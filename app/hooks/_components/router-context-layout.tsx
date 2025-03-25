@@ -12,7 +12,7 @@ export function LayoutHooks() {
 
   return selectedLayoutSegment ? (
     <Boundary labels={['Client Component Hooks']} size="small">
-      <div className="overflow-x-auto text-sm text-white [color-scheme:dark]">
+      <div className="overflow-x-auto text-sm">
         <pre>
           {JSON.stringify(
             {
