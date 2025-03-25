@@ -6,22 +6,24 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Next.js App Router',
-    template: '%s | Next.js App Router',
+    default: 'Goldlabel Core',
+    template: '%s | Goldlabel Core',
   },
-  metadataBase: new URL('https://app-router.vercel.app'),
-  description:
-    'A playground to explore new Next.js App Router features such as nested layouts, instant loading states, streaming, and component level data fetching.',
+  metadataBase: new URL('https://goldlabel.pro'),
+  description: 'The public-facing site for Goldlabel Apps Ltd. Built with Next.js and Firestore.',
   openGraph: {
-    title: 'Next.js App Router Playground',
-    description:
-      'A playground to explore new Next.js App Router features such as nested layouts, instant loading states, streaming, and component level data fetching.',
-    images: [`/api/og?title=Next.js App Router`],
+    title: 'Goldlabel Core',
+    description: 'The public-facing site for Goldlabel Apps Ltd. Built with Next.js and Firestore.',
+    images: ['/alexander-andrews-brAkTCdnhW8-unsplash.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
+    title: 'Goldlabel Core',
+    description: 'The public-facing site for Goldlabel Apps Ltd.',
+    images: ['/alexander-andrews-brAkTCdnhW8-unsplash.jpg'],
   },
 };
+
 
 export default function RootLayout({
   children,
