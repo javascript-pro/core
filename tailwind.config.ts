@@ -10,7 +10,7 @@ export default {
   future: {
     hoverOnlyWhenSupported: true,
   },
-  darkMode: 'class',
+  // darkMode: 'class',
   theme: {
     extend: {
       // https://vercel.com/design/color
