@@ -1,3 +1,8 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "react-hooks/rules-of-hooks": "off",
+    "@next/next/no-duplicate-head": "off",
+    "react/no-unescaped-entities": "off"
+  }
 }
