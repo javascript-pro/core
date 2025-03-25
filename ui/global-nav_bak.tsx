@@ -1,7 +1,7 @@
 'use client';
 
 import { demos, type Item } from '#/lib/demos';
-import { NextLogoDark } from '#/ui/next-logo';
+import { NextLogoLight } from '#/ui/next-logo';
 import Link from 'next/link';
 import { useSelectedLayoutSegment } from 'next/navigation';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
@@ -21,7 +21,7 @@ export function GlobalNav() {
           onClick={close}
         >
           <div className="h-7 w-7 rounded-full">
-            <NextLogoDark />
+            <NextLogoLight />
           </div>
 
           <h3 className="font-semibold tracking-wide text-gray-400 group-hover:text-gray-50">

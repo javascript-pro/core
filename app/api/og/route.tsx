@@ -27,7 +27,7 @@ export async function GET(req: NextRequest): Promise<Response | ImageResponse> {
             alignItems: 'center',
           }}
         >
-          {isLight ? <LightSvg /> : <DarkSvg />}
+          <LightSvg />
           <div
             style={{
               position: 'absolute',

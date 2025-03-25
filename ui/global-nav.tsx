@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useSelectedLayoutSegment } from 'next/navigation';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import clsx from 'clsx';
@@ -18,21 +19,28 @@ export function GlobalNav() {
   ];
 
   return (
-    <div className="fixed top-0 z-10 flex w-full flex-col border-b border-gray-800 bg-black lg:bottom-0 lg:z-auto lg:w-72 lg:border-b-0 lg:border-r lg:border-gray-800">
+    <div className="fixed top-0 z-10 flex w-full flex-col border-b border-gray-800  lg:bottom-0 lg:z-auto lg:w-72 lg:border-b-0 lg:border-r lg:border-gray-800">
       <div className="flex h-14 items-center px-4 py-4 lg:h-auto">
+        
         <Link href="/" className="group flex w-full items-center gap-x-2.5" onClick={close}>
-          <div className="h-7 w-7 rounded-full bg-white" />
-          <h3 className="font-semibold tracking-wide text-gray-400 group-hover:text-white">Goldlabel Core</h3>
+          <Image
+            src="/svg/favicon.svg"
+            width={40}
+            height={40}
+            alt="Goldlabel Core"
+          />
         </Link>
+
         <div className="ml-auto lg:hidden">
           <button
             type="button"
-            className="inline-flex items-center justify-center rounded-md p-2 text-gray-400"
+            className="inline-flex items-center justify-center rounded-md p-2"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
           </button>
         </div>
+
       </div>
 
       <nav
@@ -41,15 +49,15 @@ export function GlobalNav() {
           isOpen ? 'block' : 'hidden lg:block'
         )}
       >
-        <ul className="space-y-2 text-sm text-gray-300">
+        <ul className="space-y-2 text-sm">
           {navItems.map(({ label, href }) => (
             <li key={href}>
               <Link
                 href={href}
                 onClick={close}
                 className={clsx(
-                  'block rounded px-2 py-1 hover:bg-gray-800',
-                  segment === href.slice(1) ? 'bg-gray-800 text-white' : ''
+                  'block rounded px-2 py-1 hover:bg-gray-800 hover:text-white',
+                  segment === href.slice(1) ? 'bg-gray-800' : ''
                 )}
               >
                 {label}
