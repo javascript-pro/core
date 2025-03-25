@@ -4,13 +4,15 @@ import Link from 'next/link';
 export default function Page() {
   return (
     <div className="space-y-8">
-      <h1 className="text-xl font-medium text-gray-300">Examples</h1>
+      <h1 className="text-xl font-medium">
+        Examples
+      </h1>
 
-      <div className="space-y-10 text-white">
+      <div className="space-y-10">
         {demos.map((section) => {
           return (
             <div key={section.name} className="space-y-5">
-              <div className="text-xs font-semibold uppercase tracking-wider text-gray-400">
+              <div className="text-xs font-semibold uppercase tracking-wider">
                 {section.name}
               </div>
 
@@ -20,14 +22,14 @@ export default function Page() {
                     <Link
                       href={`/${item.slug}`}
                       key={item.name}
-                      className="group block space-y-1.5 rounded-lg bg-gray-900 px-5 py-3 hover:bg-gray-800"
+                      className="group block space-y-1.5 rounded-lg px-5 py-3 hover:bg-gray-800"
                     >
-                      <div className="font-medium text-gray-200 group-hover:text-gray-50">
+                      <div className="font-medium group-hover:text-gray-50">
                         {item.name}
                       </div>
 
                       {item.description ? (
-                        <div className="line-clamp-3 text-sm text-gray-400 group-hover:text-gray-300">
+                        <div className="line-clamp-3 text-sm group-hover:text-gray-300">
                           {item.description}
                         </div>
                       ) : null}

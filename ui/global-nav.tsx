@@ -19,7 +19,7 @@ export function GlobalNav() {
   ];
 
   return (
-    <div className="fixed top-0 z-10 flex w-full flex-col border-b border-gray-800  lg:bottom-0 lg:z-auto lg:w-72 lg:border-b-0 lg:border-r lg:border-gray-800">
+    <div className="fixed top-0 z-10 flex w-full flex-col border-b lg:bottom-0 lg:z-auto lg:w-72">
       <div className="flex h-14 items-center px-4 py-4 lg:h-auto">
         
         <Link href="/" className="group flex w-full items-center gap-x-2.5" onClick={close}>
