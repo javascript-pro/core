@@ -41,7 +41,7 @@ export const Boundary = ({
 }) => {
   return (
     <div
-      className={clsx('relative rounded-lg border border-dashed', {
+      className={clsx('bg-black relative rounded-lg border border-dashed', {
         'p-3 lg:p-5': size === 'small',
         'p-4 lg:p-9': size === 'default',
         'border-gray-700': color === 'default',
