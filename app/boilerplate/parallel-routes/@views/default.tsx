@@ -1,4 +1,4 @@
-import { CurrentRoute } from '#/app/parallel-routes/_ui/current-route';
+import { CurrentRoute } from '#/app/boilerplate/parallel-routes/_ui/current-route';
 import { Boundary } from '#/ui/boundary';
 import Link from 'next/link';
 

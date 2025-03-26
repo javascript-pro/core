@@ -1,4 +1,4 @@
-import { Breadcrumbs } from '#/app/patterns/breadcrumbs/_components/breadcrumbs';
+import { Breadcrumbs } from '#/app/boilerplate/patterns/breadcrumbs/_components/breadcrumbs';
 
 export default async function Page(props: {
   params: Promise<{

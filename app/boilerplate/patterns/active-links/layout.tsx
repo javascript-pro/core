@@ -1,4 +1,4 @@
-import { NavLinks } from '#/app/patterns/active-links/_components/nav-links';
+import { NavLinks } from '#/app/boilerplate/patterns/active-links/_components/nav-links';
 // import { NextLogoDark } from '#/ui/next-logo';
 import Image from 'next/image';
 import Link from 'next/link';

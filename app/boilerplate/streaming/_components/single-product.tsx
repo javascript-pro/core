@@ -1,4 +1,4 @@
-import { Pricing } from '#/app/streaming/_components/pricing';
+import { Pricing } from '#/app/boilerplate/streaming/_components/pricing';
 import type { Product } from '#/app/api/products/product';
 import { ProductRating } from '#/ui/product-rating';
 import { cookies } from 'next/headers';
