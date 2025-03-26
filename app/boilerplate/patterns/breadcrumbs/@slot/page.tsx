@@ -1,4 +1,4 @@
-import { Breadcrumbs } from '#/app/patterns/breadcrumbs/_components/breadcrumbs';
+import { Breadcrumbs } from '#/app/boilerplate/patterns/breadcrumbs/_components/breadcrumbs';
 
 // Note: Next.js doesn't currently support optional catchAll segments in parallel routes.
 // In the mean time, this file will match the "/breadcrumb" route.
