@@ -14,8 +14,7 @@ export function GlobalNav() {
 
   const navItems = [
     { label: 'Home', href: '/' },
-    { label: 'Privacy', href: '/privacy' },
-    { label: 'Company', href: '/company' },
+    { label: 'Apps', href: '/apps' },
   ];
 
   return (
