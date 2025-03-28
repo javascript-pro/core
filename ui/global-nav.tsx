@@ -23,6 +23,7 @@ export function GlobalNav() {
         
         <Link href="/" className="group flex w-full items-center gap-x-2.5" onClick={close}>
           <Image
+            priority
             src="/svg/favicon.svg"
             width={40}
             height={40}
@@ -56,7 +57,7 @@ export function GlobalNav() {
                 onClick={close}
                 className={clsx(
                   'block rounded px-2 py-1 hover:bg-gray-800 hover:text-white',
-                  segment === href.slice(1) ? 'bg-gray-800' : ''
+                  segment === href.slice(1) ? '' : ''
                 )}
               >
                 {label}

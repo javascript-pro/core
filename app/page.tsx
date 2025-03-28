@@ -29,17 +29,17 @@ export default function Home() {
         <Image
           src="/jpg/hero.jpg"
           alt="Hero"
-          layout="fill"
+          width="1200"
+          height="630"
           objectFit="cover"
           priority
         />
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <h1 className="text-white text-4xl font-bold">Welcome to Goldlabel Core</h1>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <h1 className="text-white text-4xl font-bold">Goldlabel Core</h1>
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto py-16 px-4">
-        <h2 className="text-2xl font-semibold mb-8">Explore Our Apps</h2>
+      <section className="max-w-6xl mx-auto py-8 px-3">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {panels.map((panel) => (
             <PanelCard key={panel.href} {...panel} />
