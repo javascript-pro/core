@@ -1,8 +1,8 @@
 ---
-title: App One
-description: Overview of App One.
-order: 1
-image: /jpg/app1.jpg
+title: First App
+description: Description of App One.
+order: 10
+image: /jpg/hero.jpg
 ---
 
 # App One

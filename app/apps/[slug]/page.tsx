@@ -1,4 +1,3 @@
-
 import { notFound } from 'next/navigation';
 import { getAllMarkdown, getMarkdownBySlug } from '#/lib/loadMarkdown';
 import { Metadata } from 'next';
@@ -37,11 +36,18 @@ export default function AppPage({ params }: any) {
   }
 
   return (
-    <main className="max-w-3xl mx-auto py-16 px-4 prose dark:prose-invert">
-      <h1>{data.meta.title}</h1>
-      <p className="text-zinc-500 dark:text-zinc-400 mb-4">{data.meta.description}</p>
-      <hr />
-      <article dangerouslySetInnerHTML={{ __html: data.content }} />
+    <main className="max-w-3xl mx-auto py-16 px-4">
+      <h1 className="text-3xl font-medium  mb-4">
+        {data.meta.title}
+      </h1>
+      <p className="mb-8">
+        {data.meta.description}
+      </p>
+      <hr className="border-neutral-300 dark:border-neutral-700 mb-8" />
+      <article
+        className="space-y-6"
+        dangerouslySetInnerHTML={{ __html: data.content }}
+      />
     </main>
   );
 }

@@ -12,14 +12,9 @@ export default function Home() {
 
   const panels = [
     {
-      title: 'App One',
-      description: 'Explore the first app',
-      href: '/apps/app1',
-    },
-    {
-      title: 'App Two',
-      description: 'Details about the second app',
-      href: '/apps/app2',
+      title: 'Apps',
+      description: 'PWAs and more',
+      href: '/apps/',
     },
   ];
 
@@ -40,7 +35,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto py-8 px-3">
+      <section className="max-w-6xl mx-auto py-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {panels.map((panel) => (
             <PanelCard key={panel.href} {...panel} />
