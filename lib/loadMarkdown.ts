@@ -15,15 +15,18 @@ export type MarkdownPage = {
   content: string;
 };
 
-const MARKDOWN_DIR = path.join(process.cwd(), 'public/markdown/apps');
+const MARKDOWN_ROOT = path.join(process.cwd(), 'public/markdown');
 
-export function getAllMarkdown(): MarkdownPage[] {
-  const files = fs.readdirSync(MARKDOWN_DIR);
+export function getAllMarkdown(folder: string): MarkdownPage[] {
+  const dir = path.join(MARKDOWN_ROOT, folder);
+  if (!fs.existsSync(dir)) return [];
+
+  const files = fs.readdirSync(dir);
 
   return files
     .filter(file => file.endsWith('.md'))
     .map(file => {
-      const filePath = path.join(MARKDOWN_DIR, file);
+      const filePath = path.join(dir, file);
       const raw = fs.readFileSync(filePath, 'utf-8');
       const { data, content } = matter(raw);
       const slug = file.replace(/\.md$/, '');
@@ -39,8 +42,8 @@ export function getAllMarkdown(): MarkdownPage[] {
     .sort((a, b) => (a.meta.order ?? 0) - (b.meta.order ?? 0));
 }
 
-export function getMarkdownBySlug(slug: string): MarkdownPage | null {
-  const filePath = path.join(MARKDOWN_DIR, `${slug}.md`);
+export function getMarkdownBySlug(folder: string, slug: string): MarkdownPage | null {
+  const filePath = path.join(MARKDOWN_ROOT, folder, `${slug}.md`);
   if (!fs.existsSync(filePath)) return null;
 
   const raw = fs.readFileSync(filePath, 'utf-8');

@@ -3,14 +3,14 @@ import { getAllMarkdown, getMarkdownBySlug } from '#/lib/loadMarkdown';
 import { Metadata } from 'next';
 
 export async function generateStaticParams() {
-  const apps = getAllMarkdown("apps");
-  return apps.map(({ meta }) => ({
+  const pages = getAllMarkdown("sci-fi");
+  return pages.map(({ meta }) => ({
     slug: meta.slug,
   }));
 }
 
 export async function generateMetadata({ params }: any): Promise<Metadata> {
-  const data = getMarkdownBySlug("apps", params.slug);
+  const data = getMarkdownBySlug("sci-fi", params.slug);
   if (!data) {
     return {
       title: 'Not found',
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
 }
 
 export default function AppPage({ params }: any) {
-  const data = getMarkdownBySlug("apps", params.slug);
+  const data = getMarkdownBySlug("sci-fi", params.slug);
 
   if (!data) {
     notFound();

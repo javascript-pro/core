@@ -2,12 +2,12 @@ import Link from 'next/link';
 import { getAllMarkdown } from '#/lib/loadMarkdown';
 
 export const metadata = {
-  title: 'Apps',
-  description: 'Browse the current Goldlabel apps available for preview.',
+  title: 'Science Fiction',
+  description: '',
 };
 
 export default function IndexPage() {
-  const pages = getAllMarkdown("apps");
+  const pages = getAllMarkdown("sci-fi");
 
   return (
     <main className="max-w-6xl mx-auto">

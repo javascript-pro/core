@@ -61,7 +61,7 @@ export function AddressBar() {
         {pathname !== '/' && (
           <>
             <Link href="/" className="px-2 text-black hover:underline">
-              Core
+              Home
             </Link>
             <span>/</span>
           </>

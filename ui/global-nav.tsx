@@ -15,6 +15,7 @@ export function GlobalNav() {
   const navItems = [
     { label: 'Home', href: '/' },
     { label: 'Apps', href: '/apps' },
+    { label: 'Sci-Fi', href: '/sci-fi' },
   ];
 
   return (
