@@ -25,12 +25,13 @@ export default function Home() {
 
   return (
     <main>
-      <section className="relative w-full h-96">
+      <section className="relative">
         <Image
+          
           src="/jpg/hero.jpg"
           alt="Hero"
           width="1200"
-          height="630"
+          height="330"
           objectFit="cover"
           priority
         />
