@@ -1,6 +1,5 @@
 import '#/styles/globals.css';
 import { AddressBar } from '#/ui/address-bar';
-import Byline from '#/ui/byline';
 import { GlobalNav } from '#/ui/global-nav';
 import { Metadata } from 'next';
 
@@ -46,7 +45,6 @@ export default function RootLayout({
                 {children}
               </div>
             </div>
-            <Byline />
           </div>
         </div>
       </body>

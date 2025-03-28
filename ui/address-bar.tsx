@@ -58,7 +58,7 @@ export function AddressBar() {
       <div className="flex gap-x-1 text-sm font-medium">
         <div>
           <span className="px-2">
-            Goldlabel Core
+            Core
           </span>
         </div>
         {pathname ? (
