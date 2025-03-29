@@ -15,10 +15,9 @@ type NavNode = {
   children?: NavNode[]
 }
 
-async function getMarkdownPagesRecursively(dir: string, baseSlug = ''): Promise<NavNode[]> {
+export async function getMarkdownPagesRecursively(dir: string, baseSlug = ''): Promise<NavNode[]> {
   const entries = await fs.readdir(dir, { withFileTypes: true })
 
-  // Check for index.md first
   const indexFile = entries.find(e => e.isFile() && e.name === 'index.md')
   if (!indexFile) return []
 
@@ -26,7 +25,7 @@ async function getMarkdownPagesRecursively(dir: string, baseSlug = ''): Promise<
   const rawIndex = await fs.readFile(fullIndexPath, 'utf-8')
   const { data: indexData } = matter(rawIndex)
 
-  const slug = baseSlug || '/' // fallback to root
+  const slug = baseSlug || '/'
   const node: NavNode = {
     title: indexData.title || path.basename(dir),
     slug,
@@ -58,7 +57,6 @@ async function getMarkdownPagesRecursively(dir: string, baseSlug = ''): Promise<
     }
   }
 
-  // Sort children by order
   if (node.children && node.children.length > 0) {
     node.children.sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
   }
@@ -69,5 +67,5 @@ async function getMarkdownPagesRecursively(dir: string, baseSlug = ''): Promise<
 export async function generateGlobalNav() {
   const tree = await getMarkdownPagesRecursively(MARKDOWN_ROOT)
   await fs.writeFile(OUTPUT_PATH, JSON.stringify(tree, null, 2))
-  console.log(`✅ Generated nested nav with ${tree.length} top-level sections at /globalNav.json`)
+  console.log(`✅ Generated Work, Life, Balance at /globalNav.json`)
 }
