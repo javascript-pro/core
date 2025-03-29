@@ -8,6 +8,14 @@ import clsx from 'clsx';
 import { useState } from 'react';
 import navItems from '#/public/globalNav.json';
 
+type NavNode = {
+  title: string;
+  slug: string;
+  order?: number;
+  icon?: string;
+  children?: NavNode[];
+};
+
 export function GlobalNav() {
   const [isOpen, setIsOpen] = useState(false);
   const close = () => setIsOpen(false);
@@ -44,34 +52,56 @@ export function GlobalNav() {
         )}
       >
         <ul className="space-y-2 text-sm">
-          
-        {navItems.map((item) => {
-          
-          const slug = item?.slug
-          const label = item?.title
-
-          if (typeof slug !== 'string' || typeof label !== 'string') return null;
-
-          const href = `/${slug}`;
-
-          return (
-            <li key={href}>
-              <Link
-                href={href}
-                onClick={close}
-                className={clsx(
-                  'block rounded px-2 py-1 hover:bg-gray-800 hover:text-white',
-                  segment === slug ? 'bg-gray-800 text-white' : ''
-                )}
-              >
-                {label}
-              </Link>
-            </li>
-          );
-        })}
-
+          {navItems.map((item: NavNode) => (
+            <NavItem key={item.slug} item={item} depth={0} close={close} currentSegment={segment} />
+          ))}
         </ul>
       </nav>
     </div>
+  );
+}
+
+function NavItem({
+  item,
+  depth,
+  close,
+  currentSegment,
+}: {
+  item: NavNode;
+  depth: number;
+  close: () => void;
+  currentSegment: string | null;
+}) {
+  const href = item.slug.startsWith('/') ? item.slug : `/${item.slug}`;
+  const isActive = currentSegment === item.slug.split('/').pop();
+
+  return (
+    <li>
+      <Link
+        href={href}
+        onClick={close}
+        className={clsx(
+          'block rounded px-2 py-1 hover:bg-gray-800 hover:text-white',
+          isActive ? 'bg-gray-800 text-white' : '',
+          depth > 0 && `ml-${Math.min(depth * 4, 12)}`
+        )}
+      >
+        {item.title}
+      </Link>
+
+      {item.children && item.children.length > 0 && (
+        <ul className="mt-1 space-y-1">
+          {item.children.map((child) => (
+            <NavItem
+              key={child.slug}
+              item={child}
+              depth={depth + 1}
+              close={close}
+              currentSegment={currentSegment}
+            />
+          ))}
+        </ul>
+      )}
+    </li>
   );
 }
