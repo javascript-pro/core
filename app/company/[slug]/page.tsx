@@ -1,12 +1,12 @@
-// app/apps/[slug]/page.tsx
+// app/company/[slug]/page.tsx
 
 import { notFound } from 'next/navigation';
 import { getAllMarkdown, getMarkdownBySlug, getHTMLBySlug } from '#/lib/loadMarkdown';
 import { Metadata } from 'next';
 
 export async function generateStaticParams() {
-  const apps = await getAllMarkdown("apps");
-  return apps.map(({ meta }) => ({
+  const pages = await getAllMarkdown("company");
+  return pages.map(({ meta }) => ({
     slug: meta.slug,
   }));
 }
@@ -14,7 +14,7 @@ export async function generateStaticParams() {
 export async function generateMetadata(
   { params }: { params: { slug: string } }
 ): Promise<Metadata> {
-  const data = await getMarkdownBySlug("apps", params.slug);
+  const data = await getMarkdownBySlug("company", params.slug);
   if (!data) {
     return {
       title: 'Not found',
@@ -31,11 +31,11 @@ export async function generateMetadata(
   };
 }
 
-export default async function AppsPage(
+export default async function CompanyPage(
   { params }: { params: { slug: string } }
 ) {
-  const data = await getMarkdownBySlug("apps", params.slug);
-  const html = await getHTMLBySlug("apps", params.slug);
+  const data = await getMarkdownBySlug("company", params.slug);
+  const html = await getHTMLBySlug("company", params.slug);
 
   if (!data) {
     notFound();

@@ -1,6 +1,8 @@
-import fs from 'fs';
+
+import fs from 'fs/promises'; // use the async version
 import path from 'path';
 import matter from 'gray-matter';
+import { marked } from 'marked';
 
 export type MarkdownMeta = {
   title: string;
@@ -17,43 +19,59 @@ export type MarkdownPage = {
 
 const MARKDOWN_ROOT = path.join(process.cwd(), 'public/markdown');
 
-export function getAllMarkdown(folder: string): MarkdownPage[] {
+export async function getAllMarkdown(folder: string): Promise<MarkdownPage[]> {
   const dir = path.join(MARKDOWN_ROOT, folder);
-  if (!fs.existsSync(dir)) return [];
+  try {
+    const files = await fs.readdir(dir);
+    const pages = await Promise.all(
+      files
+        .filter(file => file.endsWith('.md'))
+        .map(async file => {
+          const filePath = path.join(dir, file);
+          const raw = await fs.readFile(filePath, 'utf-8');
+          const { data, content } = matter(raw);
+          const slug = file.replace(/\.md$/, '');
 
-  const files = fs.readdirSync(dir);
+          return {
+            meta: {
+              ...(data as Omit<MarkdownMeta, 'slug'>),
+              slug,
+            },
+            content,
+          };
+        })
+    );
 
-  return files
-    .filter(file => file.endsWith('.md'))
-    .map(file => {
-      const filePath = path.join(dir, file);
-      const raw = fs.readFileSync(filePath, 'utf-8');
-      const { data, content } = matter(raw);
-      const slug = file.replace(/\.md$/, '');
-
-      return {
-        meta: {
-          ...(data as Omit<MarkdownMeta, 'slug'>),
-          slug,
-        },
-        content,
-      };
-    })
-    .sort((a, b) => (a.meta.order ?? 0) - (b.meta.order ?? 0));
+    return pages.sort((a, b) => (a.meta.order ?? 0) - (b.meta.order ?? 0));
+  } catch {
+    return [];
+  }
 }
 
-export function getMarkdownBySlug(folder: string, slug: string): MarkdownPage | null {
+export async function getHTMLBySlug(folder: string, slug: string): Promise<string | null> {
   const filePath = path.join(MARKDOWN_ROOT, folder, `${slug}.md`);
-  if (!fs.existsSync(filePath)) return null;
+  try {
+    const raw = await fs.readFile(filePath, 'utf-8');
+    const { content } = matter(raw);
+    return marked(content);
+  } catch {
+    return null;
+  }
+}
 
-  const raw = fs.readFileSync(filePath, 'utf-8');
-  const { data, content } = matter(raw);
-
-  return {
-    meta: {
-      ...(data as Omit<MarkdownMeta, 'slug'>),
-      slug,
-    },
-    content,
-  };
+export async function getMarkdownBySlug(folder: string, slug: string): Promise<MarkdownPage | null> {
+  const filePath = path.join(MARKDOWN_ROOT, folder, `${slug}.md`);
+  try {
+    const raw = await fs.readFile(filePath, 'utf-8');
+    const { data, content } = matter(raw);
+    return {
+      meta: {
+        ...(data as Omit<MarkdownMeta, 'slug'>),
+        slug,
+      },
+      content,
+    };
+  } catch {
+    return null;
+  }
 }

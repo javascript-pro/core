@@ -12,6 +12,11 @@ export default function Home() {
 
   const panels = [
     {
+      title: 'Company',
+      description: 'This page could not be found.',
+      href: '/company/',
+    },
+    {
       title: 'Apps',
       description: 'PWAs and more',
       href: '/apps/',
@@ -25,19 +30,19 @@ export default function Home() {
 
   return (
     <main>
-      <section className="relative">
-        {/* <Image
+      {/* <section className="relative">
+        <Image
           
           src="/jpg/hero.jpg"
           alt="Hero"
           width="1200"
           height="330"
           priority
-        /> */}
+        />
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-white text-4xl font-bold">Goldlabel Core</h1>
         </div>
-      </section>
+      </section> */}
 
       <section className="max-w-6xl mx-auto py-8">
         <div className="grid">
