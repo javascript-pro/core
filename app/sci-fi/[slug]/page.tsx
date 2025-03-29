@@ -12,7 +12,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata(
-  { params }: { params: { slug: string } }
+  { params }: { params: any }
 ): Promise<Metadata> {
   const data = await getMarkdownBySlug("sci-fi", params.slug);
   const html = await getHTMLBySlug("sci-fi", params.slug); // <-- fixed from "company"
@@ -34,7 +34,7 @@ export async function generateMetadata(
 }
 
 export default async function SciFiPage(
-  { params }: { params: { slug: string } }
+  { params }: { params: any }
 ) {
   const data = await getMarkdownBySlug("sci-fi", params.slug);
   const html = await getHTMLBySlug("sci-fi", params.slug);

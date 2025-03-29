@@ -12,7 +12,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata(
-  { params }: { params: { slug: string } }
+  { params }: { params: any }
 ): Promise<Metadata> {
   const data = await getMarkdownBySlug("company", params.slug);
   if (!data) {
@@ -32,7 +32,7 @@ export async function generateMetadata(
 }
 
 export default async function CompanyPage(
-  { params }: { params: { slug: string } }
+  { params }: { params: any }
 ) {
   const data = await getMarkdownBySlug("company", params.slug);
   const html = await getHTMLBySlug("company", params.slug);
