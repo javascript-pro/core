@@ -53,7 +53,13 @@ export function GlobalNav() {
       >
         <ul className="space-y-2 text-sm">
           {navItems.map((item: NavNode) => (
-            <NavItem key={item.slug} item={item} depth={0} close={close} currentSegment={segment} />
+            <NavItem
+              key={item.slug}
+              item={item}
+              depth={0}
+              close={close}
+              currentSegment={segment}
+            />
           ))}
         </ul>
       </nav>
@@ -75,15 +81,25 @@ function NavItem({
   const href = item.slug.startsWith('/') ? item.slug : `/${item.slug}`;
   const isActive = currentSegment === item.slug.split('/').pop();
 
+  // Adjusted padding to make top-level items sit better
+  const indentMap: Record<number, string> = {
+    0: 'p-2',
+    1: 'p-4',
+    2: 'p-6',
+    3: 'p-8',
+  };
+
+  const indentClass = indentMap[depth] ?? 'p-10';
+
   return (
     <li>
       <Link
         href={href}
         onClick={close}
         className={clsx(
-          'block rounded px-2 py-1 hover:bg-gray-800 hover:text-white',
-          isActive ? 'bg-gray-800 text-white' : '',
-          depth > 0 && `ml-${Math.min(depth * 4, 12)}`
+          'block rounded py-1 pr-2 hover:bg-gray-800 hover:text-white',
+          isActive && 'bg-gray-800 text-white',
+          indentClass
         )}
       >
         {item.title}

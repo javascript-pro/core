@@ -1,5 +1,5 @@
 ---
-title: Charles Darwin
+title: Next.js
 description: On the Origin of Species By Means of Natural Selection
 order: 1
 image: /jpg/hero.jpg

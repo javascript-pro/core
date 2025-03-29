@@ -12,7 +12,7 @@
         "icon": "briefcase",
         "children": [
           {
-            "title": "Charles Darwin",
+            "title": "Next.js",
             "slug": "/work/charles-darwin",
             "order": 1
           }
@@ -25,14 +25,14 @@
         "icon": "briefcase",
         "children": [
           {
-            "title": "/life/example",
+            "title": "Example",
             "slug": "/life/example",
-            "order": 0
+            "order": 10
           },
           {
             "title": "Charles Darwin",
             "slug": "/life/charles-darwin",
-            "order": 1
+            "order": 20
           }
         ]
       },
@@ -41,13 +41,7 @@
         "slug": "/balance",
         "order": 30,
         "icon": "briefcase",
-        "children": [
-          {
-            "title": "/balance/light_dark",
-            "slug": "/balance/light_dark",
-            "order": 0
-          }
-        ]
+        "children": []
       }
     ]
   }

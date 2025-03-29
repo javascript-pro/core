@@ -1,3 +1,10 @@
+---
+title: Example
+description: On the Origin of Species By Means of Natural Selection
+order: 10
+image: /jpg/hero.jpg
+---
+
 ## Design Templates
 
 Thanks for the feedback! Since Berry is more admin/dashboard-oriented, let's pivot to front-facing templates that still use MUI, focusing on navigation, page structure, and content display.
