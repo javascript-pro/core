@@ -1,4 +1,3 @@
-// import Image from 'next/image';
 import { PanelCard } from '#/components/PanelCard';
 import { Footer } from '#/components/Footer';
 import { Metadata } from 'next';
@@ -9,49 +8,36 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-
   const panels = [
     {
-      title: 'Company',
-      description: 'This page could not be found.',
-      href: '/company/',
+      title: 'Work',
+      description: 'Next.js',
+      href: '/work/',
+      image: '/jpg/work.jpg',
     },
     {
-      title: 'Apps',
-      description: 'PWAs and more',
-      href: '/apps/',
+      title: 'Life',
+      description: 'Aquaponics, Diving, Food',
+      href: '/life/',
+      image: '/jpg/life.jpg',
     },
     {
-      title: 'Sci-Fi',
-      description: 'Einstein vs Arthur C Clarke',
-      href: '/sci-fi/',
+      title: 'Balance',
+      description: 'Books, Blogs & Writing',
+      href: '/balance/',
+      image: '/jpg/balance.jpg',
     },
   ];
 
   return (
     <main>
-      {/* <section className="relative">
-        <Image
-          
-          src="/jpg/hero.jpg"
-          alt="Hero"
-          width="1200"
-          height="330"
-          priority
-        />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-white text-4xl font-bold">Goldlabel Core</h1>
-        </div>
-      </section> */}
-
-      <section className="max-w-6xl mx-auto py-8">
-        <div className="grid">
+      <section className="max-w-6xl mx-auto py-8 px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {panels.map((panel) => (
             <PanelCard key={panel.href} {...panel} />
           ))}
         </div>
       </section>
-
       <Footer />
     </main>
   );

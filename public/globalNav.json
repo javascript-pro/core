@@ -1,0 +1,48 @@
+[
+  {
+    "title": "Home",
+    "slug": "/",
+    "order": 1,
+    "icon": "Home",
+    "children": [
+      {
+        "title": "Work",
+        "slug": "/work",
+        "order": 10,
+        "icon": "briefcase",
+        "children": [
+          {
+            "title": "Next.js",
+            "slug": "/work/charles-darwin",
+            "order": 1
+          }
+        ]
+      },
+      {
+        "title": "Life",
+        "slug": "/life",
+        "order": 20,
+        "icon": "briefcase",
+        "children": [
+          {
+            "title": "Example",
+            "slug": "/life/example",
+            "order": 10
+          },
+          {
+            "title": "Charles Darwin",
+            "slug": "/life/charles-darwin",
+            "order": 20
+          }
+        ]
+      },
+      {
+        "title": "Balance",
+        "slug": "/balance",
+        "order": 30,
+        "icon": "briefcase",
+        "children": []
+      }
+    ]
+  }
+]
