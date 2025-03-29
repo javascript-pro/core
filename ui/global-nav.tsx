@@ -14,8 +14,9 @@ export function GlobalNav() {
 
   const navItems = [
     { label: 'Home', href: '/' },
-    { label: 'Privacy', href: '/privacy' },
     { label: 'Company', href: '/company' },
+    { label: 'Apps', href: '/apps' },
+    { label: 'Sci-Fi', href: '/sci-fi' },
   ];
 
   return (
@@ -24,7 +25,8 @@ export function GlobalNav() {
         
         <Link href="/" className="group flex w-full items-center gap-x-2.5" onClick={close}>
           <Image
-            src="/svg/favicon.svg"
+            priority
+            src="/svg/favicon_black.svg"
             width={40}
             height={40}
             alt="Goldlabel Core"
@@ -57,7 +59,7 @@ export function GlobalNav() {
                 onClick={close}
                 className={clsx(
                   'block rounded px-2 py-1 hover:bg-gray-800 hover:text-white',
-                  segment === href.slice(1) ? 'bg-gray-800' : ''
+                  segment === href.slice(1) ? '' : ''
                 )}
               >
                 {label}

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { Suspense } from 'react';
+import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
 
 function Params() {
@@ -14,17 +15,11 @@ function Params() {
           <React.Fragment key={key}>
             {index !== 0 ? <span>&</span> : null}
             <span className="px-1">
-              <span
-                key={key}
-                className="animate-[highlight_1s_ease-in-out_1]"
-              >
+              <span className="animate-[highlight_1s_ease-in-out_1]">
                 {key}
               </span>
               <span>=</span>
-              <span
-                key={value}
-                className="animate-[highlight_1s_ease-in-out_1]"
-              >
+              <span className="animate-[highlight_1s_ease-in-out_1]">
                 {value}
               </span>
             </span>
@@ -35,13 +30,19 @@ function Params() {
   ) : null;
 }
 
+function formatSegment(segment: string) {
+  return segment
+    .replace(/-/g, ' ')
+    .replace(/^\w/, (c) => c.toUpperCase());
+}
+
 export function AddressBar() {
   const pathname = usePathname();
+  const segments = pathname.split('/').filter(Boolean);
 
   return (
-
     <div className="flex items-center gap-x-2 p-3.5 lg:px-5 lg:py-3">
-      <div className="text-gray-600">
+      {/* <div className="text-gray-600">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-4"
@@ -54,37 +55,39 @@ export function AddressBar() {
             clipRule="evenodd"
           />
         </svg>
-      </div>
-      <div className="flex gap-x-1 text-sm font-medium">
-        <div>
-          <span className="px-2">
-            Goldlabel Core
-          </span>
-        </div>
-        {pathname ? (
-          <>
-            <span className="">/</span>
-            {pathname
-              .split('/')
-              .slice(2)
-              .map((segment) => {
-                return (
-                  <React.Fragment key={segment}>
-                    <span>
-                      <span
-                        key={segment}
-                        className="animate-[highlight_1s_ease-in-out_1] rounded-full px-1.5 py-0.5"
-                      >
-                        {segment}
-                      </span>
-                    </span>
+      </div> */}
 
-                    <span className="">/</span>
-                  </React.Fragment>
-                );
-              })}
+      <div className="flex gap-x-1 text-sm font-medium items-center">
+        {pathname !== '/' && (
+          <>
+            <Link href="/" className="px-2 text-black hover:underline">
+              Home
+            </Link>
+            <span>/</span>
           </>
-        ) : null}
+        )}
+
+        {segments.map((segment, index) => {
+          const href = '/' + segments.slice(0, index + 1).join('/');
+          const isLast = index === segments.length - 1;
+          const label = formatSegment(segment);
+
+          return (
+            <React.Fragment key={href}>
+              {index > 0 && <span>/</span>}
+              {isLast ? (
+                <span className="px-1 text-gray-700">{label}</span>
+              ) : (
+                <Link
+                  href={href}
+                  className="px-1 text-black hover:underline"
+                >
+                  {label}
+                </Link>
+              )}
+            </React.Fragment>
+          );
+        })}
 
         <Suspense>
           <Params />

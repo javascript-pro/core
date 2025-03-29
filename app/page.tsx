@@ -1,46 +1,58 @@
-import { demos } from '#/lib/demos';
-import Link from 'next/link';
+// import Image from 'next/image';
+import { PanelCard } from '#/components/PanelCard';
+import { Footer } from '#/components/Footer';
+import { Metadata } from 'next';
 
-export default function Page() {
+export const metadata: Metadata = {
+  title: 'Goldlabel Core',
+  description: 'A clean foundation for custom, professional web apps.',
+};
+
+export default function Home() {
+
+  const panels = [
+    {
+      title: 'Company',
+      description: 'This page could not be found.',
+      href: '/company/',
+    },
+    {
+      title: 'Apps',
+      description: 'PWAs and more',
+      href: '/apps/',
+    },
+    {
+      title: 'Sci-Fi',
+      description: 'Einstein vs Arthur C Clarke',
+      href: '/sci-fi/',
+    },
+  ];
+
   return (
-    <div className="space-y-8">
-      <h1 className="text-xl font-medium">
-        Examples
-      </h1>
+    <main>
+      {/* <section className="relative">
+        <Image
+          
+          src="/jpg/hero.jpg"
+          alt="Hero"
+          width="1200"
+          height="330"
+          priority
+        />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <h1 className="text-white text-4xl font-bold">Goldlabel Core</h1>
+        </div>
+      </section> */}
 
-      <div className="space-y-10">
-        {demos.map((section) => {
-          return (
-            <div key={section.name} className="space-y-5">
-              <div className="text-xs font-semibold uppercase tracking-wider">
-                {section.name}
-              </div>
+      <section className="max-w-6xl mx-auto py-8">
+        <div className="grid">
+          {panels.map((panel) => (
+            <PanelCard key={panel.href} {...panel} />
+          ))}
+        </div>
+      </section>
 
-              <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
-                {section.items.map((item) => {
-                  return (
-                    <Link
-                      href={`/${item.slug}`}
-                      key={item.name}
-                      className="group block space-y-1.5 rounded-lg px-5 py-3 hover:bg-gray-800"
-                    >
-                      <div className="font-medium group-hover:text-gray-50">
-                        {item.name}
-                      </div>
-
-                      {item.description ? (
-                        <div className="line-clamp-3 text-sm group-hover:text-gray-300">
-                          {item.description}
-                        </div>
-                      ) : null}
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </div>
+      <Footer />
+    </main>
   );
 }
