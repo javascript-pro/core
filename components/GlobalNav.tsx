@@ -6,23 +6,16 @@ import { useSelectedLayoutSegment } from 'next/navigation';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import clsx from 'clsx';
 import { useState } from 'react';
+import navItems from '#/public/globalNav.json';
 
 export function GlobalNav() {
   const [isOpen, setIsOpen] = useState(false);
   const close = () => setIsOpen(false);
   const segment = useSelectedLayoutSegment();
 
-  const navItems = [
-    { label: 'Home', href: '/' },
-    { label: 'Company', href: '/company' },
-    { label: 'Apps', href: '/apps' },
-    { label: 'Sci-Fi', href: '/sci-fi' },
-  ];
-
   return (
     <div className="fixed top-0 z-10 flex w-full flex-col border-b lg:bottom-0 lg:z-auto lg:w-72">
       <div className="flex h-14 items-center px-4 py-4 lg:h-auto">
-        
         <Link href="/" className="group flex w-full items-center gap-x-2.5" onClick={close}>
           <Image
             priority
@@ -42,7 +35,6 @@ export function GlobalNav() {
             {isOpen ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
           </button>
         </div>
-
       </div>
 
       <nav
@@ -52,20 +44,32 @@ export function GlobalNav() {
         )}
       >
         <ul className="space-y-2 text-sm">
-          {navItems.map(({ label, href }) => (
+          
+        {navItems.map((item) => {
+          
+          const slug = item?.slug
+          const label = item?.title
+
+          if (typeof slug !== 'string' || typeof label !== 'string') return null;
+
+          const href = `/${slug}`;
+
+          return (
             <li key={href}>
               <Link
                 href={href}
                 onClick={close}
                 className={clsx(
                   'block rounded px-2 py-1 hover:bg-gray-800 hover:text-white',
-                  segment === href.slice(1) ? '' : ''
+                  segment === slug ? 'bg-gray-800 text-white' : ''
                 )}
               >
                 {label}
               </Link>
             </li>
-          ))}
+          );
+        })}
+
         </ul>
       </nav>
     </div>
