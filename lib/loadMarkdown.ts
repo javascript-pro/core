@@ -1,77 +1,67 @@
+// lib/loadMarkdown.ts
 
-import fs from 'fs/promises'; // use the async version
-import path from 'path';
-import matter from 'gray-matter';
-import { marked } from 'marked';
+import fs from 'fs/promises'
+import path from 'path'
+import matter from 'gray-matter'
 
-export type MarkdownMeta = {
-  title: string;
-  description: string;
-  image?: string;
-  order?: number;
-  slug: string;
-};
+export const MARKDOWN_ROOT = path.join(process.cwd(), 'public/markdown')
 
-export type MarkdownPage = {
-  meta: MarkdownMeta;
-  content: string;
-};
+/**
+ * Load a single markdown file based on a slug path
+ * @param slugPath like "/life/portugal"
+ */
+export async function loadMarkdown(slugPath: string) {
+  const filePath = path.join(MARKDOWN_ROOT, `${slugPath}.md`)
 
-const MARKDOWN_ROOT = path.join(process.cwd(), 'public/markdown');
-
-export async function getAllMarkdown(folder: string): Promise<MarkdownPage[]> {
-  const dir = path.join(MARKDOWN_ROOT, folder);
   try {
-    const files = await fs.readdir(dir);
-    const pages = await Promise.all(
-      files
-        .filter(file => file.endsWith('.md'))
-        .map(async file => {
-          const filePath = path.join(dir, file);
-          const raw = await fs.readFile(filePath, 'utf-8');
-          const { data, content } = matter(raw);
-          const slug = file.replace(/\.md$/, '');
+    const fileContent = await fs.readFile(filePath, 'utf-8')
+    const { data, content } = matter(fileContent)
+    return { frontmatter: data, content }
+  } catch (err) {
+    return null // File not found
+  }
+}
 
+/**
+ * Recursively list all .md files and folders inside a section,
+ * excluding index.md files from the navigation tree.
+ * @param section e.g., "life"
+ */
+export async function getMarkdownTree(section: string) {
+  const sectionPath = path.join(MARKDOWN_ROOT, section)
+
+  async function walk(dir: string): Promise<any[]> {
+    const dirents = await fs.readdir(dir, { withFileTypes: true })
+    return Promise.all(
+      dirents.map(async (dirent) => {
+        const fullPath = path.join(dir, dirent.name)
+        const relativePath = path.relative(MARKDOWN_ROOT, fullPath)
+
+        if (dirent.isDirectory()) {
+          const children = await walk(fullPath)
+          // Only include the folder if it has visible children
+          if (children.length > 0) {
+            return {
+              type: 'folder',
+              name: dirent.name,
+              children,
+            }
+          }
+        } else if (dirent.name.endsWith('.md') && dirent.name !== 'index.md') {
+          const slug = '/' + relativePath.replace(/\.md$/, '')
           return {
-            meta: {
-              ...(data as Omit<MarkdownMeta, 'slug'>),
-              slug,
-            },
-            content,
-          };
-        })
-    );
-
-    return pages.sort((a, b) => (a.meta.order ?? 0) - (b.meta.order ?? 0));
-  } catch {
-    return [];
+            type: 'file',
+            name: dirent.name.replace(/\.md$/, ''),
+            slug,
+          }
+        }
+      })
+    ).then((items) => items.filter(Boolean))
   }
-}
 
-export async function getHTMLBySlug(folder: string, slug: string): Promise<string | null> {
-  const filePath = path.join(MARKDOWN_ROOT, folder, `${slug}.md`);
   try {
-    const raw = await fs.readFile(filePath, 'utf-8');
-    const { content } = matter(raw);
-    return marked(content);
-  } catch {
-    return null;
-  }
-}
-
-export async function getMarkdownBySlug(folder: string, slug: string): Promise<MarkdownPage | null> {
-  const filePath = path.join(MARKDOWN_ROOT, folder, `${slug}.md`);
-  try {
-    const raw = await fs.readFile(filePath, 'utf-8');
-    const { data, content } = matter(raw);
-    return {
-      meta: {
-        ...(data as Omit<MarkdownMeta, 'slug'>),
-        slug,
-      },
-      content,
-    };
-  } catch {
-    return null;
+    return await walk(sectionPath)
+  } catch (err) {
+    return null
   }
 }

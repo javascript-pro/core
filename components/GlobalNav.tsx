@@ -87,9 +87,10 @@ function NavItem({
     1: 'p-4',
     2: 'p-6',
     3: 'p-8',
+    4: 'p-10',
   };
 
-  const indentClass = indentMap[depth] ?? 'p-10';
+  const indentClass = indentMap[depth] ?? 'p-12';
 
   return (
     <li>

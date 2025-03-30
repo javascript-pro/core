@@ -1,8 +1,10 @@
 ---
+order: 30
 title: Example
-description: On the Origin of Species By Means of Natural Selection
-order: 10
-image: /jpg/hero.jpg
+description: Thanks for the feedback!
+slug: /life/example
+icon: life
+image: /jpg/life.jpg
 ---
 
 ## Design Templates

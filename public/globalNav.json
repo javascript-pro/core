@@ -1,20 +1,116 @@
 [
   {
-    "title": "Home",
+    "title": "Goldlabel Core",
     "slug": "/",
     "order": 1,
-    "icon": "Home",
+    "icon": "home",
+    "type": "folder",
+    "tags": [
+      "next.js",
+      "core",
+      "goldlabel"
+    ],
+    "excerpt": "Goldlabel Core is the publicfacing foundation of the Goldlabel Apps ecosystem. It’s a fast, staticfirst Next.js site powered by realtime data from Firestore and managed through a builtin admin interfa",
     "children": [
       {
         "title": "Work",
         "slug": "/work",
         "order": 10,
-        "icon": "briefcase",
+        "icon": "work",
+        "type": "folder",
+        "tags": [
+          "next.js",
+          "javascript",
+          "flash",
+          "node"
+        ],
+        "excerpt": "What is in this work folder?",
         "children": [
           {
-            "title": "Next.js",
-            "slug": "/work/charles-darwin",
-            "order": 1
+            "title": "Apps",
+            "slug": "/work/apps",
+            "order": 20,
+            "icon": "apps",
+            "type": "folder",
+            "excerpt": "A list of apps?\n\n App 1\n App 2",
+            "children": [
+              {
+                "title": "MP3 to Text",
+                "slug": "/work/apps/mp3-to-text",
+                "order": 30,
+                "icon": "work",
+                "type": "file",
+                "excerpt": "In this Weekend Portfolio project, you’ll build a compact and powerful app called mp3totext. The idea is simple but important: you upload an .mp3 file, and the app gives you back a transcription of it"
+              },
+              {
+                "title": "Flash",
+                "slug": "/work/apps/flash",
+                "order": 50,
+                "icon": "flash",
+                "type": "file",
+                "excerpt": "Flash, also known as Adobe Flash, was a multimedia software platform created by Macromedia and later acquired by Adobe. It was widely used on the web to create interactive animations, games, audio and"
+              }
+            ]
+          },
+          {
+            "title": "Company",
+            "slug": "/work/company",
+            "order": 20,
+            "icon": "company",
+            "type": "folder",
+            "excerpt": "Privacy \n Cookies \n UK ltd",
+            "children": [
+              {
+                "title": "Overview",
+                "slug": "/work/company/overview",
+                "order": 20,
+                "icon": "work",
+                "type": "file",
+                "excerpt": "Overview\n\nGoldlabel Apps is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo architecture with multiple"
+              },
+              {
+                "title": "UK Ltd company",
+                "slug": "/work/company/uk-ltd",
+                "order": 20,
+                "icon": "company",
+                "type": "file",
+                "excerpt": "UK Limited Company 5460545\n\nGoldlabel Apps Ltd is a UK Limited Company (5460545), building custom software for creators, developers, and businesses."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Balance",
+        "slug": "/balance",
+        "order": 20,
+        "icon": "balance",
+        "type": "folder",
+        "excerpt": "Balance. Balance Balance\n\nWe’ll start with a clean slate because there’s nothing up our sleeves. The goal here isn’t to build much—just to plant the flag.",
+        "children": [
+          {
+            "title": "Charles Darwin",
+            "slug": "/balance/charles-darwin",
+            "order": 20,
+            "icon": "balance",
+            "type": "file",
+            "excerpt": "We may safely infer...\n\nJudging from the past, we may safely infer that no one living species will transmit its unaltered likeness to a distant futurity. And of the species now living very few will tr"
+          },
+          {
+            "title": "Albert Einstein",
+            "slug": "/balance/einstein",
+            "order": 30,
+            "icon": "balance",
+            "type": "file",
+            "excerpt": "Albert Einstein\n\n The godfather of modern physics. Before we get into solving the mercury problem, let's share some of Einstein's contributions which are fundamental to understanding many concepts we'"
+          },
+          {
+            "title": "General Thoery of Relativity",
+            "slug": "/balance/relativity",
+            "order": 30,
+            "icon": "balance",
+            "type": "file",
+            "excerpt": "General Relativity, \n\nReally just the name for Einstein's study of gravitation. And here we're going to introduce my alltime favorite analogy for general relativity, the bowling ball on the trampoline"
           }
         ]
       },
@@ -22,26 +118,28 @@
         "title": "Life",
         "slug": "/life",
         "order": 20,
-        "icon": "briefcase",
+        "icon": "life",
+        "type": "folder",
+        "excerpt": "Life. But not as we all know it.",
         "children": [
+          {
+            "title": "aquaponics",
+            "slug": "/life/aquaponics",
+            "order": 20,
+            "icon": "life",
+            "type": "folder",
+            "excerpt": "aquaponicsaquaponicsaquaponicsaquaponicsaquaponicsaquaponics\naquaponics",
+            "children": []
+          },
           {
             "title": "Example",
             "slug": "/life/example",
-            "order": 10
-          },
-          {
-            "title": "Charles Darwin",
-            "slug": "/life/charles-darwin",
-            "order": 20
+            "order": 30,
+            "icon": "life",
+            "type": "file",
+            "excerpt": "Design Templates\n\nThanks for the feedback! Since Berry is more admin/dashboardoriented, let's pivot to frontfacing templates that still use MUI, focusing on navigation, page structure, and content dis"
           }
         ]
-      },
-      {
-        "title": "Balance",
-        "slug": "/balance",
-        "order": 30,
-        "icon": "briefcase",
-        "children": []
       }
     ]
   }
