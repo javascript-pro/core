@@ -8,7 +8,7 @@
   "scripts": {
     "nav": "tsx globalNav.mjs",
     "prepare": "husky install",
-    "build": "yarn nav && next build",
+    "build": "next build",
     "dev": "yarn nav && next dev",
     "lint": "next lint",
     "lint-staged": "lint-staged",
