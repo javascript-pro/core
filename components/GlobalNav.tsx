@@ -117,6 +117,7 @@ export function GlobalNav() {
 
       <Box component="nav" sx={{ width: { lg: drawerWidth }, flexShrink: { lg: 0 } }}>
         <Drawer
+          anchor="right"
           variant={isMobile ? 'temporary' : 'permanent'}
           open={isMobile ? mobileOpen : true}
           onClose={toggleDrawer}
