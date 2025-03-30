@@ -34,8 +34,11 @@ export default function RootLayout({
       <body className="overflow-y-scroll pb-36">
         <GlobalNav />
         <div className="lg:pl-72">
+          <div className="my-4">
+            <AddressBar />
+          </div>
           <div className="mx-auto max-w-4xl">
-          <AddressBar />
+          
           {children}
             
           </div>
