@@ -1,5 +1,5 @@
 import '#/styles/globals.css';
-import { AddressBar } from '#/components/AddressBar';
+import { Breadcrumb } from '#/components/Breadcrumb';
 import { GlobalNav } from '#/components/GlobalNav';
 import { Metadata } from 'next';
 
@@ -35,7 +35,7 @@ export default function RootLayout({
         <GlobalNav />
         <div className="lg:pl-72">
           <div className="my-4">
-            <AddressBar />
+            <Breadcrumb />
           </div>
           <div className="mx-auto max-w-4xl">
           
