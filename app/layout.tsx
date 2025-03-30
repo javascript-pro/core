@@ -22,7 +22,6 @@ export const metadata: Metadata = {
   },
 };
 
-
 export default function RootLayout({
   children,
 }: {
@@ -31,6 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content={"#C09F52"} />
         <link rel="icon" href="/svg/favicon.svg" type="image/x-icon" />
         <link rel="shortcut icon" href="/svg/favicon.svg" type="image/x-icon" />

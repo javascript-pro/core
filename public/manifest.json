@@ -10,6 +10,11 @@
   "splash_pages": null,
   "icons": [
     {
+      "src": "/png/iOS.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    },
+    {
       "src": "/png/logo512.png",
       "sizes": "512x512",
       "type": "image/png",
