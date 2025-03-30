@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { Breadcrumb } from '#/components/Breadcrumb';
 import { useState } from 'react';
 import { useSelectedLayoutSegment } from 'next/navigation';
 import navItems from '#/public/globalNav.json';
@@ -17,12 +18,17 @@ import {
   ListItemButton,
   ListItemText,
   Toolbar,
+  Typography,
   useTheme,
   useMediaQuery,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
 } from '@mui/material';
 
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 type NavNode = {
   title: string;
@@ -127,7 +133,7 @@ export function GlobalNav() {
       </Box>
 
       <Box component="main" sx={{ flexGrow: 1, p: 3, mt: 8 }}>
-        Actual page content will render here
+        <Breadcrumb />
       </Box>
     </Box>
   );
@@ -146,26 +152,54 @@ function NavItem({
 }) {
   const href = item.slug.startsWith('/') ? item.slug : `/${item.slug}`;
   const isActive = currentSegment === item.slug.split('/').pop();
-  const children = item.children;
+  const hasChildren = Array.isArray(item.children) && item.children.length > 0;
+  const theme = useTheme();
+
+  const indent = theme.spacing(1 * depth); // reduce nesting indent
+
+  if (hasChildren) {
+    return (
+      <Accordion
+        disableGutters
+        square
+        elevation={0}
+        sx={{
+          backgroundColor: 'transparent',
+          pl: indent,
+        }}
+      >
+        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+          <Typography variant="body1" fontWeight="bold">
+            {item.title}
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails sx={{ p: 0 }}>
+          <List disablePadding>
+            {item.children!.map((child) => (
+              <NavItem
+                key={child.slug}
+                item={child}
+                depth={depth + 1}
+                close={close}
+                currentSegment={currentSegment}
+              />
+            ))}
+          </List>
+        </AccordionDetails>
+      </Accordion>
+    );
+  }
 
   return (
-    <>
-      <ListItem disablePadding sx={{ pl: 2 * depth }}>
-        <ListItemButton component={Link} href={href} onClick={close} selected={isActive}>
-          <ListItemText primary={item.title} />
-        </ListItemButton>
-      </ListItem>
-
-      {Array.isArray(children) && children.length > 0 &&
-        children.map((child) => (
-          <NavItem
-            key={child.slug}
-            item={child}
-            depth={depth + 1}
-            close={close}
-            currentSegment={currentSegment}
-          />
-        ))}
-    </>
+    <ListItem disablePadding sx={{ pl: indent }}>
+      <ListItemButton
+        component={Link}
+        href={href}
+        onClick={close}
+        selected={isActive}
+      >
+        <ListItemText primary={item.title} />
+      </ListItemButton>
+    </ListItem>
   );
 }

@@ -1,12 +1,25 @@
 'use client'
 
 import Link from 'next/link'
-import { Box, Typography, List, ListItem, ListItemButton, ListItemText } from '@mui/material'
+import {
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Box,
+  Typography,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+} from '@mui/material'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 
 type TreeNode = {
   type: 'file' | 'folder'
   name: string
   slug?: string
+  order?: number
+  excerpt?: string
   children?: TreeNode[]
 }
 
@@ -25,7 +38,7 @@ export default function IndexPage({ section, tree }: Props) {
   }
 
   return (
-    <Box sx={{ p: 4 }}>
+    <Box sx={{ p: 1 }}>
       <Typography variant="h4" gutterBottom sx={{ textTransform: 'capitalize' }}>
         {section}
       </Typography>
@@ -35,14 +48,21 @@ export default function IndexPage({ section, tree }: Props) {
 }
 
 function renderTree(tree: TreeNode[], depth = 0): React.ReactElement[] {
-  return tree.map((node, index) => {
-    const paddingLeft = depth * 2
+  const sortedTree = [...tree].sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
+  const paddingLeft = depth * 2
+
+  return sortedTree.map((node, index) => {
+    const key = `${node.name}-${index}`
 
     if (node.type === 'file' && node.slug) {
       return (
-        <ListItem key={index} disablePadding sx={{ pl: paddingLeft }}>
+        <ListItem key={key} disablePadding sx={{ pl: paddingLeft }}>
           <ListItemButton component={Link} href={node.slug}>
-            <ListItemText primary={node.name} />
+            <ListItemText
+              primary={node.name}
+              secondary={node.excerpt}
+              secondaryTypographyProps={{ sx: { whiteSpace: 'pre-line' } }}
+            />
           </ListItemButton>
         </ListItem>
       )
@@ -50,12 +70,25 @@ function renderTree(tree: TreeNode[], depth = 0): React.ReactElement[] {
 
     if (node.type === 'folder' && node.children) {
       return (
-        <Box key={index} sx={{ pl: paddingLeft, mb: 1 }}>
-          <Typography variant="subtitle1" fontWeight="bold">
-            {node.name}
-          </Typography>
-          <List disablePadding>{renderTree(node.children, depth + 1)}</List>
-        </Box>
+        <Accordion key={key} disableGutters sx={{ pl: paddingLeft }}>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+            <Box>
+              <Typography>{node.name}</Typography>
+              {node.excerpt && (
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                  sx={{ whiteSpace: 'pre-line' }}
+                >
+                  {node.excerpt}
+                </Typography>
+              )}
+            </Box>
+          </AccordionSummary>
+          <AccordionDetails>
+            <List disablePadding>{renderTree(node.children, depth + 1)}</List>
+          </AccordionDetails>
+        </Accordion>
       )
     }
 

@@ -32,7 +32,7 @@
             "order": 20,
             "icon": "apps",
             "type": "folder",
-            "excerpt": "A list of apps?\n\n App 1\n App 2",
+            "excerpt": "",
             "children": [
               {
                 "title": "MP3 to Text",
@@ -81,9 +81,36 @@
         ]
       },
       {
+        "title": "Life",
+        "slug": "/life",
+        "order": 50,
+        "icon": "life",
+        "type": "folder",
+        "excerpt": "Life. But not as we all know it.",
+        "children": [
+          {
+            "title": "Aquaponics",
+            "slug": "/life/aquaponics",
+            "order": 20,
+            "icon": "life",
+            "type": "folder",
+            "excerpt": "aquaponicsaquaponicsaquaponicsaquaponicsaquaponicsaquaponics\naquaponics",
+            "children": []
+          },
+          {
+            "title": "Example",
+            "slug": "/life/example",
+            "order": 30,
+            "icon": "life",
+            "type": "file",
+            "excerpt": "Design Templates\n\nThanks for the feedback! Since Berry is more admin/dashboardoriented, let's pivot to frontfacing templates that still use MUI, focusing on navigation, page structure, and content dis"
+          }
+        ]
+      },
+      {
         "title": "Balance",
         "slug": "/balance",
-        "order": 20,
+        "order": 100,
         "icon": "balance",
         "type": "folder",
         "excerpt": "Balance. Balance Balance\n\nWe’ll start with a clean slate because there’s nothing up our sleeves. The goal here isn’t to build much—just to plant the flag.",
@@ -111,33 +138,6 @@
             "icon": "balance",
             "type": "file",
             "excerpt": "General Relativity, \n\nReally just the name for Einstein's study of gravitation. And here we're going to introduce my alltime favorite analogy for general relativity, the bowling ball on the trampoline"
-          }
-        ]
-      },
-      {
-        "title": "Life",
-        "slug": "/life",
-        "order": 20,
-        "icon": "life",
-        "type": "folder",
-        "excerpt": "Life. But not as we all know it.",
-        "children": [
-          {
-            "title": "aquaponics",
-            "slug": "/life/aquaponics",
-            "order": 20,
-            "icon": "life",
-            "type": "folder",
-            "excerpt": "aquaponicsaquaponicsaquaponicsaquaponicsaquaponicsaquaponics\naquaponics",
-            "children": []
-          },
-          {
-            "title": "Example",
-            "slug": "/life/example",
-            "order": 30,
-            "icon": "life",
-            "type": "file",
-            "excerpt": "Design Templates\n\nThanks for the feedback! Since Berry is more admin/dashboardoriented, let's pivot to frontfacing templates that still use MUI, focusing on navigation, page structure, and content dis"
           }
         ]
       }

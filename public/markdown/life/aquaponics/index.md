@@ -1,6 +1,6 @@
 ---
 order: 20
-title: aquaponics
+title: Aquaponics
 description: Fish are food
 slug: /life/aquaponics
 icon: life

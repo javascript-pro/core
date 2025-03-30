@@ -1,5 +1,5 @@
 ---
-order: 20
+order: 100
 title: Balance
 description: Writing
 slug: /balance
