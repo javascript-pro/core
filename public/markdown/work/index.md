@@ -5,6 +5,7 @@ description: Everything related to professional projects, code, tools, and clien
 slug: /work
 icon: work
 image: /jpg/work.jpg
+tags: next.js, javascript, flash, node
 ---
 
 ##  What is in this work folder?

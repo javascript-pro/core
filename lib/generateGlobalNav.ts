@@ -12,7 +12,26 @@ type NavNode = {
   slug: string
   order?: number
   icon?: string
+  type: 'folder' | 'file'
+  tags?: string[]
+  excerpt?: string
   children?: NavNode[]
+}
+
+function extractExcerpt(content: string): string {
+  return content
+    .replace(/<!--.*?-->/gs, '') // remove HTML comments
+    .replace(/!\[.*?\]\(.*?\)/g, '') // remove images
+    .replace(/\[.*?\]\(.*?\)/g, '') // remove links
+    .replace(/`{1,3}.*?`{1,3}/gs, '') // remove inline code
+    .replace(/[#>*_`-]/g, '') // strip markdown symbols
+    .trim()
+    .slice(0, 200)
+}
+
+function parseTags(rawTags?: string): string[] | undefined {
+  if (!rawTags) return undefined
+  return rawTags.split(',').map(tag => tag.trim()).filter(Boolean)
 }
 
 export async function getMarkdownPagesRecursively(dir: string, baseSlug = ''): Promise<NavNode[]> {
@@ -23,7 +42,7 @@ export async function getMarkdownPagesRecursively(dir: string, baseSlug = ''): P
 
   const fullIndexPath = path.join(dir, 'index.md')
   const rawIndex = await fs.readFile(fullIndexPath, 'utf-8')
-  const { data: indexData } = matter(rawIndex)
+  const { data: indexData, content: indexContent } = matter(rawIndex)
 
   const slug = baseSlug || '/'
   const node: NavNode = {
@@ -31,6 +50,9 @@ export async function getMarkdownPagesRecursively(dir: string, baseSlug = ''): P
     slug,
     order: indexData.order ?? 0,
     icon: indexData.icon,
+    type: 'folder',
+    tags: parseTags(indexData.tags),
+    excerpt: extractExcerpt(indexContent),
     children: []
   }
 
@@ -45,7 +67,7 @@ export async function getMarkdownPagesRecursively(dir: string, baseSlug = ''): P
 
     if (entry.isFile() && entry.name.endsWith('.md') && entry.name !== 'index.md') {
       const raw = await fs.readFile(fullPath, 'utf-8')
-      const { data } = matter(raw)
+      const { data, content } = matter(raw)
       const fileSlug = path.join(slug, entry.name.replace(/\.md$/, ''))
 
       node.children!.push({
@@ -53,6 +75,9 @@ export async function getMarkdownPagesRecursively(dir: string, baseSlug = ''): P
         slug: fileSlug,
         order: data.order ?? 0,
         icon: data.icon,
+        type: 'file',
+        tags: parseTags(data.tags),
+        excerpt: extractExcerpt(content),
       })
     }
   }
