@@ -1,11 +1,11 @@
 // app/[[...slug]]/page.tsx
 
+import path from 'path'
 import { notFound } from 'next/navigation'
+import fs from 'fs/promises'
 import { loadMarkdown, getMarkdownTree } from '#/lib/loadMarkdown'
 import IndexPage from '#/components/IndexPage'
 import MarkdownPage from '#/components/MarkDownPage'
-import path from 'path'
-import fs from 'fs/promises'
 
 type Props = {
   params: any
@@ -15,18 +15,13 @@ export default async function CatchAllPage({ params }: Props) {
   const slugArray = params.slug || []
   const slugPath = '/' + slugArray.join('/')
 
-  // 1. Homepage
-  // if (slugPath === '/') {
-  //   return <HomePage />
-  // }
-
-  // 2. Try to load markdown file
+  // Try to load markdown file
   const markdown = await loadMarkdown(slugPath)
   if (markdown) {
     return <MarkdownPage content={markdown} />
   }
 
-  // 3. Try to load folder index
+  // If markdown not found, check if it's a folder
   const folderPath = path.join(process.cwd(), 'public/markdown', ...slugArray)
   try {
     const stat = await fs.stat(folderPath)
@@ -35,10 +30,9 @@ export default async function CatchAllPage({ params }: Props) {
       const tree = await getMarkdownTree(section)
       return <IndexPage section={section} tree={tree} />
     }
-  } catch (err) {
-    // folder doesn't exist
+  } catch {
+    // Folder doesn't exist, continue to notFound
   }
 
-  // 4. Nothing found
   return notFound()
 }
