@@ -41,52 +41,57 @@ export function AddressBar() {
   const segments = pathname.split('/').filter(Boolean);
 
   return (
-    <div className="flex items-center gap-x-2 p-3.5 lg:px-5 lg:py-3">
-      
+    <div className="my-2">
+      <div className="height-200"></div>
 
-      <div className="flex gap-x-1 text-sm font-medium items-center">
-        {pathname !== '/' && (
-          <>
-            <Link href="/" className="flex items-center gap-1 px-2 text-black hover:underline">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4"
-                viewBox="0 0 20 20"
-                fill="currentColor"
+      <div className="flex items-center gap-x-2 p-3.5 lg:px-5 lg:py-3">
+        <div className="flex gap-x-1 text-sm font-medium items-center">
+          {pathname !== '/' && (
+            <>
+              <Link
+                href="/"
+                className="flex items-center gap-1 px-2 text-black hover:underline"
               >
-                <path d="M10.707 1.707a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 9.414V17a1 1 0 001 1h3a1 1 0 001-1v-4h2v4a1 1 0 001 1h3a1 1 0 001-1V9.414l.293.293a1 1 0 001.414-1.414l-7-7z" />
-              </svg>
-              <span>Home</span>
-            </Link>
-            <span>/</span>
-          </>
-        )}
-
-        {segments.map((segment, index) => {
-          const href = '/' + segments.slice(0, index + 1).join('/');
-          const isLast = index === segments.length - 1;
-          const label = formatSegment(segment);
-
-          return (
-            <React.Fragment key={href}>
-              {index > 0 && <span>/</span>}
-              {isLast ? (
-                <span className="px-1 text-gray-700">{label}</span>
-              ) : (
-                <Link
-                  href={href}
-                  className="px-1 text-black hover:underline"
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
                 >
-                  {label}
-                </Link>
-              )}
-            </React.Fragment>
-          );
-        })}
+                  <path d="M10.707 1.707a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 9.414V17a1 1 0 001 1h3a1 1 0 001-1v-4h2v4a1 1 0 001 1h3a1 1 0 001-1V9.414l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                </svg>
+                <span>Home</span>
+              </Link>
+              <span>/</span>
+            </>
+          )}
 
-        <Suspense>
-          <Params />
-        </Suspense>
+          {segments.map((segment, index) => {
+            const href = '/' + segments.slice(0, index + 1).join('/');
+            const isLast = index === segments.length - 1;
+            const label = formatSegment(segment);
+
+            return (
+              <React.Fragment key={href}>
+                {index > 0 && <span>/</span>}
+                {isLast ? (
+                  <span className="px-1 text-gray-700">{label}</span>
+                ) : (
+                  <Link
+                    href={href}
+                    className="px-1 text-black hover:underline"
+                  >
+                    {label}
+                  </Link>
+                )}
+              </React.Fragment>
+            );
+          })}
+
+          <Suspense>
+            <Params />
+          </Suspense>
+        </div>
       </div>
     </div>
   );
