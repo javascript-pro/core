@@ -12,13 +12,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Goldlabel Core',
     description: 'The public-facing site for Goldlabel Apps Ltd. Built with Next.js and Firestore.',
-    images: ['/alexander-andrews-brAkTCdnhW8-unsplash.jpg'],
+    images: ['/jpg/work.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Goldlabel Core',
     description: 'The public-facing site for Goldlabel Apps Ltd.',
-    images: ['/alexander-andrews-brAkTCdnhW8-unsplash.jpg'],
+    images: ['/jpg/work.jpg'],
   },
 };
 
@@ -30,6 +30,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta name="theme-color" content={"#C09F52"} />
+        <link rel="icon" href="/svg/favicon.svg" type="image/x-icon" />
+        <link rel="shortcut icon" href="/svg/favicon.svg" type="image/x-icon" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href={`/png/iOS.png`}
+        />
+      </head>
       <body className="overflow-y-scroll pb-36">
         <GlobalNav />
         <div className="lg:pl-72">

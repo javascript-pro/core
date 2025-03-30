@@ -14,7 +14,7 @@
     "children": [
       {
         "title": "Work",
-        "slug": "/work",
+        "slug": "work",
         "order": 10,
         "icon": "work",
         "type": "folder",
@@ -28,7 +28,7 @@
         "children": [
           {
             "title": "Apps",
-            "slug": "/work/apps",
+            "slug": "work/apps",
             "order": 20,
             "icon": "apps",
             "type": "folder",
@@ -36,7 +36,7 @@
             "children": [
               {
                 "title": "MP3 to Text",
-                "slug": "/work/apps/mp3-to-text",
+                "slug": "work/apps/mp3-to-text",
                 "order": 30,
                 "icon": "work",
                 "type": "file",
@@ -44,7 +44,7 @@
               },
               {
                 "title": "Flash",
-                "slug": "/work/apps/flash",
+                "slug": "work/apps/flash",
                 "order": 50,
                 "icon": "flash",
                 "type": "file",
@@ -54,7 +54,7 @@
           },
           {
             "title": "Company",
-            "slug": "/work/company",
+            "slug": "work/company",
             "order": 20,
             "icon": "company",
             "type": "folder",
@@ -62,7 +62,7 @@
             "children": [
               {
                 "title": "Overview",
-                "slug": "/work/company/overview",
+                "slug": "work/company/overview",
                 "order": 20,
                 "icon": "work",
                 "type": "file",
@@ -70,7 +70,7 @@
               },
               {
                 "title": "UK Ltd company",
-                "slug": "/work/company/uk-ltd",
+                "slug": "work/company/uk-ltd",
                 "order": 20,
                 "icon": "company",
                 "type": "file",
@@ -82,7 +82,7 @@
       },
       {
         "title": "Life",
-        "slug": "/life",
+        "slug": "life",
         "order": 50,
         "icon": "life",
         "type": "folder",
@@ -90,7 +90,7 @@
         "children": [
           {
             "title": "Aquaponics",
-            "slug": "/life/aquaponics",
+            "slug": "life/aquaponics",
             "order": 20,
             "icon": "life",
             "type": "folder",
@@ -99,7 +99,7 @@
           },
           {
             "title": "Example",
-            "slug": "/life/example",
+            "slug": "life/example",
             "order": 30,
             "icon": "life",
             "type": "file",
@@ -109,7 +109,7 @@
       },
       {
         "title": "Balance",
-        "slug": "/balance",
+        "slug": "balance",
         "order": 100,
         "icon": "balance",
         "type": "folder",
@@ -117,7 +117,7 @@
         "children": [
           {
             "title": "Charles Darwin",
-            "slug": "/balance/charles-darwin",
+            "slug": "balance/charles-darwin",
             "order": 20,
             "icon": "balance",
             "type": "file",
@@ -125,7 +125,7 @@
           },
           {
             "title": "Albert Einstein",
-            "slug": "/balance/einstein",
+            "slug": "balance/einstein",
             "order": 30,
             "icon": "balance",
             "type": "file",
@@ -133,7 +133,7 @@
           },
           {
             "title": "General Thoery of Relativity",
-            "slug": "/balance/relativity",
+            "slug": "balance/relativity",
             "order": 30,
             "icon": "balance",
             "type": "file",

@@ -8,17 +8,16 @@ import {
   CardContent,
   Typography,
   Avatar,
-  useTheme,
 } from '@mui/material'
-import Grid2 from '@mui/material/Grid'
+import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile'
 
 type TreeNode = {
-  type: 'file' | 'folder'
+  type: 'file' // we no longer care about 'folder'
   name: string
   slug?: string
   order?: number
   excerpt?: string
-  children?: TreeNode[]
+  children?: TreeNode[] // kept for compatibility but unused here
 }
 
 type Props = {
@@ -27,7 +26,7 @@ type Props = {
 }
 
 export default function IndexPage({ section, tree }: Props) {
-  const theme = useTheme()
+  // console.log('tree', tree)
 
   if (!tree) {
     return (
@@ -42,7 +41,9 @@ export default function IndexPage({ section, tree }: Props) {
       <Typography variant="h4" gutterBottom sx={{ textTransform: 'capitalize' }}>
         {section}
       </Typography>
+      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         {renderCards(tree)}
+      </Box>
     </Box>
   )
 }
@@ -52,55 +53,41 @@ function renderCards(tree: TreeNode[]): React.ReactElement[] {
 
   return sortedTree.map((node, index) => {
     const key = `${node.name}-${index}`
-    const isFolder = node.type === 'folder'
-    const href = isFolder
-      ? findFirstValidSlug(node.children)
-      : node.slug || '#'
+    const href = node.slug || '/missing-slug'
 
     return (
-      <div key={key}>
-        <Link href={href} passHref legacyBehavior>
-          <a style={{ textDecoration: 'none' }}>
-            <Card variant="outlined" sx={{ height: '100%' }}>
-              <CardHeader
-                avatar={
-                  <Avatar sx={{ bgcolor: isFolder ? 'primary.main' : 'secondary.main' }}>
-                    {isFolder ? '📁' : '📄'}
-                  </Avatar>
-                }
-                title={node.name}
-              />
-              {node.excerpt && (
-                <CardContent>
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    sx={{ whiteSpace: 'pre-line' }}
-                  >
-                    {node.excerpt}
-                  </Typography>
-                </CardContent>
-              )}
-            </Card>
-          </a>
-        </Link>
-      </div>
+      <Link href={href} passHref legacyBehavior key={key}>
+        <a style={{ textDecoration: 'none' }}>
+          <Card
+            variant="outlined"
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+            }}
+          >
+            <CardHeader
+              avatar={
+                <Avatar sx={{ bgcolor: 'secondary.main' }}>
+                  <InsertDriveFileIcon />
+                </Avatar>
+              }
+              title={node.name}
+            />
+            {node.excerpt && (
+              <CardContent sx={{ pt: 0 }}>
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                  sx={{ whiteSpace: 'pre-line' }}
+                >
+                  {node.excerpt}
+                </Typography>
+              </CardContent>
+            )}
+          </Card>
+        </a>
+      </Link>
     )
   })
-}
-
-function findFirstValidSlug(children?: TreeNode[]): string {
-  if (!children || children.length === 0) return '#'
-
-  const sorted = [...children].sort((a, b) => (a.order ?? 9999) - (b.order ?? 9999))
-
-  for (const child of sorted) {
-    if (child.slug) return child.slug
-    if (child.children) {
-      const nested = findFirstValidSlug(child.children)
-      if (nested !== '#') return nested
-    }
-  }
-
-  return '#'
 }

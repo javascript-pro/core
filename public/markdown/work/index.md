@@ -7,5 +7,4 @@ icon: work
 image: /jpg/work.jpg
 tags: next.js, javascript, flash, node
 ---
-
-##  What is in this work folder?
+## What is in this work folder?
