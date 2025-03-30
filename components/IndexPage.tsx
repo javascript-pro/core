@@ -2,17 +2,15 @@
 
 import Link from 'next/link'
 import {
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
   Box,
+  Card,
+  CardHeader,
+  CardContent,
   Typography,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemText,
+  Avatar,
+  useTheme,
 } from '@mui/material'
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+import Grid2 from '@mui/material/Grid'
 
 type TreeNode = {
   type: 'file' | 'folder'
@@ -29,6 +27,8 @@ type Props = {
 }
 
 export default function IndexPage({ section, tree }: Props) {
+  const theme = useTheme()
+
   if (!tree) {
     return (
       <Box sx={{ p: 4 }}>
@@ -38,60 +38,69 @@ export default function IndexPage({ section, tree }: Props) {
   }
 
   return (
-    <Box sx={{ p: 1 }}>
+    <Box sx={{ p: 2 }}>
       <Typography variant="h4" gutterBottom sx={{ textTransform: 'capitalize' }}>
         {section}
       </Typography>
-      <List disablePadding>{renderTree(tree)}</List>
+        {renderCards(tree)}
     </Box>
   )
 }
 
-function renderTree(tree: TreeNode[], depth = 0): React.ReactElement[] {
-  const sortedTree = [...tree].sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
-  const paddingLeft = depth * 2
+function renderCards(tree: TreeNode[]): React.ReactElement[] {
+  const sortedTree = [...tree].sort((a, b) => (a.order ?? 9999) - (b.order ?? 9999))
 
   return sortedTree.map((node, index) => {
     const key = `${node.name}-${index}`
+    const isFolder = node.type === 'folder'
+    const href = isFolder
+      ? findFirstValidSlug(node.children)
+      : node.slug || '#'
 
-    if (node.type === 'file' && node.slug) {
-      return (
-        <ListItem key={key} disablePadding sx={{ pl: paddingLeft }}>
-          <ListItemButton component={Link} href={node.slug}>
-            <ListItemText
-              primary={node.name}
-              secondary={node.excerpt}
-              secondaryTypographyProps={{ sx: { whiteSpace: 'pre-line' } }}
-            />
-          </ListItemButton>
-        </ListItem>
-      )
-    }
-
-    if (node.type === 'folder' && node.children) {
-      return (
-        <Accordion key={key} disableGutters sx={{ pl: paddingLeft }}>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <Box>
-              <Typography>{node.name}</Typography>
+    return (
+      <div key={key}>
+        <Link href={href} passHref legacyBehavior>
+          <a style={{ textDecoration: 'none' }}>
+            <Card variant="outlined" sx={{ height: '100%' }}>
+              <CardHeader
+                avatar={
+                  <Avatar sx={{ bgcolor: isFolder ? 'primary.main' : 'secondary.main' }}>
+                    {isFolder ? '📁' : '📄'}
+                  </Avatar>
+                }
+                title={node.name}
+              />
               {node.excerpt && (
-                <Typography
-                  variant="body2"
-                  color="text.secondary"
-                  sx={{ whiteSpace: 'pre-line' }}
-                >
-                  {node.excerpt}
-                </Typography>
+                <CardContent>
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    sx={{ whiteSpace: 'pre-line' }}
+                  >
+                    {node.excerpt}
+                  </Typography>
+                </CardContent>
               )}
-            </Box>
-          </AccordionSummary>
-          <AccordionDetails>
-            <List disablePadding>{renderTree(node.children, depth + 1)}</List>
-          </AccordionDetails>
-        </Accordion>
-      )
-    }
-
-    return <></>
+            </Card>
+          </a>
+        </Link>
+      </div>
+    )
   })
+}
+
+function findFirstValidSlug(children?: TreeNode[]): string {
+  if (!children || children.length === 0) return '#'
+
+  const sorted = [...children].sort((a, b) => (a.order ?? 9999) - (b.order ?? 9999))
+
+  for (const child of sorted) {
+    if (child.slug) return child.slug
+    if (child.children) {
+      const nested = findFirstValidSlug(child.children)
+      if (nested !== '#') return nested
+    }
+  }
+
+  return '#'
 }
