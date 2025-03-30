@@ -1,8 +1,10 @@
 ---
-title: Life
-slug: /life
 order: 20
-icon: briefcase
+title: Life
+description: You've got to have one
+slug: /life
+icon: life
+image: /jpg/life.jpg
 ---
 
-Life
+Life. But not as we all know it.

@@ -1,12 +1,14 @@
 ---
+order: 30
 title: Albert Einstein
 description: The Godfather of modern physics
-order: 15
-image: /jpg/einstein.jpg
+slug: /balance/einstein
+icon: balance
+image: /jpg/balance.jpg
 ---
-# Albert Einstein;
+## Albert Einstein
 
- the godfather of modern physics. Before we get into solving the mercury problem, let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series. 
+ The godfather of modern physics. Before we get into solving the mercury problem, let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series. 
 
 I mentioned in the last lecture this idea of Gedanken experiments, thought experiments, and they really played into a lot of the discoveries that Albert Einstein made. He was able to conceptualize problems and then apply math and physics equations that would break through and result in us understanding more of our world. Many of the solutions from the Gedanken experiments are now fundamental laws of physics. 
 
@@ -29,4 +31,3 @@ The funny thing is, the amount of energy stored in the mass of the star would ea
 Another fundamental explanation in physics that Einstein established, he was a little bit of a show-off for sure, is wave-particle duality. 
 
 There was this cool experiment that demonstrated something scientists called the photoelectric effect.
-

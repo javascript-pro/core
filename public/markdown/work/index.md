@@ -1,8 +1,10 @@
 ---
-title: Work
-slug: /work
 order: 10
-icon: briefcase
+title: Work
+description: Everything related to professional projects, code, tools, and client work
+slug: /work
+icon: work
+image: /jpg/work.jpg
 ---
 
-This section covers everything related to your professional projects, code, tools, and client work.
+##  What is in this work folder?

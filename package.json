@@ -1,11 +1,12 @@
 {
+  "version": "50.0.0",
   "private": true,
   "packageManager": "yarn@4.3.1",
   "engines": {
     "node": "22.x"
   },
   "scripts": {
-    "globalnav": "tsx globalNav.mjs",
+    "nav": "tsx globalNav.mjs",
     "prepare": "husky install",
     "build": "yarn globalnav && next build",
     "dev": "yarn globalnav && next dev",

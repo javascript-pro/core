@@ -1,20 +1,81 @@
 [
   {
-    "title": "Home",
+    "title": "Goldlabel Core",
     "slug": "/",
     "order": 1,
-    "icon": "Home",
+    "icon": "home",
     "children": [
       {
         "title": "Work",
         "slug": "/work",
         "order": 10,
-        "icon": "briefcase",
+        "icon": "work",
         "children": [
           {
-            "title": "Next.js",
-            "slug": "/work/charles-darwin",
-            "order": 1
+            "title": "Apps",
+            "slug": "/work/apps",
+            "order": 20,
+            "icon": "apps",
+            "children": [
+              {
+                "title": "MP3 to Text",
+                "slug": "/work/apps/mp3-to-text",
+                "order": 30,
+                "icon": "work"
+              },
+              {
+                "title": "Flash",
+                "slug": "/work/apps/flash",
+                "order": 50,
+                "icon": "flash"
+              }
+            ]
+          },
+          {
+            "title": "Company",
+            "slug": "/work/company",
+            "order": 20,
+            "icon": "company",
+            "children": [
+              {
+                "title": "Overview",
+                "slug": "/work/company/overview",
+                "order": 20,
+                "icon": "work"
+              },
+              {
+                "title": "UK Ltd company",
+                "slug": "/work/company/uk-ltd",
+                "order": 20,
+                "icon": "company"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Balance",
+        "slug": "/balance",
+        "order": 20,
+        "icon": "balance",
+        "children": [
+          {
+            "title": "Charles Darwin",
+            "slug": "/balance/charles-darwin",
+            "order": 20,
+            "icon": "balance"
+          },
+          {
+            "title": "Albert Einstein",
+            "slug": "/balance/einstein",
+            "order": 30,
+            "icon": "balance"
+          },
+          {
+            "title": "General Thoery of Relativity",
+            "slug": "/balance/relativity",
+            "order": 30,
+            "icon": "balance"
           }
         ]
       },
@@ -22,26 +83,22 @@
         "title": "Life",
         "slug": "/life",
         "order": 20,
-        "icon": "briefcase",
+        "icon": "life",
         "children": [
+          {
+            "title": "aquaponics",
+            "slug": "/life/aquaponics",
+            "order": 20,
+            "icon": "life",
+            "children": []
+          },
           {
             "title": "Example",
             "slug": "/life/example",
-            "order": 10
-          },
-          {
-            "title": "Charles Darwin",
-            "slug": "/life/charles-darwin",
-            "order": 20
+            "order": 30,
+            "icon": "life"
           }
         ]
-      },
-      {
-        "title": "Balance",
-        "slug": "/balance",
-        "order": 30,
-        "icon": "briefcase",
-        "children": []
       }
     ]
   }
