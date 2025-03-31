@@ -10,7 +10,7 @@
       "core",
       "goldlabel"
     ],
-    "excerpt": "Powerful, userfriendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience\n\n\nGoldlabel Core is the publicfacing foundation of the Goldlabel Apps e",
+    "excerpt": "Powerful, userfriendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience",
     "children": [
       {
         "title": "Work",
@@ -24,7 +24,7 @@
           "flash",
           "node"
         ],
-        "excerpt": "What is in this work folder?",
+        "excerpt": "Goldlabel Core is the publicfacing foundation of the Goldlabel Apps ecosystem. It’s a fast, staticfirst Next.js site powered by realtime data from Firestore and managed through a builtin admin interfa",
         "children": [
           {
             "title": "Apps",
@@ -94,7 +94,7 @@
         "order": 50,
         "icon": "life",
         "type": "folder",
-        "excerpt": "Life. But not as we all know it.",
+        "excerpt": "",
         "children": [
           {
             "title": "Aquaponics",
@@ -113,7 +113,7 @@
         "order": 100,
         "icon": "balance",
         "type": "folder",
-        "excerpt": "Balance. Balance Balance\n\nWe’ll start with a clean slate because there’s nothing up our sleeves. The goal here isn’t to build much—just to plant the flag.",
+        "excerpt": "",
         "children": [
           {
             "title": "Charles Darwin",
@@ -121,7 +121,7 @@
             "order": 20,
             "icon": "balance",
             "type": "file",
-            "excerpt": "We may safely infer...\n\nJudging from the past, we may safely infer that no one living species will transmit its unaltered likeness to a distant futurity. And of the species now living very few will tr"
+            "excerpt": "Judging from the past, we may safely infer that no one living species will transmit its unaltered likeness to a distant futurity. And of the species now living very few will transmit progeny of any ki"
           },
           {
             "title": "Albert Einstein",
@@ -129,7 +129,7 @@
             "order": 30,
             "icon": "balance",
             "type": "file",
-            "excerpt": "Albert Einstein\n\n The godfather of modern physics. Before we get into solving the mercury problem, let's share some of Einstein's contributions which are fundamental to understanding many concepts we'"
+            "excerpt": "Before we get into solving the mercury problem, let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series. \n\nI mentioned in the l"
           },
           {
             "title": "General Theory of Relativity",

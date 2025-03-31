@@ -4,6 +4,7 @@ import Link from 'next/link'
 import {
   Box,
   Card,
+  CardActionArea,
   CardHeader,
   CardMedia,
   CardContent,
@@ -53,7 +54,7 @@ export default function FolderPage({ section, tree, frontmatter, content }: Prop
       </Box>
     )
   }
-  console.log("content", content)
+  
   return (
     <>
       <Card
@@ -119,8 +120,14 @@ function renderCards(tree: TreeNode[]): React.ReactElement[] {
     const subheader = node.frontmatter?.description
     const icon = node.frontmatter?.icon
     return (
-      <Link href={href} key={key} style={{ textDecoration: 'none' }}>
-        <Box>
+      <Link 
+        href={href} key={key} 
+        style={{ 
+          color: "black",
+          textDecoration: 'none' 
+        
+        }}>
+        <CardActionArea>
           <CardHeader
             avatar={
               <Icon icon={icon as any} />
@@ -128,7 +135,7 @@ function renderCards(tree: TreeNode[]): React.ReactElement[] {
             title={title}
             subheader={subheader}
           />
-        </Box>
+        </CardActionArea>
       </Link>
     )
   })

@@ -11,14 +11,13 @@ import {
   AppBar,
   Toolbar,
   IconButton,
-  Paper,
   Fab,
   Avatar,
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
-// import HomeIcon from '@mui/icons-material/HomeOutlined';
-// import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import {Breadcrumb} from '#/components/Breadcrumb';
+
 
 const { light: themeValues } = config.themes;
 
@@ -72,7 +71,7 @@ export default function Appshell({ children }: AppshellProps) {
           height: topAppBarHeight,
         }}
       >
-        <Container maxWidth="sm">
+        <Container maxWidth="sm" sx={{mt:1}}>
           <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
             <IconButton
               color="inherit"
@@ -85,9 +84,8 @@ export default function Appshell({ children }: AppshellProps) {
               />
             </IconButton>
 
-            {/* <IconButton color="secondary">
-              <AccountCircleIcon />
-            </IconButton> */}
+
+            <Breadcrumb />
           </Toolbar>
         </Container>
       </AppBar>
