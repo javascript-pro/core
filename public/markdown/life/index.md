@@ -1,10 +1,8 @@
 ---
-order: 20
+order: 50
 title: Life
-description: You've got to have one
+description: But not as we all know it.
 slug: /life
 icon: life
 image: /jpg/life.jpg
 ---
-
-Life. But not as we all know it.

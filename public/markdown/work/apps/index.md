@@ -3,11 +3,6 @@ order: 20
 title: Apps
 description: Example apps
 slug: /work/apps
-icon: apps
+icon: settings
 image: /jpg/work.jpg
 ---
-
-A list of apps?
-
-- App 1
-- App 2

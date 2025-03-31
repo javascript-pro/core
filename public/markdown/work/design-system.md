@@ -1,10 +1,10 @@
 ---
-order: 30
-title: Example
-description: Thanks for the feedback!
-slug: /life/example
-icon: life
-image: /jpg/life.jpg
+order: 100
+title: Design System
+description: MUI, focusing on navigation, page structure, and content display
+slug: /work/design-system
+icon: work
+image: /jpg/work.jpg
 ---
 
 ## Design Templates

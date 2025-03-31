@@ -1,28 +1,32 @@
-import '#/styles/globals.css';
-import { Breadcrumb } from '#/components/Breadcrumb';
-import { GlobalNav } from '#/components/GlobalNav';
+// import '#/styles/globals.css';
+import config from '#/goldlabel/config.json'
 import { Metadata } from 'next';
+import { Appshell } from '#/goldlabel'
+
+const title = config.appTitle
+const description = config.description
+const url = config.url
+const image = config.image
 
 export const metadata: Metadata = {
   title: {
-    default: 'Goldlabel Core',
-    template: '%s | Goldlabel Core',
+    default: title,
+    template: '%s',
   },
-  metadataBase: new URL('https://goldlabel.pro'),
-  description: 'The public-facing site for Goldlabel Apps Ltd. Built with Next.js and Firestore.',
+  metadataBase: new URL(url),
+  description,
   openGraph: {
-    title: 'Goldlabel Core',
-    description: 'The public-facing site for Goldlabel Apps Ltd. Built with Next.js and Firestore.',
-    images: ['/alexander-andrews-brAkTCdnhW8-unsplash.jpg'],
+    title,
+    description,
+    images: [image],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Goldlabel Core',
-    description: 'The public-facing site for Goldlabel Apps Ltd.',
-    images: ['/alexander-andrews-brAkTCdnhW8-unsplash.jpg'],
+    title,
+    description,
+    images: [image],
   },
 };
-
 
 export default function RootLayout({
   children,
@@ -31,17 +35,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="overflow-y-scroll pb-36">
-        <GlobalNav />
-        <div className="lg:pl-72">
-          <div className="my-4">
-            <Breadcrumb />
-          </div>
-          <div className="mx-auto max-w-4xl">
-          
-          {children}
-            
-          </div>
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content={"#C09F52"} />
+        <link rel="icon" href="/svg/favicon.svg" type="image/x-icon" />
+        <link rel="shortcut icon" href="/svg/favicon.svg" type="image/x-icon" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href={`/png/iOS.png`}
+        />
+      </head>
+      <body>
+        <div id="goldlabel">
+          <Appshell>
+            {children}     
+          </Appshell>       
         </div>
       </body>
     </html>

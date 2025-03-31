@@ -1,6 +1,6 @@
 [
   {
-    "title": "Goldlabel Core",
+    "title": "Core",
     "slug": "/",
     "order": 1,
     "icon": "home",
@@ -10,11 +10,11 @@
       "core",
       "goldlabel"
     ],
-    "excerpt": "Goldlabel Core is the publicfacing foundation of the Goldlabel Apps ecosystem. It’s a fast, staticfirst Next.js site powered by realtime data from Firestore and managed through a builtin admin interfa",
+    "excerpt": "Powerful, userfriendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience",
     "children": [
       {
         "title": "Work",
-        "slug": "/work",
+        "slug": "work",
         "order": 10,
         "icon": "work",
         "type": "folder",
@@ -24,19 +24,19 @@
           "flash",
           "node"
         ],
-        "excerpt": "What is in this work folder?",
+        "excerpt": "Goldlabel Core is the publicfacing foundation of the Goldlabel Apps ecosystem. It’s a fast, staticfirst Next.js site powered by realtime data from Firestore and managed through a builtin admin interfa",
         "children": [
           {
             "title": "Apps",
-            "slug": "/work/apps",
+            "slug": "work/apps",
             "order": 20,
             "icon": "apps",
             "type": "folder",
-            "excerpt": "A list of apps?\n\n App 1\n App 2",
+            "excerpt": "",
             "children": [
               {
                 "title": "MP3 to Text",
-                "slug": "/work/apps/mp3-to-text",
+                "slug": "work/apps/mp3-to-text",
                 "order": 30,
                 "icon": "work",
                 "type": "file",
@@ -44,7 +44,7 @@
               },
               {
                 "title": "Flash",
-                "slug": "/work/apps/flash",
+                "slug": "work/apps/flash",
                 "order": 50,
                 "icon": "flash",
                 "type": "file",
@@ -54,7 +54,7 @@
           },
           {
             "title": "Company",
-            "slug": "/work/company",
+            "slug": "work/company",
             "order": 20,
             "icon": "company",
             "type": "folder",
@@ -62,7 +62,7 @@
             "children": [
               {
                 "title": "Overview",
-                "slug": "/work/company/overview",
+                "slug": "work/company/overview",
                 "order": 20,
                 "icon": "work",
                 "type": "file",
@@ -70,13 +70,21 @@
               },
               {
                 "title": "UK Ltd company",
-                "slug": "/work/company/uk-ltd",
+                "slug": "work/company/uk-ltd",
                 "order": 20,
                 "icon": "company",
                 "type": "file",
                 "excerpt": "UK Limited Company 5460545\n\nGoldlabel Apps Ltd is a UK Limited Company (5460545), building custom software for creators, developers, and businesses."
               }
             ]
+          },
+          {
+            "title": "Design System",
+            "slug": "work/design-system",
+            "order": 100,
+            "icon": "work",
+            "type": "file",
+            "excerpt": "Design Templates\n\nThanks for the feedback! Since Berry is more admin/dashboardoriented, let's pivot to frontfacing templates that still use MUI, focusing on navigation, page structure, and content dis"
           }
         ]
       },
@@ -116,28 +124,54 @@
       },
       {
         "title": "Life",
-        "slug": "/life",
-        "order": 20,
+        "slug": "life",
+        "order": 50,
         "icon": "life",
         "type": "folder",
-        "excerpt": "Life. But not as we all know it.",
+        "excerpt": "",
         "children": [
           {
-            "title": "aquaponics",
-            "slug": "/life/aquaponics",
+            "title": "Aquaponics",
+            "slug": "life/aquaponics",
             "order": 20,
             "icon": "life",
             "type": "folder",
             "excerpt": "aquaponicsaquaponicsaquaponicsaquaponicsaquaponicsaquaponics\naquaponics",
             "children": []
+          }
+        ]
+      },
+      {
+        "title": "Balance",
+        "slug": "balance",
+        "order": 100,
+        "icon": "balance",
+        "type": "folder",
+        "excerpt": "",
+        "children": [
+          {
+            "title": "Charles Darwin",
+            "slug": "balance/charles-darwin",
+            "order": 20,
+            "icon": "balance",
+            "type": "file",
+            "excerpt": "Judging from the past, we may safely infer that no one living species will transmit its unaltered likeness to a distant futurity. And of the species now living very few will transmit progeny of any ki"
           },
           {
-            "title": "Example",
-            "slug": "/life/example",
+            "title": "Albert Einstein",
+            "slug": "balance/einstein",
             "order": 30,
-            "icon": "life",
+            "icon": "balance",
             "type": "file",
-            "excerpt": "Design Templates\n\nThanks for the feedback! Since Berry is more admin/dashboardoriented, let's pivot to frontfacing templates that still use MUI, focusing on navigation, page structure, and content dis"
+            "excerpt": "Before we get into solving the mercury problem, let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series. \n\nI mentioned in the l"
+          },
+          {
+            "title": "General Theory of Relativity",
+            "slug": "balance/relativity",
+            "order": 30,
+            "icon": "balance",
+            "type": "file",
+            "excerpt": "General Relativity, \n\nReally just the name for Einstein's study of gravitation. And here we're going to introduce my alltime favorite analogy for general relativity, the bowling ball on the trampoline"
           }
         ]
       }

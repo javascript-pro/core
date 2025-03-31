@@ -1,5 +1,3 @@
-// lib/loadMarkdown.ts
-
 import fs from 'fs/promises'
 import path from 'path'
 import matter from 'gray-matter'
@@ -24,7 +22,7 @@ export async function loadMarkdown(slugPath: string) {
 
 /**
  * Recursively list all .md files and folders inside a section,
- * excluding index.md files from the navigation tree.
+ * including frontmatter and content from index.md in each folder.
  * @param section e.g., "life"
  */
 export async function getMarkdownTree(section: string) {
@@ -32,31 +30,60 @@ export async function getMarkdownTree(section: string) {
 
   async function walk(dir: string): Promise<any[]> {
     const dirents = await fs.readdir(dir, { withFileTypes: true })
-    return Promise.all(
+
+    const children = await Promise.all(
       dirents.map(async (dirent) => {
         const fullPath = path.join(dir, dirent.name)
         const relativePath = path.relative(MARKDOWN_ROOT, fullPath)
 
         if (dirent.isDirectory()) {
           const children = await walk(fullPath)
-          // Only include the folder if it has visible children
-          if (children.length > 0) {
+          const indexPath = path.join(fullPath, 'index.md')
+          let frontmatter: any = {}
+          let content = ''
+
+          try {
+            const fileContent = await fs.readFile(indexPath, 'utf-8')
+            const parsed = matter(fileContent)
+            frontmatter = parsed.data
+            frontmatter.content = parsed.content
+            content = parsed.content
+          } catch (err) {
+            // index.md not found or unreadable
+          }
+
+          if (children.length > 0 || Object.keys(frontmatter).length > 0) {
             return {
               type: 'folder',
               name: dirent.name,
+              frontmatter,
+              content,
               children,
             }
           }
         } else if (dirent.name.endsWith('.md') && dirent.name !== 'index.md') {
           const slug = '/' + relativePath.replace(/\.md$/, '')
+          let frontmatter = {}
+
+          try {
+            const fileContent = await fs.readFile(fullPath, 'utf-8')
+            const { data } = matter(fileContent)
+            frontmatter = data
+          } catch (err) {
+            // file might be unreadable or malformed
+          }
+
           return {
             type: 'file',
             name: dirent.name.replace(/\.md$/, ''),
             slug,
+            frontmatter,
           }
         }
       })
-    ).then((items) => items.filter(Boolean))
+    )
+
+    return children.filter(Boolean)
   }
 
   try {
@@ -64,4 +91,3 @@ export async function getMarkdownTree(section: string) {
   } catch (err) {
     return null
   }
-}

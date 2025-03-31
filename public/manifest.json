@@ -1,14 +1,19 @@
 {
   "short_name": "Goldlabel",
-  "name": "Goldlabel",
+  "name": "Goldlabel Core",
   "theme_color": "#C09F52",
-  "background_color": "#C09F52",
+  "background_color": "#1b1b1b",
   "display": "fullscreen",
   "orientation": "portrait",
   "scope": "/",
   "start_url": "/",
   "splash_pages": null,
   "icons": [
+    {
+      "src": "/png/iOS.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    },
     {
       "src": "/png/logo512.png",
       "sizes": "512x512",

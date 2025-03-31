@@ -1,0 +1,18 @@
+{
+  "appTitle": "Core",
+  "url": "https://goldlabel.pro",
+  "image": "/jpg/work.jpg",
+  "description": "Streamline tasks, boost productivity, and enhance customer experience",
+  "favicon": "/svg/favicon_white.svg",
+  "themeColor": "#C09F52",
+  "themes": {
+    "light": {
+      "text": "#000",
+      "primary": "#C09F52",
+      "secondary": "#FFFFFF",
+      "background": "#C09F52",
+      "paper": "#FFFFFF",
+      "mapbox": "mapbox://styles/listingslab/cm67sb391003b01qz2cb6grth"
+    }
+  }
+}
