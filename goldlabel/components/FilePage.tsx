@@ -45,13 +45,15 @@ export default function FilePage({ content }: Props) {
         />
 
         {frontmatter?.image && (
+          <Box sx={{mx:1, mb:1}}>
           <CardMedia
             component="img"
             height={200}
             src={image}
             alt={title}
-            sx={{mx:2}}
+            
           />
+          </Box>
         )}
 
 

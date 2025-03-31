@@ -68,12 +68,14 @@ export default function FolderPage({ section, tree, frontmatter, content }: Prop
         />
 
       {frontmatter?.image && (
+        <Box sx={{mx:1, mb:1}}>
           <CardMedia
             component="img"
             height={200}
             src={frontmatter.image}
             alt={frontmatter.title}
           />
+          </Box>
         )}
 
         
