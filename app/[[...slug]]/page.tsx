@@ -16,9 +16,7 @@ export default async function CatchAllPage({ params }: Props) {
   // Try to load markdown file directly
   const markdown = await loadMarkdown(slugPath)
   if (markdown) {
-    return (
-        <MarkdownPage content={markdown} />
-    )
+    return (<MarkdownPage content={markdown} />)
   }
 
   // If markdown not found, check if it's a folder

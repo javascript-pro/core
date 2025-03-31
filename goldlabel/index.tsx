@@ -1,5 +1,5 @@
-import BottomAppBar from "./BottomAppBar"
+import Appshell from "./components/Appshell"
 
 export {
-    BottomAppBar,
+    Appshell,
 }
