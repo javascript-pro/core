@@ -16,7 +16,7 @@ import {
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
-import {Breadcrumb} from '#/components/Breadcrumb';
+import {AppBreadcrumb} from '#/goldlabel';
 
 
 const { light: themeValues } = config.themes;
@@ -73,19 +73,17 @@ export default function Appshell({ children }: AppshellProps) {
       >
         <Container maxWidth="sm" sx={{mt:1}}>
           <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
-            <IconButton
+            <AppBreadcrumb />
+            {/* <IconButton
               color="inherit"
-              onClick={() => window.open('/', '_self')}
+              onClick={() => {}}
             >
               <Avatar
-                src={config.favicon}
+                src={'/jpg/avatars/swatbaby.jpg'}
                 sx={{ width: 32, height: 32 }}
                 alt="Home"
               />
-            </IconButton>
-
-
-            <Breadcrumb />
+            </IconButton> */}
           </Toolbar>
         </Container>
       </AppBar>
@@ -110,8 +108,15 @@ export default function Appshell({ children }: AppshellProps) {
       >
         <Container maxWidth="sm">
           <Toolbar>
-            <StyledFab color="primary" aria-label="Open Menu">
-              <MenuIcon color="secondary"/>
+            <StyledFab 
+              sx={{ boxShadow: 0 }}
+              onClick={() => window.open('/', '_self')}
+              color="primary" aria-label="Home">
+              <Avatar
+                src={config.favicon}
+                sx={{ width: 32, height: 32 }}
+                alt="Home"
+              />
             </StyledFab>
 
             <Box sx={{ flexGrow: 1 }} />

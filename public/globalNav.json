@@ -30,7 +30,7 @@
             "title": "Apps",
             "slug": "work/apps",
             "order": 20,
-            "icon": "apps",
+            "icon": "settings",
             "type": "folder",
             "excerpt": "",
             "children": [
@@ -56,9 +56,9 @@
             "title": "Company",
             "slug": "work/company",
             "order": 20,
-            "icon": "company",
+            "icon": "work",
             "type": "folder",
-            "excerpt": "Privacy \n Cookies \n UK ltd",
+            "excerpt": "Privacy, Cookies",
             "children": [
               {
                 "title": "Overview",
@@ -72,7 +72,7 @@
                 "title": "UK Ltd company",
                 "slug": "work/company/uk-ltd",
                 "order": 20,
-                "icon": "company",
+                "icon": "work",
                 "type": "file",
                 "excerpt": "UK Limited Company 5460545\n\nGoldlabel Apps Ltd is a UK Limited Company (5460545), building custom software for creators, developers, and businesses."
               }

@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Breadcrumb } from '#/components/Breadcrumb';
+import { AppBreadcrumb } from '#/goldlabel';
 import { useState } from 'react';
 import { useSelectedLayoutSegment } from 'next/navigation';
 import navItems from '#/public/globalNav.json';
@@ -135,7 +135,7 @@ export function GlobalNav() {
       </Box>
 
       <Box component="main" sx={{ flexGrow: 1, p: 3, mt: 8 }}>
-        <Breadcrumb />
+        <AppBreadcrumb />
       </Box>
     </Box>
   );
