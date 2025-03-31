@@ -1,4 +1,4 @@
-// app/components/MarkdownPage.tsx
+// goldlabel/components/FilePage.tsx
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
@@ -24,7 +24,7 @@ type Props = {
   }
 }
 
-export default function MarkdownPage({ content }: Props) {
+export default function FilePage({ content }: Props) {
   const { frontmatter, content: body } = content
   const { title, subheader, excerpt, image } = frontmatter
 

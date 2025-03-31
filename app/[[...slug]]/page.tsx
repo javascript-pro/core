@@ -2,8 +2,7 @@ import path from 'path'
 import { notFound } from 'next/navigation'
 import fs from 'fs/promises'
 import { loadMarkdown, getMarkdownTree } from '#/lib/loadMarkdown'
-import IndexPage from '#/components/IndexPage'
-import MarkdownPage from '#/components/MarkDownPage'
+import {FolderPage, FilePage} from '#/goldlabel'
 
 type Props = {
   params: any
@@ -16,7 +15,7 @@ export default async function CatchAllPage({ params }: Props) {
   // Try to load markdown file directly
   const markdown = await loadMarkdown(slugPath)
   if (markdown) {
-    return (<MarkdownPage content={markdown} />)
+    return (<FilePage content={markdown} />)
   }
 
   // If markdown not found, check if it's a folder
@@ -31,7 +30,7 @@ export default async function CatchAllPage({ params }: Props) {
       const indexMarkdown = await loadMarkdown(path.join(slugPath, 'index'))
 
       return (
-          <IndexPage
+          <FolderPage
             section={section}
             tree={tree}
             frontmatter={indexMarkdown?.frontmatter || null}

@@ -1,7 +1,9 @@
 import Appshell from './components/Appshell'
-import Folder from './components/Folder'
+import FolderPage from './components/FolderPage'
+import FilePage from './components/FilePage'
 
 export {
     Appshell,
-    Folder,
+    FolderPage,
+    FilePage,
 }

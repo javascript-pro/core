@@ -41,7 +41,7 @@ type Props = {
   frontmatter: Frontmatter | null
 }
 
-export default function Folder({ section, tree, frontmatter }: Props) {
+export default function FolderPage({ section, tree, frontmatter }: Props) {
   if (!tree) {
     return (
       <Box sx={{ p: 4 }}>
