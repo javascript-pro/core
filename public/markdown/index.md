@@ -4,7 +4,7 @@ title: Goldlabel Core
 description: Fast, static-first Next.js
 slug: /
 icon: home
-image: /jpg/home.jpg
+image: /jpg/work.jpg
 tags: next.js, core, goldlabel
 ---
 Goldlabel Core is the public-facing foundation of the Goldlabel Apps ecosystem. It’s a fast, static-first Next.js site powered by real-time data from Firestore and managed through a built-in admin interface. 

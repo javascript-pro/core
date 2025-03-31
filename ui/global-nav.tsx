@@ -26,7 +26,7 @@ export function GlobalNav() {
         <Link href="/" className="group flex w-full items-center gap-x-2.5" onClick={close}>
           <Image
             priority
-            src="/svg/favicon_black.svg"
+            src="/svg/favicon.svg"
             width={40}
             height={40}
             alt="Goldlabel Core"

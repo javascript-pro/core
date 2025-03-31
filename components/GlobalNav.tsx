@@ -44,7 +44,7 @@ export function GlobalNav() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const segment = useSelectedLayoutSegment();
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   const toggleDrawer = () => {
     setMobileOpen(!mobileOpen);
@@ -56,7 +56,7 @@ export function GlobalNav() {
         <Link href="/" onClick={() => setMobileOpen(false)}>
           <Image
             priority
-            src="/svg/favicon_black.svg"
+            src="/svg/favicon.svg"
             width={40}
             height={40}
             alt="Goldlabel Core"
@@ -85,6 +85,7 @@ export function GlobalNav() {
         position="fixed"
         color="default"
         sx={{ 
+          background: "white",
           boxShadow: 0,
           zIndex: theme.zIndex.drawer + 1,
         }}
@@ -94,7 +95,7 @@ export function GlobalNav() {
             <IconButton edge="start" color="inherit" aria-label="home">
               <Image
                 priority
-                src="/svg/favicon_black.svg"
+                src="/svg/favicon.svg"
                 width={32}
                 height={32}
                 alt="Goldlabel Core"
@@ -115,7 +116,7 @@ export function GlobalNav() {
         </Toolbar>
       </AppBar>
 
-      <Box component="nav" sx={{ width: { lg: drawerWidth }, flexShrink: { lg: 0 } }}>
+      <Box component="nav" sx={{ width: { md: drawerWidth }, flexShrink: { md: 0 } }}>
         <Drawer
           anchor="right"
           variant={isMobile ? 'temporary' : 'permanent'}

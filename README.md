@@ -15,7 +15,7 @@ _Charles Darwin, On the Origin of Species By Means of Natural Selection, or The 
   "appTitle": "Goldlabel Core",
   "url": "https://goldlabel.pro",
   "description": "Powerful, user-friendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience",
-  "favicon": "/svg/favicon_black.svg",
+  "favicon": "/svg/favicon.svg",
   "themeColor": "#C09F52",
   "themes": {
     "light": {

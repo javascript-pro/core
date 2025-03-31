@@ -77,6 +77,14 @@
                 "excerpt": "UK Limited Company 5460545\n\nGoldlabel Apps Ltd is a UK Limited Company (5460545), building custom software for creators, developers, and businesses."
               }
             ]
+          },
+          {
+            "title": "Design System",
+            "slug": "work/design-system",
+            "order": 100,
+            "icon": "work",
+            "type": "file",
+            "excerpt": "Design Templates\n\nThanks for the feedback! Since Berry is more admin/dashboardoriented, let's pivot to frontfacing templates that still use MUI, focusing on navigation, page structure, and content dis"
           }
         ]
       },
@@ -96,14 +104,6 @@
             "type": "folder",
             "excerpt": "aquaponicsaquaponicsaquaponicsaquaponicsaquaponicsaquaponics\naquaponics",
             "children": []
-          },
-          {
-            "title": "Example",
-            "slug": "life/example",
-            "order": 30,
-            "icon": "life",
-            "type": "file",
-            "excerpt": "Design Templates\n\nThanks for the feedback! Since Berry is more admin/dashboardoriented, let's pivot to frontfacing templates that still use MUI, focusing on navigation, page structure, and content dis"
           }
         ]
       },
@@ -132,7 +132,7 @@
             "excerpt": "Albert Einstein\n\n The godfather of modern physics. Before we get into solving the mercury problem, let's share some of Einstein's contributions which are fundamental to understanding many concepts we'"
           },
           {
-            "title": "General Thoery of Relativity",
+            "title": "General Theory of Relativity",
             "slug": "balance/relativity",
             "order": 30,
             "icon": "balance",
