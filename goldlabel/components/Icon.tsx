@@ -90,7 +90,7 @@ import PluginIcon from '@mui/icons-material/ExtensionOutlined';
 import LinguaIcon from '@mui/icons-material/TranslateOutlined';
 import GoogleIcon from '@mui/icons-material/Google';
 import WorkIcon from '@mui/icons-material/BuildOutlined';
-import LifeIcon from '@mui/icons-material/Cake';
+import LifeIcon from '@mui/icons-material/CakeOutlined';
 import BalanceIcon from '@mui/icons-material/Balance';
 import JavascriptIcon from '@mui/icons-material/JavascriptOutlined';
 import ScubaIcon from '@mui/icons-material/ScubaDivingOutlined';

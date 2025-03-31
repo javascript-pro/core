@@ -71,25 +71,15 @@ export default function Appshell({ children }: AppshellProps) {
           height: topAppBarHeight,
         }}
       >
-        <Container maxWidth="sm" sx={{mt:1}}>
-          <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
+        <Container maxWidth="sm" sx={{}}>
+          <Toolbar>
             <AppBreadcrumb />
-            {/* <IconButton
-              color="inherit"
-              onClick={() => {}}
-            >
-              <Avatar
-                src={'/jpg/avatars/swatbaby.jpg'}
-                sx={{ width: 32, height: 32 }}
-                alt="Home"
-              />
-            </IconButton> */}
           </Toolbar>
         </Container>
       </AppBar>
 
       {/* Main Content Area with top padding */}
-      <Container maxWidth="sm" sx={{ pt: `${topAppBarHeight + 0}px` }}>
+      <Container maxWidth="sm" sx={{ pt: `${topAppBarHeight - 10}px` }}>
 
           <Box sx={{ pb: '50px' }}>
             {children && <Box sx={{ p: 2 }}>{children}</Box>}

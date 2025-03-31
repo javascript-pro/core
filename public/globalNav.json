@@ -1,6 +1,6 @@
 [
   {
-    "title": "Core",
+    "title": "Goldlabel",
     "slug": "/",
     "order": 1,
     "icon": "home",
@@ -8,9 +8,13 @@
     "tags": [
       "next.js",
       "core",
-      "goldlabel"
+      "goldlabel",
+      "AI Prompt Engineering",
+      "ChatGPT",
+      "AI",
+      "Singularity"
     ],
-    "excerpt": "Powerful, userfriendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience",
+    "excerpt": "Powerful, userfriendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience\n\nIs THIS Singularity?\n\n \"Put that kind of AI into a drone with a gun...",
     "children": [
       {
         "title": "Work",
@@ -85,6 +89,21 @@
             "icon": "work",
             "type": "file",
             "excerpt": "Design Templates\n\nThanks for the feedback! Since Berry is more admin/dashboardoriented, let's pivot to frontfacing templates that still use MUI, focusing on navigation, page structure, and content dis"
+          },
+          {
+            "title": "Privacy",
+            "slug": "work/privacy",
+            "order": 1000,
+            "icon": "work",
+            "type": "file",
+            "tags": [
+              "cookies",
+              "gdpr",
+              "privacy",
+              "terms",
+              "trust"
+            ],
+            "excerpt": "We don't use cookies\n\nPrivacy Statement\n\nWelcome to Goldlabel! We value your privacy and are committed to protecting your personal information. This privacy statement aims to provide clarity on how we"
           }
         ]
       },
@@ -137,7 +156,7 @@
             "order": 30,
             "icon": "balance",
             "type": "file",
-            "excerpt": "General Relativity, \n\nReally just the name for Einstein's study of gravitation. And here we're going to introduce my alltime favorite analogy for general relativity, the bowling ball on the trampoline"
+            "excerpt": "Really just the name for Einstein's study of gravitation. And here we're going to introduce my alltime favorite analogy for general relativity, the bowling ball on the trampoline. Let's imagine that f"
           }
         ]
       }

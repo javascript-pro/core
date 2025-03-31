@@ -1,10 +1,10 @@
 ---
 order: 1
-title: S.W.A.T. Baby
+title: Goldlabel
 description: Fast, static-first Next.js
 slug: /
 icon: home
-image: /jpg/markdown-images/SWAT-Baby.jpg
+image: /jpg/home.jpg
 tags: next.js, core, goldlabel, AI Prompt Engineering, ChatGPT, AI, Singularity
 ---
 Powerful, user-friendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience
