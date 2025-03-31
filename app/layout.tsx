@@ -1,24 +1,28 @@
 import '#/styles/globals.css';
-import { GlobalNav } from '#/components/GlobalNav';
 import { Metadata } from 'next';
+
+const title = 'Core'
+const description = 'Built with Next.js and Firestore for Goldlabel Apps Ltd.'
+const image = '/jpg/work.jpg'
+const url = 'https://goldlabel.pro'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Goldlabel Core',
-    template: '%s | Goldlabel Core',
+    default: title,
+    template: '%s',
   },
-  metadataBase: new URL('https://goldlabel.pro'),
-  description: 'The public-facing site for Goldlabel Apps Ltd. Built with Next.js and Firestore.',
+  metadataBase: new URL(url),
+  description,
   openGraph: {
-    title: 'Goldlabel Core',
-    description: 'The public-facing site for Goldlabel Apps Ltd. Built with Next.js and Firestore.',
-    images: ['/jpg/work.jpg'],
+    title,
+    description,
+    images: [image],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Goldlabel Core',
-    description: 'The public-facing site for Goldlabel Apps Ltd.',
-    images: ['/jpg/work.jpg'],
+    title,
+    description,
+    images: [image],
   },
 };
 
@@ -40,11 +44,11 @@ export default function RootLayout({
           href={`/png/iOS.png`}
         />
       </head>
-      <body className="overflow-y-scroll pb-36">
-        <GlobalNav />
-        <div className="">
+      <body>
+        <div id="goldlabel">
+          <h1>APPLY MUI</h1>
             {children}            
-          </div>
+        </div>
       </body>
     </html>
   );

@@ -1,6 +1,6 @@
 ---
 order: 1
-title: Goldlabel Core
+title: Core
 description: Fast, static-first Next.js
 slug: /
 icon: home

@@ -50,10 +50,11 @@ export default function IndexPage({ section, tree, frontmatter }: Props) {
     )
   }
 
+
   const Icon = getIcon(frontmatter?.icon)
 
   return (
-    <Container maxWidth="md" sx={{ mt: 4, mb: 4 }}>
+    <>
       <Card
         variant="outlined"
         sx={{
@@ -109,7 +110,7 @@ export default function IndexPage({ section, tree, frontmatter }: Props) {
           {renderCards(tree)}
         </Box>
       )}
-    </Container>
+    </>
   )
 }
 

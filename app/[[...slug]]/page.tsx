@@ -1,7 +1,6 @@
 import path from 'path'
 import { notFound } from 'next/navigation'
 import fs from 'fs/promises'
-import { Container } from '@mui/material'
 import { loadMarkdown, getMarkdownTree } from '#/lib/loadMarkdown'
 import IndexPage from '#/components/IndexPage'
 import MarkdownPage from '#/components/MarkDownPage'
@@ -18,9 +17,7 @@ export default async function CatchAllPage({ params }: Props) {
   const markdown = await loadMarkdown(slugPath)
   if (markdown) {
     return (
-      <Container maxWidth="md" sx={{ mt: 4, mb: 4 }}>
         <MarkdownPage content={markdown} />
-      </Container>
     )
   }
 
@@ -36,13 +33,11 @@ export default async function CatchAllPage({ params }: Props) {
       const indexMarkdown = await loadMarkdown(path.join(slugPath, 'index'))
 
       return (
-        <Container maxWidth="md" sx={{ mt: 4, mb: 4 }}>
           <IndexPage
             section={section}
             tree={tree}
             frontmatter={indexMarkdown?.frontmatter || null}
           />
-        </Container>
       )
     }
   } catch {

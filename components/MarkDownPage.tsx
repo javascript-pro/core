@@ -7,7 +7,6 @@ import {
   CardContent,
   CardHeader,
   Avatar,
-  Container,
   Typography,
   Box,
 } from '@mui/material'
@@ -30,7 +29,6 @@ export default function MarkdownPage({ content }: Props) {
   const { title, subheader, excerpt, image } = frontmatter
 
   return (
-    <Container maxWidth="md" sx={{ py: 8 }}>
       <Card
         variant="outlined"
         sx={{
@@ -133,6 +131,5 @@ export default function MarkdownPage({ content }: Props) {
           </Box>
         </CardContent>
       </Card>
-    </Container>
   )
 }
