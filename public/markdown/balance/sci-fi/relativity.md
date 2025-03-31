@@ -2,7 +2,7 @@
 order: 30
 title: General Theory of Relativity
 description: Einstein's study of gravitation
-slug: /balance/relativity
+slug: /balance/sci-fi/relativity
 icon: balance
 image: /jpg/balance.jpg
 ---

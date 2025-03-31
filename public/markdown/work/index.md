@@ -3,7 +3,7 @@ order: 10
 title: Work
 description: Professional Fullstack JavaScript
 slug: /work
-icon: work
+icon: folder
 image: /jpg/work.jpg
 tags: next.js, javascript, flash, node
 ---

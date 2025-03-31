@@ -3,7 +3,7 @@ order: 1000
 title: Privacy
 description: Your trust means everything to us
 slug: /work/privacy
-icon: work
+icon: account
 image: /jpg/work.jpg
 tags: cookies, gdpr, privacy, terms, trust
 ---

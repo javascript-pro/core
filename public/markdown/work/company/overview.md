@@ -3,7 +3,7 @@ order: 20
 title: Overview
 description: Powerful, user-friendly web applications
 slug: /work/company/overview
-icon: work
+icon: doc
 image: /jpg/work.jpg
 ---
 

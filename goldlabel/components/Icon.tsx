@@ -102,6 +102,7 @@ import BootIcon from '@mui/icons-material/DoNotStepOutlined';
 import YoutubeIcon from '@mui/icons-material/YouTube';
 import ForgetIcon from '@mui/icons-material/PsychologyOutlined';
 import AIIcon from '@mui/icons-material/ModelTrainingOutlined';
+import FolderIcon from '@mui/icons-material/FolderOutlined';
 
 export type IconShape = {
   icon:
@@ -109,6 +110,7 @@ export type IconShape = {
     | 'ai'
     | 'ask'
     | 'forget'
+    | 'folder'
     | 'fingerprint'
     | 'youtube'
     | 'boot'
@@ -235,6 +237,9 @@ export default function Icon({ icon, color }: IconShape) {
     case 'forget':
       iconFragment = <ForgetIcon color={color} />;
       break;
+      case 'folder':
+        iconFragment = <FolderIcon color={color} />;
+        break;
     case 'ask':
       iconFragment = <AskIcon color={color} />;
       break;
