@@ -47,7 +47,7 @@ export default function RootLayout({
       <body>
         <div id="goldlabel">
           <h1>APPLY MUI</h1>
-            {children}            
+          {children}            
         </div>
       </body>
     </html>

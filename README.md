@@ -8,11 +8,11 @@ Judging from the past, we may safely infer that no one living species will trans
 _Charles Darwin, On the Origin of Species By Means of Natural Selection, or The Preservation Of Favoured Race In The Struggle For Life (1859)_
 
 
-`/public/goldlabel.config.json`
+`/goldlabel/goldlabel.config.json`
 
 ```json
 {
-  "appTitle": "Goldlabel Core",
+  "appTitle": "Core",
   "url": "https://goldlabel.pro",
   "description": "Powerful, user-friendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience",
   "favicon": "/svg/favicon.svg",
