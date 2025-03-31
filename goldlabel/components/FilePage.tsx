@@ -6,11 +6,9 @@ import {
   Card,
   CardContent,
   CardHeader,
-  Avatar,
-  Typography,
-  Box,
+  CardMedia,
 } from '@mui/material'
-import ArticleIcon from '@mui/icons-material/Article' // Swap this if needed
+import {Icon } from '#/goldlabel'
 
 type Props = {
   content: {
@@ -19,6 +17,8 @@ type Props = {
       subheader?: string
       excerpt?: string
       image?: string
+      icon?: string
+      description?: string
     }
     content: string
   }
@@ -26,7 +26,7 @@ type Props = {
 
 export default function FilePage({ content }: Props) {
   const { frontmatter, content: body } = content
-  const { title, subheader, excerpt, image } = frontmatter
+  const { title, image, icon, description } = frontmatter
 
   return (
       <Card
@@ -38,97 +38,29 @@ export default function FilePage({ content }: Props) {
       >
         <CardHeader
           avatar={
-            <Avatar>
-              <ArticleIcon />
-            </Avatar>
+            <Icon icon={icon as any} />
           }
           title={title || 'Untitled'}
-          subheader={subheader || null}
+          subheader={description}
         />
 
+        {frontmatter?.image && (
+          <CardMedia
+            component="img"
+            height={200}
+            src={image}
+            alt={title}
+          />
+        )}
+
+
+
         <CardContent>
-          <Box
-            sx={{
-              display: 'flex',
-              flexDirection: ['column', 'column', 'row'],
-              gap: 3,
-            }}
-          >
-            <Box sx={{ flex: 2 }}>
-              {excerpt && (
-                <Typography
-                  variant="body1"
-                  sx={{ whiteSpace: 'pre-line', mb: 2 }}
-                >
-                  {excerpt}
-                </Typography>
-              )}
 
-              <Box
-                sx={{
-                  '& h1': { fontSize: '2rem', mt: 3 },
-                  '& h2': { fontSize: '1.75rem', mt: 3 },
-                  '& h3': { fontSize: '1.5rem', mt: 3 },
-                  '& p': { mb: 2, lineHeight: 1.7 },
-                  '& ul': { pl: 3, mb: 2 },
-                  '& ol': { pl: 3, mb: 2 },
-                  '& li': { mb: 0.5 },
-                  '& a': {
-                    color: 'primary.main',
-                    textDecoration: 'underline',
-                    wordBreak: 'break-word',
-                  },
-                  '& code': {
-                    fontFamily: 'monospace',
-                    backgroundColor: '#f4f4f4',
-                    px: '0.4em',
-                    py: '0.2em',
-                    borderRadius: '4px',
-                  },
-                  '& pre': {
-                    backgroundColor: '#f4f4f4',
-                    p: 2,
-                    overflow: 'auto',
-                    borderRadius: '4px',
-                    mb: 2,
-                  },
-                  '& table': {
-                    width: '100%',
-                    borderCollapse: 'collapse',
-                    mb: 3,
-                  },
-                  '& th, & td': {
-                    border: '1px solid #ccc',
-                    p: 1,
-                    textAlign: 'left',
-                  },
-                  '& th': {
-                    backgroundColor: '#f0f0f0',
-                  },
-                }}
-              >
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                  {body}
-                </ReactMarkdown>
-              </Box>
-            </Box>
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>
+            {body}
+          </ReactMarkdown>
 
-            {image && (
-              <Box
-                component="img"
-                src={image}
-                alt={title || 'Featured'}
-                sx={{
-                  flex: 1,
-                  width: '100%',
-                  maxWidth: 300,
-                  height: 'auto',
-                  borderRadius: 2,
-                  alignSelf: 'start',
-                }}
-              />
-            )}
-          </Box>
         </CardContent>
       </Card>
   )

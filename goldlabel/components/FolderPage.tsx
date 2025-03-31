@@ -5,15 +5,12 @@ import {
   Box,
   Card,
   CardHeader,
+  CardMedia,
   CardContent,
   Typography,
-  Avatar,
-  Container,
 } from '@mui/material'
-import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile'
-import HomeIcon from '@mui/icons-material/Home'
-import BookIcon from '@mui/icons-material/Book'
-import AppsIcon from '@mui/icons-material/Apps'
+import {Icon} from '#/goldlabel'
+import ReactMarkdown from 'react-markdown'
 
 type TreeNode = {
   type: 'file' | 'folder'
@@ -21,6 +18,7 @@ type TreeNode = {
   slug?: string
   order?: number
   excerpt?: string
+  content?: string // markdown string for folder index.md
   frontmatter?: Frontmatter
   children?: TreeNode[]
 }
@@ -33,15 +31,19 @@ type Frontmatter = {
   icon?: string
   image?: string
   tags?: string
+  excerpt?: string
 }
 
 type Props = {
   section: string
   tree: TreeNode[] | null
   frontmatter: Frontmatter | null
+  content: string | null
 }
 
-export default function FolderPage({ section, tree, frontmatter }: Props) {
+export default function FolderPage({ section, tree, frontmatter, content }: Props) {
+
+
   if (!tree) {
     return (
       <Box sx={{ p: 4 }}>
@@ -51,67 +53,51 @@ export default function FolderPage({ section, tree, frontmatter }: Props) {
       </Box>
     )
   }
-
-
-  const Icon = getIcon(frontmatter?.icon)
-
+  console.log("content", content)
   return (
     <>
       <Card
-        variant="outlined"
         sx={{
-          display: 'flex',
-          flexDirection: { xs: 'column', sm: 'row' },
-          mb: 4,
         }}
       >
-        <CardContent sx={{ flex: 1 }}>
-          <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-            <Avatar sx={{ mr: 1 }}>
-              <Icon />
-            </Avatar>
-            <Typography variant="h4">
-              {frontmatter?.title || section}
-            </Typography>
-          </Box>
-          {frontmatter?.description && (
-            <Typography variant="body1" color="text.secondary">
-              {frontmatter.description}
-            </Typography>
-          )}
-          {frontmatter?.tags && (
-            <Typography
-              variant="caption"
-              sx={{ display: 'block', mt: 1, color: 'text.disabled' }}
-            >
-              {frontmatter.tags}
-            </Typography>
-          )}
-        </CardContent>
+        <CardHeader 
+          avatar={<Icon icon={frontmatter?.icon as any} />}
+          title={frontmatter?.title || section}
+          subheader={frontmatter?.description }
+        />
 
-        {frontmatter?.image && (
-          <Box
+      {frontmatter?.image && (
+          <CardMedia
             component="img"
+            height={200}
             src={frontmatter.image}
             alt={frontmatter.title}
-            sx={{
-              width: { xs: '100%', sm: 300 },
-              height: 'auto',
-              objectFit: 'cover',
-              borderTop: { xs: 1, sm: 0 },
-              borderLeft: { sm: 1 },
-              borderColor: 'divider',
-              borderRadius: 0,
-            }}
           />
         )}
+
+        <CardContent>
+          
+          {content && (
+            <ReactMarkdown>{content}</ReactMarkdown>
+          )}
+
+          {/* {frontmatter?.tags && (
+            <Typography>
+              {frontmatter.tags}
+            </Typography>
+          )} */}
+
+          {tree.length > 0 && (
+            <Box sx={{}}>
+              {renderCards(tree)}
+            </Box>
+          )}
+
+
+        </CardContent>
       </Card>
 
-      {tree.length > 0 && (
-        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-          {renderCards(tree)}
-        </Box>
-      )}
+      
     </>
   )
 }
@@ -129,53 +115,23 @@ function renderCards(tree: TreeNode[]): React.ReactElement[] {
     const href = isFolder
       ? node.frontmatter?.slug || `/${slugify(node.name)}`
       : node.slug || `/${slugify(node.name)}`
-    const AvatarIcon = isFolder ? AppsIcon : InsertDriveFileIcon
     const title = node.frontmatter?.title
     const subheader = node.frontmatter?.description
-    
+    const icon = node.frontmatter?.icon
     return (
       <Link href={href} key={key} style={{ textDecoration: 'none' }}>
-        <Card
-          variant="outlined"
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-          }}
-        >
+        <Box>
           <CardHeader
             avatar={
-              <Avatar>
-                <AvatarIcon />
-              </Avatar>
+              <Icon icon={icon as any} />
             }
             title={title}
             subheader={subheader}
           />
-          {node.excerpt && (
-            <CardContent sx={{ pt: 0 }}>
-              <Typography variant="body1" sx={{ whiteSpace: 'pre-line' }}>
-                {node.excerpt}
-              </Typography>
-            </CardContent>
-          )}
-        </Card>
+        </Box>
       </Link>
     )
   })
-}
-
-function getIcon(name?: string): React.ElementType {
-  switch (name) {
-    case 'home':
-      return HomeIcon
-    case 'book':
-      return BookIcon
-    case 'apps':
-      return AppsIcon
-    default:
-      return InsertDriveFileIcon
-  }
 }
 
 function slugify(text: string): string {

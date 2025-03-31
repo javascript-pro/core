@@ -34,6 +34,7 @@ export default async function CatchAllPage({ params }: Props) {
             section={section}
             tree={tree}
             frontmatter={indexMarkdown?.frontmatter || null}
+            content={indexMarkdown?.content || null}
           />
       )
     }

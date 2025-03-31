@@ -17,8 +17,8 @@ import {
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
-import HomeIcon from '@mui/icons-material/HomeOutlined';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+// import HomeIcon from '@mui/icons-material/HomeOutlined';
+// import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 const { light: themeValues } = config.themes;
 
@@ -85,15 +85,15 @@ export default function Appshell({ children }: AppshellProps) {
               />
             </IconButton>
 
-            <IconButton color="secondary">
+            {/* <IconButton color="secondary">
               <AccountCircleIcon />
-            </IconButton>
+            </IconButton> */}
           </Toolbar>
         </Container>
       </AppBar>
 
       {/* Main Content Area with top padding */}
-      <Container maxWidth="sm" sx={{ pt: `${topAppBarHeight + 16}px` }}>
+      <Container maxWidth="sm" sx={{ pt: `${topAppBarHeight + 0}px` }}>
 
           <Box sx={{ pb: '50px' }}>
             {children && <Box sx={{ p: 2 }}>{children}</Box>}
@@ -112,18 +112,18 @@ export default function Appshell({ children }: AppshellProps) {
       >
         <Container maxWidth="sm">
           <Toolbar>
-            <StyledFab color="secondary" aria-label="Open Menu">
-              <MenuIcon />
+            <StyledFab color="primary" aria-label="Open Menu">
+              <MenuIcon color="secondary"/>
             </StyledFab>
 
             <Box sx={{ flexGrow: 1 }} />
 
-            <IconButton
+            {/* <IconButton
               color="secondary"
               onClick={() => window.open('/', '_self')}
             >
               <HomeIcon />
-            </IconButton>
+            </IconButton> */}
           </Toolbar>
         </Container>
       </AppBar>

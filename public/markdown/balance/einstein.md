@@ -6,9 +6,7 @@ slug: /balance/einstein
 icon: balance
 image: /jpg/balance.jpg
 ---
-## Albert Einstein
-
- The godfather of modern physics. Before we get into solving the mercury problem, let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series. 
+Before we get into solving the mercury problem, let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series. 
 
 I mentioned in the last lecture this idea of Gedanken experiments, thought experiments, and they really played into a lot of the discoveries that Albert Einstein made. He was able to conceptualize problems and then apply math and physics equations that would break through and result in us understanding more of our world. Many of the solutions from the Gedanken experiments are now fundamental laws of physics. 
 
