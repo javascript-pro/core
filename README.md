@@ -8,7 +8,7 @@ Judging from the past, we may safely infer that no one living species will trans
 _Charles Darwin, On the Origin of Species By Means of Natural Selection, or The Preservation Of Favoured Race In The Struggle For Life (1859)_
 
 
-`/goldlabel/goldlabel.config.json`
+`/goldlabel/config.json`
 
 ```json
 {

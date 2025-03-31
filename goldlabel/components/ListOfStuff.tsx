@@ -1,7 +1,5 @@
 'use client';
-
 import * as React from 'react';
-
 import {
   Typography,
   Paper,
@@ -13,9 +11,7 @@ import {
   ListSubheader,
   Avatar,
 } from '@mui/material';
-
 import { styled } from '@mui/material/styles';
-
 
 const messages = [
   {
@@ -105,8 +101,6 @@ export default function ListOfStuff({ children }: AppshellProps) {
             </React.Fragment>
           ))}
         </List>
-      </Paper>
-
-      
+      </Paper>      
   );
 }

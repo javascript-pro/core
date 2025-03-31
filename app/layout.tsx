@@ -1,5 +1,5 @@
 // import '#/styles/globals.css';
-import config from '#/goldlabel/goldlabel.config.json'
+import config from '#/goldlabel/config.json'
 import { Metadata } from 'next';
 import { Appshell } from '#/goldlabel'
 
