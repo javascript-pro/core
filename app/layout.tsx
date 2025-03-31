@@ -1,10 +1,12 @@
-import '#/styles/globals.css';
+// import '#/styles/globals.css';
+import config from '#/goldlabel/goldlabel.config.json'
 import { Metadata } from 'next';
+import { Appshell } from '#/goldlabel'
 
-const title = 'Core'
-const description = 'Built with Next.js and Firestore for Goldlabel Apps Ltd.'
-const image = '/jpg/work.jpg'
-const url = 'https://goldlabel.pro'
+const title = config.appTitle
+const description = config.description
+const url = config.url
+const image = config.image
 
 export const metadata: Metadata = {
   title: {
@@ -46,8 +48,9 @@ export default function RootLayout({
       </head>
       <body>
         <div id="goldlabel">
-          <h1>APPLY MUI</h1>
-          {children}            
+          <Appshell>
+            {children}     
+          </Appshell>       
         </div>
       </body>
     </html>
