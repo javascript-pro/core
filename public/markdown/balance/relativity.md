@@ -6,8 +6,6 @@ slug: /balance/relativity
 icon: balance
 image: /jpg/balance.jpg
 ---
-## General Relativity, 
-
 Really just the name for Einstein's study of gravitation. And here we're going to introduce my all-time favorite analogy for general relativity, the bowling ball on the trampoline. Let's imagine that four-dimensional spacetime is the trampoline stretched out flat. What Einstein did to study gravitation was to see what happened to spacetime when you introduce the presence of mass, or for this example, a bowling ball. 
 
 
