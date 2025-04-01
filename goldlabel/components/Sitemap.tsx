@@ -11,13 +11,10 @@ import {
   Collapse,
   IconButton,
 } from '@mui/material'
-import ExpandLess from '@mui/icons-material/ExpandLess'
-import ExpandMore from '@mui/icons-material/ExpandMore'
-import ChevronRight from '@mui/icons-material/ChevronRight'
 import { Icon } from '#/goldlabel'
 
 export type SitemapProps = {
-  globalNav: NavItem[]
+  globalNav?: NavItem[] | null
 }
 
 type NavItem = {
@@ -34,7 +31,7 @@ type NavItem = {
 export default function Sitemap({ globalNav }: SitemapProps) {
   const [openFolders, setOpenFolders] = useState<Record<string, boolean>>(() => {
     const initial: Record<string, boolean> = {}
-    globalNav.forEach(item => {
+    ;(globalNav || []).forEach(item => {
       if (item.type === 'folder') {
         const slug = item.slug.startsWith('/') ? item.slug : `/${item.slug}`
         initial[slug] = true
@@ -66,10 +63,10 @@ export default function Sitemap({ globalNav }: SitemapProps) {
                 <Box display="flex" alignItems="center" sx={{ pl: indent }}>
                   <ListItemButton onClick={() => toggleFolder(fullPath)} sx={{ flexGrow: 1 }}>
                     <ListItemIcon>
-                      <Icon icon={item.icon as any || 'folder'} />
+                      <Icon icon={item.icon as any || 'folder'}  color="secondary"/>
                     </ListItemIcon>
                     <ListItemText primary={item.title} />
-                    {isOpen ? <ExpandLess /> : <ExpandMore />}
+                    {isOpen ? <Icon icon="up" color='secondary' /> : <Icon icon="down" color='secondary' />}
                   </ListItemButton>
                   <IconButton
                     component={Link}
@@ -78,7 +75,7 @@ export default function Sitemap({ globalNav }: SitemapProps) {
                     size="small"
                     sx={{ mr: 1 }}
                   >
-                    <ChevronRight fontSize="small" />
+                    <Icon icon="right" color='secondary' />
                   </IconButton>
                 </Box>
                 <Collapse in={isOpen} timeout="auto" unmountOnExit>
@@ -96,7 +93,7 @@ export default function Sitemap({ globalNav }: SitemapProps) {
               sx={{ pl: indent + 2 }}
             >
               <ListItemIcon>
-                <Icon icon={item.icon as any || 'description'} />
+                <Icon icon={item.icon as any || 'description'} color="secondary" />
               </ListItemIcon>
               <ListItemText primary={item.title} />
             </ListItemButton>
@@ -106,8 +103,12 @@ export default function Sitemap({ globalNav }: SitemapProps) {
     )
   }
 
+  if (!globalNav || globalNav.length === 0) {
+    return <Box sx={{ px: 2 }}>No navigation available.</Box>
+  }
+
   return (
-    <Box sx={{ px: 2 }}>
+    <Box sx={{ px: 0 }}>
       {renderList(globalNav)}
     </Box>
   )

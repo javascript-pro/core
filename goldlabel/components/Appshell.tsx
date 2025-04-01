@@ -15,8 +15,7 @@ import {
   IconButton,
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { AppBreadcrumb, Icon } from '#/goldlabel';
-import PopupMenu from './PopupMenu'; // Adjust path if needed
+import { AppBreadcrumb, Icon, PopupMenu } from '#/goldlabel';
 
 const { light: themeValues } = config.themes;
 

@@ -2,7 +2,7 @@ import path from 'path'
 import { notFound } from 'next/navigation'
 import fs from 'fs/promises'
 import { loadMarkdown, getMarkdownTree } from '#/lib/loadMarkdown'
-import { FolderPage, FilePage, Sitemap } from '#/goldlabel'
+import { FolderPage, FilePage, Sitemap, Home } from '#/goldlabel'
 
 export type CatchAllPageProps = {
   params: any
@@ -20,6 +20,13 @@ export default async function CatchAllPage({ params }: CatchAllPageProps) {
     globalNav = JSON.parse(navRaw)
   } catch (err) {
     console.error('Failed to load globalNav.json:', err)
+  }
+
+  if (slugPath === '/') {
+    return <>            
+            <Home />
+            <Sitemap globalNav={globalNav} />
+          </>
   }
 
   // Special case for /sitemap
