@@ -3,8 +3,8 @@ order: 10
 title: Work
 description: Professional Fullstack JavaScript
 slug: /work
-icon: folder
-image: /jpg/work.jpg
+icon: work
+image: /jpg/images/goldlabel.jpg
 tags: social
 ---
 See us socially on [LinkedIn](https://www.linkedin.com/in/chris-dorward/), [GitHub](https://github.com/javascript-pro), 

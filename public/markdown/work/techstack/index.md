@@ -2,8 +2,8 @@
 order: 30
 title: Techstack
 description: On the shoulders of giants
-slug: /work/teckstack
+slug: /work/techstack
 icon: techstack
-image: /jpg/work.jpg
+image: /jpg/images/goldlabel.jpg
 ---
 What does techstak really mean?
