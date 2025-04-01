@@ -14,52 +14,46 @@
       "AI",
       "Singularity"
     ],
-    "excerpt": "Powerful, userfriendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience\n\nIs THIS Singularity?\n\n \"Put that kind of AI into a drone with a gun...",
+    "excerpt": "|  |",
     "children": [
+      {
+        "title": "Sitemap",
+        "slug": "sitemap",
+        "order": 5,
+        "icon": "web",
+        "type": "file",
+        "excerpt": "Excellent choice. This statically generated sitemap is an important feature of making Goldlabel perform so well in SEO tests"
+      },
       {
         "title": "Work",
         "slug": "work",
         "order": 10,
-        "icon": "folder",
+        "icon": "work",
         "type": "folder",
         "tags": [
           "social"
         ],
-        "excerpt": "See us socially on , , \n,\n, \nor even the social network formally known as .\n\nGoldlabel Core is the publicfacing foundation of the Goldlabel Apps ecosystem. It’s a fast, staticfirst Next.js site powere",
+        "excerpt": "See us socially on , , \n,\n, \nor even the social network formally known as .\n\nThe app is designed to grow alongside our products, with a content system we can update anytime and an authentication layer",
         "children": [
-          {
-            "title": "Examples",
-            "slug": "work/examples",
-            "order": 10,
-            "icon": "examples",
-            "type": "folder",
-            "excerpt": "Here is a list of examples",
-            "children": [
-              {
-                "title": "MP3 to Text",
-                "slug": "work/examples/mp3-to-text",
-                "order": 30,
-                "icon": "examples",
-                "type": "file",
-                "excerpt": "In this Weekend Portfolio project, you’ll build a compact and powerful app called mp3totext. The idea is simple but important: you upload an .mp3 file, and the app gives you back a transcription of it"
-              }
-            ]
-          },
           {
             "title": "Company",
             "slug": "work/company",
             "order": 20,
-            "icon": "work",
+            "icon": "company",
             "type": "folder",
-            "excerpt": "Privacy, Cookies",
+            "excerpt": "We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers t",
             "children": [
               {
                 "title": "Goldlabel Apps Ltd",
                 "slug": "work/company/uk-ltd",
-                "order": 20,
+                "order": 25,
                 "icon": "doc",
                 "type": "file",
-                "excerpt": "Goldlabel Apps Ltd is a UK Limited Company (5460545), building custom software for creators, developers, and businesses.\n\n\n\nGet in touch. For it's a  universally acknowledged that a Software Developer"
+                "tags": [
+                  "legal",
+                  "address"
+                ],
+                "excerpt": "Goldlabel Apps Ltd is a UK Limited Company (5460545), building custom software for creators, developers, and businesses.\n\nGet in touch. For it's a  universally acknowledged that a Software Developer i"
               },
               {
                 "title": "Privacy",
@@ -84,7 +78,7 @@
             "order": 30,
             "icon": "techstack",
             "type": "folder",
-            "excerpt": "What does techstak really mean?",
+            "excerpt": "Goldlabel Core is the publicfacing foundation of the Goldlabel Apps ecosystem. It’s a fast, staticfirst Next.js site powered by realtime data from Firestore and managed through a builtin admin interfa",
             "children": [
               {
                 "title": "Overview",
@@ -106,9 +100,27 @@
                 "title": "Design System",
                 "slug": "work/techstack/design-system",
                 "order": 100,
-                "icon": "doc",
+                "icon": "design",
                 "type": "file",
                 "excerpt": "Design Templates\n\nThanks for the feedback! Since Berry is more admin/dashboardoriented, let's pivot to frontfacing templates that still use MUI, focusing on navigation, page structure, and content dis"
+              }
+            ]
+          },
+          {
+            "title": "Examples",
+            "slug": "work/examples",
+            "order": 310,
+            "icon": "examples",
+            "type": "folder",
+            "excerpt": "Fast, staticfirst Next.js. Powerful, userfriendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience\nslug: /",
+            "children": [
+              {
+                "title": "MP3 to Text",
+                "slug": "work/examples/mp3-to-text",
+                "order": 30,
+                "icon": "examples",
+                "type": "file",
+                "excerpt": "In this Weekend Portfolio project, you’ll build a compact and powerful app called mp3totext. The idea is simple but important: you upload an .mp3 file, and the app gives you back a transcription of it"
               }
             ]
           }
@@ -118,7 +130,7 @@
         "title": "Life",
         "slug": "life",
         "order": 50,
-        "icon": "folder",
+        "icon": "life",
         "type": "folder",
         "excerpt": "",
         "children": [
@@ -155,9 +167,9 @@
         "title": "Balance",
         "slug": "balance",
         "order": 100,
-        "icon": "folder",
+        "icon": "balance",
         "type": "folder",
-        "excerpt": "",
+        "excerpt": "Is THIS Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday\n\nReact\n\n We Specialise in React front ends. They aren't a",
         "children": [
           {
             "title": "Science Fiction",

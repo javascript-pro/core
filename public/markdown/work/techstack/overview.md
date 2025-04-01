@@ -4,7 +4,7 @@ title: Overview
 description: Powerful, user-friendly web applications
 slug: /work/techstack/overview
 icon: doc
-image: /jpg/work.jpg
+image: /jpg/images/github.jpg
 ---
 Goldlabel Core is a project designed to deliver **powerful, user-friendly web applications** that enhance productivity and streamline tasks. The project uses a **monorepo** architecture with multiple Next.js applications deployed to **Vercel**.
 

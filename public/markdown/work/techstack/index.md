@@ -4,6 +4,6 @@ title: Techstack
 description: On the shoulders of giants
 slug: /work/techstack
 icon: techstack
-image: /jpg/images/goldlabel.jpg
+image: /jpg/images/github.jpg
 ---
-What does techstak really mean?
+Goldlabel Core is the public-facing foundation of the Goldlabel Apps ecosystem. It’s a fast, static-first Next.js site powered by real-time data from Firestore and managed through a built-in admin interface. 

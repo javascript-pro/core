@@ -1,10 +1,11 @@
 ---
 order: 1
 title: Goldlabel
-description: Fast, static-first Next.js
-slug: /
+description: 
 icon: home
-image: /jpg/images/goldlabel.jpg
+image: /jpg/images/spade.jpg
 tags: next.js, core, goldlabel, AI Prompt Engineering, ChatGPT, AI, Singularity
 ---
-Powerful, user-friendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience
+[Work](/work) | [Life](/life) | [Balance](/balance)
+
+[Sitemap](/sitemap)

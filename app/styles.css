@@ -1,0 +1,11 @@
+/* file-page-markdown */
+
+a {
+    color: #C09F52;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ab9156;
+}

@@ -2,6 +2,7 @@
 import config from '#/goldlabel/config.json'
 import { Metadata } from 'next';
 import { Appshell } from '#/goldlabel'
+import './styles.css'
 
 const title = config.appTitle
 const description = config.description

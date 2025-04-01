@@ -8,11 +8,10 @@ import {
   CardContent,
   CardHeader,
   CardMedia,
-  Link,
 } from '@mui/material'
 import { Icon } from '#/goldlabel'
 
-type Props = {
+export type FilePageProps = {
   content: {
     frontmatter: {
       title?: string
@@ -23,10 +22,12 @@ type Props = {
       description?: string
     }
     content: string
+    
   }
+  globalNav?: any
 }
 
-export default function FilePage({ content }: Props) {
+export default function FilePage({ content, globalNav }: FilePageProps) {
   const { frontmatter, content: body } = content
   const { title, image, icon, description } = frontmatter
 
@@ -49,22 +50,8 @@ export default function FilePage({ content }: Props) {
         </Box>
       )}
 
-      <CardContent>
-        <ReactMarkdown
-          remarkPlugins={[remarkGfm]}
-          components={{
-            a: ({ href, children }) => (
-              <Link
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                underline="hover"
-                color="secondary"
-              >
-                {children}
-              </Link>
-            ),
-          }}>
+      <CardContent id="file-page-markdown">
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>
           {body}
         </ReactMarkdown>
       </CardContent>

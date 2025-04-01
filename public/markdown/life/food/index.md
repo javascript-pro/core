@@ -4,7 +4,7 @@ title: Food
 description: Right sleep. Right food.
 slug: /life/food
 icon: food
-image: /jpg/life.jpg
+image: /jpg/images/life.jpg
 ---
 
 Cakes and stuff

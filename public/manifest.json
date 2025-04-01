@@ -2,7 +2,7 @@
   "short_name": "Goldlabel",
   "name": "Goldlabel Core",
   "theme_color": "#C09F52",
-  "background_color": "#1b1b1b",
+  "background_color": "#C09F52",
   "display": "fullscreen",
   "orientation": "portrait",
   "scope": "/",
