@@ -2,7 +2,7 @@ import path from 'path'
 import { notFound } from 'next/navigation'
 import fs from 'fs/promises'
 import { loadMarkdown, getMarkdownTree } from '#/lib/loadMarkdown'
-import { FolderPage, FilePage } from '#/goldlabel'
+import { FolderPage, FilePage, Sitemap } from '#/goldlabel'
 
 export type CatchAllPageProps = {
   params: any
@@ -12,6 +12,8 @@ export default async function CatchAllPage({ params }: CatchAllPageProps) {
   const slugArray = params.slug || []
   const slugPath = '/' + slugArray.join('/')
 
+
+
   // Load globalNav JSON directly from public folder
   const navPath = path.join(process.cwd(), 'public/globalNav.json')
   let globalNav = null
@@ -20,6 +22,11 @@ export default async function CatchAllPage({ params }: CatchAllPageProps) {
     globalNav = JSON.parse(navRaw)
   } catch (err) {
     console.error('Failed to load globalNav.json:', err)
+  }
+
+  // Special case for /sitemap
+  if (slugPath === '/sitemap') {
+    return <Sitemap globalNav={globalNav} />
   }
 
   // Try to load markdown file directly

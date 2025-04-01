@@ -5,12 +5,15 @@ import Icon from './components/Icon'
 import IconShape from './components/Icon'
 import {AppBreadcrumb} from './components/AppBreadcrumb'
 
+import Sitemap from './components/Sitemap'
+
 export {
     Appshell,
     FolderPage,
     FilePage,
     Icon,
     AppBreadcrumb,
+    Sitemap,
 }
 
 export type {
