@@ -1,8 +1,9 @@
 ---
-order: 20
+order: 5
 title: Apps
-description: Example apps
+description: Working Examples
 slug: /work/apps
-icon: settings
+icon: apps
 image: /jpg/work.jpg
 ---
+Here is a list of examples

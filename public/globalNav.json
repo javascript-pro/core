@@ -33,10 +33,10 @@
           {
             "title": "Apps",
             "slug": "work/apps",
-            "order": 20,
-            "icon": "settings",
+            "order": 5,
+            "icon": "apps",
             "type": "folder",
-            "excerpt": "",
+            "excerpt": "Here is a list of examples",
             "children": [
               {
                 "title": "MP3 to Text",
@@ -65,14 +65,6 @@
             "excerpt": "Privacy, Cookies",
             "children": [
               {
-                "title": "Overview",
-                "slug": "work/company/overview",
-                "order": 20,
-                "icon": "doc",
-                "type": "file",
-                "excerpt": "Overview\n\nGoldlabel Apps is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo architecture with multiple"
-              },
-              {
                 "title": "UK Limited Company 5460545",
                 "slug": "work/company/uk-ltd",
                 "order": 20,
@@ -83,12 +75,30 @@
             ]
           },
           {
-            "title": "Design System",
-            "slug": "work/design-system",
-            "order": 100,
-            "icon": "doc",
-            "type": "file",
-            "excerpt": "Design Templates\n\nThanks for the feedback! Since Berry is more admin/dashboardoriented, let's pivot to frontfacing templates that still use MUI, focusing on navigation, page structure, and content dis"
+            "title": "Techstack",
+            "slug": "work/techstack",
+            "order": 30,
+            "icon": "techstack",
+            "type": "folder",
+            "excerpt": "What does techstak really mean?",
+            "children": [
+              {
+                "title": "Overview",
+                "slug": "work/techstack/overview",
+                "order": 20,
+                "icon": "doc",
+                "type": "file",
+                "excerpt": "Goldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo architecture with multiple Next.js a"
+              },
+              {
+                "title": "Design System",
+                "slug": "work/techstack/design-system",
+                "order": 100,
+                "icon": "doc",
+                "type": "file",
+                "excerpt": "Design Templates\n\nThanks for the feedback! Since Berry is more admin/dashboardoriented, let's pivot to frontfacing templates that still use MUI, focusing on navigation, page structure, and content dis"
+              }
+            ]
           },
           {
             "title": "Privacy",
