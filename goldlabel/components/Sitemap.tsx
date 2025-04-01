@@ -62,23 +62,17 @@ export default function Sitemap({
             return (
               <React.Fragment key={fullPath}>
                 <Box display="flex" alignItems="center" sx={{ pl: indent }}>
-                <IconButton
-                    component={Link}
-                    href={fullPath}
-                    aria-label={`Go to ${item.title}`}
-                  >
-                    <Icon icon="right" color="secondary" />
-                  </IconButton>
+                
                   <ListItemButton
                     onClick={() => {
                       toggleFolder(fullPath)
-                      onClose()
+                      
                     }}
                     sx={{ flexGrow: 1 }}
                   >
-                    <ListItemIcon>
+                    {/* <ListItemIcon>
                       <Icon icon={item.icon as any || 'folder'} color="secondary" />
-                    </ListItemIcon>
+                    </ListItemIcon> */}
                     <ListItemText primary={item.title} />
                     {isOpen ? (
                       <Icon icon="up" color="secondary" />
@@ -86,6 +80,14 @@ export default function Sitemap({
                       <Icon icon="down" color="secondary" />
                     )}
                   </ListItemButton>
+
+                  <IconButton
+                    component={Link}
+                    href={fullPath}
+                    aria-label={`Go to ${item.title}`}
+                  >
+                    <Icon icon="right" color="secondary" />
+                  </IconButton>
                   
                 </Box>
                 <Collapse in={isOpen} timeout="auto" unmountOnExit>

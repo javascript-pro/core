@@ -19,7 +19,7 @@ export default function Home({}: HomeProps) {
         sx={{
           position: 'relative',
           width: '100%',
-          height: fullScreen ? 100 : 150,
+          height: 315,
           borderRadius: 2,
           overflow: 'hidden',
         }}
@@ -42,7 +42,7 @@ export default function Home({}: HomeProps) {
         Welcome to Goldlabel
       </Typography>
 
-      <Typography variant="body1" sx={{}}>
+      <Typography variant="body1" sx={{}} align="center">
         We build modern apps for a modern web. Explore our projects, tools, and ideas — all in one place.
       </Typography>
 

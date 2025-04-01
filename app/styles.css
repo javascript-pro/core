@@ -9,3 +9,13 @@ a {
 a:hover {
     color: #ab9156;
 }
+
+blockquote {
+    border-left: 2px solid #C09F52;
+    padding-left: 16px;
+    margin-left: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}

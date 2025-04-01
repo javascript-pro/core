@@ -25,7 +25,9 @@ export default async function CatchAllPage({ params }: CatchAllPageProps) {
   if (slugPath === '/') {
     return <>            
             <Home />
-            <Sitemap globalNav={globalNav} openTopLevelByDefault={1} />
+            <div style={{marginLeft: 50, marginRight: 50}}>
+            <Sitemap globalNav={globalNav} openTopLevelByDefault={0} />
+            </div>
           </>
   }
 

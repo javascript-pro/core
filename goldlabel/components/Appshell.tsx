@@ -73,8 +73,8 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
           height: topAppBarHeight,
         }}
       >
-        <Container maxWidth="sm">
-          <Toolbar>
+        <Container maxWidth="md">
+          <Toolbar sx={{justifyContent: 'space-between'}}>
             <IconButton
               onClick={() => {
                 window.open ("/", "_self")
@@ -91,7 +91,7 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
       </AppBar>
 
       {/* Main Content Area with top padding */}
-      <Container maxWidth="sm" sx={{ pt: `${topAppBarHeight - 10}px` }}>
+      <Container maxWidth="md" sx={{ pt: `${topAppBarHeight - 10}px` }}>
         <Box sx={{ pb: '50px' }}>
           {children && <Box sx={{ p: 2 }}>{children}</Box>}
         </Box>
@@ -107,7 +107,7 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
           boxShadow: 0,
         }}
       >
-        <Container maxWidth="sm">
+        <Container maxWidth="md">
           <Toolbar>
             <StyledFab
               sx={{ boxShadow: 0 }}

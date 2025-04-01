@@ -65,7 +65,7 @@ export default function FolderPage({
   return (
     <Box sx={{ px: 2 }}>
       <CardHeader
-        avatar={<Icon icon={frontmatter?.icon as any} color="secondary" />}
+        action={<Icon icon={frontmatter?.icon as any} color="secondary" />}
         title={frontmatter?.title || section}
         subheader={frontmatter?.description}
       />
@@ -74,13 +74,17 @@ export default function FolderPage({
         <Box sx={{ mx: 1, mb: 1 }}>
           <CardMedia
             component="img"
-            height={150}
+            height={315}
             src={frontmatter.image}
             alt={frontmatter.title}
           />
         </Box>
       )}
-
+      {content && (
+        <CardContent sx={{ mt: 4 }}>
+          <ReactMarkdown>{content}</ReactMarkdown>
+        </CardContent>
+      )}
       {children.length > 0 && (
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 2 }}>
           {children
@@ -92,30 +96,25 @@ export default function FolderPage({
                   href={`/${node.slug}`}
                   style={{ color: 'black', textDecoration: 'none' }}
                 >
-                  <Card variant="outlined">
-                    <CardActionArea>
-                      <CardHeader
-                        avatar={
-                          node.icon ? (
-                            <Icon icon={node.icon as any} color="secondary" />
-                          ) : undefined
-                        }
-                        title={node.title}
-                        subheader={node.excerpt}
-                      />
-                    </CardActionArea>
-                  </Card>
+                  <CardHeader
+                    title={node.title}
+                    subheader={node.excerpt}
+                    sx={{
+                      alignItems: 'flex-start',
+                    }}
+                    avatar={
+                      node.icon ? (
+                        <Icon icon={node.icon as any} color="secondary" />
+                      ) : undefined
+                    }
+                  />
                 </Link>
               </Box>
             ))}
         </Box>
       )}
 
-      {content && (
-        <CardContent sx={{ mt: 4 }}>
-          <ReactMarkdown>{content}</ReactMarkdown>
-        </CardContent>
-      )}
+      
     </Box>
   )
 }

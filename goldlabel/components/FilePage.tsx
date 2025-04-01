@@ -35,7 +35,7 @@ export default function FilePage({ content, globalNav }: FilePageProps) {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column' }}>
       <CardHeader
-        avatar={<IconButton>
+        action={<IconButton disabled>
           <Icon icon={icon as any} color="secondary" />
           </IconButton>}
         title={title || 'Untitled'}
@@ -46,7 +46,7 @@ export default function FilePage({ content, globalNav }: FilePageProps) {
         <Box sx={{ mx: 1, mb: 1 }}>
           <CardMedia
             component="img"
-            height={150}
+            height={315}
             src={image}
             alt={title}
           />
