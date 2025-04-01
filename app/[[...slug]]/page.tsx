@@ -31,7 +31,7 @@ export default async function CatchAllPage({ params }: CatchAllPageProps) {
 
   // Special case for /sitemap
   if (slugPath === '/sitemap') {
-    return <Sitemap globalNav={globalNav} />
+    return <Sitemap globalNav={globalNav} openTopLevelByDefault={10}/>
   }
 
   // Try to load markdown file directly

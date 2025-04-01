@@ -15,6 +15,8 @@ import { Icon } from '#/goldlabel'
 
 export type SitemapProps = {
   globalNav?: NavItem[] | null
+  openTopLevelByDefault?: number // now a number (default = 1)
+  onClose?: () => void
 }
 
 type NavItem = {
@@ -28,17 +30,12 @@ type NavItem = {
   children?: NavItem[]
 }
 
-export default function Sitemap({ globalNav }: SitemapProps) {
-  const [openFolders, setOpenFolders] = useState<Record<string, boolean>>(() => {
-    const initial: Record<string, boolean> = {}
-    ;(globalNav || []).forEach(item => {
-      if (item.type === 'folder') {
-        const slug = item.slug.startsWith('/') ? item.slug : `/${item.slug}`
-        initial[slug] = true
-      }
-    })
-    return initial
-  })
+export default function Sitemap({
+  onClose = () => {},
+  globalNav,
+  openTopLevelByDefault = 0,
+}: SitemapProps) {
+  const [openFolders, setOpenFolders] = useState<Record<string, boolean>>({})
 
   const toggleFolder = (slug: string) => {
     setOpenFolders(prev => ({
@@ -49,34 +46,47 @@ export default function Sitemap({ globalNav }: SitemapProps) {
 
   const renderList = (items: NavItem[], parentPath = '', depth = 0) => {
     const sorted = [...items].sort((a, b) => a.order - b.order)
-    const indent = 2 + depth * 2 // e.g. pl: 2 for top-level, 4, 6, etc.
+    const indent = 2 + depth * 2
 
     return (
       <List component="div" disablePadding>
         {sorted.map((item) => {
           const fullPath = item.slug.startsWith('/') ? item.slug : `/${item.slug}`
-          const isOpen = openFolders[fullPath] ?? false
+          const isToggled = openFolders[fullPath]
+          const isOpen =
+            typeof isToggled === 'boolean'
+              ? isToggled
+              : depth < openTopLevelByDefault
 
           if (item.type === 'folder') {
             return (
               <React.Fragment key={fullPath}>
                 <Box display="flex" alignItems="center" sx={{ pl: indent }}>
-                  <ListItemButton onClick={() => toggleFolder(fullPath)} sx={{ flexGrow: 1 }}>
-                    <ListItemIcon>
-                      <Icon icon={item.icon as any || 'folder'}  color="secondary"/>
-                    </ListItemIcon>
-                    <ListItemText primary={item.title} />
-                    {isOpen ? <Icon icon="up" color='secondary' /> : <Icon icon="down" color='secondary' />}
-                  </ListItemButton>
-                  <IconButton
+                <IconButton
                     component={Link}
                     href={fullPath}
                     aria-label={`Go to ${item.title}`}
-                    size="small"
-                    sx={{ mr: 1 }}
                   >
-                    <Icon icon="right" color='secondary' />
+                    <Icon icon="right" color="secondary" />
                   </IconButton>
+                  <ListItemButton
+                    onClick={() => {
+                      toggleFolder(fullPath)
+                      onClose()
+                    }}
+                    sx={{ flexGrow: 1 }}
+                  >
+                    <ListItemIcon>
+                      <Icon icon={item.icon as any || 'folder'} color="secondary" />
+                    </ListItemIcon>
+                    <ListItemText primary={item.title} />
+                    {isOpen ? (
+                      <Icon icon="up" color="secondary" />
+                    ) : (
+                      <Icon icon="down" color="secondary" />
+                    )}
+                  </ListItemButton>
+                  
                 </Box>
                 <Collapse in={isOpen} timeout="auto" unmountOnExit>
                   {renderList(item.children || [], fullPath, depth + 1)}
@@ -90,10 +100,11 @@ export default function Sitemap({ globalNav }: SitemapProps) {
               key={fullPath}
               component={Link}
               href={fullPath}
+              onClick={onClose}
               sx={{ pl: indent + 2 }}
             >
               <ListItemIcon>
-                <Icon icon={item.icon as any || 'description'} color="secondary" />
+                <Icon icon={item.icon as any || 'doc'} color="secondary" />
               </ListItemIcon>
               <ListItemText primary={item.title} />
             </ListItemButton>
@@ -107,9 +118,5 @@ export default function Sitemap({ globalNav }: SitemapProps) {
     return <Box sx={{ px: 2 }}>No navigation available.</Box>
   }
 
-  return (
-    <Box sx={{ px: 0 }}>
-      {renderList(globalNav)}
-    </Box>
-  )
+  return <Box sx={{ px: 0 }}>{renderList(globalNav)}</Box>
 }

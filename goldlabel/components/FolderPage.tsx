@@ -65,7 +65,7 @@ export default function FolderPage({
   return (
     <Box sx={{ px: 2 }}>
       <CardHeader
-        action={<Icon icon={frontmatter?.icon as any} color="secondary" />}
+        avatar={<Icon icon={frontmatter?.icon as any} color="secondary" />}
         title={frontmatter?.title || section}
         subheader={frontmatter?.description}
       />

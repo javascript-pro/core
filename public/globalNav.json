@@ -1,6 +1,6 @@
 [
   {
-    "title": "Goldlabel",
+    "title": "Home",
     "slug": "/",
     "order": 1,
     "icon": "home",
@@ -16,14 +16,6 @@
     ],
     "excerpt": "Publicfacing foundation of the Goldlabel Apps ecosystem. It’s a fast, staticfirst Next.js site powered by realtime data from Firestore and managed through a builtin admin interface. \n\n |  |",
     "children": [
-      {
-        "title": "Sitemap",
-        "slug": "sitemap",
-        "order": 5,
-        "icon": "web",
-        "type": "file",
-        "excerpt": "Excellent choice. This statically generated sitemap is an important feature of making Goldlabel perform so well in SEO tests"
-      },
       {
         "title": "Work",
         "slug": "work",
@@ -180,14 +172,6 @@
             "excerpt": "",
             "children": [
               {
-                "title": "Charles Darwin",
-                "slug": "balance/sci-fi/charles-darwin",
-                "order": 20,
-                "icon": "doc",
-                "type": "file",
-                "excerpt": "Judging from the past, we may safely infer that no one living species will transmit its unaltered likeness to a distant futurity. And of the species now living very few will transmit progeny of any ki"
-              },
-              {
                 "title": "Einstein",
                 "slug": "balance/sci-fi/einstein",
                 "order": 30,
@@ -202,6 +186,14 @@
                 "icon": "doc",
                 "type": "file",
                 "excerpt": "Really just the name for Einstein's study of gravitation. And here we're going to introduce my alltime favorite analogy for general relativity, the bowling ball on the trampoline. Let's imagine that f"
+              },
+              {
+                "title": "Charles Darwin",
+                "slug": "balance/sci-fi/charles-darwin",
+                "order": 2000,
+                "icon": "doc",
+                "type": "file",
+                "excerpt": "Judging from the past, we may safely infer that no one living species will transmit its unaltered likeness to a distant futurity. And of the species now living very few will transmit progeny of any ki"
               }
             ]
           }

@@ -8,6 +8,7 @@ import {
   CardContent,
   CardHeader,
   CardMedia,
+  IconButton,
 } from '@mui/material'
 import { Icon } from '#/goldlabel'
 
@@ -34,7 +35,9 @@ export default function FilePage({ content, globalNav }: FilePageProps) {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column' }}>
       <CardHeader
-        action={<Icon icon={icon as any} color="secondary" />}
+        avatar={<IconButton>
+          <Icon icon={icon as any} color="secondary" />
+          </IconButton>}
         title={title || 'Untitled'}
         subheader={description}
       />

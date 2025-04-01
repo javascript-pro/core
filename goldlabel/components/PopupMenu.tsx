@@ -13,17 +13,18 @@ import {
 import { Icon, Sitemap } from '#/goldlabel';
 
 type PopupMenuProps = {
-  open: boolean;
-  onClose: () => void;
+  open?: boolean;
+  onClose?: () => void;
+  globalNav: any
 };
 
-export default function PopupMenu({ open, onClose }: PopupMenuProps) {
+export default function PopupMenu({ open, onClose, globalNav }: PopupMenuProps) {
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
   
   return (
     <Dialog
-      open={open}
+      open={open as boolean}
       onClose={onClose}
       fullScreen={fullScreen}
       fullWidth
@@ -48,7 +49,11 @@ export default function PopupMenu({ open, onClose }: PopupMenuProps) {
         </IconButton>
       </DialogTitle>
       <DialogContent >
-        <Sitemap />
+        <Sitemap 
+          globalNav={globalNav} 
+          onClose={onClose} 
+          openTopLevelByDefault={3}
+        />
       </DialogContent>
     </Dialog>
   );

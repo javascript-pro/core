@@ -19,8 +19,7 @@ export default function Home({}: HomeProps) {
         sx={{
           position: 'relative',
           width: '100%',
-          height: fullScreen ? 200 : 300,
-          mb: 4,
+          height: fullScreen ? 100 : 150,
           borderRadius: 2,
           overflow: 'hidden',
         }}
@@ -34,11 +33,16 @@ export default function Home({}: HomeProps) {
         />
       </Box>
 
-      <Typography variant="h3" component="h1" gutterBottom>
+      <Typography
+        variant="h6"
+        component="h1"
+        gutterBottom
+        align="center"
+      >
         Welcome to Goldlabel
       </Typography>
 
-      <Typography variant="body1" sx={{ mb: 2 }}>
+      <Typography variant="body1" sx={{}}>
         We build modern apps for a modern web. Explore our projects, tools, and ideas — all in one place.
       </Typography>
 

@@ -48,11 +48,12 @@ const StyledFab = styled(Fab)({
 });
 
 type AppshellProps = {
-  children?: React.ReactNode;
+  children?: React.ReactNode
+  globalNav?: any
 };
 
-export default function Appshell({ children }: AppshellProps) {
-  const topAppBarHeight = 64;
+export default function Appshell({ children, globalNav }: AppshellProps) {
+  const topAppBarHeight = 50;
   const [menuOpen, setMenuOpen] = React.useState(false);
 
   const handleToggleMenu = () => setMenuOpen(!menuOpen);
@@ -123,7 +124,7 @@ export default function Appshell({ children }: AppshellProps) {
       </AppBar>
 
       {/* Pop-up Menu Dialog */}
-      <PopupMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
+      <PopupMenu open={menuOpen} onClose={() => setMenuOpen(false)} globalNav={globalNav} />
     </ThemeProvider>
   );
 }

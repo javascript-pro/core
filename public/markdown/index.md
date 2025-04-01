@@ -1,7 +1,7 @@
 ---
 order: 1
-title: Goldlabel
-description: Core
+title: Home
+description: Goldlabel Core
 slug: /
 icon: home
 image: /jpg/images/spade.jpg
