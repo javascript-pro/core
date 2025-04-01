@@ -23,36 +23,25 @@
         "icon": "folder",
         "type": "folder",
         "tags": [
-          "next.js",
-          "javascript",
-          "flash",
-          "node"
+          "social"
         ],
-        "excerpt": "Goldlabel Core is the publicfacing foundation of the Goldlabel Apps ecosystem. It’s a fast, staticfirst Next.js site powered by realtime data from Firestore and managed through a builtin admin interfa",
+        "excerpt": "See us socially on , , \n,\n, \nor even the social network formally known as .\n\nGoldlabel Core is the publicfacing foundation of the Goldlabel Apps ecosystem. It’s a fast, staticfirst Next.js site powere",
         "children": [
           {
-            "title": "Apps",
-            "slug": "work/apps",
-            "order": 5,
-            "icon": "apps",
+            "title": "Examples",
+            "slug": "work/examples",
+            "order": 10,
+            "icon": "examples",
             "type": "folder",
             "excerpt": "Here is a list of examples",
             "children": [
               {
                 "title": "MP3 to Text",
-                "slug": "work/apps/mp3-to-text",
+                "slug": "work/examples/mp3-to-text",
                 "order": 30,
-                "icon": "work",
+                "icon": "examples",
                 "type": "file",
                 "excerpt": "In this Weekend Portfolio project, you’ll build a compact and powerful app called mp3totext. The idea is simple but important: you upload an .mp3 file, and the app gives you back a transcription of it"
-              },
-              {
-                "title": "Flash",
-                "slug": "work/apps/flash",
-                "order": 50,
-                "icon": "flash",
-                "type": "file",
-                "excerpt": "Flash, also known as Adobe Flash, was a multimedia software platform created by Macromedia and later acquired by Adobe. It was widely used on the web to create interactive animations, games, audio and"
               }
             ]
           },
@@ -65,12 +54,27 @@
             "excerpt": "Privacy, Cookies",
             "children": [
               {
-                "title": "UK Limited Company 5460545",
+                "title": "Goldlabel Apps Ltd",
                 "slug": "work/company/uk-ltd",
                 "order": 20,
                 "icon": "doc",
                 "type": "file",
-                "excerpt": "Goldlabel Apps Ltd is a UK Limited Company (5460545), building custom software for creators, developers, and businesses."
+                "excerpt": "Goldlabel Apps Ltd is a UK Limited Company (5460545), building custom software for creators, developers, and businesses.\n\n\n\nGet in touch. For it's a  universally acknowledged that a Software Developer"
+              },
+              {
+                "title": "Privacy",
+                "slug": "work/company/privacy",
+                "order": 1000,
+                "icon": "account",
+                "type": "file",
+                "tags": [
+                  "cookies",
+                  "gdpr",
+                  "privacy",
+                  "terms",
+                  "trust"
+                ],
+                "excerpt": "Privacy Statement\n\nWelcome to Goldlabel! We value your privacy and are committed to protecting your personal information. This privacy statement aims to provide clarity on how we collect, use, and saf"
               }
             ]
           },
@@ -91,6 +95,14 @@
                 "excerpt": "Goldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo architecture with multiple Next.js a"
               },
               {
+                "title": "Flash",
+                "slug": "work/techstack/flash",
+                "order": 50,
+                "icon": "flash",
+                "type": "file",
+                "excerpt": "Flash, also known as Adobe Flash, was a multimedia software platform created by Macromedia and later acquired by Adobe. It was widely used on the web to create interactive animations, games, audio and"
+              },
+              {
                 "title": "Design System",
                 "slug": "work/techstack/design-system",
                 "order": 100,
@@ -99,21 +111,6 @@
                 "excerpt": "Design Templates\n\nThanks for the feedback! Since Berry is more admin/dashboardoriented, let's pivot to frontfacing templates that still use MUI, focusing on navigation, page structure, and content dis"
               }
             ]
-          },
-          {
-            "title": "Privacy",
-            "slug": "work/privacy",
-            "order": 1000,
-            "icon": "account",
-            "type": "file",
-            "tags": [
-              "cookies",
-              "gdpr",
-              "privacy",
-              "terms",
-              "trust"
-            ],
-            "excerpt": "We don't use cookies\n\nPrivacy Statement\n\nWelcome to Goldlabel! We value your privacy and are committed to protecting your personal information. This privacy statement aims to provide clarity on how we"
           }
         ]
       },
@@ -174,23 +171,23 @@
                 "title": "Charles Darwin",
                 "slug": "balance/sci-fi/charles-darwin",
                 "order": 20,
-                "icon": "balance",
+                "icon": "doc",
                 "type": "file",
                 "excerpt": "Judging from the past, we may safely infer that no one living species will transmit its unaltered likeness to a distant futurity. And of the species now living very few will transmit progeny of any ki"
               },
               {
-                "title": "Albert Einstein",
+                "title": "Einstein",
                 "slug": "balance/sci-fi/einstein",
                 "order": 30,
-                "icon": "balance",
+                "icon": "doc",
                 "type": "file",
-                "excerpt": "Before we get into solving the mercury problem, let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series. \n\nI mentioned in the l"
+                "excerpt": "Let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series. \n\nI mentioned in the last lecture this idea of Gedanken experiments, t"
               },
               {
                 "title": "General Theory of Relativity",
                 "slug": "balance/sci-fi/relativity",
                 "order": 30,
-                "icon": "balance",
+                "icon": "doc",
                 "type": "file",
                 "excerpt": "Really just the name for Einstein's study of gravitation. And here we're going to introduce my alltime favorite analogy for general relativity, the bowling ball on the trampoline. Let's imagine that f"
               }

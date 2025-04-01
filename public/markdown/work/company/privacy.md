@@ -1,14 +1,12 @@
 ---
 order: 1000
 title: Privacy
-description: Your trust means everything to us
-slug: /work/privacy
+description: We don't use cookies
+slug: /work/company/privacy
 icon: account
 image: /jpg/work.jpg
 tags: cookies, gdpr, privacy, terms, trust
 ---
-> We don't use cookies
-
 **Privacy Statement**
 
 Welcome to Goldlabel! We value your privacy and are committed to protecting your personal information. This privacy statement aims to provide clarity on how we collect, use, and safeguard your data.

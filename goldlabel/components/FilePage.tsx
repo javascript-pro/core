@@ -1,15 +1,16 @@
 // goldlabel/components/FilePage.tsx
+
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import {
   Box,
-  Card,
   CardContent,
   CardHeader,
   CardMedia,
+  Link,
 } from '@mui/material'
-import {Icon } from '#/goldlabel'
+import { Icon } from '#/goldlabel'
 
 type Props = {
   content: {
@@ -30,41 +31,43 @@ export default function FilePage({ content }: Props) {
   const { title, image, icon, description } = frontmatter
 
   return (
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-        }}
-      >
-        <CardHeader
-          action={
-            <Icon icon={icon as any} />
-          }
-          title={title || 'Untitled'}
-          subheader={description}
-        />
+    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+      <CardHeader
+        action={<Icon icon={icon as any} color="secondary" />}
+        title={title || 'Untitled'}
+        subheader={description}
+      />
 
-        {frontmatter?.image && (
-          <Box sx={{mx:1, mb:1}}>
+      {image && (
+        <Box sx={{ mx: 1, mb: 1 }}>
           <CardMedia
             component="img"
             height={150}
             src={image}
             alt={title}
-            
           />
-          </Box>
-        )}
+        </Box>
+      )}
 
-
-
-        <CardContent>
-
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>
-            {body}
-          </ReactMarkdown>
-
-        </CardContent>
-      </Box>
+      <CardContent>
+        <ReactMarkdown
+          remarkPlugins={[remarkGfm]}
+          components={{
+            a: ({ href, children }) => (
+              <Link
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                underline="hover"
+                color="secondary"
+              >
+                {children}
+              </Link>
+            ),
+          }}>
+          {body}
+        </ReactMarkdown>
+      </CardContent>
+    </Box>
   )
 }
