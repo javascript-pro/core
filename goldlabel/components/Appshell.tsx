@@ -10,14 +10,12 @@ import {
   createTheme,
   AppBar,
   Toolbar,
-  IconButton,
   Fab,
   Avatar,
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import MenuIcon from '@mui/icons-material/Menu';
-import {Breadcrumb} from '#/components/Breadcrumb';
-
+import { AppBreadcrumb } from '#/goldlabel';
+import PopupMenu from './PopupMenu'; // Adjust path if needed
 
 const { light: themeValues } = config.themes;
 
@@ -55,6 +53,9 @@ type AppshellProps = {
 
 export default function Appshell({ children }: AppshellProps) {
   const topAppBarHeight = 64;
+  const [menuOpen, setMenuOpen] = React.useState(false);
+
+  const handleToggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
     <ThemeProvider theme={theme}>
@@ -71,31 +72,18 @@ export default function Appshell({ children }: AppshellProps) {
           height: topAppBarHeight,
         }}
       >
-        <Container maxWidth="sm" sx={{mt:1}}>
-          <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
-            <IconButton
-              color="inherit"
-              onClick={() => window.open('/', '_self')}
-            >
-              <Avatar
-                src={config.favicon}
-                sx={{ width: 32, height: 32 }}
-                alt="Home"
-              />
-            </IconButton>
-
-
-            <Breadcrumb />
+        <Container maxWidth="sm">
+          <Toolbar>
+            <AppBreadcrumb />
           </Toolbar>
         </Container>
       </AppBar>
 
       {/* Main Content Area with top padding */}
-      <Container maxWidth="sm" sx={{ pt: `${topAppBarHeight + 0}px` }}>
-
-          <Box sx={{ pb: '50px' }}>
-            {children && <Box sx={{ p: 2 }}>{children}</Box>}
-          </Box>
+      <Container maxWidth="sm" sx={{ pt: `${topAppBarHeight - 10}px` }}>
+        <Box sx={{ pb: '50px' }}>
+          {children && <Box sx={{ p: 2 }}>{children}</Box>}
+        </Box>
       </Container>
 
       {/* Bottom AppBar */}
@@ -110,21 +98,25 @@ export default function Appshell({ children }: AppshellProps) {
       >
         <Container maxWidth="sm">
           <Toolbar>
-            <StyledFab color="primary" aria-label="Open Menu">
-              <MenuIcon color="secondary"/>
-            </StyledFab>
-
-            <Box sx={{ flexGrow: 1 }} />
-
-            {/* <IconButton
-              color="secondary"
-              onClick={() => window.open('/', '_self')}
+            <StyledFab
+              sx={{ boxShadow: 0 }}
+              onClick={handleToggleMenu}
+              color="primary"
+              aria-label="Open Menu"
             >
-              <HomeIcon />
-            </IconButton> */}
+              <Avatar
+                src={config.favicon}
+                sx={{ width: 32, height: 32 }}
+                alt="Menu"
+              />
+            </StyledFab>
+            <Box sx={{ flexGrow: 1 }} />
           </Toolbar>
         </Container>
       </AppBar>
+
+      {/* Pop-up Menu Dialog */}
+      <PopupMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
     </ThemeProvider>
   );
 }

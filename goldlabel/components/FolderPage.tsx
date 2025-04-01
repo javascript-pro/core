@@ -57,27 +57,35 @@ export default function FolderPage({ section, tree, frontmatter, content }: Prop
   
   return (
     <>
-      <Card
+      <Box
         sx={{
         }}
       >
         <CardHeader 
-          avatar={<Icon icon={frontmatter?.icon as any} />}
+          action={<Icon icon={frontmatter?.icon as any} />}
           title={frontmatter?.title || section}
           subheader={frontmatter?.description }
         />
 
       {frontmatter?.image && (
+        <Box sx={{mx:1, mb:1}}>
           <CardMedia
             component="img"
             height={200}
             src={frontmatter.image}
             alt={frontmatter.title}
           />
+          </Box>
         )}
 
+        
+        {tree.length > 0 && (
+            <Box sx={{}}>
+              {renderCards(tree)}
+            </Box>
+          )}
+
         <CardContent>
-          
           {content && (
             <ReactMarkdown>{content}</ReactMarkdown>
           )}
@@ -87,16 +95,9 @@ export default function FolderPage({ section, tree, frontmatter, content }: Prop
               {frontmatter.tags}
             </Typography>
           )} */}
-
-          {tree.length > 0 && (
-            <Box sx={{}}>
-              {renderCards(tree)}
-            </Box>
-          )}
-
-
         </CardContent>
-      </Card>
+
+      </Box>
 
       
     </>

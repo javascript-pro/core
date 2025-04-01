@@ -3,6 +3,7 @@ import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import {
+  Box,
   Card,
   CardContent,
   CardHeader,
@@ -29,15 +30,14 @@ export default function FilePage({ content }: Props) {
   const { title, image, icon, description } = frontmatter
 
   return (
-      <Card
-        variant="outlined"
+      <Box
         sx={{
           display: 'flex',
           flexDirection: 'column',
         }}
       >
         <CardHeader
-          avatar={
+          action={
             <Icon icon={icon as any} />
           }
           title={title || 'Untitled'}
@@ -45,12 +45,15 @@ export default function FilePage({ content }: Props) {
         />
 
         {frontmatter?.image && (
+          <Box sx={{mx:1, mb:1}}>
           <CardMedia
             component="img"
             height={200}
             src={image}
             alt={title}
+            
           />
+          </Box>
         )}
 
 
@@ -62,6 +65,6 @@ export default function FilePage({ content }: Props) {
           </ReactMarkdown>
 
         </CardContent>
-      </Card>
+      </Box>
   )
 }

@@ -2,14 +2,11 @@
 order: 20
 title: Overview
 description: Powerful, user-friendly web applications
-slug: /work/company/overview
-icon: work
+slug: /work/techstack/overview
+icon: doc
 image: /jpg/work.jpg
 ---
-
-### **Overview**
-
-Goldlabel Apps is a project designed to deliver **powerful, user-friendly web applications** that enhance productivity and streamline tasks. The project uses a **monorepo** architecture with multiple Next.js applications deployed to **Vercel**.
+Goldlabel Core is a project designed to deliver **powerful, user-friendly web applications** that enhance productivity and streamline tasks. The project uses a **monorepo** architecture with multiple Next.js applications deployed to **Vercel**.
 
 At this stage, the **www** public-facing site is the primary focus, with an emphasis on **perfect SEO** and **static site generation** (SSG). The goals for the **www** app include:
 

@@ -1,6 +1,6 @@
 [
   {
-    "title": "Core",
+    "title": "Goldlabel",
     "slug": "/",
     "order": 1,
     "icon": "home",
@@ -8,15 +8,19 @@
     "tags": [
       "next.js",
       "core",
-      "goldlabel"
+      "goldlabel",
+      "AI Prompt Engineering",
+      "ChatGPT",
+      "AI",
+      "Singularity"
     ],
-    "excerpt": "Powerful, userfriendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience",
+    "excerpt": "Powerful, userfriendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience\n\nIs THIS Singularity?\n\n \"Put that kind of AI into a drone with a gun...",
     "children": [
       {
         "title": "Work",
         "slug": "work",
         "order": 10,
-        "icon": "work",
+        "icon": "folder",
         "type": "folder",
         "tags": [
           "next.js",
@@ -29,10 +33,10 @@
           {
             "title": "Apps",
             "slug": "work/apps",
-            "order": 20,
+            "order": 5,
             "icon": "apps",
             "type": "folder",
-            "excerpt": "",
+            "excerpt": "Here is a list of examples",
             "children": [
               {
                 "title": "MP3 to Text",
@@ -56,35 +60,60 @@
             "title": "Company",
             "slug": "work/company",
             "order": 20,
-            "icon": "company",
+            "icon": "work",
             "type": "folder",
-            "excerpt": "Privacy \n Cookies \n UK ltd",
+            "excerpt": "Privacy, Cookies",
             "children": [
               {
-                "title": "Overview",
-                "slug": "work/company/overview",
-                "order": 20,
-                "icon": "work",
-                "type": "file",
-                "excerpt": "Overview\n\nGoldlabel Apps is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo architecture with multiple"
-              },
-              {
-                "title": "UK Ltd company",
+                "title": "UK Limited Company 5460545",
                 "slug": "work/company/uk-ltd",
                 "order": 20,
-                "icon": "company",
+                "icon": "doc",
                 "type": "file",
-                "excerpt": "UK Limited Company 5460545\n\nGoldlabel Apps Ltd is a UK Limited Company (5460545), building custom software for creators, developers, and businesses."
+                "excerpt": "Goldlabel Apps Ltd is a UK Limited Company (5460545), building custom software for creators, developers, and businesses."
               }
             ]
           },
           {
-            "title": "Design System",
-            "slug": "work/design-system",
-            "order": 100,
-            "icon": "work",
+            "title": "Techstack",
+            "slug": "work/techstack",
+            "order": 30,
+            "icon": "techstack",
+            "type": "folder",
+            "excerpt": "What does techstak really mean?",
+            "children": [
+              {
+                "title": "Overview",
+                "slug": "work/techstack/overview",
+                "order": 20,
+                "icon": "doc",
+                "type": "file",
+                "excerpt": "Goldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo architecture with multiple Next.js a"
+              },
+              {
+                "title": "Design System",
+                "slug": "work/techstack/design-system",
+                "order": 100,
+                "icon": "doc",
+                "type": "file",
+                "excerpt": "Design Templates\n\nThanks for the feedback! Since Berry is more admin/dashboardoriented, let's pivot to frontfacing templates that still use MUI, focusing on navigation, page structure, and content dis"
+              }
+            ]
+          },
+          {
+            "title": "Privacy",
+            "slug": "work/privacy",
+            "order": 1000,
+            "icon": "account",
             "type": "file",
-            "excerpt": "Design Templates\n\nThanks for the feedback! Since Berry is more admin/dashboardoriented, let's pivot to frontfacing templates that still use MUI, focusing on navigation, page structure, and content dis"
+            "tags": [
+              "cookies",
+              "gdpr",
+              "privacy",
+              "terms",
+              "trust"
+            ],
+            "excerpt": "We don't use cookies\n\nPrivacy Statement\n\nWelcome to Goldlabel! We value your privacy and are committed to protecting your personal information. This privacy statement aims to provide clarity on how we"
           }
         ]
       },
@@ -126,17 +155,26 @@
         "title": "Life",
         "slug": "life",
         "order": 50,
-        "icon": "life",
+        "icon": "folder",
         "type": "folder",
         "excerpt": "",
         "children": [
           {
+            "title": "Diving",
+            "slug": "life/diving",
+            "order": 10,
+            "icon": "diving",
+            "type": "folder",
+            "excerpt": "All about diving",
+            "children": []
+          },
+          {
             "title": "Aquaponics",
             "slug": "life/aquaponics",
             "order": 20,
-            "icon": "life",
+            "icon": "fish",
             "type": "folder",
-            "excerpt": "aquaponicsaquaponicsaquaponicsaquaponicsaquaponicsaquaponics\naquaponics",
+            "excerpt": "",
             "children": []
           }
         ]
@@ -145,33 +183,43 @@
         "title": "Balance",
         "slug": "balance",
         "order": 100,
-        "icon": "balance",
+        "icon": "folder",
         "type": "folder",
         "excerpt": "",
         "children": [
           {
-            "title": "Charles Darwin",
-            "slug": "balance/charles-darwin",
-            "order": 20,
-            "icon": "balance",
-            "type": "file",
-            "excerpt": "Judging from the past, we may safely infer that no one living species will transmit its unaltered likeness to a distant futurity. And of the species now living very few will transmit progeny of any ki"
-          },
-          {
-            "title": "Albert Einstein",
-            "slug": "balance/einstein",
-            "order": 30,
-            "icon": "balance",
-            "type": "file",
-            "excerpt": "Before we get into solving the mercury problem, let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series. \n\nI mentioned in the l"
-          },
-          {
-            "title": "General Theory of Relativity",
-            "slug": "balance/relativity",
-            "order": 30,
-            "icon": "balance",
-            "type": "file",
-            "excerpt": "General Relativity, \n\nReally just the name for Einstein's study of gravitation. And here we're going to introduce my alltime favorite analogy for general relativity, the bowling ball on the trampoline"
+            "title": "Science Fiction",
+            "slug": "balance/sci-fi",
+            "order": 120,
+            "icon": "folder",
+            "type": "folder",
+            "excerpt": "",
+            "children": [
+              {
+                "title": "Charles Darwin",
+                "slug": "balance/sci-fi/charles-darwin",
+                "order": 20,
+                "icon": "balance",
+                "type": "file",
+                "excerpt": "Judging from the past, we may safely infer that no one living species will transmit its unaltered likeness to a distant futurity. And of the species now living very few will transmit progeny of any ki"
+              },
+              {
+                "title": "Albert Einstein",
+                "slug": "balance/sci-fi/einstein",
+                "order": 30,
+                "icon": "balance",
+                "type": "file",
+                "excerpt": "Before we get into solving the mercury problem, let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series. \n\nI mentioned in the l"
+              },
+              {
+                "title": "General Theory of Relativity",
+                "slug": "balance/sci-fi/relativity",
+                "order": 30,
+                "icon": "balance",
+                "type": "file",
+                "excerpt": "Really just the name for Einstein's study of gravitation. And here we're going to introduce my alltime favorite analogy for general relativity, the bowling ball on the trampoline. Let's imagine that f"
+              }
+            ]
           }
         ]
       }

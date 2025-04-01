@@ -1,13 +1,10 @@
 ---
 order: 20
 title: Company
-description: About Goldlabel
+description: Goldlabel Apps Ltd
 slug: /work/company
-icon: company
+icon: work
 image: /jpg/work.jpg
 ---
 
-- [Overview](/work/company/overview)
-- Privacy 
-- Cookies 
-- UK ltd
+Privacy, Cookies
