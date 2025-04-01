@@ -12,9 +12,10 @@ import {
   Toolbar,
   Fab,
   Avatar,
+  IconButton,
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { AppBreadcrumb } from '#/goldlabel';
+import { AppBreadcrumb, Icon } from '#/goldlabel';
 import PopupMenu from './PopupMenu'; // Adjust path if needed
 
 const { light: themeValues } = config.themes;
@@ -41,7 +42,7 @@ const theme = createTheme({
 const StyledFab = styled(Fab)({
   position: 'absolute',
   zIndex: 1,
-  top: -30,
+  top: -8,
   left: 0,
   right: 0,
   margin: '0 auto',
@@ -74,6 +75,16 @@ export default function Appshell({ children }: AppshellProps) {
       >
         <Container maxWidth="sm">
           <Toolbar>
+            <IconButton
+              onClick={() => {
+                window.open ("/", "_self")
+              }}>
+              <Avatar
+                src={config.favicon}
+                sx={{ width: 32, height: 32 }}
+                alt="Home"
+              />
+            </IconButton>
             <AppBreadcrumb />
           </Toolbar>
         </Container>
@@ -104,11 +115,8 @@ export default function Appshell({ children }: AppshellProps) {
               color="primary"
               aria-label="Open Menu"
             >
-              <Avatar
-                src={config.favicon}
-                sx={{ width: 32, height: 32 }}
-                alt="Menu"
-              />
+              
+              <Icon icon="menu" color="secondary" />
             </StyledFab>
             <Box sx={{ flexGrow: 1 }} />
           </Toolbar>
