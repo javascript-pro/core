@@ -126,9 +126,18 @@
         "excerpt": "",
         "children": [
           {
+            "title": "Food",
+            "slug": "life/food",
+            "order": 10,
+            "icon": "food",
+            "type": "folder",
+            "excerpt": "Cakes and stuff",
+            "children": []
+          },
+          {
             "title": "Diving",
             "slug": "life/diving",
-            "order": 10,
+            "order": 100,
             "icon": "diving",
             "type": "folder",
             "excerpt": "All about diving",
@@ -137,7 +146,7 @@
           {
             "title": "Aquaponics",
             "slug": "life/aquaponics",
-            "order": 20,
+            "order": 200,
             "icon": "fish",
             "type": "folder",
             "excerpt": "",

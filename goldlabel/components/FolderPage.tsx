@@ -3,7 +3,6 @@
 import Link from 'next/link'
 import {
   Box,
-  Card,
   CardActionArea,
   CardHeader,
   CardMedia,
@@ -62,7 +61,7 @@ export default function FolderPage({ section, tree, frontmatter, content }: Prop
         }}
       >
         <CardHeader 
-          action={<Icon icon={frontmatter?.icon as any} />}
+          action={<Icon icon={frontmatter?.icon as any} color="secondary"/>}
           title={frontmatter?.title || section}
           subheader={frontmatter?.description }
         />
@@ -131,7 +130,7 @@ function renderCards(tree: TreeNode[]): React.ReactElement[] {
         <CardActionArea>
           <CardHeader
             avatar={
-              <Icon icon={icon as any} />
+              <Icon icon={icon as any} color="secondary"/>
             }
             title={title}
             subheader={subheader}
