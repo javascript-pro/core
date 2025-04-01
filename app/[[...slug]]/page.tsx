@@ -12,8 +12,6 @@ export default async function CatchAllPage({ params }: CatchAllPageProps) {
   const slugArray = params.slug || []
   const slugPath = '/' + slugArray.join('/')
 
-
-
   // Load globalNav JSON directly from public folder
   const navPath = path.join(process.cwd(), 'public/globalNav.json')
   let globalNav = null
