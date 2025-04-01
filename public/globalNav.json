@@ -33,7 +33,7 @@
             "order": 20,
             "icon": "company",
             "type": "folder",
-            "excerpt": "We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers t",
+            "excerpt": "321323 High Road\nChadwell Heath\nEssex RM6 6AX\nUK Ltd",
             "children": [
               {
                 "title": "Goldlabel Apps Ltd",
@@ -46,6 +46,21 @@
                   "address"
                 ],
                 "excerpt": "Goldlabel Apps Ltd is a UK Limited Company (5460545), building custom software for creators, developers, and businesses.\n\nGet in touch. For it's a  universally acknowledged that a Software Developer i"
+              },
+              {
+                "title": "Cookies",
+                "slug": "work/company/cookies",
+                "order": 750,
+                "icon": "account",
+                "type": "file",
+                "tags": [
+                  "cookies",
+                  "gdpr",
+                  "privacy",
+                  "terms",
+                  "trust"
+                ],
+                "excerpt": "While cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers to explore alternative "
               },
               {
                 "title": "Privacy",
@@ -133,7 +148,16 @@
             "icon": "food",
             "type": "folder",
             "excerpt": "Cakes and stuff",
-            "children": []
+            "children": [
+              {
+                "title": "Banana Bread",
+                "slug": "life/food/banana-bread",
+                "order": 50,
+                "icon": "food",
+                "type": "file",
+                "excerpt": "Moist, flavorful, and easy to make. Perfect for using overripe bananas, this classic loaf is a crowdpleaser for breakfast, snacks, or dessert.\n\n\n 125g Butter\n 175g Brown sugar\n 1 tsp Vanilla extract o"
+              }
+            ]
           },
           {
             "title": "Diving",
@@ -141,8 +165,17 @@
             "order": 100,
             "icon": "diving",
             "type": "folder",
-            "excerpt": "All about diving",
-            "children": []
+            "excerpt": "",
+            "children": [
+              {
+                "title": "It's not raining underwater",
+                "slug": "life/diving/overview",
+                "order": 50,
+                "icon": "diving",
+                "type": "file",
+                "excerpt": ""
+              }
+            ]
           },
           {
             "title": "Aquaponics",
@@ -151,7 +184,16 @@
             "icon": "fish",
             "type": "folder",
             "excerpt": "",
-            "children": []
+            "children": [
+              {
+                "title": "What is Aquaponics?",
+                "slug": "life/aquaponics/overview",
+                "order": 50,
+                "icon": "fish",
+                "type": "file",
+                "excerpt": "What: Aquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closedloop system.\n\nWho: Ideal for urban growers, hobbyists"
+              }
+            ]
           }
         ]
       },

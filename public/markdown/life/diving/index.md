@@ -6,5 +6,3 @@ slug: /life/diving
 icon: diving
 image: /jpg/images/life.jpg
 ---
-
-All about diving
