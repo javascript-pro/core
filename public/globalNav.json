@@ -14,7 +14,7 @@
       "AI",
       "Singularity"
     ],
-    "excerpt": "Goldlabel Core is the publicfacing foundation of the Goldlabel Apps ecosystem. It’s a fast, staticfirst Next.js site powered by realtime data from Firestore and managed through a builtin admin interfa",
+    "excerpt": "Publicfacing foundation of the Goldlabel Apps ecosystem. It’s a fast, staticfirst Next.js site powered by realtime data from Firestore and managed through a builtin admin interface. \n\n |  |",
     "children": [
       {
         "title": "Sitemap",
