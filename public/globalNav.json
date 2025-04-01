@@ -118,6 +118,40 @@
         ]
       },
       {
+        "title": "Balance",
+        "slug": "/balance",
+        "order": 20,
+        "icon": "balance",
+        "type": "folder",
+        "excerpt": "Balance. Balance Balance\n\nWe’ll start with a clean slate because there’s nothing up our sleeves. The goal here isn’t to build much—just to plant the flag.",
+        "children": [
+          {
+            "title": "Charles Darwin",
+            "slug": "/balance/charles-darwin",
+            "order": 20,
+            "icon": "balance",
+            "type": "file",
+            "excerpt": "We may safely infer...\n\nJudging from the past, we may safely infer that no one living species will transmit its unaltered likeness to a distant futurity. And of the species now living very few will tr"
+          },
+          {
+            "title": "Albert Einstein",
+            "slug": "/balance/einstein",
+            "order": 30,
+            "icon": "balance",
+            "type": "file",
+            "excerpt": "Albert Einstein\n\n The godfather of modern physics. Before we get into solving the mercury problem, let's share some of Einstein's contributions which are fundamental to understanding many concepts we'"
+          },
+          {
+            "title": "General Thoery of Relativity",
+            "slug": "/balance/relativity",
+            "order": 30,
+            "icon": "balance",
+            "type": "file",
+            "excerpt": "General Relativity, \n\nReally just the name for Einstein's study of gravitation. And here we're going to introduce my alltime favorite analogy for general relativity, the bowling ball on the trampoline"
+          }
+        ]
+      },
+      {
         "title": "Life",
         "slug": "life",
         "order": 50,
