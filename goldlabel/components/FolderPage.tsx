@@ -67,7 +67,7 @@ export default function FolderPage({
         </Box>
       )}
 
-      <Sitemap globalNav={globalNav} openTopLevelByDefault={1} />
+      <Sitemap globalNav={globalNav} />
 
       {content && (
         <CardContent sx={{ mt: 4 }}>
