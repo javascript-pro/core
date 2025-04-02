@@ -6,5 +6,6 @@ slug: /life/food
 icon: food
 image: /jpg/images/life.jpg
 ---
+When I want a recipe I go the internet of course. I get annoyed by the amount of adverts on the pages where I want to follow simple instructions.  
 
-Cakes and stuff
+For some recipes that I've tried & tested I've stripped them down and added them here. Sometimes they've been tweaked a little or translated from silly ounces to sensible grams.

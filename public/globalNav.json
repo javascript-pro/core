@@ -25,15 +25,103 @@
         "tags": [
           "social"
         ],
-        "excerpt": "See us socially on , , \n,\n, \nor even the social network formally known as .\n\nThe app is designed to grow alongside our products, with a content system we can update anytime and an authentication layer",
+        "excerpt": "See us socially on , , \n,\n, \nor even the social network formally known as .",
         "children": [
           {
-            "title": "Company",
-            "slug": "work/company",
+            "title": "Features",
+            "slug": "work/features",
             "order": 20,
-            "icon": "company",
+            "icon": "feature",
             "type": "folder",
-            "excerpt": "321323 High Road\nChadwell Heath\nEssex RM6 6AX\nUK Ltd",
+            "tags": [
+              "features"
+            ],
+            "excerpt": "Authentication\nAuth is part of Goldlabel’s core. It can be used with various third party providers, eg Cognito To use, you go back to the point where gatsby creates pages. \n\n Hosting & Cloud Database\n",
+            "children": [
+              {
+                "title": "Lingua",
+                "slug": "work/features/lingua",
+                "order": 30,
+                "icon": "feature",
+                "type": "file",
+                "tags": [
+                  "features"
+                ],
+                "excerpt": "Lingua is our multi language translation package. Localisation is not something you want to simply bolt onto a website at the end. Users will do that themselves if they cared enough about reading anyt"
+              }
+            ]
+          },
+          {
+            "title": "Techstack",
+            "slug": "work/techstack",
+            "order": 30,
+            "icon": "techstack",
+            "type": "folder",
+            "excerpt": "",
+            "children": [
+              {
+                "title": "Overview",
+                "slug": "work/techstack/overview",
+                "order": 20,
+                "icon": "doc",
+                "type": "file",
+                "excerpt": "Goldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo architecture with multiple Next.js a"
+              },
+              {
+                "title": "Flash",
+                "slug": "work/techstack/flash",
+                "order": 50,
+                "icon": "flash",
+                "type": "file",
+                "excerpt": "Flash, also known as Adobe Flash, was a multimedia software platform created by Macromedia and later acquired by Adobe. It was widely used on the web to create interactive animations, games, audio and"
+              },
+              {
+                "title": "Design System",
+                "slug": "work/techstack/design-system",
+                "order": 100,
+                "icon": "design",
+                "type": "file",
+                "excerpt": "Design Templates\n\n Thanks for the feedback! Since Berry is more admin/dashboardoriented, let's pivot to frontfacing templates that still use MUI, focusing on navigation, page structure, and content di"
+              }
+            ]
+          },
+          {
+            "title": "Remote working",
+            "slug": "work/remote-working",
+            "order": 190,
+            "icon": "work",
+            "type": "file",
+            "tags": [
+              "remote",
+              "hybrid"
+            ],
+            "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years, due in large part to the COVID19 pandemic. Prior to the pandemic, many businesses were hesitant to allow employees to w"
+          },
+          {
+            "title": "Examples",
+            "slug": "work/examples",
+            "order": 310,
+            "icon": "examples",
+            "type": "folder",
+            "excerpt": "Fast, staticfirst Next.js. Powerful, userfriendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience\nslug: /",
+            "children": [
+              {
+                "title": "MP3 to Text",
+                "slug": "work/examples/mp3-to-text",
+                "order": 30,
+                "icon": "examples",
+                "type": "file",
+                "excerpt": "In this Weekend Portfolio project, you’ll build a compact and powerful app called mp3totext. The idea is simple but important: you upload an .mp3 file, and the app gives you back a transcription of it"
+              }
+            ]
+          },
+          {
+            "title": "UK Ltd Company",
+            "slug": "work/company",
+            "order": 2000,
+            "icon": "work",
+            "type": "folder",
+            "excerpt": "",
             "children": [
               {
                 "title": "Goldlabel Apps Ltd",
@@ -78,58 +166,6 @@
                 "excerpt": "Privacy Statement\n\nWelcome to Goldlabel! We value your privacy and are committed to protecting your personal information. This privacy statement aims to provide clarity on how we collect, use, and saf"
               }
             ]
-          },
-          {
-            "title": "Techstack",
-            "slug": "work/techstack",
-            "order": 30,
-            "icon": "techstack",
-            "type": "folder",
-            "excerpt": "Goldlabel Core is the publicfacing foundation of the Goldlabel Apps ecosystem. It’s a fast, staticfirst Next.js site powered by realtime data from Firestore and managed through a builtin admin interfa",
-            "children": [
-              {
-                "title": "Overview",
-                "slug": "work/techstack/overview",
-                "order": 20,
-                "icon": "doc",
-                "type": "file",
-                "excerpt": "Goldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo architecture with multiple Next.js a"
-              },
-              {
-                "title": "Flash",
-                "slug": "work/techstack/flash",
-                "order": 50,
-                "icon": "flash",
-                "type": "file",
-                "excerpt": "Flash, also known as Adobe Flash, was a multimedia software platform created by Macromedia and later acquired by Adobe. It was widely used on the web to create interactive animations, games, audio and"
-              },
-              {
-                "title": "Design System",
-                "slug": "work/techstack/design-system",
-                "order": 100,
-                "icon": "design",
-                "type": "file",
-                "excerpt": "Design Templates\n\nThanks for the feedback! Since Berry is more admin/dashboardoriented, let's pivot to frontfacing templates that still use MUI, focusing on navigation, page structure, and content dis"
-              }
-            ]
-          },
-          {
-            "title": "Examples",
-            "slug": "work/examples",
-            "order": 310,
-            "icon": "examples",
-            "type": "folder",
-            "excerpt": "Fast, staticfirst Next.js. Powerful, userfriendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience\nslug: /",
-            "children": [
-              {
-                "title": "MP3 to Text",
-                "slug": "work/examples/mp3-to-text",
-                "order": 30,
-                "icon": "examples",
-                "type": "file",
-                "excerpt": "In this Weekend Portfolio project, you’ll build a compact and powerful app called mp3totext. The idea is simple but important: you upload an .mp3 file, and the app gives you back a transcription of it"
-              }
-            ]
           }
         ]
       },
@@ -139,7 +175,7 @@
         "order": 50,
         "icon": "life",
         "type": "folder",
-        "excerpt": "",
+        "excerpt": "I work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age I'm never going to ski like I used to. Ma",
         "children": [
           {
             "title": "Food",
@@ -147,8 +183,23 @@
             "order": 10,
             "icon": "food",
             "type": "folder",
-            "excerpt": "Cakes and stuff",
+            "excerpt": "When I want a recipe I go the internet of course. I get annoyed by the amount of adverts on the pages where I want to follow simple instructions.  \n\nFor some recipes that I've tried & tested I've stri",
             "children": [
+              {
+                "title": "Air Fried Stuffed Peppers",
+                "slug": "life/food/air-fried-peppers",
+                "order": 35,
+                "icon": "food",
+                "type": "file",
+                "tags": [
+                  "food",
+                  "punching dolphins",
+                  "recipes",
+                  "air fryer",
+                  "peppers"
+                ],
+                "excerpt": "Ingredients\n\n 2 Large peppers (capsicums)\n 1 125g pack of mozzarella\n Enough of your best, most delicious bolognaise to fill the peppers\n\n Method\n\n STEP 1\n\nPrepare Air Fryer pan. Line it with tinfoil "
+              },
               {
                 "title": "Banana Bread",
                 "slug": "life/food/banana-bread",

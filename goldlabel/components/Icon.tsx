@@ -106,12 +106,14 @@ import FolderIcon from '@mui/icons-material/FolderOutlined';
 
 import CompanyIcon from '@mui/icons-material/Shop2Outlined';
 import DesignIcon from '@mui/icons-material/PaletteOutlined';
+import FeatureIcon from '@mui/icons-material/FeaturedPlayListOutlined';
 
 
 export type IconShape = {
   icon:
     | 'account'
     | 'company'
+    | 'feature'
     | 'design'
     | 'ai'
     | 'ask'
@@ -252,6 +254,12 @@ export default function Icon({ icon, color }: IconShape) {
         case 'company':
           iconFragment = <CompanyIcon color={color} />;
           break;
+
+          case 'feature':
+            iconFragment = <FeatureIcon color={color} />;
+            break;
+
+
     case 'ask':
       iconFragment = <AskIcon color={color} />;
       break;

@@ -7,9 +7,10 @@ import { Sitemap } from '#/goldlabel'
 
 type HomeProps = {
   open?: boolean
+  globalNav?: any
 }
 
-export default function Home({}: HomeProps) {
+export default function Home({ globalNav }: HomeProps) {
   const theme = useTheme()
   const fullScreen = useMediaQuery(theme.breakpoints.down('md'))
 
@@ -26,7 +27,7 @@ export default function Home({}: HomeProps) {
       >
         <Image
           src="/jpg/images/spade.jpg"
-          alt="Spage cover"
+          alt="Home"
           fill
           style={{ objectFit: 'cover' }}
           priority
@@ -47,7 +48,7 @@ export default function Home({}: HomeProps) {
       </Typography>
 
       {/* Optionally add sitemap or featured links here */}
-      {/* <Sitemap globalNav={yourNavDataHere} /> */}
+      <Sitemap globalNav={globalNav} />
     </Box>
   )
 }

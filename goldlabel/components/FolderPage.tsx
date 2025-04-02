@@ -70,21 +70,23 @@ export default function FolderPage({
         subheader={frontmatter?.description}
       />
 
-      {frontmatter?.image && (
-        <Box sx={{ mx: 1, mb: 1 }}>
-          <CardMedia
-            component="img"
-            height={315}
-            src={frontmatter.image}
-            alt={frontmatter.title}
-          />
-        </Box>
-      )}
-      {content && (
-        <CardContent sx={{ mt: 4 }}>
-          <ReactMarkdown>{content}</ReactMarkdown>
-        </CardContent>
-      )}
+{frontmatter?.image && (
+  <Box sx={{ mx: 1, mb: 1 }}>
+    <CardMedia
+      component="img"
+      sx={{
+        height: {
+          xs: 120, // half of 315 on small screens
+          md: 220,   // default height on md and up
+        },
+      }}
+      src={frontmatter.image}
+      alt={frontmatter.title}
+    />
+  </Box>
+)}
+
+      
       {children.length > 0 && (
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 2 }}>
           {children
@@ -98,7 +100,7 @@ export default function FolderPage({
                 >
                   <CardHeader
                     title={node.title}
-                    subheader={node.excerpt}
+                    // subheader={node.excerpt}
                     sx={{
                       alignItems: 'flex-start',
                     }}
@@ -113,7 +115,11 @@ export default function FolderPage({
             ))}
         </Box>
       )}
-
+      {content && (
+        <CardContent sx={{ mt: 4 }}>
+          <ReactMarkdown>{content}</ReactMarkdown>
+        </CardContent>
+      )}
       
     </Box>
   )

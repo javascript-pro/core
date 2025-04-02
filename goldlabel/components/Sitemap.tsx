@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import {
   Box,
@@ -28,6 +28,58 @@ type NavItem = {
   excerpt?: string
   tags?: string[]
   children?: NavItem[]
+}
+
+// This component handles the rendering of a folder item and scrolls it into view when opened.
+function FolderItem({
+  item,
+  fullPath,
+  indent,
+  depth,
+  isOpen,
+  toggleFolder,
+  renderList,
+}: {
+  item: NavItem
+  fullPath: string
+  indent: number
+  depth: number
+  isOpen: boolean
+  toggleFolder: (slug: string) => void
+  renderList: (items: NavItem[], parentPath: string, depth: number) => React.ReactNode
+}) {
+  const folderRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (isOpen && folderRef.current) {
+      const rect = folderRef.current.getBoundingClientRect()
+      // Scroll only if the folder is partially or completely off-screen.
+      if (rect.top < 0 || rect.bottom > window.innerHeight) {
+        folderRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+    }
+  }, [isOpen])
+
+  return (
+    <React.Fragment>
+      <Box ref={folderRef} display="flex" alignItems="center" sx={{ pl: indent }}>
+        <ListItemButton onClick={() => toggleFolder(fullPath)} sx={{ flexGrow: 1 }}>
+          <ListItemText primary={item.title} />
+          {isOpen ? (
+            <Icon icon="up" color="secondary" />
+          ) : (
+            <Icon icon="down" color="secondary" />
+          )}
+        </ListItemButton>
+        <IconButton component={Link} href={fullPath} aria-label={`Go to ${item.title}`}>
+          <Icon icon="right" color="secondary" />
+        </IconButton>
+      </Box>
+      <Collapse in={isOpen} timeout="auto" unmountOnExit>
+        {renderList(item.children || [], fullPath, depth + 1)}
+      </Collapse>
+    </React.Fragment>
+  )
 }
 
 export default function Sitemap({
@@ -60,40 +112,16 @@ export default function Sitemap({
 
           if (item.type === 'folder') {
             return (
-              <React.Fragment key={fullPath}>
-                <Box display="flex" alignItems="center" sx={{ pl: indent }}>
-                
-                  <ListItemButton
-                    onClick={() => {
-                      toggleFolder(fullPath)
-                      
-                    }}
-                    sx={{ flexGrow: 1 }}
-                  >
-                    {/* <ListItemIcon>
-                      <Icon icon={item.icon as any || 'folder'} color="secondary" />
-                    </ListItemIcon> */}
-                    <ListItemText primary={item.title} />
-                    {isOpen ? (
-                      <Icon icon="up" color="secondary" />
-                    ) : (
-                      <Icon icon="down" color="secondary" />
-                    )}
-                  </ListItemButton>
-
-                  <IconButton
-                    component={Link}
-                    href={fullPath}
-                    aria-label={`Go to ${item.title}`}
-                  >
-                    <Icon icon="right" color="secondary" />
-                  </IconButton>
-                  
-                </Box>
-                <Collapse in={isOpen} timeout="auto" unmountOnExit>
-                  {renderList(item.children || [], fullPath, depth + 1)}
-                </Collapse>
-              </React.Fragment>
+              <FolderItem
+                key={fullPath}
+                item={item}
+                fullPath={fullPath}
+                indent={indent}
+                depth={depth}
+                isOpen={isOpen}
+                toggleFolder={toggleFolder}
+                renderList={renderList}
+              />
             )
           }
 

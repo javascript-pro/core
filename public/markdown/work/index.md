@@ -11,6 +11,3 @@ See us socially on [LinkedIn](https://www.linkedin.com/in/chris-dorward/), [GitH
 [Facebook](https://www.facebook.com/goldlabelapps/),
 [Flickr](https://www.flickr.com/photos/listingslab), 
 or even the social network formally known as [Twitter](https://twitter.com/pb_weizang).
-
-The app is designed to grow alongside our products, with a content system we can update anytime and an authentication layer that keeps control in our hands.
-
