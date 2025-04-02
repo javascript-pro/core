@@ -10,19 +10,9 @@ import {
   CardContent,
   Typography,
 } from '@mui/material'
-import { Icon } from '#/goldlabel'
+import { Icon, Sitemap } from '#/goldlabel'
 import ReactMarkdown from 'react-markdown'
-
-export type MarkdownProps = {
-  type: 'file' | 'folder'
-  name: string
-  slug?: string
-  order?: number
-  excerpt?: string
-  content?: string
-  frontmatter?: Frontmatter
-  children?: MarkdownProps[]
-}
+import { NavItem } from '#/goldlabel/types/nav'
 
 export type Frontmatter = {
   order?: number
@@ -35,21 +25,12 @@ export type Frontmatter = {
   excerpt?: string
 }
 
-type NavNode = {
-  title: string
-  slug: string
-  order?: number
-  icon?: string
-  excerpt?: string
-  children?: NavNode[]
-}
-
 export type FolderPageProps = {
   section: string
-  tree: MarkdownProps[] | null
+  tree: NavItem[] | null
   frontmatter: Frontmatter | null
   content: string | null
-  globalNav: NavNode[]
+  globalNav: NavItem[]
 }
 
 export default function FolderPage({
@@ -60,7 +41,7 @@ export default function FolderPage({
   globalNav,
 }: FolderPageProps) {
   const currentNode = findNodeBySlug(globalNav, section)
-  const children: NavNode[] = currentNode?.children || []
+  const children: NavItem[] = currentNode?.children || []
 
   return (
     <Box sx={{ px: 2 }}>
@@ -70,62 +51,34 @@ export default function FolderPage({
         subheader={frontmatter?.description}
       />
 
-{frontmatter?.image && (
-  <Box sx={{ mx: 1, mb: 1 }}>
-    <CardMedia
-      component="img"
-      sx={{
-        height: {
-          xs: 120, // half of 315 on small screens
-          md: 220,   // default height on md and up
-        },
-      }}
-      src={frontmatter.image}
-      alt={frontmatter.title}
-    />
-  </Box>
-)}
-
-      
-      {children.length > 0 && (
-        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 2 }}>
-          {children
-            .slice()
-            .sort((a: NavNode, b: NavNode) => (a.order ?? 9999) - (b.order ?? 9999))
-            .map((node, index) => (
-              <Box key={index}>
-                <Link
-                  href={`/${node.slug}`}
-                  style={{ color: 'black', textDecoration: 'none' }}
-                >
-                  <CardHeader
-                    title={node.title}
-                    // subheader={node.excerpt}
-                    sx={{
-                      alignItems: 'flex-start',
-                    }}
-                    avatar={
-                      node.icon ? (
-                        <Icon icon={node.icon as any} color="secondary" />
-                      ) : undefined
-                    }
-                  />
-                </Link>
-              </Box>
-            ))}
+      {frontmatter?.image && (
+        <Box sx={{ mx: 1, mb: 1 }}>
+          <CardMedia
+            component="img"
+            sx={{
+              height: {
+                xs: 120,
+                md: 220,
+              },
+            }}
+            src={frontmatter.image}
+            alt={frontmatter.title}
+          />
         </Box>
       )}
+
+      <Sitemap globalNav={globalNav} openTopLevelByDefault={1} />
+
       {content && (
         <CardContent sx={{ mt: 4 }}>
           <ReactMarkdown>{content}</ReactMarkdown>
         </CardContent>
       )}
-      
     </Box>
   )
 }
 
-function findNodeBySlug(nav: NavNode[], slug: string): NavNode | null {
+function findNodeBySlug(nav: NavItem[], slug: string): NavItem | null {
   for (const node of nav) {
     if (node.slug === slug) return node
     if (node.children && Array.isArray(node.children)) {

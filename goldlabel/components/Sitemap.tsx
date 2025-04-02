@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import {
   Box,
@@ -12,6 +12,7 @@ import {
   IconButton,
 } from '@mui/material'
 import { Icon } from '#/goldlabel'
+import { NavItem } from '#/goldlabel/types/nav' // ✅ shared type
 
 export type SitemapProps = {
   globalNav?: NavItem[] | null
@@ -19,18 +20,7 @@ export type SitemapProps = {
   onClose?: () => void
 }
 
-type NavItem = {
-  title: string
-  slug: string
-  order: number
-  icon: string
-  type: 'file' | 'folder'
-  excerpt?: string
-  tags?: string[]
-  children?: NavItem[]
-}
-
-// This component handles the rendering of a folder item and scrolls it into view when opened.
+// Simplified FolderItem: no viewport scrolling
 function FolderItem({
   item,
   fullPath,
@@ -48,21 +38,9 @@ function FolderItem({
   toggleFolder: (slug: string) => void
   renderList: (items: NavItem[], parentPath: string, depth: number) => React.ReactNode
 }) {
-  const folderRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    if (isOpen && folderRef.current) {
-      const rect = folderRef.current.getBoundingClientRect()
-      // Scroll only if the folder is partially or completely off-screen.
-      if (rect.top < 0 || rect.bottom > window.innerHeight) {
-        folderRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      }
-    }
-  }, [isOpen])
-
   return (
     <React.Fragment>
-      <Box ref={folderRef} display="flex" alignItems="center" sx={{ pl: indent }}>
+      <Box display="flex" alignItems="center" sx={{ pl: indent }}>
         <ListItemButton onClick={() => toggleFolder(fullPath)} sx={{ flexGrow: 1 }}>
           <ListItemText primary={item.title} />
           {isOpen ? (
@@ -97,7 +75,7 @@ export default function Sitemap({
   }
 
   const renderList = (items: NavItem[], parentPath = '', depth = 0) => {
-    const sorted = [...items].sort((a, b) => a.order - b.order)
+    const sorted = [...items].sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
     const indent = 2 + depth * 2
 
     return (

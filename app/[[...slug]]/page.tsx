@@ -22,11 +22,11 @@ export default async function CatchAllPage({ params }: CatchAllPageProps) {
     console.error('Failed to load globalNav.json:', err)
   }
 
-  if (slugPath === '/') {
-    return <>            
-            <Home globalNav={globalNav}/>
-          </>
-  }
+  // if (slugPath === '/') {
+  //   return <>            
+  //           <Home globalNav={globalNav}/>
+  //         </>
+  // }
 
   // Special case for /sitemap
   if (slugPath === '/sitemap') {

@@ -52,7 +52,7 @@ export default function PopupMenu({ open, onClose, globalNav }: PopupMenuProps) 
         <Sitemap 
           globalNav={globalNav} 
           onClose={onClose} 
-          openTopLevelByDefault={3}
+          openTopLevelByDefault={1}
         />
       </DialogContent>
     </Dialog>
