@@ -1,16 +1,12 @@
 'use client'
 
-import Link from 'next/link'
 import {
   Box,
-  Card,
-  CardActionArea,
   CardHeader,
   CardMedia,
   CardContent,
-  Typography,
 } from '@mui/material'
-import { Icon, Sitemap } from '#/goldlabel'
+import { Icon, ContextNav } from '#/goldlabel'
 import ReactMarkdown from 'react-markdown'
 import { NavItem } from '#/goldlabel/types/nav'
 
@@ -67,7 +63,7 @@ export default function FolderPage({
         </Box>
       )}
 
-      <Sitemap globalNav={globalNav} />
+      <ContextNav globalNav={globalNav} parentDepth={1} />
 
       {content && (
         <CardContent sx={{ mt: 4 }}>
