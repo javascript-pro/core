@@ -77,8 +77,8 @@ export default function FolderPage({
             {isSmUp ? (
               
               <Box sx={{display: "flex"}}>
-                <Box sx={{}}>
-                  <ContextNav globalNav={globalNav} parentDepth={1} />
+                <Box sx={{minWidth: 200}}>
+                  ADVERT
                 </Box>
                 <Box sx={{}}>
                   {content && (
@@ -92,22 +92,17 @@ export default function FolderPage({
               
             ) : (
               <Box sx={{}}>
+                <Accordion sx={{boxShadow:0}}>
+                  <AccordionSummary expandIcon={<ExpandMoreIcon />} />
+                  <AccordionDetails>
+                    ADVERT
+                  </AccordionDetails>
+                </Accordion>
                 {content && (
                   <CardContent>
                     <ReactMarkdown>{content}</ReactMarkdown>
                   </CardContent>
                 )}
-                <Accordion sx={{boxShadow:0}}>
-                  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <ContextNav globalNav={globalNav} parentDepth={1} />
-                  </AccordionDetails>
-                </Accordion>
-
-                
-
               </Box>
             )}
           </Box>
