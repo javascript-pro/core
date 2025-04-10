@@ -13,6 +13,7 @@ import {
   Fab,
   Avatar,
   IconButton,
+  // Typography,
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { AppBreadcrumb, Icon, PopupMenu } from '#/goldlabel';
@@ -93,6 +94,7 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
       {/* Main Content Area with top padding */}
       <Container maxWidth="md" sx={{ pt: `${topAppBarHeight - 10}px` }}>
         <Box sx={{ pb: '50px' }}>
+        {/* <Typography variant='h1'>Typography</Typography> */}
           {children && <Box sx={{ p: 2 }}>{children}</Box>}
         </Box>
       </Container>

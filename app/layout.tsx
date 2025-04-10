@@ -30,7 +30,6 @@ export const metadata: Metadata = {
   },
 }
 
-// ✅ make the layout async so we can read from disk
 export default async function RootLayout({
   children,
 }: {

@@ -14,6 +14,7 @@ function Params() {
 
   return (
     <Box className="px-2 text-gray-500 text-sm" component="span">
+      
       ?
       {Array.from(searchParams.entries()).map(([key, value], index) => (
         <React.Fragment key={key}>
