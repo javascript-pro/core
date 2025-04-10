@@ -5,11 +5,16 @@ import {
   CardHeader,
   CardMedia,
   CardContent,
+  Accordion,
+  Grid,
+  AccordionSummary,
+  AccordionDetails,
+  Typography,
+  useMediaQuery,
+  useTheme,
 } from '@mui/material'
-import { 
-  Icon, 
-  // ContextNav,
-} from '#/goldlabel'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+import { Icon, ContextNav } from '#/goldlabel'
 import ReactMarkdown from 'react-markdown'
 import { NavItem } from '#/goldlabel/types/nav'
 
@@ -34,11 +39,13 @@ export type FolderPageProps = {
 
 export default function FolderPage({
   section,
-  // tree,
   frontmatter,
   content,
   globalNav,
 }: FolderPageProps) {
+  const theme = useTheme()
+  const isSmUp = useMediaQuery(theme.breakpoints.up('sm'))
+
   const currentNode = findNodeBySlug(globalNav, section)
   const children: NavItem[] = currentNode?.children || []
 
@@ -51,13 +58,13 @@ export default function FolderPage({
       />
 
       {frontmatter?.image && (
-        <Box sx={{ mx: 1, mb: 1 }}>
+        <Box sx={{ mb: 4}}>
           <CardMedia
             component="img"
             sx={{
               height: {
                 xs: 120,
-                md: 220,
+                sm: 180,
               },
             }}
             src={frontmatter.image}
@@ -65,16 +72,49 @@ export default function FolderPage({
           />
         </Box>
       )}
+          <Box sx={{ display: "flex" }}>
+            
+            {isSmUp ? (
+              
+              <Box sx={{display: "flex"}}>
+                <Box sx={{}}>
+                  <ContextNav globalNav={globalNav} parentDepth={1} />
+                </Box>
+                <Box sx={{}}>
+                  {content && (
+                    <CardContent>
+                      <ReactMarkdown>{content}</ReactMarkdown>
+                    </CardContent>
+                  )}
+                </Box>
+              </Box>
 
-      {/* <ContextNav globalNav={globalNav} parentDepth={1} /> */}
+              
+            ) : (
+              <Box sx={{}}>
+                {content && (
+                  <CardContent>
+                    <ReactMarkdown>{content}</ReactMarkdown>
+                  </CardContent>
+                )}
+                <Accordion sx={{boxShadow:0}}>
+                  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                    
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <ContextNav globalNav={globalNav} parentDepth={1} />
+                  </AccordionDetails>
+                </Accordion>
 
-      {content && (
-        <CardContent sx={{ mt: 4 }}>
-          <ReactMarkdown>
-            {content}
-          </ReactMarkdown>
-        </CardContent>
-      )}
+                
+
+              </Box>
+            )}
+          </Box>
+          <Box>
+        </Box>
+
+          
     </Box>
   )
 }
