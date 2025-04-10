@@ -6,7 +6,10 @@ import {
   CardMedia,
   CardContent,
 } from '@mui/material'
-import { Icon, ContextNav } from '#/goldlabel'
+import { 
+  Icon, 
+  // ContextNav,
+} from '#/goldlabel'
 import ReactMarkdown from 'react-markdown'
 import { NavItem } from '#/goldlabel/types/nav'
 
@@ -31,7 +34,7 @@ export type FolderPageProps = {
 
 export default function FolderPage({
   section,
-  tree,
+  // tree,
   frontmatter,
   content,
   globalNav,
@@ -63,11 +66,13 @@ export default function FolderPage({
         </Box>
       )}
 
-      <ContextNav globalNav={globalNav} parentDepth={1} />
+      {/* <ContextNav globalNav={globalNav} parentDepth={1} /> */}
 
       {content && (
         <CardContent sx={{ mt: 4 }}>
-          <ReactMarkdown>{content}</ReactMarkdown>
+          <ReactMarkdown>
+            {content}
+          </ReactMarkdown>
         </CardContent>
       )}
     </Box>
