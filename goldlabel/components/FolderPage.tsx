@@ -5,16 +5,10 @@ import {
   CardHeader,
   CardMedia,
   CardContent,
-  Accordion,
-  Grid,
-  AccordionSummary,
-  AccordionDetails,
-  Typography,
   useMediaQuery,
   useTheme,
 } from '@mui/material'
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
-import { Icon, ContextNav } from '#/goldlabel'
+import { Icon, Advert } from '#/goldlabel'
 import ReactMarkdown from 'react-markdown'
 import { NavItem } from '#/goldlabel/types/nav'
 
@@ -80,34 +74,30 @@ export default function FolderPage({
             {isSmUp ? (
               
               <Box sx={{display: "flex"}}>
-                <Box sx={{minWidth: 250}}>
-                  ADVERT
-                </Box>
-                <Box sx={{}}>
-                  {content && (
-                    <CardContent>
-                      <ReactMarkdown>{content}</ReactMarkdown>
-                    </CardContent>
-                  )}
-                </Box>
+                
+                <Box 
+                  sx={{mt:{
+                    xs: 0,
+                    sm: -3,
+                  }}}>
+                    {content && (
+                      <CardContent>
+                        <ReactMarkdown>{content}</ReactMarkdown>
+                      </CardContent>
+                    )}
+                  </Box>
+                  <Box sx={{maxWidth: 300}}>
+                    <Advert />
+                  </Box>
               </Box>
 
               
             ) : (
               <Box sx={{}}>
-                <Accordion sx={{boxShadow:0}}>
-                  <AccordionSummary expandIcon={<ExpandMoreIcon />} >
-                    ADVERT
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    ADVERT
-                  </AccordionDetails>
-                </Accordion>
-                {content && (
-                  <CardContent>
-                    <ReactMarkdown>{content}</ReactMarkdown>
-                  </CardContent>
-                )}
+                {content && <ReactMarkdown>{content}</ReactMarkdown>}
+                
+                    <Advert />
+                
               </Box>
             )}
           </Box>

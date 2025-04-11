@@ -9,9 +9,11 @@ import IconShape from './components/Icon'
 import {AppBreadcrumb} from './components/AppBreadcrumb'
 import Sitemap from './components/Sitemap'
 import ContextNav from './components/ContextNav'
+import Advert from './components/Advert'
 
 export {
     Home,
+    Advert,
     ContextNav,
     Appshell,
     FolderPage,

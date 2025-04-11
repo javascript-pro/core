@@ -48,7 +48,9 @@ export default function PopupMenu({ open, onClose, globalNav }: PopupMenuProps) 
           <Icon icon="close" />
         </IconButton>
       </DialogTitle>
-      <DialogContent >
+      <DialogContent sx={{
+        mb: 2
+      }}>
         <Sitemap 
           globalNav={globalNav} 
           onClose={onClose} 

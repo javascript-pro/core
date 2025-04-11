@@ -29,6 +29,9 @@ const theme = createTheme({
     secondary: {
       main: themeValues.secondary,
     },
+    success: {
+      main: themeValues.secondary,
+    },
     background: {
       default: themeValues.background,
       paper: themeValues.paper,

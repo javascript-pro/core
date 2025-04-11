@@ -46,7 +46,7 @@ export default function FilePage({ content, globalNav }: FilePageProps) {
         <Box sx={{ mx: 1, mb: 1 }}>
           <CardMedia
             component="img"
-            height={315}
+            height={250}
             src={image}
             alt={title}
           />
