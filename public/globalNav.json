@@ -254,8 +254,17 @@
         "order": 100,
         "icon": "balance",
         "type": "folder",
-        "excerpt": "Is THIS Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday\n\nReact\n\n We Specialise in React front ends. They aren't a",
+        "excerpt": "A collection of Writing\n\nIs THIS Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday",
         "children": [
+          {
+            "title": "Generation X",
+            "slug": "balance/gen-x",
+            "order": 100,
+            "icon": "balance",
+            "type": "folder",
+            "excerpt": "Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland",
+            "children": []
+          },
           {
             "title": "Science Fiction",
             "slug": "balance/sci-fi",
