@@ -26,7 +26,7 @@ export default function Advert() {
     title: "SpeakWrite",
     icon: "star",
     url: "/work/examples/speakwrite",
-    description: "An Open Source transcription engine to create propaganda.  Foreseen by Orwell in 1984, built for reals by us, just now. Out of our heads",
+    description: "An Open Source AI engine to generate propaganda. As foreseen by Orwell in 1984, as built for reals by us, just now. Out of our heads",
     image: "/jpg/speakwrite.jpg",
   }
   

@@ -6,7 +6,7 @@
     "icon": "home",
     "type": "folder",
     "tags": [
-      "next.js",
+      "Next.js",
       "core",
       "goldlabel",
       "AI Prompt Engineering",
@@ -14,7 +14,7 @@
       "AI",
       "Singularity"
     ],
-    "excerpt": "Publicfacing foundation of the Goldlabel Apps ecosystem. It’s a fast, staticfirst Next.js site powered by realtime data from Firestore and managed through a builtin admin interface",
+    "excerpt": "Choose your path, Sir.\n\n,  or \n\nPublicfacing foundation of the Goldlabel Apps ecosystem. It’s a fast, staticfirst Next.js site powered by realtime data from Firestore and managed through a builtin adm",
     "children": [
       {
         "title": "Work",
@@ -111,7 +111,7 @@
                 "order": 30,
                 "icon": "examples",
                 "type": "file",
-                "excerpt": "In this Weekend Portfolio project, you’ll build a compact and powerful app called mp3totext. The idea is simple but important: you upload an .mp3 file, and the app gives you back a transcription of it"
+                "excerpt": "Approach a large thing by doing a small thing and trying not to think about how large it is. Depends on your sense of time. Mine's pretty abnormal, but how about trying one weekend at a time?\n\n Weeken"
               }
             ]
           },
