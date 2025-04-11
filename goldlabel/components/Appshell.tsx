@@ -12,10 +12,11 @@ import {
   Toolbar,
   Fab,
   Avatar,
+  IconButton,
+  // Typography,
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { AppBreadcrumb } from '#/goldlabel';
-import PopupMenu from './PopupMenu'; // Adjust path if needed
+import { AppBreadcrumb, Icon, PopupMenu } from '#/goldlabel';
 
 const { light: themeValues } = config.themes;
 
@@ -26,6 +27,9 @@ const theme = createTheme({
       main: themeValues.primary,
     },
     secondary: {
+      main: themeValues.secondary,
+    },
+    success: {
       main: themeValues.secondary,
     },
     background: {
@@ -41,18 +45,19 @@ const theme = createTheme({
 const StyledFab = styled(Fab)({
   position: 'absolute',
   zIndex: 1,
-  top: -30,
+  top: -8,
   left: 0,
   right: 0,
   margin: '0 auto',
 });
 
 type AppshellProps = {
-  children?: React.ReactNode;
+  children?: React.ReactNode
+  globalNav?: any
 };
 
-export default function Appshell({ children }: AppshellProps) {
-  const topAppBarHeight = 64;
+export default function Appshell({ children, globalNav }: AppshellProps) {
+  const topAppBarHeight = 50;
   const [menuOpen, setMenuOpen] = React.useState(false);
 
   const handleToggleMenu = () => setMenuOpen(!menuOpen);
@@ -72,16 +77,27 @@ export default function Appshell({ children }: AppshellProps) {
           height: topAppBarHeight,
         }}
       >
-        <Container maxWidth="sm">
-          <Toolbar>
+        <Container maxWidth="md">
+          <Toolbar sx={{justifyContent: 'space-between'}}>
+            <IconButton
+              onClick={() => {
+                window.open ("/", "_self")
+              }}>
+              <Avatar
+                src={config.favicon}
+                sx={{ width: 32, height: 32 }}
+                alt="Home"
+              />
+            </IconButton>
             <AppBreadcrumb />
           </Toolbar>
         </Container>
       </AppBar>
 
       {/* Main Content Area with top padding */}
-      <Container maxWidth="sm" sx={{ pt: `${topAppBarHeight - 10}px` }}>
+      <Container maxWidth="md" sx={{ pt: `${topAppBarHeight - 10}px` }}>
         <Box sx={{ pb: '50px' }}>
+        {/* <Typography variant='h1'>Typography</Typography> */}
           {children && <Box sx={{ p: 2 }}>{children}</Box>}
         </Box>
       </Container>
@@ -96,7 +112,7 @@ export default function Appshell({ children }: AppshellProps) {
           boxShadow: 0,
         }}
       >
-        <Container maxWidth="sm">
+        <Container maxWidth="md">
           <Toolbar>
             <StyledFab
               sx={{ boxShadow: 0 }}
@@ -104,11 +120,8 @@ export default function Appshell({ children }: AppshellProps) {
               color="primary"
               aria-label="Open Menu"
             >
-              <Avatar
-                src={config.favicon}
-                sx={{ width: 32, height: 32 }}
-                alt="Menu"
-              />
+              
+              <Icon icon="menu" color="secondary" />
             </StyledFab>
             <Box sx={{ flexGrow: 1 }} />
           </Toolbar>
@@ -116,7 +129,7 @@ export default function Appshell({ children }: AppshellProps) {
       </AppBar>
 
       {/* Pop-up Menu Dialog */}
-      <PopupMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
+      <PopupMenu open={menuOpen} onClose={() => setMenuOpen(false)} globalNav={globalNav} />
     </ThemeProvider>
   );
 }

@@ -104,9 +104,17 @@ import ForgetIcon from '@mui/icons-material/PsychologyOutlined';
 import AIIcon from '@mui/icons-material/ModelTrainingOutlined';
 import FolderIcon from '@mui/icons-material/FolderOutlined';
 
+import CompanyIcon from '@mui/icons-material/Shop2Outlined';
+import DesignIcon from '@mui/icons-material/PaletteOutlined';
+import FeatureIcon from '@mui/icons-material/FeaturedPlayListOutlined';
+
+
 export type IconShape = {
   icon:
     | 'account'
+    | 'company'
+    | 'feature'
+    | 'design'
     | 'ai'
     | 'ask'
     | 'forget'
@@ -234,12 +242,24 @@ export default function Icon({ icon, color }: IconShape) {
     case 'ai':
       iconFragment = <AIIcon color={color} />;
       break;
-    case 'forget':
+      case 'design':
+        iconFragment = <DesignIcon color={color} />;
+        break;
+      case 'forget':
       iconFragment = <ForgetIcon color={color} />;
       break;
       case 'folder':
         iconFragment = <FolderIcon color={color} />;
         break;
+        case 'company':
+          iconFragment = <CompanyIcon color={color} />;
+          break;
+
+          case 'feature':
+            iconFragment = <FeatureIcon color={color} />;
+            break;
+
+
     case 'ask':
       iconFragment = <AskIcon color={color} />;
       break;

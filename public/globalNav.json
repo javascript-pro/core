@@ -1,12 +1,12 @@
 [
   {
-    "title": "Goldlabel",
+    "title": "Goldlabel Core",
     "slug": "/",
     "order": 1,
     "icon": "home",
     "type": "folder",
     "tags": [
-      "next.js",
+      "Next.js",
       "core",
       "goldlabel",
       "AI Prompt Engineering",
@@ -14,7 +14,7 @@
       "AI",
       "Singularity"
     ],
-    "excerpt": "Powerful, userfriendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience\n\nIs THIS Singularity?\n\n \"Put that kind of AI into a drone with a gun...",
+    "excerpt": "Choose your path, Sir.\n\n,  or \n\nPublicfacing foundation of the Goldlabel Apps ecosystem. It’s a fast, staticfirst Next.js site powered by realtime data from Firestore and managed through a builtin adm",
     "children": [
       {
         "title": "Work",
@@ -23,46 +23,41 @@
         "icon": "folder",
         "type": "folder",
         "tags": [
-          "next.js",
-          "javascript",
-          "flash",
-          "node"
+          "social"
         ],
-        "excerpt": "Goldlabel Core is the publicfacing foundation of the Goldlabel Apps ecosystem. It’s a fast, staticfirst Next.js site powered by realtime data from Firestore and managed through a builtin admin interfa",
+        "excerpt": "See us socially on , , \n,\n, \nor even the social network formally known as .",
         "children": [
           {
-            "title": "Apps",
-            "slug": "work/apps",
-            "order": 5,
-            "icon": "apps",
+            "title": "Features",
+            "slug": "work/features",
+            "order": 20,
+            "icon": "feature",
             "type": "folder",
-            "excerpt": "Here is a list of examples",
+            "tags": [
+              "features"
+            ],
+            "excerpt": "Authentication\nAuth is part of Goldlabel’s core. It can be used with various third party providers, eg Cognito To use, you go back to the point where gatsby creates pages. \n\n Hosting & Cloud Database\n",
             "children": [
               {
-                "title": "MP3 to Text",
-                "slug": "work/apps/mp3-to-text",
+                "title": "Lingua",
+                "slug": "work/features/lingua",
                 "order": 30,
-                "icon": "work",
+                "icon": "feature",
                 "type": "file",
-                "excerpt": "In this Weekend Portfolio project, you’ll build a compact and powerful app called mp3totext. The idea is simple but important: you upload an .mp3 file, and the app gives you back a transcription of it"
-              },
-              {
-                "title": "Flash",
-                "slug": "work/apps/flash",
-                "order": 50,
-                "icon": "flash",
-                "type": "file",
-                "excerpt": "Flash, also known as Adobe Flash, was a multimedia software platform created by Macromedia and later acquired by Adobe. It was widely used on the web to create interactive animations, games, audio and"
+                "tags": [
+                  "features"
+                ],
+                "excerpt": "Lingua is our multi language translation package. Localisation is not something you want to simply bolt onto a website at the end. Users will do that themselves if they cared enough about reading anyt"
               }
             ]
           },
           {
-            "title": "Company",
-            "slug": "work/company",
-            "order": 20,
-            "icon": "work",
+            "title": "Techstack",
+            "slug": "work/techstack",
+            "order": 30,
+            "icon": "techstack",
             "type": "folder",
-            "excerpt": "Privacy, Cookies",
+            "excerpt": "Fullstack is one of those industry terms rapidly loosing meaning from overuse. In the olden days there was a very clear difference between someone who made the frontend of an app and a person who made",
             "children": [
               {
                 "title": "UK Limited Company 5460545",
@@ -91,63 +86,104 @@
                 "excerpt": "Goldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo architecture with multiple Next.js a"
               },
               {
+                "title": "Flash",
+                "slug": "work/techstack/flash",
+                "order": 50,
+                "icon": "flash",
+                "type": "file",
+                "excerpt": "Flash, also known as Adobe Flash, was a multimedia software platform created by Macromedia and later acquired by Adobe. It was widely used on the web to create interactive animations, games, audio and"
+              },
+              {
                 "title": "Design System",
                 "slug": "work/techstack/design-system",
                 "order": 100,
-                "icon": "doc",
+                "icon": "design",
                 "type": "file",
-                "excerpt": "Design Templates\n\nThanks for the feedback! Since Berry is more admin/dashboardoriented, let's pivot to frontfacing templates that still use MUI, focusing on navigation, page structure, and content dis"
+                "excerpt": "Design Templates\n\n Thanks for the feedback! Since Berry is more admin/dashboardoriented, let's pivot to frontfacing templates that still use MUI, focusing on navigation, page structure, and content di"
               }
             ]
           },
           {
-            "title": "Privacy",
-            "slug": "work/privacy",
-            "order": 1000,
-            "icon": "account",
+            "title": "Remote working",
+            "slug": "work/remote-working",
+            "order": 190,
+            "icon": "work",
             "type": "file",
             "tags": [
-              "cookies",
-              "gdpr",
-              "privacy",
-              "terms",
-              "trust"
+              "remote",
+              "hybrid"
             ],
-            "excerpt": "We don't use cookies\n\nPrivacy Statement\n\nWelcome to Goldlabel! We value your privacy and are committed to protecting your personal information. This privacy statement aims to provide clarity on how we"
-          }
-        ]
-      },
-      {
-        "title": "Balance",
-        "slug": "/balance",
-        "order": 20,
-        "icon": "balance",
-        "type": "folder",
-        "excerpt": "Balance. Balance Balance\n\nWe’ll start with a clean slate because there’s nothing up our sleeves. The goal here isn’t to build much—just to plant the flag.",
-        "children": [
-          {
-            "title": "Charles Darwin",
-            "slug": "/balance/charles-darwin",
-            "order": 20,
-            "icon": "balance",
-            "type": "file",
-            "excerpt": "We may safely infer...\n\nJudging from the past, we may safely infer that no one living species will transmit its unaltered likeness to a distant futurity. And of the species now living very few will tr"
+            "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years, due in large part to the COVID19 pandemic. Prior to the pandemic, many businesses were hesitant to allow employees to w"
           },
           {
-            "title": "Albert Einstein",
-            "slug": "/balance/einstein",
-            "order": 30,
-            "icon": "balance",
-            "type": "file",
-            "excerpt": "Albert Einstein\n\n The godfather of modern physics. Before we get into solving the mercury problem, let's share some of Einstein's contributions which are fundamental to understanding many concepts we'"
+            "title": "Examples",
+            "slug": "work/examples",
+            "order": 310,
+            "icon": "examples",
+            "type": "folder",
+            "excerpt": "Fast, staticfirst Next.js. Powerful, userfriendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience\nslug: /",
+            "children": [
+              {
+                "title": "Speak Write",
+                "slug": "work/examples/speakwrite",
+                "order": 30,
+                "icon": "examples",
+                "type": "file",
+                "excerpt": "Approach a large thing by doing a small thing and trying not to think about how large it is. Depends on your sense of time. Mine's pretty abnormal, but how about trying one weekend at a time?\n\n Weeken"
+              }
+            ]
           },
           {
-            "title": "General Thoery of Relativity",
-            "slug": "/balance/relativity",
-            "order": 30,
-            "icon": "balance",
-            "type": "file",
-            "excerpt": "General Relativity, \n\nReally just the name for Einstein's study of gravitation. And here we're going to introduce my alltime favorite analogy for general relativity, the bowling ball on the trampoline"
+            "title": "UK Ltd Company",
+            "slug": "work/company",
+            "order": 2000,
+            "icon": "work",
+            "type": "folder",
+            "excerpt": "",
+            "children": [
+              {
+                "title": "Goldlabel Apps Ltd",
+                "slug": "work/company/uk-ltd",
+                "order": 25,
+                "icon": "doc",
+                "type": "file",
+                "tags": [
+                  "legal",
+                  "address"
+                ],
+                "excerpt": "Goldlabel Apps Ltd is a UK Limited Company (5460545), building custom software for creators, developers, and businesses.\n\nGet in touch. For it's a  universally acknowledged that a Software Developer i"
+              },
+              {
+                "title": "Cookies",
+                "slug": "work/company/cookies",
+                "order": 750,
+                "icon": "account",
+                "type": "file",
+                "tags": [
+                  "cookies",
+                  "gdpr",
+                  "privacy",
+                  "terms",
+                  "trust"
+                ],
+                "excerpt": "While cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers to explore alternative "
+              },
+              {
+                "title": "Privacy",
+                "slug": "work/company/privacy",
+                "order": 1000,
+                "icon": "account",
+                "type": "file",
+                "tags": [
+                  "cookies",
+                  "gdpr",
+                  "privacy",
+                  "terms",
+                  "trust"
+                ],
+                "excerpt": "Privacy Statement\n\nWelcome to Goldlabel! We value your privacy and are committed to protecting your personal information. This privacy statement aims to provide clarity on how we collect, use, and saf"
+              }
+            ]
           }
         ]
       },
@@ -157,25 +193,76 @@
         "order": 50,
         "icon": "folder",
         "type": "folder",
-        "excerpt": "",
+        "excerpt": "I work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age I'm never going to ski like I used to. Ma",
         "children": [
+          {
+            "title": "Food",
+            "slug": "life/food",
+            "order": 10,
+            "icon": "food",
+            "type": "folder",
+            "excerpt": "When I want a recipe I go the internet of course. I get annoyed by the amount of adverts on the pages where I want to follow simple instructions.  \n\nFor some recipes that I've tried & tested I've stri",
+            "children": [
+              {
+                "title": "Air Fried Stuffed Peppers",
+                "slug": "life/food/air-fried-peppers",
+                "order": 35,
+                "icon": "food",
+                "type": "file",
+                "tags": [
+                  "food",
+                  "punching dolphins",
+                  "recipes",
+                  "air fryer",
+                  "peppers"
+                ],
+                "excerpt": "Ingredients\n\n 2 Large peppers (capsicums)\n 1 125g pack of mozzarella\n Enough of your best, most delicious bolognaise to fill the peppers\n\n Method\n\n STEP 1\n\nPrepare Air Fryer pan. Line it with tinfoil "
+              },
+              {
+                "title": "Banana Bread",
+                "slug": "life/food/banana-bread",
+                "order": 50,
+                "icon": "food",
+                "type": "file",
+                "excerpt": "Moist, flavorful, and easy to make. Perfect for using overripe bananas, this classic loaf is a crowdpleaser for breakfast, snacks, or dessert.\n\n\n 125g Butter\n 175g Brown sugar\n 1 tsp Vanilla extract o"
+              }
+            ]
+          },
           {
             "title": "Diving",
             "slug": "life/diving",
-            "order": 10,
+            "order": 100,
             "icon": "diving",
             "type": "folder",
-            "excerpt": "All about diving",
-            "children": []
+            "excerpt": "",
+            "children": [
+              {
+                "title": "It's not raining underwater",
+                "slug": "life/diving/overview",
+                "order": 50,
+                "icon": "diving",
+                "type": "file",
+                "excerpt": ""
+              }
+            ]
           },
           {
             "title": "Aquaponics",
             "slug": "life/aquaponics",
-            "order": 20,
+            "order": 200,
             "icon": "fish",
             "type": "folder",
             "excerpt": "",
-            "children": []
+            "children": [
+              {
+                "title": "What is Aquaponics?",
+                "slug": "life/aquaponics/overview",
+                "order": 50,
+                "icon": "fish",
+                "type": "file",
+                "excerpt": "What: Aquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closedloop system.\n\nWho: Ideal for urban growers, hobbyists"
+              }
+            ]
           }
         ]
       },
@@ -185,8 +272,17 @@
         "order": 100,
         "icon": "folder",
         "type": "folder",
-        "excerpt": "",
+        "excerpt": "A collection of Writing\n\nIs THIS Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday",
         "children": [
+          {
+            "title": "Generation X",
+            "slug": "balance/gen-x",
+            "order": 100,
+            "icon": "balance",
+            "type": "folder",
+            "excerpt": "Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland",
+            "children": []
+          },
           {
             "title": "Science Fiction",
             "slug": "balance/sci-fi",
@@ -196,28 +292,28 @@
             "excerpt": "",
             "children": [
               {
-                "title": "Charles Darwin",
-                "slug": "balance/sci-fi/charles-darwin",
-                "order": 20,
-                "icon": "balance",
-                "type": "file",
-                "excerpt": "Judging from the past, we may safely infer that no one living species will transmit its unaltered likeness to a distant futurity. And of the species now living very few will transmit progeny of any ki"
-              },
-              {
-                "title": "Albert Einstein",
+                "title": "Einstein",
                 "slug": "balance/sci-fi/einstein",
                 "order": 30,
-                "icon": "balance",
+                "icon": "doc",
                 "type": "file",
-                "excerpt": "Before we get into solving the mercury problem, let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series. \n\nI mentioned in the l"
+                "excerpt": "Let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series. \n\nI mentioned in the last lecture this idea of Gedanken experiments, t"
               },
               {
                 "title": "General Theory of Relativity",
                 "slug": "balance/sci-fi/relativity",
                 "order": 30,
-                "icon": "balance",
+                "icon": "doc",
                 "type": "file",
                 "excerpt": "Really just the name for Einstein's study of gravitation. And here we're going to introduce my alltime favorite analogy for general relativity, the bowling ball on the trampoline. Let's imagine that f"
+              },
+              {
+                "title": "Charles Darwin",
+                "slug": "balance/sci-fi/charles-darwin",
+                "order": 2000,
+                "icon": "doc",
+                "type": "file",
+                "excerpt": "Judging from the past, we may safely infer that no one living species will transmit its unaltered likeness to a distant futurity. And of the species now living very few will transmit progeny of any ki"
               }
             ]
           }

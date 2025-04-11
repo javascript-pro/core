@@ -2,20 +2,41 @@ import path from 'path'
 import { notFound } from 'next/navigation'
 import fs from 'fs/promises'
 import { loadMarkdown, getMarkdownTree } from '#/lib/loadMarkdown'
-import {FolderPage, FilePage} from '#/goldlabel'
+import { FolderPage, FilePage, Sitemap, Home } from '#/goldlabel'
 
-type Props = {
+export type CatchAllPageProps = {
   params: any
 }
 
-export default async function CatchAllPage({ params }: Props) {
+export default async function CatchAllPage({ params }: CatchAllPageProps) {
   const slugArray = params.slug || []
   const slugPath = '/' + slugArray.join('/')
+
+  // Load globalNav JSON directly from public folder
+  const navPath = path.join(process.cwd(), 'public/globalNav.json')
+  let globalNav = null
+  try {
+    const navRaw = await fs.readFile(navPath, 'utf-8')
+    globalNav = JSON.parse(navRaw)
+  } catch (err) {
+    console.error('Failed to load globalNav.json:', err)
+  }
+
+  // if (slugPath === '/') {
+  //   return <>            
+  //           <Home globalNav={globalNav}/>
+  //         </>
+  // }
+
+  // Special case for /sitemap
+  if (slugPath === '/sitemap') {
+    return <Sitemap globalNav={globalNav} openTopLevelByDefault={10}/>
+  }
 
   // Try to load markdown file directly
   const markdown = await loadMarkdown(slugPath)
   if (markdown) {
-    return (<FilePage content={markdown} />)
+    return <FilePage content={markdown} globalNav={globalNav} />
   }
 
   // If markdown not found, check if it's a folder
@@ -30,12 +51,13 @@ export default async function CatchAllPage({ params }: Props) {
       const indexMarkdown = await loadMarkdown(path.join(slugPath, 'index'))
 
       return (
-          <FolderPage
-            section={section}
-            tree={tree}
-            frontmatter={indexMarkdown?.frontmatter || null}
-            content={indexMarkdown?.content || null}
-          />
+        <FolderPage
+          section={section}
+          tree={tree}
+          frontmatter={indexMarkdown?.frontmatter || null}
+          content={indexMarkdown?.content || null}
+          globalNav={globalNav}
+        />
       )
     }
   } catch {

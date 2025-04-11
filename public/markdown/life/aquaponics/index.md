@@ -1,8 +1,8 @@
 ---
-order: 20
+order: 200
 title: Aquaponics
 description: Fish are food. Not friends.
 slug: /life/aquaponics
 icon: fish
-image: /jpg/life.jpg
+image: /jpg/images/life.jpg
 ---

@@ -1,4 +1,3 @@
-// apps/www/next.config.js
 const withPWA = require('next-pwa')({
     dest: 'public',
     register: true,
@@ -8,6 +7,7 @@ const withPWA = require('next-pwa')({
   
   const nextConfig = {
     // Your existing config here
+
   };
   
   module.exports = withPWA(nextConfig);

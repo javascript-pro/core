@@ -4,5 +4,5 @@ title: Science Fiction
 description: and Speculative Fiction
 slug: /balance/sci-fi
 icon: folder
-image: /jpg/balance.jpg
+image: /jpg/images/einstein.jpg
 ---

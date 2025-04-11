@@ -1,17 +1,18 @@
 // goldlabel/components/FilePage.tsx
+
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import {
   Box,
-  Card,
   CardContent,
   CardHeader,
   CardMedia,
+  IconButton,
 } from '@mui/material'
-import {Icon } from '#/goldlabel'
+import { Icon } from '#/goldlabel'
 
-type Props = {
+export type FilePageProps = {
   content: {
     frontmatter: {
       title?: string
@@ -22,49 +23,42 @@ type Props = {
       description?: string
     }
     content: string
+    
   }
+  globalNav?: any
 }
 
-export default function FilePage({ content }: Props) {
+export default function FilePage({ content, globalNav }: FilePageProps) {
   const { frontmatter, content: body } = content
   const { title, image, icon, description } = frontmatter
 
   return (
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-        }}
-      >
-        <CardHeader
-          action={
-            <Icon icon={icon as any} />
-          }
-          title={title || 'Untitled'}
-          subheader={description}
-        />
+    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+      <CardHeader
+        avatar={<IconButton disabled>
+          <Icon icon={icon as any} color="secondary" />
+          </IconButton>}
+        title={title || 'Untitled'}
+        subheader={description}
+      />
 
-        {frontmatter?.image && (
-          <Box sx={{mx:1, mb:1}}>
+      {image && (
+        <Box sx={{ mx: 1, mb: 1 }}>
           <CardMedia
             component="img"
-            height={200}
+            height={250}
             src={image}
             alt={title}
             
           />
-          </Box>
-        )}
+        </Box>
+      )}
 
-
-
-        <CardContent>
-
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>
-            {body}
-          </ReactMarkdown>
-
-        </CardContent>
-      </Box>
+      <CardContent id="file-page-markdown">
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+          {body}
+        </ReactMarkdown>
+      </CardContent>
+    </Box>
   )
 }

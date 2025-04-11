@@ -4,9 +4,15 @@ title: Overview
 description: Powerful, user-friendly web applications
 slug: /work/techstack/overview
 icon: doc
-image: /jpg/work.jpg
+image: /jpg/images/github.jpg
 ---
 Goldlabel Core is a project designed to deliver **powerful, user-friendly web applications** that enhance productivity and streamline tasks. The project uses a **monorepo** architecture with multiple Next.js applications deployed to **Vercel**.
+
+Goldlabel Core is the public facing foundation of the Goldlabel Apps ecosystem. It’s a fast, static-first Next.js site powered by real-time data from Firestore and managed through a built-in admin interface. 
+
+
+
+The app is designed to grow alongside our products, with a content system we can update anytime and an authentication layer that keeps control in our hands.
 
 At this stage, the **www** public-facing site is the primary focus, with an emphasis on **perfect SEO** and **static site generation** (SSG). The goals for the **www** app include:
 

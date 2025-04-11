@@ -1,26 +1,20 @@
 ---
 order: 1
-title: Goldlabel
-description: Fast, static-first Next.js
+title: Goldlabel Core
+description: Next.js, core, goldlabel, AI Prompt Engineering, ChatGPT, AI, Singularity
 slug: /
 icon: home
-image: /jpg/images/home.jpg
-tags: next.js, core, goldlabel, AI Prompt Engineering, ChatGPT, AI, Singularity
+image: /jpg/images/bitcoin.jpg
+tags: Next.js, core, goldlabel, AI Prompt Engineering, ChatGPT, AI, Singularity
 ---
-Powerful, user-friendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience
+### Choose your path, Sir. [Work](/work), [Life](/life) or [Balance](/balance)
 
-Is THIS Singularity?
+Public-facing foundation of the Goldlabel Apps ecosystem. It’s a fast, static-first Next.js site powered by real-time data from Firestore and managed through a built-in admin interface. State of the art
 
-> "Put that kind of AI into a drone with a gun... then yeh, you've got a big problem." _Bloke down the pub said, yesterday_
-
-React
+### React
 
 > We Specialise in React front ends. They aren't an afterthought on a stale old data layer, they are the very meat and veg of the app
 
-Generation X
+### WordPress
 
-> Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland
-
-WordPress
-
-> WordPress is great but has a time and a place. The time is in the past and the place is in the bin.
+> WordPress is great but has a time and a place. The time is in the past and the place is in the bin. But getting it right was such a pain, cost double intended spend and works pretty well, right? Find out why you might want to think again

@@ -14,6 +14,7 @@ function Params() {
 
   return (
     <Box className="px-2 text-gray-500 text-sm" component="span">
+      
       ?
       {Array.from(searchParams.entries()).map(([key, value], index) => (
         <React.Fragment key={key}>
@@ -36,31 +37,18 @@ function formatSegment(segment: string) {
 
 export function AppBreadcrumb() {
   const pathname = usePathname();
-  const segments = pathname.split('/').filter(Boolean);
+  const segments = pathname.replace(/\/$/, '').split('/').filter(Boolean);
 
   return (
     <Box my={2} px={2}>
       <Breadcrumbs aria-label="breadcrumb" separator="/" maxItems={8}>
-        {pathname !== '/' && (
-          <NextLink href="/" passHref legacyBehavior>
-            <MUILink underline="hover" color="inherit" variant="body2">
-              Home
-            </MUILink>
-          </NextLink>
-        )}
-
         {segments.map((segment, index) => {
           const href = '/' + segments.slice(0, index + 1).join('/');
           const isLast = index === segments.length - 1;
           const label = formatSegment(segment);
 
           return isLast ? (
-            <Typography
-              key={href}
-              color="text.primary"
-              variant="body2"
-              sx={{ fontWeight: 500 }}
-            >
+            <Typography key={href} color="text.primary" variant="body2">
               {label}
             </Typography>
           ) : (
