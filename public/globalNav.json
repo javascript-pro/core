@@ -106,8 +106,8 @@
             "excerpt": "Fast, staticfirst Next.js. Powerful, userfriendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience\nslug: /",
             "children": [
               {
-                "title": "MP3 to Text",
-                "slug": "work/examples/mp3-to-text",
+                "title": "Speak Write",
+                "slug": "work/examples/speakwrite",
                 "order": 30,
                 "icon": "examples",
                 "type": "file",

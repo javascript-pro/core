@@ -58,13 +58,16 @@ export default function FolderPage({
       />
 
       {frontmatter?.image && (
-        <Box sx={{ mb: 4}}>
+        <Box sx={{ mb: {
+          xs: 1,
+          sm: 4,
+        }}}>
           <CardMedia
             component="img"
             sx={{
               height: {
-                xs: 120,
-                sm: 180,
+                xs: 100,
+                sm: 250,
               },
             }}
             src={frontmatter.image}
@@ -77,7 +80,7 @@ export default function FolderPage({
             {isSmUp ? (
               
               <Box sx={{display: "flex"}}>
-                <Box sx={{minWidth: 200}}>
+                <Box sx={{minWidth: 250}}>
                   ADVERT
                 </Box>
                 <Box sx={{}}>
@@ -93,7 +96,9 @@ export default function FolderPage({
             ) : (
               <Box sx={{}}>
                 <Accordion sx={{boxShadow:0}}>
-                  <AccordionSummary expandIcon={<ExpandMoreIcon />} />
+                  <AccordionSummary expandIcon={<ExpandMoreIcon />} >
+                    ADVERT
+                  </AccordionSummary>
                   <AccordionDetails>
                     ADVERT
                   </AccordionDetails>
