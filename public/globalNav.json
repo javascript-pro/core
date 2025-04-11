@@ -14,7 +14,7 @@
       "AI",
       "Singularity"
     ],
-    "excerpt": "Choose your path, Sir.\n\n,  or \n\nPublicfacing foundation of the Goldlabel Apps ecosystem. It’s a fast, staticfirst Next.js site powered by realtime data from Firestore and managed through a builtin adm",
+    "excerpt": "Choose your path, Sir\n ,  or \n\n WordPress\n\n WordPress is great but has a time and a place. The time is in the past and the place is in the bin. But getting it right was such a pain, cost double intend",
     "children": [
       {
         "title": "Work",
@@ -25,7 +25,7 @@
         "tags": [
           "social"
         ],
-        "excerpt": "See us socially on , , \n,\n, \nor even the social network formally known as .",
+        "excerpt": "Publicfacing foundation of the Goldlabel Apps ecosystem. It’s a fast, staticfirst Next.js site powered by realtime data from Firestore and managed through a builtin admin interface. State of the art\n\n",
         "children": [
           {
             "title": "Features",
@@ -175,7 +175,7 @@
         "order": 50,
         "icon": "life",
         "type": "folder",
-        "excerpt": "I work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age I'm never going to ski like I used to. Ma",
+        "excerpt": "I work remotely. I , eat, ride motorbikes and . Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age I'm never going to ski like I used to. Maybe it's time ",
         "children": [
           {
             "title": "Food",
@@ -254,7 +254,7 @@
         "order": 100,
         "icon": "balance",
         "type": "folder",
-        "excerpt": "A collection of Writing\n\nIs THIS Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday",
+        "excerpt": "A collection of Writing\n\n \n\n Is THIS Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday",
         "children": [
           {
             "title": "Generation X",

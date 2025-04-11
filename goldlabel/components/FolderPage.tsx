@@ -43,68 +43,52 @@ export default function FolderPage({
   const currentNode = findNodeBySlug(globalNav, section)
   const children: NavItem[] = currentNode?.children || []
 
+  const isHome = section === 'home'
+
   return (
     <Box sx={{ px: 2 }}>
       <CardHeader
-        avatar={<Icon icon={frontmatter?.icon as any} color="secondary" />}
+        avatar={
+          isHome
+            ? null
+            : <Icon icon={frontmatter?.icon as any} color="secondary" />
+        }
         title={frontmatter?.title || section}
         subheader={frontmatter?.description}
       />
 
       {frontmatter?.image && (
-        <Box sx={{ mb: {
-          xs: 1,
-          sm: 4,
-        }}}>
+        <Box sx={{ mb: { xs: 1, sm: 4 } }}>
           <CardMedia
             component="img"
-            sx={{
-              height: {
-                xs: 100,
-                sm: 250,
-              },
-            }}
+            sx={{ height: { xs: 100, sm: 250 } }}
             src={frontmatter.image}
             alt={frontmatter.title}
           />
         </Box>
       )}
+
+      <Box sx={{ display: "flex" }}>
+        {isSmUp ? (
           <Box sx={{ display: "flex" }}>
-            
-            {isSmUp ? (
-              
-              <Box sx={{display: "flex"}}>
-                
-                <Box 
-                  sx={{mt:{
-                    xs: 0,
-                    sm: -3,
-                  }}}>
-                    {content && (
-                      <CardContent>
-                        <ReactMarkdown>{content}</ReactMarkdown>
-                      </CardContent>
-                    )}
-                  </Box>
-                  <Box sx={{maxWidth: 300}}>
-                    <Advert />
-                  </Box>
-              </Box>
-
-              
-            ) : (
-              <Box sx={{}}>
-                {content && <ReactMarkdown>{content}</ReactMarkdown>}
-                
-                    <Advert />
-                
-              </Box>
-            )}
+            <Box sx={{ mt: { xs: 0, sm: -3 } }}>
+              {content && (
+                <CardContent>
+                  <ReactMarkdown>{content}</ReactMarkdown>
+                </CardContent>
+              )}
+            </Box>
+            <Box sx={{ maxWidth: 300 }}>
+              <Advert />
+            </Box>
           </Box>
+        ) : (
           <Box>
-        </Box>
-
-          
+            {content && <ReactMarkdown>{content}</ReactMarkdown>}
+            <Advert />
+          </Box>
+        )}
+      </Box>
     </Box>
   )
 }

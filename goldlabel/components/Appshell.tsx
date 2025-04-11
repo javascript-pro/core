@@ -79,6 +79,8 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
       >
         <Container maxWidth="md">
           <Toolbar sx={{justifyContent: 'space-between'}}>
+            
+            <AppBreadcrumb />
             <IconButton
               onClick={() => {
                 window.open ("/", "_self")
@@ -89,7 +91,6 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
                 alt="Home"
               />
             </IconButton>
-            <AppBreadcrumb />
           </Toolbar>
         </Container>
       </AppBar>
