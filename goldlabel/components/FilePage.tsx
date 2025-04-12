@@ -49,7 +49,11 @@ export default function FilePage({ content, globalNav }: FilePageProps) {
             position: 'relative',
             width: '100%',
             maxWidth: 800,
-            aspectRatio: '16/9',
+            aspectRatio: {
+              xs: '16/9',
+              sm: '16/9',
+              md: '16/4.5', // half height on md+ screens
+            },
             mx: 1,
             mb: 2,
             borderRadius: 2,
@@ -57,6 +61,7 @@ export default function FilePage({ content, globalNav }: FilePageProps) {
           }}
         >
           <Image
+            priority
             src={image}
             alt={title || 'Image'}
             fill

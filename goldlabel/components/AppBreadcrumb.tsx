@@ -39,7 +39,7 @@ export function AppBreadcrumb() {
   const segments = pathname.replace(/\/$/, '').split('/').filter(Boolean);
 
   // Hide breadcrumbs on home page
-  if (segments.length === 0) return null;
+  if (segments.length === 0) return <>&nbsp;</>;
 
   return (
     <Box my={2} px={2}>

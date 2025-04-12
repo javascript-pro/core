@@ -66,7 +66,11 @@ export default function FolderPage({
             position: 'relative',
             width: '100%',
             maxWidth: 900,
-            aspectRatio: '16/9',
+            aspectRatio: {
+              xs: '16/9',
+              sm: '16/9',
+              md: '16/4.5', // half height from md breakpoint
+            },
             mb: { xs: 1, sm: 4 },
             borderRadius: 2,
             overflow: 'hidden',
