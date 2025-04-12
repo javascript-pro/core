@@ -4,7 +4,7 @@ title: Goldlabel Core
 description: Next.js, core, goldlabel, AI Prompt Engineering, ChatGPT, AI, Singularity
 slug: /
 icon: home
-image: /jpg/home.jpg
+image: /jpg/Goldlabel-OpenGraph.jpg
 tags: Next.js, core, goldlabel, AI Prompt Engineering, ChatGPT, AI, Singularity
 ---
 ### Choose your path, Sir

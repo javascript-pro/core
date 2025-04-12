@@ -4,7 +4,7 @@ title: Speak Write
 description: An Open Source transcription engine to create propaganda.  Foreseen by Orwell in 1984, built for reals by us, just now. Out of our heads
 slug: /work/examples/speakwrite
 icon: examples
-image: /jpg/1984.jpg
+image: /jpg/Goldlabel-OpenGraph.jpg
 ---
 > Approach a large thing by doing a small thing and trying not to think about how large it is. Depends on your sense of time. Mine's pretty abnormal, but how about trying one weekend at a time?
 

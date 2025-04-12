@@ -3,11 +3,11 @@
 import {
   Box,
   CardHeader,
-  CardMedia,
   CardContent,
   useMediaQuery,
   useTheme,
 } from '@mui/material'
+import Image from 'next/image'
 import { Icon, Advert } from '#/goldlabel'
 import ReactMarkdown from 'react-markdown'
 import { NavItem } from '#/goldlabel/types/nav'
@@ -58,12 +58,24 @@ export default function FolderPage({
       />
 
       {frontmatter?.image && (
-        <Box sx={{ mb: { xs: 1, sm: 4 } }}>
-          <CardMedia
-            component="img"
-            sx={{ height: { xs: 100, sm: 250 } }}
+        <Box
+          sx={{
+            position: 'relative',
+            width: '100%',
+            maxWidth: 900,
+            aspectRatio: '16/9',
+            mb: { xs: 1, sm: 4 },
+            borderRadius: 2,
+            overflow: 'hidden',
+          }}
+        >
+          <Image
+            priority
             src={frontmatter.image}
-            alt={frontmatter.title}
+            alt={frontmatter.title || 'Cover image'}
+            fill
+            sizes="(max-width: 600px) 100vw, (max-width: 1200px) 80vw, 900px"
+            style={{ objectFit: 'cover' }}
           />
         </Box>
       )}
