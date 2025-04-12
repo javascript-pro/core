@@ -3,7 +3,7 @@
   "url": "https://goldlabel.pro",
   "image": "/jpg/work.jpg",
   "description": "Streamline tasks, boost productivity, and enhance customer experience",
-  "favicon": "/svg/favicon.svg",
+  "favicon": "/svg/favicon_nobg.svg",
   "themeColor": "#C09F52",
   "themes": {
     "light": {

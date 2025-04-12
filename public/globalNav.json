@@ -14,7 +14,7 @@
       "AI",
       "Singularity"
     ],
-    "excerpt": "Choose your path, Sir\n ,  or \n\n WordPress\n\n WordPress is great but has a time and a place. The time is in the past and the place is in the bin. But getting it right was such a pain, cost double intend",
+    "excerpt": "WordPress\n\n WordPress is great but has a time and a place. The time is in the past and the place is in the bin. But getting it right was such a pain, cost double intended spend and works pretty well, ",
     "children": [
       {
         "title": "Work",
@@ -111,7 +111,7 @@
                 "order": 30,
                 "icon": "examples",
                 "type": "file",
-                "excerpt": "Approach a large thing by doing a small thing and trying not to think about how large it is. Depends on your sense of time. Mine's pretty abnormal, but how about trying one weekend at a time?\n\n Weeken"
+                "excerpt": "An Open Source transcription engine to create propaganda.\n\nApproach a large thing by doing a small thing and trying not to think about how large it is. Depends on your sense of time. Mine's pretty abn"
               }
             ]
           },
@@ -254,8 +254,17 @@
         "order": 100,
         "icon": "balance",
         "type": "folder",
-        "excerpt": "A collection of Writing\n\n \n\n Is THIS Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday",
+        "excerpt": "Is THIS Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday",
         "children": [
+          {
+            "title": "Books",
+            "slug": "balance/books",
+            "order": 100,
+            "icon": "balance",
+            "type": "folder",
+            "excerpt": "Weekend Portfolio\n Weekend 1\nIn this Weekend Portfolio project, you’ll build a compact and powerful app called mp3totext. The idea is simple but important: you upload an .mp3 file, and the app gives y",
+            "children": []
+          },
           {
             "title": "Generation X",
             "slug": "balance/gen-x",
