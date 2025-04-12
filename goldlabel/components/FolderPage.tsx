@@ -8,7 +8,10 @@ import {
   useTheme,
 } from '@mui/material'
 import Image from 'next/image'
-import { Icon, Advert } from '#/goldlabel'
+import { 
+  // Icon, 
+  Advert,
+} from '#/goldlabel'
 import ReactMarkdown from 'react-markdown'
 import { NavItem } from '#/goldlabel/types/nav'
 
@@ -48,11 +51,11 @@ export default function FolderPage({
   return (
     <Box sx={{ px: 2 }}>
       <CardHeader
-        avatar={
-          isHome
-            ? null
-            : <Icon icon={frontmatter?.icon as any} color="secondary" />
-        }
+        // avatar={
+        //   isHome
+        //     ? null
+        //     : <Icon icon={frontmatter?.icon as any} color="secondary" />
+        // }
         title={frontmatter?.title || section}
         subheader={frontmatter?.description}
       />

@@ -34,11 +34,11 @@ export default function FilePage({ content, globalNav }: FilePageProps) {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column' }}>
       <CardHeader
-        avatar={
-          <IconButton disabled>
-            <Icon icon={icon as any} color="secondary" />
-          </IconButton>
-        }
+        // avatar={
+        //   <IconButton disabled>
+        //     <Icon icon={icon as any} color="secondary" />
+        //   </IconButton>
+        // }
         title={title || 'Untitled'}
         subheader={description}
       />
