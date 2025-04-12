@@ -4,7 +4,7 @@ title: Techstack
 description: On the shoulders of giants
 slug: /work/techstack
 icon: techstack
-image: /jpg/images/github.jpg
+image: /jpg/github.jpg
 ---
 Fullstack is one of those industry terms rapidly loosing meaning from overuse. In the olden days there was a very clear difference between someone who made the frontend of an app and a person who made the backend. People who could do both were vanishingly rare because it was simply 2 different skills which existed only in 2 differennt personality types. 
 

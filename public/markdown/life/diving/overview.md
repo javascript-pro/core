@@ -4,5 +4,5 @@ title: "It's not raining underwater"
 description: Proper crowd pleaser
 slug: /life/diving/overview
 icon: diving
-image: /jpg/images/life.jpg
+image: /jpg/diving.jpg
 ---

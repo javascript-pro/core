@@ -4,7 +4,7 @@ title: Design System
 description: MUI, focusing on navigation, page structure, and content display
 slug: /work/techstack/design-system
 icon: design
-image: /jpg/images/github.jpg
+image: /jpg/github.jpg
 ---
 
 ## Design Templates

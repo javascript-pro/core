@@ -5,7 +5,7 @@ title: Goldlabel Apps Ltd
 description: UK Limited Company 5460545
 slug: /work/company/uk-ltd
 icon: doc
-image: /jpg/images/goldlabel.jpg
+image: /jpg/core.jpg
 tags: legal, address
 ---
 Goldlabel Apps Ltd is a UK Limited Company (5460545), building custom software for creators, developers, and businesses.

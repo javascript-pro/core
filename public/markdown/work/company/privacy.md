@@ -4,7 +4,7 @@ title: Privacy
 description: We don't use cookies
 slug: /work/company/privacy
 icon: account
-image: /jpg/images/goldlabel.jpg
+image: /jpg/goldlabel.jpg
 tags: cookies, gdpr, privacy, terms, trust
 ---
 **Privacy Statement**

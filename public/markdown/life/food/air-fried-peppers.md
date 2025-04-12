@@ -4,7 +4,7 @@ title: "Air Fried Stuffed Peppers"
 description: "Got bolognese and peppers?"
 slug: "/life/food/air-fried-peppers"
 icon: "food"
-image: "/jpg/images/food.jpg"
+image: "/jpg/food.jpg"
 tags: "food, punching dolphins, recipes, air fryer, peppers"
 ---
 ### Ingredients
