@@ -1,8 +1,8 @@
 {
   "short_name": "Core",
   "name": "Goldlabel Core",
-  "theme_color": "#FFFFFF",
-  "background_color": "#FFFFFF",
+  "theme_color": "#E2E2E2",
+  "background_color": "#E2E2E2",
   "display": "fullscreen",
   "orientation": "portrait",
   "scope": "/",
@@ -12,12 +12,7 @@
     {
       "src": "/png/iOS.png",
       "type": "image/png",
-      "sizes": "180x180"
-    },
-    {
-      "src": "/png/logo512.png",
-      "sizes": "512x512",
-      "type": "image/png",
+      "sizes": "180x180",
       "purpose": "any maskable"
     }
   ]

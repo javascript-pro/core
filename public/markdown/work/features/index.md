@@ -4,7 +4,7 @@ title: Features
 description: What does it do?
 slug: /work/features
 icon: feature
-image: /jpg/images/feature.jpg
+image: /jpg/feature.jpg
 tags: features
 ---
 #### Authentication

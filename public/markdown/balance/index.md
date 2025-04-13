@@ -1,12 +1,12 @@
 ---
 order: 100
 title: Balance
-description: Writing
+description: A collection of Writing
 slug: /balance
 icon: balance
-image: /jpg/images/SWAT-Baby.jpg
+image: /jpg/SWAT-Baby.jpg
 ---
-## A collection of Writing
+## [Books](/balance/books)
 
 ### [Are you Generation X too?](/balance/gen-x)
 

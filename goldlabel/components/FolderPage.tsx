@@ -3,12 +3,15 @@
 import {
   Box,
   CardHeader,
-  CardMedia,
   CardContent,
   useMediaQuery,
   useTheme,
 } from '@mui/material'
-import { Icon, Advert } from '#/goldlabel'
+import Image from 'next/image'
+import { 
+  // Icon, 
+  Advert,
+} from '#/goldlabel'
 import ReactMarkdown from 'react-markdown'
 import { NavItem } from '#/goldlabel/types/nav'
 
@@ -43,68 +46,68 @@ export default function FolderPage({
   const currentNode = findNodeBySlug(globalNav, section)
   const children: NavItem[] = currentNode?.children || []
 
+  const isHome = section === 'home'
+
   return (
     <Box sx={{ px: 2 }}>
       <CardHeader
-        avatar={<Icon icon={frontmatter?.icon as any} color="secondary" />}
+        // avatar={
+        //   isHome
+        //     ? null
+        //     : <Icon icon={frontmatter?.icon as any} color="secondary" />
+        // }
         title={frontmatter?.title || section}
         subheader={frontmatter?.description}
       />
 
       {frontmatter?.image && (
-        <Box sx={{ mb: {
-          xs: 1,
-          sm: 4,
-        }}}>
-          <CardMedia
-            component="img"
-            sx={{
-              height: {
-                xs: 100,
-                sm: 250,
-              },
-            }}
+        <Box
+          sx={{
+            position: 'relative',
+            width: '100%',
+            maxWidth: 900,
+            aspectRatio: {
+              xs: '16/9',
+              sm: '16/9',
+              md: '16/4.5', // half height from md breakpoint
+            },
+            mb: { xs: 1, sm: 4 },
+            borderRadius: 2,
+            overflow: 'hidden',
+          }}
+        >
+          <Image
+            priority
             src={frontmatter.image}
-            alt={frontmatter.title}
+            alt={frontmatter.title || 'Cover image'}
+            fill
+            sizes="(max-width: 600px) 100vw, (max-width: 1200px) 80vw, 900px"
+            style={{ objectFit: 'cover' }}
           />
         </Box>
       )}
+
+      <Box sx={{ display: "flex" }}>
+        {isSmUp ? (
           <Box sx={{ display: "flex" }}>
-            
-            {isSmUp ? (
-              
-              <Box sx={{display: "flex"}}>
-                
-                <Box 
-                  sx={{mt:{
-                    xs: 0,
-                    sm: -3,
-                  }}}>
-                    {content && (
-                      <CardContent>
-                        <ReactMarkdown>{content}</ReactMarkdown>
-                      </CardContent>
-                    )}
-                  </Box>
-                  <Box sx={{maxWidth: 300}}>
-                    <Advert />
-                  </Box>
-              </Box>
-
-              
-            ) : (
-              <Box sx={{}}>
-                {content && <ReactMarkdown>{content}</ReactMarkdown>}
-                
-                    <Advert />
-                
-              </Box>
-            )}
+            <Box sx={{ mt: { xs: 0, sm: -3 } }}>
+              {content && (
+                <CardContent>
+                  <ReactMarkdown>{content}</ReactMarkdown>
+                </CardContent>
+              )}
+            </Box>
+            <Box sx={{ maxWidth: 300 }}>
+              <Advert />
+            </Box>
           </Box>
+        ) : (
           <Box>
-        </Box>
-
-          
+            {content && <ReactMarkdown>{content}</ReactMarkdown>}
+            <Advert />
+          </Box>
+        )}
+      </Box>
     </Box>
   )
 }

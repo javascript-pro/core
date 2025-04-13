@@ -1,13 +1,13 @@
 // goldlabel/components/FilePage.tsx
 
 import React from 'react'
+import Image from 'next/image'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import {
   Box,
   CardContent,
   CardHeader,
-  CardMedia,
   IconButton,
 } from '@mui/material'
 import { Icon } from '#/goldlabel'
@@ -23,7 +23,6 @@ export type FilePageProps = {
       description?: string
     }
     content: string
-    
   }
   globalNav?: any
 }
@@ -35,21 +34,39 @@ export default function FilePage({ content, globalNav }: FilePageProps) {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column' }}>
       <CardHeader
-        avatar={<IconButton disabled>
-          <Icon icon={icon as any} color="secondary" />
-          </IconButton>}
+        // avatar={
+        //   <IconButton disabled>
+        //     <Icon icon={icon as any} color="secondary" />
+        //   </IconButton>
+        // }
         title={title || 'Untitled'}
         subheader={description}
       />
 
       {image && (
-        <Box sx={{ mx: 1, mb: 1 }}>
-          <CardMedia
-            component="img"
-            height={250}
+        <Box
+          sx={{
+            position: 'relative',
+            width: '100%',
+            maxWidth: 800,
+            aspectRatio: {
+              xs: '16/9',
+              sm: '16/9',
+              md: '16/4.5', // half height on md+ screens
+            },
+            mx: 1,
+            mb: 2,
+            borderRadius: 2,
+            overflow: 'hidden',
+          }}
+        >
+          <Image
+            priority
             src={image}
-            alt={title}
-            
+            alt={title || 'Image'}
+            fill
+            sizes="(max-width: 600px) 100vw, (max-width: 1200px) 80vw, 800px"
+            style={{ objectFit: 'cover' }}
           />
         </Box>
       )}

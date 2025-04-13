@@ -1,10 +1,15 @@
+
+/* Gold 
+#C09F52
+*/
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* Light theme defaults - no Tailwind greys */
 html, body {
-  background-color: white;
+  background-color: #E2E2E2;
   color: black;
 }
 
@@ -22,7 +27,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
+  font-weight: normal;
   color: black;
 }
 

@@ -10,7 +10,7 @@ import {
   IconButton,
   Typography,
 } from '@mui/material';
-import { Icon, Sitemap } from '#/goldlabel';
+import { Icon, ContextNav } from '#/goldlabel';
 
 type PopupMenuProps = {
   open?: boolean;
@@ -51,11 +51,7 @@ export default function PopupMenu({ open, onClose, globalNav }: PopupMenuProps) 
       <DialogContent sx={{
         mb: 2
       }}>
-        <Sitemap 
-          globalNav={globalNav} 
-          onClose={onClose} 
-          openTopLevelByDefault={1}
-        />
+        <ContextNav />
       </DialogContent>
     </Dialog>
   );

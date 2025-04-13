@@ -8,13 +8,12 @@ import Typography from '@mui/material/Typography';
 import { Box, Link as MUILink } from '@mui/material';
 
 function Params() {
-  const searchParams = useSearchParams()!;
+  const searchParams = useSearchParams();
 
-  if (searchParams.toString().length === 0) return null;
+  if (!searchParams || searchParams.toString().length === 0) return null;
 
   return (
     <Box className="px-2 text-gray-500 text-sm" component="span">
-      
       ?
       {Array.from(searchParams.entries()).map(([key, value], index) => (
         <React.Fragment key={key}>
@@ -39,9 +38,20 @@ export function AppBreadcrumb() {
   const pathname = usePathname();
   const segments = pathname.replace(/\/$/, '').split('/').filter(Boolean);
 
+  // Hide breadcrumbs on home page
+  if (segments.length === 0) return <>&nbsp;</>;
+
   return (
     <Box my={2} px={2}>
       <Breadcrumbs aria-label="breadcrumb" separator="/" maxItems={8}>
+        {/* Home Link */}
+        <NextLink href="/" passHref legacyBehavior>
+          <MUILink underline="hover" color="inherit" variant="body2">
+            Home
+          </MUILink>
+        </NextLink>
+
+        {/* Remaining segments */}
         {segments.map((segment, index) => {
           const href = '/' + segments.slice(0, index + 1).join('/');
           const isLast = index === segments.length - 1;

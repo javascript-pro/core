@@ -69,7 +69,6 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
       {/* Top AppBar */}
       <AppBar
         position="fixed"
-        color="primary"
         sx={{
           top: 0,
           bottom: 'auto',
@@ -79,6 +78,8 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
       >
         <Container maxWidth="md">
           <Toolbar sx={{justifyContent: 'space-between'}}>
+            
+            <AppBreadcrumb />
             <IconButton
               onClick={() => {
                 window.open ("/", "_self")
@@ -89,7 +90,6 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
                 alt="Home"
               />
             </IconButton>
-            <AppBreadcrumb />
           </Toolbar>
         </Container>
       </AppBar>
@@ -110,12 +110,15 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
           top: 'auto',
           bottom: 0,
           boxShadow: 0,
+          background: 0
         }}
       >
-        <Container maxWidth="md">
-          <Toolbar>
+        <Container maxWidth="md" >
+          <Toolbar sx={{
+            // background: "red"
+            }}>
             <StyledFab
-              sx={{ boxShadow: 0 }}
+              // sx={{ boxShadow: 0 }}
               onClick={handleToggleMenu}
               color="primary"
               aria-label="Open Menu"
