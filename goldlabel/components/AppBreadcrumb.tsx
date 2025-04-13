@@ -3,9 +3,7 @@
 import React, { Suspense } from 'react';
 import NextLink from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
-import Breadcrumbs from '@mui/material/Breadcrumbs';
-import Typography from '@mui/material/Typography';
-import { Box, Link as MUILink } from '@mui/material';
+import { Box, Link as MUILink, Typography } from '@mui/material';
 
 function Params() {
   const searchParams = useSearchParams();
@@ -13,7 +11,7 @@ function Params() {
   if (!searchParams || searchParams.toString().length === 0) return null;
 
   return (
-    <Box className="px-2 text-gray-500 text-sm" component="span">
+    <Box component="span" sx={{ px: 1, color: 'text.secondary', fontSize: '0.75rem' }}>
       ?
       {Array.from(searchParams.entries()).map(([key, value], index) => (
         <React.Fragment key={key}>
@@ -38,42 +36,47 @@ export function AppBreadcrumb() {
   const pathname = usePathname();
   const segments = pathname.replace(/\/$/, '').split('/').filter(Boolean);
 
-  // Hide breadcrumbs on home page
   if (segments.length === 0) return <>&nbsp;</>;
 
   return (
-    <Box my={2} px={2}>
-      <Breadcrumbs aria-label="breadcrumb" separator="/" maxItems={8}>
-        {/* Home Link */}
-        <NextLink href="/" passHref legacyBehavior>
-          <MUILink underline="hover" color="inherit" variant="body2">
-            Home
-          </MUILink>
-        </NextLink>
+    <Box sx={{ fontSize: '0.75rem', display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
+      
+      <NextLink href="/" passHref legacyBehavior>
+        <MUILink underline="hover" color="inherit" variant="caption">
+          Home
+        </MUILink>
+      </NextLink>
 
-        {/* Remaining segments */}
-        {segments.map((segment, index) => {
-          const href = '/' + segments.slice(0, index + 1).join('/');
-          const isLast = index === segments.length - 1;
-          const label = formatSegment(segment);
+      {segments.map((segment, index) => {
+        const isLast = index === segments.length - 1;
+        const href = '/' + segments.slice(0, index + 1).join('/');
+        const label = formatSegment(segment);
 
-          return isLast ? (
-            <Typography key={href} color="text.primary" variant="body2">
-              {label}
-            </Typography>
-          ) : (
-            <NextLink key={href} href={href} passHref legacyBehavior>
-              <MUILink underline="hover" color="inherit" variant="body2">
+        return (
+          <React.Fragment key={href}>
+            <span style={{ margin: '0 4px' }}>/</span>
+            {isLast ? (
+              <Typography
+                variant="caption"
+                color="text.primary"
+                sx={{ fontWeight: 500 }}
+              >
                 {label}
-              </MUILink>
-            </NextLink>
-          );
-        })}
+              </Typography>
+            ) : (
+              <NextLink href={href} passHref legacyBehavior>
+                <MUILink underline="hover" color="inherit" variant="caption">
+                  {label}
+                </MUILink>
+              </NextLink>
+            )}
+          </React.Fragment>
+        );
+      })}
 
-        <Suspense>
-          <Params />
-        </Suspense>
-      </Breadcrumbs>
+      <Suspense>
+        <Params />
+      </Suspense>
     </Box>
   );
 }
