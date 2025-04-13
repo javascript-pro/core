@@ -52,11 +52,11 @@ export default function ContextNav({
           <ListItemText primary="Home" />
         </ListItemButton>
 
-        <ListItemButton onClick={() => onItemClick({ route: "/account" })}>
+        <ListItemButton onClick={() => onItemClick({ route: "/admin" })}>
           <ListItemIcon>
             <Icon icon="account" />
           </ListItemIcon>
-          <ListItemText primary="Account" />
+          <ListItemText primary="Admin" />
         </ListItemButton>
 
         <ListItemButton onClick={() => onItemClick({ route: "/work" })}>

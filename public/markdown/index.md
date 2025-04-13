@@ -7,18 +7,18 @@ icon: home
 image: /jpg/home.jpg
 tags: Next Gen, Next.js, core, Gen X, goldlabel, pr0, AI Prompt Engineering, ChatGPT, OpenAI, Singularity
 ---
-### Next Gen, Gen X, Next.js, AI Prompt Engineering, OpenAI & Singularity
+## Next Gen, Gen X, Next.js, AI Prompt Engineering, OpenAI & Singularity
 
 **Custom software that works.**  
 We build and ship modern web apps for clients who need real results — fast.
 
-## What We Do
+### What We Do
 
 Goldlabel Apps is a UK-based software company that designs, builds, and maintains full-stack web applications. We specialize in **Next.js**, **Firebase**, and **custom UI development**, delivering everything from internal admin tools to polished public-facing websites.
 
 Whether you're a startup with a short deadline or an enterprise with complex workflows, we can help.
 
-## How We Work
+### How We Work
 
 - **Small teams. Big output.**  
   Our projects are lean by design. We focus on fast delivery without the overhead.
@@ -30,7 +30,7 @@ Whether you're a startup with a short deadline or an enterprise with complex wor
   You’ll never be locked in. Our code is designed to be picked up by your team — or handed back to us when needed.
 
 
-## Examples in the Wild
+### Examples in the Wild
 
 - **SpeakWrite**  
   A voice-to-campaign tool powered by AI, turning speech into complete social media kits.
@@ -42,7 +42,7 @@ Whether you're a startup with a short deadline or an enterprise with complex wor
   A series of standalone, production-ready app templates you can build in a weekend.
 
 
-## Work With Us
+### Work With Us
 
 We take on a limited number of new projects each quarter. If you need:
 
