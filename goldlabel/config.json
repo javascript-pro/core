@@ -7,9 +7,9 @@
   "themeColor": "#E2E2E2",
   "themes": {
     "light": {
-      "text": "#000",
-      "primary": "#FFFFFF",
-      "secondary": "#C09F52",
+      "text": "#303030",
+      "primary": "##C09F52",
+      "secondary": "#303030",
       "background": "#E2E2E2",
       "paper": "#E2E2E2",
       "mapbox": "mapbox://styles/listingslab/cm67sb391003b01qz2cb6grth"
