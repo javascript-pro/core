@@ -4,11 +4,11 @@ title: Balance
 description: A collection of Writing
 slug: /balance
 icon: balance
-image: /jpg/SWAT-Baby.jpg
+image: /jpg/balance.jpg
 ---
-## [Books](/balance/books)
+### [Our books](/balance/books)
 
-### [Are you Generation X too?](/balance/gen-x)
+### [Are you Gen X?](/balance/gen-x)
 
 ### Is THIS Singularity?
 
