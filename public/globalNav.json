@@ -1,6 +1,6 @@
 [
   {
-    "title": "Goldlabel",
+    "title": "Goldlabel pr0",
     "slug": "/",
     "order": 1,
     "icon": "home",
@@ -17,7 +17,7 @@
       "OpenAI",
       "Singularity"
     ],
-    "excerpt": "Next Gen, Gen X, Next.js, AI Prompt Engineering, OpenAI & Singularity\n\n Choose your own path, Sir ,  or",
+    "excerpt": "Next Gen, Gen X, Next.js, AI Prompt Engineering, OpenAI & Singularity\n\n Goldlabel Apps Ltd\n\nCustom software that works.  \nWe build and ship modern web apps for clients who need real results — fast.\n\n\n",
     "children": [
       {
         "title": "Work",
@@ -114,7 +114,7 @@
                 "order": 30,
                 "icon": "examples",
                 "type": "file",
-                "excerpt": "An Open Source transcription engine to create propaganda.\n\nApproach a large thing by doing a small thing and trying not to think about how large it is. Depends on your sense of time. Mine's pretty abn"
+                "excerpt": "Foreseen by Orwell in 1984, built for reals just now. By us. Out of our heads\n\n\nApproach a large thing by doing a small thing and trying not to think about how large it is. Depends on your sense of ti"
               }
             ]
           },
@@ -272,7 +272,7 @@
         "order": 100,
         "icon": "balance",
         "type": "folder",
-        "excerpt": "Is THIS Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday",
+        "excerpt": "Is THIS Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday\n\n Choose your own path, Sir ,  or",
         "children": [
           {
             "title": "Books",
