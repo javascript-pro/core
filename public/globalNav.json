@@ -20,7 +20,7 @@
         "title": "Work",
         "slug": "work",
         "order": 10,
-        "icon": "folder",
+        "icon": "work",
         "type": "folder",
         "tags": [
           "social"
@@ -58,24 +58,6 @@
             "icon": "techstack",
             "type": "folder",
             "excerpt": "Fullstack is one of those industry terms rapidly loosing meaning from overuse. In the olden days there was a very clear difference between someone who made the frontend of an app and a person who made",
-            "children": [
-              {
-                "title": "UK Limited Company 5460545",
-                "slug": "work/company/uk-ltd",
-                "order": 20,
-                "icon": "doc",
-                "type": "file",
-                "excerpt": "Goldlabel Apps Ltd is a UK Limited Company (5460545), building custom software for creators, developers, and businesses."
-              }
-            ]
-          },
-          {
-            "title": "Techstack",
-            "slug": "work/techstack",
-            "order": 30,
-            "icon": "techstack",
-            "type": "folder",
-            "excerpt": "What does techstak really mean?",
             "children": [
               {
                 "title": "Overview",
@@ -132,6 +114,21 @@
                 "excerpt": "An Open Source transcription engine to create propaganda.\n\nApproach a large thing by doing a small thing and trying not to think about how large it is. Depends on your sense of time. Mine's pretty abn"
               }
             ]
+          },
+          {
+            "title": "Privacy",
+            "slug": "work/privacy",
+            "order": 1000,
+            "icon": "account",
+            "type": "file",
+            "tags": [
+              "cookies",
+              "gdpr",
+              "privacy",
+              "terms",
+              "trust"
+            ],
+            "excerpt": "We don't use cookies\n\nPrivacy Statement\n\nWelcome to Goldlabel! We value your privacy and are committed to protecting your personal information. This privacy statement aims to provide clarity on how we"
           },
           {
             "title": "UK Ltd Company",
@@ -191,7 +188,7 @@
         "title": "Life",
         "slug": "life",
         "order": 50,
-        "icon": "folder",
+        "icon": "life",
         "type": "folder",
         "excerpt": "I work remotely. I , eat, ride motorbikes and . Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age I'm never going to ski like I used to. Maybe it's time ",
         "children": [
@@ -270,7 +267,7 @@
         "title": "Balance",
         "slug": "balance",
         "order": 100,
-        "icon": "folder",
+        "icon": "balance",
         "type": "folder",
         "excerpt": "Is THIS Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday",
         "children": [
