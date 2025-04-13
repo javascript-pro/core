@@ -99,7 +99,7 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
       }}>
         <Box sx={{ pb: '50px' }}>
         {/* <Typography variant='h1'>Typography</Typography> */}
-          {children && <Box sx={{ p: 2 }}>{children}</Box>}
+          {children && <Box sx={{ p: 0 }}>{children}</Box>}
         </Box>
       </Container>
 

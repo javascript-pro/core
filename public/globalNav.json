@@ -17,7 +17,7 @@
       "OpenAI",
       "Singularity"
     ],
-    "excerpt": "Next Gen, Gen X, Next.js, AI Prompt Engineering, OpenAI & Singularity\n\n Goldlabel Apps Ltd\n\nCustom software that works.  \nWe build and ship modern web apps for clients who need real results — fast.\n\n\n",
+    "excerpt": "Next Gen, Gen X, Next.js, AI Prompt Engineering, OpenAI & Singularity\n\nCustom software that works.  \nWe build and ship modern web apps for clients who need real results — fast.\n\n What We Do\n\nGoldlabel",
     "children": [
       {
         "title": "Work",
@@ -28,7 +28,7 @@
         "tags": [
           "social"
         ],
-        "excerpt": "This is the Publicfacing core of the Goldlabel Apps ecosystem. It’s a fast, staticfirst Next.js site powered by realtime data from Firestore and managed through a builtin admin interface. State of the",
+        "excerpt": "Work\n\nSoftware built in the open.  \nEvery app we ship is real, running in production, and developed in public.\n\n\n\n Active Projects\n\n SpeakWrite\nTurn your voice into a complete media kit.  \nUpload a sh",
         "children": [
           {
             "title": "Features",

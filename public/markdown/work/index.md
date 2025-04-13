@@ -13,8 +13,6 @@ tags: social
 **Software built in the open.**  
 Every app we ship is real, running in production, and developed in public.
 
----
-
 ## Active Projects
 
 ### **SpeakWrite**
@@ -22,28 +20,20 @@ Turn your voice into a complete media kit.
 Upload a short speech, edit the transcript, and let AI do the rest — titles, descriptions, Open Graph tags, even a featured image.  
 [Live Demo](https://speakwrite.vercel.app)
 
----
-
 ### **Goldlabel Core**
 Our flagship site — fully statically generated with Firestore-powered updates and a real admin panel.  
 Built with Next.js App Router and MUI.  
 [Visit Site](https://goldlabel.pro)
-
----
 
 ### **Weekend Portfolio**
 A series of standalone apps you can build in a weekend.  
 Each project teaches modern deployment, real-world app structure, and how to get from idea to income.  
 [Explore Projects](/apps)
 
----
-
 ### **MP3 Recorder**
 A privacy-first voice note tool built with Firebase Storage and client-side recording.  
 Record, upload, and manage your audio from any device.  
 [Check it Out](https://mp3-recorder.vercel.app)
-
----
 
 ## What Makes This Different?
 
@@ -55,8 +45,6 @@ Record, upload, and manage your audio from any device.
 
 - **We build for reuse.**  
   Every component, pattern, and API is designed to be portable and production-ready.
-
----
 
 ## Want to Build With Us?
 
