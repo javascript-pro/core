@@ -20,7 +20,7 @@
         "title": "Work",
         "slug": "work",
         "order": 10,
-        "icon": "work",
+        "icon": "folder",
         "type": "folder",
         "tags": [
           "social"
@@ -58,6 +58,24 @@
             "icon": "techstack",
             "type": "folder",
             "excerpt": "Fullstack is one of those industry terms rapidly loosing meaning from overuse. In the olden days there was a very clear difference between someone who made the frontend of an app and a person who made",
+            "children": [
+              {
+                "title": "UK Limited Company 5460545",
+                "slug": "work/company/uk-ltd",
+                "order": 20,
+                "icon": "doc",
+                "type": "file",
+                "excerpt": "Goldlabel Apps Ltd is a UK Limited Company (5460545), building custom software for creators, developers, and businesses."
+              }
+            ]
+          },
+          {
+            "title": "Techstack",
+            "slug": "work/techstack",
+            "order": 30,
+            "icon": "techstack",
+            "type": "folder",
+            "excerpt": "What does techstak really mean?",
             "children": [
               {
                 "title": "Overview",
@@ -173,7 +191,7 @@
         "title": "Life",
         "slug": "life",
         "order": 50,
-        "icon": "life",
+        "icon": "folder",
         "type": "folder",
         "excerpt": "I work remotely. I , eat, ride motorbikes and . Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age I'm never going to ski like I used to. Maybe it's time ",
         "children": [
@@ -252,7 +270,7 @@
         "title": "Balance",
         "slug": "balance",
         "order": 100,
-        "icon": "balance",
+        "icon": "folder",
         "type": "folder",
         "excerpt": "Is THIS Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday",
         "children": [
