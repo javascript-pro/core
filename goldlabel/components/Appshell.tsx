@@ -1,6 +1,6 @@
 'use client';
 
-import config from '#/goldlabel/config.json';
+import config from '../config.json';
 import * as React from 'react';
 import {
   Box,
@@ -119,9 +119,8 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
             // background: "red"
             }}>
             <StyledFab
-              // sx={{ boxShadow: 0 }}
+              sx={{ boxShadow: 0, background: "white" }}
               onClick={handleToggleMenu}
-              color="secondary"
               aria-label="Open Menu"
             >
               

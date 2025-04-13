@@ -8,9 +8,11 @@ import {
   useTheme,
 } from '@mui/material'
 import Image from 'next/image'
-import { 
+import {
   Advert,
-} from '#/goldlabel'
+  FolderContents,
+} from '../'
+
 import ReactMarkdown from 'react-markdown'
 import { NavItem } from '#/goldlabel/types/nav'
 
@@ -86,12 +88,14 @@ export default function FolderPage({
             </Box>
             <Box sx={{ maxWidth: 300 }}>
               <Advert />
+              <FolderContents />
             </Box>
           </Box>
         ) : (
           <Box>
             {content && <ReactMarkdown>{content}</ReactMarkdown>}
             <Advert />
+            <FolderContents />
           </Box>
         )}
       </Box>
