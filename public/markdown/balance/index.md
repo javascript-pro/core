@@ -13,3 +13,5 @@ image: /jpg/balance.jpg
 ### Is THIS Singularity?
 
 > "Put that kind of AI into a drone with a gun... then yeh, you've got a big problem." _Bloke down the pub said, yesterday_
+
+> Choose your own path, Sir [Work](/work), [Life](/life) or [Balance](/balance)

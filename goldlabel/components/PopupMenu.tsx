@@ -5,12 +5,8 @@ import {
   Dialog,
   DialogContent,
   DialogActions,
-  DialogTitle,
   useMediaQuery,
   useTheme,
-  IconButton,
-  Typography,
-  List,
   ListItemButton,
   ListItemIcon,
   ListItemText,
@@ -41,10 +37,7 @@ export default function PopupMenu({ open, onClose, globalNav }: PopupMenuProps) 
         },
       }}
     >
-
-      <DialogContent sx={{
-        mb: 2
-      }}>
+      <DialogContent>
         <ContextNav onClose={onClose} />
       </DialogContent>
       <DialogActions>

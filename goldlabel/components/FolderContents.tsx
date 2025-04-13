@@ -33,18 +33,18 @@ function findFolderBySlug(items: NavItem[], pathname: string): NavItem | null {
   return null
 }
 
-function findParentOfFile(
+function findParentOfItem(
   items: NavItem[],
   pathname: string,
   parents: NavItem[] = []
 ): NavItem | null {
   for (const item of items) {
     const fullPath = `/${item.slug}`.replace(/\/+/g, '/')
-    if (fullPath === pathname && item.type === 'file') {
+    if (fullPath === pathname) {
       return parents[parents.length - 1] || null
     }
     if (item.children) {
-      const found = findParentOfFile(item.children, pathname, [...parents, item])
+      const found = findParentOfItem(item.children, pathname, [...parents, item])
       if (found) return found
     }
   }
@@ -56,23 +56,40 @@ export default function FolderContents() {
   const router = useRouter()
 
   const folder = findFolderBySlug(globalNav, pathname)
-  const parent = folder || findParentOfFile(globalNav, pathname)
+  const parent = folder || findParentOfItem(globalNav, pathname)
+  const grandparent = parent
+    ? findParentOfItem(globalNav, `/${parent.slug}`)
+    : null
+
   const itemsToRender = parent?.children || []
+  const currentPath = pathname.replace(/\/+/g, '/')
 
   return (
     <Box sx={{ minWidth: 300 }}>
       {itemsToRender.length === 0 ? null : (
         <List dense>
-          {itemsToRender.map((item) => (
-            <ListItem key={item.slug} disablePadding>
-              <ListItemButton onClick={() => router.push(`/${item.slug}`)}>
-                <ListItemText
-                  primary={item.title}
-                  secondary={item.description}
-                />
+          {/* Up button to grandparent folder, if it exists */}
+          {grandparent && (
+            <ListItem key="up" disablePadding>
+              <ListItemButton onClick={() => router.push(`/${grandparent.slug}`)}>
+                <ListItemText primary="Back" />
               </ListItemButton>
             </ListItem>
-          ))}
+          )}
+
+          {/* Children items, excluding current file */}
+          {itemsToRender
+            .filter((item) => `/${item.slug}`.replace(/\/+/g, '/') !== currentPath)
+            .map((item) => (
+              <ListItem key={item.slug} disablePadding>
+                <ListItemButton onClick={() => router.push(`/${item.slug}`)}>
+                  <ListItemText
+                    primary={item.title}
+                    secondary={item.description}
+                  />
+                </ListItemButton>
+              </ListItem>
+            ))}
         </List>
       )}
     </Box>

@@ -12,3 +12,5 @@ See me socially on [LinkedIn](https://www.linkedin.com/in/chris-dorward/), [GitH
 [Facebook](https://www.facebook.com/goldlabelapps/),
 [Flickr](https://www.flickr.com/photos/listingslab), 
 or even the social network formally known as [Twitter](https://twitter.com/pb_weizang).
+
+> Choose your own path, Sir [Work](/work), [Life](/life) or [Balance](/balance)

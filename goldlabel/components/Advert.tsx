@@ -23,10 +23,10 @@ export default function Advert() {
   const router = useRouter()
 
   const ad: IAdvert = {
-    title: "SpeakWrite",
+    title: "SpeakWrite Propaganda ",
     icon: "star",
     url: "/work/examples/speakwrite",
-    description: "An Open Source AI engine to generate propaganda",
+    description: "Generator with Open Source AI ",
     image: "/jpg/speakwrite.jpg",
   }
   
