@@ -8,7 +8,7 @@
   "themes": {
     "light": {
       "text": "#303030",
-      "primary": "##C09F52",
+      "primary": "#C09F52",
       "secondary": "#303030",
       "background": "#efefef",
       "paper": "#efefef",

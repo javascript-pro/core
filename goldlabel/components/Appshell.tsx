@@ -73,6 +73,7 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
           top: 0,
           bottom: 'auto',
           boxShadow: 0,
+          background: '#efefef'
         }}
       >
         <Container maxWidth="md">
@@ -95,7 +96,7 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
 
       {/* Main Content Area with top padding */}
       <Container maxWidth="md" sx={{ 
-        pt: 5
+        pt: 7
       }}>
         <Box sx={{ pb: '50px' }}>
         {/* <Typography variant='h1'>Typography</Typography> */}
