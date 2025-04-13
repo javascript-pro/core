@@ -4,14 +4,14 @@
   "image": "/jpg/work.jpg",
   "description": "Streamline tasks, boost productivity, and enhance customer experience",
   "favicon": "/svg/favicon_nobg.svg",
-  "themeColor": "#C09F52",
+  "themeColor": "#E2E2E2",
   "themes": {
     "light": {
       "text": "#000",
       "primary": "#FFFFFF",
       "secondary": "#C09F52",
-      "background": "#FFFFFF",
-      "paper": "#FFFFFF",
+      "background": "#E2E2E2",
+      "paper": "#E2E2E2",
       "mapbox": "mapbox://styles/listingslab/cm67sb391003b01qz2cb6grth"
     }
   }
