@@ -9,7 +9,7 @@ import {
 } from '@mui/material'
 import Image from 'next/image'
 import {
-  Advert,
+  Featured,
   FolderContents,
 } from '../'
 
@@ -29,6 +29,7 @@ export type Frontmatter = {
 
 export type FolderPageProps = {
   section: string
+  featured?: any[]
   tree: NavItem[] | null
   frontmatter: Frontmatter | null
   content: string | null
@@ -39,6 +40,7 @@ export default function FolderPage({
   section,
   frontmatter,
   content,
+  featured,
 }: FolderPageProps) {
   const theme = useTheme()
   const isSmUp = useMediaQuery(theme.breakpoints.up('sm'))
@@ -80,21 +82,22 @@ export default function FolderPage({
         {isSmUp ? (
           <Box sx={{ display: "flex" }}>
             <Box sx={{ mt: { xs: 0, sm: -3 } }}>
+
               {content && (
                 <CardContent>
                   <ReactMarkdown>{content}</ReactMarkdown>
                 </CardContent>
               )}
             </Box>
-            <Box sx={{ maxWidth: 300 }}>
-              <Advert />
+            <Box sx={{ maxWidth: 300 }}>            
+              <Featured featured={featured} />
               <FolderContents />
             </Box>
           </Box>
         ) : (
           <Box>
             {content && <ReactMarkdown>{content}</ReactMarkdown>}
-            <Advert />
+            <Featured />
             <FolderContents />
           </Box>
         )}

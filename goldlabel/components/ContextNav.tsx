@@ -49,7 +49,7 @@ export default function ContextNav({
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
-        <Grid size={6}>
+        <Grid size={{ xs: 12, md: 6 }}>
           <Typography variant='button'>Settings</Typography>
           <List dense>
             <ListItemButton onClick={() => handleItemClick({ route: "/admin" })}>
@@ -68,7 +68,7 @@ export default function ContextNav({
           </List>
         </Grid>
 
-        <Grid size={6}>
+        <Grid size={{ xs: 12, md: 6 }}>
           <Typography variant='button'>Nav</Typography>
           <List dense>
             

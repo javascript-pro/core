@@ -13,6 +13,7 @@ import {
 } from '@mui/material'
 import {
   FolderContents,
+  Featured,
 } from '../'
 
 export type FilePageProps = {
@@ -28,6 +29,7 @@ export type FilePageProps = {
     content: string
   }
   globalNav?: any
+  featured?: any[]
 }
 
 export default function FilePage({ content, globalNav }: FilePageProps) {
@@ -82,6 +84,7 @@ export default function FilePage({ content, globalNav }: FilePageProps) {
               </CardContent>
             </Box>
             <Box sx={{ maxWidth: 300 }}>
+              <Featured />
               <FolderContents />
             </Box>
           </Box>

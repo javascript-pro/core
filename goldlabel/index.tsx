@@ -10,6 +10,7 @@ import Sitemap from './components/Sitemap'
 import ContextNav from './components/ContextNav'
 import Advert from './components/Advert'
 import FolderContents from './components/FolderContents'
+import Featured from './components/Featured'
 
 export {
     Home,
@@ -23,6 +24,7 @@ export {
     AppBreadcrumb,
     Sitemap,
     PopupMenu,
+    Featured,
 }
 
 export type {

@@ -5,12 +5,7 @@ import { notFound } from 'next/navigation'
 import fs from 'fs/promises'
 import { loadMarkdown, getMarkdownTree } from '#/lib/loadMarkdown'
 import { FolderPage, FilePage, Sitemap } from '#/goldlabel'
-
-// type Props = {
-//   params: {
-//     slug?: string[]
-//   }
-// }
+import {getFeatured} from "../../lib/getFeatured"
 
 export default async function CatchAllPage({ params }: any) {
   const slugArray = Array.isArray(params?.slug) ? params.slug : []
@@ -30,8 +25,10 @@ export default async function CatchAllPage({ params }: any) {
   }
 
   const markdown = await loadMarkdown(slugPath)
+  const featured = await getFeatured()
+
   if (markdown) {
-    return <FilePage content={markdown} globalNav={globalNav} />
+    return <FilePage featured={featured} content={markdown} globalNav={globalNav} />
   }
 
   const folderPath = path.join(process.cwd(), 'public/markdown', ...slugArray)
@@ -45,6 +42,7 @@ export default async function CatchAllPage({ params }: any) {
 
       return (
         <FolderPage
+          featured={featured}
           section={section}
           tree={tree}
           frontmatter={indexMarkdown?.frontmatter || null}
