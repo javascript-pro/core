@@ -7,8 +7,12 @@ import {
   ListItem,
   ListItemButton,
   ListItemText,
+  ListItemIcon,
 } from '@mui/material'
 import { usePathname, useRouter } from 'next/navigation'
+import {
+  Icon,
+} from "../"
 import globalNav from '../../public/globalNav.json'
 
 type NavItem = {
@@ -72,7 +76,9 @@ export default function FolderContents() {
           {grandparent && (
             <ListItem key="up" disablePadding>
               <ListItemButton onClick={() => router.push(`/${grandparent.slug}`)}>
-                <ListItemText primary="Back" />
+                <ListItemIcon>
+                  <Icon icon="up" />
+                </ListItemIcon>
               </ListItemButton>
             </ListItem>
           )}
