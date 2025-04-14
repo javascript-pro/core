@@ -1,17 +1,25 @@
 {
-  "appTitle": "Goldlabel Core",
+  "appTitle": "Goldlabel pr0",
   "url": "https://goldlabel.pro",
-  "image": "/jpg/work.jpg",
-  "description": "Streamline tasks, boost productivity, and enhance customer experience",
+  "image": "/jpg/home.jpg",
+  "description": "Next Gen, Gen X, Next.js, AI Prompt Engineering, OpenAI & Singularity",
   "favicon": "/svg/favicon_nobg.svg",
-  "themeColor": "#E2E2E2",
+  "themeColor": "#efefef",
   "themes": {
     "light": {
       "text": "#303030",
-      "primary": "##C09F52",
+      "primary": "#C09F52",
+      "secondary": "#efefef",
+      "background": "#efefef",
+      "paper": "#efefef",
+      "mapbox": "mapbox://styles/listingslab/cm67sb391003b01qz2cb6grth"
+    },
+    "dark": {
+      "text": "#efefef",
+      "primary": "#C09F52",
       "secondary": "#303030",
-      "background": "#E2E2E2",
-      "paper": "#E2E2E2",
+      "background": "#303030",
+      "paper": "#303030",
       "mapbox": "mapbox://styles/listingslab/cm67sb391003b01qz2cb6grth"
     }
   }

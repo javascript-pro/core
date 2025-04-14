@@ -1,31 +1,34 @@
 [
   {
-    "title": "Goldlabel",
+    "title": "Goldlabel pr0",
     "slug": "/",
     "order": 1,
     "icon": "home",
     "type": "folder",
     "tags": [
+      "Next Gen",
       "Next.js",
       "core",
+      "Gen X",
       "goldlabel",
+      "pr0",
       "AI Prompt Engineering",
       "ChatGPT",
-      "AI",
+      "OpenAI",
       "Singularity"
     ],
-    "excerpt": "WordPress\n\n WordPress is great but has a time and a place. The time is in the past and the place is in the bin. But getting it right was such a pain, cost double intended spend and works pretty well, ",
+    "excerpt": "Next Gen, Gen X, Next.js, AI Prompt Engineering, OpenAI & Singularity\n\nCustom software that works.  \nWe build and ship modern web apps for clients who need real results — fast.\n\n What We Do\n\nGoldlabel",
     "children": [
       {
         "title": "Work",
         "slug": "work",
         "order": 10,
-        "icon": "folder",
+        "icon": "work",
         "type": "folder",
         "tags": [
           "social"
         ],
-        "excerpt": "Publicfacing foundation of the Goldlabel Apps ecosystem. It’s a fast, staticfirst Next.js site powered by realtime data from Firestore and managed through a builtin admin interface. State of the art\n\n",
+        "excerpt": "Work\n\nSoftware built in the open.  \nEvery app we ship is real, running in production, and developed in public.\n\n Active Projects\n\n SpeakWrite\nTurn your voice into a complete media kit.  \nUpload a shor",
         "children": [
           {
             "title": "Features",
@@ -58,24 +61,6 @@
             "icon": "techstack",
             "type": "folder",
             "excerpt": "Fullstack is one of those industry terms rapidly loosing meaning from overuse. In the olden days there was a very clear difference between someone who made the frontend of an app and a person who made",
-            "children": [
-              {
-                "title": "UK Limited Company 5460545",
-                "slug": "work/company/uk-ltd",
-                "order": 20,
-                "icon": "doc",
-                "type": "file",
-                "excerpt": "Goldlabel Apps Ltd is a UK Limited Company (5460545), building custom software for creators, developers, and businesses."
-              }
-            ]
-          },
-          {
-            "title": "Techstack",
-            "slug": "work/techstack",
-            "order": 30,
-            "icon": "techstack",
-            "type": "folder",
-            "excerpt": "What does techstak really mean?",
             "children": [
               {
                 "title": "Overview",
@@ -129,9 +114,24 @@
                 "order": 30,
                 "icon": "examples",
                 "type": "file",
-                "excerpt": "An Open Source transcription engine to create propaganda.\n\nApproach a large thing by doing a small thing and trying not to think about how large it is. Depends on your sense of time. Mine's pretty abn"
+                "excerpt": "Foreseen by Orwell in 1984, built for reals just now. By us. Out of our heads\n\n\nApproach a large thing by doing a small thing and trying not to think about how large it is. Depends on your sense of ti"
               }
             ]
+          },
+          {
+            "title": "Privacy",
+            "slug": "work/privacy",
+            "order": 1000,
+            "icon": "account",
+            "type": "file",
+            "tags": [
+              "cookies",
+              "gdpr",
+              "privacy",
+              "terms",
+              "trust"
+            ],
+            "excerpt": "We don't use cookies\n\nPrivacy Statement\n\nWelcome to Goldlabel! We value your privacy and are committed to protecting your personal information. This privacy statement aims to provide clarity on how we"
           },
           {
             "title": "UK Ltd Company",
@@ -191,7 +191,7 @@
         "title": "Life",
         "slug": "life",
         "order": 50,
-        "icon": "folder",
+        "icon": "life",
         "type": "folder",
         "excerpt": "I work remotely. I , eat, ride motorbikes and . Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age I'm never going to ski like I used to. Maybe it's time ",
         "children": [
@@ -270,9 +270,9 @@
         "title": "Balance",
         "slug": "balance",
         "order": 100,
-        "icon": "folder",
+        "icon": "balance",
         "type": "folder",
-        "excerpt": "Is THIS Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday",
+        "excerpt": "Is THIS Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday\n\n Choose your own path, Sir ,  or",
         "children": [
           {
             "title": "Books",
@@ -280,7 +280,7 @@
             "order": 100,
             "icon": "balance",
             "type": "folder",
-            "excerpt": "Weekend Portfolio\n Weekend 1\nIn this Weekend Portfolio project, you’ll build a compact and powerful app called mp3totext. The idea is simple but important: you upload an .mp3 file, and the app gives y",
+            "excerpt": "Book 1. Weekend Portfolio\n\nAimed at semiprofessional coders who want to go pr0.\n\n Weekend 1\nIn this Weekend Portfolio project, you’ll build a compact and powerful app called mp3totext. The idea is sim",
             "children": []
           },
           {

@@ -1,4 +1,3 @@
-
 import Home from './components/Home'
 import Appshell from './components/Appshell'
 import FolderPage from './components/FolderPage'
@@ -10,6 +9,7 @@ import {AppBreadcrumb} from './components/AppBreadcrumb'
 import Sitemap from './components/Sitemap'
 import ContextNav from './components/ContextNav'
 import Advert from './components/Advert'
+import FolderContents from './components/FolderContents'
 
 export {
     Home,
@@ -17,6 +17,7 @@ export {
     ContextNav,
     Appshell,
     FolderPage,
+    FolderContents,
     FilePage,
     Icon,
     AppBreadcrumb,

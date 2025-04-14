@@ -1,6 +1,6 @@
 'use client';
 
-import config from '#/goldlabel/config.json';
+import config from '../config.json';
 import * as React from 'react';
 import {
   Box,
@@ -13,16 +13,19 @@ import {
   Fab,
   Avatar,
   IconButton,
-  // Typography,
 } from '@mui/material';
-import { styled } from '@mui/material/styles';
-import { AppBreadcrumb, Icon, PopupMenu } from '#/goldlabel';
+import { styled } from '@mui/material/styles'
+import { AppBreadcrumb, Icon, PopupMenu } from '../'
 
-const { light: themeValues } = config.themes;
+// const mode = 'light'
+// const { light: themeValues } = config.themes;
+
+const mode = 'dark'
+const { dark: themeValues } = config.themes;
 
 const theme = createTheme({
   palette: {
-    mode: 'light',
+    mode,
     primary: {
       main: themeValues.primary,
     },
@@ -57,7 +60,7 @@ type AppshellProps = {
 };
 
 export default function Appshell({ children, globalNav }: AppshellProps) {
-  const topAppBarHeight = 50;
+  
   const [menuOpen, setMenuOpen] = React.useState(false);
 
   const handleToggleMenu = () => setMenuOpen(!menuOpen);
@@ -73,7 +76,7 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
           top: 0,
           bottom: 'auto',
           boxShadow: 0,
-          height: topAppBarHeight,
+          background: themeValues.background
         }}
       >
         <Container maxWidth="md">
@@ -95,10 +98,12 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
       </AppBar>
 
       {/* Main Content Area with top padding */}
-      <Container maxWidth="md" sx={{ pt: `${topAppBarHeight - 10}px` }}>
+      <Container maxWidth="md" sx={{ 
+        pt: 7
+      }}>
         <Box sx={{ pb: '50px' }}>
         {/* <Typography variant='h1'>Typography</Typography> */}
-          {children && <Box sx={{ p: 2 }}>{children}</Box>}
+          {children && <Box sx={{ p: 0 }}>{children}</Box>}
         </Box>
       </Container>
 
@@ -114,25 +119,26 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
         }}
       >
         <Container maxWidth="md" >
-          <Toolbar sx={{
-            // background: "red"
-            }}>
+          <Toolbar sx={{}}>
             <StyledFab
-              // sx={{ boxShadow: 0 }}
+              color="secondary"
+              sx={{ boxShadow: 0 }}
               onClick={handleToggleMenu}
-              color="primary"
               aria-label="Open Menu"
             >
               
-              <Icon icon="menu" color="secondary" />
+              <Icon icon="menu"/>
             </StyledFab>
             <Box sx={{ flexGrow: 1 }} />
           </Toolbar>
         </Container>
       </AppBar>
 
-      {/* Pop-up Menu Dialog */}
-      <PopupMenu open={menuOpen} onClose={() => setMenuOpen(false)} globalNav={globalNav} />
+      <PopupMenu 
+        open={menuOpen} 
+        onClose={() => setMenuOpen(false)} 
+        globalNav={globalNav} 
+      />
     </ThemeProvider>
   );
 }

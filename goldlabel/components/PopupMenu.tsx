@@ -4,13 +4,14 @@ import * as React from 'react';
 import {
   Dialog,
   DialogContent,
-  DialogTitle,
+  DialogActions,
   useMediaQuery,
   useTheme,
-  IconButton,
-  Typography,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
 } from '@mui/material';
-import { Icon, ContextNav } from '#/goldlabel';
+import { Icon, ContextNav } from '../';
 
 type PopupMenuProps = {
   open?: boolean;
@@ -36,23 +37,17 @@ export default function PopupMenu({ open, onClose, globalNav }: PopupMenuProps) 
         },
       }}
     >
-      <DialogTitle sx={{ border: 0 }}>
-        <Typography>&nbsp;</Typography>
-        <IconButton
-          edge="end"
-          color="inherit"
-          onClick={onClose}
-          aria-label="close"
-          sx={{ position: 'absolute', right: 16, top: 8 }}
-        >
-          <Icon icon="close" />
-        </IconButton>
-      </DialogTitle>
-      <DialogContent sx={{
-        mb: 2
-      }}>
-        <ContextNav />
+      <DialogContent>
+        <ContextNav onClose={onClose} />
       </DialogContent>
+      <DialogActions>
+        <ListItemButton onClick={onClose}>
+          <ListItemIcon>
+            <Icon icon="close" />
+          </ListItemIcon>
+          <ListItemText primary="Close" />
+        </ListItemButton>
+      </DialogActions>
     </Dialog>
   );
 }

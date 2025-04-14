@@ -8,10 +8,11 @@ import {
   useTheme,
 } from '@mui/material'
 import Image from 'next/image'
-import { 
-  // Icon, 
+import {
   Advert,
-} from '#/goldlabel'
+  FolderContents,
+} from '../'
+
 import ReactMarkdown from 'react-markdown'
 import { NavItem } from '#/goldlabel/types/nav'
 
@@ -38,28 +39,16 @@ export default function FolderPage({
   section,
   frontmatter,
   content,
-  globalNav,
 }: FolderPageProps) {
   const theme = useTheme()
   const isSmUp = useMediaQuery(theme.breakpoints.up('sm'))
 
-  const currentNode = findNodeBySlug(globalNav, section)
-  const children: NavItem[] = currentNode?.children || []
-
-  const isHome = section === 'home'
-
   return (
     <Box sx={{ px: 2 }}>
       <CardHeader
-        // avatar={
-        //   isHome
-        //     ? null
-        //     : <Icon icon={frontmatter?.icon as any} color="secondary" />
-        // }
         title={frontmatter?.title || section}
         subheader={frontmatter?.description}
       />
-
       {frontmatter?.image && (
         <Box
           sx={{
@@ -69,7 +58,7 @@ export default function FolderPage({
             aspectRatio: {
               xs: '16/9',
               sm: '16/9',
-              md: '16/4.5', // half height from md breakpoint
+              md: '16/4.5',
             },
             mb: { xs: 1, sm: 4 },
             borderRadius: 2,
@@ -99,26 +88,17 @@ export default function FolderPage({
             </Box>
             <Box sx={{ maxWidth: 300 }}>
               <Advert />
+              <FolderContents />
             </Box>
           </Box>
         ) : (
           <Box>
             {content && <ReactMarkdown>{content}</ReactMarkdown>}
             <Advert />
+            <FolderContents />
           </Box>
         )}
       </Box>
     </Box>
   )
-}
-
-function findNodeBySlug(nav: NavItem[], slug: string): NavItem | null {
-  for (const node of nav) {
-    if (node.slug === slug) return node
-    if (node.children && Array.isArray(node.children)) {
-      const found = findNodeBySlug(node.children, slug)
-      if (found) return found
-    }
-  }
-  return null
 }

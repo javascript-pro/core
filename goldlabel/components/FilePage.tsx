@@ -1,4 +1,4 @@
-// goldlabel/components/FilePage.tsx
+'use client'
 
 import React from 'react'
 import Image from 'next/image'
@@ -8,9 +8,12 @@ import {
   Box,
   CardContent,
   CardHeader,
-  IconButton,
+  useMediaQuery,
+  useTheme,
 } from '@mui/material'
-import { Icon } from '#/goldlabel'
+import {
+  FolderContents,
+} from '../'
 
 export type FilePageProps = {
   content: {
@@ -29,16 +32,14 @@ export type FilePageProps = {
 
 export default function FilePage({ content, globalNav }: FilePageProps) {
   const { frontmatter, content: body } = content
-  const { title, image, icon, description } = frontmatter
+  const { title, image, description } = frontmatter
+
+  const theme = useTheme()
+  const isSmUp = useMediaQuery(theme.breakpoints.up('sm'))
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+    <Box sx={{ px: 2 }}>
       <CardHeader
-        // avatar={
-        //   <IconButton disabled>
-        //     <Icon icon={icon as any} color="secondary" />
-        //   </IconButton>
-        // }
         title={title || 'Untitled'}
         subheader={description}
       />
@@ -48,14 +49,13 @@ export default function FilePage({ content, globalNav }: FilePageProps) {
           sx={{
             position: 'relative',
             width: '100%',
-            maxWidth: 800,
+            maxWidth: 900,
             aspectRatio: {
               xs: '16/9',
               sm: '16/9',
-              md: '16/4.5', // half height on md+ screens
+              md: '16/4.5',
             },
-            mx: 1,
-            mb: 2,
+            mb: { xs: 1, sm: 4 },
             borderRadius: 2,
             overflow: 'hidden',
           }}
@@ -63,19 +63,39 @@ export default function FilePage({ content, globalNav }: FilePageProps) {
           <Image
             priority
             src={image}
-            alt={title || 'Image'}
+            alt={title || 'Cover image'}
             fill
-            sizes="(max-width: 600px) 100vw, (max-width: 1200px) 80vw, 800px"
+            sizes="(max-width: 600px) 100vw, (max-width: 1200px) 80vw, 900px"
             style={{ objectFit: 'cover' }}
           />
         </Box>
       )}
 
-      <CardContent id="file-page-markdown">
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>
-          {body}
-        </ReactMarkdown>
-      </CardContent>
+      <Box sx={{ display: 'flex' }}>
+        {isSmUp ? (
+          <Box sx={{ display: 'flex' }}>
+            <Box sx={{ mt: { xs: 0, sm: -3 } }}>
+              <CardContent>
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                  {body}
+                </ReactMarkdown>
+              </CardContent>
+            </Box>
+            <Box sx={{ maxWidth: 300 }}>
+              <FolderContents />
+            </Box>
+          </Box>
+        ) : (
+          <Box>
+            <CardContent>
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                {body}
+              </ReactMarkdown>
+            </CardContent>
+            <FolderContents />
+          </Box>
+        )}
+      </Box>
     </Box>
   )
 }

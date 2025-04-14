@@ -1,8 +1,7 @@
 'use client'
 
 import React from 'react'
-import { usePathname } from 'next/navigation'
-// import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import {
   Box,
   List,
@@ -12,63 +11,77 @@ import {
   Typography,
   Divider,
 } from '@mui/material'
-import { Icon } from '#/goldlabel'
-// import { NavItem } from '#/goldlabel/types/nav'
+import { Icon } from '../'
 
 type ContextNavProps = {
-}
+  onClose?: () => void
+};
+
+export default function ContextNav({ 
+  onClose = () => {
+    console.log("NO onClose found")
+  }
+}: ContextNavProps) {
+  
+  const router = useRouter()
+
+  const onItemClick = (clickObj: { route?: string, action?: string }) => {
+   // console.log("onItemClick", clickObj)
+
+    if (clickObj.route) {
+      router.push(clickObj.route)
+    }
+
+    if (clickObj.action) {
+      if (clickObj.action === 'CLOSEDIALOG') {
+        onClose()
+      }
+    } else {
+      onClose()
+    }
+  }
+
+  return (
+    <Box sx={{}}>
 
 
-export default function ContextNav({}: ContextNavProps) {
-  const pathname = usePathname()
+      <List dense>
 
-  return <Box sx={{ px: 0 }}>
-            
-            <Typography variant="button">
-              Find
-            </Typography>
-            
-            <List>
-              <ListItemButton>
-                <ListItemIcon>
-                  <Icon icon="home" />
-                </ListItemIcon>
-                <ListItemText 
-                  primary="Home"
-                />
-              </ListItemButton>
-            </List>
-            <Divider sx={{mb:2}} />
-            <Typography variant="button">
-              Settings
-            </Typography>
-            <List>
-              <ListItemButton>
-                <ListItemIcon>
-                  <Icon icon="account" />
-                </ListItemIcon>
-                <ListItemText 
-                  primary="Account"
-                />
-              </ListItemButton>
-              <ListItemButton>
-                <ListItemIcon>
-                  <Icon icon="settings" />
-                </ListItemIcon>
-                <ListItemText 
-                  primary="Light Dark"
-                />
-              </ListItemButton>
-            </List>
-            <Divider sx={{mb:2}} />
-            <ListItemButton>
-              <ListItemIcon>
-                <Icon icon="close" />
-              </ListItemIcon>
-              <ListItemText 
-                primary="Close"
-              />
-            </ListItemButton>
+        <ListItemButton onClick={() => onItemClick({ route: "/" })}>
+          <ListItemIcon>
+            <Icon icon="home" />
+          </ListItemIcon>
+          <ListItemText primary="Home" />
+        </ListItemButton>
 
-          </Box>
+        <ListItemButton onClick={() => onItemClick({ route: "/admin" })}>
+          <ListItemIcon>
+            <Icon icon="account" />
+          </ListItemIcon>
+          <ListItemText primary="Admin" />
+        </ListItemButton>
+
+        <ListItemButton onClick={() => onItemClick({ route: "/work" })}>
+          <ListItemIcon>
+            <Icon icon="work" />
+          </ListItemIcon>
+          <ListItemText primary="Work" />
+        </ListItemButton>
+
+        <ListItemButton onClick={() => onItemClick({ route: "/life" })}>
+          <ListItemIcon>
+            <Icon icon="life" />
+          </ListItemIcon>
+          <ListItemText primary="Life" />
+        </ListItemButton>
+
+        <ListItemButton onClick={() => onItemClick({ route: "/balance" })}>
+          <ListItemIcon>
+            <Icon icon="balance" />
+          </ListItemIcon>
+          <ListItemText primary="Balance" />
+        </ListItemButton>
+      </List>
+    </Box>
+  )
 }

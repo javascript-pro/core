@@ -21,12 +21,14 @@ export interface IAdvert {
 
 export default function Advert() {
   const router = useRouter()
-
+  const hide = true
+  if (hide) return null
+  
   const ad: IAdvert = {
-    title: "SpeakWrite",
+    title: "SpeakWrite Propaganda ",
     icon: "star",
     url: "/work/examples/speakwrite",
-    description: "An Open Source AI engine to generate propaganda. As foreseen by Orwell in 1984, as built for reals by us, just now. Out of our heads",
+    description: "Generator with Open Source AI ",
     image: "/jpg/speakwrite.jpg",
   }
   

@@ -9,8 +9,8 @@
 
 /* Light theme defaults - no Tailwind greys */
 html, body {
-  background-color: #E2E2E2;
-  color: black;
+  background-color: #efefef;
+  color: #303030;
 }
 
 /* body {
