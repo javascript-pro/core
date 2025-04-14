@@ -42,10 +42,10 @@ export default function PopupMenu({ open, onClose, globalNav }: PopupMenuProps) 
       </DialogContent>
       <DialogActions>
         <ListItemButton onClick={onClose}>
+          <ListItemText primary="Close" />
           <ListItemIcon>
             <Icon icon="close" />
           </ListItemIcon>
-          <ListItemText primary="Close" />
         </ListItemButton>
       </DialogActions>
     </Dialog>

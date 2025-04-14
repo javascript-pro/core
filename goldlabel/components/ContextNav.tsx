@@ -8,6 +8,8 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  Grid,
+  Typography,
 } from '@mui/material'
 import { Icon } from '../'
 
@@ -40,46 +42,60 @@ export default function ContextNav({
   }
 
   return (
-    <Box sx={{}}>
+    <Box sx={{flexGrow: 1}}>
 
+      <Grid container spacing={2}>
 
-      <List dense>
+        <Grid size={6}>
+          <Typography variant='button'>
+            Nav
+          </Typography>
+        <List dense>
+            <ListItemButton onClick={() => onItemClick({ route: "/" })}>
+              <ListItemIcon>
+                <Icon icon="left" />
+              </ListItemIcon>
+              <ListItemText primary="Home" />
+            </ListItemButton>
+            <ListItemButton onClick={() => onItemClick({ route: "/work" })}>
+              <ListItemIcon>
+                <Icon icon="work" />
+              </ListItemIcon>
+              <ListItemText primary="Work" />
+            </ListItemButton>
+            <ListItemButton onClick={() => onItemClick({ route: "/life" })}>
+              <ListItemIcon>
+                <Icon icon="life" />
+              </ListItemIcon>
+              <ListItemText primary="Life" />
+            </ListItemButton>
+            <ListItemButton onClick={() => onItemClick({ route: "/balance" })}>
+              <ListItemIcon>
+                <Icon icon="balance" />
+              </ListItemIcon>
+              <ListItemText primary="Balance" />
+            </ListItemButton>
+        </List>
+        </Grid>
 
-        <ListItemButton onClick={() => onItemClick({ route: "/" })}>
-          <ListItemIcon>
-            <Icon icon="home" />
-          </ListItemIcon>
-          <ListItemText primary="Home" />
-        </ListItemButton>
+        <Grid size={6}>
+          <Typography variant='button'>
+            Settings
+          </Typography>
+          <List dense>
+            
+            <ListItemButton onClick={() => onItemClick({ route: "/admin" })}>
+              <ListItemIcon>
+                <Icon icon="account" />
+              </ListItemIcon>
+              <ListItemText primary="Admin" />
+            </ListItemButton>
+          </List>
+        </Grid>
+      </Grid>
+    
 
-        <ListItemButton onClick={() => onItemClick({ route: "/admin" })}>
-          <ListItemIcon>
-            <Icon icon="account" />
-          </ListItemIcon>
-          <ListItemText primary="Admin" />
-        </ListItemButton>
-
-        <ListItemButton onClick={() => onItemClick({ route: "/work" })}>
-          <ListItemIcon>
-            <Icon icon="work" />
-          </ListItemIcon>
-          <ListItemText primary="Work" />
-        </ListItemButton>
-
-        <ListItemButton onClick={() => onItemClick({ route: "/life" })}>
-          <ListItemIcon>
-            <Icon icon="life" />
-          </ListItemIcon>
-          <ListItemText primary="Life" />
-        </ListItemButton>
-
-        <ListItemButton onClick={() => onItemClick({ route: "/balance" })}>
-          <ListItemIcon>
-            <Icon icon="balance" />
-          </ListItemIcon>
-          <ListItemText primary="Balance" />
-        </ListItemButton>
-      </List>
+      
     </Box>
   )
 }

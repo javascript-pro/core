@@ -17,11 +17,11 @@ import {
 import { styled } from '@mui/material/styles'
 import { AppBreadcrumb, Icon, PopupMenu } from '../'
 
-// const mode = 'light'
-// const { light: themeValues } = config.themes;
+const mode = 'light'
+const { light: themeValues } = config.themes
 
-const mode = 'dark'
-const { dark: themeValues } = config.themes;
+// const mode = 'dark'
+// const { dark: themeValues } = config.themes
 
 const theme = createTheme({
   palette: {
