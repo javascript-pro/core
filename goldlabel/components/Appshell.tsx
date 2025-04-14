@@ -13,16 +13,19 @@ import {
   Fab,
   Avatar,
   IconButton,
-  // Typography,
 } from '@mui/material';
 import { styled } from '@mui/material/styles'
 import { AppBreadcrumb, Icon, PopupMenu } from '../'
 
+const mode = 'light'
 const { light: themeValues } = config.themes;
+
+// const mode = 'dark'
+// const { dark: themeValues } = config.themes;
 
 const theme = createTheme({
   palette: {
-    mode: 'light',
+    mode,
     primary: {
       main: themeValues.primary,
     },
@@ -73,7 +76,7 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
           top: 0,
           bottom: 'auto',
           boxShadow: 0,
-          background: '#efefef'
+          background: themeValues.background
         }}
       >
         <Container maxWidth="md">
@@ -116,16 +119,15 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
         }}
       >
         <Container maxWidth="md" >
-          <Toolbar sx={{
-            // background: "red"
-            }}>
+          <Toolbar sx={{}}>
             <StyledFab
-              sx={{ boxShadow: 0, background: "white" }}
+              color="secondary"
+              sx={{ boxShadow: 0 }}
               onClick={handleToggleMenu}
               aria-label="Open Menu"
             >
               
-              <Icon icon="menu" color="primary" />
+              <Icon icon="menu"/>
             </StyledFab>
             <Box sx={{ flexGrow: 1 }} />
           </Toolbar>
