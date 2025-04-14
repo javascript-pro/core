@@ -1,6 +1,9 @@
 'use client';
 
 import * as React from 'react';
+import { useKey } from '../../lib/useKey'
+import { useSlice } from '../../lib/useSlice'
+
 import {
   Dialog,
   DialogContent,
@@ -21,6 +24,10 @@ type PopupMenuProps = {
 
 export default function PopupMenu({ open, onClose, globalNav }: PopupMenuProps) {
   const theme = useTheme();
+  
+  const slice = useSlice()
+  
+  const [darkmode, setDarkmode] = useKey('darkmode')
   const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
   
   return (
@@ -38,7 +45,16 @@ export default function PopupMenu({ open, onClose, globalNav }: PopupMenuProps) 
       }}
     >
       <DialogContent>
-        <ContextNav onClose={onClose} />
+        {/* <ContextNav onClose={onClose} /> */}
+
+        <button onClick={() => setDarkmode(!darkmode)}>
+          Toggle Darkmode (currently {darkmode ? 'on' : 'off'})
+        </button>
+
+        <pre>
+          {JSON.stringify(slice, null, 2)}
+        </pre>
+
       </DialogContent>
       <DialogActions>
         <ListItemButton onClick={onClose}>

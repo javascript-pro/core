@@ -3,6 +3,7 @@ import fs from 'fs/promises'
 import config from '#/goldlabel/config.json'
 import { Metadata } from 'next'
 import { Appshell } from '#/goldlabel'
+import ReduxProvider from '../lib/ReduxProvider'
 import './styles.css'
 
 const title = config.appTitle
@@ -55,11 +56,13 @@ export default async function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="/png/iOS.png" />
       </head>
       <body>
-        <div id="goldlabel">
-          <Appshell globalNav={globalNav}>
-            {children}
-          </Appshell>
-        </div>
+        <ReduxProvider>
+          <div id="goldlabel">
+            <Appshell globalNav={globalNav}>
+              {children}
+            </Appshell>
+          </div>
+        </ReduxProvider>
       </body>
     </html>
   )
