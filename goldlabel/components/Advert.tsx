@@ -21,7 +21,9 @@ export interface IAdvert {
 
 export default function Advert() {
   const router = useRouter()
-
+  const hide = true
+  if (hide) return null
+  
   const ad: IAdvert = {
     title: "SpeakWrite Propaganda ",
     icon: "star",

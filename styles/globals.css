@@ -10,7 +10,7 @@
 /* Light theme defaults - no Tailwind greys */
 html, body {
   background-color: #efefef;
-  color: black;
+  color: #303030;
 }
 
 /* body {
