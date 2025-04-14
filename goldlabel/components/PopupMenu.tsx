@@ -45,15 +45,15 @@ export default function PopupMenu({ open, onClose, globalNav }: PopupMenuProps) 
       }}
     >
       <DialogContent>
-        {/* <ContextNav onClose={onClose} /> */}
+        <ContextNav onClose={onClose} />
 
-        <button onClick={() => setDarkmode(!darkmode)}>
+        {/* <button onClick={() => setDarkmode(!darkmode)}>
           Toggle Darkmode (currently {darkmode ? 'on' : 'off'})
         </button>
 
         <pre>
           {JSON.stringify(slice, null, 2)}
-        </pre>
+        </pre> */}
 
       </DialogContent>
       <DialogActions>

@@ -83,13 +83,20 @@ export default function ContextNav({
             Settings
           </Typography>
           <List dense>
-            
             <ListItemButton onClick={() => onItemClick({ route: "/admin" })}>
               <ListItemIcon>
                 <Icon icon="account" />
               </ListItemIcon>
               <ListItemText primary="Admin" />
             </ListItemButton>
+
+            <ListItemButton onClick={() => onItemClick({ action: "CHANGE_MODE" })}>
+              <ListItemIcon>
+                <Icon icon="lightmode" />
+              </ListItemIcon>
+              <ListItemText primary="Lightmode" />
+            </ListItemButton>
+
           </List>
         </Grid>
       </Grid>
