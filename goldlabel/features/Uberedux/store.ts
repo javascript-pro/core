@@ -2,23 +2,20 @@
 
 import { configureStore, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { persistStore, persistReducer } from 'redux-persist';
-import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web
+import storage from 'redux-persist/lib/storage';
 import { combineReducers } from 'redux';
+import { initialState } from './initialState'
 
-interface ReduxState {
+export interface UbereduxState {
   darkmode: boolean;
   [key: string]: any;
 }
 
-const initialState: ReduxState = {
-  darkmode: false,
-};
-
 const reduxSlice = createSlice({
-  name: 'redux',
+  name: 'uberedux',
   initialState,
   reducers: {
-    setReduxData: (state, action: PayloadAction<Partial<ReduxState>>) => {
+    setReduxKey: (state, action: PayloadAction<Partial<UbereduxState>>) => {
       return { ...state, ...action.payload };
     },
   },
@@ -46,7 +43,7 @@ export const store = configureStore({
 
 export const persistor = persistStore(store);
 
-export const { setReduxData } = reduxSlice.actions;
+export const { setReduxKey } = reduxSlice.actions;
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

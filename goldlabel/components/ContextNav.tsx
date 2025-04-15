@@ -11,7 +11,7 @@ import {
   Grid,
 } from '@mui/material';
 import { Icon } from '../';
-import { useKey } from '../../lib/useKey';
+import { useKey } from '../../goldlabel/features/Uberedux';
 
 type ContextNavProps = {
   onClose?: () => void;

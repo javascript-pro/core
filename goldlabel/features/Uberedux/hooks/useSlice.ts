@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { RootState, setReduxData } from './store';
+import { RootState, setReduxKey } from '../';
 
 export function useSlice() {
   const slice = useSelector((state: RootState) => state.redux);
@@ -9,7 +9,7 @@ export function useSlice() {
     key: K,
     value: (typeof slice)[K],
   ) {
-    dispatch(setReduxData({ [key]: value }));
+    dispatch(setReduxKey({ [key]: value }));
   }
 
   return {

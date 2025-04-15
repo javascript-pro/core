@@ -6,7 +6,10 @@ import fs from 'fs/promises';
 import { loadMarkdown, getMarkdownTree } from '#/lib/loadMarkdown';
 import { FolderPage, FilePage, Sitemap } from '#/goldlabel';
 import { getFeatured } from '../../lib/getFeatured';
-import Uberedux from '../../goldlabel/features/Uberedux/Uberedux'
+import { 
+  Uberedux,
+} from '../../goldlabel/features/Uberedux'
+
 export default async function CatchAllPage({ params }: any) {
   const slugArray = Array.isArray(params?.slug) ? params.slug : [];
   const slugPath = '/' + slugArray.join('/');
