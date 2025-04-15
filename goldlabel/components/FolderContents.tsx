@@ -82,6 +82,9 @@ export default function FolderContents() {
                 <ListItemIcon>
                   <Icon icon="up" />
                 </ListItemIcon>
+                <ListItemText
+                    primary={"Up"}
+                  />
               </ListItemButton>
             </ListItem>
           )}

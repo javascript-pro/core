@@ -8,8 +8,6 @@ image: /jpg/core.jpg
 tags: social
 ---
 
-# Work
-
 **Software built in the open.**  
 Every app we ship is real, running in production, and developed in public.
 

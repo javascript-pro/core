@@ -25,8 +25,10 @@
         "order": 10,
         "icon": "work",
         "type": "folder",
-        "tags": ["social"],
-        "excerpt": "Work\n\nSoftware built in the open.  \nEvery app we ship is real, running in production, and developed in public.\n\n Active Projects\n\n SpeakWrite\nTurn your voice into a complete media kit.  \nUpload a shor",
+        "tags": [
+          "social"
+        ],
+        "excerpt": "Work\n\nSoftware built in the open.  \nEvery app we ship is real, running in production, and developed in public.\n\n Active Projects\n\n SpeakWrite\n\nTurn your voice into a complete media kit.  \nUpload a sho",
         "children": [
           {
             "title": "Features",
@@ -34,8 +36,10 @@
             "order": 20,
             "icon": "feature",
             "type": "folder",
-            "tags": ["features"],
-            "excerpt": "Authentication\nAuth is part of Goldlabel’s core. It can be used with various third party providers, eg Cognito To use, you go back to the point where gatsby creates pages. \n\n Hosting & Cloud Database\n",
+            "tags": [
+              "features"
+            ],
+            "excerpt": "Authentication\n\nAuth is part of Goldlabel’s core. It can be used with various third party providers, eg Cognito To use, you go back to the point where gatsby creates pages.\n\n Hosting & Cloud Database\n",
             "children": [
               {
                 "title": "Lingua",
@@ -43,7 +47,9 @@
                 "order": 30,
                 "icon": "feature",
                 "type": "file",
-                "tags": ["features"],
+                "tags": [
+                  "features"
+                ],
                 "excerpt": "Lingua is our multi language translation package. Localisation is not something you want to simply bolt onto a website at the end. Users will do that themselves if they cared enough about reading anyt"
               }
             ]
@@ -88,7 +94,10 @@
             "order": 190,
             "icon": "work",
             "type": "file",
-            "tags": ["remote", "hybrid"],
+            "tags": [
+              "remote",
+              "hybrid"
+            ],
             "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years, due in large part to the COVID19 pandemic. Prior to the pandemic, many businesses were hesitant to allow employees to w"
           },
           {
@@ -115,7 +124,13 @@
             "order": 1000,
             "icon": "account",
             "type": "file",
-            "tags": ["cookies", "gdpr", "privacy", "terms", "trust"],
+            "tags": [
+              "cookies",
+              "gdpr",
+              "privacy",
+              "terms",
+              "trust"
+            ],
             "excerpt": "We don't use cookies\n\nPrivacy Statement\n\nWelcome to Goldlabel! We value your privacy and are committed to protecting your personal information. This privacy statement aims to provide clarity on how we"
           },
           {
@@ -132,7 +147,10 @@
                 "order": 25,
                 "icon": "doc",
                 "type": "file",
-                "tags": ["legal", "address"],
+                "tags": [
+                  "legal",
+                  "address"
+                ],
                 "excerpt": "Goldlabel Apps Ltd is a UK Limited Company (5460545), building custom software for creators, developers, and businesses.\n\nGet in touch. For it's a  universally acknowledged that a Software Developer i"
               },
               {
@@ -141,7 +159,13 @@
                 "order": 750,
                 "icon": "account",
                 "type": "file",
-                "tags": ["cookies", "gdpr", "privacy", "terms", "trust"],
+                "tags": [
+                  "cookies",
+                  "gdpr",
+                  "privacy",
+                  "terms",
+                  "trust"
+                ],
                 "excerpt": "While cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers to explore alternative "
               },
               {
@@ -150,7 +174,13 @@
                 "order": 1000,
                 "icon": "account",
                 "type": "file",
-                "tags": ["cookies", "gdpr", "privacy", "terms", "trust"],
+                "tags": [
+                  "cookies",
+                  "gdpr",
+                  "privacy",
+                  "terms",
+                  "trust"
+                ],
                 "excerpt": "Privacy Statement\n\nWelcome to Goldlabel! We value your privacy and are committed to protecting your personal information. This privacy statement aims to provide clarity on how we collect, use, and saf"
               }
             ]
@@ -171,7 +201,7 @@
             "order": 10,
             "icon": "food",
             "type": "folder",
-            "excerpt": "When I want a recipe I go the internet of course. I get annoyed by the amount of adverts on the pages where I want to follow simple instructions.  \n\nFor some recipes that I've tried & tested I've stri",
+            "excerpt": "When I want a recipe I go the internet of course. I get annoyed by the amount of adverts on the pages where I want to follow simple instructions.\n\nFor some recipes that I've tried & tested I've stripp",
             "children": [
               {
                 "title": "Air Fried Stuffed Peppers",
@@ -194,7 +224,7 @@
                 "order": 50,
                 "icon": "food",
                 "type": "file",
-                "excerpt": "Moist, flavorful, and easy to make. Perfect for using overripe bananas, this classic loaf is a crowdpleaser for breakfast, snacks, or dessert.\n\n\n 125g Butter\n 175g Brown sugar\n 1 tsp Vanilla extract o"
+                "excerpt": "Moist, flavorful, and easy to make. Perfect for using overripe bananas, this classic loaf is a crowdpleaser for breakfast, snacks, or dessert.\n\n 125g Butter\n 175g Brown sugar\n 1 tsp Vanilla extract or"
               }
             ]
           },
@@ -250,7 +280,7 @@
             "order": 100,
             "icon": "balance",
             "type": "folder",
-            "excerpt": "Book 1. Weekend Portfolio\n\nAimed at semiprofessional coders who want to go pr0.\n\n Weekend 1\nIn this Weekend Portfolio project, you’ll build a compact and powerful app called mp3totext. The idea is sim",
+            "excerpt": "Book 1. Weekend Portfolio\n\nAimed at semiprofessional coders who want to go pr0.\n\n Weekend 1\n\nIn this Weekend Portfolio project, you’ll build a compact and powerful app called mp3totext. The idea is si",
             "children": []
           },
           {
@@ -276,7 +306,7 @@
                 "order": 30,
                 "icon": "doc",
                 "type": "file",
-                "excerpt": "Let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series. \n\nI mentioned in the last lecture this idea of Gedanken experiments, t"
+                "excerpt": "Let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series.\n\nI mentioned in the last lecture this idea of Gedanken experiments, th"
               },
               {
                 "title": "General Theory of Relativity",

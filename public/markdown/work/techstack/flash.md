@@ -5,6 +5,7 @@ description: In 2020, Adobe officially discontinued Flash and removed all downlo
 slug: /work/techstack/flash
 icon: flash
 image: /jpg/github.jpg
+featured: true
 ---
 
 Flash, also known as Adobe Flash, was a multimedia software platform created by Macromedia and later acquired by Adobe. It was widely used on the web to create interactive animations, games, audio and video players, and various other rich media content. Flash content was delivered through browser plugins, allowing users to view and interact with the multimedia elements embedded in web pages.

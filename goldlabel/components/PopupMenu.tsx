@@ -3,7 +3,6 @@
 import * as React from 'react';
 import { useKey } from '../../lib/useKey';
 import { useSlice } from '../../lib/useSlice';
-
 import {
   Dialog,
   DialogContent,
@@ -50,14 +49,6 @@ export default function PopupMenu({
     >
       <DialogContent>
         <ContextNav onClose={onClose} />
-
-        {/* <button onClick={() => setDarkmode(!darkmode)}>
-          Toggle Darkmode (currently {darkmode ? 'on' : 'off'})
-        </button>
-
-        <pre>
-          {JSON.stringify(slice, null, 2)}
-        </pre> */}
       </DialogContent>
       <DialogActions>
         <ListItemButton onClick={onClose}>

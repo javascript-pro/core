@@ -29,7 +29,7 @@ export type FilePageProps = {
   featured?: any[];
 };
 
-export default function FilePage({ content, globalNav }: FilePageProps) {
+export default function FilePage({ content, featured }: FilePageProps) {
   const { frontmatter, content: body } = content;
   const { title, image, description } = frontmatter;
 
@@ -78,7 +78,7 @@ export default function FilePage({ content, globalNav }: FilePageProps) {
               </CardContent>
             </Box>
             <Box sx={{ maxWidth: 300 }}>
-              <Featured />
+              <Featured featured={featured}/>
               <FolderContents />
             </Box>
           </Box>
