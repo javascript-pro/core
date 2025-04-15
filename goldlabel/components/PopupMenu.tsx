@@ -1,8 +1,8 @@
 'use client';
 
 import * as React from 'react';
-import { useKey } from '../../lib/useKey'
-import { useSlice } from '../../lib/useSlice'
+import { useKey } from '../../lib/useKey';
+import { useSlice } from '../../lib/useSlice';
 
 import {
   Dialog,
@@ -19,17 +19,21 @@ import { Icon, ContextNav } from '../';
 type PopupMenuProps = {
   open?: boolean;
   onClose?: () => void;
-  globalNav: any
+  globalNav: any;
 };
 
-export default function PopupMenu({ open, onClose, globalNav }: PopupMenuProps) {
+export default function PopupMenu({
+  open,
+  onClose,
+  globalNav,
+}: PopupMenuProps) {
   const theme = useTheme();
-  
-  const slice = useSlice()
-  
-  const [darkmode, setDarkmode] = useKey('darkmode')
+
+  const slice = useSlice();
+
+  const [darkmode, setDarkmode] = useKey('darkmode');
   const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
-  
+
   return (
     <Dialog
       open={open as boolean}
@@ -54,7 +58,6 @@ export default function PopupMenu({ open, onClose, globalNav }: PopupMenuProps) 
         <pre>
           {JSON.stringify(slice, null, 2)}
         </pre> */}
-
       </DialogContent>
       <DialogActions>
         <ListItemButton onClick={onClose}>

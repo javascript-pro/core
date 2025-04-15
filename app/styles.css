@@ -1,19 +1,24 @@
 a {
-    color: #3e3b3b;
-    text-decoration: none;
-    /* font-weight: bold; */
+  color: #3e3b3b;
+  text-decoration: none;
+  /* font-weight: bold; */
 }
 
 a:hover {
-    color: #514848;
+  color: #514848;
 }
 
 blockquote {
-    border-left: 2px solid #C09F52;
-    padding-left: 16px;
-    margin-left: 0;
+  border-left: 2px solid #c09f52;
+  padding-left: 16px;
+  margin-left: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: normal;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
 }

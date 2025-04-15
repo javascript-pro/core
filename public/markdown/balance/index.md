@@ -6,6 +6,7 @@ slug: /balance
 icon: balance
 image: /jpg/balance.jpg
 ---
+
 ### [Our books](/balance/books)
 
 ### [Are you Gen X?](/balance/gen-x)

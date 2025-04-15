@@ -1,25 +1,25 @@
-'use client'
+'use client';
 
-import { signOut } from 'firebase/auth'
-import { auth } from '../../lib/firebase'
-import { useRouter } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { signOut } from 'firebase/auth';
+import { auth } from '../../lib/firebase';
+import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 export default function Dashboard() {
-  const router = useRouter()
-  const [email, setEmail] = useState('')
+  const router = useRouter();
+  const [email, setEmail] = useState('');
 
   useEffect(() => {
-    const currentUser = auth.currentUser
+    const currentUser = auth.currentUser;
     if (currentUser) {
-      setEmail(currentUser.email || '')
+      setEmail(currentUser.email || '');
     }
-  }, [])
+  }, []);
 
   const handleLogout = async () => {
-    await signOut(auth)
-    router.refresh()
-  }
+    await signOut(auth);
+    router.refresh();
+  };
 
   return (
     <main>
@@ -27,11 +27,7 @@ export default function Dashboard() {
       <p>
         Signed in as <span>{email}</span>
       </p>
-      <button
-        onClick={handleLogout}
-      >
-        Sign Out
-      </button>
+      <button onClick={handleLogout}>Sign Out</button>
     </main>
-  )
+  );
 }

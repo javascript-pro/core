@@ -1,7 +1,7 @@
-'use client'
+'use client';
 
-import config from '../config.json'
-import * as React from 'react'
+import config from '../config.json';
+import * as React from 'react';
 import {
   Box,
   CssBaseline,
@@ -13,10 +13,10 @@ import {
   Fab,
   Avatar,
   IconButton,
-} from '@mui/material'
-import { styled } from '@mui/material/styles'
-import { AppBreadcrumb, Icon, PopupMenu } from '../'
-import { useKey } from '../../lib/useKey'
+} from '@mui/material';
+import { styled } from '@mui/material/styles';
+import { AppBreadcrumb, Icon, PopupMenu } from '../';
+import { useKey } from '../../lib/useKey';
 
 const StyledFab = styled(Fab)({
   position: 'absolute',
@@ -25,20 +25,20 @@ const StyledFab = styled(Fab)({
   left: 0,
   right: 0,
   margin: '0 auto',
-})
+});
 
 type AppshellProps = {
-  children?: React.ReactNode
-  globalNav?: any
-}
+  children?: React.ReactNode;
+  globalNav?: any;
+};
 
 export default function Appshell({ children, globalNav }: AppshellProps) {
-  const [menuOpen, setMenuOpen] = React.useState(false)
+  const [menuOpen, setMenuOpen] = React.useState(false);
 
-  const [darkmode] = useKey('darkmode')
+  const [darkmode] = useKey('darkmode');
 
-  const mode = darkmode ? 'dark' : 'light'
-  const themeValues = config.themes[mode]
+  const mode = darkmode ? 'dark' : 'light';
+  const themeValues = config.themes[mode];
 
   const theme = React.useMemo(
     () =>
@@ -63,10 +63,10 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
           },
         },
       }),
-    [mode, themeValues]
-  )
+    [mode, themeValues],
+  );
 
-  const handleToggleMenu = () => setMenuOpen(!menuOpen)
+  const handleToggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
     <ThemeProvider theme={theme}>
@@ -129,7 +129,11 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
         </Container>
       </AppBar>
 
-      <PopupMenu open={menuOpen} onClose={() => setMenuOpen(false)} globalNav={globalNav} />
+      <PopupMenu
+        open={menuOpen}
+        onClose={() => setMenuOpen(false)}
+        globalNav={globalNav}
+      />
     </ThemeProvider>
-  )
+  );
 }

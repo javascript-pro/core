@@ -1,12 +1,13 @@
 ---
 order: 35
-title: "Air Fried Stuffed Peppers"
-description: "Got bolognese and peppers?"
-slug: "/life/food/air-fried-peppers"
-icon: "food"
-image: "/jpg/food.jpg"
-tags: "food, punching dolphins, recipes, air fryer, peppers"
+title: 'Air Fried Stuffed Peppers'
+description: 'Got bolognese and peppers?'
+slug: '/life/food/air-fried-peppers'
+icon: 'food'
+image: '/jpg/food.jpg'
+tags: 'food, punching dolphins, recipes, air fryer, peppers'
 ---
+
 ### Ingredients
 
 - 2 Large peppers (capsicums)

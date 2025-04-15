@@ -7,6 +7,7 @@ icon: account
 image: /jpg/core.jpg
 tags: cookies, gdpr, privacy, terms, trust
 ---
+
 While cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers to explore alternative approaches or supplementary technologies. Here are a few reasons why some developers might consider cookies as "old-fashioned" and explore alternatives:
 
 1. **Privacy Concerns:** Cookies are often associated with privacy concerns because they can be used to track users across different websites. In an era where privacy is a growing concern, some users are wary of being tracked online. Developers may explore alternative solutions that respect user privacy better.

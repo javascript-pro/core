@@ -11,14 +11,19 @@ function Params() {
   if (!searchParams || searchParams.toString().length === 0) return null;
 
   return (
-    <Box component="span" sx={{ px: 1, color: 'text.secondary', fontSize: '0.75rem' }}>
+    <Box
+      component="span"
+      sx={{ px: 1, color: 'text.secondary', fontSize: '0.75rem' }}
+    >
       ?
       {Array.from(searchParams.entries()).map(([key, value], index) => (
         <React.Fragment key={key}>
           {index !== 0 && <span>&</span>}
           <span className="px-1">
             <span className="animate-[highlight_1s_ease-in-out_1]">{key}</span>=
-            <span className="animate-[highlight_1s_ease-in-out_1]">{value}</span>
+            <span className="animate-[highlight_1s_ease-in-out_1]">
+              {value}
+            </span>
           </span>
         </React.Fragment>
       ))}
@@ -27,9 +32,7 @@ function Params() {
 }
 
 function formatSegment(segment: string) {
-  return segment
-    .replace(/-/g, ' ')
-    .replace(/^\w/, (c) => c.toUpperCase());
+  return segment.replace(/-/g, ' ').replace(/^\w/, (c) => c.toUpperCase());
 }
 
 export function AppBreadcrumb() {
@@ -39,8 +42,14 @@ export function AppBreadcrumb() {
   if (segments.length === 0) return <>&nbsp;</>;
 
   return (
-    <Box sx={{ fontSize: '0.75rem', display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
-      
+    <Box
+      sx={{
+        fontSize: '0.75rem',
+        display: 'flex',
+        alignItems: 'center',
+        flexWrap: 'wrap',
+      }}
+    >
       <NextLink href="/" passHref legacyBehavior>
         <MUILink underline="hover" color="inherit" variant="caption">
           Home

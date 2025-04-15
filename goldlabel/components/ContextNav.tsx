@@ -1,7 +1,7 @@
-'use client'
+'use client';
 
-import React from 'react'
-import { useRouter } from 'next/navigation'
+import React from 'react';
+import { useRouter } from 'next/navigation';
 import {
   Box,
   List,
@@ -10,56 +10,59 @@ import {
   ListItemText,
   Grid,
   Typography,
-} from '@mui/material'
-import { Icon } from '../'
-import { useKey } from '../../lib/useKey'
+} from '@mui/material';
+import { Icon } from '../';
+import { useKey } from '../../lib/useKey';
 
 type ContextNavProps = {
-  onClose?: () => void
+  onClose?: () => void;
 };
 
-export default function ContextNav({ 
+export default function ContextNav({
   onClose = () => {
-    console.log("NO onClose found")
-  }
+    console.log('NO onClose found');
+  },
 }: ContextNavProps) {
-  
-  const router = useRouter()
-  const [darkmode, setDarkmode] = useKey('darkmode')
+  const router = useRouter();
+  const [darkmode, setDarkmode] = useKey('darkmode');
 
-  const handleItemClick = (clickObj: { route?: string, action?: string }) => {
+  const handleItemClick = (clickObj: { route?: string; action?: string }) => {
     if (clickObj.route) {
-      router.push(clickObj.route)
+      router.push(clickObj.route);
     }
     if (clickObj.action) {
       switch (clickObj.action) {
         case 'TOGGLE_DARKMODE':
-          setDarkmode(!darkmode)
-          break
+          setDarkmode(!darkmode);
+          break;
         case 'CLOSE_DIALOG':
-          onClose()
-          break
+          onClose();
+          break;
       }
     }
     if (!clickObj.route && !clickObj.action) {
-      onClose()
+      onClose();
     }
-  }
+  };
 
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
         <Grid size={{ xs: 12, md: 6 }}>
-          <Typography variant='button'>Settings</Typography>
+          <Typography variant="button">Settings</Typography>
           <List dense>
-            <ListItemButton onClick={() => handleItemClick({ route: "/admin" })}>
+            <ListItemButton
+              onClick={() => handleItemClick({ route: '/admin' })}
+            >
               <ListItemIcon>
                 <Icon icon="admin" />
               </ListItemIcon>
               <ListItemText primary="Admin" />
             </ListItemButton>
 
-            <ListItemButton onClick={() => handleItemClick({ action: 'TOGGLE_DARKMODE' })}>
+            <ListItemButton
+              onClick={() => handleItemClick({ action: 'TOGGLE_DARKMODE' })}
+            >
               <ListItemIcon>
                 <Icon icon={darkmode ? 'lightmode' : 'darkmode'} />
               </ListItemIcon>
@@ -69,28 +72,29 @@ export default function ContextNav({
         </Grid>
 
         <Grid size={{ xs: 12, md: 6 }}>
-          <Typography variant='button'>Nav</Typography>
+          <Typography variant="button">Nav</Typography>
           <List dense>
-            
-            <ListItemButton onClick={() => handleItemClick({ route: "/work" })}>
+            <ListItemButton onClick={() => handleItemClick({ route: '/work' })}>
               <ListItemIcon>
                 <Icon icon="work" />
               </ListItemIcon>
               <ListItemText primary="Work" />
             </ListItemButton>
-            <ListItemButton onClick={() => handleItemClick({ route: "/life" })}>
+            <ListItemButton onClick={() => handleItemClick({ route: '/life' })}>
               <ListItemIcon>
                 <Icon icon="life" />
               </ListItemIcon>
               <ListItemText primary="Life" />
             </ListItemButton>
-            <ListItemButton onClick={() => handleItemClick({ route: "/balance" })}>
+            <ListItemButton
+              onClick={() => handleItemClick({ route: '/balance' })}
+            >
               <ListItemIcon>
                 <Icon icon="balance" />
               </ListItemIcon>
               <ListItemText primary="Balance" />
             </ListItemButton>
-            <ListItemButton onClick={() => handleItemClick({ route: "/" })}>
+            <ListItemButton onClick={() => handleItemClick({ route: '/' })}>
               <ListItemIcon>
                 <Icon icon="left" />
               </ListItemIcon>
@@ -100,5 +104,5 @@ export default function ContextNav({
         </Grid>
       </Grid>
     </Box>
-  )
+  );
 }

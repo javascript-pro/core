@@ -21,8 +21,7 @@ _Charles Darwin, On the Origin of Species By Means of Natural Selection, or The 
       "background": "#FFFFFF",
       "paper": "#E3EBF0",
       "mapbox": "mapbox://styles/listingslab/cm67sb391003b01qz2cb6grth"
-    },
+    }
   }
 }
-
 ```

@@ -1,50 +1,44 @@
-'use client'
+'use client';
 
-import React from 'react'
-import Image from 'next/image'
-import ReactMarkdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
+import React from 'react';
+import Image from 'next/image';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import {
   Box,
   CardContent,
   CardHeader,
   useMediaQuery,
   useTheme,
-} from '@mui/material'
-import {
-  FolderContents,
-  Featured,
-} from '../'
+} from '@mui/material';
+import { FolderContents, Featured } from '../';
 
 export type FilePageProps = {
   content: {
     frontmatter: {
-      title?: string
-      subheader?: string
-      excerpt?: string
-      image?: string
-      icon?: string
-      description?: string
-    }
-    content: string
-  }
-  globalNav?: any
-  featured?: any[]
-}
+      title?: string;
+      subheader?: string;
+      excerpt?: string;
+      image?: string;
+      icon?: string;
+      description?: string;
+    };
+    content: string;
+  };
+  globalNav?: any;
+  featured?: any[];
+};
 
 export default function FilePage({ content, globalNav }: FilePageProps) {
-  const { frontmatter, content: body } = content
-  const { title, image, description } = frontmatter
+  const { frontmatter, content: body } = content;
+  const { title, image, description } = frontmatter;
 
-  const theme = useTheme()
-  const isSmUp = useMediaQuery(theme.breakpoints.up('sm'))
+  const theme = useTheme();
+  const isSmUp = useMediaQuery(theme.breakpoints.up('sm'));
 
   return (
     <Box sx={{ px: 2 }}>
-      <CardHeader
-        title={title || 'Untitled'}
-        subheader={description}
-      />
+      <CardHeader title={title || 'Untitled'} subheader={description} />
 
       {image && (
         <Box
@@ -91,14 +85,12 @@ export default function FilePage({ content, globalNav }: FilePageProps) {
         ) : (
           <Box>
             <CardContent>
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                {body}
-              </ReactMarkdown>
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>{body}</ReactMarkdown>
             </CardContent>
             <FolderContents />
           </Box>
         )}
       </Box>
     </Box>
-  )
+  );
 }

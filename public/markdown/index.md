@@ -1,12 +1,13 @@
 ---
 order: 1
 title: Goldlabel pr0
-description: 
+description:
 slug: /
 icon: home
 image: /jpg/home.jpg
 tags: Next Gen, Next.js, core, Gen X, goldlabel, pr0, AI Prompt Engineering, ChatGPT, OpenAI, Singularity
 ---
+
 ## Next Gen, Gen X, Next.js, AI Prompt Engineering, OpenAI & Singularity
 
 **Custom software that works.**  
@@ -29,7 +30,6 @@ Whether you're a startup with a short deadline or an enterprise with complex wor
 - **Readable, extensible codebases.**  
   You’ll never be locked in. Our code is designed to be picked up by your team — or handed back to us when needed.
 
-
 ### Examples in the Wild
 
 - **SpeakWrite**  
@@ -41,14 +41,13 @@ Whether you're a startup with a short deadline or an enterprise with complex wor
 - **Weekend Portfolio**  
   A series of standalone, production-ready app templates you can build in a weekend.
 
-
 ### Work With Us
 
 We take on a limited number of new projects each quarter. If you need:
 
-- A custom admin portal  
-- A branded AI tool  
-- A fast, SEO-optimized marketing site  
+- A custom admin portal
+- A branded AI tool
+- A fast, SEO-optimized marketing site
 - Or something completely new
 
 We’d love to hear about it.

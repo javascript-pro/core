@@ -1,45 +1,52 @@
-'use client'
+'use client';
 
-import * as React from 'react'
-import { useRouter } from 'next/navigation'
+import * as React from 'react';
+import { useRouter } from 'next/navigation';
 import {
   Box,
-  Card,
   CardActionArea,
   CardMedia,
   CardContent,
   Typography,
   Grid,
-} from '@mui/material'
-import { Icon } from '../'
+} from '@mui/material';
+import { Icon } from '../';
 
 export type FeaturedProps = {
   featured?: {
-    slug: string
+    slug: string;
     frontmatter: {
-      title: string
-      description?: string
-      icon?: string
-      image?: string
-    }
-  }[]
-}
+      title: string;
+      description?: string;
+      icon?: string;
+      image?: string;
+    };
+  }[];
+};
 
 export default function Featured({ featured = [] }: FeaturedProps) {
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <Box sx={{ mt: 4 }}>
-      
       <Grid container spacing={2}>
         {featured.map((item, i) => {
-          const { slug, frontmatter } = item
-          const { title, description, icon, image } = frontmatter
+          const { slug, frontmatter } = item;
+          const { title, description, icon, image } = frontmatter;
 
           return (
             <Grid key={slug} size={{ xs: 12 }}>
-              <Box sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-                <CardActionArea onClick={() => router.push(slug)} sx={{ height: '100%' }}>
+              <Box
+                sx={{
+                  height: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+              >
+                <CardActionArea
+                  onClick={() => router.push(slug)}
+                  sx={{ height: '100%' }}
+                >
                   {image && (
                     <CardMedia
                       component="img"
@@ -61,9 +68,9 @@ export default function Featured({ featured = [] }: FeaturedProps) {
                 </CardActionArea>
               </Box>
             </Grid>
-          )
+          );
         })}
       </Grid>
     </Box>
-  )
+  );
 }
