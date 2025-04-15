@@ -6,7 +6,7 @@ slug: /work/features/good-fit
 icon: feature
 image: /jpg/good-fit.jpg
 tags: features, translation, localisation, jobs
-featured: true
+featured: false
 ---
 > Is your job a Good Fit?
 

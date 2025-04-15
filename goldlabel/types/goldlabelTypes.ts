@@ -1,4 +1,4 @@
-// goldlabel/types/nav.ts
+// goldlabel/types/goldlabelTypes.ts
 
 export type NavItem = {
   title: string;

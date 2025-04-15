@@ -11,7 +11,7 @@ import Image from 'next/image';
 import { Featured, FolderContents } from '../';
 
 import ReactMarkdown from 'react-markdown';
-import { NavItem } from '../../goldlabel/types/nav';
+import { NavItem } from '../../goldlabel/types/goldlabelTypes';
 
 export type Frontmatter = {
   order?: number;

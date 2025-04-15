@@ -51,6 +51,17 @@ export default function Featured({ featured = [] }: FeaturedProps) {
             </ListItemButton>
           );
         })}
+
+            <ListItemButton onClick={() => handleItemClick("/good-fit")}>
+        
+                <ListItemIcon>
+                  <Icon icon={"feature"} />
+                </ListItemIcon>
+              
+              <ListItemText primary={"Good Fit?"} />
+            </ListItemButton>
+
+
       </List>
     </Box>
   );
