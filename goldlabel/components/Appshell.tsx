@@ -78,7 +78,7 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
       />
 
       {/* Main Content Area */}
-      <Container maxWidth="md" sx={{ }}>
+      <Container maxWidth="md" sx={{ mt:2 }}>
         <Box sx={{ pb: '50px' }}>
           {children && <Box sx={{ p: 0 }}>{children}</Box>}
         </Box>

@@ -128,6 +128,24 @@ export default function ContextNav({
               <ListItemText primary="Uberedux" />
             </ListItemButton>
 
+            <ListItemButton
+              onClick={() => handleItemClick({ route: '/good-fit' })}
+            >
+              <ListItemIcon>
+                <Icon icon="feature" />
+              </ListItemIcon>
+              <ListItemText primary="Good Fit?" />
+            </ListItemButton>
+
+            <ListItemButton
+              onClick={() => handleItemClick({ route: '/api/goldlabel' })}
+            >
+              <ListItemIcon>
+                <Icon icon="feature" />
+              </ListItemIcon>
+              <ListItemText primary="API" />
+            </ListItemButton>
+
           </List>
         </Grid>
 
