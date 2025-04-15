@@ -9,6 +9,10 @@ import { getFeatured } from '../../lib/getFeatured';
 import { 
   Uberedux,
 } from '../../goldlabel/features/Uberedux'
+import { 
+  GoodFit,
+} from '../../goldlabel/features/GoodFit'
+
 
 export default async function CatchAllPage({ params }: any) {
   const slugArray = Array.isArray(params?.slug) ? params.slug : [];
@@ -29,6 +33,10 @@ export default async function CatchAllPage({ params }: any) {
 
   if (slugPath === '/uberedux') {
     return <Uberedux />
+  }
+
+  if (slugPath === '/good-fit') {
+    return <GoodFit />
   }
 
   const markdown = await loadMarkdown(slugPath);

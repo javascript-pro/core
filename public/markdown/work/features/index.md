@@ -9,6 +9,8 @@ tags: features, authentication
 featured: false
 ---
 
+[Good Fit?](/good-fit)
+
 > Fast, static-first Next.js. Powerful, user-friendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience
 
 #### Authentication
