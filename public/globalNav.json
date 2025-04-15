@@ -17,7 +17,7 @@
       "OpenAI",
       "Singularity"
     ],
-    "excerpt": "Next Gen, Gen X, Next.js, AI Prompt Engineering, OpenAI & Singularity\n\nCustom software that works.  \nWe build and ship modern web apps for clients who need real results — fast.\n\n What We Do\n\nGoldlabel",
+    "excerpt": "Custom software that works. We build and ship modern web apps for clients who need real results — fast\n\n Next Gen, Gen X, Next.js, AI Prompt Engineering, OpenAI & Singularity\n\nGoldlabel Apps is a UKba",
     "children": [
       {
         "title": "Work",
@@ -28,7 +28,7 @@
         "tags": [
           "social"
         ],
-        "excerpt": "Work\n\nSoftware built in the open.  \nEvery app we ship is real, running in production, and developed in public.\n\n Active Projects\n\n SpeakWrite\n\nTurn your voice into a complete media kit.  \nUpload a sho",
+        "excerpt": "Software built in the open.  \nEvery app we ship is real, running in production, and developed in public.\n\n Active Projects\n\n SpeakWrite\n\nTurn your voice into a complete media kit.  \nUpload a short spe",
         "children": [
           {
             "title": "Features",
@@ -37,20 +37,53 @@
             "icon": "feature",
             "type": "folder",
             "tags": [
-              "features"
+              "features",
+              "authentication"
             ],
-            "excerpt": "Authentication\n\nAuth is part of Goldlabel’s core. It can be used with various third party providers, eg Cognito To use, you go back to the point where gatsby creates pages.\n\n Hosting & Cloud Database\n",
+            "excerpt": "Fast, staticfirst Next.js. Powerful, userfriendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience\n\n Authentication\n\nAuth is part of Goldlabel’",
             "children": [
+              {
+                "title": "Is this job a Good Fit?",
+                "slug": "work/features/good-fit",
+                "order": 10,
+                "icon": "ai",
+                "type": "file",
+                "tags": [
+                  "features",
+                  "translation",
+                  "localisation",
+                  "jobs"
+                ],
+                "excerpt": "Is this job a Good Fit?\n\nA simple AI tool which will tell you in seconds. Paste in a job description and our AI will judge if it's a good match. If it is, you’ll get a tailored CV you can download ins"
+              },
               {
                 "title": "Lingua",
                 "slug": "work/features/lingua",
                 "order": 30,
-                "icon": "feature",
+                "icon": "lingua",
                 "type": "file",
                 "tags": [
-                  "features"
+                  "features",
+                  "translation",
+                  "localisation"
                 ],
-                "excerpt": "Lingua is our multi language translation package. Localisation is not something you want to simply bolt onto a website at the end. Users will do that themselves if they cared enough about reading anyt"
+                "excerpt": "Because Localisation is not something you want to simply bolt onto a website at the end.\n\nUsers will do that themselves if they cared enough about reading anything you have written. Which they don't. "
+              },
+              {
+                "title": "Speak Write",
+                "slug": "work/features/speakwrite",
+                "order": 30,
+                "icon": "features",
+                "type": "file",
+                "excerpt": "Foreseen by Orwell in 1984, built for reals just now. By us. Out of our heads\n\nApproach a large thing by doing a small thing and trying not to think about how large it is. Depends on your sense of tim"
+              },
+              {
+                "title": "Flash",
+                "slug": "work/features/flash",
+                "order": 50,
+                "icon": "flash",
+                "type": "file",
+                "excerpt": "Flash, also known as Adobe Flash, was a multimedia software platform created by Macromedia and later acquired by Adobe. \n\nIt was widely used on the web to create interactive animations, games, audio a"
               }
             ]
           },
@@ -69,14 +102,6 @@
                 "icon": "doc",
                 "type": "file",
                 "excerpt": "Goldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo architecture with multiple Next.js a"
-              },
-              {
-                "title": "Flash",
-                "slug": "work/techstack/flash",
-                "order": 50,
-                "icon": "flash",
-                "type": "file",
-                "excerpt": "Flash, also known as Adobe Flash, was a multimedia software platform created by Macromedia and later acquired by Adobe. It was widely used on the web to create interactive animations, games, audio and"
               },
               {
                 "title": "Design System",
@@ -101,24 +126,6 @@
             "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years, due in large part to the COVID19 pandemic. Prior to the pandemic, many businesses were hesitant to allow employees to w"
           },
           {
-            "title": "Examples",
-            "slug": "work/examples",
-            "order": 310,
-            "icon": "examples",
-            "type": "folder",
-            "excerpt": "Fast, staticfirst Next.js. Powerful, userfriendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience\nslug: /",
-            "children": [
-              {
-                "title": "Speak Write",
-                "slug": "work/examples/speakwrite",
-                "order": 30,
-                "icon": "examples",
-                "type": "file",
-                "excerpt": "Foreseen by Orwell in 1984, built for reals just now. By us. Out of our heads\n\nApproach a large thing by doing a small thing and trying not to think about how large it is. Depends on your sense of tim"
-              }
-            ]
-          },
-          {
             "title": "Privacy",
             "slug": "work/privacy",
             "order": 1000,
@@ -139,7 +146,7 @@
             "order": 2000,
             "icon": "work",
             "type": "folder",
-            "excerpt": "",
+            "excerpt": "Get in touch. For it's a  universally acknowledged that a Software Developer in possession of a good product, must be in want of a good business partner",
             "children": [
               {
                 "title": "Goldlabel Apps Ltd",
@@ -151,7 +158,7 @@
                   "legal",
                   "address"
                 ],
-                "excerpt": "Goldlabel Apps Ltd is a UK Limited Company (5460545), building custom software for creators, developers, and businesses.\n\nGet in touch. For it's a  universally acknowledged that a Software Developer i"
+                "excerpt": "Goldlabel Apps Ltd is a UK Limited Company (5460545)\n\n321323 High Road  \nChadwell Heath  \nEssex RM6 6AX"
               },
               {
                 "title": "Cookies",
@@ -234,7 +241,7 @@
             "order": 100,
             "icon": "diving",
             "type": "folder",
-            "excerpt": "",
+            "excerpt": "This section of the site is a quiet space for sharing some of the places I’ve been, the gear I’ve trusted, and the small moments I remember best — that sound when you first descend, the feeling of hov",
             "children": [
               {
                 "title": "It's not raining underwater",
@@ -242,7 +249,7 @@
                 "order": 50,
                 "icon": "diving",
                 "type": "file",
-                "excerpt": ""
+                "excerpt": "I’ve been diving for over 25 years. I’m not an instructor, and I don’t dive every weekend — but it’s something that’s been part of my life for a long time. I trained as a PADI Divemaster (though my ce"
               }
             ]
           },

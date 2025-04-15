@@ -108,6 +108,7 @@ import FolderIcon from '@mui/icons-material/FolderOutlined';
 import CompanyIcon from '@mui/icons-material/Shop2Outlined';
 import DesignIcon from '@mui/icons-material/PaletteOutlined';
 import FeatureIcon from '@mui/icons-material/FeaturedPlayListOutlined';
+import SitemapIcon from '@mui/icons-material/TrackChanges';
 
 export type IconShape = {
   icon:
@@ -203,6 +204,7 @@ export type IconShape = {
     | 'left'
     | 'down'
     | 'up'
+    | 'sitemap'
     | 'right'
     | 'menu'
     | 'success'
@@ -605,7 +607,9 @@ export default function Icon({ icon, color }: IconShape) {
     case 'admin':
       iconFragment = <AdminIcon color={color} />;
       break;
-
+    case 'sitemap':
+      iconFragment = <SitemapIcon color={color} />;
+      break;
     default:
       iconFragment = <ErrorIcon color={'warning'} />;
   }

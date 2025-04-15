@@ -20,11 +20,16 @@ type ContextNavProps = {
 
 export default function ContextNav({
   onClose = () => {
-    console.log('NO onClose found');
+    console.log('No onClose found');
   },
 }: ContextNavProps) {
   const router = useRouter();
   const [darkmode, setDarkmode] = useKey('darkmode');
+
+  const closePopupMenu = () => {
+    
+    return null
+  }
 
   const handleItemClick = (clickObj: { route?: string; action?: string }) => {
     if (clickObj.route) {
@@ -51,14 +56,18 @@ export default function ContextNav({
         <Grid size={{ xs: 12, md: 6 }}>
           <Typography variant="button">Settings</Typography>
           <List dense>
+
             <ListItemButton
-              onClick={() => handleItemClick({ route: '/admin' })}
+              onClick={() => handleItemClick({ route: '/sitemap' })}
             >
               <ListItemIcon>
-                <Icon icon="admin" />
+                <Icon icon="sitemap" />
               </ListItemIcon>
-              <ListItemText primary="Admin" />
+              <ListItemText primary="Sitemap" />
             </ListItemButton>
+
+
+            
 
             <ListItemButton
               onClick={() => handleItemClick({ action: 'TOGGLE_DARKMODE' })}
@@ -68,6 +77,16 @@ export default function ContextNav({
               </ListItemIcon>
               <ListItemText primary={darkmode ? 'Light Mode' : 'Dark Mode'} />
             </ListItemButton>
+
+            <ListItemButton
+              onClick={() => handleItemClick({ route: '/admin' })}
+            >
+              <ListItemIcon>
+                <Icon icon="admin" />
+              </ListItemIcon>
+              <ListItemText primary="Admin" />
+            </ListItemButton>
+            
           </List>
         </Grid>
 
@@ -98,7 +117,7 @@ export default function ContextNav({
               <ListItemIcon>
                 <Icon icon="left" />
               </ListItemIcon>
-              {/* <ListItemText primary="Home" /> */}
+              <ListItemText primary="Home" />
             </ListItemButton>
           </List>
         </Grid>

@@ -1,8 +1,8 @@
 'use client';
 
 import * as React from 'react';
-import { useKey } from '../../lib/useKey';
-import { useSlice } from '../../lib/useSlice';
+// import { useKey } from '../../lib/useKey';
+// import { useSlice } from '../../lib/useSlice';
 import {
   Dialog,
   DialogContent,
@@ -28,9 +28,8 @@ export default function PopupMenu({
 }: PopupMenuProps) {
   const theme = useTheme();
 
-  const slice = useSlice();
-
-  const [darkmode, setDarkmode] = useKey('darkmode');
+  // const slice = useSlice();
+  // const [darkmode, setDarkmode] = useKey('darkmode');
   const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
   return (

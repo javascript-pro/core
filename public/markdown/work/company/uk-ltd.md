@@ -6,12 +6,10 @@ slug: /work/company/uk-ltd
 icon: doc
 image: /jpg/core.jpg
 tags: legal, address
-featured: true
+featured: false
 ---
-
-Goldlabel Apps Ltd is a UK Limited Company (5460545)
+> Goldlabel Apps Ltd is a UK Limited Company (5460545)
 
 321-323 High Road  
 Chadwell Heath  
-Essex RM6 6AX  
-UK
+Essex RM6 6AX

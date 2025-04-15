@@ -11,16 +11,15 @@ import {
   Collapse,
   IconButton,
 } from '@mui/material';
-import { Icon } from '#/goldlabel';
-import { NavItem } from '#/goldlabel/types/nav'; // ✅ shared type
+import { Icon } from '../../goldlabel';
+import { NavItem } from '../../goldlabel/types/nav';
 
 export type SitemapProps = {
   globalNav?: NavItem[] | null;
-  openTopLevelByDefault?: number; // now a number (default = 1)
+  openTopLevelByDefault?: number;
   onClose?: () => void;
 };
 
-// Simplified FolderItem: no viewport scrolling
 function FolderItem({
   item,
   fullPath,
@@ -51,9 +50,9 @@ function FolderItem({
         >
           <ListItemText primary={item.title} />
           {isOpen ? (
-            <Icon icon="up" color="secondary" />
+            <Icon icon="up" />
           ) : (
-            <Icon icon="down" color="secondary" />
+            <Icon icon="down" />
           )}
         </ListItemButton>
         <IconButton
@@ -61,7 +60,7 @@ function FolderItem({
           href={fullPath}
           aria-label={`Go to ${item.title}`}
         >
-          <Icon icon="right" color="secondary" />
+          <Icon icon="right" />
         </IconButton>
       </Box>
       <Collapse in={isOpen} timeout="auto" unmountOnExit>
@@ -125,7 +124,7 @@ export default function Sitemap({
               sx={{ pl: indent + 2 }}
             >
               <ListItemIcon>
-                <Icon icon={(item.icon as any) || 'doc'} color="secondary" />
+                <Icon icon={(item.icon as any) || 'doc'} />
               </ListItemIcon>
               <ListItemText primary={item.title} />
             </ListItemButton>
