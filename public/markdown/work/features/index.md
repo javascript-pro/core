@@ -4,9 +4,9 @@ title: Features
 description: What can Goldlabel do?
 slug: /work/features
 icon: feature
-image: /jpg/features.jpg
+image: /jpg/good-fit.jpg
 tags: features, authentication
-featured: true
+featured: false
 ---
 
 > Fast, static-first Next.js. Powerful, user-friendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience

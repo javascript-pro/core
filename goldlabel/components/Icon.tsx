@@ -104,10 +104,9 @@ import YoutubeIcon from '@mui/icons-material/YouTube';
 import ForgetIcon from '@mui/icons-material/PsychologyOutlined';
 import AIIcon from '@mui/icons-material/ModelTrainingOutlined';
 import FolderIcon from '@mui/icons-material/FolderOutlined';
-
 import CompanyIcon from '@mui/icons-material/Shop2Outlined';
 import DesignIcon from '@mui/icons-material/PaletteOutlined';
-import FeatureIcon from '@mui/icons-material/FeaturedPlayListOutlined';
+import FeatureIcon from '@mui/icons-material/RocketLaunchOutlined';
 import SitemapIcon from '@mui/icons-material/AccountTree';
 
 export type IconShape = {

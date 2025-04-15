@@ -6,7 +6,7 @@ import fs from 'fs/promises';
 import { loadMarkdown, getMarkdownTree } from '#/lib/loadMarkdown';
 import { FolderPage, FilePage, Sitemap } from '#/goldlabel';
 import { getFeatured } from '../../lib/getFeatured';
-
+import Uberedux from '../../goldlabel/features/Uberedux/Uberedux'
 export default async function CatchAllPage({ params }: any) {
   const slugArray = Array.isArray(params?.slug) ? params.slug : [];
   const slugPath = '/' + slugArray.join('/');
@@ -22,6 +22,10 @@ export default async function CatchAllPage({ params }: any) {
 
   if (slugPath === '/sitemap') {
     return <Sitemap globalNav={globalNav} openTopLevelByDefault={10} />;
+  }
+
+  if (slugPath === '/uberedux') {
+    return <Uberedux />
   }
 
   const markdown = await loadMarkdown(slugPath);

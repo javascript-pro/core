@@ -3,7 +3,7 @@ order: 30
 title: Speak Write
 description: Open Source AI propaganda generator
 slug: /work/features/speakwrite
-icon: features
+icon: feature
 image: /jpg/speakwrite.jpg
 ---
 

@@ -9,7 +9,6 @@ import {
   ListItemIcon,
   ListItemText,
   Grid,
-  Typography,
 } from '@mui/material';
 import { Icon } from '../';
 import { useKey } from '../../lib/useKey';
@@ -33,11 +32,13 @@ export default function ContextNav({
   const handleItemClick = (clickObj: { route?: string; action?: string }) => {
     if (clickObj.route) {
       router.push(clickObj.route);
+      onClose();
     }
     if (clickObj.action) {
       switch (clickObj.action) {
         case 'TOGGLE_DARKMODE':
           setDarkmode(!darkmode);
+          onClose();
           break;
         case 'CLOSE_DIALOG':
           onClose();
@@ -52,41 +53,17 @@ export default function ContextNav({
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
-        <Grid size={{ xs: 12, md: 6 }}>
-          <Typography variant="button">Settings</Typography>
-          <List dense>
-            <ListItemButton
-              onClick={() => handleItemClick({ route: '/sitemap' })}
-            >
-              <ListItemIcon>
-                <Icon icon="sitemap" />
-              </ListItemIcon>
-              <ListItemText primary="Sitemap" />
-            </ListItemButton>
-
-            <ListItemButton
-              onClick={() => handleItemClick({ action: 'TOGGLE_DARKMODE' })}
-            >
-              <ListItemIcon>
-                <Icon icon={darkmode ? 'lightmode' : 'darkmode'} />
-              </ListItemIcon>
-              <ListItemText primary={darkmode ? 'Light Mode' : 'Dark Mode'} />
-            </ListItemButton>
-
-            <ListItemButton
-              onClick={() => handleItemClick({ route: '/admin' })}
-            >
-              <ListItemIcon>
-                <Icon icon="admin" />
-              </ListItemIcon>
-              <ListItemText primary="Admin" />
-            </ListItemButton>
-          </List>
-        </Grid>
 
         <Grid size={{ xs: 12, md: 6 }}>
-          <Typography variant="button">Nav</Typography>
           <List dense>
+            
+            <ListItemButton onClick={() => handleItemClick({ route: '/' })}>
+              <ListItemIcon>
+                <Icon icon="home" />
+              </ListItemIcon>
+              <ListItemText primary="Home" />
+            </ListItemButton>
+
             <ListItemButton onClick={() => handleItemClick({ route: '/work' })}>
               <ListItemIcon>
                 <Icon icon="work" />
@@ -107,14 +84,54 @@ export default function ContextNav({
               </ListItemIcon>
               <ListItemText primary="Balance" />
             </ListItemButton>
-            <ListItemButton onClick={() => handleItemClick({ route: '/' })}>
-              <ListItemIcon>
-                <Icon icon="left" />
-              </ListItemIcon>
-              <ListItemText primary="Home" />
-            </ListItemButton>
+            
           </List>
         </Grid>
+
+        <Grid size={{ xs: 12, md: 6 }}>
+          <List dense>
+
+            <ListItemButton
+              onClick={() => handleItemClick({ route: '/admin' })}
+            >
+              <ListItemIcon>
+                <Icon icon="admin" />
+              </ListItemIcon>
+              <ListItemText primary="Admin" />
+            </ListItemButton>
+
+            <ListItemButton
+              onClick={() => handleItemClick({ route: '/sitemap' })}
+            >
+              <ListItemIcon>
+                <Icon icon="sitemap" />
+              </ListItemIcon>
+              <ListItemText primary="Sitemap" />
+            </ListItemButton>
+
+            <ListItemButton
+              onClick={() => handleItemClick({ action: 'TOGGLE_DARKMODE' })}
+            >
+              <ListItemIcon>
+                <Icon icon={darkmode ? 'lightmode' : 'darkmode'} />
+              </ListItemIcon>
+              <ListItemText primary={darkmode ? 'Light Mode' : 'Dark Mode'} />
+            </ListItemButton>
+
+
+            <ListItemButton
+              onClick={() => handleItemClick({ route: '/uberedux' })}
+            >
+              <ListItemIcon>
+                <Icon icon="feature" />
+              </ListItemIcon>
+              <ListItemText primary="Uberedux" />
+            </ListItemButton>
+
+          </List>
+        </Grid>
+
+
       </Grid>
     </Box>
   );
