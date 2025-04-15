@@ -7,6 +7,7 @@ icon: lingua
 image: /jpg/lingua.jpg
 tags: features, translation, localisation
 ---
+
 > Because Localisation is not something you want to simply bolt onto a website at the end.
 
 Users will do that themselves if they cared enough about reading anything you have written. Which they don't. Lingua makes the user feel the app is aimed for them. It's a trust thing

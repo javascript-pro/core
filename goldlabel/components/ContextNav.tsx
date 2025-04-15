@@ -27,9 +27,8 @@ export default function ContextNav({
   const [darkmode, setDarkmode] = useKey('darkmode');
 
   const closePopupMenu = () => {
-    
-    return null
-  }
+    return null;
+  };
 
   const handleItemClick = (clickObj: { route?: string; action?: string }) => {
     if (clickObj.route) {
@@ -56,7 +55,6 @@ export default function ContextNav({
         <Grid size={{ xs: 12, md: 6 }}>
           <Typography variant="button">Settings</Typography>
           <List dense>
-
             <ListItemButton
               onClick={() => handleItemClick({ route: '/sitemap' })}
             >
@@ -65,9 +63,6 @@ export default function ContextNav({
               </ListItemIcon>
               <ListItemText primary="Sitemap" />
             </ListItemButton>
-
-
-            
 
             <ListItemButton
               onClick={() => handleItemClick({ action: 'TOGGLE_DARKMODE' })}
@@ -86,7 +81,6 @@ export default function ContextNav({
               </ListItemIcon>
               <ListItemText primary="Admin" />
             </ListItemButton>
-            
           </List>
         </Grid>
 

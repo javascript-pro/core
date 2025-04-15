@@ -32,7 +32,7 @@ export default function Featured({ featured = [] }: FeaturedProps) {
 
   // Sort by frontmatter.order (default to 0 if undefined)
   const sorted = [...featured].sort(
-    (a, b) => (a.frontmatter.order ?? 0) - (b.frontmatter.order ?? 0)
+    (a, b) => (a.frontmatter.order ?? 0) - (b.frontmatter.order ?? 0),
   );
 
   return (

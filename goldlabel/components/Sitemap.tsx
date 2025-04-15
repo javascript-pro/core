@@ -49,11 +49,7 @@ function FolderItem({
           sx={{ flexGrow: 1 }}
         >
           <ListItemText primary={item.title} />
-          {isOpen ? (
-            <Icon icon="up" />
-          ) : (
-            <Icon icon="down" />
-          )}
+          {isOpen ? <Icon icon="up" /> : <Icon icon="down" />}
         </ListItemButton>
         <IconButton
           component={Link}
