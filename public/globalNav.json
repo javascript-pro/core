@@ -31,6 +31,21 @@
         "excerpt": "Software built in the open.  \nEvery app we ship is real, running in production, and developed in public.\n\n Active Projects\n\n SpeakWrite\n\nTurn your voice into a complete media kit.  \nUpload a short spe",
         "children": [
           {
+            "title": "Resume (CV)",
+            "slug": "work/resume",
+            "order": 5,
+            "icon": "doc",
+            "type": "file",
+            "tags": [
+              "features",
+              "translation",
+              "localisation",
+              "jobs",
+              "doc"
+            ],
+            "excerpt": ""
+          },
+          {
             "title": "Features",
             "slug": "work/features",
             "order": 20,
@@ -43,9 +58,9 @@
             "excerpt": "Fast, staticfirst Next.js. Powerful, userfriendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience\n\n Authentication\n\nAuth is part of Goldlabel’",
             "children": [
               {
-                "title": "Is this job a Good Fit?",
+                "title": "Is this job a good fit?",
                 "slug": "work/features/good-fit",
-                "order": 10,
+                "order": 25,
                 "icon": "ai",
                 "type": "file",
                 "tags": [

@@ -118,11 +118,11 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
           <Toolbar>
             <StyledFab
               color="secondary"
-              sx={{ boxShadow: 0 }}
+              sx={{ boxShadow: 0, border: "2px solid " + themeValues.primary }}
               onClick={handleToggleMenu}
               aria-label="Open Menu"
             >
-              <Icon icon="menu" />
+              <Icon icon="flash" color={"primary"} />
             </StyledFab>
             <Box sx={{ flexGrow: 1 }} />
           </Toolbar>

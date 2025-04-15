@@ -18,6 +18,7 @@ export type FeaturedProps = {
       title: string;
       description?: string;
       icon?: string;
+      order?: number;
     };
   }[];
 };
@@ -29,10 +30,15 @@ export default function Featured({ featured = [] }: FeaturedProps) {
     router.push(slug);
   };
 
+  // Sort by frontmatter.order (default to 0 if undefined)
+  const sorted = [...featured].sort(
+    (a, b) => (a.frontmatter.order ?? 0) - (b.frontmatter.order ?? 0)
+  );
+
   return (
     <Box sx={{ mt: 0 }}>
       <List dense>
-        {featured.map(({ slug, frontmatter }) => {
+        {sorted.map(({ slug, frontmatter }) => {
           const { title, icon } = frontmatter;
           return (
             <ListItemButton key={slug} onClick={() => handleItemClick(slug)}>

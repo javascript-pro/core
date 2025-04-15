@@ -1,6 +1,6 @@
 ---
-order: 10
-title: Is this job a Good Fit?
+order: 25
+title: Good Fit?
 description: An example AI tool
 slug: /work/features/good-fit
 icon: ai

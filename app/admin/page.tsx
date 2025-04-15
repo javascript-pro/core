@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { onAuthStateChanged, User } from 'firebase/auth';
 import { auth } from '../../lib/firebase';
 import LoginForm from './login';
-import { Dashboard } from '../../goldlabel/admin';
+import { Dashboard } from '../../goldlabel/features/Admin';
 
 export default function AdminPage() {
   const [user, setUser] = useState<User | null>(null);
