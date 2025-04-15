@@ -1,8 +1,8 @@
 import path from 'path';
 import fs from 'fs/promises';
-import config from '#/goldlabel/config.json';
+import config from '../goldlabel/config.json';
 import { Metadata } from 'next';
-import { Appshell } from '#/goldlabel';
+import { Appshell } from '../goldlabel';
 import {UbereduxProvider} from '../goldlabel/features/Uberedux';
 import './styles.css';
 

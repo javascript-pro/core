@@ -12,7 +12,7 @@ export interface UbereduxState {
 }
 
 const reduxSlice = createSlice({
-  name: 'uberedux',
+  name: 'redux',
   initialState,
   reducers: {
     setReduxKey: (state, action: PayloadAction<Partial<UbereduxState>>) => {

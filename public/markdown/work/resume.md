@@ -6,7 +6,7 @@ slug: /work/resume
 icon: doc
 image: /jpg/good-fit.jpg
 tags: features, translation, localisation, jobs, doc
-featured: true
+featured: false
 ---
 ## Fullstack JavaScript Developer  
 
