@@ -4,7 +4,7 @@ title: Features
 description: What can Goldlabel do?
 slug: /work/features
 icon: feature
-image: /jpg/features.jpg
+image: /jpg/good-fit.jpg
 tags: features, authentication
 featured: true
 ---

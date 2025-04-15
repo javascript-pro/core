@@ -46,7 +46,7 @@
                 "title": "Good Fit?",
                 "slug": "work/features/good-fit",
                 "order": 25,
-                "icon": "ai",
+                "icon": "feature",
                 "type": "file",
                 "tags": [
                   "features",
@@ -57,9 +57,25 @@
                 "excerpt": "Is this job a Good Fit?\n\nA simple AI tool which will tell you in seconds. Paste in a job description and our AI will judge if it's a good match. If it is, you’ll get a tailored CV you can download ins"
               },
               {
+                "title": "Speak Write",
+                "slug": "work/features/speakwrite",
+                "order": 30,
+                "icon": "feature",
+                "type": "file",
+                "excerpt": "Foreseen by Orwell in 1984, built for reals just now. By us. Out of our heads\n\nApproach a large thing by doing a small thing and trying not to think about how large it is. Depends on your sense of tim"
+              },
+              {
+                "title": "Flash",
+                "slug": "work/features/flash",
+                "order": 50,
+                "icon": "feature",
+                "type": "file",
+                "excerpt": "Flash, also known as Adobe Flash, was a multimedia software platform created by Macromedia and later acquired by Adobe.\n\nIt was widely used on the web to create interactive animations, games, audio an"
+              },
+              {
                 "title": "Lingua",
                 "slug": "work/features/lingua",
-                "order": 30,
+                "order": 130,
                 "icon": "lingua",
                 "type": "file",
                 "tags": [
@@ -68,22 +84,6 @@
                   "localisation"
                 ],
                 "excerpt": "Because Localisation is not something you want to simply bolt onto a website at the end.\n\nUsers will do that themselves if they cared enough about reading anything you have written. Which they don't. "
-              },
-              {
-                "title": "Speak Write",
-                "slug": "work/features/speakwrite",
-                "order": 30,
-                "icon": "features",
-                "type": "file",
-                "excerpt": "Foreseen by Orwell in 1984, built for reals just now. By us. Out of our heads\n\nApproach a large thing by doing a small thing and trying not to think about how large it is. Depends on your sense of tim"
-              },
-              {
-                "title": "Flash",
-                "slug": "work/features/flash",
-                "order": 50,
-                "icon": "flash",
-                "type": "file",
-                "excerpt": "Flash, also known as Adobe Flash, was a multimedia software platform created by Macromedia and later acquired by Adobe.\n\nIt was widely used on the web to create interactive animations, games, audio an"
               }
             ]
           },

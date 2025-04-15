@@ -4,6 +4,7 @@ import config from '../config.json';
 import * as React from 'react';
 import {
   Box,
+  Avatar,
   CssBaseline,
   Container,
   ThemeProvider,
@@ -11,11 +12,9 @@ import {
   AppBar,
   Toolbar,
   Fab,
-  Avatar,
-  IconButton,
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { AppBreadcrumb, Icon, PopupMenu } from '../';
+import { PopupMenu } from '../';
 import { useKey } from '../../lib/useKey';
 
 const StyledFab = styled(Fab)({
@@ -72,32 +71,8 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
     <ThemeProvider theme={theme}>
       <CssBaseline />
 
-      {/* Top AppBar */}
-      <AppBar
-        position="fixed"
-        sx={{
-          top: 0,
-          bottom: 'auto',
-          boxShadow: 0,
-          background: themeValues.background,
-        }}
-      >
-        <Container maxWidth="md">
-          <Toolbar sx={{ justifyContent: 'space-between' }}>
-            <AppBreadcrumb />
-            <IconButton onClick={() => window.open('/', '_self')}>
-              <Avatar
-                src={config.favicon}
-                sx={{ width: 32, height: 32 }}
-                alt="Home"
-              />
-            </IconButton>
-          </Toolbar>
-        </Container>
-      </AppBar>
-
       {/* Main Content Area */}
-      <Container maxWidth="md" sx={{ pt: 7 }}>
+      <Container maxWidth="md" sx={{ }}>
         <Box sx={{ pb: '50px' }}>
           {children && <Box sx={{ p: 0 }}>{children}</Box>}
         </Box>
@@ -122,7 +97,7 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
               onClick={handleToggleMenu}
               aria-label="Open Menu"
             >
-              <Icon icon="flash" color={'primary'} />
+              <Avatar src={config.favicon}/>
             </StyledFab>
             <Box sx={{ flexGrow: 1 }} />
           </Toolbar>

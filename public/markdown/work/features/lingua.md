@@ -1,5 +1,5 @@
 ---
-order: 30
+order: 130
 title: Lingua
 description: Multi language translation package
 slug: /work/features/lingua
