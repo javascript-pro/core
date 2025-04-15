@@ -5,6 +5,9 @@ import * as React from 'react';
 // import { useSlice } from '../../lib/useSlice';
 import {
   Dialog,
+  DialogTitle,
+  CardHeader,
+  Avatar,
   DialogContent,
   DialogActions,
   useMediaQuery,
@@ -46,14 +49,19 @@ export default function PopupMenu({
         },
       }}
     >
+      <DialogTitle>
+        <CardHeader 
+          avatar={<Avatar />}
+          title="fadsfhklf"
+        />
+      </DialogTitle>
       <DialogContent>
         <ContextNav onClose={onClose} />
       </DialogContent>
       <DialogActions>
         <ListItemButton onClick={onClose}>
-          <ListItemText primary="Close" />
           <ListItemIcon>
-            <Icon icon="close" />
+            <Icon icon="close" color="primary" />
           </ListItemIcon>
         </ListItemButton>
       </DialogActions>

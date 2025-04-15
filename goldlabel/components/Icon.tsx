@@ -108,7 +108,7 @@ import FolderIcon from '@mui/icons-material/FolderOutlined';
 import CompanyIcon from '@mui/icons-material/Shop2Outlined';
 import DesignIcon from '@mui/icons-material/PaletteOutlined';
 import FeatureIcon from '@mui/icons-material/FeaturedPlayListOutlined';
-import SitemapIcon from '@mui/icons-material/TrackChanges';
+import SitemapIcon from '@mui/icons-material/AccountTree';
 
 export type IconShape = {
   icon:
