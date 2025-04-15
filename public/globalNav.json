@@ -31,6 +31,14 @@
         "excerpt": "Software built in the open.  \nEvery app we ship is real, running in production, and developed in public.\n\n Active Projects\n\n SpeakWrite\n\nTurn your voice into a complete media kit.  \nUpload a short spe",
         "children": [
           {
+            "title": "Core",
+            "slug": "work/core",
+            "order": 20,
+            "icon": "doc",
+            "type": "file",
+            "excerpt": "Goldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo architecture with multiple Next.js a"
+          },
+          {
             "title": "Features",
             "slug": "work/features",
             "order": 20,
@@ -42,20 +50,6 @@
             ],
             "excerpt": "Fast, staticfirst Next.js. Powerful, userfriendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience\n\n Authentication\n\nAuth is part of Goldlabel’",
             "children": [
-              {
-                "title": "Good Fit?",
-                "slug": "work/features/good-fit",
-                "order": 25,
-                "icon": "feature",
-                "type": "file",
-                "tags": [
-                  "features",
-                  "translation",
-                  "localisation",
-                  "jobs"
-                ],
-                "excerpt": "Is this job a Good Fit?\n\nA simple AI tool which will tell you in seconds. Paste in a job description and our AI will judge if it's a good match. If it is, you’ll get a tailored CV you can download ins"
-              },
               {
                 "title": "Speak Write",
                 "slug": "work/features/speakwrite",
@@ -73,6 +67,20 @@
                 "excerpt": "Flash, also known as Adobe Flash, was a multimedia software platform created by Macromedia and later acquired by Adobe.\n\nIt was widely used on the web to create interactive animations, games, audio an"
               },
               {
+                "title": "Good Fit?",
+                "slug": "work/features/good-fit",
+                "order": 55,
+                "icon": "feature",
+                "type": "file",
+                "tags": [
+                  "features",
+                  "translation",
+                  "localisation",
+                  "jobs"
+                ],
+                "excerpt": "Is your job a Good Fit?\n\nA simple AI tool which will tell you in seconds. Paste in a job description and our AI will judge if it's a good match. If it is, you’ll get a tailored CV you can download ins"
+              },
+              {
                 "title": "Lingua",
                 "slug": "work/features/lingua",
                 "order": 130,
@@ -88,33 +96,31 @@
             ]
           },
           {
-            "title": "Techstack",
-            "slug": "work/techstack",
+            "title": "Fullstack",
+            "slug": "work/fullstack",
             "order": 30,
             "icon": "techstack",
-            "type": "folder",
-            "excerpt": "Fullstack is one of those industry terms rapidly loosing meaning from overuse. In the olden days there was a very clear difference between someone who made the frontend of an app and a person who made",
-            "children": [
-              {
-                "title": "Overview",
-                "slug": "work/techstack/overview",
-                "order": 20,
-                "icon": "doc",
-                "type": "file",
-                "excerpt": "Goldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo architecture with multiple Next.js a"
-              },
-              {
-                "title": "Design System",
-                "slug": "work/techstack/design-system",
-                "order": 100,
-                "icon": "design",
-                "type": "file",
-                "excerpt": "Design Templates\n\n Thanks for the feedback! Since Berry is more admin/dashboardoriented, let's pivot to frontfacing templates that still use MUI, focusing on navigation, page structure, and content di"
-              }
-            ]
+            "type": "file",
+            "tags": [
+              "JavaScript",
+              "Vanilla JavaScript",
+              "TypeScript",
+              "React",
+              "Angular",
+              "Vue",
+              "etc",
+              "Material UI",
+              "Flash",
+              "Server Side JavaScript",
+              "Node",
+              "Gatsby",
+              "NextJS",
+              "Headless CMS"
+            ],
+            "excerpt": "Fullstack is one of those industry terms rapidly loosing meaning from overuse. In the olden days there was a very clear difference between someone who made the frontend of an app and a person who made"
           },
           {
-            "title": "Resume (CV)",
+            "title": "Our Resume (CV)",
             "slug": "work/resume",
             "order": 50,
             "icon": "doc",
@@ -126,7 +132,7 @@
               "jobs",
               "doc"
             ],
-            "excerpt": ""
+            "excerpt": "Chris Dorward – Senior JavaScript Developer  \n\nI’m a seasoned developer with two decades of experience in web systems, now focused on React, TypeScript, and scalable app architecture. I’ve delivered w"
           },
           {
             "title": "Remote working",

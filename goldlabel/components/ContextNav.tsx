@@ -32,11 +32,13 @@ export default function ContextNav({
   const handleItemClick = (clickObj: { route?: string; action?: string }) => {
     if (clickObj.route) {
       router.push(clickObj.route);
+      onClose();
     }
     if (clickObj.action) {
       switch (clickObj.action) {
         case 'TOGGLE_DARKMODE':
           setDarkmode(!darkmode);
+          onClose();
           break;
         case 'CLOSE_DIALOG':
           onClose();

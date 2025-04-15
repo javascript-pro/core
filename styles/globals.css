@@ -2,16 +2,16 @@
 #C09F52
 */
 
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 /* Light theme defaults - no Tailwind greys */
-html,
+/* html,
 body {
   background-color: #efefef;
   color: #303030;
-}
+} */
 
 /* body {
   @apply bg-white text-black font-sans antialiased;
@@ -22,7 +22,7 @@ a {
   text-decoration: underline; */
 }
 
-a:hover {
+/* a:hover {
   color: #003366;
 }
 
@@ -38,4 +38,4 @@ h6 {
 
 p {
   color: black;
-}
+} */

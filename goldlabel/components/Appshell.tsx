@@ -71,6 +71,12 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
     <ThemeProvider theme={theme}>
       <CssBaseline />
 
+      <PopupMenu
+        open={menuOpen}
+        onClose={() => setMenuOpen(false)}
+        globalNav={globalNav}
+      />
+
       {/* Main Content Area */}
       <Container maxWidth="md" sx={{ }}>
         <Box sx={{ pb: '50px' }}>
@@ -93,10 +99,12 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
           <Toolbar>
             <StyledFab
               color="secondary"
-              sx={{ boxShadow: 0, border: '2px solid ' + themeValues.primary }}
+              sx={{ 
+                boxShadow: 0, 
+                border: '2px solid ' + themeValues.border 
+              }}
               onClick={handleToggleMenu}
-              aria-label="Open Menu"
-            >
+              aria-label="Goldlabel Menu">
               <Avatar src={config.favicon}/>
             </StyledFab>
             <Box sx={{ flexGrow: 1 }} />
@@ -104,11 +112,6 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
         </Container>
       </AppBar>
 
-      <PopupMenu
-        open={menuOpen}
-        onClose={() => setMenuOpen(false)}
-        globalNav={globalNav}
-      />
     </ThemeProvider>
   );
 }

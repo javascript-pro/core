@@ -12,6 +12,7 @@
       "secondary": "#efefef",
       "background": "#efefef",
       "paper": "#efefef",
+      "border": "#c4c4c4",
       "mapbox": "mapbox://styles/listingslab/cm67sb391003b01qz2cb6grth"
     },
     "dark": {
@@ -20,6 +21,7 @@
       "secondary": "#303030",
       "background": "#303030",
       "paper": "#303030",
+      "border": "#222222",
       "mapbox": "mapbox://styles/listingslab/cm67sb391003b01qz2cb6grth"
     }
   }
