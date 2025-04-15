@@ -1,34 +1,34 @@
 // hooks/useAuth.ts
-import { useEffect, useState } from 'react'
-import { onAuthStateChanged, User } from 'firebase/auth'
-import { doc, getDoc } from 'firebase/firestore'
-import { auth, db } from '../lib/firebase'
+import { useEffect, useState } from 'react';
+import { onAuthStateChanged, User } from 'firebase/auth';
+import { doc, getDoc } from 'firebase/firestore';
+import { auth, db } from '../lib/firebase';
 
-type Role = 'admin' | 'member' | null
+type Role = 'admin' | 'member' | null;
 
 export function useAuth() {
-  const [user, setUser] = useState<User | null>(null)
-  const [role, setRole] = useState<Role>(null)
-  const [loading, setLoading] = useState(true)
+  const [user, setUser] = useState<User | null>(null);
+  const [role, setRole] = useState<Role>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
-      setUser(firebaseUser)
+      setUser(firebaseUser);
 
       if (firebaseUser) {
-        const ref = doc(db, 'users', firebaseUser.uid)
-        const snap = await getDoc(ref)
-        const data = snap.exists() ? snap.data() : null
-        setRole((data?.role as Role) || null)
+        const ref = doc(db, 'users', firebaseUser.uid);
+        const snap = await getDoc(ref);
+        const data = snap.exists() ? snap.data() : null;
+        setRole((data?.role as Role) || null);
       } else {
-        setRole(null)
+        setRole(null);
       }
 
-      setLoading(false)
-    })
+      setLoading(false);
+    });
 
-    return () => unsubscribe()
-  }, [])
+    return () => unsubscribe();
+  }, []);
 
-  return { user, role, loading }
+  return { user, role, loading };
 }

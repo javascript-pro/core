@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import {
   Box,
@@ -6,42 +6,41 @@ import {
   CardContent,
   useMediaQuery,
   useTheme,
-} from '@mui/material'
-import Image from 'next/image'
-import {
-  Advert,
-  FolderContents,
-} from '../'
+} from '@mui/material';
+import Image from 'next/image';
+import { Featured, FolderContents } from '../';
 
-import ReactMarkdown from 'react-markdown'
-import { NavItem } from '#/goldlabel/types/nav'
+import ReactMarkdown from 'react-markdown';
+import { NavItem } from '../../goldlabel/types/nav';
 
 export type Frontmatter = {
-  order?: number
-  title?: string
-  description?: string
-  slug?: string
-  icon?: string
-  image?: string
-  tags?: string[]
-  excerpt?: string
-}
+  order?: number;
+  title?: string;
+  description?: string;
+  slug?: string;
+  icon?: string;
+  image?: string;
+  tags?: string[];
+  excerpt?: string;
+};
 
 export type FolderPageProps = {
-  section: string
-  tree: NavItem[] | null
-  frontmatter: Frontmatter | null
-  content: string | null
-  globalNav: NavItem[]
-}
+  section: string;
+  featured?: any[];
+  tree: NavItem[] | null;
+  frontmatter: Frontmatter | null;
+  content: string | null;
+  globalNav: NavItem[];
+};
 
 export default function FolderPage({
   section,
   frontmatter,
   content,
+  featured,
 }: FolderPageProps) {
-  const theme = useTheme()
-  const isSmUp = useMediaQuery(theme.breakpoints.up('sm'))
+  const theme = useTheme();
+  const isSmUp = useMediaQuery(theme.breakpoints.up('sm'));
 
   return (
     <Box sx={{ px: 2 }}>
@@ -76,9 +75,9 @@ export default function FolderPage({
         </Box>
       )}
 
-      <Box sx={{ display: "flex" }}>
+      <Box sx={{ display: 'flex' }}>
         {isSmUp ? (
-          <Box sx={{ display: "flex" }}>
+          <Box sx={{ display: 'flex' }}>
             <Box sx={{ mt: { xs: 0, sm: -3 } }}>
               {content && (
                 <CardContent>
@@ -87,18 +86,20 @@ export default function FolderPage({
               )}
             </Box>
             <Box sx={{ maxWidth: 300 }}>
-              <Advert />
+              
               <FolderContents />
+              <Featured featured={featured} />
             </Box>
           </Box>
         ) : (
           <Box>
             {content && <ReactMarkdown>{content}</ReactMarkdown>}
-            <Advert />
+            
             <FolderContents />
+            <Featured featured={featured} />
           </Box>
         )}
       </Box>
     </Box>
-  )
+  );
 }

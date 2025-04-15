@@ -20,7 +20,8 @@ import AskIcon from '@mui/icons-material/QuestionAnswerOutlined';
 import WhenIcon from '@mui/icons-material/CalendarMonthOutlined';
 import WhatIcon from '@mui/icons-material/HardwareOutlined';
 import FilterIcon from '@mui/icons-material/SortOutlined';
-import AccountIcon from '@mui/icons-material//SupervisedUserCircle';
+import AccountIcon from '@mui/icons-material/SupervisedUserCircle';
+import AdminIcon from '@mui/icons-material/Security';
 import AndroidIcon from '@mui/icons-material/Android';
 import HowIcon from '@mui/icons-material/ElectricBoltOutlined';
 import WhoIcon from '@mui/icons-material/EscalatorWarningOutlined';
@@ -103,15 +104,15 @@ import YoutubeIcon from '@mui/icons-material/YouTube';
 import ForgetIcon from '@mui/icons-material/PsychologyOutlined';
 import AIIcon from '@mui/icons-material/ModelTrainingOutlined';
 import FolderIcon from '@mui/icons-material/FolderOutlined';
-
 import CompanyIcon from '@mui/icons-material/Shop2Outlined';
 import DesignIcon from '@mui/icons-material/PaletteOutlined';
-import FeatureIcon from '@mui/icons-material/FeaturedPlayListOutlined';
-
+import FeatureIcon from '@mui/icons-material/RocketLaunchOutlined';
+import SitemapIcon from '@mui/icons-material/AccountTree';
 
 export type IconShape = {
   icon:
     | 'account'
+    | 'admin'
     | 'company'
     | 'feature'
     | 'design'
@@ -202,6 +203,7 @@ export type IconShape = {
     | 'left'
     | 'down'
     | 'up'
+    | 'sitemap'
     | 'right'
     | 'menu'
     | 'success'
@@ -242,23 +244,22 @@ export default function Icon({ icon, color }: IconShape) {
     case 'ai':
       iconFragment = <AIIcon color={color} />;
       break;
-      case 'design':
-        iconFragment = <DesignIcon color={color} />;
-        break;
-      case 'forget':
+    case 'design':
+      iconFragment = <DesignIcon color={color} />;
+      break;
+    case 'forget':
       iconFragment = <ForgetIcon color={color} />;
       break;
-      case 'folder':
-        iconFragment = <FolderIcon color={color} />;
-        break;
-        case 'company':
-          iconFragment = <CompanyIcon color={color} />;
-          break;
+    case 'folder':
+      iconFragment = <FolderIcon color={color} />;
+      break;
+    case 'company':
+      iconFragment = <CompanyIcon color={color} />;
+      break;
 
-          case 'feature':
-            iconFragment = <FeatureIcon color={color} />;
-            break;
-
+    case 'feature':
+      iconFragment = <FeatureIcon color={color} />;
+      break;
 
     case 'ask':
       iconFragment = <AskIcon color={color} />;
@@ -601,6 +602,12 @@ export default function Icon({ icon, color }: IconShape) {
       break;
     case 'notifyr':
       iconFragment = <NotifyrIcon color={color} />;
+      break;
+    case 'admin':
+      iconFragment = <AdminIcon color={color} />;
+      break;
+    case 'sitemap':
+      iconFragment = <SitemapIcon color={color} />;
       break;
     default:
       iconFragment = <ErrorIcon color={'warning'} />;

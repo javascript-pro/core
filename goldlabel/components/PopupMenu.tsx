@@ -1,8 +1,13 @@
 'use client';
 
 import * as React from 'react';
+// import { useKey } from '../../lib/useKey';
+// import { useSlice } from '../../lib/useSlice';
 import {
   Dialog,
+  DialogTitle,
+  CardHeader,
+  Avatar,
   DialogContent,
   DialogActions,
   useMediaQuery,
@@ -16,13 +21,20 @@ import { Icon, ContextNav } from '../';
 type PopupMenuProps = {
   open?: boolean;
   onClose?: () => void;
-  globalNav: any
+  globalNav: any;
 };
 
-export default function PopupMenu({ open, onClose, globalNav }: PopupMenuProps) {
+export default function PopupMenu({
+  open,
+  onClose,
+  globalNav,
+}: PopupMenuProps) {
   const theme = useTheme();
+
+  // const slice = useSlice();
+  // const [darkmode, setDarkmode] = useKey('darkmode');
   const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
-  
+
   return (
     <Dialog
       open={open as boolean}
@@ -37,15 +49,20 @@ export default function PopupMenu({ open, onClose, globalNav }: PopupMenuProps) 
         },
       }}
     >
+      <DialogTitle>
+        <CardHeader 
+          avatar={<Avatar src={"/svg/favicon_nobg.svg"}/>}
+          title="Goldlabel Menu"
+        />
+      </DialogTitle>
       <DialogContent>
         <ContextNav onClose={onClose} />
       </DialogContent>
       <DialogActions>
         <ListItemButton onClick={onClose}>
           <ListItemIcon>
-            <Icon icon="close" />
+            <Icon icon="close" color="primary" />
           </ListItemIcon>
-          <ListItemText primary="Close" />
         </ListItemButton>
       </DialogActions>
     </Dialog>

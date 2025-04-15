@@ -22,8 +22,11 @@ export function GlobalNav() {
   return (
     <div className="fixed top-0 z-10 flex w-full flex-col border-b lg:bottom-0 lg:z-auto lg:w-72">
       <div className="flex h-14 items-center px-4 py-4 lg:h-auto">
-        
-        <Link href="/" className="group flex w-full items-center gap-x-2.5" onClick={close}>
+        <Link
+          href="/"
+          className="group flex w-full items-center gap-x-2.5"
+          onClick={close}
+        >
           <Image
             priority
             src="/svg/favicon.svg"
@@ -39,16 +42,19 @@ export function GlobalNav() {
             className="inline-flex items-center justify-center rounded-md p-2"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
+            {isOpen ? (
+              <XMarkIcon className="h-6 w-6" />
+            ) : (
+              <Bars3Icon className="h-6 w-6" />
+            )}
           </button>
         </div>
-
       </div>
 
       <nav
         className={clsx(
           'flex-grow px-4 pb-12 pt-2 lg:block',
-          isOpen ? 'block' : 'hidden lg:block'
+          isOpen ? 'block' : 'hidden lg:block',
         )}
       >
         <ul className="space-y-2 text-sm">
@@ -59,7 +65,7 @@ export function GlobalNav() {
                 onClick={close}
                 className={clsx(
                   'block rounded px-2 py-1 hover:bg-gray-800 hover:text-white',
-                  segment === href.slice(1) ? '' : ''
+                  segment === href.slice(1) ? '' : '',
                 )}
               >
                 {label}

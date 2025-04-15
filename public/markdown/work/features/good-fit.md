@@ -1,0 +1,14 @@
+---
+order: 55
+title: Good Fit?
+description: An example AI tool
+slug: /work/features/good-fit
+icon: feature
+image: /jpg/good-fit.jpg
+tags: features, translation, localisation, jobs
+featured: true
+---
+
+## Is your job a Good Fit?
+
+A simple AI tool which will tell you in seconds. Paste in a job description and our AI will judge if it's a good match. If it is, you’ll get a tailored CV you can download instantly. If not, all the best

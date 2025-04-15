@@ -1,11 +1,11 @@
 // app/api/seed/route.ts
-import { db } from '#/lib/firebase'
-import { collection, doc, setDoc, serverTimestamp } from 'firebase/firestore'
-import { NextResponse } from 'next/server'
+import { db } from '#/lib/firebase';
+import { collection, doc, setDoc, serverTimestamp } from 'firebase/firestore';
+import { NextResponse } from 'next/server';
 
 export async function GET() {
-  const appsRef = collection(db, 'apps')
-  const pagesRef = collection(db, 'pages')
+  const appsRef = collection(db, 'apps');
+  const pagesRef = collection(db, 'pages');
 
   await Promise.all([
     setDoc(doc(appsRef, 'mp3-to-text'), {
@@ -20,11 +20,12 @@ export async function GET() {
     setDoc(doc(pagesRef, 'about'), {
       title: 'About',
       description: 'About Goldlabel',
-      content: 'Goldlabel Apps Ltd builds fast, real-world tools with a strong design system.',
+      content:
+        'Goldlabel Apps Ltd builds fast, real-world tools with a strong design system.',
       updatedAt: serverTimestamp(),
       lastUpdatedBy: 'dev-seed',
     }),
-  ])
+  ]);
 
-  return NextResponse.json({ status: 'seeded' })
+  return NextResponse.json({ status: 'seeded' });
 }

@@ -4,6 +4,7 @@ import config from '../config.json';
 import * as React from 'react';
 import {
   Box,
+  Avatar,
   CssBaseline,
   Container,
   ThemeProvider,
@@ -11,39 +12,10 @@ import {
   AppBar,
   Toolbar,
   Fab,
-  Avatar,
-  IconButton,
 } from '@mui/material';
-import { styled } from '@mui/material/styles'
-import { AppBreadcrumb, Icon, PopupMenu } from '../'
-
-// const mode = 'light'
-// const { light: themeValues } = config.themes;
-
-const mode = 'dark'
-const { dark: themeValues } = config.themes;
-
-const theme = createTheme({
-  palette: {
-    mode,
-    primary: {
-      main: themeValues.primary,
-    },
-    secondary: {
-      main: themeValues.secondary,
-    },
-    success: {
-      main: themeValues.secondary,
-    },
-    background: {
-      default: themeValues.background,
-      paper: themeValues.paper,
-    },
-    text: {
-      primary: themeValues.text,
-    },
-  },
-});
+import { styled } from '@mui/material/styles';
+import { PopupMenu } from '../';
+import { useKey } from '../../lib/useKey';
 
 const StyledFab = styled(Fab)({
   position: 'absolute',
@@ -55,13 +27,43 @@ const StyledFab = styled(Fab)({
 });
 
 type AppshellProps = {
-  children?: React.ReactNode
-  globalNav?: any
+  children?: React.ReactNode;
+  globalNav?: any;
 };
 
 export default function Appshell({ children, globalNav }: AppshellProps) {
-  
   const [menuOpen, setMenuOpen] = React.useState(false);
+
+  const [darkmode] = useKey('darkmode');
+
+  const mode = darkmode ? 'dark' : 'light';
+  const themeValues = config.themes[mode];
+
+  const theme = React.useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode,
+          primary: {
+            main: themeValues.primary,
+          },
+          secondary: {
+            main: themeValues.secondary,
+          },
+          success: {
+            main: themeValues.secondary,
+          },
+          background: {
+            default: themeValues.background,
+            paper: themeValues.paper,
+          },
+          text: {
+            primary: themeValues.text,
+          },
+        },
+      }),
+    [mode, themeValues],
+  );
 
   const handleToggleMenu = () => setMenuOpen(!menuOpen);
 
@@ -69,40 +71,15 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
     <ThemeProvider theme={theme}>
       <CssBaseline />
 
-      {/* Top AppBar */}
-      <AppBar
-        position="fixed"
-        sx={{
-          top: 0,
-          bottom: 'auto',
-          boxShadow: 0,
-          background: themeValues.background
-        }}
-      >
-        <Container maxWidth="md">
-          <Toolbar sx={{justifyContent: 'space-between'}}>
-            
-            <AppBreadcrumb />
-            <IconButton
-              onClick={() => {
-                window.open ("/", "_self")
-              }}>
-              <Avatar
-                src={config.favicon}
-                sx={{ width: 32, height: 32 }}
-                alt="Home"
-              />
-            </IconButton>
-          </Toolbar>
-        </Container>
-      </AppBar>
+      <PopupMenu
+        open={menuOpen}
+        onClose={() => setMenuOpen(false)}
+        globalNav={globalNav}
+      />
 
-      {/* Main Content Area with top padding */}
-      <Container maxWidth="md" sx={{ 
-        pt: 7
-      }}>
+      {/* Main Content Area */}
+      <Container maxWidth="md" sx={{ }}>
         <Box sx={{ pb: '50px' }}>
-        {/* <Typography variant='h1'>Typography</Typography> */}
           {children && <Box sx={{ p: 0 }}>{children}</Box>}
         </Box>
       </Container>
@@ -115,30 +92,26 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
           top: 'auto',
           bottom: 0,
           boxShadow: 0,
-          background: 0
+          background: 0,
         }}
       >
-        <Container maxWidth="md" >
-          <Toolbar sx={{}}>
+        <Container maxWidth="md">
+          <Toolbar>
             <StyledFab
               color="secondary"
-              sx={{ boxShadow: 0 }}
+              sx={{ 
+                boxShadow: 0, 
+                border: '2px solid ' + themeValues.border 
+              }}
               onClick={handleToggleMenu}
-              aria-label="Open Menu"
-            >
-              
-              <Icon icon="menu"/>
+              aria-label="Goldlabel Menu">
+              <Avatar src={config.favicon}/>
             </StyledFab>
             <Box sx={{ flexGrow: 1 }} />
           </Toolbar>
         </Container>
       </AppBar>
 
-      <PopupMenu 
-        open={menuOpen} 
-        onClose={() => setMenuOpen(false)} 
-        globalNav={globalNav} 
-      />
     </ThemeProvider>
   );
 }

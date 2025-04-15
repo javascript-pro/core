@@ -1,4 +1,4 @@
 // globalNav.mjs
-import { generateGlobalNav } from './lib/generateGlobalNav'
+import { generateGlobalNav } from './lib/generateGlobalNav';
 
-generateGlobalNav()
+generateGlobalNav();

@@ -7,6 +7,7 @@ icon: account
 image: /jpg/work.jpg
 tags: cookies, gdpr, privacy, terms, trust
 ---
+
 > We don't use cookies
 
 **Privacy Statement**

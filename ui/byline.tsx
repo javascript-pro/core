@@ -7,9 +7,7 @@ export default function Byline() {
         <div className="flex items-center gap-x-1.5">
           <div className="text-sm">By</div>
           <a href="https://goldlabel.pro" title="Vercel">
-            
-              Goldlabel
-            
+            Goldlabel
           </a>
         </div>
 
