@@ -50,7 +50,7 @@ export default function Featured({ featured = [] }: FeaturedProps) {
             secondary="Paste in a job description, get an instantly tailored CV"
           />
         </ListItemButton>
-        <ListItemButton
+        {/* <ListItemButton
           onClick={() => handleItemClick('/work/products/speak-write')}
         >
           <ListItemIcon sx={{ alignSelf: 'flex-start', mt: 1 }}>
@@ -60,7 +60,7 @@ export default function Featured({ featured = [] }: FeaturedProps) {
             primary={'SpeakWrite'}
             secondary="Foreseen by Orwell in 1984, built by us for reals just now"
           />
-        </ListItemButton>
+        </ListItemButton> */}
       </List>
 
       <List dense>
