@@ -11,7 +11,7 @@ import Image from 'next/image';
 import { Featured, FolderContents } from '../';
 
 import ReactMarkdown from 'react-markdown';
-import { NavItem } from '../../goldlabel/types/nav';
+import { NavItem } from '../../goldlabel/types/goldlabelTypes';
 
 export type Frontmatter = {
   order?: number;
@@ -86,7 +86,6 @@ export default function FolderPage({
               )}
             </Box>
             <Box sx={{ maxWidth: 300 }}>
-              
               <FolderContents />
               <Featured featured={featured} />
             </Box>
@@ -94,7 +93,7 @@ export default function FolderPage({
         ) : (
           <Box>
             {content && <ReactMarkdown>{content}</ReactMarkdown>}
-            
+
             <FolderContents />
             <Featured featured={featured} />
           </Box>

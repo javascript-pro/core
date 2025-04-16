@@ -1,13 +1,12 @@
 'use client';
 
 import * as React from 'react';
-import {useSlice} from "../../../lib/useSlice"
+import { useSlice } from '../Uberedux';
 export default function Uberedux() {
-
-  const slice = useSlice()
+  const slice = useSlice();
   return (
-    <pre>
-      {JSON.stringify(slice, null, 2)}
-    </pre>
+    <>
+      <pre>uberedux: {JSON.stringify(slice, null, 2)}</pre>
+    </>
   );
 }

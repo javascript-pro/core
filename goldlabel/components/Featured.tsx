@@ -8,6 +8,7 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  Typography,
 } from '@mui/material';
 import { Icon } from '../';
 
@@ -51,6 +52,24 @@ export default function Featured({ featured = [] }: FeaturedProps) {
             </ListItemButton>
           );
         })}
+      </List>
+        <Typography variant="button" sx={{}}>
+          Examples
+        </Typography>
+      <List dense>
+        <ListItemButton onClick={() => handleItemClick('/examples/good-fit')}>
+          <ListItemIcon>
+            <Icon icon={'star'} />
+          </ListItemIcon>
+          <ListItemText primary={'Good Fit?'} />
+        </ListItemButton>
+        <ListItemButton onClick={() => handleItemClick('/examples/speak-write')}>
+          <ListItemIcon>
+            <Icon icon={'star'} />
+          </ListItemIcon>
+          <ListItemText 
+            primary={'Speak Write'} />
+        </ListItemButton>
       </List>
     </Box>
   );
