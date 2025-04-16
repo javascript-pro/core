@@ -13,13 +13,11 @@ import {
 } from '@mui/material';
 import { Icon } from '../';
 import { useKey } from '../../goldlabel/features/Uberedux';
-import {
-  Featured,
-} from '../'
+import { Featured } from '../';
 
 type ContextNavProps = {
   onClose?: () => void;
-  featured: any
+  featured: any;
 };
 
 export default function ContextNav({
@@ -126,7 +124,6 @@ export default function ContextNav({
               </ListItemIcon>
               <ListItemText primary="Uberedux" />
             </ListItemButton>
-
 
             <ListItemButton
               onClick={() => handleItemClick({ route: '/api/goldlabel' })}

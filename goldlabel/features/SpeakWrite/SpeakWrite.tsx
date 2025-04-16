@@ -12,7 +12,7 @@ import {
   TextField,
   Divider,
 } from '@mui/material';
-import {Icon, Featured} from '../../'
+import { Icon, Featured } from '../../';
 
 export default function SpeakWrite() {
   const [recording, setRecording] = React.useState(false);
@@ -24,19 +24,16 @@ export default function SpeakWrite() {
 
   return (
     <>
-    <Card sx={{ maxWidth: 800, margin: 'auto', mt: 4, p: 2 }}>
+      <Card sx={{ maxWidth: 800, margin: 'auto', mt: 4, p: 2 }}>
+        <CardHeader
+          avatar={<Icon icon="speak-write" />}
+          title="SpeakWrite"
+          subheader="Foreseen by Orwell in 1984, built for reals just now. By us"
+        />
 
-      <CardHeader
-        avatar={<Icon icon="speak-write"/>}
-        title="SpeakWrite"
-        subheader="Foreseen by Orwell in 1984, built for reals just now. By us"
-      />
-
-      <CardContent>
-      Open Source AI propaganda generator
-      </CardContent>
-    </Card>
-    <Featured />
+        <CardContent>Open Source AI propaganda generator</CardContent>
+      </Card>
+      <Featured />
     </>
   );
 }

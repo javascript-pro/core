@@ -18,9 +18,8 @@ import { SpeakWrite } from '../../goldlabel/features/SpeakWrite';
 // }
 
 export default async function CatchAllPage({ params }: any) {
-
   // Make sure to check for undefined and coerce to array
-  const slugArray = await params?.slug ?? [];
+  const slugArray = (await params?.slug) ?? [];
   const slugPath = '/' + slugArray.join('/');
 
   // Load global nav

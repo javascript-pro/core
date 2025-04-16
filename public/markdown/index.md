@@ -7,6 +7,7 @@ icon: home
 image: /jpg/home.jpg
 tags: Next Gen, Next.js, core, Gen X, goldlabel, pr0, AI Prompt Engineering, ChatGPT, OpenAI, Singularity
 ---
+
 > We build and ship modern web apps for clients who need real results — fast
 
 ### Next Gen, Gen X, Next.js, AI Prompt Engineering, OpenAI & Singularity

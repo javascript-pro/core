@@ -25,11 +25,7 @@ type PopupMenuProps = {
   globalNav?: any;
 };
 
-export default function PopupMenu({
-  open,
-  onClose,
-  featured,
-}: PopupMenuProps) {
+export default function PopupMenu({ open, onClose, featured }: PopupMenuProps) {
   const theme = useTheme();
 
   // const slice = useSlice();
@@ -57,7 +53,7 @@ export default function PopupMenu({
         />
       </DialogTitle>
       <DialogContent>
-        <ContextNav onClose={onClose} featured={featured}/>
+        <ContextNav onClose={onClose} featured={featured} />
       </DialogContent>
       <DialogActions>
         <ListItemButton onClick={onClose}>

@@ -56,20 +56,24 @@ export default function Featured({ featured = [] }: FeaturedProps) {
       </List>
       <Divider />
       <List dense>
-        <ListItemButton onClick={() => handleItemClick('/work/products/good-fit')}>
-        <ListItemIcon sx={{ alignSelf: 'flex-start', mt: 1 }}>
+        <ListItemButton
+          onClick={() => handleItemClick('/work/products/good-fit')}
+        >
+          <ListItemIcon sx={{ alignSelf: 'flex-start', mt: 1 }}>
             <Icon icon={'good-fit'} />
           </ListItemIcon>
-          <ListItemText 
-            primary={'Good Fit?'} 
+          <ListItemText
+            primary={'Good Fit?'}
             secondary="Paste in a job description and our AI will judge if it's a good match. If it is, you’ll get a tailored CV you can download instantly"
           />
         </ListItemButton>
-        <ListItemButton onClick={() => handleItemClick('/work/products/speak-write')}>
+        <ListItemButton
+          onClick={() => handleItemClick('/work/products/speak-write')}
+        >
           <ListItemIcon sx={{ alignSelf: 'flex-start', mt: 1 }}>
             <Icon icon={'speak-write'} />
           </ListItemIcon>
-          <ListItemText 
+          <ListItemText
             primary={'SpeakWrite'}
             secondary="Foreseen by Orwell in 1984, built by us for reals just now"
           />

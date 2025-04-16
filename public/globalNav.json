@@ -25,9 +25,7 @@
         "order": 10,
         "icon": "work",
         "type": "folder",
-        "tags": [
-          "social"
-        ],
+        "tags": ["social"],
         "excerpt": "Software built in the open.  \nEvery app we ship is real, running in production, and developed in public.\n\n Active Projects\n\n SpeakWrite\n\nTurn your voice into a complete media kit.  \nUpload a short spe",
         "children": [
           {
@@ -36,10 +34,7 @@
             "order": 20,
             "icon": "feature",
             "type": "folder",
-            "tags": [
-              "features",
-              "authentication"
-            ],
+            "tags": ["features", "authentication"],
             "excerpt": "Approach a large thing by doing a small thing and trying not to think about how large it is. Depends on your sense of time. Mine's pretty abnormal, but how about trying one weekend at a time?\n\n Authen",
             "children": [
               {
@@ -72,12 +67,7 @@
                 "order": 55,
                 "icon": "good-fit",
                 "type": "file",
-                "tags": [
-                  "features",
-                  "translation",
-                  "localisation",
-                  "jobs"
-                ],
+                "tags": ["features", "translation", "localisation", "jobs"],
                 "excerpt": "Is your job a Good Fit?\n\nThis simple AI tool will tell you in seconds. Paste in a job description and our AI will judge if it's a good match. If it is, you’ll get a tailored CV you can download instan"
               },
               {
@@ -94,11 +84,7 @@
                 "order": 130,
                 "icon": "lingua",
                 "type": "file",
-                "tags": [
-                  "features",
-                  "translation",
-                  "localisation"
-                ],
+                "tags": ["features", "translation", "localisation"],
                 "excerpt": "Because Localisation is not something you want to simply bolt onto a website at the end.\n\nUsers will do that themselves if they cared enough about reading anything you have written. Which they don't. "
               }
             ]
@@ -109,9 +95,7 @@
             "order": 20,
             "icon": "products",
             "type": "folder",
-            "tags": [
-              "products"
-            ],
+            "tags": ["products"],
             "excerpt": "",
             "children": []
           },
@@ -145,13 +129,7 @@
             "order": 50,
             "icon": "doc",
             "type": "file",
-            "tags": [
-              "features",
-              "translation",
-              "localisation",
-              "jobs",
-              "doc"
-            ],
+            "tags": ["features", "translation", "localisation", "jobs", "doc"],
             "excerpt": "Fullstack JavaScript Developer\n\nChris Dorward is a seasoned developer with two decades of experience in web systems, now focused on React, TypeScript, and scalable app architecture. I’ve delivered wor"
           },
           {
@@ -168,10 +146,7 @@
                 "order": 25,
                 "icon": "doc",
                 "type": "file",
-                "tags": [
-                  "legal",
-                  "address"
-                ],
+                "tags": ["legal", "address"],
                 "excerpt": "Goldlabel Apps Ltd is a UK Limited Company (5460545)\n\n321323 High Road  \nChadwell Heath  \nEssex RM6 6AX"
               },
               {
@@ -180,10 +155,7 @@
                 "order": 190,
                 "icon": "work",
                 "type": "file",
-                "tags": [
-                  "remote",
-                  "hybrid"
-                ],
+                "tags": ["remote", "hybrid"],
                 "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years, due in large part to the COVID19 pandemic. Prior to the pandemic, many businesses were hesitant to allow employees to w"
               },
               {
@@ -192,13 +164,7 @@
                 "order": 750,
                 "icon": "account",
                 "type": "file",
-                "tags": [
-                  "cookies",
-                  "gdpr",
-                  "privacy",
-                  "terms",
-                  "trust"
-                ],
+                "tags": ["cookies", "gdpr", "privacy", "terms", "trust"],
                 "excerpt": "While cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers to explore alternative "
               },
               {
@@ -207,13 +173,7 @@
                 "order": 1000,
                 "icon": "account",
                 "type": "file",
-                "tags": [
-                  "cookies",
-                  "gdpr",
-                  "privacy",
-                  "terms",
-                  "trust"
-                ],
+                "tags": ["cookies", "gdpr", "privacy", "terms", "trust"],
                 "excerpt": "We don't use cookies\n\nPrivacy Statement\n\nWelcome to Goldlabel! We value your privacy and are committed to protecting your personal information. This privacy statement aims to provide clarity on how we"
               }
             ]

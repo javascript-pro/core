@@ -6,10 +6,10 @@ export const initialState: UbereduxState = {
   menuOpen: true,
   goodfit: {
     initted: false,
-    random: "dfakshdlhaskf",
+    random: 'dfakshdlhaskf',
   },
   speakwrite: {
     initted: false,
-    random: "dfak shdlhas   kf",
+    random: 'dfak shdlhas   kf',
   },
 };
