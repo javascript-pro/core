@@ -3,7 +3,6 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import {
-  Divider,
   Box,
   List,
   ListItemButton,
@@ -54,6 +53,7 @@ export default function ContextNav({
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
         <Grid size={{ xs: 12, md: 6 }}>
+          <Featured />
           <List dense>
             <ListItemButton onClick={() => handleItemClick({ route: '/' })}>
               <ListItemIcon>
@@ -95,14 +95,13 @@ export default function ContextNav({
         </Grid>
 
         <Grid size={{ xs: 12, md: 6 }}>
-          <Featured />
-          <Divider />
+          
           <List dense>
             <ListItemButton
               onClick={() => handleItemClick({ route: '/api/goldlabel' })}
             >
               <ListItemIcon>
-                <Icon icon="techstack" />
+                <Icon icon="api" color="primary" />
               </ListItemIcon>
               <ListItemText primary="API" />
             </ListItemButton>
@@ -111,7 +110,7 @@ export default function ContextNav({
               onClick={() => handleItemClick({ route: '/admin' })}
             >
               <ListItemIcon>
-                <Icon icon="admin" />
+                <Icon icon="admin" color="primary"/>
               </ListItemIcon>
               <ListItemText primary="Admin" />
             </ListItemButton>
@@ -120,7 +119,7 @@ export default function ContextNav({
               onClick={() => handleItemClick({ action: 'TOGGLE_DARKMODE' })}
             >
               <ListItemIcon>
-                <Icon icon={darkmode ? 'lightmode' : 'darkmode'} />
+                <Icon icon={darkmode ? 'lightmode' : 'darkmode'}  color="primary"/>
               </ListItemIcon>
               <ListItemText primary={darkmode ? 'Light Mode' : 'Dark Mode'} />
             </ListItemButton>

@@ -8,7 +8,6 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
-  Divider,
 } from '@mui/material';
 import { Icon } from '../';
 
@@ -38,7 +37,32 @@ export default function Featured({ featured = [] }: FeaturedProps) {
 
   return (
     <Box sx={{ mt: 0 }}>
-      {/* <Divider /> */}
+      
+      <List dense>
+        <ListItemButton
+          onClick={() => handleItemClick('/work/products/good-fit')}
+        >
+          <ListItemIcon sx={{ alignSelf: 'flex-start', mt: 1 }}>
+            <Icon icon={'good-fit'} color="primary"/>
+          </ListItemIcon>
+          <ListItemText
+            primary={'Good Fit?'}
+            secondary="Paste in a job description, get an instantly tailored CV"
+          />
+        </ListItemButton>
+        <ListItemButton
+          onClick={() => handleItemClick('/work/products/speak-write')}
+        >
+          <ListItemIcon sx={{ alignSelf: 'flex-start', mt: 1 }}>
+            <Icon icon={'speak-write'}  color="primary"/>
+          </ListItemIcon>
+          <ListItemText
+            primary={'SpeakWrite'}
+            secondary="Foreseen by Orwell in 1984, built by us for reals just now"
+          />
+        </ListItemButton>
+      </List>
+
       <List dense>
         {sorted.map(({ slug, frontmatter }) => {
           const { title, icon } = frontmatter;
@@ -54,31 +78,7 @@ export default function Featured({ featured = [] }: FeaturedProps) {
           );
         })}
       </List>
-      <Divider />
-      <List dense>
-        <ListItemButton
-          onClick={() => handleItemClick('/work/products/good-fit')}
-        >
-          <ListItemIcon sx={{ alignSelf: 'flex-start', mt: 1 }}>
-            <Icon icon={'good-fit'} />
-          </ListItemIcon>
-          <ListItemText
-            primary={'Good Fit?'}
-            secondary="Paste in a job description and our AI will judge if it's a good match. If it is, you’ll get a tailored CV you can download instantly"
-          />
-        </ListItemButton>
-        <ListItemButton
-          onClick={() => handleItemClick('/work/products/speak-write')}
-        >
-          <ListItemIcon sx={{ alignSelf: 'flex-start', mt: 1 }}>
-            <Icon icon={'speak-write'} />
-          </ListItemIcon>
-          <ListItemText
-            primary={'SpeakWrite'}
-            secondary="Foreseen by Orwell in 1984, built by us for reals just now"
-          />
-        </ListItemButton>
-      </List>
+    
     </Box>
   );
 }
