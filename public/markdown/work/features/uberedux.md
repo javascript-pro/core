@@ -1,10 +1,10 @@
 ---
-order: 50
-title: Flash
-description: In 2020, Adobe officially discontinued Flash and removed all download links for the Flash Player from their website
-slug: /work/features/flash
+order: 65
+title: Uberedux
+description: 
+slug: /work/features/uberedux
 icon: feature
-image: /jpg/githflashb.jpg
+image: /jpg/work.jpg
 featured: false
 ---
 > Flash, also known as Adobe Flash, was a multimedia software platform created by Macromedia and later acquired by Adobe.

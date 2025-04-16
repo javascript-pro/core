@@ -309,7 +309,16 @@
             "icon": "balance",
             "type": "folder",
             "excerpt": "Book 1. Weekend Portfolio\n\nAimed at semiprofessional coders who want to go pr0.\n\n Weekend 1\n\nIn this Weekend Portfolio project, you’ll build a compact and powerful app called mp3totext. The idea is si",
-            "children": []
+            "children": [
+              {
+                "title": "Wei Zang’s Food",
+                "slug": "balance/books/wei-zangs-food",
+                "order": 11,
+                "icon": "balance",
+                "type": "file",
+                "excerpt": "I never learned to cook. No one taught me. That’s why I’m good at it.\n\nPeople who are taught spend too long worrying about what’s “right.” I just watched, tasted, guessed. Like debugging something tha"
+              }
+            ]
           },
           {
             "title": "Generation X",
