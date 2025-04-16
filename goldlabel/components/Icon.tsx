@@ -112,10 +112,12 @@ import SitemapIcon from '@mui/icons-material/AccountTree';
 import GoodfitIcon from '@mui/icons-material/InterpreterMode';
 import SpeakwriteIcon from '@mui/icons-material/KeyboardVoice';
 import ProductsIcon from '@mui/icons-material/Store';
+import UbereduxIcon from '@mui/icons-material/StorageOutlined';
 
 export type IconShape = {
   icon:
     | 'account'
+    | 'uberedux'
     | 'good-fit'
     | 'products'
     | 'speak-write'
@@ -254,6 +256,12 @@ export default function Icon({ icon, color }: IconShape) {
     case 'design':
       iconFragment = <DesignIcon color={color} />;
       break;
+
+      case 'uberedux':
+        iconFragment = <UbereduxIcon color={color} />;
+        break;
+
+
     case 'forget':
       iconFragment = <ForgetIcon color={color} />;
       break;

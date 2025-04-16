@@ -61,9 +61,20 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
             primary: themeValues.text,
           },
         },
+        components: {
+          MuiButton: {
+            styleOverrides: {
+              containedPrimary: {
+                fontWeight: "bold",
+                color: '#fff', // force light text on primary buttons
+              },
+            },
+          },
+        },
       }),
     [mode, themeValues],
   );
+  
 
   const handleToggleMenu = () => setMenuOpen(!menuOpen);
 

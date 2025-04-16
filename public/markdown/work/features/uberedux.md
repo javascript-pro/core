@@ -3,31 +3,41 @@ order: 65
 title: Uberedux
 description:
 slug: /work/features/uberedux
-icon: feature
-image: /jpg/work.jpg
-featured: false
+icon: uberedux
+image: /jpg/uberedux.jpg
+featured: true
 ---
 
-> Flash, also known as Adobe Flash, was a multimedia software platform created by Macromedia and later acquired by Adobe.
+> Top 3 reasons Redux still makes sense
 
-It was widely used on the web to create interactive animations, games, audio and video players, and various other rich media content. Flash content was delivered through browser plugins, allowing users to view and interact with the multimedia elements embedded in web pages.
+#### 1. **Cross-Page UI State (especially in Admin Mode)**  
+Goldlabel Core is meant to feel like a unified experience across public and private views. Redux helps:
 
-However, Flash began to face several issues that eventually led to its decline and eventual discontinuation:
+- sync global UI state like sidebar open/closed  
+- manage toast queues, modals, and snackbars  
+- coordinate things like edit mode, preview state, or selected nav item across routes
 
-1. Security vulnerabilities: Flash had a long history of security flaws, making it a prime target for hackers and malicious software. Frequent security updates were required to patch vulnerabilities, creating concerns for users' data and system security.
+This is especially important if we’re using the App Router pattern with layouts and async components. You want state that doesn’t get wiped just because a user navigated.
 
-2. Performance issues: Flash content often consumed a significant amount of system resources, leading to slow-loading web pages and negatively impacting the user experience.
 
-3. Closed and proprietary technology: Flash was a closed platform, controlled by Adobe. This limited the ability of the web community to contribute to its development, leading to a lack of innovation and standardization.
+#### 2. **Real-Time Firestore Sync with Flexibility**  
+We’ll be pulling in data from Firestore — some of it for public routes, some for admin-only routes. With Redux, we can:
 
-4. Mobile devices and accessibility: Flash content was not supported on iOS devices (iPhone and iPad) and several other mobile platforms. As more users shifted to mobile devices, Flash became increasingly irrelevant.
+- store Firestore docs in slices (e.g. `pages`, `apps`, `users`)  
+- layer in loading/error state management  
+- optionally cache results or subscribe to updates via listeners
 
-5. Battery life and overheating: Running Flash content on mobile devices often resulted in excessive battery drain and device overheating, further adding to its unpopularity on mobile platforms.
+That’s much cleaner than managing everything with `useEffect` + local state in each component.
 
-6. Emergence of HTML5: HTML5, along with CSS3 and JavaScript, emerged as a viable alternative to Flash for creating interactive web content. HTML5 provided native support for multimedia elements, eliminating the need for third-party plugins like Flash.
+---
 
-7. Industry support: Major tech companies, including Apple and Google, openly criticized Flash and pushed for HTML5 adoption. As a result, browser support for Flash gradually diminished.
+#### 3. **Shared Auth-Driven State Across the App**  
+Goldlabel Core will use Firebase Auth + Firestore roles. Once a user logs in, their session should:
 
-In response to these issues and the rise of HTML5, Adobe officially announced the end of support for Flash in 2017. Major web browsers also started to phase out support for Flash, further accelerating its decline. By the end of 2020, Adobe officially discontinued Flash and removed all download links for the Flash Player from their website.
+- populate a user profile (`uid`, `role`, etc.)  
+- grant permissions to edit/create content  
+- unlock admin UI elements conditionally
 
-Modern web applications now rely on open web standards such as HTML5, CSS3, and JavaScript, which offer better security, performance, accessibility, and compatibility across a wide range of devices. With the advent of these web technologies, there is no longer a need for proprietary plugins like Flash, and its use has been almost entirely replaced by more modern and efficient alternatives.
+That logic is best held in Redux so it’s available everywhere — not just the auth context. This also gives you flexibility to override per-component logic based on state.
+
+So yeah — **Redux gives Goldlabel Core structure and control**, especially when it evolves into a more complex app with editable pages, nested routes, and real-time content management.
