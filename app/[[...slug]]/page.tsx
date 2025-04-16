@@ -41,11 +41,11 @@ export default async function CatchAllPage({ params }: any) {
     return <Uberedux />;
   }
 
-  if (slugPath === '/examples/good-fit') {
+  if (slugPath === '/work/products/good-fit') {
     return <GoodFit />;
   }
 
-  if (slugPath === '/examples/speak-write') {
+  if (slugPath === '/work/products/speak-write') {
     return <SpeakWrite />;
   }
 

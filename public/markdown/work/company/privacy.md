@@ -1,12 +1,14 @@
 ---
 order: 1000
 title: Privacy
-description: We don't use cookies
+description: Your trust means everything to us
 slug: /work/company/privacy
 icon: account
-image: /jpg/goldlabel.jpg
+image: /jpg/work.jpg
 tags: cookies, gdpr, privacy, terms, trust
 ---
+
+> We don't use cookies
 
 **Privacy Statement**
 

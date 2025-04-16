@@ -31,14 +31,6 @@
         "excerpt": "Software built in the open.  \nEvery app we ship is real, running in production, and developed in public.\n\n Active Projects\n\n SpeakWrite\n\nTurn your voice into a complete media kit.  \nUpload a short spe",
         "children": [
           {
-            "title": "Core",
-            "slug": "work/core",
-            "order": 20,
-            "icon": "doc",
-            "type": "file",
-            "excerpt": "Goldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo architecture with multiple Next.js a"
-          },
-          {
             "title": "Features",
             "slug": "work/features",
             "order": 20,
@@ -48,15 +40,23 @@
               "features",
               "authentication"
             ],
-            "excerpt": "Fast, staticfirst Next.js. Powerful, userfriendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience\n\n Authentication\n\nAuth is part of Goldlabel’",
+            "excerpt": "Approach a large thing by doing a small thing and trying not to think about how large it is. Depends on your sense of time. Mine's pretty abnormal, but how about trying one weekend at a time?\n\n Authen",
             "children": [
               {
-                "title": "Speak Write",
-                "slug": "work/features/speakwrite",
-                "order": 30,
-                "icon": "feature",
+                "title": "Core",
+                "slug": "work/features/core",
+                "order": 20,
+                "icon": "doc",
                 "type": "file",
-                "excerpt": "Foreseen by Orwell in 1984, built for reals just now. By us. Out of our heads\n\nApproach a large thing by doing a small thing and trying not to think about how large it is. Depends on your sense of tim"
+                "excerpt": "Goldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo architecture with multiple Next.js a"
+              },
+              {
+                "title": "Speak Write",
+                "slug": "work/features/speak-write",
+                "order": 30,
+                "icon": "speak-write",
+                "type": "file",
+                "excerpt": "Foreseen by Orwell in 1984, built for reals just now. By us. Out of our heads"
               },
               {
                 "title": "Flash",
@@ -70,7 +70,7 @@
                 "title": "Good Fit?",
                 "slug": "work/features/good-fit",
                 "order": 55,
-                "icon": "feature",
+                "icon": "good-fit",
                 "type": "file",
                 "tags": [
                   "features",
@@ -79,6 +79,14 @@
                   "jobs"
                 ],
                 "excerpt": "Is your job a Good Fit?\n\nThis simple AI tool will tell you in seconds. Paste in a job description and our AI will judge if it's a good match. If it is, you’ll get a tailored CV you can download instan"
+              },
+              {
+                "title": "Uberedux",
+                "slug": "work/features/uberedux",
+                "order": 65,
+                "icon": "feature",
+                "type": "file",
+                "excerpt": "Flash, also known as Adobe Flash, was a multimedia software platform created by Macromedia and later acquired by Adobe.\n\nIt was widely used on the web to create interactive animations, games, audio an"
               },
               {
                 "title": "Lingua",
@@ -94,6 +102,18 @@
                 "excerpt": "Because Localisation is not something you want to simply bolt onto a website at the end.\n\nUsers will do that themselves if they cared enough about reading anything you have written. Which they don't. "
               }
             ]
+          },
+          {
+            "title": "Products",
+            "slug": "work/products",
+            "order": 20,
+            "icon": "products",
+            "type": "folder",
+            "tags": [
+              "products"
+            ],
+            "excerpt": "",
+            "children": []
           },
           {
             "title": "Fullstack",
@@ -135,33 +155,6 @@
             "excerpt": "Fullstack JavaScript Developer\n\nChris Dorward is a seasoned developer with two decades of experience in web systems, now focused on React, TypeScript, and scalable app architecture. I’ve delivered wor"
           },
           {
-            "title": "Remote working",
-            "slug": "work/remote-working",
-            "order": 190,
-            "icon": "work",
-            "type": "file",
-            "tags": [
-              "remote",
-              "hybrid"
-            ],
-            "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years, due in large part to the COVID19 pandemic. Prior to the pandemic, many businesses were hesitant to allow employees to w"
-          },
-          {
-            "title": "Privacy",
-            "slug": "work/privacy",
-            "order": 1000,
-            "icon": "account",
-            "type": "file",
-            "tags": [
-              "cookies",
-              "gdpr",
-              "privacy",
-              "terms",
-              "trust"
-            ],
-            "excerpt": "We don't use cookies\n\nPrivacy Statement\n\nWelcome to Goldlabel! We value your privacy and are committed to protecting your personal information. This privacy statement aims to provide clarity on how we"
-          },
-          {
             "title": "UK Ltd Company",
             "slug": "work/company",
             "order": 2000,
@@ -180,6 +173,18 @@
                   "address"
                 ],
                 "excerpt": "Goldlabel Apps Ltd is a UK Limited Company (5460545)\n\n321323 High Road  \nChadwell Heath  \nEssex RM6 6AX"
+              },
+              {
+                "title": "Remote working",
+                "slug": "work/company/remote-working",
+                "order": 190,
+                "icon": "work",
+                "type": "file",
+                "tags": [
+                  "remote",
+                  "hybrid"
+                ],
+                "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years, due in large part to the COVID19 pandemic. Prior to the pandemic, many businesses were hesitant to allow employees to w"
               },
               {
                 "title": "Cookies",
@@ -209,7 +214,7 @@
                   "terms",
                   "trust"
                 ],
-                "excerpt": "Privacy Statement\n\nWelcome to Goldlabel! We value your privacy and are committed to protecting your personal information. This privacy statement aims to provide clarity on how we collect, use, and saf"
+                "excerpt": "We don't use cookies\n\nPrivacy Statement\n\nWelcome to Goldlabel! We value your privacy and are committed to protecting your personal information. This privacy statement aims to provide clarity on how we"
               }
             ]
           }
@@ -309,7 +314,16 @@
             "icon": "balance",
             "type": "folder",
             "excerpt": "Book 1. Weekend Portfolio\n\nAimed at semiprofessional coders who want to go pr0.\n\n Weekend 1\n\nIn this Weekend Portfolio project, you’ll build a compact and powerful app called mp3totext. The idea is si",
-            "children": []
+            "children": [
+              {
+                "title": "Wei Zang’s Food",
+                "slug": "balance/books/wei-zangs-food",
+                "order": 11,
+                "icon": "food",
+                "type": "file",
+                "excerpt": "I never learned to cook. No one taught me. That’s why I can tell you about it.\n\nPeople who are taught spend too long worrying about what’s “right.” I just ate what I liked, cooked it, guessed. Like de"
+              }
+            ]
           },
           {
             "title": "Generation X",

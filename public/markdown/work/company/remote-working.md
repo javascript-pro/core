@@ -2,7 +2,7 @@
 order: 190
 title: Remote working
 description: Productivity, communication, and collaboration
-slug: /work/remote-working
+slug: /work/company/remote-working
 icon: work
 image: /jpg/work.jpg
 tags: remote, hybrid

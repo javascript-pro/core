@@ -109,9 +109,16 @@ import DesignIcon from '@mui/icons-material/PaletteOutlined';
 import FeatureIcon from '@mui/icons-material/RocketLaunchOutlined';
 import SitemapIcon from '@mui/icons-material/AccountTree';
 
+import GoodfitIcon from '@mui/icons-material/InterpreterMode';
+import SpeakwriteIcon from '@mui/icons-material/KeyboardVoice';
+import ProductsIcon from '@mui/icons-material/Store';
+
 export type IconShape = {
   icon:
     | 'account'
+    | 'good-fit'
+    | 'products'
+    | 'speak-write'
     | 'admin'
     | 'company'
     | 'feature'
@@ -609,6 +616,17 @@ export default function Icon({ icon, color }: IconShape) {
     case 'sitemap':
       iconFragment = <SitemapIcon color={color} />;
       break;
+    case 'good-fit':
+      iconFragment = <GoodfitIcon color={color} />;
+      break;
+
+    case 'products':
+      iconFragment = <ProductsIcon color={color} />;
+      break;
+    case 'speak-write':
+      iconFragment = <SpeakwriteIcon color={color} />;
+      break;
+
     default:
       iconFragment = <ErrorIcon color={'warning'} />;
   }
