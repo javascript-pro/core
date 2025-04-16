@@ -3,7 +3,7 @@ order: 11
 title: Wei Zang’s Food
 description: 魏藏美食
 slug: /balance/books
-icon: balance
+icon: food
 image: /jpg/wei-zangs-food.jpg
 featured: true
 epub: wei-zangs-food.epub

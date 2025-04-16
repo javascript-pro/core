@@ -19,12 +19,14 @@ import {
 
 type ContextNavProps = {
   onClose?: () => void;
+  featured: any
 };
 
 export default function ContextNav({
   onClose = () => {
     console.log('No onClose found');
   },
+  featured,
 }: ContextNavProps) {
   const router = useRouter();
   const [darkmode, setDarkmode] = useKey('darkmode');
@@ -91,12 +93,7 @@ export default function ContextNav({
               </ListItemIcon>
               <ListItemText primary="Sitemap" />
             </ListItemButton>
-
-
           </List>
-
-
-
         </Grid>
 
         <Grid size={{ xs: 12, md: 6 }}>

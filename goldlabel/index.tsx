@@ -11,6 +11,8 @@ import ContextNav from './components/ContextNav';
 import Advert from './components/Advert';
 import FolderContents from './components/FolderContents';
 import Featured from './components/Featured';
+import VoiceRecorder from './components/VoiceRecorder';
+
 
 export {
   Home,
@@ -25,6 +27,7 @@ export {
   Sitemap,
   PopupMenu,
   Featured,
+  VoiceRecorder,
 };
 
 export type { IconShape };

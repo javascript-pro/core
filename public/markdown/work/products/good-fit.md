@@ -2,8 +2,8 @@
 order: 55
 title: Good Fit?
 description: An example AI tool
-slug: /work/features/good-fit
-icon: feature
+slug: /work/products/good-fit
+icon: good-fit
 image: /jpg/good-fit.jpg
 tags: features, translation, localisation, jobs
 featured: false

@@ -21,13 +21,14 @@ import { Icon, ContextNav } from '../';
 type PopupMenuProps = {
   open?: boolean;
   onClose?: () => void;
-  globalNav: any;
+  featured?: any;
+  globalNav?: any;
 };
 
 export default function PopupMenu({
   open,
   onClose,
-  globalNav,
+  featured,
 }: PopupMenuProps) {
   const theme = useTheme();
 
@@ -56,7 +57,7 @@ export default function PopupMenu({
         />
       </DialogTitle>
       <DialogContent>
-        <ContextNav onClose={onClose} />
+        <ContextNav onClose={onClose} featured={featured}/>
       </DialogContent>
       <DialogActions>
         <ListItemButton onClick={onClose}>
