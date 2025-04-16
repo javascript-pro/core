@@ -65,7 +65,7 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
           MuiButton: {
             styleOverrides: {
               containedPrimary: {
-                fontWeight: "bold",
+                fontWeight: 'bold',
                 color: '#fff', // force light text on primary buttons
               },
             },
@@ -74,7 +74,6 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
       }),
     [mode, themeValues],
   );
-  
 
   const handleToggleMenu = () => setMenuOpen(!menuOpen);
 

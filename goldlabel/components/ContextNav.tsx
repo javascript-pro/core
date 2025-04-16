@@ -99,6 +99,15 @@ export default function ContextNav({
           <Divider />
           <List dense>
             <ListItemButton
+              onClick={() => handleItemClick({ route: '/api/goldlabel' })}
+            >
+              <ListItemIcon>
+                <Icon icon="techstack" />
+              </ListItemIcon>
+              <ListItemText primary="API" />
+            </ListItemButton>
+
+            <ListItemButton
               onClick={() => handleItemClick({ route: '/admin' })}
             >
               <ListItemIcon>
@@ -120,18 +129,9 @@ export default function ContextNav({
               onClick={() => handleItemClick({ route: '/uberedux' })}
             >
               <ListItemIcon>
-                <Icon icon="js" />
+                <Icon icon="uberedux" color="primary" />
               </ListItemIcon>
               <ListItemText primary="Uberedux" />
-            </ListItemButton>
-
-            <ListItemButton
-              onClick={() => handleItemClick({ route: '/api/goldlabel' })}
-            >
-              <ListItemIcon>
-                <Icon icon="techstack" />
-              </ListItemIcon>
-              <ListItemText primary="API" />
             </ListItemButton>
           </List>
         </Grid>

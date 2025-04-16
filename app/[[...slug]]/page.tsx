@@ -6,16 +6,9 @@ import fs from 'fs/promises';
 import { loadMarkdown, getMarkdownTree } from '#/lib/loadMarkdown';
 import { FolderPage, FilePage, Sitemap } from '#/goldlabel';
 import { getFeatured } from '../../lib/getFeatured';
-// import { Uberedux, GoodFit, SpeakWrite } from '../../goldlabel/features';
 import { Uberedux } from '../../goldlabel/features/Uberedux';
-import { GoodFit } from '../../goldlabel/features/GoodFit';
-import { SpeakWrite } from '../../goldlabel/features/SpeakWrite';
-
-// export interface PageProps {
-//   params: {
-//     slug?: string[];
-//   };
-// }
+import { GoodFit } from '../../goldlabel/products/GoodFit';
+import { SpeakWrite } from '../../goldlabel/products/SpeakWrite';
 
 export default async function CatchAllPage({ params }: any) {
   // Make sure to check for undefined and coerce to array
@@ -31,6 +24,7 @@ export default async function CatchAllPage({ params }: any) {
   } catch (err) {
     console.error('Failed to load globalNav.json:', err);
   }
+  /* Special cases */
 
   if (slugPath === '/sitemap') {
     return <Sitemap globalNav={globalNav} openTopLevelByDefault={10} />;

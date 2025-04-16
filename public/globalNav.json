@@ -62,9 +62,9 @@
                 "title": "Uberedux",
                 "slug": "work/features/uberedux",
                 "order": 65,
-                "icon": "feature",
+                "icon": "uberedux",
                 "type": "file",
-                "excerpt": "Flash, also known as Adobe Flash, was a multimedia software platform created by Macromedia and later acquired by Adobe.\n\nIt was widely used on the web to create interactive animations, games, audio an"
+                "excerpt": "Top 3 reasons Redux still makes sense\n\n 1. CrossPage UI State (especially in Admin Mode)\n\nGoldlabel Core is meant to feel like a unified experience across public and private views. Redux helps:\n\n sync"
               },
               {
                 "title": "Lingua",
