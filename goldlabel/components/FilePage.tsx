@@ -78,7 +78,6 @@ export default function FilePage({ content, featured }: FilePageProps) {
               </CardContent>
             </Box>
             <Box sx={{ maxWidth: 300 }}>
-              
               <FolderContents />
               <Featured featured={featured} />
             </Box>

@@ -8,7 +8,8 @@ image: /jpg/good-fit.jpg
 tags: features, translation, localisation, jobs, doc
 featured: false
 ---
-## Fullstack JavaScript Developer  
+
+## Fullstack JavaScript Developer
 
 Chris Dorward is a seasoned developer with two decades of experience in web systems, now focused on React, TypeScript, and scalable app architecture. I’ve delivered work for startups corporates, and remote-first teams across the UK,
 
@@ -16,7 +17,7 @@ Europe, and Australia. I’m happiest building performant UIs and robust integra
 
 ## Profile
 
-Senior JavaScript Developer with over 20 years of experience and a deep focus on modern React architecture, systems design, and DevOps. Proven success delivering React/Redux applications with robust CI/CD pipelines, containerisation, and scalable architecture. 
+Senior JavaScript Developer with over 20 years of experience and a deep focus on modern React architecture, systems design, and DevOps. Proven success delivering React/Redux applications with robust CI/CD pipelines, containerisation, and scalable architecture.
 
 Strong track record in remote contract roles and hybrid teams using TypeScript, Redux-Saga, Docker, and GraphQL. Equally comfortable debugging code, mentoring engineers, or discussing systems strategy with stakeholders.
 

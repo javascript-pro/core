@@ -3,6 +3,7 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import {
+  Divider,
   Box,
   List,
   ListItemButton,
@@ -12,6 +13,9 @@ import {
 } from '@mui/material';
 import { Icon } from '../';
 import { useKey } from '../../goldlabel/features/Uberedux';
+import {
+  Featured,
+} from '../'
 
 type ContextNavProps = {
   onClose?: () => void;
@@ -24,10 +28,6 @@ export default function ContextNav({
 }: ContextNavProps) {
   const router = useRouter();
   const [darkmode, setDarkmode] = useKey('darkmode');
-
-  const closePopupMenu = () => {
-    return null;
-  };
 
   const handleItemClick = (clickObj: { route?: string; action?: string }) => {
     if (clickObj.route) {
@@ -53,10 +53,8 @@ export default function ContextNav({
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
-
         <Grid size={{ xs: 12, md: 6 }}>
           <List dense>
-            
             <ListItemButton onClick={() => handleItemClick({ route: '/' })}>
               <ListItemIcon>
                 <Icon icon="home" />
@@ -84,21 +82,6 @@ export default function ContextNav({
               </ListItemIcon>
               <ListItemText primary="Balance" />
             </ListItemButton>
-            
-          </List>
-        </Grid>
-
-        <Grid size={{ xs: 12, md: 6 }}>
-          <List dense>
-
-            <ListItemButton
-              onClick={() => handleItemClick({ route: '/admin' })}
-            >
-              <ListItemIcon>
-                <Icon icon="admin" />
-              </ListItemIcon>
-              <ListItemText primary="Admin" />
-            </ListItemButton>
 
             <ListItemButton
               onClick={() => handleItemClick({ route: '/sitemap' })}
@@ -107,6 +90,26 @@ export default function ContextNav({
                 <Icon icon="sitemap" />
               </ListItemIcon>
               <ListItemText primary="Sitemap" />
+            </ListItemButton>
+
+
+          </List>
+
+
+
+        </Grid>
+
+        <Grid size={{ xs: 12, md: 6 }}>
+          <Featured />
+          <Divider />
+          <List dense>
+            <ListItemButton
+              onClick={() => handleItemClick({ route: '/admin' })}
+            >
+              <ListItemIcon>
+                <Icon icon="admin" />
+              </ListItemIcon>
+              <ListItemText primary="Admin" />
             </ListItemButton>
 
             <ListItemButton
@@ -118,38 +121,26 @@ export default function ContextNav({
               <ListItemText primary={darkmode ? 'Light Mode' : 'Dark Mode'} />
             </ListItemButton>
 
-
             <ListItemButton
               onClick={() => handleItemClick({ route: '/uberedux' })}
             >
               <ListItemIcon>
-                <Icon icon="feature" />
+                <Icon icon="js" />
               </ListItemIcon>
               <ListItemText primary="Uberedux" />
             </ListItemButton>
 
-            <ListItemButton
-              onClick={() => handleItemClick({ route: '/good-fit' })}
-            >
-              <ListItemIcon>
-                <Icon icon="feature" />
-              </ListItemIcon>
-              <ListItemText primary="Good Fit?" />
-            </ListItemButton>
 
             <ListItemButton
               onClick={() => handleItemClick({ route: '/api/goldlabel' })}
             >
               <ListItemIcon>
-                <Icon icon="feature" />
+                <Icon icon="techstack" />
               </ListItemIcon>
               <ListItemText primary="API" />
             </ListItemButton>
-
           </List>
         </Grid>
-
-
       </Grid>
     </Box>
   );

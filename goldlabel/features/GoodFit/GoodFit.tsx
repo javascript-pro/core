@@ -51,13 +51,15 @@ export default function GoodFit() {
   return (
     <Card>
       <CardHeader
-        avatar={<Avatar src="/svg/good-fit.svg" alt="Good Fit?"/>}
+        avatar={<Avatar src="/svg/good-fit.svg" alt="Good Fit?" />}
         title="Good Fit?"
         subheader="Paste your job description to find out"
       />
       <CardContent>
         <Typography paragraph>
-          Paste a job description and get instant feedback on how well our skills and experience match what you're looking for.You can download a automatically tailored CV
+          Paste a job description and get instant feedback on how well our
+          skills and experience match what you're looking for.You can download a
+          automatically tailored CV
         </Typography>
 
         <TextField

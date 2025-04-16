@@ -6,7 +6,7 @@ const withPWA = require('next-pwa')({
 });
 
 const nextConfig = {
-  // Your existing config here
+  devIndicators: false,
 };
 
 module.exports = withPWA(nextConfig);

@@ -6,18 +6,24 @@ import fs from 'fs/promises';
 import { loadMarkdown, getMarkdownTree } from '#/lib/loadMarkdown';
 import { FolderPage, FilePage, Sitemap } from '#/goldlabel';
 import { getFeatured } from '../../lib/getFeatured';
-import { 
-  Uberedux,
-} from '../../goldlabel/features/Uberedux'
-import { 
-  GoodFit,
-} from '../../goldlabel/features/GoodFit'
+// import { Uberedux, GoodFit, SpeakWrite } from '../../goldlabel/features';
+import { Uberedux } from '../../goldlabel/features/Uberedux';
+import { GoodFit } from '../../goldlabel/features/GoodFit';
+import { SpeakWrite } from '../../goldlabel/features/SpeakWrite';
 
+// export interface PageProps {
+//   params: {
+//     slug?: string[];
+//   };
+// }
 
 export default async function CatchAllPage({ params }: any) {
-  const slugArray = Array.isArray(params?.slug) ? params.slug : [];
+
+  // Make sure to check for undefined and coerce to array
+  const slugArray = await params?.slug ?? [];
   const slugPath = '/' + slugArray.join('/');
 
+  // Load global nav
   const navPath = path.join(process.cwd(), 'public/globalNav.json');
   let globalNav = null;
   try {
@@ -32,11 +38,15 @@ export default async function CatchAllPage({ params }: any) {
   }
 
   if (slugPath === '/uberedux') {
-    return <Uberedux />
+    return <Uberedux />;
   }
 
-  if (slugPath === '/good-fit') {
-    return <GoodFit />
+  if (slugPath === '/examples/good-fit') {
+    return <GoodFit />;
+  }
+
+  if (slugPath === '/examples/speak-write') {
+    return <SpeakWrite />;
   }
 
   const markdown = await loadMarkdown(slugPath);
@@ -48,6 +58,7 @@ export default async function CatchAllPage({ params }: any) {
     );
   }
 
+  // Try to load as folder
   const folderPath = path.join(process.cwd(), 'public/markdown', ...slugArray);
   try {
     const stat = await fs.stat(folderPath);

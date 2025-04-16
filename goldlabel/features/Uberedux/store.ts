@@ -4,7 +4,7 @@ import { configureStore, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { combineReducers } from 'redux';
-import { initialState } from './initialState'
+import { initialState } from './initialState';
 
 export interface UbereduxState {
   darkmode: boolean;
@@ -43,7 +43,8 @@ export const store = configureStore({
 
 export const persistor = persistStore(store);
 
-export const { setReduxKey } = reduxSlice.actions;
+// export const { setReduxKey } = reduxSlice.actions;
+export const setReduxKey = reduxSlice.actions.setReduxKey;
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

@@ -50,8 +50,8 @@ export default function PopupMenu({
       }}
     >
       <DialogTitle>
-        <CardHeader 
-          avatar={<Avatar src={"/svg/favicon_nobg.svg"}/>}
+        <CardHeader
+          avatar={<Avatar src={'/svg/favicon_nobg.svg'} />}
           title="Goldlabel Menu"
         />
       </DialogTitle>

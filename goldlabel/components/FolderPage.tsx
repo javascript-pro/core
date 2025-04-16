@@ -86,7 +86,6 @@ export default function FolderPage({
               )}
             </Box>
             <Box sx={{ maxWidth: 300 }}>
-              
               <FolderContents />
               <Featured featured={featured} />
             </Box>
@@ -94,7 +93,7 @@ export default function FolderPage({
         ) : (
           <Box>
             {content && <ReactMarkdown>{content}</ReactMarkdown>}
-            
+
             <FolderContents />
             <Featured featured={featured} />
           </Box>

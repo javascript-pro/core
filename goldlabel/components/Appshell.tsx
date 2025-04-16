@@ -78,7 +78,7 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
       />
 
       {/* Main Content Area */}
-      <Container maxWidth="md" sx={{ mt:2 }}>
+      <Container maxWidth="md" sx={{ mt: 2 }}>
         <Box sx={{ pb: '50px' }}>
           {children && <Box sx={{ p: 0 }}>{children}</Box>}
         </Box>
@@ -99,19 +99,19 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
           <Toolbar>
             <StyledFab
               color="secondary"
-              sx={{ 
-                boxShadow: 0, 
-                border: '2px solid ' + themeValues.border 
+              sx={{
+                boxShadow: 0,
+                border: '2px solid ' + themeValues.border,
               }}
               onClick={handleToggleMenu}
-              aria-label="Goldlabel Menu">
-              <Avatar src={config.favicon}/>
+              aria-label="Goldlabel Menu"
+            >
+              <Avatar src={config.favicon} />
             </StyledFab>
             <Box sx={{ flexGrow: 1 }} />
           </Toolbar>
         </Container>
       </AppBar>
-
     </ThemeProvider>
   );
 }
