@@ -7,6 +7,7 @@ icon: speak-write
 image: /jpg/speak-write.jpg
 featured: false
 ---
+
 > Foreseen by Orwell in 1984, built for reals just now. By us. Out of our heads
 
 Sure thing, here's a draft of the **SpeakWrite** landing page copy, in clean "web voice" — modern, crisp, and focused on clarity, not hype:
@@ -20,29 +21,29 @@ SpeakWrite turns your voice into a complete, ready-to-post content kit — power
 ### How it works
 
 1. **Record or Upload**  
-Capture your voice. Just talk — the way you would in a meeting, a pitch, or a podcast.
+   Capture your voice. Just talk — the way you would in a meeting, a pitch, or a podcast.
 
 2. **Transcribe**  
-SpeakWrite uses Whisper by OpenAI to generate accurate, fast transcripts.
+   SpeakWrite uses Whisper by OpenAI to generate accurate, fast transcripts.
 
 3. **Edit & Enhance**  
-Tweak the transcript. Add context, links, or a punchline.
+   Tweak the transcript. Add context, links, or a punchline.
 
 4. **Generate Assets**  
-AI writes your headline, social copy, and Open Graph image. Everything is zipped and ready to go.
+   AI writes your headline, social copy, and Open Graph image. Everything is zipped and ready to go.
 
 ### Why SpeakWrite?
 
-- Built for creators, founders, marketers, and indie hackers  
-- No setup, no fluff — just hit record  
-- Saves time, cuts friction, gets you published faster  
+- Built for creators, founders, marketers, and indie hackers
+- No setup, no fluff — just hit record
+- Saves time, cuts friction, gets you published faster
 
 ### What you get
 
-- Social-ready transcript  
-- Title and meta description  
-- X/Twitter post copy  
-- Open Graph image  
+- Social-ready transcript
+- Title and meta description
+- X/Twitter post copy
+- Open Graph image
 - Downloadable zip file
 
 ### Get started

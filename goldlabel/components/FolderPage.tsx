@@ -1,5 +1,5 @@
 'use client';
-
+import * as React from 'react';
 import {
   Box,
   CardHeader,
@@ -86,16 +86,17 @@ export default function FolderPage({
               )}
             </Box>
             <Box sx={{ maxWidth: 300 }}>
-              <FolderContents />
               <Featured featured={featured} />
+              <FolderContents />
+              
             </Box>
           </Box>
         ) : (
           <Box>
             {content && <ReactMarkdown>{content}</ReactMarkdown>}
-
-            <FolderContents />
             <Featured featured={featured} />
+            <FolderContents />
+            
           </Box>
         )}
       </Box>

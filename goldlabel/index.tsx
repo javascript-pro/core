@@ -13,7 +13,6 @@ import FolderContents from './components/FolderContents';
 import Featured from './components/Featured';
 import VoiceRecorder from './components/VoiceRecorder';
 
-
 export {
   Home,
   Advert,

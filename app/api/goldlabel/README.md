@@ -1,6 +1,5 @@
 Example JD
 
-
 ```
 Front End JavaScript Developer (React)
 Remote £40,000-£50,000

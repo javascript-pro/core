@@ -51,14 +51,6 @@
                 "excerpt": "Goldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo architecture with multiple Next.js a"
               },
               {
-                "title": "Speak Write",
-                "slug": "work/features/speak-write",
-                "order": 30,
-                "icon": "speak-write",
-                "type": "file",
-                "excerpt": "Foreseen by Orwell in 1984, built for reals just now. By us. Out of our heads"
-              },
-              {
                 "title": "Flash",
                 "slug": "work/features/flash",
                 "order": 50,
@@ -67,26 +59,12 @@
                 "excerpt": "Flash, also known as Adobe Flash, was a multimedia software platform created by Macromedia and later acquired by Adobe.\n\nIt was widely used on the web to create interactive animations, games, audio an"
               },
               {
-                "title": "Good Fit?",
-                "slug": "work/features/good-fit",
-                "order": 55,
-                "icon": "good-fit",
-                "type": "file",
-                "tags": [
-                  "features",
-                  "translation",
-                  "localisation",
-                  "jobs"
-                ],
-                "excerpt": "Is your job a Good Fit?\n\nThis simple AI tool will tell you in seconds. Paste in a job description and our AI will judge if it's a good match. If it is, you’ll get a tailored CV you can download instan"
-              },
-              {
                 "title": "Uberedux",
                 "slug": "work/features/uberedux",
                 "order": 65,
-                "icon": "feature",
+                "icon": "uberedux",
                 "type": "file",
-                "excerpt": "Flash, also known as Adobe Flash, was a multimedia software platform created by Macromedia and later acquired by Adobe.\n\nIt was widely used on the web to create interactive animations, games, audio an"
+                "excerpt": "Top 3 reasons Redux still makes sense\n\n 1. CrossPage UI State (especially in Admin Mode)\n\nGoldlabel Core is meant to feel like a unified experience across public and private views. Redux helps:\n\n sync"
               },
               {
                 "title": "Lingua",
@@ -112,8 +90,31 @@
             "tags": [
               "products"
             ],
-            "excerpt": "",
-            "children": []
+            "excerpt": "Paste a job description and get instant feedback on how well our skills and experience match what you're looking for. You can download an automatically tailored CV.\n\n \n\n Foreseen by Orwell in 1984, bu",
+            "children": [
+              {
+                "title": "Speak Write",
+                "slug": "work/products/speak-write",
+                "order": 30,
+                "icon": "speak-write",
+                "type": "file",
+                "excerpt": "Foreseen by Orwell in 1984, built for reals just now. By us. Out of our heads\n\nSure thing, here's a draft of the SpeakWrite landing page copy, in clean \"web voice\" — modern, crisp, and focused on clar"
+              },
+              {
+                "title": "Good Fit?",
+                "slug": "work/products/good-fit",
+                "order": 55,
+                "icon": "good-fit",
+                "type": "file",
+                "tags": [
+                  "features",
+                  "translation",
+                  "localisation",
+                  "jobs"
+                ],
+                "excerpt": "Is your job a Good Fit?\n\nThis simple AI tool will tell you in seconds. Paste in a job description and our AI will judge if it's a good match. If it is, you’ll get a tailored CV you can download instan"
+              }
+            ]
           },
           {
             "title": "Fullstack",
