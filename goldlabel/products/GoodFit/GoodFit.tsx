@@ -4,7 +4,25 @@ import * as React from 'react';
 import { Box, Button, Grid, CardHeader, CardContent, TextField, Typography } from '@mui/material';
 import { Icon, VoiceRecorder } from '../../';
 
-export default function GoodFit() {
+export type Frontmatter = {
+  order?: number;
+  title?: string;
+  description?: string;
+  slug?: string;
+  icon?: string;
+  image?: string;
+  tags?: string[];
+  excerpt?: string;
+};
+
+export type GoodFitProps = {
+  markdown: any;
+};
+
+
+export default function GoodFit({
+  markdown,
+}: GoodFitProps) {
 
   const [jobDescription, setJobDescription] = React.useState('');
   const showVoice = false
@@ -12,6 +30,8 @@ export default function GoodFit() {
   return (
     <>
       <Box sx={{ maxWidth: 800, margin: 'auto', mt: 4, p: 2 }}>
+        <pre>markdown: {JSON.stringify(markdown, null, 2)}</pre>
+        
         <CardHeader
           avatar={<Icon icon="good-fit" color="primary" />}
           title="Good Fit?"
@@ -41,7 +61,7 @@ export default function GoodFit() {
                 onChange={(e) => setJobDescription(e.target.value)}
               />
               {showVoice ? <VoiceRecorder product="goodfit"/> : null }
-              
+              This is our most up to date CV, which will be compared to your JD to judge suitability
             </Grid>
 
             <Grid size={{xs: 12, md: 4 }}>

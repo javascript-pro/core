@@ -34,9 +34,6 @@ export default async function CatchAllPage({ params }: any) {
     return <Uberedux />;
   }
 
-  if (slugPath === '/work/products/good-fit') {
-    return <GoodFit />;
-  }
 
   if (slugPath === '/work/products/speak-write') {
     return <SpeakWrite />;
@@ -44,6 +41,11 @@ export default async function CatchAllPage({ params }: any) {
 
   const markdown = await loadMarkdown(slugPath);
   const featured = await getFeatured();
+
+  if (slugPath === '/work/products/good-fit') {
+    return <GoodFit markdown={markdown} />;
+  }
+
 
   if (markdown) {
     return (
