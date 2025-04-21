@@ -107,12 +107,11 @@
                 "icon": "good-fit",
                 "type": "file",
                 "tags": [
-                  "features",
-                  "translation",
-                  "localisation",
-                  "jobs"
+                  "examples",
+                  "Open AI",
+                  "recruitment"
                 ],
-                "excerpt": "Is your job a Good Fit?\n\nThis simple AI tool will tell you in seconds. Paste in a job description and our AI will judge if it's a good match. If it is, you’ll get a tailored CV you can download instan"
+                "excerpt": "Find out if your job is a good fit for our experience and skills. This simple AI tool will tell you in seconds. Paste in a job description and click the button to let our AI it and tell you if it's a "
               }
             ]
           },

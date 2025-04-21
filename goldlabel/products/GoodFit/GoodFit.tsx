@@ -1,8 +1,13 @@
 'use client';
 
 import * as React from 'react';
-import { Box, Button, Grid, CardHeader, CardContent, TextField, Typography } from '@mui/material';
-import { Icon, VoiceRecorder } from '../../';
+import { Box, Button, Grid, CardHeader, CardMedia, CardContent, TextField, Typography,
+
+} from '@mui/material';
+import { 
+  Icon,
+  MarkdownPopup,
+} from '../../';
 
 export type Frontmatter = {
   order?: number;
@@ -25,17 +30,28 @@ export default function GoodFit({
 }: GoodFitProps) {
 
   const [jobDescription, setJobDescription] = React.useState('');
-  const showVoice = false
 
+  const {
+    frontmatter,
+    content,
+  } = markdown
+
+  const {
+    title,
+    description,
+    image,
+    // tags,
+    icon,
+  } = frontmatter
+  
   return (
     <>
       <Box sx={{ maxWidth: 800, margin: 'auto', mt: 4, p: 2 }}>
-        <pre>markdown: {JSON.stringify(markdown, null, 2)}</pre>
         
         <CardHeader
-          avatar={<Icon icon="good-fit" color="primary" />}
-          title="Good Fit?"
-          subheader="Find out in seconds"
+          avatar={<Icon icon={icon} />}
+          title={title}
+          subheader={description}
         />
 
         <CardContent>
@@ -43,7 +59,7 @@ export default function GoodFit({
 
             <Grid size={{xs: 12 }}>
             <Typography>
-              This simple AI tool will tell you in seconds. Paste in a job description and our AI will judge if it's a good match. If it is, you’ll get a tailored CV you can download instantly. If not, all the best
+              {content}
             </Typography>
             </Grid>
 
@@ -60,22 +76,37 @@ export default function GoodFit({
                 value={jobDescription}
                 onChange={(e) => setJobDescription(e.target.value)}
               />
-              {showVoice ? <VoiceRecorder product="goodfit"/> : null }
-              This is our most up to date CV, which will be compared to your JD to judge suitability
+
+              <MarkdownPopup 
+                title="Our CV (Resume)" 
+                icon="doc"
+                markdown="e thing, here's a draft of the **SpeakWrite** landing page copy, in clean "
+              />
+
             </Grid>
 
             <Grid size={{xs: 12, md: 4 }}>
+
+              <CardMedia 
+                src={image}
+                component={"img"}
+              />
+
               <Button
-                disabled
+                fullWidth
                 variant="contained"
                 onClick={() => {}}
               >
                 <Icon icon="openai" />
-                <Box sx={{ ml: 1, mr: 2 }}>Is it a good fit?</Box>
+                <Box sx={{ mx: 1 }}>
+                  Good Fit?
+                </Box>
               </Button>
+
             </Grid>
           </Grid>
         </CardContent>
+        {/* <pre>tags: {JSON.stringify(tags, null, 2)}</pre> */}
       </Box>      
     </>
   );
