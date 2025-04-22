@@ -1,8 +1,9 @@
 'use client';
 
 import * as React from 'react';
-// import { useKey } from '../../lib/useKey';
-// import { useSlice } from '../../lib/useSlice';
+import {
+  useRouter,
+} from 'next/navigation';
 import {
   Dialog,
   DialogTitle,
@@ -14,7 +15,7 @@ import {
   useTheme,
   ListItemButton,
   ListItemIcon,
-  ListItemText,
+  IconButton,
 } from '@mui/material';
 import { Icon, ContextNav } from '../';
 
@@ -25,11 +26,15 @@ type PopupMenuProps = {
   globalNav?: any;
 };
 
-export default function PopupMenu({ open, onClose, featured }: PopupMenuProps) {
+export default function PopupMenu({
+  open,
+  onClose = () => {
+    console.warn('Close');
+  },
+  featured,
+}: PopupMenuProps) {
   const theme = useTheme();
-
-  // const slice = useSlice();
-  // const [darkmode, setDarkmode] = useKey('darkmode');
+  const router = useRouter();
   const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
@@ -48,19 +53,35 @@ export default function PopupMenu({ open, onClose, featured }: PopupMenuProps) {
     >
       <DialogTitle>
         <CardHeader
-          avatar={<Avatar src={'/svg/favicon_nobg.svg'} />}
-          title="Goldlabel Menu"
+          avatar={
+            <IconButton
+              sx={{
+                ml: -2,
+              }}
+              onClick={() => {
+                router.push('/');
+                onClose();
+              }}
+            >
+              <Avatar alt="Goldlabel Menu" src={'/svg/favicon_grey.svg'} />
+            </IconButton>
+          }
         />
       </DialogTitle>
       <DialogContent>
         <ContextNav onClose={onClose} featured={featured} />
       </DialogContent>
-      <DialogActions>
-        <ListItemButton onClick={onClose}>
-          <ListItemIcon>
-            <Icon icon="close" color="primary" />
-          </ListItemIcon>
-        </ListItemButton>
+      <DialogActions sx={{p: 1}}>
+        <IconButton
+          sx={{
+            // ml: -2,
+          }}
+          onClick={() => {
+            onClose();
+          }}
+        >
+          <Icon icon='close' />
+        </IconButton>
       </DialogActions>
     </Dialog>
   );

@@ -7,9 +7,10 @@ icon: work
 image: /jpg/goldlabel/work.jpg
 tags: JavaScript, Vanilla JavaScript, TypeScript, React, Angular, Vue, etc, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 ---
+
 > Every app we ship is real, running in production, and developed in public
 
-Goldlabel Core is Open Source and Free forever — Statically generated with Firestore-powered updates and a real admin panel. Built with Next.js App Router and MUI. 
+Goldlabel Core is Open Source and Free forever — Statically generated with Firestore-powered updates and a real admin panel. Built with Next.js App Router and MUI.
 
 [DEMO](https://goldlabel.pro)
 

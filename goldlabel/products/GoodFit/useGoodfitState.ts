@@ -1,5 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { RootState, setUbereduxKey } from '../../../goldlabel/features/Uberedux';
+import {
+  RootState,
+  setUbereduxKey,
+} from '../../../goldlabel/features/Uberedux';
 
 export function useGoodfitState<K extends keyof RootState['redux']>(key: K) {
   const value = useSelector((state: RootState) => state.redux[key]);

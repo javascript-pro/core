@@ -7,32 +7,32 @@
     "type": "folder",
     "tags": [
       "JavaScript",
-      "Next Men",
-      "Next.is",
+      "Next Gen",
+      "Next.js",
       "core",
-      "Men X",
+      "Gen X",
       "goldlabel",
-      "pre",
-      "of Prompt Engineering",
+      "pr0",
+      "AI Prompt Engineering",
       "ChatGPT",
       "OpenAI",
       "Singularity",
-      "Contend",
-      "Vanilla of",
+      "Frontend",
+      "Vanilla JS",
       "TypeScript",
       "React",
       "Angular",
-      "Due",
-      "Material of",
+      "Vue",
+      "Material UI",
       "MUI",
-      "Clash",
+      "Flash",
       "Server Side JavaScript",
-      "Rode",
+      "Node",
       "Gatsby",
       "NextJS",
-      "Endless CMS"
+      "Headless CMS"
     ],
-    "excerpt": "He build and ship modern web apes for clients who need real results — fast\n\nGoldlabel Pp is a ofbased software company that designs, build, and maintains fullstick web applications. He specialized in ",
+    "excerpt": "We build and ship modern web apps for clients who need real results — fast\n\nGoldlabel Apps is a UKbased software company that designs, builds, and maintains fullstack web applications. We specialize i",
     "children": [
       {
         "title": "Work",
@@ -41,9 +41,22 @@
         "icon": "work",
         "type": "folder",
         "tags": [
-          "social"
+          "JavaScript",
+          "Vanilla JavaScript",
+          "TypeScript",
+          "React",
+          "Angular",
+          "Vue",
+          "etc",
+          "Material UI",
+          "Flash",
+          "Server Side JavaScript",
+          "Node",
+          "Gatsby",
+          "NextJS",
+          "Headless CMS"
         ],
-        "excerpt": "Every app we ship is real, running in production, and developed in public.\n\n\n Goldlabel Core\n\nFree Forever — Statically generated with Firestorepowered updates and a real admin panel. Built with Next.",
+        "excerpt": "Every app we ship is real, running in production, and developed in public\n\nGoldlabel Core is Open Source and Free forever — Statically generated with Firestorepowered updates and a real admin panel. B",
         "children": [
           {
             "title": "About",
@@ -119,16 +132,8 @@
               "cartridges",
               "features"
             ],
-            "excerpt": "1. Bootstrapped Next.js project\n    Clone and deploy to GitHub & Vercel.\n\n2. Material UI:\n\n\n3. Backend API routes\n\n4. Polish\n    Error handling, loading states, and mobile responsiveness.",
+            "excerpt": "1. Bootstrapped Next.js project\n\n    Clone and deploy to GitHub & Vercel.\n\n2. Material UI:\n\n3. Backend API routes\n\n4. Polish\n    Error handling, loading states, and mobile responsiveness.",
             "children": [
-              {
-                "title": "Core",
-                "slug": "work/cartridges/core",
-                "order": 20,
-                "icon": "doc",
-                "type": "file",
-                "excerpt": "Goldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo architecture with multiple Next.js a"
-              },
               {
                 "title": "Flash",
                 "slug": "work/cartridges/flash",
@@ -185,6 +190,15 @@
             ]
           },
           {
+            "title": "Core",
+            "slug": "work/core",
+            "order": 20,
+            "icon": "core",
+            "type": "folder",
+            "excerpt": "Goldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo architecture with multiple Next.js a",
+            "children": []
+          },
+          {
             "title": "Products",
             "slug": "work/products",
             "order": 20,
@@ -207,7 +221,7 @@
                   "ai",
                   "good-fit"
                 ],
-                "excerpt": "1. User Input:\n    Job description (JD) pasted into a text area.\n    Resume content pasted into a second text area.\n   \n\n \n\n Paste a job description and get instant feedback on how well our skills and",
+                "excerpt": "1. User Input:\n    Job description (JD) pasted into a text area.\n    Resume content pasted into a second text area.\n\n \n\n Paste a job description and get instant feedback on how well our skills and exp",
                 "children": [
                   {
                     "title": "Our Resume (CV)",
@@ -250,7 +264,7 @@
           },
           {
             "title": "Fullstack",
-            "slug": "work/fullstack",
+            "slug": "work/tech",
             "order": 30,
             "icon": "techstack",
             "type": "folder",
@@ -360,7 +374,7 @@
         "order": 100,
         "icon": "balance",
         "type": "folder",
-        "excerpt": "Took 1. \n\n \n\n Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Upland\n\n Is this Singularity?\n\n \"But that kind of of into a drone with a gun... then yes, you've got a b",
+        "excerpt": "Book 1. \n\n \n\n Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Is this Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a",
         "children": [
           {
             "title": "Books",
@@ -401,7 +415,7 @@
             "title": "Science Fiction",
             "slug": "balance/sci-fi",
             "order": 120,
-            "icon": "older",
+            "icon": "folder",
             "type": "folder",
             "excerpt": "",
             "children": [
@@ -409,9 +423,9 @@
                 "title": "Einstein",
                 "slug": "balance/sci-fi/einstein",
                 "order": 30,
-                "icon": "do",
+                "icon": "doc",
                 "type": "file",
-                "excerpt": "Met's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series.\n\nI mentioned in the last lecture this idea of Gedanken experiments, th"
+                "excerpt": "Let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series.\n\nI mentioned in the last lecture this idea of Gedanken experiments, th"
               },
               {
                 "title": "General Theory of Relativity",
@@ -425,9 +439,9 @@
                 "title": "Charles Darwin",
                 "slug": "balance/sci-fi/charles-darwin",
                 "order": 2000,
-                "icon": "do",
+                "icon": "doc",
                 "type": "file",
-                "excerpt": "Judging from the past, we may safely infer that no one living species will transmit its unaltered likeness to a distant maturity. And of the species now living very few will transmit progeny of any ki"
+                "excerpt": "Judging from the past, we may safely infer that no one living species will transmit its unaltered likeness to a distant futurity. And of the species now living very few will transmit progeny of any ki"
               }
             ]
           }

@@ -8,6 +8,7 @@ image: /jpg/cartridges/cartridge.jpg
 tags: cartridges, jobs, doc, markdown
 featured: false
 ---
+
 ## Fullstack JavaScript Developer
 
 [Chris](https://www.linkedin.com/in/chris-dorward/) is a seasoned developer with two decades of experience in web systems, now focused on React, TypeScript, and scalable app architecture. I’ve delivered work for startups corporates, and remote-first teams across the UK,

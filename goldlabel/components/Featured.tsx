@@ -25,7 +25,11 @@ export type FeaturedProps = {
   folderLabel?: string;
 };
 
-export default function Featured({ featured = [], folderLabel }: FeaturedProps) {
+export default function Featured({
+  featured = [],
+  folderLabel,
+}: FeaturedProps) {
+  
   const showFeatured = false;
   const router = useRouter();
 
@@ -35,7 +39,7 @@ export default function Featured({ featured = [], folderLabel }: FeaturedProps) 
 
   // Sort by frontmatter.order (default to 0 if undefined)
   const sorted = [...featured].sort(
-    (a, b) => (a.frontmatter.order ?? 0) - (b.frontmatter.order ?? 0)
+    (a, b) => (a.frontmatter.order ?? 0) - (b.frontmatter.order ?? 0),
   );
 
   if (!showFeatured) return null;
@@ -49,7 +53,9 @@ export default function Featured({ featured = [], folderLabel }: FeaturedProps) 
       )}
 
       <List dense>
-        <ListItemButton onClick={() => handleItemClick('/work/products/good-fit')}>
+        <ListItemButton
+          onClick={() => handleItemClick('/work/products/good-fit')}
+        >
           <ListItemIcon sx={{ alignSelf: 'flex-start', mt: 1 }}>
             <Icon icon={'good-fit'} />
           </ListItemIcon>

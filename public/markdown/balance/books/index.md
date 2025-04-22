@@ -6,6 +6,7 @@ slug: /balance/books
 icon: balance
 image: /jpg/products/speak-write.jpg
 ---
+
 ## Weekend Portfolio
 
 > Written for semi-professional coders ready to go pr0

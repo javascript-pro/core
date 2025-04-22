@@ -6,6 +6,7 @@ slug: /balance/sci-fi/einstein
 icon: doc
 image: /jpg/photos/einstein.jpg
 ---
+
 > Let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series.
 
 I mentioned in the last lecture this idea of Gedanken experiments, thought experiments, and they really played into a lot of the discoveries that Albert Einstein made. He was able to conceptualize problems and then apply math and physics equations that would break through and result in us understanding more of our world. Many of the solutions from the Gedanken experiments are now fundamental laws of physics.

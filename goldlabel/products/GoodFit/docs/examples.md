@@ -1,10 +1,10 @@
 Example JD
 
-___
+---
 
 Example CV
 
-___
+---
 
 Example Output
 
@@ -15,4 +15,3 @@ Your resume aligns well with the required technical skills (JavaScript, React, A
 
 Suggestion:
 Buy a subscription
-

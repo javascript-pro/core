@@ -7,6 +7,7 @@ icon: account
 image: /jpg/goldlabel/goldlabel.jpg
 tags: cookies, gdpr, privacy, terms, trust
 ---
+
 > We don't use cookies
 
 **Privacy Statement**

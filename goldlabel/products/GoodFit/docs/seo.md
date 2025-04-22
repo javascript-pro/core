@@ -31,10 +31,11 @@ import type { Metadata } from 'next';
 // Helper function to get page title dynamically
 async function getPageTitle(slugPath: string): Promise<string> {
   const defaultTitle = 'Goldlabel Core';
-  
+
   if (slugPath === '/sitemap') return 'Sitemap | Goldlabel Core';
   if (slugPath === '/uberedux') return 'Uberedux | Goldlabel Core';
-  if (slugPath === '/work/products/speak-write') return 'SpeakWrite | Goldlabel Core';
+  if (slugPath === '/work/products/speak-write')
+    return 'SpeakWrite | Goldlabel Core';
   if (slugPath === '/work/products/good-fit') return 'GoodFit | Goldlabel Core';
 
   const markdown = await loadMarkdown(slugPath);
@@ -92,17 +93,21 @@ export default async function CatchAllPage({ params }: any) {
     console.error('Failed to load globalNav.json:', err);
   }
 
-  if (slugPath === '/sitemap') return <Sitemap globalNav={globalNav} openTopLevelByDefault={10} />;
+  if (slugPath === '/sitemap')
+    return <Sitemap globalNav={globalNav} openTopLevelByDefault={10} />;
   if (slugPath === '/uberedux') return <Uberedux />;
   if (slugPath === '/work/products/speak-write') return <SpeakWrite />;
 
   const markdown = await loadMarkdown(slugPath);
   const featured = await getFeatured();
 
-  if (slugPath === '/work/products/good-fit') return <GoodFit markdown={markdown} />;
+  if (slugPath === '/work/products/good-fit')
+    return <GoodFit markdown={markdown} />;
 
   if (markdown) {
-    return <FilePage featured={featured} content={markdown} globalNav={globalNav} />;
+    return (
+      <FilePage featured={featured} content={markdown} globalNav={globalNav} />
+    );
   }
 
   const folderPath = path.join(process.cwd(), 'public/markdown', ...slugArray);
@@ -152,14 +157,12 @@ After integrating this approach, your app will dynamically generate meaningful, 
 
 Now, your site has a professional SEO strategy built right into its core, using Next.js’s robust metadata system.
 
-
-___
-
+---
 
 We're working on Core. It's a Next.js app and we have a page.tsx which renders almost all routes /app/[[...slug]]/page.tsx. here it is
 
 // app/[[...slug]]/page.tsx
-import * as React from 'react';
+import \* as React from 'react';
 import path from 'path';
 import { notFound } from 'next/navigation';
 import fs from 'fs/promises';
@@ -171,56 +174,54 @@ import { GoodFit } from '../../goldlabel/products/GoodFit';
 import { SpeakWrite } from '../../goldlabel/products/SpeakWrite';
 
 export default async function CatchAllPage({ params }: any) {
-  // Make sure to check for undefined and coerce to array
-  const slugArray = (await params?.slug) ?? [];
-  const slugPath = '/' + slugArray.join('/');
+// Make sure to check for undefined and coerce to array
+const slugArray = (await params?.slug) ?? [];
+const slugPath = '/' + slugArray.join('/');
 
-  // Load global nav
-  const navPath = path.join(process.cwd(), 'public/globalNav.json');
-  let globalNav = null;
+// Load global nav
+const navPath = path.join(process.cwd(), 'public/globalNav.json');
+let globalNav = null;
 
-  try {
-    const navRaw = await fs.readFile(navPath, 'utf-8');
-    globalNav = JSON.parse(navRaw);
-  } catch (err) {
-    console.error('Failed to load globalNav.json:', err);
-  }
-  /* Special cases */
+try {
+const navRaw = await fs.readFile(navPath, 'utf-8');
+globalNav = JSON.parse(navRaw);
+} catch (err) {
+console.error('Failed to load globalNav.json:', err);
+}
+/_ Special cases _/
 
-  if (slugPath === '/sitemap') {
-    return <Sitemap globalNav={globalNav} openTopLevelByDefault={10} />;
-  }
+if (slugPath === '/sitemap') {
+return <Sitemap globalNav={globalNav} openTopLevelByDefault={10} />;
+}
 
-  if (slugPath === '/uberedux') {
-    return <Uberedux />;
-  }
+if (slugPath === '/uberedux') {
+return <Uberedux />;
+}
 
+if (slugPath === '/work/products/speak-write') {
+return <SpeakWrite />;
+}
 
-  if (slugPath === '/work/products/speak-write') {
-    return <SpeakWrite />;
-  }
+const markdown = await loadMarkdown(slugPath);
+const featured = await getFeatured();
 
-  const markdown = await loadMarkdown(slugPath);
-  const featured = await getFeatured();
+if (slugPath === '/work/products/good-fit') {
+return <GoodFit markdown={markdown} />;
+}
 
-  if (slugPath === '/work/products/good-fit') {
-    return <GoodFit markdown={markdown} />;
-  }
+if (markdown) {
+return (
+<FilePage featured={featured} content={markdown} globalNav={globalNav} />
+);
+}
 
-
-  if (markdown) {
-    return (
-      <FilePage featured={featured} content={markdown} globalNav={globalNav} />
-    );
-  }
-
-  // Try to load as folder
-  const folderPath = path.join(process.cwd(), 'public/markdown', ...slugArray);
-  try {
-    const stat = await fs.stat(folderPath);
-    if (stat.isDirectory()) {
-      const section = slugArray.join('/');
-      const tree = await getMarkdownTree(section);
+// Try to load as folder
+const folderPath = path.join(process.cwd(), 'public/markdown', ...slugArray);
+try {
+const stat = await fs.stat(folderPath);
+if (stat.isDirectory()) {
+const section = slugArray.join('/');
+const tree = await getMarkdownTree(section);
 
       const indexMarkdown = await loadMarkdown(path.join(slugPath, 'index'));
 
@@ -235,11 +236,12 @@ export default async function CatchAllPage({ params }: any) {
         />
       );
     }
-  } catch {
-    // Not a folder
-  }
 
-  return notFound();
+} catch {
+// Not a folder
+}
+
+return notFound();
 }
 
 I want to use Next.js's great SEO flexibility to cretae dynamig page titles that get noticed in the browser chrome, bookmarks and sharing

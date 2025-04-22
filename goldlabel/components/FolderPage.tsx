@@ -51,7 +51,7 @@ export default function FolderPage({
         subheader={frontmatter?.description}
       />
 
-      <Box sx={{ mx: 2, mb: 2}}>
+      <Box sx={{ mx: 2, mb: 2 }}>
         <AppBreadcrumb />
       </Box>
 
@@ -72,7 +72,6 @@ export default function FolderPage({
             overflow: 'hidden',
           }}
         >
-          
           <Image
             priority
             src={frontmatter.image}
@@ -88,7 +87,6 @@ export default function FolderPage({
         {isSmUp ? (
           <Box sx={{ display: 'flex' }}>
             <Box sx={{ mt: { xs: 0, sm: -3 } }}>
-              
               {content && (
                 <CardContent>
                   <ReactMarkdown>{content}</ReactMarkdown>

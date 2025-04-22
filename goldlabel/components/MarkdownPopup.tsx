@@ -13,56 +13,37 @@ import {
 import { Icon } from '../';
 
 export type MarkdownPopupProps = {
-  icon:  string;
+  icon: string;
   title: string;
   markdown: string;
 };
 
-export default function MarkdownPopup({ 
-  icon = "settings",
-  title = "Title",
-  markdown = "> Nothing to see here"
+export default function MarkdownPopup({
+  icon = 'settings',
+  title = 'Title',
+  markdown = '> Nothing to see here',
 }: MarkdownPopupProps) {
-  
-  const [open, setOpen] = React.useState(true)
+  const [open, setOpen] = React.useState(true);
 
   return (
     <>
       <Box>
         <Dialog open={open} fullWidth>
           <DialogTitle>
-            <CardHeader 
-              avatar={<Icon icon={icon as any} />}
-              title={title}
-            />
-            
+            <CardHeader avatar={<Icon icon={icon as any} />} title={title} />
           </DialogTitle>
-          <DialogContent>
-            { markdown }
-          </DialogContent>
+          <DialogContent>{markdown}</DialogContent>
           <DialogActions>
-          <Button
-            fullWidth
-            variant="outlined"
-            onClick={() => {}}
-          >
-            <Icon icon="close" />
-            <Box sx={{ mx: 1 }}>
-              Close
-            </Box>
-          </Button>
+            <Button fullWidth variant="outlined" onClick={() => {}}>
+              <Icon icon="close" />
+              <Box sx={{ mx: 1 }}>Close</Box>
+            </Button>
           </DialogActions>
         </Dialog>
 
-        <Button
-          fullWidth
-          variant="contained"
-          onClick={() => {}}
-        >
+        <Button fullWidth variant="contained" onClick={() => {}}>
           <Icon icon={icon as any} />
-          <Box sx={{ mx: 1 }}>
-            View our CV
-          </Box>
+          <Box sx={{ mx: 1 }}>View our CV</Box>
         </Button>
       </Box>
     </>

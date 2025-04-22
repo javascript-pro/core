@@ -1,7 +1,6 @@
-
 export type GoodfitState = {
-  initted: boolean
-  thingo: number
+  initted: boolean;
+  thingo: number;
 };
 export const speakwrite: GoodfitState = {
   initted: false,

@@ -5,7 +5,7 @@ description: Please explain
 slug: /work/cartridges/more
 icon: cartridge
 image: /jpg/cartridges/cartridge.jpg
-tags: cartridges, cartidge, 
+tags: cartridges, cartidge,
 featured: false
 ---
 

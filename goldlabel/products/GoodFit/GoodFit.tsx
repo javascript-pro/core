@@ -1,13 +1,17 @@
 'use client';
 
 import * as React from 'react';
-import { Box, Button, Grid, CardHeader, CardMedia, CardContent, TextField, Typography,
-
+import {
+  Box,
+  Button,
+  Grid,
+  CardHeader,
+  CardMedia,
+  CardContent,
+  TextField,
+  Typography,
 } from '@mui/material';
-import { 
-  Icon,
-  MarkdownPopup,
-} from '../../';
+import { Icon, MarkdownPopup } from '../../';
 
 export type Frontmatter = {
   order?: number;
@@ -24,17 +28,10 @@ export type GoodFitProps = {
   markdown: any;
 };
 
-
-export default function GoodFit({
-  markdown,
-}: GoodFitProps) {
-
+export default function GoodFit({ markdown }: GoodFitProps) {
   const [jobDescription, setJobDescription] = React.useState('');
 
-  const {
-    frontmatter,
-    content,
-  } = markdown
+  const { frontmatter, content } = markdown;
 
   const {
     title,
@@ -42,12 +39,11 @@ export default function GoodFit({
     image,
     // tags,
     icon,
-  } = frontmatter
-  
+  } = frontmatter;
+
   return (
     <>
       <Box sx={{ maxWidth: 800, margin: 'auto', mt: 4, p: 2 }}>
-        
         <CardHeader
           avatar={<Icon icon={icon} />}
           title={title}
@@ -56,17 +52,13 @@ export default function GoodFit({
 
         <CardContent>
           <Grid container spacing={2}>
-
-            <Grid size={{xs: 12 }}>
-            <Typography>
-              {content}
-            </Typography>
+            <Grid size={{ xs: 12 }}>
+              <Typography>{content}</Typography>
             </Grid>
 
-            <Grid size={{xs: 12, md: 8 }}>
-              
+            <Grid size={{ xs: 12, md: 8 }}>
               <TextField
-                sx={{background: 'white', mb: 2,}}
+                sx={{ background: 'white', mb: 2 }}
                 label="Job Description"
                 placeholder="Paste your job description here..."
                 multiline
@@ -77,37 +69,25 @@ export default function GoodFit({
                 onChange={(e) => setJobDescription(e.target.value)}
               />
 
-              <MarkdownPopup 
-                title="Our CV (Resume)" 
+              <MarkdownPopup
+                title="Our CV (Resume)"
                 icon="doc"
                 markdown="e thing, here's a draft of the **SpeakWrite** landing page copy, in clean "
               />
-
             </Grid>
 
-            <Grid size={{xs: 12, md: 4 }}>
+            <Grid size={{ xs: 12, md: 4 }}>
+              <CardMedia src={image} component={'img'} />
 
-              <CardMedia 
-                src={image}
-                component={"img"}
-              />
-
-              <Button
-                fullWidth
-                variant="contained"
-                onClick={() => {}}
-              >
+              <Button fullWidth variant="contained" onClick={() => {}}>
                 <Icon icon="openai" />
-                <Box sx={{ mx: 1 }}>
-                  Good Fit?
-                </Box>
+                <Box sx={{ mx: 1 }}>Good Fit?</Box>
               </Button>
-
             </Grid>
           </Grid>
         </CardContent>
         {/* <pre>tags: {JSON.stringify(tags, null, 2)}</pre> */}
-      </Box>      
+      </Box>
     </>
   );
 }

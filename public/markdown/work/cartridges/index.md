@@ -10,10 +10,10 @@ featured: false
 ---
 
 1. **Bootstrapped Next.js project**
+
    - Clone and deploy to GitHub & Vercel.
 
 2. **Material UI:**
-
 
 3. **Backend API routes**
 

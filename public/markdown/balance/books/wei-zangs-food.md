@@ -8,6 +8,7 @@ image: /jpg/wei-zang/wei-zangs-food.jpg
 featured: false
 epub: wei-zangs-food.epub
 ---
+
 > I never learned to cook. No one taught me. That’s why I can tell you about it.
 
 People who are taught spend too long worrying about what’s “right.” I just ate what I liked, cooked it, guessed. Like debugging something that only makes sense once it’s in your mouth.

@@ -8,6 +8,7 @@ image: /jpg/cartridges/cartridge.jpg
 tags: cartridges, cartridge
 featured: true
 ---
+
 > In short: Markdown keeps our content lightweight, portable, and friendly to both humans and machines
 
 ## What is Markdown?
@@ -41,6 +42,5 @@ At Goldlabel, we use Markdown for everything from site pages to internal documen
 - **Developer-first** — Our devs write Markdown like they write code. Same editor, same workflow, less friction.
 
 ---
-
 
 That’s why we lean on it — and why we’re making tools like `MarkDownPreview`

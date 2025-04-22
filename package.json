@@ -1,5 +1,5 @@
 {
-  "version": "50.3.0",
+  "version": "50.3.1",
   "private": true,
   "packageManager": "yarn@4.3.1",
   "engines": {
@@ -12,7 +12,7 @@
     "dev": "rm -rf .next && yarn nav && next dev",
     "lint": "next lint",
     "lint-staged": "lint-staged",
-    "prettier": "prettier --write --ignore-unknown .",
+    "format": "prettier --write --ignore-unknown .",
     "prettier:check": "prettier --check --ignore-unknown .",
     "start": "next start",
     "test": "yarn prettier:check && yarn lint"

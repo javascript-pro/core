@@ -8,7 +8,6 @@ import {
   ListItem,
   ListItemButton,
   ListItemText,
-  Typography,
 } from '@mui/material';
 import { usePathname, useRouter } from 'next/navigation';
 import { Icon } from '../';
@@ -76,7 +75,6 @@ export default function FolderContents({ folderLabel }: FolderContentsProps) {
 
   return (
     <Box sx={{ minWidth: 300 }}>
-
       {grandparent && (
         <>
           <ListItem disablePadding>
@@ -84,9 +82,7 @@ export default function FolderContents({ folderLabel }: FolderContentsProps) {
               <ListItemIcon>
                 <Icon icon="up" />
               </ListItemIcon>
-              <ListItemText
-                primary={grandparent.title}
-              />
+              <ListItemText primary={grandparent.title} />
             </ListItemButton>
           </ListItem>
         </>
@@ -101,7 +97,6 @@ export default function FolderContents({ folderLabel }: FolderContentsProps) {
             .map((item) => (
               <ListItem key={item.slug} disablePadding>
                 <ListItemButton onClick={() => router.push(`/${item.slug}`)}>
-                  
                   <ListItemText
                     primary={item.title}
                     secondary={item.description}
