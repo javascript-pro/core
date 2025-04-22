@@ -4,7 +4,7 @@ title: Goldlabel pr0
 description: Custom software that works
 slug: /
 icon: home
-image: /jpg/home.jpg
+image: /jpg/goldlabel/Home.jpg
 tags: Next Gen, Next.js, core, Gen X, goldlabel, pr0, AI Prompt Engineering, ChatGPT, OpenAI, Singularity
 ---
 

@@ -9,6 +9,7 @@ import {
   ListItemIcon,
   ListItemText,
   Grid,
+  Typography,
 } from '@mui/material';
 import { Icon } from '../';
 import { useKey } from '../../goldlabel/features/Uberedux';
@@ -54,6 +55,7 @@ export default function ContextNav({
       <Grid container spacing={2}>
         <Grid size={{ xs: 12, md: 6 }}>
           <Featured />
+
           <List dense>
             <ListItemButton onClick={() => handleItemClick({ route: '/' })}>
               <ListItemIcon>

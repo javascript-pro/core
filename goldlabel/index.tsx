@@ -12,6 +12,7 @@ import Advert from './components/Advert';
 import FolderContents from './components/FolderContents';
 import Featured from './components/Featured';
 import VoiceRecorder from './components/VoiceRecorder';
+import MarkdownPopup from './components/MarkdownPopup';
 
 export {
   Home,
@@ -27,6 +28,7 @@ export {
   PopupMenu,
   Featured,
   VoiceRecorder,
+  MarkdownPopup,
 };
 
 export type { IconShape };

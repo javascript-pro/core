@@ -4,7 +4,7 @@ title: Books
 description: It's hard to collate stuff into meaningful e-books, but we've done our best
 slug: /balance/books
 icon: balance
-image: /jpg/books.jpg
+image: /jpg/Opengraph-template.jpg
 ---
 
 ## Book 1. Weekend Portfolio

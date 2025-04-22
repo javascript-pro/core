@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { useSlice, useDispatch, resetUberedux } from '../Uberedux';
+import { useSlice, useDispatch } from '../Uberedux';
 import {
   Box,
   Button,

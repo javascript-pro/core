@@ -4,7 +4,7 @@ title: What is Aquaponics?
 description:
 slug: /life/aquaponics/overview
 icon: fish
-image: /jpg/location.jpg
+image: /jpg/wei-zang/wei-zangs-food.jpg
 ---
 
 What: Aquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closed-loop system.

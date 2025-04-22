@@ -4,7 +4,7 @@ title: Lingua
 description: Multi language translation package
 slug: /work/features/lingua
 icon: lingua
-image: /jpg/lingua.jpg
+image: /jpg/cartridges/cartridge.jpg
 tags: features, translation, localisation
 ---
 

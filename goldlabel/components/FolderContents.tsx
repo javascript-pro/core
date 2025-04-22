@@ -7,7 +7,7 @@ import {
   ListItem,
   ListItemButton,
   ListItemText,
-  ListItemIcon,
+  Typography,
 } from '@mui/material';
 import { usePathname, useRouter } from 'next/navigation';
 import { Icon } from '../';
@@ -56,7 +56,11 @@ function findParentOfItem(
   return null;
 }
 
-export default function FolderContents() {
+export type FolderContentsProps = {
+  folderLabel?: string;
+};
+
+export default function FolderContents({ folderLabel }: FolderContentsProps) {
   const pathname = usePathname();
   const router = useRouter();
 
@@ -71,22 +75,12 @@ export default function FolderContents() {
 
   return (
     <Box sx={{ minWidth: 300 }}>
+      <Typography sx={{ mx: 2 }} variant="button">
+        {folderLabel || ''}
+      </Typography>
+
       {itemsToRender.length === 0 ? null : (
         <List dense>
-          {/* Up button to grandparent folder, if it exists */}
-          {grandparent && (
-            <ListItem key="up" disablePadding>
-              <ListItemButton
-                onClick={() => router.push(`/${grandparent.slug}`)}
-              >
-                <ListItemIcon>
-                  <Icon icon="up" />
-                </ListItemIcon>
-                <ListItemText primary={'Up'} />
-              </ListItemButton>
-            </ListItem>
-          )}
-
           {/* Children items, excluding current file */}
           {itemsToRender
             .filter(

@@ -1,3 +1,4 @@
+import * as React from 'react';
 import path from 'path';
 import fs from 'fs/promises';
 import config from '../goldlabel/config.json';

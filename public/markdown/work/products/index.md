@@ -4,10 +4,18 @@ title: Products
 description: What's on the shelf?
 slug: /work/products
 icon: products
-image: /jpg/products.jpg
+image: /jpg/products/good-fit.jpg
 tags: products
 featured: false
 ---
+## Products
+
+- [Good Fit?](/products/good-fit)
+
+1. **User Input:**
+   - Job description (JD) pasted into a text area.
+   - Resume content pasted into a second text area.
+   
 
 # [Good Fit?](/work/products/good-fit)
 
@@ -15,4 +23,4 @@ featured: false
 
 # [SpeakWrite](/work/products/speak-write)
 
-> Foreseen by Orwell in 1984, built for reals just now. By us. Out of our heads
+> As foreseen by Orwell in 1984. Built for reals just now. By us. Out of our heads

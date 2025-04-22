@@ -1,5 +1,5 @@
 {
-  "version": "50.2.5",
+  "version": "50.2.8",
   "private": true,
   "packageManager": "yarn@4.3.1",
   "engines": {
@@ -9,7 +9,7 @@
     "nav": "tsx globalNav.mjs",
     "prepare": "husky install",
     "build": "next build",
-    "dev": "yarn nav && next dev",
+    "dev": "clear && rm -rf .next && yarn nav && next dev",
     "lint": "next lint",
     "lint-staged": "lint-staged",
     "prettier": "prettier --write --ignore-unknown .",

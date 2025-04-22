@@ -11,7 +11,7 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
-import { FolderContents, Featured } from '../';
+import { FolderContents, Featured, AppBreadcrumb } from '../';
 
 export type FilePageProps = {
   content: {
@@ -72,6 +72,7 @@ export default function FilePage({ content, featured }: FilePageProps) {
           <Box sx={{ display: 'flex' }}>
             <Box sx={{ mt: { xs: 0, sm: -3 } }}>
               <CardContent>
+                <AppBreadcrumb />
                 <ReactMarkdown remarkPlugins={[remarkGfm]}>
                   {body}
                 </ReactMarkdown>

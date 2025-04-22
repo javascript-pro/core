@@ -4,7 +4,7 @@ title: Core
 description: Public facing foundation of the Goldlabel Apps ecosystem
 slug: /work/features/core
 icon: doc
-image: /jpg/core.jpg
+image: /jpg/cartridges/cartridge.jpg
 ---
 
 > Goldlabel Core is a project designed to deliver **powerful, user-friendly web applications** that enhance productivity and streamline tasks. The project uses a **monorepo** architecture with multiple Next.js applications deployed to **Vercel**.

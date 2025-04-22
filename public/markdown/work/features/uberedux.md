@@ -4,8 +4,8 @@ title: Uberedux
 description:
 slug: /work/features/uberedux
 icon: uberedux
-image: /jpg/uberedux.jpg
-featured: true
+image: /jpg/cartridges/cartridge.jpg
+featured: false
 ---
 
 > Top 3 reasons Redux still makes sense

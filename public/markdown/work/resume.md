@@ -4,7 +4,7 @@ title: Our Resume (CV)
 description: Most up to date
 slug: /work/resume
 icon: doc
-image: /jpg/good-fit.jpg
+image: /jpg/Opengraph-template.jpg
 tags: features, translation, localisation, jobs, doc
 featured: false
 ---

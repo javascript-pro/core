@@ -8,7 +8,7 @@ import {
   useTheme,
 } from '@mui/material';
 import Image from 'next/image';
-import { Featured, FolderContents } from '../';
+import { Featured, FolderContents, AppBreadcrumb } from '../';
 
 import ReactMarkdown from 'react-markdown';
 import { NavItem } from '../../goldlabel/types/goldlabelTypes';
@@ -31,6 +31,7 @@ export type FolderPageProps = {
   frontmatter: Frontmatter | null;
   content: string | null;
   globalNav: NavItem[];
+  folderLabel?: string; // NEW PROP
 };
 
 export default function FolderPage({
@@ -38,6 +39,7 @@ export default function FolderPage({
   frontmatter,
   content,
   featured,
+  folderLabel, // NEW PROP
 }: FolderPageProps) {
   const theme = useTheme();
   const isSmUp = useMediaQuery(theme.breakpoints.up('sm'));
@@ -79,6 +81,7 @@ export default function FolderPage({
         {isSmUp ? (
           <Box sx={{ display: 'flex' }}>
             <Box sx={{ mt: { xs: 0, sm: -3 } }}>
+              <AppBreadcrumb />
               {content && (
                 <CardContent>
                   <ReactMarkdown>{content}</ReactMarkdown>
@@ -86,17 +89,15 @@ export default function FolderPage({
               )}
             </Box>
             <Box sx={{ maxWidth: 300 }}>
-              <Featured featured={featured} />
-              <FolderContents />
-              
+              <Featured featured={featured} folderLabel={folderLabel} />
+              <FolderContents folderLabel={folderLabel} />
             </Box>
           </Box>
         ) : (
           <Box>
             {content && <ReactMarkdown>{content}</ReactMarkdown>}
-            <Featured featured={featured} />
-            <FolderContents />
-            
+            <Featured featured={featured} folderLabel={folderLabel} />
+            <FolderContents folderLabel={folderLabel} />
           </Box>
         )}
       </Box>

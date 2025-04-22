@@ -5,7 +5,7 @@ export default function OpenAIIcon(props: any) {
   let mainColor = 'black';
   const theme = useTheme();
   // console.log(theme.palette.mode)
-  mainColor = theme.palette.primary.main;
+  mainColor = theme.palette.secondary.main;
   let color2 = 'white';
 
   return (
