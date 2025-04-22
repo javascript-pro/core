@@ -103,7 +103,7 @@ export default function ContextNav({
               onClick={() => handleItemClick({ route: '/api/goldlabel' })}
             >
               <ListItemIcon>
-                <Icon icon="api" color="primary" />
+                <Icon icon="api" />
               </ListItemIcon>
               <ListItemText primary="API" />
             </ListItemButton>
@@ -112,7 +112,7 @@ export default function ContextNav({
               onClick={() => handleItemClick({ route: '/admin' })}
             >
               <ListItemIcon>
-                <Icon icon="admin" color="primary"/>
+                <Icon icon="admin"/>
               </ListItemIcon>
               <ListItemText primary="Admin" />
             </ListItemButton>
@@ -121,7 +121,7 @@ export default function ContextNav({
               onClick={() => handleItemClick({ action: 'TOGGLE_DARKMODE' })}
             >
               <ListItemIcon>
-                <Icon icon={darkmode ? 'lightmode' : 'darkmode'}  color="primary"/>
+                <Icon icon={darkmode ? 'lightmode' : 'darkmode'} />
               </ListItemIcon>
               <ListItemText primary={darkmode ? 'Light Mode' : 'Dark Mode'} />
             </ListItemButton>
@@ -130,7 +130,7 @@ export default function ContextNav({
               onClick={() => handleItemClick({ route: '/uberedux' })}
             >
               <ListItemIcon>
-                <Icon icon="uberedux" color="primary" />
+                <Icon icon="uberedux" />
               </ListItemIcon>
               <ListItemText primary="Uberedux" />
             </ListItemButton>

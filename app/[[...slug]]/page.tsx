@@ -20,13 +20,13 @@ async function getPageTitle(slugPath: string): Promise<string> {
 
   const markdown = await loadMarkdown(slugPath);
   if (markdown && markdown.frontmatter.title) {
-    return `${markdown.frontmatter.title} ${markdown.frontmatter.description}`;
+    return `${markdown.frontmatter.title}. ${markdown.frontmatter.description}`;
   }
 
   // Handle folder index page
   const indexMarkdown = await loadMarkdown(path.join(slugPath, 'index'));
   if (indexMarkdown?.frontmatter.title) {
-    return `${indexMarkdown.frontmatter.title} ${indexMarkdown.frontmatter.description}`;
+    return `${indexMarkdown.frontmatter.title}. ${indexMarkdown.frontmatter.description}`;
   }
 
   // Default fallback
@@ -76,7 +76,7 @@ export default async function CatchAllPage({ params }: any) {
 
   if (slugPath === '/sitemap') return <Sitemap globalNav={globalNav} openTopLevelByDefault={10} />;
   if (slugPath === '/uberedux') return <Uberedux />;
-  if (slugPath === '/work/products/speak-write') return <SpeakWrite />;
+  // if (slugPath === '/work/products/speak-write') return <SpeakWrite />;
 
   const markdown = await loadMarkdown(slugPath);
   const featured = await getFeatured();
