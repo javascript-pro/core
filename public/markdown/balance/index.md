@@ -9,7 +9,8 @@ image: /jpg/wei-zang/wei-zangs-food.jpg
 
 ### [Read our books](/balance/books)
 
-- Book 1. [Wei Zang's Food](/balance/books/wei-zangs-food)
+- [Wei Zang's Food](/balance/books/wei-zangs-food)
+- [Weekend Portfolio](/balance/books/weekend-portfolio)
 
 ### [Are you Gen X?](/balance/gen-x)
 

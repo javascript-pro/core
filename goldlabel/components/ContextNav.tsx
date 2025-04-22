@@ -11,7 +11,7 @@ import {
   Grid,
 } from '@mui/material';
 import { Icon } from '../';
-import { useKey } from '../../goldlabel/features/Uberedux';
+import { useKey } from '../../goldlabel/cartridges/Uberedux';
 import { Featured } from '../';
 
 type ContextNavProps = {
@@ -57,6 +57,17 @@ export default function ContextNav({
           <Featured featured={featured}/>
 
           <List dense>
+
+          <ListItemButton
+              onClick={() => handleItemClick({ route: '/' })}
+            >
+              <ListItemIcon>
+                <Icon icon="home" />
+              </ListItemIcon>
+              <ListItemText primary="Home" />
+            </ListItemButton>
+
+
             <ListItemButton
               onClick={() => handleItemClick({ route: '/sitemap' })}
             >

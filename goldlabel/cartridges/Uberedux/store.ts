@@ -6,8 +6,8 @@ import storage from 'redux-persist/lib/storage';
 import { combineReducers } from 'redux';
 import { initialState } from './initialState';
 
+
 export interface UbereduxState {
-  darkmode: boolean;
   [key: string]: any;
 }
 
@@ -29,7 +29,7 @@ const rootReducer = combineReducers({
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['uberedux'],
+  whitelist: ['redux'],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

@@ -4,7 +4,7 @@ import fs from 'fs/promises';
 import config from '../goldlabel/config.json';
 import { Metadata } from 'next';
 import { Appshell } from '../goldlabel';
-import { UbereduxProvider } from '../goldlabel/features/Uberedux';
+import { UbereduxProvider } from '../goldlabel/cartridges/Uberedux';
 import './styles.css';
 
 const title = config.appTitle;

@@ -1,4 +1,3 @@
-import GoodFit from './GoodFit';
-import { useGoodfitState } from './useGoodfitState';
+import GoodFit from './GoodFit'
 
-export { GoodFit, useGoodfitState };
+export { GoodFit };

@@ -5,9 +5,9 @@ import fs from 'fs/promises';
 import { loadMarkdown, getMarkdownTree } from '../../lib/loadMarkdown';
 import { FolderPage, FilePage, Sitemap } from '../../goldlabel';
 import { getFeatured } from '../../lib/getFeatured';
-import { Uberedux } from '../../goldlabel/features/Uberedux';
+import { Uberedux } from '../../goldlabel/cartridges/Uberedux';
 import { GoodFit } from '../../goldlabel/products/GoodFit';
-import { SpeakWrite } from '../../goldlabel/products/SpeakWrite';
+// import { SpeakWrite } from '../../goldlabel/products/SpeakWrite';
 import type { Metadata } from 'next';
 
 async function getPageTitle(slugPath: string): Promise<string> {

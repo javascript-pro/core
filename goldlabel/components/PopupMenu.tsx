@@ -68,9 +68,11 @@ export default function PopupMenu({
           }
         />
       </DialogTitle>
+
       <DialogContent>
         <ContextNav onClose={onClose} featured={featured} />
       </DialogContent>
+      
       <DialogActions sx={{p: 1}}>
         <IconButton
           sx={{

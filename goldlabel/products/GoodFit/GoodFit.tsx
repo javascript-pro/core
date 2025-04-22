@@ -12,6 +12,7 @@ import {
 import { 
   Icon,
 } from '../../';
+import {useSlice} from '../../cartridges/Uberedux'
 
 export type Frontmatter = {
   order?: number;
@@ -30,6 +31,8 @@ export type GoodFitProps = {
 
 export default function GoodFit() {
 
+  const goodfitState = useSlice()
+
   const [jobDescription, setJobDescription] = React.useState('');
   const [resume, setResume] = React.useState('');
 
@@ -46,50 +49,56 @@ export default function GoodFit() {
         />
 
         <CardContent>
-          <Grid container spacing={1}>
+          <Grid container spacing={2}>
 
-            <Grid size={{ xs: 12, md: 6 }}>
+            <Grid size={{ xs: 12, md: 5 }}>
               <TextField
-                sx={{ background: 'white', mb: 2 }}
-                variant="outlined"
+                value={resume}
+                variant="filled"
                 label="Resume"
                 placeholder="Paste resume here..."
                 multiline
                 fullWidth
                 rows={10}
-                value={resume}
                 onChange={(e) => setResume(e.target.value)}
               />
             </Grid>
 
-            <Grid size={{ xs: 12, md: 6 }}>
+            <Grid size={{ xs: 12, md: 2 }}>
+              <Box sx={{
+                my: 5,
+              }}>
+                <Button 
+                  variant="contained" 
+                  onClick={ onAnalyse }>
+                  {/* <Box>
+                    <Icon icon="openai" />
+                  </Box> */}
+                  <Box sx={{ mx: 1 }}>
+                    Analyse
+                  </Box>
+                </Button>
+              </Box>
+            </Grid>
+
+            <Grid size={{ xs: 12, md: 5 }}>
               <TextField
-                sx={{ background: 'white', mb: 2 }}
-                variant="outlined"
+                value={jobDescription}
+                variant="filled"
                 label="Job Description"
                 placeholder="Paste job description here..."
                 multiline
                 fullWidth
                 rows={10}
-                value={jobDescription}
+                
                 onChange={(e) => setJobDescription(e.target.value)}
               />
             </Grid>
 
-            <Grid size={{ xs: 12 }}>
-              <Button 
-                variant="contained" 
-                onClick={ onAnalyse }>
-                <Icon icon="openai" />
-                <Box sx={{ mx: 1 }}>
-                  Analyse
-                </Box>
-              </Button>
-            </Grid>
           </Grid>
         </CardContent>
 
-        {/* <pre>tags: {JSON.stringify(tags, null, 2)}</pre> */}
+        <pre>goodfitState: {JSON.stringify(goodfitState, null, 2)}</pre>
 
       </Box>
     </>

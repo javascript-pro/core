@@ -1,10 +1,10 @@
 
 export type GoodfitState = {
   initted: boolean;
-  thingo: number;
+  thingo?: number;
+  goodfitState?: any
 };
 
-export const goodfit: GoodfitState = {
-  initted: false,
-  thingo: 321,
+export const goodfitState: GoodfitState = {
+  initted: false,  
 };
