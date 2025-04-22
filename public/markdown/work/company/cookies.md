@@ -14,7 +14,7 @@ While cookies have been a fundamental part of web development for many years and
 
 2. **Limited Storage:** Cookies have a size limit (typically around 4KB), which can be a constraint when developers need to store larger sets of data. For more complex applications with substantial data requirements, developers might turn to other technologies that offer more extensive storage options.
 
-3. **Security Issues:** While cookies can be secure, they are still susceptible to certain types of attacks, such as Cross-Site Scripting (XSS) and Cross-Site Request Forgery (CSRF). Some developers may opt for newer technologies with built-in security features or explore ways to enhance cookie security.
+3. **Security Issues:** While cookies can be secure, they are still susceptible to certain types of attacks, such as Cross-Site Scripting (XSS) and Cross-Site Request Forgery (CSRF). Some developers may opt for newer technologies with built-in security cartridges or explore ways to enhance cookie security.
 
 4. **Stateless Nature:** Cookies are stateful and rely on the client-side to store information. For stateless applications or those embracing more modern architecture patterns like serverless or microservices, developers might explore stateless alternatives or leverage technologies that allow for centralized state management.
 

@@ -2,7 +2,7 @@
 order: 65
 title: Uberedux
 description:
-slug: /work/features/uberedux
+slug: /work/cartridges/uberedux
 icon: uberedux
 image: /jpg/cartridges/cartridge.jpg
 featured: false

@@ -2,10 +2,10 @@
 order: 130
 title: MarkDown Preview
 description: Markdown Preview component
-slug: /work/features/markdown-preview
+slug: /work/cartridges/markdown-preview
 icon: cartridge
 image: /jpg/cartridges/cartridge.jpg
-tags: features, tcartridge
+tags: cartridges, cartridge
 featured: true
 ---
 

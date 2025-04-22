@@ -37,7 +37,7 @@
             "icon": "feature",
             "type": "folder",
             "tags": [
-              "features",
+              "cartridges",
               "authentication"
             ],
             "excerpt": "Features\n\n \n\nA textfield which works like textedit or whatever the window equivalent might be",
@@ -73,7 +73,7 @@
                 "icon": "lingua",
                 "type": "file",
                 "tags": [
-                  "features",
+                  "cartridges",
                   "translation",
                   "localisation"
                 ],
@@ -86,8 +86,8 @@
                 "icon": "cartridge",
                 "type": "file",
                 "tags": [
-                  "features",
-                  "tcartridge"
+                  "cartridges",
+                  "cartridge"
                 ],
                 "excerpt": "Two panels; \n\n1. A textfield which works like textedit or whatever the window equivalent might be\n\n2. A"
               },
@@ -98,7 +98,7 @@
                 "icon": "cartridge",
                 "type": "file",
                 "tags": [
-                  "features",
+                  "cartridges",
                   "cartidge"
                 ],
                 "excerpt": "Result: Fast, staticfirst Next.js. Powerful, userfriendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience\n\n What are the Basic Features?\n\n Aut"
@@ -170,13 +170,13 @@
             "icon": "doc",
             "type": "file",
             "tags": [
-              "features",
+              "cartridges",
               "translation",
               "localisation",
               "jobs",
               "doc"
             ],
-            "excerpt": "Fullstack JavaScript Developer\n\nChris Dorward is a seasoned developer with two decades of experience in web systems, now focused on React, TypeScript, and scalable app architecture. I’ve delivered wor"
+            "excerpt": "Fullstack JavaScript Developer\n\n is a seasoned developer with two decades of experience in web systems, now focused on React, TypeScript, and scalable app architecture. I’ve delivered work for startup"
           },
           {
             "title": "UK Ltd Company",

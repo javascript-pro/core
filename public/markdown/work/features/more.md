@@ -2,10 +2,10 @@
 order: 2000
 title: Cartridges
 description: Please explain
-slug: /work/features/more
+slug: /work/cartridges/more
 icon: cartridge
 image: /jpg/cartridges/cartridge.jpg
-tags: features, cartidge, 
+tags: cartridges, cartidge, 
 featured: false
 ---
 
