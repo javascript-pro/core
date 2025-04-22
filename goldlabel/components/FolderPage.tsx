@@ -50,6 +50,11 @@ export default function FolderPage({
         title={frontmatter?.title || section}
         subheader={frontmatter?.description}
       />
+
+      <Box sx={{ mx: 2, mb: 2}}>
+        <AppBreadcrumb />
+      </Box>
+
       {frontmatter?.image && (
         <Box
           sx={{
@@ -61,11 +66,13 @@ export default function FolderPage({
               sm: '16/9',
               md: '16/4.5',
             },
-            mb: { xs: 1, sm: 4 },
-            borderRadius: 2,
+            mx: { xs: 1.5 },
+            mb: { xs: 1, sm: 2 },
+            borderRadius: 1,
             overflow: 'hidden',
           }}
         >
+          
           <Image
             priority
             src={frontmatter.image}
@@ -81,7 +88,7 @@ export default function FolderPage({
         {isSmUp ? (
           <Box sx={{ display: 'flex' }}>
             <Box sx={{ mt: { xs: 0, sm: -3 } }}>
-              <AppBreadcrumb />
+              
               {content && (
                 <CardContent>
                   <ReactMarkdown>{content}</ReactMarkdown>

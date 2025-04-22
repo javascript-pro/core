@@ -2,9 +2,9 @@
 order: 50
 title: Flash
 description: In 2020, Adobe officially discontinued Flash and removed all download links for the Flash Player from their website
-slug: /work/features/flash
+slug: /work/cartridges/flash
 icon: feature
-image: /jpg/cartridges/cartridge.jpg
+image: /jpg/cartridges/flash.jpg
 featured: false
 ---
 

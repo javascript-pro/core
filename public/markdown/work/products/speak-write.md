@@ -4,7 +4,7 @@ title: Speak Write
 description: Open Source AI propaganda generator
 slug: /work/products/speak-write
 icon: speak-write
-image: /jpg/products/good-fit.jpg
+image: /jpg/products/speak-write.jpg
 featured: false
 ---
 

@@ -2,10 +2,10 @@
 order: 130
 title: Lingua
 description: Multi language translation package
-slug: /work/features/lingua
+slug: /work/cartridges/lingua
 icon: lingua
 image: /jpg/cartridges/cartridge.jpg
-tags: features, translation, localisation
+tags: cartridges, translation, localisation
 ---
 
 > Because Localisation is not something you want to simply bolt onto a website at the end.

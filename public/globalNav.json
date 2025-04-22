@@ -1,6 +1,6 @@
 [
   {
-    "title": "Goldlabel pr0",
+    "title": "Goldlabel",
     "slug": "/",
     "order": 1,
     "icon": "home",
@@ -17,7 +17,7 @@
       "OpenAI",
       "Singularity"
     ],
-    "excerpt": "We build and ship modern web apps for clients who need real results — fast\n\n Next Gen, Gen X, Next.js, AI Prompt Engineering, OpenAI & Singularity\n\nGoldlabel Apps is a UKbased software company that de",
+    "excerpt": "We build and ship modern web apps for clients who need real results — fast\n\nGoldlabel Apps is a UKbased software company that designs, builds, and maintains fullstack web applications. We specialize i",
     "children": [
       {
         "title": "Work",
@@ -31,20 +31,20 @@
         "excerpt": "Software built in the open.  \nEvery app we ship is real, running in production, and developed in public.\n\n Active Projects\n\n SpeakWrite\n\nTurn your voice into a complete media kit.  \nUpload a short spe",
         "children": [
           {
-            "title": "Features",
-            "slug": "work/features",
+            "title": "Cartridges",
+            "slug": "work/cartridges",
             "order": 20,
             "icon": "feature",
             "type": "folder",
             "tags": [
-              "features",
+              "cartridges",
               "authentication"
             ],
-            "excerpt": "Features\n\n \n\nA textfield which works like textedit or whatever the window equivalent might be",
+            "excerpt": "What are they? Features.\n\n \n\nA textfield which works like textedit or whatever the window equivalent might be",
             "children": [
               {
                 "title": "Core",
-                "slug": "work/features/core",
+                "slug": "work/cartridges/core",
                 "order": 20,
                 "icon": "doc",
                 "type": "file",
@@ -52,7 +52,7 @@
               },
               {
                 "title": "Flash",
-                "slug": "work/features/flash",
+                "slug": "work/cartridges/flash",
                 "order": 50,
                 "icon": "feature",
                 "type": "file",
@@ -60,7 +60,7 @@
               },
               {
                 "title": "Uberedux",
-                "slug": "work/features/uberedux",
+                "slug": "work/cartridges/uberedux",
                 "order": 65,
                 "icon": "uberedux",
                 "type": "file",
@@ -68,12 +68,12 @@
               },
               {
                 "title": "Lingua",
-                "slug": "work/features/lingua",
+                "slug": "work/cartridges/lingua",
                 "order": 130,
                 "icon": "lingua",
                 "type": "file",
                 "tags": [
-                  "features",
+                  "cartridges",
                   "translation",
                   "localisation"
                 ],
@@ -81,24 +81,24 @@
               },
               {
                 "title": "MarkDown Preview",
-                "slug": "work/features/markdown-preview",
+                "slug": "work/cartridges/markdown-preview",
                 "order": 130,
                 "icon": "cartridge",
                 "type": "file",
                 "tags": [
-                  "features",
-                  "tcartridge"
+                  "cartridges",
+                  "cartridge"
                 ],
                 "excerpt": "Two panels; \n\n1. A textfield which works like textedit or whatever the window equivalent might be\n\n2. A"
               },
               {
                 "title": "Cartridges",
-                "slug": "work/features/more",
+                "slug": "work/cartridges/more",
                 "order": 2000,
                 "icon": "cartridge",
                 "type": "file",
                 "tags": [
-                  "features",
+                  "cartridges",
                   "cartidge"
                 ],
                 "excerpt": "Result: Fast, staticfirst Next.js. Powerful, userfriendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience\n\n What are the Basic Features?\n\n Aut"
@@ -170,13 +170,13 @@
             "icon": "doc",
             "type": "file",
             "tags": [
-              "features",
+              "cartridges",
               "translation",
               "localisation",
               "jobs",
               "doc"
             ],
-            "excerpt": "Fullstack JavaScript Developer\n\nChris Dorward is a seasoned developer with two decades of experience in web systems, now focused on React, TypeScript, and scalable app architecture. I’ve delivered wor"
+            "excerpt": "Fullstack JavaScript Developer\n\n is a seasoned developer with two decades of experience in web systems, now focused on React, TypeScript, and scalable app architecture. I’ve delivered work for startup"
           },
           {
             "title": "UK Ltd Company",

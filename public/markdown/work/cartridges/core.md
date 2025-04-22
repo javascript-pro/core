@@ -2,7 +2,7 @@
 order: 20
 title: Core
 description: Public facing foundation of the Goldlabel Apps ecosystem
-slug: /work/features/core
+slug: /work/cartridges/core
 icon: doc
 image: /jpg/cartridges/cartridge.jpg
 ---
