@@ -114,9 +114,12 @@ import SpeakwriteIcon from '@mui/icons-material/KeyboardVoice';
 import ProductsIcon from '@mui/icons-material/Store';
 import UbereduxIcon from '@mui/icons-material/StorageOutlined';
 
+import CartridgeIcon from '@mui/icons-material/IntegrationInstructionsOutlined';
+
 export type IconShape = {
   icon:
     | 'account'
+    | 'cartridge'
     | 'uberedux'
     | 'good-fit'
     | 'products'
@@ -633,6 +636,11 @@ export default function Icon({ icon, color }: IconShape) {
     case 'speak-write':
       iconFragment = <SpeakwriteIcon color={color} />;
       break;
+      case 'cartridge':
+        iconFragment = <CartridgeIcon color={color} />;
+        break;
+      
+
 
     default:
       iconFragment = <ErrorIcon color={'warning'} />;

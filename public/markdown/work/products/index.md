@@ -15,4 +15,4 @@ featured: false
 
 # [SpeakWrite](/work/products/speak-write)
 
-> Foreseen by Orwell in 1984, built for reals just now. By us. Out of our heads
+> As foreseen by Orwell in 1984. Built for reals just now. By us. Out of our heads

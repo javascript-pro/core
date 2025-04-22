@@ -5,7 +5,7 @@ description: 魏藏美食
 slug: /balance/books
 icon: food
 image: /jpg/wei-zangs-food.jpg
-featured: true
+featured: false
 epub: wei-zangs-food.epub
 ---
 

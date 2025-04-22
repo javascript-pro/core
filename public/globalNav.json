@@ -40,7 +40,7 @@
               "features",
               "authentication"
             ],
-            "excerpt": "Approach a large thing by doing a small thing and trying not to think about how large it is. Depends on your sense of time. Mine's pretty abnormal, but how about trying one weekend at a time?\n\n Authen",
+            "excerpt": "Features\n\n \n\n Products",
             "children": [
               {
                 "title": "Core",
@@ -78,6 +78,30 @@
                   "localisation"
                 ],
                 "excerpt": "Because Localisation is not something you want to simply bolt onto a website at the end.\n\nUsers will do that themselves if they cared enough about reading anything you have written. Which they don't. "
+              },
+              {
+                "title": "MarkDown Preview",
+                "slug": "work/features/markdown-preview",
+                "order": 130,
+                "icon": "cartridge",
+                "type": "file",
+                "tags": [
+                  "features",
+                  "tcartridge"
+                ],
+                "excerpt": "Two panels; \n\n1. A"
+              },
+              {
+                "title": "More about features",
+                "slug": "work/features/more",
+                "order": 2000,
+                "icon": "cartidge",
+                "type": "file",
+                "tags": [
+                  "features",
+                  "cartidge"
+                ],
+                "excerpt": "More about features\n\n Approach a large thing by doing a small thing and trying not to think about how large it is. Depends on your sense of time. Mine's pretty abnormal, but how about trying one weeke"
               }
             ]
           },
@@ -90,7 +114,7 @@
             "tags": [
               "products"
             ],
-            "excerpt": "Paste a job description and get instant feedback on how well our skills and experience match what you're looking for. You can download an automatically tailored CV.\n\n \n\n Foreseen by Orwell in 1984, bu",
+            "excerpt": "Paste a job description and get instant feedback on how well our skills and experience match what you're looking for. You can download an automatically tailored CV.\n\n \n\n As foreseen by Orwell in 1984.",
             "children": [
               {
                 "title": "Speak Write",
