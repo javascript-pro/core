@@ -38,9 +38,9 @@
             "type": "folder",
             "tags": [
               "cartridges",
-              "authentication"
+              "features"
             ],
-            "excerpt": "What are they? Features.\n\n \n\nA textfield which works like textedit or whatever the window equivalent might be",
+            "excerpt": "What are they? Features\n\n1. Bootstrapped Next.js project\n    Clone and deploy to GitHub & Vercel.\n\n2. Basic UI (MUI):\n    Two text input areas (JD & Resume).\n    Submit button.\n    Result display pane",
             "children": [
               {
                 "title": "Core",
@@ -114,8 +114,37 @@
             "tags": [
               "products"
             ],
-            "excerpt": "Products\n\n \n\n1. User Input:\n    Job description (JD) pasted into a text area.\n    Resume content pasted into a second text area.\n   \n\n \n\n Paste a job description and get instant feedback on how well o",
+            "excerpt": "Paste a job description and get instant feedback on how well our skills and experience match what you're looking for. You can download an automatically tailored CV.\n\n SpeakWrite\n\n As foreseen by Orwel",
             "children": [
+              {
+                "title": "Good Fit?",
+                "slug": "work/products/good-fit",
+                "order": 20,
+                "icon": "good-fit",
+                "type": "folder",
+                "tags": [
+                  "products",
+                  "recruitment",
+                  "ai",
+                  "good-fit"
+                ],
+                "excerpt": "1. User Input:\n    Job description (JD) pasted into a text area.\n    Resume content pasted into a second text area.\n   \n\n \n\n Paste a job description and get instant feedback on how well our skills and",
+                "children": [
+                  {
+                    "title": "Overview",
+                    "slug": "work/products/good-fit/overview",
+                    "order": 55,
+                    "icon": "good-fit",
+                    "type": "file",
+                    "tags": [
+                      "examples",
+                      "Open AI",
+                      "recruitment"
+                    ],
+                    "excerpt": "Find out if your job is a good fit for our experience and skills. This simple AI tool will tell you in seconds. Paste in a job description and click the button to let our AI it and tell you if it's a "
+                  }
+                ]
+              },
               {
                 "title": "Speak Write",
                 "slug": "work/products/speak-write",
@@ -123,19 +152,6 @@
                 "icon": "speak-write",
                 "type": "file",
                 "excerpt": "Foreseen by Orwell in 1984, built for reals just now. By us. Out of our heads\n\nSure thing, here's a draft of the SpeakWrite landing page copy, in clean \"web voice\" — modern, crisp, and focused on clar"
-              },
-              {
-                "title": "Good Fit?",
-                "slug": "work/products/good-fit",
-                "order": 55,
-                "icon": "good-fit",
-                "type": "file",
-                "tags": [
-                  "examples",
-                  "Open AI",
-                  "recruitment"
-                ],
-                "excerpt": "Find out if your job is a good fit for our experience and skills. This simple AI tool will tell you in seconds. Paste in a job description and click the button to let our AI it and tell you if it's a "
               }
             ]
           },
@@ -329,7 +345,7 @@
         "order": 100,
         "icon": "balance",
         "type": "folder",
-        "excerpt": "Is THIS Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday\n\n Choose your own path, Sir ,  or",
+        "excerpt": "Book 1. \n\n \n\n Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Is this Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a",
         "children": [
           {
             "title": "Books",
@@ -337,7 +353,7 @@
             "order": 100,
             "icon": "balance",
             "type": "folder",
-            "excerpt": "Book 1. Weekend Portfolio\n\nAimed at semiprofessional coders who want to go pr0.\n\n Weekend 1\n\nIn this Weekend Portfolio project, you’ll build a compact and powerful app called mp3totext. The idea is si",
+            "excerpt": "Weekend Portfolio\n\n Written for semiprofessional coders ready to go pr0\n\nIn a weekend project, you’ll build a simple but powerful AI app. The idea is simple but important: you upload an .mp3 file, and",
             "children": [
               {
                 "title": "Wei Zang’s Food",
@@ -346,6 +362,14 @@
                 "icon": "food",
                 "type": "file",
                 "excerpt": "I never learned to cook. No one taught me. That’s why I can tell you about it.\n\nPeople who are taught spend too long worrying about what’s “right.” I just ate what I liked, cooked it, guessed. Like de"
+              },
+              {
+                "title": "Weekend Portfolio",
+                "slug": "balance/books/weekend-portfolio",
+                "order": 160,
+                "icon": "speak-write",
+                "type": "file",
+                "excerpt": "Weekend Portfolio\n\nAimed at semiprofessional coders who want to go pr0.\n\n Weekend 1\n\nIn a weekend project, you’ll build a simple but powerful AI app. The idea is simple but important: you upload an .m"
               }
             ]
           },

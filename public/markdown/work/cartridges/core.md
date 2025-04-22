@@ -60,3 +60,8 @@ At this stage, the **www** public-facing site is the primary focus, with an emph
 - Additional applications may be deployed under the Goldlabel Apps umbrella.
 - Features like dynamic data integration (e.g., Firebase, CMS) can enhance page content while preserving SEO and performance.
 - Expansion of static and dynamic content to further enrich the user experience.
+
+
+### [Weekend Portfolio](/balance/books/weekend-portfolio)
+
+A series of standalone apps you can build in a weekend. Each project has modern deployment, real-world app structure

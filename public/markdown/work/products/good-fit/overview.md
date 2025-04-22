@@ -1,6 +1,6 @@
 ---
 order: 55
-title: Good Fit?
+title: Overview
 description: An example AI tool
 slug: /work/products/good-fit
 icon: good-fit
