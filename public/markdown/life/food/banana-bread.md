@@ -4,7 +4,7 @@ title: 'Banana Bread'
 description: Proper crowd pleaser
 slug: /life/food/banana-bread
 icon: food
-image: /jpg/life.jpg
+image: /jpg/wei-zang/wei-zangs-food.jpg
 ---
 
 Moist, flavorful, and easy to make. Perfect for using overripe bananas, this classic loaf is a crowd-pleaser for breakfast, snacks, or dessert.

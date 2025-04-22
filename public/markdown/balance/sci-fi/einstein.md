@@ -4,7 +4,7 @@ title: Einstein
 description: Albert. The Godfather of modern physics
 slug: /balance/sci-fi/einstein
 icon: doc
-image: /jpg/einstein.jpg
+image: /jpg/photos/einstein.jpg
 ---
 
 Let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series.

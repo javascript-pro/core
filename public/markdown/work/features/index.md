@@ -4,7 +4,7 @@ title: Features
 description: What can Goldlabel do?
 slug: /work/features
 icon: feature
-image: /jpg/cartridges/cartridge.jpg
+image: /jpg/cartridges/cartridges.jpg
 tags: features, authentication
 featured: false
 ---
@@ -12,6 +12,4 @@ featured: false
 
 - [Markdown Preview](/work/features/markdown-preview)
 
-## Products
-
-- [Good Fit?](/products/good-fit)
+A textfield which works like textedit or whatever the window equivalent might be

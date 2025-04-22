@@ -1,17 +1,17 @@
 ---
 order: 2000
-title: More about features
+title: Cartridges
 description: Please explain
 slug: /work/features/more
-icon: cartidge
+icon: cartridge
 image: /jpg/cartridges/cartridge.jpg
 tags: features, cartidge, 
 featured: false
 ---
 
-## More about features
+> Result: Fast, static-first Next.js. Powerful, user-friendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience
 
-> Approach a large thing by doing a small thing and trying not to think about how large it is. Depends on your sense of time. Mine's pretty abnormal, but how about trying one weekend at a time?
+## What are the Basic Features?
 
 #### Authentication
 
@@ -25,4 +25,4 @@ Goldlabel Apps can be hosted anywhere but they all need to talk to the same syst
 
 A tried and tested way to increase Search Engine Visibility and the amount of free organic traffic to your site is to list it on directories. Listing a business here is free and offers; Real Online Presence, Targeted Reach, Drives Growth, Establish Credibility andAnalytics and Insights
 
-Fast, static-first Next.js. Powerful, user-friendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience
+> Approach a large thing by doing a small thing and trying not to think about how large it is. Depends on your sense of time. Mine's pretty abnormal, but how about trying one weekend at a time?

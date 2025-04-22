@@ -40,7 +40,7 @@
               "features",
               "authentication"
             ],
-            "excerpt": "Features\n\n \n\n Products",
+            "excerpt": "Features\n\n \n\nA textfield which works like textedit or whatever the window equivalent might be",
             "children": [
               {
                 "title": "Core",
@@ -89,19 +89,19 @@
                   "features",
                   "tcartridge"
                 ],
-                "excerpt": "Two panels; \n\n1. A"
+                "excerpt": "Two panels; \n\n1. A textfield which works like textedit or whatever the window equivalent might be\n\n2. A"
               },
               {
-                "title": "More about features",
+                "title": "Cartridges",
                 "slug": "work/features/more",
                 "order": 2000,
-                "icon": "cartidge",
+                "icon": "cartridge",
                 "type": "file",
                 "tags": [
                   "features",
                   "cartidge"
                 ],
-                "excerpt": "More about features\n\n Approach a large thing by doing a small thing and trying not to think about how large it is. Depends on your sense of time. Mine's pretty abnormal, but how about trying one weeke"
+                "excerpt": "Result: Fast, staticfirst Next.js. Powerful, userfriendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience\n\n What are the Basic Features?\n\n Aut"
               }
             ]
           },
@@ -114,7 +114,7 @@
             "tags": [
               "products"
             ],
-            "excerpt": "Paste a job description and get instant feedback on how well our skills and experience match what you're looking for. You can download an automatically tailored CV.\n\n \n\n As foreseen by Orwell in 1984.",
+            "excerpt": "Products\n\n \n\n1. User Input:\n    Job description (JD) pasted into a text area.\n    Resume content pasted into a second text area.\n   \n\n \n\n Paste a job description and get instant feedback on how well o",
             "children": [
               {
                 "title": "Speak Write",
@@ -196,7 +196,7 @@
                   "legal",
                   "address"
                 ],
-                "excerpt": "Goldlabel Apps Ltd is a UK Limited Company (5460545)\n\n321323 High Road  \nChadwell Heath  \nEssex RM6 6AX"
+                "excerpt": "Goldlabel Apps Ltd is a UK Limited Company (5460545)\n\n321323 High Road  \nChadwell Heath  \nimage: /jpg/goldlabel/Home.jpgEssex RM6 6AX"
               },
               {
                 "title": "Remote working",

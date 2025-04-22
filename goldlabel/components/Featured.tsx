@@ -8,6 +8,7 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  Typography,
 } from '@mui/material';
 import { Icon } from '../';
 
@@ -21,9 +22,11 @@ export type FeaturedProps = {
       order?: number;
     };
   }[];
+  folderLabel?: string;
 };
 
-export default function Featured({ featured = [] }: FeaturedProps) {
+export default function Featured({ featured = [], folderLabel }: FeaturedProps) {
+  const showFeatured = false;
   const router = useRouter();
 
   const handleItemClick = (slug: string) => {
@@ -32,29 +35,34 @@ export default function Featured({ featured = [] }: FeaturedProps) {
 
   // Sort by frontmatter.order (default to 0 if undefined)
   const sorted = [...featured].sort(
-    (a, b) => (a.frontmatter.order ?? 0) - (b.frontmatter.order ?? 0),
+    (a, b) => (a.frontmatter.order ?? 0) - (b.frontmatter.order ?? 0)
   );
+
+  if (!showFeatured) return null;
 
   return (
     <Box sx={{ mt: 0 }}>
-      
+      {folderLabel && (
+        <Typography sx={{ mx: 2 }} variant="button">
+          {folderLabel}
+        </Typography>
+      )}
+
       <List dense>
-        <ListItemButton
-          onClick={() => handleItemClick('/work/products/good-fit')}
-        >
+        <ListItemButton onClick={() => handleItemClick('/work/products/good-fit')}>
           <ListItemIcon sx={{ alignSelf: 'flex-start', mt: 1 }}>
-            <Icon icon={'good-fit'} color="primary"/>
+            <Icon icon={'good-fit'} />
           </ListItemIcon>
           <ListItemText
             primary={'Good Fit?'}
-            secondary="Paste in a job description, get an instantly tailored CV"
+            // secondary="Paste in a job description, get an instantly tailored CV"
           />
         </ListItemButton>
-        {/* <ListItemButton
-          onClick={() => handleItemClick('/work/products/speak-write')}
-        >
+
+        {/* Future featured items */}
+        {/* <ListItemButton onClick={() => handleItemClick('/work/products/speak-write')}>
           <ListItemIcon sx={{ alignSelf: 'flex-start', mt: 1 }}>
-            <Icon icon={'speak-write'}  color="primary"/>
+            <Icon icon={'speak-write'} color="primary" />
           </ListItemIcon>
           <ListItemText
             primary={'SpeakWrite'}
@@ -78,7 +86,6 @@ export default function Featured({ featured = [] }: FeaturedProps) {
           );
         })}
       </List>
-    
     </Box>
   );
 }

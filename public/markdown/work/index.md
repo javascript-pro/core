@@ -4,7 +4,7 @@ title: Work
 description: Professional Fullstack JavaScript
 slug: /work
 icon: work
-image: /jpg/core.jpg
+image: /jpg/Opengraph-template.jpg
 tags: social
 ---
 

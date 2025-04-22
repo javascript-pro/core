@@ -4,7 +4,7 @@ title: Food
 description: Right sleep. Right food.
 slug: /life/food
 icon: food
-image: /jpg/life.jpg
+image: /jpg/wei-zang/wei-zangs-food.jpg
 ---
 
 When I want a recipe I go the internet of course. I get annoyed by the amount of adverts on the pages where I want to follow simple instructions.

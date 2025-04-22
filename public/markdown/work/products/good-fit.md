@@ -4,7 +4,7 @@ title: Good Fit?
 description: An example AI tool
 slug: /work/products/good-fit
 icon: good-fit
-image: /jpg/good-fit.jpg
+image: /jpg/products/good-fit.jpg
 tags: examples, Open AI, recruitment
 featured: false
 ---
