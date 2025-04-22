@@ -6,12 +6,12 @@ import {
   Button,
   Grid,
   CardHeader,
-  CardMedia,
   CardContent,
   TextField,
-  Typography,
 } from '@mui/material';
-import { Icon, MarkdownPopup } from '../../';
+import { 
+  Icon,
+} from '../../';
 
 export type Frontmatter = {
   order?: number;
@@ -28,65 +28,69 @@ export type GoodFitProps = {
   markdown: any;
 };
 
-export default function GoodFit({ markdown }: GoodFitProps) {
+export default function GoodFit() {
+
   const [jobDescription, setJobDescription] = React.useState('');
+  const [resume, setResume] = React.useState('');
 
-  const { frontmatter, content } = markdown;
-
-  const {
-    title,
-    description,
-    image,
-    // tags,
-    icon,
-  } = frontmatter;
+  const onAnalyse = () => {
+    console.warn("onAnalyse")
+  }
 
   return (
     <>
       <Box sx={{ maxWidth: 800, margin: 'auto', mt: 4, p: 2 }}>
         <CardHeader
-          avatar={<Icon icon={icon} />}
-          title={title}
-          subheader={description}
+          avatar={<Icon icon={"good-fit"} />}
+          title={"Good fit?"}
         />
 
         <CardContent>
-          <Grid container spacing={2}>
-            <Grid size={{ xs: 12 }}>
-              <Typography>{content}</Typography>
-            </Grid>
+          <Grid container spacing={1}>
 
-            <Grid size={{ xs: 12, md: 8 }}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <TextField
                 sx={{ background: 'white', mb: 2 }}
-                label="Job Description"
-                placeholder="Paste your job description here..."
+                variant="outlined"
+                label="Resume"
+                placeholder="Paste resume here..."
                 multiline
                 fullWidth
                 rows={10}
-                variant="outlined"
-                value={jobDescription}
-                onChange={(e) => setJobDescription(e.target.value)}
-              />
-
-              <MarkdownPopup
-                title="Our CV (Resume)"
-                icon="doc"
-                markdown="e thing, here's a draft of the **SpeakWrite** landing page copy, in clean "
+                value={resume}
+                onChange={(e) => setResume(e.target.value)}
               />
             </Grid>
 
-            <Grid size={{ xs: 12, md: 4 }}>
-              <CardMedia src={image} component={'img'} />
+            <Grid size={{ xs: 12, md: 6 }}>
+              <TextField
+                sx={{ background: 'white', mb: 2 }}
+                variant="outlined"
+                label="Job Description"
+                placeholder="Paste job description here..."
+                multiline
+                fullWidth
+                rows={10}
+                value={jobDescription}
+                onChange={(e) => setJobDescription(e.target.value)}
+              />
+            </Grid>
 
-              <Button fullWidth variant="contained" onClick={() => {}}>
+            <Grid size={{ xs: 12 }}>
+              <Button 
+                variant="contained" 
+                onClick={ onAnalyse }>
                 <Icon icon="openai" />
-                <Box sx={{ mx: 1 }}>Good Fit?</Box>
+                <Box sx={{ mx: 1 }}>
+                  Analyse
+                </Box>
               </Button>
             </Grid>
           </Grid>
         </CardContent>
+
         {/* <pre>tags: {JSON.stringify(tags, null, 2)}</pre> */}
+
       </Box>
     </>
   );

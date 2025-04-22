@@ -23,7 +23,7 @@ export default function MarkdownPopup({
   title = 'Title',
   markdown = '> Nothing to see here',
 }: MarkdownPopupProps) {
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
 
   return (
     <>
@@ -34,17 +34,24 @@ export default function MarkdownPopup({
           </DialogTitle>
           <DialogContent>{markdown}</DialogContent>
           <DialogActions>
-            <Button fullWidth variant="outlined" onClick={() => {}}>
+            <Button fullWidth variant="outlined" onClick={() => {
+              setOpen(false)
+            }}>
               <Icon icon="close" />
               <Box sx={{ mx: 1 }}>Close</Box>
             </Button>
           </DialogActions>
         </Dialog>
 
-        <Button fullWidth variant="contained" onClick={() => {}}>
+        {/* <Button 
+          variant="outlined"
+          color="error"
+          onClick={() => {
+            setOpen(true)
+          }}>
           <Icon icon={icon as any} />
           <Box sx={{ mx: 1 }}>View our CV</Box>
-        </Button>
+        </Button> */}
       </Box>
     </>
   );

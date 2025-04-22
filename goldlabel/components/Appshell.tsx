@@ -68,8 +68,8 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
           MuiButton: {
             styleOverrides: {
               containedPrimary: {
-                fontWeight: 'normal',
-                color: '#efefef',
+                fontWeight: 'bold',
+                boxShadow: 'none',
               },
             },
           },
@@ -111,10 +111,8 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
         <Container maxWidth="md">
           <Toolbar>
             <StyledFab
-              color="secondary"
               sx={{
-                // boxShadow: 0,
-                // border: '1px solid ' + themeValues.text,
+                boxShadow: 0,
               }}
               onClick={handleToggleMenu}
               aria-label="Goldlabel Menu"

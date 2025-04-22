@@ -84,10 +84,12 @@ export default async function CatchAllPage({ params }: any) {
   const markdown = await loadMarkdown(slugPath);
   const featured = await getFeatured();
 
-  if (slugPath === '/work/products/good-fit')
-    return <GoodFit markdown={markdown} />;
+  if (slugPath === '/work/products/good-fit') {
+    return <GoodFit />;
+  }
 
   if (markdown) {
+
     return (
       <FilePage featured={featured} content={markdown} globalNav={globalNav} />
     );
