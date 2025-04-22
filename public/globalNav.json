@@ -408,7 +408,7 @@
             "order": 100,
             "icon": "balance",
             "type": "folder",
-            "excerpt": "Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland",
+            "excerpt": "The term Generation X acquired a modern application after the release of Generation X: Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\nTales for an Accelera",
             "children": []
           },
           {
@@ -417,7 +417,7 @@
             "order": 120,
             "icon": "folder",
             "type": "folder",
-            "excerpt": "",
+            "excerpt": "Because we can carefully observe constellations when the Sun is not blocking their path, we know what position the stars should be in when the Sun is keeping us from seeing them. However, according to",
             "children": [
               {
                 "title": "Einstein",
