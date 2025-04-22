@@ -1,5 +1,5 @@
 // app/[[...slug]]/page.tsx
-
+import * as React from 'react';
 import path from 'path';
 import { notFound } from 'next/navigation';
 import fs from 'fs/promises';
@@ -18,6 +18,7 @@ export default async function CatchAllPage({ params }: any) {
   // Load global nav
   const navPath = path.join(process.cwd(), 'public/globalNav.json');
   let globalNav = null;
+
   try {
     const navRaw = await fs.readFile(navPath, 'utf-8');
     globalNav = JSON.parse(navRaw);
