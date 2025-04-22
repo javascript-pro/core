@@ -7,12 +7,11 @@ icon: account
 image: /jpg/goldlabel/goldlabel.jpg
 tags: cookies, gdpr, privacy, terms, trust
 ---
-
 > We don't use cookies
 
 **Privacy Statement**
 
-Welcome to Goldlabel! We value your privacy and are committed to protecting your personal information. This privacy statement aims to provide clarity on how we collect, use, and safeguard your data.
+Welcome to Goldlabel. We value your privacy and are committed to protecting your personal information. This privacy statement aims to provide clarity on how we collect, use, and safeguard your data.
 
 **What Information Do We Collect?**
 
