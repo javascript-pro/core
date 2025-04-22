@@ -7,12 +7,11 @@ icon: work
 image: /jpg/goldlabel/work.jpg
 tags: social
 ---
-> Every app we ship is real, running in production, and developed in public.
+> Every app we ship is real, running in production, and developed in public
 
+Goldlabel Core is Open Source and Free forever — Statically generated with Firestore-powered updates and a real admin panel. Built with Next.js App Router and MUI. 
 
-### Goldlabel Core
-
-Free Forever — Statically generated with Firestore-powered updates and a real admin panel. Built with Next.js App Router and MUI. [DEMO](https://goldlabel.pro)
+[DEMO](https://goldlabel.pro)
 
 ### Benefits
 
