@@ -23,6 +23,8 @@ Whether you're a startup with a short deadline or an enterprise with complex wor
 - **Readable, extensible codebases.**  
   You’ll never be locked in. Our code is designed to be picked up by your team — or handed back to us when needed.
 
+> Choose your own path, Sir [Work](/work), [Life](/life) or [Balance](/balance)
+
 ### Work With Us
 
 We take on a limited number of new projects each quarter. If you need:

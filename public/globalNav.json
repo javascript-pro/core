@@ -95,8 +95,8 @@
                 "excerpt": "Because Localisation is not something you want to simply bolt onto a website at the end.\n\nUsers will do that themselves if they cared enough about reading anything you have written. Which they don't. "
               },
               {
-                "title": "MarkDown Preview",
-                "slug": "work/cartridges/markdown-preview",
+                "title": "MarkDown",
+                "slug": "work/cartridges/markdown",
                 "order": 130,
                 "icon": "cartridge",
                 "type": "file",
@@ -340,10 +340,10 @@
             "order": 200,
             "icon": "fish",
             "type": "folder",
-            "excerpt": "",
+            "excerpt": "Aquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closedloop system.",
             "children": [
               {
-                "title": "What is Aquaponics?",
+                "title": "Aquaponics 5 Ws",
                 "slug": "life/aquaponics/overview",
                 "order": 50,
                 "icon": "fish",

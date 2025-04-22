@@ -76,9 +76,6 @@ export default function FolderContents({ folderLabel }: FolderContentsProps) {
 
   return (
     <Box sx={{ minWidth: 300 }}>
-      <Typography sx={{ mx: 2 }} variant="button">
-        {folderLabel || ''}
-      </Typography>
 
       {grandparent && (
         <>
