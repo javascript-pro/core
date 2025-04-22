@@ -1,12 +1,11 @@
 ---
 order: 20
 title: Core
-description: Public facing foundation of the Goldlabel Apps ecosystem
-slug: /work/cartridges/core
-icon: doc
+description: Goldlabel Core is Open Source and Free forever — Statically generated with Firestore-powered updates and a real admin panel. Built with Next.js App Router and MUI. 
+slug: /work/core
+icon: core
 image: /jpg/cartridges/cartridge.jpg
 ---
-
 > Goldlabel Core is a project designed to deliver **powerful, user-friendly web applications** that enhance productivity and streamline tasks. The project uses a **monorepo** architecture with multiple Next.js applications deployed to **Vercel**.
 
 Goldlabel Core is the public facing foundation of the Goldlabel Apps ecosystem. It’s a fast, static-first Next.js site powered by real-time data from Firestore and managed through a built-in admin interface.

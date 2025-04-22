@@ -5,7 +5,7 @@ description: Professional Fullstack JavaScript
 slug: /work
 icon: work
 image: /jpg/goldlabel/work.jpg
-tags: social
+tags: JavaScript, Vanilla JavaScript, TypeScript, React, Angular, Vue, etc, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 ---
 > Every app we ship is real, running in production, and developed in public
 
