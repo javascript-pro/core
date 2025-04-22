@@ -9,7 +9,7 @@
     "nav": "tsx globalNav.mjs",
     "prepare": "husky install",
     "build": "next build",
-    "dev": "clear && rm -rf .next && yarn nav && next dev",
+    "dev": "rm -rf .next && yarn nav && next dev",
     "lint": "next lint",
     "lint-staged": "lint-staged",
     "prettier": "prettier --write --ignore-unknown .",

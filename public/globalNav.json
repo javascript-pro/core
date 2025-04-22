@@ -6,6 +6,7 @@
     "icon": "home",
     "type": "folder",
     "tags": [
+      "JavaScript",
       "Next Gen",
       "Next.js",
       "core",
@@ -15,7 +16,21 @@
       "AI Prompt Engineering",
       "ChatGPT",
       "OpenAI",
-      "Singularity"
+      "Singularity",
+      "Frontend",
+      "Vanilla JS",
+      "TypeScript",
+      "React",
+      "Angular",
+      "Vue",
+      "Material UI",
+      "MUI",
+      "Flash",
+      "Server Side JavaScript",
+      "Node",
+      "Gatsby",
+      "NextJS",
+      "Headless CMS"
     ],
     "excerpt": "We build and ship modern web apps for clients who need real results — fast\n\nGoldlabel Apps is a UKbased software company that designs, builds, and maintains fullstack web applications. We specialize i",
     "children": [
@@ -28,7 +43,7 @@
         "tags": [
           "social"
         ],
-        "excerpt": "Software built in the open.  \nEvery app we ship is real, running in production, and developed in public.\n\n Active Projects\n\n SpeakWrite\n\nTurn your voice into a complete media kit.  \nUpload a short spe",
+        "excerpt": "Every app we ship is real, running in production, and developed in public.\n\n\n Goldlabel Core\n\nFree Forever — Statically generated with Firestorepowered updates and a real admin panel. Built with Next.",
         "children": [
           {
             "title": "Cartridges",
@@ -131,6 +146,20 @@
                 "excerpt": "1. User Input:\n    Job description (JD) pasted into a text area.\n    Resume content pasted into a second text area.\n   \n\n \n\n Paste a job description and get instant feedback on how well our skills and",
                 "children": [
                   {
+                    "title": "Our Resume (CV)",
+                    "slug": "work/products/good-fit/resume",
+                    "order": 50,
+                    "icon": "good-fit",
+                    "type": "file",
+                    "tags": [
+                      "cartridges",
+                      "jobs",
+                      "doc",
+                      "markdown"
+                    ],
+                    "excerpt": "Fullstack JavaScript Developer\n\n is a seasoned developer with two decades of experience in web systems, now focused on React, TypeScript, and scalable app architecture. I’ve delivered work for startup"
+                  },
+                  {
                     "title": "Overview",
                     "slug": "work/products/good-fit/overview",
                     "order": 55,
@@ -160,7 +189,7 @@
             "slug": "work/fullstack",
             "order": 30,
             "icon": "techstack",
-            "type": "file",
+            "type": "folder",
             "tags": [
               "JavaScript",
               "Vanilla JavaScript",
@@ -177,22 +206,8 @@
               "NextJS",
               "Headless CMS"
             ],
-            "excerpt": "Fullstack is one of those industry terms rapidly loosing meaning from overuse. In the olden days there was a very clear difference between someone who made the frontend of an app and a person who made"
-          },
-          {
-            "title": "Our Resume (CV)",
-            "slug": "work/resume",
-            "order": 50,
-            "icon": "doc",
-            "type": "file",
-            "tags": [
-              "cartridges",
-              "translation",
-              "localisation",
-              "jobs",
-              "doc"
-            ],
-            "excerpt": "Fullstack JavaScript Developer\n\n is a seasoned developer with two decades of experience in web systems, now focused on React, TypeScript, and scalable app architecture. I’ve delivered work for startup"
+            "excerpt": "Fullstack is one of those industry terms rapidly loosing meaning from overuse. In the olden days there was a very clear difference between someone who made the frontend of an app and a person who made",
+            "children": []
           },
           {
             "title": "UK Ltd Company",
@@ -369,7 +384,7 @@
                 "order": 160,
                 "icon": "speak-write",
                 "type": "file",
-                "excerpt": "Weekend Portfolio\n\nAimed at semiprofessional coders who want to go pr0.\n\n Weekend 1\n\nIn a weekend project, you’ll build a simple but powerful AI app. The idea is simple but important: you upload an .m"
+                "excerpt": "Written for at semiprofessional coders ready to go pr0\n\nIn a weekend project, you’ll build a simple but powerful AI app. The idea is simple but important: you upload an .mp3 file, and the app gives yo"
               }
             ]
           },

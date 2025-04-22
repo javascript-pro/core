@@ -1,14 +1,13 @@
 ---
 order: 50
 title: Our Resume (CV)
-description: Most up to date
-slug: /work/resume
-icon: doc
-image: /jpg/Opengraph-template.jpg
-tags: cartridges, translation, localisation, jobs, doc
-featured: true
+description: Latest
+slug: /work/products/good-fit/resume
+icon: good-fit
+image: /jpg/cartridges/cartridge.jpg
+tags: cartridges, jobs, doc, markdown
+featured: false
 ---
-
 ## Fullstack JavaScript Developer
 
 [Chris](https://www.linkedin.com/in/chris-dorward/) is a seasoned developer with two decades of experience in web systems, now focused on React, TypeScript, and scalable app architecture. I’ve delivered work for startups corporates, and remote-first teams across the UK,
