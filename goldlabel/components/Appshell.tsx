@@ -111,7 +111,7 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
               color="secondary"
               sx={{
                 boxShadow: 0,
-                border: '2px solid ' + themeValues.border,
+                border: '2px solid ' + themeValues.text,
               }}
               onClick={handleToggleMenu}
               aria-label="Goldlabel Menu"
