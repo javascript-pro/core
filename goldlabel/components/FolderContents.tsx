@@ -3,6 +3,7 @@
 import * as React from 'react';
 import {
   Box,
+  ListItemIcon,
   List,
   ListItem,
   ListItemButton,
@@ -79,9 +80,23 @@ export default function FolderContents({ folderLabel }: FolderContentsProps) {
         {folderLabel || ''}
       </Typography>
 
+      {grandparent && (
+        <>
+          <ListItem disablePadding>
+            <ListItemButton onClick={() => router.push(`/${grandparent.slug}`)}>
+              <ListItemIcon>
+                <Icon icon="up" />
+              </ListItemIcon>
+              <ListItemText
+                primary={grandparent.title}
+              />
+            </ListItemButton>
+          </ListItem>
+        </>
+      )}
+
       {itemsToRender.length === 0 ? null : (
         <List dense>
-          {/* Children items, excluding current file */}
           {itemsToRender
             .filter(
               (item) => `/${item.slug}`.replace(/\/+/g, '/') !== currentPath,
@@ -89,6 +104,7 @@ export default function FolderContents({ folderLabel }: FolderContentsProps) {
             .map((item) => (
               <ListItem key={item.slug} disablePadding>
                 <ListItemButton onClick={() => router.push(`/${item.slug}`)}>
+                  
                   <ListItemText
                     primary={item.title}
                     secondary={item.description}

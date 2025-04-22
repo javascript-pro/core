@@ -53,6 +53,9 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
           success: {
             main: themeValues.secondary,
           },
+          info: {
+            main: themeValues.text,
+          },
           background: {
             default: themeValues.background,
             paper: themeValues.paper,
