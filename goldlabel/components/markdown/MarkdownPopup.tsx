@@ -10,7 +10,7 @@ import {
   DialogContent,
   CardHeader,
 } from '@mui/material';
-import { Icon } from '../';
+import { Icon } from '../../';
 
 export type MarkdownPopupProps = {
   icon: string;
