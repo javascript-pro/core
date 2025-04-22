@@ -4,10 +4,9 @@ title: Privacy
 description: Your trust means everything to us
 slug: /work/company/privacy
 icon: account
-image: /jpg/goldlabel/Home.jpg
+image: /jpg/goldlabel/goldlabel.jpg
 tags: cookies, gdpr, privacy, terms, trust
 ---
-
 > We don't use cookies
 
 **Privacy Statement**
