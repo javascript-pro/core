@@ -20,13 +20,13 @@ async function getPageTitle(slugPath: string): Promise<string> {
 
   const markdown = await loadMarkdown(slugPath);
   if (markdown && markdown.frontmatter.title) {
-    return `${markdown.frontmatter.title} | Goldlabel Core`;
+    return `${markdown.frontmatter.title} ${markdown.frontmatter.description}`;
   }
 
   // Handle folder index page
   const indexMarkdown = await loadMarkdown(path.join(slugPath, 'index'));
   if (indexMarkdown?.frontmatter.title) {
-    return `${indexMarkdown.frontmatter.title}`;
+    return `${indexMarkdown.frontmatter.title} ${indexMarkdown.frontmatter.description}`;
   }
 
   // Default fallback

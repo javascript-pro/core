@@ -1,6 +1,6 @@
 ---
 order: 20
-title: Features
+title: Cartridges
 description: What can Goldlabel do?
 slug: /work/cartridges
 icon: feature
@@ -8,7 +8,7 @@ image: /jpg/cartridges/cartridges.jpg
 tags: cartridges, authentication
 featured: false
 ---
-## Features
+## What are they? Features.
 
 - [Markdown Preview](/work/cartridges/markdown-preview)
 
