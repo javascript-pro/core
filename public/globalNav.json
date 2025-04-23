@@ -72,7 +72,10 @@
                 "order": 25,
                 "icon": "doc",
                 "type": "file",
-                "tags": ["legal", "address"],
+                "tags": [
+                  "legal",
+                  "address"
+                ],
                 "excerpt": "Goldlabel Apps Ltd is a UK Limited Company (5460545)\n\n321323 High Road  \nChadwell Heath  \nimage: /jpg/goldlabel/Home.jpgEssex RM6 6AX"
               },
               {
@@ -81,8 +84,11 @@
                 "order": 190,
                 "icon": "work",
                 "type": "file",
-                "tags": ["remote", "hybrid"],
-                "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years. \n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communication,"
+                "tags": [
+                  "remote",
+                  "hybrid"
+                ],
+                "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years.\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communication, "
               },
               {
                 "title": "Cookies",
@@ -90,7 +96,13 @@
                 "order": 750,
                 "icon": "account",
                 "type": "file",
-                "tags": ["cookies", "gdpr", "privacy", "terms", "trust"],
+                "tags": [
+                  "cookies",
+                  "gdpr",
+                  "privacy",
+                  "terms",
+                  "trust"
+                ],
                 "excerpt": "We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers t"
               },
               {
@@ -99,7 +111,13 @@
                 "order": 1000,
                 "icon": "account",
                 "type": "file",
-                "tags": ["cookies", "gdpr", "privacy", "terms", "trust"],
+                "tags": [
+                  "cookies",
+                  "gdpr",
+                  "privacy",
+                  "terms",
+                  "trust"
+                ],
                 "excerpt": "We don't use cookies\n\nPrivacy Statement\n\nWelcome to Goldlabel. We value your privacy and are committed to protecting your personal information. This privacy statement aims to provide clarity on how we"
               }
             ]
@@ -110,7 +128,10 @@
             "order": 20,
             "icon": "feature",
             "type": "folder",
-            "tags": ["cartridges", "features"],
+            "tags": [
+              "cartridges",
+              "features"
+            ],
             "excerpt": "1. Bootstrapped Next.js project\n\n    Clone and deploy to GitHub & Vercel.\n\n2. Material UI:\n\n3. Backend API routes\n\n4. Polish\n    Error handling, loading states, and mobile responsiveness.",
             "children": [
               {
@@ -135,7 +156,11 @@
                 "order": 130,
                 "icon": "lingua",
                 "type": "file",
-                "tags": ["cartridges", "translation", "localisation"],
+                "tags": [
+                  "cartridges",
+                  "translation",
+                  "localisation"
+                ],
                 "excerpt": "Because Localisation is not something you want to simply bolt onto a website at the end.\n\nUsers will do that themselves if they cared enough about reading anything you have written. Which they don't. "
               },
               {
@@ -144,7 +169,10 @@
                 "order": 130,
                 "icon": "cartridge",
                 "type": "file",
-                "tags": ["cartridges", "cartridge"],
+                "tags": [
+                  "cartridges",
+                  "cartridge"
+                ],
                 "excerpt": "In short: Markdown keeps our content lightweight, portable, and friendly to both humans and machines\n\n What is Markdown?\n\nMarkdown is a plain text format for writing content that’s meant to be both hu"
               },
               {
@@ -153,7 +181,10 @@
                 "order": 2000,
                 "icon": "cartridge",
                 "type": "file",
-                "tags": ["cartridges", "cartidge"],
+                "tags": [
+                  "cartridges",
+                  "cartidge"
+                ],
                 "excerpt": "Result: Fast, staticfirst Next.js. Powerful, userfriendly web applications custom designed to streamline tasks, boost productivity, and enhance customer experience\n\n What are the Basic Features?\n\n Aut"
               }
             ]
@@ -164,7 +195,9 @@
             "order": 20,
             "icon": "products",
             "type": "folder",
-            "tags": ["products"],
+            "tags": [
+              "products"
+            ],
             "excerpt": "Paste a job description and get instant feedback on how well our skills and experience match what you're looking for. You can download an automatically tailored CV.\n\n SpeakWrite\n\n As foreseen by Orwel",
             "children": [
               {
@@ -173,7 +206,12 @@
                 "order": 20,
                 "icon": "good-fit",
                 "type": "folder",
-                "tags": ["products", "recruitment", "ai", "good-fit"],
+                "tags": [
+                  "products",
+                  "recruitment",
+                  "ai",
+                  "good-fit"
+                ],
                 "excerpt": "1. User Input:\n    Job description (JD) pasted into a text area.\n    Resume content pasted into a second text area.\n\n \n\n Paste a job description and get instant feedback on how well our skills and exp",
                 "children": [
                   {
@@ -182,7 +220,12 @@
                     "order": 50,
                     "icon": "good-fit",
                     "type": "file",
-                    "tags": ["cartridges", "jobs", "doc", "markdown"],
+                    "tags": [
+                      "cartridges",
+                      "jobs",
+                      "doc",
+                      "markdown"
+                    ],
                     "excerpt": "Fullstack JavaScript Developer\n\n is a seasoned developer with two decades of experience in web systems, now focused on React, TypeScript, and scalable app architecture. I’ve delivered work for startup"
                   },
                   {
@@ -191,7 +234,11 @@
                     "order": 55,
                     "icon": "good-fit",
                     "type": "file",
-                    "tags": ["examples", "Open AI", "recruitment"],
+                    "tags": [
+                      "examples",
+                      "Open AI",
+                      "recruitment"
+                    ],
                     "excerpt": "Find out if your job is a good fit for our experience and skills. This simple AI tool will tell you in seconds. Paste in a job description and click the button to let our AI it and tell you if it's a "
                   }
                 ]
