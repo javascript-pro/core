@@ -23,16 +23,14 @@ export default function LightDarkToggle({ mode }: LightDarkToggleProps) {
   };
 
   return (
-    <Box>
-      <Tooltip title={darkmode ? 'Light Mode' : 'Dark Mode'}>
-        <IconButton
-          onClick={() => {
-            handleButtonClick({ action: 'TOGGLE_DARKMODE' });
-          }}
-        >
-          <Icon icon={darkmode ? 'lightmode' : 'darkmode'} />
-        </IconButton>
-      </Tooltip>
-    </Box>
+    <Tooltip title={darkmode ? 'Light Mode' : 'Dark Mode'}>
+      <IconButton
+        onClick={() => {
+          handleButtonClick({ action: 'TOGGLE_DARKMODE' });
+        }}
+      >
+        <Icon icon={darkmode ? 'lightmode' : 'darkmode'} />
+      </IconButton>
+    </Tooltip>
   );
 }
