@@ -18,40 +18,30 @@ export type Frontmatter = {
 };
 
 export type FolderPageProps = {
-  section: string;
   featured?: any[];
   tree: NavItem[] | null;
   frontmatter: Frontmatter | null;
   content: string | null;
   globalNav: NavItem[];
-  folderLabel?: string; // NEW PROP
 };
 
 export default function FolderPage({
-  section,
   frontmatter,
   content,
 }: FolderPageProps) {
   const theme = useTheme();
-  const isSmUp = useMediaQuery(theme.breakpoints.up('sm'));
 
   return (
     <Box sx={{ px: 2 }}>
-      <CardHeader
-        title={frontmatter?.title || section}
-        subheader={frontmatter?.description}
-      />
-
-      {/* <Box sx={{ mx: 2, mb: 2 }}>
-        <AppBreadcrumb />
-      </Box> */}
 
       <Grid container spacing={2}>
+
         <Grid size={{ xs: 12, md: 3 }}>
           <FolderContents />
         </Grid>
-        <Grid size={{ xs: 12, md: 9 }}>
 
+        <Grid size={{ xs: 12, md: 9 }}>
+          <AppBreadcrumb />
           { frontmatter?.image && (
             <Box
               sx={{

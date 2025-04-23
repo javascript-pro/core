@@ -1,23 +1,23 @@
 import React from 'react';
 import path from 'path';
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
 import fs from 'fs/promises';
 import { loadMarkdown, getMarkdownTree } from '../../lib/loadMarkdown';
 import { FolderPage, FilePage, Sitemap } from '../../goldlabel';
 import { getFeatured } from '../../lib/getFeatured';
 import { Uberedux } from '../../goldlabel/cartridges/Uberedux';
 import { GoodFit } from '../../goldlabel/products/GoodFit';
-// import { SpeakWrite } from '../../goldlabel/products/SpeakWrite';
-import type { Metadata } from 'next';
 
 async function getPageTitle(slugPath: string): Promise<string> {
+
   const defaultTitle = 'Goldlabel';
 
-  if (slugPath === '/sitemap') return 'Sitemap | Goldlabel Core';
-  if (slugPath === '/uberedux') return 'Uberedux | Goldlabel Core';
+  if (slugPath === '/sitemap') return 'Sitemap';
+  if (slugPath === '/uberedux') return 'Uberedux';
   if (slugPath === '/work/products/speak-write')
-    return 'SpeakWrite | Goldlabel Core';
-  if (slugPath === '/work/products/good-fit') return 'GoodFit | Goldlabel Core';
+    return 'SpeakWrite';
+  if (slugPath === '/work/products/good-fit') return 'GoodFit';
 
   const markdown = await loadMarkdown(slugPath);
   if (markdown && markdown.frontmatter.title) {
@@ -104,7 +104,6 @@ export default async function CatchAllPage({ params }: any) {
       return (
         <FolderPage
           featured={featured}
-          section={section}
           tree={tree}
           frontmatter={indexMarkdown?.frontmatter || null}
           content={indexMarkdown?.content || null}

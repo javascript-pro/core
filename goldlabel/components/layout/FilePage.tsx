@@ -31,13 +31,12 @@ export default function FilePage({ content, featured }: FilePageProps) {
 
   return (
     <Box sx={{ px: 2 }}>
+      
       <CardHeader title={title || 'Untitled'} subheader={description} />
 
       <Box sx={{ mx: 2, mb: 2 }}>
         <AppBreadcrumb />
       </Box>
-
-      
 
       <Grid container spacing={2}>
         <Grid size={{ xs: 12, md: 3 }}>
