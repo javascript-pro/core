@@ -4,7 +4,7 @@ import { Box } from '@mui/material';
 import { 
   Share, 
   LightDarkToggle,
-  Featured,
+  // Featured,
 } from '../../';
 
 export interface IHeaderActions {
@@ -16,7 +16,7 @@ export default function HeaderActions() {
     <Box sx={{ display: 'flex', mt: 1.5 }}>
       <Share />
       <LightDarkToggle mode="iconbutton" />
-      <Featured />
+      {/* <Featured /> */}
     </Box>
   );
 }

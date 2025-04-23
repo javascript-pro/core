@@ -77,9 +77,8 @@ export default async function CatchAllPage({ params }: any) {
   /* Special cases */
 
   if (slugPath === '/sitemap')
-    return <Sitemap globalNav={globalNav} openTopLevelByDefault={10} />;
+    return <Sitemap globalNav={globalNav} openTopLevelByDefault={1} />;
   if (slugPath === '/uberedux') return <Uberedux />;
-  // if (slugPath === '/work/products/speak-write') return <SpeakWrite />;
 
   const markdown = await loadMarkdown(slugPath);
   const featured = await getFeatured();

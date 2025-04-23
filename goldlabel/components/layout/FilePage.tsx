@@ -3,8 +3,8 @@
 import React from 'react';
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
-import { Box, Grid, CardHeader, useMediaQuery, useTheme } from '@mui/material';
-import { FolderContents, Featured, AppBreadcrumb } from '../../';
+import { Box, Grid, Typography } from '@mui/material';
+import { FolderContents, AppBreadcrumb } from '../../';
 
 export type FilePageProps = {
   content: {
@@ -24,25 +24,26 @@ export type FilePageProps = {
 
 export default function FilePage({ content, featured }: FilePageProps) {
   const { frontmatter, content: body } = content;
-  const { title, image, description } = frontmatter;
+  const { title, image } = frontmatter;
 
-  const theme = useTheme();
-  const isSmUp = useMediaQuery(theme.breakpoints.up('sm'));
 
   return (
     <Box sx={{ px: 2 }}>
-      
-      <CardHeader title={title || 'Untitled'} subheader={description} />
-
-      <Box sx={{ mx: 2, mb: 2 }}>
-        <AppBreadcrumb />
-      </Box>
 
       <Grid container spacing={2}>
         <Grid size={{ xs: 12, md: 3 }}>
           <FolderContents />
         </Grid>
         <Grid size={{ xs: 12, md: 9 }}>
+
+          <Typography component='h1'>
+            {frontmatter?.title}
+          </Typography>
+
+          <Typography variant='caption'>
+            {frontmatter?.description}
+          </Typography>
+          <AppBreadcrumb />
           { image && (
             <Box
               sx={{
@@ -53,8 +54,7 @@ export default function FilePage({ content, featured }: FilePageProps) {
                   xs: '1/1',
                   sm: '16/4.5',
                 },
-                mx: { xs: 1.5 },
-                mb: { xs: 1, sm: 2 },
+                my: { xs: 1, sm: 2 },
                 borderRadius: 1,
                 overflow: 'hidden',
               }}
@@ -67,8 +67,10 @@ export default function FilePage({ content, featured }: FilePageProps) {
                 sizes="(max-width: 600px) 100vw, (max-width: 1200px) 80vw, 900px"
                 style={{ objectFit: 'cover' }}
               />
+              
             </Box>
           )}
+          
           {body && <ReactMarkdown>{body}</ReactMarkdown>}
         </Grid>
       </Grid>

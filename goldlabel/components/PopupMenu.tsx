@@ -49,28 +49,9 @@ export default function PopupMenu({
         },
       }}
     >
-      <DialogTitle>
-        <CardHeader
-          avatar={
-            <IconButton
-              sx={{
-                ml: -2,
-              }}
-              onClick={() => {
-                router.push('/');
-                onClose();
-              }}
-            >
-              <Avatar
-                alt="Icon"
-                src={darkmode ? config.favicon.dark : config.favicon.light}
-              />
-            </IconButton>
-          }
-        />
-      </DialogTitle>
 
-      <DialogContent>
+
+      <DialogContent sx={{mt: 3}}>
         <ContextNav onClose={onClose} featured={featured} />
       </DialogContent>
 

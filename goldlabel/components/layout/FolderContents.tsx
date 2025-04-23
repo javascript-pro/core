@@ -1,5 +1,4 @@
 'use client';
-
 import * as React from 'react';
 import {
   Box,
@@ -10,8 +9,8 @@ import {
   ListItemText,
 } from '@mui/material';
 import { usePathname, useRouter } from 'next/navigation';
-import { Icon } from '../';
-import globalNav from '../../public/globalNav.json';
+import { Icon } from '../../';
+import globalNav from '../../../public/globalNav.json';
 
 type NavItem = {
   title?: string;
@@ -74,16 +73,16 @@ export default function FolderContents({ folderLabel }: FolderContentsProps) {
   const currentPath = pathname.replace(/\/+/g, '/');
 
   return (
-    <Box sx={{}}>
+    <Box sx={{mt: -1}}>
 
       { grandparent && (
         <>
           <ListItem disablePadding>
             <ListItemButton onClick={() => router.push(`/${grandparent.slug}`)}>
-              <ListItemText secondary={grandparent.title} />
               <ListItemIcon>
-                <Icon icon="up" />
+                <Icon icon="left" />
               </ListItemIcon>
+              <ListItemText secondary={grandparent.title} />
             </ListItemButton>
           </ListItem>
         </>

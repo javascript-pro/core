@@ -1,6 +1,6 @@
 'use client';
 import * as React from 'react';
-import { Box, CardHeader, Grid, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import { FolderContents, AppBreadcrumb } from '../../';
 import ReactMarkdown from 'react-markdown';
@@ -29,7 +29,6 @@ export default function FolderPage({
   frontmatter,
   content,
 }: FolderPageProps) {
-  const theme = useTheme();
 
   return (
     <Box sx={{ px: 2 }}>
@@ -41,7 +40,17 @@ export default function FolderPage({
         </Grid>
 
         <Grid size={{ xs: 12, md: 9 }}>
+
+          <Typography variant='h6'>
+            {frontmatter?.title}
+          </Typography>
+
+          <Typography>
+            {frontmatter?.description}
+          </Typography>
+
           <AppBreadcrumb />
+          
           { frontmatter?.image && (
             <Box
               sx={{
@@ -52,7 +61,7 @@ export default function FolderPage({
                   xs: '1/1',
                   sm: '16/4.5',
                 },
-                mb: { xs: 1, sm: 2 },
+                my: { xs: 1, sm: 2 },
                 borderRadius: 1,
                 overflow: 'hidden',
               }}
@@ -65,9 +74,11 @@ export default function FolderPage({
                 sizes="(max-width: 600px) 100vw, (max-width: 1200px) 80vw, 900px"
                 style={{ objectFit: 'cover' }}
               />
-
             </Box>
         )}
+        
+        
+
           { content && <ReactMarkdown>{content}</ReactMarkdown>}
         </Grid>
       </Grid>
