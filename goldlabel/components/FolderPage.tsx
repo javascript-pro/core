@@ -62,9 +62,8 @@ export default function FolderPage({
             width: '100%',
             maxWidth: 900,
             aspectRatio: {
-              xs: '16/9',
-              sm: '16/9',
-              md: '16/4.5',
+              xs: '1/1',
+              sm: '16/4.5',
             },
             mx: { xs: 1.5 },
             mb: { xs: 1, sm: 2 },
