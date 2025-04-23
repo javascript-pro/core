@@ -10,7 +10,7 @@ export interface IHeaderActions {
 
 export default function HeaderActions() {
   return (
-    <Box>
+    <Box sx={{ display: "flex" }}>
       <IconButton
         onClick={() => {
           console.log('ping. pong.');
@@ -18,6 +18,15 @@ export default function HeaderActions() {
       >
         <Icon icon={'pingpong' as any} />
       </IconButton>
+
+      <IconButton
+        onClick={() => {
+          console.log('ping. pong.');
+        }}
+      >
+        <Icon icon={'pingpong' as any} />
+      </IconButton>
+      
     </Box>
   );
 }
