@@ -53,14 +53,21 @@ export default function ContextNav({
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
         <Grid size={{ xs: 12, md: 6 }}>
-          <Featured featured={featured} />
-
           <List dense>
             <ListItemButton onClick={() => handleItemClick({ route: '/' })}>
               <ListItemIcon>
                 <Icon icon="home" />
               </ListItemIcon>
               <ListItemText primary="Home" />
+            </ListItemButton>
+
+            <ListItemButton
+              onClick={() => handleItemClick({ route: '/work/company' })}
+            >
+              <ListItemIcon>
+                <Icon icon="cartridge" />
+              </ListItemIcon>
+              <ListItemText primary="About" />
             </ListItemButton>
 
             <ListItemButton
@@ -73,13 +80,9 @@ export default function ContextNav({
             </ListItemButton>
           </List>
         </Grid>
-      </Grid>
-    </Box>
-  );
-}
 
-/*
         <Grid size={{ xs: 12, md: 6 }}>
+          <Featured featured={featured} />
           <List dense>
             <ListItemButton
               onClick={() => handleItemClick({ route: '/api/goldlabel' })}
@@ -88,15 +91,6 @@ export default function ContextNav({
                 <Icon icon="api" />
               </ListItemIcon>
               <ListItemText primary="API" />
-            </ListItemButton>
-
-            <ListItemButton
-              onClick={() => handleItemClick({ route: '/admin' })}
-            >
-              <ListItemIcon>
-                <Icon icon="admin" />
-              </ListItemIcon>
-              <ListItemText primary="Admin" />
             </ListItemButton>
 
             <ListItemButton
@@ -118,4 +112,7 @@ export default function ContextNav({
             </ListItemButton>
           </List>
         </Grid>
-*/
+      </Grid>
+    </Box>
+  );
+}

@@ -50,7 +50,7 @@ export default function Featured({
           {folderLabel}
         </Typography>
       )}
-
+      {/* Featured Example Paste in a job description, get an instantly tailored CV */}
       <List dense>
         <ListItemButton
           onClick={() => handleItemClick('/work/products/good-fit')}
@@ -58,10 +58,7 @@ export default function Featured({
           <ListItemIcon sx={{}}>
             <Icon icon={'good-fit'} />
           </ListItemIcon>
-          <ListItemText
-            primary="Featured Example"
-            // secondary="Paste in a job description, get an instantly tailored CV"
-          />
+          <ListItemText primary="Good fit?" secondary="Simple AI Example" />
         </ListItemButton>
       </List>
 
