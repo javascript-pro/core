@@ -56,7 +56,7 @@
           "NextJS",
           "Headless CMS"
         ],
-        "excerpt": "Every app we ship is real, running in production, and developed in public\n\nGoldlabel Core is Open Source and Free forever — Statically generated with Firestorepowered updates and a real admin panel. B",
+        "excerpt": "Apps we ship are real, run in production, and developed in public\n\nOpen Source and Free forever — Statically generated with Firestorepowered updates and a real admin panel. Built with Next.js App Rout",
         "children": [
           {
             "title": "About",
@@ -67,16 +67,19 @@
             "excerpt": "Get in touch\n\nIt's a  universally acknowledged that a Software Developer in possession of a good product, must be in want of a good business partner",
             "children": [
               {
-                "title": "UK Limited",
-                "slug": "work/company/uk-ltd",
-                "order": 25,
-                "icon": "doc",
+                "title": "Privacy",
+                "slug": "work/company/privacy",
+                "order": 100,
+                "icon": "account",
                 "type": "file",
                 "tags": [
-                  "legal",
-                  "address"
+                  "cookies",
+                  "gdpr",
+                  "privacy",
+                  "terms",
+                  "trust"
                 ],
-                "excerpt": "Goldlabel Apps Ltd is a UK Limited Company (5460545)\n\nGoldlabel Apps Ltd\n321323 High Road  \nChadwell Heath  \nEssex RM6 6AX"
+                "excerpt": "We don't use cookies\n\nPrivacy Statement\n\nWelcome to Goldlabel. We value your privacy and are committed to protecting your personal information. This privacy statement aims to provide clarity on how we"
               },
               {
                 "title": "Working remotely",
@@ -93,7 +96,7 @@
               {
                 "title": "Cookies",
                 "slug": "work/company/cookies",
-                "order": 750,
+                "order": 200,
                 "icon": "account",
                 "type": "file",
                 "tags": [
@@ -106,19 +109,16 @@
                 "excerpt": "We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers t"
               },
               {
-                "title": "Privacy",
-                "slug": "work/company/privacy",
-                "order": 1000,
-                "icon": "account",
+                "title": "UK Limited",
+                "slug": "work/company/uk-ltd",
+                "order": 250,
+                "icon": "doc",
                 "type": "file",
                 "tags": [
-                  "cookies",
-                  "gdpr",
-                  "privacy",
-                  "terms",
-                  "trust"
+                  "legal",
+                  "address"
                 ],
-                "excerpt": "We don't use cookies\n\nPrivacy Statement\n\nWelcome to Goldlabel. We value your privacy and are committed to protecting your personal information. This privacy statement aims to provide clarity on how we"
+                "excerpt": "Goldlabel Apps Ltd is a UK Limited Company (5460545)\n\nGoldlabel Apps Ltd\n321323 High Road  \nChadwell Heath  \nEssex RM6 6AX"
               }
             ]
           },
