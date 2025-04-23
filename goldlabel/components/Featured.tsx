@@ -58,7 +58,7 @@ export default function Featured({
           <ListItemIcon sx={{}}>
             <Icon icon={'good-fit'} />
           </ListItemIcon>
-          <ListItemText primary="Good fit?" secondary="Simple AI Example" />
+          <ListItemText secondary="Good fit?" primary="Simple AI Example" />
         </ListItemButton>
       </List>
 
