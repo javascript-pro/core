@@ -8,13 +8,12 @@ image: /png/weizang.png
 tags: cartridges, features
 featured: false
 ---
-
-### Free, Open Source cartridges
+> Free, Open Source cartridges
 
 - Flash
 - Lingua
 - Uberedux
-
+___
 1. Bootstrapped Next.js project
    - Deploy to Vercel via GitHub
 2. Material UI

@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { Box, CardHeader, Grid, useMediaQuery, useTheme } from '@mui/material';
 import Image from 'next/image';
-import { Featured, FolderContents, AppBreadcrumb } from '../../';
+import { FolderContents, AppBreadcrumb } from '../../';
 import ReactMarkdown from 'react-markdown';
 import { NavItem } from '../../../goldlabel/types';
 
@@ -31,8 +31,6 @@ export default function FolderPage({
   section,
   frontmatter,
   content,
-  featured,
-  folderLabel, // NEW PROP
 }: FolderPageProps) {
   const theme = useTheme();
   const isSmUp = useMediaQuery(theme.breakpoints.up('sm'));
@@ -44,68 +42,45 @@ export default function FolderPage({
         subheader={frontmatter?.description}
       />
 
-      <Box sx={{ mx: 2, mb: 2 }}>
+      {/* <Box sx={{ mx: 2, mb: 2 }}>
         <AppBreadcrumb />
-      </Box>
-
-      {frontmatter?.image && (
-        <Box
-          sx={{
-            position: 'relative',
-            width: '100%',
-            maxWidth: 900,
-            aspectRatio: {
-              xs: '1/1',
-              sm: '16/4.5',
-            },
-            mx: { xs: 1.5 },
-            mb: { xs: 1, sm: 2 },
-            borderRadius: 1,
-            overflow: 'hidden',
-          }}
-        >
-          <Image
-            priority
-            src={frontmatter.image}
-            alt={frontmatter.title || 'OpenGraph Image'}
-            fill
-            sizes="(max-width: 600px) 100vw, (max-width: 1200px) 80vw, 900px"
-            style={{ objectFit: 'cover' }}
-          />
-        </Box>
-      )}
+      </Box> */}
 
       <Grid container spacing={2}>
         <Grid size={{ xs: 12, md: 3 }}>
           <FolderContents />
-          <Featured featured={featured} />
         </Grid>
         <Grid size={{ xs: 12, md: 9 }}>
-          {content && <ReactMarkdown>{content}</ReactMarkdown>}
+
+          { frontmatter?.image && (
+            <Box
+              sx={{
+                position: 'relative',
+                width: '100%',
+                maxWidth: 900,
+                aspectRatio: {
+                  xs: '1/1',
+                  sm: '16/4.5',
+                },
+                mb: { xs: 1, sm: 2 },
+                borderRadius: 1,
+                overflow: 'hidden',
+              }}
+            >
+              <Image
+                priority
+                src={frontmatter.image}
+                alt={frontmatter.title || 'OpenGraph Image'}
+                fill
+                sizes="(max-width: 600px) 100vw, (max-width: 1200px) 80vw, 900px"
+                style={{ objectFit: 'cover' }}
+              />
+
+            </Box>
+        )}
+          { content && <ReactMarkdown>{content}</ReactMarkdown>}
         </Grid>
       </Grid>
     </Box>
   );
 }
-
-/*
-      <Box sx={{ display: 'flex' }}>
-        {isSmUp ? (
-          <Box sx={{ display: 'flex' }}>
-            <Box sx={{ mt: { xs: 0, sm: -3 } }}>
-              
-            </Box>
-            <Box sx={{ maxWidth: 300 }}>
-              
-              
-            </Box>
-          </Box>
-        ) : (
-          <Box>
-            {content && <ReactMarkdown>{content}</ReactMarkdown>}
-            <Featured featured={featured} folderLabel={folderLabel} />
-            <FolderContents folderLabel={folderLabel} />
-          </Box>
-        )}
-      </Box>
-*/

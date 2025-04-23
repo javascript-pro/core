@@ -46,15 +46,15 @@ export default function Header({
       >
         <Container maxWidth="md">
           <CardHeader
-            avatar={
-              <>
-                <IconButton onClick={onHomeClick}>
-                  <Avatar src={config.favicon.dark} />
-                </IconButton>
-              </>
-            }
-            title={meta.title}
-            subheader={meta.description}
+            // avatar={
+            //   <>
+            //     <IconButton onClick={onHomeClick}>
+            //       <Avatar src={config.favicon.dark} />
+            //     </IconButton>
+            //   </>
+            // }
+            // title={meta.title}
+            // subheader={meta.description}
             action={<HeaderActions />}
           />
         </Container>

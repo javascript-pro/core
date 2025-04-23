@@ -1,7 +1,5 @@
 'use client';
-
 import React from 'react';
-import { useRouter } from 'next/navigation';
 import { Box, IconButton, Tooltip } from '@mui/material';
 import { Icon } from '../';
 import { useKey } from '../../goldlabel/cartridges/Uberedux';
@@ -11,7 +9,7 @@ export type LightDarkToggleProps = {
 };
 
 export default function LightDarkToggle({ mode }: LightDarkToggleProps) {
-  const router = useRouter();
+
   const [darkmode, setDarkmode] = useKey('darkmode');
 
   const handleButtonClick = (clickObj: { route?: string; action?: string }) => {
@@ -38,14 +36,3 @@ export default function LightDarkToggle({ mode }: LightDarkToggleProps) {
     </Box>
   );
 }
-
-/*
-<ListItemButton
-              onClick={() => handleButtonClick({ route: '/uberedux' })}
-            >
-              <ListItemIcon>
-                <Icon icon="uberedux" />
-              </ListItemIcon>
-              <ListItemText primary="Uberedux" />
-            </ListItemButton>
-*/

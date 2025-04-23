@@ -1,9 +1,11 @@
 'use client';
-
 import * as React from 'react';
 import { Box } from '@mui/material';
-import { Share, LightDarkToggle } from '../../';
-import { AuthButton } from '../../cartridges/Auth';
+import { 
+  Share, 
+  LightDarkToggle,
+  Featured,
+} from '../../';
 
 export interface IHeaderActions {
   anyKey?: any;
@@ -11,10 +13,10 @@ export interface IHeaderActions {
 
 export default function HeaderActions() {
   return (
-    <Box sx={{ display: 'flex' }}>
-      <AuthButton />
+    <Box sx={{ display: 'flex', mt: 1.5 }}>
       <Share />
       <LightDarkToggle mode="iconbutton" />
+      <Featured />
     </Box>
   );
 }

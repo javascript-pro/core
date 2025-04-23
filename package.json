@@ -46,6 +46,7 @@
     "react-dom": "19.0.0",
     "react-markdown": "^10.1.0",
     "react-redux": "^9.2.0",
+    "react-share": "^5.2.2",
     "redux-persist": "^6.0.0",
     "remark": "^15.0.1",
     "remark-directive": "^4.0.0",
