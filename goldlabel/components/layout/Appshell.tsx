@@ -87,12 +87,14 @@ export default function Appshell({ children, globalNav }: IAppshell) {
         globalNav={globalNav}
       />
 
-      <Header meta={{
-        title: config.appTitle,
-        description: config.description,
-      }} />
+      <Header
+        meta={{
+          title: config.appTitle,
+          description: config.description,
+        }}
+      />
 
-      <Container maxWidth="md" sx={{ mt: "80px" }}>
+      <Container maxWidth="md" sx={{ mt: '80px' }}>
         <Box sx={{ pb: '50px' }}>
           {children && <Box sx={{ p: 0 }}>{children}</Box>}
         </Box>

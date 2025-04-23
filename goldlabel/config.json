@@ -7,7 +7,7 @@
     "light": "/svg/favicon_grey.svg"
   },
   "image": "/jpg/home.jpg",
- "themeColor": "#efefef",
+  "themeColor": "#efefef",
   "themes": {
     "light": {
       "text": "#303030",

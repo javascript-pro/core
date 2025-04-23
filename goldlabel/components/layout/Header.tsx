@@ -2,9 +2,14 @@
 import config from '../../config.json';
 import * as React from 'react';
 import { useRouter } from 'next/navigation';
-import { 
+import {
   useTheme,
-  IconButton, AppBar, Avatar, CardHeader, Container } from '@mui/material';
+  IconButton,
+  AppBar,
+  Avatar,
+  CardHeader,
+  Container,
+} from '@mui/material';
 import { HeaderActions } from './';
 // import { Icon } from '../../';
 
@@ -24,13 +29,13 @@ export default function Header({
   const router = useRouter();
 
   const onHomeClick = () => {
-    router.push("/");
+    router.push('/');
   };
 
-  const theme = useTheme()
+  const theme = useTheme();
   return (
     <>
-          <AppBar
+      <AppBar
         position="fixed"
         color="primary"
         sx={{
@@ -40,23 +45,21 @@ export default function Header({
           background: theme.palette.background.default,
         }}
       >
-<Container maxWidth="md">
-      <CardHeader
-        avatar={
-          <>
-            <IconButton onClick={onHomeClick}>
-              <Avatar src={config.favicon.dark}/>
-            </IconButton>
-          </>
-        }
-        title={meta.title}
-        subheader={meta.description}
-        action={<HeaderActions />}
-      />
-</Container>
-      
+        <Container maxWidth="md">
+          <CardHeader
+            avatar={
+              <>
+                <IconButton onClick={onHomeClick}>
+                  <Avatar src={config.favicon.dark} />
+                </IconButton>
+              </>
+            }
+            title={meta.title}
+            subheader={meta.description}
+            action={<HeaderActions />}
+          />
+        </Container>
       </AppBar>
-      
     </>
   );
 }
