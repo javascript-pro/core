@@ -29,7 +29,7 @@ export default function Featured({
   featured = [],
   folderLabel,
 }: FeaturedProps) {
-  const showFeatured = false;
+  const showFeatured = true;
   const router = useRouter();
 
   const handleItemClick = (slug: string) => {
@@ -55,25 +55,14 @@ export default function Featured({
         <ListItemButton
           onClick={() => handleItemClick('/work/products/good-fit')}
         >
-          <ListItemIcon sx={{ alignSelf: 'flex-start', mt: 1 }}>
+          <ListItemIcon sx={{}}>
             <Icon icon={'good-fit'} />
           </ListItemIcon>
           <ListItemText
-            primary={'Good Fit?'}
+            primary="Featured Example"
             // secondary="Paste in a job description, get an instantly tailored CV"
           />
         </ListItemButton>
-
-        {/* Future featured items */}
-        {/* <ListItemButton onClick={() => handleItemClick('/work/products/speak-write')}>
-          <ListItemIcon sx={{ alignSelf: 'flex-start', mt: 1 }}>
-            <Icon icon={'speak-write'} color="primary" />
-          </ListItemIcon>
-          <ListItemText
-            primary={'SpeakWrite'}
-            secondary="Foreseen by Orwell in 1984, built by us for reals just now"
-          />
-        </ListItemButton> */}
       </List>
 
       <List dense>
