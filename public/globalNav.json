@@ -190,15 +190,6 @@
             ]
           },
           {
-            "title": "Core",
-            "slug": "work/core",
-            "order": 20,
-            "icon": "core",
-            "type": "folder",
-            "excerpt": "Goldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo architecture with multiple Next.js a",
-            "children": []
-          },
-          {
             "title": "Products",
             "slug": "work/products",
             "order": 20,
@@ -425,7 +416,7 @@
                 "order": 30,
                 "icon": "doc",
                 "type": "file",
-                "excerpt": "Let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series.\n\nI mentioned in the last lecture this idea of Gedanken experiments, th"
+                "excerpt": "Let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series.\n\n Let's share some of Einstein's contributions which are fundamental t"
               },
               {
                 "title": "General Theory of Relativity",
