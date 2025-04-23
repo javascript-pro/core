@@ -7,6 +7,6 @@ export const initialState: UbereduxState = {
   config,
   darkmode: false,
   authModalOpen: false,
-  authModalMode: "login",
+  authModalMode: 'login',
   goodfitState,
 };

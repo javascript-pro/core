@@ -25,33 +25,22 @@ export type FolderPageProps = {
   globalNav: NavItem[];
 };
 
-export default function FolderPage({
-  frontmatter,
-  content,
-}: FolderPageProps) {
-
+export default function FolderPage({ frontmatter, content }: FolderPageProps) {
   return (
     <Box sx={{ px: 2 }}>
-
       <Grid container spacing={2}>
-
         <Grid size={{ xs: 12, md: 3 }}>
           <FolderContents />
         </Grid>
 
         <Grid size={{ xs: 12, md: 9 }}>
+          <Typography variant="h6">{frontmatter?.title}</Typography>
 
-          <Typography variant='h6'>
-            {frontmatter?.title}
-          </Typography>
-
-          <Typography>
-            {frontmatter?.description}
-          </Typography>
+          <Typography>{frontmatter?.description}</Typography>
 
           <AppBreadcrumb />
-          
-          { frontmatter?.image && (
+
+          {frontmatter?.image && (
             <Box
               sx={{
                 position: 'relative',
@@ -75,11 +64,9 @@ export default function FolderPage({
                 style={{ objectFit: 'cover' }}
               />
             </Box>
-        )}
-        
-        
+          )}
 
-          { content && <ReactMarkdown>{content}</ReactMarkdown>}
+          {content && <ReactMarkdown>{content}</ReactMarkdown>}
         </Grid>
       </Grid>
     </Box>

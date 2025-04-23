@@ -9,7 +9,6 @@ export type LightDarkToggleProps = {
 };
 
 export default function LightDarkToggle({ mode }: LightDarkToggleProps) {
-
   const [darkmode, setDarkmode] = useKey('darkmode');
 
   const handleButtonClick = (clickObj: { route?: string; action?: string }) => {

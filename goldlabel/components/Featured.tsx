@@ -1,10 +1,7 @@
 'use client';
 import * as React from 'react';
 import { useRouter } from 'next/navigation';
-import {
-  Box,
-  IconButton,
-} from '@mui/material';
+import { Box, IconButton } from '@mui/material';
 import { Icon } from '../';
 
 export type FeaturedProps = {
@@ -29,9 +26,9 @@ export default function Featured({}: FeaturedProps) {
 
   return (
     <Box sx={{ mt: 0 }}>
-        <IconButton onClick={() => handleItemClick('/work/products/good-fit')}>
-          <Icon icon={'star'} />
-        </IconButton>
+      <IconButton onClick={() => handleItemClick('/work/products/good-fit')}>
+        <Icon icon={'star'} />
+      </IconButton>
     </Box>
   );
 }

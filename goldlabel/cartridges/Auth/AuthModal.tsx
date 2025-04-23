@@ -20,9 +20,7 @@ export type IAuthModal = {
   onClose?: () => void;
 };
 
-export default function AuthModal({
-}: IAuthModal) {
-
+export default function AuthModal({}: IAuthModal) {
   const [authModalOpen, setAuthModalOpen] = useKey('authModalOpen');
   const [authModalMode, setAuthModalMode] = useKey('authModalMode');
   const theme = useTheme();
@@ -45,43 +43,45 @@ export default function AuthModal({
       }}
     >
       <DialogTitle>
-        <Typography sx={{
-          mt: 2
-        }}>
+        <Typography
+          sx={{
+            mt: 2,
+          }}
+        >
           {config.appTitle}
         </Typography>
       </DialogTitle>
-      
-      <DialogContent sx={{mt: 3}}>
 
-        { authModalMode === "login" ? <>
-          <TextField 
-            fullWidth
-            id="email"
-            sx={{
-              mb: 2
-            }}
-            label="Email"
-          />
-          <TextField 
-            fullWidth
-            id="password"
-            sx={{
-              mb: 2
-            }}
-            label="Password"
-            type='password'
-          />
-        </> : null }
+      <DialogContent sx={{ mt: 3 }}>
+        {authModalMode === 'login' ? (
+          <>
+            <TextField
+              fullWidth
+              id="email"
+              sx={{
+                mb: 2,
+              }}
+              label="Email"
+            />
+            <TextField
+              fullWidth
+              id="password"
+              sx={{
+                mb: 2,
+              }}
+              label="Password"
+              type="password"
+            />
+          </>
+        ) : null}
 
         <Button
           size="small"
-          sx={{
-          }}
+          sx={{}}
           color="inherit"
-          variant='text'
+          variant="text"
           onClick={() => {
-            setAuthModalMode("create");
+            setAuthModalMode('create');
           }}
         >
           New Account
@@ -89,12 +89,11 @@ export default function AuthModal({
 
         <Button
           size="small"
-          sx={{
-          }}
+          sx={{}}
           color="inherit"
-          variant='text'
+          variant="text"
           onClick={() => {
-            setAuthModalMode("reset");
+            setAuthModalMode('reset');
           }}
         >
           New password
@@ -102,13 +101,13 @@ export default function AuthModal({
 
         <Button
           sx={{
-            ml: 1
+            ml: 1,
           }}
-          variant='contained'
+          variant="contained"
         >
           Login
         </Button>
-      
+
         {/* <pre>authModalMode: {JSON.stringify(authModalMode, null, 2)}</pre> */}
       </DialogContent>
 
@@ -121,7 +120,6 @@ export default function AuthModal({
           <Icon icon="close" />
         </IconButton>
       </DialogActions>
-
     </Dialog>
   );
 }

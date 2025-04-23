@@ -26,25 +26,18 @@ export default function FilePage({ content, featured }: FilePageProps) {
   const { frontmatter, content: body } = content;
   const { title, image } = frontmatter;
 
-
   return (
     <Box sx={{ px: 2 }}>
-
       <Grid container spacing={2}>
         <Grid size={{ xs: 12, md: 3 }}>
           <FolderContents />
         </Grid>
         <Grid size={{ xs: 12, md: 9 }}>
+          <Typography component="h1">{frontmatter?.title}</Typography>
 
-          <Typography component='h1'>
-            {frontmatter?.title}
-          </Typography>
-
-          <Typography variant='caption'>
-            {frontmatter?.description}
-          </Typography>
+          <Typography variant="caption">{frontmatter?.description}</Typography>
           <AppBreadcrumb />
-          { image && (
+          {image && (
             <Box
               sx={{
                 position: 'relative',
@@ -67,10 +60,9 @@ export default function FilePage({ content, featured }: FilePageProps) {
                 sizes="(max-width: 600px) 100vw, (max-width: 1200px) 80vw, 900px"
                 style={{ objectFit: 'cover' }}
               />
-              
             </Box>
           )}
-          
+
           {body && <ReactMarkdown>{body}</ReactMarkdown>}
         </Grid>
       </Grid>

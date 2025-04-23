@@ -73,9 +73,8 @@ export default function FolderContents({ folderLabel }: FolderContentsProps) {
   const currentPath = pathname.replace(/\/+/g, '/');
 
   return (
-    <Box sx={{mt: -1}}>
-
-      { grandparent && (
+    <Box sx={{ mt: -1 }}>
+      {grandparent && (
         <>
           <ListItem disablePadding>
             <ListItemButton onClick={() => router.push(`/${grandparent.slug}`)}>
@@ -87,7 +86,6 @@ export default function FolderContents({ folderLabel }: FolderContentsProps) {
           </ListItem>
         </>
       )}
-
 
       {itemsToRender.length === 0 ? null : (
         <List dense>
@@ -107,8 +105,6 @@ export default function FolderContents({ folderLabel }: FolderContentsProps) {
             ))}
         </List>
       )}
-
-      
     </Box>
   );
 }

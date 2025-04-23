@@ -49,9 +49,7 @@ export default function PopupMenu({
         },
       }}
     >
-
-
-      <DialogContent sx={{mt: 3}}>
+      <DialogContent sx={{ mt: 3 }}>
         <ContextNav onClose={onClose} featured={featured} />
       </DialogContent>
 

@@ -10,13 +10,11 @@ import { Uberedux } from '../../goldlabel/cartridges/Uberedux';
 import { GoodFit } from '../../goldlabel/products/GoodFit';
 
 async function getPageTitle(slugPath: string): Promise<string> {
-
   const defaultTitle = 'Goldlabel';
 
   if (slugPath === '/sitemap') return 'Sitemap';
   if (slugPath === '/uberedux') return 'Uberedux';
-  if (slugPath === '/work/products/speak-write')
-    return 'SpeakWrite';
+  if (slugPath === '/work/products/speak-write') return 'SpeakWrite';
   if (slugPath === '/work/products/good-fit') return 'GoodFit';
 
   const markdown = await loadMarkdown(slugPath);

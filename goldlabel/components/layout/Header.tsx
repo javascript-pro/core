@@ -1,12 +1,7 @@
 'use client';
 import * as React from 'react';
 import { useRouter } from 'next/navigation';
-import {
-  useTheme,
-  AppBar,
-  CardHeader,
-  Container,
-} from '@mui/material';
+import { useTheme, AppBar, CardHeader, Container } from '@mui/material';
 import { HeaderActions } from './';
 
 export interface IHeader {

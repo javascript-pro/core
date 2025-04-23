@@ -1,7 +1,13 @@
 'use client';
 import * as React from 'react';
-import { 
-  Box, IconButton, Menu, MenuItem, ListItemIcon, ListItemText } from '@mui/material';
+import {
+  Box,
+  IconButton,
+  Menu,
+  MenuItem,
+  ListItemIcon,
+  ListItemText,
+} from '@mui/material';
 import { Icon } from '../';
 import {
   FacebookShareButton,
@@ -30,18 +36,11 @@ export default function Share() {
 
   return (
     <Box sx={{ display: 'flex' }}>
-      <IconButton 
-        
-        onClick={handleClick}>
+      <IconButton onClick={handleClick}>
         <Icon icon={'share' as any} />
       </IconButton>
 
-      <Menu 
-        anchorEl={anchorEl} 
-        open={open} 
-        onClose={handleClose}
-      >
-      
+      <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
         <MenuItem
           sx={{
             minWidth: 250,

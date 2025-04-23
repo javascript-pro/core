@@ -9,9 +9,7 @@ export interface ISignupSignin {
   anyKey?: any;
 }
 
-export default function SignupSignin({
-}) {
-
+export default function SignupSignin({}) {
   const [authModalOpen, setAuthModalOpen] = useKey('authModalOpen');
 
   return (
@@ -20,10 +18,10 @@ export default function SignupSignin({
       <IconButton
         onClick={() => {
           setAuthModalOpen(true);
-        }}>
+        }}
+      >
         <Icon icon="signin" />
       </IconButton>
     </>
-    
   );
 }

@@ -25,7 +25,6 @@ const StyledFab = styled(Fab)({
   right: 0,
 });
 
-
 export type IAppshell = {
   children?: React.ReactNode;
   globalNav?: any;
@@ -89,10 +88,12 @@ export default function Appshell({ children, globalNav }: IAppshell) {
       />
 
       <Header
-        meta={{
-          // title: config.appTitle,
-          // description: config.description,
-        }}
+        meta={
+          {
+            // title: config.appTitle,
+            // description: config.description,
+          }
+        }
       />
 
       <Container maxWidth="md" sx={{ mt: '80px' }}>
