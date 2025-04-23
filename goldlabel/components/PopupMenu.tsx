@@ -61,9 +61,9 @@ export default function PopupMenu({
                 onClose();
               }}
             >
-              <Avatar 
-                alt="Icon" 
-                src={ darkmode ? config.favicon.dark : config.favicon.light } 
+              <Avatar
+                alt="Icon"
+                src={darkmode ? config.favicon.dark : config.favicon.light}
               />
             </IconButton>
           }

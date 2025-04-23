@@ -4,13 +4,12 @@ import { useTheme, SvgIcon } from '@mui/material';
 export default function PingpongballIcon(props: any) {
   let mainColor = 'black';
   const theme = useTheme();
-  // console.log(theme.palette.mode)
-  mainColor = theme.palette.primary.main;
-  let color2 = 'white';
+  mainColor = theme.palette.text.primary;
+  let color2 = theme.palette.secondary.main;
 
   return (
     <SvgIcon {...props}>
-      <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+      <g stroke="none" fill="none" fillRule="evenodd">
         <g>
           <rect fillOpacity="0" x="0" y="0" width="24" height="24"></rect>
           <g transform="translate(1.000000, 1.000000)" fillRule="nonzero">

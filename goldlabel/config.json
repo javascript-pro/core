@@ -1,12 +1,12 @@
 {
-  "appTitle": "Goldlabel",
   "url": "https://goldlabel.pro",
+  "appTitle": "Goldlabel",
+  "description": "Next Gen, Gen X",
   "favicon": {
     "dark": "/svg/favicon_gold.svg",
     "light": "/svg/favicon_grey.svg"
   },
   "image": "/jpg/home.jpg",
-  "description": "Next Gen, Gen X, Next.js, AI Prompt Engineering, OpenAI & Singularity",
   "themeColor": "#efefef",
   "themes": {
     "light": {

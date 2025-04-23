@@ -9,7 +9,7 @@ import {
   Slider,
   Typography,
 } from '@mui/material';
-import { Icon } from '../';
+import { Icon } from '../../';
 
 type VoiceRecorderProps = {
   product: 'speakwrite' | 'goodfit';

@@ -12,7 +12,7 @@ import {
   IconButton,
 } from '@mui/material';
 import { Icon } from '../../goldlabel';
-import { NavItem } from '../../goldlabel/types/goldlabelTypes';
+import { NavItem } from '../../goldlabel/types';
 
 export type SitemapProps = {
   globalNav?: NavItem[] | null;

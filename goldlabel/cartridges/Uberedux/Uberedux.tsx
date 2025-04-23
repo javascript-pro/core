@@ -2,12 +2,7 @@
 
 import * as React from 'react';
 import { useSlice, useDispatch } from '../Uberedux';
-import {
-  Card,
-  CardHeader,
-  CardContent,
-  Typography,
-} from '@mui/material';
+import { Card, CardHeader, CardContent, Typography } from '@mui/material';
 import { Icon } from '../../';
 
 export default function Uberedux() {
@@ -31,13 +26,9 @@ export default function Uberedux() {
         subheader="State management gives Core structure and control"
       />
       <CardContent>
-        
-        <Typography>
-          store was persisted 
-        </Typography>
-        
+        <Typography>store was persisted</Typography>
+
         <pre>slice: {JSON.stringify(slice, null, 2)}</pre>
-      
       </CardContent>
       {/* <CardActions>
         <Button variant="contained" onClick={onReset}>

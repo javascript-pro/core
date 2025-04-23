@@ -1,5 +1,5 @@
 'use client';
-import config from '../config.json';
+import config from '../../config.json';
 import * as React from 'react';
 import {
   Box,
@@ -13,8 +13,8 @@ import {
   Fab,
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { PopupMenu } from '../';
-import { useKey } from '../cartridges/Uberedux';
+import { PopupMenu, Header } from '../../';
+import { useKey } from '../../cartridges/Uberedux';
 
 const StyledFab = styled(Fab)({
   position: 'absolute',
@@ -25,13 +25,12 @@ const StyledFab = styled(Fab)({
   right: 0,
 });
 
-type AppshellProps = {
+export type IAppshell = {
   children?: React.ReactNode;
   globalNav?: any;
 };
 
-export default function Appshell({ children, globalNav }: AppshellProps) {
-  
+export default function Appshell({ children, globalNav }: IAppshell) {
   const [menuOpen, setMenuOpen] = React.useState(false);
   const [darkmode] = useKey('darkmode');
   const mode = darkmode ? 'dark' : 'light';
@@ -88,14 +87,19 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
         globalNav={globalNav}
       />
 
-      {/* Main Content Area */}
-      <Container maxWidth="md" sx={{ mt: 2 }}>
+      <Header
+        meta={{
+          title: config.appTitle,
+          description: config.description,
+        }}
+      />
+
+      <Container maxWidth="md" sx={{ mt: '80px' }}>
         <Box sx={{ pb: '50px' }}>
           {children && <Box sx={{ p: 0 }}>{children}</Box>}
         </Box>
       </Container>
 
-      {/* Bottom AppBar */}
       <AppBar
         position="fixed"
         color="primary"
@@ -116,9 +120,9 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
               onClick={handleToggleMenu}
               aria-label="Goldlabel Menu"
             >
-              <Avatar 
-                alt="Icon" 
-                src={ darkmode ? config.favicon.dark : config.favicon.light } 
+              <Avatar
+                alt="Icon"
+                src={darkmode ? config.favicon.dark : config.favicon.light}
               />
             </StyledFab>
             <Box sx={{ flexGrow: 1 }} />
