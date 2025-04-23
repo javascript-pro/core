@@ -98,7 +98,6 @@ export default function FolderContents({ folderLabel }: FolderContentsProps) {
         <>
           <ListItem disablePadding>
             <ListItemButton onClick={() => router.push(`/${grandparent.slug}`)}>
-              
               <ListItemIcon>
                 <Icon icon="up" />
               </ListItemIcon>

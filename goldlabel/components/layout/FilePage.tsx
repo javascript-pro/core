@@ -4,13 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import {
-  Box,
-  Grid,
-  CardHeader,
-  useMediaQuery,
-  useTheme,
-} from '@mui/material';
+import { Box, Grid, CardHeader, useMediaQuery, useTheme } from '@mui/material';
 import { FolderContents, Featured, AppBreadcrumb } from '../../';
 
 export type FilePageProps = {
@@ -71,19 +65,15 @@ export default function FilePage({ content, featured }: FilePageProps) {
         </Box>
       )}
 
-          <Grid container spacing={2}>
-            <Grid size={{ xs: 12, md: 3 }}>
-              <FolderContents />
-              <Featured featured={featured} />
-              
-            </Grid>
-            <Grid size={{ xs: 12, md: 9 }}>
-              {content && (
-                  <ReactMarkdown>{body}</ReactMarkdown>
-              )}
-            </Grid>
-          </Grid>
-
+      <Grid container spacing={2}>
+        <Grid size={{ xs: 12, md: 3 }}>
+          <FolderContents />
+          <Featured featured={featured} />
+        </Grid>
+        <Grid size={{ xs: 12, md: 9 }}>
+          {content && <ReactMarkdown>{body}</ReactMarkdown>}
+        </Grid>
+      </Grid>
     </Box>
   );
 }

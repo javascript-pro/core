@@ -96,7 +96,6 @@ export default function GoodFit() {
           <Grid container spacing={2}>
             <Grid size={{ xs: 12, md: 6 }}>
               <TextField
-                
                 value={resume}
                 label="Resume"
                 multiline

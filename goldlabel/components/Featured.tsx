@@ -29,7 +29,6 @@ export default function Featured({
   featured = [],
   folderLabel,
 }: FeaturedProps) {
-
   const router = useRouter();
 
   const handleItemClick = (slug: string) => {

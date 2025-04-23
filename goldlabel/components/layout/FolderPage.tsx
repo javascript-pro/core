@@ -1,12 +1,6 @@
 'use client';
 import * as React from 'react';
-import {
-  Box,
-  CardHeader,
-  Grid,
-  useMediaQuery,
-  useTheme,
-} from '@mui/material';
+import { Box, CardHeader, Grid, useMediaQuery, useTheme } from '@mui/material';
 import Image from 'next/image';
 import { Featured, FolderContents, AppBreadcrumb } from '../../';
 import ReactMarkdown from 'react-markdown';
@@ -81,21 +75,15 @@ export default function FolderPage({
         </Box>
       )}
 
-
-    <Grid container spacing={2}>
-      <Grid size={{ xs: 12, md: 3 }}>
-        <FolderContents />
-        <Featured featured={featured} />
-        
+      <Grid container spacing={2}>
+        <Grid size={{ xs: 12, md: 3 }}>
+          <FolderContents />
+          <Featured featured={featured} />
+        </Grid>
+        <Grid size={{ xs: 12, md: 9 }}>
+          {content && <ReactMarkdown>{content}</ReactMarkdown>}
+        </Grid>
       </Grid>
-      <Grid size={{ xs: 12, md: 9 }}>
-        {content && (
-            <ReactMarkdown>{content}</ReactMarkdown>
-        )}
-      </Grid>
-    </Grid>
-
-
     </Box>
   );
 }
