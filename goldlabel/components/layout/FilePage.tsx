@@ -6,7 +6,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import {
   Box,
-  CardContent,
+  Grid,
   CardHeader,
   useMediaQuery,
   useTheme,
@@ -71,30 +71,19 @@ export default function FilePage({ content, featured }: FilePageProps) {
         </Box>
       )}
 
-      <Box sx={{ display: 'flex' }}>
-        {isSmUp ? (
-          <Box sx={{ display: 'flex' }}>
-            <Box sx={{ mt: { xs: 0, sm: -3 } }}>
-              <CardContent>
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                  {body}
-                </ReactMarkdown>
-              </CardContent>
-            </Box>
-            <Box sx={{ maxWidth: 300 }}>
-              <Featured featured={featured} />
+          <Grid container spacing={2}>
+            <Grid size={{ xs: 12, md: 3 }}>
               <FolderContents />
-            </Box>
-          </Box>
-        ) : (
-          <Box>
-            <CardContent>
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>{body}</ReactMarkdown>
-            </CardContent>
-            <FolderContents />
-          </Box>
-        )}
-      </Box>
+              <Featured featured={featured} />
+              
+            </Grid>
+            <Grid size={{ xs: 12, md: 9 }}>
+              {content && (
+                  <ReactMarkdown>{body}</ReactMarkdown>
+              )}
+            </Grid>
+          </Grid>
+
     </Box>
   );
 }

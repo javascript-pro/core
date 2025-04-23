@@ -29,7 +29,7 @@ export default function Featured({
   featured = [],
   folderLabel,
 }: FeaturedProps) {
-  const showFeatured = false;
+
   const router = useRouter();
 
   const handleItemClick = (slug: string) => {
@@ -40,8 +40,6 @@ export default function Featured({
   const sorted = [...featured].sort(
     (a, b) => (a.frontmatter.order ?? 0) - (b.frontmatter.order ?? 0),
   );
-
-  if (!showFeatured) return null;
 
   return (
     <Box sx={{ mt: 0 }}>
@@ -58,7 +56,7 @@ export default function Featured({
           <ListItemIcon sx={{}}>
             <Icon icon={'good-fit'} />
           </ListItemIcon>
-          <ListItemText secondary="Good fit?" primary="Simple AI Example" />
+          <ListItemText primary="Good fit?" />
         </ListItemButton>
       </List>
 

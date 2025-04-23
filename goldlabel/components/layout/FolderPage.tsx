@@ -3,7 +3,7 @@ import * as React from 'react';
 import {
   Box,
   CardHeader,
-  CardContent,
+  Grid,
   useMediaQuery,
   useTheme,
 } from '@mui/material';
@@ -73,7 +73,7 @@ export default function FolderPage({
           <Image
             priority
             src={frontmatter.image}
-            alt={frontmatter.title || 'Cover image'}
+            alt={frontmatter.title || 'OpenGraph Image'}
             fill
             sizes="(max-width: 600px) 100vw, (max-width: 1200px) 80vw, 900px"
             style={{ objectFit: 'cover' }}
@@ -81,19 +81,35 @@ export default function FolderPage({
         </Box>
       )}
 
+
+    <Grid container spacing={2}>
+      <Grid size={{ xs: 12, md: 3 }}>
+        <FolderContents />
+        <Featured featured={featured} />
+        
+      </Grid>
+      <Grid size={{ xs: 12, md: 9 }}>
+        {content && (
+            <ReactMarkdown>{content}</ReactMarkdown>
+        )}
+      </Grid>
+    </Grid>
+
+
+    </Box>
+  );
+}
+
+/*
       <Box sx={{ display: 'flex' }}>
         {isSmUp ? (
           <Box sx={{ display: 'flex' }}>
             <Box sx={{ mt: { xs: 0, sm: -3 } }}>
-              {content && (
-                <CardContent>
-                  <ReactMarkdown>{content}</ReactMarkdown>
-                </CardContent>
-              )}
+              
             </Box>
             <Box sx={{ maxWidth: 300 }}>
-              <Featured featured={featured} folderLabel={folderLabel} />
-              <FolderContents folderLabel={folderLabel} />
+              
+              
             </Box>
           </Box>
         ) : (
@@ -104,6 +120,4 @@ export default function FolderPage({
           </Box>
         )}
       </Box>
-    </Box>
-  );
-}
+*/

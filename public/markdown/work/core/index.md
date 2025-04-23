@@ -4,7 +4,7 @@ title: Core
 slug: /work/core
 description: Open Source and Free forever
 icon: core
-image: /jpg/goldlabel/core.jpg
+image: /png/weizang.png
 featured: false
 ---
 

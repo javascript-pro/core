@@ -4,7 +4,7 @@ title: Cartridges
 description: Please explain
 slug: /work/cartridges/more
 icon: cartridge
-image: /jpg/cartridges/cartridge.jpg
+image: /png/weizang.png
 tags: cartridges, cartidge,
 featured: false
 ---

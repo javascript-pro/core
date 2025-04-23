@@ -4,7 +4,7 @@ title: MarkDown
 description: Keeps content lightweight
 slug: /work/cartridges/markdown
 icon: cartridge
-image: /jpg/cartridges/cartridge.jpg
+image: /png/weizang.png
 tags: cartridges, cartridge
 featured: false
 ---
