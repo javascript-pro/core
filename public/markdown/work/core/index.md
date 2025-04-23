@@ -1,16 +1,11 @@
 ---
 order: 20
 title: Core
-<<<<<<<< HEAD:public/markdown/work/cartridges/core.md
-description: Public facing foundation of the Goldlabel Apps ecosystem
-slug: /work/cartridges/core
-icon: doc
-========
-description: Goldlabel Core is Open Source and Free forever — Statically generated with Firestore-powered updates and a real admin panel. Built with Next.js App Router and MUI.
 slug: /work/core
+description: Open Source and Free forever
 icon: core
->>>>>>>> develop:public/markdown/work/core/index.md
-image: /jpg/cartridges/cartridge.jpg
+image: /jpg/goldlabel/core.jpg
+featured: false
 ---
 
 > Goldlabel Core is a project designed to deliver **powerful, user-friendly web applications** that enhance productivity and streamline tasks. The project uses a **monorepo** architecture with multiple Next.js applications deployed to **Vercel**.
@@ -25,9 +20,7 @@ At this stage, the **www** public-facing site is the primary focus, with an emph
 - **Tight control** over metadata like titles, descriptions, and Open Graph information.
 - A **responsive layout** with easily navigable pages, prioritizing serious, no-nonsense content presentation without large animations or oversized images.
 
----
-
-### **Design and Development Goals**
+#### **Design and Development Goals**
 
 1. **SEO and Performance Optimization**:
 
@@ -50,18 +43,14 @@ At this stage, the **www** public-facing site is the primary focus, with an emph
    - **StaticHeader** and **StaticFooter** provide consistent navigation and branding across pages.
    - The footer includes links built with the Next.js `Link` component, styled using MUI's system (`sx` prop).
 
----
-
-### **Technical Setup**
+#### **Technical Setup**
 
 - The **monorepo** is managed with a combination of Next.js, MUI, and Emotion.
 - The app is server-rendered for static content, ensuring minimal client-side hydration.
 - **Emotion's SSR** integration extracts critical styles during the static build to prevent styling mismatches between server and client.
 - The project supports rapid customization and updates through a shared component library and scalable page templates.
 
----
-
-### **Future Directions**
+#### **Future Directions**
 
 - Additional applications may be deployed under the Goldlabel Apps umbrella.
 - Features like dynamic data integration (e.g., Firebase, CMS) can enhance page content while preserving SEO and performance.

@@ -108,17 +108,17 @@ import CompanyIcon from '@mui/icons-material/Shop2Outlined';
 import DesignIcon from '@mui/icons-material/PaletteOutlined';
 import FeatureIcon from '@mui/icons-material/RocketLaunchOutlined';
 import SitemapIcon from '@mui/icons-material/AccountTree';
-
 import GoodfitIcon from '@mui/icons-material/InterpreterMode';
 import SpeakwriteIcon from '@mui/icons-material/KeyboardVoice';
 import ProductsIcon from '@mui/icons-material/Store';
 import UbereduxIcon from '@mui/icons-material/StorageOutlined';
-
 import CartridgeIcon from '@mui/icons-material/IntegrationInstructionsOutlined';
+import CoreIcon from '@mui/icons-material/BarcodeReader';
 
 export type IconShape = {
   icon:
     | 'account'
+    | 'core'
     | 'cartridge'
     | 'uberedux'
     | 'good-fit'
@@ -253,6 +253,9 @@ export default function Icon({ icon, color }: IconShape) {
   if (!color) color = 'inherit';
   let iconFragment = <React.Fragment />;
   switch (icon) {
+    case 'core':
+      iconFragment = <CoreIcon color={color} />;
+      break;
     case 'ai':
       iconFragment = <AIIcon color={color} />;
       break;

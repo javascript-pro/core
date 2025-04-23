@@ -1,5 +1,4 @@
 'use client';
-
 import config from '../config.json';
 import * as React from 'react';
 import {
@@ -19,11 +18,11 @@ import { useKey } from '../cartridges/Uberedux';
 
 const StyledFab = styled(Fab)({
   position: 'absolute',
-  zIndex: 1,
-  top: -8,
+  margin: '0 auto',
+  zIndex: 1000,
+  top: -4,
   left: 0,
   right: 0,
-  margin: '0 auto',
 });
 
 type AppshellProps = {
@@ -32,10 +31,9 @@ type AppshellProps = {
 };
 
 export default function Appshell({ children, globalNav }: AppshellProps) {
+  
   const [menuOpen, setMenuOpen] = React.useState(false);
-
   const [darkmode] = useKey('darkmode');
-
   const mode = darkmode ? 'dark' : 'light';
   const themeValues = config.themes[mode];
 
@@ -113,11 +111,15 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
             <StyledFab
               sx={{
                 boxShadow: 0,
+                background: 0,
               }}
               onClick={handleToggleMenu}
               aria-label="Goldlabel Menu"
             >
-              <Avatar src={config.favicon} />
+              <Avatar 
+                alt="Icon" 
+                src={ darkmode ? config.favicon.dark : config.favicon.light } 
+              />
             </StyledFab>
             <Box sx={{ flexGrow: 1 }} />
           </Toolbar>

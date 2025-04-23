@@ -1,9 +1,7 @@
 'use client';
-
+import config from '../config.json';
 import * as React from 'react';
-import {
-  useRouter,
-} from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import {
   Dialog,
   DialogTitle,
@@ -13,11 +11,10 @@ import {
   DialogActions,
   useMediaQuery,
   useTheme,
-  ListItemButton,
-  ListItemIcon,
   IconButton,
 } from '@mui/material';
 import { Icon, ContextNav } from '../';
+import { useKey } from '../cartridges/Uberedux';
 
 type PopupMenuProps = {
   open?: boolean;
@@ -33,6 +30,7 @@ export default function PopupMenu({
   },
   featured,
 }: PopupMenuProps) {
+  const [darkmode] = useKey('darkmode');
   const theme = useTheme();
   const router = useRouter();
   const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
@@ -63,7 +61,10 @@ export default function PopupMenu({
                 onClose();
               }}
             >
-              <Avatar alt="Goldlabel Menu" src={'/svg/favicon_grey.svg'} />
+              <Avatar 
+                alt="Icon" 
+                src={ darkmode ? config.favicon.dark : config.favicon.light } 
+              />
             </IconButton>
           }
         />
@@ -72,17 +73,19 @@ export default function PopupMenu({
       <DialogContent>
         <ContextNav onClose={onClose} featured={featured} />
       </DialogContent>
-      
-      <DialogActions sx={{p: 1}}>
+
+      <DialogActions sx={{ p: 1 }}>
         <IconButton
-          sx={{
-            // ml: -2,
-          }}
+          sx={
+            {
+              // ml: -2,
+            }
+          }
           onClick={() => {
             onClose();
           }}
         >
-          <Icon icon='close' />
+          <Icon icon="close" />
         </IconButton>
       </DialogActions>
     </Dialog>

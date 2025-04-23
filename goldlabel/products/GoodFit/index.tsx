@@ -1,3 +1,3 @@
-import GoodFit from './GoodFit'
+import GoodFit from './GoodFit';
 
 export { GoodFit };

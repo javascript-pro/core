@@ -1,5 +1,3 @@
 import SpeakWrite from './SpeakWrite';
 
-export { 
-    SpeakWrite,
-};
+export { SpeakWrite };

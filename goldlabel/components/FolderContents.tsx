@@ -75,19 +75,6 @@ export default function FolderContents({ folderLabel }: FolderContentsProps) {
 
   return (
     <Box sx={{ minWidth: 300 }}>
-      {grandparent && (
-        <>
-          <ListItem disablePadding>
-            <ListItemButton onClick={() => router.push(`/${grandparent.slug}`)}>
-              <ListItemIcon>
-                <Icon icon="up" />
-              </ListItemIcon>
-              <ListItemText primary={grandparent.title} />
-            </ListItemButton>
-          </ListItem>
-        </>
-      )}
-
       {itemsToRender.length === 0 ? null : (
         <List dense>
           {itemsToRender
@@ -105,6 +92,19 @@ export default function FolderContents({ folderLabel }: FolderContentsProps) {
               </ListItem>
             ))}
         </List>
+      )}
+
+      {grandparent && (
+        <>
+          <ListItem disablePadding>
+            <ListItemButton onClick={() => router.push(`/${grandparent.slug}`)}>
+              <ListItemText primary={grandparent.title} />
+              <ListItemIcon>
+                <Icon icon="up" />
+              </ListItemIcon>
+            </ListItemButton>
+          </ListItem>
+        </>
       )}
     </Box>
   );

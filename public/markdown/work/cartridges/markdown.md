@@ -6,7 +6,7 @@ slug: /work/cartridges/markdown
 icon: cartridge
 image: /jpg/cartridges/cartridge.jpg
 tags: cartridges, cartridge
-featured: true
+featured: false
 ---
 
 > In short: Markdown keeps our content lightweight, portable, and friendly to both humans and machines

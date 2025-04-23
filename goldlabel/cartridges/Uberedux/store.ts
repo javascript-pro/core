@@ -6,7 +6,6 @@ import storage from 'redux-persist/lib/storage';
 import { combineReducers } from 'redux';
 import { initialState } from './initialState';
 
-
 export interface UbereduxState {
   [key: string]: any;
 }

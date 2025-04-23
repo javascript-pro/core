@@ -28,6 +28,11 @@ export default function ContextNav({
   const router = useRouter();
   const [darkmode, setDarkmode] = useKey('darkmode');
 
+  const openInNewTab = (url: string) => {
+    window.open(url, '_blank');
+    return;
+  }
+
   const handleItemClick = (clickObj: { route?: string; action?: string }) => {
     if (clickObj.route) {
       router.push(clickObj.route);
@@ -53,20 +58,23 @@ export default function ContextNav({
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
         <Grid size={{ xs: 12, md: 6 }}>
-          
-          <Featured featured={featured}/>
-
+          <Featured featured={featured} />
           <List dense>
-
-          <ListItemButton
-              onClick={() => handleItemClick({ route: '/' })}
-            >
+            <ListItemButton onClick={() => handleItemClick({ route: '/' })}>
               <ListItemIcon>
                 <Icon icon="home" />
               </ListItemIcon>
               <ListItemText primary="Home" />
             </ListItemButton>
 
+            <ListItemButton
+              onClick={() => handleItemClick({ route: '/work/company' })}
+            >
+              <ListItemIcon>
+                <Icon icon="cartridge" />
+              </ListItemIcon>
+              <ListItemText primary="About" />
+            </ListItemButton>
 
             <ListItemButton
               onClick={() => handleItemClick({ route: '/sitemap' })}
@@ -78,30 +86,17 @@ export default function ContextNav({
             </ListItemButton>
           </List>
         </Grid>
-      </Grid>
-    </Box>
-  );
-}
 
-/*
         <Grid size={{ xs: 12, md: 6 }}>
+          
           <List dense>
             <ListItemButton
-              onClick={() => handleItemClick({ route: '/api/goldlabel' })}
+              onClick={() => openInNewTab('/api/goldlabel')}
             >
               <ListItemIcon>
                 <Icon icon="api" />
               </ListItemIcon>
               <ListItemText primary="API" />
-            </ListItemButton>
-
-            <ListItemButton
-              onClick={() => handleItemClick({ route: '/admin' })}
-            >
-              <ListItemIcon>
-                <Icon icon="admin" />
-              </ListItemIcon>
-              <ListItemText primary="Admin" />
             </ListItemButton>
 
             <ListItemButton
@@ -113,7 +108,16 @@ export default function ContextNav({
               <ListItemText primary={darkmode ? 'Light Mode' : 'Dark Mode'} />
             </ListItemButton>
 
-            <ListItemButton
+            
+          </List>
+        </Grid>
+      </Grid>
+    </Box>
+  );
+}
+
+/*
+<ListItemButton
               onClick={() => handleItemClick({ route: '/uberedux' })}
             >
               <ListItemIcon>
@@ -121,6 +125,4 @@ export default function ContextNav({
               </ListItemIcon>
               <ListItemText primary="Uberedux" />
             </ListItemButton>
-          </List>
-        </Grid>
 */

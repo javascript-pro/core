@@ -1,12 +1,13 @@
 ---
-order: 1000
+order: 100
 title: Privacy
 description: Your trust means everything to us
 slug: /work/company/privacy
 icon: account
-image: /jpg/goldlabel/goldlabel.jpg
+image: /png/company.png
 tags: cookies, gdpr, privacy, terms, trust
 ---
+
 > We don't use cookies
 
 **Privacy Statement**
