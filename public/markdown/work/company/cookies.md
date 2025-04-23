@@ -1,10 +1,10 @@
 ---
-order: 750
+order: 200
 title: Cookies
 description: We don't use cookies
 slug: /work/company/cookies
 icon: account
-image: /jpg/goldlabel/goldlabel.jpg
+image: /png/company.png
 tags: cookies, gdpr, privacy, terms, trust
 ---
 

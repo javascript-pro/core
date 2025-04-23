@@ -4,7 +4,7 @@ title: About
 description: Goldlabel Apps
 slug: /work/company
 icon: work
-image: /jpg/goldlabel/goldlabel.jpg
+image: /png/company.png
 ---
 
 > Get in touch

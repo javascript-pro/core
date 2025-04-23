@@ -28,6 +28,11 @@ export default function ContextNav({
   const router = useRouter();
   const [darkmode, setDarkmode] = useKey('darkmode');
 
+  const openInNewTab = (url: string) => {
+    window.open(url, '_blank');
+    return;
+  }
+
   const handleItemClick = (clickObj: { route?: string; action?: string }) => {
     if (clickObj.route) {
       router.push(clickObj.route);
@@ -85,7 +90,7 @@ export default function ContextNav({
           <Featured featured={featured} />
           <List dense>
             <ListItemButton
-              onClick={() => handleItemClick({ route: '/api/goldlabel' })}
+              onClick={() => openInNewTab('/api/goldlabel')}
             >
               <ListItemIcon>
                 <Icon icon="api" />

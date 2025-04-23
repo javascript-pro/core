@@ -1,5 +1,4 @@
 'use client';
-
 import * as React from 'react';
 import {
   Box,
@@ -10,7 +9,7 @@ import {
   TextField,
 } from '@mui/material';
 import { Icon } from '../../';
-import { useSlice } from '../../cartridges/Uberedux';
+// import { useSlice } from '../../cartridges/Uberedux';
 
 export type Frontmatter = {
   order?: number;
@@ -28,8 +27,8 @@ export type GoodFitProps = {
 };
 
 export default function GoodFit() {
-  const goodfitState = useSlice();
-
+  
+  // const goodfitState = useSlice();
   const [jobDescription, setJobDescription] = React.useState('');
   const [resume, setResume] = React.useState('');
 
@@ -87,7 +86,7 @@ export default function GoodFit() {
           </Grid>
         </CardContent>
 
-        <pre>goodfitState: {JSON.stringify(goodfitState, null, 2)}</pre>
+        {/* <pre>goodfitState: {JSON.stringify(goodfitState, null, 2)}</pre> */}
       </Box>
     </>
   );
