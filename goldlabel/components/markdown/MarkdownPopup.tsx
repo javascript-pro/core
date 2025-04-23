@@ -34,9 +34,13 @@ export default function MarkdownPopup({
           </DialogTitle>
           <DialogContent>{markdown}</DialogContent>
           <DialogActions>
-            <Button fullWidth variant="outlined" onClick={() => {
-              setOpen(false)
-            }}>
+            <Button
+              fullWidth
+              variant="outlined"
+              onClick={() => {
+                setOpen(false);
+              }}
+            >
               <Icon icon="close" />
               <Box sx={{ mx: 1 }}>Close</Box>
             </Button>

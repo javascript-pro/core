@@ -29,7 +29,6 @@ export default function Featured({
   featured = [],
   folderLabel,
 }: FeaturedProps) {
-  
   const showFeatured = false;
   const router = useRouter();
 

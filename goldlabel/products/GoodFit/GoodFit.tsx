@@ -9,10 +9,8 @@ import {
   CardContent,
   TextField,
 } from '@mui/material';
-import { 
-  Icon,
-} from '../../';
-import {useSlice} from '../../cartridges/Uberedux'
+import { Icon } from '../../';
+import { useSlice } from '../../cartridges/Uberedux';
 
 export type Frontmatter = {
   order?: number;
@@ -30,27 +28,22 @@ export type GoodFitProps = {
 };
 
 export default function GoodFit() {
-
-  const goodfitState = useSlice()
+  const goodfitState = useSlice();
 
   const [jobDescription, setJobDescription] = React.useState('');
   const [resume, setResume] = React.useState('');
 
   const onAnalyse = () => {
-    console.warn("onAnalyse")
-  }
+    console.warn('onAnalyse');
+  };
 
   return (
     <>
       <Box sx={{ maxWidth: 800, margin: 'auto', mt: 4, p: 2 }}>
-        <CardHeader
-          avatar={<Icon icon={"good-fit"} />}
-          title={"Good fit?"}
-        />
+        <CardHeader avatar={<Icon icon={'good-fit'} />} title={'Good fit?'} />
 
         <CardContent>
           <Grid container spacing={2}>
-
             <Grid size={{ xs: 12, md: 5 }}>
               <TextField
                 value={resume}
@@ -65,18 +58,16 @@ export default function GoodFit() {
             </Grid>
 
             <Grid size={{ xs: 12, md: 2 }}>
-              <Box sx={{
-                my: 5,
-              }}>
-                <Button 
-                  variant="contained" 
-                  onClick={ onAnalyse }>
+              <Box
+                sx={{
+                  my: 5,
+                }}
+              >
+                <Button variant="contained" onClick={onAnalyse}>
                   {/* <Box>
                     <Icon icon="openai" />
                   </Box> */}
-                  <Box sx={{ mx: 1 }}>
-                    Analyse
-                  </Box>
+                  <Box sx={{ mx: 1 }}>Analyse</Box>
                 </Button>
               </Box>
             </Grid>
@@ -90,16 +81,13 @@ export default function GoodFit() {
                 multiline
                 fullWidth
                 rows={10}
-                
                 onChange={(e) => setJobDescription(e.target.value)}
               />
             </Grid>
-
           </Grid>
         </CardContent>
 
         <pre>goodfitState: {JSON.stringify(goodfitState, null, 2)}</pre>
-
       </Box>
     </>
   );

@@ -22,9 +22,5 @@ export default function AdminPage() {
   if (loading) return <p>Loading...</p>;
   if (!user) return <LoginForm />;
 
-  return (
-    <main>
-      Dashboard
-    </main>
-  );
+  return <main>Dashboard</main>;
 }

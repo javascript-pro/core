@@ -1,16 +1,10 @@
 'use client';
 
 import * as React from 'react';
-import {
-  Card,
-  CardHeader,
-  CardContent,
-} from '@mui/material';
+import { Card, CardHeader, CardContent } from '@mui/material';
 import { Icon } from '../../';
 
 export default function SpeakWrite() {
-
-
   return (
     <>
       <Card sx={{ maxWidth: 800, margin: 'auto', mt: 4, p: 2 }}>
@@ -22,7 +16,6 @@ export default function SpeakWrite() {
 
         <CardContent>Open Source AI propaganda generator</CardContent>
       </Card>
-      
     </>
   );
 }

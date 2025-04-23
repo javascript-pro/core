@@ -53,20 +53,15 @@ export default function ContextNav({
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
         <Grid size={{ xs: 12, md: 6 }}>
-          
-          <Featured featured={featured}/>
+          <Featured featured={featured} />
 
           <List dense>
-
-          <ListItemButton
-              onClick={() => handleItemClick({ route: '/' })}
-            >
+            <ListItemButton onClick={() => handleItemClick({ route: '/' })}>
               <ListItemIcon>
                 <Icon icon="home" />
               </ListItemIcon>
               <ListItemText primary="Home" />
             </ListItemButton>
-
 
             <ListItemButton
               onClick={() => handleItemClick({ route: '/sitemap' })}

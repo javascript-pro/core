@@ -1,9 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import {
-  useRouter,
-} from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import {
   Dialog,
   DialogTitle,
@@ -72,17 +70,19 @@ export default function PopupMenu({
       <DialogContent>
         <ContextNav onClose={onClose} featured={featured} />
       </DialogContent>
-      
-      <DialogActions sx={{p: 1}}>
+
+      <DialogActions sx={{ p: 1 }}>
         <IconButton
-          sx={{
-            // ml: -2,
-          }}
+          sx={
+            {
+              // ml: -2,
+            }
+          }
           onClick={() => {
             onClose();
           }}
         >
-          <Icon icon='close' />
+          <Icon icon="close" />
         </IconButton>
       </DialogActions>
     </Dialog>

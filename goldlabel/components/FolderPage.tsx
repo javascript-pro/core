@@ -71,7 +71,6 @@ export default function FolderPage({
             overflow: 'hidden',
           }}
         >
-          
           <Image
             priority
             src={frontmatter.image}

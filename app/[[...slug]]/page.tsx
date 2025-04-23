@@ -89,7 +89,6 @@ export default async function CatchAllPage({ params }: any) {
   }
 
   if (markdown) {
-
     return (
       <FilePage featured={featured} content={markdown} globalNav={globalNav} />
     );
