@@ -11,12 +11,16 @@ import ContextNav from './components/ContextNav';
 import Advert from './components/Advert';
 import FolderContents from './components/FolderContents';
 import Featured from './components/Featured';
+import LightDarkToggle from './components/LightDarkToggle';
 
 import MarkdownPopup from './components/markdown/MarkdownPopup';
 import VoiceRecorder from './components/top-secret/VoiceRecorder';
 
+import Share from './components/Share';
+
 export {
   Header,
+  Share,
   Advert,
   ContextNav,
   Appshell,
@@ -30,6 +34,7 @@ export {
   Featured,
   VoiceRecorder,
   MarkdownPopup,
+  LightDarkToggle,
 };
 
 export type { IconShape, IHeader, FolderPageProps };

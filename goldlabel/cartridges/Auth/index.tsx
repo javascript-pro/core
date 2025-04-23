@@ -1,7 +1,6 @@
-// import Uberedux from './Uberedux';
+import AuthButton from './AuthButton';
+import { IAuthButton } from './AuthButton';
 
-// export {
-//   Auth
-// };
+export { AuthButton };
 
-// export type { RootState, UbereduxDispatch, UbereduxState };
+export type { IAuthButton };

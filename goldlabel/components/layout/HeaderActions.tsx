@@ -1,8 +1,9 @@
 'use client';
 
 import * as React from 'react';
-import { Box, IconButton } from '@mui/material';
-import { Icon } from '../../';
+import { Box } from '@mui/material';
+import { Share, LightDarkToggle } from '../../';
+import { AuthButton } from '../../cartridges/Auth';
 
 export interface IHeaderActions {
   anyKey?: any;
@@ -10,23 +11,10 @@ export interface IHeaderActions {
 
 export default function HeaderActions() {
   return (
-    <Box sx={{ display: "flex" }}>
-      <IconButton
-        onClick={() => {
-          console.log('ping. pong.');
-        }}
-      >
-        <Icon icon={'pingpong' as any} />
-      </IconButton>
-
-      <IconButton
-        onClick={() => {
-          console.log('ping. pong.');
-        }}
-      >
-        <Icon icon={'pingpong' as any} />
-      </IconButton>
-      
+    <Box sx={{ display: 'flex' }}>
+      <AuthButton />
+      <Share />
+      <LightDarkToggle mode="iconbutton" />
     </Box>
   );
 }

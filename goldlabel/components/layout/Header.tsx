@@ -11,7 +11,6 @@ import {
   Container,
 } from '@mui/material';
 import { HeaderActions } from './';
-// import { Icon } from '../../';
 
 export interface IHeader {
   meta: {

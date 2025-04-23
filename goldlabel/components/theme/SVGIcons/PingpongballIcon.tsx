@@ -1,11 +1,9 @@
 import * as React from 'react';
-import { useTheme, SvgIcon } from '@mui/material';
+import { SvgIcon } from '@mui/material';
 
 export default function PingpongballIcon(props: any) {
-  let mainColor = 'black';
-  const theme = useTheme();
-  mainColor = theme.palette.text.primary;
-  let color2 = theme.palette.secondary.main;
+  const mainColor = '#C09F52';
+  const smile = '#FFF';
 
   return (
     <SvgIcon {...props}>
@@ -19,7 +17,7 @@ export default function PingpongballIcon(props: any) {
             ></path>
             <path
               d="M8,12 C12.6203742,21.9973959 20,13.9133228 20,13.9133228 C14.7209979,15.4126605 8,12 8,12 Z"
-              fill={color2}
+              fill={smile}
             ></path>
           </g>
         </g>
