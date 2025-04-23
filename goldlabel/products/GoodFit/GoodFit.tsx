@@ -4,7 +4,6 @@ import {
   Box,
   Button,
   Grid,
-  CardHeader,
   CardContent,
   TextField,
 } from '@mui/material';
@@ -33,23 +32,44 @@ export default function GoodFit() {
     examples,
   } = goodfitState[0]
 
+  const [feedback, setFeedback] = React.useState('feedback');
+
   const [jobDescription, setJobDescription] = React.useState('');
   const [resume, setResume] = React.useState('');
-
   const [valid, setValid] = React.useState(false);
 
+  const validate = () => {
+    let valid = true
+    // let message = "All good"
+    // const validity =  {
+    //   valid,
+    //   message,
+    // };
+    console.warn('validate: valid', valid);
+    setValid(valid);
+  };
+
+
   const onUpdateFields = () => {
-    console.warn('oonUpdateFields');
+    validate()
+  };
+
+  const onPasteClick = (field: string) => {
+    console.warn('onPasteClick', field);
+    if (field === "jd"){
+      setJobDescription(examples.jd)
+    }
+    if (field === "resume") setResume(examples.resume)
   };
 
   const onAnalyse = () => {
-    console.warn('onAnalyse');
+    // console.warn('onAnalyse');
   };
 
   return (
     <>
       <Box sx={{ maxWidth: 800, margin: 'auto', mt: 4, p: 2 }}>
-        <CardHeader avatar={<Icon icon={'good-fit'} />} title={'Good fit?'} />
+        {/* <CardHeader avatar={<Icon icon={'good-fit'} />} title={'Good fit?'} /> */}
 
         <CardContent>
           <Grid container spacing={2}>
@@ -61,12 +81,14 @@ export default function GoodFit() {
                   // disabled={ valid ? false : true }
                   // variant= { valid ? "contained" : "outlined" }
                   variant= { "contained" }
-                  onClick={onAnalyse}>
+                  onClick={() => {
+                    onPasteClick("resume");
+                  }}>
                   <Box sx={{ mt: 1 }}>
                     <Icon icon={'down'} />
                   </Box>
                   <Box sx={{ mx: 1 }}>
-                    Example Resume
+                    Paste Example Resume
                   </Box>
                 </Button>
               </Box>
@@ -76,7 +98,7 @@ export default function GoodFit() {
                   background: "#F7F7F7",
                 }}
                 value={resume}
-                label="Paste Resume"
+                label="Resume"
                 multiline
                 fullWidth
                 rows={7}
@@ -87,23 +109,22 @@ export default function GoodFit() {
               />
             </Grid>
 
-            
-
             <Grid size={{ xs: 12, md: 6 }}>
 
               <Box sx={{ mb: 2 }}>
                 <Button 
                   fullWidth
-                  
                   // disabled={ valid ? false : true }
                   // variant= { valid ? "contained" : "outlined" }
                   variant= { "contained" }
-                  onClick={onAnalyse}>
+                  onClick={() => {
+                    onPasteClick("jd");
+                  }}>
                   <Box sx={{ mt: 1 }}>
                     <Icon icon={'down'} />
                   </Box>
                   <Box sx={{ mx: 1 }}>
-                    Example Job Description
+                    Paste Example JD
                   </Box>
                 </Button>
               </Box>
@@ -113,7 +134,7 @@ export default function GoodFit() {
                   background: "#F7F7F7",
                 }}
                 value={jobDescription}
-                label="Paste Job Description"
+                label="Job Description"
                 multiline
                 fullWidth
                 rows={7}
@@ -132,20 +153,20 @@ export default function GoodFit() {
                   variant= { valid ? "contained" : "outlined" }
                   onClick={onAnalyse}
                 >
+                  
+                  <Box sx={{ mx: 1 }}>Analyse</Box>
                   <Box sx={{ mx: 1 }}>
-                    <Icon icon={'good-fit'} />
+                    <Icon icon={'right'} />
                   </Box>
-                  <Box sx={{ mx: 1 }}>Analyse fit</Box>
                 </Button>
               </Box>
 
             </Grid>
 
-
           </Grid>
         </CardContent>
 
-        <pre>examples: {JSON.stringify(examples, null, 2)}</pre>
+        {/* <pre>examples: {JSON.stringify(examples, null, 2)}</pre> */}
       </Box>
     </>
   );
