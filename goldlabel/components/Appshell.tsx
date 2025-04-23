@@ -31,7 +31,6 @@ type AppshellProps = {
 };
 
 export default function Appshell({ children, globalNav }: AppshellProps) {
-  
   const [menuOpen, setMenuOpen] = React.useState(false);
   const [darkmode] = useKey('darkmode');
   const mode = darkmode ? 'dark' : 'light';
@@ -116,9 +115,9 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
               onClick={handleToggleMenu}
               aria-label="Goldlabel Menu"
             >
-              <Avatar 
-                alt="Icon" 
-                src={ darkmode ? config.favicon.dark : config.favicon.light } 
+              <Avatar
+                alt="Icon"
+                src={darkmode ? config.favicon.dark : config.favicon.light}
               />
             </StyledFab>
             <Box sx={{ flexGrow: 1 }} />

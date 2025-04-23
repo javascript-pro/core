@@ -31,7 +31,7 @@ export default function ContextNav({
   const openInNewTab = (url: string) => {
     window.open(url, '_blank');
     return;
-  }
+  };
 
   const handleItemClick = (clickObj: { route?: string; action?: string }) => {
     if (clickObj.route) {
@@ -88,11 +88,8 @@ export default function ContextNav({
         </Grid>
 
         <Grid size={{ xs: 12, md: 6 }}>
-          
           <List dense>
-            <ListItemButton
-              onClick={() => openInNewTab('/api/goldlabel')}
-            >
+            <ListItemButton onClick={() => openInNewTab('/api/goldlabel')}>
               <ListItemIcon>
                 <Icon icon="api" />
               </ListItemIcon>
@@ -107,8 +104,6 @@ export default function ContextNav({
               </ListItemIcon>
               <ListItemText primary={darkmode ? 'Light Mode' : 'Dark Mode'} />
             </ListItemButton>
-
-            
           </List>
         </Grid>
       </Grid>

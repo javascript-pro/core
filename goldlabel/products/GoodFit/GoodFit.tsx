@@ -29,59 +29,55 @@ export type GoodFitProps = {
 };
 
 export default function GoodFit() {
-  
-  const goodfitState = useKey("goodfitState");
-  const {
-    examples,
-  } = goodfitState[0]
+  const goodfitState = useKey('goodfitState');
+  const { examples } = goodfitState[0];
 
   const [jd, setJD] = React.useState('');
   const [resume, setResume] = React.useState('');
   const [valid, setValid] = React.useState(false);
-  const [message, setMessage] = React.useState("Paste a Resume or JD");
+  const [message, setMessage] = React.useState('Paste a Resume or JD');
   const [error, setError] = React.useState(false);
 
   const validate = () => {
     setTimeout(() => {
       if (resume.length < 9 && jd.length < 9) {
-        setMessage("More detail needed");
+        setMessage('More detail needed');
         setError(false);
         setValid(false);
         return;
       }
-    
+
       // if (resume.length < 9) {
       //   setMessage("Resume needs 100 characters at least");
       //   setError(true);
       //   setValid(false);
       //   return;
       // }
-    
+
       // if (jd.length < 9) {
       //   setMessage("The JD needs 100 characters at least");
       //   setError(true);
       //   setValid(false);
       //   return;
       // }
-    
+
       // If both are valid
-      setMessage("Analayse when ready");
+      setMessage('Analayse when ready');
       setError(false);
       setValid(true);
-    }, 200)
+    }, 200);
   };
-  
 
   const onUpdateFields = () => {
-    validate()
+    validate();
   };
 
   const onPasteClick = (field: string) => {
-    if (field === "jd"){
-      setJD(examples.jd)
+    if (field === 'jd') {
+      setJD(examples.jd);
       validate();
     }
-    if (field === "resume") {
+    if (field === 'resume') {
       setResume(examples.resume);
       validate();
     }
@@ -97,13 +93,11 @@ export default function GoodFit() {
         {/* <CardHeader avatar={<Icon icon={'good-fit'} />} title={'Good fit?'} /> */}
 
         <CardContent>
-  
           <Grid container spacing={2}>
             <Grid size={{ xs: 12, md: 6 }}>
-
               <TextField
                 sx={{
-                  background: "#F7F7F7",
+                  background: '#F7F7F7',
                 }}
                 value={resume}
                 label="Resume"
@@ -117,33 +111,27 @@ export default function GoodFit() {
               />
 
               <Box sx={{ mt: 2 }}>
-                <Button 
+                <Button
                   fullWidth
                   // disabled={ valid ? false : true }
                   // variant= { valid ? "contained" : "outlined" }
-                  variant= { "contained" }
+                  variant={'contained'}
                   onClick={() => {
-                    onPasteClick("resume");
-                  }}>
+                    onPasteClick('resume');
+                  }}
+                >
                   <Box sx={{ mt: 1 }}>
                     <Icon icon={'up'} />
                   </Box>
-                  <Box sx={{ mx: 1 }}>
-                    Example Resume
-                  </Box>
+                  <Box sx={{ mx: 1 }}>Example Resume</Box>
                 </Button>
               </Box>
-
-
             </Grid>
 
             <Grid size={{ xs: 12, md: 6 }}>
-
-              
-
               <TextField
                 sx={{
-                  background: "#F7F7F7",
+                  background: '#F7F7F7',
                 }}
                 value={jd}
                 label="Job Description"
@@ -157,36 +145,32 @@ export default function GoodFit() {
               />
 
               <Box sx={{ mt: 2 }}>
-                <Button 
+                <Button
                   fullWidth
                   // disabled={ valid ? false : true }
                   // variant= { valid ? "contained" : "outlined" }
-                  variant= { "contained" }
+                  variant={'contained'}
                   onClick={() => {
-                    onPasteClick("jd");
-                  }}>
+                    onPasteClick('jd');
+                  }}
+                >
                   <Box sx={{ mt: 1 }}>
                     <Icon icon={'up'} />
                   </Box>
-                  <Box sx={{ mx: 1 }}>
-                    Example JD
-                  </Box>
+                  <Box sx={{ mx: 1 }}>Example JD</Box>
                 </Button>
               </Box>
-
             </Grid>
 
-            <Grid size={{ xs: 12}}>
-              <Alert severity={!error ? "info" : "warning"} 
-                sx={{mb: 2}}
-              >
+            <Grid size={{ xs: 12 }}>
+              <Alert severity={!error ? 'info' : 'warning'} sx={{ mb: 2 }}>
                 <AlertTitle>{message}</AlertTitle>
               </Alert>
               <Box sx={{ m: 0 }}>
-                <Button 
+                <Button
                   fullWidth
-                  disabled={ valid ? false : true }
-                  variant= { valid ? "contained" : "outlined" }
+                  disabled={valid ? false : true}
+                  variant={valid ? 'contained' : 'outlined'}
                   onClick={onAnalyse}
                 >
                   <Box sx={{ mx: 1 }}>Analyse</Box>

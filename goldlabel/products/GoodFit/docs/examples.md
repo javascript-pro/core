@@ -2,7 +2,6 @@ Example JD
 
 https://www.cv-library.co.uk/job/223375932/Full-Stack-Engineer?hlkw=react-node&sid=ef7983b0-4b41-4356-829a-8068290cb745
 
-
 Full Stack Blockchain Developer
 London – Hybrid Working
 £100,000-£130,000
@@ -38,7 +37,6 @@ Desire to keep developing Blockchain knowledge.
 Salary: £100,000-£130,000
 
 If that sounds of interest, please apply and I can give you a call today!
-
 
 ---
 
