@@ -15,7 +15,7 @@ import {
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { PopupMenu } from '../';
-import { useKey } from '../features/Uberedux';
+import { useKey } from '../cartridges/Uberedux';
 
 const StyledFab = styled(Fab)({
   position: 'absolute',
@@ -53,6 +53,9 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
           success: {
             main: themeValues.secondary,
           },
+          info: {
+            main: themeValues.text,
+          },
           background: {
             default: themeValues.background,
             paper: themeValues.paper,
@@ -66,7 +69,7 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
             styleOverrides: {
               containedPrimary: {
                 fontWeight: 'bold',
-                color: '#fff', // force light text on primary buttons
+                boxShadow: 'none',
               },
             },
           },
@@ -108,10 +111,8 @@ export default function Appshell({ children, globalNav }: AppshellProps) {
         <Container maxWidth="md">
           <Toolbar>
             <StyledFab
-              color="secondary"
               sx={{
                 boxShadow: 0,
-                border: '2px solid ' + themeValues.text,
               }}
               onClick={handleToggleMenu}
               aria-label="Goldlabel Menu"

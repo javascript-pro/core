@@ -3,11 +3,11 @@
 import * as React from 'react';
 import {
   Box,
+  ListItemIcon,
   List,
   ListItem,
   ListItemButton,
   ListItemText,
-  Typography,
 } from '@mui/material';
 import { usePathname, useRouter } from 'next/navigation';
 import { Icon } from '../';
@@ -75,13 +75,21 @@ export default function FolderContents({ folderLabel }: FolderContentsProps) {
 
   return (
     <Box sx={{ minWidth: 300 }}>
-      <Typography sx={{ mx: 2 }} variant="button">
-        {folderLabel || ''}
-      </Typography>
+      {grandparent && (
+        <>
+          <ListItem disablePadding>
+            <ListItemButton onClick={() => router.push(`/${grandparent.slug}`)}>
+              <ListItemIcon>
+                <Icon icon="up" />
+              </ListItemIcon>
+              <ListItemText primary={grandparent.title} />
+            </ListItemButton>
+          </ListItem>
+        </>
+      )}
 
       {itemsToRender.length === 0 ? null : (
         <List dense>
-          {/* Children items, excluding current file */}
           {itemsToRender
             .filter(
               (item) => `/${item.slug}`.replace(/\/+/g, '/') !== currentPath,

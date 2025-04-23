@@ -636,11 +636,9 @@ export default function Icon({ icon, color }: IconShape) {
     case 'speak-write':
       iconFragment = <SpeakwriteIcon color={color} />;
       break;
-      case 'cartridge':
-        iconFragment = <CartridgeIcon color={color} />;
-        break;
-      
-
+    case 'cartridge':
+      iconFragment = <CartridgeIcon color={color} />;
+      break;
 
     default:
       iconFragment = <ErrorIcon color={'warning'} />;

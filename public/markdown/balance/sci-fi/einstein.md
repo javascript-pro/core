@@ -8,6 +8,8 @@ image: /jpg/photos/einstein.jpg
 ---
 > Let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series.
 
+> Let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series.
+
 I mentioned in the last lecture this idea of Gedanken experiments, thought experiments, and they really played into a lot of the discoveries that Albert Einstein made. He was able to conceptualize problems and then apply math and physics equations that would break through and result in us understanding more of our world. Many of the solutions from the Gedanken experiments are now fundamental laws of physics.
 
 Albert Einstein famously worked at a patent office and developed these thought experiments that resulted in massive changes to our understanding of our universe. He evaluated a lot of patents that had to do with electricity and mechanics, which show up in many of his Gedanken experiments. He also benefited from regular interactions with multiple philosophers and scientists, including our good friend Henri Poincaré from the last lecture. Anyway, in 1905, Einstein's genius burst into the scene in spectacular fashion. Historians refer to 1905 as Einstein's miracle year.

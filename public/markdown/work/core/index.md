@@ -1,9 +1,15 @@
 ---
 order: 20
 title: Core
+<<<<<<<< HEAD:public/markdown/work/cartridges/core.md
 description: Public facing foundation of the Goldlabel Apps ecosystem
 slug: /work/cartridges/core
 icon: doc
+========
+description: Goldlabel Core is Open Source and Free forever — Statically generated with Firestore-powered updates and a real admin panel. Built with Next.js App Router and MUI.
+slug: /work/core
+icon: core
+>>>>>>>> develop:public/markdown/work/core/index.md
 image: /jpg/cartridges/cartridge.jpg
 ---
 
@@ -60,3 +66,7 @@ At this stage, the **www** public-facing site is the primary focus, with an emph
 - Additional applications may be deployed under the Goldlabel Apps umbrella.
 - Features like dynamic data integration (e.g., Firebase, CMS) can enhance page content while preserving SEO and performance.
 - Expansion of static and dynamic content to further enrich the user experience.
+
+### [Weekend Portfolio](/balance/books/weekend-portfolio)
+
+A series of standalone apps you can build in a weekend. Each project has modern deployment, real-world app structure

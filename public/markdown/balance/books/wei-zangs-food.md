@@ -2,7 +2,7 @@
 order: 11
 title: Wei Zang’s Food
 description: 魏藏美食
-slug: /balance/books
+slug: /balance/books/wei-zangs-food
 icon: food
 image: /jpg/wei-zang/wei-zangs-food.jpg
 featured: false

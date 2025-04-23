@@ -4,8 +4,8 @@ title: Goldlabel
 description: Custom software that works
 slug: /
 icon: home
-image: /jpg/goldlabel/Home.jpg
-tags: Next Gen, Next.js, core, Gen X, goldlabel, pr0, AI Prompt Engineering, ChatGPT, OpenAI, Singularity
+image: /jpg/goldlabel/goldlabel.jpg
+tags: JavaScript , Next Gen, Next.js, core, Gen X, goldlabel, pr0, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 ---
 
 > We build and ship modern web apps for clients who need real results — fast
@@ -22,6 +22,8 @@ Whether you're a startup with a short deadline or an enterprise with complex wor
 
 - **Readable, extensible codebases.**  
   You’ll never be locked in. Our code is designed to be picked up by your team — or handed back to us when needed.
+
+> Choose your own path, Sir [Work](/work), [Life](/life) or [Balance](/balance)
 
 ### Work With Us
 

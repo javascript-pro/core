@@ -2,25 +2,14 @@
 
 import * as React from 'react';
 import {
-  Box,
   Card,
   CardHeader,
   CardContent,
-  Typography,
-  Button,
-  Stack,
-  TextField,
-  Divider,
 } from '@mui/material';
-import { Icon, Featured } from '../../';
+import { Icon } from '../../';
 
 export default function SpeakWrite() {
-  const [recording, setRecording] = React.useState(false);
-  const [audioURL, setAudioURL] = React.useState<string | null>(null);
-  const [transcript, setTranscript] = React.useState('');
-  const [uploading, setUploading] = React.useState(false);
-  const [transcribing, setTranscribing] = React.useState(false);
-  const [completed, setCompleted] = React.useState(false);
+
 
   return (
     <>
@@ -33,7 +22,7 @@ export default function SpeakWrite() {
 
         <CardContent>Open Source AI propaganda generator</CardContent>
       </Card>
-      <Featured />
+      
     </>
   );
 }

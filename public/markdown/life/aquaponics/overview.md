@@ -1,10 +1,10 @@
 ---
 order: 50
-title: What is Aquaponics?
-description:
+title: Aquaponics 5 Ws
+description: What, Who Where, When & Why
 slug: /life/aquaponics/overview
 icon: fish
-image: /jpg/wei-zang/wei-zangs-food.jpg
+image: /jpg/aquaponics/aquaponics.jpg
 ---
 
 What: Aquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closed-loop system.

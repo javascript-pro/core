@@ -12,7 +12,7 @@ import Advert from './components/Advert';
 import FolderContents from './components/FolderContents';
 import Featured from './components/Featured';
 import VoiceRecorder from './components/VoiceRecorder';
-import MarkdownPopup from './components/MarkdownPopup';
+import MarkdownPopup from './components/markdown/MarkdownPopup';
 
 export {
   Home,

@@ -6,6 +6,7 @@
     "icon": "home",
     "type": "folder",
     "tags": [
+      "JavaScript",
       "Next Gen",
       "Next.js",
       "core",
@@ -15,7 +16,21 @@
       "AI Prompt Engineering",
       "ChatGPT",
       "OpenAI",
-      "Singularity"
+      "Singularity",
+      "Frontend",
+      "Vanilla JS",
+      "TypeScript",
+      "React",
+      "Angular",
+      "Vue",
+      "Material UI",
+      "MUI",
+      "Flash",
+      "Server Side JavaScript",
+      "Node",
+      "Gatsby",
+      "NextJS",
+      "Headless CMS"
     ],
     "excerpt": "We build and ship modern web apps for clients who need real results — fast\n\nGoldlabel Apps is a UKbased software company that designs, builds, and maintains fullstack web applications. We specialize i",
     "children": [
@@ -26,30 +41,99 @@
         "icon": "work",
         "type": "folder",
         "tags": [
-          "social"
+          "JavaScript",
+          "Vanilla JavaScript",
+          "TypeScript",
+          "React",
+          "Angular",
+          "Vue",
+          "etc",
+          "Material UI",
+          "Flash",
+          "Server Side JavaScript",
+          "Node",
+          "Gatsby",
+          "NextJS",
+          "Headless CMS"
         ],
-        "excerpt": "Software built in the open.  \nEvery app we ship is real, running in production, and developed in public.\n\n Active Projects\n\n SpeakWrite\n\nTurn your voice into a complete media kit.  \nUpload a short spe",
+        "excerpt": "Every app we ship is real, running in production, and developed in public\n\nGoldlabel Core is Open Source and Free forever — Statically generated with Firestorepowered updates and a real admin panel. B",
         "children": [
           {
-            "title": "Cartridges",
+            "title": "About",
+            "slug": "work/company",
+            "order": 10,
+            "icon": "work",
+            "type": "folder",
+            "excerpt": "Get in touch\n\nIt's a  universally acknowledged that a Software Developer in possession of a good product, must be in want of a good business partner",
+            "children": [
+              {
+                "title": "Goldlabel Apps Ltd",
+                "slug": "work/company/uk-ltd",
+                "order": 25,
+                "icon": "doc",
+                "type": "file",
+                "tags": [
+                  "legal",
+                  "address"
+                ],
+                "excerpt": "Goldlabel Apps Ltd is a UK Limited Company (5460545)\n\n321323 High Road  \nChadwell Heath  \nimage: /jpg/goldlabel/Home.jpgEssex RM6 6AX"
+              },
+              {
+                "title": "Working remotely",
+                "slug": "work/company/remote-working",
+                "order": 190,
+                "icon": "work",
+                "type": "file",
+                "tags": [
+                  "remote",
+                  "hybrid"
+                ],
+                "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years. \n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communication,"
+              },
+              {
+                "title": "Cookies",
+                "slug": "work/company/cookies",
+                "order": 750,
+                "icon": "account",
+                "type": "file",
+                "tags": [
+                  "cookies",
+                  "gdpr",
+                  "privacy",
+                  "terms",
+                  "trust"
+                ],
+                "excerpt": "We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers t"
+              },
+              {
+                "title": "Privacy",
+                "slug": "work/company/privacy",
+                "order": 1000,
+                "icon": "account",
+                "type": "file",
+                "tags": [
+                  "cookies",
+                  "gdpr",
+                  "privacy",
+                  "terms",
+                  "trust"
+                ],
+                "excerpt": "We don't use cookies\n\nPrivacy Statement\n\nWelcome to Goldlabel. We value your privacy and are committed to protecting your personal information. This privacy statement aims to provide clarity on how we"
+              }
+            ]
+          },
+          {
+            "title": "Open Source Core",
             "slug": "work/cartridges",
             "order": 20,
             "icon": "feature",
             "type": "folder",
             "tags": [
               "cartridges",
-              "authentication"
+              "features"
             ],
-            "excerpt": "What are they? Features.\n\n \n\nA textfield which works like textedit or whatever the window equivalent might be",
+            "excerpt": "1. Bootstrapped Next.js project\n\n    Clone and deploy to GitHub & Vercel.\n\n2. Material UI:\n\n3. Backend API routes\n\n4. Polish\n    Error handling, loading states, and mobile responsiveness.",
             "children": [
-              {
-                "title": "Core",
-                "slug": "work/cartridges/core",
-                "order": 20,
-                "icon": "doc",
-                "type": "file",
-                "excerpt": "Goldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo architecture with multiple Next.js a"
-              },
               {
                 "title": "Flash",
                 "slug": "work/cartridges/flash",
@@ -80,8 +164,8 @@
                 "excerpt": "Because Localisation is not something you want to simply bolt onto a website at the end.\n\nUsers will do that themselves if they cared enough about reading anything you have written. Which they don't. "
               },
               {
-                "title": "MarkDown Preview",
-                "slug": "work/cartridges/markdown-preview",
+                "title": "MarkDown",
+                "slug": "work/cartridges/markdown",
                 "order": 130,
                 "icon": "cartridge",
                 "type": "file",
@@ -89,7 +173,7 @@
                   "cartridges",
                   "cartridge"
                 ],
-                "excerpt": "Two panels; \n\n1. A textfield which works like textedit or whatever the window equivalent might be\n\n2. A"
+                "excerpt": "In short: Markdown keeps our content lightweight, portable, and friendly to both humans and machines\n\n What is Markdown?\n\nMarkdown is a plain text format for writing content that’s meant to be both hu"
               },
               {
                 "title": "Cartridges",
@@ -106,6 +190,15 @@
             ]
           },
           {
+            "title": "Core",
+            "slug": "work/core",
+            "order": 20,
+            "icon": "core",
+            "type": "folder",
+            "excerpt": "Goldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo architecture with multiple Next.js a",
+            "children": []
+          },
+          {
             "title": "Products",
             "slug": "work/products",
             "order": 20,
@@ -114,8 +207,51 @@
             "tags": [
               "products"
             ],
-            "excerpt": "Products\n\n \n\n1. User Input:\n    Job description (JD) pasted into a text area.\n    Resume content pasted into a second text area.\n   \n\n \n\n Paste a job description and get instant feedback on how well o",
+            "excerpt": "Paste a job description and get instant feedback on how well our skills and experience match what you're looking for. You can download an automatically tailored CV.\n\n SpeakWrite\n\n As foreseen by Orwel",
             "children": [
+              {
+                "title": "Good Fit?",
+                "slug": "work/products/good-fit",
+                "order": 20,
+                "icon": "good-fit",
+                "type": "folder",
+                "tags": [
+                  "products",
+                  "recruitment",
+                  "ai",
+                  "good-fit"
+                ],
+                "excerpt": "1. User Input:\n    Job description (JD) pasted into a text area.\n    Resume content pasted into a second text area.\n\n \n\n Paste a job description and get instant feedback on how well our skills and exp",
+                "children": [
+                  {
+                    "title": "Our Resume (CV)",
+                    "slug": "work/products/good-fit/resume",
+                    "order": 50,
+                    "icon": "good-fit",
+                    "type": "file",
+                    "tags": [
+                      "cartridges",
+                      "jobs",
+                      "doc",
+                      "markdown"
+                    ],
+                    "excerpt": "Fullstack JavaScript Developer\n\n is a seasoned developer with two decades of experience in web systems, now focused on React, TypeScript, and scalable app architecture. I’ve delivered work for startup"
+                  },
+                  {
+                    "title": "Overview",
+                    "slug": "work/products/good-fit/overview",
+                    "order": 55,
+                    "icon": "good-fit",
+                    "type": "file",
+                    "tags": [
+                      "examples",
+                      "Open AI",
+                      "recruitment"
+                    ],
+                    "excerpt": "Find out if your job is a good fit for our experience and skills. This simple AI tool will tell you in seconds. Paste in a job description and click the button to let our AI it and tell you if it's a "
+                  }
+                ]
+              },
               {
                 "title": "Speak Write",
                 "slug": "work/products/speak-write",
@@ -123,28 +259,15 @@
                 "icon": "speak-write",
                 "type": "file",
                 "excerpt": "Foreseen by Orwell in 1984, built for reals just now. By us. Out of our heads\n\nSure thing, here's a draft of the SpeakWrite landing page copy, in clean \"web voice\" — modern, crisp, and focused on clar"
-              },
-              {
-                "title": "Good Fit?",
-                "slug": "work/products/good-fit",
-                "order": 55,
-                "icon": "good-fit",
-                "type": "file",
-                "tags": [
-                  "examples",
-                  "Open AI",
-                  "recruitment"
-                ],
-                "excerpt": "Find out if your job is a good fit for our experience and skills. This simple AI tool will tell you in seconds. Paste in a job description and click the button to let our AI it and tell you if it's a "
               }
             ]
           },
           {
             "title": "Fullstack",
-            "slug": "work/fullstack",
+            "slug": "work/tech",
             "order": 30,
             "icon": "techstack",
-            "type": "file",
+            "type": "folder",
             "tags": [
               "JavaScript",
               "Vanilla JavaScript",
@@ -161,86 +284,8 @@
               "NextJS",
               "Headless CMS"
             ],
-            "excerpt": "Fullstack is one of those industry terms rapidly loosing meaning from overuse. In the olden days there was a very clear difference between someone who made the frontend of an app and a person who made"
-          },
-          {
-            "title": "Our Resume (CV)",
-            "slug": "work/resume",
-            "order": 50,
-            "icon": "doc",
-            "type": "file",
-            "tags": [
-              "cartridges",
-              "translation",
-              "localisation",
-              "jobs",
-              "doc"
-            ],
-            "excerpt": "Fullstack JavaScript Developer\n\n is a seasoned developer with two decades of experience in web systems, now focused on React, TypeScript, and scalable app architecture. I’ve delivered work for startup"
-          },
-          {
-            "title": "UK Ltd Company",
-            "slug": "work/company",
-            "order": 2000,
-            "icon": "work",
-            "type": "folder",
-            "excerpt": "Get in touch. For it's a  universally acknowledged that a Software Developer in possession of a good product, must be in want of a good business partner",
-            "children": [
-              {
-                "title": "Goldlabel Apps Ltd",
-                "slug": "work/company/uk-ltd",
-                "order": 25,
-                "icon": "doc",
-                "type": "file",
-                "tags": [
-                  "legal",
-                  "address"
-                ],
-                "excerpt": "Goldlabel Apps Ltd is a UK Limited Company (5460545)\n\n321323 High Road  \nChadwell Heath  \nimage: /jpg/goldlabel/Home.jpgEssex RM6 6AX"
-              },
-              {
-                "title": "Remote working",
-                "slug": "work/company/remote-working",
-                "order": 190,
-                "icon": "work",
-                "type": "file",
-                "tags": [
-                  "remote",
-                  "hybrid"
-                ],
-                "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years, due in large part to the COVID19 pandemic. Prior to the pandemic, many businesses were hesitant to allow employees to w"
-              },
-              {
-                "title": "Cookies",
-                "slug": "work/company/cookies",
-                "order": 750,
-                "icon": "account",
-                "type": "file",
-                "tags": [
-                  "cookies",
-                  "gdpr",
-                  "privacy",
-                  "terms",
-                  "trust"
-                ],
-                "excerpt": "While cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers to explore alternative "
-              },
-              {
-                "title": "Privacy",
-                "slug": "work/company/privacy",
-                "order": 1000,
-                "icon": "account",
-                "type": "file",
-                "tags": [
-                  "cookies",
-                  "gdpr",
-                  "privacy",
-                  "terms",
-                  "trust"
-                ],
-                "excerpt": "We don't use cookies\n\nPrivacy Statement\n\nWelcome to Goldlabel! We value your privacy and are committed to protecting your personal information. This privacy statement aims to provide clarity on how we"
-              }
-            ]
+            "excerpt": "Fullstack is one of those industry terms rapidly loosing meaning from overuse. In the olden days there was a very clear difference between someone who made the frontend of an app and a person who made",
+            "children": []
           }
         ]
       },
@@ -309,10 +354,10 @@
             "order": 200,
             "icon": "fish",
             "type": "folder",
-            "excerpt": "",
+            "excerpt": "Aquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closedloop system.",
             "children": [
               {
-                "title": "What is Aquaponics?",
+                "title": "Aquaponics 5 Ws",
                 "slug": "life/aquaponics/overview",
                 "order": 50,
                 "icon": "fish",
@@ -329,7 +374,7 @@
         "order": 100,
         "icon": "balance",
         "type": "folder",
-        "excerpt": "Is THIS Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday\n\n Choose your own path, Sir ,  or",
+        "excerpt": "Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Is this Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\"",
         "children": [
           {
             "title": "Books",
@@ -337,7 +382,7 @@
             "order": 100,
             "icon": "balance",
             "type": "folder",
-            "excerpt": "Book 1. Weekend Portfolio\n\nAimed at semiprofessional coders who want to go pr0.\n\n Weekend 1\n\nIn this Weekend Portfolio project, you’ll build a compact and powerful app called mp3totext. The idea is si",
+            "excerpt": "Weekend Portfolio\n\n Written for semiprofessional coders ready to go pr0\n\nIn a weekend project, you’ll build a simple but powerful AI app. The idea is simple but important: you upload an .mp3 file, and",
             "children": [
               {
                 "title": "Wei Zang’s Food",
@@ -346,6 +391,14 @@
                 "icon": "food",
                 "type": "file",
                 "excerpt": "I never learned to cook. No one taught me. That’s why I can tell you about it.\n\nPeople who are taught spend too long worrying about what’s “right.” I just ate what I liked, cooked it, guessed. Like de"
+              },
+              {
+                "title": "Weekend Portfolio",
+                "slug": "balance/books/weekend-portfolio",
+                "order": 160,
+                "icon": "speak-write",
+                "type": "file",
+                "excerpt": "Written for at semiprofessional coders ready to go pr0\n\nIn a weekend project, you’ll build a simple but powerful AI app. The idea is simple but important: you upload an .mp3 file, and the app gives yo"
               }
             ]
           },
@@ -355,7 +408,7 @@
             "order": 100,
             "icon": "balance",
             "type": "folder",
-            "excerpt": "Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland",
+            "excerpt": "The term Generation X acquired a modern application after the release of Generation X: Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\nTales for an Accelera",
             "children": []
           },
           {
@@ -364,7 +417,7 @@
             "order": 120,
             "icon": "folder",
             "type": "folder",
-            "excerpt": "",
+            "excerpt": "Because we can carefully observe constellations when the Sun is not blocking their path, we know what position the stars should be in when the Sun is keeping us from seeing them. However, according to",
             "children": [
               {
                 "title": "Einstein",

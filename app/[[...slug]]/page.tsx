@@ -5,17 +5,18 @@ import fs from 'fs/promises';
 import { loadMarkdown, getMarkdownTree } from '../../lib/loadMarkdown';
 import { FolderPage, FilePage, Sitemap } from '../../goldlabel';
 import { getFeatured } from '../../lib/getFeatured';
-import { Uberedux } from '../../goldlabel/features/Uberedux';
+import { Uberedux } from '../../goldlabel/cartridges/Uberedux';
 import { GoodFit } from '../../goldlabel/products/GoodFit';
-import { SpeakWrite } from '../../goldlabel/products/SpeakWrite';
+// import { SpeakWrite } from '../../goldlabel/products/SpeakWrite';
 import type { Metadata } from 'next';
 
 async function getPageTitle(slugPath: string): Promise<string> {
   const defaultTitle = 'Goldlabel';
-  
+
   if (slugPath === '/sitemap') return 'Sitemap | Goldlabel Core';
   if (slugPath === '/uberedux') return 'Uberedux | Goldlabel Core';
-  if (slugPath === '/work/products/speak-write') return 'SpeakWrite | Goldlabel Core';
+  if (slugPath === '/work/products/speak-write')
+    return 'SpeakWrite | Goldlabel Core';
   if (slugPath === '/work/products/good-fit') return 'GoodFit | Goldlabel Core';
 
   const markdown = await loadMarkdown(slugPath);
@@ -45,7 +46,8 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
     description: 'Goldlabel',
     openGraph: {
       title,
-      description: 'We build and ship modern web apps for clients who need real results — fast',
+      description:
+        'We build and ship modern web apps for clients who need real results — fast',
       url: `https://goldlabel.pro${slugPath}`,
       siteName: 'Goldlabel',
       type: 'website',
@@ -53,11 +55,11 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
     twitter: {
       card: 'summary_large_image',
       title,
-      description: 'We build and ship modern web apps for clients who need real results — fast',
+      description:
+        'We build and ship modern web apps for clients who need real results — fast',
     },
   };
 }
-
 
 export default async function CatchAllPage({ params }: any) {
   const slugArray = params?.slug ?? [];
@@ -65,7 +67,7 @@ export default async function CatchAllPage({ params }: any) {
 
   const navPath = path.join(process.cwd(), 'public/globalNav.json');
   let globalNav = null;
-  
+
   try {
     const navRaw = await fs.readFile(navPath, 'utf-8');
     globalNav = JSON.parse(navRaw);
@@ -74,17 +76,23 @@ export default async function CatchAllPage({ params }: any) {
   }
   /* Special cases */
 
-  if (slugPath === '/sitemap') return <Sitemap globalNav={globalNav} openTopLevelByDefault={10} />;
+  if (slugPath === '/sitemap')
+    return <Sitemap globalNav={globalNav} openTopLevelByDefault={10} />;
   if (slugPath === '/uberedux') return <Uberedux />;
   // if (slugPath === '/work/products/speak-write') return <SpeakWrite />;
 
   const markdown = await loadMarkdown(slugPath);
   const featured = await getFeatured();
 
-  if (slugPath === '/work/products/good-fit') return <GoodFit markdown={markdown} />;
+  if (slugPath === '/work/products/good-fit') {
+    return <GoodFit />;
+  }
 
   if (markdown) {
-    return <FilePage featured={featured} content={markdown} globalNav={globalNav} />;
+
+    return (
+      <FilePage featured={featured} content={markdown} globalNav={globalNav} />
+    );
   }
 
   const folderPath = path.join(process.cwd(), 'public/markdown', ...slugArray);
@@ -106,7 +114,7 @@ export default async function CatchAllPage({ params }: any) {
       );
     }
   } catch {
-    console.warn("This is not a folder")
+    console.warn('This is not a folder');
   }
 
   return notFound();

@@ -7,11 +7,16 @@ icon: balance
 image: /jpg/wei-zang/wei-zangs-food.jpg
 ---
 
-### [Our books](/balance/books)
+### [Read our books](/balance/books)
+
+- [Wei Zang's Food](/balance/books/wei-zangs-food)
+- [Weekend Portfolio](/balance/books/weekend-portfolio)
 
 ### [Are you Gen X?](/balance/gen-x)
 
-### Is THIS Singularity?
+> Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland
+
+### Is _this_ Singularity?
 
 > "Put that kind of AI into a drone with a gun... then yeh, you've got a big problem." _Bloke down the pub said, yesterday_
 

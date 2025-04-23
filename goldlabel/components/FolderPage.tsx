@@ -51,7 +51,7 @@ export default function FolderPage({
         subheader={frontmatter?.description}
       />
 
-      <Box sx={{ mx: 2, mb: 2}}>
+      <Box sx={{ mx: 2, mb: 2 }}>
         <AppBreadcrumb />
       </Box>
 
@@ -62,9 +62,8 @@ export default function FolderPage({
             width: '100%',
             maxWidth: 900,
             aspectRatio: {
-              xs: '16/9',
-              sm: '16/9',
-              md: '16/4.5',
+              xs: '1/1',
+              sm: '16/4.5',
             },
             mx: { xs: 1.5 },
             mb: { xs: 1, sm: 2 },
@@ -88,7 +87,6 @@ export default function FolderPage({
         {isSmUp ? (
           <Box sx={{ display: 'flex' }}>
             <Box sx={{ mt: { xs: 0, sm: -3 } }}>
-              
               {content && (
                 <CardContent>
                   <ReactMarkdown>{content}</ReactMarkdown>

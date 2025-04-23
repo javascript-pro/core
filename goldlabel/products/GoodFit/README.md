@@ -2,7 +2,6 @@
 
 Very simply, it analyses a JD (Job Description) to a CV (Resume) for fit. It returns scrore out of 10, a reason and a suggestion
 
-
 [project="Weekend Portfolio Project."]
 
 Here's how we might approach this **Good Fit** project efficiently:
@@ -10,6 +9,7 @@ Here's how we might approach this **Good Fit** project efficiently:
 ### App functionality
 
 1. **User Input:**
+
    - Job description (JD) pasted into a text area.
    - Resume content pasted into a second text area.
 

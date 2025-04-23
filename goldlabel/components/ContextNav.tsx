@@ -9,10 +9,9 @@ import {
   ListItemIcon,
   ListItemText,
   Grid,
-  Typography,
 } from '@mui/material';
 import { Icon } from '../';
-import { useKey } from '../../goldlabel/features/Uberedux';
+import { useKey } from '../../goldlabel/cartridges/Uberedux';
 import { Featured } from '../';
 
 type ContextNavProps = {
@@ -54,36 +53,20 @@ export default function ContextNav({
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
         <Grid size={{ xs: 12, md: 6 }}>
-          <Featured />
+          
+          <Featured featured={featured}/>
 
           <List dense>
-            <ListItemButton onClick={() => handleItemClick({ route: '/' })}>
+
+          <ListItemButton
+              onClick={() => handleItemClick({ route: '/' })}
+            >
               <ListItemIcon>
                 <Icon icon="home" />
               </ListItemIcon>
               <ListItemText primary="Home" />
             </ListItemButton>
 
-            <ListItemButton onClick={() => handleItemClick({ route: '/work' })}>
-              <ListItemIcon>
-                <Icon icon="work" />
-              </ListItemIcon>
-              <ListItemText primary="Work" />
-            </ListItemButton>
-            <ListItemButton onClick={() => handleItemClick({ route: '/life' })}>
-              <ListItemIcon>
-                <Icon icon="life" />
-              </ListItemIcon>
-              <ListItemText primary="Life" />
-            </ListItemButton>
-            <ListItemButton
-              onClick={() => handleItemClick({ route: '/balance' })}
-            >
-              <ListItemIcon>
-                <Icon icon="balance" />
-              </ListItemIcon>
-              <ListItemText primary="Balance" />
-            </ListItemButton>
 
             <ListItemButton
               onClick={() => handleItemClick({ route: '/sitemap' })}
@@ -95,9 +78,13 @@ export default function ContextNav({
             </ListItemButton>
           </List>
         </Grid>
+      </Grid>
+    </Box>
+  );
+}
 
+/*
         <Grid size={{ xs: 12, md: 6 }}>
-          
           <List dense>
             <ListItemButton
               onClick={() => handleItemClick({ route: '/api/goldlabel' })}
@@ -112,7 +99,7 @@ export default function ContextNav({
               onClick={() => handleItemClick({ route: '/admin' })}
             >
               <ListItemIcon>
-                <Icon icon="admin"/>
+                <Icon icon="admin" />
               </ListItemIcon>
               <ListItemText primary="Admin" />
             </ListItemButton>
@@ -136,7 +123,4 @@ export default function ContextNav({
             </ListItemButton>
           </List>
         </Grid>
-      </Grid>
-    </Box>
-  );
-}
+*/

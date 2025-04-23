@@ -39,11 +39,11 @@ export default function FilePage({ content, featured }: FilePageProps) {
   return (
     <Box sx={{ px: 2 }}>
       <CardHeader title={title || 'Untitled'} subheader={description} />
-      
-      <Box sx={{ mx: 2, mb: 2}}>
+
+      <Box sx={{ mx: 2, mb: 2 }}>
         <AppBreadcrumb />
       </Box>
-      
+
       {image && (
         <Box
           sx={{
@@ -51,9 +51,8 @@ export default function FilePage({ content, featured }: FilePageProps) {
             width: '100%',
             maxWidth: 900,
             aspectRatio: {
-              xs: '16/9',
-              sm: '16/9',
-              md: '16/4.5',
+              xs: '1/1',
+              sm: '16/4.5',
             },
             mx: { xs: 1.5 },
             mb: { xs: 1, sm: 2 },
@@ -77,7 +76,6 @@ export default function FilePage({ content, featured }: FilePageProps) {
           <Box sx={{ display: 'flex' }}>
             <Box sx={{ mt: { xs: 0, sm: -3 } }}>
               <CardContent>
-                
                 <ReactMarkdown remarkPlugins={[remarkGfm]}>
                   {body}
                 </ReactMarkdown>
