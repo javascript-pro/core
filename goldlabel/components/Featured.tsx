@@ -29,7 +29,7 @@ export default function Featured({
   featured = [],
   folderLabel,
 }: FeaturedProps) {
-  const showFeatured = true;
+  const showFeatured = false;
   const router = useRouter();
 
   const handleItemClick = (slug: string) => {

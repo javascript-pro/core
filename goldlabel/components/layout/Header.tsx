@@ -1,42 +1,62 @@
 'use client';
-
+import config from '../../config.json';
 import * as React from 'react';
-import { Alert, AlertTitle, Typography, ButtonBase } from '@mui/material';
 import { useRouter } from 'next/navigation';
-import { Icon } from '../../';
-// import { } from "./";
+import { 
+  useTheme,
+  IconButton, AppBar, Avatar, CardHeader, Container } from '@mui/material';
+import { HeaderActions } from './';
+// import { Icon } from '../../';
 
 export interface IHeader {
-  title?: string;
-  url?: string;
-  description?: string;
-  icon?: string;
-  image?: string;
+  meta: {
+    title?: string;
+    description?: string;
+  };
 }
 
-export default function Header() {
+export default function Header({
+  meta = {
+    title: 'Default title',
+    description: 'Default description',
+  },
+}: IHeader) {
   const router = useRouter();
-  const hide = true;
-  if (hide) return null;
 
-  const ad: IHeader = {
-    title: 'SpeakWrite Propaganda ',
-    icon: 'star',
-    url: '/work/examples/speakwrite',
-    description: 'Generator with Open Source AI ',
-    image: '/jpg/speakwrite.jpg',
+  const onHomeClick = () => {
+    router.push("/");
   };
 
-  const handleClick = () => {
-    router.push(ad.url as string);
-  };
-
+  const theme = useTheme()
   return (
-    <ButtonBase onClick={handleClick} sx={{ textAlign: 'left' }}>
-      <Alert severity="success" icon={<Icon icon={ad.icon as any} />}>
-        <AlertTitle>{ad.title}</AlertTitle>
-        <Typography>{ad.description}</Typography>
-      </Alert>
-    </ButtonBase>
+    <>
+          <AppBar
+        position="fixed"
+        color="primary"
+        sx={{
+          top: 0,
+          bottom: 'auto',
+          boxShadow: 0,
+          background: theme.palette.background.default,
+        }}
+      >
+<Container maxWidth="md">
+      <CardHeader
+        avatar={
+          <>
+            <IconButton onClick={onHomeClick}>
+              <Avatar src={config.favicon.dark}/>
+            </IconButton>
+          </>
+        }
+        title={meta.title}
+        subheader={meta.description}
+        action={<HeaderActions />}
+      />
+</Container>
+      
+      </AppBar>
+      
+    </>
   );
 }

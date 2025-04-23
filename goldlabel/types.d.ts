@@ -1,4 +1,6 @@
-// goldlabel/types/goldlabelTypes.ts
+import { IHeader } from './';
+
+export { IHeader };
 
 export type NavItem = {
   title: string;

@@ -8,10 +8,9 @@ import {
   useTheme,
 } from '@mui/material';
 import Image from 'next/image';
-import { Featured, FolderContents, AppBreadcrumb } from '../';
-
+import { Featured, FolderContents, AppBreadcrumb } from '../../';
 import ReactMarkdown from 'react-markdown';
-import { NavItem } from '../../goldlabel/types/goldlabelTypes';
+import { NavItem } from '../../../goldlabel/types';
 
 export type Frontmatter = {
   order?: number;

@@ -11,7 +11,7 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
-import { FolderContents, Featured, AppBreadcrumb } from '../';
+import { FolderContents, Featured, AppBreadcrumb } from '../../';
 
 export type FilePageProps = {
   content: {
