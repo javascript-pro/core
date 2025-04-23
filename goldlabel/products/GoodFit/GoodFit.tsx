@@ -9,7 +9,7 @@ import {
   TextField,
 } from '@mui/material';
 import { Icon } from '../../';
-// import { useSlice } from '../../cartridges/Uberedux';
+import { useKey } from '../../cartridges/Uberedux';
 
 export type Frontmatter = {
   order?: number;
@@ -28,9 +28,19 @@ export type GoodFitProps = {
 
 export default function GoodFit() {
   
-  // const goodfitState = useSlice();
+  const goodfitState = useKey("goodfitState");
+  const {
+    examples,
+  } = goodfitState[0]
+
   const [jobDescription, setJobDescription] = React.useState('');
   const [resume, setResume] = React.useState('');
+
+  const [valid, setValid] = React.useState(false);
+
+  const onUpdateFields = () => {
+    console.warn('oonUpdateFields');
+  };
 
   const onAnalyse = () => {
     console.warn('onAnalyse');
@@ -43,50 +53,99 @@ export default function GoodFit() {
 
         <CardContent>
           <Grid container spacing={2}>
-            <Grid size={{ xs: 12, md: 5 }}>
-              <TextField
-                value={resume}
-                variant="filled"
-                label="Resume"
-                placeholder="Paste resume here..."
-                multiline
-                fullWidth
-                rows={10}
-                onChange={(e) => setResume(e.target.value)}
-              />
-            </Grid>
+            <Grid size={{ xs: 12, md: 6 }}>
 
-            <Grid size={{ xs: 12, md: 2 }}>
-              <Box
-                sx={{
-                  my: 5,
-                }}
-              >
-                <Button variant="contained" onClick={onAnalyse}>
-                  {/* <Box>
-                    <Icon icon="openai" />
-                  </Box> */}
-                  <Box sx={{ mx: 1 }}>Analyse</Box>
+              <Box sx={{ mb: 2 }}>
+                <Button 
+                  fullWidth
+                  // disabled={ valid ? false : true }
+                  // variant= { valid ? "contained" : "outlined" }
+                  variant= { "contained" }
+                  onClick={onAnalyse}>
+                  <Box sx={{ mt: 1 }}>
+                    <Icon icon={'down'} />
+                  </Box>
+                  <Box sx={{ mx: 1 }}>
+                    Example Resume
+                  </Box>
                 </Button>
               </Box>
-            </Grid>
 
-            <Grid size={{ xs: 12, md: 5 }}>
               <TextField
-                value={jobDescription}
-                variant="filled"
-                label="Job Description"
-                placeholder="Paste job description here..."
+                sx={{
+                  background: "#F7F7F7",
+                }}
+                value={resume}
+                label="Paste Resume"
                 multiline
                 fullWidth
-                rows={10}
-                onChange={(e) => setJobDescription(e.target.value)}
+                rows={7}
+                onChange={(e) => {
+                  setResume(e.target.value);
+                  onUpdateFields();
+                }}
               />
             </Grid>
+
+            
+
+            <Grid size={{ xs: 12, md: 6 }}>
+
+              <Box sx={{ mb: 2 }}>
+                <Button 
+                  fullWidth
+                  
+                  // disabled={ valid ? false : true }
+                  // variant= { valid ? "contained" : "outlined" }
+                  variant= { "contained" }
+                  onClick={onAnalyse}>
+                  <Box sx={{ mt: 1 }}>
+                    <Icon icon={'down'} />
+                  </Box>
+                  <Box sx={{ mx: 1 }}>
+                    Example Job Description
+                  </Box>
+                </Button>
+              </Box>
+
+              <TextField
+                sx={{
+                  background: "#F7F7F7",
+                }}
+                value={jobDescription}
+                label="Paste Job Description"
+                multiline
+                fullWidth
+                rows={7}
+                onChange={(e) => {
+                  setJobDescription(e.target.value);
+                  onUpdateFields();
+                }}
+              />
+            </Grid>
+
+            <Grid size={{ xs: 12}}>
+              <Box sx={{ m: 0 }}>
+                <Button 
+                  fullWidth
+                  disabled={ valid ? false : true }
+                  variant= { valid ? "contained" : "outlined" }
+                  onClick={onAnalyse}
+                >
+                  <Box sx={{ mx: 1 }}>
+                    <Icon icon={'good-fit'} />
+                  </Box>
+                  <Box sx={{ mx: 1 }}>Analyse fit</Box>
+                </Button>
+              </Box>
+
+            </Grid>
+
+
           </Grid>
         </CardContent>
 
-        {/* <pre>goodfitState: {JSON.stringify(goodfitState, null, 2)}</pre> */}
+        <pre>examples: {JSON.stringify(examples, null, 2)}</pre>
       </Box>
     </>
   );
