@@ -5,5 +5,8 @@ import { goodfitState } from '../../products/GoodFit/initialState';
 export const initialState: UbereduxState = {
   persisted: Date.now(),
   config,
+  darkmode: false,
+  authModalOpen: false,
+  authModalMode: 'login',
   goodfitState,
 };

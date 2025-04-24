@@ -58,7 +58,6 @@ export default function ContextNav({
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
         <Grid size={{ xs: 12, md: 6 }}>
-          <Featured featured={featured} />
           <List dense>
             <ListItemButton onClick={() => handleItemClick({ route: '/' })}>
               <ListItemIcon>
@@ -68,26 +67,26 @@ export default function ContextNav({
             </ListItemButton>
 
             <ListItemButton
-              onClick={() => handleItemClick({ route: '/work/company' })}
+              onClick={() => handleItemClick({ route: '/sitemap' })}
             >
               <ListItemIcon>
-                <Icon icon="cartridge" />
+                <Icon icon="sitemap" />
               </ListItemIcon>
-              <ListItemText primary="About" />
+              <ListItemText primary="Site Map" />
             </ListItemButton>
 
-            <ListItemButton
+            {/* <ListItemButton
               onClick={() => handleItemClick({ route: '/sitemap' })}
             >
               <ListItemIcon>
                 <Icon icon="sitemap" />
               </ListItemIcon>
               <ListItemText primary="Sitemap" />
-            </ListItemButton>
+            </ListItemButton> */}
           </List>
         </Grid>
 
-        <Grid size={{ xs: 12, md: 6 }}>
+        {/* <Grid size={{ xs: 12, md: 6 }}>
           <List dense>
             <ListItemButton onClick={() => openInNewTab('/api/goldlabel')}>
               <ListItemIcon>
@@ -105,7 +104,7 @@ export default function ContextNav({
               <ListItemText primary={darkmode ? 'Light Mode' : 'Dark Mode'} />
             </ListItemButton>
           </List>
-        </Grid>
+        </Grid> */}
       </Grid>
     </Box>
   );

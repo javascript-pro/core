@@ -1,6 +1,6 @@
 ---
 order: 30
-title: General Theory of Relativity
+title: General Relativity
 description: Einstein's study of gravitation
 slug: /balance/sci-fi/relativity
 icon: doc

@@ -1,5 +1,4 @@
 'use client';
-
 import * as React from 'react';
 import {
   Box,
@@ -10,8 +9,8 @@ import {
   ListItemText,
 } from '@mui/material';
 import { usePathname, useRouter } from 'next/navigation';
-import { Icon } from '../';
-import globalNav from '../../public/globalNav.json';
+import { Icon } from '../../';
+import globalNav from '../../../public/globalNav.json';
 
 type NavItem = {
   title?: string;
@@ -74,7 +73,20 @@ export default function FolderContents({ folderLabel }: FolderContentsProps) {
   const currentPath = pathname.replace(/\/+/g, '/');
 
   return (
-    <Box sx={{ minWidth: 300 }}>
+    <Box sx={{ mt: -1 }}>
+      {grandparent && (
+        <>
+          <ListItem disablePadding>
+            <ListItemButton onClick={() => router.push(`/${grandparent.slug}`)}>
+              <ListItemIcon>
+                <Icon icon="left" />
+              </ListItemIcon>
+              <ListItemText secondary={grandparent.title} />
+            </ListItemButton>
+          </ListItem>
+        </>
+      )}
+
       {itemsToRender.length === 0 ? null : (
         <List dense>
           {itemsToRender
@@ -92,19 +104,6 @@ export default function FolderContents({ folderLabel }: FolderContentsProps) {
               </ListItem>
             ))}
         </List>
-      )}
-
-      {grandparent && (
-        <>
-          <ListItem disablePadding>
-            <ListItemButton onClick={() => router.push(`/${grandparent.slug}`)}>
-              <ListItemText primary={grandparent.title} />
-              <ListItemIcon>
-                <Icon icon="up" />
-              </ListItemIcon>
-            </ListItemButton>
-          </ListItem>
-        </>
       )}
     </Box>
   );

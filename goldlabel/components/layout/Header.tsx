@@ -1,17 +1,8 @@
 'use client';
-import config from '../../config.json';
 import * as React from 'react';
 import { useRouter } from 'next/navigation';
-import {
-  useTheme,
-  IconButton,
-  AppBar,
-  Avatar,
-  CardHeader,
-  Container,
-} from '@mui/material';
+import { useTheme, AppBar, CardHeader, Container } from '@mui/material';
 import { HeaderActions } from './';
-// import { Icon } from '../../';
 
 export interface IHeader {
   meta: {
@@ -47,13 +38,6 @@ export default function Header({
       >
         <Container maxWidth="md">
           <CardHeader
-            avatar={
-              <>
-                <IconButton onClick={onHomeClick}>
-                  <Avatar src={config.favicon.dark} />
-                </IconButton>
-              </>
-            }
             title={meta.title}
             subheader={meta.description}
             action={<HeaderActions />}

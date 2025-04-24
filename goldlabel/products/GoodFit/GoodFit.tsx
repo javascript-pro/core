@@ -96,9 +96,6 @@ export default function GoodFit() {
           <Grid container spacing={2}>
             <Grid size={{ xs: 12, md: 6 }}>
               <TextField
-                sx={{
-                  background: '#F7F7F7',
-                }}
                 value={resume}
                 label="Resume"
                 multiline
@@ -130,9 +127,6 @@ export default function GoodFit() {
 
             <Grid size={{ xs: 12, md: 6 }}>
               <TextField
-                sx={{
-                  background: '#F7F7F7',
-                }}
                 value={jd}
                 label="Job Description"
                 multiline

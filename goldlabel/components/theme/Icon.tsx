@@ -127,6 +127,7 @@ export type IconShape = {
     | 'admin'
     | 'company'
     | 'feature'
+    | 'auth'
     | 'design'
     | 'ai'
     | 'ask'
@@ -276,7 +277,9 @@ export default function Icon({ icon, color }: IconShape) {
     case 'company':
       iconFragment = <CompanyIcon color={color} />;
       break;
-
+    case 'auth':
+      iconFragment = <AdminIcon color={color} />;
+      break;
     case 'feature':
       iconFragment = <FeatureIcon color={color} />;
       break;

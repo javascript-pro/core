@@ -4,11 +4,11 @@ title: Work
 description: Professional Fullstack JavaScript Development
 slug: /work
 icon: work
-image: /png/weizang.png
+image: /png/bez.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React, Angular, Vue, etc, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 ---
 
-> Apps we ship are real, run in production, and developed in public
+> The apps we ship are real, run in production, and are developed in public
 
 Open Source and Free forever — Statically generated with Firestore-powered updates and a real admin panel. Built with Next.js App Router and Material UI
 

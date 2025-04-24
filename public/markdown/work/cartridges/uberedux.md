@@ -4,7 +4,7 @@ title: Uberedux
 description:
 slug: /work/cartridges/uberedux
 icon: uberedux
-image: /jpg/cartridges/uberedux.jpg
+image: /png/weizang.png
 featured: false
 ---
 
