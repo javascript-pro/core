@@ -1,10 +1,10 @@
 import config from '../../config.json';
 import { UbereduxState } from '../Uberedux';
+import {initialState as bouncer} from '../Bouncer/initialState'
 
 export const initialState: UbereduxState = {
   persisted: Date.now(),
-  config,
-  darkmode: false,
-  authModalOpen: false,
-  authModalMode: 'login',
+  cartridge: "core",
+  // config,
+  bouncer,
 };

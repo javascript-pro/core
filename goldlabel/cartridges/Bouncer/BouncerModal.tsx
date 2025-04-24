@@ -16,11 +16,11 @@ import {
 import { Icon } from '../../';
 import { useKey } from '../../cartridges/Uberedux';
 
-export type IAuthModal = {
+export type IBouncerModal = {
   onClose?: () => void;
 };
 
-export default function AuthModal({}: IAuthModal) {
+export default function BouncerModal({}: IBouncerModal) {
   const [authModalOpen, setAuthModalOpen] = useKey('authModalOpen');
   const [authModalMode, setAuthModalMode] = useKey('authModalMode');
   const theme = useTheme();

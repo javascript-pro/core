@@ -7,6 +7,7 @@ import { combineReducers } from 'redux';
 import { initialState } from './initialState';
 
 export interface UbereduxState {
+  cartridge: "bouncer" | "uberedux" | "core"
   [key: string]: any;
 }
 
