@@ -1,4 +1,3 @@
-
 import BouncerModal from './BouncerModal';
 import { IBouncerModal } from './BouncerModal';
 

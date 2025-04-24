@@ -6,10 +6,10 @@
     "node": "22.x"
   },
   "scripts": {
+    "dev": "yarn format && rm -rf .next && yarn nav && next dev",
     "nav": "tsx globalNav.mjs",
     "prepare": "husky install",
     "build": "next build",
-    "dev": "rm -rf .next && yarn nav && next dev",
     "lint": "next lint",
     "lint-staged": "lint-staged",
     "format": "prettier --write --ignore-unknown .",

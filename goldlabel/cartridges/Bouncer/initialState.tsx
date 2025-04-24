@@ -1,6 +1,6 @@
 import { UbereduxState } from '../../types';
 
 export const initialState: UbereduxState = {
-  cartridge: "bouncer",
+  cartridge: 'bouncer',
   modalOpen: true,
 };

@@ -1,5 +1,5 @@
 import { IHeader } from './';
-import {UbereduxState} from './cartridges/Uberedux/store';
+import { UbereduxState } from './cartridges/Uberedux/store';
 
 export { IHeader, UbereduxState };
 
