@@ -4,7 +4,7 @@ title: Fullstack
 description: On the shoulders of giants we develop
 slug: /work/tech
 icon: techstack
-image: /jpg/goldlabel/work.jpg
+image: /png/goldlabel.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React, Angular, Vue, etc, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 ---
 

@@ -4,7 +4,7 @@ title: Our Resume (CV)
 description: Latest
 slug: /work/products/good-fit/resume
 icon: good-fit
-image: /jpg/cartridges/cartridge.jpg
+image: /png/goldlabel.png
 tags: cartridges, jobs, doc, markdown
 featured: false
 ---

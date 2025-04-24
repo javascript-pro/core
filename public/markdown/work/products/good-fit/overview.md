@@ -4,7 +4,7 @@ title: Overview
 description: An example AI tool
 slug: /work/products/good-fit
 icon: good-fit
-image: /jpg/products/good-fit.jpg
+image: /png/goldlabel.png
 tags: examples, Open AI, recruitment
 featured: false
 ---

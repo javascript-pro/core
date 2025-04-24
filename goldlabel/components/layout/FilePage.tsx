@@ -1,10 +1,9 @@
 'use client';
-
 import React from 'react';
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
-import { Box, Grid, Typography } from '@mui/material';
-import { FolderContents, AppBreadcrumb } from '../../';
+import { Box, Grid, CardHeader } from '@mui/material';
+import { FolderContents, Icon } from '../../';
 
 export type FilePageProps = {
   content: {
@@ -29,14 +28,14 @@ export default function FilePage({ content, featured }: FilePageProps) {
   return (
     <Box sx={{ px: 2 }}>
       <Grid container spacing={2}>
-        <Grid size={{ xs: 12, md: 3 }}>
-          <FolderContents />
-        </Grid>
         <Grid size={{ xs: 12, md: 9 }}>
-          <Typography component="h1">{frontmatter?.title}</Typography>
+          <CardHeader
+            avatar={<Icon icon={frontmatter?.icon as any} />}
+            title={frontmatter?.title}
+            subheader={frontmatter?.description}
+            action={<></>}
+          />
 
-          <Typography variant="caption">{frontmatter?.description}</Typography>
-          <AppBreadcrumb />
           {image && (
             <Box
               sx={{
@@ -64,6 +63,29 @@ export default function FilePage({ content, featured }: FilePageProps) {
           )}
 
           {body && <ReactMarkdown>{body}</ReactMarkdown>}
+        </Grid>
+
+        <Grid
+          sx={{
+            display: {
+              xs: 'none',
+              md: 'block',
+            },
+          }}
+          size={{ md: 3 }}
+        >
+          <FolderContents />
+        </Grid>
+        <Grid
+          sx={{
+            display: {
+              xs: 'block',
+              md: 'none',
+            },
+          }}
+          size={{ xs: 12 }}
+        >
+          <FolderContents />
         </Grid>
       </Grid>
     </Box>

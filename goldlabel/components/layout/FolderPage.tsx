@@ -1,8 +1,8 @@
 'use client';
 import * as React from 'react';
-import { Box, Grid, Typography } from '@mui/material';
+import { Box, Grid, Typography, CardHeader } from '@mui/material';
 import Image from 'next/image';
-import { FolderContents, AppBreadcrumb } from '../../';
+import { FolderContents, AppBreadcrumb, Icon } from '../../';
 import ReactMarkdown from 'react-markdown';
 import { NavItem } from '../../../goldlabel/types';
 
@@ -27,19 +27,15 @@ export type FolderPageProps = {
 
 export default function FolderPage({ frontmatter, content }: FolderPageProps) {
   return (
-    <Box sx={{ px: 2 }}>
-      <Grid container spacing={2}>
-        <Grid size={{ xs: 12, md: 3 }}>
-          <FolderContents />
-        </Grid>
-
+    <Box sx={{ px: 0 }}>
+      <Grid container spacing={0}>
         <Grid size={{ xs: 12, md: 9 }}>
-          <Typography variant="h6">{frontmatter?.title}</Typography>
-
-          <Typography>{frontmatter?.description}</Typography>
-
-          <AppBreadcrumb />
-
+          <CardHeader
+            avatar={<Icon icon={frontmatter?.icon as any} />}
+            title={frontmatter?.title}
+            subheader={frontmatter?.description}
+            action={<></>}
+          />
           {frontmatter?.image && (
             <Box
               sx={{
@@ -67,6 +63,30 @@ export default function FolderPage({ frontmatter, content }: FolderPageProps) {
           )}
 
           {content && <ReactMarkdown>{content}</ReactMarkdown>}
+        </Grid>
+
+        <Grid
+          sx={{
+            display: {
+              xs: 'none',
+              md: 'block',
+            },
+          }}
+          size={{ md: 3 }}
+        >
+          <FolderContents />
+        </Grid>
+
+        <Grid
+          sx={{
+            display: {
+              xs: 'block',
+              md: 'none',
+            },
+          }}
+          size={{ xs: 12 }}
+        >
+          <FolderContents />
         </Grid>
       </Grid>
     </Box>

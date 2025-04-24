@@ -4,7 +4,7 @@ title: Open Source
 description: Pre bootstrapped Next.js
 slug: /work/open-source
 icon: feature
-image: /png/weizang.png
+image: /png/goldlabel.png
 tags: cartridges, features
 featured: false
 ---

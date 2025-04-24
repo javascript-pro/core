@@ -4,16 +4,13 @@ import * as React from 'react';
 import {
   Box,
   Avatar,
-  CssBaseline,
   Container,
-  ThemeProvider,
   createTheme,
   AppBar,
   Toolbar,
   Fab,
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { PopupMenu, Header } from '../../';
 import { useKey } from '../../cartridges/Uberedux';
 
 const StyledFab = styled(Fab)({
@@ -25,12 +22,12 @@ const StyledFab = styled(Fab)({
   right: 0,
 });
 
-export type IAppshell = {
+export type IBottomAppbar = {
   children?: React.ReactNode;
   globalNav?: any;
 };
 
-export default function Appshell({ children, globalNav }: IAppshell) {
+export default function BottomAppbar({}: IBottomAppbar) {
   const [menuOpen, setMenuOpen] = React.useState(false);
   const [darkmode] = useKey('darkmode');
   const mode = darkmode ? 'dark' : 'light';
@@ -78,29 +75,34 @@ export default function Appshell({ children, globalNav }: IAppshell) {
   const handleToggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-
-      <PopupMenu
-        globalNav={globalNav}
-        open={menuOpen}
-        onClose={() => setMenuOpen(false)}
-      />
-
-      <Header
-        meta={
-          {
-            // title: config.appTitle,
-            // description: config.description,
-          }
-        }
-      />
-
-      <Container maxWidth="md" sx={{ mt: '80px' }}>
-        <Box sx={{ pb: '50px' }}>
-          {children && <Box sx={{ p: 0 }}>{children}</Box>}
-        </Box>
+    <AppBar
+      position="fixed"
+      color="primary"
+      sx={{
+        top: 'auto',
+        bottom: 0,
+        boxShadow: 0,
+        background: 0,
+      }}
+    >
+      <Container maxWidth="md">
+        <Toolbar>
+          <StyledFab
+            sx={{
+              boxShadow: 0,
+              background: 0,
+            }}
+            onClick={handleToggleMenu}
+            aria-label="Goldlabel Menu"
+          >
+            <Avatar
+              alt="Icon"
+              src={darkmode ? config.favicon.dark : config.favicon.light}
+            />
+          </StyledFab>
+          <Box sx={{ flexGrow: 1 }} />
+        </Toolbar>
       </Container>
-    </ThemeProvider>
+    </AppBar>
   );
 }
