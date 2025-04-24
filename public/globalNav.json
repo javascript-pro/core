@@ -339,8 +339,8 @@
             "excerpt": "This section of the site is a quiet space for sharing some of the places I’ve been, the gear I’ve trusted, and the small moments I remember best — that sound when you first descend, the feeling of hov",
             "children": [
               {
-                "title": "It's not raining underwater",
-                "slug": "life/diving/overview",
+                "title": "Why dive?",
+                "slug": "life/diving/why-dive",
                 "order": 50,
                 "icon": "diving",
                 "type": "file",

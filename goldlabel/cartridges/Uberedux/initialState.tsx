@@ -1,12 +1,10 @@
 import config from '../../config.json';
 import { UbereduxState } from '../Uberedux';
-import { goodfitState } from '../../products/GoodFit/initialState';
+import { initialState as bouncer } from '../Bouncer/initialState';
 
 export const initialState: UbereduxState = {
   persisted: Date.now(),
-  config,
-  darkmode: false,
-  authModalOpen: false,
-  authModalMode: 'login',
-  goodfitState,
+  cartridge: 'core',
+  // config,
+  bouncer,
 };

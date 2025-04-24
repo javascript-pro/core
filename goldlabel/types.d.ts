@@ -1,6 +1,7 @@
 import { IHeader } from './';
+import { UbereduxState } from './cartridges/Uberedux/store';
 
-export { IHeader };
+export { IHeader, UbereduxState };
 
 export type NavItem = {
   title: string;

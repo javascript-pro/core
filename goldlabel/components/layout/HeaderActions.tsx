@@ -6,7 +6,7 @@ import {
   LightDarkToggle,
   // Featured,
 } from '../../';
-import { SignupSignin } from '../../cartridges/Auth';
+import { LoginBtn } from '../../cartridges/Bouncer';
 
 export interface IHeaderActions {
   anyKey?: any;
@@ -17,7 +17,7 @@ export default function HeaderActions() {
     <Box sx={{ display: 'flex' }}>
       <Share />
       <LightDarkToggle />
-      <SignupSignin />
+      <LoginBtn />
     </Box>
   );
 }
