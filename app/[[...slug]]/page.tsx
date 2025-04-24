@@ -7,7 +7,7 @@ import { loadMarkdown, getMarkdownTree } from '../../lib/loadMarkdown';
 import { FolderPage, FilePage, Sitemap } from '../../goldlabel';
 import { getFeatured } from '../../lib/getFeatured';
 import { Uberedux } from '../../goldlabel/cartridges/Uberedux';
-import { GoodFit } from '../../goldlabel/products/GoodFit';
+// import { GoodFit } from '../../goldlabel/products/GoodFit';
 
 async function getPageTitle(slugPath: string): Promise<string> {
   const defaultTitle = 'Goldlabel';
@@ -22,17 +22,16 @@ async function getPageTitle(slugPath: string): Promise<string> {
     return `${markdown.frontmatter.title}. ${markdown.frontmatter.description}`;
   }
 
-  // Handle folder index page
   const indexMarkdown = await loadMarkdown(path.join(slugPath, 'index'));
   if (indexMarkdown?.frontmatter.title) {
     return `${indexMarkdown.frontmatter.title}. ${indexMarkdown.frontmatter.description}`;
   }
 
-  // Default fallback
   return defaultTitle;
 }
 
 // Generate dynamic metadata
+
 export async function generateMetadata({ params }: any): Promise<Metadata> {
   const slugArray = params?.slug ?? [];
   const slugPath = '/' + slugArray.join('/');
@@ -70,20 +69,17 @@ export default async function CatchAllPage({ params }: any) {
     const navRaw = await fs.readFile(navPath, 'utf-8');
     globalNav = JSON.parse(navRaw);
   } catch (err) {
-    console.error('Failed to load globalNav.json:', err);
+    console.error('Loading globalNav.json Failed:', err);
   }
-  /* Special cases */
 
   if (slugPath === '/sitemap')
     return <Sitemap globalNav={globalNav} openTopLevelByDefault={1} />;
   if (slugPath === '/uberedux') return <Uberedux />;
-
   const markdown = await loadMarkdown(slugPath);
   const featured = await getFeatured();
-
-  if (slugPath === '/work/products/good-fit') {
-    return <GoodFit />;
-  }
+  // if (slugPath === '/work/products/good-fit') {
+  //   return <GoodFit />;
+  // }
 
   if (markdown) {
     return (
@@ -109,7 +105,7 @@ export default async function CatchAllPage({ params }: any) {
       );
     }
   } catch {
-    console.warn('This is not a folder');
+    console.warn('This is _not_ a folder');
   }
 
   return notFound();

@@ -4,7 +4,7 @@ title: Diving
 description: Fish are friends. Not food.
 slug: /life/diving
 icon: diving
-image: /jpg/diving/diving.jpg
+image: /png/diving/diving.png
 featured: false
 ---
 
