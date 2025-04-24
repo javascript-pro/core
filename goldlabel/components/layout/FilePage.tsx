@@ -28,12 +28,8 @@ export default function FilePage({ content, featured }: FilePageProps) {
   return (
     <Box sx={{ px: 2 }}>
       <Grid container spacing={2}>
-        
-
-
         <Grid size={{ xs: 12, md: 9 }}>
-          
-          <CardHeader 
+          <CardHeader
             avatar={<Icon icon={frontmatter?.icon as any} />}
             title={frontmatter?.title}
             subheader={frontmatter?.description}
@@ -69,27 +65,28 @@ export default function FilePage({ content, featured }: FilePageProps) {
           {body && <ReactMarkdown>{body}</ReactMarkdown>}
         </Grid>
 
-        <Grid 
+        <Grid
           sx={{
             display: {
               xs: 'none',
               md: 'block',
             },
           }}
-          size={{ md: 3 }}>
+          size={{ md: 3 }}
+        >
           <FolderContents />
         </Grid>
-        <Grid 
+        <Grid
           sx={{
             display: {
               xs: 'block',
               md: 'none',
             },
           }}
-          size={{ xs: 12 }}>
+          size={{ xs: 12 }}
+        >
           <FolderContents />
         </Grid>
-
       </Grid>
     </Box>
   );

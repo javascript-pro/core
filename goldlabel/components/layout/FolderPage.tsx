@@ -29,11 +29,8 @@ export default function FolderPage({ frontmatter, content }: FolderPageProps) {
   return (
     <Box sx={{ px: 0 }}>
       <Grid container spacing={0}>
-        
-        
-
         <Grid size={{ xs: 12, md: 9 }}>
-          <CardHeader 
+          <CardHeader
             avatar={<Icon icon={frontmatter?.icon as any} />}
             title={frontmatter?.title}
             subheader={frontmatter?.description}
@@ -68,28 +65,29 @@ export default function FolderPage({ frontmatter, content }: FolderPageProps) {
           {content && <ReactMarkdown>{content}</ReactMarkdown>}
         </Grid>
 
-        <Grid 
+        <Grid
           sx={{
             display: {
               xs: 'none',
               md: 'block',
             },
           }}
-          size={{ md: 3 }}>
+          size={{ md: 3 }}
+        >
           <FolderContents />
         </Grid>
 
-        <Grid 
+        <Grid
           sx={{
             display: {
               xs: 'block',
               md: 'none',
             },
           }}
-          size={{ xs: 12 }}>
+          size={{ xs: 12 }}
+        >
           <FolderContents />
         </Grid>
-
       </Grid>
     </Box>
   );

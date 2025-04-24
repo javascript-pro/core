@@ -75,36 +75,34 @@ export default function BottomAppbar({}: IBottomAppbar) {
   const handleToggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    
-
-      <AppBar
-        position="fixed"
-        color="primary"
-        sx={{
-          top: 'auto',
-          bottom: 0,
-          boxShadow: 0,
-          background: 0,
-        }}
-      >
-        <Container maxWidth="md">
-          <Toolbar>
-            <StyledFab
-              sx={{
-                boxShadow: 0,
-                background: 0,
-              }}
-              onClick={handleToggleMenu}
-              aria-label="Goldlabel Menu"
-            >
-              <Avatar
-                alt="Icon"
-                src={darkmode ? config.favicon.dark : config.favicon.light}
-              />
-            </StyledFab>
-            <Box sx={{ flexGrow: 1 }} />
-          </Toolbar>
-        </Container>
-      </AppBar>
+    <AppBar
+      position="fixed"
+      color="primary"
+      sx={{
+        top: 'auto',
+        bottom: 0,
+        boxShadow: 0,
+        background: 0,
+      }}
+    >
+      <Container maxWidth="md">
+        <Toolbar>
+          <StyledFab
+            sx={{
+              boxShadow: 0,
+              background: 0,
+            }}
+            onClick={handleToggleMenu}
+            aria-label="Goldlabel Menu"
+          >
+            <Avatar
+              alt="Icon"
+              src={darkmode ? config.favicon.dark : config.favicon.light}
+            />
+          </StyledFab>
+          <Box sx={{ flexGrow: 1 }} />
+        </Toolbar>
+      </Container>
+    </AppBar>
   );
 }

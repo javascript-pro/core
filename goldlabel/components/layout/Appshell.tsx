@@ -101,7 +101,6 @@ export default function Appshell({ children, globalNav }: IAppshell) {
           {children && <Box sx={{ p: 0 }}>{children}</Box>}
         </Box>
       </Container>
-
     </ThemeProvider>
   );
 }
