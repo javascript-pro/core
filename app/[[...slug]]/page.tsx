@@ -22,17 +22,16 @@ async function getPageTitle(slugPath: string): Promise<string> {
     return `${markdown.frontmatter.title}. ${markdown.frontmatter.description}`;
   }
 
-  // Handle folder index page
   const indexMarkdown = await loadMarkdown(path.join(slugPath, 'index'));
   if (indexMarkdown?.frontmatter.title) {
     return `${indexMarkdown.frontmatter.title}. ${indexMarkdown.frontmatter.description}`;
   }
 
-  // Default fallback
   return defaultTitle;
 }
 
 // Generate dynamic metadata
+
 export async function generateMetadata({ params }: any): Promise<Metadata> {
   const slugArray = params?.slug ?? [];
   const slugPath = '/' + slugArray.join('/');
@@ -72,14 +71,12 @@ export default async function CatchAllPage({ params }: any) {
   } catch (err) {
     console.error('Loading globalNav.json Failed:', err);
   }
-  /* Special routes */
 
   if (slugPath === '/sitemap')
     return <Sitemap globalNav={globalNav} openTopLevelByDefault={1} />;
   if (slugPath === '/uberedux') return <Uberedux />;
   const markdown = await loadMarkdown(slugPath);
   const featured = await getFeatured();
-
   // if (slugPath === '/work/products/good-fit') {
   //   return <GoodFit />;
   // }
