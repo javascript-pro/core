@@ -15,6 +15,7 @@ import globalNav from '../../../public/globalNav.json';
 type NavItem = {
   title?: string;
   slug?: string;
+  icon?: string;
   description?: string;
   type?: string;
   children?: NavItem[];
@@ -79,7 +80,7 @@ export default function FolderContents({ folderLabel }: FolderContentsProps) {
           <ListItem disablePadding>
             <ListItemButton onClick={() => router.push(`/${grandparent.slug}`)}>
               <ListItemIcon>
-                <Icon icon="left" />
+                <Icon icon={grandparent.icon as any} />
               </ListItemIcon>
               <ListItemText secondary={grandparent.title} />
             </ListItemButton>
