@@ -4,7 +4,7 @@ title: Lingua
 description: Multi language translation package
 slug: /work/cartridges/lingua
 icon: lingua
-image: /png/weizang.png
+image: /png/goldlabel.png
 tags: cartridges, translation, localisation
 ---
 

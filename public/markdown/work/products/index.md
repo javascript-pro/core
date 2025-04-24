@@ -4,7 +4,7 @@ title: Products
 description: What's on the shelf?
 slug: /work/products
 icon: products
-image: /jpg/products/good-fit.jpg
+image: /png/goldlabel.png
 tags: products
 featured: false
 ---

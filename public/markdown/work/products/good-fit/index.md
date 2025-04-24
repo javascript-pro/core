@@ -4,7 +4,7 @@ title: Good Fit?
 description: Recruitment App
 slug: /work/products/good-fit
 icon: good-fit
-image: /jpg/products/good-fit.jpg
+image: /png/goldlabel.png
 tags: products, recruitment, ai, good-fit,
 featured: false
 ---
