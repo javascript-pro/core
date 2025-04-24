@@ -1,6 +1,5 @@
 import config from '../../config.json';
 import { UbereduxState } from '../Uberedux';
-import { goodfitState } from '../../products/GoodFit/initialState';
 
 export const initialState: UbereduxState = {
   persisted: Date.now(),
@@ -8,5 +7,4 @@ export const initialState: UbereduxState = {
   darkmode: false,
   authModalOpen: false,
   authModalMode: 'login',
-  goodfitState,
 };

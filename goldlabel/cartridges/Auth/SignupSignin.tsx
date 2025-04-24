@@ -11,7 +11,7 @@ export interface ISignupSignin {
 
 export default function SignupSignin({}) {
   const [authModalOpen, setAuthModalOpen] = useKey('authModalOpen');
-  return null
+  return null;
   return (
     <>
       <AuthModal />
