@@ -4,7 +4,7 @@ title: Core
 slug: /work/free/core
 description: Open Source and Free forever
 icon: core
-image: /png/characters/chix.png
+image: /png/bouncer/bouncer.png
 featured: false
 ---
 

@@ -13,6 +13,7 @@
       "Gen X",
       "goldlabel",
       "pr0",
+      "bouncer",
       "AI Prompt Engineering",
       "ChatGPT",
       "OpenAI",
@@ -87,7 +88,8 @@
                 "type": "folder",
                 "tags": [
                   "cartridges",
-                  "free"
+                  "free",
+                  "bouncer"
                 ],
                 "excerpt": "What actually are Cartridges?",
                 "children": [
@@ -100,7 +102,8 @@
                     "tags": [
                       "cartridges",
                       "cartridge",
-                      "free"
+                      "free",
+                      "bouncer"
                     ],
                     "excerpt": "Bouncer is the name of our authentication and access control system built on Firebase Authentication and Firestore. It is included in the Core as a reusable component, available globally from any cart"
                   }
@@ -149,7 +152,7 @@
             "title": "Private",
             "slug": "work/private",
             "order": 10,
-            "icon": "work",
+            "icon": "private",
             "type": "folder",
             "tags": [
               "private"
