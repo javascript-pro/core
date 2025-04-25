@@ -3,7 +3,6 @@ import Header from './Header';
 import HeaderActions from './HeaderActions';
 import FolderPage from './FolderPage';
 import FilePage from './FilePage';
-import FolderContents from './FolderContents';
 
 import { IAppshell } from './Appshell';
 import { IHeader } from './Header';
@@ -18,7 +17,6 @@ export {
   HeaderActions,
   FolderPage,
   FilePage,
-  FolderContents,
 };
 
 export type {

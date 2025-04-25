@@ -80,7 +80,7 @@
                 "excerpt": "Goldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo architecture with multiple Next.js a"
               },
               {
-                "title": "Free Cartridges",
+                "title": "Cartridges",
                 "slug": "work/free/cartridges",
                 "order": 20,
                 "icon": "star",
@@ -89,7 +89,7 @@
                   "cartridges",
                   "free"
                 ],
-                "excerpt": "",
+                "excerpt": "What actually are Cartridges?",
                 "children": [
                   {
                     "title": "Bouncer",

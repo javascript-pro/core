@@ -8,4 +8,5 @@ image: /png/goldlabel.png
 tags: cartridges, free
 featured: false
 ---
+
 > What actually _are_ Cartridges?

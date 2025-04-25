@@ -4,7 +4,7 @@ import IconShape from './components/theme/Icon';
 import { Appshell, Header, FolderPage, FilePage } from './components/layout';
 import { IHeader, FolderPageProps } from './components/layout';
 import { AppBreadcrumb } from './components/layout/AppBreadcrumb';
-import FolderContents from './components/layout/FolderContents';
+import FolderContents from './components/FolderContents';
 
 import Share from './components/Share';
 import PopupMenu from './components/PopupMenu';
