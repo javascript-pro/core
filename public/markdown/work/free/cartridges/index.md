@@ -4,7 +4,7 @@ title: Cartridges
 description: What are the free cartridges?
 slug: /work/free/cartridges
 icon: star
-image: /png/goldlabel.png
+image: /png/characters/chix.png
 tags: cartridges, free
 featured: false
 ---

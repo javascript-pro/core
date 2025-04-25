@@ -4,7 +4,7 @@ title: Bouncer
 description: Access Control System
 slug: /work/free/cartridges/bouncer
 icon: cartridge
-image: /png/goldlabel.png
+image: /png/characters/chix.png
 tags: cartridges, cartridge, free
 featured: false
 ---

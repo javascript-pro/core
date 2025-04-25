@@ -4,7 +4,7 @@ title: Core
 slug: /work/free/core
 description: Open Source and Free forever
 icon: core
-image: /png/goldlabel.png
+image: /png/characters/chix.png
 featured: false
 ---
 
