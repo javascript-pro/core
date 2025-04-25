@@ -1,10 +1,7 @@
 {
-  "version": "50.4.4",
+  "version": "50.4.5",
   "private": true,
   "packageManager": "yarn@4.3.1",
-  "engines": {
-    "node": "22.x"
-  },
   "scripts": {
     "dev": "yarn format && rm -rf .next && yarn nav && next dev",
     "nav": "tsx globalNav.mjs",
@@ -19,6 +16,9 @@
   },
   "git": {
     "pre-commit": "lint-staged"
+  },
+  "engines": {
+    "node": "22.x"
   },
   "lint-staged": {
     "*": "prettier --write --ignore-unknown"
