@@ -1,7 +1,7 @@
 ---
-order: 20
+order: 10
 title: Core
-slug: /work/core
+slug: /work/free/core
 description: Open Source and Free forever
 icon: core
 image: /png/goldlabel.png
