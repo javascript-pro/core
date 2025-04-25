@@ -8,11 +8,11 @@ import {
 } from '../../';
 import { LoginBtn } from '../../cartridges/Bouncer';
 
-export interface IHeaderActions {
+export interface IHeaderNav {
   anyKey?: any;
 }
 
-export default function HeaderActions() {
+export default function HeaderNav() {
   return (
     <Box sx={{ display: 'flex' }}>
       <Share />

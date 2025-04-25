@@ -1,11 +1,10 @@
-import Icon from './components/theme/Icon';
-import IconShape from './components/theme/Icon';
-
 import { Appshell, Header, FolderPage, FilePage } from './components/layout';
 import { IHeader, FolderPageProps } from './components/layout';
 import { AppBreadcrumb } from './components/layout/AppBreadcrumb';
 import FolderContents from './components/FolderContents';
-
+import HeaderNav from './components/nav/HeaderNav';
+import Icon from './components/theme/Icon';
+import IconShape from './components/theme/Icon';
 import Share from './components/Share';
 import PopupMenu from './components/PopupMenu';
 import Sitemap from './components/Sitemap';
@@ -33,6 +32,7 @@ export {
   VoiceRecorder,
   MarkdownPopup,
   LightDarkToggle,
+  HeaderNav,
 };
 
 export type { IconShape, IHeader, FolderPageProps };

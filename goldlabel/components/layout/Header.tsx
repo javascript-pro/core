@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { useRouter } from 'next/navigation';
 import { useTheme, AppBar, CardHeader, Container } from '@mui/material';
-import { HeaderActions } from './';
+import { HeaderNav } from '../../';
 
 export interface IHeader {
   meta: {
@@ -40,7 +40,7 @@ export default function Header({
           <CardHeader
             title={meta.title}
             subheader={meta.description}
-            action={<HeaderActions />}
+            action={<HeaderNav />}
           />
         </Container>
       </AppBar>
