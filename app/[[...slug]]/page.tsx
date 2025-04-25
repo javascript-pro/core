@@ -4,10 +4,10 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import fs from 'fs/promises';
 import { loadMarkdown, getMarkdownTree } from '../../lib/loadMarkdown';
-import { FolderPage, FilePage, Sitemap } from '../../goldlabel';
+import { FolderPage, FilePage, Sitemap } from '../../core';
 import { getFeatured } from '../../lib/getFeatured';
-import { Uberedux } from '../../goldlabel/cartridges/Uberedux';
-// import { GoodFit } from '../../goldlabel/products/GoodFit';
+import { Uberedux } from '../../core/cartridges/Uberedux';
+// import { GoodFit } from '../../core/products/GoodFit';
 
 async function getPageTitle(slugPath: string): Promise<string> {
   const defaultTitle = 'Goldlabel';

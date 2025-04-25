@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import { Box, Grid, CardHeader } from '@mui/material';
 import Image from 'next/image';
 import { FolderNav, Icon } from '../../';
-import { NavItem } from '../../../goldlabel/types';
+import { NavItem } from '../../../core/types';
 
 export type Frontmatter = {
   order?: number;
