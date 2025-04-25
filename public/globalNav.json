@@ -219,6 +219,15 @@
             ]
           },
           {
+            "title": "Generation X",
+            "slug": "life/gen-x",
+            "order": 100,
+            "icon": "life",
+            "type": "folder",
+            "excerpt": "The term Generation X acquired a modern application after the release of Generation X: Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Glossary\n\nMcJob A lo",
+            "children": []
+          },
+          {
             "title": "Aquaponics",
             "slug": "life/aquaponics",
             "order": 200,
@@ -271,15 +280,6 @@
                 "excerpt": "Written for at semiprofessional coders ready to go pr0\n\nIn a weekend project, you’ll build a simple but powerful AI app. The idea is simple but important: you upload an .mp3 file, and the app gives yo"
               }
             ]
-          },
-          {
-            "title": "Generation X",
-            "slug": "balance/gen-x",
-            "order": 100,
-            "icon": "balance",
-            "type": "folder",
-            "excerpt": "The term Generation X acquired a modern application after the release of Generation X: Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\nTales for an Accelera",
-            "children": []
           },
           {
             "title": "Science Fiction",

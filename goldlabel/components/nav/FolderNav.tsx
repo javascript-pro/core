@@ -9,8 +9,8 @@ import {
   ListItemText,
 } from '@mui/material';
 import { usePathname, useRouter } from 'next/navigation';
-import { Icon } from '../';
-import globalNav from '../../public/globalNav.json';
+import { Icon } from '../../';
+import globalNav from '../../../public/globalNav.json';
 
 type NavItem = {
   title?: string;
@@ -56,11 +56,11 @@ function findParentOfItem(
   return null;
 }
 
-export type FolderContentsProps = {
+export type FolderNavProps = {
   folderLabel?: string;
 };
 
-export default function FolderContents({ folderLabel }: FolderContentsProps) {
+export default function FolderNav({ folderLabel }: FolderNavProps) {
   const pathname = usePathname();
   const router = useRouter();
 
@@ -79,10 +79,11 @@ export default function FolderContents({ folderLabel }: FolderContentsProps) {
         <>
           <ListItem disablePadding>
             <ListItemButton onClick={() => router.push(`/${grandparent.slug}`)}>
+              
+              <ListItemIcon>
+                <Icon icon={'up'} />
+              </ListItemIcon>
               <ListItemText secondary={grandparent.title} />
-              {/* <ListItemIcon>
-                <Icon icon={grandparent.icon as any} />
-              </ListItemIcon> */}
             </ListItemButton>
           </ListItem>
         </>

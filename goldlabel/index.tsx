@@ -1,7 +1,7 @@
 import { Appshell, Header, FolderPage, FilePage } from './components/layout';
 import { IHeader, FolderPageProps } from './components/layout';
 import { AppBreadcrumb } from './components/layout/AppBreadcrumb';
-import FolderContents from './components/FolderContents';
+import FolderNav from './components/nav/FolderNav';
 
 // nav
 import HeaderNav from './components/nav/HeaderNav';
@@ -31,7 +31,7 @@ export {
   ContextNav,
   Appshell,
   FolderPage,
-  FolderContents,
+  FolderNav,
   FilePage,
   Icon,
   AppBreadcrumb,

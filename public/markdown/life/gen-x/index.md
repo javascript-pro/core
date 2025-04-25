@@ -2,14 +2,14 @@
 order: 100
 title: Generation X
 description: by Douglas Coupland
-slug: /balance/gen-x
-icon: balance
-image: /jpg/gen-x/cassete tapes.jpg
+slug: /life/gen-x
+icon: life
+image: /png/people/colz.png
 ---
 
 > The term **Generation X** acquired a modern application after the release of Generation X: Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland
 
-Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland
+#### Glossary
 
 **McJob** A low-pay, low-prestige, low-dignity, low-benefit, no-future job in the service sector. Frequently considered a satisfying career choice by people who have never held one.
 

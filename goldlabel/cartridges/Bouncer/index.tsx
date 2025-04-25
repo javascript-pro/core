@@ -1,9 +1,9 @@
 import BouncerModal from './BouncerModal';
 import { IBouncerModal } from './BouncerModal';
 
-import LoginBtn from './LoginBtn';
-import { ILoginBtn } from './LoginBtn';
+import BouncerBtn from './BouncerBtn';
+import { IBouncerBtn } from './BouncerBtn';
 
-export { LoginBtn, BouncerModal };
+export { BouncerBtn, BouncerModal };
 
-export type { ILoginBtn, IBouncerModal };
+export type { IBouncerBtn, IBouncerModal };

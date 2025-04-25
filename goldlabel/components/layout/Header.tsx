@@ -19,9 +19,9 @@ export default function Header({
 }: IHeader) {
   const router = useRouter();
 
-  const onHomeClick = () => {
-    router.push('/');
-  };
+  // const onHomeClick = () => {
+  //   router.push('/');
+  // };
 
   const theme = useTheme();
   return (

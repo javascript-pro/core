@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import { Box, Grid, CardHeader } from '@mui/material';
-import { FolderContents, Icon } from '../../';
+import { FolderNav, Icon } from '../../';
 
 export type FilePageProps = {
   content: {
@@ -28,6 +28,22 @@ export default function FilePage({ content, featured }: FilePageProps) {
   return (
     <Box sx={{ px: 2 }}>
       <Grid container spacing={2}>
+
+
+
+      <Grid
+          sx={{
+            display: {
+              xs: 'none',
+              md: 'block',
+            },
+          }}
+          size={{ md: 3 }}
+        >
+          <FolderNav />
+        </Grid>
+
+
         <Grid size={{ xs: 12, md: 9 }}>
           <CardHeader
             avatar={<Icon icon={frontmatter?.icon as any} />}
@@ -68,25 +84,15 @@ export default function FilePage({ content, featured }: FilePageProps) {
         <Grid
           sx={{
             display: {
-              xs: 'none',
-              md: 'block',
-            },
-          }}
-          size={{ md: 3 }}
-        >
-          <FolderContents />
-        </Grid>
-        <Grid
-          sx={{
-            display: {
               xs: 'block',
               md: 'none',
             },
           }}
           size={{ xs: 12 }}
         >
-          <FolderContents />
+          <FolderNav />
         </Grid>
+        
       </Grid>
     </Box>
   );
