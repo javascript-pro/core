@@ -38,6 +38,7 @@ export default function FolderPage({ frontmatter, content }: FolderPageProps) {
           }}
           size={{ md: 3 }}
         >
+          <Box sx={{ height: 20}} />
           <FolderNav />
         </Grid>
 
@@ -86,6 +87,7 @@ export default function FolderPage({ frontmatter, content }: FolderPageProps) {
           }}
           size={{ xs: 12 }}
         >
+        
           <FolderNav />
         </Grid>
       </Grid>
