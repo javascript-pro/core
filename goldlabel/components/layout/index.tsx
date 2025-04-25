@@ -11,13 +11,7 @@ import { IHeaderActions } from './HeaderActions';
 import { FolderPageProps } from './FolderPage';
 import { FilePageProps } from './FilePage';
 
-export {
-  Appshell,
-  Header,
-  HeaderActions,
-  FolderPage,
-  FilePage,
-};
+export { Appshell, Header, HeaderActions, FolderPage, FilePage };
 
 export type {
   IHeader,

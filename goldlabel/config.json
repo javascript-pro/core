@@ -2,12 +2,12 @@
   "appTitle": "Goldlabel",
   "url": "https://goldlabel.pro",
   "description": "Next Gen. Gen X",
+  "themeColor": "#efefef",
   "favicon": {
     "dark": "/svg/favicon_gold.svg",
     "light": "/svg/favicon_grey.svg"
   },
   "image": "/jpg/home.jpg",
-  "themeColor": "#efefef",
   "themes": {
     "light": {
       "text": "#303030",

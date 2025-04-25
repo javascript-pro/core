@@ -3,7 +3,7 @@
     "title": "Goldlabel",
     "slug": "/",
     "order": 1,
-    "icon": "home",
+    "icon": "goldlabel",
     "type": "folder",
     "tags": [
       "JavaScript",
@@ -153,7 +153,7 @@
         "order": 50,
         "icon": "life",
         "type": "folder",
-        "excerpt": "I work remotely. I , eat, ride motorbikes and . Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age I'm never going to ski like I used to. Maybe it's time ",
+        "excerpt": "I work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age I'm never going to ski like I used to. Ma",
         "children": [
           {
             "title": "Food",
