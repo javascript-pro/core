@@ -29,7 +29,6 @@ export default function FolderPage({ frontmatter, content }: FolderPageProps) {
   return (
     <Box sx={{ px: 0 }}>
       <Grid container spacing={0}>
-        
         <Grid
           sx={{
             display: {
@@ -39,7 +38,7 @@ export default function FolderPage({ frontmatter, content }: FolderPageProps) {
           }}
           size={{ md: 4 }}
         >
-          <Box sx={{ height: 20 }} />
+          <Box sx={{ height: 24 }} />
           <FolderNav />
         </Grid>
 

@@ -37,7 +37,7 @@ export default function FilePage({ content, featured }: FilePageProps) {
           }}
           size={{ md: 4 }}
         >
-          <Box sx={{ height: 20 }} />
+          <Box sx={{ height: 24 }} />
           <FolderNav />
         </Grid>
 
