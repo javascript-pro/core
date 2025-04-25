@@ -1,5 +1,5 @@
 {
-  "appTitle": "Core API",
+  "app": "Core API",
   "baseurl": "http://localhost:3000/api/goldlabel/",
   "frontend": "http://localhost:3000/",
   "description": "Next.js",

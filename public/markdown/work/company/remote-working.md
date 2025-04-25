@@ -1,5 +1,5 @@
 ---
-order: 190
+order: 250
 title: Working remotely
 description: Productivity, communication, and collaboration
 slug: /work/company/remote-working

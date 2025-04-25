@@ -3,9 +3,7 @@ import { useTheme, SvgIcon } from '@mui/material';
 
 export default function GoldlabelOutlined(props: any) {
   const theme = useTheme();
-  let color1 = theme.palette.primary.main;
-  // const {color} = props
-  // if (color) color1 = color
+  const color1 = theme.palette.text.primary;
 
   return (
     <SvgIcon {...props}>

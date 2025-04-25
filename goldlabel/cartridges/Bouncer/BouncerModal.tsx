@@ -14,23 +14,23 @@ import {
   Typography,
 } from '@mui/material';
 import { Icon } from '../../';
-import { useKey } from '../../cartridges/Uberedux';
+// import { useKey } from '../../cartridges/Uberedux';
 
 export type IBouncerModal = {
   onClose?: () => void;
 };
 
 export default function BouncerModal({}: IBouncerModal) {
-  const [authModalOpen, setAuthModalOpen] = useKey('authModalOpen');
-  const [authModalMode, setAuthModalMode] = useKey('authModalMode');
+  // const [authModalOpen, setAuthModalOpen] = useKey('authModalOpen');
+  // const [authModalMode, setAuthModalMode] = useKey('authModalMode');
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
     <Dialog
-      open={authModalOpen as boolean}
+      open={false}
       onClose={() => {
-        setAuthModalOpen(false);
+        console.log('close');
       }}
       fullScreen={fullScreen}
       fullWidth
@@ -48,32 +48,30 @@ export default function BouncerModal({}: IBouncerModal) {
             mt: 2,
           }}
         >
-          {config.appTitle}
+          {config.app}
         </Typography>
       </DialogTitle>
 
       <DialogContent sx={{ mt: 3 }}>
-        {authModalMode === 'login' ? (
-          <>
-            <TextField
-              fullWidth
-              id="email"
-              sx={{
-                mb: 2,
-              }}
-              label="Email"
-            />
-            <TextField
-              fullWidth
-              id="password"
-              sx={{
-                mb: 2,
-              }}
-              label="Password"
-              type="password"
-            />
-          </>
-        ) : null}
+        <>
+          <TextField
+            fullWidth
+            id="email"
+            sx={{
+              mb: 2,
+            }}
+            label="Email"
+          />
+          <TextField
+            fullWidth
+            id="password"
+            sx={{
+              mb: 2,
+            }}
+            label="Password"
+            type="password"
+          />
+        </>
 
         <Button
           size="small"
@@ -81,7 +79,7 @@ export default function BouncerModal({}: IBouncerModal) {
           color="inherit"
           variant="text"
           onClick={() => {
-            setAuthModalMode('create');
+            console.log('New Account');
           }}
         >
           New Account
@@ -93,10 +91,10 @@ export default function BouncerModal({}: IBouncerModal) {
           color="inherit"
           variant="text"
           onClick={() => {
-            setAuthModalMode('reset');
+            console.log('Reset password');
           }}
         >
-          New password
+          Reset password
         </Button>
 
         <Button
@@ -114,7 +112,7 @@ export default function BouncerModal({}: IBouncerModal) {
       <DialogActions sx={{ p: 1 }}>
         <IconButton
           onClick={() => {
-            setAuthModalOpen(false);
+            console.log('close');
           }}
         >
           <Icon icon="close" />

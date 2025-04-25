@@ -1,8 +1,8 @@
 ---
-order: 200
-title: Cookies
-description: We don't use cookies
-slug: /work/company/cookies
+order: 555
+title: Privacy & Cookies
+description: Your trust means everything to us
+slug: /work/company/privacy-cookies
 icon: account
 image: /png/goldlabel.png
 tags: cookies, gdpr, privacy, terms, trust
@@ -23,3 +23,37 @@ While cookies have been a fundamental part of web development for many years and
 5. **User Experience:** Cookies may contribute to a slightly slower user experience because they are transmitted with every HTTP request. In scenarios where minimizing latency is crucial, developers might explore technologies that can achieve similar functionalities with reduced overhead.
 
 It's important to note that while cookies have their limitations, they remain a versatile and widely used tool in web development. Developers often make choices based on the specific needs of their projects, considering factors such as user experience, security, and privacy. If your goal is to reduce reliance on cookies, consider exploring technologies like Web Storage, Session Storage, IndexedDB, or modern web standards like the Web Storage API or the Fetch API as alternatives or complements. Always keep in mind the specific requirements and constraints of your project when choosing the right tool for the job.
+
+**Privacy Statement**
+
+Welcome to Goldlabel. We value your privacy and are committed to protecting your personal information. This privacy statement aims to provide clarity on how we collect, use, and safeguard your data.
+
+**What Information Do We Collect?**
+
+We collect only the necessary information required to enhance your experience with our website. This may include your name, email address, and any other details you willingly provide.
+
+**How Do We Use Your Information?**
+
+The information we collect is used to personalize your experience, improve our website, and keep you informed about our products and services. Rest assured, we never share your data with third parties without your explicit consent.
+
+**Cookies and Similar Technologies**
+
+We use cookies and similar technologies to enhance your browsing experience. You have the option to manage cookie preferences through your browser settings.
+
+**Data Security**
+
+Your data security is our priority. We employ industry-standard measures to protect your information from unauthorized access or disclosure.
+
+**Your Choices**
+
+You have the right to control the information you share with us. If you have any concerns or wish to update your preferences, please contact us.
+
+**Updates to Our Privacy Statement**
+
+We may update our privacy statement to reflect changes in our practices. Any updates will be posted on this page.
+
+**Contact Us**
+
+If you have any questions or concerns regarding your privacy, please feel free to contact us at problems@goldlabel.pro
+
+Thank you for choosing Goldlabel. Your trust means everything to us

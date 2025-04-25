@@ -1,6 +1,10 @@
 import { UbereduxState } from '../../types';
 
-export const initialState: UbereduxState = {
+export interface IBoucerState {}
+
+export const initialState: IBoucerState = {
   cartridge: 'bouncer',
   modalOpen: true,
+  authed: false,
+  fingerprint: null,
 };

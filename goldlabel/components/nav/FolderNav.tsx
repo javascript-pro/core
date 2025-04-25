@@ -56,11 +56,11 @@ function findParentOfItem(
   return null;
 }
 
-export type FolderContentsProps = {
+export type FolderNavProps = {
   folderLabel?: string;
 };
 
-export default function FolderContents({ folderLabel }: FolderContentsProps) {
+export default function FolderNav({ folderLabel }: FolderNavProps) {
   const pathname = usePathname();
   const router = useRouter();
 
@@ -80,7 +80,7 @@ export default function FolderContents({ folderLabel }: FolderContentsProps) {
           <ListItem disablePadding>
             <ListItemButton onClick={() => router.push(`/${grandparent.slug}`)}>
               <ListItemIcon>
-                <Icon icon={grandparent.icon as any} />
+                <Icon icon={'up'} />
               </ListItemIcon>
               <ListItemText secondary={grandparent.title} />
             </ListItemButton>
