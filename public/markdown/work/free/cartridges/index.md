@@ -4,8 +4,8 @@ title: Cartridges
 description: What are the free cartridges?
 slug: /work/free/cartridges
 icon: star
-image: /png/characters/chix.png
-tags: cartridges, free
+image: /png/bouncer/bouncer.png
+tags: cartridges, free, bouncer
 featured: false
 ---
 

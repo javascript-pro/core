@@ -1,5 +1,3 @@
-import { Boundary } from '#/ui/boundary';
-
 export default function NotFound() {
-  return <>404, bro</>;
+  return <h1>404, bro</h1>;
 }

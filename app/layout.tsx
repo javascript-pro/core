@@ -1,10 +1,10 @@
 import * as React from 'react';
 import path from 'path';
 import fs from 'fs/promises';
-import config from '../goldlabel/config.json';
+import config from '../core/config.json';
 import { Metadata } from 'next';
-import { Appshell } from '../goldlabel';
-import { UbereduxProvider } from '../goldlabel/cartridges/Uberedux';
+import { Appshell } from '../core';
+import { UbereduxProvider } from '../core/cartridges/Uberedux';
 import './styles.css';
 
 const title = config.app;
