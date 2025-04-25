@@ -5,9 +5,8 @@ description: Custom software that works
 slug: /
 icon: goldlabel
 image: /png/characters/mumma.png
-tags: JavaScript , Next Gen, Next.js, core, Gen X, goldlabel, pr0, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
+tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 ---
-
 Goldlabel Apps is a UK-based software company that designs, builds, and maintains full-stack web applications. We specialize in Next.js, Firebase, and custom UI development, delivering everything from internal admin tools to polished public-facing websites.
 
 > We build and ship modern web apps for clients who need real results — fast
