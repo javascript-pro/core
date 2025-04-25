@@ -1,14 +1,14 @@
 'use client';
 import React from 'react';
-import { Box, IconButton, Tooltip } from '@mui/material';
-import { Icon } from '../';
-import { useKey } from '../../goldlabel/cartridges/Uberedux';
+import { IconButton, Tooltip } from '@mui/material';
+import { Icon } from '../../';
+import { useKey } from '../../cartridges/Uberedux';
 
-export type LightDarkToggleProps = {
+export type ILightDarkToggle = {
   mode?: 'iconbutton' | 'listbutton';
 };
 
-export default function LightDarkToggle({ mode }: LightDarkToggleProps) {
+export default function LightDarkToggle({ mode }: ILightDarkToggle) {
   const [darkmode, setDarkmode] = useKey('darkmode');
 
   const handleButtonClick = (clickObj: { route?: string; action?: string }) => {
