@@ -6,6 +6,7 @@ slug: /work
 icon: work
 image: /png/characters/biker.png
 tags: private
-private: true 
+private: true
 ---
+
 You cannot see this.
