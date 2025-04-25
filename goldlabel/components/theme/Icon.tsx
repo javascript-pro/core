@@ -265,10 +265,10 @@ export default function Icon({ icon, color }: IconShape) {
       iconFragment = <DesignIcon color={color} />;
       break;
 
-      case 'bouncer':
-        iconFragment = <BlokeyIcon color={color} />;
-        break;
-      
+    case 'bouncer':
+      iconFragment = <BlokeyIcon color={color} />;
+      break;
+
     case 'uberedux':
       iconFragment = <UbereduxIcon color={color} />;
       break;

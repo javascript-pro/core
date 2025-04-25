@@ -79,7 +79,6 @@ export default function FolderNav({ folderLabel }: FolderNavProps) {
         <>
           <ListItem disablePadding>
             <ListItemButton onClick={() => router.push(`/${grandparent.slug}`)}>
-              
               <ListItemIcon>
                 <Icon icon={'up'} />
               </ListItemIcon>

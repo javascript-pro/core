@@ -9,20 +9,19 @@ export interface IBouncerBtn {
   tooltip: string;
 }
 
-export default function BouncerBtn({
-  tooltip,
-}: IBouncerBtn) {
+export default function BouncerBtn({ tooltip }: IBouncerBtn) {
   // const [authModalOpen, setAuthModalOpen] = useKey('authModalOpen');
 
   return (
-    <><Tooltip title={tooltip} >
-      <IconButton
-        onClick={() => {
-          console.log("bouncer click")
-        }}
-      >
-        <Icon icon="bouncer" />
-      </IconButton>
+    <>
+      <Tooltip title={tooltip}>
+        <IconButton
+          onClick={() => {
+            console.log('bouncer click');
+          }}
+        >
+          <Icon icon="bouncer" />
+        </IconButton>
       </Tooltip>
     </>
   );

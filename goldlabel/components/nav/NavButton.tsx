@@ -17,7 +17,7 @@ export default function NavButton({
   onClick,
 }: INavButton) {
   // console.log('NavButton', mode, icon, title);
-  if (mode === "icon"){
+  if (mode === 'icon') {
     return (
       <Tooltip title={title}>
         <IconButton onClick={onClick}>

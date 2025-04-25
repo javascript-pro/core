@@ -28,10 +28,7 @@ export default function FilePage({ content, featured }: FilePageProps) {
   return (
     <Box sx={{ px: 2 }}>
       <Grid container spacing={2}>
-
-
-
-      <Grid
+        <Grid
           sx={{
             display: {
               xs: 'none',
@@ -42,7 +39,6 @@ export default function FilePage({ content, featured }: FilePageProps) {
         >
           <FolderNav />
         </Grid>
-
 
         <Grid size={{ xs: 12, md: 9 }}>
           <CardHeader
@@ -92,7 +88,6 @@ export default function FilePage({ content, featured }: FilePageProps) {
         >
           <FolderNav />
         </Grid>
-        
       </Grid>
     </Box>
   );

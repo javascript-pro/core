@@ -30,7 +30,7 @@ export default function BouncerModal({}: IBouncerModal) {
     <Dialog
       open={false}
       onClose={() => {
-        console.log("close")
+        console.log('close');
       }}
       fullScreen={fullScreen}
       fullWidth
@@ -53,27 +53,25 @@ export default function BouncerModal({}: IBouncerModal) {
       </DialogTitle>
 
       <DialogContent sx={{ mt: 3 }}>
-        
-          <>
-            <TextField
-              fullWidth
-              id="email"
-              sx={{
-                mb: 2,
-              }}
-              label="Email"
-            />
-            <TextField
-              fullWidth
-              id="password"
-              sx={{
-                mb: 2,
-              }}
-              label="Password"
-              type="password"
-            />
-          </>
-          
+        <>
+          <TextField
+            fullWidth
+            id="email"
+            sx={{
+              mb: 2,
+            }}
+            label="Email"
+          />
+          <TextField
+            fullWidth
+            id="password"
+            sx={{
+              mb: 2,
+            }}
+            label="Password"
+            type="password"
+          />
+        </>
 
         <Button
           size="small"
@@ -81,7 +79,7 @@ export default function BouncerModal({}: IBouncerModal) {
           color="inherit"
           variant="text"
           onClick={() => {
-            console.log("New Account")
+            console.log('New Account');
           }}
         >
           New Account
@@ -93,7 +91,7 @@ export default function BouncerModal({}: IBouncerModal) {
           color="inherit"
           variant="text"
           onClick={() => {
-            console.log("Reset password")
+            console.log('Reset password');
           }}
         >
           Reset password
@@ -114,7 +112,7 @@ export default function BouncerModal({}: IBouncerModal) {
       <DialogActions sx={{ p: 1 }}>
         <IconButton
           onClick={() => {
-            console.log("close")
+            console.log('close');
           }}
         >
           <Icon icon="close" />
