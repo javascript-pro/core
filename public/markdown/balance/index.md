@@ -12,7 +12,7 @@ image: /png/nhtfs/weizang.png
 - Wei Zang's Food
 - Weekend Portfolio
 
-### [Are you Gen X?](/balance/gen-x)
+### Are you Generation X?
 
 > Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland
 

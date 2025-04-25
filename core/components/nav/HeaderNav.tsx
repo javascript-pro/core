@@ -3,7 +3,7 @@ import * as React from 'react';
 import { useRouter } from 'next/navigation';
 import { Box } from '@mui/material';
 import { LightDarkToggle, NavButton } from '../../';
-import { BouncerBtn } from '../../cartridges/Bouncer';
+// import { BouncerBtn } from '../../cartridges/Bouncer';
 
 export interface IHeaderNav {
   anyKey?: any;
@@ -21,7 +21,7 @@ export default function HeaderNav() {
       <LightDarkToggle />
 
       <NavButton mode="icon" icon="home" title="Home" onClick={goHome} />
-      <BouncerBtn tooltip="Bollix" />
+      {/* <BouncerBtn tooltip="Bollix" /> */}
     </Box>
   );
 }

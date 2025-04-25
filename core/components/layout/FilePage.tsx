@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import { Box, Grid, CardHeader } from '@mui/material';
-import { FolderNav, Icon } from '../../';
+import { FolderNav, Icon, AppBreadcrumb } from '../../';
 
 export type FilePageProps = {
   content: {
@@ -35,13 +35,15 @@ export default function FilePage({ content, featured }: FilePageProps) {
               md: 'block',
             },
           }}
-          size={{ md: 3 }}
+          size={{ md: 4 }}
         >
+          <Box sx={{ height: 20 }} />
           <FolderNav />
         </Grid>
 
-        <Grid size={{ xs: 12, md: 9 }}>
+        <Grid size={{ xs: 12, md: 8 }}>
           <CardHeader
+            sx={{ ml: -2 }}
             avatar={<Icon icon={frontmatter?.icon as any} />}
             title={frontmatter?.title}
             subheader={frontmatter?.description}
@@ -73,7 +75,7 @@ export default function FilePage({ content, featured }: FilePageProps) {
               />
             </Box>
           )}
-
+          <AppBreadcrumb />
           {body && <ReactMarkdown>{body}</ReactMarkdown>}
         </Grid>
 

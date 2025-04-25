@@ -1,6 +1,6 @@
 ---
 order: 2
-title: Free & Open Source
+title: Free on GitHub
 description: Free, Gratis and for Nothing
 slug: /work/free
 icon: star

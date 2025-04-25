@@ -3,7 +3,7 @@ import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Box, Grid, CardHeader } from '@mui/material';
 import Image from 'next/image';
-import { FolderNav, Icon } from '../../';
+import { FolderNav, Icon, AppBreadcrumb } from '../../';
 import { NavItem } from '../../../core/types';
 
 export type Frontmatter = {
@@ -29,6 +29,7 @@ export default function FolderPage({ frontmatter, content }: FolderPageProps) {
   return (
     <Box sx={{ px: 0 }}>
       <Grid container spacing={0}>
+        
         <Grid
           sx={{
             display: {
@@ -36,14 +37,15 @@ export default function FolderPage({ frontmatter, content }: FolderPageProps) {
               md: 'block',
             },
           }}
-          size={{ md: 3 }}
+          size={{ md: 4 }}
         >
-          <Box sx={{ height: 20}} />
+          <Box sx={{ height: 20 }} />
           <FolderNav />
         </Grid>
 
-        <Grid size={{ xs: 12, md: 9 }}>
+        <Grid size={{ xs: 12, md: 8 }}>
           <CardHeader
+            sx={{ ml: -2 }}
             avatar={<Icon icon={frontmatter?.icon as any} />}
             title={frontmatter?.title}
             subheader={frontmatter?.description}
@@ -74,7 +76,7 @@ export default function FolderPage({ frontmatter, content }: FolderPageProps) {
               />
             </Box>
           )}
-
+          <AppBreadcrumb />
           {content && <ReactMarkdown>{content}</ReactMarkdown>}
         </Grid>
 
@@ -87,7 +89,6 @@ export default function FolderPage({ frontmatter, content }: FolderPageProps) {
           }}
           size={{ xs: 12 }}
         >
-        
           <FolderNav />
         </Grid>
       </Grid>

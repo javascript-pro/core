@@ -60,7 +60,7 @@
         "excerpt": "The apps we ship are real, run in production and are developed in public\n\nThe Core is Open Source and Free forever — giving you statically generated sites with Firestorepowered updates and a real admi",
         "children": [
           {
-            "title": "Free & Open Source",
+            "title": "Free on GitHub",
             "slug": "work/free",
             "order": 2,
             "icon": "star",
