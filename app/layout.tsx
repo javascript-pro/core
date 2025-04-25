@@ -7,7 +7,7 @@ import { Appshell } from '../goldlabel';
 import { UbereduxProvider } from '../goldlabel/cartridges/Uberedux';
 import './styles.css';
 
-const title = config.appTitle;
+const title = config.app;
 const description = config.description;
 const url = config.url;
 const image = config.image;

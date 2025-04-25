@@ -48,7 +48,7 @@ export default function BouncerModal({}: IBouncerModal) {
             mt: 2,
           }}
         >
-          {config.appTitle}
+          {config.app}
         </Typography>
       </DialogTitle>
 

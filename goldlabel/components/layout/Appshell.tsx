@@ -90,7 +90,7 @@ export default function Appshell({ children, globalNav }: IAppshell) {
       <Header
         meta={
           {
-            // title: config.appTitle,
+            // title: config.app,
             // description: config.description,
           }
         }
