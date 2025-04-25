@@ -11,7 +11,7 @@ import {
   Grid,
 } from '@mui/material';
 import { Icon } from '../';
-import { useKey } from '../../goldlabel/cartridges/Uberedux';
+import { useKey } from '../../core/cartridges/Uberedux';
 import { Featured } from '../';
 
 type ContextNavProps = {
@@ -88,7 +88,7 @@ export default function ContextNav({
 
         {/* <Grid size={{ xs: 12, md: 6 }}>
           <List dense>
-            <ListItemButton onClick={() => openInNewTab('/api/goldlabel')}>
+            <ListItemButton onClick={() => openInNewTab('/api/core')}>
               <ListItemIcon>
                 <Icon icon="api" />
               </ListItemIcon>

@@ -11,8 +11,8 @@ import {
   Collapse,
   IconButton,
 } from '@mui/material';
-import { Icon } from '../../goldlabel';
-import { NavItem } from '../../goldlabel/types';
+import { Icon } from '../../core';
+import { NavItem } from '../../core/types';
 
 export type SitemapProps = {
   globalNav?: NavItem[] | null;

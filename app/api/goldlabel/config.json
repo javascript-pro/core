@@ -1,17 +1,17 @@
 {
   "app": "Core API",
-  "baseurl": "http://localhost:3000/api/goldlabel/",
+  "baseurl": "http://localhost:3000/api/core/",
   "frontend": "http://localhost:3000/",
   "description": "Next.js",
   "endpoints": [
     {
       "title": "Good Fit?",
-      "endpoint": "http://localhost:3000/api/goldlabel/good-fit/",
+      "endpoint": "http://localhost:3000/api/core/good-fit/",
       "verbs": ["GET", "POST"]
     },
     {
       "title": "Speak Write",
-      "endpoint": "http://localhost:3000/api/goldlabel/speak-write/",
+      "endpoint": "http://localhost:3000/api/core/speak-write/",
       "verbs": ["GET", "POST"]
     }
   ]
