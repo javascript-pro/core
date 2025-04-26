@@ -22,7 +22,7 @@ function flattenNav(node: any, allSlugs: string[] = []): string[] {
 
 function renderNav(node: any): React.ReactNode {
   return (
-    <ul>
+    <ol>
       {node.slug && (
         <li>
           <Link href={`/${node.slug}`}>{node.title}</Link>
@@ -31,7 +31,7 @@ function renderNav(node: any): React.ReactNode {
       {node.children && node.children.length > 0 && (
         <li>{node.children.map((child: any) => renderNav(child))}</li>
       )}
-    </ul>
+    </ol>
   );
 }
 
