@@ -9,7 +9,6 @@ import ReactMarkdown from 'react-markdown';
 import {
   Avatar,
   CssBaseline,
-  Container,
   Box,
   Typography,
   Grid,
@@ -162,7 +161,6 @@ export default async function Page({ params }: { params: any }) {
 
   const navItem = findNavItem(slugPath, globalNav[0]);
   const title = navItem?.title || 'Goldlabel';
-  const description = navItem?.description || '';
   const ogImage = frontmatter.image || '/png/test.png';
 
   return (
@@ -187,9 +185,6 @@ export default async function Page({ params }: { params: any }) {
                   <Box sx={{ display: "block" }}>
                     <Typography component="h1" variant="h4">
                       {title}
-                    </Typography>
-                    <Typography component="h2" variant="body2">
-                      {description}
                     </Typography>
                   </Box>
                 </Box>
