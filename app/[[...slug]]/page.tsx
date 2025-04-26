@@ -7,6 +7,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import {
+  Avatar,
   CssBaseline,
   Container,
   Box,
@@ -33,7 +34,7 @@ function renderNav(node: any, depth: number = 0): React.ReactNode {
       {node.slug && (
         <Box key={`slug_${node.slug}`} ml={depth * 2} my={0.5}>
           <Link href={`/${node.slug}`} style={{ textDecoration: 'none' }}>
-            <Typography variant={depth === 0 ? 'body1' : 'body2'}>
+            <Typography color='black' variant={depth === 0 ? 'body1' : 'body2'}>
               {node.title}
             </Typography>
           </Link>
@@ -143,22 +144,49 @@ export default async function Page({ params }: { params: any }) {
     }
   }
 
-  const navItem = findNavItem(slugPath, globalNav[0]);
+  
 
+  // console.log('navItem', navItem)
+  const navItem = findNavItem(slugPath, globalNav[0]);
   const title = navItem?.title || 'Goldlabel';
+  const description = navItem?.excerpt || '';
   const ogImage = frontmatter.image || '/png/test.png';
 
   return (
     <>
       <CssBaseline />
-      <Container>
+      <Container 
+        maxWidth={"md"} 
+        sx={{
+          mt: 3,
+        }}>
+        <header>
+          <Box sx={{ display: "flex" }}>
+            <Box sx={{ mt: 1, mr: 2 }}>
+              <Link href={`/`} style={{ textDecoration: 'none' }}>
+                <Avatar src={"/svg/favicon_gold.svg"} alt={"Goldlabel"} />
+              </Link>
+            </Box>
+            <Box sx={{ display: "block" }}>
+              <Typography component="h1" variant="h4">
+                {title}
+              </Typography>
+              <Typography component="h2" variant="body2">
+                {description}
+              </Typography>
+            </Box>
+          </Box>
+          
+        </header>
         <div id="ssg" style={{ display: 'flex', minHeight: '100vh' }}>
+
           <aside style={{ width: '280px', padding: '1rem' }}>
             {renderNav(globalNav[0])}
           </aside>
           <main style={{ flex: 1, padding: '2rem' }}>
             {ogImage && (
               <Box mb={4}>
+                
                 <Image
                   priority
                   src={ogImage}
