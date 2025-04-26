@@ -1,36 +1,9 @@
 import * as React from 'react';
 import path from 'path';
 import fs from 'fs/promises';
-import config from '../core/config.json';
-import { Metadata } from 'next';
 import { Appshell } from '../core';
 import { UbereduxProvider } from '../core/cartridges/Uberedux';
 import './styles.css';
-
-const title = config.app;
-const description = config.description;
-const url = config.url;
-const image = config.image;
-
-export const metadata: Metadata = {
-  title: {
-    default: title,
-    template: '%s',
-  },
-  metadataBase: new URL(url),
-  description,
-  openGraph: {
-    title,
-    description,
-    images: [image],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title,
-    description,
-    images: [image],
-  },
-};
 
 export default async function RootLayout({
   children,
@@ -56,9 +29,7 @@ export default async function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="/png/iOS.png" />
       </head>
       <body>
-        <UbereduxProvider>
-          <Appshell>{children}</Appshell>
-        </UbereduxProvider>
+        <UbereduxProvider>{children}</UbereduxProvider>
       </body>
     </html>
   );
