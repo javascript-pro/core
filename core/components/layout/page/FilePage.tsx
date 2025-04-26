@@ -19,29 +19,16 @@ export type FilePageProps = {
   };
 };
 
-export default function FilePage({ 
-  content,
-}: FilePageProps) {
-
+export default function FilePage({ content }: FilePageProps) {
   const { frontmatter, body } = content;
-  const { 
-    title, 
-    image,
-    description,
-    icon,
-  } = frontmatter;
+  const { title, image, description, icon } = frontmatter;
 
   const theme = useTheme();
   // const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
     <Box sx={{ px: 0 }}>
-
-      <Header 
-        title={title}
-        description={description}
-        icon={icon}
-      />
+      <Header title={title} description={description} icon={icon} />
 
       <Grid container spacing={2}>
         <Grid
@@ -58,7 +45,6 @@ export default function FilePage({
         </Grid>
 
         <Grid size={{ xs: 12, md: 8 }}>
-          
           {image && (
             <Box
               sx={{
@@ -85,14 +71,13 @@ export default function FilePage({
             </Box>
           )}
           <AppBreadcrumb />
-          
+
           {body && <ReactMarkdown>{body}</ReactMarkdown>}
         </Grid>
       </Grid>
     </Box>
   );
 }
-
 
 /*
 <CardHeader

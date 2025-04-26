@@ -56,10 +56,8 @@ export default async function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="/png/iOS.png" />
       </head>
       <body>
-        <UbereduxProvider>
-          <div id="goldlabel">
-            <Appshell>{children}</Appshell>
-          </div>
+        <UbereduxProvider>  
+          <Appshell>{children}</Appshell>
         </UbereduxProvider>
       </body>
     </html>

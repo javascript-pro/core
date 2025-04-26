@@ -73,7 +73,7 @@ export default function Appshell({
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Container maxWidth="md" sx={{pt: "70px"}}>
+      <Container maxWidth="md" sx={{ pt: '70px' }}>
         <Box sx={{ pb: '50px' }}>
           {children && <Box sx={{ p: 0 }}>{children}</Box>}
         </Box>

@@ -1,6 +1,12 @@
 'use client';
 import * as React from 'react';
-import { useTheme, AppBar, CardHeader, Container, useMediaQuery } from '@mui/material';
+import {
+  useTheme,
+  AppBar,
+  CardHeader,
+  Container,
+  useMediaQuery,
+} from '@mui/material';
 import { HeaderNav, Icon } from '../../';
 
 export interface IHeader {
@@ -14,7 +20,6 @@ export default function Header({
   title = 'Default title',
   description = 'Default description',
 }: IHeader) {
-
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
