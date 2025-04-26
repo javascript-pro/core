@@ -57,9 +57,7 @@ export default async function RootLayout({
       </head>
       <body>
         <UbereduxProvider>
-          <div id="goldlabel">
-            <Appshell>{children}</Appshell>
-          </div>
+          <Appshell>{children}</Appshell>
         </UbereduxProvider>
       </body>
     </html>

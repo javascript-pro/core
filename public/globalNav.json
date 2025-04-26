@@ -33,7 +33,7 @@
       "NextJS",
       "Headless CMS"
     ],
-    "excerpt": "Goldlabel Apps is a UKbased software company that designs, builds, and maintains fullstack web applications. We specialize in Next.js, Firebase, and custom UI development, delivering everything from i",
+    "excerpt": "We build and ship modern web apps for clients who need real results — fast\n\n Small teams. Big output\n Real deployments from Day One\n Readable, extensible codebases\n\n Work With Us\n\nWe take on a limited",
     "children": [
       {
         "title": "Work",
@@ -117,7 +117,7 @@
             "order": 10,
             "icon": "work",
             "type": "folder",
-            "excerpt": "Goldlabel Apps Ltd is a UK Limited Company (5460545)\n\nGoldlabel Apps Ltd\n321323 High Road  \nChadwell Heath  \nEssex RM6 6AX\n\nGet in touch for it's a truth universally acknowledged that a Software Devel",
+            "excerpt": "Goldlabel Apps is a UKbased software company that designs, builds, and maintains fullstack web applications. We specialize in Next.js, Firebase, and custom UI development, delivering everything from i",
             "children": [
               {
                 "title": "Working remotely",
@@ -223,7 +223,7 @@
           },
           {
             "title": "Generation X",
-            "slug": "life/gen-x",
+            "slug": "life/generation-x",
             "order": 100,
             "icon": "life",
             "type": "folder",

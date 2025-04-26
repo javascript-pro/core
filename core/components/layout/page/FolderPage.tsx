@@ -6,7 +6,6 @@ import { Box, Grid, useTheme } from '@mui/material';
 import Image from 'next/image';
 import { FolderNav, Icon, AppBreadcrumb, MobileMenu, Header } from '../../../';
 
-
 export type Frontmatter = {
   order?: number;
   title?: string;
@@ -19,7 +18,7 @@ export type Frontmatter = {
 };
 
 export type FolderPageProps = {
-  frontmatter: any
+  frontmatter: any;
   content: string | null;
 };
 
@@ -27,21 +26,11 @@ export default function FolderPage({ frontmatter, content }: FolderPageProps) {
   const theme = useTheme();
   // const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
-  const { 
-    title, 
-    image,
-    description,
-    icon,
-  } = frontmatter;
+  const { title, image, description, icon } = frontmatter;
 
   return (
     <Box sx={{ px: 0 }}>
-
-      <Header 
-        title={title}
-        description={description}
-        icon={icon}
-      />
+      <Header title={title} description={description} icon={icon} />
 
       <Grid container spacing={0}>
         <Grid
@@ -58,6 +47,7 @@ export default function FolderPage({ frontmatter, content }: FolderPageProps) {
         </Grid>
 
         <Grid size={{ xs: 12, md: 8 }}>
+          <AppBreadcrumb />
           {image && (
             <Box
               sx={{
@@ -66,7 +56,7 @@ export default function FolderPage({ frontmatter, content }: FolderPageProps) {
                 maxWidth: 900,
                 aspectRatio: {
                   xs: '1/1',
-                  sm: '16/4.5',
+                  sm: '16/9',
                 },
                 my: { xs: 1, sm: 2 },
                 borderRadius: 1,
@@ -83,8 +73,7 @@ export default function FolderPage({ frontmatter, content }: FolderPageProps) {
               />
             </Box>
           )}
-          <AppBreadcrumb />
-          
+
           {content && <ReactMarkdown>{content}</ReactMarkdown>}
         </Grid>
       </Grid>

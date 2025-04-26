@@ -81,9 +81,7 @@ export default async function CatchAllPage({ params }: any) {
   const featured = await getFeatured();
 
   if (markdown) {
-    return (
-      <FilePage content={markdown as any} />
-    );
+    return <FilePage content={markdown as any} />;
   }
 
   const folderPath = path.join(process.cwd(), 'public/markdown', ...slugArray);

@@ -4,7 +4,7 @@ title: Privacy & Cookies
 description: Your trust means everything to us
 slug: /work/company/privacy-cookies
 icon: account
-image: /png/goldlabel.png
+image: /png/system/tick.png
 tags: cookies, gdpr, privacy, terms, trust
 ---
 
