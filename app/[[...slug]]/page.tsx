@@ -30,12 +30,25 @@ function flattenNav(node: any, allSlugs: string[] = []): string[] {
 }
 
 function renderNav(node: any, depth: number = 0): React.ReactNode {
+  if (node.slug === '' || node.slug === '/') {
+    // Skip rendering the home route
+    return (
+      <>
+        {node.children && node.children.length > 0 && (
+          <>
+            {node.children.map((child: any) => renderNav(child, depth))}
+          </>
+        )}
+      </>
+    );
+  }
+
   return (
     <>
       {node.slug && (
         <Box key={`slug_${node.slug}`} ml={depth * 2} my={0.5}>
           <Link href={`/${node.slug}`} style={{ textDecoration: 'none' }}>
-            <Typography color='black' variant={depth === 0 ? 'body1' : 'body2'}>
+            <Typography color="black" variant={depth === 0 ? 'body1' : 'body2'}>
               {node.title}
             </Typography>
           </Link>
@@ -49,6 +62,7 @@ function renderNav(node: any, depth: number = 0): React.ReactNode {
     </>
   );
 }
+
 
 function findNavItem(slugPath: string, node: any): any | null {
   if (node.slug === slugPath) return node;
@@ -147,7 +161,7 @@ export default async function Page({ params }: { params: any }) {
 
   const navItem = findNavItem(slugPath, globalNav[0]);
   const title = navItem?.title || 'Goldlabel';
-  const excerpt = navItem?.excerpt || '';
+  const description = navItem?.description || '';
   const ogImage = frontmatter.image || '/png/test.png';
 
   return (
@@ -177,11 +191,11 @@ export default async function Page({ params }: { params: any }) {
                   {title}
                 </Typography>
                 <Typography component="h2" variant="body2">
-                  {excerpt}
+                  {description}
                 </Typography>
               </Box>
             </Box>
-            </header>
+          </header>
           </Grid>
 
           <Grid size={{
@@ -191,7 +205,7 @@ export default async function Page({ params }: { params: any }) {
           }}>
             <main style={{ flex: 1 }}>
               {ogImage && (
-                <Box mb={4}>
+                <Box my={2}>
                   
                   <Image
                     priority
@@ -217,7 +231,7 @@ export default async function Page({ params }: { params: any }) {
             <aside>
                 <Box
                   sx={{
-                    mt: 5
+                    m: 2
                   }}
                 >
                   { renderNav(globalNav[0]) }
@@ -227,19 +241,36 @@ export default async function Page({ params }: { params: any }) {
 
           <Grid size={{
             xs: 12,
+            sm: 7, 
+            md: 8,
           }}>
-           Footer
+            <footer>
+              <Box sx={{ textAlign: 'center', py: 4, mt: 4 }}>
+                <Typography variant="body2" color="text.secondary">
+                  Modern web apps. Real deployments. Professional results.
+                </Typography>
+                <Box sx={{ mt: 1 }}>
+                  <Link href="/privacy-cookies" style={{ marginRight: 16, textDecoration: 'none', color: 'inherit' }}>
+                    Privacy
+                  </Link>
+                  <Link href="/terms" style={{ marginRight: 16, textDecoration: 'none', color: 'inherit' }}>
+                    Terms
+                  </Link>
+                  <Link href="/contact" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    Contact
+                  </Link>
+                </Box>
+                <Box sx={{ mt: 1 }}>
+                  <Typography variant="caption" color="text.secondary">
+                    © {new Date().getFullYear()} Goldlabel Apps Ltd.
+                  </Typography>
+                </Box>
+              </Box>
+            </footer>
           </Grid>
-        </Grid>
-
-
-        
-        <div id="ssg" style={{ display: 'flex', minHeight: '100vh' }}>
-
-
 
           
-        </div>
+        </Grid>
       </Container>
     </>
   );
