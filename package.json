@@ -3,8 +3,8 @@
   "private": true,
   "packageManager": "yarn@4.3.1",
   "scripts": {
-    "dev": "yarn format && rm -rf .next && yarn nav && next dev",
-    "nav": "tsx globalNav.mjs",
+    "dev": "clear && rm -rf .next && yarn generate && next dev",
+    "generate": "tsx generate.mjs",
     "prepare": "husky install",
     "build": "next build",
     "lint": "next lint",
