@@ -101,8 +101,8 @@ export async function generateMetadata({ params }: { params: any }) {
   const frontmatter = await loadFrontmatter(slugPath);
 
   const app = "Goldlabel";
-  const title = `${navItem?.title}. ${navItem?.excerpt}` || app;
-  const description = navItem?.excerpt || 'We build and ship modern web apps for clients who need real results — fast';
+  const title = `${frontmatter?.title}. ${frontmatter?.description}` || app;
+  const description = frontmatter?.description || 'We build and ship modern web apps for clients who need real results — fast';
   const img = frontmatter.image || '/png/test.png';
   const url = `https://goldlabel.pro/${slugPath}`;
 
@@ -185,6 +185,9 @@ export default async function Page({ params }: { params: any }) {
                   <Box sx={{ display: "block" }}>
                     <Typography component="h1" variant="h4">
                       {title}
+                    </Typography>
+                    <Typography component="h2" variant="body2">
+                      {frontmatter.description}
                     </Typography>
                   </Box>
                 </Box>
