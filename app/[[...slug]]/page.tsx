@@ -8,6 +8,9 @@ import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import {
   CssBaseline,
+  Container,
+  Box,
+  Typography,
 } from '@mui/material';
 
 export interface Params {
@@ -24,18 +27,24 @@ function flattenNav(node: any, allSlugs: string[] = []): string[] {
   return allSlugs;
 }
 
-function renderNav(node: any): React.ReactNode {
+function renderNav(node: any, depth: number = 0): React.ReactNode {
   return (
-    <ul>
+    <>
       {node.slug && (
-        <li key={`slug_${node.slug}`}>
-          <Link href={`/${node.slug}`}>{node.title}</Link>
-        </li>
+        <Box key={`slug_${node.slug}`} ml={depth * 2} my={0.5}>
+          <Link href={`/${node.slug}`} style={{ textDecoration: 'none' }}>
+            <Typography variant={depth === 0 ? 'body1' : 'body2'}>
+              {node.title}
+            </Typography>
+          </Link>
+        </Box>
       )}
       {node.children && node.children.length > 0 && (
-        <li>{node.children.map((child: any) => renderNav(child))}</li>
+        <>
+          {node.children.map((child: any) => renderNav(child, depth + 1))}
+        </>
       )}
-    </ul>
+    </>
   );
 }
 
@@ -117,7 +126,7 @@ export default async function Page({ params }: { params: any }) {
     path.join(process.cwd(), 'public', 'markdown', slugPath, 'index.md'),
   ];
 
-  let body = 'Page not found';
+  let content = 'Page not found';
   let frontmatter: any = {};
 
   for (const filePath of tryPaths) {
@@ -125,7 +134,7 @@ export default async function Page({ params }: { params: any }) {
       if (fs.existsSync(filePath)) {
         const fileContent = fs.readFileSync(filePath, 'utf8');
         const parsed = matter(fileContent);
-        body = parsed.content;
+        content = parsed.content;
         frontmatter = parsed.data;
         break;
       }
@@ -142,43 +151,30 @@ export default async function Page({ params }: { params: any }) {
   return (
     <>
       <CssBaseline />
-
-      <div id="ssg"
-      style={{ 
-        display: 'flex', 
-        minHeight: '100vh',
-      }}>
-        
-      <aside
-        style={{
-          width: '280px',
-        }}
-      >
-        {renderNav(globalNav[0])}
-      </aside>
-
-      <main style={{ flex: 1, padding: '2rem' }}>
-        {ogImage && (
-          <Image
-              priority
-              src={ogImage}
-              alt={title}
-              width={1200}
-              height={630}
-              style={{ 
-                width: '100%', 
-                height: 'auto', 
-                objectFit: 'cover', 
-                borderRadius: '8px' 
-              }}
-            />
-        )}
-        <article>
-          <ReactMarkdown>{body}</ReactMarkdown>
-        </article>
-      </main>
-    </div>
+      <Container>
+        <div id="ssg" style={{ display: 'flex', minHeight: '100vh' }}>
+          <aside style={{ width: '280px', padding: '1rem' }}>
+            {renderNav(globalNav[0])}
+          </aside>
+          <main style={{ flex: 1, padding: '2rem' }}>
+            {ogImage && (
+              <Box mb={4}>
+                <Image
+                  priority
+                  src={ogImage}
+                  alt={title}
+                  width={1200}
+                  height={630}
+                  style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: '8px' }}
+                />
+              </Box>
+            )}
+            <article>
+              <ReactMarkdown>{content}</ReactMarkdown>
+            </article>
+          </main>
+        </div>
+      </Container>
     </>
-    
   );
 }
