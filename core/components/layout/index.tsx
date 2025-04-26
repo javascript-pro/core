@@ -1,14 +1,14 @@
 import Appshell from './Appshell';
 import Header from './Header';
 
-import FolderPage from './FolderPage';
-import FilePage from './FilePage';
+import FolderPage from './page/FolderPage';
+import FilePage from './page/FilePage';
 
 import { IAppshell } from './Appshell';
 import { IHeader } from './Header';
 
-import { FolderPageProps } from './FolderPage';
-import { FilePageProps } from './FilePage';
+import { FolderPageProps } from './page/FolderPage';
+import { FilePageProps } from './page/FilePage';
 
 export { Appshell, Header, FolderPage, FilePage };
 

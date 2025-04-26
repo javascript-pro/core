@@ -1,33 +1,38 @@
 'use client';
-import React from 'react';
-import Image from 'next/image';
+import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
-import { Box, Grid, CardHeader } from '@mui/material';
-import { FolderNav, Icon, AppBreadcrumb } from '../../';
+import { Box, Grid, CardHeader, useMediaQuery, useTheme } from '@mui/material';
+import Image from 'next/image';
+import { FolderNav, Icon, AppBreadcrumb } from '../../../';
+import { NavItem } from '../../../../core/types';
 
-export type FilePageProps = {
-  content: {
-    frontmatter: {
-      title?: string;
-      subheader?: string;
-      excerpt?: string;
-      image?: string;
-      icon?: string;
-      description?: string;
-    };
-    content: string;
-  };
-  globalNav?: any;
-  featured?: any[];
+export type Frontmatter = {
+  order?: number;
+  title?: string;
+  description?: string;
+  slug?: string;
+  icon?: string;
+  image?: string;
+  tags?: string[];
+  excerpt?: string;
 };
 
-export default function FilePage({ content, featured }: FilePageProps) {
-  const { frontmatter, content: body } = content;
-  const { title, image } = frontmatter;
+export type FolderPageProps = {
+  featured?: any[];
+  tree: NavItem[] | null;
+  frontmatter: Frontmatter | null;
+  content: string | null;
+  globalNav: NavItem[];
+};
+
+export default function FolderPage({ frontmatter, content }: FolderPageProps) {
+
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
-    <Box sx={{ px: 2 }}>
-      <Grid container spacing={2}>
+    <Box sx={{ px: 0 }}>
+      <Grid container spacing={0}>
         <Grid
           sx={{
             display: {
@@ -47,10 +52,9 @@ export default function FilePage({ content, featured }: FilePageProps) {
             avatar={<Icon icon={frontmatter?.icon as any} />}
             title={frontmatter?.title}
             subheader={frontmatter?.description}
-            action={<></>}
+            action={isMobile ? <>menu btn</> : null}
           />
-
-          {image && (
+          {frontmatter?.image && (
             <Box
               sx={{
                 position: 'relative',
@@ -67,8 +71,8 @@ export default function FilePage({ content, featured }: FilePageProps) {
             >
               <Image
                 priority
-                src={image}
-                alt={title || 'Cover image'}
+                src={frontmatter.image}
+                alt={frontmatter.title || 'OpenGraph Image'}
                 fill
                 sizes="(max-width: 600px) 100vw, (max-width: 1200px) 80vw, 900px"
                 style={{ objectFit: 'cover' }}
@@ -76,7 +80,7 @@ export default function FilePage({ content, featured }: FilePageProps) {
             </Box>
           )}
           <AppBreadcrumb />
-          {body && <ReactMarkdown>{body}</ReactMarkdown>}
+          {content && <ReactMarkdown>{content}</ReactMarkdown>}
         </Grid>
 
         <Grid

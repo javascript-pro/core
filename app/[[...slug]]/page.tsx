@@ -43,6 +43,7 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
     description: 'Goldlabel',
     openGraph: {
       title,
+      images: ['/png/test.png'],
       description:
         'We build and ship modern web apps for clients who need real results — fast',
       url: `https://goldlabel.pro${slugPath}`,
@@ -51,6 +52,7 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
+      images: ['/png/test.png'],
       title,
       description:
         'We build and ship modern web apps for clients who need real results — fast',
