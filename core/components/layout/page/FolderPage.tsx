@@ -3,7 +3,7 @@ import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Box, Grid, CardHeader, useMediaQuery, useTheme } from '@mui/material';
 import Image from 'next/image';
-import { FolderNav, Icon, AppBreadcrumb } from '../../../';
+import { FolderNav, Icon, AppBreadcrumb, MobileMenu } from '../../../';
 import { NavItem } from '../../../../core/types';
 
 export type Frontmatter = {
@@ -26,7 +26,6 @@ export type FolderPageProps = {
 };
 
 export default function FolderPage({ frontmatter, content }: FolderPageProps) {
-
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
@@ -52,7 +51,9 @@ export default function FolderPage({ frontmatter, content }: FolderPageProps) {
             avatar={<Icon icon={frontmatter?.icon as any} />}
             title={frontmatter?.title}
             subheader={frontmatter?.description}
-            action={isMobile ? <>menu btn</> : null}
+            action={isMobile ? <MobileMenu>
+              <FolderNav />
+            </MobileMenu> : null}
           />
           {frontmatter?.image && (
             <Box
@@ -83,17 +84,6 @@ export default function FolderPage({ frontmatter, content }: FolderPageProps) {
           {content && <ReactMarkdown>{content}</ReactMarkdown>}
         </Grid>
 
-        <Grid
-          sx={{
-            display: {
-              xs: 'block',
-              md: 'none',
-            },
-          }}
-          size={{ xs: 12 }}
-        >
-          <FolderNav />
-        </Grid>
       </Grid>
     </Box>
   );
