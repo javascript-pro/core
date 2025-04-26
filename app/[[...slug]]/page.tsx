@@ -101,7 +101,7 @@ export async function generateMetadata({ params }: { params: any }) {
   const frontmatter = await loadFrontmatter(slugPath);
 
   const app = "Goldlabel";
-  const title = navItem?.title || app;
+  const title = `${navItem?.title}. ${navItem?.excerpt}` || app;
   const description = navItem?.excerpt || 'We build and ship modern web apps for clients who need real results — fast';
   const img = frontmatter.image || '/png/test.png';
   const url = `https://goldlabel.pro/${slugPath}`;
@@ -168,34 +168,33 @@ export default async function Page({ params }: { params: any }) {
     <>
       <CssBaseline />
       <Container 
-        maxWidth={"sm"} 
+        maxWidth={"md"} 
         sx={{
           mt: 3,
         }}>
-
 
         <Grid container>
 
           <Grid size={{
             xs: 12,
           }}>
-          <header>
-            <Box sx={{ display: "flex" }}>
-              <Box sx={{ mr: 1 }}>
-                <Link href={`/`} style={{ textDecoration: 'none' }}>
-                  <Avatar src={"/svg/favicon_gold.svg"} alt={"Goldlabel"} />
-                </Link>
+            <header>
+              <Box sx={{ display: "flex" }}>
+                <Box sx={{ mr: 1 }}>
+                  <Link href={`/`} style={{ textDecoration: 'none' }}>
+                    <Avatar src={"/svg/favicon_gold.svg"} alt={"Goldlabel"} />
+                  </Link>
+                </Box>
+                <Box sx={{ display: "block" }}>
+                  <Typography component="h1" variant="h4">
+                    {title}
+                  </Typography>
+                  <Typography component="h2" variant="body2">
+                    {description}
+                  </Typography>
+                </Box>
               </Box>
-              <Box sx={{ display: "block" }}>
-                <Typography component="h1" variant="h4">
-                  {title}
-                </Typography>
-                <Typography component="h2" variant="body2">
-                  {description}
-                </Typography>
-              </Box>
-            </Box>
-          </header>
+            </header>
           </Grid>
 
           <Grid size={{
