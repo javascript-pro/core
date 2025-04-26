@@ -1,106 +1,59 @@
-import React from 'react';
+import fs from 'fs';
 import path from 'path';
-import { notFound } from 'next/navigation';
-import type { Metadata } from 'next';
-import fs from 'fs/promises';
-import { loadMarkdown, getMarkdownTree } from '../../lib/loadMarkdown';
-import { FolderPage, FilePage, Sitemap } from '../../core';
-import { getFeatured } from '../../lib/getFeatured';
-import { Uberedux } from '../../core/cartridges/Uberedux';
-// import { GoodFit } from '../../core/products/GoodFit';
+import matter from 'gray-matter';
+import globalNav from '../../public/globalNav.json';
+import React from 'react';
 
-async function getPageTitle(slugPath: string): Promise<string> {
-  const defaultTitle = 'Goldlabel';
-
-  if (slugPath === '/sitemap') return 'Sitemap';
-  if (slugPath === '/uberedux') return 'Uberedux';
-  if (slugPath === '/work/products/speak-write') return 'SpeakWrite';
-  if (slugPath === '/work/products/good-fit') return 'GoodFit';
-
-  const markdown = await loadMarkdown(slugPath);
-  if (markdown && markdown.frontmatter.title) {
-    return `${markdown.frontmatter.title}. ${markdown.frontmatter.description}`;
-  }
-
-  const indexMarkdown = await loadMarkdown(path.join(slugPath, 'index'));
-  if (indexMarkdown?.frontmatter.title) {
-    return `${indexMarkdown.frontmatter.title}. ${indexMarkdown.frontmatter.description}`;
-  }
-
-  return defaultTitle;
+interface Params {
+  slug?: string[];
 }
 
-// Generate dynamic metadata
-
-export async function generateMetadata({ params }: any): Promise<Metadata> {
-  const slugArray = params?.slug ?? [];
-  const slugPath = '/' + slugArray.join('/');
-
-  const title = await getPageTitle(slugPath);
-
-  return {
-    title,
-    description: 'Goldlabel',
-    openGraph: {
-      title,
-      images: ['/png/test.png'],
-      description:
-        'We build and ship modern web apps for clients who need real results — fast',
-      url: `https://goldlabel.pro${slugPath}`,
-      siteName: 'Goldlabel',
-      type: 'website',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      images: ['/png/test.png'],
-      title,
-      description:
-        'We build and ship modern web apps for clients who need real results — fast',
-    },
-  };
+function flattenNav(node: any, allSlugs: string[] = []): string[] {
+  if (node.slug) {
+    allSlugs.push(node.slug);
+  }
+  if (node.children && node.children.length > 0) {
+    node.children.forEach((child: any) => flattenNav(child, allSlugs));
+  }
+  return allSlugs;
 }
 
-export default async function CatchAllPage({ params }: any) {
-  const slugArray = params?.slug ?? [];
-  const slugPath = '/' + slugArray.join('/');
+export async function generateStaticParams(): Promise<Params[]> {
+  const slugs = flattenNav(globalNav[0]);
 
-  const navPath = path.join(process.cwd(), 'public/globalNav.json');
-  let globalNav = null;
+  return slugs.map((slug) => ({
+    slug: slug.split('/'),
+  }));
+}
 
-  try {
-    const navRaw = await fs.readFile(navPath, 'utf-8');
-    globalNav = JSON.parse(navRaw);
-  } catch (err) {
-    console.error('Loading globalNav.json Failed:', err);
-  }
+export default async function Page({ params }: { params: any }) {
+  const slugPath = params.slug ? params.slug.join('/') : '';
 
-  if (slugPath === '/sitemap')
-    return <Sitemap globalNav={globalNav} openTopLevelByDefault={1} />;
-  if (slugPath === '/uberedux') return <Uberedux />;
-  const markdown = await loadMarkdown(slugPath);
-  const featured = await getFeatured();
+  const tryPaths = [
+    path.join(process.cwd(), 'public', 'markdown', `${slugPath}.md`),
+    path.join(process.cwd(), 'public', 'markdown', slugPath, 'index.md'),
+  ];
 
-  if (markdown) {
-    return <FilePage content={markdown as any} />;
-  }
+  let content = 'Page not found';
 
-  const folderPath = path.join(process.cwd(), 'public/markdown', ...slugArray);
-  try {
-    const stat = await fs.stat(folderPath);
-    if (stat.isDirectory()) {
-      const section = slugArray.join('/');
-      const tree = await getMarkdownTree(section);
-      const indexMarkdown = await loadMarkdown(path.join(slugPath, 'index'));
-      return (
-        <FolderPage
-          frontmatter={indexMarkdown?.frontmatter || null}
-          content={indexMarkdown?.content || null}
-        />
-      );
+  for (const filePath of tryPaths) {
+    try {
+      if (fs.existsSync(filePath)) {
+        const fileContent = fs.readFileSync(filePath, 'utf8');
+        const { content: mdContent } = matter(fileContent);
+        content = mdContent;
+        break;
+      }
+    } catch (error) {
+      console.error('Failed to load markdown for', slugPath, error);
     }
-  } catch {
-    console.warn('This is _not_ a folder');
   }
 
-  return notFound();
+  return (
+    <main style={{ padding: '2rem' }}>
+      <article>
+        <pre>{content}</pre>
+      </article>
+    </main>
+  );
 }
