@@ -1,9 +1,8 @@
 import * as React from 'react';
 import path from 'path';
 import fs from 'fs/promises';
-import { Appshell } from '../core';
+// import { Appshell } from '../core';
 import { UbereduxProvider } from '../core/cartridges/Uberedux';
-import './styles.css';
 
 export default async function RootLayout({
   children,

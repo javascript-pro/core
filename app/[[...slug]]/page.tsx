@@ -24,7 +24,7 @@ function renderNav(node: any): React.ReactNode {
   return (
     <ul>
       {node.slug && (
-        <li>
+        <li key={`slug_${node.slug}`}>
           <Link href={`/${node.slug}`}>{node.title}</Link>
         </li>
       )}
