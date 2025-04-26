@@ -3,35 +3,30 @@ import config from '../../config.json';
 import * as React from 'react';
 import {
   Box,
-  Avatar,
   CssBaseline,
   Container,
   ThemeProvider,
   createTheme,
-  AppBar,
-  Toolbar,
-  Fab,
 } from '@mui/material';
-import { styled } from '@mui/material/styles';
-import { PopupMenu, Header } from '../../';
 import { useKey } from '../../cartridges/Uberedux';
-
-const StyledFab = styled(Fab)({
-  position: 'absolute',
-  margin: '0 auto',
-  zIndex: 1000,
-  top: -4,
-  left: 0,
-  right: 0,
-});
 
 export type IAppshell = {
   children?: React.ReactNode;
-  globalNav?: any;
+  meta?: {
+    icon?: string;
+    title?: string;
+    description?: string;
+  };
 };
 
-export default function Appshell({ children, globalNav }: IAppshell) {
-  const [menuOpen, setMenuOpen] = React.useState(false);
+export default function Appshell({
+  children,
+  meta = {
+    icon: 'appshell icon',
+    title: 'appshell title',
+    description: 'appshell desc',
+  },
+}: IAppshell) {
   const [darkmode] = useKey('darkmode');
   const mode = darkmode ? 'dark' : 'light';
   const themeValues = config.themes[mode];
@@ -75,28 +70,10 @@ export default function Appshell({ children, globalNav }: IAppshell) {
     [mode, themeValues],
   );
 
-  const handleToggleMenu = () => setMenuOpen(!menuOpen);
-
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-
-      <PopupMenu
-        globalNav={globalNav}
-        open={menuOpen}
-        onClose={() => setMenuOpen(false)}
-      />
-
-      <Header
-        meta={
-          {
-            // title: config.app,
-            // description: config.description,
-          }
-        }
-      />
-
-      <Container maxWidth="md" sx={{ mt: '80px' }}>
+      <Container maxWidth="md" sx={{pt: "70px"}}>
         <Box sx={{ pb: '50px' }}>
           {children && <Box sx={{ p: 0 }}>{children}</Box>}
         </Box>

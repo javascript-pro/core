@@ -60,7 +60,7 @@
         "excerpt": "The apps we ship are real, run in production and are developed in public\n\nThe Core is Open Source and Free forever — giving you statically generated sites with Firestorepowered updates and a real admi",
         "children": [
           {
-            "title": "Free & Open Source",
+            "title": "Free on GitHub",
             "slug": "work/free",
             "order": 2,
             "icon": "star",
@@ -256,7 +256,7 @@
         "order": 100,
         "icon": "balance",
         "type": "folder",
-        "excerpt": "Books\n\n Wei Zang's Food\n Weekend Portfolio\n\n \n\n Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Is this Singularity?\n\n \"Put that kind of AI into a drone wi",
+        "excerpt": "Books\n\n Wei Zang's Food\n Weekend Portfolio\n\n Are you Generation X?\n\n Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Is this Singularity?\n\n \"Put that kind ",
         "children": [
           {
             "title": "Books",

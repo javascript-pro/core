@@ -1,29 +1,23 @@
 'use client';
 import * as React from 'react';
-import { useRouter } from 'next/navigation';
-import { useTheme, AppBar, CardHeader, Container } from '@mui/material';
-import { HeaderNav } from '../../';
+import { useTheme, AppBar, CardHeader, Container, useMediaQuery } from '@mui/material';
+import { HeaderNav, Icon } from '../../';
 
 export interface IHeader {
-  meta: {
-    title?: string;
-    description?: string;
-  };
+  icon?: string | null;
+  title?: string | null;
+  description?: string | null;
 }
 
 export default function Header({
-  meta = {
-    title: 'Default title',
-    description: 'Default description',
-  },
+  icon = 'goldlabel',
+  title = 'Default title',
+  description = 'Default description',
 }: IHeader) {
-  const router = useRouter();
-
-  // const onHomeClick = () => {
-  //   router.push('/');
-  // };
 
   const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
   return (
     <>
       <AppBar
@@ -38,8 +32,9 @@ export default function Header({
       >
         <Container maxWidth="md">
           <CardHeader
-            title={meta.title}
-            subheader={meta.description}
+            avatar={<Icon icon={icon as any} />}
+            title={title}
+            subheader={description}
             action={<HeaderNav />}
           />
         </Container>

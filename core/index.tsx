@@ -2,6 +2,7 @@ import { Appshell, Header, FolderPage, FilePage } from './components/layout';
 import { IHeader, FolderPageProps } from './components/layout';
 import { AppBreadcrumb } from './components/layout/AppBreadcrumb';
 import FolderNav from './components/nav/FolderNav';
+import MobileMenu from './components/nav/MobileMenu';
 
 // nav
 import HeaderNav from './components/nav/HeaderNav';
@@ -42,6 +43,7 @@ export {
   MarkdownPopup,
   LightDarkToggle,
   HeaderNav,
+  MobileMenu,
 };
 
 export type { IconShape, IHeader, FolderPageProps, INavButton, IHeaderNav };

@@ -43,6 +43,7 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
     description: 'Goldlabel',
     openGraph: {
       title,
+      images: ['/png/test.png'],
       description:
         'We build and ship modern web apps for clients who need real results — fast',
       url: `https://goldlabel.pro${slugPath}`,
@@ -51,6 +52,7 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
+      images: ['/png/test.png'],
       title,
       description:
         'We build and ship modern web apps for clients who need real results — fast',
@@ -77,13 +79,10 @@ export default async function CatchAllPage({ params }: any) {
   if (slugPath === '/uberedux') return <Uberedux />;
   const markdown = await loadMarkdown(slugPath);
   const featured = await getFeatured();
-  // if (slugPath === '/work/products/good-fit') {
-  //   return <GoodFit />;
-  // }
 
   if (markdown) {
     return (
-      <FilePage featured={featured} content={markdown} globalNav={globalNav} />
+      <FilePage content={markdown as any} />
     );
   }
 
@@ -96,11 +95,8 @@ export default async function CatchAllPage({ params }: any) {
       const indexMarkdown = await loadMarkdown(path.join(slugPath, 'index'));
       return (
         <FolderPage
-          featured={featured}
-          tree={tree}
           frontmatter={indexMarkdown?.frontmatter || null}
           content={indexMarkdown?.content || null}
-          globalNav={globalNav as any}
         />
       );
     }
