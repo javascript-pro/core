@@ -2,7 +2,7 @@
 order: 100
 title: Generation X
 description: by Douglas Coupland
-slug: /life/gen-x
+slug: /life/generation-x
 icon: life
 image: /png/people/colz.png
 ---

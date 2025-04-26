@@ -47,6 +47,7 @@ export default function FolderPage({ frontmatter, content }: FolderPageProps) {
         </Grid>
 
         <Grid size={{ xs: 12, md: 8 }}>
+          <AppBreadcrumb />
           {image && (
             <Box
               sx={{
@@ -55,7 +56,7 @@ export default function FolderPage({ frontmatter, content }: FolderPageProps) {
                 maxWidth: 900,
                 aspectRatio: {
                   xs: '1/1',
-                  sm: '16/4.5',
+                  sm: '16/9',
                 },
                 my: { xs: 1, sm: 2 },
                 borderRadius: 1,
@@ -72,7 +73,6 @@ export default function FolderPage({ frontmatter, content }: FolderPageProps) {
               />
             </Box>
           )}
-          <AppBreadcrumb />
 
           {content && <ReactMarkdown>{content}</ReactMarkdown>}
         </Grid>

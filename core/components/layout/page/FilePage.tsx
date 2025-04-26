@@ -45,6 +45,7 @@ export default function FilePage({ content }: FilePageProps) {
         </Grid>
 
         <Grid size={{ xs: 12, md: 8 }}>
+          <AppBreadcrumb />
           {image && (
             <Box
               sx={{
@@ -53,7 +54,7 @@ export default function FilePage({ content }: FilePageProps) {
                 maxWidth: 900,
                 aspectRatio: {
                   xs: '1/1',
-                  sm: '16/4.5',
+                  sm: '16/9',
                 },
                 my: { xs: 1, sm: 2 },
                 borderRadius: 1,
@@ -70,7 +71,6 @@ export default function FilePage({ content }: FilePageProps) {
               />
             </Box>
           )}
-          <AppBreadcrumb />
 
           {body && <ReactMarkdown>{body}</ReactMarkdown>}
         </Grid>
