@@ -12,6 +12,7 @@ import {
   Container,
   Box,
   Typography,
+  Grid,
 } from '@mui/material';
 
 export interface Params {
@@ -144,63 +145,100 @@ export default async function Page({ params }: { params: any }) {
     }
   }
 
-  
-
-  // console.log('navItem', navItem)
   const navItem = findNavItem(slugPath, globalNav[0]);
   const title = navItem?.title || 'Goldlabel';
-  const description = navItem?.excerpt || '';
+  const excerpt = navItem?.excerpt || '';
   const ogImage = frontmatter.image || '/png/test.png';
 
   return (
     <>
       <CssBaseline />
       <Container 
-        maxWidth={"md"} 
+        maxWidth={"sm"} 
         sx={{
           mt: 3,
         }}>
-        <header>
-          <Box sx={{ display: "flex" }}>
-            <Box sx={{ mt: 1, mr: 2 }}>
-              <Link href={`/`} style={{ textDecoration: 'none' }}>
-                <Avatar src={"/svg/favicon_gold.svg"} alt={"Goldlabel"} />
-              </Link>
+
+
+        <Grid container>
+
+          <Grid size={{
+            xs: 12,
+          }}>
+          <header>
+            <Box sx={{ display: "flex" }}>
+              <Box sx={{ mr: 1 }}>
+                <Link href={`/`} style={{ textDecoration: 'none' }}>
+                  <Avatar src={"/svg/favicon_gold.svg"} alt={"Goldlabel"} />
+                </Link>
+              </Box>
+              <Box sx={{ display: "block" }}>
+                <Typography component="h1" variant="h4">
+                  {title}
+                </Typography>
+                <Typography component="h2" variant="body2">
+                  {excerpt}
+                </Typography>
+              </Box>
             </Box>
-            <Box sx={{ display: "block" }}>
-              <Typography component="h1" variant="h4">
-                {title}
-              </Typography>
-              <Typography component="h2" variant="body2">
-                {description}
-              </Typography>
-            </Box>
-          </Box>
-          
-        </header>
+            </header>
+          </Grid>
+
+          <Grid size={{
+            xs: 12,
+            sm: 7, 
+            md: 8,
+          }}>
+            <main style={{ flex: 1 }}>
+              {ogImage && (
+                <Box mb={4}>
+                  
+                  <Image
+                    priority
+                    src={ogImage}
+                    alt={title}
+                    width={1200}
+                    height={630}
+                    style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: '8px' }}
+                  />
+                </Box>
+              )}
+              <article>
+                <ReactMarkdown>{content}</ReactMarkdown>
+              </article>
+            </main>
+          </Grid>
+
+          <Grid size={{
+            xs: 12,
+            sm: 5,
+            md: 4,
+          }}>
+            <aside>
+                <Box
+                  sx={{
+                    mt: 5
+                  }}
+                >
+                  { renderNav(globalNav[0]) }
+                </Box>
+            </aside>
+          </Grid>
+
+          <Grid size={{
+            xs: 12,
+          }}>
+           Footer
+          </Grid>
+        </Grid>
+
+
+        
         <div id="ssg" style={{ display: 'flex', minHeight: '100vh' }}>
 
-          <aside style={{ width: '280px', padding: '1rem' }}>
-            {renderNav(globalNav[0])}
-          </aside>
-          <main style={{ flex: 1, padding: '2rem' }}>
-            {ogImage && (
-              <Box mb={4}>
-                
-                <Image
-                  priority
-                  src={ogImage}
-                  alt={title}
-                  width={1200}
-                  height={630}
-                  style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: '8px' }}
-                />
-              </Box>
-            )}
-            <article>
-              <ReactMarkdown>{content}</ReactMarkdown>
-            </article>
-          </main>
+
+
+          
         </div>
       </Container>
     </>
