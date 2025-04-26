@@ -2,8 +2,8 @@
 import React from 'react';
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
-import { Box, Grid, CardHeader, useMediaQuery, useTheme } from '@mui/material';
-import { FolderNav, Icon, AppBreadcrumb, MobileMenu } from '../../../';
+import { Box, Grid, useMediaQuery, useTheme } from '@mui/material';
+import { FolderNav, AppBreadcrumb, Header } from '../../../';
 
 export type FilePageProps = {
   content: {
@@ -15,21 +15,34 @@ export type FilePageProps = {
       icon?: string;
       description?: string;
     };
-    content: string;
+    body: string;
   };
-  globalNav?: any;
-  featured?: any[];
 };
 
-export default function FilePage({ content, featured }: FilePageProps) {
-  const { frontmatter, content: body } = content;
-  const { title, image } = frontmatter;
+export default function FilePage({ 
+  content,
+}: FilePageProps) {
+
+  const { frontmatter, body } = content;
+  const { 
+    title, 
+    image,
+    description,
+    icon,
+  } = frontmatter;
 
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  // const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
-    <Box sx={{ px: 2 }}>
+    <Box sx={{ px: 0 }}>
+
+      <Header 
+        title={title}
+        description={description}
+        icon={icon}
+      />
+
       <Grid container spacing={2}>
         <Grid
           sx={{
@@ -45,15 +58,7 @@ export default function FilePage({ content, featured }: FilePageProps) {
         </Grid>
 
         <Grid size={{ xs: 12, md: 8 }}>
-          <CardHeader
-            sx={{ ml: -2 }}
-            avatar={<Icon icon={frontmatter?.icon as any} />}
-            title={frontmatter?.title}
-            subheader={frontmatter?.description}
-            action={isMobile ? <MobileMenu>
-               <FolderNav />
-            </MobileMenu> : null}
-          />
+          
           {image && (
             <Box
               sx={{
@@ -80,11 +85,27 @@ export default function FilePage({ content, featured }: FilePageProps) {
             </Box>
           )}
           <AppBreadcrumb />
+          
           {body && <ReactMarkdown>{body}</ReactMarkdown>}
         </Grid>
-
-       
       </Grid>
     </Box>
   );
 }
+
+
+/*
+<CardHeader
+            sx={{ ml: -2 }}
+            avatar={<Icon icon={frontmatter?.icon as any} />}
+            title={frontmatter?.title}
+            subheader={frontmatter?.description}
+            action={
+              isMobile ? (
+                <MobileMenu>
+                  <FolderNav />
+                </MobileMenu>
+              ) : null
+            }
+          />
+*/

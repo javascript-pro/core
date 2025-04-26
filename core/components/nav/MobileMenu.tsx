@@ -14,7 +14,6 @@ export default function MobileMenu({
   icon = 'menu',
   children = null,
 }: IMobileMenu) {
-
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
@@ -26,17 +25,12 @@ export default function MobileMenu({
     setAnchorEl(null);
   };
 
-
   return (
     <>
-      <Menu
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-      >
+      <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
         {children}
       </Menu>
-    
+
       <Tooltip title={title}>
         <IconButton onClick={handleClick}>
           <Icon icon={icon as any} />

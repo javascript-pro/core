@@ -1,10 +1,11 @@
 'use client';
+// import { NavItem } from '../../../../core/types';
 import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
-import { Box, Grid, CardHeader, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Grid, useTheme } from '@mui/material';
 import Image from 'next/image';
-import { FolderNav, Icon, AppBreadcrumb, MobileMenu } from '../../../';
-import { NavItem } from '../../../../core/types';
+import { FolderNav, Icon, AppBreadcrumb, MobileMenu, Header } from '../../../';
+
 
 export type Frontmatter = {
   order?: number;
@@ -18,19 +19,30 @@ export type Frontmatter = {
 };
 
 export type FolderPageProps = {
-  featured?: any[];
-  tree: NavItem[] | null;
-  frontmatter: Frontmatter | null;
+  frontmatter: any
   content: string | null;
-  globalNav: NavItem[];
 };
 
 export default function FolderPage({ frontmatter, content }: FolderPageProps) {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  // const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
+  const { 
+    title, 
+    image,
+    description,
+    icon,
+  } = frontmatter;
 
   return (
     <Box sx={{ px: 0 }}>
+
+      <Header 
+        title={title}
+        description={description}
+        icon={icon}
+      />
+
       <Grid container spacing={0}>
         <Grid
           sx={{
@@ -46,16 +58,7 @@ export default function FolderPage({ frontmatter, content }: FolderPageProps) {
         </Grid>
 
         <Grid size={{ xs: 12, md: 8 }}>
-          <CardHeader
-            sx={{ ml: -2 }}
-            avatar={<Icon icon={frontmatter?.icon as any} />}
-            title={frontmatter?.title}
-            subheader={frontmatter?.description}
-            action={isMobile ? <MobileMenu>
-              <FolderNav />
-            </MobileMenu> : null}
-          />
-          {frontmatter?.image && (
+          {image && (
             <Box
               sx={{
                 position: 'relative',
@@ -72,8 +75,8 @@ export default function FolderPage({ frontmatter, content }: FolderPageProps) {
             >
               <Image
                 priority
-                src={frontmatter.image}
-                alt={frontmatter.title || 'OpenGraph Image'}
+                src={image}
+                alt={title || 'OpenGraph Image'}
                 fill
                 sizes="(max-width: 600px) 100vw, (max-width: 1200px) 80vw, 900px"
                 style={{ objectFit: 'cover' }}
@@ -81,9 +84,9 @@ export default function FolderPage({ frontmatter, content }: FolderPageProps) {
             </Box>
           )}
           <AppBreadcrumb />
+          
           {content && <ReactMarkdown>{content}</ReactMarkdown>}
         </Grid>
-
       </Grid>
     </Box>
   );
