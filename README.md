@@ -2,7 +2,7 @@
 
 > New... <img src="https://goldlabel.pro/png/system/tick.png" width="320"/>
 
-> Free, Open Source cartridges (features)
+> ✅ Free, Open Source Cartridges (Features)
 
 - Flash
 - Lingua
