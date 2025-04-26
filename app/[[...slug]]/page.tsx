@@ -14,6 +14,7 @@ import {
   Typography,
   Grid,
 } from '@mui/material';
+import {Core} from "../../gl-core"
 
 export interface Params {
   slug?: string[];
@@ -167,110 +168,109 @@ export default async function Page({ params }: { params: any }) {
   return (
     <>
       <CssBaseline />
-      <Container 
-        maxWidth={"md"} 
-        sx={{
-          mt: 3,
-        }}>
+      
+      <Core payload={{bol: "ix"}}>
 
-        <Grid container>
 
-          <Grid size={{
-            xs: 12,
-          }}>
-            <header>
-              <Box sx={{ display: "flex" }}>
-                <Box sx={{ mr: 1 }}>
-                  <Link href={`/`} style={{ textDecoration: 'none' }}>
-                    <Avatar src={"/svg/favicon_gold.svg"} alt={"Goldlabel"} />
-                  </Link>
+          <Grid container>
+
+            <Grid size={{
+              xs: 12,
+            }}>
+              <header>
+                <Box sx={{ display: "flex" }}>
+                  <Box sx={{ mr: 1 }}>
+                    <Link href={`/`} style={{ textDecoration: 'none' }}>
+                      <Avatar src={"/svg/favicon_gold.svg"} alt={"Goldlabel"} />
+                    </Link>
+                  </Box>
+                  <Box sx={{ display: "block" }}>
+                    <Typography component="h1" variant="h4">
+                      {title}
+                    </Typography>
+                    <Typography component="h2" variant="body2">
+                      {description}
+                    </Typography>
+                  </Box>
                 </Box>
-                <Box sx={{ display: "block" }}>
-                  <Typography component="h1" variant="h4">
-                    {title}
+              </header>
+            </Grid>
+
+            <Grid size={{
+              xs: 12,
+              sm: 7, 
+              md: 8,
+            }}>
+              <main style={{ flex: 1 }}>
+                {ogImage && (
+                  <Box my={2}>
+                    
+                    <Image
+                      priority
+                      src={ogImage}
+                      alt={title}
+                      width={1200}
+                      height={630}
+                      style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: '8px' }}
+                    />
+                  </Box>
+                )}
+                <article>
+                  <ReactMarkdown>{content}</ReactMarkdown>
+                </article>
+              </main>
+            </Grid>
+
+            <Grid size={{
+              xs: 12,
+              sm: 5,
+              md: 4,
+            }}>
+              <aside>
+                  <Box
+                    sx={{
+                      m: 2
+                    }}
+                  >
+                    { renderNav(globalNav[0]) }
+                  </Box>
+              </aside>
+            </Grid>
+
+            <Grid size={{
+              xs: 12,
+              sm: 7, 
+              md: 8,
+            }}>
+              <footer>
+                <Box sx={{ textAlign: 'center', py: 4, mt: 4 }}>
+                  <Typography variant="body2" color="text.secondary">
+                    Modern web apps. Real deployments. Professional results.
                   </Typography>
-                  <Typography component="h2" variant="body2">
-                    {description}
-                  </Typography>
+                  <Box sx={{ mt: 1 }}>
+                    <Link href="/privacy-cookies" style={{ marginRight: 16, textDecoration: 'none', color: 'inherit' }}>
+                      Privacy
+                    </Link>
+                    <Link href="/terms" style={{ marginRight: 16, textDecoration: 'none', color: 'inherit' }}>
+                      Terms
+                    </Link>
+                    <Link href="/contact" style={{ textDecoration: 'none', color: 'inherit' }}>
+                      Contact
+                    </Link>
+                  </Box>
+                  <Box sx={{ mt: 1 }}>
+                    <Typography variant="caption" color="text.secondary">
+                      © {new Date().getFullYear()} Goldlabel Apps Ltd.
+                    </Typography>
+                  </Box>
                 </Box>
-              </Box>
-            </header>
-          </Grid>
+              </footer>
+            </Grid>
 
-          <Grid size={{
-            xs: 12,
-            sm: 7, 
-            md: 8,
-          }}>
-            <main style={{ flex: 1 }}>
-              {ogImage && (
-                <Box my={2}>
-                  
-                  <Image
-                    priority
-                    src={ogImage}
-                    alt={title}
-                    width={1200}
-                    height={630}
-                    style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: '8px' }}
-                  />
-                </Box>
-              )}
-              <article>
-                <ReactMarkdown>{content}</ReactMarkdown>
-              </article>
-            </main>
+            
           </Grid>
-
-          <Grid size={{
-            xs: 12,
-            sm: 5,
-            md: 4,
-          }}>
-            <aside>
-                <Box
-                  sx={{
-                    m: 2
-                  }}
-                >
-                  { renderNav(globalNav[0]) }
-                </Box>
-            </aside>
-          </Grid>
-
-          <Grid size={{
-            xs: 12,
-            sm: 7, 
-            md: 8,
-          }}>
-            <footer>
-              <Box sx={{ textAlign: 'center', py: 4, mt: 4 }}>
-                <Typography variant="body2" color="text.secondary">
-                  Modern web apps. Real deployments. Professional results.
-                </Typography>
-                <Box sx={{ mt: 1 }}>
-                  <Link href="/privacy-cookies" style={{ marginRight: 16, textDecoration: 'none', color: 'inherit' }}>
-                    Privacy
-                  </Link>
-                  <Link href="/terms" style={{ marginRight: 16, textDecoration: 'none', color: 'inherit' }}>
-                    Terms
-                  </Link>
-                  <Link href="/contact" style={{ textDecoration: 'none', color: 'inherit' }}>
-                    Contact
-                  </Link>
-                </Box>
-                <Box sx={{ mt: 1 }}>
-                  <Typography variant="caption" color="text.secondary">
-                    © {new Date().getFullYear()} Goldlabel Apps Ltd.
-                  </Typography>
-                </Box>
-              </Box>
-            </footer>
-          </Grid>
-
           
-        </Grid>
-      </Container>
+      </Core>
     </>
   );
 }

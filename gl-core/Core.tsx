@@ -1,7 +1,10 @@
 'use client';
 
 import * as React from 'react';
-import { Box, Alert, AlertTitle, Typography, ButtonBase } from '@mui/material';
+import { 
+  Box,
+  Container,
+} from '@mui/material';
 import { useRouter } from 'next/navigation';
 
 export interface ICore {
@@ -16,16 +19,13 @@ export default function Core({
   }
 }: ICore ) {
 
-
-  console.log("Core payload", payload)
-
+  // console.log("Core payload", payload)
   const router = useRouter();
-
   const ad = {
     title: 'Core Propaganda',
     icon: 'star',
     url: '/propaganda',
-    description: 'Generator with Open Source AI',
+    description: 'Generated with Open Source AI',
     image: '/png/test.png',
   };
 
@@ -35,17 +35,20 @@ export default function Core({
 
   return (
     <>
-      <ButtonBase onClick={handleClick} sx={{ textAlign: 'left' }}>
+      <Container 
+          maxWidth={"md"} 
+          sx={{
+            mt: 3,
+          }}>
+        {children}
+      </Container>
+    </>
+  );
+}
+
+/* <ButtonBase onClick={handleClick} sx={{ textAlign: 'left' }}>
         <Alert severity="success">
           <AlertTitle>{ad.title}</AlertTitle>
           <Typography>{ad.description}</Typography>
         </Alert>
-      </ButtonBase>
-
-      <Box>
-        {children}
-      </Box>
-    </>
-
-  );
-}
+      </ButtonBase> */
