@@ -7,19 +7,18 @@ import {
 } from '@mui/material';
 import { useRouter } from 'next/navigation';
 
-export interface ICore {
+export type TCore = {
   children: React.ReactNode;
   payload?: any;
-}
+};
 
 export default function Core({
   children = <>Nothing to show</>,
   payload = {
     no: "payload."
   }
-}: ICore ) {
+}: TCore ) {
 
-  // console.log("Core payload", payload)
   const router = useRouter();
   const ad = {
     title: 'Core Propaganda',

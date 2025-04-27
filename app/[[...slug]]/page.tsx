@@ -183,7 +183,7 @@ export default async function Page({ params }: { params: any }) {
                     </Link>
                   </Box>
                   <Box sx={{ display: "block" }}>
-                    <Typography component="h1" variant="h4">
+                    <Typography component="h1" variant="h6">
                       {title}
                     </Typography>
                     <Typography component="h2" variant="body2">
