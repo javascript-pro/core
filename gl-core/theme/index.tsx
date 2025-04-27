@@ -1,9 +1,8 @@
+import Icon from './Icon';
+import { TIcon } from './Icon';
 
-// import Core from './Core';
-// import { ICore } from './Core';
+export {
+  Icon,
+};
 
-// export {
-//   Core,
-// };
-
-// export type { ICore };
+export type { TIcon };
