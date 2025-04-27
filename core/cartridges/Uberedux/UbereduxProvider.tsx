@@ -4,7 +4,6 @@ import { ReactNode } from 'react';
 import { Provider } from 'react-redux';
 import { store, persistor } from './store';
 import { PersistGate } from 'redux-persist/integration/react';
-import { Box, Typography } from '@mui/material';
 
 export default function UbereduxProvider({
   children,
@@ -16,16 +15,16 @@ export default function UbereduxProvider({
       <PersistGate
         loading={
           <>
-            <Box
-              sx={{
+            <div
+              style={{
                 height: '100vh',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
               }}
             >
-              <Typography variant="button">Uberedux Rehydrating...</Typography>
-            </Box>
+              <h6>Rehydrating...</h6>
+            </div>
           </>
         }
         persistor={persistor}
