@@ -1,10 +1,10 @@
 'use client';
 
 import * as React from 'react';
-import { 
-  Box,
-  Container,
-} from '@mui/material';
+// import { 
+//   Box,
+//   Container,
+// } from '@mui/material';
 import { useRouter } from 'next/navigation';
 
 export type TCore = {
@@ -14,34 +14,19 @@ export type TCore = {
 
 export default function Core({
   children = <>Nothing to show</>,
-  payload = {
-    no: "payload."
-  }
+  // payload = {
+  //   no: "payload."
+  // }
 }: TCore ) {
 
   const router = useRouter();
-  const ad = {
-    title: 'Core Propaganda',
-    icon: 'star',
-    url: '/propaganda',
-    description: 'Generated with Open Source AI',
-    image: '/png/test.png',
-  };
 
   const handleClick = () => {
-    router.push(ad.url as string);
+    router.push("/");
   };
 
   return (
-    <>
-      <Container 
-          maxWidth={"md"} 
-          sx={{
-            mt: 3,
-          }}>
-        {children}
-      </Container>
-    </>
+    <>{children}</>
   );
 }
 

@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    background: #c4c4c4;
+}
+.gl {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #c4c4c4;
+    color: #303030;
+    
+}
+.gl .gl-wrap {
+    border: 1px solid #c4c4c4;
+    background: #efefef;
+    margin: 12px;
+    padding: 12px;
+}
+
+.gl a {
+    padding-left: 8px;
+    color: #303030;
+}
+.gl a:hover {
+    color: #C09F52;
+}
+.gl h1, .gl h2, .gl h3, .gl h4, .gl h5, .gl h6 {
+    font-weight: normal;
+}
