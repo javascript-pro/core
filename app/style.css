@@ -1,18 +1,19 @@
 body {
     margin: 0;
-    background: #c4c4c4;
+    background: #C09F52;
 }
 .gl {
     font-family: Arial, Helvetica, sans-serif;
-    background: #c4c4c4;
+    background: #C09F52;
     color: #303030;
     
 }
 .gl .gl-wrap {
     border: 1px solid #c4c4c4;
     background: #efefef;
-    margin: 12px;
-    padding: 12px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
 }
 
 .gl a {
