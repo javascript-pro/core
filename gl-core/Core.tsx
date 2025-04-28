@@ -26,7 +26,12 @@ export default function Core({
   };
 
   return (
-    <>{children}</>
+
+    <>
+    
+    heelo core
+    
+    {children}</>
   );
 }
 

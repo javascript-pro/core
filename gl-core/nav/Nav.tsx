@@ -47,17 +47,17 @@ export default function Nav({
           <ListItemButton
             onClick={() => {
               navClick({
-                url: "/previous",
+                url: "/",
                 target: "_self",
 
               })
             }}
           >
             <ListItemIcon>
-              <Icon icon={"left"}/>
+              <Icon icon={"home"}/>
             </ListItemIcon>
             <ListItemText 
-              primary="404"
+              primary="home"
             />
           </ListItemButton>
 
