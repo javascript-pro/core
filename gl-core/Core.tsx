@@ -1,22 +1,25 @@
 'use client';
 
 import * as React from 'react';
-import { Container, Paper } from '@mui/material';
+import { Container, Typography, CardMedia } from '@mui/material';
 import { 
   Theme,
   HeaderAppbar,
 } from "./";
+import ReactMarkdown from 'react-markdown';
 
 export type TCore = {
   type?: "page" | "file" | "folder";
   children?: React.ReactNode;
   frontmatter?: {
+    icon?: string;
+    title?: string;
+    description?: string;
+    image?: string;
     [key: string]: any;
   } | null;
-  image?: string;
   body?: string | null;
   header?: any;
-  
 };
 
 export default function Core({
@@ -24,7 +27,6 @@ export default function Core({
   frontmatter = null,
   body = null,
 }: TCore) {
-  
   const maxW = "md";
 
   return (
@@ -37,15 +39,29 @@ export default function Core({
       />
       <Container maxWidth={maxW} sx={{ mt: "100px" }}>
         <div id="top"></div>
-        <Paper square>
-          {process.env.NODE_ENV === 'development' && (
-            <>
-              <pre>frontmatter: {JSON.stringify(frontmatter, null, 2)}</pre>
-              <pre>body: {JSON.stringify(body, null, 2)}</pre>
-            </>
+        <>
+          {/* Show featured image if available */}
+          {frontmatter?.image && (
+            <CardMedia
+              component="img"
+              image={frontmatter.image}
+              alt={frontmatter.title || "Featured image"}
+              sx={{ width: "100%", maxHeight: 400, objectFit: "cover" }}
+            />
+          )}
+
+          {/* Render markdown body if available */}
+          {body && (
+            <Container sx={{ py: 2 }}>
+              <Typography component={"div"}>
+                <ReactMarkdown>
+                  {body}
+                </ReactMarkdown>
+              </Typography>
+            </Container>
           )}
           {children}
-        </Paper>
+        </>
       </Container>
     </Theme>
   );

@@ -24,7 +24,7 @@ export default function HeaderAppbar({
 }: THeaderAppbar) {
 
   
-  return <AppBar>
+  return <AppBar color={"secondary"} sx={{boxShadow: 0}}>
           <Container maxWidth={maxW as any}>
             <CardHeader 
               avatar={<IconButton
