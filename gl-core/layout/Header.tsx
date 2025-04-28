@@ -27,7 +27,7 @@ export default function Header({
   const router = useRouter();
   // const icon = "settings"
   
-  const headerClick = (hay) => {
+  const headerClick = (hay: any) => {
     console.log("headerClick", hay)
     return;
   }

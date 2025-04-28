@@ -1,7 +1,7 @@
 ---
 order: 1
 title: Goldlabel
-description: Where Next? Next Gen. Gen X
+description: Where Next? Next Gen. Gen X?
 slug: /
 icon: goldlabel
 image: /png/generation-x/generation-x.png
