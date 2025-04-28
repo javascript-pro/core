@@ -1,15 +1,15 @@
 // Cartridges
 
-// Bouncer
 // Flash
+import {Flash} from './Flash';
+import { TFlash } from './Flash';
+
+export {
+    Flash,
+};
+
+export type { TFlash };
+
+// Bouncer
 // Lingua
 // Uberedux
-
-// import Bouncer from './Bouncer';
-// import { TBouncer } from './Bouncer';
-
-// export {
-//     Bouncer,
-// };
-
-// export type { TBouncer };

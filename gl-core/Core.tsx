@@ -1,10 +1,11 @@
 'use client';
 
 import * as React from 'react';
-// import { 
-//   Box,
-//   Container,
-// } from '@mui/material';
+import { 
+  Box,
+  Container,
+  Typography,
+} from '@mui/material';
 import { useRouter } from 'next/navigation';
 
 export type TCore = {
@@ -28,10 +29,14 @@ export default function Core({
   return (
 
     <>
+      <Typography variant='h1'>
+        Core.tsx
+      </Typography>
     
-    heelo core
     
-    {children}</>
+      {children}
+    
+    </>
   );
 }
 
