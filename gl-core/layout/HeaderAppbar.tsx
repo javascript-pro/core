@@ -13,18 +13,25 @@ export type THeaderAppbar = {
   maxW?: "xs" | "sm" | "md" | "lg" | null
   title?: string | null;
   subheader?: string | null;
+  icon?: string | null;
 }
 
 export default function HeaderAppbar({
   title = null,
   subheader = null,
-  maxW = null
+  maxW = null,
+  icon = null,
 }: THeaderAppbar) {
 
   
   return <AppBar>
           <Container maxWidth={maxW as any}>
             <CardHeader 
+              avatar={<IconButton
+                        color="inherit"
+                        >
+                          <Icon icon={icon as any} />
+                        </IconButton>}
               title={title}
               subheader={subheader}
               action={<IconButton

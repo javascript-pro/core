@@ -28,13 +28,13 @@ function flattenNav(node: any, allSlugs: string[] = []): string[] {
 function renderNav(node: any, depth: number = 0): React.ReactNode {
   if (node.slug === '' || node.slug === '/') {
     return (
-      <>
+      <React.Fragment key={`${node.slug}_depth`}>
         {node.children && node.children.length > 0 && (
-          <>
+          <React.Fragment key={`${node.slug}_depth_2`}>
             {node.children.map((child: any) => renderNav(child, depth))}
-          </>
+          </React.Fragment>
         )}
-      </>
+      </React.Fragment>
     );
   }
 

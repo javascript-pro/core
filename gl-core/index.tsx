@@ -1,5 +1,9 @@
 import Core from './Core';
 import { TCore } from './Core';
+
+import {Theme} from './theme';
+import { TTheme } from './theme';
+
 import {MainMenu} from './nav';
 import { TMainMenu } from './nav';
 import {Nav} from './nav';
@@ -26,6 +30,7 @@ import {
 
 export {
   Core,
+  Theme,
   MainMenu,
   createMUITheme,
   Icon,
@@ -45,4 +50,4 @@ export {
   resetUberedux,
 };
 
-export type { TCore, TMainMenu, TIcon, TNav, TNavItem, THeader, THeaderAppbar };
+export type { TCore, TTheme, TMainMenu, TIcon, TNav, TNavItem, THeader, THeaderAppbar };

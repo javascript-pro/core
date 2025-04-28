@@ -10,7 +10,7 @@
   "images": ["/png/test.png", "/png/system/tick.png"],
   "themes": {
     "light": {
-      "primary": "#F7F7F7",
+      "primary": "#efefef",
       "secondary": "#efefef",
       "background": "#efefef",
       "paper": "#efefef",
