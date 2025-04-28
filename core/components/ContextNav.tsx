@@ -11,7 +11,7 @@ import {
   Grid,
 } from '@mui/material';
 import { Icon } from '../';
-import { useKey } from '../../core/cartridges/Uberedux';
+import { useKey } from '../../gl-core/cartridges/Uberedux';
 import { Featured } from '../';
 
 type ContextNavProps = {

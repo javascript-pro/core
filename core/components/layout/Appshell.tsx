@@ -8,7 +8,7 @@ import {
   ThemeProvider,
   createTheme,
 } from '@mui/material';
-import { useKey } from '../../cartridges/Uberedux';
+import { useKey } from '../../../gl-core/cartridges/Uberedux';
 
 export type IAppshell = {
   children?: React.ReactNode;

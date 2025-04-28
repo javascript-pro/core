@@ -154,13 +154,19 @@ export default async function Page({ params }: { params: any }) {
     }
   }
 
+  const type = "page";
   const navItem = findNavItem(slugPath, globalNav[0]);
   const title = navItem?.title || 'Goldlabel';
   const ogImage = frontmatter.image || '/png/test.png';
+  
 
   return (
-    <Core>
-      <div className='gl'><div className='gl-wrap'>
+    <Core
+      type={type}
+      frontmatter={frontmatter}
+      body={content}
+    >
+      <div id="core-ssg" className='gl'><div className='gl-wrap'>
         
           <header id="gl-header">
 

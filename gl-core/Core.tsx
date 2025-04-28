@@ -1,41 +1,64 @@
 'use client';
 
 import * as React from 'react';
-import { 
-  Box,
+import {
   Container,
-  Typography,
+  Paper,
+  // Typography,
 } from '@mui/material';
-import { useRouter } from 'next/navigation';
+import {
+  HeaderAppbar,
+} from "./"
 
 export type TCore = {
   children: React.ReactNode;
-  payload?: any;
+  frontmatter?: any;
+  body?: string | null;
+  header?: any
+  type: "page" | "404"
 };
 
 export default function Core({
   children = <>Nothing to show</>,
-  // payload = {
-  //   no: "payload."
-  // }
+  frontmatter = null,
+  body = null,
+  type = "page",
 }: TCore ) {
 
-  const router = useRouter();
+  // const router = useRouter();
 
-  const handleClick = () => {
-    router.push("/");
-  };
+  // const handleClick = () => {
+  //   router.push("/");
+  // };
+
+  const maxW = "md"
 
   return (
-
     <>
-      <Typography variant='h1'>
-        Core.tsx
-      </Typography>
-    
-    
-      {children}
-    
+      <HeaderAppbar
+        maxW={maxW}
+        title={frontmatter.title}
+        subheader={frontmatter.description}
+      />
+
+
+      <Container maxWidth={maxW} sx={{mt: "100px" }}>
+        <div id="top"></div>
+        <Paper square>
+          
+          {/* <Typography variant='body1'>
+            Type: {type}
+          </Typography> */}
+          <pre>
+            frontmatter: {JSON.stringify(frontmatter, null, 2)}
+          </pre>
+          <pre>
+            body: {JSON.stringify(body, null, 2)}
+          </pre>
+          
+          {children}
+        </Paper>
+      </ Container>
     </>
   );
 }

@@ -4,9 +4,6 @@ import * as React from 'react';
 import { useRouter } from 'next/navigation';
 import {
   Dialog,
-  DialogTitle,
-  CardHeader,
-  Avatar,
   DialogContent,
   DialogActions,
   useMediaQuery,
@@ -14,7 +11,7 @@ import {
   IconButton,
 } from '@mui/material';
 import { Icon, ContextNav } from '../';
-import { useKey } from '../cartridges/Uberedux';
+import { useKey } from '../../gl-core/cartridges/Uberedux';
 
 type PopupMenuProps = {
   open?: boolean;

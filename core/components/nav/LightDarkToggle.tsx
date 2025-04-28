@@ -2,8 +2,7 @@
 import React from 'react';
 import { IconButton, Tooltip } from '@mui/material';
 import { Icon } from '../../';
-import { useKey } from '../../cartridges/Uberedux';
-
+import { useKey } from '../../../gl-core/cartridges/Uberedux';
 export type ILightDarkToggle = {
   mode?: 'iconbutton' | 'listbutton';
 };

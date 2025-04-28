@@ -1,12 +1,16 @@
+#core-ssg {
+    /* border: 5px solid red; */
+    display: none;
+}
+
 body {
     margin: 0;
-    background: #C09F52;
+    background: #efefef;
 }
+
 .gl {
     font-family: Arial, Helvetica, sans-serif;
-    background: #C09F52;
     color: #303030;
-    
 }
 .gl .gl-wrap {
     border: 1px solid #c4c4c4;

@@ -11,7 +11,7 @@ import {
   Fab,
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { useKey } from '../../cartridges/Uberedux';
+import { useKey } from '../../../gl-core/cartridges/Uberedux';
 
 const StyledFab = styled(Fab)({
   position: 'absolute',
