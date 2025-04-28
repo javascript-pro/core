@@ -149,6 +149,19 @@
             ]
           },
           {
+            "title": "GitHub",
+            "slug": "work/github",
+            "order": 10,
+            "icon": "github",
+            "type": "folder",
+            "tags": [
+              "github",
+              "process"
+            ],
+            "excerpt": "We use GitHub for everything. Including project management. Most of the communication done between us and our clients during development is done through GitHub in the form of comments, pull resuests, ",
+            "children": []
+          },
+          {
             "title": "Private",
             "slug": "work/private",
             "order": 10,
