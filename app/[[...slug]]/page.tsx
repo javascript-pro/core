@@ -8,6 +8,7 @@ import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import {
   Core,
+  Nav,
 } from "../../gl-core"
 
 export type TPage = {
@@ -50,7 +51,7 @@ function renderNav(node: any, depth: number = 0): React.ReactNode {
         </div>
       )}
       {node.children && node.children.length > 0 && (
-        <div>
+        <div key={`or_slug_${node.slug}`}>
           {node.children.map((child: any) => renderNav(child, depth + 1))}
         </div>
       )}
@@ -182,6 +183,11 @@ export default async function Page({ params }: { params: any }) {
               </h2>
           </header>
 
+          <aside id="gl-main-menu">
+            <Nav />
+          </aside>
+
+
           <main id="gl-main">
             {ogImage && (
               <Image
@@ -197,10 +203,10 @@ export default async function Page({ params }: { params: any }) {
               <ReactMarkdown>{content}</ReactMarkdown>
             </article>
           </main>
-          <aside id="gl-main-menu">
+          
+          <footer id="gl-footer">
             { renderNav(globalNav[0]) }
-          </aside>
-          <footer id="gl-footer"></footer>
+          </footer>
         </div></div>
     </Core>
   );

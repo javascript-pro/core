@@ -1,8 +1,12 @@
 import MainMenu from './MainMenu';
 import { TMainMenu } from './MainMenu';
 
+import Nav from './Nav';
+import { TNav, TNavItem } from './Nav';
+
 export {
     MainMenu,
+    Nav,
 };
 
-export type { TMainMenu };
+export type { TMainMenu, TNav, TNavItem };
