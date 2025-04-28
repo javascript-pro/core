@@ -1,5 +1,5 @@
 'use client';
-
+import config from './config.json';
 import * as React from 'react';
 import {
   Container,
@@ -22,16 +22,11 @@ export default function Core({
   children = <>Nothing to show</>,
   frontmatter = null,
   body = null,
-  type = "page",
+  // type = "page",
 }: TCore ) {
 
-  // const router = useRouter();
-
-  // const handleClick = () => {
-  //   router.push("/");
-  // };
-
-  const maxW = "md"
+  const maxW = "md";
+  const {brandColor} = config;
 
   return (
     <>
@@ -55,6 +50,9 @@ export default function Core({
           <pre>
             body: {JSON.stringify(body, null, 2)}
           </pre>
+          <pre>
+            brandColor: {JSON.stringify(brandColor, null, 2)}
+          </pre>
           
           {children}
         </Paper>
@@ -62,10 +60,3 @@ export default function Core({
     </>
   );
 }
-
-/* <ButtonBase onClick={handleClick} sx={{ textAlign: 'left' }}>
-        <Alert severity="success">
-          <AlertTitle>{ad.title}</AlertTitle>
-          <Typography>{ad.description}</Typography>
-        </Alert>
-      </ButtonBase> */
