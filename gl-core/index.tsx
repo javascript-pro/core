@@ -11,6 +11,10 @@ import { TIcon } from './theme';
 // layout
 import {Header} from './layout';
 import { THeader } from './layout';
+
+import {Footer} from './layout';
+import { TFooter } from './layout';
+
 // nav
 import {MainMenu} from './nav';
 import { TMainMenu } from './nav';
@@ -53,6 +57,7 @@ export {
 // components
 export {
   Header,
+  Footer,
 };
 
 // nav
@@ -80,4 +85,4 @@ export {
   exampleAction,
 };
 
-export type { TCore, TTheme, TMainMenu, TIcon, TNav, THeader, TUbereduxDispatch, TNavItem };
+export type { TFooter, TCore, TTheme, TMainMenu, TIcon, TNav, THeader, TUbereduxDispatch, TNavItem };

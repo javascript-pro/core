@@ -12,7 +12,7 @@ import {
   Header,
   MainMenu,
   useIsMobile,
-  // resetUberedux,
+  Footer,
 } from "./";
 import ReactMarkdown from 'react-markdown';
 
@@ -40,57 +40,82 @@ export default function Core({
 
   return (
     <Theme>
-      <div id="scroll-top" />
-      <Header
-        maxW={maxW}
-        icon={frontmatter?.icon}
-        title={frontmatter?.title}
-        subheader={frontmatter?.description}
-      />
-      <Container maxWidth={maxW} sx={{ mt: "100px" }}>        
-        <Grid container spacing={2}>
+      <Box 
+        id="scroll-top"
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          minHeight: '100vh',
+        }}
+      >
+        {/* Header */}
+        <Header
+          maxW={maxW}
+          icon={frontmatter?.icon}
+          title={frontmatter?.title}
+          subheader={frontmatter?.description}
+        />
+
+        {/* Main content */}
+        <Container 
+          maxWidth={maxW}
+          sx={{ mt: "100px", flexGrow: 1 }}
+        >        
+          <Grid container spacing={2}>
           <Grid size={{
             "xs": 12,
             "md": 4,
           }}>
-            {/* Show featured image if available */}
-            {frontmatter?.image && (
-              <CardMedia
-                component="img"
-                image={frontmatter.image}
-                alt={frontmatter.title || "Featured image"}
-                sx={{ width: "100%", maxHeight: 400, objectFit: "cover" }}
-              />
-            )}
+              {/* Show featured image if available */}
+              {frontmatter?.image && (
+                <CardMedia
+                  component="img"
+                  image={frontmatter.image}
+                  alt={frontmatter.title || "Featured image"}
+                  sx={{ width: "100%", maxHeight: 400, objectFit: "cover" }}
+                />
+              )}
 
-            { !isMobile && <Box sx={{ my:3 }}>
-                            <MainMenu />
-                          </Box> }
-            
-          </Grid>
-          <Grid size={{
+              { !isMobile && (
+                <Box sx={{ my: 3 }}>
+                  <MainMenu />
+                </Box>
+              )}
+            </Grid>
+
+            <Grid size={{
             "xs": 12,
             "md": 8,
           }}>
-            {/* Render markdown body if available */}
-            {body && (
-              <Container sx={{ py: 2 }}>
-                <Typography component={"div"}>
-                  <ReactMarkdown>
-                    {body}
-                  </ReactMarkdown>
-                </Typography>
-              </Container>
-            )}
+              {/* Render markdown body if available */}
+              {body && (
+                <Container sx={{ py: 2 }}>
+                  <Typography component={"div"}>
+                    <ReactMarkdown>
+                      {body}
+                    </ReactMarkdown>
+                  </Typography>
+                </Container>
+              )}
+            </Grid>
           </Grid>
-        </Grid>
-      </Container>
-      
+        </Container>
+
+        {/* Footer */}
+        <Footer />
+      </Box>
     </Theme>
   );
 }
 
+
 /*
+
+<Grid size={{
+            "xs": 12,
+            "md": 4,
+          }}>
+            
 { process.env.NODE_ENV === 'development' && (
             <>
               <pre>
