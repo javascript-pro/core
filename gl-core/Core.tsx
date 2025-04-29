@@ -40,24 +40,14 @@ export default function Core({
 
   return (
     <Theme>
+      <div id="scroll-top" />
       <Header
         maxW={maxW}
         icon={frontmatter?.icon}
         title={frontmatter?.title}
         subheader={frontmatter?.description}
       />
-      <Container maxWidth={maxW} sx={{ mt: "100px" }}>
-
-        <pre>
-          slice {JSON.stringify(slice, null, 2)}
-        </pre>
-
-        {/* <IconButton onClick={resetUberedux}>
-          <Icon icon="reset" />
-        </IconButton> */}
-
-        <div id="top"></div>
-
+      <Container maxWidth={maxW} sx={{ mt: "100px" }}>        
         <Grid container spacing={2}>
           <Grid size={{
             "xs": 12,
@@ -90,6 +80,13 @@ export default function Core({
           </Grid>
         </Grid>
       </Container>
+      { process.env.NODE_ENV === 'development' && (
+            <>
+              <pre>
+                slice {JSON.stringify(slice, null, 2)}
+              </pre>
+            </>
+      )}
     </Theme>
   );
 }

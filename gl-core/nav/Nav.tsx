@@ -1,18 +1,16 @@
 'use client';
 
 import * as React from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 import {
+  Button,
+  Alert,
+  IconButton,
   Dialog,
   DialogTitle,
   DialogContent,
   DialogActions,
-  CardHeader,
-  Avatar,
-  IconButton,
   List,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
 } from '@mui/material';
 import { 
   useIsMobile,
@@ -20,6 +18,7 @@ import {
   useDispatch,
   setUbereduxKey,
   Icon,
+  NavItem,
 } from '../';
 
 export type TNav = {
@@ -32,11 +31,17 @@ export default function Nav({
   const slice = useSlice();
   const {modalNav} = slice;
   const isMobile = useIsMobile();
+
+  const pathname = usePathname();
+  const router = useRouter();
   
   const closeModalNav = () => dispatch (setUbereduxKey({ modalNav: false}))
   const openModalNav = () => dispatch (setUbereduxKey({ modalNav: true}))
-  
 
+  // const onExampleActionClick = () => {
+  //   dispatch (exampleAction())
+  // } 
+  
   return <>
           <IconButton
             color="inherit"
@@ -47,38 +52,77 @@ export default function Nav({
 
           <Dialog 
             fullWidth
+            maxWidth="xs"
             fullScreen={isMobile ? true : false}
             open={modalNav}
             onClose={closeModalNav}
           >
             <DialogTitle>
-              <CardHeader 
-                title={"Nav"}
-                avatar={<Avatar src={"/svg/favicon_gold.svg"} />}
-              />
+              <Alert 
+                severity="success" 
+                icon={<Icon icon="core" />}
+              >
+                All systems working fine
+              </Alert>
+              
             </DialogTitle>
+
             <DialogContent>
+
+              {pathname}
+              
               <List>
-                <ListItemButton>
-                  <ListItemText 
-                    primary="Example Action"
-                  />
-                </ListItemButton>
+                <NavItem 
+                  icon="home"
+                  label="Home"
+                  onClick={() => {
+                    router.push("/");
+                    closeModalNav();
+                  }}
+                />
+
+                <NavItem 
+                  icon="work"
+                  label="Work"
+                  onClick={() => {
+                    router.push("/work");
+                    closeModalNav();
+                  }}
+                />
+
+
               </List>
               
             </DialogContent>
             <DialogActions>
-              <List>
-                <ListItemButton onClick={closeModalNav}>
-                  <ListItemText 
-                    primary="Close"
-                  />
-                  <ListItemIcon>
-                    <Icon icon="close" />
-                  </ListItemIcon>
-                </ListItemButton>
-              </List>
+              {isMobile ? <><IconButton onClick={closeModalNav}>
+                  <Icon icon="close" />
+                </IconButton></> 
+              : <><Button variant="contained" onClick={closeModalNav}>
+                    Close
+                  </Button></>}
             </DialogActions>
           </Dialog>
         </>
 }
+
+
+/*
+<ListItemButton onClick={onExampleActionClick}>
+    <ListItemIcon>
+      <Icon icon="right" />
+    </ListItemIcon>
+    <ListItemText 
+      primary="Example"
+    />
+  </ListItemButton>
+
+  <ListItemButton>
+    <ListItemIcon>
+      <Icon icon="reset" />
+    </ListItemIcon>
+    <ListItemText 
+      primary="Reset to factory settings"
+    />
+  </ListItemButton>
+*/

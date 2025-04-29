@@ -5,12 +5,12 @@ export type TAction = {
   payload: any;
 }
 
-export const exampleAction = (payload: TAction): any =>
+export const exampleAction = (): any =>
   async (dispatch: TUbereduxDispatch) => {
     try {
-      console.log("exampleAction", payload);
+      console.log("exampleAction");
 
-      // dispatch(setUbereduxKey({ key: "authedUser", value: authedUser }));
+      dispatch(setUbereduxKey({ key: "authedUser", value: true }));
 
     } catch (e: unknown) {
       if (e instanceof Error) {

@@ -16,6 +16,9 @@ import {MainMenu} from './nav';
 import { TMainMenu } from './nav';
 import {Nav} from './nav';
 import { TNav } from './nav';
+import {NavItem} from './nav';
+import { TNavItem } from './nav';
+
 
 import {
   useConfig,
@@ -56,6 +59,7 @@ export {
 export {
   MainMenu,
   Nav,
+  NavItem,
 };
 
 // uberedux
@@ -76,4 +80,4 @@ export {
   exampleAction,
 };
 
-export type { TCore, TTheme, TMainMenu, TIcon, TNav, THeader, TUbereduxDispatch };
+export type { TCore, TTheme, TMainMenu, TIcon, TNav, THeader, TUbereduxDispatch, TNavItem };
