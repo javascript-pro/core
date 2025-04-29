@@ -7,7 +7,7 @@ import { TTheme } from './theme';
 import {MainMenu} from './nav';
 import { TMainMenu } from './nav';
 import {Nav} from './nav';
-import { TNav, TNavItem } from './nav';
+import { TNav } from './nav';
 import {Header} from './layout';
 import { THeader } from './layout';
 import { Icon } from './theme';
@@ -49,4 +49,4 @@ export {
   resetUberedux,
 };
 
-export type { TCore, TTheme, TMainMenu, TIcon, TNav, TNavItem, THeader };
+export type { TCore, TTheme, TMainMenu, TIcon, TNav, THeader };
