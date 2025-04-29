@@ -10,13 +10,12 @@ import {Nav} from './nav';
 import { TNav, TNavItem } from './nav';
 import {Header} from './layout';
 import { THeader } from './layout';
-import {HeaderAppbar} from './layout';
-import { THeaderAppbar } from './layout';
 import { Icon } from './theme';
 import { createMUITheme } from './theme';
 import { TIcon } from './theme';
 import {
   useConfig,
+  useIsMobile,
 } from './hooks';
 import {
   Uberedux,
@@ -36,13 +35,13 @@ export {
   Icon,
   Nav,
   Header,
-  HeaderAppbar,
   Uberedux,
   UbereduxProvider,
 };
 
 export {
   useConfig,
+  useIsMobile,
   useSlice,
   useDispatch,
   useKey,
@@ -50,4 +49,4 @@ export {
   resetUberedux,
 };
 
-export type { TCore, TTheme, TMainMenu, TIcon, TNav, TNavItem, THeader, THeaderAppbar };
+export type { TCore, TTheme, TMainMenu, TIcon, TNav, TNavItem, THeader };

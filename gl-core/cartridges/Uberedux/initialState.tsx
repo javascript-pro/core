@@ -1,8 +1,8 @@
-import { UbereduxState } from '../Uberedux';
-// import { initialState as bouncer } from '../Bouncer/initialState';
+import config from '../../config.json';
 
-export const initialState: UbereduxState = {
+export const initialState: any = {
+  app: config.app,
   persisted: Date.now(),
-  cartridge: 'core',
-  // bouncer,
+  // navOpen: false,
+  // cartridges: ['Bouncer'],
 };

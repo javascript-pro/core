@@ -61,7 +61,7 @@ import SpyIcon from '@mui/icons-material/RemoveRedEye';
 import ShareIcon from '@mui/icons-material/Share';
 import WarningIcon from '@mui/icons-material/Warning';
 import ErrorIcon from '@mui/icons-material/Error';
-import MenuIcon from '@mui/icons-material/MenuOutlined';
+import MenuIcon from '@mui/icons-material/MenuOpen';
 import LeftIcon from '@mui/icons-material/ArrowBackOutlined';
 import UpIcon from '@mui/icons-material/ArrowUpwardOutlined';
 import RightIcon from '@mui/icons-material/ArrowForwardOutlined';

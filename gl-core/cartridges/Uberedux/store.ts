@@ -6,16 +6,16 @@ import storage from 'redux-persist/lib/storage';
 import { combineReducers } from 'redux';
 import { initialState } from './initialState';
 
-export interface UbereduxState {
-  cartridge: 'bouncer' | 'uberedux' | 'core';
-  [key: string]: any;
-}
+// export interface UbereduxState {
+//   cartridge: 'bouncer' | 'uberedux' | 'core';
+//   [key: string]: any;
+// }
 
 const reduxSlice = createSlice({
   name: 'redux',
   initialState,
   reducers: {
-    setUbereduxKey: (state, action: PayloadAction<Partial<UbereduxState>>) => {
+    setUbereduxKey: (state, action: PayloadAction<Partial<any>>) => {
       return { ...state, ...action.payload };
     },
     resetUberedux: () => initialState,

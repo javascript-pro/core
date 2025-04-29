@@ -5,7 +5,7 @@ import { useDispatch } from './hooks/useDispatch';
 import { useKey } from './hooks/useKey';
 import { setUbereduxKey, resetUberedux } from './store';
 
-import { RootState, UbereduxDispatch, UbereduxState } from './store';
+import { RootState, UbereduxDispatch } from './store';
 
 export {
   UbereduxProvider,
@@ -17,4 +17,4 @@ export {
   resetUberedux,
 };
 
-export type { RootState, UbereduxDispatch, UbereduxState };
+export type { RootState, UbereduxDispatch};

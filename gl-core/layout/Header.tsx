@@ -1,59 +1,46 @@
 'use client';
 
 import * as React from 'react';
-import { useRouter } from 'next/navigation';
 import {
-  Button,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
+  AppBar,
+  Container,
+  CardHeader,
+  IconButton,
 } from '@mui/material';
-import { Icon } from '../';
+import { useIsMobile, Icon, Nav } from '../';
 
 export type THeader = {
+  maxW?: "xs" | "sm" | "md" | "lg" | null
   title?: string | null;
-  description?: string | null;
-  action?: React.ReactNode | null;
-  avatar?: React.ReactNode | null;
+  subheader?: string | null;
+  icon?: string | null;
 }
 
 export default function Header({
   title = null,
-  description = null,
-  action = null,
-  avatar= null,
+  subheader = null,
+  maxW = null,
+  icon = null,
 }: THeader) {
 
-  const router = useRouter();
-  // const icon = "settings"
+  const isMobile = useIsMobile();
+  console.log("isMobile", isMobile);
+
+
   
-  const headerClick = (hay: any) => {
-    console.log("headerClick", hay)
-    return;
-  }
-
-  return <>
-            <Button
-                variant='contained'
-            >
-            Button
-            </Button>
-          <ListItemButton
-            onClick={() => {
-                headerClick({
-                url: "/previous",
-                target: "_self",
-
-              })
-            }}
-          >
-            <ListItemIcon>
-              <Icon icon={"left"}/>
-            </ListItemIcon>
-            <ListItemText 
-              primary="404"
+  return <AppBar color={"secondary"} sx={{boxShadow: 0}}>
+          <Container maxWidth={maxW as any}>
+            <CardHeader 
+              avatar={<IconButton
+                        disabled
+                        color="inherit"
+                        >
+                          <Icon icon={icon as any} />
+                        </IconButton>}
+              title={title}
+              subheader={subheader}
+              action={<Nav />}
             />
-          </ListItemButton>
-
-          </>
+          </Container>
+        </AppBar>
 }

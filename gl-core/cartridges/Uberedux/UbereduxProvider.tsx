@@ -1,6 +1,7 @@
 'use client';
 import * as React from 'react';
 import { ReactNode } from 'react';
+import Image from 'next/image';
 import { Provider } from 'react-redux';
 import { store, persistor } from './store';
 import { PersistGate } from 'redux-persist/integration/react';
@@ -23,7 +24,14 @@ export default function UbereduxProvider({
                 alignItems: 'center',
               }}
             >
-              <h6>Rehydrating...</h6>
+              <Image
+                priority
+                src="/svg/rehydrate-ad.svg"
+                alt="Rehydrating Uberedux"
+                width={250}
+                height={250}
+                style={{ objectFit: 'contain' }}
+              />
             </div>
           </>
         }

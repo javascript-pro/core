@@ -1,65 +1,41 @@
 'use client';
 
 import * as React from 'react';
-import { useRouter } from 'next/navigation';
 import {
-  List,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
+  Box,
+  IconButton,
 } from '@mui/material';
-import { Icon } from '../';
-
-export type TNavItem = {  
-  url: string;
-  target?: string;
-  label?: string
-  title?: string
-  icon?: string
-}
+import { 
+  useSlice,
+  useDispatch,
+  setUbereduxKey,
+  Icon,
+} from '../';
 
 export type TNav = {
   title?: string | null;
 }
 
 export default function Nav({
-  title = null,
 }: TNav) {
-
-  const router = useRouter();
-  // const icon = "settings"
+  const dispatch = useDispatch();
+  const slice = useSlice();
+  const {navOpen} = slice;
   
-  const navClick = (navItem: TNavItem) => {
-    const {url, target} = navItem;
-    if (target === '_blank') {
-      window.open(url, '_blank');
-    } else {
-      router.push(url);
-    }
-    return;
+  const onMenuClick = () => {
+    if (!navOpen){}
+      dispatch (setUbereduxKey({ navOpen: !navOpen})
+    );
   }
+  
 
-  return <List dense>
-          {/* <ListItemButton>
-            {title}
-          </ListItemButton> */}
-
-          <ListItemButton
-            onClick={() => {
-              navClick({
-                url: "/",
-                target: "_self",
-
-              })
-            }}
+  return <Box>
+          <IconButton
+            color="inherit"
+            onClick={onMenuClick}
+            
           >
-            <ListItemIcon>
-              <Icon icon={"home"}/>
-            </ListItemIcon>
-            <ListItemText 
-              primary="home"
-            />
-          </ListItemButton>
-
-        </List>
+            <Icon icon="menu" />
+          </IconButton>
+        </Box>
 }
