@@ -1,9 +1,11 @@
-// components/Footer.tsx
+'use client';
 import React from 'react';
 import { 
   Box, 
+  Divider,
   List,
   Container, Grid, Typography } from '@mui/material';
+import { useRouter } from 'next/navigation';
 import {
   NavItem,
 } from "../";
@@ -13,7 +15,8 @@ export type TFooter = {
 
 export default function Footer({
 }: TFooter) {
-
+  
+  const router = useRouter();
 
   return (
     <Box component="footer" sx={{
@@ -21,14 +24,15 @@ export default function Footer({
         py: 6,
     }}>
       <Container maxWidth="md">
+        <Divider sx={{my:1}} />
         <Grid container spacing={2}>
-          {/* Company Info */}
+          
             <Grid size={{
                 "xs": 12,
                 "sm": 6,
                 "md": 3,
             }}>
-              <Typography variant="h6" gutterBottom sx={{mt:1}}>
+              <Typography variant="body1" gutterBottom sx={{mt:1}}>
                 Goldlabel Apps Ltd
               </Typography>
               <Typography variant="body2">321-323 High Road</Typography>
@@ -37,7 +41,6 @@ export default function Footer({
               <Typography variant="body2">Reg. in England and Wales</Typography>
           </Grid>
 
-          {/* Navigation */}
           <Grid size={{
                 "xs": 12,
                 "sm": 6,
@@ -46,50 +49,46 @@ export default function Footer({
             
             <List dense>
               <NavItem 
-                label="Home"
-                icon="home"
-              />
-              <NavItem 
                 label="Work"
                 icon="work"
                 onClick={() => {
-                  console.log("/work")
+                  router.push("/work");
                 }}
               />
               <NavItem 
                 label="Life"
                 icon="life"
                 onClick={() => {
-                  console.log("/life")
+                  router.push("/life")
                 }}
               />
               <NavItem 
                 label="Balance"
                 icon="balance"
                 onClick={() => {
-                  console.log("/balance")
+                  router.push("/balance")
                 }}
               />
             </List>
           </Grid>
 
-          {/* Legal */}
           <Grid size={{
-                "xs": 12,
-                "sm": 6,
-                "md": 3,
-            }}>
+            "xs": 12,
+            "sm": 6,
+            "md": 3,
+          }}>
+
             <List dense>
               <NavItem 
                 label="Privacy"
                 icon="admin"
+                onClick={() => {
+                  router.push("/work/company/privacy-cookies")
+                }}
               />
             </List>
-
-
           </Grid>
 
-          {/* Social / Trust */}
           <Grid size={{
                 "xs": 12,
                 "sm": 6,
@@ -100,6 +99,9 @@ export default function Footer({
               <NavItem 
                 label="GitHub"
                 icon="github"
+                onClick={() => {
+                  window.open("https://github.com/goldlabel-apps", "_blank");
+                }}
               />
             </List>
 

@@ -27,21 +27,33 @@ export default function Header({
   const isMobile = useIsMobile();
   const router = useRouter();
   
-  return <AppBar color={"secondary"} sx={{boxShadow: 0}}>
-          <Container maxWidth={maxW as any}>
-            <CardHeader 
-              avatar={<IconButton
-                        onClick={() => {
-                          router.push("/");
-                        }}
-                        color="inherit"
-                        >
-                          <Icon icon={icon as any} />
-                        </IconButton>}
-              title={title}
-              subheader={!isMobile ? subheader : null }
-              action={<Nav />}
-            />
-          </Container>
-        </AppBar>
+  return (
+    <AppBar 
+      color="secondary"
+      position="fixed"
+      sx={{
+        boxShadow: 0,
+        top: isMobile ? 'auto' : 0,
+        bottom: isMobile ? 0 : 'auto',
+      }}
+    >
+      <Container maxWidth={maxW as any}>
+        <CardHeader 
+          avatar={
+            <IconButton
+              onClick={() => {
+                router.push("/");
+              }}
+              color="inherit"
+            >
+              <Icon icon={icon as any} />
+            </IconButton>
+          }
+          title={title}
+          subheader={!isMobile ? subheader : null}
+          action={<Nav />}
+        />
+      </Container>
+    </AppBar>
+  );
 }

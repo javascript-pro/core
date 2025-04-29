@@ -2,6 +2,7 @@
 import * as React from 'react';
 import { 
   Box,
+  Divider,
   Container, 
   Grid, 
   Typography, 
@@ -18,7 +19,6 @@ import ReactMarkdown from 'react-markdown';
 
 export type TCore = {
   type?: "page" | "file" | "folder";
-  children?: React.ReactNode;
   frontmatter?: {
     icon?: string;
     title?: string;
@@ -27,11 +27,9 @@ export type TCore = {
     [key: string]: any;
   } | null;
   body?: string | null;
-  header?: any;
 };
 
 export default function Core({
-  children = <>Nothing to show</>,
   frontmatter = null,
   body = null,
 }: TCore) {
@@ -48,24 +46,27 @@ export default function Core({
           minHeight: '100vh',
         }}
       >
-        {/* Header */}
         <Header
           maxW={maxW}
           icon={frontmatter?.icon}
           title={frontmatter?.title}
           subheader={frontmatter?.description}
         />
-
-        {/* Main content */}
+        <Divider sx={{my:1}} />
+        
         <Container 
           maxWidth={maxW}
-          sx={{ mt: "100px", flexGrow: 1 }}
+          sx={{ 
+            mt: isMobile ? 2 : "100px", 
+            mb: isMobile ? '64px' : 0,
+            flexGrow: 1 
+          }}
         >        
           <Grid container spacing={2}>
-          <Grid size={{
-            "xs": 12,
-            "md": 4,
-          }}>
+            <Grid size={{
+              "xs": 12,
+              "md": 4,
+            }}>
               {/* Show featured image if available */}
               {frontmatter?.image && (
                 <CardMedia
@@ -84,10 +85,9 @@ export default function Core({
             </Grid>
 
             <Grid size={{
-            "xs": 12,
-            "md": 8,
-          }}>
-              {/* Render markdown body if available */}
+              "xs": 12,
+              "md": 8,
+            }}>
               {body && (
                 <Container sx={{ py: 2 }}>
                   <Typography component={"div"}>
@@ -107,20 +107,3 @@ export default function Core({
     </Theme>
   );
 }
-
-
-/*
-
-<Grid size={{
-            "xs": 12,
-            "md": 4,
-          }}>
-            
-{ process.env.NODE_ENV === 'development' && (
-            <>
-              <pre>
-                slice {JSON.stringify(slice, null, 2)}
-              </pre>
-            </>
-      )}
-*/

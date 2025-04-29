@@ -65,7 +65,7 @@ function findParentOfItem(
 }
 
 export default function MainNav({
-  onSelect = () => console.log("no onSelect()")
+  onSelect = () => {}
 }: TMainMenu) {
   const pathname = usePathname();
   const router = useRouter();
