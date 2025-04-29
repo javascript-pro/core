@@ -1,8 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { RootState, setUbereduxKey } from '../';
+import { TRootState, setUbereduxKey } from '../';
 
 export function useSlice() {
-  const slice = useSelector((state: RootState) => state.redux);
+  const slice = useSelector((state: TRootState) => state.redux);
   const dispatch = useDispatch();
 
   function setValue<K extends keyof typeof slice>(

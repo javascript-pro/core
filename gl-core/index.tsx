@@ -1,18 +1,22 @@
 import Core from './Core';
 import { TCore } from './Core';
-
+// actions
+import {exampleAction} from './actions';
+// theme
 import {Theme} from './theme';
 import { TTheme } from './theme';
-
+import { Icon } from './theme';
+import { createMUITheme } from './theme';
+import { TIcon } from './theme';
+// layout
+import {Header} from './layout';
+import { THeader } from './layout';
+// nav
 import {MainMenu} from './nav';
 import { TMainMenu } from './nav';
 import {Nav} from './nav';
 import { TNav } from './nav';
-import {Header} from './layout';
-import { THeader } from './layout';
-import { Icon } from './theme';
-import { createMUITheme } from './theme';
-import { TIcon } from './theme';
+
 import {
   useConfig,
   useIsMobile,
@@ -26,20 +30,38 @@ import {
   setUbereduxKey,
   resetUberedux,
 } from './cartridges/Uberedux';
+import {
+  TUbereduxDispatch,
+} from './cartridges/Uberedux';
 
 export {
   Core,
-  Theme,
-  MainMenu,
-  createMUITheme,
-  Icon,
-  Nav,
-  Header,
-  Uberedux,
-  UbereduxProvider,
 };
 
+
+// theme
 export {
+  Theme,
+  createMUITheme,
+  Icon,
+};
+
+
+// components
+export {
+  Header,
+};
+
+// nav
+export {
+  MainMenu,
+  Nav,
+};
+
+// uberedux
+export {
+  Uberedux,
+  UbereduxProvider,
   useConfig,
   useIsMobile,
   useSlice,
@@ -49,4 +71,9 @@ export {
   resetUberedux,
 };
 
-export type { TCore, TTheme, TMainMenu, TIcon, TNav, THeader };
+// actions
+export {
+  exampleAction,
+};
+
+export type { TCore, TTheme, TMainMenu, TIcon, TNav, THeader, TUbereduxDispatch };

@@ -4,8 +4,8 @@ import { useSlice } from './hooks/useSlice';
 import { useDispatch } from './hooks/useDispatch';
 import { useKey } from './hooks/useKey';
 import { setUbereduxKey, resetUberedux } from './store';
-
-import { RootState, UbereduxDispatch } from './store';
+S
+import { TRootState, TUbereduxDispatch } from './store';
 
 export {
   UbereduxProvider,
@@ -17,4 +17,4 @@ export {
   resetUberedux,
 };
 
-export type { RootState, UbereduxDispatch};
+export type { TRootState, TUbereduxDispatch};

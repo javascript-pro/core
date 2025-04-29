@@ -6,11 +6,6 @@ import storage from 'redux-persist/lib/storage';
 import { combineReducers } from 'redux';
 import { initialState } from './initialState';
 
-// export interface UbereduxState {
-//   cartridge: 'bouncer' | 'uberedux' | 'core';
-//   [key: string]: any;
-// }
-
 const reduxSlice = createSlice({
   name: 'redux',
   initialState,
@@ -47,5 +42,5 @@ export const persistor = persistStore(store);
 export const setUbereduxKey = reduxSlice.actions.setUbereduxKey;
 export const resetUberedux = reduxSlice.actions.resetUberedux;
 
-export type RootState = ReturnType<typeof store.getState>;
-export type UbereduxDispatch = typeof store.dispatch;
+export type TRootState = ReturnType<typeof store.getState>;
+export type TUbereduxDispatch = typeof store.dispatch;

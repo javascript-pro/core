@@ -24,9 +24,6 @@ export default function Header({
 }: THeader) {
 
   const isMobile = useIsMobile();
-  console.log("isMobile", isMobile);
-
-
   
   return <AppBar color={"secondary"} sx={{boxShadow: 0}}>
           <Container maxWidth={maxW as any}>
@@ -38,7 +35,7 @@ export default function Header({
                           <Icon icon={icon as any} />
                         </IconButton>}
               title={title}
-              subheader={subheader}
+              subheader={!isMobile ? subheader : null }
               action={<Nav />}
             />
           </Container>

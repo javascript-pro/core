@@ -1,10 +1,17 @@
+import {TUbereduxDispatch} from '../';
 import { setUbereduxKey } from "../";
 
-export const exampleAction = (payload: any): any =>
-  async (dispatch: any) => {
+export type TAction = {
+  payload: any;
+}
+
+export const exampleAction = (payload: TAction): any =>
+  async (dispatch: TUbereduxDispatch) => {
     try {
       console.log("exampleAction", payload);
+
       // dispatch(setUbereduxKey({ key: "authedUser", value: authedUser }));
+
     } catch (e: unknown) {
       if (e instanceof Error) {
         dispatch(setUbereduxKey({ key: "error", value: e.message }));

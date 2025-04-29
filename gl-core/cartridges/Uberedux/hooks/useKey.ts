@@ -1,11 +1,11 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { RootState, setUbereduxKey } from '../';
+import { TRootState, setUbereduxKey } from '../';
 
-export function useKey<K extends keyof RootState['redux']>(key: K) {
-  const value = useSelector((state: RootState) => state.redux[key]);
+export function useKey<K extends keyof TRootState['redux']>(key: K) {
+  const value = useSelector((state: TRootState) => state.redux[key]);
   const dispatch = useDispatch();
 
-  function setValue(newValue: RootState['redux'][K]) {
+  function setValue(newValue: TRootState['redux'][K]) {
     dispatch(setUbereduxKey({ [key]: newValue }));
   }
 
