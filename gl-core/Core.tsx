@@ -63,7 +63,7 @@ export default function Core({
               />
             )}
 
-            { !isMobile && <Box sx={{ my:2 }}>
+            { !isMobile && <Box sx={{ my:3 }}>
                             <MainMenu />
                           </Box> }
             

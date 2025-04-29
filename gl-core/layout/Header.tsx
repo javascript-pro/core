@@ -7,6 +7,7 @@ import {
   CardHeader,
   IconButton,
 } from '@mui/material';
+import { useRouter } from 'next/navigation';
 import { useIsMobile, Icon, Nav } from '../';
 
 export type THeader = {
@@ -24,12 +25,15 @@ export default function Header({
 }: THeader) {
 
   const isMobile = useIsMobile();
+  const router = useRouter();
   
   return <AppBar color={"secondary"} sx={{boxShadow: 0}}>
           <Container maxWidth={maxW as any}>
             <CardHeader 
               avatar={<IconButton
-                        disabled
+                        onClick={() => {
+                          router.push("/");
+                        }}
                         color="inherit"
                         >
                           <Icon icon={icon as any} />

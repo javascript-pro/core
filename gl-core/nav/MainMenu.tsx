@@ -65,7 +65,7 @@ function findParentOfItem(
 }
 
 export default function MainNav({
-  onSelect = () => console.log("onSelect()")
+  onSelect = () => console.log("no onSelect()")
 }: TMainMenu) {
   const pathname = usePathname();
   const router = useRouter();
@@ -82,58 +82,60 @@ export default function MainNav({
   return (
     <Box sx={{ mt: -1 }}>
       {grandparent && (
-          <ListItem disablePadding>
-            <ListItemButton onClick={() => {
-              router.push(`/${grandparent.slug}`);
-              onSelect();
-            }}>
-              <ListItemIcon>
-                <Icon icon={grandparent.icon as any} />
-              </ListItemIcon>
-              <ListItemText secondary={grandparent.title} />
-              <ListItemIcon>
-                <Icon icon={"up"} />
-              </ListItemIcon>
-            </ListItemButton>
-          </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton
+            disabled={pathname === `/${grandparent.slug}`}
+            onClick={() => {
+              if (pathname !== `/${grandparent.slug}`) {
+                router.push(`/${grandparent.slug}`);
+                onSelect();
+              }
+            }}
+          >
+            <ListItemIcon>
+              <Icon icon={grandparent.icon as any} />
+            </ListItemIcon>
+            <ListItemText secondary={grandparent.title} />
+          </ListItemButton>
+        </ListItem>
       )}
 
       {parent && (
-          <ListItem disablePadding>
-            <ListItemButton onClick={() => {
-              router.push(`/${parent.slug}`);
-              onSelect();
-            }}>
-             <ListItemIcon>
-                <Icon icon={parent.icon as any} />
-              </ListItemIcon>
-              <ListItemText primary={parent.title} />
-              <ListItemIcon>
-                <Icon icon={"up"} />
-              </ListItemIcon>
-            </ListItemButton>
-          </ListItem>
-        )}
+        <ListItem disablePadding>
+          <ListItemButton
+            disabled={pathname === `/${parent.slug}`}
+            onClick={() => {
+              if (pathname !== `/${parent.slug}`) {
+                router.push(`/${parent.slug}`);
+                onSelect();
+              }
+            }}
+          >
+            <ListItemIcon>
+              <Icon icon={parent.icon as any} />
+            </ListItemIcon>
+            <ListItemText primary={parent.title} />
+          </ListItemButton>
+        </ListItem>
+      )}
 
-      {itemsToRender.length === 0 ? null : (
+      {itemsToRender.length > 0 && (
         <List dense>
           {itemsToRender
             .filter(
-              (item) => `/${item.slug}`.replace(/\/+/g, '/') !== currentPath,
+              (item) => `/${item.slug}`.replace(/\/+/g, '/') !== currentPath
             )
             .map((item) => (
-              <>
-                <NavItem 
-                  key={item.slug}
-                  icon={item.icon}
-                  label={item.title}
-                  sublabel={item.description}
-                  onClick={() => {
-                    router.push(`/${item.slug}`);
-                    onSelect();
-                  }}
-                />
-              </>
+              <NavItem
+                key={item.slug}
+                icon={item.icon}
+                label={item.title}
+                sublabel={item.description}
+                onClick={() => {
+                  router.push(`/${item.slug}`);
+                  onSelect();
+                }}
+              />
             ))}
         </List>
       )}
