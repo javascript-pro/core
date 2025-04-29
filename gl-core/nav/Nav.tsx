@@ -20,6 +20,7 @@ import {
   Icon,
   NavItem,
   MainMenu,
+  exampleAction
 } from '../';
 
 export type TNav = {
@@ -36,8 +37,8 @@ export default function Nav({
   const pathname = usePathname();
   const router = useRouter();
   
-  const closeModalNav = () => dispatch (setUbereduxKey({ modalNav: false}))
-  const openModalNav = () => dispatch (setUbereduxKey({ modalNav: true}))
+  const closeModalNav = () => dispatch(setUbereduxKey({ key: "modalNav", value: false }));
+  const openModalNav = () => dispatch (setUbereduxKey({ key: "modalNav", value: true }))
 
   // const onExampleActionClick = () => {
   //   dispatch (exampleAction())
@@ -69,7 +70,14 @@ export default function Nav({
             </DialogTitle>
 
             <DialogContent>
-              
+
+              <NavItem 
+                onClick={() => {
+                  dispatch(setUbereduxKey({ key: "example", value: true }));
+                }}
+                label="example"
+              />
+
               <List>
                 <MainMenu onSelect={closeModalNav} />
               </List>

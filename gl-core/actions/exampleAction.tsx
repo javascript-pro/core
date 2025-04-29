@@ -9,8 +9,7 @@ export const exampleAction = (): any =>
   async (dispatch: TUbereduxDispatch) => {
     try {
       console.log("exampleAction");
-
-      dispatch(setUbereduxKey({ key: "authedUser", value: true }));
+      dispatch(setUbereduxKey({ key: "exampleAction", value: true }));
 
     } catch (e: unknown) {
       if (e instanceof Error) {

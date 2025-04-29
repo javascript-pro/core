@@ -10,9 +10,13 @@ const reduxSlice = createSlice({
   name: 'redux',
   initialState,
   reducers: {
-    setUbereduxKey: (state, action: PayloadAction<Partial<any>>) => {
-      return { ...state, ...action.payload };
-    },
+    setUbereduxKey: (state, action: PayloadAction<{ key: string; value: any }>) => {
+      const { key, value } = action.payload;
+      return {
+        ...state,
+        [key]: value,
+      };
+    },    
     resetUberedux: () => initialState,
   },
 });

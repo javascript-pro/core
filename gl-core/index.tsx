@@ -16,13 +16,17 @@ import {Footer} from './layout';
 import { TFooter } from './layout';
 
 // nav
-import {MainMenu} from './nav';
-import { TMainMenu } from './nav';
-import {Nav} from './nav';
-import { TNav } from './nav';
-import {NavItem} from './nav';
-import { TNavItem } from './nav';
-
+import {
+  MainMenu,
+  Nav,
+  NavItem,
+  PageBreadcrumb
+} from './nav';
+import { 
+  TNav,
+  TMainMenu,
+  TNavItem,
+} from './nav';
 
 import {
   useConfig,
@@ -65,6 +69,7 @@ export {
   MainMenu,
   Nav,
   NavItem,
+  PageBreadcrumb,
 };
 
 // uberedux

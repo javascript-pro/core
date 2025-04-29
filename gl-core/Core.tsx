@@ -2,18 +2,19 @@
 import * as React from 'react';
 import { 
   Box,
-  Divider,
   Container, 
   Grid, 
   Typography, 
   CardMedia,
 } from '@mui/material';
 import { 
+  useSlice,
   Theme,
   Header,
   MainMenu,
   useIsMobile,
   Footer,
+  PageBreadcrumb,
 } from "./";
 import ReactMarkdown from 'react-markdown';
 
@@ -34,9 +35,11 @@ export default function Core({
   frontmatter = null,
   body = null,
 }: TCore) {
+
+  const slice = useSlice();
   const isMobile = useIsMobile();
   const maxW = "md";
-
+  
   return (
     <Theme>
       <Box 
@@ -53,8 +56,6 @@ export default function Core({
           title={frontmatter?.title}
           subheader={frontmatter?.description}
         />
-        <Divider sx={{my:1}} />
-        
         <Container 
           maxWidth={maxW}
           sx={{ 
@@ -62,28 +63,12 @@ export default function Core({
             mb: isMobile ? '64px' : 0,
             flexGrow: 1 
           }}
-        >        
-          <Grid container spacing={2}>
-            <Grid size={{
-              "xs": 12,
-              "md": 4,
-            }}>
-              {/* Show featured image if available */}
-              {frontmatter?.image && (
-                <CardMedia
-                  component="img"
-                  image={frontmatter.image}
-                  alt={frontmatter.title || "Featured image"}
-                  sx={{ width: "100%", maxHeight: 400, objectFit: "cover" }}
-                />
-              )}
+        >
 
-              { !isMobile && (
-                <Box sx={{ my: 3 }}>
-                  <MainMenu />
-                </Box>
-              )}
-            </Grid>
+{/* <pre>
+  slice: { JSON.stringify(slice, null, 2)}
+</pre> */}
+          <Grid container spacing={2}>
 
             <Grid size={{
               "xs": 12,
@@ -91,6 +76,18 @@ export default function Core({
             }}>
               {body && (
                 <Container sx={{ py: 2 }}>
+                  {frontmatter?.image && (
+                    <CardMedia
+                      component="img"
+                      image={frontmatter.image}
+                      alt={frontmatter.title || "Featured image"}
+                      sx={{ width: "100%", maxHeight: 400, objectFit: "cover" }}
+                    />
+                  )}
+
+                  <Box sx={{mt:2}}>
+                    <PageBreadcrumb />
+                  </Box>
                   <Typography component={"div"}>
                     <ReactMarkdown>
                       {body}
@@ -99,12 +96,30 @@ export default function Core({
                 </Container>
               )}
             </Grid>
+
+            <Grid size={{
+              "xs": 12,
+              "md": 4,
+            }}>
+              
+             { !isMobile && (
+                <Box sx={{ my: 3 }}>
+                  <MainMenu />
+                </Box>
+              )}
+            </Grid>
+
           </Grid>
         </Container>
 
-        {/* Footer */}
         <Footer />
       </Box>
     </Theme>
   );
 }
+
+/*
+<pre>
+  slice: { JSON.stringify(slice, null, 2)}
+</pre>
+*/

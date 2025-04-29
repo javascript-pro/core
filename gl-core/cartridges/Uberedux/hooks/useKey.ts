@@ -6,7 +6,7 @@ export function useKey<K extends keyof TRootState['redux']>(key: K) {
   const dispatch = useDispatch();
 
   function setValue(newValue: TRootState['redux'][K]) {
-    dispatch(setUbereduxKey({ [key]: newValue }));
+    // dispatch(setUbereduxKey({ [key]: newValue }));
   }
 
   return [value, setValue] as const;
