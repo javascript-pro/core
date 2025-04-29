@@ -19,6 +19,7 @@ import {
   setUbereduxKey,
   Icon,
   NavItem,
+  MainMenu,
 } from '../';
 
 export type TNav = {
@@ -68,29 +69,9 @@ export default function Nav({
             </DialogTitle>
 
             <DialogContent>
-
-              {pathname}
               
               <List>
-                <NavItem 
-                  icon="home"
-                  label="Home"
-                  onClick={() => {
-                    router.push("/");
-                    closeModalNav();
-                  }}
-                />
-
-                <NavItem 
-                  icon="work"
-                  label="Work"
-                  onClick={() => {
-                    router.push("/work");
-                    closeModalNav();
-                  }}
-                />
-
-
+                <MainMenu onSelect={closeModalNav} />
               </List>
               
             </DialogContent>

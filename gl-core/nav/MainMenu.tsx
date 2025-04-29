@@ -2,26 +2,34 @@
 import * as React from 'react';
 import {
   Box,
-  ListItemIcon,
   List,
   ListItem,
   ListItemButton,
   ListItemText,
+  ListItemIcon,
 } from '@mui/material';
 import { usePathname, useRouter } from 'next/navigation';
-// import { Icon } from '../';
 import globalNav from '../../public/globalNav.json';
+import {
+  NavItem,
+  Icon,
+} from '../';
 
-export type NavItem = {
+export type TMainMenu = {
+  folderLabel?: string;
+  onSelect?: () => void;
+};
+
+export type TMainMenuItem = {
   title?: string;
   slug?: string;
   icon?: string;
   description?: string;
   type?: string;
-  children?: NavItem[];
+  children?: TMainMenuItem[];
 };
 
-function findFolderBySlug(items: NavItem[], pathname: string): NavItem | null {
+function findFolderBySlug(items: TMainMenuItem[], pathname: string): TMainMenuItem | null {
   for (const item of items) {
     const fullPath = `/${item.slug}`.replace(/\/+/g, '/');
     if (fullPath === pathname && item.type === 'folder') {
@@ -36,10 +44,10 @@ function findFolderBySlug(items: NavItem[], pathname: string): NavItem | null {
 }
 
 function findParentOfItem(
-  items: NavItem[],
+  items: TMainMenuItem[],
   pathname: string,
-  parents: NavItem[] = [],
-): NavItem | null {
+  parents: TMainMenuItem[] = [],
+): TMainMenuItem | null {
   for (const item of items) {
     const fullPath = `/${item.slug}`.replace(/\/+/g, '/');
     if (fullPath === pathname) {
@@ -56,11 +64,9 @@ function findParentOfItem(
   return null;
 }
 
-export type TMainMenu = {
-  folderLabel?: string;
-};
-
-export default function MainNav({ folderLabel }: TMainMenu) {
+export default function MainNav({
+  onSelect = () => console.log("onSelect()")
+}: TMainMenu) {
   const pathname = usePathname();
   const router = useRouter();
 
@@ -76,17 +82,38 @@ export default function MainNav({ folderLabel }: TMainMenu) {
   return (
     <Box sx={{ mt: -1 }}>
       {grandparent && (
-        <>
           <ListItem disablePadding>
-            <ListItemButton onClick={() => router.push(`/${grandparent.slug}`)}>
-              {/* <ListItemIcon>
-                <Icon icon={'up'} />
-              </ListItemIcon> */}
+            <ListItemButton onClick={() => {
+              router.push(`/${grandparent.slug}`);
+              onSelect();
+            }}>
+              <ListItemIcon>
+                <Icon icon={grandparent.icon as any} />
+              </ListItemIcon>
               <ListItemText secondary={grandparent.title} />
+              <ListItemIcon>
+                <Icon icon={"up"} />
+              </ListItemIcon>
             </ListItemButton>
           </ListItem>
-        </>
       )}
+
+      {parent && (
+          <ListItem disablePadding>
+            <ListItemButton onClick={() => {
+              router.push(`/${parent.slug}`);
+              onSelect();
+            }}>
+             <ListItemIcon>
+                <Icon icon={parent.icon as any} />
+              </ListItemIcon>
+              <ListItemText primary={parent.title} />
+              <ListItemIcon>
+                <Icon icon={"up"} />
+              </ListItemIcon>
+            </ListItemButton>
+          </ListItem>
+        )}
 
       {itemsToRender.length === 0 ? null : (
         <List dense>
@@ -95,14 +122,18 @@ export default function MainNav({ folderLabel }: TMainMenu) {
               (item) => `/${item.slug}`.replace(/\/+/g, '/') !== currentPath,
             )
             .map((item) => (
-              <ListItem key={item.slug} disablePadding>
-                <ListItemButton onClick={() => router.push(`/${item.slug}`)}>
-                  <ListItemText
-                    primary={item.title}
-                    secondary={item.description}
-                  />
-                </ListItemButton>
-              </ListItem>
+              <>
+                <NavItem 
+                  key={item.slug}
+                  icon={item.icon}
+                  label={item.title}
+                  sublabel={item.description}
+                  onClick={() => {
+                    router.push(`/${item.slug}`);
+                    onSelect();
+                  }}
+                />
+              </>
             ))}
         </List>
       )}

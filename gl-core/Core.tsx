@@ -1,7 +1,7 @@
 'use client';
 import * as React from 'react';
 import { 
-  // IconButton, 
+  Box,
   Container, 
   Grid, 
   Typography, 
@@ -10,8 +10,8 @@ import {
 import { 
   Theme,
   Header,
-  // Icon,
-  useSlice,
+  MainMenu,
+  useIsMobile,
   // resetUberedux,
 } from "./";
 import ReactMarkdown from 'react-markdown';
@@ -35,7 +35,7 @@ export default function Core({
   frontmatter = null,
   body = null,
 }: TCore) {
-  const slice = useSlice();
+  const isMobile = useIsMobile();
   const maxW = "md";
 
   return (
@@ -51,7 +51,7 @@ export default function Core({
         <Grid container spacing={2}>
           <Grid size={{
             "xs": 12,
-            "md": 6,
+            "md": 4,
           }}>
             {/* Show featured image if available */}
             {frontmatter?.image && (
@@ -62,10 +62,15 @@ export default function Core({
                 sx={{ width: "100%", maxHeight: 400, objectFit: "cover" }}
               />
             )}
+
+            { !isMobile && <Box sx={{ my:2 }}>
+                            <MainMenu />
+                          </Box> }
+            
           </Grid>
           <Grid size={{
             "xs": 12,
-            "md": 6,
+            "md": 8,
           }}>
             {/* Render markdown body if available */}
             {body && (
@@ -80,13 +85,17 @@ export default function Core({
           </Grid>
         </Grid>
       </Container>
-      { process.env.NODE_ENV === 'development' && (
+      
+    </Theme>
+  );
+}
+
+/*
+{ process.env.NODE_ENV === 'development' && (
             <>
               <pre>
                 slice {JSON.stringify(slice, null, 2)}
               </pre>
             </>
       )}
-    </Theme>
-  );
-}
+*/
