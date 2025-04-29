@@ -27,6 +27,7 @@ export type TCore = {
     [key: string]: any;
   } | null;
   body?: string | null;
+  children?: React.ReactNode;
 };
 
 export default function Core({
