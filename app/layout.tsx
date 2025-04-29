@@ -1,8 +1,8 @@
 import * as React from 'react';
 import path from 'path';
 import fs from 'fs/promises';
-// import { Appshell } from '../core';
-import { UbereduxProvider } from '../core/cartridges/Uberedux';
+import "./style.css";
+import { UbereduxProvider } from '../gl-core/cartridges/Uberedux';
 
 export default async function RootLayout({
   children,
@@ -22,7 +22,7 @@ export default async function RootLayout({
     <html lang="en">
       <head>
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#efefef" />
+        <meta name="theme-color" content="#c4c4c4" />
         <link rel="icon" href="/svg/favicon.svg" type="image/x-icon" />
         <link rel="shortcut icon" href="/svg/favicon.svg" type="image/x-icon" />
         <link rel="apple-touch-icon" sizes="180x180" href="/png/iOS.png" />

@@ -33,7 +33,7 @@
       "NextJS",
       "Headless CMS"
     ],
-    "excerpt": "We build and ship modern web apps for clients who need real results — fast\n\n Small teams. Big output\n Real deployments from Day One\n Readable, extensible codebases\n\n Work With Us\n\nWe take on a limited",
+    "excerpt": "We build and ship modern web apps for clients who need real results — fast. Custom software that works\n\n Small teams. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codeb",
     "children": [
       {
         "title": "Work",
@@ -149,6 +149,19 @@
             ]
           },
           {
+            "title": "GitHub",
+            "slug": "work/github",
+            "order": 10,
+            "icon": "github",
+            "type": "folder",
+            "tags": [
+              "github",
+              "process"
+            ],
+            "excerpt": "We use GitHub for everything. Including project management. Most of the communication done between us and our clients during development is done through GitHub in the form of comments, pull resuests, ",
+            "children": []
+          },
+          {
             "title": "Private",
             "slug": "work/private",
             "order": 10,
@@ -191,7 +204,7 @@
                   "air fryer",
                   "peppers"
                 ],
-                "excerpt": "Ingredients\n\n 2 Large peppers (capsicums)\n 1 125g pack of mozzarella\n Enough of your best, most delicious bolognaise to fill the peppers\n\n Method\n\n STEP 1\n\nPrepare Air Fryer pan. Line it with tinfoil "
+                "excerpt": "2 Large peppers (capsicums)\n 1 125g pack of mozzarella\n Enough of your best, most delicious bolognaise to fill the peppers\n\n STEP 1\n\nPrepare Air Fryer pan. Line it with tinfoil if you want to keep it "
               },
               {
                 "title": "Banana Bread",

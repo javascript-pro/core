@@ -7,15 +7,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import {
-  Avatar,
-  CssBaseline,
-  Box,
-  Typography,
-  Grid,
-} from '@mui/material';
-import {Core} from "../../gl-core"
+  Core,
+  Nav,
+} from "../../gl-core"
 
-export interface Params {
+export type TPage = {
   slug?: string[];
 }
 
@@ -31,33 +27,33 @@ function flattenNav(node: any, allSlugs: string[] = []): string[] {
 
 function renderNav(node: any, depth: number = 0): React.ReactNode {
   if (node.slug === '' || node.slug === '/') {
-    // Skip rendering the home route
     return (
-      <>
+      <React.Fragment key={`${node.slug}_depth`}>
         {node.children && node.children.length > 0 && (
-          <>
+          <React.Fragment key={`${node.slug}_depth_2`}>
             {node.children.map((child: any) => renderNav(child, depth))}
-          </>
+          </React.Fragment>
         )}
-      </>
+      </React.Fragment>
     );
   }
 
   return (
     <>
       {node.slug && (
-        <Box key={`slug_${node.slug}`} ml={depth * 2} my={0.5}>
-          <Link href={`/${node.slug}`} style={{ textDecoration: 'none' }}>
-            <Typography color="black" variant={depth === 0 ? 'body1' : 'body2'}>
+        <div key={`slug_${node.slug}`} >
+          <Link 
+            className='gl-link'
+            href={`/${node.slug}`}
+          >
               {node.title}
-            </Typography>
           </Link>
-        </Box>
+        </div>
       )}
       {node.children && node.children.length > 0 && (
-        <>
+        <div key={`or_slug_${node.slug}`}>
           {node.children.map((child: any) => renderNav(child, depth + 1))}
-        </>
+        </div>
       )}
     </>
   );
@@ -89,7 +85,7 @@ async function loadFrontmatter(slugPath: string) {
         return parsed.data;
       }
     } catch (error) {
-      console.error('Failed to load markdown frontmatter for', slugPath, error);
+      console.error('Something went badly wrong', slugPath, error);
     }
   }
   return {};
@@ -97,7 +93,6 @@ async function loadFrontmatter(slugPath: string) {
 
 export async function generateMetadata({ params }: { params: any }) {
   const slugPath = params.slug ? params.slug.join('/') : '';
-  const navItem = findNavItem(slugPath, globalNav[0]);
   const frontmatter = await loadFrontmatter(slugPath);
 
   const app = "Goldlabel";
@@ -126,7 +121,7 @@ export async function generateMetadata({ params }: { params: any }) {
   };
 }
 
-export async function generateStaticParams(): Promise<Params[]> {
+export async function generateStaticParams(): Promise<TPage[]> {
   const slugs = flattenNav(globalNav[0]);
 
   return slugs.map((slug) => ({
@@ -142,7 +137,7 @@ export default async function Page({ params }: { params: any }) {
     path.join(process.cwd(), 'public', 'markdown', slugPath, 'index.md'),
   ];
 
-  let content = 'Page not found';
+  let content = 'Something went badly wrong here';
   let frontmatter: any = {};
 
   for (const filePath of tryPaths) {
@@ -159,116 +154,66 @@ export default async function Page({ params }: { params: any }) {
     }
   }
 
+  const type = "page";
   const navItem = findNavItem(slugPath, globalNav[0]);
   const title = navItem?.title || 'Goldlabel';
   const ogImage = frontmatter.image || '/png/test.png';
+  
 
   return (
-    <>
-      <CssBaseline />
-      
-      <Core payload={{bol: "ix"}}>
+    <Core
+      type={type}
+      frontmatter={frontmatter}
+      body={content}
+    >
+      <div id="core-ssg" className='gl'><div className='gl-wrap'>
+        
+          <header id="gl-header">
+
+            <Link href={`/`} style={{ textDecoration: 'none' }}>
+              <Image
+                  src={"/svg/favicon_gold.svg"}
+                  alt={title}
+                  width={50}
+                  height={50}
+              />
+            </Link>
+
+              <Link href={`/`} style={{ textDecoration: 'none' }}>
+                <h1>
+                  {title}
+                </h1>
+              </Link>
+              <h2>
+                {frontmatter.description}
+              </h2>
+          </header>
+
+          <aside id="gl-main-menu">
+            <Nav />
+          </aside>
 
 
-          <Grid container>
-
-            <Grid size={{
-              xs: 12,
-            }}>
-              <header>
-                <Box sx={{ display: "flex" }}>
-                  <Box sx={{ mr: 1 }}>
-                    <Link href={`/`} style={{ textDecoration: 'none' }}>
-                      <Avatar src={"/svg/favicon_gold.svg"} alt={"Goldlabel"} />
-                    </Link>
-                  </Box>
-                  <Box sx={{ display: "block" }}>
-                    <Typography component="h1" variant="h4">
-                      {title}
-                    </Typography>
-                    <Typography component="h2" variant="body2">
-                      {frontmatter.description}
-                    </Typography>
-                  </Box>
-                </Box>
-              </header>
-            </Grid>
-
-            <Grid size={{
-              xs: 12,
-              sm: 7, 
-              md: 8,
-            }}>
-              <main style={{ flex: 1 }}>
-                {ogImage && (
-                  <Box my={2}>
-                    
-                    <Image
-                      priority
-                      src={ogImage}
-                      alt={title}
-                      width={1200}
-                      height={630}
-                      style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: '8px' }}
-                    />
-                  </Box>
-                )}
-                <article>
-                  <ReactMarkdown>{content}</ReactMarkdown>
-                </article>
-              </main>
-            </Grid>
-
-            <Grid size={{
-              xs: 12,
-              sm: 5,
-              md: 4,
-            }}>
-              <aside>
-                  <Box
-                    sx={{
-                      m: 2
-                    }}
-                  >
-                    { renderNav(globalNav[0]) }
-                  </Box>
-              </aside>
-            </Grid>
-
-            <Grid size={{
-              xs: 12,
-              sm: 7, 
-              md: 8,
-            }}>
-              <footer>
-                <Box sx={{ textAlign: 'center', py: 4, mt: 4 }}>
-                  <Typography variant="body2" color="text.secondary">
-                    Modern web apps. Real deployments. Professional results.
-                  </Typography>
-                  <Box sx={{ mt: 1 }}>
-                    <Link href="/privacy-cookies" style={{ marginRight: 16, textDecoration: 'none', color: 'inherit' }}>
-                      Privacy
-                    </Link>
-                    <Link href="/terms" style={{ marginRight: 16, textDecoration: 'none', color: 'inherit' }}>
-                      Terms
-                    </Link>
-                    <Link href="/contact" style={{ textDecoration: 'none', color: 'inherit' }}>
-                      Contact
-                    </Link>
-                  </Box>
-                  <Box sx={{ mt: 1 }}>
-                    <Typography variant="caption" color="text.secondary">
-                      © {new Date().getFullYear()} Goldlabel Apps Ltd.
-                    </Typography>
-                  </Box>
-                </Box>
-              </footer>
-            </Grid>
-
-            
-          </Grid>
+          <main id="gl-main">
+            {ogImage && (
+              <Image
+                  priority
+                  src={ogImage}
+                  alt={title}
+                  width={1200}
+                  height={630}
+                  style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: '8px' }}
+              />
+            )}
+            <article id="gl-body">
+              <ReactMarkdown>{content}</ReactMarkdown>
+            </article>
+          </main>
           
-      </Core>
-    </>
+          <footer id="gl-footer">
+            { renderNav(globalNav[0]) }
+          </footer>
+        </div></div>
+    </Core>
   );
 }
