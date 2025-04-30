@@ -11,6 +11,7 @@ import {
 } from '@mui/material';
 import {
   Icon,
+  useIsMobile,
 } from "../";
 
 export type TFooter = {
@@ -19,7 +20,8 @@ export type TFooter = {
 
 export default function Footer({
 }: TFooter) {
-  
+  const isMobile = useIsMobile();
+  if (isMobile) return null;
   return (
     <>
         <AppBar 
@@ -39,9 +41,8 @@ export default function Footer({
               }}>
                 <Grid container spacing={1}>
                   <Grid size={{
-                    "xs": 12,
-                    "sm": 6,
-                    "md": 3,
+                    "sm": 12,
+                    "md": 4,
                   }}>
                   <Typography variant="button">
                     Company
@@ -53,29 +54,18 @@ export default function Footer({
                 </Grid>
 
                 <Grid size={{
-                    "xs": 12,
-                    "sm": 6,
-                    "md": 3,
+                    "sm": 12,
+                    "md": 4,
                 }}>
                   <Typography variant="button">
                     Links
                   </Typography>
                 </Grid>
 
-                <Grid size={{
-                  "xs": 12,
-                  "sm": 6,
-                  "md": 3,
-                }}>
-                  <Typography variant="button">
-                    Legal
-                  </Typography>
-                </Grid>
 
                 <Grid size={{
-                    "xs": 12,
-                    "sm": 6,
-                    "md": 3,
+                    "sm": 12,
+                    "md": 4,
                 }}>
                   <Typography variant="button">
                     Connect
@@ -84,8 +74,6 @@ export default function Footer({
               </Grid>
             </Box>
 
-            <Box sx={{ flexGrow: 1 }} />
-            
             
           </Container>
       </Toolbar>

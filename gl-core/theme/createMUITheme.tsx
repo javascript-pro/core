@@ -16,9 +16,9 @@ export function createMUITheme() {
       secondary: {
         main: theme.secondary,
       },
-      // success: {
-      //   main: theme.secondary,
-      // },
+      success: {
+        main: theme.primary,
+      },
       // info: {
       //   main: theme.text,
       // },

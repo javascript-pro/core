@@ -10,7 +10,6 @@ import {
   Footer,
   Main,
 } from "./";
-import { AnyIfEmpty } from 'react-redux';
 
 export type TFrontmatter = {
   icon?: string;
@@ -53,7 +52,10 @@ export default function Core({
         />
 
         <Box sx={{ mt: !isMobile ? 10 : 1 }}>
-          <Main body={body as any} />
+          <Main 
+            body={body as any} 
+            frontmatter={frontmatter as any}
+          />
         </Box>
         
         <Footer />

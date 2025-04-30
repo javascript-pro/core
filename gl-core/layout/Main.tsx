@@ -9,10 +9,12 @@ import {
 
 export type TMain = {
   body?: string;
+  frontmatter?: any;
 }
 
 export default function Main({
-  body = "No body"
+  body = "No body",
+  frontmatter = null,
 }: TMain) {
   
   return (
@@ -24,7 +26,7 @@ export default function Main({
           "sm": 6,
           "md": 3,
         }}>
-          <Share />
+          <Share frontmatter={frontmatter} />
         </Grid>
 
         <Grid size={{
