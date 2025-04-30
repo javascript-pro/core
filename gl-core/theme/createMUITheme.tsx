@@ -19,9 +19,9 @@ export function createMUITheme() {
       success: {
         main: theme.primary,
       },
-      // info: {
-      //   main: theme.text,
-      // },
+      info: {
+        main: theme.secondary,
+      },
       background: {
         default: theme.background,
         paper: theme.paper,

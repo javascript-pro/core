@@ -51,7 +51,12 @@ export default function Core({
           subheader={frontmatter?.description}
         />
 
-        <Box sx={{ mt: !isMobile ? 10 : 1 }}>
+        <Box 
+          sx={{ 
+            // border: "1px solid green",
+            mt: !isMobile ? "120px" : "10px",
+          }}
+        >
           <Main 
             body={body as any} 
             frontmatter={frontmatter as any}

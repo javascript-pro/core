@@ -39,16 +39,16 @@ export default function Header({
     >
       <Container maxWidth={maxW as any}>
         <CardHeader 
-          avatar={
-            <IconButton
-              onClick={() => {
-                router.push("/");
-              }}
-              color="inherit"
-            >
-              <Icon icon={icon as any} />
-            </IconButton>
-          }
+          // avatar={
+          //   <IconButton
+          //     onClick={() => {
+          //       router.push("/");
+          //     }}
+          //     color="inherit"
+          //   >
+          //     <Icon icon={icon as any} />
+          //   </IconButton>
+          // }
           title={title}
           subheader={!isMobile ? subheader : null}
           action={<Nav />}
