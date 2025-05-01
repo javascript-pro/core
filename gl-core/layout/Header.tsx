@@ -21,7 +21,7 @@ export default function Header({
   title = null,
   subheader = null,
   maxW = null,
-  icon = null,
+  // icon = null,
 }: THeader) {
 
   const isMobile = useIsMobile();
@@ -29,7 +29,7 @@ export default function Header({
   
   return (
     <AppBar 
-      color="secondary"
+      color="default"
       position="fixed"
       sx={{
         boxShadow: 0,
@@ -39,19 +39,19 @@ export default function Header({
     >
       <Container maxWidth={maxW as any}>
         <CardHeader 
-          // avatar={
-          //   <IconButton
-          //     onClick={() => {
-          //       router.push("/");
-          //     }}
-          //     color="inherit"
-          //   >
-          //     <Icon icon={icon as any} />
-          //   </IconButton>
-          // }
+          avatar={
+            <IconButton
+              onClick={() => {
+                router.push("/");
+              }}
+              color="inherit"
+            >
+              <Icon icon={"home"} />
+            </IconButton>
+          }
           title={title}
-          subheader={!isMobile ? subheader : null}
-          action={<Nav />}
+          subheader={subheader}
+          action={isMobile ? <Nav /> : null}
         />
       </Container>
     </AppBar>

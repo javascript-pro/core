@@ -49,6 +49,7 @@ export default function Share({
 
   return <>
           <MightyButton 
+            color="secondary"
             label="Share"
             icon="share"
             onClick={openModalShare}
