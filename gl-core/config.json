@@ -10,12 +10,12 @@
   "images": ["/png/test.png", "/png/system/tick.png"],
   "themes": {
     "light": {
-      "primary": "#303030",
-      "secondary": "#efefef",
+      "primary": "#C09F52",
+      "secondary": "#303030",
       "background": "#c4c4c4",
-      "paper": "#c4c4c4",
+      "paper": "#FFF",
       "text": "#303030",
-      "border": "#c4c4c4"
+      "border": "#C9B37E"
     },
     "dark": {
       "primary": "#C09F52",

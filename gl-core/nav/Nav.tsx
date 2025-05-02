@@ -1,10 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { usePathname, useRouter } from 'next/navigation';
 import {
-  Button,
-  Alert,
   IconButton,
   Dialog,
   DialogTitle,
@@ -18,8 +15,8 @@ import {
   useDispatch,
   setUbereduxKey,
   Icon,
-  NavItem,
   MainMenu,
+  MightyButton,
 } from '../';
 
 export type TNav = {
@@ -32,16 +29,9 @@ export default function Nav({
   const slice = useSlice();
   const {modalNav} = slice;
   const isMobile = useIsMobile();
-
-  const pathname = usePathname();
-  const router = useRouter();
   
-  const closeModalNav = () => dispatch (setUbereduxKey({ modalNav: false}))
-  const openModalNav = () => dispatch (setUbereduxKey({ modalNav: true}))
-
-  // const onExampleActionClick = () => {
-  //   dispatch (exampleAction())
-  // } 
+  const closeModalNav = () => dispatch(setUbereduxKey({ key: "modalNav", value: false }));
+  const openModalNav = () => dispatch (setUbereduxKey({ key: "modalNav", value: true }))
   
   return <>
           <IconButton
@@ -59,51 +49,29 @@ export default function Nav({
             onClose={closeModalNav}
           >
             <DialogTitle>
-              <Alert 
-                severity="success" 
-                icon={<Icon icon="core" />}
-              >
-                All systems working fine
-              </Alert>
-              
+              Nav              
             </DialogTitle>
 
             <DialogContent>
-              
-              <List>
+              <List dense>
                 <MainMenu onSelect={closeModalNav} />
               </List>
-              
             </DialogContent>
+
             <DialogActions>
               {isMobile ? <><IconButton onClick={closeModalNav}>
                   <Icon icon="close" />
                 </IconButton></> 
-              : <><Button variant="contained" onClick={closeModalNav}>
-                    Close
-                  </Button></>}
+              : <>
+                  <MightyButton 
+                    label="Close"
+                    icon="close"
+                    variant="outlined" 
+                    onClick={closeModalNav}
+                  />
+                </>}
             </DialogActions>
+
           </Dialog>
         </>
 }
-
-
-/*
-<ListItemButton onClick={onExampleActionClick}>
-    <ListItemIcon>
-      <Icon icon="right" />
-    </ListItemIcon>
-    <ListItemText 
-      primary="Example"
-    />
-  </ListItemButton>
-
-  <ListItemButton>
-    <ListItemIcon>
-      <Icon icon="reset" />
-    </ListItemIcon>
-    <ListItemText 
-      primary="Reset to factory settings"
-    />
-  </ListItemButton>
-*/

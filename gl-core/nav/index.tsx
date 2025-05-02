@@ -7,11 +7,21 @@ import { TNav } from './Nav';
 import NavItem from './NavItem';
 import { TNavItem } from './NavItem';
 
+import {PageBreadcrumb} from './PageBreadcrumb';
+
+import Share from './Share';
+import { TShare } from './Share';
+
+import MightyButton from './MightyButton';
+import { TMightyButton } from './MightyButton';
 
 export {
     MainMenu,
     Nav,
     NavItem,
+    PageBreadcrumb,
+    Share,
+    MightyButton,
 };
 
-export type { TMainMenu, TNav, TNavItem, TMainMenuItem };
+export type { TMightyButton, TShare, TMainMenu, TNav, TNavItem, TMainMenuItem };

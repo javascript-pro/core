@@ -1,5 +1,5 @@
 import Core from './Core';
-import { TCore } from './Core';
+import { TCore, TFrontmatter } from './Core';
 // actions
 import {exampleAction} from './actions';
 // theme
@@ -11,18 +11,27 @@ import { TIcon } from './theme';
 // layout
 import {Header} from './layout';
 import { THeader } from './layout';
-
+import {Main} from './layout';
+import { TMain } from './layout';
 import {Footer} from './layout';
 import { TFooter } from './layout';
 
 // nav
-import {MainMenu} from './nav';
-import { TMainMenu } from './nav';
-import {Nav} from './nav';
-import { TNav } from './nav';
-import {NavItem} from './nav';
-import { TNavItem } from './nav';
-
+import {
+  MainMenu,
+  Nav,
+  NavItem,
+  PageBreadcrumb,
+  Share,
+  MightyButton,
+} from './nav';
+import { 
+  TNav,
+  TMainMenu,
+  TNavItem,
+  TShare,
+  TMightyButton,
+} from './nav';
 
 import {
   useConfig,
@@ -58,6 +67,7 @@ export {
 export {
   Header,
   Footer,
+  Main,
 };
 
 // nav
@@ -65,6 +75,9 @@ export {
   MainMenu,
   Nav,
   NavItem,
+  PageBreadcrumb,
+  Share,
+  MightyButton,
 };
 
 // uberedux
@@ -83,6 +96,7 @@ export {
 // actions
 export {
   exampleAction,
+  
 };
 
-export type { TFooter, TCore, TTheme, TMainMenu, TIcon, TNav, THeader, TUbereduxDispatch, TNavItem };
+export type { TFrontmatter, TMightyButton, TMain, TShare, TFooter, TCore, TTheme, TMainMenu, TIcon, TNav, THeader, TUbereduxDispatch, TNavItem };

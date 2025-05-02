@@ -1,0 +1,5 @@
+# robots.txt at https://goldlabel.pro/robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://goldlabel.pro/sitemap.xml

@@ -1,113 +1,85 @@
 'use client';
 import React from 'react';
 import { 
-  Box, 
-  Divider,
-  List,
-  Container, Grid, Typography } from '@mui/material';
-import { useRouter } from 'next/navigation';
+  Box,
+  AppBar,
+  Toolbar,
+  IconButton,
+  Container, 
+  Grid, 
+  Typography,
+} from '@mui/material';
 import {
-  NavItem,
+  Icon,
+  useIsMobile,
 } from "../";
 
 export type TFooter = {
+
 }
 
 export default function Footer({
 }: TFooter) {
-  
-  const router = useRouter();
-
+  const isMobile = useIsMobile();
+  if (isMobile) return null;
   return (
-    <Box component="footer" sx={{
-        mt: 8, 
-        py: 6,
-    }}>
-      <Container maxWidth="md">
-        <Divider sx={{my:1}} />
-        <Grid container spacing={2}>
-          
-            <Grid size={{
-                "xs": 12,
-                "sm": 6,
-                "md": 3,
-            }}>
-              <Typography variant="body1" gutterBottom sx={{mt:1}}>
-                Goldlabel Apps Ltd
-              </Typography>
-              <Typography variant="body2">321-323 High Road</Typography>
-              <Typography variant="body2">Essex RM6 6AX</Typography>
-              <Typography variant="body2">UK Company No. 15460545</Typography>
-              <Typography variant="body2">Reg. in England and Wales</Typography>
-          </Grid>
-
-          <Grid size={{
-                "xs": 12,
-                "sm": 6,
-                "md": 3,
-            }}>
-            
-            <List dense>
-              <NavItem 
-                label="Work"
-                icon="work"
-                onClick={() => {
-                  router.push("/work");
-                }}
-              />
-              <NavItem 
-                label="Life"
-                icon="life"
-                onClick={() => {
-                  router.push("/life")
-                }}
-              />
-              <NavItem 
-                label="Balance"
-                icon="balance"
-                onClick={() => {
-                  router.push("/balance")
-                }}
-              />
-            </List>
-          </Grid>
-
-          <Grid size={{
-            "xs": 12,
-            "sm": 6,
-            "md": 3,
+    <>
+        <AppBar 
+          position="fixed" 
+          color="default" 
+          sx={{
+            boxShadow: 0,
+            top: 'auto', 
+            bottom: 0,
+            py: 2
           }}>
+          <Toolbar>
+            <Container maxWidth="md">
+              <Box sx={{
+                // border: "1px solid green", 
+                flexGrow:1,
+              }}>
+                <Grid container spacing={1}>
+                  <Grid size={{
+                    "sm": 12,
+                    "md": 4,
+                  }}>
+                  <Typography variant="button">
+                    Company
+                  </Typography>
+                  <Typography variant="body2">Goldlabel Apps Ltd</Typography>
+                  <Typography variant="body2">321-323 High Road</Typography>
+                  <Typography variant="body2">Essex RM6 6AX</Typography>
+                  <Typography variant="body2">UK Company No. 15460545</Typography>
+                </Grid>
 
-            <List dense>
-              <NavItem 
-                label="Privacy"
-                icon="admin"
-                onClick={() => {
-                  router.push("/work/company/privacy-cookies")
-                }}
-              />
-            </List>
-          </Grid>
+                <Grid size={{
+                    "sm": 12,
+                    "md": 4,
+                }}>
+                  <Typography variant="button">
+                    Links
+                  </Typography>
+                </Grid>
 
-          <Grid size={{
-                "xs": 12,
-                "sm": 6,
-                "md": 3,
-            }}>
+
+                <Grid size={{
+                    "sm": 12,
+                    "md": 4,
+                }}>
+                  <Typography variant="button">
+                    Connect
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Box>
+
             
-            <List dense>
-              <NavItem 
-                label="GitHub"
-                icon="github"
-                onClick={() => {
-                  window.open("https://github.com/goldlabel-apps", "_blank");
-                }}
-              />
-            </List>
+          </Container>
+      </Toolbar>
+      
+    </AppBar>
 
-          </Grid>
-        </Grid>
-      </Container>
-    </Box>
+    </>
   );
 };

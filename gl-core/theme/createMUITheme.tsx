@@ -16,12 +16,12 @@ export function createMUITheme() {
       secondary: {
         main: theme.secondary,
       },
-      // success: {
-      //   main: theme.secondary,
-      // },
-      // info: {
-      //   main: theme.text,
-      // },
+      success: {
+        main: theme.primary,
+      },
+      info: {
+        main: theme.secondary,
+      },
       background: {
         default: theme.background,
         paper: theme.paper,
