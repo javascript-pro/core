@@ -1,4 +1,3 @@
-// lib/getPopupMenu.tsx
 import fs from 'fs';
 import path from 'path';
 

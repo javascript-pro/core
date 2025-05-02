@@ -1,5 +1,3 @@
-// lib/generateGlobalNav.ts
-
 import fs from 'fs/promises';
 import path from 'path';
 import matter from 'gray-matter';
