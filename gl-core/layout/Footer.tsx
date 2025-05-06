@@ -25,9 +25,9 @@ export default function Footer({
   return (
     <>
         <AppBar 
-          position="fixed" 
-          color="default" 
+          position="fixed"
           sx={{
+            background: "white",
             boxShadow: 0,
             top: 'auto', 
             bottom: 0,
@@ -41,36 +41,25 @@ export default function Footer({
               }}>
                 <Grid container spacing={1}>
                   <Grid size={{
-                    "sm": 12,
-                    "md": 4,
+                    "xs": 12,
+                    "sm": 6,
                   }}>
                   <Typography variant="button">
-                    Company
+                  Goldlabel Apps Ltd
                   </Typography>
-                  <Typography variant="body2">Goldlabel Apps Ltd</Typography>
-                  <Typography variant="body2">321-323 High Road</Typography>
-                  <Typography variant="body2">Essex RM6 6AX</Typography>
+                  <Typography variant="body2"></Typography>
+                  <Typography variant="body2">321-323 High Road, Essex RM6 6AX</Typography>
                   <Typography variant="body2">UK Company No. 15460545</Typography>
                 </Grid>
 
-                <Grid size={{
-                    "sm": 12,
-                    "md": 4,
-                }}>
-                  <Typography variant="button">
-                    Links
-                  </Typography>
-                </Grid>
-
-
-                <Grid size={{
-                    "sm": 12,
-                    "md": 4,
+                {/* <Grid size={{
+                    "xs": 12,
+                    "sm": 6,
                 }}>
                   <Typography variant="button">
                     Connect
                   </Typography>
-                </Grid>
+                </Grid> */}
               </Grid>
             </Box>
 

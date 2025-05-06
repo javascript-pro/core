@@ -1,5 +1,5 @@
 {
-  "version": "50.5.7",
+  "version": "50.5.8",
   "private": true,
   "packageManager": "yarn@4.3.1",
   "scripts": {
@@ -37,6 +37,7 @@
     "firebase": "^11.5.0",
     "gray-matter": "^4.0.3",
     "hastscript": "^9.0.1",
+    "html2pdf.js": "^0.10.3",
     "marked": "^15.0.7",
     "ms": "3.0.0-canary.1",
     "next": "15.0.0-canary.193",

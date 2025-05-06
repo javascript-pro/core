@@ -28,10 +28,10 @@ export default function Header({
   const router = useRouter();
   
   return (
-    <AppBar 
-      color="default"
+    <AppBar
       position="fixed"
       sx={{
+        background: "white",
         boxShadow: 0,
         top: isMobile ? 'auto' : 0,
         bottom: isMobile ? 0 : 'auto',
@@ -41,16 +41,17 @@ export default function Header({
         <CardHeader 
           avatar={
             <IconButton
+              sx={{ml: -1}}
               onClick={() => {
                 router.push("/");
               }}
               color="inherit"
             >
-              <Icon icon={"home"} />
+              <Icon icon={"goldlabel"} />
             </IconButton>
           }
           title={title}
-          subheader={subheader}
+          subheader={!isMobile ? subheader : null}
           action={isMobile ? <Nav /> : null}
         />
       </Container>

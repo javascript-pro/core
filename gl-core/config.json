@@ -12,7 +12,7 @@
     "light": {
       "primary": "#C09F52",
       "secondary": "#303030",
-      "background": "#c4c4c4",
+      "background": "#FFF",
       "paper": "#FFF",
       "text": "#303030",
       "border": "#C9B37E"

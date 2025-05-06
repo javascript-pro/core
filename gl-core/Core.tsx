@@ -55,6 +55,7 @@ export default function Core({
           sx={{ 
             // border: "1px solid green",
             mt: !isMobile ? "120px" : "10px",
+            pb: 6,
           }}
         >
           <Main 
