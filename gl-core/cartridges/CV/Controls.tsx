@@ -11,7 +11,6 @@ export type TControls = {
 };
 
 export default function Controls({ markdown = 'No content' }: TControls) {
-  
   const onDownloadClick = async () => {
     // Dynamically import html2pdf ONLY when the button is clicked
     const { default: html2pdf } = await import('html2pdf.js');
@@ -44,7 +43,7 @@ export default function Controls({ markdown = 'No content' }: TControls) {
       <Toolbar sx={{ display: 'flex', justifyContent: 'flex-end' }}>
         <MightyButton
           icon="save"
-          label="Download PDF"
+          label="Save PDF"
           variant="outlined"
           color="secondary"
           onClick={onDownloadClick}

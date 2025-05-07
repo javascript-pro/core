@@ -17,7 +17,7 @@ export default function CV({
 
   return <Container maxWidth="md">
             <Controls markdown={body} />
-            <Typography>
+            <Typography component="div">
               <ReactMarkdown>
                 {body}
               </ReactMarkdown>
