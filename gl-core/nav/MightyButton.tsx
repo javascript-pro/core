@@ -9,39 +9,37 @@ import {
 } from '../';
 
 export type TMightyButton = {
-  type?: "auto";
   label?: string | undefined;
   variant?: "contained" | "outlined" | "text" | undefined;
   color?: any;
   icon?: string | undefined;
+  fullWidth?: boolean;
   onClick?: () => void;
 }
 
 export default function MightyButton({
-  type = "auto",
   color = "primary",
   icon = undefined,
   variant = undefined,
   label = "No Label",
+  fullWidth = false,
   onClick = () => {
     console.log("no onClick")
   }
 }: TMightyButton) {
   
-  if (type === "auto" ){
-    return <Button 
-              size="small"
-              variant={variant}
-              color={color}
-              onClick={onClick}
-            >
-              <Box sx={{pt: 0.5, mr: 1}}>
-                <Icon icon={icon as any} />
-              </Box>
-              <Box sx={{mx:1}}>
-                {label}
-              </Box>
-            </Button>
-  }
-  return null
+  return <Button 
+            fullWidth={fullWidth}
+            size="small"
+            variant={variant}
+            color={color}
+            onClick={onClick}
+          >
+            <Box sx={{pt: 0.5, mr: 1}}>
+              <Icon icon={icon as any} />
+            </Box>
+            <Box sx={{mx:1}}>
+              {label}
+            </Box>
+          </Button>
 };

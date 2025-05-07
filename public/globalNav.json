@@ -36,6 +36,19 @@
     "excerpt": "We build and ship modern web apps for clients who need real results — fast. Custom software that works\n\n Small teams. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codeb",
     "children": [
       {
+        "title": "C.V.",
+        "slug": "cv",
+        "order": 2,
+        "icon": "goldlabel",
+        "type": "file",
+        "tags": [
+          "CV",
+          "jobs",
+          "work"
+        ],
+        "excerpt": "Chris Dorward  \nSenior Fullstack JavaScript Developer  \n\nEmail: listingslab@gmail.com  \nWeb: https://goldlabel.pro  \nGitHub: https://github.com/javascriptpro  \nLinkedIn: https://www.linkedin.com/in/ch"
+      },
+      {
         "title": "Work",
         "slug": "work",
         "order": 10,

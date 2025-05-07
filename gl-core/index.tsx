@@ -24,13 +24,17 @@ import {
   PageBreadcrumb,
   Share,
   MightyButton,
+  Search,
 } from './nav';
+
+
 import { 
   TNav,
   TMainMenu,
   TNavItem,
   TShare,
   TMightyButton,
+  TSearch,
 } from './nav';
 
 import {
@@ -49,6 +53,14 @@ import {
 import {
   TUbereduxDispatch,
 } from './cartridges/Uberedux';
+
+import {
+  CV,
+} from './cartridges/CV';
+import {
+  TCV,
+} from './cartridges/CV';
+
 
 export {
   Core,
@@ -78,6 +90,7 @@ export {
   PageBreadcrumb,
   Share,
   MightyButton,
+  Search,
 };
 
 // uberedux
@@ -93,10 +106,14 @@ export {
   resetUberedux,
 };
 
+// CV
+export {
+  CV,
+};
+
 // actions
 export {
   exampleAction,
-  
 };
 
-export type { TFrontmatter, TMightyButton, TMain, TShare, TFooter, TCore, TTheme, TMainMenu, TIcon, TNav, THeader, TUbereduxDispatch, TNavItem };
+export type { TSearch, TCV, TFrontmatter, TMightyButton, TMain, TShare, TFooter, TCore, TTheme, TMainMenu, TIcon, TNav, THeader, TUbereduxDispatch, TNavItem };

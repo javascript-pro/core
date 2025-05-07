@@ -124,9 +124,7 @@ export default function MainNav({
       {itemsToRender.length > 0 && (
         <List dense>
           {itemsToRender
-            .filter(
-              (item) => normalizeSlug(item.slug) !== normalizedPath
-            )
+            .filter((item) => normalizeSlug(item.slug) !== normalizedPath && normalizeSlug(item.slug) !== '/cv')
             .map((item) => (
               <NavItem
                 key={item.slug}

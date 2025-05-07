@@ -1,26 +1,26 @@
 ---
-name: Chris
-title: Software Engineer
-email: chris@goldlabel.pro
+order: 2
+title: C.V.
+description: Is Goldlabel a good fit for your job?
+slug: /
+icon: goldlabel
+image: /png/bouncer/bouncer.png
+tags: CV, jobs, work
 ---
-# Chris Dorward  
+## Chris Dorward  
 **Senior Fullstack JavaScript Developer**  
 
 **Email:** listingslab@gmail.com  
-**Web:** https://goldlabel.pro  
+**Web:** https://goldlabel.pro/cv  
 **GitHub:** https://github.com/javascript-pro  
 **LinkedIn:** https://www.linkedin.com/in/chris-dorward  
 **Work eligibility:** UK & German passports — full rights in UK and EU  
 
 ## Summary  
 
-20+ years of experience delivering scalable apps using React, TypeScript, and modern DevOps now specialising in Next.js. Recently, I’ve become deeply involved in the practical use of AI — both as a development accelerator and as a tool embedded in client-facing apps. The key is experience: AI doesn't do the work for you. You need to guide the process with clarity and intent. Speed and code quality have more than doubled as a result.
+Over 20 years of experience delivering scalable web applications across startups, enterprises, and remote-first teams in the UK, Europe, and Australia. Deep expertise in React, TypeScript, and app architecture, with a current focus on Next.js. Recently, I’ve focused on using AI as a practical development accelerator — not a shortcut, but a force multiplier. With experience and intent, AI generates production-grade results faster and cleaner. Code now ships 2–3x faster with fewer bugs.
 
-Seasoned JavaScript developer with over two decades of experience building web systems across startups, corporates, and remote-first teams in the UK, Europe, and Australia. Deep focus on React, TypeScript, and scalable app architecture. Proven track record delivering performant UIs, robust integrations, and CI/CD pipelines using modern tools like Redux, Docker, and GraphQL.
-
-Most recently, I’ve developed a strong focus on using AI effectively — not as a shortcut, but as a multiplier. With the right experience, AI tools can be directed to produce clean, production-grade results at speed. This approach has enabled our team to deliver code two to three times faster than a year ago, with fewer bugs and better outcomes.
-
-Equally effective leading projects or collaborating in agile teams. Happiest working with a clear brief, clean codebase, and a team that values delivery. Outside of work, I write, travel, surf, dive & ski.
+Proven track record building high-performance UIs, integrating automated testing and linting, and delivering through streamlined pipelines. Equally comfortable leading projects or collaborating in agile teams. Prefer a clear brief, a clean codebase, and a culture that values delivery. Outside work, I write, travel, surf, dive, and ski.
 
 ## Tech Skills  
 
@@ -52,7 +52,7 @@ Equally effective leading projects or collaborating in agile teams. Happiest wor
 - Supporting wider digital twin product strategy with tooling, documentation, and UI infrastructure  
 
 ### Full Stack JavaScript Developer — Atrackt!  
-**Malta — Jun 2022 to Apr 2023**  
+**Malta — Jun 2021 to Apr 2023**  
 - Worked closely with the CTO as part of a lean, cross-functional team  
 - Delivered high-performance static and PWA sites using Gatsby (Node + React)  
 - Integrated Headless CMS platforms like Contentful and Strapi  

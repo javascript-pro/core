@@ -57,9 +57,10 @@ export default function Main({
               >
                 <Image
                   priority
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   src={featuredImage}
                   alt={frontmatter?.title || 'Featured image'}
-                  fill
                   style={{ objectFit: 'cover' }}
                 />
               </Box>

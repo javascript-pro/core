@@ -159,6 +159,16 @@ export default async function Page({ params }: { params: any }) {
   const title = navItem?.title || 'Goldlabel';
   const ogImage = frontmatter.image || '/png/test.png';
   
+  if (slugPath === 'cv') {
+    return <Core
+              type={"cv"}
+              body={content}
+            >
+              <div id="core-ssg" className='gl'><div className='gl-wrap'>
+                <ReactMarkdown>{content}</ReactMarkdown>
+              </div></div>
+            </Core>
+  }
 
   return (
     <Core

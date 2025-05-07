@@ -9,6 +9,7 @@ import {
   useIsMobile,
   Footer,
   Main,
+  CV,
 } from "./";
 
 export type TFrontmatter = {
@@ -20,13 +21,14 @@ export type TFrontmatter = {
 }
 
 export type TCore = {
-  type?: "page" | "file" | "folder";
+  type?: "page" | "file" | "folder" | "cv";
   frontmatter?: TFrontmatter | null;
   body?: string | null;
   children?: React.ReactNode;
 };
 
 export default function Core({
+  type = "page",
   frontmatter = null,
   body = null,
 }: TCore) {
@@ -44,27 +46,35 @@ export default function Core({
           minHeight: '100vh',
         }}
       >
-        <Header
-          maxW={maxW}
-          icon={frontmatter?.icon}
-          title={frontmatter?.title}
-          subheader={frontmatter?.description}
-        />
 
-        <Box 
-          sx={{ 
-            // border: "1px solid green",
-            mt: !isMobile ? "120px" : "10px",
-            pb: 6,
-          }}
-        >
-          <Main 
-            body={body as any} 
-            frontmatter={frontmatter as any}
+        { type === "cv" ? <CV body={body as any} />
+        : <>
+          <Header
+            maxW={maxW}
+            icon={frontmatter?.icon}
+            title={frontmatter?.title}
+            subheader={frontmatter?.description}
           />
-        </Box>
-        
-        <Footer />
+
+          <Box 
+            sx={{
+              mt: !isMobile ? "80px" : "10px",
+            }}
+          >
+
+          <Box 
+            sx={{
+              mb: 6,
+            }}
+          >
+            <Main 
+              body={body as any} 
+              frontmatter={frontmatter as any}
+            />
+            </Box>
+          </Box>
+          <Footer />
+        </> }
 
       </Box>
     </Theme>

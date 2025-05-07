@@ -15,6 +15,9 @@ import { TShare } from './Share';
 import MightyButton from './MightyButton';
 import { TMightyButton } from './MightyButton';
 
+import Search from './Search';
+import { TSearch } from './Search';
+
 export {
     MainMenu,
     Nav,
@@ -22,6 +25,7 @@ export {
     PageBreadcrumb,
     Share,
     MightyButton,
+    Search,
 };
 
-export type { TMightyButton, TShare, TMainMenu, TNav, TNavItem, TMainMenuItem };
+export type { TSearch, TMightyButton, TShare, TMainMenu, TNav, TNavItem, TMainMenuItem };
