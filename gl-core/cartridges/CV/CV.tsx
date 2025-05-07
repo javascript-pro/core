@@ -16,7 +16,7 @@ export default function CV({
 }: TCV) {
 
   return <Container maxWidth="md">
-            <Controls />
+            <Controls markdown={body} />
             <Typography>
               <ReactMarkdown>
                 {body}

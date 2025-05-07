@@ -16,4 +16,4 @@ We build and ship modern web apps for clients who need real results — fast. Cu
 
 **Work With Us**
 
-We take on a limited number of new projects each month. If you need anything we’d love to hear about it. Find us on GitHub: **@javascript-pro**
+We take on a limited number of new projects each month. If you need something done we’d love to hear about it. Find out if we're a [good fit](/cv)
