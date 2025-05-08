@@ -1,19 +1,17 @@
+// updateCVSlice.ts
 import { TUbereduxDispatch } from '../../../';
 import { setUbereduxKey } from '../../../';
 
 export type TAction = {
-  payload: any;
+  payload: string; // markdown content
 };
 
-export const updateCVSlice = (): any => async (dispatch: TUbereduxDispatch) => {
+export const updateCVSlice = (markdown: string): any => async (dispatch: TUbereduxDispatch) => {
   try {
-    console.log('updateCVSlice');
-    // dispatch(setUbereduxKey({ key: 'exampleAction', value: true }));
+    console.log('updateCVSlice', markdown);
+    dispatch(setUbereduxKey({ key: 'cv.originalCV', value: markdown }));
   } catch (e: unknown) {
-    if (e instanceof Error) {
-      dispatch(setUbereduxKey({ key: 'error', value: e.message }));
-    } else {
-      dispatch(setUbereduxKey({ key: 'error', value: String(e) }));
-    }
+    const msg = e instanceof Error ? e.message : String(e);
+    dispatch(setUbereduxKey({ key: 'error', value: msg }));
   }
 };
