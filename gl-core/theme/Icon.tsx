@@ -116,12 +116,14 @@ import CartridgeIcon from '@mui/icons-material/IntegrationInstructionsOutlined';
 import CoreIcon from '@mui/icons-material/BarcodeReader';
 import CopyIcon from '@mui/icons-material/CopyAllOutlined';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import JobIcon from '@mui/icons-material/EditSquare';
 
 export type TIcon = {
   icon:
     | 'account'
-   | 'copy'
-      | 'linkedin'
+    | 'job'
+    | 'copy'
+    | 'linkedin'
     | 'core'
     | 'cartridge'
     | 'uberedux'
@@ -661,13 +663,17 @@ export default function Icon({ icon, color }: TIcon) {
       iconFragment = <CartridgeIcon color={color} />;
       break;
 
-      case 'copy':
-        iconFragment = <CopyIcon color={color} />;
-        break;
+    case 'copy':
+      iconFragment = <CopyIcon color={color} />;
+      break;
 
-        case 'linkedin':
-          iconFragment = <LinkedInIcon color={color} />;
-          break;
+    case 'linkedin':
+      iconFragment = <LinkedInIcon color={color} />;
+      break;
+
+    case 'job':
+      iconFragment = <JobIcon color={color} />;
+      break;
 
     default:
       iconFragment = <ErrorIcon color={'warning'} />;

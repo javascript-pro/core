@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';

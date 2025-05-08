@@ -7,173 +7,209 @@ icon: goldlabel
 image: /png/bouncer/bouncer.png
 tags: CV, jobs, work
 ---
-## Chris Dorward  
-**Senior Fullstack JavaScript Developer**  
+
+## Chris Dorward
+
+**Senior Fullstack JavaScript Developer**
 
 **Email:** listingslab@gmail.com  
 **Web:** https://goldlabel.pro/cv  
 **GitHub:** https://github.com/javascript-pro  
 **LinkedIn:** https://www.linkedin.com/in/chris-dorward  
-**Work eligibility:** UK & German passports — full rights in UK and EU  
+**Work eligibility:** UK & German passports — full rights in UK and EU
 
-## Summary  
+## Summary
 
 Over 20 years of experience delivering scalable web applications across startups, enterprises, and remote-first teams in the UK, Europe, and Australia. Deep expertise in React, TypeScript, and app architecture, with a current focus on Next.js. Recently, I’ve focused on using AI as a practical development accelerator — not a shortcut, but a force multiplier. With experience and intent, AI generates production-grade results faster and cleaner. Code now ships 2–3x faster with fewer bugs.
 
 Proven track record building high-performance UIs, integrating automated testing and linting, and delivering through streamlined pipelines. Equally comfortable leading projects or collaborating in agile teams. Prefer a clear brief, a clean codebase, and a culture that values delivery. Outside work, I write, travel, surf, dive, and ski.
 
-## Tech Skills  
+## Tech Skills
 
-- **Languages:** JavaScript (ES6+), TypeScript, HTML5, CSS3, PHP  
-- **Frameworks & Libraries:** React, Next.js (App Router), Redux, Redux-Saga, Node.js, Express, jQuery  
-- **UI & Styling:** MUI (Material UI), Tailwind CSS, Styled Components  
-- **Tools & Platforms:** Git, GitHub, Vercel, Firebase (Auth, Firestore, Storage), Netlify, Docker, Turborepo, Webpack  
-- **Databases & APIs:** Firestore, PostgreSQL (Neon), DynamoDB, GraphQL, REST, WordPress (Headless)  
-- **Testing & QA:** Jest, React Testing Library, Cypress, Cucumber (BDD), Gherkin  
-- **DevOps & Workflow:** CI/CD (GitHub Actions, Netlify Deploy), GitFlow, Agile/SCRUM, Headless CMS (Strapi, Contentful)  
-- **Other:** Progressive Web Apps (PWA), Static Site Generation (SSG), Server-Side Rendering (SSR), OpenAI API, Whisper/DALL·E  
+- **Languages:** JavaScript (ES6+), TypeScript, HTML5, CSS3, PHP
+- **Frameworks & Libraries:** React, Next.js (App Router), Redux, Redux-Saga, Node.js, Express, jQuery
+- **UI & Styling:** MUI (Material UI), Tailwind CSS, Styled Components
+- **Tools & Platforms:** Git, GitHub, Vercel, Firebase (Auth, Firestore, Storage), Netlify, Docker, Turborepo, Webpack
+- **Databases & APIs:** Firestore, PostgreSQL (Neon), DynamoDB, GraphQL, REST, WordPress (Headless)
+- **Testing & QA:** Jest, React Testing Library, Cypress, Cucumber (BDD), Gherkin
+- **DevOps & Workflow:** CI/CD (GitHub Actions, Netlify Deploy), GitFlow, Agile/SCRUM, Headless CMS (Strapi, Contentful)
+- **Other:** Progressive Web Apps (PWA), Static Site Generation (SSG), Server-Side Rendering (SSR), OpenAI API, Whisper/DALL·E
 
-## Experience  
+## Experience
 
-### Founder — Goldlabel Apps Ltd  
-**Remote — 2024 to Present**  
-- Building a suite of real-world Next.js apps and open-source tools designed to help developers go from amateur to professional  
-- Publishing instructional eBooks on modern web delivery, covering everything from setup to deployment workflows  
-- Created and maintained the Goldlabel Monorepo: a multi-app Next.js project using Turborepo and MUI, deployed to Vercel  
-- Released SpeakWrite, an AI-powered voice-to-marketing app using OpenAI Whisper, DALL·E, and Firebase  
-- Developing and documenting Playbook, a Markdown-powered e-reader PWA for creative content cartridges  
+### Founder — Goldlabel Apps Ltd
 
-### Frontend Developer — VU.CITY  
-**London / Remote — Apr 2023 to May 2025**  
-- Leading the development of internal tools and the Admin Portal using Next.js (App Router), Firebase Auth, and Firestore  
-- Architecting a modular frontend platform to power multiple apps with a shared design system based on MUI  
-- Building event-driven interfaces that integrate with external systems, including AWS and internal APIs  
-- Championing best practices across accessibility, performance, and developer experience  
-- Supporting wider digital twin product strategy with tooling, documentation, and UI infrastructure  
+**Remote — 2024 to Present**
 
-### Full Stack JavaScript Developer — Atrackt!  
-**Malta — Jun 2021 to Apr 2023**  
-- Worked closely with the CTO as part of a lean, cross-functional team  
-- Delivered high-performance static and PWA sites using Gatsby (Node + React)  
-- Integrated Headless CMS platforms like Contentful and Strapi  
-- Used Material UI Design System across all frontends for consistent UX  
-- Also served as Scrum Master when needed, facilitating agile delivery  
+- Building a suite of real-world Next.js apps and open-source tools designed to help developers go from amateur to professional
+- Publishing instructional eBooks on modern web delivery, covering everything from setup to deployment workflows
+- Created and maintained the Goldlabel Monorepo: a multi-app Next.js project using Turborepo and MUI, deployed to Vercel
+- Released SpeakWrite, an AI-powered voice-to-marketing app using OpenAI Whisper, DALL·E, and Firebase
+- Developing and documenting Playbook, a Markdown-powered e-reader PWA for creative content cartridges
 
-### Product Lead — Wanngi  
-**Brisbane, Australia — Jun 2020 to Nov 2020**  
-- Led the redevelopment of a legacy Angular PWA into a new React-based platform  
-- Architected and implemented core framework features using custom open-source tooling  
-- Oversaw a small engineering team and coordinated cross-functional delivery  
+### Frontend Developer — VU.CITY
 
-### Senior Frontend Developer — Codeworx  
-**Brisbane, Australia — Sep 2019 to Feb 2020**  
-- Migrated a legacy poker app from CoffeeScript/jQuery to a modern React-based PWA  
-- Refactored critical UI flows to improve maintainability and performance  
-- Delivered incremental improvements while maintaining stability for existing users  
+**London / Remote — Apr 2023 to May 2025**
 
-### Senior Frontend Developer — Rexlabs  
-**Brisbane, Australia — Mar 2019 to Aug 2019**  
-- Supported transition from legacy PHP/Knockout stack to a React/Redux frontend  
-- Contributed to modularizing the UI and improving developer experience  
-- Mentored junior developers during migration sprints  
+- Leading the development of internal tools and the Admin Portal using Next.js (App Router), Firebase Auth, and Firestore
+- Architecting a modular frontend platform to power multiple apps with a shared design system based on MUI
+- Building event-driven interfaces that integrate with external systems, including AWS and internal APIs
+- Championing best practices across accessibility, performance, and developer experience
+- Supporting wider digital twin product strategy with tooling, documentation, and UI infrastructure
 
-### React Developer — Boral  
-**Sydney, Australia — Aug 2018 to Feb 2019 (Contract)**  
-- Built foundational test architecture using Cucumber, Gherkin, and BDD principles  
-- Developed and tested multiple React PWAs with AWS Amplify and GraphQL  
-- Enabled CI/CD workflows to support rapid feature deployment  
+### Full Stack JavaScript Developer — Atrackt!
 
-### Senior Frontend Developer — Canon Australia  
-**Sydney, Australia — Mar 2018 to Aug 2018 (Contract)**  
-- Led frontend development of a full-featured Progressive Web App from scratch  
-- Architected state management with Redux and persistent store  
-- Integrated multiple SaaS APIs and delivered UX enhancements across devices  
+**Malta — Jun 2021 to Apr 2023**
 
-### Frontend Engineer — Aligent Consulting  
-**Adelaide, Australia — Apr 2017 to Mar 2018**  
-- Developed and maintained frontend themes for high-traffic Magento e-commerce sites  
-- Created custom JavaScript (ES6) modules to enhance user experience, including complex checkout flows  
-- Built commercial-grade Progressive Web Apps (PWAs) in React for mobile-first performance  
-- Worked closely with design and backend teams to deliver polished, conversion-optimized user interfaces  
+- Worked closely with the CTO as part of a lean, cross-functional team
+- Delivered high-performance static and PWA sites using Gatsby (Node + React)
+- Integrated Headless CMS platforms like Contentful and Strapi
+- Used Material UI Design System across all frontends for consistent UX
+- Also served as Scrum Master when needed, facilitating agile delivery
 
-### Fullstack Developer — usTwo  
-**Sydney, Australia — Jan 2017 to Feb 2017 (Contract)**  
-- Lead developer for the Cancer Council NSW’s [Healthy Lunchbox](http://healthylunchbox.com.au) app  
-- Built a React frontend connected to a WordPress CMS via the new REST API  
-- Developed custom PHP endpoints and WordPress plugins  
-- Used modern tooling including ES6, Webpack, and GitFlow  
+### Product Lead — Wanngi
 
-### Front End Software Engineer — Alcidion  
-**Adelaide, Australia — Aug 2016 to Nov 2016 (Contract)**  
-- Built frontend interfaces for a real-time hospital bed management system using React and Redux  
-- Worked in a tight-knit, fast-paced SCRUM team delivering critical medical software  
-- Focused on performance, usability, and reliability in a healthcare context  
+**Brisbane, Australia — Jun 2020 to Nov 2020**
 
-### Contract JavaScript Developer — Huawei  
-**Shenzhen, China — Feb 2016 to May 2016**  
-- Built an isomorphic JavaScript project management app using React and Node.js  
-- Worked within a small, agile development team  
-- Contributed to localisation efforts for Chinese-language users  
-- Gained hands-on experience in a Chinese corporate environment  
+- Led the redevelopment of a legacy Angular PWA into a new React-based platform
+- Architected and implemented core framework features using custom open-source tooling
+- Oversaw a small engineering team and coordinated cross-functional delivery
 
-### Contract JavaScript Developer — The Changing Workplace  
-**London — Sep 2015 to Jan 2016**  
-- Contributed to a large-scale SaaS platform for facilities management  
-- Developed frontend JavaScript applications handling complex, high-volume datasets  
-- Consumed RESTful APIs and collaborated across backend and QA teams  
-- Enterprise clients included Microsoft and General Electric  
+### Senior Frontend Developer — Codeworx
 
-### Self-Employed Web Developer — Listingslab  
-**Remote / Global — Jul 2007 to Jul 2015**  
-- Ran a solo consultancy delivering full-stack web development  
-- Specialized in WordPress Multisite, custom plugins, and responsive theme design  
-- Built mobile-first UIs using HTML5, CSS3, and jQuery  
-- Worked with distributed teams using GitHub and agile workflows  
+**Brisbane, Australia — Sep 2019 to Feb 2020**
 
-### Senior Developer — Velo//  
-**London — Oct 2010 to Dec 2011**  
-- Developed WordPress Multisite solutions with custom modules and themes  
-- Delivered frontend and backend features using Flash and PHP/MySQL  
-- Contributed to multi-client campaign execution  
+- Migrated a legacy poker app from CoffeeScript/jQuery to a modern React-based PWA
+- Refactored critical UI flows to improve maintainability and performance
+- Delivered incremental improvements while maintaining stability for existing users
 
-### Lead Product Developer — FMG  
-**London — Nov 2005 to Dec 2006**  
-- Designed and launched **Ceros**, a Flash-based digital publishing platform  
-- Developed the product prototype and backend integrations  
-- Platform sold commercially since 2006  
+### Senior Frontend Developer — Rexlabs
 
-### Senior Systems Developer — IG Index  
-**London — Oct 2003 to Nov 2005**  
-- Lead Flash developer in the in-house creative team  
-- Migrated frontend systems to a third-generation Flash platform  
-- Produced digital campaigns, partner sites, and marketing assets  
+**Brisbane, Australia — Mar 2019 to Aug 2019**
 
-## Early Career (1999–2004)  
+- Supported transition from legacy PHP/Knockout stack to a React/Redux frontend
+- Contributed to modularizing the UI and improving developer experience
+- Mentored junior developers during migration sprints
+
+### React Developer — Boral
+
+**Sydney, Australia — Aug 2018 to Feb 2019 (Contract)**
+
+- Built foundational test architecture using Cucumber, Gherkin, and BDD principles
+- Developed and tested multiple React PWAs with AWS Amplify and GraphQL
+- Enabled CI/CD workflows to support rapid feature deployment
+
+### Senior Frontend Developer — Canon Australia
+
+**Sydney, Australia — Mar 2018 to Aug 2018 (Contract)**
+
+- Led frontend development of a full-featured Progressive Web App from scratch
+- Architected state management with Redux and persistent store
+- Integrated multiple SaaS APIs and delivered UX enhancements across devices
+
+### Frontend Engineer — Aligent Consulting
+
+**Adelaide, Australia — Apr 2017 to Mar 2018**
+
+- Developed and maintained frontend themes for high-traffic Magento e-commerce sites
+- Created custom JavaScript (ES6) modules to enhance user experience, including complex checkout flows
+- Built commercial-grade Progressive Web Apps (PWAs) in React for mobile-first performance
+- Worked closely with design and backend teams to deliver polished, conversion-optimized user interfaces
+
+### Fullstack Developer — usTwo
+
+**Sydney, Australia — Jan 2017 to Feb 2017 (Contract)**
+
+- Lead developer for the Cancer Council NSW’s [Healthy Lunchbox](http://healthylunchbox.com.au) app
+- Built a React frontend connected to a WordPress CMS via the new REST API
+- Developed custom PHP endpoints and WordPress plugins
+- Used modern tooling including ES6, Webpack, and GitFlow
+
+### Front End Software Engineer — Alcidion
+
+**Adelaide, Australia — Aug 2016 to Nov 2016 (Contract)**
+
+- Built frontend interfaces for a real-time hospital bed management system using React and Redux
+- Worked in a tight-knit, fast-paced SCRUM team delivering critical medical software
+- Focused on performance, usability, and reliability in a healthcare context
+
+### Contract JavaScript Developer — Huawei
+
+**Shenzhen, China — Feb 2016 to May 2016**
+
+- Built an isomorphic JavaScript project management app using React and Node.js
+- Worked within a small, agile development team
+- Contributed to localisation efforts for Chinese-language users
+- Gained hands-on experience in a Chinese corporate environment
+
+### Contract JavaScript Developer — The Changing Workplace
+
+**London — Sep 2015 to Jan 2016**
+
+- Contributed to a large-scale SaaS platform for facilities management
+- Developed frontend JavaScript applications handling complex, high-volume datasets
+- Consumed RESTful APIs and collaborated across backend and QA teams
+- Enterprise clients included Microsoft and General Electric
+
+### Self-Employed Web Developer — Listingslab
+
+**Remote / Global — Jul 2007 to Jul 2015**
+
+- Ran a solo consultancy delivering full-stack web development
+- Specialized in WordPress Multisite, custom plugins, and responsive theme design
+- Built mobile-first UIs using HTML5, CSS3, and jQuery
+- Worked with distributed teams using GitHub and agile workflows
+
+### Senior Developer — Velo//
+
+**London — Oct 2010 to Dec 2011**
+
+- Developed WordPress Multisite solutions with custom modules and themes
+- Delivered frontend and backend features using Flash and PHP/MySQL
+- Contributed to multi-client campaign execution
+
+### Lead Product Developer — FMG
+
+**London — Nov 2005 to Dec 2006**
+
+- Designed and launched **Ceros**, a Flash-based digital publishing platform
+- Developed the product prototype and backend integrations
+- Platform sold commercially since 2006
+
+### Senior Systems Developer — IG Index
+
+**London — Oct 2003 to Nov 2005**
+
+- Lead Flash developer in the in-house creative team
+- Migrated frontend systems to a third-generation Flash platform
+- Produced digital campaigns, partner sites, and marketing assets
+
+## Early Career (1999–2004)
 
 Held a series of Flash and web development roles during the peak of the Flash era, contributing to frontend systems across finance, gaming, media, and publishing.
 
-**Highlights include:**  
-- **Cantor Fitzgerald (2002–2003):** Systems Developer on trading UIs  
-- **Eurobet (2002):** Senior Flash Developer for online gaming  
-- **Pearson Broadband (2002–2003):** Flash Developer for education delivery  
-- **Kyunet, Sydney (2001–2002):** Senior Web Developer during dotcom boom  
-- **KPE London (2000–2001):** Flash Developer for rich media campaigns  
-- **4MAT / Aspinalls (1999):** Early work in casino and recruitment web apps  
+**Highlights include:**
 
-## Education  
+- **Cantor Fitzgerald (2002–2003):** Systems Developer on trading UIs
+- **Eurobet (2002):** Senior Flash Developer for online gaming
+- **Pearson Broadband (2002–2003):** Flash Developer for education delivery
+- **Kyunet, Sydney (2001–2002):** Senior Web Developer during dotcom boom
+- **KPE London (2000–2001):** Flash Developer for rich media campaigns
+- **4MAT / Aspinalls (1999):** Early work in casino and recruitment web apps
+
+## Education
 
 **BSc Psychology**  
-*Newcastle University, UK — 1999*  
+_Newcastle University, UK — 1999_
 
 **A Levels: Maths, Physics, Chemistry**  
-*Woodbridge School, Suffolk — 1994*  
+_Woodbridge School, Suffolk — 1994_
 
 **GCSEs: 10 Subjects**  
-Including English, Maths, and Science  
+Including English, Maths, and Science
 
-## Languages  
+## Languages
 
-- **English:** Native  
-- **German:** Fluent — bilingual upbringing, partial schooling in Germany  
-- **French:** Conversational  
-
+- **English:** Native
+- **German:** Fluent — bilingual upbringing, partial schooling in Germany
+- **French:** Conversational

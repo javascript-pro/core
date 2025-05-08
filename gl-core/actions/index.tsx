@@ -1,5 +1,3 @@
-import {exampleAction} from "./exampleAction";
+import { exampleAction } from './exampleAction';
 
-export {
-    exampleAction,
-}
+export { exampleAction };

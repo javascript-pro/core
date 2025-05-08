@@ -1,10 +1,9 @@
 import config from '../config.json';
 import { createTheme } from '@mui/material';
-import {TTheme} from '../';
+import { TTheme } from '../';
 
 const mode = 'light';
 const theme = config.themes.light;
-
 
 export function createMUITheme() {
   return createTheme({

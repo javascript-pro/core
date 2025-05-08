@@ -7,7 +7,7 @@ import { TNav } from './Nav';
 import NavItem from './NavItem';
 import { TNavItem } from './NavItem';
 
-import {PageBreadcrumb} from './PageBreadcrumb';
+import { PageBreadcrumb } from './PageBreadcrumb';
 
 import Share from './Share';
 import { TShare } from './Share';
@@ -18,14 +18,14 @@ import { TMightyButton } from './MightyButton';
 import Search from './Search';
 import { TSearch } from './Search';
 
-export {
-    MainMenu,
-    Nav,
-    NavItem,
-    PageBreadcrumb,
-    Share,
-    MightyButton,
-    Search,
-};
+export { MainMenu, Nav, NavItem, PageBreadcrumb, Share, MightyButton, Search };
 
-export type { TSearch, TMightyButton, TShare, TMainMenu, TNav, TNavItem, TMainMenuItem };
+export type {
+  TSearch,
+  TMightyButton,
+  TShare,
+  TMainMenu,
+  TNav,
+  TNavItem,
+  TMainMenuItem,
+};

@@ -1,50 +1,43 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import { 
-  Box,
-  Container, 
-  Grid,
-  Typography,
-} from '@mui/material';
+import { Box, Container, Grid, Typography } from '@mui/material';
 import {
   // Share,
   useIsMobile,
   MainMenu,
-} from "../";
+} from '../';
 import ReactMarkdown from 'react-markdown';
 
 export type TMain = {
   body?: string;
   frontmatter?: any;
-}
+};
 
-export default function Main({
-  body = "No body",
-  frontmatter = null,
-}: TMain) {
-
+export default function Main({ body = 'No body', frontmatter = null }: TMain) {
   const isMobile = useIsMobile();
   const featuredImage = frontmatter?.image || null;
-  
+
   return (
     <Container maxWidth="md">
       <Grid container spacing={2}>
-
-        <Grid size={{
-          "xs": 12,
-          "md": 3,
-        }}>
+        <Grid
+          size={{
+            xs: 12,
+            md: 3,
+          }}
+        >
           {/* <Share frontmatter={frontmatter} /> */}
           {!isMobile ? <MainMenu /> : null}
         </Grid>
 
-        <Grid size={{
-          "xs": 12,
-          "md": 9,
-        }}>
+        <Grid
+          size={{
+            xs: 12,
+            md: 9,
+          }}
+        >
           <Typography variant="body1">
-
             {featuredImage && (
               <Box
                 position="relative"
@@ -66,12 +59,10 @@ export default function Main({
               </Box>
             )}
 
-            <ReactMarkdown>
-              {body}
-            </ReactMarkdown>
+            <ReactMarkdown>{body}</ReactMarkdown>
           </Typography>
         </Grid>
       </Grid>
     </Container>
   );
-};
+}

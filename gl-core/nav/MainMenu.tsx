@@ -10,10 +10,7 @@ import {
 } from '@mui/material';
 import { usePathname, useRouter } from 'next/navigation';
 import globalNav from '../../public/globalNav.json';
-import {
-  NavItem,
-  Icon,
-} from '../';
+import { NavItem, Icon } from '../';
 
 export type TMainMenu = {
   folderLabel?: string;
@@ -33,7 +30,10 @@ function normalizeSlug(slug?: string) {
   return `/${slug || ''}`.replace(/\/+/g, '/');
 }
 
-function findFolderBySlug(items: TMainMenuItem[], pathname: string): TMainMenuItem | null {
+function findFolderBySlug(
+  items: TMainMenuItem[],
+  pathname: string,
+): TMainMenuItem | null {
   for (const item of items) {
     const fullPath = normalizeSlug(item.slug);
     if (fullPath === pathname && item.type === 'folder') {
@@ -58,7 +58,10 @@ function findParentOfItem(
       return parents[parents.length - 1] || null;
     }
     if (item.children) {
-      const found = findParentOfItem(item.children, pathname, [...parents, item]);
+      const found = findParentOfItem(item.children, pathname, [
+        ...parents,
+        item,
+      ]);
       if (found) return found;
     }
   }
@@ -67,7 +70,7 @@ function findParentOfItem(
 
 export default function MainNav({
   folderLabel,
-  onSelect = () => {}
+  onSelect = () => {},
 }: TMainMenu) {
   const pathname = usePathname();
   const router = useRouter();
@@ -124,7 +127,11 @@ export default function MainNav({
       {itemsToRender.length > 0 && (
         <List dense>
           {itemsToRender
-            .filter((item) => normalizeSlug(item.slug) !== normalizedPath && normalizeSlug(item.slug) !== '/cv')
+            .filter(
+              (item) =>
+                normalizeSlug(item.slug) !== normalizedPath &&
+                normalizeSlug(item.slug) !== '/cv',
+            )
             .map((item) => (
               <NavItem
                 key={item.slug}

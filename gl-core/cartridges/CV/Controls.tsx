@@ -4,13 +4,17 @@ import * as React from 'react';
 import { AppBar, Toolbar } from '@mui/material';
 import { MightyButton } from '../../';
 import { marked } from 'marked';
-import {templatePDF} from "./"
+import { templatePDF } from './';
 
 export type TControls = {
   markdown?: string;
 };
 
 export default function Controls({ markdown = 'No content' }: TControls) {
+  const onJDClick = async () => {
+    console.log('onJDClick');
+  };
+
   const onDownloadClick = async () => {
     // Dynamically import html2pdf ONLY when the button is clicked
     const { default: html2pdf } = await import('html2pdf.js');
@@ -41,6 +45,16 @@ export default function Controls({ markdown = 'No content' }: TControls) {
       }}
     >
       <Toolbar sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+        
+        <MightyButton
+          sx={{mx: 1}}
+          icon="job"
+          label="Job Description"
+          variant="outlined"
+          color="secondary"
+          onClick={onJDClick}
+        />
+
         <MightyButton
           icon="save"
           label="Save PDF"

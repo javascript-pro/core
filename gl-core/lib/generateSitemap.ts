@@ -7,7 +7,10 @@ const OUTPUT_PATH = path.join(process.cwd(), 'public', 'sitemap.xml');
 
 const BASE_URL = 'https://goldlabel.pro';
 
-async function getAllMarkdownSlugs(dir: string, baseSlug = ''): Promise<string[]> {
+async function getAllMarkdownSlugs(
+  dir: string,
+  baseSlug = '',
+): Promise<string[]> {
   const entries = await fs.readdir(dir, { withFileTypes: true });
 
   const slugs: string[] = [];
@@ -35,13 +38,15 @@ async function getAllMarkdownSlugs(dir: string, baseSlug = ''): Promise<string[]
 }
 
 function generateSitemapXml(slugs: string[]): string {
-  const urls = slugs.map((slug) => {
-    const fullUrl = new URL(slug.replace(/\\/g, '/'), BASE_URL).href;
-    return `
+  const urls = slugs
+    .map((slug) => {
+      const fullUrl = new URL(slug.replace(/\\/g, '/'), BASE_URL).href;
+      return `
   <url>
     <loc>${fullUrl}</loc>
   </url>`;
-  }).join('');
+    })
+    .join('');
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">

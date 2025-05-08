@@ -1,19 +1,19 @@
 import Core from './Core';
 import { TCore, TFrontmatter } from './Core';
 // actions
-import {exampleAction} from './actions';
+import { exampleAction } from './actions';
 // theme
-import {Theme} from './theme';
+import { Theme } from './theme';
 import { TTheme } from './theme';
 import { Icon } from './theme';
 import { createMUITheme } from './theme';
 import { TIcon } from './theme';
 // layout
-import {Header} from './layout';
+import { Header } from './layout';
 import { THeader } from './layout';
-import {Main} from './layout';
+import { Main } from './layout';
 import { TMain } from './layout';
-import {Footer} from './layout';
+import { Footer } from './layout';
 import { TFooter } from './layout';
 
 // nav
@@ -27,8 +27,7 @@ import {
   Search,
 } from './nav';
 
-
-import { 
+import {
   TNav,
   TMainMenu,
   TNavItem,
@@ -37,10 +36,7 @@ import {
   TSearch,
 } from './nav';
 
-import {
-  useConfig,
-  useIsMobile,
-} from './hooks';
+import { useConfig, useIsMobile } from './hooks';
 import {
   Uberedux,
   UbereduxProvider,
@@ -50,48 +46,21 @@ import {
   setUbereduxKey,
   resetUberedux,
 } from './cartridges/Uberedux';
-import {
-  TUbereduxDispatch,
-} from './cartridges/Uberedux';
+import { TUbereduxDispatch } from './cartridges/Uberedux';
 
-import {
-  CV,
-} from './cartridges/CV';
-import {
-  TCV,
-} from './cartridges/CV';
+import { CV } from './cartridges/CV';
+import { TCV } from './cartridges/CV';
 
-
-export {
-  Core,
-};
-
+export { Core };
 
 // theme
-export {
-  Theme,
-  createMUITheme,
-  Icon,
-};
-
+export { Theme, createMUITheme, Icon };
 
 // components
-export {
-  Header,
-  Footer,
-  Main,
-};
+export { Header, Footer, Main };
 
 // nav
-export {
-  MainMenu,
-  Nav,
-  NavItem,
-  PageBreadcrumb,
-  Share,
-  MightyButton,
-  Search,
-};
+export { MainMenu, Nav, NavItem, PageBreadcrumb, Share, MightyButton, Search };
 
 // uberedux
 export {
@@ -107,13 +76,25 @@ export {
 };
 
 // CV
-export {
-  CV,
-};
+export { CV };
 
 // actions
-export {
-  exampleAction,
-};
+export { exampleAction };
 
-export type { TSearch, TCV, TFrontmatter, TMightyButton, TMain, TShare, TFooter, TCore, TTheme, TMainMenu, TIcon, TNav, THeader, TUbereduxDispatch, TNavItem };
+export type {
+  TSearch,
+  TCV,
+  TFrontmatter,
+  TMightyButton,
+  TMain,
+  TShare,
+  TFooter,
+  TCore,
+  TTheme,
+  TMainMenu,
+  TIcon,
+  TNav,
+  THeader,
+  TUbereduxDispatch,
+  TNavItem,
+};
