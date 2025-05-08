@@ -1,7 +1,17 @@
 
 export const initialState: any = {
-  originalCV: null,
-  tailoredCV: null,
-  jd: null,
-  explaination: null,
+  resume: {
+    markdown: null,
+    visible: false,
+    tailored: null,
+    sections: [],
+  },
+  jd: {
+    markdown: null,
+    visible: false,
+  },
+  explaination: {
+    markdown: null,
+    visible: false,
+  },
 };  

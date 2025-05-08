@@ -37,7 +37,7 @@ export default function Core({
         }}
       >
         {type === 'cv' ? (
-          <CV body={body as any} />
+          <CV markdown={body as any} />
         ) : (
           <>
             <Header

@@ -1,35 +1,76 @@
 'use client';
+
 import * as React from 'react';
+import { Container, Typography } from '@mui/material';
 import { Controls } from './';
-import { Typography, Container } from '@mui/material';
 import ReactMarkdown from 'react-markdown';
+
 import { useSlice, useDispatch } from '../../';
-import {updateCVSlice} from "./";
+import { setUbereduxKey } from '../../';
+import { updateCVKey } from './';
 
 export type TCV = {
-  body?: string;
+  markdown?: string;
 };
 
-export default function CV({ body = 'No content' }: TCV) {
-
+export default function CV({ markdown = 'No content' }: TCV) {
   const slice = useSlice();
+  const {cv} = slice;
   const dispatch = useDispatch();
 
-  React.useEffect(() => {
-    if (!slice.cv?.originalCV && body) {
-      dispatch(updateCVSlice(body));
-    }
-  }, [slice.cv?.originalCV, body, dispatch]);
+  // Slugify helper for section IDs
+  const slugify = (str: string): string =>
+    str
+      .toLowerCase()
+      .trim()
+      .replace(/[^\w\s-]/g, '')
+      .replace(/\s+/g, '-');
 
+  // Extract ## section headings from markdown
+  const extractSections = (md: string) =>
+    md
+      .split('\n')
+      .filter((line) => line.startsWith('## '))
+      .map((line) => {
+        const title = line.replace(/^## /, '').trim();
+        return {
+          id: slugify(title),
+          title,
+          visible: true,
+        };
+      });
+
+  // Initialize cv.resume once
+  React.useEffect(() => {
+    const resume = slice.cv?.resume;
+
+    if (!resume?.markdown && markdown) {
+      const sections = extractSections(markdown);
+      dispatch(updateCVKey('cv.resume', {
+        markdown,
+        sections,
+      }));
+    }
+  }, [slice.cv?.resume, markdown, dispatch]);
+
+  const resume = slice.cv?.resume || {};
+  const visible = resume.visible === true;
+  const displayMarkdown = resume.markdown || markdown;
+  
   return (
     <Container maxWidth="md">
-      <Controls markdown={body} />
+      <Controls markdown={displayMarkdown} />
+      <pre style={{ marginTop: '2rem' }}>
+        resume: {JSON.stringify(resume, null, 2)}
+      </pre>
 
-      {/* <Typography component="div">
-        <ReactMarkdown>{body}</ReactMarkdown>
-      </Typography> */}
+      {visible && (
+        <Typography component="div" sx={{ mt: 4 }}>
+          <ReactMarkdown>{displayMarkdown}</ReactMarkdown>
+        </Typography>
+      )}
 
-      <pre>slice: {JSON.stringify(slice, null, 2)}</pre>
+      
     </Container>
   );
 }

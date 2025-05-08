@@ -46,18 +46,18 @@ export default function Controls({ markdown = 'No content' }: TControls) {
     >
       <Toolbar sx={{ display: 'flex', justifyContent: 'flex-end' }}>
         
-        <MightyButton
+        {/* <MightyButton
           sx={{mx: 1}}
           icon="job"
           label="Job Description"
           variant="outlined"
           color="secondary"
           onClick={onJDClick}
-        />
+        /> */}
 
         <MightyButton
           icon="save"
-          label="Save PDF"
+          label="Download"
           variant="outlined"
           color="secondary"
           onClick={onDownloadClick}

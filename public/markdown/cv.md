@@ -8,7 +8,7 @@ image: /png/bouncer/bouncer.png
 tags: CV, jobs, work
 ---
 
-## Chris Dorward
+# Chris Dorward
 
 **Senior Fullstack JavaScript Developer**
 
