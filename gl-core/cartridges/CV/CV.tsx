@@ -4,9 +4,7 @@ import * as React from 'react';
 import { Container, Typography } from '@mui/material';
 import { Controls } from './';
 import ReactMarkdown from 'react-markdown';
-
 import { useSlice, useDispatch } from '../../';
-import { setUbereduxKey } from '../../';
 import { updateCVKey } from './';
 
 export type TCV = {
@@ -48,6 +46,7 @@ export default function CV({ markdown = 'No content' }: TCV) {
       const sections = extractSections(markdown);
       dispatch(updateCVKey('cv.resume', {
         markdown,
+        tailored: markdown,
         sections,
       }));
     }
@@ -60,7 +59,8 @@ export default function CV({ markdown = 'No content' }: TCV) {
   return (
     <Container maxWidth="md">
       <Controls markdown={displayMarkdown} />
-      <pre style={{ marginTop: '2rem' }}>
+
+      <pre>
         resume: {JSON.stringify(resume, null, 2)}
       </pre>
 
@@ -70,7 +70,6 @@ export default function CV({ markdown = 'No content' }: TCV) {
         </Typography>
       )}
 
-      
     </Container>
   );
 }

@@ -1,8 +1,8 @@
 
 export const initialState: any = {
   resume: {
-    markdown: null,
     visible: false,
+    markdown: null,
     tailored: null,
     sections: [],
   },
@@ -10,7 +10,7 @@ export const initialState: any = {
     markdown: null,
     visible: false,
   },
-  explaination: {
+  overview: {
     markdown: null,
     visible: false,
   },
