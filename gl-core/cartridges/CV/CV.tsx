@@ -8,15 +8,15 @@ import { useSlice, useDispatch } from '../../';
 import { updateCVKey } from './';
 
 export type TCV = {
-  markdown?: string;
+  original?: string | null;
 };
 
-export default function CV({ markdown = 'No content' }: TCV) {
+export default function CV({ 
+  original = null,
+}: TCV) {
   const slice = useSlice();
-  const {cv} = slice;
   const dispatch = useDispatch();
 
-  // Slugify helper for section IDs
   const slugify = (str: string): string =>
     str
       .toLowerCase()
@@ -24,7 +24,6 @@ export default function CV({ markdown = 'No content' }: TCV) {
       .replace(/[^\w\s-]/g, '')
       .replace(/\s+/g, '-');
 
-  // Extract ## section headings from markdown
   const extractSections = (md: string) =>
     md
       .split('\n')
@@ -38,37 +37,36 @@ export default function CV({ markdown = 'No content' }: TCV) {
         };
       });
 
-  // Initialize cv.resume once
   React.useEffect(() => {
     const resume = slice.cv?.resume;
 
-    if (!resume?.markdown && markdown) {
-      const sections = extractSections(markdown);
+    if (!resume?.original && original) {
+      const sections = extractSections(original);
       dispatch(updateCVKey('cv.resume', {
-        markdown,
-        tailored: markdown,
+        original,
+        tailored: original,
         sections,
       }));
     }
-  }, [slice.cv?.resume, markdown, dispatch]);
+  }, [slice.cv?.resume, original, dispatch]);
 
   const resume = slice.cv?.resume || {};
-  const visible = resume.visible === true;
-  const displayMarkdown = resume.markdown || markdown;
+  const visibleCV = resume.visible === true;
+  const displayMarkdown = resume.tailored || resume.original || original;
   
   return (
     <Container maxWidth="md">
       <Controls markdown={displayMarkdown} />
 
-      <pre>
-        resume: {JSON.stringify(resume, null, 2)}
-      </pre>
-
-      {visible && (
+      {visibleCV && (
         <Typography component="div" sx={{ mt: 4 }}>
           <ReactMarkdown>{displayMarkdown}</ReactMarkdown>
         </Typography>
       )}
+
+      {/* <pre>
+        resume: {JSON.stringify(resume, null, 2)}
+      </pre> */}
 
     </Container>
   );

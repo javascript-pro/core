@@ -1,8 +1,8 @@
 
 export const initialState: any = {
   resume: {
-    visible: false,
-    markdown: null,
+    visible: true,
+    original: null,
     tailored: null,
     sections: [],
   },

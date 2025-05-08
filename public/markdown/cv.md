@@ -7,12 +7,13 @@ icon: goldlabel
 image: /png/bouncer/bouncer.png
 tags: CV, jobs, work
 ---
-
 # Chris Dorward
-
 **Senior Fullstack JavaScript Developer**
 
+## Contact
+
 **Email:** listingslab@gmail.com  
+**Phone:** 07745 763 122
 **Web:** https://goldlabel.pro/cv  
 **GitHub:** https://github.com/javascript-pro  
 **LinkedIn:** https://www.linkedin.com/in/chris-dorward  
@@ -24,7 +25,7 @@ Over 20 years of experience delivering scalable web applications across startups
 
 Proven track record building high-performance UIs, integrating automated testing and linting, and delivering through streamlined pipelines. Equally comfortable leading projects or collaborating in agile teams. Prefer a clear brief, a clean codebase, and a culture that values delivery. Outside work, I write, travel, surf, dive, and ski.
 
-## Tech Skills
+## Skills
 
 - **Languages:** JavaScript (ES6+), TypeScript, HTML5, CSS3, PHP
 - **Frameworks & Libraries:** React, Next.js (App Router), Redux, Redux-Saga, Node.js, Express, jQuery
@@ -184,7 +185,9 @@ Proven track record building high-performance UIs, integrating automated testing
 - Migrated frontend systems to a third-generation Flash platform
 - Produced digital campaigns, partner sites, and marketing assets
 
-## Early Career (1999–2004)
+## Early Career 
+
+**(1999–2004)**
 
 Held a series of Flash and web development roles during the peak of the Flash era, contributing to frontend systems across finance, gaming, media, and publishing.
 
