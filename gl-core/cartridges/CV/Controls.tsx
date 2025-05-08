@@ -9,7 +9,6 @@ import {
   FormControlLabel,
   Checkbox,
   Popover,
-  IconButton,
 } from '@mui/material';
 import { MightyButton } from '../../';
 import { marked } from 'marked';
@@ -27,14 +26,12 @@ export default function Controls({ markdown = 'No content' }: TControls) {
   const resume = slice.cv?.resume || {};
   const sections = resume.sections || [];
 
-  // popup anchor state
   const [anchorEl, setAnchorEl] = React.useState<HTMLElement | null>(null);
   const open = Boolean(anchorEl);
   const handleToggleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(anchorEl ? null : event.currentTarget);
   };
 
-  // Slugify helper
   const slugify = (str: string): string =>
     str
       .toLowerCase()
@@ -42,7 +39,6 @@ export default function Controls({ markdown = 'No content' }: TControls) {
       .replace(/[^\w\s-]/g, '')
       .replace(/\s+/g, '-');
 
-  // Filter visible sections
   const getTailoredMarkdown = (original: string, sections: typeof resume.sections) => {
     const lines = original.split('\n');
     const visibleIds = new Set(sections.filter((s) => s.visible).map((s) => s.id));
@@ -64,7 +60,6 @@ export default function Controls({ markdown = 'No content' }: TControls) {
     return result.join('\n');
   };
 
-  // Download PDF
   const onDownloadClick = async () => {
     const { default: html2pdf } = await import('html2pdf.js');
     const fullHTML = templatePDF(marked.parse(markdown || '') as string);
@@ -84,6 +79,11 @@ export default function Controls({ markdown = 'No content' }: TControls) {
       .save();
   };
 
+  const onJDClick = async () => {
+    dispatch(updateCVKey('cv.resume', { visible: false }));
+    dispatch(updateCVKey('cv.jd', { visible: true }));
+  }
+
   return (
     <>
       <AppBar
@@ -102,6 +102,15 @@ export default function Controls({ markdown = 'No content' }: TControls) {
             color="secondary"
             onClick={handleToggleClick as any}
           />
+
+          <MightyButton
+            icon="job"
+            label="Job Description"
+            variant="outlined"
+            color="secondary"
+            onClick={onJDClick}
+          />
+
           <MightyButton
             icon="save"
             label="Download"
@@ -155,3 +164,10 @@ export default function Controls({ markdown = 'No content' }: TControls) {
     </>
   );
 }
+
+
+      /* 
+      <pre>
+        cv: {JSON.stringify(cv, null, 2)}
+      </pre> 
+      */
