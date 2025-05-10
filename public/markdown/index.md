@@ -10,7 +10,7 @@ tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Pr
 
 We build and ship modern web apps for clients who need real results — fast. Custom software that works
 
-- _Small_ teams. **Big** output
+- _Small_ team. **Big** output
 - Real deployments from Day One
 - Readable, extensible, Open Source codebases
 

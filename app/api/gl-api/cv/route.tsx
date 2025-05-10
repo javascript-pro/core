@@ -6,9 +6,6 @@ export async function GET(request: NextRequest) {
 
   return NextResponse.json({
     time: Date.now(),
-    frontend,
-    baseurl,
-    app,
-    verbs: ['GET', 'POST'],
+
   });
 }

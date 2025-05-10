@@ -12,10 +12,10 @@ tags: CV, jobs, work
 
 ## Contact
 
-**Email:** listingslab@gmail.com  
-**Phone:** 07745 763 122
-**Web:** https://goldlabel.pro/cv  
-**GitHub:** https://github.com/javascript-pro  
+**Email:** [goldlabel.apps@gmail.com](mailto:goldlabel.apps@gmail.com)  
+**Web:** [goldlabel.pro](https://goldlabel.pro)  
+**Phone:** +44 07745 763 122  
+**GitHub:** [github.com/javascript-pro](https://github.com/javascript-pro)  
 **LinkedIn:** https://www.linkedin.com/in/chris-dorward  
 **Work eligibility:** UK & German passports — full rights in UK and EU
 

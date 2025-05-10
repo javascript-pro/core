@@ -92,8 +92,8 @@ export default function CV({ original = null }: TCV) {
           <TextField
             fullWidth
             multiline
-            rows={8}
-            label="Paste the job description here"
+            rows={15}
+            label="Paste Job Description here"
             defaultValue={jd.markdown || ''}
             onChange={(e) => {
               dispatch(
