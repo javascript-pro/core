@@ -117,10 +117,12 @@ import CoreIcon from '@mui/icons-material/BarcodeReader';
 import CopyIcon from '@mui/icons-material/CopyAllOutlined';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import JobIcon from '@mui/icons-material/EditSquare';
+import DownloadIcon from '@mui/icons-material/Download';
 
 export type TIcon = {
   icon:
     | 'account'
+        | 'download'
     | 'job'
     | 'copy'
     | 'linkedin'
@@ -673,6 +675,11 @@ export default function Icon({ icon, color }: TIcon) {
 
     case 'job':
       iconFragment = <JobIcon color={color} />;
+      break;
+
+
+          case 'download':
+      iconFragment = <DownloadIcon color={color} />;
       break;
 
     default:
