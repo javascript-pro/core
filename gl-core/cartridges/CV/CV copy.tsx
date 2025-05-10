@@ -1,12 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import {
-  Container,
-  Typography,
-  TextField,
-  Box,
-} from '@mui/material';
+import { Container, Typography, TextField, Box } from '@mui/material';
 import ReactMarkdown from 'react-markdown';
 import { useSlice, useDispatch, MightyButton } from '../../';
 import { updateCVKey } from './';
@@ -50,7 +45,7 @@ export default function CV({ original = null }: TCV) {
           original,
           tailored: original,
           sections,
-        })
+        }),
       );
     }
   }, [cv?.resume, original, dispatch]);
@@ -58,12 +53,11 @@ export default function CV({ original = null }: TCV) {
   const onJDCancel = () => {
     dispatch(updateCVKey('cv.resume', { visible: true }));
     dispatch(updateCVKey('cv.jd', { visible: false }));
-  }
+  };
 
   const onAnalyse = () => {
-    console.log("onAnalyse");
-  }
-  
+    console.log('onAnalyse');
+  };
 
   const resume = cv?.resume || {};
   const jd = cv?.jd || {};
@@ -73,12 +67,9 @@ export default function CV({ original = null }: TCV) {
 
   return (
     <Container maxWidth="md">
-      
-
       {/* <pre>
         cv: {JSON.stringify(cv, null, 2)}
       </pre>  */}
-
 
       {visibleCV && (
         <Typography component="div" sx={{ mt: 4 }}>
@@ -98,7 +89,7 @@ export default function CV({ original = null }: TCV) {
               dispatch(
                 updateCVKey('cv.jd', {
                   markdown: e.target.value,
-                })
+                }),
               );
             }}
             onPaste={(e) => {
@@ -106,20 +97,19 @@ export default function CV({ original = null }: TCV) {
               dispatch(
                 updateCVKey('cv.jd', {
                   markdown: pasted,
-                })
+                }),
               );
             }}
           />
 
           <Box sx={{ mt: 2, display: 'flex', justifyContent: 'flex-end' }}>
-
             <MightyButton
-              sx={{mx: 1}}
+              sx={{ mx: 1 }}
               icon="left"
               label="Back"
               variant="outlined"
               color="secondary"
-              onClick={ onJDCancel }
+              onClick={onJDCancel}
             />
 
             <MightyButton
@@ -127,9 +117,8 @@ export default function CV({ original = null }: TCV) {
               label="Analyse"
               variant="outlined"
               color="secondary"
-              onClick={ onAnalyse }
+              onClick={onAnalyse}
             />
-
           </Box>
         </Box>
       )}

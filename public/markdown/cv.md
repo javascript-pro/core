@@ -7,7 +7,9 @@ icon: goldlabel
 image: /png/bouncer/bouncer.png
 tags: CV, jobs, work
 ---
+
 # Chris Dorward
+
 **Senior Fullstack JavaScript Developer**
 
 ## Contact
@@ -185,7 +187,7 @@ Proven track record building high-performance UIs, integrating automated testing
 - Migrated frontend systems to a third-generation Flash platform
 - Produced digital campaigns, partner sites, and marketing assets
 
-## Early Career 
+## Early Career
 
 **(1999–2004)**
 

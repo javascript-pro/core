@@ -1,4 +1,3 @@
-
 export const initialState: any = {
   resume: {
     visible: true,
@@ -14,4 +13,4 @@ export const initialState: any = {
     markdown: null,
     visible: false,
   },
-};  
+};

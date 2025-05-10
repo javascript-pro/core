@@ -122,7 +122,7 @@ import DownloadIcon from '@mui/icons-material/Download';
 export type TIcon = {
   icon:
     | 'account'
-        | 'download'
+    | 'download'
     | 'job'
     | 'copy'
     | 'linkedin'
@@ -677,8 +677,7 @@ export default function Icon({ icon, color }: TIcon) {
       iconFragment = <JobIcon color={color} />;
       break;
 
-
-          case 'download':
+    case 'download':
       iconFragment = <DownloadIcon color={color} />;
       break;
 

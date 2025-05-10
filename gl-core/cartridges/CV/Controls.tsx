@@ -39,9 +39,14 @@ export default function Controls({ markdown = 'No content' }: TControls) {
       .replace(/[^\w\s-]/g, '')
       .replace(/\s+/g, '-');
 
-  const getTailoredMarkdown = (original: string, sections: typeof resume.sections) => {
+  const getTailoredMarkdown = (
+    original: string,
+    sections: typeof resume.sections,
+  ) => {
     const lines = original.split('\n');
-    const visibleIds = new Set(sections.filter((s) => s.visible).map((s) => s.id));
+    const visibleIds = new Set(
+      sections.filter((s) => s.visible).map((s) => s.id),
+    );
 
     let include = true;
     const result: string[] = [];
@@ -82,7 +87,7 @@ export default function Controls({ markdown = 'No content' }: TControls) {
   const onJDClick = async () => {
     dispatch(updateCVKey('cv.resume', { visible: false }));
     dispatch(updateCVKey('cv.jd', { visible: true }));
-  }
+  };
 
   return (
     <>
@@ -144,13 +149,16 @@ export default function Controls({ markdown = 'No content' }: TControls) {
                       };
 
                       const original = resume.original || '';
-                      const tailored = getTailoredMarkdown(original, updatedSections);
+                      const tailored = getTailoredMarkdown(
+                        original,
+                        updatedSections,
+                      );
 
                       dispatch(
                         updateCVKey('cv.resume', {
                           sections: updatedSections,
                           tailored,
-                        })
+                        }),
                       );
                     }}
                   />
@@ -165,8 +173,7 @@ export default function Controls({ markdown = 'No content' }: TControls) {
   );
 }
 
-
-      /* 
+/* 
       <pre>
         cv: {JSON.stringify(cv, null, 2)}
       </pre> 

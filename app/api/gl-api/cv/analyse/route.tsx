@@ -10,7 +10,10 @@ export async function POST(req: NextRequest) {
     const { cv, job } = await req.json();
 
     if (!cv || !job) {
-      return NextResponse.json({ error: 'Missing CV or Job description' }, { status: 400 });
+      return NextResponse.json(
+        { error: 'Missing CV or Job description' },
+        { status: 400 },
+      );
     }
 
     const prompt = `
@@ -40,9 +43,11 @@ Your response should include:
     const content = completion.choices[0]?.message?.content || '';
 
     return NextResponse.json({ result: content });
-
   } catch (error) {
     console.error('OpenAI API error:', error);
-    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+    return NextResponse.json(
+      { error: 'Internal Server Error' },
+      { status: 500 },
+    );
   }
 }

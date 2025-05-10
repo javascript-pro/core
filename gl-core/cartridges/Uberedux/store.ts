@@ -12,7 +12,7 @@ const reduxSlice = createSlice({
   reducers: {
     setUbereduxKey: (
       state,
-      action: PayloadAction<{ key: string; value: any }>
+      action: PayloadAction<{ key: string; value: any }>,
     ) => {
       const { key, value } = action.payload;
       const keys = key.split('.');
