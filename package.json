@@ -1,5 +1,5 @@
 {
-  "version": "50.5.8",
+  "version": "50.5.9",
   "private": true,
   "packageManager": "yarn@4.3.1",
   "scripts": {
@@ -42,7 +42,7 @@
     "ms": "3.0.0-canary.1",
     "next": "15.0.0-canary.193",
     "next-pwa": "^5.6.0",
-    "openai": "^4.94.0",
+    "openai": "4.25.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-markdown": "^10.1.0",

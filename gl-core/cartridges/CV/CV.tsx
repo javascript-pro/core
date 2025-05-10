@@ -2,27 +2,36 @@
 
 import * as React from 'react';
 import { Container, AppBar } from '@mui/material';
-import { TailoredCV } from './';
-import { MightyButton, useSlice } from '../../';
+import { useSlice, useDispatch } from '../../';
+import { RenderCV, Job, Download, updateCVKey } from '../CV';
 
 export type TCV = {
   originalCV?: string | null;
 };
-export default function CV({ originalCV = null }: TCV) {
+
+export default function CV({ 
+  originalCV = null,
+}: TCV) {
+
+  const dispatch = useDispatch();
   const slice = useSlice();
   const { cv } = slice;
 
-  const onDownloadClick = () => {
-    console.log('onDownloadClick');
-  };
+  React.useEffect(() => {
+    const resume = cv?.resume;
+    if (!resume && originalCV) {
+      dispatch(updateCVKey('cv', { resume: originalCV}));
+    }
 
-  React.useEffect(() => {}, []);
+  }, [cv?.resume, originalCV, dispatch]);
 
-  if (cv?.resume) return null;
+  if (!cv?.resume) return null;
 
   return (
     <Container maxWidth="md">
-      <TailoredCV markdown={originalCV} />
+      <pre>cv: {JSON.stringify(cv, null, 2)}</pre>
+      <Job />
+      <RenderCV />
       <AppBar
         position="fixed"
         color="primary"
@@ -35,14 +44,7 @@ export default function CV({ originalCV = null }: TCV) {
         }}
       >
         <Container maxWidth="md">
-          <MightyButton
-            fullWidth
-            onClick={onDownloadClick}
-            color="secondary"
-            label="Download PDF"
-            variant="contained"
-            icon="download"
-          />
+          <Download />
         </Container>
       </AppBar>
     </Container>

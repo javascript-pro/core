@@ -1,16 +1,10 @@
-export const initialState: any = {
-  resume: {
-    visible: true,
-    original: null,
-    tailored: null,
-    sections: [],
-  },
-  jd: {
-    markdown: null,
-    visible: false,
-  },
-  overview: {
-    markdown: null,
-    visible: false,
-  },
+export type TCVSlice = {
+  resume: string | null;
+  jd: string | null;
+};
+
+
+export const initialState: TCVSlice = {
+  resume: null,
+  jd: null,
 };

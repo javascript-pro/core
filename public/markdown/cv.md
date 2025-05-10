@@ -29,14 +29,24 @@ Proven track record building high-performance UIs, integrating automated testing
 
 ## Skills
 
-- **Languages:** JavaScript (ES6+), TypeScript, HTML5, CSS3, PHP
-- **Frameworks & Libraries:** React, Next.js (App Router), Redux, Redux-Saga, Node.js, Express, jQuery
-- **UI & Styling:** MUI (Material UI), Tailwind CSS, Styled Components
-- **Tools & Platforms:** Git, GitHub, Vercel, Firebase (Auth, Firestore, Storage), Netlify, Docker, Turborepo, Webpack
-- **Databases & APIs:** Firestore, PostgreSQL (Neon), DynamoDB, GraphQL, REST, WordPress (Headless)
-- **Testing & QA:** Jest, React Testing Library, Cypress, Cucumber (BDD), Gherkin
-- **DevOps & Workflow:** CI/CD (GitHub Actions, Netlify Deploy), GitFlow, Agile/SCRUM, Headless CMS (Strapi, Contentful)
-- **Other:** Progressive Web Apps (PWA), Static Site Generation (SSG), Server-Side Rendering (SSR), OpenAI API, Whisper/DALL·E
+- **Languages:** Vanilla JavaScript (ES6+), TypeScript, HTML5, PHP
+
+- **Frameworks & Libraries:** React, Next.js (App Router), Redux, Node.js, Express, jQuery
+
+- **Style:** Vanilla CSS, Material UI, Tailwind CSS, Styled Components, Figma
+
+- **Database:** Firestore, MongoDB, MySQL, PostgreSQL, DynamoDB
+
+- **APIs:** REST, GraphQL, OpenAI, Whisper/DALL·E
+
+- **Testing & QA:** Jest, React Testing Library, Cucumber (BDD), Gherkin
+
+- **DevOps & Workflow:** CI/CD (GitHub Actions, Netlify Deploy), Linux (MAMP stack), GitFlow, Agile/SCRUM, Git, GitHub, Vercel, Firebase (Auth, Firestore, Storage), Netlify, Docker, Turborepo, Webpack
+
+- **CMS:** WordPress, Headless CMS (Strapi, Contentful), Drupal
+
+- **Other:** Progressive Web Apps (PWA), Static Site Generation (SSG), Server-Side Rendering (SSR)
+
 
 ## Experience
 

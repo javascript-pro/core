@@ -1,53 +1,58 @@
-import { NextRequest, NextResponse } from 'next/server';
-import OpenAI from 'openai';
+// app/api/gl-api/cv/analyse/route.ts
+import { NextRequest } from 'next/server';
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+export const runtime = 'edge';
 
 export async function POST(req: NextRequest) {
-  try {
-    const { cv, job } = await req.json();
+  const { resume, jd } = await req.json();
 
-    if (!cv || !job) {
-      return NextResponse.json(
-        { error: 'Missing CV or Job description' },
-        { status: 400 },
-      );
-    }
+  if (!resume || !jd) {
+    return new Response('Missing resume or job description', { status: 400 });
+  }
 
-    const prompt = `
-You are a professional CV rewriting assistant.
-Given the following CV and job description:
+  const prompt = `
+You are a senior hiring consultant.
+
+Evaluate the following CV against the provided job description and provide a structured response titled "fit".
+
+Start your response with a clear judgement — is this candidate a good fit for the role?
+
+Then, explain why or why not, highlighting:
+- Relevant skills or experience that overlap
+- Any strong alignment with the job description
+- Any gaps worth noting
 
 ---CV---
-${cv}
+${resume}
 
 ---Job Description---
-${job}
+${jd}
+`;
 
-1. Provide a short bullet-point overview of how well this CV matches the job.
-2. Rewrite the CV in Markdown format, optimizing it for this role. Maintain a professional tone.
-
-Your response should include:
-- A section titled 'Match Overview'
-- A section titled 'Optimized CV (Markdown)'
-    `;
-
-    const completion = await openai.chat.completions.create({
+  const openaiRes = await fetch('https://api.openai.com/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
       model: 'gpt-4',
-      messages: [{ role: 'user', content: prompt }],
+      stream: true,
       temperature: 0.7,
-    });
+      max_tokens: 1024,
+      messages: [{ role: 'user', content: prompt }],
+    }),
+  });
 
-    const content = completion.choices[0]?.message?.content || '';
-
-    return NextResponse.json({ result: content });
-  } catch (error) {
-    console.error('OpenAI API error:', error);
-    return NextResponse.json(
-      { error: 'Internal Server Error' },
-      { status: 500 },
-    );
+  if (!openaiRes.ok || !openaiRes.body) {
+    console.error('OpenAI fetch failed', await openaiRes.text());
+    return new Response('OpenAI stream failed', { status: 500 });
   }
+
+  return new Response(openaiRes.body, {
+    headers: {
+      'Content-Type': 'text/plain; charset=utf-8',
+      'Cache-Control': 'no-cache',
+    },
+  });
 }
