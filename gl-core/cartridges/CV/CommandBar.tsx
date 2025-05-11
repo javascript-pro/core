@@ -22,7 +22,7 @@ export default function CommandBar() {
     >
       <Container maxWidth="md">
         <Toolbar>
-          {mode === "jd" ? 
+          {mode === "jd" || mode === "ai" ? 
             <MightyButton
               mode={isMobile ? "icon" : null}
               onClick={() => {
@@ -33,7 +33,7 @@ export default function CommandBar() {
               variant="text"
             /> : null}
           
-          {mode === "resume" ? <MightyButton
+          {mode === "resume" || mode === "ai" ? <MightyButton
             mode={isMobile ? "icon" : null}
             onClick={() => {
               dispatch(updateCVKey('cv', { mode: "jd"}));
@@ -49,9 +49,9 @@ export default function CommandBar() {
           {mode === "jd" ? 
             <MightyButton
               onClick={() => {
-
+                dispatch(updateCVKey('cv', { mode: "ai"}));
               }}
-              label="Analyse"
+              label="Match CV"
               variant="contained"
               icon="openai"
             /> 

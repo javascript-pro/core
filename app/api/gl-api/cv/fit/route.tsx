@@ -20,7 +20,7 @@ Start your response with a clear judgement — is this candidate a good fit for 
 Then, explain why or why not, highlighting:
 - Relevant skills or experience that overlap
 - Any strong alignment with the job description
-- Any gaps worth noting
+- Respond in the first person
 
 ---CV---
 ${resume}

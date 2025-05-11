@@ -28,21 +28,13 @@ Proven track record building high-performance UIs, integrating automated testing
 ## Skills
 
 - **Languages:** Vanilla JavaScript (ES6+), TypeScript, HTML5, PHP
-
-- **Frameworks & Libraries:** React, Next.js (App Router), Redux, Node.js, Express, jQuery
-
+- **Frameworks & Libraries:** React, React Native, Next.js (App Router), Redux, Node.js, Express, jQuery
 - **Style:** Vanilla CSS, Material UI, Tailwind CSS, Styled Components, Figma
-
-- **Database:** Firestore, MongoDB, MySQL, PostgreSQL, DynamoDB
-
+- **Database:** NoSQL, Firestore, MongoDB, DynamoDB, Supabase, MySQL, PostgreSQL, SQL
 - **APIs:** REST, GraphQL, OpenAI, Whisper/DALL·E
-
 - **Testing & QA:** Jest, React Testing Library, Cucumber (BDD), Gherkin
-
 - **DevOps & Workflow:** CI/CD (GitHub Actions, Netlify Deploy), Linux (MAMP stack), GitFlow, Agile/SCRUM, Git, GitHub, Vercel, Firebase (Auth, Firestore, Storage), Netlify, Docker, Turborepo, Webpack
-
 - **CMS:** WordPress, Headless CMS (Strapi, Contentful), Drupal
-
 - **Other:** Progressive Web Apps (PWA), Static Site Generation (SSG), Server-Side Rendering (SSR)
 
 ## Experience
@@ -89,7 +81,7 @@ Proven track record building high-performance UIs, integrating automated testing
 
 **Brisbane, Australia — Sep 2019 to Feb 2020**
 
-- Migrated a legacy poker app from CoffeeScript/jQuery to a modern React-based PWA
+- Migrated a legacy poker app from CoffeeScript/jQuery to a modern React-based PWA and React Native App
 - Refactored critical UI flows to improve maintainability and performance
 - Delivered incremental improvements while maintaining stability for existing users
 

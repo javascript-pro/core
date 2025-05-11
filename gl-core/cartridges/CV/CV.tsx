@@ -32,13 +32,11 @@ export default function CV({ originalCV = null }: TCV) {
         <Resume />
       </Collapse>
      
-     <Collapse in={mode === 'jd' ? true : false} timeout="auto" unmountOnExit>
+      <Collapse in={mode === 'jd' ? true : false} timeout="auto" unmountOnExit>
         <Job />
       </Collapse>
       
-      <Collapse in={mode === 'ai' ? true : false} timeout="auto" unmountOnExit>
-        <AIResponse />
-      </Collapse>
+      { mode === 'ai' ? <AIResponse /> : null}
       
       <CommandBar />
       

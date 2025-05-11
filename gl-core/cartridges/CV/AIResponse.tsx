@@ -27,7 +27,7 @@ export default function AIResponse() {
     setLoading(true);
 
     try {
-      const res = await fetch('/api/gl-api/cv/analyse', {
+      const res = await fetch('/api/gl-api/cv/fit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ resume, jd }),
@@ -74,17 +74,19 @@ export default function AIResponse() {
     setLoading(false);
   };
 
+  useEffect(() => {
+  if (!resume || !jd) return;
+
+  const timer = setTimeout(() => {
+    handleAnalyse();
+  }, 250);
+
+  return () => clearTimeout(timer);
+}, [resume, jd]);
+
+
   return (
     <Box>
-      <Button
-        variant="contained"
-        color="primary"
-        onClick={handleAnalyse}
-        disabled={loading}
-      >
-        {loading ? 'Analysing...' : 'Analyse Fit'}
-      </Button>
-
       {error && (
         <Box mt={2}>
           <Alert severity="error">{error}</Alert>
@@ -96,11 +98,8 @@ export default function AIResponse() {
         p={2}
         ref={scrollRef}
         sx={{
-          maxHeight: '60vh',
+          maxHeight: '80vh ',
           overflowY: 'auto',
-          border: '1px solid #ddd',
-          borderRadius: 2,
-          backgroundColor: '#fafafa',
         }}
       >
         <ReactMarkdown
