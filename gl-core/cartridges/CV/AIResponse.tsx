@@ -4,7 +4,7 @@ import { Box, Button, Alert, Typography } from '@mui/material';
 import { useSlice } from '../../';
 import ReactMarkdown from 'react-markdown';
 
-export default function RenderCV() {
+export default function AIResponse() {
   const [output, setOutput] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -34,7 +34,7 @@ export default function RenderCV() {
       });
 
       if (!res.ok || !res.body) {
-        throw new Error((await res.text()) || 'No response stream');
+        throw new Error((await res.text()) || 'No AIResponse stream');
       }
 
       const reader = res.body.getReader();

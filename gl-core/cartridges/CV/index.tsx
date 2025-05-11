@@ -1,25 +1,26 @@
 import CV from './CV';
 import { TCV } from './CV';
-
-import RenderCV from './RenderCV';
-
+import CommandBar from './CommandBar';
+import AIResponse from './AIResponse';
+import Resume from './Resume';
 import Job from './Job';
-import { TJob } from './Job';
 import Download from './Download';
-import { TDownload } from './Download';
-
 import { templatePDF } from './templatePDF';
 import { initialState as CVinitialState } from './initialState';
 import { updateCVKey } from './actions/updateCVKey';
 
+export type { TCV };
+
 export {
+  CV,
+  CommandBar,
+  Resume,
   Job,
   Download,
-  RenderCV,
+  AIResponse,
   updateCVKey,
-  CV,
   templatePDF,
   CVinitialState,
 };
 
-export type { TDownload, TCV, TJob };
+

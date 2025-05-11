@@ -1,9 +1,9 @@
 'use client';
 
 import * as React from 'react';
-import { Container, AppBar } from '@mui/material';
+import { Container, Collapse } from '@mui/material';
 import { useSlice, useDispatch } from '../../';
-import { RenderCV, Job, Download, updateCVKey } from '../CV';
+import { AIResponse, Job, Resume, updateCVKey, CommandBar } from '../CV';
 
 export type TCV = {
   originalCV?: string | null;
@@ -12,37 +12,27 @@ export type TCV = {
 export default function CV({ originalCV = null }: TCV) {
   const dispatch = useDispatch();
   const slice = useSlice();
-  const { cv } = slice;
+  const { mode } = slice.cv;
 
   React.useEffect(() => {
-    const resume = cv?.resume;
+    const resume = slice.cv.resume;
     if (!resume && originalCV) {
       dispatch(updateCVKey('cv', { resume: originalCV }));
     }
-  }, [cv?.resume, originalCV, dispatch]);
-
-  if (!cv?.resume) return null;
+  }, [slice.cv.resume, originalCV, dispatch]);
 
   return (
     <Container maxWidth="md">
-      {/* <pre>cv: {JSON.stringify(cv, null, 2)}</pre> */}
-      <Job />
-      <RenderCV />
-      <AppBar
-        position="fixed"
-        color="primary"
-        sx={{
-          background: 0,
-          boxShadow: 0,
-          top: 'auto',
-          bottom: 0,
-          p: 1,
-        }}
-      >
-        <Container maxWidth="md">
-          <Download />
-        </Container>
-      </AppBar>
+      <Collapse in={mode === "resume" ? true : false} timeout="auto" unmountOnExit>
+        <Resume />
+      </Collapse>
+      <Collapse in={mode === "jd" ? true : false} timeout="auto" unmountOnExit>
+        <Job />
+      </Collapse>
+      <Collapse in={mode === "jd" ? true : false} timeout="auto" unmountOnExit>
+        <AIResponse />
+      </Collapse>
+      <CommandBar />
     </Container>
   );
 }

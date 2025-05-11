@@ -4,11 +4,7 @@ import { Box, TextField } from '@mui/material';
 import { useSlice, useDispatch } from '../../';
 import { updateCVKey } from './';
 
-export type TJob = {
-  markdown?: string | null;
-};
-
-export default function Job({ markdown = null }: TJob) {
+export default function Job() {
   const dispatch = useDispatch();
   const slice = useSlice();
   const { cv } = slice;

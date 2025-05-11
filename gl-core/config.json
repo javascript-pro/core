@@ -6,14 +6,14 @@
     "dark": "/svg/favicon_gold.svg",
     "light": "/svg/favicon_grey.svg"
   },
-  "brandColor": "#C09F52",
   "images": ["/png/test.png", "/png/system/tick.png"],
+  "brandColor": "#C09F52",
   "themes": {
     "light": {
       "primary": "#C09F52",
       "secondary": "#303030",
-      "background": "#FFF",
-      "paper": "#FFF",
+      "background": "#e2e2e2",
+      "paper": "#e2e2e2",
       "text": "#303030",
       "border": "#C9B37E"
     },
