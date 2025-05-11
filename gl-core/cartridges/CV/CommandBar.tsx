@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Box, Container, AppBar, Toolbar } from '@mui/material';
-import { MightyButton, useDispatch } from '../../';
+import { useSlice, MightyButton, useDispatch, useIsMobile } from '../../';
 import { updateCVKey, resetCV } from "../CV";
 
 export default function CommandBar() {
+  const isMobile = useIsMobile()
   const dispatch = useDispatch();
+  const slice = useSlice();
+  const { mode } = slice.cv;
 
   return (
     <AppBar
@@ -19,35 +22,47 @@ export default function CommandBar() {
     >
       <Container maxWidth="md">
         <Toolbar>
-
-          <MightyButton
-            onClick={() => {
-              dispatch(resetCV())
-            }}
-            icon="doc"
-            color="primary"
-            label="Resume"
-            variant="text"
-          />
-
-          <MightyButton
+          {mode === "jd" ? 
+            <MightyButton
+              mode={isMobile ? "icon" : null}
+              onClick={() => {
+                dispatch(resetCV())
+              }}
+              icon="doc"
+              label="Resume"
+              variant="text"
+            /> : null}
+          
+          {mode === "resume" ? <MightyButton
+            mode={isMobile ? "icon" : null}
             onClick={() => {
               dispatch(updateCVKey('cv', { mode: "jd"}));
             }}
             icon="job"
-            color="primary"
             label="Job Description"
             variant="text"
-          />
+          /> : null }
+          
 
           <Box sx={{ flexGrow:1 }} />
+
+          {mode === "jd" ? 
             <MightyButton
-              onClick={() => {}}
-              color="primary"
+              onClick={() => {
+
+              }}
+              label="Analyse"
+              variant="contained"
+              icon="openai"
+            /> 
+          : <MightyButton
+              onClick={() => {
+                
+              }}
               label="Download"
               variant="contained"
               icon="download"
-            />
+            /> }
           </Toolbar>
       </Container>
     </AppBar>

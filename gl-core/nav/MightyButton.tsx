@@ -4,6 +4,7 @@ import { Box, Button, IconButton, Tooltip } from '@mui/material';
 import { Icon, useIsMobile } from '../';
 
 export type TMightyButton = {
+  mode?: "button" | "icon" | null
   label?: string | undefined;
   variant?: 'contained' | 'outlined' | 'text' | undefined;
   sx?: any;
@@ -14,6 +15,7 @@ export type TMightyButton = {
 };
 
 export default function MightyButton({
+  mode = "button",
   color = 'primary',
   sx = null,
   icon = undefined,
@@ -25,9 +27,7 @@ export default function MightyButton({
   },
 }: TMightyButton) {
 
-  const isMobile = useIsMobile();
-
-  if (isMobile){
+  if (mode === "icon"){
     return <Tooltip 
               title={label}
               enterTouchDelay={0} 
