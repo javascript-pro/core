@@ -38,6 +38,16 @@ export function createMUITheme() {
           },
         },
       },
+      MuiTypography: {
+        styleOverrides: {
+          h1: { fontWeight: 400 },
+          h2: { fontWeight: 400 },
+          h3: { fontWeight: 400 },
+          h4: { fontWeight: 400 },
+          h5: { fontWeight: 400 },
+          h6: { fontWeight: 400 },
+        },
+      },
     },
   });
 }

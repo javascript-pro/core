@@ -8,18 +8,16 @@ image: /png/bouncer/bouncer.png
 tags: CV, jobs, work
 ---
 
-# Chris Dorward
+## Chris Dorward
 
-**Senior Fullstack JavaScript Developer**
+### Fullstack JavaScript Developer
 
-## Contact
-
-**Email:** [goldlabel.apps@gmail.com](mailto:goldlabel.apps@gmail.com)  
-**Web:** [goldlabel.pro](https://goldlabel.pro)  
-**Phone:** +44 07745 763 122  
-**GitHub:** [github.com/javascript-pro](https://github.com/javascript-pro)  
-**LinkedIn:** https://www.linkedin.com/in/chris-dorward  
-**Work eligibility:** UK & German passports — full rights in UK and EU
+[goldlabel.apps@gmail.com](mailto:goldlabel.apps@gmail.com)  
+[goldlabel.pro](https://goldlabel.pro)  
++44 07745 763 122  
+[GitHub](https://github.com/javascript-pro) 
+[LinkedIn](https://www.linkedin.com/in/chris-dorward)  
+UK & German passports — full work eligibility in UK and EU
 
 ## Summary
 

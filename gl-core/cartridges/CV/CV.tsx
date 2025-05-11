@@ -23,16 +23,25 @@ export default function CV({ originalCV = null }: TCV) {
 
   return (
     <Container maxWidth="md">
-      <Collapse in={mode === "resume" ? true : false} timeout="auto" unmountOnExit>
+      {/* <pre>slice.cv: {JSON.stringify(slice.cv, null, 2)}</pre> */}
+      <Collapse
+        in={mode === 'resume' ? true : false}
+        timeout="auto"
+        unmountOnExit
+      >
         <Resume />
       </Collapse>
-      <Collapse in={mode === "jd" ? true : false} timeout="auto" unmountOnExit>
+     
+     <Collapse in={mode === 'jd' ? true : false} timeout="auto" unmountOnExit>
         <Job />
       </Collapse>
-      <Collapse in={mode === "jd" ? true : false} timeout="auto" unmountOnExit>
+      
+      <Collapse in={mode === 'ai' ? true : false} timeout="auto" unmountOnExit>
         <AIResponse />
       </Collapse>
+      
       <CommandBar />
+      
     </Container>
   );
 }

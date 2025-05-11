@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { Box, Button } from '@mui/material';
-import { Icon } from '../';
+import { Box, Button, IconButton, Tooltip } from '@mui/material';
+import { Icon, useIsMobile } from '../';
 
 export type TMightyButton = {
   label?: string | undefined;
@@ -24,6 +24,24 @@ export default function MightyButton({
     console.log('no onClick');
   },
 }: TMightyButton) {
+
+  const isMobile = useIsMobile();
+
+  if (isMobile){
+    return <Tooltip 
+              title={label}
+              enterTouchDelay={0} 
+              leaveTouchDelay={3000}
+            >
+            <IconButton 
+              color="inherit"
+              onClick={onClick}
+            >
+              <Icon icon={icon as any} />
+            </IconButton>
+          </Tooltip>
+  }
+
   return (
     <Button
       sx={sx}

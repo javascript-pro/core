@@ -10,7 +10,7 @@
   "brandColor": "#C09F52",
   "themes": {
     "light": {
-      "primary": "#C09F52",
+      "primary": "#e2e2e2",
       "secondary": "#303030",
       "background": "#e2e2e2",
       "paper": "#e2e2e2",

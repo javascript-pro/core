@@ -8,6 +8,7 @@ import Download from './Download';
 import { templatePDF } from './templatePDF';
 import { initialState as CVinitialState } from './initialState';
 import { updateCVKey } from './actions/updateCVKey';
+import { resetCV } from './actions/resetCV';
 
 export type { TCV };
 
@@ -19,8 +20,7 @@ export {
   Download,
   AIResponse,
   updateCVKey,
+  resetCV,
   templatePDF,
   CVinitialState,
 };
-
-

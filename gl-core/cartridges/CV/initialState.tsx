@@ -1,11 +1,11 @@
 export type TCVSlice = {
-  mode: "resume" | "jd" | "ai"
+  mode: 'resume' | 'jd' | 'ai';
   resume: string | null;
   jd: string | null;
 };
 
 export const initialState: TCVSlice = {
-  mode: "resume",
+  mode: 'resume',
   resume: null,
   jd: null,
 };
