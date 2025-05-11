@@ -2,22 +2,20 @@
 import React from 'react';
 import { Box, TextField } from '@mui/material';
 import { useSlice, useDispatch } from '../../';
-import {updateCVKey} from "./"
+import { updateCVKey } from './';
 
 export type TJob = {
   markdown?: string | null;
 };
 
-export default function Job({ 
-  markdown = null,
-}: TJob) {
+export default function Job({ markdown = null }: TJob) {
   const dispatch = useDispatch();
   const slice = useSlice();
   const { cv } = slice;
   const { jd } = cv;
-  
+
   return (
-    <Box sx={{my: 2}}>
+    <Box sx={{ my: 2 }}>
       <TextField
         fullWidth
         multiline
@@ -26,7 +24,7 @@ export default function Job({
         label="Paste Job Description"
         defaultValue={jd || ''}
         onChange={(e) => {
-          dispatch( updateCVKey('cv', { jd: e.target.value }));
+          dispatch(updateCVKey('cv', { jd: e.target.value }));
         }}
         onPaste={(e) => {
           const pasted = e.clipboardData.getData('text');

@@ -3,7 +3,6 @@ export type TCVSlice = {
   jd: string | null;
 };
 
-
 export const initialState: TCVSlice = {
   resume: null,
   jd: null,

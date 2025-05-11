@@ -47,7 +47,6 @@ Proven track record building high-performance UIs, integrating automated testing
 
 - **Other:** Progressive Web Apps (PWA), Static Site Generation (SSG), Server-Side Rendering (SSR)
 
-
 ## Experience
 
 ### Founder — Goldlabel Apps Ltd

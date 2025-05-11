@@ -34,7 +34,7 @@ export default function RenderCV() {
       });
 
       if (!res.ok || !res.body) {
-        throw new Error(await res.text() || 'No response stream');
+        throw new Error((await res.text()) || 'No response stream');
       }
 
       const reader = res.body.getReader();
@@ -76,9 +76,9 @@ export default function RenderCV() {
 
   return (
     <Box>
-      <Button 
-        variant="contained" 
-        color="primary" 
+      <Button
+        variant="contained"
+        color="primary"
         onClick={handleAnalyse}
         disabled={loading}
       >
@@ -105,11 +105,31 @@ export default function RenderCV() {
       >
         <ReactMarkdown
           components={{
-            h1: ({ children }) => <Typography variant="h4" gutterBottom>{children}</Typography>,
-            h2: ({ children }) => <Typography variant="h5" gutterBottom>{children}</Typography>,
-            h3: ({ children }) => <Typography variant="h6" gutterBottom>{children}</Typography>,
-            p: ({ children }) => <Typography variant="body1" paragraph>{children}</Typography>,
-            li: ({ children }) => <li><Typography variant="body2">{children}</Typography></li>,
+            h1: ({ children }) => (
+              <Typography variant="h4" gutterBottom>
+                {children}
+              </Typography>
+            ),
+            h2: ({ children }) => (
+              <Typography variant="h5" gutterBottom>
+                {children}
+              </Typography>
+            ),
+            h3: ({ children }) => (
+              <Typography variant="h6" gutterBottom>
+                {children}
+              </Typography>
+            ),
+            p: ({ children }) => (
+              <Typography variant="body1" paragraph>
+                {children}
+              </Typography>
+            ),
+            li: ({ children }) => (
+              <li>
+                <Typography variant="body2">{children}</Typography>
+              </li>
+            ),
             strong: ({ children }) => <strong>{children}</strong>,
             em: ({ children }) => <em>{children}</em>,
           }}

@@ -7,10 +7,7 @@ export type TDownload = {
   markdown?: string | null;
 };
 
-export default function Download({ 
-  markdown = null,
-}: TDownload) {
- 
+export default function Download({ markdown = null }: TDownload) {
   return (
     <Box>
       {/* <pre>markdown: {JSON.stringify(markdown, null, 2)}</pre> */}

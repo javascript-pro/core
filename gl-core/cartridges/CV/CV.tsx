@@ -9,10 +9,7 @@ export type TCV = {
   originalCV?: string | null;
 };
 
-export default function CV({ 
-  originalCV = null,
-}: TCV) {
-
+export default function CV({ originalCV = null }: TCV) {
   const dispatch = useDispatch();
   const slice = useSlice();
   const { cv } = slice;
@@ -20,16 +17,15 @@ export default function CV({
   React.useEffect(() => {
     const resume = cv?.resume;
     if (!resume && originalCV) {
-      dispatch(updateCVKey('cv', { resume: originalCV}));
+      dispatch(updateCVKey('cv', { resume: originalCV }));
     }
-
   }, [cv?.resume, originalCV, dispatch]);
 
   if (!cv?.resume) return null;
 
   return (
     <Container maxWidth="md">
-      <pre>cv: {JSON.stringify(cv, null, 2)}</pre>
+      {/* <pre>cv: {JSON.stringify(cv, null, 2)}</pre> */}
       <Job />
       <RenderCV />
       <AppBar

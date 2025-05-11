@@ -12,6 +12,14 @@ import { templatePDF } from './templatePDF';
 import { initialState as CVinitialState } from './initialState';
 import { updateCVKey } from './actions/updateCVKey';
 
-export { Job, Download, RenderCV, updateCVKey, CV, templatePDF, CVinitialState };
+export {
+  Job,
+  Download,
+  RenderCV,
+  updateCVKey,
+  CV,
+  templatePDF,
+  CVinitialState,
+};
 
 export type { TDownload, TCV, TJob };
