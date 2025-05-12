@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Box } from '@mui/material';
-import { MightyButton } from '../../';
+import { MightyButton } from '../../../';
 
 export default function Download() {
   return (

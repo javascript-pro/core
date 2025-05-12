@@ -1,14 +1,14 @@
 import React from 'react';
 import { Box, Typography, Link as MuiLink } from '@mui/material';
 import ReactMarkdown from 'react-markdown';
-import { useSlice } from '../../';
+import { useSlice } from '../../../';
 
 export default function Resume() {
   const slice = useSlice();
   const { resume } = slice.cv;
 
   return (
-    <Box sx={{ mb: "100px", mt: 4 }}>
+    <Box sx={{ mb: '100px', mt: 4 }}>
       <ReactMarkdown
         components={{
           h1: ({ children }) => (
@@ -39,17 +39,18 @@ export default function Resume() {
           strong: ({ children }) => <strong>{children}</strong>,
           em: ({ children }) => <em>{children}</em>,
           a: ({ href, children }) => (
-            <MuiLink 
+            <MuiLink
               href={href}
               target="_blank"
               rel="noopener noreferrer"
               color="#303030"
-              underline='none'
+              underline="none"
             >
               {children}
             </MuiLink>
           ),
-        }}>
+        }}
+      >
         {resume}
       </ReactMarkdown>
     </Box>

@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { Container, Collapse } from '@mui/material';
 import { useSlice, useDispatch } from '../../';
-import { AIResponse, Job, Resume, updateCVKey, CommandBar } from '../CV';
+import { AIResponse, JD, Resume, updateCVKey, CommandBar } from '../CV';
 
 export type TCV = {
   originalCV?: string | null;
@@ -31,15 +31,14 @@ export default function CV({ originalCV = null }: TCV) {
       >
         <Resume />
       </Collapse>
-     
+
       <Collapse in={mode === 'jd' ? true : false} timeout="auto" unmountOnExit>
-        <Job />
+        <JD />
       </Collapse>
-      
-      { mode === 'ai' ? <AIResponse /> : null}
-      
+
+      {mode === 'ai' ? <AIResponse /> : null}
+
       <CommandBar />
-      
     </Container>
   );
 }

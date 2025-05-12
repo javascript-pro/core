@@ -1,14 +1,14 @@
 'use client';
 import React from 'react';
 import { Box, TextField } from '@mui/material';
-import { useSlice, useDispatch } from '../../';
-import { updateCVKey } from './';
+import { useSlice, useDispatch } from '../../../';
+import { updateCVKey } from '../';
 
 const APPBAR_HEIGHT = 64;
 const ESTIMATED_ROW_HEIGHT = 24;
 const PADDING = 48;
 
-export default function Job() {
+export default function JD() {
   const dispatch = useDispatch();
   const slice = useSlice();
   const { cv } = slice;
@@ -34,8 +34,7 @@ export default function Job() {
       if (inputRef.current) {
         inputRef.current.focus();
       }
-    }, 1000)
-
+    }, 1000);
   }, [minRows]);
 
   return (

@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useRef, useEffect } from 'react';
 import { Box, Button, Alert, Typography } from '@mui/material';
-import { useSlice } from '../../';
+import { useSlice } from '../../../';
 import ReactMarkdown from 'react-markdown';
 
 export default function AIResponse() {
@@ -75,15 +75,14 @@ export default function AIResponse() {
   };
 
   useEffect(() => {
-  if (!resume || !jd) return;
+    if (!resume || !jd) return;
 
-  const timer = setTimeout(() => {
-    handleAnalyse();
-  }, 250);
+    const timer = setTimeout(() => {
+      handleAnalyse();
+    }, 250);
 
-  return () => clearTimeout(timer);
-}, [resume, jd]);
-
+    return () => clearTimeout(timer);
+  }, [resume, jd]);
 
   return (
     <Box>

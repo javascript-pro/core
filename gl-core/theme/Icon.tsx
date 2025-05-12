@@ -33,7 +33,7 @@ import DesktopIcon from '@mui/icons-material/DesktopWindowsOutlined';
 import GithubIcon from '@mui/icons-material/GitHub';
 import MobileIcon from '@mui/icons-material/PhoneAndroid';
 import NotifyrIcon from '@mui/icons-material/MarkUnreadChatAlt';
-import ResetIcon from '@mui/icons-material/Refresh';
+import ResetIcon from '@mui/icons-material/RestartAlt';
 import HomeIcon from '@mui/icons-material/HomeOutlined';
 import NewsIcon from '@mui/icons-material/GradeOutlined';
 import ExampleIcon from '@mui/icons-material/RocketLaunch';
@@ -118,9 +118,14 @@ import CopyIcon from '@mui/icons-material/CopyAllOutlined';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import JobIcon from '@mui/icons-material/EditSquare';
 import DownloadIcon from '@mui/icons-material/Download';
+import AddIcon from '@mui/icons-material/Add';
+import PreviewIcon from '@mui/icons-material/Preview';
 
 export type TIcon = {
   icon:
+    | 'plus'
+        | 'preview'
+    | 'add'
     | 'account'
     | 'download'
     | 'job'
@@ -267,6 +272,15 @@ export default function Icon({ icon, color }: TIcon) {
     case 'core':
       iconFragment = <CoreIcon color={color} />;
       break;
+
+    case 'plus':
+      iconFragment = <AddIcon color={color} />;
+      break;
+
+    case 'add':
+      iconFragment = <AddIcon color={color} />;
+      break;
+
     case 'ai':
       iconFragment = <AIIcon color={color} />;
       break;
@@ -680,6 +694,12 @@ export default function Icon({ icon, color }: TIcon) {
     case 'download':
       iconFragment = <DownloadIcon color={color} />;
       break;
+
+
+          case 'preview':
+      iconFragment = <PreviewIcon color={color} />;
+      break;
+
 
     default:
       iconFragment = <ErrorIcon color={'warning'} />;

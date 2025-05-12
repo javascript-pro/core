@@ -1,10 +1,10 @@
 import CV from './CV';
 import { TCV } from './CV';
-import CommandBar from './CommandBar';
-import AIResponse from './AIResponse';
-import Resume from './Resume';
-import Job from './Job';
-import Download from './Download';
+import CommandBar from './components/CommandBar';
+import AIResponse from './components/AIResponse';
+import Resume from './components/Resume';
+import JD from './components/JD';
+import Download from './components/Download';
 import { templatePDF } from './templatePDF';
 import { initialState as CVinitialState } from './initialState';
 import { updateCVKey } from './actions/updateCVKey';
@@ -16,7 +16,7 @@ export {
   CV,
   CommandBar,
   Resume,
-  Job,
+  JD,
   Download,
   AIResponse,
   updateCVKey,

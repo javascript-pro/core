@@ -15,7 +15,7 @@ tags: CV, jobs, work
 [goldlabel.apps@gmail.com](mailto:goldlabel.apps@gmail.com)  
 [goldlabel.pro](https://goldlabel.pro)  
 +44 07745 763 122  
-[GitHub](https://github.com/javascript-pro) 
+[GitHub](https://github.com/javascript-pro)
 [LinkedIn](https://www.linkedin.com/in/chris-dorward)  
 UK & German passports — full work eligibility in UK and EU
 
@@ -30,7 +30,7 @@ Proven track record building high-performance UIs, integrating automated testing
 - **Languages:** Vanilla JavaScript (ES6+), TypeScript, HTML5, PHP
 - **Frameworks & Libraries:** React, React Native, Next.js (App Router), Redux, Node.js, Express, jQuery
 - **Style:** Vanilla CSS, Material UI, Tailwind CSS, Styled Components, Figma
-- **Database:** NoSQL, Firestore, MongoDB, DynamoDB, Supabase, MySQL, PostgreSQL, SQL
+- **Database:** NoSQL, Firestore, Supabase, MongoDB, DynamoDB, MySQL, PostgreSQL, SQL
 - **APIs:** REST, GraphQL, OpenAI, Whisper/DALL·E
 - **Testing & QA:** Jest, React Testing Library, Cucumber (BDD), Gherkin
 - **DevOps & Workflow:** CI/CD (GitHub Actions, Netlify Deploy), Linux (MAMP stack), GitFlow, Agile/SCRUM, Git, GitHub, Vercel, Firebase (Auth, Firestore, Storage), Netlify, Docker, Turborepo, Webpack
@@ -73,7 +73,7 @@ Proven track record building high-performance UIs, integrating automated testing
 
 **Brisbane, Australia — Jun 2020 to Nov 2020**
 
-- Led the redevelopment of a legacy Angular PWA into a new React-based platform
+- Led the redevelopment of a legacy Angular PWA into a new React-based platform with , Supabase
 - Architected and implemented core framework features using custom open-source tooling
 - Oversaw a small engineering team and coordinated cross-functional delivery
 
