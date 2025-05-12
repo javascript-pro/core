@@ -16,4 +16,4 @@ export {
   resetUberedux,
 };
 
-export type { TRootState, TUbereduxDispatch};
+export type { TRootState, TUbereduxDispatch };

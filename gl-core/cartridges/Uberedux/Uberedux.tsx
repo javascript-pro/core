@@ -20,7 +20,6 @@ export default function Uberedux() {
 
         <pre>slice: {JSON.stringify(slice, null, 2)}</pre>
       </CardContent>
-
     </Card>
   );
 }

@@ -1,7 +1,4 @@
-import {useConfig} from "./useConfig";
-import {useIsMobile} from "./useIsMobile";
+import { useConfig } from './useConfig';
+import { useIsMobile } from './useIsMobile';
 
-export {
-    useConfig,
-    useIsMobile,
-}
+export { useConfig, useIsMobile };

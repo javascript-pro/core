@@ -1,15 +1,7 @@
 'use client';
 import * as React from 'react';
-import { 
-  Box,
-} from '@mui/material';
-import { 
-  Theme,
-  Header,
-  useIsMobile,
-  Footer,
-  Main,
-} from "./";
+import { Box } from '@mui/material';
+import { Theme, Header, useIsMobile, Footer, Main, CV } from './';
 
 export type TFrontmatter = {
   icon?: string;
@@ -17,26 +9,26 @@ export type TFrontmatter = {
   description?: string;
   image?: string;
   [key: string]: any;
-}
+};
 
 export type TCore = {
-  type?: "page" | "file" | "folder";
+  type?: 'page' | 'file' | 'folder' | 'cv';
   frontmatter?: TFrontmatter | null;
   body?: string | null;
   children?: React.ReactNode;
 };
 
 export default function Core({
+  type = 'page',
   frontmatter = null,
   body = null,
 }: TCore) {
-
   const isMobile = useIsMobile();
-  const maxW = "md";
-  
+  const maxW = 'md';
+
   return (
     <Theme>
-      <Box 
+      <Box
         id="scroll-top"
         sx={{
           display: 'flex',
@@ -44,27 +36,33 @@ export default function Core({
           minHeight: '100vh',
         }}
       >
-        <Header
-          maxW={maxW}
-          icon={frontmatter?.icon}
-          title={frontmatter?.title}
-          subheader={frontmatter?.description}
-        />
+        {type === 'cv' ? (
+          <CV originalCV={body as any} />
+        ) : (
+          <>
+            <Header
+              maxW={maxW}
+              icon={frontmatter?.icon}
+              title={frontmatter?.title}
+              subheader={frontmatter?.description}
+            />
 
-        <Box 
-          sx={{ 
-            // border: "1px solid green",
-            mt: !isMobile ? "120px" : "10px",
-          }}
-        >
-          <Main 
-            body={body as any} 
-            frontmatter={frontmatter as any}
-          />
-        </Box>
-        
-        <Footer />
-
+            <Box
+              sx={{
+                mt: !isMobile ? '80px' : '10px',
+              }}
+            >
+              <Box
+                sx={{
+                  mb: 6,
+                }}
+              >
+                <Main body={body as any} frontmatter={frontmatter as any} />
+              </Box>
+            </Box>
+            <Footer />
+          </>
+        )}
       </Box>
     </Theme>
   );

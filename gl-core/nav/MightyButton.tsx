@@ -1,47 +1,57 @@
 'use client';
 import React from 'react';
-import { 
-  Box,
-  Button,
-} from '@mui/material';
-import { 
-  Icon,
-} from '../';
+import { Box, Button, IconButton, Tooltip } from '@mui/material';
+import { Icon } from '../';
 
 export type TMightyButton = {
-  type?: "auto";
+  mode?: 'button' | 'icon' | null;
+  disabled?: boolean;
   label?: string | undefined;
-  variant?: "contained" | "outlined" | "text" | undefined;
+  variant?: 'contained' | 'outlined' | 'text' | undefined;
+  sx?: any;
   color?: any;
   icon?: string | undefined;
+  fullWidth?: boolean;
   onClick?: () => void;
-}
+};
 
 export default function MightyButton({
-  type = "auto",
-  color = "primary",
+  mode = 'button',
+  disabled = false,
+  color = 'primary',
+  sx = null,
   icon = undefined,
   variant = undefined,
-  label = "No Label",
+  label = 'No Label',
+  fullWidth = false,
   onClick = () => {
-    console.log("no onClick")
-  }
+    console.log('no onClick');
+  },
 }: TMightyButton) {
-  
-  if (type === "auto" ){
-    return <Button 
-              size="small"
-              variant={variant}
-              color={color}
-              onClick={onClick}
-            >
-              <Box sx={{pt: 0.5, mr: 1}}>
-                <Icon icon={icon as any} />
-              </Box>
-              <Box sx={{mx:1}}>
-                {label}
-              </Box>
-            </Button>
+  if (mode === 'icon') {
+    return (
+      <Tooltip title={label} enterTouchDelay={0} leaveTouchDelay={3000}>
+        <IconButton color="inherit" onClick={onClick} disabled={disabled}>
+          <Icon icon={icon as any} />
+        </IconButton>
+      </Tooltip>
+    );
   }
-  return null
-};
+
+  return (
+    <Button
+      disabled={disabled}
+      sx={sx}
+      fullWidth={fullWidth}
+      size="small"
+      variant={variant}
+      color={color}
+      onClick={onClick}
+    >
+      <Box sx={{ pt: 0.5, mr: 1 }}>
+        <Icon icon={icon as any} />
+      </Box>
+      <Box sx={{ mx: 1 }}>{label}</Box>
+    </Button>
+  );
+}

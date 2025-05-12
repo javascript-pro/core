@@ -1,10 +1,9 @@
 import config from '../config.json';
 import { createTheme } from '@mui/material';
-import {TTheme} from '../';
+import { TTheme } from '../';
 
 const mode = 'light';
 const theme = config.themes.light;
-
 
 export function createMUITheme() {
   return createTheme({
@@ -37,6 +36,16 @@ export function createMUITheme() {
             fontWeight: 'bold',
             boxShadow: 'none',
           },
+        },
+      },
+      MuiTypography: {
+        styleOverrides: {
+          h1: { fontWeight: 400 },
+          h2: { fontWeight: 400 },
+          h3: { fontWeight: 400 },
+          h4: { fontWeight: 400 },
+          h5: { fontWeight: 400 },
+          h6: { fontWeight: 400 },
         },
       },
     },
