@@ -36,7 +36,7 @@ export default function Download() {
         fullWidth
         onClick={onDownloadClick}
         color="secondary"
-        label="Download CV"
+        label="Download"
         variant="contained"
         icon="download"
       />

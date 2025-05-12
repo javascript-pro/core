@@ -8,7 +8,7 @@ export default function CommandBar() {
   const isMobile = useIsMobile();
   const dispatch = useDispatch();
   const slice = useSlice();
-  const { mode, jd, validJd } = slice.cv;
+  const { mode, jd, validJd, fit } = slice.cv;
 
   return (
     <AppBar
@@ -22,17 +22,7 @@ export default function CommandBar() {
     >
       <Container maxWidth="md">
         <Toolbar>
-          {jd ? (
-            <MightyButton
-              mode={'icon'}
-              onClick={() => {
-                dispatch(resetCV());
-              }}
-              icon="reset"
-              label="Reset"
-              variant="text"
-            />
-          ) : null}
+         
 
           {mode === 'jd' || mode === 'ai' ? (
             <MightyButton
@@ -41,7 +31,7 @@ export default function CommandBar() {
                 dispatch(updateCVKey('cv', { mode: 'resume' }));
               }}
               icon="preview"
-              label="Back to C.V."
+              label="C.V."
               variant="text"
             />
           ) : null}
@@ -53,8 +43,8 @@ export default function CommandBar() {
                 onClick={() => {
                   dispatch(updateCVKey('cv', { mode: 'jd' }));
                 }}
-                icon="add"
-                label="Add Job Description"
+                icon="job"
+                label="Job Description"
                 variant="text"
               />
             </>
@@ -75,6 +65,19 @@ export default function CommandBar() {
           ) : (
             <Download />
           )}
+
+           {jd ? (
+            <MightyButton
+              mode={'icon'}
+              onClick={() => {
+                dispatch(resetCV());
+              }}
+              icon="reset"
+              label="Reset"
+              variant="text"
+            />
+          ) : null}
+
         </Toolbar>
       </Container>
     </AppBar>

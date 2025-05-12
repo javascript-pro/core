@@ -1,20 +1,21 @@
 'use client';
 import React, { useState, useRef, useEffect } from 'react';
-import { Box, Button, Alert, Typography } from '@mui/material';
-import { useSlice } from '../../../';
+import { Box, Alert, Typography } from '@mui/material';
+import { useSlice, useDispatch } from '../../../';
+import { updateCVKey } from '../';
 import ReactMarkdown from 'react-markdown';
 
 export default function AIResponse() {
   const [output, setOutput] = useState('');
-  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const slice = useSlice();
+  const dispatch = useDispatch();
   const { cv } = slice;
-  const { jd, resume } = cv;
+  const { jd, resume, fetching, fit } = cv;
 
-  // Scroll to bottom whenever output updates
+  // Scroll to bottom on output change
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
@@ -22,9 +23,9 @@ export default function AIResponse() {
   }, [output]);
 
   const handleAnalyse = async () => {
+    dispatch(updateCVKey('cv', { fetching: true }));
     setOutput('');
     setError(null);
-    setLoading(true);
 
     try {
       const res = await fetch('/api/gl-api/cv/fit', {
@@ -40,6 +41,7 @@ export default function AIResponse() {
       const reader = res.body.getReader();
       const decoder = new TextDecoder('utf-8');
       let partial = '';
+      let finalOutput = '';
 
       while (true) {
         const { value, done } = await reader.read();
@@ -60,29 +62,34 @@ export default function AIResponse() {
           try {
             const json = JSON.parse(jsonStr);
             const token = json.choices?.[0]?.delta?.content;
-            if (token) setOutput((prev) => prev + token);
+            if (token) {
+              finalOutput += token;
+              setOutput((prev) => prev + token);
+            }
           } catch (e) {
             console.error('Bad JSON from chunk:', line);
           }
         }
       }
+
+      dispatch(updateCVKey('cv', { fit: finalOutput }));
     } catch (err: any) {
       console.error('Stream error:', err);
       setError(err.message || 'Unknown error');
     }
 
-    setLoading(false);
+    dispatch(updateCVKey('cv', { fetching: false }));
   };
 
   useEffect(() => {
-    if (!resume || !jd) return;
+    if (!resume || !jd || fetching || fit) return;
 
     const timer = setTimeout(() => {
       handleAnalyse();
     }, 250);
 
     return () => clearTimeout(timer);
-  }, [resume, jd]);
+  }, [resume, jd, fetching, fit]);
 
   return (
     <Box>
@@ -97,7 +104,7 @@ export default function AIResponse() {
         p={2}
         ref={scrollRef}
         sx={{
-          maxHeight: '80vh ',
+          maxHeight: '80vh',
           overflowY: 'auto',
         }}
       >
@@ -132,7 +139,7 @@ export default function AIResponse() {
             em: ({ children }) => <em>{children}</em>,
           }}
         >
-          {output}
+          {output || fit || ''}
         </ReactMarkdown>
       </Box>
     </Box>
