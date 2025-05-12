@@ -10,10 +10,7 @@ import {
 } from '@mui/material';
 import { usePathname, useRouter } from 'next/navigation';
 import globalNav from '../../public/globalNav.json';
-import {
-  NavItem,
-  Icon,
-} from '../';
+import { NavItem, Icon } from '../';
 
 export type TMainMenu = {
   folderLabel?: string;
@@ -29,9 +26,16 @@ export type TMainMenuItem = {
   children?: TMainMenuItem[];
 };
 
-function findFolderBySlug(items: TMainMenuItem[], pathname: string): TMainMenuItem | null {
+function normalizeSlug(slug?: string) {
+  return `/${slug || ''}`.replace(/\/+/g, '/');
+}
+
+function findFolderBySlug(
+  items: TMainMenuItem[],
+  pathname: string,
+): TMainMenuItem | null {
   for (const item of items) {
-    const fullPath = `/${item.slug}`.replace(/\/+/g, '/');
+    const fullPath = normalizeSlug(item.slug);
     if (fullPath === pathname && item.type === 'folder') {
       return item;
     }
@@ -49,7 +53,7 @@ function findParentOfItem(
   parents: TMainMenuItem[] = [],
 ): TMainMenuItem | null {
   for (const item of items) {
-    const fullPath = `/${item.slug}`.replace(/\/+/g, '/');
+    const fullPath = normalizeSlug(item.slug);
     if (fullPath === pathname) {
       return parents[parents.length - 1] || null;
     }
@@ -65,29 +69,30 @@ function findParentOfItem(
 }
 
 export default function MainNav({
-  onSelect = () => {}
+  folderLabel,
+  onSelect = () => {},
 }: TMainMenu) {
   const pathname = usePathname();
   const router = useRouter();
 
-  const folder = findFolderBySlug(globalNav, pathname);
-  const parent = folder || findParentOfItem(globalNav, pathname);
+  const normalizedPath = normalizeSlug(pathname);
+  const folder = findFolderBySlug(globalNav, normalizedPath);
+  const parent = folder || findParentOfItem(globalNav, normalizedPath);
   const grandparent = parent
-    ? findParentOfItem(globalNav, `/${parent.slug}`)
+    ? findParentOfItem(globalNav, normalizeSlug(parent.slug))
     : null;
 
   const itemsToRender = parent?.children || [];
-  const currentPath = pathname.replace(/\/+/g, '/');
 
   return (
-    <Box sx={{ mt: -1 }}>
-      {grandparent && (
+    <Box sx={{}}>
+      {grandparent && grandparent.slug && grandparent.slug !== '/' && (
         <ListItem disablePadding>
           <ListItemButton
-            disabled={pathname === `/${grandparent.slug}`}
+            disabled={normalizedPath === normalizeSlug(grandparent.slug)}
             onClick={() => {
-              if (pathname !== `/${grandparent.slug}`) {
-                router.push(`/${grandparent.slug}`);
+              if (normalizedPath !== normalizeSlug(grandparent.slug)) {
+                router.push(normalizeSlug(grandparent.slug));
                 onSelect();
               }
             }}
@@ -95,18 +100,18 @@ export default function MainNav({
             <ListItemIcon>
               <Icon icon={grandparent.icon as any} />
             </ListItemIcon>
-            <ListItemText secondary={grandparent.title} />
+            <ListItemText secondary={folderLabel || grandparent.title} />
           </ListItemButton>
         </ListItem>
       )}
 
-      {parent && (
+      {parent && parent.slug && parent.slug !== '/' && (
         <ListItem disablePadding>
           <ListItemButton
-            disabled={pathname === `/${parent.slug}`}
+            disabled={normalizedPath === normalizeSlug(parent.slug)}
             onClick={() => {
-              if (pathname !== `/${parent.slug}`) {
-                router.push(`/${parent.slug}`);
+              if (normalizedPath !== normalizeSlug(parent.slug)) {
+                router.push(normalizeSlug(parent.slug));
                 onSelect();
               }
             }}
@@ -114,7 +119,7 @@ export default function MainNav({
             <ListItemIcon>
               <Icon icon={parent.icon as any} />
             </ListItemIcon>
-            <ListItemText primary={parent.title} />
+            <ListItemText primary={folderLabel || parent.title} />
           </ListItemButton>
         </ListItem>
       )}
@@ -123,7 +128,9 @@ export default function MainNav({
         <List dense>
           {itemsToRender
             .filter(
-              (item) => `/${item.slug}`.replace(/\/+/g, '/') !== currentPath
+              (item) =>
+                normalizeSlug(item.slug) !== normalizedPath &&
+                normalizeSlug(item.slug) !== '/cv',
             )
             .map((item) => (
               <NavItem
@@ -132,7 +139,7 @@ export default function MainNav({
                 label={item.title}
                 sublabel={item.description}
                 onClick={() => {
-                  router.push(`/${item.slug}`);
+                  router.push(normalizeSlug(item.slug));
                   onSelect();
                 }}
               />

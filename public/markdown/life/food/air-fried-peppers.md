@@ -8,7 +8,6 @@ image: /jpg/wei-zang/wei-zangs-food.jpg
 tags: 'food, punching dolphins, recipes, air fryer, peppers'
 ---
 
-
 - 2 Large peppers (capsicums)
 - 1 125g pack of mozzarella
 - Enough of your best, most delicious bolognaise to fill the peppers

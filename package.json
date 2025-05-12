@@ -1,5 +1,5 @@
 {
-  "version": "50.5.6",
+  "version": "50.5.9",
   "private": true,
   "packageManager": "yarn@4.3.1",
   "scripts": {
@@ -37,11 +37,12 @@
     "firebase": "^11.5.0",
     "gray-matter": "^4.0.3",
     "hastscript": "^9.0.1",
+    "html2pdf.js": "^0.10.3",
     "marked": "^15.0.7",
     "ms": "3.0.0-canary.1",
     "next": "15.0.0-canary.193",
     "next-pwa": "^5.6.0",
-    "openai": "^4.94.0",
+    "openai": "4.25.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-markdown": "^10.1.0",
@@ -59,8 +60,6 @@
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^15.2.4",
-    "@tailwindcss/forms": "0.5.7",
-    "@tailwindcss/typography": "0.5.12",
     "@types/ms": "0.7.34",
     "@types/next-pwa": "^5",
     "@types/node": "20.12.7",
@@ -74,8 +73,6 @@
     "lint-staged": "15.2.2",
     "postcss": "8.4.38",
     "prettier": "3.2.5",
-    "prettier-plugin-tailwindcss": "0.5.14",
-    "tailwindcss": "3.4.3",
     "tsx": "^4.19.3",
     "typescript": "5.4.5"
   }

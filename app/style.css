@@ -1,11 +1,17 @@
 #core-ssg {
-    /* border: 5px solid red; */
-    display: none;
+  /* border: 5px solid red; */
+  display: none;
 }
 
 body {
-    margin: 0;
-    background: #efefef;
+  margin: 0;
+  /* background: #efefef; */
+}
+
+blockquote {
+  border-left: 2px solid #c09f52;
+  padding-left: 20px;
+  margin: 0;
 }
 
 blockquote {
@@ -15,24 +21,29 @@ blockquote {
 }
 
 .gl {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #303030;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #303030;
 }
 .gl .gl-wrap {
-    border: 1px solid #c4c4c4;
-    background: #efefef;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 5px;
+  border: 1px solid #c4c4c4;
+  background: #efefef;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 .gl a {
-    padding-left: 8px;
-    color: #303030;
+  padding-left: 8px;
+  color: #303030;
 }
 .gl a:hover {
-    color: #C09F52;
+  color: #c09f52;
 }
-.gl h1, .gl h2, .gl h3, .gl h4, .gl h5, .gl h6 {
-    font-weight: normal;
+.gl h1,
+.gl h2,
+.gl h3,
+.gl h4,
+.gl h5,
+.gl h6 {
+  font-weight: normal;
 }

@@ -6,14 +6,11 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
-import {
-  Core,
-  Nav,
-} from "../../gl-core"
+import { Core, Nav } from '../../gl-core';
 
 export type TPage = {
   slug?: string[];
-}
+};
 
 function flattenNav(node: any, allSlugs: string[] = []): string[] {
   if (node.slug) {
@@ -41,12 +38,9 @@ function renderNav(node: any, depth: number = 0): React.ReactNode {
   return (
     <>
       {node.slug && (
-        <div key={`slug_${node.slug}`} >
-          <Link 
-            className='gl-link'
-            href={`/${node.slug}`}
-          >
-              {node.title}
+        <div key={`slug_${node.slug}`}>
+          <Link className="gl-link" href={`/${node.slug}`}>
+            {node.title}
           </Link>
         </div>
       )}
@@ -58,7 +52,6 @@ function renderNav(node: any, depth: number = 0): React.ReactNode {
     </>
   );
 }
-
 
 function findNavItem(slugPath: string, node: any): any | null {
   if (node.slug === slugPath) return node;
@@ -95,9 +88,11 @@ export async function generateMetadata({ params }: { params: any }) {
   const slugPath = params.slug ? params.slug.join('/') : '';
   const frontmatter = await loadFrontmatter(slugPath);
 
-  const app = "Goldlabel";
+  const app = 'Goldlabel';
   const title = `${frontmatter?.title}. ${frontmatter?.description}` || app;
-  const description = frontmatter?.description || 'We build and ship modern web apps for clients who need real results — fast';
+  const description =
+    frontmatter?.description ||
+    'We build and ship modern web apps for clients who need real results — fast';
   const img = frontmatter.image || '/png/test.png';
   const url = `https://goldlabel.pro/${slugPath}`;
 
@@ -154,66 +149,71 @@ export default async function Page({ params }: { params: any }) {
     }
   }
 
-  const type = "page";
+  const type = 'page';
   const navItem = findNavItem(slugPath, globalNav[0]);
   const title = navItem?.title || 'Goldlabel';
   const ogImage = frontmatter.image || '/png/test.png';
-  
+
+  if (slugPath === 'cv') {
+    return (
+      <Core type={'cv'} body={content}>
+        <div id="core-ssg" className="gl">
+          <div className="gl-wrap">
+            <ReactMarkdown>{content}</ReactMarkdown>
+          </div>
+        </div>
+      </Core>
+    );
+  }
 
   return (
-    <Core
-      type={type}
-      frontmatter={frontmatter}
-      body={content}
-    >
-      <div id="core-ssg" className='gl'><div className='gl-wrap'>
-        
+    <Core type={type} frontmatter={frontmatter} body={content}>
+      <div id="core-ssg" className="gl">
+        <div className="gl-wrap">
           <header id="gl-header">
-
             <Link href={`/`} style={{ textDecoration: 'none' }}>
               <Image
-                  src={"/svg/favicon_gold.svg"}
-                  alt={title}
-                  width={50}
-                  height={50}
+                src={'/svg/favicon_gold.svg'}
+                alt={title}
+                width={50}
+                height={50}
               />
             </Link>
 
-              <Link href={`/`} style={{ textDecoration: 'none' }}>
-                <h1>
-                  {title}
-                </h1>
-              </Link>
-              <h2>
-                {frontmatter.description}
-              </h2>
+            <Link href={`/`} style={{ textDecoration: 'none' }}>
+              <h1>{title}</h1>
+            </Link>
+            <h2>{frontmatter.description}</h2>
           </header>
 
           <aside id="gl-main-menu">
             <Nav />
           </aside>
 
-
           <main id="gl-main">
             {ogImage && (
               <Image
-                  priority
-                  src={ogImage}
-                  alt={title}
-                  width={1200}
-                  height={630}
-                  style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: '8px' }}
+                priority
+                src={ogImage}
+                alt={title}
+                width={1200}
+                height={630}
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  objectFit: 'cover',
+                  borderRadius: '8px',
+                }}
               />
             )}
             <article id="gl-body">
               <ReactMarkdown>{content}</ReactMarkdown>
             </article>
           </main>
-          
-          <footer id="gl-footer">
-            { renderNav(globalNav[0]) }
-          </footer>
-        </div></div>
+
+          <footer id="gl-footer">{renderNav(globalNav[0])}</footer>
+        </div>
+      </div>
     </Core>
   );
 }

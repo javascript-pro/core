@@ -9,4 +9,3 @@ tags: github, process
 ---
 
 We use GitHub for everything. Including project management. Most of the communication done between us and our clients during development is done through GitHub in the form of comments, pull resuests, reviews and so forth
-

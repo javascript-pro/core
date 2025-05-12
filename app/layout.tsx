@@ -1,7 +1,7 @@
 import * as React from 'react';
 import path from 'path';
 import fs from 'fs/promises';
-import "./style.css";
+import './style.css';
 import { UbereduxProvider } from '../gl-core/cartridges/Uberedux';
 
 export default async function RootLayout({
