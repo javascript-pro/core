@@ -7,12 +7,13 @@ import { updateCVKey } from '../';
 const APPBAR_HEIGHT = 64;
 const ESTIMATED_ROW_HEIGHT = 24;
 const PADDING = 48;
+const MIN_LENGTH = 100;
 
 export default function JD() {
   const dispatch = useDispatch();
   const slice = useSlice();
   const { cv } = slice;
-  const { jd } = cv;
+  const { jd, validJd } = cv;
 
   const [minRows, setMinRows] = React.useState(10);
   const inputRef = React.useRef<HTMLTextAreaElement | null>(null);
@@ -37,6 +38,25 @@ export default function JD() {
     }, 1000);
   }, [minRows]);
 
+  const validateJD = (text: string) => {
+    const isValid = text.length >= MIN_LENGTH;
+    dispatch(updateCVKey('cv', { validJd: isValid }));
+    return isValid;
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    dispatch(updateCVKey('cv', { jd: value }));
+    validateJD(value);
+  };
+
+  const handlePaste = (e: React.ClipboardEvent<HTMLDivElement>) => {
+    const pasted = e.clipboardData.getData('text');
+    dispatch(updateCVKey('cv', { jd: pasted }));
+    validateJD(pasted);
+    e.preventDefault(); // Prevent double-paste issue
+  };
+
   return (
     <Box sx={{ px: 2, pt: 2 }}>
       <TextField
@@ -47,13 +67,14 @@ export default function JD() {
         inputRef={inputRef}
         label="Paste Job Description"
         value={jd || ''}
-        onChange={(e) => {
-          dispatch(updateCVKey('cv', { jd: e.target.value }));
-        }}
-        onPaste={(e) => {
-          const pasted = e.clipboardData.getData('text');
-          dispatch(updateCVKey('cv', { jd: pasted }));
-        }}
+        // error={validJd === false}
+        helperText={
+          validJd === false
+            ? `Job descriptions must be at least ${MIN_LENGTH} characters`
+            : ''
+        }
+        onChange={handleChange}
+        onPaste={handlePaste}
       />
     </Box>
   );

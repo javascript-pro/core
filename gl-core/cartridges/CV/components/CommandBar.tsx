@@ -8,7 +8,7 @@ export default function CommandBar() {
   const isMobile = useIsMobile();
   const dispatch = useDispatch();
   const slice = useSlice();
-  const { mode, jd } = slice.cv;
+  const { mode, jd, validJd } = slice.cv;
 
   return (
     <AppBar
@@ -22,17 +22,17 @@ export default function CommandBar() {
     >
       <Container maxWidth="md">
         <Toolbar>
-
-          { jd ? <MightyButton
-            mode={isMobile ? 'icon' : null}
-            onClick={() => {
-              dispatch(resetCV());
-            }}
-            icon="reset"
-            label="Reset"
-            variant="text"
-          /> : null }
-          
+          {jd ? (
+            <MightyButton
+              mode={'icon'}
+              onClick={() => {
+                dispatch(resetCV());
+              }}
+              icon="reset"
+              label="Reset"
+              variant="text"
+            />
+          ) : null}
 
           {mode === 'jd' || mode === 'ai' ? (
             <MightyButton
@@ -41,27 +41,30 @@ export default function CommandBar() {
                 dispatch(updateCVKey('cv', { mode: 'resume' }));
               }}
               icon="preview"
-              label="Preview Resume"
+              label="Back to C.V."
               variant="text"
             />
           ) : null}
 
           {mode === 'resume' || mode === 'ai' ? (
-            <MightyButton
-              mode={isMobile ? 'icon' : null}
-              onClick={() => {
-                dispatch(updateCVKey('cv', { mode: 'jd' }));
-              }}
-              icon="add"
-              label="Add Job Description"
-              variant="text"
-            />
+            <>
+              <MightyButton
+                mode={isMobile ? 'icon' : null}
+                onClick={() => {
+                  dispatch(updateCVKey('cv', { mode: 'jd' }));
+                }}
+                icon="add"
+                label="Add Job Description"
+                variant="text"
+              />
+            </>
           ) : null}
 
           <Box sx={{ flexGrow: 1 }} />
 
           {mode === 'jd' ? (
             <MightyButton
+              disabled={!validJd}
               onClick={() => {
                 dispatch(updateCVKey('cv', { mode: 'ai' }));
               }}

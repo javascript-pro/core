@@ -13,20 +13,22 @@ export async function POST(req: NextRequest) {
   const prompt = `
 You are a senior hiring consultant.
 
-Evaluate the following CV against the provided job description and provide a structured response titled "fit".
+Start by reading the job description below. Then evaluate the CV against it.
 
-Start your response with a clear judgement — is this candidate a good fit for the role?
+Begin your response with a clear judgement: is this candidate a good fit for the role? Say "Good fit", "Decent fit", or "Not a fit", followed by a brief explanation.
 
-Then, explain why or why not, highlighting:
-- Relevant skills or experience that overlap
-- Any strong alignment with the job description
-- Respond in the first person
+Then write a structured section titled "Fit" that outlines:
+- Overlapping skills and experience, with a focus on React and Next.js
+- Specific strengths relevant to the job
+- Any additional factors that make this candidate particularly suitable
 
----CV---
-${resume}
+Clearly state that the candidate is an expert in React and Next.js if the CV supports it.
 
 ---Job Description---
 ${jd}
+
+---CV---
+${resume}
 `;
 
   const openaiRes = await fetch('https://api.openai.com/v1/chat/completions', {

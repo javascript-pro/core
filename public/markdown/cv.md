@@ -12,16 +12,13 @@ tags: CV, jobs, work
 
 ### Fullstack JavaScript Developer
 
-[goldlabel.apps@gmail.com](mailto:goldlabel.apps@gmail.com)  
-[goldlabel.pro](https://goldlabel.pro)  
-+44 07745 763 122  
-[GitHub](https://github.com/javascript-pro)
-[LinkedIn](https://www.linkedin.com/in/chris-dorward)  
-UK & German passports — full work eligibility in UK and EU
+[goldlabel.apps@gmail.com](mailto:goldlabel.apps@gmail.com) +44 07745 763 122  
+[goldlabel.pro](https://goldlabel.pro) | [GitHub](https://github.com/javascript-pro) |
+[LinkedIn](https://www.linkedin.com/in/chris-dorward)
 
 ## Summary
 
-Over 20 years of experience delivering scalable web applications across startups, enterprises, and remote-first teams in the UK, Europe, and Australia. Deep expertise in React, TypeScript, and app architecture, with a current focus on Next.js. Recently, I’ve focused on using AI as a practical development accelerator — not a shortcut, but a force multiplier. With experience and intent, AI generates production-grade results faster and cleaner. Code now ships 2–3x faster with fewer bugs.
+Over 20 years of experience delivering scalable web applications across startups, enterprises, and remote-first teams in the UK, Europe, and Australia. Deep expertise in React, TypeScript, current specialising in Next.js. Recently, I’ve focused on using AI as a practical development accelerator — not a shortcut, but a force multiplier. With experience and intent, AI generates production-grade results faster and cleaner. Code now ships 2–3x faster with fewer bugs.
 
 Proven track record building high-performance UIs, integrating automated testing and linting, and delivering through streamlined pipelines. Equally comfortable leading projects or collaborating in agile teams. Prefer a clear brief, a clean codebase, and a culture that values delivery. Outside work, I write, travel, surf, dive, and ski.
 
@@ -212,8 +209,12 @@ _Woodbridge School, Suffolk — 1994_
 **GCSEs: 10 Subjects**  
 Including English, Maths, and Science
 
-## Languages
+## Spoken Languages
 
 - **English:** Native
 - **German:** Fluent — bilingual upbringing, partial schooling in Germany
 - **French:** Conversational
+
+## Work Eligibility
+
+UK & German passports, full work eligibility in UK and EU

@@ -1,10 +1,11 @@
 'use client';
 import React from 'react';
 import { Box, Button, IconButton, Tooltip } from '@mui/material';
-import { Icon, useIsMobile } from '../';
+import { Icon } from '../';
 
 export type TMightyButton = {
   mode?: 'button' | 'icon' | null;
+  disabled?: boolean;
   label?: string | undefined;
   variant?: 'contained' | 'outlined' | 'text' | undefined;
   sx?: any;
@@ -16,6 +17,7 @@ export type TMightyButton = {
 
 export default function MightyButton({
   mode = 'button',
+  disabled = false,
   color = 'primary',
   sx = null,
   icon = undefined,
@@ -29,7 +31,7 @@ export default function MightyButton({
   if (mode === 'icon') {
     return (
       <Tooltip title={label} enterTouchDelay={0} leaveTouchDelay={3000}>
-        <IconButton color="inherit" onClick={onClick}>
+        <IconButton color="inherit" onClick={onClick} disabled={disabled}>
           <Icon icon={icon as any} />
         </IconButton>
       </Tooltip>
@@ -38,6 +40,7 @@ export default function MightyButton({
 
   return (
     <Button
+      disabled={disabled}
       sx={sx}
       fullWidth={fullWidth}
       size="small"

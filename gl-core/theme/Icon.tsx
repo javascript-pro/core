@@ -124,7 +124,7 @@ import PreviewIcon from '@mui/icons-material/Preview';
 export type TIcon = {
   icon:
     | 'plus'
-        | 'preview'
+    | 'preview'
     | 'add'
     | 'account'
     | 'download'
@@ -695,11 +695,9 @@ export default function Icon({ icon, color }: TIcon) {
       iconFragment = <DownloadIcon color={color} />;
       break;
 
-
-          case 'preview':
+    case 'preview':
       iconFragment = <PreviewIcon color={color} />;
       break;
-
 
     default:
       iconFragment = <ErrorIcon color={'warning'} />;
