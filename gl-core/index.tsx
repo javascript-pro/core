@@ -1,22 +1,13 @@
 import Core from './Core';
 import { TCore, TFrontmatter } from './Core';
-// actions
 import { exampleAction } from './actions';
-// theme
 import { Theme } from './theme';
 import { TTheme } from './theme';
 import { Icon } from './theme';
 import { createMUITheme } from './theme';
 import { TIcon } from './theme';
-// layout
-import { Header } from './layout';
-import { THeader } from './layout';
-import { Main } from './layout';
-import { TMain } from './layout';
-import { Footer } from './layout';
-import { TFooter } from './layout';
-
-// nav
+import { RenderMarkdown, Header, Main, Footer } from './layout';
+import { TRenderMarkdown, THeader, TMain, TFooter } from './layout';
 import {
   MainMenu,
   Nav,
@@ -26,16 +17,7 @@ import {
   MightyButton,
   Search,
 } from './nav';
-
-import {
-  TNav,
-  // TMainMenu,
-  TNavItem,
-  TShare,
-  TMightyButton,
-  TSearch,
-} from './nav';
-
+import { TNav, TNavItem, TShare, TMightyButton, TSearch } from './nav';
 import { useConfig, useIsMobile } from './hooks';
 import {
   Uberedux,
@@ -47,7 +29,6 @@ import {
   resetUberedux,
 } from './cartridges/Uberedux';
 import { TUbereduxDispatch } from './cartridges/Uberedux';
-
 import { CV } from './cartridges/CV';
 import { TCV } from './cartridges/CV';
 
@@ -56,8 +37,8 @@ export { Core };
 // theme
 export { Theme, createMUITheme, Icon };
 
-// components
-export { Header, Footer, Main };
+// layout
+export { Header, Footer, Main, RenderMarkdown };
 
 // nav
 export { MainMenu, Nav, NavItem, PageBreadcrumb, Share, MightyButton, Search };
@@ -91,7 +72,7 @@ export type {
   TFooter,
   TCore,
   TTheme,
-  // TMainMenu,
+  TRenderMarkdown,
   TIcon,
   TNav,
   THeader,

@@ -1,14 +1,21 @@
 'use client';
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
-import { Box, Container, Grid, Typography } from '@mui/material';
+import {
+  Box,
+  Container,
+  Grid,
+  Typography,
+  Link as MuiLink,
+  useTheme,
+} from '@mui/material';
 import {
   // Share,
   PageBreadcrumb,
   useIsMobile,
   MainMenu,
 } from '../';
-import ReactMarkdown from 'react-markdown';
 
 export type TMain = {
   body?: string;
@@ -18,6 +25,8 @@ export type TMain = {
 export default function Main({ body = 'No body', frontmatter = null }: TMain) {
   const isMobile = useIsMobile();
   const featuredImage = frontmatter?.image || null;
+  const theme = useTheme();
+  const textColor = theme.palette.text.primary;
 
   return (
     <Container maxWidth="md">
@@ -28,34 +37,48 @@ export default function Main({ body = 'No body', frontmatter = null }: TMain) {
             md: 9,
           }}
         >
-
-          
-            {featuredImage && (
-              <Box
-                position="relative"
-                width="100%"
-                height={0}
-                paddingTop="50%" // maintains a 2:1 aspect ratio
-                mb={2}
-                borderRadius={2}
-                overflow="hidden"
-              >
-                <Image
-                  priority
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  src={featuredImage}
-                  alt={frontmatter?.title || 'Featured image'}
-                  style={{ objectFit: 'cover' }}
-                />
-              </Box>
-            )}
+          {featuredImage && (
+            <Box
+              position="relative"
+              width="100%"
+              height={0}
+              paddingTop="50%" // maintains a 2:1 aspect ratio
+              mb={2}
+              borderRadius={2}
+              overflow="hidden"
+            >
+              <Image
+                priority
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                src={featuredImage}
+                alt={frontmatter?.title || 'Featured image'}
+                style={{ objectFit: 'cover' }}
+              />
+            </Box>
+          )}
 
           <Box>
             <PageBreadcrumb />
           </Box>
           <Typography variant="body1">
-            <ReactMarkdown>{body}</ReactMarkdown>
+            <ReactMarkdown
+              components={{
+                a: ({ href, children }) => (
+                  <MuiLink
+                    href={href}
+                    // target="_blank"
+                    rel="noopener noreferrer"
+                    color={textColor}
+                    underline="none"
+                  >
+                    {children}
+                  </MuiLink>
+                ),
+              }}
+            >
+              {body}
+            </ReactMarkdown>
           </Typography>
         </Grid>
 

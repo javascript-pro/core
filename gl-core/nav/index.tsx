@@ -24,7 +24,6 @@ export type {
   TSearch,
   TMightyButton,
   TShare,
-  
   TNav,
   TNavItem,
   // TMainMenu,
