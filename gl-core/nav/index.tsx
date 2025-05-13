@@ -1,5 +1,5 @@
 import MainMenu from './MainMenu';
-import { TMainMenu, TMainMenuItem } from './MainMenu';
+// import { TMainMenu, TMainMenuItem } from './MainMenu';
 
 import Nav from './Nav';
 import { TNav } from './Nav';
@@ -24,8 +24,9 @@ export type {
   TSearch,
   TMightyButton,
   TShare,
-  TMainMenu,
+  
   TNav,
   TNavItem,
-  TMainMenuItem,
+  // TMainMenu,
+  // TMainMenuItem,
 };

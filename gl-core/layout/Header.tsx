@@ -33,19 +33,21 @@ export default function Header({
     >
       <Container maxWidth={maxW as any}>
         <CardHeader
-          avatar={
-            <IconButton
-              sx={{ ml: -1 }}
-              onClick={() => {
-                router.push('/');
-              }}
-              color="inherit"
-            >
-              <Icon icon={'goldlabel'} />
-            </IconButton>
-          }
+          sx={{ml: -2}}
+          // avatar={
+          //   <IconButton
+          //     sx={{ ml: -1 }}
+          //     onClick={() => {
+          //       router.push('/');
+          //     }}
+          //     color="inherit"
+          //   >
+          //     <Icon icon={'goldlabel'} />
+          //   </IconButton>
+          // }
           title={title}
           subheader={!isMobile ? subheader : null}
+          // subheader={subheader}
           action={isMobile ? <Nav /> : null}
         />
       </Container>

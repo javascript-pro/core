@@ -28,11 +28,8 @@ export default function Main({ body = 'No body', frontmatter = null }: TMain) {
             md: 9,
           }}
         >
-          <Box>
-            <PageBreadcrumb />
-          </Box>
 
-          <Typography variant="body1">
+          
             {featuredImage && (
               <Box
                 position="relative"
@@ -54,6 +51,10 @@ export default function Main({ body = 'No body', frontmatter = null }: TMain) {
               </Box>
             )}
 
+          <Box>
+            <PageBreadcrumb />
+          </Box>
+          <Typography variant="body1">
             <ReactMarkdown>{body}</ReactMarkdown>
           </Typography>
         </Grid>

@@ -49,7 +49,7 @@ export default function Core({
 
             <Box
               sx={{
-                mt: !isMobile ? '80px' : '10px',
+                mt: !isMobile ? '100px' : '10px',
               }}
             >
               <Box

@@ -29,7 +29,7 @@ import {
 
 import {
   TNav,
-  TMainMenu,
+  // TMainMenu,
   TNavItem,
   TShare,
   TMightyButton,
@@ -91,7 +91,7 @@ export type {
   TFooter,
   TCore,
   TTheme,
-  TMainMenu,
+  // TMainMenu,
   TIcon,
   TNav,
   THeader,
