@@ -22,8 +22,6 @@ export default function CommandBar() {
     >
       <Container maxWidth="md">
         <Toolbar>
-         
-
           {mode === 'jd' || mode === 'ai' ? (
             <MightyButton
               mode={isMobile ? 'icon' : null}
@@ -66,7 +64,7 @@ export default function CommandBar() {
             <Download />
           )}
 
-           {jd ? (
+          {jd ? (
             <MightyButton
               mode={'icon'}
               onClick={() => {
@@ -77,7 +75,6 @@ export default function CommandBar() {
               variant="text"
             />
           ) : null}
-
         </Toolbar>
       </Container>
     </AppBar>

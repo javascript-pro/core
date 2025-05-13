@@ -7,7 +7,7 @@ import JD from './components/JD';
 import Download from './components/Download';
 import { templatePDF } from './templatePDF';
 import { initialState as CVinitialState } from './initialState';
-import {updateCVKey} from './actions/updateCVKey';
+import { updateCVKey } from './actions/updateCVKey';
 import { resetCV } from './actions/resetCV';
 
 export type { TCV };

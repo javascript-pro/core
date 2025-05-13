@@ -50,12 +50,12 @@ export default function Core({
 
             <Box
               sx={{
-                mt: !isMobile ? '80px' : '10px',
+                mt: !isMobile ? '100px' : '10px',
               }}
             >
               <Box
                 sx={{
-                  mb: 6,
+                  mb: '100px',
                 }}
               >
                 <Main body={body as any} frontmatter={frontmatter as any} />
