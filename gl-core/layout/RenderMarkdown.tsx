@@ -3,14 +3,15 @@
 import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Link as MuiLink, Typography, useTheme } from '@mui/material';
-// import { useRouter } from 'next/navigation';
-// import { useIsMobile, Icon, Nav } from '../';
 
 export type TRenderMarkdown = {
-  markdown: string;
+  children: React.ReactNode;
 };
 
-export default function RenderMarkdown({ markdown = '' }: TRenderMarkdown) {
+export default function RenderMarkdown({ 
+  children = '',
+}: TRenderMarkdown) {
+
   const theme = useTheme();
   const linkCol = theme.palette.text.primary;
 
@@ -39,25 +40,28 @@ export default function RenderMarkdown({ markdown = '' }: TRenderMarkdown) {
         ),
         li: ({ children }) => (
           <li>
-            <Typography variant="body2">{children}</Typography>
+            <Typography variant="body1">{children}</Typography>
           </li>
         ),
         strong: ({ children }) => <strong>{children}</strong>,
         em: ({ children }) => <em>{children}</em>,
-        a: ({ href, children }) => (
-          <MuiLink
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            color={linkCol}
-            underline="none"
-          >
-            {children}
-          </MuiLink>
-        ),
+        a: ({ href = '', children }) => {
+          const isExternal = /^https?:\/\//.test(href);
+          return (
+            <MuiLink
+              href={href}
+              target={isExternal ? '_blank' : '_self'}
+              rel={isExternal ? 'noopener noreferrer' : undefined}
+              color={linkCol}
+              underline="none"
+            >
+              <strong>{children}</strong>
+            </MuiLink>
+          );
+        },
       }}
     >
-      {markdown}
+      {children as string}
     </ReactMarkdown>
   );
 }

@@ -7,11 +7,11 @@ import {
   Container,
   Grid,
   Typography,
-  Link as MuiLink,
   useTheme,
 } from '@mui/material';
 import {
   // Share,
+  RenderMarkdown,
   PageBreadcrumb,
   useIsMobile,
   MainMenu,
@@ -61,25 +61,9 @@ export default function Main({ body = 'No body', frontmatter = null }: TMain) {
           <Box>
             <PageBreadcrumb />
           </Box>
-          <Typography variant="body1">
-            <ReactMarkdown
-              components={{
-                a: ({ href, children }) => (
-                  <MuiLink
-                    href={href}
-                    // target="_blank"
-                    rel="noopener noreferrer"
-                    color={textColor}
-                    underline="none"
-                  >
-                    {children}
-                  </MuiLink>
-                ),
-              }}
-            >
-              {body}
-            </ReactMarkdown>
-          </Typography>
+          <RenderMarkdown>
+            {body}
+          </RenderMarkdown>
         </Grid>
 
         <Grid
