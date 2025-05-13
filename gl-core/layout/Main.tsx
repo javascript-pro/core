@@ -1,16 +1,13 @@
 'use client';
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
 import {
   Box,
   Container,
   Grid,
-  Typography,
-  useTheme,
 } from '@mui/material';
 import {
-  // Share,
+  Share,
   RenderMarkdown,
   PageBreadcrumb,
   useIsMobile,
@@ -22,11 +19,9 @@ export type TMain = {
   frontmatter?: any;
 };
 
-export default function Main({ body = 'No body', frontmatter = null }: TMain) {
+export default function Main({ body = '', frontmatter = null }: TMain) {
   const isMobile = useIsMobile();
   const featuredImage = frontmatter?.image || null;
-  const theme = useTheme();
-  const textColor = theme.palette.text.primary;
 
   return (
     <Container maxWidth="md">
@@ -37,6 +32,12 @@ export default function Main({ body = 'No body', frontmatter = null }: TMain) {
             md: 9,
           }}
         >
+          <Box sx={{my:1, display: "flex" }}>
+            <Box sx={{ml: -1, mr: 1}}>
+              <Share frontmatter={frontmatter} body={body} />
+            </Box>
+            <PageBreadcrumb />
+          </Box>
           {featuredImage && (
             <Box
               position="relative"
@@ -58,9 +59,7 @@ export default function Main({ body = 'No body', frontmatter = null }: TMain) {
             </Box>
           )}
 
-          <Box>
-            <PageBreadcrumb />
-          </Box>
+
           <RenderMarkdown>
             {body}
           </RenderMarkdown>
