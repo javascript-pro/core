@@ -7,6 +7,9 @@ import { TMain } from './Main';
 import Footer from './Footer';
 import { TFooter } from './Footer';
 
-export { Header, Main, Footer };
+import RenderMarkdown from './RenderMarkdown';
+import { TRenderMarkdown } from './RenderMarkdown';
 
-export type { THeader, TMain, TFooter };
+export { Header, Main, Footer, RenderMarkdown };
+
+export type { THeader, TMain, TFooter, TRenderMarkdown };

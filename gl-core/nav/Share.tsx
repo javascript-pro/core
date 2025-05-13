@@ -1,10 +1,10 @@
 'use client';
+
 import * as React from 'react';
 import {
   Box,
   IconButton,
   Dialog,
-  DialogTitle,
   DialogContent,
   DialogActions,
   CardHeader,
@@ -23,27 +23,55 @@ import {
   Icon,
 } from '../';
 
+import {
+  FacebookShareButton,
+  LinkedinShareButton,
+  WhatsappShareButton,
+} from 'react-share';
+
 export type TShare = {
-  label?: string | null;
-  frontmatter?: any;
+  frontmatter?: {
+    title?: string;
+    description?: string;
+    image?: string;
+    slug?: string;
+  };
+  body?: string;
 };
 
-export default function Share({ frontmatter = null }: TShare) {
+export default function Share({
+  frontmatter = null,
+  body = '',
+}: TShare) {
   const dispatch = useDispatch();
   const slice = useSlice();
   const { modalShare } = slice;
   const isMobile = useIsMobile();
+
+  const [copied, setCopied] = React.useState(false);
 
   const closeModalShare = () =>
     dispatch(setUbereduxKey({ key: 'modalShare', value: false }));
   const openModalShare = () =>
     dispatch(setUbereduxKey({ key: 'modalShare', value: true }));
 
-  if (!frontmatter) return null;
+  if (!frontmatter || !frontmatter.slug) return null;
+
+  const shareUrl = `https://goldlabel.pro/${frontmatter.slug}`;
+  const shareTitle = frontmatter.title || 'Check this out';
+  const shareDescription =
+    frontmatter.description ||
+    'A new project from Goldlabel — modern software, real results.';
+  const shareImage = frontmatter.image?.startsWith('http')
+    ? frontmatter.image
+    : `https://goldlabel.pro${frontmatter.image || '/png/test.png'}`;
+
+  const fullWidth = { display: 'block', width: '100%' };
 
   return (
     <>
       <MightyButton
+        mode="icon"
         color="secondary"
         label="Share"
         icon="share"
@@ -53,71 +81,92 @@ export default function Share({ frontmatter = null }: TShare) {
       <Dialog
         fullWidth
         maxWidth="xs"
-        fullScreen={isMobile ? true : false}
+        fullScreen={isMobile}
         open={modalShare as boolean}
         onClose={closeModalShare}
       >
-        <DialogTitle>Sharing</DialogTitle>
         <DialogContent>
-          <Box>
-            <CardHeader
-              title={frontmatter.title}
-              subheader={frontmatter.description}
+          <Box sx={{mb:2}}>
+            <CardHeader title={`Share: ${shareTitle}`} subheader={shareDescription} />
+            <CardMedia
+              component="img"
+              height="200"
+              image={shareImage}
+              alt={shareTitle}
             />
-            <CardMedia height={100} component={'img'} src={frontmatter.image} />
           </Box>
 
-          {/* <pre>
-                frontmatter: { JSON.stringify(frontmatter, null, 2) }
-              </pre> */}
-
           <List dense>
-            <ListItemButton>
-              <ListItemIcon>
-                <Icon icon="facebook" />
-              </ListItemIcon>
-              <ListItemText primary="Facebook" />
-            </ListItemButton>
 
-            <ListItemButton>
-              <ListItemIcon>
-                <Icon icon="linkedin" />
-              </ListItemIcon>
-              <ListItemText primary="LinkedIn" />
-            </ListItemButton>
-
-            <ListItemButton>
-              <ListItemIcon>
-                <Icon icon="whatsapp" />
-              </ListItemIcon>
-              <ListItemText primary="WhatsApp" />
-            </ListItemButton>
-
-            <ListItemButton>
+            <ListItemButton
+              onClick={() => {
+                navigator.clipboard.writeText(shareUrl);
+                setCopied(true);
+                setTimeout(() => setCopied(false), 2000);
+              }}
+            >
               <ListItemIcon>
                 <Icon icon="copy" />
               </ListItemIcon>
-              <ListItemText primary="Copy Link" />
+              <ListItemText primary={copied ? 'Copied!' : 'Copy Link'} />
             </ListItemButton>
+
+
+            <FacebookShareButton url={shareUrl} style={fullWidth}>
+              <ListItemButton>
+                <ListItemIcon>
+                  <Icon icon="facebook" />
+                </ListItemIcon>
+                <ListItemText primary="Facebook" />
+              </ListItemButton>
+            </FacebookShareButton>
+
+            <LinkedinShareButton
+              url={shareUrl}
+              title={shareTitle}
+              summary={shareDescription}
+              source="Goldlabel"
+              style={fullWidth}
+            >
+              <ListItemButton>
+                <ListItemIcon>
+                  <Icon icon="linkedin" />
+                </ListItemIcon>
+                <ListItemText primary="LinkedIn" />
+              </ListItemButton>
+            </LinkedinShareButton>
+
+            <WhatsappShareButton
+              url={shareUrl}
+              title={shareTitle}
+              separator=" - "
+              style={fullWidth}
+            >
+              <ListItemButton>
+                <ListItemIcon>
+                  <Icon icon="whatsapp" />
+                </ListItemIcon>
+                <ListItemText primary="WhatsApp" />
+              </ListItemButton>
+            </WhatsappShareButton>
+
+
           </List>
         </DialogContent>
 
         <DialogActions>
           {isMobile ? (
-            <>
-              <IconButton onClick={closeModalShare}>
-                <Icon icon="close" />
-              </IconButton>
-            </>
+            <IconButton onClick={closeModalShare}>
+              <Icon icon="close" />
+            </IconButton>
           ) : (
-            <>
-              <MightyButton
-                label="Close"
-                icon="close"
-                variant="outlined"
-                onClick={closeModalShare}
-              />
-            </>
+            <MightyButton
+              mode="icon"
+              label="Close"
+              icon="close"
+              variant="outlined"
+              onClick={closeModalShare}
+            />
           )}
         </DialogActions>
       </Dialog>

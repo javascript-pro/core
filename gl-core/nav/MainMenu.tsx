@@ -23,14 +23,16 @@ const shouldShow = (item: NavItem) => item.slug !== 'cv';
 function renderTree(
   item: NavItem,
   currentSlug: string,
-  onSelect?: () => void
+  onSelect?: () => void,
 ): React.ReactNode {
   if (!shouldShow(item)) return null;
 
   const isCurrent = item.slug === currentSlug;
 
   const label = isCurrent ? (
-    <span style={{ opacity: 0.6, fontWeight: 500, cursor: 'default' }}>{item.title}</span>
+    <span style={{ opacity: 0.6, fontWeight: 500, cursor: 'default' }}>
+      {item.title}
+    </span>
   ) : (
     <Link
       href={`/${item.slug}`}
@@ -43,9 +45,9 @@ function renderTree(
 
   return (
     <TreeItem key={item.slug} itemId={item.slug} label={label}>
-      {item.children?.filter(shouldShow).map((child) =>
-        renderTree(child, currentSlug, onSelect)
-      )}
+      {item.children
+        ?.filter(shouldShow)
+        .map((child) => renderTree(child, currentSlug, onSelect))}
     </TreeItem>
   );
 }
@@ -86,10 +88,11 @@ export default function MainMenu({ onSelect }: MainMenuProps) {
         selectedItems={[currentSlug]}
         defaultExpandedItems={expanded}
       >
-        {globalNav.flatMap((section) =>
-          section.children?.filter(shouldShow).map((item) =>
-            renderTree(item, currentSlug, onSelect)
-          ) || []
+        {globalNav.flatMap(
+          (section) =>
+            section.children
+              ?.filter(shouldShow)
+              .map((item) => renderTree(item, currentSlug, onSelect)) || [],
         )}
       </SimpleTreeView>
     </Box>

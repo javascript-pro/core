@@ -51,7 +51,7 @@ export function PageBreadcrumb() {
       }}
     >
       <NextLink href="/" passHref legacyBehavior>
-        <MUILink underline="hover" color="inherit" variant="caption">
+        <MUILink underline="hover" color="inherit" variant="body2">
           Home
         </MUILink>
       </NextLink>
@@ -66,7 +66,7 @@ export function PageBreadcrumb() {
             <span style={{ margin: '0 4px' }}>/</span>
             {isLast ? (
               <Typography
-                variant="caption"
+                variant="body2"
                 color="text.primary"
                 sx={{ fontWeight: 500 }}
               >
@@ -74,7 +74,7 @@ export function PageBreadcrumb() {
               </Typography>
             ) : (
               <NextLink href={href} passHref legacyBehavior>
-                <MUILink underline="hover" color="inherit" variant="caption">
+                <MUILink underline="hover" color="inherit" variant="body2">
                   {label}
                 </MUILink>
               </NextLink>
