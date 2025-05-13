@@ -3,13 +3,12 @@ import React from 'react';
 import { marked } from 'marked';
 import { Box } from '@mui/material';
 import { MightyButton, useSlice } from '../../../';
-import {templatePDF} from "../";
+import { templatePDF } from '../';
 
 export default function Download() {
-
   const slice = useSlice();
   const { resume } = slice.cv;
-  
+
   const onDownloadClick = async () => {
     const { default: html2pdf } = await import('html2pdf.js');
     const fullHTML = templatePDF(marked.parse(resume || '') as string);
@@ -43,4 +42,3 @@ export default function Download() {
     </Box>
   );
 }
-

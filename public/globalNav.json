@@ -41,11 +41,7 @@
         "order": 2,
         "icon": "goldlabel",
         "type": "file",
-        "tags": [
-          "CV",
-          "jobs",
-          "work"
-        ],
+        "tags": ["CV", "jobs", "work"],
         "excerpt": "Chris Dorward\n\n Fullstack JavaScript Developer\n\n +44 07745 763 122  \n |  |\n\n\n Summary\n\nOver 20 years of experience delivering scalable web applications across startups, enterprises, and remotefirst te"
       },
       {
@@ -78,11 +74,7 @@
             "order": 2,
             "icon": "star",
             "type": "folder",
-            "tags": [
-              "cartridges",
-              "features",
-              "free"
-            ],
+            "tags": ["cartridges", "features", "free"],
             "excerpt": "Free, Open Source cartridges\n\n Flash\n Lingua\n Uberedux",
             "children": [
               {
@@ -99,11 +91,7 @@
                 "order": 20,
                 "icon": "star",
                 "type": "folder",
-                "tags": [
-                  "cartridges",
-                  "free",
-                  "bouncer"
-                ],
+                "tags": ["cartridges", "free", "bouncer"],
                 "excerpt": "What actually are Cartridges?",
                 "children": [
                   {
@@ -112,12 +100,7 @@
                     "order": 130,
                     "icon": "cartridge",
                     "type": "file",
-                    "tags": [
-                      "cartridges",
-                      "cartridge",
-                      "free",
-                      "bouncer"
-                    ],
+                    "tags": ["cartridges", "cartridge", "free", "bouncer"],
                     "excerpt": "Bouncer is the name of our authentication and access control system built on Firebase Authentication and Firestore. It is included in the Core as a reusable component, available globally from any cart"
                   }
                 ]
@@ -138,10 +121,7 @@
                 "order": 250,
                 "icon": "work",
                 "type": "file",
-                "tags": [
-                  "remote",
-                  "hybrid"
-                ],
+                "tags": ["remote", "hybrid"],
                 "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years.\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communication, "
               },
               {
@@ -150,13 +130,7 @@
                 "order": 555,
                 "icon": "account",
                 "type": "file",
-                "tags": [
-                  "cookies",
-                  "gdpr",
-                  "privacy",
-                  "terms",
-                  "trust"
-                ],
+                "tags": ["cookies", "gdpr", "privacy", "terms", "trust"],
                 "excerpt": "We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers t"
               }
             ]
@@ -167,10 +141,7 @@
             "order": 10,
             "icon": "github",
             "type": "folder",
-            "tags": [
-              "github",
-              "process"
-            ],
+            "tags": ["github", "process"],
             "excerpt": "We use GitHub for everything. Including project management. Most of the communication done between us and our clients during development is done through GitHub in the form of comments, pull resuests, ",
             "children": []
           },
@@ -180,9 +151,7 @@
             "order": 10,
             "icon": "private",
             "type": "folder",
-            "tags": [
-              "private"
-            ],
+            "tags": ["private"],
             "excerpt": "You cannot see this.",
             "children": []
           }

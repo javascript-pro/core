@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Box, Container, Grid, Typography } from '@mui/material';
 import {
   // Share,
+  PageBreadcrumb,
   useIsMobile,
   MainMenu,
 } from '../';
@@ -24,19 +25,13 @@ export default function Main({ body = 'No body', frontmatter = null }: TMain) {
         <Grid
           size={{
             xs: 12,
-            md: 3,
-          }}
-        >
-          {/* <Share frontmatter={frontmatter} /> */}
-          {!isMobile ? <MainMenu /> : null}
-        </Grid>
-
-        <Grid
-          size={{
-            xs: 12,
             md: 9,
           }}
         >
+          <Box>
+            <PageBreadcrumb />
+          </Box>
+
           <Typography variant="body1">
             {featuredImage && (
               <Box
@@ -61,6 +56,16 @@ export default function Main({ body = 'No body', frontmatter = null }: TMain) {
 
             <ReactMarkdown>{body}</ReactMarkdown>
           </Typography>
+        </Grid>
+
+        <Grid
+          size={{
+            xs: 12,
+            md: 3,
+          }}
+        >
+          {/* <Share frontmatter={frontmatter} /> */}
+          {!isMobile ? <MainMenu /> : null}
         </Grid>
       </Grid>
     </Container>

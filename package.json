@@ -1,5 +1,5 @@
 {
-  "version": "50.5.9",
+  "version": "50.6.0",
   "private": true,
   "packageManager": "yarn@4.3.1",
   "scripts": {
@@ -29,6 +29,7 @@
     "@heroicons/react": "2.1.3",
     "@mui/icons-material": "^7.0.1",
     "@mui/material": "^7.0.1",
+    "@mui/x-tree-view": "^8.3.0",
     "@reduxjs/toolkit": "^2.6.1",
     "@toolpad/core": "^0.14.0",
     "clsx": "2.1.1",

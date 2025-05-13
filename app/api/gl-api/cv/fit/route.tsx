@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) {
     return new Response('Missing resume or job description', { status: 400 });
   }
 
-const prompt = `
+  const prompt = `
 You are a senior hiring consultant.
 
 Start by reading the job description below. Then evaluate the CV against it.
@@ -31,7 +31,6 @@ ${jd}
 ---CV---
 ${resume}
 `;
-
 
   const openaiRes = await fetch('https://api.openai.com/v1/chat/completions', {
     method: 'POST',

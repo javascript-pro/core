@@ -54,7 +54,7 @@ export default function Core({
             >
               <Box
                 sx={{
-                  mb: 6,
+                  mb: '100px',
                 }}
               >
                 <Main body={body as any} frontmatter={frontmatter as any} />
