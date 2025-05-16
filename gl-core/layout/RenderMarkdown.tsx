@@ -24,7 +24,7 @@ export default function RenderMarkdown({
   width = '90vw',
   maxWidth = null,
 }: TRenderMarkdown) {
-  const config = useConfig();
+  // const config = useConfig();
   const theme = useTheme();
   
   const scrollRef = React.useRef<HTMLDivElement>(null);

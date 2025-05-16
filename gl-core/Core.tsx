@@ -56,7 +56,7 @@ export default function Core({ frontmatter = null, body = null }: TCore) {
         </MovieClip>
 
         <MovieClip id="body" opacity={0} width="95vw" maxWidth={1024}>
-          <RenderMarkdown height="45vh" maxWidth={900}>
+          <RenderMarkdown height="45vh" maxWidth={1024}>
             {body}
           </RenderMarkdown>
         </MovieClip>

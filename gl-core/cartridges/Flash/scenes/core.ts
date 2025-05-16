@@ -24,27 +24,24 @@ const setScene = () => {
   });
   setOpacity('rehydrate-ad', { opacity: 1 });
   fade('rehydrate-ad', { fadeInOut: 'out' });
-  
-
-
   setPosition('header', {
     screenPosition: 'top-middle',
   });
   fade('header', { fadeInOut: 'in' });
   setPosition('image', {
     screenPosition: 'top-middle',
-    offsetY: 100,
+    offsetY: 80,
   });
   fade('image', { fadeInOut: 'in' });
   setPosition('breadcrumb', {
-    screenPosition: 'middle-middle',
-    offsetY: 115,
+    screenPosition: 'middle-right',
+    offsetY: 90,
     offsetX: 10,
   });
   fade('breadcrumb', { fadeInOut: 'in' });
   setPosition('body', {
     screenPosition: 'middle-middle',
-    offsetY: 150,
+    offsetY: 110,
   });
   fade('body', { fadeInOut: 'in' });  
 };
