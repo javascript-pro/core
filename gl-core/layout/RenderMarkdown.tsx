@@ -23,11 +23,23 @@ export default function RenderMarkdown({ children = '', height = '80vh' }: TRend
   const lineHeight = 28;
   const scrollStep = lineHeight * 10;
 
+  const [canScrollUp, setCanScrollUp] = React.useState(false);
+  const [canScrollDown, setCanScrollDown] = React.useState(false);
+
   const handleScroll = (direction: 'up' | 'down') => {
     if (scrollRef.current) {
       const el = scrollRef.current;
       const amount = direction === 'up' ? -scrollStep : scrollStep;
       el.scrollBy({ top: amount, behavior: 'smooth' });
+      setTimeout(updateScrollButtons, 300); // wait for smooth scroll
+    }
+  };
+
+  const updateScrollButtons = () => {
+    if (scrollRef.current) {
+      const el = scrollRef.current;
+      setCanScrollUp(el.scrollTop > 0);
+      setCanScrollDown(el.scrollTop + el.clientHeight < el.scrollHeight);
     }
   };
 
@@ -48,6 +60,23 @@ export default function RenderMarkdown({ children = '', height = '80vh' }: TRend
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
+  // Scroll event + resize listener
+  React.useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    updateScrollButtons(); // initial
+
+    const handleScrollEvent = () => updateScrollButtons();
+    el.addEventListener('scroll', handleScrollEvent);
+    window.addEventListener('resize', updateScrollButtons);
+
+    return () => {
+      el.removeEventListener('scroll', handleScrollEvent);
+      window.removeEventListener('resize', updateScrollButtons);
+    };
+  }, []);
+
   return (
     <Box
       sx={{
@@ -60,13 +89,15 @@ export default function RenderMarkdown({ children = '', height = '80vh' }: TRend
         gap: 1,
       }}
     >
-      <IconButton
-        onClick={() => handleScroll('up')}
-        size="small"
-        sx={{ color: theme.palette.text.secondary }}
-      >
-        <ArrowDropUpIcon fontSize="large" />
-      </IconButton>
+      {canScrollUp && (
+        <IconButton
+          onClick={() => handleScroll('up')}
+          size="small"
+          sx={{ color: theme.palette.text.secondary }}
+        >
+          <ArrowDropUpIcon fontSize="large" />
+        </IconButton>
+      )}
 
       <Box
         ref={scrollRef}
@@ -92,7 +123,7 @@ export default function RenderMarkdown({ children = '', height = '80vh' }: TRend
             backgroundColor: theme.palette.background.paper,
           },
         }}
-        tabIndex={0} // ensures it can receive focus if needed
+        tabIndex={0}
       >
         <ReactMarkdown
           components={{
@@ -143,13 +174,15 @@ export default function RenderMarkdown({ children = '', height = '80vh' }: TRend
         </ReactMarkdown>
       </Box>
 
-      <IconButton
-        onClick={() => handleScroll('down')}
-        size="small"
-        sx={{ color: theme.palette.text.secondary }}
-      >
-        <ArrowDropDownIcon fontSize="large" />
-      </IconButton>
+      {canScrollDown && (
+        <IconButton
+          onClick={() => handleScroll('down')}
+          size="small"
+          sx={{ color: theme.palette.text.secondary }}
+        >
+          <ArrowDropDownIcon fontSize="large" />
+        </IconButton>
+      )}
     </Box>
   );
 }
