@@ -28,14 +28,13 @@ export default function Core(
   const {flash} = slice
   const {showOutput} = flash;
   // const showOutput = true
-
   return (
     <Theme>
       <CssBaseline />
       <Flash id="flash-core" scene="core">
         
-        <MovieClip id="flash-main" opacity={0} width={800}>
-          <RenderMarkdown height="60vh">
+        <MovieClip id="body" opacity={0}>
+          <RenderMarkdown height={"50vh"}>
             {body}
           </RenderMarkdown>
         </MovieClip>

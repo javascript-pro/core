@@ -1,9 +1,7 @@
-// ActionScript/animation/setPosition.ts
-
 export type TSetPosition = {
   screenPosition?: string; // e.g. "top-left", "middle-right"
-  offsetX?: number;        // fine-tune horizontal position (default: 0)
-  offsetY?: number;        // fine-tune vertical position (default: 0)
+  offsetX?: number | string; // px number or CSS string like '10%'
+  offsetY?: number | string;
 };
 
 export const setPosition = (divId: string, options: TSetPosition) => {
@@ -19,19 +17,21 @@ export const setPosition = (divId: string, options: TSetPosition) => {
     offsetY = 0,
   } = options;
 
-  const { top, left } = getCenteredPosition(screenPosition, el, offsetX, offsetY);
+  const coords = getCenteredPosition(screenPosition, el, offsetX, offsetY);
 
   el.style.position = 'absolute';
-  el.style.top = `${top}px`;
-  el.style.left = `${left}px`;
+
+  // If offset is a string, apply it as-is
+  el.style.top = typeof coords.top === 'number' ? `${coords.top}px` : coords.top;
+  el.style.left = typeof coords.left === 'number' ? `${coords.left}px` : coords.left;
 };
 
 const getCenteredPosition = (
   position: string,
   element: HTMLElement,
-  offsetX: number,
-  offsetY: number
-): { top: number; left: number } => {
+  offsetX: number | string,
+  offsetY: number | string
+): { top: number | string; left: number | string } => {
   const vw = window.innerWidth;
   const vh = window.innerHeight;
   const w = element.offsetWidth;
@@ -71,7 +71,7 @@ const getCenteredPosition = (
   }
 
   return {
-    top: top - h / 2 + offsetY,
-    left: left - w / 2 + offsetX,
+    top: typeof offsetY === 'number' ? top - h / 2 + offsetY : `calc(${top - h / 2}px + ${offsetY})`,
+    left: typeof offsetX === 'number' ? left - w / 2 + offsetX : `calc(${left - w / 2}px + ${offsetX})`,
   };
 };

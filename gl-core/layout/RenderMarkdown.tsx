@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
+import { Icon } from '../../gl-core';
 import {
   Box,
   IconButton,
@@ -9,15 +10,18 @@ import {
   Typography,
   useTheme,
 } from '@mui/material';
-import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 export type TRenderMarkdown = {
   children: React.ReactNode;
   height?: number | string;
+  width?: number | string; // NEW
 };
 
-export default function RenderMarkdown({ children = '', height = '80vh' }: TRenderMarkdown) {
+export default function RenderMarkdown({
+  children = '',
+  height = '50vh',
+  width = '90vw', // default to 90% of viewport width
+}: TRenderMarkdown) {
   const theme = useTheme();
   const scrollRef = React.useRef<HTMLDivElement>(null);
   const lineHeight = 28;
@@ -31,7 +35,7 @@ export default function RenderMarkdown({ children = '', height = '80vh' }: TRend
       const el = scrollRef.current;
       const amount = direction === 'up' ? -scrollStep : scrollStep;
       el.scrollBy({ top: amount, behavior: 'smooth' });
-      setTimeout(updateScrollButtons, 300); // wait for smooth scroll
+      setTimeout(updateScrollButtons, 300);
     }
   };
 
@@ -43,7 +47,6 @@ export default function RenderMarkdown({ children = '', height = '80vh' }: TRend
     }
   };
 
-  // Keyboard handler
   React.useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'ArrowUp') {
@@ -60,12 +63,11 @@ export default function RenderMarkdown({ children = '', height = '80vh' }: TRend
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  // Scroll event + resize listener
   React.useEffect(() => {
     const el = scrollRef.current;
     if (!el) return;
 
-    updateScrollButtons(); // initial
+    updateScrollButtons();
 
     const handleScrollEvent = () => updateScrollButtons();
     el.addEventListener('scroll', handleScrollEvent);
@@ -80,8 +82,7 @@ export default function RenderMarkdown({ children = '', height = '80vh' }: TRend
   return (
     <Box
       sx={{
-        width: '100%',
-        maxWidth: 800,
+        width,
         height,
         display: 'flex',
         flexDirection: 'column',
@@ -95,7 +96,7 @@ export default function RenderMarkdown({ children = '', height = '80vh' }: TRend
           size="small"
           sx={{ color: theme.palette.text.secondary }}
         >
-          <ArrowDropUpIcon fontSize="large" />
+          <Icon icon="up" />
         </IconButton>
       )}
 
@@ -109,7 +110,6 @@ export default function RenderMarkdown({ children = '', height = '80vh' }: TRend
           backgroundColor: theme.palette.background.default,
           borderRadius: 2,
           boxShadow: 2,
-          outline: 'none',
           scrollbarWidth: 'auto',
           scrollbarColor: `${theme.palette.primary.main} ${theme.palette.background.paper}`,
           '&::-webkit-scrollbar': {
@@ -180,7 +180,7 @@ export default function RenderMarkdown({ children = '', height = '80vh' }: TRend
           size="small"
           sx={{ color: theme.palette.text.secondary }}
         >
-          <ArrowDropDownIcon fontSize="large" />
+          <Icon icon="down" />
         </IconButton>
       )}
     </Box>
