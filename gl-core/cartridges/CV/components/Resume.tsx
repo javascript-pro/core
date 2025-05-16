@@ -8,7 +8,7 @@ export default function Resume() {
   const { resume } = slice.cv;
 
   return (
-    <Box sx={{ mb: '100px', mt: 4 }}>
+    <Box sx={{ mb: '100px', mt: 1 }}>
       <ReactMarkdown
         components={{
           h1: ({ children }) => (

@@ -25,5 +25,5 @@ export const setOpacity = (
     el.style.display = 'none';
   }
 
-  console.log(`setOpacity: "${divId}" set to opacity ${opacity}`);
+  // console.log(`setOpacity: "${divId}" set to opacity ${opacity}`);
 };

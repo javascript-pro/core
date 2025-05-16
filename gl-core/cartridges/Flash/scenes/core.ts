@@ -10,6 +10,7 @@ import { setPosition, fade, setOpacity } from '../ActionScript';
 const clips = [
   'redux',
   'rehydrate-ad',
+  'flash-main',
 ];
 
 export const init = (divId: string) => {
@@ -18,12 +19,19 @@ export const init = (divId: string) => {
 };
 
 const setScene = () => {
+
+  
+  setPosition('flash-main', { 
+            screenPosition: 'middle-middle',
+        });
+  setOpacity('flash-main', { opacity: 1 });
+
   setPosition('rehydrate-ad', { 
             screenPosition: 'middle-middle',
             offsetX: 35,
             offsetY: 35,
         });
   setOpacity('rehydrate-ad', { opacity: 1 });
-
-  fade('rehydrate-ad', { fadeInOut: 'out', duration: 1.2 });
+  fade('rehydrate-ad', { fadeInOut: 'out'});
+  
 };
