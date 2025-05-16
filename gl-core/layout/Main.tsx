@@ -20,6 +20,7 @@ export type TMain = {
 };
 
 export default function Main({ body = '', frontmatter = null }: TMain) {
+  
   const isMobile = useIsMobile();
   const featuredImage = frontmatter?.image || null;
 
