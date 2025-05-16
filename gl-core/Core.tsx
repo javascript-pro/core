@@ -1,7 +1,7 @@
 'use client';
 import * as React from 'react';
 import { CssBaseline } from '@mui/material';
-import { Theme, Flash, MovieClip, useSlice, RenderMarkdown } from '../gl-core';
+import { Theme, Flash, MovieClip, Photo,useSlice, RenderMarkdown, MainMenu } from '../gl-core';
 
 export type TFrontmatter = {
   icon?: string;
@@ -26,20 +26,29 @@ export default function Core({ frontmatter = null, body = null }: TCore) {
   return (
     <Theme>
       <CssBaseline />
-      <Flash id="flash-core" scene="core">
-        <MovieClip id="body" opacity={0}>
-          <RenderMarkdown height={'50vh'}>{body}</RenderMarkdown>
-        </MovieClip>
-
+      <Flash id="core">
         <MovieClip id="rehydrate-ad" opacity={0}>
           <img src="/svg/rehydrate-ad.svg" />
         </MovieClip>
 
+       
+
+        <MovieClip id="body" opacity={0}>
+          <Photo src={frontmatter?.image ?? null} />
+          <RenderMarkdown>{body}</RenderMarkdown>
+        </MovieClip>
+
+         <MovieClip id="nav" opacity={0} >
+          <MainMenu />
+        </MovieClip>
+
+
         {showOutput ? (
           <MovieClip id="output">
-            <pre>body: {JSON.stringify(body, null, 2)}</pre>
+            <pre>frontmatter: {JSON.stringify(frontmatter, null, 2)}</pre>
           </MovieClip>
         ) : null}
+
       </Flash>
     </Theme>
   );

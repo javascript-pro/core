@@ -9,13 +9,17 @@ export type TFlash = {
   scene?: string;
 };
 
-export default function Flash({ id = 'flash-', children }: TFlash) {
+export default function Flash({ 
+  id = 'flash-',
+  scene = "core", 
+  children,
+}: TFlash) {
   React.useEffect(() => {
     const loadScene = async () => {
       try {
         const scene = await import('./scenes/core');
         setTimeout(() => {
-          scene.init(id);
+          scene.init();
         }, 1);
       } catch (err) {
         console.error('Failed to load core scene', err);

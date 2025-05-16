@@ -38,8 +38,8 @@ import { TUbereduxDispatch } from './cartridges/Uberedux';
 import { CV } from './cartridges/CV';
 import { TCV } from './cartridges/CV';
 
-import { Flash, MovieClip } from './cartridges/Flash';
-import { TFlash, TMovieClip } from './cartridges/Flash';
+import { Flash, MovieClip, Photo } from './cartridges/Flash';
+import { TFlash, TMovieClip, TPhoto } from './cartridges/Flash';
 
 export { Core };
 
@@ -69,7 +69,7 @@ export {
 export { CV };
 
 // Flash
-export { Flash, MovieClip };
+export { Flash, MovieClip, Photo };
 
 // actions
 export { exampleAction };
@@ -93,4 +93,5 @@ export type {
   TResponsive,
   TFlash,
   TMovieClip,
+  TPhoto,
 };
