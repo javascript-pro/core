@@ -8,10 +8,7 @@ export type TRenderMarkdown = {
   children: React.ReactNode;
 };
 
-export default function RenderMarkdown({ 
-  children = '',
-}: TRenderMarkdown) {
-
+export default function RenderMarkdown({ children = '' }: TRenderMarkdown) {
   const theme = useTheme();
   const linkCol = theme.palette.text.primary;
 
@@ -34,9 +31,7 @@ export default function RenderMarkdown({
           </Typography>
         ),
         p: ({ children }) => (
-          <Typography variant="body1">
-            {children}
-          </Typography>
+          <Typography variant="body1">{children}</Typography>
         ),
         li: ({ children }) => (
           <li>

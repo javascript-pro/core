@@ -27,7 +27,7 @@ export function createMUITheme() {
       },
       text: {
         primary: theme.text,
-        secondary: theme.secondary
+        secondary: theme.secondary,
       },
     },
     components: {

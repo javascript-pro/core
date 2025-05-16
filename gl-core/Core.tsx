@@ -18,17 +18,17 @@ export type TCore = {
   children?: React.ReactNode;
 };
 
-export default function Core({
-  // frontmatter = null,
-  // body = null,
-}: TCore) {
-
+export default function Core(
+  {
+    // frontmatter = null,
+    // body = null,
+  }: TCore,
+) {
   return (
     <Theme>
       <CssBaseline />
-      
-      <Flash id="core">
 
+      <Flash id="core">
         <MovieClip id="rehydrate-ad">
           <img src="/svg/rehydrate-ad.svg" />
         </MovieClip>
@@ -36,7 +36,6 @@ export default function Core({
         <MovieClip id="core-header">
           <pre>{JSON.stringify(null, null, 2)}</pre>
         </MovieClip>
-
       </Flash>
     </Theme>
   );

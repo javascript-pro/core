@@ -1,11 +1,7 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import {
-  Box,
-  Container,
-  Grid,
-} from '@mui/material';
+import { Box, Container, Grid } from '@mui/material';
 import {
   Share,
   RenderMarkdown,
@@ -20,7 +16,6 @@ export type TMain = {
 };
 
 export default function Main({ body = '', frontmatter = null }: TMain) {
-  
   const isMobile = useIsMobile();
   const featuredImage = frontmatter?.image || null;
 
@@ -33,8 +28,8 @@ export default function Main({ body = '', frontmatter = null }: TMain) {
             md: 9,
           }}
         >
-          <Box sx={{my:1, display: "flex" }}>
-            <Box sx={{ml: -1, mr: 1}}>
+          <Box sx={{ my: 1, display: 'flex' }}>
+            <Box sx={{ ml: -1, mr: 1 }}>
               <Share frontmatter={frontmatter} body={body} />
             </Box>
             <PageBreadcrumb />
@@ -60,10 +55,7 @@ export default function Main({ body = '', frontmatter = null }: TMain) {
             </Box>
           )}
 
-
-          <RenderMarkdown>
-            {body}
-          </RenderMarkdown>
+          <RenderMarkdown>{body}</RenderMarkdown>
         </Grid>
 
         <Grid

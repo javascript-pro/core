@@ -2,5 +2,5 @@
 
 export const initialState: any = {
   cartridge: 'flash',
-  setting1: "none",
+  settingsOpen: false,
 };

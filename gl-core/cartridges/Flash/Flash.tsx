@@ -11,9 +11,5 @@ export type TFlash = {
 export default function Flash({ id = null, children }: TFlash) {
   // Future: flash state machine, playhead, timeline, etc.
 
-  return (
-    <Stage id={id}>
-      {children}
-    </Stage>
-  );
+  return <Stage id={id}>{children}</Stage>;
 }

@@ -9,7 +9,6 @@ export type TStage = {
 };
 
 export default function Stage({ id = null, children }: TStage) {
-  
   const [size, setSize] = React.useState({
     width: 0,
     height: 0,

@@ -1,11 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { 
-  AppBar,
-  Button,
-  Toolbar,
-} from '@mui/material';
+import { AppBar, Button, Toolbar } from '@mui/material';
 import { useRouter } from 'next/navigation';
 import { useIsMobile, Icon, Nav } from '../';
 
@@ -28,13 +24,8 @@ export default function Header({
   return (
     <AppBar position="fixed">
       <Toolbar>
-        <Button 
-          variant="contained"
-        >
-          Home
-        </Button>
+        <Button variant="contained">Home</Button>
       </Toolbar>
-
     </AppBar>
   );
 }

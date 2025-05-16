@@ -13,8 +13,6 @@ import { TRenderMarkdown } from './RenderMarkdown';
 import Responsive from './Responsive';
 import { TResponsive } from './Responsive';
 
-
-
 export { Header, Main, Footer, RenderMarkdown, Responsive };
 
 export type { THeader, TMain, TFooter, TRenderMarkdown, TResponsive };

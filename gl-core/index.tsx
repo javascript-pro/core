@@ -7,7 +7,13 @@ import { Icon } from './theme';
 import { createMUITheme } from './theme';
 import { TIcon } from './theme';
 import { RenderMarkdown, Header, Main, Footer, Responsive } from './layout';
-import { TRenderMarkdown, THeader, TMain, TFooter, TResponsive } from './layout';
+import {
+  TRenderMarkdown,
+  THeader,
+  TMain,
+  TFooter,
+  TResponsive,
+} from './layout';
 import {
   MainMenu,
   Nav,
@@ -64,7 +70,6 @@ export { CV };
 
 // Flash
 export { Flash, MovieClip };
-
 
 // actions
 export { exampleAction };
