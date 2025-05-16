@@ -47,7 +47,7 @@ export default function Core({ frontmatter = null, body = null }: TCore) {
           <img src="/svg/rehydrate-ad.svg" />
         </MovieClip>
 
-        <MovieClip id="image" opacity={0} width="95vw">
+        <MovieClip id="image" opacity={0} width="95vw" maxWidth={1024}>
           <Photo src={frontmatter?.image ?? null} />
         </MovieClip>
 

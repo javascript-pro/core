@@ -1,10 +1,23 @@
 'use client';
 
 import { configureStore, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import config from '../../config.json';
 import { persistStore, persistReducer } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
+import baseStorage from 'redux-persist/lib/storage';
 import { combineReducers } from 'redux';
 import { initialState } from './initialState';
+
+// Wrapped storage that optionally skips loading persisted state
+const storage = {
+  ...baseStorage,
+  getItem: async (key: string) => {
+    if (config.forceUpdate) {
+      console.log(`[redux] Skipping persisted state due to forceUpdate`);
+      return null;
+    }
+    return baseStorage.getItem(key);
+  },
+};
 
 const reduxSlice = createSlice({
   name: 'redux',

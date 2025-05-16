@@ -12,7 +12,7 @@ export default function CommandBar() {
 
   return (
     <AppBar
-      position="fixed"
+      // position="fixed"
       color="secondary"
       sx={{
         top: 'auto',
