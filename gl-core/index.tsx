@@ -6,8 +6,14 @@ import { TTheme } from './theme';
 import { Icon } from './theme';
 import { createMUITheme } from './theme';
 import { TIcon } from './theme';
-import { RenderMarkdown, Header, Main, Footer } from './layout';
-import { TRenderMarkdown, THeader, TMain, TFooter } from './layout';
+import { RenderMarkdown, Header, Main, Footer, Responsive } from './layout';
+import {
+  TRenderMarkdown,
+  THeader,
+  TMain,
+  TFooter,
+  TResponsive,
+} from './layout';
 import {
   MainMenu,
   Nav,
@@ -32,13 +38,16 @@ import { TUbereduxDispatch } from './cartridges/Uberedux';
 import { CV } from './cartridges/CV';
 import { TCV } from './cartridges/CV';
 
+import { Flash, MovieClip, Photo } from './cartridges/Flash';
+import { TFlash, TMovieClip, TPhoto } from './cartridges/Flash';
+
 export { Core };
 
 // theme
 export { Theme, createMUITheme, Icon };
 
 // layout
-export { Header, Footer, Main, RenderMarkdown };
+export { Header, Footer, Main, RenderMarkdown, Responsive };
 
 // nav
 export { MainMenu, Nav, NavItem, PageBreadcrumb, Share, MightyButton, Search };
@@ -59,6 +68,9 @@ export {
 // CV
 export { CV };
 
+// Flash
+export { Flash, MovieClip, Photo };
+
 // actions
 export { exampleAction };
 
@@ -78,4 +90,8 @@ export type {
   THeader,
   TUbereduxDispatch,
   TNavItem,
+  TResponsive,
+  TFlash,
+  TMovieClip,
+  TPhoto,
 };

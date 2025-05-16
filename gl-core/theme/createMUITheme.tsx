@@ -1,9 +1,9 @@
 import config from '../config.json';
 import { createTheme } from '@mui/material';
-import { TTheme } from '../';
+// import { TTheme } from '../';
 
-const mode = 'light';
-const theme = config.themes.light;
+const mode = 'dark';
+const theme = config.themes.dark;
 
 export function createMUITheme() {
   return createTheme({
@@ -27,6 +27,7 @@ export function createMUITheme() {
       },
       text: {
         primary: theme.text,
+        secondary: theme.secondary,
       },
     },
     components: {

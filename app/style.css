@@ -1,11 +1,10 @@
 #core-ssg {
-  /* border: 5px solid red; */
   display: none;
 }
 
 body {
   margin: 0;
-  /* background: #efefef; */
+  background: #303030;
 }
 
 blockquote {
@@ -22,7 +21,7 @@ blockquote {
 
 .gl {
   font-family: Arial, Helvetica, sans-serif;
-  color: #303030;
+  /* color: #303030; */
 }
 .gl .gl-wrap {
   border: 1px solid #c4c4c4;

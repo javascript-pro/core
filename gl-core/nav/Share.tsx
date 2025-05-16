@@ -39,10 +39,7 @@ export type TShare = {
   body?: string;
 };
 
-export default function Share({
-  frontmatter = null,
-  body = '',
-}: TShare) {
+export default function Share({ frontmatter = null, body = '' }: TShare) {
   const dispatch = useDispatch();
   const slice = useSlice();
   const { modalShare } = slice;
@@ -86,8 +83,11 @@ export default function Share({
         onClose={closeModalShare}
       >
         <DialogContent>
-          <Box sx={{mb:2}}>
-            <CardHeader title={`Share: ${shareTitle}`} subheader={shareDescription} />
+          <Box sx={{ mb: 2 }}>
+            <CardHeader
+              title={`Share: ${shareTitle}`}
+              subheader={shareDescription}
+            />
             <CardMedia
               component="img"
               height="200"
@@ -97,7 +97,6 @@ export default function Share({
           </Box>
 
           <List dense>
-
             <ListItemButton
               onClick={() => {
                 navigator.clipboard.writeText(shareUrl);
@@ -110,7 +109,6 @@ export default function Share({
               </ListItemIcon>
               <ListItemText primary={copied ? 'Copied!' : 'Copy Link'} />
             </ListItemButton>
-
 
             <FacebookShareButton url={shareUrl} style={fullWidth}>
               <ListItemButton>
@@ -149,8 +147,6 @@ export default function Share({
                 <ListItemText primary="WhatsApp" />
               </ListItemButton>
             </WhatsappShareButton>
-
-
           </List>
         </DialogContent>
 

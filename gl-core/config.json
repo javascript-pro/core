@@ -1,5 +1,5 @@
 {
-  "app": "Goldlabel",
+  "app": "Goldlabel pr0",
   "description": "Where Next? Next Gen. Gen X?",
   "url": "https://goldlabel.pro",
   "favicon": {
@@ -9,6 +9,14 @@
   "images": ["/png/test.png", "/png/system/tick.png"],
   "brandColor": "#C09F52",
   "themes": {
+    "dark": {
+      "primary": "#C09F52",
+      "secondary": "#e2e2e2",
+      "background": "#303030",
+      "paper": "#4f4f4f",
+      "text": "#fffFFF",
+      "border": "#C09F52"
+    },
     "light": {
       "primary": "#e2e2e2",
       "secondary": "#303030",
@@ -16,14 +24,6 @@
       "paper": "#e2e2e2",
       "text": "#303030",
       "border": "#C9B37E"
-    },
-    "dark": {
-      "primary": "#C09F52",
-      "secondary": "#303030",
-      "background": "#303030",
-      "paper": "#303030",
-      "text": "#efefef",
-      "border": "#222222"
     }
   },
   "cartridges": [
