@@ -1,7 +1,7 @@
 'use client';
 import * as React from 'react';
-import { CssBaseline, Box } from '@mui/material';
-import { Theme, Responsive } from '../gl-core';
+import { CssBaseline } from '@mui/material';
+import { Theme, Flash, MovieClip } from '../gl-core';
 
 export type TFrontmatter = {
   icon?: string;
@@ -19,14 +19,25 @@ export type TCore = {
 };
 
 export default function Core({
-  frontmatter = null,
-  body = null,
+  // frontmatter = null,
+  // body = null,
 }: TCore) {
 
   return (
     <Theme>
       <CssBaseline />
-      &lt;Flash
+      
+      <Flash id="core">
+
+        <MovieClip id="rehydrate-ad">
+          <img src="/svg/rehydrate-ad.svg" />
+        </MovieClip>
+
+        <MovieClip id="core-header">
+          <pre>{JSON.stringify(null, null, 2)}</pre>
+        </MovieClip>
+
+      </Flash>
     </Theme>
   );
 }

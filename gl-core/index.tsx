@@ -32,6 +32,9 @@ import { TUbereduxDispatch } from './cartridges/Uberedux';
 import { CV } from './cartridges/CV';
 import { TCV } from './cartridges/CV';
 
+import { Flash, MovieClip } from './cartridges/Flash';
+import { TFlash, TMovieClip } from './cartridges/Flash';
+
 export { Core };
 
 // theme
@@ -59,6 +62,10 @@ export {
 // CV
 export { CV };
 
+// Flash
+export { Flash, MovieClip };
+
+
 // actions
 export { exampleAction };
 
@@ -79,4 +86,6 @@ export type {
   TUbereduxDispatch,
   TNavItem,
   TResponsive,
+  TFlash,
+  TMovieClip,
 };

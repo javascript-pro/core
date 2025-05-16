@@ -1,17 +1,19 @@
 'use client';
 
 import * as React from 'react';
-import { Box } from '@mui/material';
-import { Icon } from '../../';
+import { Stage, MovieClip } from '../Flash';
 
 export type TFlash = {
-  id?: string | null;
+  id: string | null;
+  children?: React.ReactNode;
 };
 
-export default function Flash({ id = null }: TFlash) {
+export default function Flash({ id = null, children }: TFlash) {
+  // Future: flash state machine, playhead, timeline, etc.
+
   return (
-    <Box>
-      Flash <Icon icon="flash" />
-    </Box>
+    <Stage id={id}>
+      {children}
+    </Stage>
   );
 }
