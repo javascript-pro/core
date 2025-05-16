@@ -16,6 +16,7 @@ export type TMain = {
 };
 
 export default function Main({ body = '', frontmatter = null }: TMain) {
+  
   const isMobile = useIsMobile();
   const featuredImage = frontmatter?.image || null;
 
@@ -56,6 +57,16 @@ export default function Main({ body = '', frontmatter = null }: TMain) {
           )}
 
           <RenderMarkdown>{body}</RenderMarkdown>
+        </Grid>
+
+        <Grid
+          size={{
+            xs: 12,
+            md: 3,
+          }}
+        >
+          {/* <Share frontmatter={frontmatter} /> */}
+          {!isMobile ? <MainMenu /> : null}
         </Grid>
 
         <Grid
