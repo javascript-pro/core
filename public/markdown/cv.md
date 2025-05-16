@@ -32,7 +32,7 @@ Proven track record building high-performance UIs, integrating automated testing
 - **Testing & QA:** Jest, React Testing Library, Cucumber (BDD), Gherkin
 - **DevOps & Workflow:** CI/CD (GitHub Actions, Netlify Deploy), Linux (MAMP stack), GitFlow, Agile/SCRUM, Git, GitHub, Vercel, Firebase (Auth, Firestore, Storage), Netlify, Docker, Turborepo, Webpack
 - **CMS:** WordPress, Headless CMS (Strapi, Contentful), Drupal
-- **Other:** Progressive Web Apps (PWA), Static Site Generation (SSG), Server-Side Rendering (SSR)
+- **Other:** Progressive Web Apps (PWA), Static Site Generation (SSG), Server-Side Rendering (SSR), Raspberry Pi & Python
 
 ## Experience
 
