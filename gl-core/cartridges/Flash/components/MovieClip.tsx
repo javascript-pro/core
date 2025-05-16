@@ -34,13 +34,14 @@ export default function MovieClip({
       sx={{
         position: 'absolute',
         width,
-        
         height,
         opacity,
         top,
         left,
         right,
         bottom,
+        ...(maxWidth !== null && { maxWidth }),
+        margin: '0 auto',
       }}
     >
       {children}
