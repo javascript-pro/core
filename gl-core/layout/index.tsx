@@ -10,6 +10,11 @@ import { TFooter } from './Footer';
 import RenderMarkdown from './RenderMarkdown';
 import { TRenderMarkdown } from './RenderMarkdown';
 
-export { Header, Main, Footer, RenderMarkdown };
+import Responsive from './Responsive';
+import { TResponsive } from './Responsive';
 
-export type { THeader, TMain, TFooter, TRenderMarkdown };
+
+
+export { Header, Main, Footer, RenderMarkdown, Responsive };
+
+export type { THeader, TMain, TFooter, TRenderMarkdown, TResponsive };

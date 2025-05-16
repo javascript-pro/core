@@ -6,8 +6,8 @@ import { TTheme } from './theme';
 import { Icon } from './theme';
 import { createMUITheme } from './theme';
 import { TIcon } from './theme';
-import { RenderMarkdown, Header, Main, Footer } from './layout';
-import { TRenderMarkdown, THeader, TMain, TFooter } from './layout';
+import { RenderMarkdown, Header, Main, Footer, Responsive } from './layout';
+import { TRenderMarkdown, THeader, TMain, TFooter, TResponsive } from './layout';
 import {
   MainMenu,
   Nav,
@@ -38,7 +38,7 @@ export { Core };
 export { Theme, createMUITheme, Icon };
 
 // layout
-export { Header, Footer, Main, RenderMarkdown };
+export { Header, Footer, Main, RenderMarkdown, Responsive };
 
 // nav
 export { MainMenu, Nav, NavItem, PageBreadcrumb, Share, MightyButton, Search };
@@ -78,4 +78,5 @@ export type {
   THeader,
   TUbereduxDispatch,
   TNavItem,
+  TResponsive,
 };
