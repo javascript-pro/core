@@ -1,7 +1,16 @@
 'use client';
 import * as React from 'react';
 import { CssBaseline } from '@mui/material';
-import { Theme, Flash, MovieClip, Photo,useSlice, RenderMarkdown, MainMenu } from '../gl-core';
+import { 
+  Theme, 
+  Flash, 
+  MovieClip, 
+  Photo,
+  useSlice, 
+  RenderMarkdown, 
+  Header,
+  PageBreadcrumb, 
+} from '../gl-core';
 
 export type TFrontmatter = {
   icon?: string;
@@ -27,21 +36,6 @@ export default function Core({ frontmatter = null, body = null }: TCore) {
     <Theme>
       <CssBaseline />
       <Flash id="core">
-        <MovieClip id="rehydrate-ad" opacity={0}>
-          <img src="/svg/rehydrate-ad.svg" />
-        </MovieClip>
-
-       
-
-        <MovieClip id="body" opacity={0}>
-          <Photo src={frontmatter?.image ?? null} />
-          <RenderMarkdown>{body}</RenderMarkdown>
-        </MovieClip>
-
-         <MovieClip id="nav" opacity={0} >
-          <MainMenu />
-        </MovieClip>
-
 
         {showOutput ? (
           <MovieClip id="output">
@@ -49,6 +43,34 @@ export default function Core({ frontmatter = null, body = null }: TCore) {
           </MovieClip>
         ) : null}
 
+        <MovieClip id="rehydrate-ad" opacity={0}>
+          <img src="/svg/rehydrate-ad.svg" />
+        </MovieClip>
+        
+        <MovieClip id="image" opacity={0} width={"90vw"}>
+          <Photo src={frontmatter?.image ?? null} />
+        </MovieClip>
+
+        
+        <MovieClip id="breadcrumb" opacity={0} width={"90vw"} maxWidth={900}>
+          <PageBreadcrumb />
+        </MovieClip>
+        
+        <MovieClip id="body" opacity={0} width={"90vw"} maxWidth={900}>
+          <RenderMarkdown 
+            height={"50vh"}>
+              {body}
+          </RenderMarkdown>
+        </MovieClip>
+        
+        <MovieClip id="header" opacity={0} width={"90vw"}>
+          <Header frontmatter={frontmatter}/>
+        </MovieClip>
+
+        
+
+
+      
       </Flash>
     </Theme>
   );

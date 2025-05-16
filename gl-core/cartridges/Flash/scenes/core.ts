@@ -24,19 +24,32 @@ const setScene = () => {
   });
   setOpacity('rehydrate-ad', { opacity: 1 });
   fade('rehydrate-ad', { fadeInOut: 'out' });
-
-  setPosition('nav', {
-    screenPosition: 'bottom-left',
-    
-  });
-  fade('nav', { fadeInOut: 'in' });
-
-  setTimeout(() => {
-    setPosition('body', {
-      screenPosition: 'top-left',
-    });
-    fade('body', { fadeInOut: 'in' });
-  }, 500)
-
   
+
+
+  setPosition('header', {
+    screenPosition: 'top-middle',
+  });
+  fade('header', { fadeInOut: 'in' });
+  setPosition('image', {
+    screenPosition: 'top-middle',
+    offsetY: 100,
+  });
+  fade('image', { fadeInOut: 'in' });
+  setPosition('breadcrumb', {
+    screenPosition: 'middle-middle',
+    offsetY: 115,
+    offsetX: 10,
+  });
+  fade('breadcrumb', { fadeInOut: 'in' });
+  setPosition('body', {
+    screenPosition: 'middle-middle',
+    offsetY: 150,
+  });
+  fade('body', { fadeInOut: 'in' });  
 };
+
+
+
+  // setTimeout(() => {
+  // }, 500)

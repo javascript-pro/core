@@ -14,13 +14,13 @@ import {
 export type TRenderMarkdown = {
   children: React.ReactNode;
   height?: number | string;
-  width?: number | string; // NEW
+  width?: number | string;
 };
 
 export default function RenderMarkdown({
   children = '',
   height = '50vh',
-  width = '90vw', // default to 90% of viewport width
+  width = '90vw',
 }: TRenderMarkdown) {
   const theme = useTheme();
   const scrollRef = React.useRef<HTMLDivElement>(null);
@@ -85,26 +85,14 @@ export default function RenderMarkdown({
         width,
         height,
         display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
+        flexDirection: 'row',
         gap: 1,
       }}
     >
-      {canScrollUp && (
-        <IconButton
-          onClick={() => handleScroll('up')}
-          size="small"
-          sx={{ color: theme.palette.text.secondary }}
-        >
-          <Icon icon="up" />
-        </IconButton>
-      )}
-
       <Box
         ref={scrollRef}
         sx={{
           flexGrow: 1,
-          width: '100%',
           overflowY: 'scroll',
           padding: 2,
           backgroundColor: theme.palette.background.default,
@@ -174,15 +162,37 @@ export default function RenderMarkdown({
         </ReactMarkdown>
       </Box>
 
-      {canScrollDown && (
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          py: 1,
+        }}
+      >
+        <IconButton
+          onClick={() => handleScroll('up')}
+          size="small"
+          sx={{
+            color: theme.palette.text.secondary,
+            visibility: canScrollUp ? 'visible' : 'hidden',
+          }}
+        >
+          <Icon icon="up" />
+        </IconButton>
+
         <IconButton
           onClick={() => handleScroll('down')}
           size="small"
-          sx={{ color: theme.palette.text.secondary }}
+          sx={{
+            color: theme.palette.text.secondary,
+            visibility: canScrollDown ? 'visible' : 'hidden',
+          }}
         >
           <Icon icon="down" />
         </IconButton>
-      )}
+      </Box>
     </Box>
   );
 }
