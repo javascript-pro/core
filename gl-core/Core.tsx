@@ -1,7 +1,7 @@
 'use client';
 import * as React from 'react';
-import { Box } from '@mui/material';
-import { Theme, Header, useIsMobile, Footer, Main, CV } from './';
+import { CssBaseline } from '@mui/material';
+import { Theme, Flash, MovieClip, Photo,useSlice, RenderMarkdown, MainMenu } from '../gl-core';
 
 export type TFrontmatter = {
   icon?: string;
@@ -18,52 +18,38 @@ export type TCore = {
   children?: React.ReactNode;
 };
 
-export default function Core({
-  type = 'page',
-  frontmatter = null,
-  body = null,
-}: TCore) {
-  const isMobile = useIsMobile();
-  const maxW = 'md';
-
+export default function Core({ frontmatter = null, body = null }: TCore) {
+  const slice = useSlice();
+  const { flash } = slice;
+  const { showOutput } = flash;
+  // const showOutput = true
   return (
     <Theme>
-      <Box
-        id="scroll-top"
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          minHeight: '100vh',
-        }}
-      >
-        {type === 'cv' ? (
-          <CV originalCV={body as any} />
-        ) : (
-          <>
-            <Header
-              maxW={maxW}
-              icon={frontmatter?.icon}
-              title={frontmatter?.title}
-              subheader={frontmatter?.description}
-            />
+      <CssBaseline />
+      <Flash id="core">
+        <MovieClip id="rehydrate-ad" opacity={0}>
+          <img src="/svg/rehydrate-ad.svg" />
+        </MovieClip>
 
-            <Box
-              sx={{
-                mt: !isMobile ? '100px' : '10px',
-              }}
-            >
-              <Box
-                sx={{
-                  mb: '100px',
-                }}
-              >
-                <Main body={body as any} frontmatter={frontmatter as any} />
-              </Box>
-            </Box>
-            <Footer />
-          </>
-        )}
-      </Box>
+       
+
+        <MovieClip id="body" opacity={0}>
+          <Photo src={frontmatter?.image ?? null} />
+          <RenderMarkdown>{body}</RenderMarkdown>
+        </MovieClip>
+
+         <MovieClip id="nav" opacity={0} >
+          <MainMenu />
+        </MovieClip>
+
+
+        {showOutput ? (
+          <MovieClip id="output">
+            <pre>frontmatter: {JSON.stringify(frontmatter, null, 2)}</pre>
+          </MovieClip>
+        ) : null}
+
+      </Flash>
     </Theme>
   );
 }

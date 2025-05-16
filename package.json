@@ -1,5 +1,5 @@
 {
-  "version": "50.6.2",
+  "version": "50.6.5",
   "private": true,
   "packageManager": "yarn@4.3.1",
   "scripts": {
@@ -37,6 +37,7 @@
     "dinero.js": "2.0.0-alpha.10",
     "firebase": "^11.5.0",
     "gray-matter": "^4.0.3",
+    "gsap": "^3.13.0",
     "hastscript": "^9.0.1",
     "html2pdf.js": "^0.10.3",
     "marked": "^15.0.7",

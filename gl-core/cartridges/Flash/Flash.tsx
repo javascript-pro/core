@@ -1,17 +1,33 @@
 'use client';
 
 import * as React from 'react';
-import { Box } from '@mui/material';
-import { Icon } from '../../';
+import { Stage } from '../Flash';
 
 export type TFlash = {
-  id?: string | null;
+  id: string;
+  children?: React.ReactNode;
+  scene?: string;
 };
 
-export default function Flash({ id = null }: TFlash) {
-  return (
-    <Box>
-      Flash <Icon icon="flash" />
-    </Box>
-  );
+export default function Flash({ 
+  id = 'flash-',
+  scene = "core", 
+  children,
+}: TFlash) {
+  React.useEffect(() => {
+    const loadScene = async () => {
+      try {
+        const scene = await import('./scenes/core');
+        setTimeout(() => {
+          scene.init();
+        }, 1);
+      } catch (err) {
+        console.error('Failed to load core scene', err);
+      }
+    };
+
+    loadScene();
+  }, []);
+
+  return <Stage id={id}>{children}</Stage>;
 }
