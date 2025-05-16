@@ -1,7 +1,5 @@
 import Flash from './Flash';
-
 import { initialState as FlashinitialState } from './initialState';
-
 import { TFlash } from './Flash';
 import Stage from './components/Stage';
 import { TStage } from './components/Stage';

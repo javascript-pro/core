@@ -1,6 +1,7 @@
 // export interface IFlashState {}
 
 export const initialState: any = {
-  cartridge: 'flash',
+  cartridgeName: 'flash',
   settingsOpen: false,
+  showRedux: false,
 };

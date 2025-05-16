@@ -6,9 +6,16 @@ import { Box } from '@mui/material';
 export type TMovieClip = {
   id: string;
   children?: React.ReactNode;
+  width?: number | string;
+  height?: number | string;
 };
 
-export default function MovieClip({ id, children }: TMovieClip) {
+export default function MovieClip({ 
+  id, 
+  children, 
+  width = 320,
+  height = 320,
+}: TMovieClip) {
   return (
     <Box
       id={id}
@@ -16,11 +23,8 @@ export default function MovieClip({ id, children }: TMovieClip) {
         position: 'absolute',
         top: 0,
         left: 0,
-        width: 250,
-        height: 250,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
+        width,
+        height,
       }}
     >
       {children}

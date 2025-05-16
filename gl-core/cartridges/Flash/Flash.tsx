@@ -1,15 +1,31 @@
 'use client';
 
 import * as React from 'react';
-import { Stage, MovieClip } from '../Flash';
+import { Stage } from '../Flash';
 
 export type TFlash = {
-  id: string | null;
+  id: string;
   children?: React.ReactNode;
+  scene?: string;
 };
 
-export default function Flash({ id = null, children }: TFlash) {
-  // Future: flash state machine, playhead, timeline, etc.
+export default function Flash({ 
+  id = "", 
+  children,
+}: TFlash) {
+
+  React.useEffect(() => {
+    const loadScene = async () => {
+      try {
+        const scene = await import('./scenes/core');
+        scene.init(id)
+      } catch (err) {
+        console.error('Failed to load core scene', err);
+      }
+    };
+
+    loadScene();
+  }, []);
 
   return <Stage id={id}>{children}</Stage>;
 }

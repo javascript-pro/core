@@ -1,7 +1,7 @@
 'use client';
 import * as React from 'react';
 import { CssBaseline } from '@mui/material';
-import { Theme, Flash, MovieClip } from '../gl-core';
+import { Theme, Flash, MovieClip, useSlice } from '../gl-core';
 
 export type TFrontmatter = {
   icon?: string;
@@ -24,18 +24,28 @@ export default function Core(
     // body = null,
   }: TCore,
 ) {
+  const slice = useSlice();
+  const {flash} = slice
+  const {showRedux} = flash;
+  // console.log("slice", slice)
+
   return (
     <Theme>
       <CssBaseline />
 
-      <Flash id="core">
+      <Flash 
+        id="flash-core"
+        scene="core"
+      >
+
         <MovieClip id="rehydrate-ad">
           <img src="/svg/rehydrate-ad.svg" />
         </MovieClip>
 
-        <MovieClip id="core-header">
-          <pre>{JSON.stringify(null, null, 2)}</pre>
-        </MovieClip>
+        {showRedux ? <MovieClip id="redux">
+          <pre>flash: {JSON.stringify(flash, null, 2)}</pre>
+        </MovieClip> : null }
+        
       </Flash>
     </Theme>
   );
