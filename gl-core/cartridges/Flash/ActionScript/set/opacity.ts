@@ -6,7 +6,7 @@ export type TSetOpacity = {
 
 export const setOpacity = (
   divId: string,
-  options: TSetOpacity = { opacity: 1 }
+  options: TSetOpacity = { opacity: 1 },
 ) => {
   const el = document.getElementById(divId);
   if (!el) {

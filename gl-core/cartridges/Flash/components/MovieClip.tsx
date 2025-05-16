@@ -11,9 +11,9 @@ export type TMovieClip = {
   opacity?: number;
 };
 
-export default function MovieClip({ 
-  id, 
-  children, 
+export default function MovieClip({
+  id,
+  children,
   width = 320,
   height = 320,
   opacity = 1,
@@ -28,7 +28,6 @@ export default function MovieClip({
         left: 0,
         width,
         height,
-        
       }}
     >
       {children}

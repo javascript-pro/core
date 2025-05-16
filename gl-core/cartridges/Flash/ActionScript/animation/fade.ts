@@ -7,10 +7,7 @@ export type TFade = {
   duration?: number; // optional, in seconds
 };
 
-export const fade = (
-  divId: string,
-  options: TFade = { fadeInOut: 'in' }
-) => {
+export const fade = (divId: string, options: TFade = { fadeInOut: 'in' }) => {
   const el = document.getElementById(divId);
 
   if (!el) {
@@ -18,10 +15,7 @@ export const fade = (
     return;
   }
 
-  const {
-    fadeInOut,
-    duration = 0.6,
-  } = options;
+  const { fadeInOut, duration = 0.6 } = options;
 
   gsap.to(el, {
     duration,
@@ -36,6 +30,6 @@ export const fade = (
       if (fadeInOut === 'out') {
         el.style.display = 'none'; // hide after fade out
       }
-    }
+    },
   });
 };

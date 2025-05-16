@@ -8,14 +8,14 @@ export type TTemplate = {
 
 export const template = (
   divId: string,
-  options: TTemplate = { 
+  options: TTemplate = {
     option1: 1,
-}
+  },
 ) => {
   const el = document.getElementById(divId);
   if (!el) {
     console.warn(`template: div id "${divId}" not found`);
     return;
   }
-  console.log("setOpacity options", options);
+  console.log('setOpacity options', options);
 };

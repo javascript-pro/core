@@ -11,26 +11,24 @@ export const setPosition = (divId: string, options: TSetPosition) => {
     return;
   }
 
-  const {
-    screenPosition = 'top-left',
-    offsetX = 0,
-    offsetY = 0,
-  } = options;
+  const { screenPosition = 'top-left', offsetX = 0, offsetY = 0 } = options;
 
   const coords = getCenteredPosition(screenPosition, el, offsetX, offsetY);
 
   el.style.position = 'absolute';
 
   // If offset is a string, apply it as-is
-  el.style.top = typeof coords.top === 'number' ? `${coords.top}px` : coords.top;
-  el.style.left = typeof coords.left === 'number' ? `${coords.left}px` : coords.left;
+  el.style.top =
+    typeof coords.top === 'number' ? `${coords.top}px` : coords.top;
+  el.style.left =
+    typeof coords.left === 'number' ? `${coords.left}px` : coords.left;
 };
 
 const getCenteredPosition = (
   position: string,
   element: HTMLElement,
   offsetX: number | string,
-  offsetY: number | string
+  offsetY: number | string,
 ): { top: number | string; left: number | string } => {
   const vw = window.innerWidth;
   const vh = window.innerHeight;
@@ -71,7 +69,13 @@ const getCenteredPosition = (
   }
 
   return {
-    top: typeof offsetY === 'number' ? top - h / 2 + offsetY : `calc(${top - h / 2}px + ${offsetY})`,
-    left: typeof offsetX === 'number' ? left - w / 2 + offsetX : `calc(${left - w / 2}px + ${offsetX})`,
+    top:
+      typeof offsetY === 'number'
+        ? top - h / 2 + offsetY
+        : `calc(${top - h / 2}px + ${offsetY})`,
+    left:
+      typeof offsetX === 'number'
+        ? left - w / 2 + offsetX
+        : `calc(${left - w / 2}px + ${offsetX})`,
   };
 };

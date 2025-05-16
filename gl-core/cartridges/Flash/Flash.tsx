@@ -9,11 +9,7 @@ export type TFlash = {
   scene?: string;
 };
 
-export default function Flash({ 
-  id = "flash-", 
-  children,
-}: TFlash) {
-
+export default function Flash({ id = 'flash-', children }: TFlash) {
   React.useEffect(() => {
     const loadScene = async () => {
       try {

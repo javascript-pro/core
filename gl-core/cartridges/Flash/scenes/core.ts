@@ -7,31 +7,24 @@
 
 import { setPosition, fade, setOpacity } from '../ActionScript';
 
-const clips = [
-  'redux',
-  'rehydrate-ad',
-  'body',
-];
+const clips = ['redux', 'rehydrate-ad', 'body'];
 
 export const init = (divId: string) => {
-//   console.log(`[core.ts] inits: ${divId}`);
+  //   console.log(`[core.ts] inits: ${divId}`);
   setScene();
 };
 
 const setScene = () => {
-
-  setPosition('body', { 
+  setPosition('body', {
     screenPosition: 'middle-middle',
-    offsetX: "1vw"
   });
-  setOpacity('body', { opacity: 1 });
+  fade('body', { fadeInOut: 'in' });
 
-  setPosition('rehydrate-ad', { 
-            screenPosition: 'middle-middle',
-            offsetX: 35,
-            offsetY: 35,
-        });
+  setPosition('rehydrate-ad', {
+    screenPosition: 'middle-middle',
+    offsetX: 35,
+    offsetY: 35,
+  });
   setOpacity('rehydrate-ad', { opacity: 1 });
-  fade('rehydrate-ad', { fadeInOut: 'out'});
-  
+  fade('rehydrate-ad', { fadeInOut: 'out' });
 };
