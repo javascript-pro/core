@@ -1,7 +1,11 @@
 'use client';
 
 import * as React from 'react';
-import { AppBar, Container, CardHeader, IconButton } from '@mui/material';
+import { 
+  AppBar,
+  Button,
+  Toolbar,
+} from '@mui/material';
 import { useRouter } from 'next/navigation';
 import { useIsMobile, Icon, Nav } from '../';
 
@@ -22,35 +26,15 @@ export default function Header({
   const router = useRouter();
 
   return (
-    <AppBar
-      position="fixed"
-      sx={{
-        background: 'white',
-        boxShadow: 0,
-        top: isMobile ? 'auto' : 0,
-        bottom: isMobile ? 0 : 'auto',
-      }}
-    >
-      <Container maxWidth={maxW as any}>
-        <CardHeader
-          sx={{ ml: -2 }}
-          // avatar={
-          //   <IconButton
-          //     sx={{ ml: -1 }}
-          //     onClick={() => {
-          //       router.push('/');
-          //     }}
-          //     color="inherit"
-          //   >
-          //     <Icon icon={'goldlabel'} />
-          //   </IconButton>
-          // }
-          title={title}
-          subheader={!isMobile ? subheader : null}
-          // subheader={subheader}
-          action={isMobile ? <Nav /> : null}
-        />
-      </Container>
+    <AppBar position="fixed">
+      <Toolbar>
+        <Button 
+          variant="contained"
+        >
+          Home
+        </Button>
+      </Toolbar>
+
     </AppBar>
   );
 }

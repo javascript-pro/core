@@ -26,19 +26,7 @@ export default function Core({
   return (
     <Theme>
       <CssBaseline />
-      <Box
-        id="scroll-top"
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          minHeight: '100vh',
-        }}
-      >
-        <Responsive 
-          body={body as any} 
-          frontmatter={frontmatter as any} 
-        />
-      </Box>
+      &lt;Flash
     </Theme>
   );
 }

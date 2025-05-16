@@ -11,10 +11,10 @@
   "themes": {
     "dark": {
       "primary": "#C09F52",
-      "secondary": "#FFFFFF",
+      "secondary": "#e2e2e2",
       "background": "#303030",
       "paper": "#4f4f4f",
-      "text": "#fff",
+      "text": "#fffFFF",
       "border": "#00ff0c"
     },
     "light": {
