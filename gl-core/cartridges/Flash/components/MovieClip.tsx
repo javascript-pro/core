@@ -25,6 +25,7 @@ export default function MovieClip({
         left: 0,
         width,
         height,
+        opacity: 0,
       }}
     >
       {children}

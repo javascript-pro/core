@@ -1,5 +1,14 @@
 // Vanilla TypeScript
 
-import { moveTo } from './animation/moveTo';
+// Animation
+import { fade } from './animation/fade';
 
-export { moveTo };
+// Setters
+import {setOpacity} from './set/opacity';
+import { setPosition } from './set/setPosition';
+
+
+export { fade };
+
+// Setters
+export { setOpacity, setPosition };

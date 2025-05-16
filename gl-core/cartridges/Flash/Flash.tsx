@@ -10,7 +10,7 @@ export type TFlash = {
 };
 
 export default function Flash({ 
-  id = "", 
+  id = "flash-", 
   children,
 }: TFlash) {
 
@@ -18,7 +18,9 @@ export default function Flash({
     const loadScene = async () => {
       try {
         const scene = await import('./scenes/core');
-        scene.init(id)
+        setTimeout(() => {
+          scene.init(id);
+        }, 1);
       } catch (err) {
         console.error('Failed to load core scene', err);
       }

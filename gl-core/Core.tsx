@@ -37,7 +37,6 @@ export default function Core(
         id="flash-core"
         scene="core"
       >
-
         <MovieClip id="rehydrate-ad">
           <img src="/svg/rehydrate-ad.svg" />
         </MovieClip>

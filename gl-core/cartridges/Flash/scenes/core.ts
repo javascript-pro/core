@@ -1,26 +1,29 @@
 // scenes/core.ts
 
-/* 
-Using the gsap animation library, this is the scene manager script
-it should have an init function which will be called on useEffect in the 
-Flash component
-*/
+/**
+ * This is the scene manager for the Flash runtime.
+ * It defines layout and actions for the initial scene using ActionScript helpers.
+ */
 
-import {moveTo} from '../ActionScript';
+import { setPosition, fade, setOpacity } from '../ActionScript';
 
 const clips = [
-    "redux",
-    "rehydrate-ad",
+  'redux',
+  'rehydrate-ad',
 ];
 
 export const init = (divId: string) => {
-    reset();
-}
+//   console.log(`[core.ts] inits: ${divId}`);
+  setScene();
+};
 
-// const 
+const setScene = () => {
+  setPosition('rehydrate-ad', { 
+            screenPosition: 'middle-middle',
+            offsetX: 35,
+            offsetY: 35,
+        });
+  setOpacity('rehydrate-ad', { opacity: 1 });
 
-const reset = () => {
-    console.log("core.ts > reset", clips);
-    
-    // moveTo("rehydrate-ad", "center middle")
-}
+  fade('rehydrate-ad', { fadeInOut: 'out', duration: 1.2 });
+};
