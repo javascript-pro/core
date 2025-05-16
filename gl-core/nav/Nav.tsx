@@ -4,10 +4,8 @@ import * as React from 'react';
 import {
   IconButton,
   Dialog,
-  DialogTitle,
   DialogContent,
   DialogActions,
-  List,
 } from '@mui/material';
 import {
   useIsMobile,
@@ -47,12 +45,9 @@ export default function Nav({}: TNav) {
         open={modalNav}
         onClose={closeModalNav}
       >
-        <DialogTitle>Nav</DialogTitle>
 
         <DialogContent>
-          <List dense>
             <MainMenu onSelect={closeModalNav} />
-          </List>
         </DialogContent>
 
         <DialogActions>
@@ -65,9 +60,10 @@ export default function Nav({}: TNav) {
           ) : (
             <>
               <MightyButton
-                label="Close"
+                label="Close Nav"
                 icon="close"
                 variant="outlined"
+                color="secondary"
                 onClick={closeModalNav}
               />
             </>

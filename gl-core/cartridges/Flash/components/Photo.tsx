@@ -29,15 +29,13 @@ export default function Photo({ src = null }: TPhoto) {
   return (
     <CardMedia
       component="img"
-      image={src}
+      src={src as string}
       alt="Photo"
       sx={{
         width: '100%',
         maxWidth: '100%',
-        maxHeight: 300,
-        objectFit: 'contain',
-        borderRadius: 2,
-        boxShadow: 3,
+        maxHeight: 200,
+        objectFit: 'cover',
       }}
     />
   );
