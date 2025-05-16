@@ -21,6 +21,7 @@ export function createMUITheme() {
       info: {
         main: theme.secondary,
       },
+      divider: theme.border,
       background: {
         default: theme.background,
         paper: theme.paper,

@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
-import { Icon } from '../../gl-core';
+import { Icon, useConfig } from '../../gl-core';
 import {
   Box,
   IconButton,
@@ -15,14 +15,18 @@ export type TRenderMarkdown = {
   children: React.ReactNode;
   height?: number | string;
   width?: number | string;
+  maxWidth?: number | string | null;
 };
 
 export default function RenderMarkdown({
   children = '',
   height = '50vh',
   width = '90vw',
+  maxWidth = null,
 }: TRenderMarkdown) {
+  const config = useConfig();
   const theme = useTheme();
+  
   const scrollRef = React.useRef<HTMLDivElement>(null);
   const lineHeight = 28;
   const scrollStep = lineHeight * 10;
@@ -84,20 +88,54 @@ export default function RenderMarkdown({
       sx={{
         width,
         height,
+        maxWidth,
         display: 'flex',
         flexDirection: 'row',
         gap: 1,
       }}
     >
+      {/* Up/Down Buttons on the Left */}
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          py: 1,
+        }}
+      >
+        <IconButton
+          onClick={() => handleScroll('up')}
+          size="small"
+          sx={{
+            color: theme.palette.text.secondary,
+            visibility: canScrollUp ? 'visible' : 'hidden',
+          }}
+        >
+          <Icon icon="up" />
+        </IconButton>
+
+        <IconButton
+          onClick={() => handleScroll('down')}
+          size="small"
+          sx={{
+            color: theme.palette.text.secondary,
+            visibility: canScrollDown ? 'visible' : 'hidden',
+          }}
+        >
+          <Icon icon="down" />
+        </IconButton>
+      </Box>
+
+      {/* Scrollable Markdown Box */}
       <Box
         ref={scrollRef}
         sx={{
           flexGrow: 1,
           overflowY: 'scroll',
           padding: 2,
-          backgroundColor: theme.palette.background.default,
-          borderRadius: 2,
-          boxShadow: 2,
+          borderRadius: 1,
+          borderLeft: '1px solid ' + theme.palette.background.paper,
           scrollbarWidth: 'auto',
           scrollbarColor: `${theme.palette.primary.main} ${theme.palette.background.paper}`,
           '&::-webkit-scrollbar': {
@@ -160,38 +198,6 @@ export default function RenderMarkdown({
         >
           {children as string}
         </ReactMarkdown>
-      </Box>
-
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          py: 1,
-        }}
-      >
-        <IconButton
-          onClick={() => handleScroll('up')}
-          size="small"
-          sx={{
-            color: theme.palette.text.secondary,
-            visibility: canScrollUp ? 'visible' : 'hidden',
-          }}
-        >
-          <Icon icon="up" />
-        </IconButton>
-
-        <IconButton
-          onClick={() => handleScroll('down')}
-          size="small"
-          sx={{
-            color: theme.palette.text.secondary,
-            visibility: canScrollDown ? 'visible' : 'hidden',
-          }}
-        >
-          <Icon icon="down" />
-        </IconButton>
       </Box>
     </Box>
   );

@@ -31,7 +31,7 @@ export default function Core({ frontmatter = null, body = null }: TCore) {
   const slice = useSlice();
   const { flash } = slice;
   const { showOutput } = flash;
-  // const showOutput = true
+
   return (
     <Theme>
       <CssBaseline />
@@ -46,31 +46,25 @@ export default function Core({ frontmatter = null, body = null }: TCore) {
         <MovieClip id="rehydrate-ad" opacity={0}>
           <img src="/svg/rehydrate-ad.svg" />
         </MovieClip>
-        
-        <MovieClip id="image" opacity={0} width={"90vw"}>
+
+        <MovieClip id="image" opacity={0} width="95vw">
           <Photo src={frontmatter?.image ?? null} />
         </MovieClip>
 
-        
-        <MovieClip id="breadcrumb" opacity={0} width={"90vw"} maxWidth={900}>
+        <MovieClip id="breadcrumb" opacity={0} width="95vw" maxWidth={1024}>
           <PageBreadcrumb />
         </MovieClip>
-        
-        <MovieClip id="body" opacity={0} width={"90vw"} maxWidth={900}>
-          <RenderMarkdown 
-            height={"50vh"}>
-              {body}
+
+        <MovieClip id="body" opacity={0} width="95vw" maxWidth={1024}>
+          <RenderMarkdown height="45vh" maxWidth={900}>
+            {body}
           </RenderMarkdown>
         </MovieClip>
-        
-        <MovieClip id="header" opacity={0} width={"90vw"}>
-          <Header frontmatter={frontmatter}/>
+
+        <MovieClip id="header" opacity={0} width="95vw" maxWidth={1024}>
+          <Header frontmatter={frontmatter} />
         </MovieClip>
 
-        
-
-
-      
       </Flash>
     </Theme>
   );
