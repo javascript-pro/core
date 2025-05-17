@@ -66,6 +66,17 @@ export default function Nav({}: TNav) {
             <ListItemText primary="Home" />
           </ListItemButton>
 
+          <ListItemButton
+            onClick={() => {
+              closeModalNav();
+              router.push('/flash');
+            }}
+          >
+            <ListItemIcon>
+              <Icon icon="flash" />
+            </ListItemIcon>
+            <ListItemText primary="Flash" />
+          </ListItemButton>
           
         </DialogTitle>
 
