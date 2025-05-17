@@ -6,6 +6,9 @@ import {
   Dialog,
   DialogContent,
   DialogActions,
+  DialogTitle,
+  Typography,
+  Fab,
 } from '@mui/material';
 import {
   useIsMobile,
@@ -34,9 +37,10 @@ export default function Nav({}: TNav) {
 
   return (
     <>
-      <IconButton color="inherit" onClick={openModalNav}>
-        <Icon icon="menu" />
-      </IconButton>
+      
+      <Fab color="primary" onClick={openModalNav}>
+        <Icon icon="blokey" />
+      </Fab>
 
       <Dialog
         fullWidth
@@ -45,6 +49,11 @@ export default function Nav({}: TNav) {
         open={modalNav}
         onClose={closeModalNav}
       >
+        <DialogTitle>
+          <Typography variant='h2'>
+            Hello.
+          </Typography>
+        </DialogTitle>
 
         <DialogContent>
             <MainMenu onSelect={closeModalNav} />
@@ -60,10 +69,9 @@ export default function Nav({}: TNav) {
           ) : (
             <>
               <MightyButton
-                label="Close Nav"
+                label="Close"
                 icon="close"
-                variant="outlined"
-                color="secondary"
+                variant="contained"
                 onClick={closeModalNav}
               />
             </>

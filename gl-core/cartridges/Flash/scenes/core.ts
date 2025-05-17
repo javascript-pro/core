@@ -22,6 +22,14 @@ const setScene = () => {
     screenPosition: 'top-middle',
   });
   fade('content', { fadeInOut: 'in' }); 
+
+  setPosition('click-here', {
+    screenPosition: 'bottom-right',
+    offsetX: -50,
+    offsetY: -50,
+  });
+  fade('click-here', { fadeInOut: 'in' }); 
+
 };
 
 

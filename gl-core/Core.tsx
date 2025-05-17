@@ -9,7 +9,8 @@ import {
   useSlice, 
   RenderMarkdown, 
   Header,
-  PageBreadcrumb, 
+  PageBreadcrumb,
+  Nav, 
 } from '../gl-core';
 
 export type TFrontmatter = {
@@ -22,15 +23,17 @@ export type TFrontmatter = {
 
 export type TCore = {
   type?: 'page' | 'file' | 'folder' | 'cv';
-  frontmatter?: TFrontmatter | null;
+  frontmatter?: any;
   body?: string | null;
   children?: React.ReactNode;
 };
 
-export default function Core({ frontmatter = null, body = null }: TCore) {
+export default function Core({ frontmatter, body = null }: TCore) {
   const slice = useSlice();
   const { flash } = slice;
   const { showOutput } = flash;
+  // const showOutput = true;
+  const {title, description} = frontmatter;
 
   return (
     <Theme>
@@ -42,6 +45,8 @@ export default function Core({ frontmatter = null, body = null }: TCore) {
             <pre>frontmatter: {JSON.stringify(frontmatter, null, 2)}</pre>
           </MovieClip>
         ) : null}
+
+
 
         <MovieClip id="ad" opacity={0}>
           <img src="/svg/rehydrate-ad.svg" />
@@ -55,6 +60,15 @@ export default function Core({ frontmatter = null, body = null }: TCore) {
             {body}
           </RenderMarkdown>
         </MovieClip>
+
+        <MovieClip 
+          id="click-here" 
+          opacity={0} 
+          width={48} 
+          height={48}>
+          <Nav />
+        </MovieClip>
+
 
       </Flash>
     </Theme>

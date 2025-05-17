@@ -18,7 +18,6 @@ export type TTheme = {
 
 export default function Theme({ children = null }: TTheme) {
   const slice = useSlice();
-  // console.log("slice.themeMode", slice.themeMode);
   const theme = createMUITheme(slice.themeMode);
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 }

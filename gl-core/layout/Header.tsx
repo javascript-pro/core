@@ -4,12 +4,17 @@ import * as React from 'react';
 import { 
   IconButton,
   CardHeader,
-  CardContent,
+  // CardContent,
+  Typography,
 } from '@mui/material';
 import { 
   useRouter,
 } from 'next/navigation';
-import { useIsMobile, Icon, Nav} from '../';
+import { 
+  useIsMobile, 
+  Icon, 
+  // Nav,
+} from '../';
 
 export type THeader = {
   frontmatter?: any;
@@ -34,15 +39,15 @@ export default function Header({
 
   return (<>
   <CardHeader 
-    action={<Nav />}
-    avatar={<IconButton
-      size='small'
-      onClick={onAvatarClick}
-    >
-      <Icon icon={icon} />
-    </IconButton>}
-    title={title}
-    subheader={description}
+    // action={<Nav />}
+    // action={<IconButton
+    //   size='small'
+    //   onClick={onAvatarClick}
+    // >
+    //   <Icon icon={icon} />
+    // </IconButton>}
+    title={<Typography variant={"h4"} component={"h1"}>{title}</Typography>}
+    subheader={<Typography variant={"body1"} component={"h2"}>{description}</Typography>}
   />
   </>
         
