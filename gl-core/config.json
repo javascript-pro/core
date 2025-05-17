@@ -1,7 +1,7 @@
 {
   "app": "Goldlabel pr0",
   "description": "Where Next? Next Gen. Gen X?",
-  "forceUpdate": false,
+  "forceUpdate": true,
   "url": "https://goldlabel.pro",
   "favicon": {
     "dark": "/svg/favicon_gold.svg",
