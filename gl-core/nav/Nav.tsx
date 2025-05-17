@@ -18,6 +18,7 @@ import {
   Icon,
   MainMenu,
   MightyButton,
+  ModeSwitch,
 } from '../';
 
 export type TNav = {
@@ -56,7 +57,16 @@ export default function Nav({}: TNav) {
         </DialogTitle>
 
         <DialogContent>
-            <MainMenu onSelect={closeModalNav} />
+
+          <ModeSwitch />
+
+          <Typography variant='body1' sx={{my:1}}>
+            Find something to read
+          </Typography>
+          <MainMenu onSelect={closeModalNav} />
+
+          {/* <pre style={{fontSize: 10}}>slice: {JSON.stringify(slice, null, 2)}</pre> */}
+
         </DialogContent>
 
         <DialogActions>
@@ -71,7 +81,8 @@ export default function Nav({}: TNav) {
               <MightyButton
                 label="Close"
                 icon="close"
-                variant="contained"
+                color="secondary"
+                variant="outlined"
                 onClick={closeModalNav}
               />
             </>
