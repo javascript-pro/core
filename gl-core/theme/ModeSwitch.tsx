@@ -2,12 +2,7 @@
 
 import * as React from 'react';
 import { Box, Switch, Typography } from '@mui/material';
-import {
-  Icon,
-  useSlice,
-  useDispatch,
-  setUbereduxKey,
-} from '../../gl-core';
+import { Icon, useSlice, useDispatch, setUbereduxKey } from '../../gl-core';
 
 export default function ModeSwitch() {
   const dispatch = useDispatch();
@@ -21,12 +16,9 @@ export default function ModeSwitch() {
 
   return (
     <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-      <Switch
-        checked={themeMode === 'dark'}
-        onChange={handleToggle}
-      />
-      <Box sx={{mr:1, mt: 0.5}}>
-        <Icon icon={themeMode === 'dark' ? 'lightmode' : 'darkmode' as any} />
+      <Switch checked={themeMode === 'dark'} onChange={handleToggle} />
+      <Box sx={{ mr: 1, mt: 0.5 }}>
+        <Icon icon={themeMode === 'dark' ? 'lightmode' : ('darkmode' as any)} />
       </Box>
       <Typography variant="body1">
         {themeMode === 'dark' ? 'Swap to Light' : 'Swap to Dark'}

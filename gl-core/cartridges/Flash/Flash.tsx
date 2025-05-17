@@ -9,9 +9,9 @@ export type TFlash = {
   scene?: string;
 };
 
-export default function Flash({ 
+export default function Flash({
   id = 'flash-',
-  scene = "core", 
+  scene = 'core',
   children,
 }: TFlash) {
   React.useEffect(() => {

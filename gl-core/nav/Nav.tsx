@@ -1,14 +1,18 @@
 'use client';
 
 import * as React from 'react';
+import { useRouter } from 'next/navigation';
 import {
   IconButton,
   Dialog,
   DialogContent,
   DialogActions,
   DialogTitle,
-  Typography,
   Fab,
+  CardHeader,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
 } from '@mui/material';
 import {
   useIsMobile,
@@ -27,6 +31,7 @@ export type TNav = {
 
 export default function Nav({}: TNav) {
   const dispatch = useDispatch();
+  const router = useRouter();
   const slice = useSlice();
   const { modalNav } = slice;
   const isMobile = useIsMobile();
@@ -38,7 +43,6 @@ export default function Nav({}: TNav) {
 
   return (
     <>
-      
       <Fab color="primary" onClick={openModalNav}>
         <Icon icon="blokey" />
       </Fab>
@@ -51,22 +55,23 @@ export default function Nav({}: TNav) {
         onClose={closeModalNav}
       >
         <DialogTitle>
-          <Typography variant='h2'>
-            Hello.
-          </Typography>
+          <ListItemButton
+            onClick={() => {
+              closeModalNav();
+              router.push('/');
+            }}
+          >
+            <ListItemIcon>
+              <Icon icon="home" />
+            </ListItemIcon>
+            <ListItemText primary="Home." />
+          </ListItemButton>
         </DialogTitle>
 
         <DialogContent>
-
-          <ModeSwitch />
-
-          <Typography variant='body1' sx={{my:1}}>
-            Find something to read
-          </Typography>
           <MainMenu onSelect={closeModalNav} />
-
+          <ModeSwitch />
           {/* <pre style={{fontSize: 10}}>slice: {JSON.stringify(slice, null, 2)}</pre> */}
-
         </DialogContent>
 
         <DialogActions>

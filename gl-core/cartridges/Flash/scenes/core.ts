@@ -2,14 +2,13 @@
 
 import { setPosition, fade, setOpacity } from '../ActionScript';
 
-export const init = (
+export const init = () =>
   // divId: string,
-) => {
-  setScene();
-};
+  {
+    setScene();
+  };
 
 const setScene = () => {
-
   setPosition('ad', {
     screenPosition: 'middle-middle',
     offsetX: 35,
@@ -21,17 +20,15 @@ const setScene = () => {
   setPosition('content', {
     screenPosition: 'top-middle',
   });
-  fade('content', { fadeInOut: 'in' }); 
+  fade('content', { fadeInOut: 'in' });
 
   setPosition('click-here', {
     screenPosition: 'bottom-right',
     offsetX: -50,
     offsetY: -50,
   });
-  fade('click-here', { fadeInOut: 'in' }); 
-
+  fade('click-here', { fadeInOut: 'in' });
 };
 
-
-  // setTimeout(() => {
-  // }, 500)
+// setTimeout(() => {
+// }, 500)
