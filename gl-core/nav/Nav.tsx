@@ -66,7 +66,7 @@ export default function Nav({}: TNav) {
             <ListItemText primary="Home" />
           </ListItemButton>
 
-          <ModeSwitch />
+          
         </DialogTitle>
 
         <DialogContent>
@@ -76,6 +76,7 @@ export default function Nav({}: TNav) {
         </DialogContent>
 
         <DialogActions>
+          <ModeSwitch />
           {isMobile ? (
             <>
               <IconButton onClick={closeModalNav}>
