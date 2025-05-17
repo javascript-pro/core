@@ -1,16 +1,16 @@
 'use client';
 import * as React from 'react';
 import { CssBaseline } from '@mui/material';
-import { 
-  Theme, 
-  Flash, 
-  MovieClip, 
+import {
+  Theme,
+  Flash,
+  MovieClip,
   Photo,
-  useSlice, 
-  RenderMarkdown, 
+  useSlice,
+  RenderMarkdown,
   Header,
   PageBreadcrumb,
-  Nav, 
+  Nav,
 } from '../gl-core';
 
 export type TFrontmatter = {
@@ -33,20 +33,17 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const { flash } = slice;
   const { showOutput } = flash;
   // const showOutput = true;
-  const {title, description} = frontmatter;
+  const { title, description } = frontmatter;
 
   return (
     <Theme>
       <CssBaseline />
       <Flash id="core">
-
         {showOutput ? (
           <MovieClip id="output">
             <pre>frontmatter: {JSON.stringify(frontmatter, null, 2)}</pre>
           </MovieClip>
         ) : null}
-
-
 
         <MovieClip id="ad" opacity={0}>
           <img src="/svg/rehydrate-ad.svg" />
@@ -56,20 +53,12 @@ export default function Core({ frontmatter, body = null }: TCore) {
           <Header frontmatter={frontmatter} />
           <Photo src={frontmatter?.image ?? null} />
           <PageBreadcrumb />
-          <RenderMarkdown>
-            {body}
-          </RenderMarkdown>
+          <RenderMarkdown>{body}</RenderMarkdown>
         </MovieClip>
 
-        <MovieClip 
-          id="click-here" 
-          opacity={0} 
-          width={48} 
-          height={48}>
+        <MovieClip id="click-here" opacity={0} width={48} height={48}>
           <Nav />
         </MovieClip>
-
-
       </Flash>
     </Theme>
   );

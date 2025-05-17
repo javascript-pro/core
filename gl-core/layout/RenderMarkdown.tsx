@@ -3,12 +3,7 @@
 import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
 // import { Icon } from '../../gl-core';
-import {
-  Box,
-  Link as MuiLink,
-  Typography,
-  useTheme,
-} from '@mui/material';
+import { Box, Link as MuiLink, Typography, useTheme } from '@mui/material';
 
 export type TRenderMarkdown = {
   children: React.ReactNode;

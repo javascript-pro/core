@@ -2,10 +2,7 @@ import config from '../config.json';
 import { createTheme } from '@mui/material';
 // import { TTheme } from '../';
 
-
-
-export function createMUITheme(themeMode: "light" | "dark") {
-
+export function createMUITheme(themeMode: 'light' | 'dark') {
   const mode = themeMode;
   const theme = config.themes[themeMode];
 

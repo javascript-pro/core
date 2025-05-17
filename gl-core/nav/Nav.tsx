@@ -1,14 +1,17 @@
 'use client';
 
 import * as React from 'react';
+import { useRouter } from 'next/navigation';
 import {
   IconButton,
   Dialog,
   DialogContent,
   DialogActions,
   DialogTitle,
-  Typography,
   Fab,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
 } from '@mui/material';
 import {
   useIsMobile,
@@ -18,6 +21,7 @@ import {
   Icon,
   MainMenu,
   MightyButton,
+  ModeSwitch,
 } from '../';
 
 export type TNav = {
@@ -26,6 +30,7 @@ export type TNav = {
 
 export default function Nav({}: TNav) {
   const dispatch = useDispatch();
+  const router = useRouter();
   const slice = useSlice();
   const { modalNav } = slice;
   const isMobile = useIsMobile();
@@ -37,7 +42,6 @@ export default function Nav({}: TNav) {
 
   return (
     <>
-      
       <Fab color="primary" onClick={openModalNav}>
         <Icon icon="blokey" />
       </Fab>
@@ -50,16 +54,29 @@ export default function Nav({}: TNav) {
         onClose={closeModalNav}
       >
         <DialogTitle>
-          <Typography variant='h2'>
-            Hello.
-          </Typography>
+          <ListItemButton
+            onClick={() => {
+              closeModalNav();
+              router.push('/');
+            }}
+          >
+            <ListItemIcon>
+              <Icon icon="home" />
+            </ListItemIcon>
+            <ListItemText primary="Home" />
+          </ListItemButton>
+
+          
         </DialogTitle>
 
         <DialogContent>
-            <MainMenu onSelect={closeModalNav} />
+          <MainMenu onSelect={closeModalNav} />
+
+          {/* <pre style={{fontSize: 10}}>slice: {JSON.stringify(slice, null, 2)}</pre> */}
         </DialogContent>
 
         <DialogActions>
+          <ModeSwitch />
           {isMobile ? (
             <>
               <IconButton onClick={closeModalNav}>
@@ -71,7 +88,7 @@ export default function Nav({}: TNav) {
               <MightyButton
                 label="Close"
                 icon="close"
-                variant="contained"
+                color="secondary"
                 onClick={closeModalNav}
               />
             </>

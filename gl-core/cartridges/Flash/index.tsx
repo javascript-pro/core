@@ -9,7 +9,6 @@ import { TMovieClip } from './components/MovieClip';
 import Photo from './components/Photo';
 import { TPhoto } from './components/Photo';
 
-
 export { Flash, Stage, MovieClip, Photo, FlashinitialState };
 
 export type { TFlash, TStage, TMovieClip, TPhoto };

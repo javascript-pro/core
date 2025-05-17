@@ -6,6 +6,7 @@ import { TTheme } from './theme';
 import { Icon } from './theme';
 import { createMUITheme } from './theme';
 import { TIcon } from './theme';
+import { ModeSwitch } from './theme';
 import { RenderMarkdown, Header, Main, Footer, Responsive } from './layout';
 import {
   TRenderMarkdown,
@@ -44,7 +45,7 @@ import { TFlash, TMovieClip, TPhoto } from './cartridges/Flash';
 export { Core };
 
 // theme
-export { Theme, createMUITheme, Icon };
+export { Theme, createMUITheme, Icon, ModeSwitch };
 
 // layout
 export { Header, Footer, Main, RenderMarkdown, Responsive };
