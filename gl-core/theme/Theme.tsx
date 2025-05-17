@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { ThemeProvider } from '@mui/material';
-import { createMUITheme } from '../';
+import { useSlice, createMUITheme } from '../';
 
 export type TTheme = {
   theme?: {
@@ -17,6 +17,7 @@ export type TTheme = {
 };
 
 export default function Theme({ children = null }: TTheme) {
-  const theme = createMUITheme();
+  const slice = useSlice();
+  const theme = createMUITheme(slice.themeMode);
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 }

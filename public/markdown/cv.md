@@ -1,7 +1,7 @@
 ---
 order: 2
 title: C.V.
-description: Is Goldlabel a good fit for your job?
+description: Is Goldlabel a good fit for you?
 slug: /
 icon: goldlabel
 image: /png/bouncer/bouncer.png

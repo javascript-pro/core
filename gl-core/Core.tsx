@@ -9,7 +9,8 @@ import {
   useSlice, 
   RenderMarkdown, 
   Header,
-  PageBreadcrumb, 
+  PageBreadcrumb,
+  Nav, 
 } from '../gl-core';
 
 export type TFrontmatter = {
@@ -22,15 +23,17 @@ export type TFrontmatter = {
 
 export type TCore = {
   type?: 'page' | 'file' | 'folder' | 'cv';
-  frontmatter?: TFrontmatter | null;
+  frontmatter?: any;
   body?: string | null;
   children?: React.ReactNode;
 };
 
-export default function Core({ frontmatter = null, body = null }: TCore) {
+export default function Core({ frontmatter, body = null }: TCore) {
   const slice = useSlice();
   const { flash } = slice;
   const { showOutput } = flash;
+  // const showOutput = true;
+  const {title, description} = frontmatter;
 
   return (
     <Theme>
@@ -43,27 +46,29 @@ export default function Core({ frontmatter = null, body = null }: TCore) {
           </MovieClip>
         ) : null}
 
-        <MovieClip id="rehydrate-ad" opacity={0}>
+
+
+        <MovieClip id="ad" opacity={0}>
           <img src="/svg/rehydrate-ad.svg" />
         </MovieClip>
 
-        <MovieClip id="image" opacity={0} width="95vw">
+        <MovieClip id="content" opacity={0} width="95vw">
+          <Header frontmatter={frontmatter} />
           <Photo src={frontmatter?.image ?? null} />
-        </MovieClip>
-
-        <MovieClip id="breadcrumb" opacity={0} width="95vw" maxWidth={1024}>
           <PageBreadcrumb />
-        </MovieClip>
-
-        <MovieClip id="body" opacity={0} width="95vw" maxWidth={1024}>
-          <RenderMarkdown height="45vh" maxWidth={900}>
+          <RenderMarkdown>
             {body}
           </RenderMarkdown>
         </MovieClip>
 
-        <MovieClip id="header" opacity={0} width="95vw" maxWidth={1024}>
-          <Header frontmatter={frontmatter} />
+        <MovieClip 
+          id="click-here" 
+          opacity={0} 
+          width={48} 
+          height={48}>
+          <Nav />
         </MovieClip>
+
 
       </Flash>
     </Theme>

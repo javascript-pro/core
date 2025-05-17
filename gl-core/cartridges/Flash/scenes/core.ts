@@ -1,13 +1,6 @@
 // scenes/core.ts
 
-/**
- * This is the scene manager for the Flash runtime.
- * It defines layout and actions for the initial scene using ActionScript helpers.
- */
-
 import { setPosition, fade, setOpacity } from '../ActionScript';
-
-// const clips = ['redux', 'rehydrate-ad', 'body'];
 
 export const init = (
   // divId: string,
@@ -17,38 +10,27 @@ export const init = (
 
 const setScene = () => {
 
-  setPosition('rehydrate-ad', {
+  setPosition('ad', {
     screenPosition: 'middle-middle',
     offsetX: 35,
     offsetY: 35,
   });
-  setOpacity('rehydrate-ad', { opacity: 1 });
-  fade('rehydrate-ad', { fadeInOut: 'out' });
-  
+  setOpacity('ad', { opacity: 1 });
+  fade('ad', { fadeInOut: 'out' });
 
-
-  setPosition('header', {
+  setPosition('content', {
     screenPosition: 'top-middle',
   });
-  fade('header', { fadeInOut: 'in' });
-  setPosition('image', {
-    screenPosition: 'top-middle',
-    offsetY: 100,
+  fade('content', { fadeInOut: 'in' }); 
+
+  setPosition('click-here', {
+    screenPosition: 'bottom-right',
+    offsetX: -50,
+    offsetY: -50,
   });
-  fade('image', { fadeInOut: 'in' });
-  setPosition('breadcrumb', {
-    screenPosition: 'middle-middle',
-    offsetY: 115,
-    offsetX: 10,
-  });
-  fade('breadcrumb', { fadeInOut: 'in' });
-  setPosition('body', {
-    screenPosition: 'middle-middle',
-    offsetY: 150,
-  });
-  fade('body', { fadeInOut: 'in' });  
+  fade('click-here', { fadeInOut: 'in' }); 
+
 };
-
 
 
   // setTimeout(() => {
