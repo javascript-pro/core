@@ -9,7 +9,6 @@ import {
   DialogActions,
   DialogTitle,
   Fab,
-  CardHeader,
   ListItemButton,
   ListItemIcon,
   ListItemText,
@@ -64,13 +63,15 @@ export default function Nav({}: TNav) {
             <ListItemIcon>
               <Icon icon="home" />
             </ListItemIcon>
-            <ListItemText primary="Home." />
+            <ListItemText primary="Home" />
           </ListItemButton>
+
+          <ModeSwitch />
         </DialogTitle>
 
         <DialogContent>
           <MainMenu onSelect={closeModalNav} />
-          <ModeSwitch />
+
           {/* <pre style={{fontSize: 10}}>slice: {JSON.stringify(slice, null, 2)}</pre> */}
         </DialogContent>
 
@@ -87,7 +88,6 @@ export default function Nav({}: TNav) {
                 label="Close"
                 icon="close"
                 color="secondary"
-                variant="outlined"
                 onClick={closeModalNav}
               />
             </>
