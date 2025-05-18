@@ -7,6 +7,10 @@ icon: goldlabel
 image: '/png/defaultFeatured.png'
 tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 ---
+## Free
+
+- [Uberedux](/free/uberedux)
+- [Flash](/free/flash)
 
 We build and ship modern web apps for clients who need real results — fast. Custom software that works
 

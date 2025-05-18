@@ -8,7 +8,7 @@ export const init = () => {
 
 const playTest = () => {
   // console.log('playTest');
-  setPosition('testclip', { screenPosition: 'center' });
+  setPosition('testclip', { screenPosition: 'top-right' });
   fade('testclip', { fadeInOut: 'in', duration: 1 });
 };
 
