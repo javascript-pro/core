@@ -11,16 +11,21 @@ export default function TestClip({ slug = null }: TTestClip) {
   return (
     <Box
       sx={{
-        border: '1px solid gold',
-        background: 'rgba, 255, 255, 255, 0.25',
-        width: 200,
-        height: 200,
+        overflow: "hidden",
+        border: '5px solid gold',
+        borderRadius: 2,
+        p: 2,
+        background: 'rgba(255, 255, 255, 0.25)',
       }}
     >
-      <pre>slug: {JSON.stringify(slug, null, 2)}</pre>
+      {/* <pre>slug: {JSON.stringify(slug, null, 2)}</pre> */}
 
-      <Typography variant="body2" color="text.secondary">
+      
+      <Typography variant="h4" color="text.secondary">
         TestClip
+      </Typography>
+      <Typography variant="body1" color="text.secondary">
+        Test Clip TestTest Clip Test Clip Test Clip Test Clip
       </Typography>
     </Box>
   );

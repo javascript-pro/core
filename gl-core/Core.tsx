@@ -59,8 +59,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
           <Nav />
         </MovieClip>
 
-        <MovieClip width={60} height={60} id="test-clip" opacity={1}>
-          <TestClip slug="test" />
+        <MovieClip id="testclip" width={200} height={200} opacity={0}>
+          <TestClip slug="testclip" />
         </MovieClip>
       </Flash>
     </Theme>

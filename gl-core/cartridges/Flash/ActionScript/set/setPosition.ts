@@ -1,27 +1,32 @@
 export type TSetPosition = {
-  screenPosition?: string; // e.g. "top-left", "middle-right"
+  screenPosition?: string; // e.g. "top-left", "middle-right", or "center"
   offsetX?: number | string; // px number or CSS string like '10%'
   offsetY?: number | string;
 };
 
 export const setPosition = (divId: string, options: TSetPosition) => {
-  const el = document.getElementById(divId);
-  if (!el) {
-    console.warn(`setPosition: div id "${divId}" not found`);
-    return;
-  }
+  requestAnimationFrame(() => {
+    const el = document.getElementById(divId);
+    if (!el) {
+      console.warn(`setPosition: div id "${divId}" not found`);
+      return;
+    }
 
-  const { screenPosition = 'top-left', offsetX = 0, offsetY = 0 } = options;
+    const { screenPosition = 'top-left', offsetX = 0, offsetY = 0 } = options;
 
-  const coords = getCenteredPosition(screenPosition, el, offsetX, offsetY);
+    const coords = getCenteredPosition(screenPosition, el, offsetX, offsetY);
 
-  el.style.position = 'absolute';
+    el.style.position = 'absolute';
+    el.style.top =
+      typeof coords.top === 'number' ? `${coords.top}px` : coords.top;
+    el.style.left =
+      typeof coords.left === 'number' ? `${coords.left}px` : coords.left;
+  });
+};
 
-  // If offset is a string, apply it as-is
-  el.style.top =
-    typeof coords.top === 'number' ? `${coords.top}px` : coords.top;
-  el.style.left =
-    typeof coords.left === 'number' ? `${coords.left}px` : coords.left;
+const normalizePosition = (pos: string): string => {
+  if (pos === 'center') return 'middle-middle';
+  return pos;
 };
 
 const getCenteredPosition = (
@@ -35,7 +40,7 @@ const getCenteredPosition = (
   const w = element.offsetWidth;
   const h = element.offsetHeight;
 
-  const [vertical, horizontal] = position.split('-');
+  const [vertical, horizontal] = normalizePosition(position).split('-');
 
   let top = 0;
   let left = 0;
