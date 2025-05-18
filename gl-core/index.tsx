@@ -7,14 +7,14 @@ import { Icon } from './theme';
 import { createMUITheme } from './theme';
 import { TIcon } from './theme';
 import { ModeSwitch } from './theme';
-import { RenderMarkdown, Header, Main, Footer, Responsive } from './layout';
+import { RenderMarkdown, Header, Main, Footer, Responsive } from './components/layout';
 import {
   TRenderMarkdown,
   THeader,
   TMain,
   TFooter,
   TResponsive,
-} from './layout';
+} from './components/layout';
 import {
   MainMenu,
   Nav,
@@ -23,8 +23,8 @@ import {
   Share,
   MightyButton,
   Search,
-} from './nav';
-import { TNav, TNavItem, TShare, TMightyButton, TSearch } from './nav';
+} from './components/nav';
+import { TNav, TNavItem, TShare, TMightyButton, TSearch } from './components/nav';
 import { useConfig, useIsMobile } from './hooks';
 import {
   Uberedux,

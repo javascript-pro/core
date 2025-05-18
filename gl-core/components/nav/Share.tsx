@@ -21,7 +21,7 @@ import {
   setUbereduxKey,
   useIsMobile,
   Icon,
-} from '../';
+} from '../../../gl-core';
 
 import {
   FacebookShareButton,

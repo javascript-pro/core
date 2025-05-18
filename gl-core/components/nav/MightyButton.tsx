@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Box, Button, IconButton, Tooltip } from '@mui/material';
-import { Icon } from '../';
+import { Icon } from '../../../gl-core';
 
 export type TMightyButton = {
   mode?: 'button' | 'icon' | null;

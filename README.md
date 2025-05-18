@@ -1,16 +1,18 @@
 # Major Version 51
 
-From this version on there are some aspects of the software which are not free and not open source, but are definately available for the asking. [core](https://github.com/javascript-pro/core) remains an entirely working open source and free to use and modify app as always.
+From this version on there are some aspects of the software which are not free and not open source, but are definately available for the asking. [core](https://github.com/javascript-pro/core) remains an entirely working open source and free to use and modify app as always. Always Free & Open Source
 
 ## Goldlabel Core
 
-✅ Always Free & Open Source
-
-> NEW STUFF...
+> ✅ NEW
 
 - Share statically generated page
 
+### Usage
 
+```sh
+
+```
 
 ### Free Cartridges
 

@@ -22,7 +22,7 @@ import {
   MainMenu,
   MightyButton,
   ModeSwitch,
-} from '../';
+} from '../../../gl-core';
 
 export type TNav = {
   title?: string | null;

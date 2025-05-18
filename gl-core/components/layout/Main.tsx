@@ -8,7 +8,7 @@ import {
   PageBreadcrumb,
   useIsMobile,
   MainMenu,
-} from '../';
+} from '../../../gl-core';
 
 export type TMain = {
   body?: string;
