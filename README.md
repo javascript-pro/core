@@ -1,12 +1,16 @@
 # Major Version 51
 
+From this version on there are some aspects of the software which are not free and not open source, but are definately available for the asking. [core](https://github.com/javascript-pro/core) remains an entirely working open source and free to use and modify app as always.
+
 ## Goldlabel Core
 
 ✅ Always Free & Open Source
 
-> NEW STUFF... <img src="https://goldlabel.pro/png/defaultFeatured.png" width="500"/>
+> NEW STUFF...
 
 - Share statically generated page
+
+<img src="https://goldlabel.pro/png/defaultFeatured.png" width="320"/>
 
 ### Free Cartridges
 
