@@ -47,7 +47,7 @@ export default function Stage({ id = null, children }: TStage) {
         overflow: 'hidden',
         zIndex: 0,
         boxSizing: 'border-box',
-        border: '10px solid blue',
+        // border: '10px solid blue',
       }}
     >
       {children}

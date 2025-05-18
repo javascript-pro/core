@@ -7,14 +7,14 @@ export const init = () => {
 };
 
 const playTest = () => {
-  console.log('playTest');
-  setPosition('testclip', { screenPosition: 'top-right' });
-  fade('testclip', { fadeInOut: 'in', duration: 1.9 });
+  // console.log('playTest');
+  setPosition('testclip', { screenPosition: 'center' });
+  fade('testclip', { fadeInOut: 'in', duration: 1 });
 };
 
 const setScene = () => {
   fade('content', { fadeInOut: 'in' });
-  setPosition('click-here', { screenPosition: 'bottom-left' });
+  setPosition('click-here', { screenPosition: 'bottom-right' });
   fade('click-here', { fadeInOut: 'in' });
   playTest();
 };

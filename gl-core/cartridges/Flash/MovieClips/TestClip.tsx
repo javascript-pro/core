@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { Box, Avatar } from '@mui/material';
+import { Box, Avatar, IconButton } from '@mui/material';
 
 export type TTestClip = {
   slug: string | null;
@@ -13,10 +13,12 @@ export default function TestClip({ slug = null }: TTestClip) {
       sx={{
         width: 42,
         height: 42,
-        background: 'rgba(255, 255, 255, 0.25)',
+        // background: 'rgba(255, 255, 255, 0.25)',
       }}
     >
-      <Avatar src="/svg/pingpong.svg" alt={slug}/>      
+      <IconButton>
+        <Avatar src="/svg/pingpong.svg" alt={slug as string} />
+      </IconButton>
     </Box>
   );
 }

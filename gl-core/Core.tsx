@@ -62,7 +62,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
         <MovieClip id="testclip" opacity={0} width={42} height={42}>
           <TestClip slug="testclip" />
         </MovieClip>
-
       </Flash>
     </Theme>
   );

@@ -57,7 +57,7 @@
             "order": 20,
             "icon": "uberedux",
             "type": "file",
-            "excerpt": "Apps need state management\n\nor you'd be back in jQuery callback hell. Nobody wants that.\n\nUberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app already works and giv"
+            "excerpt": "Apps need State Management\n\nOtherwise you'd be back in jQuery callback hell. Nobody wants that.\n\nUberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app already works "
           }
         ]
       },

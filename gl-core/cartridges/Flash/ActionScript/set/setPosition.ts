@@ -1,10 +1,21 @@
 export type TSetPosition = {
   screenPosition?: string; // e.g. "top-left", "middle-right", or "center"
-  offsetX?: number | string; // px number or CSS string like '10%'
-  offsetY?: number | string;
 };
 
-export const setPosition = (divId: string, options: TSetPosition) => {
+/*
+Supported Values for screenPosition:
+'top-left'
+'top-middle'
+'top-right'
+'middle-left'
+'middle-middle' or 'center'
+'middle-right'
+'bottom-left'
+'bottom-middle'
+'bottom-right'
+*/
+
+export const setPosition = (divId: string, options: TSetPosition = {}) => {
   requestAnimationFrame(() => {
     const el = document.getElementById(divId);
     if (!el) {
@@ -12,75 +23,58 @@ export const setPosition = (divId: string, options: TSetPosition) => {
       return;
     }
 
-    const { screenPosition = 'top-left', offsetX = 0, offsetY = 0 } = options;
-
-    const coords = getCenteredPosition(screenPosition, el, offsetX, offsetY);
+    const { screenPosition = 'top-left' } = options;
+    const coords = getPosition(screenPosition, el);
 
     el.style.position = 'absolute';
-    el.style.top =
-      typeof coords.top === 'number' ? `${coords.top}px` : coords.top;
-    el.style.left =
-      typeof coords.left === 'number' ? `${coords.left}px` : coords.left;
+    el.style.top = `${coords.top}px`;
+    el.style.left = `${coords.left - window.innerWidth/2}px`;
   });
 };
 
 const normalizePosition = (pos: string): string => {
-  if (pos === 'center') return 'middle-middle';
-  return pos;
+  return pos === 'center' ? 'middle-middle' : pos;
 };
 
-const getCenteredPosition = (
+const getPosition = (
   position: string,
-  element: HTMLElement,
-  offsetX: number | string,
-  offsetY: number | string,
-): { top: number | string; left: number | string } => {
+  el: HTMLElement
+): { top: number; left: number } => {
   const vw = window.innerWidth;
   const vh = window.innerHeight;
-  const w = element.offsetWidth;
-  const h = element.offsetHeight;
+  const w = el.offsetWidth;
+  const h = el.offsetHeight;
 
-  const [vertical, horizontal] = normalizePosition(position).split('-');
+  const [vAlign = 'middle', hAlign = 'middle'] = normalizePosition(position).split('-');
 
   let top = 0;
   let left = 0;
 
-  switch (vertical) {
+  // Vertical alignment
+  switch (vAlign) {
     case 'top':
-      top = 0 + h / 2;
+      top = 0;
       break;
     case 'middle':
-      top = vh / 2;
+      top = vh / 2 - h / 2;
       break;
     case 'bottom':
-      top = vh - h / 2;
+      top = vh - h;
       break;
-    default:
-      top = vh / 2;
   }
 
-  switch (horizontal) {
+  // Horizontal alignment
+  switch (hAlign) {
     case 'left':
-      left = 0 + w / 2;
+      left = 0;
       break;
     case 'middle':
-      left = vw / 2;
+      left = vw / 2 - w / 2;
       break;
     case 'right':
-      left = vw - w / 2;
+      left = vw - w;
       break;
-    default:
-      left = vw / 2;
   }
 
-  return {
-    top:
-      typeof offsetY === 'number'
-        ? top - h / 2 + offsetY
-        : `calc(${top - h / 2}px + ${offsetY})`,
-    left:
-      typeof offsetX === 'number'
-        ? left - w / 2 + offsetX
-        : `calc(${left - w / 2}px + ${offsetX})`,
-  };
+  return { top, left };
 };
