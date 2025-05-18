@@ -8,6 +8,7 @@ image: '/png/defaultFeatured.png'
 github: 'https://github.com/javascript-pro/core/tree/main/gl-core/cartridges/Uberedux'
 keywords: 'Catridges, Uberedux, State Management, Redux'
 ---
+
 ## Apps need state management
 
 or you'd be back in jQuery callback hell. Nobody wants that.

@@ -5,7 +5,6 @@ import OliverIcon from './SVGIcons/OliverIcon';
 import OpenAIIcon from './SVGIcons/OpenAIIcon';
 import MacromediaIconIcon from './SVGIcons/MacromediaIcon';
 
-
 import BlokeyIcon from './SVGIcons/BlokeyIcon';
 import WordpressIcon from './SVGIcons/WordpressIcon';
 import GoldlabelIcon from './SVGIcons/GoldlabelOutlined';
@@ -284,11 +283,9 @@ export default function Icon({ icon, color }: TIcon) {
       iconFragment = <AddIcon color={color} />;
       break;
 
-
-          case 'flash':
+    case 'flash':
       iconFragment = <MacromediaIconIcon color={color} />;
       break;
-
 
     case 'ai':
       iconFragment = <AIIcon color={color} />;

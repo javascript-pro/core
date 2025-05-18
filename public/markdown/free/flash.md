@@ -7,6 +7,7 @@ icon: 'flash'
 image: '/png/defaultFeatured.png'
 keywords: 'Catridges, Flash, SVG'
 ---
+
 ## A Pointless reinvention of MacroMedia Flash?
 
 Maybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You're welcome
@@ -18,7 +19,6 @@ Maybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React
 - State management with redux/toolkit
 - Material UI
 - TypeScript
-
 
 #### History of Flash
 
