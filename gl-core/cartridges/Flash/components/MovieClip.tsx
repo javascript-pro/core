@@ -32,8 +32,9 @@ export default function MovieClip({
     <Box
       id={id}
       sx={{
+        border: '1px solid limegreen',
         position: 'absolute',
-        // border: '1px solid red',
+
         width,
         height,
         opacity,

@@ -68,7 +68,7 @@ export default function Nav({}: TNav) {
 
           <ListItemButton
             onClick={() => {
-              console.log("click Flash")
+              console.log('click Flash');
               closeModalNav();
               router.push('/flash');
             }}
@@ -85,12 +85,11 @@ export default function Nav({}: TNav) {
             icon="uberedux"
             color="secondary"
             onClick={() => {
-              console.log("click Uberedux")
+              console.log('click Uberedux');
               closeModalNav();
               router.push('/free/uberedux');
             }}
           />
-
         </DialogTitle>
 
         <DialogContent>

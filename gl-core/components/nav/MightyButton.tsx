@@ -1,13 +1,18 @@
 'use client';
 import React from 'react';
-import { Box, Button, IconButton,   ListItemButton,
+import {
+  Box,
+  Button,
+  IconButton,
+  ListItemButton,
   ListItemIcon,
-ListItemText,
-Tooltip } from '@mui/material';
+  ListItemText,
+  Tooltip,
+} from '@mui/material';
 import { Icon } from '../../../gl-core';
 
 export type TMightyButton = {
-  mode?: 'button' | 'icon' | "listitem" | null;
+  mode?: 'button' | 'icon' | 'listitem' | null;
   disabled?: boolean;
   label?: string | undefined;
   variant?: 'contained' | 'outlined' | 'text' | undefined;
@@ -31,20 +36,16 @@ export default function MightyButton({
     console.log('no onClick');
   },
 }: TMightyButton) {
-
-  if (mode === 'listitem'){
-    return <ListItemButton
-            disabled={disabled}
-            onClick={onClick}
-            sx={sx}
-          >
-            <ListItemIcon>
-              <Icon icon={icon as any} />
-            </ListItemIcon>
-            <ListItemText primary={label} />
-          </ListItemButton>
+  if (mode === 'listitem') {
+    return (
+      <ListItemButton disabled={disabled} onClick={onClick} sx={sx}>
+        <ListItemIcon>
+          <Icon icon={icon as any} />
+        </ListItemIcon>
+        <ListItemText primary={label} />
+      </ListItemButton>
+    );
   }
-
 
   if (mode === 'icon') {
     return (
