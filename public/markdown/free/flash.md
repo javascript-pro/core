@@ -1,6 +1,6 @@
 ---
 order: 15
-slug: '/flash'
+slug: '/free/flash'
 title: 'Flash?'
 description: 'Pointless reinvention of MacroMedia Flash in React'
 icon: 'flash'

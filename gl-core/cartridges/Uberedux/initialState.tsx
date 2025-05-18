@@ -5,7 +5,7 @@ import { FlashinitialState } from '../Flash';
 export const initialState: any = {
   app: config.app,
   persisted: Date.now(),
-  themeMode: 'light',
+  themeMode: 'dark',
   modalNav: false,
   modalShare: false,
   cv: CVinitialState,
