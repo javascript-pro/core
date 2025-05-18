@@ -11,7 +11,10 @@ import {
   Header,
   PageBreadcrumb,
   Nav,
+  
 } from '../gl-core';
+
+import {TestClip} from './cartridges/Flash'
 
 export type TFrontmatter = {
   icon?: string;
@@ -28,12 +31,13 @@ export type TCore = {
   children?: React.ReactNode;
 };
 
+// TestClip
+
 export default function Core({ frontmatter, body = null }: TCore) {
   const slice = useSlice();
   const { flash } = slice;
   const { showOutput } = flash;
   // const showOutput = true;
-  const { title, description } = frontmatter;
 
   return (
     <Theme>
@@ -45,11 +49,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
           </MovieClip>
         ) : null}
 
-        <MovieClip id="ad" opacity={0}>
-          <img src="/svg/rehydrate-ad.svg" />
-        </MovieClip>
-
-        <MovieClip id="content" opacity={0} maxWidth={500}>
+        <MovieClip id="content" opacity={0} maxWidth={600}>
           <Header frontmatter={frontmatter} />
           <Photo src={frontmatter?.image ?? null} />
           <PageBreadcrumb />
@@ -59,6 +59,11 @@ export default function Core({ frontmatter, body = null }: TCore) {
         <MovieClip width={60} height={60} id="click-here" opacity={0}>
           <Nav />
         </MovieClip>
+        
+        <MovieClip width={60} height={60} id="test-clip" opacity={1}>
+          <TestClip slug="test" /> 
+        </MovieClip>
+
       </Flash>
     </Theme>
   );

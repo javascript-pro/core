@@ -17,7 +17,7 @@ export default function Flash({
   React.useEffect(() => {
     const loadScene = async () => {
       try {
-        const scene = await import('./scenes/core');
+        const scene = await import('./Scenes_/core');
         setTimeout(() => {
           scene.init();
         }, 1);

@@ -7,10 +7,7 @@ export const init = () => {
 };
 
 const setScene = () => {
-  setOpacity('ad', { opacity: 1 });
-  fade('ad', { fadeInOut: 'out' });
   fade('content', { fadeInOut: 'in' });
-
   setPosition('click-here', { screenPosition: 'bottom-right' });
   fade('click-here', { fadeInOut: 'in' });
 };
