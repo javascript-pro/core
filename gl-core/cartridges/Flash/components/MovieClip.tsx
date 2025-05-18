@@ -19,8 +19,8 @@ export type TMovieClip = {
 export default function MovieClip({
   id,
   children,
-  width = 320,
-  height = 320,
+  width,
+  height,
   opacity = 1,
   top = 0,
   left = 0,
@@ -28,25 +28,46 @@ export default function MovieClip({
   bottom = 0,
   maxWidth = null,
 }: TMovieClip) {
+  const ref = React.useRef<HTMLDivElement>(null);
+  const [size, setSize] = React.useState<{ width: number; height: number }>({
+    width: 0,
+    height: 0,
+  });
+
+  React.useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const resizeObserver = new ResizeObserver(([entry]) => {
+      const { width, height } = entry.contentRect;
+      setSize({ width, height });
+    });
+
+    resizeObserver.observe(el);
+    return () => resizeObserver.disconnect();
+  }, []);
+
   return (
     <Box
       id={id}
       sx={{
-        border: '1px solid limegreen',
         position: 'absolute',
-
-        width,
-        height,
         opacity,
         top,
         left,
         right,
         bottom,
-        ...(maxWidth !== null && { maxWidth }),
-        margin: '0 auto',
+        width: width ?? 'auto',
+        height: height ?? 'auto',
+        maxWidth: maxWidth ?? 'none',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        // border: '1px solid limegreen',
       }}
     >
-      {children}
+      <Box ref={ref} sx={{ display: 'inline-block', width: '100%' }}>
+        {children}
+      </Box>
     </Box>
   );
 }

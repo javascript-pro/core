@@ -44,12 +44,12 @@
         "excerpt": "Some things in life are free — and Core is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or bui",
         "children": [
           {
-            "title": "Flash?",
+            "title": "Flash",
             "slug": "free/flash",
             "order": 15,
             "icon": "flash",
             "type": "file",
-            "excerpt": "Flash Plugin\n\nWe have ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You're welcome\n\n Features\n\n SVG Graphics\n Animation using Greensock\n State managem"
+            "excerpt": "A Pointless reinvention of MacroMedia Flash?\n\nMaybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You're welcome\n\n Features\n\n SVG Graphics\n Ani"
           },
           {
             "title": "Uberedux",
@@ -57,7 +57,7 @@
             "order": 20,
             "icon": "uberedux",
             "type": "file",
-            "excerpt": "Apps need state management — or you'd be right back in jQuery callback hell. And nobody wants that.\n\nUberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app already wo"
+            "excerpt": "Apps need State Management\n\nOtherwise you'd be back in jQuery callback hell. Nobody wants that.\n\nUberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app already works "
           }
         ]
       },

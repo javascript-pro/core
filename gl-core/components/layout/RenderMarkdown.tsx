@@ -13,9 +13,9 @@ export type TRenderMarkdown = {
 
 export default function RenderMarkdown({
   children = '',
-  height = '50vh',
-  width = '90vw',
-  maxWidth = null,
+  height,
+  width,
+  maxWidth,
 }: TRenderMarkdown) {
   const theme = useTheme();
   const scrollRef = React.useRef<HTMLDivElement>(null);
@@ -23,9 +23,9 @@ export default function RenderMarkdown({
   return (
     <Box
       sx={{
-        width,
-        height,
-        maxWidth,
+        width: width ?? '100%',
+        height: height ?? '100%',
+        maxWidth: maxWidth ?? '100%',
         display: 'flex',
         flexDirection: 'row',
         gap: 1,
