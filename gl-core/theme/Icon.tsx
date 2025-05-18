@@ -3,6 +3,9 @@ import * as React from 'react';
 import PingpongballIcon from './SVGIcons/PingpongballIcon';
 import OliverIcon from './SVGIcons/OliverIcon';
 import OpenAIIcon from './SVGIcons/OpenAIIcon';
+import MacromediaIconIcon from './SVGIcons/MacromediaIcon';
+
+
 import BlokeyIcon from './SVGIcons/BlokeyIcon';
 import WordpressIcon from './SVGIcons/WordpressIcon';
 import GoldlabelIcon from './SVGIcons/GoldlabelOutlined';
@@ -136,6 +139,7 @@ export type TIcon = {
     | 'uberedux'
     | 'good-fit'
     | 'products'
+    | 'flash'
     | 'speak-write'
     | 'admin'
     | 'private'
@@ -260,8 +264,7 @@ export type TIcon = {
     | 'safari'
     | 'firefox'
     | 'plugins'
-    | 'bouncer'
-    | 'flash';
+    | 'bouncer';
   color?: any;
 };
 
@@ -280,6 +283,12 @@ export default function Icon({ icon, color }: TIcon) {
     case 'add':
       iconFragment = <AddIcon color={color} />;
       break;
+
+
+          case 'flash':
+      iconFragment = <MacromediaIconIcon color={color} />;
+      break;
+
 
     case 'ai':
       iconFragment = <AIIcon color={color} />;
@@ -339,9 +348,7 @@ export default function Icon({ icon, color }: TIcon) {
     case 'filter':
       iconFragment = <FilterIcon color={color} />;
       break;
-    case 'flash':
-      iconFragment = <HowIcon color={color} />;
-      break;
+
     case 'signup':
       iconFragment = <SignupIcon color={color} />;
       break;

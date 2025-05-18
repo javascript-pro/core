@@ -49,14 +49,18 @@ export default function Core({ frontmatter, body = null }: TCore) {
           <img src="/svg/rehydrate-ad.svg" />
         </MovieClip>
 
-        <MovieClip id="content" opacity={0}>
+        <MovieClip id="content" opacity={0} maxWidth={500}>
           <Header frontmatter={frontmatter} />
           <Photo src={frontmatter?.image ?? null} />
           <PageBreadcrumb />
           <RenderMarkdown>{body}</RenderMarkdown>
         </MovieClip>
 
-        <MovieClip id="click-here" opacity={0}>
+        <MovieClip 
+          width={60}
+          height={60}
+          id="click-here" 
+          opacity={0}>
           <Nav />
         </MovieClip>
       </Flash>

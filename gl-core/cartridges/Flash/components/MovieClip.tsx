@@ -29,10 +29,7 @@ export default function MovieClip({
   maxWidth = null,
 }: TMovieClip) {
   const ref = React.useRef<HTMLDivElement>(null);
-  const [size, setSize] = React.useState<{ width: number; height: number }>({
-    width: 0,
-    height: 0,
-  });
+  const [size, setSize] = React.useState<{ width: number; height: number }>({ width: 0, height: 0 });
 
   React.useEffect(() => {
     const el = ref.current;
@@ -47,32 +44,25 @@ export default function MovieClip({
     return () => resizeObserver.disconnect();
   }, []);
 
-  // Apply maxWidth cap only when width is measured (i.e. not manually set)
-  const resolvedWidth =
-    width !== undefined
-      ? width
-      : typeof maxWidth === 'number'
-        ? Math.min(size.width, maxWidth)
-        : size.width;
-
   return (
     <Box
       id={id}
       sx={{
-        border: '1px solid limegreen',
         position: 'absolute',
-        width: resolvedWidth,
-        height: height ?? size.height,
         opacity,
         top,
         left,
         right,
         bottom,
-        ...(maxWidth !== null && { maxWidth }),
-        margin: '0 auto',
+        width: width ?? 'auto',
+        height: height ?? 'auto',
+        maxWidth: maxWidth ?? 'none',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        // border: '1px solid limegreen',
       }}
     >
-      <Box ref={ref} sx={{ display: 'inline-block' }}>
+      <Box ref={ref} sx={{ display: 'inline-block', width: '100%' }}>
         {children}
       </Box>
     </Box>

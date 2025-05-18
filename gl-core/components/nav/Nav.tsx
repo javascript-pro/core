@@ -70,7 +70,7 @@ export default function Nav({}: TNav) {
             onClick={() => {
               console.log('click Flash');
               closeModalNav();
-              router.push('/flash');
+              router.push('/free/flash');
             }}
           >
             <ListItemIcon>

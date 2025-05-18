@@ -8,8 +8,9 @@ image: '/png/defaultFeatured.png'
 github: 'https://github.com/javascript-pro/core/tree/main/gl-core/cartridges/Uberedux'
 keywords: 'Catridges, Uberedux, State Management, Redux'
 ---
+## Apps need state management
 
-Apps need state management — or you'd be right back in jQuery callback hell. And nobody wants that.
+or you'd be back in jQuery callback hell. Nobody wants that.
 
 **Uberedux** is a simple, zero-config wrapper around Redux. It plugs cleanly into how the app already works and gives you the global state access you need without boilerplate or fuss.
 

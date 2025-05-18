@@ -1,16 +1,15 @@
 ---
 order: 15
 slug: '/free/flash'
-title: 'Flash?'
+title: 'Flash'
 description: 'Pointless reinvention of MacroMedia Flash in React'
 icon: 'flash'
 image: '/png/defaultFeatured.png'
-keywords: 'Catridges, Flash'
+keywords: 'Catridges, Flash, SVG'
 ---
+## A Pointless reinvention of MacroMedia Flash?
 
-### Flash Plugin
-
-We have ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You're welcome
+Maybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You're welcome
 
 #### Features
 
@@ -20,9 +19,6 @@ We have ridiculously and pointlessly reinvented MacroMedia Flash with React JS s
 - Material UI
 - TypeScript
 
-_© copyright?_ Well... Adobe didn't want the name anymore, so we nicked it
-
-Whadya gonna do huh? Forget about it. Donnie Brasco
 
 #### History of Flash
 
@@ -71,3 +67,7 @@ Flash was popular in the development of web apps primarily during the late 1990s
 Flash's popularity in web app development was partly due to its ease of use, rich multimedia capabilities, and relatively broad support across different web browsers and operating systems. It offered a way for developers to create visually appealing and interactive content without relying solely on static HTML and limited JavaScript.
 
 However, as mentioned earlier, Flash started to face several issues, including security vulnerabilities, performance concerns, and lack of mobile support. These factors, along with the rise of HTML5 and open web standards, eventually led to the decline of Flash in modern web app development. Today, Flash is no longer used, and web developers have transitioned to more modern technologies like HTML5, CSS3, and JavaScript to create interactive and multimedia-rich web applications.
+
+_© copyright?_ Well... Adobe didn't want the name anymore, so we nicked it
+
+Whadya gonna do huh? Forget about it. Donnie Brasco
