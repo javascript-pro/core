@@ -28,7 +28,7 @@ export const setPosition = (divId: string, options: TSetPosition = {}) => {
 
     el.style.position = 'absolute';
     el.style.top = `${coords.top}px`;
-    el.style.left = `${coords.left - window.innerWidth/2}px`;
+    el.style.left = `${coords.left - window.innerWidth / 2}px`;
   });
 };
 
@@ -38,14 +38,15 @@ const normalizePosition = (pos: string): string => {
 
 const getPosition = (
   position: string,
-  el: HTMLElement
+  el: HTMLElement,
 ): { top: number; left: number } => {
   const vw = window.innerWidth;
   const vh = window.innerHeight;
   const w = el.offsetWidth;
   const h = el.offsetHeight;
 
-  const [vAlign = 'middle', hAlign = 'middle'] = normalizePosition(position).split('-');
+  const [vAlign = 'middle', hAlign = 'middle'] =
+    normalizePosition(position).split('-');
 
   let top = 0;
   let left = 0;
