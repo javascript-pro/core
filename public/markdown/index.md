@@ -4,7 +4,7 @@ title: Goldlabel
 description: Where Next? Next Gen. Gen X?
 slug: /
 icon: goldlabel
-image: /png/characters/chix.png
+image: "/png/defaultFeatured.png"
 tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 ---
 
