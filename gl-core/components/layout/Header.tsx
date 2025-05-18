@@ -1,10 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import {
-  CardHeader,
-  Typography,
-} from '@mui/material';
+import { CardHeader, Typography } from '@mui/material';
 // import { useRouter } from 'next/navigation';
 
 export type THeader = {
@@ -22,7 +19,6 @@ export default function Header({ frontmatter = null }: THeader) {
   return (
     <>
       <CardHeader
-        
         title={
           <Typography variant={'h4'} component={'h1'}>
             {title}

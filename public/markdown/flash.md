@@ -1,11 +1,11 @@
 ---
 order: 15
-slug: "/flash"
-title: "Flash?"
-description: "Pointless reinvention of MacroMedia Flash in React"
-icon: "flash"
-image: "/png/defaultFeatured.png"
-keywords: "Catridges, Flash"
+slug: '/flash'
+title: 'Flash?'
+description: 'Pointless reinvention of MacroMedia Flash in React'
+icon: 'flash'
+image: '/png/defaultFeatured.png'
+keywords: 'Catridges, Flash'
 ---
 
 ### Flash Plugin

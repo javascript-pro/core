@@ -77,7 +77,6 @@ export default function Nav({}: TNav) {
             </ListItemIcon>
             <ListItemText primary="Flash" />
           </ListItemButton>
-          
         </DialogTitle>
 
         <DialogContent>
