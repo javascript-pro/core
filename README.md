@@ -14,9 +14,9 @@ From this version on there are some aspects of the software which are not free a
 
 ### Free Cartridges
 
-- [Flash](/flash)
-- Lingua
-- Uberedux
+- [Flash](https://github.com/javascript-pro/core/tree/main/gl-core/cartridges/Flash)
+- [Lingua](https://github.com/javascript-pro/core/tree/main/gl-core/cartridges/Lingua)
+- [Uberedux](https://github.com/javascript-pro/core/tree/main/gl-core/cartridges/Uberedux)
 
 #### Context
 
