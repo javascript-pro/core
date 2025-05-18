@@ -62,7 +62,7 @@ export default function MovieClip({
         maxWidth: maxWidth ?? 'none',
         marginLeft: 'auto',
         marginRight: 'auto',
-        // border: '1px solid limegreen',
+        border: '1px solid limegreen',
       }}
     >
       <Box ref={ref} sx={{ display: 'inline-block', width: '100%' }}>
