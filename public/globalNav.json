@@ -36,6 +36,32 @@
     "excerpt": "We build and ship modern web apps for clients who need real results — fast. Custom software that works\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codeba",
     "children": [
       {
+        "title": "Free",
+        "slug": "free",
+        "order": 1,
+        "icon": "free",
+        "type": "folder",
+        "excerpt": "Some things in life are free — and Core is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or bui",
+        "children": [
+          {
+            "title": "Flash?",
+            "slug": "free/flash",
+            "order": 15,
+            "icon": "flash",
+            "type": "file",
+            "excerpt": "Flash Plugin\n\nWe have ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You're welcome\n\n Features\n\n SVG Graphics\n Animation using Greensock\n State managem"
+          },
+          {
+            "title": "Uberedux",
+            "slug": "free/uberedux",
+            "order": 20,
+            "icon": "uberedux",
+            "type": "file",
+            "excerpt": "Apps need state management — or you'd be right back in jQuery callback hell. And nobody wants that.\n\nUberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app already wo"
+          }
+        ]
+      },
+      {
         "title": "C.V.",
         "slug": "cv",
         "order": 2,
@@ -187,14 +213,6 @@
             "children": []
           }
         ]
-      },
-      {
-        "title": "Flash?",
-        "slug": "flash",
-        "order": 15,
-        "icon": "flash",
-        "type": "file",
-        "excerpt": "Flash Plugin\n\nWe have ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You're welcome\n\n Features\n\n SVG Graphics\n Animation using Greensock\n State managem"
       },
       {
         "title": "Life",

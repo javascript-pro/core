@@ -56,7 +56,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
           <RenderMarkdown>{body}</RenderMarkdown>
         </MovieClip>
 
-        <MovieClip id="click-here" opacity={0} width={48} height={48}>
+        <MovieClip id="click-here" opacity={0} width={56} height={56}>
           <Nav />
         </MovieClip>
       </Flash>

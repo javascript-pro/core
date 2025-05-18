@@ -33,6 +33,7 @@ export default function MovieClip({
       id={id}
       sx={{
         position: 'absolute',
+        // border: '1px solid red',
         width,
         height,
         opacity,

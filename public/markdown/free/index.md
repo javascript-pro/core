@@ -6,6 +6,7 @@ slug: /free
 icon: free
 image: /png/characters/punk.png
 ---
+
 > Some things in life **are** free — and Core is one of them.
 
 This is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or build on. If you’re the kind of developer who likes digging under the hood, this is where the engine lives.
