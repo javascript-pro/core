@@ -1,16 +1,15 @@
 # Major Version 51
 
-From this version on there are some aspects of the software which are not free and not open source, but are definately available for the asking. [core](https://github.com/javascript-pro/core) remains an entirely working open source and free to use and modify app as always.
+From this version on there are some aspects of the software which are not free and not open source, but are definately available for the asking. [core](https://github.com/javascript-pro/core) remains an entirely working app, free to use and modify as ever. Always Free & Open Source.
 
 ## Goldlabel Core
 
-✅ Always Free & Open Source
+✅ New
 
-> NEW STUFF...
+- Share statically generated page well
+- Might as well be in Chinese
 
-- Share statically generated page
-
-
+### [Install & Use](https://github.com/javascript-pro/core/tree/main/gl-core)
 
 ### Free Cartridges
 
@@ -24,4 +23,4 @@ From this version on there are some aspects of the software which are not free a
 
 [Charles Darwin](https://goldlabel.pro/balance/sci-fi/charles-darwin), On the Origin of Species By Means of Natural Selection, or The Preservation Of Favoured Race In The Struggle For Life (1859)
 
-![Happy Days Ad](https://goldlabel.pro/jpg/defaultFeatured.jpg)
+![Wei Zang](https://goldlabel.pro/png/nhtfs/weizang.png)

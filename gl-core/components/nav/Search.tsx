@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { styled, alpha, InputBase } from '@mui/material';
-import { Icon } from '../';
+import { Icon } from '../../../gl-core';
 
 export type TSearch = {
   onSearch?: () => void;

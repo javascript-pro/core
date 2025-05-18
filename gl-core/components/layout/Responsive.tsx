@@ -2,7 +2,7 @@
 import React from 'react';
 // import Image from 'next/image';
 import { Box, Container, Grid } from '@mui/material';
-import { Header } from '../';
+import { Header } from '../../../gl-core';
 
 export type TResponsive = {
   body?: string;

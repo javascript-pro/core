@@ -4,12 +4,11 @@ import {
   Box,
   AppBar,
   Toolbar,
-  IconButton,
   Container,
   Grid,
   Typography,
 } from '@mui/material';
-import { Icon, useIsMobile } from '../';
+import { useIsMobile } from '../../../gl-core';
 
 export type TFooter = {};
 

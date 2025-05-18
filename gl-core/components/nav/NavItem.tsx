@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
-import { Icon } from '../';
+import { Icon } from '../../../gl-core';
 
 export type TNavItem = {
   label?: string | null;

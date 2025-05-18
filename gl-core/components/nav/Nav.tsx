@@ -22,7 +22,7 @@ import {
   MainMenu,
   MightyButton,
   ModeSwitch,
-} from '../';
+} from '../../../gl-core';
 
 export type TNav = {
   title?: string | null;
@@ -68,6 +68,7 @@ export default function Nav({}: TNav) {
 
           <ListItemButton
             onClick={() => {
+              console.log('click Flash');
               closeModalNav();
               router.push('/flash');
             }}
@@ -77,7 +78,18 @@ export default function Nav({}: TNav) {
             </ListItemIcon>
             <ListItemText primary="Flash" />
           </ListItemButton>
-          
+
+          <MightyButton
+            mode="listitem"
+            label="Uberedux"
+            icon="uberedux"
+            color="secondary"
+            onClick={() => {
+              console.log('click Uberedux');
+              closeModalNav();
+              router.push('/free/uberedux');
+            }}
+          />
         </DialogTitle>
 
         <DialogContent>

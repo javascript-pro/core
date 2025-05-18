@@ -11,8 +11,8 @@ export const init = () =>
 const setScene = () => {
   setPosition('ad', {
     screenPosition: 'middle-middle',
-    offsetX: 35,
-    offsetY: 35,
+    // offsetX: 35,
+    // offsetY: 35,
   });
   setOpacity('ad', { opacity: 1 });
   fade('ad', { fadeInOut: 'out' });
@@ -24,8 +24,8 @@ const setScene = () => {
 
   setPosition('click-here', {
     screenPosition: 'bottom-right',
-    offsetX: -50,
-    offsetY: -50,
+    // offsetX: -50,
+    // offsetY: -50,
   });
   fade('click-here', { fadeInOut: 'in' });
 };

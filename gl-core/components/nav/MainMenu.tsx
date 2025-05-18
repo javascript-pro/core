@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import Box from '@mui/material/Box';
 import { SimpleTreeView } from '@mui/x-tree-view/SimpleTreeView';
 import { TreeItem } from '@mui/x-tree-view/TreeItem';
-import globalNav from '../../public/globalNav.json';
+import globalNav from '../../../public/globalNav.json';
 
 type NavItem = {
   title: string;
