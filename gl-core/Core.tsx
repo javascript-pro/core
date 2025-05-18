@@ -11,10 +11,9 @@ import {
   Header,
   PageBreadcrumb,
   Nav,
-  
 } from '../gl-core';
 
-import {TestClip} from './cartridges/Flash'
+import { TestClip } from './cartridges/Flash';
 
 export type TFrontmatter = {
   icon?: string;
@@ -59,11 +58,10 @@ export default function Core({ frontmatter, body = null }: TCore) {
         <MovieClip width={60} height={60} id="click-here" opacity={0}>
           <Nav />
         </MovieClip>
-        
-        <MovieClip width={60} height={60} id="test-clip" opacity={1}>
-          <TestClip slug="test" /> 
-        </MovieClip>
 
+        <MovieClip width={60} height={60} id="test-clip" opacity={1}>
+          <TestClip slug="test" />
+        </MovieClip>
       </Flash>
     </Theme>
   );

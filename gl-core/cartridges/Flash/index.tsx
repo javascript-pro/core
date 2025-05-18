@@ -5,16 +5,12 @@ import Stage from './components/Stage';
 import { TStage } from './components/Stage';
 import MovieClip from './components/MovieClip';
 import { TMovieClip } from './components/MovieClip';
-import {
-    TestClip,
-} from './MovieClips'
+import { TestClip } from './MovieClips';
 import Photo from './components/Photo';
 import { TPhoto } from './components/Photo';
 
 export { Flash, Stage, MovieClip, Photo, FlashinitialState };
 
-export {
-    TestClip,
-}
+export { TestClip };
 
 export type { TFlash, TStage, TMovieClip, TPhoto };
