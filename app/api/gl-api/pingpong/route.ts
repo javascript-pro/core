@@ -9,7 +9,7 @@ export async function GET(request: NextRequest) {
     // Fetch all docs from the 'pingpong' collection
     const snapshot = await db.collection('pingpong').get();
 
-    const data = snapshot.docs.map(doc => ({
+    const data = snapshot.docs.map((doc) => ({
       id: doc.id,
       ...doc.data(),
     }));
@@ -22,6 +22,9 @@ export async function GET(request: NextRequest) {
     });
   } catch (err: any) {
     console.error('GET /pingpong error:', err);
-    return NextResponse.json({ error: 'Failed to fetch data' }, { status: 500 });
+    return NextResponse.json(
+      { error: 'Failed to fetch data' },
+      { status: 500 },
+    );
   }
 }
