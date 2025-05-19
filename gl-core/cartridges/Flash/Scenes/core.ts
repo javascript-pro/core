@@ -6,15 +6,20 @@ export const init = () => {
   setScene();
 };
 
-const playTest = () => {
-  console.log('playTest');
-  // setPosition('testclip', { screenPosition: 'top-right' });
-  // fade('testclip', { fadeInOut: 'in', duration: 1 });
+const playNextPrevious = () => {
+  console.log('playNextPrevious');
+  setPosition('nextprev', {
+    screenPosition: 'bottom-left',
+  });
+  fade('nextprev', {
+    fadeInOut: 'in',
+    duration: 2,
+  });
 };
 
 const setScene = () => {
   fade('content', { fadeInOut: 'in' });
   setPosition('click-here', { screenPosition: 'bottom-right' });
   fade('click-here', { fadeInOut: 'in' });
-  playTest();
+  playNextPrevious();
 };

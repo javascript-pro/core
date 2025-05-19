@@ -133,7 +133,12 @@ export default async function Page({ params }: { params: any }) {
   ];
 
   let content = 'Something went badly wrong here';
-  let frontmatter: any = {};
+  let frontmatter: any = {
+    icon: "blokey",
+    title: "404, bro",
+    descriptioin: "Keep looking?",
+    image: "/png/defaultFeatured.png",
+  };
 
   for (const filePath of tryPaths) {
     try {

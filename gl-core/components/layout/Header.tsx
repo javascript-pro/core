@@ -2,25 +2,23 @@
 
 import * as React from 'react';
 import { CardHeader, Typography } from '@mui/material';
-import {Icon} from '../../../gl-core';
+import { Icon } from '../../../gl-core';
 
 export type THeader = {
   frontmatter?: any;
 };
 
 export default function Header({ frontmatter = null }: THeader) {
-  const { title,icon, description } = frontmatter;
+  const { title, icon, description } = frontmatter;
   return (
     <>
       <CardHeader
-        avatar={<Icon icon={icon as any} />
-      }
+        avatar={<Icon icon={icon as any} />}
         title={
           <Typography variant={'h4'} component={'h1'}>
             {title}
           </Typography>
         }
-        
       />
     </>
   );

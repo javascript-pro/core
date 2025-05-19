@@ -4,7 +4,7 @@ slug: '/free/uberedux'
 title: 'Uberedux'
 description: 'All Apps need State Management'
 icon: 'uberedux'
-image: '/png/defaultFeatured.png'
+image: '/png/uberedux.png'
 github: 'https://github.com/javascript-pro/core/tree/main/gl-core/cartridges/Uberedux'
 keywords: 'Catridges, Uberedux, State Management, Redux'
 ---

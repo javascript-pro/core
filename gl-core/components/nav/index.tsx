@@ -18,7 +18,18 @@ import { TMightyButton } from './MightyButton';
 import Search from './Search';
 import { TSearch } from './Search';
 
-export { MainMenu, Nav, NavItem, PageBreadcrumb, Share, MightyButton, Search };
+import NextPrevious from './NextPrevious';
+
+export {
+  MainMenu,
+  NextPrevious,
+  Nav,
+  NavItem,
+  PageBreadcrumb,
+  Share,
+  MightyButton,
+  Search,
+};
 
 export type {
   TSearch,

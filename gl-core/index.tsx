@@ -29,6 +29,7 @@ import {
   Share,
   MightyButton,
   Search,
+  NextPrevious,
 } from './components/nav';
 import {
   TNav,
@@ -63,7 +64,16 @@ export { Theme, createMUITheme, Icon, ModeSwitch };
 export { Header, Footer, Main, RenderMarkdown, Responsive };
 
 // nav
-export { MainMenu, Nav, NavItem, PageBreadcrumb, Share, MightyButton, Search };
+export {
+  MainMenu,
+  NextPrevious,
+  Nav,
+  NavItem,
+  PageBreadcrumb,
+  Share,
+  MightyButton,
+  Search,
+};
 
 // uberedux
 export {

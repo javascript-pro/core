@@ -11,6 +11,7 @@ import {
   Header,
   PageBreadcrumb,
   Nav,
+  NextPrevious,
 } from '../gl-core';
 
 import { TestClip } from './cartridges/Flash';
@@ -55,13 +56,15 @@ export default function Core({ frontmatter, body = null }: TCore) {
           <RenderMarkdown>{body}</RenderMarkdown>
         </MovieClip>
 
+        <MovieClip id="nextprev" opacity={0} height={38}>
+          <NextPrevious />
+        </MovieClip>
+
         <MovieClip width={60} height={60} id="click-here" opacity={0}>
           <Nav />
         </MovieClip>
 
-        <MovieClip id="testclip" opacity={0} width={42} height={42}>
-          <TestClip slug="testclip" />
-        </MovieClip>
+
       </Flash>
     </Theme>
   );
