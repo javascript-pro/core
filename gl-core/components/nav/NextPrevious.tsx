@@ -4,7 +4,7 @@ import * as React from 'react';
 import navJSON from '../../../public/globalNav.json';
 import { usePathname, useRouter } from 'next/navigation';
 import { Box, useTheme, Typography } from '@mui/material';
-import { MightyButton, ShareThis } from '../../../gl-core';
+import { MightyButton, ShareThis, Icon, useIsMobile } from '../../../gl-core';
 
 type NavItem = {
   title: string;
@@ -29,6 +29,7 @@ export default function NextPrevious() {
   const router = useRouter();
   const pathname = usePathname();
   const theme = useTheme();
+  const isMobile = useIsMobile();
 
   const isHome = pathname === '/';
 
@@ -208,8 +209,12 @@ export default function NextPrevious() {
 
       {obj.this.visible && (
         <>
-          <ShareThis />
-          <Typography
+          <ShareThis 
+            // icon={obj.this.icon}
+            title={obj.this.title}
+            description={obj.this.description}
+          />
+          {!isMobile ? <Typography
             sx={{
               my: 1,
             }}
@@ -217,7 +222,8 @@ export default function NextPrevious() {
             component={'h2'}
           >
             {obj.this.description}
-          </Typography>
+          </Typography> : null }
+          
         </>
       )}
     </Box>
