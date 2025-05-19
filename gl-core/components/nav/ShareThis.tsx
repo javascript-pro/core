@@ -8,7 +8,6 @@ import {
 } from 'react-share';
 import {
   Box,
-  IconButton,
   Menu,
   MenuItem,
   ListItemIcon,
@@ -26,12 +25,12 @@ export type TShareThis = {
 };
 
 export default function ShareThis({
+
   title = 'Check this out',
   description = '',
   excerpt = '',
-  body = '',
-  image = '',
   url = typeof window !== 'undefined' ? window.location.href : '',
+
 }: TShareThis) {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [copied, setCopied] = React.useState(false);
@@ -73,8 +72,10 @@ export default function ShareThis({
           onClick={() => {
             navigator.clipboard.writeText(url);
             setCopied(true);
-            setTimeout(() => setCopied(false), 2000);
-            handleClose();
+            setTimeout(() => {
+              setCopied(false);
+              handleClose();
+            }, 1500);
           }}
         >
           <ListItemIcon>
