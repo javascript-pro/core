@@ -48,7 +48,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
           </MovieClip>
         ) : null}
 
-        <MovieClip id="content" opacity={0} maxWidth={650}>
+        <MovieClip id="content" opacity={0}>
           <Header frontmatter={frontmatter} />
           <Photo src={frontmatter?.image ?? null} />
           <PageBreadcrumb />

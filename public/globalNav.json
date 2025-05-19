@@ -33,7 +33,7 @@
       "NextJS",
       "Headless CMS"
     ],
-    "excerpt": "We build and ship modern web apps for clients who need real results — fast. Custom software that works\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codeba",
+    "excerpt": "Free\n\n \n \n\nWe build and ship modern web apps for clients who need real results — fast. Custom software that works\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open So",
     "children": [
       {
         "title": "Free",
@@ -41,7 +41,7 @@
         "order": 1,
         "icon": "free",
         "type": "folder",
-        "excerpt": "Some things in life are free — and Core is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or bui",
+        "excerpt": "Free\n\n \n \n\n Some things in life are free — and Core is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, b",
         "children": [
           {
             "title": "Flash",

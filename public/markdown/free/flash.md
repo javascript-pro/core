@@ -12,8 +12,6 @@ keywords: 'Catridges, Flash, SVG'
 
 Maybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You're welcome
 
-#### Features
-
 - SVG Graphics
 - Animation using Greensock
 - State management with redux/toolkit
