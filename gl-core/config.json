@@ -12,7 +12,7 @@
   "themes": {
     "light": {
       "primary": "#A6D4D1",
-      "secondary": "#303030",
+      "secondary": "#FFF",
       "background": "#FFF",
       "paper": "#FFF",
       "text": "#303030",

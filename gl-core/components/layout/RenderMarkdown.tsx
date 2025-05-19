@@ -2,7 +2,13 @@
 
 import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
-import { Box, Link as MuiLink, Typography, useTheme } from '@mui/material';
+import {
+  Box,
+  Link as MuiLink,
+  Typography,
+  useTheme,
+} from '@mui/material';
+import { MightyButton } from '../../../gl-core';
 
 export type TRenderMarkdown = {
   children: React.ReactNode;
@@ -19,16 +25,48 @@ export default function RenderMarkdown({
 }: TRenderMarkdown) {
   const theme = useTheme();
   const scrollRef = React.useRef<HTMLDivElement>(null);
+  const [canScrollDown, setCanScrollDown] = React.useState(false);
+  const [canScrollUp, setCanScrollUp] = React.useState(false);
+
+  const checkScroll = () => {
+    const el = scrollRef.current;
+    if (el) {
+      setCanScrollDown(el.scrollTop + el.clientHeight < el.scrollHeight - 10);
+      setCanScrollUp(el.scrollTop > 10);
+    }
+  };
+
+  React.useEffect(() => {
+    checkScroll();
+    const observer = new ResizeObserver(checkScroll);
+    if (scrollRef.current) {
+      observer.observe(scrollRef.current);
+      scrollRef.current.addEventListener('scroll', checkScroll);
+    }
+
+    return () => {
+      observer.disconnect();
+      scrollRef.current?.removeEventListener('scroll', checkScroll);
+    };
+  }, [children]);
+
+  const handleScrollDown = () => {
+    scrollRef.current?.scrollBy({ top: 300, behavior: 'smooth' });
+  };
+
+  const handleScrollUp = () => {
+    scrollRef.current?.scrollBy({ top: -300, behavior: 'smooth' });
+  };
 
   return (
     <Box
       sx={{
         width: width ?? '100%',
-        height: height ?? '100%',
+        height: 'calc(100vh - 370px)',
         maxWidth: maxWidth ?? '100%',
-        minHeight: 0, // Critical for scroll inside flex container
+        minHeight: 0,
         display: 'flex',
-        flexDirection: 'row',
+        flexDirection: 'column',
         gap: 1,
       }}
     >
@@ -37,9 +75,8 @@ export default function RenderMarkdown({
         sx={{
           flexGrow: 1,
           overflowY: 'auto',
-          padding: 2,
-          borderRadius: 1,
-          minHeight: 0, // Ensure scroll area can shrink properly
+          padding: 1,
+          minHeight: 0,
           scrollbarWidth: 'auto',
           scrollbarColor: `${theme.palette.primary.main} ${theme.palette.background.paper}`,
           '&::-webkit-scrollbar': {
@@ -58,29 +95,19 @@ export default function RenderMarkdown({
         <ReactMarkdown
           components={{
             h1: ({ children }) => (
-              <Typography variant="h4" gutterBottom>
-                {children}
-              </Typography>
+              <Typography variant="h4" gutterBottom>{children}</Typography>
             ),
             h2: ({ children }) => (
-              <Typography variant="h5" gutterBottom>
-                {children}
-              </Typography>
+              <Typography variant="h5" gutterBottom>{children}</Typography>
             ),
             h3: ({ children }) => (
-              <Typography variant="h6" gutterBottom>
-                {children}
-              </Typography>
+              <Typography variant="h6" gutterBottom>{children}</Typography>
             ),
             p: ({ children }) => (
-              <Typography variant="body1" paragraph>
-                {children}
-              </Typography>
+              <Typography variant="body1" paragraph>{children}</Typography>
             ),
             li: ({ children }) => (
-              <li>
-                <Typography variant="body1">{children}</Typography>
-              </li>
+              <li><Typography variant="body1">{children}</Typography></li>
             ),
             strong: ({ children }) => <strong>{children}</strong>,
             em: ({ children }) => <em>{children}</em>,
@@ -102,6 +129,30 @@ export default function RenderMarkdown({
         >
           {children as string}
         </ReactMarkdown>
+      </Box>
+
+      <Box sx={{ m: 2, display: 'flex', gap: 2, justifyContent: 'left' }}>
+        {canScrollDown && (
+          <MightyButton
+            mode="listitem"
+            color="inherit"
+            variant="outlined"
+            label="Scroll Down"
+            icon="down"
+            onClick={handleScrollDown}
+          />
+        )}
+        {canScrollUp && (
+          <MightyButton
+            mode="listitem"
+            color="inherit"
+            variant="outlined"
+            label="Scroll Up"
+            icon="up"
+            onClick={handleScrollUp}
+          />
+        )}
+        
       </Box>
     </Box>
   );
