@@ -49,7 +49,7 @@
             "title": "Core",
             "slug": "/core",
             "order": 10,
-            "icon": "core",
+            "icon": "github",
             "type": "file",
             "tags": [
               "free",

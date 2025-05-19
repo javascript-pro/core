@@ -35,7 +35,7 @@ function renderTree(
     </span>
   ) : (
     <Link
-      href={`/${item.slug}`}
+      href={item.slug.startsWith('/') ? item.slug : `/${item.slug}`}
       onClick={onSelect}
       style={{ textDecoration: 'none', color: 'inherit' }}
     >

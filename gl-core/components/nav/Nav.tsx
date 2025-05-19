@@ -3,6 +3,7 @@
 import * as React from 'react';
 import { useRouter } from 'next/navigation';
 import {
+  Box,
   IconButton,
   Dialog,
   DialogContent,
@@ -39,7 +40,12 @@ export default function Nav({}: TNav) {
 
   return (
     <>
-      <Fab color="primary" onClick={openModalNav}>
+      <Fab 
+        sx={{
+          boxShadow: 0,
+        }}
+        color="primary" 
+        onClick={openModalNav}>
         <Icon icon="blokey" />
       </Fab>
 
@@ -70,8 +76,10 @@ export default function Nav({}: TNav) {
               console.log('onSearchTrigger', e);
             }}
           />
-
-          <MainMenu onSelect={closeModalNav} />
+          <Box sx={{m:2}}>
+            <MainMenu onSelect={closeModalNav} />
+          </Box>
+          
 
           {/* <pre style={{fontSize: 10}}>slice: {JSON.stringify(slice, null, 2)}</pre> */}
         </DialogContent>
