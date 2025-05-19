@@ -4,7 +4,7 @@ slug: '/free/flash'
 title: 'Flash'
 description: 'Pointless reinvention of MacroMedia Flash in React'
 icon: 'flash'
-image: '/png/defaultFeatured.png'
+image: '/png/uberedux.png'
 keywords: 'Catridges, Flash, SVG'
 ---
 

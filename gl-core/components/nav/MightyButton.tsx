@@ -12,7 +12,7 @@ import {
 import { Icon } from '../../../gl-core';
 
 export type TMightyButton = {
-  mode?: 'button' | 'icon' | 'listitem' | null;
+  mode?: 'button' | 'icon' | 'listitem' | 'noicon' | null;
   disabled?: boolean;
   label?: string | undefined;
   variant?: 'contained' | 'outlined' | 'text' | undefined;
@@ -36,6 +36,22 @@ export default function MightyButton({
     console.log('no onClick');
   },
 }: TMightyButton) {
+  if (mode === 'noicon') {
+    return (
+      <Button
+        disabled={disabled}
+        sx={sx}
+        fullWidth={fullWidth}
+        size="small"
+        variant={variant}
+        color={color}
+        onClick={onClick}
+      >
+        {label}
+      </Button>
+    );
+  }
+
   if (mode === 'listitem') {
     return (
       <ListItemButton disabled={disabled} onClick={onClick} sx={sx}>

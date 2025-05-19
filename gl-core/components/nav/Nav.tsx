@@ -9,9 +9,6 @@ import {
   DialogActions,
   DialogTitle,
   Fab,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
 } from '@mui/material';
 import {
   useIsMobile,
@@ -21,7 +18,7 @@ import {
   Icon,
   MainMenu,
   MightyButton,
-  ModeSwitch,
+  Search,
 } from '../../../gl-core';
 
 export type TNav = {
@@ -53,53 +50,27 @@ export default function Nav({}: TNav) {
         open={modalNav}
         onClose={closeModalNav}
       >
-        <DialogTitle>
-          <ListItemButton
+        <DialogTitle></DialogTitle>
+
+        <DialogContent>
+          <Search />
+          <MightyButton
+            sx={{ m: 1, mt: 2 }}
+            mode="noicon"
+            label="Home"
+            icon="home"
             onClick={() => {
+              console.log('Home clicked');
               closeModalNav();
               router.push('/');
             }}
-          >
-            <ListItemIcon>
-              <Icon icon="home" />
-            </ListItemIcon>
-            <ListItemText primary="Home" />
-          </ListItemButton>
-
-          <ListItemButton
-            onClick={() => {
-              console.log('click Flash');
-              closeModalNav();
-              router.push('/free/flash');
-            }}
-          >
-            <ListItemIcon>
-              <Icon icon="flash" />
-            </ListItemIcon>
-            <ListItemText primary="Flash" />
-          </ListItemButton>
-
-          <MightyButton
-            mode="listitem"
-            label="Uberedux"
-            icon="uberedux"
-            color="secondary"
-            onClick={() => {
-              console.log('click Uberedux');
-              closeModalNav();
-              router.push('/free/uberedux');
-            }}
           />
-        </DialogTitle>
-
-        <DialogContent>
           <MainMenu onSelect={closeModalNav} />
 
           {/* <pre style={{fontSize: 10}}>slice: {JSON.stringify(slice, null, 2)}</pre> */}
         </DialogContent>
 
         <DialogActions>
-          <ModeSwitch />
           {isMobile ? (
             <>
               <IconButton onClick={closeModalNav}>

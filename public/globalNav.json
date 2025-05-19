@@ -33,13 +33,13 @@
       "NextJS",
       "Headless CMS"
     ],
-    "excerpt": "Free\n\n \n \n\nWe build and ship modern web apps for clients who need real results — fast. Custom software that works\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open So",
+    "excerpt": "We build and ship modern web apps for clients who need real results — fast. Custom software that works\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codeba",
     "children": [
       {
         "title": "Free",
         "slug": "free",
         "order": 1,
-        "icon": "free",
+        "icon": "how",
         "type": "folder",
         "excerpt": "Free\n\n \n \n\n Some things in life are free — and Core is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, b",
         "children": [
@@ -57,7 +57,7 @@
             "order": 20,
             "icon": "uberedux",
             "type": "file",
-            "excerpt": "Apps need State Management\n\nOtherwise you'd be back in jQuery callback hell. Nobody wants that.\n\nUberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app already works "
+            "excerpt": "Apps need State Management\n\nOtherwise you'd be back in jQuery callback hell. Nobody wants that. Uberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app already works a"
           }
         ]
       },

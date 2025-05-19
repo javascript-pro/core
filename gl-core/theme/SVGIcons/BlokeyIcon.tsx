@@ -3,7 +3,7 @@ import { useTheme, SvgIcon } from '@mui/material';
 
 export default function BlokeyIcon(props: any) {
   const theme = useTheme();
-  let color1 = theme.palette.text.primary;
+  let color1 = '#303030';
 
   return (
     <SvgIcon {...props}>

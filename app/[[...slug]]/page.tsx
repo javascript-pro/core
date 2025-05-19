@@ -7,6 +7,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import { Core, Nav } from '../../gl-core';
+import { lighten } from '@mui/material';
 
 export type TPage = {
   slug?: string[];
@@ -89,12 +90,14 @@ export async function generateMetadata({ params }: { params: any }) {
   const frontmatter = await loadFrontmatter(slugPath);
 
   const app = 'Goldlabel';
-  const title = `${frontmatter?.title}. ${frontmatter?.description}` || app;
+  let title = `${frontmatter?.title}. ${frontmatter?.description}` || app;
   const description =
     frontmatter?.description ||
     'We build and ship modern web apps for clients who need real results — fast';
   const img = frontmatter.image || '/png/test.png';
   const url = `https://goldlabel.pro/${slugPath}`;
+
+  if (title === undefined) title = "404, bro"
 
   return {
     title,
@@ -133,7 +136,12 @@ export default async function Page({ params }: { params: any }) {
   ];
 
   let content = 'Something went badly wrong here';
-  let frontmatter: any = {};
+  let frontmatter: any = {
+    icon: 'blokey',
+    title: '404, bro',
+    descriptioin: 'Keep looking?',
+    image: '/png/defaultFeatured.png',
+  };
 
   for (const filePath of tryPaths) {
     try {

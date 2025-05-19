@@ -15,6 +15,7 @@ const isValidImage = (src: string | null): boolean => {
   return validExtensions.includes(ext);
 };
 
+
 export default function Photo({ src = null }: TPhoto) {
   if (!isValidImage(src)) {
     return (
@@ -27,16 +28,28 @@ export default function Photo({ src = null }: TPhoto) {
   }
 
   return (
-    <CardMedia
-      component="img"
-      src={src as string}
-      alt="Photo"
+    <Box
       sx={{
         width: '100%',
-        maxWidth: '100%',
-        maxHeight: 200,
-        objectFit: 'cover',
+        maxWidth: '50%',
+        height: 220,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        overflow: 'hidden',
+        backgroundColor: 'background.default',
       }}
-    />
+    >
+      <CardMedia
+        component="img"
+        src={src as string}
+        alt="Photo"
+        sx={{
+          width: '100%',
+          height: 'auto',
+          objectFit: 'contain',
+        }}
+      />
+    </Box>
   );
 }
