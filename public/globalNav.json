@@ -37,13 +37,13 @@
     "excerpt": "Building and shipping modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codebases\n  Always Free & Open",
     "children": [
       {
-        "title": "Free",
+        "title": "Free & Open Source",
         "description": "Some things in life ARE free",
         "slug": "/free",
         "order": 1,
         "icon": "how",
         "type": "folder",
-        "excerpt": "Some things in life are free — and  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or build o",
+        "excerpt": "Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or b",
         "children": [
           {
             "title": "Core",

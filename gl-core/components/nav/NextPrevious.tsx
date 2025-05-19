@@ -152,7 +152,7 @@ export default function NextPrevious() {
   return (
     <Box
       sx={{
-        background: 'rgba(255,255,255, 0.2)',
+        // background: 'rgba(255,255,255, 0.2)',
         display: 'flex',
         flexWrap: 'wrap',
         gap: 1,

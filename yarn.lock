@@ -1669,6 +1669,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fingerprintjs/fingerprintjs@npm:^4.6.2":
+  version: 4.6.2
+  resolution: "@fingerprintjs/fingerprintjs@npm:4.6.2"
+  dependencies:
+    tslib: "npm:^2.4.1"
+  checksum: 10c0/d3534f55ce4dd039e3d3d772e5d35ebd3deba23e70b00347e72688f38618f08504b9bd2f72f2dc3975d83c76e5d1e029acc7a40aa77abf6fbc3c50b0b857dff8
+  languageName: node
+  linkType: hard
+
 "@firebase/analytics-compat@npm:0.2.21":
   version: 0.2.21
   resolution: "@firebase/analytics-compat@npm:0.2.21"
@@ -11061,6 +11070,7 @@ __metadata:
   dependencies:
     "@emotion/react": "npm:^11.14.0"
     "@emotion/styled": "npm:^11.14.0"
+    "@fingerprintjs/fingerprintjs": "npm:^4.6.2"
     "@heroicons/react": "npm:2.1.3"
     "@mui/icons-material": "npm:^7.0.1"
     "@mui/material": "npm:^7.0.1"
@@ -12289,7 +12299,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.1.0, tslib@npm:^2.4.0":
+"tslib@npm:^2.1.0, tslib@npm:^2.4.0, tslib@npm:^2.4.1":
   version: 2.8.1
   resolution: "tslib@npm:2.8.1"
   checksum: 10c0/9c4759110a19c53f992d9aae23aac5ced636e99887b51b9e61def52611732872ff7668757d4e4c61f19691e36f4da981cd9485e869b4a7408d689f6bf1f14e62
