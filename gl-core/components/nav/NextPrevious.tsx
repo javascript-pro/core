@@ -6,11 +6,11 @@ import * as React from 'react';
 import navJSON from '../../../public/globalNav.json';
 import { useRouter } from 'next/navigation';
 import { useTheme, Card } from '@mui/material';
-import { Icon, MightyButton } from '../../../gl-core';
+import { MightyButton } from '../../../gl-core';
 
 export default function NextPrevious() {
   const router = useRouter();
-  const theme = useTheme()
+  const theme = useTheme();
 
   console.log('navJSON', navJSON);
 
@@ -28,7 +28,7 @@ export default function NextPrevious() {
       }}
     >
       <MightyButton
-        mode={'noicon'}
+        mode={'icon'}
         onClick={() => {
           navigateTo('/');
         }}

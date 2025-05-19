@@ -15,6 +15,7 @@ const isValidImage = (src: string | null): boolean => {
   return validExtensions.includes(ext);
 };
 
+
 export default function Photo({ src = null }: TPhoto) {
   if (!isValidImage(src)) {
     return (
@@ -30,7 +31,7 @@ export default function Photo({ src = null }: TPhoto) {
     <Box
       sx={{
         width: '100%',
-        maxWidth: '100%',
+        maxWidth: '50%',
         height: 220,
         display: 'flex',
         justifyContent: 'center',

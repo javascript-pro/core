@@ -36,8 +36,6 @@ export default function MightyButton({
     console.log('no onClick');
   },
 }: TMightyButton) {
-
-
   if (mode === 'noicon') {
     return (
       <Button

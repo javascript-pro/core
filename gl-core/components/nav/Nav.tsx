@@ -50,14 +50,12 @@ export default function Nav({}: TNav) {
         open={modalNav}
         onClose={closeModalNav}
       >
-        <DialogTitle>
-          
-        </DialogTitle>
+        <DialogTitle></DialogTitle>
 
         <DialogContent>
           <Search />
           <MightyButton
-            sx={{m:1, mt: 2}}
+            sx={{ m: 1, mt: 2 }}
             mode="noicon"
             label="Home"
             icon="home"
@@ -69,13 +67,10 @@ export default function Nav({}: TNav) {
           />
           <MainMenu onSelect={closeModalNav} />
 
-
-          
           {/* <pre style={{fontSize: 10}}>slice: {JSON.stringify(slice, null, 2)}</pre> */}
         </DialogContent>
 
         <DialogActions>
-
           {isMobile ? (
             <>
               <IconButton onClick={closeModalNav}>
