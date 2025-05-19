@@ -14,9 +14,11 @@ export default function Header({ frontmatter = null }: THeader) {
   return (
     <>
       <CardHeader
-        sx={{
-          // background: theme.palette.primary.main,
-        }}
+        sx={
+          {
+            // background: theme.palette.primary.main,
+          }
+        }
         avatar={<Icon icon={icon as any} />}
         title={
           <Typography sx={{ mt: 0.5 }} variant={'h5'} component={'h1'}>

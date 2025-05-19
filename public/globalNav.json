@@ -227,14 +227,6 @@
         ]
       },
       {
-        "title": "Flash?",
-        "slug": "/flash",
-        "order": 15,
-        "icon": "flash",
-        "type": "file",
-        "excerpt": "Flash Plugin\n\nWe have ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You're welcome\n\n Features\n\n SVG Graphics\n Animation using Greensock\n State managem"
-      },
-      {
         "title": "Life",
         "description": "Well, we've all got to have one",
         "slug": "/life",
