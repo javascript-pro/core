@@ -12,6 +12,9 @@ import { PageBreadcrumb } from './PageBreadcrumb';
 import Share from './Share';
 import { TShare } from './Share';
 
+import ShareThis from './ShareThis';
+import { TShareThis } from './ShareThis';
+
 import MightyButton from './MightyButton';
 import { TMightyButton } from './MightyButton';
 
@@ -27,6 +30,7 @@ export {
   NavItem,
   PageBreadcrumb,
   Share,
+  ShareThis,
   MightyButton,
   Search,
 };
@@ -37,6 +41,7 @@ export type {
   TShare,
   TNav,
   TNavItem,
+  TShareThis,
   // TMainMenu,
   // TMainMenuItem,
 };

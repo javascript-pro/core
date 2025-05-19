@@ -3,8 +3,8 @@
 import * as React from 'react';
 import navJSON from '../../../public/globalNav.json';
 import { usePathname, useRouter } from 'next/navigation';
-import { Box, CardHeader, IconButton, Typography } from '@mui/material';
-import { MightyButton, Icon } from '../../../gl-core';
+import { Box, useTheme, Typography } from '@mui/material';
+import { MightyButton, ShareThis } from '../../../gl-core';
 
 type NavItem = {
   title: string;
@@ -28,6 +28,7 @@ type NavButton = {
 export default function NextPrevious() {
   const router = useRouter();
   const pathname = usePathname();
+  const theme = useTheme();
 
   const isHome = pathname === '/';
 
@@ -141,8 +142,6 @@ export default function NextPrevious() {
     }
   }
 
-  // console.log('thisObj', thisObj);
-
   obj.this.title = thisObj?.title as string;
   obj.this.description = thisObj?.description as string;
 
@@ -153,6 +152,7 @@ export default function NextPrevious() {
   return (
     <Box
       sx={{
+        background: 'rgba(255,255,255, 0.2)',
         display: 'flex',
         flexWrap: 'wrap',
         gap: 1,
@@ -170,17 +170,7 @@ export default function NextPrevious() {
         />
       )}
 
-      {obj.prev.visible && (
-        <MightyButton
-          mode="icon"
-          sx={{ mr: 1 }}
-          color="secondary"
-          disabled={obj.prev.disabled}
-          onClick={() => navigateTo(obj.prev.slug)}
-          label="Previous"
-          icon="left"
-        />
-      )}
+
 
       {obj.up.visible && (
         <MightyButton
@@ -194,16 +184,16 @@ export default function NextPrevious() {
         />
       )}
 
-      {obj.this.visible && (
-        <Typography
-          sx={{
-            my: 0.75,
-          }}
-          variant="h6"
-          component={'h2'}
-        >
-          {obj.this.description}
-        </Typography>
+      {obj.prev.visible && (
+        <MightyButton
+          mode="icon"
+          sx={{ mr: 1 }}
+          color="secondary"
+          disabled={obj.prev.disabled}
+          onClick={() => navigateTo(obj.prev.slug)}
+          label="Previous"
+          icon="left"
+        />
       )}
 
       {obj.next.visible && (
@@ -216,6 +206,21 @@ export default function NextPrevious() {
           label="Next"
           icon="right"
         />
+      )}
+
+            {obj.this.visible && (
+        <>
+          <ShareThis />
+          <Typography
+            sx={{
+              my: 1,
+            }}
+            variant="body1"
+            component={'h2'}
+          >
+            {obj.this.description}
+          </Typography>
+        </>
       )}
     </Box>
   );

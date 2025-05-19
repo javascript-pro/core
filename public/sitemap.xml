@@ -26,9 +26,6 @@
     <loc>https://goldlabel.pro/balance/sci-fi/relativity</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/cv</loc>
-  </url>
-  <url>
     <loc>https://goldlabel.pro/free/core</loc>
   </url>
   <url>
@@ -78,6 +75,9 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work/company/remote-working</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/cv</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/free/cartridges/bouncer</loc>

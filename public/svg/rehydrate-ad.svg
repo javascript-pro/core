@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="250px" height="250px" viewBox="0 0 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>rehydrate-ad</title>
-    <defs>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
-            <stop stop-color="#C09F52" offset="0%"></stop>
-            <stop stop-color="#87703B" offset="100%"></stop>
-        </linearGradient>
-    </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="rehydrate-ad" fill-rule="nonzero">
-            <g id="goldlabel" transform="translate(57, 73)" fill="url(#linearGradient-1)">
+            <g id="goldlabel" transform="translate(57, 73)" stroke="#FFFFFF" stroke-width="3">
                 <path d="M135,52 L103.3125,96.3857142 C101.6875,98.6142858 99.75,100.440476 97.5,101.864286 C95.2500002,103.288095 92.7500001,104 90,104 L11.2499999,104 C8.15625011,104 5.5078125,102.908929 3.30468751,100.726786 C1.10156249,98.5446427 0,95.9214287 0,92.8571429 L0,11.1428571 C0,8.07857128 1.10156249,5.45535726 3.30468751,3.27321436 C5.5078125,1.09107145 8.15625011,0 11.2499999,0 L90,0 C92.7500001,0 95.2500002,0.71190473 97.5,2.13571419 C99.75,3.55952365 101.6875,5.38571419 103.3125,7.61428581 L135,52 Z" id="Label"></path>
             </g>
             <g id="blokey" transform="translate(114, 116)" fill="#FFFFFF">

@@ -34,7 +34,7 @@
       "NextJS",
       "Headless CMS"
     ],
-    "excerpt": "Hello\n\nWe build and ship modern web apps for clients who need real results — fast. Custom software that works\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source",
+    "excerpt": "We build and ship modern web apps for clients who need real results — fast. Custom software that works\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codeba",
     "children": [
       {
         "title": "Free",
@@ -76,19 +76,6 @@
         ]
       },
       {
-        "title": "C.V.",
-        "slug": "/cv",
-        "order": 2,
-        "icon": "goldlabel",
-        "type": "file",
-        "tags": [
-          "CV",
-          "jobs",
-          "work"
-        ],
-        "excerpt": "Chris Dorward\n\n Fullstack JavaScript Developer\n\n +44 07745 763 122  \n |  |\n\n\n Summary\n\nOver 20 years of experience delivering scalable web applications across startups, enterprises, and remotefirst te"
-      },
-      {
         "title": "Work",
         "description": "Professional Fullstack JavaScript Development",
         "slug": "/work",
@@ -113,6 +100,19 @@
         ],
         "excerpt": "The apps we ship are real, run in production and are developed in public\n\nThe Core is Open Source and Free forever — giving you statically generated sites with Firestorepowered updates and a real admi",
         "children": [
+          {
+            "title": "C.V.",
+            "slug": "/cv",
+            "order": 2,
+            "icon": "goldlabel",
+            "type": "file",
+            "tags": [
+              "CV",
+              "jobs",
+              "work"
+            ],
+            "excerpt": "Chris Dorward\n\n Fullstack JavaScript Developer\n\n +44 07745 763 122  \n |  |\n\n\n Summary\n\nOver 20 years of experience delivering scalable web applications across startups, enterprises, and remotefirst te"
+          },
           {
             "title": "Free on GitHub",
             "description": "Free, Gratis and for Nothing",

@@ -30,6 +30,7 @@ import {
   MightyButton,
   Search,
   NextPrevious,
+  ShareThis,
 } from './components/nav';
 import {
   TNav,
@@ -37,6 +38,7 @@ import {
   TShare,
   TMightyButton,
   TSearch,
+  TShareThis,
 } from './components/nav';
 import { useConfig, useIsMobile } from './hooks';
 import {
@@ -73,6 +75,7 @@ export {
   Share,
   MightyButton,
   Search,
+  ShareThis,
 };
 
 // uberedux
@@ -117,4 +120,5 @@ export type {
   TFlash,
   TMovieClip,
   TPhoto,
+  TShareThis,
 };

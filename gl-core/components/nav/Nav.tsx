@@ -53,18 +53,23 @@ export default function Nav({}: TNav) {
         <DialogTitle></DialogTitle>
 
         <DialogContent>
-          <Search />
-          <MightyButton
+          
+          {/* <MightyButton
             sx={{ m: 1, mt: 2 }}
-            mode="noicon"
             label="Home"
             icon="home"
+            variant='contained'
             onClick={() => {
               console.log('Home clicked');
               closeModalNav();
               router.push('/');
             }}
-          />
+          /> */}
+
+          <Search onTrigger={(e: any) => {
+            console.log("onSearchTrigger", e)
+          }} />
+
           <MainMenu onSelect={closeModalNav} />
 
           {/* <pre style={{fontSize: 10}}>slice: {JSON.stringify(slice, null, 2)}</pre> */}
