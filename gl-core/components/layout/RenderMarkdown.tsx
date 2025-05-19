@@ -24,7 +24,7 @@ export default function RenderMarkdown({
     <Box
       sx={{
         width: width ?? '100%',
-        height: height ?? 'calc(100vh - 200px)',
+        height: height ?? '100%',
         maxWidth: maxWidth ?? '100%',
         minHeight: 0, // Critical for scroll inside flex container
         display: 'flex',

@@ -53,14 +53,15 @@ export default function Core({ frontmatter, body = null }: TCore) {
           <Header frontmatter={frontmatter} />
           <Photo src={frontmatter?.image ?? null} />
           <PageBreadcrumb />
-          <RenderMarkdown>{body}</RenderMarkdown>
+          {/* Conditionally control the size of this component */}
+          <RenderMarkdown height={270}>{body}</RenderMarkdown>
         </MovieClip>
 
-        <MovieClip id="nextprev" opacity={0} height={38}>
+        <MovieClip id="nextprev" opacity={0} height={75}>
           <NextPrevious />
         </MovieClip>
 
-        <MovieClip width={60} height={60} id="click-here" opacity={0}>
+        <MovieClip width={65} height={65} id="click-here" opacity={0}>
           <Nav />
         </MovieClip>
       </Flash>

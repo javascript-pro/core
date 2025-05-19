@@ -1,7 +1,7 @@
 ---
 order: 10
 title: Company
-description: About Goldlabel
+description: About Goldlabel Apps Ltd
 slug: /work/company
 icon: work
 image: /png/system/tick.png

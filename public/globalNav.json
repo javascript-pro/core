@@ -1,6 +1,7 @@
 [
   {
     "title": "Goldlabel",
+    "description": "Custom software that works",
     "slug": "/",
     "order": 1,
     "icon": "goldlabel",
@@ -33,19 +34,32 @@
       "NextJS",
       "Headless CMS"
     ],
-    "excerpt": "We build and ship modern web apps for clients who need real results — fast. Custom software that works\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codeba",
+    "excerpt": "Building and shipping modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codebases\n\n Free\n\n   \n  Always",
     "children": [
       {
         "title": "Free",
-        "slug": "free",
+        "description": "Some things in life ARE free",
+        "slug": "/free",
         "order": 1,
         "icon": "how",
         "type": "folder",
-        "excerpt": "Free\n\n \n \n\n Some things in life are free — and Core is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, b",
+        "excerpt": "Some things in life are free — and  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or build o",
         "children": [
           {
+            "title": "Core",
+            "slug": "/core",
+            "order": 10,
+            "icon": "github",
+            "type": "file",
+            "tags": [
+              "free",
+              "core"
+            ],
+            "excerpt": "Goldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo architecture with multiple Next.js a"
+          },
+          {
             "title": "Flash",
-            "slug": "free/flash",
+            "slug": "/flash",
             "order": 15,
             "icon": "flash",
             "type": "file",
@@ -53,7 +67,7 @@
           },
           {
             "title": "Uberedux",
-            "slug": "free/uberedux",
+            "slug": "/uberedux",
             "order": 20,
             "icon": "uberedux",
             "type": "file",
@@ -62,21 +76,9 @@
         ]
       },
       {
-        "title": "C.V.",
-        "slug": "cv",
-        "order": 2,
-        "icon": "goldlabel",
-        "type": "file",
-        "tags": [
-          "CV",
-          "jobs",
-          "work"
-        ],
-        "excerpt": "Chris Dorward\n\n Fullstack JavaScript Developer\n\n +44 07745 763 122  \n |  |\n\n\n Summary\n\nOver 20 years of experience delivering scalable web applications across startups, enterprises, and remotefirst te"
-      },
-      {
         "title": "Work",
-        "slug": "work",
+        "description": "Professional Fullstack JavaScript Development",
+        "slug": "/work",
         "order": 10,
         "icon": "work",
         "type": "folder",
@@ -99,8 +101,22 @@
         "excerpt": "The apps we ship are real, run in production and are developed in public\n\nThe Core is Open Source and Free forever — giving you statically generated sites with Firestorepowered updates and a real admi",
         "children": [
           {
+            "title": "C.V.",
+            "slug": "/cv",
+            "order": 2,
+            "icon": "goldlabel",
+            "type": "file",
+            "tags": [
+              "CV",
+              "jobs",
+              "work"
+            ],
+            "excerpt": "Chris Dorward\n\n Fullstack JavaScript Developer\n\n +44 07745 763 122  \n |  |\n\n\n Summary\n\nOver 20 years of experience delivering scalable web applications across startups, enterprises, and remotefirst te"
+          },
+          {
             "title": "Free on GitHub",
-            "slug": "work/free",
+            "description": "Free, Gratis and for Nothing",
+            "slug": "/free",
             "order": 2,
             "icon": "star",
             "type": "folder",
@@ -112,16 +128,9 @@
             "excerpt": "Free, Open Source cartridges\n\n Flash\n Lingua\n Uberedux",
             "children": [
               {
-                "title": "Core",
-                "slug": "work/free/core",
-                "order": 10,
-                "icon": "core",
-                "type": "file",
-                "excerpt": "Goldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo architecture with multiple Next.js a"
-              },
-              {
                 "title": "Cartridges",
-                "slug": "work/free/cartridges",
+                "description": "What are the free cartridges?",
+                "slug": "/cartridges",
                 "order": 20,
                 "icon": "star",
                 "type": "folder",
@@ -134,7 +143,7 @@
                 "children": [
                   {
                     "title": "Bouncer",
-                    "slug": "work/free/cartridges/bouncer",
+                    "slug": "/bouncer",
                     "order": 130,
                     "icon": "cartridge",
                     "type": "file",
@@ -152,7 +161,8 @@
           },
           {
             "title": "Company",
-            "slug": "work/company",
+            "description": "About Goldlabel Apps Ltd",
+            "slug": "/company",
             "order": 10,
             "icon": "work",
             "type": "folder",
@@ -160,7 +170,7 @@
             "children": [
               {
                 "title": "Working remotely",
-                "slug": "work/company/remote-working",
+                "slug": "/remote-working",
                 "order": 250,
                 "icon": "work",
                 "type": "file",
@@ -172,7 +182,7 @@
               },
               {
                 "title": "Privacy & Cookies",
-                "slug": "work/company/privacy-cookies",
+                "slug": "/privacy-cookies",
                 "order": 555,
                 "icon": "account",
                 "type": "file",
@@ -189,7 +199,8 @@
           },
           {
             "title": "GitHub",
-            "slug": "work/github",
+            "description": "Critical to our process",
+            "slug": "/github",
             "order": 10,
             "icon": "github",
             "type": "folder",
@@ -202,7 +213,8 @@
           },
           {
             "title": "Private",
-            "slug": "work/private",
+            "description": "Protected by Bouncer",
+            "slug": "/private",
             "order": 10,
             "icon": "private",
             "type": "folder",
@@ -216,7 +228,8 @@
       },
       {
         "title": "Life",
-        "slug": "life",
+        "description": "Well, we've all got to have one",
+        "slug": "/life",
         "order": 50,
         "icon": "life",
         "type": "folder",
@@ -224,7 +237,8 @@
         "children": [
           {
             "title": "Food",
-            "slug": "life/food",
+            "description": "Right sleep. Right food.",
+            "slug": "/food",
             "order": 10,
             "icon": "food",
             "type": "folder",
@@ -232,7 +246,7 @@
             "children": [
               {
                 "title": "Air Fried Stuffed Peppers",
-                "slug": "life/food/air-fried-peppers",
+                "slug": "/air-fried-peppers",
                 "order": 35,
                 "icon": "food",
                 "type": "file",
@@ -247,7 +261,7 @@
               },
               {
                 "title": "Banana Bread",
-                "slug": "life/food/banana-bread",
+                "slug": "/banana-bread",
                 "order": 50,
                 "icon": "food",
                 "type": "file",
@@ -257,7 +271,8 @@
           },
           {
             "title": "Diving",
-            "slug": "life/diving",
+            "description": "Fish are friends. Not food.",
+            "slug": "/diving",
             "order": 100,
             "icon": "diving",
             "type": "folder",
@@ -265,7 +280,7 @@
             "children": [
               {
                 "title": "Why dive?",
-                "slug": "life/diving/why-dive",
+                "slug": "/why-dive",
                 "order": 50,
                 "icon": "diving",
                 "type": "file",
@@ -275,7 +290,8 @@
           },
           {
             "title": "Generation X",
-            "slug": "life/generation-x",
+            "description": "by Douglas Coupland",
+            "slug": "/generation-x",
             "order": 100,
             "icon": "life",
             "type": "folder",
@@ -284,7 +300,8 @@
           },
           {
             "title": "Aquaponics",
-            "slug": "life/aquaponics",
+            "description": "Fish are food. Not friends.",
+            "slug": "/aquaponics",
             "order": 200,
             "icon": "fish",
             "type": "folder",
@@ -292,7 +309,7 @@
             "children": [
               {
                 "title": "Aquaponics 5 Ws",
-                "slug": "life/aquaponics/overview",
+                "slug": "/overview",
                 "order": 50,
                 "icon": "fish",
                 "type": "file",
@@ -304,7 +321,8 @@
       },
       {
         "title": "Balance",
-        "slug": "balance",
+        "description": "A collection of Writing",
+        "slug": "/balance",
         "order": 100,
         "icon": "balance",
         "type": "folder",
@@ -312,7 +330,8 @@
         "children": [
           {
             "title": "Books",
-            "slug": "balance/books",
+            "description": "It's hard to collate stuff into meaningful e-books, but we've done our best",
+            "slug": "/books",
             "order": 100,
             "icon": "balance",
             "type": "folder",
@@ -320,7 +339,7 @@
             "children": [
               {
                 "title": "Wei Zang’s Food",
-                "slug": "balance/books/wei-zangs-food",
+                "slug": "/wei-zangs-food",
                 "order": 11,
                 "icon": "food",
                 "type": "file",
@@ -328,7 +347,7 @@
               },
               {
                 "title": "Weekend Portfolio",
-                "slug": "balance/books/weekend-portfolio",
+                "slug": "/weekend-portfolio",
                 "order": 160,
                 "icon": "speak-write",
                 "type": "file",
@@ -338,7 +357,8 @@
           },
           {
             "title": "Science Fiction",
-            "slug": "balance/sci-fi",
+            "description": "and Speculative Fiction",
+            "slug": "/sci-fi",
             "order": 120,
             "icon": "folder",
             "type": "folder",
@@ -346,7 +366,7 @@
             "children": [
               {
                 "title": "Einstein",
-                "slug": "balance/sci-fi/einstein",
+                "slug": "/einstein",
                 "order": 30,
                 "icon": "doc",
                 "type": "file",
@@ -354,7 +374,7 @@
               },
               {
                 "title": "General Relativity",
-                "slug": "balance/sci-fi/relativity",
+                "slug": "/relativity",
                 "order": 30,
                 "icon": "doc",
                 "type": "file",
@@ -362,7 +382,7 @@
               },
               {
                 "title": "Charles Darwin",
-                "slug": "balance/sci-fi/charles-darwin",
+                "slug": "/charles-darwin",
                 "order": 2000,
                 "icon": "doc",
                 "type": "file",

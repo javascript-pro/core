@@ -7,7 +7,7 @@ export const init = () => {
 };
 
 const playNextPrevious = () => {
-  console.log('playNextPrevious');
+  // console.log('playNextPrevious');
   setPosition('nextprev', {
     screenPosition: 'bottom-left',
   });

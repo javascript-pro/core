@@ -4,7 +4,7 @@ import { styled, alpha, InputBase } from '@mui/material';
 import { Icon } from '../../../gl-core';
 
 export type TSearch = {
-  onSearch?: () => void;
+  onTrigger?: (value: any) => void;
 };
 
 const SearchField = styled('div')(({ theme }) => ({
@@ -49,8 +49,8 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function Search({
-  onSearch = () => {
-    console.log('no onSearch');
+  onTrigger = () => {
+    console.log('No onTrigger set');
   },
 }: TSearch) {
   return (
@@ -59,6 +59,8 @@ export default function Search({
         <Icon icon="search" />
       </SearchIconWrapper>
       <StyledInputBase
+        autoFocus
+        onChange={onTrigger}
         placeholder="Search…"
         inputProps={{ 'aria-label': 'search' }}
       />
