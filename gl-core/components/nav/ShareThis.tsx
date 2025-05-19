@@ -6,7 +6,15 @@ import {
   LinkedinShareButton,
   WhatsappShareButton,
 } from 'react-share';
-import { Box, Typography, CardHeader, Menu, MenuItem, ListItemIcon, ListItemText } from '@mui/material';
+import {
+  Box,
+  Typography,
+  CardHeader,
+  Menu,
+  MenuItem,
+  ListItemIcon,
+  ListItemText,
+} from '@mui/material';
 import { MightyButton, Icon } from '../../../gl-core';
 
 export type TShareThis = {
@@ -58,10 +66,9 @@ export default function ShareThis({
         onClose={handleClose}
         anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
       >
-        
-        <CardHeader 
+        <CardHeader
           // avatar={<Icon icon={icon as any} />}
-          title={<Typography variant='h6'>{title}</Typography>}
+          title={<Typography variant="h6">{title}</Typography>}
           subheader={<Typography>{description}</Typography>}
         />
 
