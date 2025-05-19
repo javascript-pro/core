@@ -10,14 +10,13 @@
   "images": ["/png/test.png", "/png/system/tick.png"],
   "brandColor": "#C09F52",
   "themes": {
-
     "light": {
       "primary": "#A6D4D1",
       "secondary": "#303030",
       "background": "#FFF",
       "paper": "#FFF",
       "text": "#303030",
-      "border": "#C9B37E"
+      "border": "#A6D4D1"
     },
     "dark": {
       "primary": "#A6D4D1",

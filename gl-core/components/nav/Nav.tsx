@@ -53,7 +53,6 @@ export default function Nav({}: TNav) {
         <DialogTitle></DialogTitle>
 
         <DialogContent>
-          
           {/* <MightyButton
             sx={{ m: 1, mt: 2 }}
             label="Home"
@@ -66,9 +65,11 @@ export default function Nav({}: TNav) {
             }}
           /> */}
 
-          <Search onTrigger={(e: any) => {
-            console.log("onSearchTrigger", e)
-          }} />
+          <Search
+            onTrigger={(e: any) => {
+              console.log('onSearchTrigger', e);
+            }}
+          />
 
           <MainMenu onSelect={closeModalNav} />
 

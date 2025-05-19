@@ -4,7 +4,7 @@ import { styled, alpha, InputBase } from '@mui/material';
 import { Icon } from '../../../gl-core';
 
 export type TSearch = {
-  onTrigger?: () => void;
+  onTrigger?: (value: any) => void;
 };
 
 const SearchField = styled('div')(({ theme }) => ({

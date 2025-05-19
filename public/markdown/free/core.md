@@ -3,7 +3,7 @@ order: 10
 title: Core
 slug: /free/core
 description: Open Source and Free Forever
-icon: core
+icon: github
 image: /png/defaultFeatured.png
 tags: free, core
 ---

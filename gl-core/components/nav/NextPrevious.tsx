@@ -170,8 +170,6 @@ export default function NextPrevious() {
         />
       )}
 
-
-
       {obj.up.visible && (
         <MightyButton
           mode="icon"
@@ -208,7 +206,7 @@ export default function NextPrevious() {
         />
       )}
 
-            {obj.this.visible && (
+      {obj.this.visible && (
         <>
           <ShareThis />
           <Typography
