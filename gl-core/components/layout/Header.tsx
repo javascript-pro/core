@@ -2,33 +2,25 @@
 
 import * as React from 'react';
 import { CardHeader, Typography } from '@mui/material';
-// import { useRouter } from 'next/navigation';
+import {Icon} from '../../../gl-core';
 
 export type THeader = {
   frontmatter?: any;
 };
 
 export default function Header({ frontmatter = null }: THeader) {
-  // const router = useRouter();
-  const { title, description } = frontmatter;
-
-  // const onAvatarClick = () => {
-  //   router.push('/');
-  // };
-
+  const { title,icon, description } = frontmatter;
   return (
     <>
       <CardHeader
+        avatar={<Icon icon={icon as any} />
+      }
         title={
           <Typography variant={'h4'} component={'h1'}>
             {title}
           </Typography>
         }
-        subheader={
-          <Typography variant={'body1'} component={'h2'}>
-            {description}
-          </Typography>
-        }
+        
       />
     </>
   );
@@ -45,5 +37,13 @@ export default function Header({ frontmatter = null }: THeader) {
 // </IconButton>}
 
 <pre>frontmatter: {JSON.stringify(frontmatter, null, 2)}</pre>
+
+
+subheader={
+  <Typography variant={'body1'} component={'h2'}>
+    {description}
+  </Typography>
+}
+
 
 */

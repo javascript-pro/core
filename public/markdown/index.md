@@ -8,19 +8,17 @@ image: '/png/defaultFeatured.png'
 tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 ---
 
-## Free
-
-- [Uberedux](/free/uberedux)
-- [Flash](/free/flash)
-
 We build and ship modern web apps for clients who need real results — fast. Custom software that works
 
 - _Small_ team. **Big** output
 - Real deployments from Day One
 - Readable, extensible, Open Source codebases
 
-**Work With Us**
+#### Free
 
-We take on a limited number of new projects each month. If you need something done we’d love to hear about it.
+- [Uberedux](/free/uberedux)
+- [Flash](/free/flash)
 
-Find out if we're a [good fit](/cv)
+#### Work With Us
+
+We take on a limited number of new projects each month. If you need something done we’d love to hear about it. Find out if we're a [good fit](/cv)
