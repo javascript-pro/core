@@ -76,7 +76,7 @@ export default function MightyButton({
   return (
     <Button
       disabled={disabled}
-      sx={sx}
+      sx={{...sx, boxShadow: 0}}
       fullWidth={fullWidth}
       size="small"
       variant={variant}

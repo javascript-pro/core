@@ -172,9 +172,9 @@ export default function NextPrevious() {
 
       {obj.up.visible && (
         <MightyButton
-          mode="icon"
+          mode="button"
           sx={{ mr: 1 }}
-          color="secondary"
+          color="inherit"
           disabled={obj.up.disabled}
           onClick={() => navigateTo(obj.up.slug)}
           label="Up"
@@ -184,9 +184,9 @@ export default function NextPrevious() {
 
       {obj.prev.visible && (
         <MightyButton
-          mode="icon"
+          mode="button"
           sx={{ mr: 1 }}
-          color="secondary"
+          color="inherit"
           disabled={obj.prev.disabled}
           onClick={() => navigateTo(obj.prev.slug)}
           label="Previous"
@@ -196,9 +196,9 @@ export default function NextPrevious() {
 
       {obj.next.visible && (
         <MightyButton
-          mode="icon"
+          mode="button"
           sx={{ mr: 1 }}
-          color="secondary"
+          color="inherit"
           disabled={obj.next.disabled}
           onClick={() => navigateTo(obj.next.slug)}
           label="Next"
