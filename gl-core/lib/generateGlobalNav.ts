@@ -13,6 +13,7 @@ type NavNode = {
   type: 'folder' | 'file';
   tags?: string[];
   excerpt?: string;
+  description?: string;
   children?: NavNode[];
 };
 
@@ -35,6 +36,23 @@ function parseTags(rawTags?: string): string[] | undefined {
     .filter(Boolean);
 }
 
+// Ensures every slug starts with exactly one /
+function createSlug(...segments: string[]): string {
+  let slug = segments
+    .filter(Boolean)
+    .map((s) => s.replace(/^\/+|\/+$/g, '')) // trim all slashes
+    .join('/');
+
+  // Defensive fix: remove leading parts until we find a slash
+  while (slug && !slug.startsWith('/')) {
+    const index = slug.indexOf('/');
+    if (index === -1) break;
+    slug = slug.slice(index + 1);
+  }
+
+  return '/' + slug.replace(/^\/+/, '');
+}
+
 export async function getMarkdownPagesRecursively(
   dir: string,
   baseSlug = '',
@@ -50,7 +68,8 @@ export async function getMarkdownPagesRecursively(
 
     folderNode = {
       title: indexData.title || path.basename(dir),
-      slug: baseSlug || '/',
+      description: indexData.description || 'description',
+      slug: createSlug(baseSlug),
       order: indexData.order ?? 0,
       icon: indexData.icon,
       type: 'folder',
@@ -67,7 +86,7 @@ export async function getMarkdownPagesRecursively(
     const fullPath = path.join(dir, entry.name);
 
     if (entry.isDirectory()) {
-      const childSlug = path.join(baseSlug, entry.name);
+      const childSlug = createSlug(baseSlug, entry.name);
       const childNodes = await getMarkdownPagesRecursively(fullPath, childSlug);
       folderNode.children!.push(...childNodes);
     }
@@ -79,10 +98,11 @@ export async function getMarkdownPagesRecursively(
     ) {
       const raw = await fs.readFile(fullPath, 'utf-8');
       const { data, content } = matter(raw);
-      const fileSlug = path.join(baseSlug, entry.name.replace(/\.md$/, ''));
+      const baseName = entry.name.replace(/\.md$/, '');
+      const fileSlug = createSlug(baseSlug, baseName);
 
       folderNode.children!.push({
-        title: data.title || fileSlug,
+        title: data.title || baseName,
         slug: fileSlug,
         order: data.order ?? 0,
         icon: data.icon,
@@ -103,5 +123,5 @@ export async function getMarkdownPagesRecursively(
 export async function generateGlobalNav() {
   const tree = await getMarkdownPagesRecursively(MARKDOWN_ROOT);
   await fs.writeFile(OUTPUT_PATH, JSON.stringify(tree, null, 2));
-  console.log(`✅ Generated Work, Life, Balance at /globalNav.json`);
+  console.log(`✅ Generated /globalNav.json`);
 }

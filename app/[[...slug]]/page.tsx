@@ -15,7 +15,8 @@ export type TPage = {
 
 function flattenNav(node: any, allSlugs: string[] = []): string[] {
   if (node.slug) {
-    allSlugs.push(node.slug);
+    const cleaned = node.slug.replace(/^\/+/, '').replace(/\/+$/, '');
+    allSlugs.push(cleaned);
   }
   if (node.children && node.children.length > 0) {
     node.children.forEach((child: any) => flattenNav(child, allSlugs));

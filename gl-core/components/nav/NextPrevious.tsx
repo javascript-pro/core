@@ -3,11 +3,13 @@
 import * as React from 'react';
 import navJSON from '../../../public/globalNav.json';
 import { usePathname, useRouter } from 'next/navigation';
-import { Box, CardHeader, IconButton } from '@mui/material';
+import { Box, CardHeader, IconButton, Typography } from '@mui/material';
 import { MightyButton, Icon } from '../../../gl-core';
 
 type NavItem = {
   title: string;
+  description?: string;
+  icon?: string;
   slug: string;
   type: 'file' | 'folder';
   order: number;
@@ -76,9 +78,6 @@ export default function NextPrevious() {
     },
   };
 
-  // get the pathname and remove the starting slash because slugs don't have them
-  const currentSlug = pathname.replace(/^\/|\/$/g, '');
-
   // flatten the globalNav tree into a flat array of NavItem
   function flattenNav(items: any[], parentPath = ''): NavItem[] {
     let result: NavItem[] = [];
@@ -86,10 +85,11 @@ export default function NextPrevious() {
     for (const item of items) {
       const rawSlug = item.slug.replace(/^\/|\/$/g, '');
       const fullSlug = parentPath ? `${parentPath}/${rawSlug}` : rawSlug;
-      const normalizedSlug = fullSlug;
+      const normalizedSlug = `/${fullSlug}`;
 
       result.push({
         title: item.title,
+        description: item.description,
         slug: normalizedSlug,
         type: item.type,
         order: item.order ?? 999,
@@ -106,7 +106,45 @@ export default function NextPrevious() {
 
   const flatNav = flattenNav(navJSON as any[]);
 
-  console.log('flatNav', flatNav);
+  // find the object in the globalNav tree which matches the pathname
+  const thisObj = flatNav.find((item) => item.slug === pathname);
+
+  if (thisObj) {
+    obj.this.title = thisObj.title;
+
+    // UP
+    if (thisObj.parent) {
+      obj.up.visible = true;
+      obj.up.disabled = false;
+      obj.up.slug = thisObj.parent;
+    }
+
+    // SIBLINGS
+    const siblings = flatNav
+      .filter((item) => item.parent === thisObj.parent)
+      .sort((a, b) => a.order - b.order);
+
+    const index = siblings.findIndex((item) => item.slug === thisObj.slug);
+    const prev = siblings[index - 1];
+    const next = siblings[index + 1];
+
+    if (prev) {
+      obj.prev.visible = true;
+      obj.prev.disabled = false;
+      obj.prev.slug = prev.slug;
+    }
+
+    if (next) {
+      obj.next.visible = true;
+      obj.next.disabled = false;
+      obj.next.slug = next.slug;
+    }
+  }
+
+  // console.log('thisObj', thisObj);
+
+  obj.this.title = thisObj?.title as string;
+  obj.this.description = thisObj?.description as string;
 
   const navigateTo = (slug: string | undefined) => {
     if (slug) router.push(slug);
@@ -132,25 +170,9 @@ export default function NextPrevious() {
         />
       )}
 
-      {obj.this.visible && (
-        <CardHeader
-          avatar={
-            <IconButton
-              color="inherit"
-              onClick={() => {
-                console.log('this');
-              }}
-            >
-              <Icon icon="categories" />
-            </IconButton>
-          }
-          title={`pathname: ${pathname}`}
-          subheader={obj.this.description}
-        />
-      )}
-
       {obj.prev.visible && (
         <MightyButton
+          mode="icon"
           sx={{ mr: 1 }}
           color="secondary"
           disabled={obj.prev.disabled}
@@ -162,6 +184,7 @@ export default function NextPrevious() {
 
       {obj.up.visible && (
         <MightyButton
+          mode="icon"
           sx={{ mr: 1 }}
           color="secondary"
           disabled={obj.up.disabled}
@@ -171,8 +194,21 @@ export default function NextPrevious() {
         />
       )}
 
+      {obj.this.visible && (
+        <Typography
+          sx={{
+            my: 0.75,
+          }}
+          variant="h6"
+          component={'h2'}
+        >
+          {obj.this.description}
+        </Typography>
+      )}
+
       {obj.next.visible && (
         <MightyButton
+          mode="icon"
           sx={{ mr: 1 }}
           color="secondary"
           disabled={obj.next.disabled}
