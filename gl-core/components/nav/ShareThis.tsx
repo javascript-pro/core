@@ -6,13 +6,7 @@ import {
   LinkedinShareButton,
   WhatsappShareButton,
 } from 'react-share';
-import {
-  Box,
-  Menu,
-  MenuItem,
-  ListItemIcon,
-  ListItemText,
-} from '@mui/material';
+import { Box, Menu, MenuItem, ListItemIcon, ListItemText } from '@mui/material';
 import { MightyButton, Icon } from '../../../gl-core';
 
 export type TShareThis = {
@@ -25,12 +19,10 @@ export type TShareThis = {
 };
 
 export default function ShareThis({
-
   title = 'Check this out',
   description = '',
   excerpt = '',
   url = typeof window !== 'undefined' ? window.location.href : '',
-
 }: TShareThis) {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [copied, setCopied] = React.useState(false);

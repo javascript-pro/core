@@ -37,6 +37,7 @@
     "date-fns": "3.6.0",
     "dinero.js": "2.0.0-alpha.10",
     "firebase": "^11.5.0",
+    "firebase-admin": "^13.4.0",
     "gray-matter": "^4.0.3",
     "gsap": "^3.13.0",
     "hastscript": "^9.0.1",

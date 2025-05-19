@@ -14,6 +14,7 @@ It runs entirely in the browser, requires no login, and doesn't rely on cookies 
   - An `events` array: visit, click, scroll, etc.
 
 This lets us determine:
+
 - If a user has been here before
 - What routes they visited and when
 - Whether they’re **currently active** (based on recent interaction)
