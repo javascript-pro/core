@@ -1,11 +1,11 @@
 ---
 order: 10
 title: Core
-slug: /work/free/core
-description: Open Source and Free forever
+slug: /free/core
+description: Open Source and Free Forever
 icon: core
-image: /png/bouncer/bouncer.png
-featured: false
+image: /png/defaultFeatured.png
+tags: free, core
 ---
 
 > Goldlabel Core is a project designed to deliver **powerful, user-friendly web applications** that enhance productivity and streamline tasks. The project uses a **monorepo** architecture with multiple Next.js applications deployed to **Vercel**.

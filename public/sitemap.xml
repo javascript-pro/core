@@ -29,6 +29,9 @@
     <loc>https://goldlabel.pro/cv</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/free/core</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/free/flash</loc>
   </url>
   <url>
@@ -81,9 +84,6 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work/free/cartridges</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/free/core</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/free</loc>

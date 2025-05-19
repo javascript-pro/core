@@ -33,7 +33,7 @@
       "NextJS",
       "Headless CMS"
     ],
-    "excerpt": "We build and ship modern web apps for clients who need real results — fast. Custom software that works\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codeba",
+    "excerpt": "Hello\n\nWe build and ship modern web apps for clients who need real results — fast. Custom software that works\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source",
     "children": [
       {
         "title": "Free",
@@ -41,8 +41,20 @@
         "order": 1,
         "icon": "how",
         "type": "folder",
-        "excerpt": "Free\n\n \n \n\n Some things in life are free — and Core is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, b",
+        "excerpt": "Some things in life are free — and Core is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or bui",
         "children": [
+          {
+            "title": "Core",
+            "slug": "free/core",
+            "order": 10,
+            "icon": "core",
+            "type": "file",
+            "tags": [
+              "free",
+              "core"
+            ],
+            "excerpt": "Goldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo architecture with multiple Next.js a"
+          },
           {
             "title": "Flash",
             "slug": "free/flash",
@@ -111,14 +123,6 @@
             ],
             "excerpt": "Free, Open Source cartridges\n\n Flash\n Lingua\n Uberedux",
             "children": [
-              {
-                "title": "Core",
-                "slug": "work/free/core",
-                "order": 10,
-                "icon": "core",
-                "type": "file",
-                "excerpt": "Goldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo architecture with multiple Next.js a"
-              },
               {
                 "title": "Cartridges",
                 "slug": "work/free/cartridges",

@@ -1,6 +1,6 @@
 ---
 order: 20
-slug: '/free/uberedux'
+slug: /free/uberedux
 title: 'Uberedux'
 description: 'All Apps need State Management'
 icon: 'uberedux'

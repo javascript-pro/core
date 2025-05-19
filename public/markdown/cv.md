@@ -2,7 +2,7 @@
 order: 2
 title: C.V.
 description: Is Goldlabel a good fit for you?
-slug: /
+slug: /cv
 icon: goldlabel
 image: /png/bouncer/bouncer.png
 tags: CV, jobs, work

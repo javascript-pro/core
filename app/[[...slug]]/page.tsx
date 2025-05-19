@@ -97,7 +97,7 @@ export async function generateMetadata({ params }: { params: any }) {
   const img = frontmatter.image || '/png/test.png';
   const url = `https://goldlabel.pro/${slugPath}`;
 
-  if (title === undefined) title = "404, bro"
+  if (title === undefined) title = '404, bro';
 
   return {
     title,
