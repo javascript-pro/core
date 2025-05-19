@@ -40,12 +40,13 @@ export default function Nav({}: TNav) {
 
   return (
     <>
-      <Fab 
+      <Fab
         sx={{
           boxShadow: 0,
         }}
-        color="primary" 
-        onClick={openModalNav}>
+        color="primary"
+        onClick={openModalNav}
+      >
         <Icon icon="blokey" />
       </Fab>
 
@@ -76,10 +77,9 @@ export default function Nav({}: TNav) {
               console.log('onSearchTrigger', e);
             }}
           />
-          <Box sx={{m:2}}>
+          <Box sx={{ m: 2 }}>
             <MainMenu onSelect={closeModalNav} />
           </Box>
-          
 
           {/* <pre style={{fontSize: 10}}>slice: {JSON.stringify(slice, null, 2)}</pre> */}
         </DialogContent>

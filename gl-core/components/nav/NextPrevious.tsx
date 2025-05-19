@@ -172,7 +172,7 @@ export default function NextPrevious() {
 
       {obj.up.visible && (
         <MightyButton
-          mode="button"
+          mode="icon"
           sx={{ mr: 1 }}
           color="inherit"
           disabled={obj.up.disabled}
@@ -184,7 +184,7 @@ export default function NextPrevious() {
 
       {obj.prev.visible && (
         <MightyButton
-          mode="button"
+          mode="icon"
           sx={{ mr: 1 }}
           color="inherit"
           disabled={obj.prev.disabled}
@@ -196,7 +196,7 @@ export default function NextPrevious() {
 
       {obj.next.visible && (
         <MightyButton
-          mode="button"
+          mode="icon"
           sx={{ mr: 1 }}
           color="inherit"
           disabled={obj.next.disabled}

@@ -34,7 +34,7 @@
       "NextJS",
       "Headless CMS"
     ],
-    "excerpt": "Building and shipping modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codebases\n\n Free\n\n   \n  Always",
+    "excerpt": "Building and shipping modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codebases\n  Always Free & Open",
     "children": [
       {
         "title": "Free",
@@ -225,6 +225,14 @@
             "children": []
           }
         ]
+      },
+      {
+        "title": "Flash?",
+        "slug": "/flash",
+        "order": 15,
+        "icon": "flash",
+        "type": "file",
+        "excerpt": "Flash Plugin\n\nWe have ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You're welcome\n\n Features\n\n SVG Graphics\n Animation using Greensock\n State managem"
       },
       {
         "title": "Life",

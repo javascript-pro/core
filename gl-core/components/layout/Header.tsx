@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { CardHeader, Typography } from '@mui/material';
+import { CardHeader, Typography, useTheme } from '@mui/material';
 import { Icon } from '../../../gl-core';
 
 export type THeader = {
@@ -9,10 +9,14 @@ export type THeader = {
 };
 
 export default function Header({ frontmatter = null }: THeader) {
-  const { title, icon, description } = frontmatter;
+  const { title, icon } = frontmatter;
+  const theme = useTheme();
   return (
     <>
       <CardHeader
+        sx={{
+          // background: theme.palette.primary.main,
+        }}
         avatar={<Icon icon={icon as any} />}
         title={
           <Typography sx={{ mt: 0.5 }} variant={'h5'} component={'h1'}>
