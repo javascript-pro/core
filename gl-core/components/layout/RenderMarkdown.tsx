@@ -2,12 +2,7 @@
 
 import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
-import {
-  Box,
-  Link as MuiLink,
-  Typography,
-  useTheme,
-} from '@mui/material';
+import { Box, Link as MuiLink, Typography, useTheme } from '@mui/material';
 import { MightyButton } from '../../../gl-core';
 
 export type TRenderMarkdown = {
@@ -95,19 +90,29 @@ export default function RenderMarkdown({
         <ReactMarkdown
           components={{
             h1: ({ children }) => (
-              <Typography variant="h4" gutterBottom>{children}</Typography>
+              <Typography variant="h4" gutterBottom>
+                {children}
+              </Typography>
             ),
             h2: ({ children }) => (
-              <Typography variant="h5" gutterBottom>{children}</Typography>
+              <Typography variant="h5" gutterBottom>
+                {children}
+              </Typography>
             ),
             h3: ({ children }) => (
-              <Typography variant="h6" gutterBottom>{children}</Typography>
+              <Typography variant="h6" gutterBottom>
+                {children}
+              </Typography>
             ),
             p: ({ children }) => (
-              <Typography variant="body1" paragraph>{children}</Typography>
+              <Typography variant="body1" paragraph>
+                {children}
+              </Typography>
             ),
             li: ({ children }) => (
-              <li><Typography variant="body1">{children}</Typography></li>
+              <li>
+                <Typography variant="body1">{children}</Typography>
+              </li>
             ),
             strong: ({ children }) => <strong>{children}</strong>,
             em: ({ children }) => <em>{children}</em>,
@@ -152,7 +157,6 @@ export default function RenderMarkdown({
             onClick={handleScrollUp}
           />
         )}
-        
       </Box>
     </Box>
   );

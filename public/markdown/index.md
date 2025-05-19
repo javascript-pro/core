@@ -17,9 +17,4 @@ tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Pr
 - [Core](/free/core) Always Free & Open Source as a public repo on [GitHub](https://github.com/javascript-pro/core)
 - [Uberedux](/free/uberedux)
 - [Flash](/free/flash)
-
-#### Work With Us
-
-We take on a limited number of new projects each month. If you need something done we’d love to hear about it. Find out if we're a [good fit](/work/cv)
-
-## Where Next? Next Gen. [Gen X](/life/generation-x)?
+- Where Next? Next Gen. [Gen X](/life/generation-x)?

@@ -80,7 +80,11 @@ async function loadFrontmatter(slugPath: string) {
         return parsed.data;
       }
     } catch (error) {
-      console.error('Something went badly wrong [restart?](/)  ', slugPath, error);
+      console.error(
+        'Something went badly wrong [restart?](/)  ',
+        slugPath,
+        error,
+      );
     }
   }
   return {};
@@ -136,7 +140,8 @@ export default async function Page({ params }: { params: any }) {
     path.join(process.cwd(), 'public', 'markdown', slugPath, 'index.md'),
   ];
 
-  let content = 'Something went a bit wrong [Turn it off & off again?](/?reboot) ';
+  let content =
+    'Something went a bit wrong [Turn it off & off again?](/?reboot) ';
   let frontmatter: any = {
     icon: 'blokey',
     title: '404, bro',
