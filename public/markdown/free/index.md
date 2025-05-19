@@ -3,9 +3,14 @@ order: 1
 title: Free
 description: Some things in life ARE free
 slug: /free
-icon: free
-image: /png/characters/punk.png
+icon: how
+image: /png/defaultFeatured.png
 ---
+
+## Free
+
+- [Uberedux](/free/uberedux)
+- [Flash](/free/flash)
 
 > Some things in life **are** free — and Core is one of them.
 

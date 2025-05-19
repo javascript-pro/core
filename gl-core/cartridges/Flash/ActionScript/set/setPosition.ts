@@ -28,7 +28,7 @@ export const setPosition = (divId: string, options: TSetPosition = {}) => {
 
     el.style.position = 'absolute';
     el.style.top = `${coords.top}px`;
-    el.style.left = `${coords.left - window.innerWidth / 2}px`;
+    el.style.left = `${coords.left}px`;
   });
 };
 

@@ -24,8 +24,9 @@ export default function RenderMarkdown({
     <Box
       sx={{
         width: width ?? '100%',
-        height: height ?? '100%',
+        height: height ?? 'calc(100vh - 200px)',
         maxWidth: maxWidth ?? '100%',
+        minHeight: 0, // Critical for scroll inside flex container
         display: 'flex',
         flexDirection: 'row',
         gap: 1,
@@ -35,9 +36,10 @@ export default function RenderMarkdown({
         ref={scrollRef}
         sx={{
           flexGrow: 1,
-          overflowY: 'scroll',
+          overflowY: 'auto',
           padding: 2,
           borderRadius: 1,
+          minHeight: 0, // Ensure scroll area can shrink properly
           scrollbarWidth: 'auto',
           scrollbarColor: `${theme.palette.primary.main} ${theme.palette.background.paper}`,
           '&::-webkit-scrollbar': {
@@ -56,19 +58,13 @@ export default function RenderMarkdown({
         <ReactMarkdown
           components={{
             h1: ({ children }) => (
-              <Typography variant="h4" gutterBottom>
-                {children}
-              </Typography>
+              <Typography variant="h4" gutterBottom>{children}</Typography>
             ),
             h2: ({ children }) => (
-              <Typography variant="h5" gutterBottom>
-                {children}
-              </Typography>
+              <Typography variant="h5" gutterBottom>{children}</Typography>
             ),
             h3: ({ children }) => (
-              <Typography variant="h6" gutterBottom>
-                {children}
-              </Typography>
+              <Typography variant="h6" gutterBottom>{children}</Typography>
             ),
             p: ({ children }) => (
               <Typography variant="body1" paragraph>
