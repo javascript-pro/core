@@ -1,4 +1,4 @@
-import config from '../response.json';
+import config from '../config.json';
 import { NextRequest, NextResponse } from 'next/server';
 import { db } from '../../../../gl-core/lib/firebase-admin'; // adjust if no alias
 

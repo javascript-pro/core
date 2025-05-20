@@ -1,10 +1,12 @@
-import config from '../config.json';
+// core/app/api/route.ts
+import config from './gl-api/config.json';
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(request: NextRequest) {
-  const { app, baseurl, frontend } = config;
+  const { app = '' } = config;
 
   return NextResponse.json({
     time: Date.now(),
+    app: `${app} API`,
   });
 }

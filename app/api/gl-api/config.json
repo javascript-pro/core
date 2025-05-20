@@ -1,5 +1,5 @@
 {
-  "app": "Goldlabel API",
+  "app": "Goldlabel",
   "baseurl": "http://localhost:3000/api/gl-api/",
   "frontend": "http://localhost:3000/",
   "description": "Next.js",

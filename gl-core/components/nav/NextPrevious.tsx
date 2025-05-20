@@ -227,12 +227,8 @@ export default function NextPrevious() {
               {obj.this.description}
             </Typography>
           ) : null}
-
-          
         </>
       )}
-
-
     </Box>
   );
 }
