@@ -1,7 +1,21 @@
-// app/api/gl-api/cv/analyse/route.ts
-import { NextRequest } from 'next/server';
+// app/api/gl-api/openai/cv/route.ts
+import config from '../../config.json';
+import { NextRequest, NextResponse } from 'next/server';
 
 export const runtime = 'edge';
+
+export async function GET(request: NextRequest) {
+  const { app } = config;
+
+  return NextResponse.json({
+    time: Date.now(),
+    app,
+    endpoint: 'gl-api/openai/cv',
+    description: 'Interacts with OpenAI API',
+    verbs: ['GET', 'POST'],
+  });
+}
+
 
 export async function POST(req: NextRequest) {
   const { resume, jd } = await req.json();

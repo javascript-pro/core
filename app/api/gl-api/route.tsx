@@ -8,9 +8,9 @@ export async function GET(request: NextRequest) {
   return NextResponse.json({
     time: Date.now(),
     app,
-    endpoint: "gl-api",
+    endpoint: 'gl-api',
     title: `${app} API`,
-    flickr: "http://localhost:3000/api/gl-api/flickr"
+    flickr: 'http://localhost:3000/api/gl-api/flickr',
+    openai: 'http://localhost:3000/api/gl-api/openai',
   });
 }
-

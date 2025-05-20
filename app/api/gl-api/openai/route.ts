@@ -8,8 +8,9 @@ export async function GET(request: NextRequest) {
   return NextResponse.json({
     time: Date.now(),
     app,
-    endpoint: 'gl-api/flickr',
-    description: 'Interacts with Flickr API',
-    verbs: ['GET'],
+    endpoint: 'gl-api/openai',
+    description: 'Interacts with OpenAI API',
+    verbs: ['GET', 'POST'],
+    cv: 'http://localhost:3000/api/gl-api/openai/cv',
   });
 }
