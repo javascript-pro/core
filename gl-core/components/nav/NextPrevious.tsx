@@ -4,7 +4,7 @@ import * as React from 'react';
 import navJSON from '../../../public/globalNav.json';
 import { usePathname, useRouter } from 'next/navigation';
 import { Box, useTheme, Typography } from '@mui/material';
-import { MightyButton, ShareThis } from '../../../gl-core';
+import { MightyButton, ShareThis, Icon, useIsMobile } from '../../../gl-core';
 
 type NavItem = {
   title: string;
@@ -29,6 +29,7 @@ export default function NextPrevious() {
   const router = useRouter();
   const pathname = usePathname();
   const theme = useTheme();
+  const isMobile = useIsMobile();
 
   const isHome = pathname === '/';
 
@@ -133,12 +134,14 @@ export default function NextPrevious() {
       obj.prev.visible = true;
       obj.prev.disabled = false;
       obj.prev.slug = prev.slug;
+      obj.prev.title = prev.title;
     }
 
     if (next) {
       obj.next.visible = true;
       obj.next.disabled = false;
       obj.next.slug = next.slug;
+      obj.next.title = next.title;
     }
   }
 
@@ -152,7 +155,7 @@ export default function NextPrevious() {
   return (
     <Box
       sx={{
-        background: 'rgba(255,255,255, 0.2)',
+        // background: 'rgba(255,255,255, 0.2)',
         display: 'flex',
         flexWrap: 'wrap',
         gap: 1,
@@ -189,7 +192,7 @@ export default function NextPrevious() {
           color="inherit"
           disabled={obj.prev.disabled}
           onClick={() => navigateTo(obj.prev.slug)}
-          label="Previous"
+          label={obj.prev.title}
           icon="left"
         />
       )}
@@ -201,23 +204,29 @@ export default function NextPrevious() {
           color="inherit"
           disabled={obj.next.disabled}
           onClick={() => navigateTo(obj.next.slug)}
-          label="Next"
+          label={obj.next.title}
           icon="right"
         />
       )}
 
       {obj.this.visible && (
         <>
-          <ShareThis />
-          <Typography
-            sx={{
-              my: 1,
-            }}
-            variant="body1"
-            component={'h2'}
-          >
-            {obj.this.description}
-          </Typography>
+          <ShareThis
+            // icon={obj.this.icon}
+            title={obj.this.title}
+            description={obj.this.description}
+          />
+          {!isMobile ? (
+            <Typography
+              sx={{
+                my: 1,
+              }}
+              variant="body1"
+              component={'h2'}
+            >
+              {obj.this.description}
+            </Typography>
+          ) : null}
         </>
       )}
     </Box>

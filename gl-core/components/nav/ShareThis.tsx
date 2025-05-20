@@ -8,7 +8,8 @@ import {
 } from 'react-share';
 import {
   Box,
-  IconButton,
+  Typography,
+  CardHeader,
   Menu,
   MenuItem,
   ListItemIcon,
@@ -19,18 +20,14 @@ import { MightyButton, Icon } from '../../../gl-core';
 export type TShareThis = {
   title?: string;
   description?: string;
-  excerpt?: string;
-  body?: string;
+  icon?: string;
   image?: string;
   url?: string;
 };
 
 export default function ShareThis({
-  title = 'Check this out',
+  title = '',
   description = '',
-  excerpt = '',
-  body = '',
-  image = '',
   url = typeof window !== 'undefined' ? window.location.href : '',
 }: TShareThis) {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -49,7 +46,7 @@ export default function ShareThis({
     setAnchorEl(null);
   };
 
-  const fullWidth = { display: 'block', width: '100%' };
+  const fullWidth = { display: 'block' };
 
   return (
     <>
@@ -69,12 +66,20 @@ export default function ShareThis({
         onClose={handleClose}
         anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
       >
+        <CardHeader
+          // avatar={<Icon icon={icon as any} />}
+          title={<Typography variant="h6">{title}</Typography>}
+          subheader={<Typography>{description}</Typography>}
+        />
+
         <MenuItem
           onClick={() => {
             navigator.clipboard.writeText(url);
             setCopied(true);
-            setTimeout(() => setCopied(false), 2000);
-            handleClose();
+            setTimeout(() => {
+              setCopied(false);
+              handleClose();
+            }, 1500);
           }}
         >
           <ListItemIcon>
@@ -98,7 +103,7 @@ export default function ShareThis({
           <LinkedinShareButton
             url={url}
             title={title}
-            summary={description || excerpt}
+            summary={description}
             source="Goldlabel"
             style={fullWidth}
           >
