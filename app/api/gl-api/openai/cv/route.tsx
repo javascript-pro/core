@@ -16,7 +16,6 @@ export async function GET(request: NextRequest) {
   });
 }
 
-
 export async function POST(req: NextRequest) {
   const { resume, jd } = await req.json();
 
