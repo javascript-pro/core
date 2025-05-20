@@ -3,8 +3,7 @@ import config from '../config.json';
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(request: NextRequest) {
-  const { apibase, /* app */ } = config;
-
+  const { apibase /* app */ } = config;
 
   return NextResponse.json({
     time: Date.now(),

@@ -3,10 +3,14 @@
 import * as React from 'react';
 import navJSON from '../../../public/globalNav.json';
 import { usePathname, useRouter } from 'next/navigation';
-import { Box, useTheme, Typography } from '@mui/material';
-import { MightyButton, ShareThis, Icon, useIsMobile } from '../../../gl-core';
+import { Box, /* useTheme, */ Typography } from '@mui/material';
+import {
+  MightyButton,
+  ShareThis,
+  /* Icon, */ useIsMobile,
+} from '../../../gl-core';
 
-type NavItem = {
+export type TDoc = {
   title: string;
   description?: string;
   icon?: string;
@@ -16,9 +20,11 @@ type NavItem = {
   parent?: string | null;
 };
 
-type NavButton = {
+export type TNextPrev = {
   label: string;
+  url?: string;
   title: string;
+  github?: string;
   description: string;
   disabled: boolean;
   visible: boolean;
@@ -28,18 +34,35 @@ type NavButton = {
 export default function NextPrevious() {
   const router = useRouter();
   const pathname = usePathname();
-  const theme = useTheme();
+  // const theme = useTheme();
   const isMobile = useIsMobile();
 
   const isHome = pathname === '/';
 
   const obj: {
-    home: NavButton;
-    this: NavButton;
-    up: NavButton;
-    prev: NavButton;
-    next: NavButton;
+    home: TNextPrev;
+    api: TNextPrev;
+    github: TNextPrev;
+    this: TNextPrev;
+    up: TNextPrev;
+    prev: TNextPrev;
+    next: TNextPrev;
   } = {
+    api: {
+      label: 'API',
+      title: 'API',
+      description: 'Base url /api/gl-api',
+      disabled: false,
+      visible: true,
+    },
+    github: {
+      // url,
+      label: 'GitHub',
+      title: 'GitHub',
+      description: 'View code',
+      disabled: false,
+      visible: true,
+    },
     home: {
       label: 'Home',
       title: 'Reset',
@@ -80,9 +103,9 @@ export default function NextPrevious() {
     },
   };
 
-  // flatten the globalNav tree into a flat array of NavItem
-  function flattenNav(items: any[], parentPath = ''): NavItem[] {
-    let result: NavItem[] = [];
+  // flatten the globalNav tree into a flat array of TDoc
+  function flattenNav(items: any[], parentPath = ''): TDoc[] {
+    let result: TDoc[] = [];
 
     for (const item of items) {
       const rawSlug = item.slug.replace(/^\/|\/$/g, '');
@@ -173,6 +196,28 @@ export default function NextPrevious() {
         />
       )}
 
+      {obj.this.visible && (
+        <>
+          <ShareThis
+            // icon={obj.this.icon}
+            title={obj.this.title}
+            description={obj.this.description}
+          />
+
+        </>
+      )}
+
+      {obj.github.visible && (
+        <MightyButton
+          sx={{ mr: 1 }}
+          mode="icon"
+          onClick={() => navigateTo('/work/github')}
+          label="GitHub"
+          icon="github"
+          disabled={obj.github.disabled}
+        />
+      )}
+
       {obj.up.visible && (
         <MightyButton
           mode="icon"
@@ -209,13 +254,8 @@ export default function NextPrevious() {
         />
       )}
 
-      {obj.this.visible && (
+      {/* {obj.this.visible && (
         <>
-          <ShareThis
-            // icon={obj.this.icon}
-            title={obj.this.title}
-            description={obj.this.description}
-          />
           {!isMobile ? (
             <Typography
               sx={{
@@ -228,7 +268,11 @@ export default function NextPrevious() {
             </Typography>
           ) : null}
         </>
-      )}
+      )} */}
+
+
+
+
     </Box>
   );
 }

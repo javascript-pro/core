@@ -9,7 +9,7 @@ export type THeader = {
 };
 
 export default function Header({ frontmatter = null }: THeader) {
-  const { title, icon } = frontmatter;
+  const { title, description, icon } = frontmatter;
   const theme = useTheme();
   return (
     <>
@@ -21,8 +21,13 @@ export default function Header({ frontmatter = null }: THeader) {
         }
         avatar={<Icon icon={icon as any} />}
         title={
-          <Typography sx={{ mt: 0.5 }} variant={'h5'} component={'h1'}>
+          <Typography sx={{}} variant={'body1'} component={'h1'}>
             {title}
+          </Typography>
+        }
+        subheader={
+          <Typography sx={{}} variant={'body2'} component={'h2'}>
+            {description}
           </Typography>
         }
       />

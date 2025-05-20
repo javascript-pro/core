@@ -56,6 +56,7 @@ export default function RenderMarkdown({
   return (
     <Box
       sx={{
+        // border: "1px solid red",
         width: width ?? '100%',
         height: 'calc(100vh - 370px)',
         maxWidth: maxWidth ?? '100%',
@@ -68,9 +69,10 @@ export default function RenderMarkdown({
       <Box
         ref={scrollRef}
         sx={{
+          pl: 4,
           flexGrow: 1,
           overflowY: 'auto',
-          padding: 1,
+          
           minHeight: 0,
           scrollbarWidth: 'auto',
           scrollbarColor: `${theme.palette.primary.main} ${theme.palette.background.paper}`,

@@ -6,7 +6,7 @@ import {
 } from 'next/server';
 
 export async function GET() {
-// request: NextRequest
+  // request: NextRequest
   const { apibase } = config;
 
   return NextResponse.json({

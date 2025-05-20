@@ -5,12 +5,12 @@ import { NextRequest, NextResponse } from 'next/server';
 export const runtime = 'edge';
 
 export async function GET(request: NextRequest) {
-
   const { apibase } = config;
   return NextResponse.json({
     time: Date.now(),
     endpoint: `${apibase}/openai/cv`,
-    description: 'Start by reading the job description below. Then evaluate the CV against it.',
+    description:
+      'Start by reading the job description below. Then evaluate the CV against it.',
   });
 }
 
