@@ -72,7 +72,7 @@ export default function RenderMarkdown({
           pl: 4,
           flexGrow: 1,
           overflowY: 'auto',
-          
+
           minHeight: 0,
           scrollbarWidth: 'auto',
           scrollbarColor: `${theme.palette.primary.main} ${theme.palette.background.paper}`,

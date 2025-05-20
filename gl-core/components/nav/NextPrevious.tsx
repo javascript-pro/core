@@ -203,7 +203,6 @@ export default function NextPrevious() {
             title={obj.this.title}
             description={obj.this.description}
           />
-
         </>
       )}
 
@@ -269,10 +268,6 @@ export default function NextPrevious() {
           ) : null}
         </>
       )} */}
-
-
-
-
     </Box>
   );
 }
