@@ -34,7 +34,7 @@
       "NextJS",
       "Headless CMS"
     ],
-    "excerpt": "Building and shipping modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codebases\n  Always Free & Open",
+    "excerpt": "Building and shipping modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codebases\n\n Discover Goldlabel",
     "children": [
       {
         "title": "Free & Open Source",
@@ -51,7 +51,10 @@
             "order": 10,
             "icon": "github",
             "type": "file",
-            "tags": ["free", "core"],
+            "tags": [
+              "free",
+              "core"
+            ],
             "excerpt": "Goldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo architecture with multiple Next.js a"
           },
           {
@@ -95,7 +98,7 @@
           "NextJS",
           "Headless CMS"
         ],
-        "excerpt": "The apps we ship are real, run in production and are developed in public\n\nThe Core is Open Source and Free forever — giving you statically generated sites with Firestorepowered updates and a real admi",
+        "excerpt": "Goldlabel Core is always Free & Open Source as a public repo on \n\n \n \n\n The apps we ship are real, run in production and are developed in public\n\nThe Core is Open Source and Free forever — giving you ",
         "children": [
           {
             "title": "C.V.",
@@ -103,7 +106,11 @@
             "order": 2,
             "icon": "goldlabel",
             "type": "file",
-            "tags": ["CV", "jobs", "work"],
+            "tags": [
+              "CV",
+              "jobs",
+              "work"
+            ],
             "excerpt": "Chris Dorward\n\n Fullstack JavaScript Developer\n\n +44 07745 763 122  \n |  |\n\n\n Summary\n\nOver 20 years of experience delivering scalable web applications across startups, enterprises, and remotefirst te"
           },
           {
@@ -113,7 +120,11 @@
             "order": 2,
             "icon": "star",
             "type": "folder",
-            "tags": ["cartridges", "features", "free"],
+            "tags": [
+              "cartridges",
+              "features",
+              "free"
+            ],
             "excerpt": "Free, Open Source cartridges\n\n Flash\n Lingua\n Uberedux",
             "children": [
               {
@@ -123,7 +134,11 @@
                 "order": 20,
                 "icon": "star",
                 "type": "folder",
-                "tags": ["cartridges", "free", "bouncer"],
+                "tags": [
+                  "cartridges",
+                  "free",
+                  "bouncer"
+                ],
                 "excerpt": "What actually are Cartridges?",
                 "children": [
                   {
@@ -132,7 +147,12 @@
                     "order": 130,
                     "icon": "cartridge",
                     "type": "file",
-                    "tags": ["cartridges", "cartridge", "free", "bouncer"],
+                    "tags": [
+                      "cartridges",
+                      "cartridge",
+                      "free",
+                      "bouncer"
+                    ],
                     "excerpt": "Bouncer is the name of our authentication and access control system built on Firebase Authentication and Firestore. It is included in the Core as a reusable component, available globally from any cart"
                   }
                 ]
@@ -146,7 +166,7 @@
             "order": 10,
             "icon": "work",
             "type": "folder",
-            "excerpt": "Goldlabel Apps is a UKbased software company that designs, builds, and maintains fullstack web applications. We specialize in Next.js, Firebase, and custom UI development, delivering everything from i",
+            "excerpt": "Goldlabel Apps Ltd is a UK Limited Company (5460545)\n\nGoldlabel Apps is a UKbased software company that designs, builds, and maintains fullstack web applications. We specialize in Next.js, Firebase, a",
             "children": [
               {
                 "title": "Working remotely",
@@ -154,7 +174,10 @@
                 "order": 250,
                 "icon": "work",
                 "type": "file",
-                "tags": ["remote", "hybrid"],
+                "tags": [
+                  "remote",
+                  "hybrid"
+                ],
                 "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years.\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communication, "
               },
               {
@@ -163,7 +186,13 @@
                 "order": 555,
                 "icon": "account",
                 "type": "file",
-                "tags": ["cookies", "gdpr", "privacy", "terms", "trust"],
+                "tags": [
+                  "cookies",
+                  "gdpr",
+                  "privacy",
+                  "terms",
+                  "trust"
+                ],
                 "excerpt": "We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers t"
               }
             ]
@@ -175,7 +204,10 @@
             "order": 10,
             "icon": "github",
             "type": "folder",
-            "tags": ["github", "process"],
+            "tags": [
+              "github",
+              "process"
+            ],
             "excerpt": "We use GitHub for everything. Including project management. Most of the communication done between us and our clients during development is done through GitHub in the form of comments, pull resuests, ",
             "children": []
           },
@@ -186,7 +218,9 @@
             "order": 10,
             "icon": "private",
             "type": "folder",
-            "tags": ["private"],
+            "tags": [
+              "private"
+            ],
             "excerpt": "You cannot see this.",
             "children": []
           }
@@ -255,16 +289,6 @@
             ]
           },
           {
-            "title": "Generation X",
-            "description": "by Douglas Coupland",
-            "slug": "/generation-x",
-            "order": 100,
-            "icon": "life",
-            "type": "folder",
-            "excerpt": "The term Generation X acquired a modern application after the release of Generation X: Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Glossary\n\nMcJob A lo",
-            "children": []
-          },
-          {
             "title": "Aquaponics",
             "description": "Fish are food. Not friends.",
             "slug": "/aquaponics",
@@ -312,47 +336,57 @@
                 "excerpt": "I never learned to cook. No one taught me. That’s why I can tell you about it.\n\nPeople who are taught spend too long worrying about what’s “right.” I just ate what I liked, cooked it, guessed. Like de"
               },
               {
+                "title": "Generation X",
+                "description": "by Douglas Coupland",
+                "slug": "/generation-x",
+                "order": 100,
+                "icon": "book",
+                "type": "folder",
+                "excerpt": "The term Generation X acquired a modern application after the release of Generation X: Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Glossary\n\nMcJob A lo",
+                "children": []
+              },
+              {
+                "title": "Science Fiction",
+                "description": "and Speculative Fiction",
+                "slug": "/sci-fi",
+                "order": 120,
+                "icon": "folder",
+                "type": "folder",
+                "excerpt": "Because we can carefully observe constellations when the Sun is not blocking their path, we know what position the stars should be in when the Sun is keeping us from seeing them. However, according to",
+                "children": [
+                  {
+                    "title": "Einstein",
+                    "slug": "/einstein",
+                    "order": 30,
+                    "icon": "doc",
+                    "type": "file",
+                    "excerpt": "Let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series.\n\n Let's share some of Einstein's contributions which are fundamental t"
+                  },
+                  {
+                    "title": "General Relativity",
+                    "slug": "/relativity",
+                    "order": 30,
+                    "icon": "doc",
+                    "type": "file",
+                    "excerpt": "Really just the name for Einstein's study of gravitation. And here we're going to introduce my alltime favorite analogy for general relativity, the bowling ball on the trampoline. Let's imagine that f"
+                  },
+                  {
+                    "title": "Charles Darwin",
+                    "slug": "/charles-darwin",
+                    "order": 2000,
+                    "icon": "doc",
+                    "type": "file",
+                    "excerpt": "Judging from the past, we may safely infer that no one living species will transmit its unaltered likeness to a distant futurity. And of the species now living very few will transmit progeny of any ki"
+                  }
+                ]
+              },
+              {
                 "title": "Weekend Portfolio",
                 "slug": "/weekend-portfolio",
                 "order": 160,
                 "icon": "speak-write",
                 "type": "file",
                 "excerpt": "Written for at semiprofessional coders ready to go pr0\n\nIn a weekend project, you’ll build a simple but powerful AI app. The idea is simple but important: you upload an .mp3 file, and the app gives yo"
-              }
-            ]
-          },
-          {
-            "title": "Science Fiction",
-            "description": "and Speculative Fiction",
-            "slug": "/sci-fi",
-            "order": 120,
-            "icon": "folder",
-            "type": "folder",
-            "excerpt": "Because we can carefully observe constellations when the Sun is not blocking their path, we know what position the stars should be in when the Sun is keeping us from seeing them. However, according to",
-            "children": [
-              {
-                "title": "Einstein",
-                "slug": "/einstein",
-                "order": 30,
-                "icon": "doc",
-                "type": "file",
-                "excerpt": "Let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series.\n\n Let's share some of Einstein's contributions which are fundamental t"
-              },
-              {
-                "title": "General Relativity",
-                "slug": "/relativity",
-                "order": 30,
-                "icon": "doc",
-                "type": "file",
-                "excerpt": "Really just the name for Einstein's study of gravitation. And here we're going to introduce my alltime favorite analogy for general relativity, the bowling ball on the trampoline. Let's imagine that f"
-              },
-              {
-                "title": "Charles Darwin",
-                "slug": "/charles-darwin",
-                "order": 2000,
-                "icon": "doc",
-                "type": "file",
-                "excerpt": "Judging from the past, we may safely infer that no one living species will transmit its unaltered likeness to a distant futurity. And of the species now living very few will transmit progeny of any ki"
               }
             ]
           }

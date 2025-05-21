@@ -2,7 +2,22 @@
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
+    <loc>https://goldlabel.pro/balance/books/generation-x</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/balance/books</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/balance/books/sci-fi/charles-darwin</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/balance/books/sci-fi/einstein</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/balance/books/sci-fi</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/balance/books/sci-fi/relativity</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/balance/books/weekend-portfolio</loc>
@@ -14,16 +29,7 @@
     <loc>https://goldlabel.pro/balance</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/sci-fi/charles-darwin</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/sci-fi/einstein</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/sci-fi</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/sci-fi/relativity</loc>
+    <loc>https://goldlabel.pro/balance/photos</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/free/core</loc>
@@ -60,9 +66,6 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/life/food</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/life/generation-x</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/life</loc>
