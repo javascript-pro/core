@@ -15,7 +15,7 @@ export default function Flickr({
   const flickr = useSlice().flickr;
   return (
     <>
-      <Typography variant='h1'>
+      <Typography variant='h2'>
         Flickr
       </Typography>
       <pre style={{fontSize:10}}>flickr: {JSON.stringify(flickr, null, 2)}</pre>

@@ -10,8 +10,10 @@ export async function GET() {
     endpoint: `${apibase}/`,
     endpoints: [
       {
-        flickr:
+        flickrAlbum:
           'http://localhost:3000/api/gl-api/flickr/?album=72177720324245676',
+        flickrPhoto:
+          'http://localhost:3000/api/gl-api/flickr/?photo=54534952165',
       },
     ],
   });
