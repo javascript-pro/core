@@ -53,7 +53,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
           <Header frontmatter={frontmatter} />
           <Photo src={frontmatter?.image ?? null} />
           <PageBreadcrumb />
-          {/* Conditionally control the size of this component */}
+          {/* Conditionally control the size of this component. or not */}
           <RenderMarkdown height={300}>{body}</RenderMarkdown>
         </MovieClip>
 

@@ -1,12 +1,5 @@
 {
-  "app": "Goldlabel",
-  "baseurl": "http://localhost:3000/api/gl-api/",
-  "frontend": "http://localhost:3000/",
-  "description": "Next.js",
-  "endpoints": [
-    {
-      "title": "C.V.",
-      "endpoint": "http://localhost:3000/api/gl-api/cv/"
-    }
-  ]
+  "app": "gl-api",
+  "apibase": "http://localhost:3000/api/gl-api",
+  "frontend": "http://localhost:3000/"
 }

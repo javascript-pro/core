@@ -5,17 +5,14 @@ import { NextRequest, NextResponse } from 'next/server';
 export const runtime = 'edge';
 
 export async function GET(request: NextRequest) {
-  const { app } = config;
-
+  const { apibase } = config;
   return NextResponse.json({
     time: Date.now(),
-    app,
-    endpoint: 'gl-api/openai/cv',
-    description: 'Interacts with OpenAI API',
-    verbs: ['GET', 'POST'],
+    endpoint: `${apibase}/openai/cv`,
+    description:
+      'Start by reading the job description below. Then evaluate the CV against it.',
   });
 }
-
 
 export async function POST(req: NextRequest) {
   const { resume, jd } = await req.json();

@@ -7,11 +7,11 @@ icon: work
 image: /png/system/tick.png
 ---
 
+> Goldlabel Apps Ltd is a UK Limited Company (5460545)
+
 Goldlabel Apps is a UK-based software company that designs, builds, and maintains full-stack web applications. We specialize in Next.js, Firebase, and custom UI development, delivering everything from internal admin tools to polished public-facing websites.
 
 Whether you're a startup with a short deadline or an enterprise with complex workflows, we can help.
-
-> Goldlabel Apps Ltd is a UK Limited Company (5460545)
 
 Goldlabel Apps Ltd
 321-323 High Road  

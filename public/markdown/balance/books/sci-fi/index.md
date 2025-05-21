@@ -2,7 +2,7 @@
 order: 120
 title: Science Fiction
 description: and Speculative Fiction
-slug: /balance/sci-fi
+slug: /balance/books/sci-fi
 icon: folder
 image: /jpg/photos/einstein.jpg
 ---
