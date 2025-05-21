@@ -34,7 +34,7 @@
       "NextJS",
       "Headless CMS"
     ],
-    "excerpt": "Building and shipping modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codebases\n\n Discover Goldlabel",
+    "excerpt": "We build and shipp modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codebases",
     "children": [
       {
         "title": "Free & Open Source",
@@ -176,7 +176,7 @@
               "github",
               "process"
             ],
-            "excerpt": "We use GitHub for everything. Including project management. Most of the communication done between us and our clients during development is done through GitHub in the form of comments, pull resuests, ",
+            "excerpt": "We use GitHub for everything. Including . Most of the communication done between us and our clients during development is done through GitHub in the form of comments, pull resuests, reviews and so for",
             "children": []
           },
           {
