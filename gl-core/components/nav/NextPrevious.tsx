@@ -211,14 +211,13 @@ export default function NextPrevious() {
           sx={{ mr: 1 }}
           mode="icon"
           onClick={() => {
-            window.open("/api/gl-api", "_blank");
+            window.open('/api/gl-api', '_blank');
           }}
           label="API"
           icon="api"
           disabled={obj.github.disabled}
         />
       )}
-
 
       {obj.github.visible && (
         <MightyButton
@@ -266,8 +265,6 @@ export default function NextPrevious() {
           icon="right"
         />
       )}
-
-      
     </Box>
   );
 }

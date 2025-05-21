@@ -1,6 +1,7 @@
 import config from '../../config.json';
 import { CVinitialState } from '../CV';
 import { FlashinitialState } from '../Flash';
+import { FlickrinitialState } from '../Flickr';
 // PingpongintialSlice from
 
 export const initialState: any = {
@@ -11,4 +12,5 @@ export const initialState: any = {
   modalShare: false,
   cv: CVinitialState,
   flash: FlashinitialState,
+  flickr: FlickrinitialState,
 };

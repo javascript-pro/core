@@ -11,6 +11,7 @@ tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Pr
 
 - [About](/work/company)
 - [GitHub](/work/github)
+- [Flickr](/balance/flickr)
 - [Flash](/free/flash)
 
 ## We build and shipp modern web apps for clients who need real results — fast

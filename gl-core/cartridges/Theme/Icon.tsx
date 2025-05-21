@@ -121,10 +121,14 @@ import JobIcon from '@mui/icons-material/EditSquare';
 import DownloadIcon from '@mui/icons-material/Download';
 import AddIcon from '@mui/icons-material/Add';
 import PreviewIcon from '@mui/icons-material/Preview';
+import FlickrIcon from '@mui/icons-material/CameraRoll';
+import PhotoIcon from '@mui/icons-material/CameraAlt';
 
 export type TIcon = {
   icon:
     | 'plus'
+    | 'flickr'
+    | 'photo'
     | 'preview'
     | 'add'
     | 'account'
@@ -700,6 +704,14 @@ export default function Icon({ icon, color }: TIcon) {
 
     case 'preview':
       iconFragment = <PreviewIcon color={color} />;
+      break;
+
+    case 'flickr':
+      iconFragment = <FlickrIcon color={color} />;
+      break;
+
+    case 'photo':
+      iconFragment = <PhotoIcon color={color} />;
       break;
 
     default:

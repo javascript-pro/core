@@ -383,6 +383,16 @@
                 "excerpt": "Written for at semiprofessional coders ready to go pr0\n\nIn a weekend project, you’ll build a simple but powerful AI app. The idea is simple but important: you upload an .mp3 file, and the app gives yo"
               }
             ]
+          },
+          {
+            "title": "Flickr",
+            "description": "We take a lot of photos",
+            "slug": "/flickr",
+            "order": 129,
+            "icon": "flickr",
+            "type": "folder",
+            "excerpt": "Photos\n\n Zoto Roadtrip\n \n\n Krone fleet truckers",
+            "children": []
           }
         ]
       }
