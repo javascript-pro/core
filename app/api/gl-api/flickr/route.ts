@@ -37,7 +37,8 @@ export async function GET(request: NextRequest) {
       time: Date.now(),
       endpoint: `${apibase}/flickr`,
       status: 'warning',
-      message: 'You need to specify a flickr album id in the query string like this ?album=7210000000',
+      message:
+        'You need to specify a valid flickr album id in the query string like this ?album=72177720324245676',
     });
   }
 
@@ -51,7 +52,6 @@ export async function GET(request: NextRequest) {
     }
 
     // TODO: Call Flickr API here
-
   } catch (err: any) {
     status = 'warning';
     message = err.message || 'Unknown error during Flickr album lookup.';
@@ -65,28 +65,12 @@ export async function GET(request: NextRequest) {
   }
 
   const result: TFlickrPhoto[] = [
-    {
-      flickrId: '54528014218',
-      flickrUrl: 'https://www.flickr.com/photos/listingslab/54528014218',
-      title: 'Trucks',
-      description: 'Big boys camping',
-      time: Date.now(),
-      lat: 0,
-      lng: 0,
-      meta: { tags: ['camping', 'trucks'] },
-      sizes: {
-        orig: {
-          src: 'https://live.staticflickr.com/.../54528014218_o.jpg',
-          width: 1200,
-          height: 620,
-        },
-      },
-    },
+
   ];
 
   return NextResponse.json({
     time: Date.now(),
-    endpoint: `${apibase}/flickr?album=123456789`,
+    endpoint: `${apibase}/flickr?album=${album}`,
     album,
     status,
     message,
