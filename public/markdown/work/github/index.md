@@ -13,8 +13,6 @@ We use GitHub for everything. Including [project management](https://github.com/
 
 A typical JSON Object might describe a Photo shown from the Flickr service
 
-
-
 ```javascript
 {
     id={"xxxx-yyyy-zzzz"}
@@ -41,17 +39,15 @@ A typical JSON Object might describe a Photo shown from the Flickr service
 }
 ```
 
-
-
 ```typescript
 export type TPhoto = {
-    id: string;
-    sizes?: {
-        orig: {
-            src: string;
-            width: number;
-            height: nbumber;
-        }
-    }
-}
+  id: string;
+  sizes?: {
+    orig: {
+      src: string;
+      width: number;
+      height: nbumber;
+    };
+  };
+};
 ```
