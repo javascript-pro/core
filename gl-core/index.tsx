@@ -1,12 +1,11 @@
 import Core from './Core';
 import { TCore, TFrontmatter } from './Core';
-import { exampleAction } from './actions';
-import { Theme } from './theme';
-import { TTheme } from './theme';
-import { Icon } from './theme';
-import { createMUITheme } from './theme';
-import { TIcon } from './theme';
-import { ModeSwitch } from './theme';
+import { Theme } from './cartridges/Theme';
+import { TTheme } from './cartridges/Theme';
+import { Icon } from './cartridges/Theme';
+import { createMUITheme } from './cartridges/Theme';
+import { TIcon } from './cartridges/Theme';
+import { ModeSwitch } from  './cartridges/Theme';
 import {
   RenderMarkdown,
   Header,
@@ -77,7 +76,6 @@ export {
 };
 export { CV };
 export { Flash, MovieClip, Photo };
-export { exampleAction };
 
 export type {
   TSearch,

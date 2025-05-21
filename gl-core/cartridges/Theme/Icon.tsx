@@ -4,7 +4,6 @@ import PingpongballIcon from './SVGIcons/PingpongballIcon';
 import OliverIcon from './SVGIcons/OliverIcon';
 import OpenAIIcon from './SVGIcons/OpenAIIcon';
 import MacromediaIconIcon from './SVGIcons/MacromediaIcon';
-
 import BlokeyIcon from './SVGIcons/BlokeyIcon';
 import WordpressIcon from './SVGIcons/WordpressIcon';
 import GoldlabelIcon from './SVGIcons/GoldlabelOutlined';
