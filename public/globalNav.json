@@ -34,7 +34,7 @@
       "NextJS",
       "Headless CMS"
     ],
-    "excerpt": "Building and shipping modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codebases\n\n Discover Goldlabel",
+    "excerpt": "Building and shipping modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codebases",
     "children": [
       {
         "title": "Free & Open Source",
@@ -51,7 +51,10 @@
             "order": 10,
             "icon": "github",
             "type": "file",
-            "tags": ["free", "core"],
+            "tags": [
+              "free",
+              "core"
+            ],
             "excerpt": "Goldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo architecture with multiple Next.js a"
           },
           {
@@ -76,7 +79,12 @@
             "order": 130,
             "icon": "bouncer",
             "type": "file",
-            "tags": ["cartridges", "cartridge", "free", "bouncer"],
+            "tags": [
+              "cartridges",
+              "cartridge",
+              "free",
+              "bouncer"
+            ],
             "excerpt": "Bouncer is the name of our authentication and access control system built on Firebase Authentication and Firestore. It is included in the Core as a reusable component, available globally from any cart"
           }
         ]
@@ -112,7 +120,11 @@
             "order": 2,
             "icon": "goldlabel",
             "type": "file",
-            "tags": ["CV", "jobs", "work"],
+            "tags": [
+              "CV",
+              "jobs",
+              "work"
+            ],
             "excerpt": "Chris Dorward\n\n Fullstack JavaScript Developer\n\n +44 07745 763 122  \n |  |\n\n\n Summary\n\nOver 20 years of experience delivering scalable web applications across startups, enterprises, and remotefirst te"
           },
           {
@@ -130,7 +142,10 @@
                 "order": 250,
                 "icon": "work",
                 "type": "file",
-                "tags": ["remote", "hybrid"],
+                "tags": [
+                  "remote",
+                  "hybrid"
+                ],
                 "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years.\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communication, "
               },
               {
@@ -139,7 +154,13 @@
                 "order": 555,
                 "icon": "account",
                 "type": "file",
-                "tags": ["cookies", "gdpr", "privacy", "terms", "trust"],
+                "tags": [
+                  "cookies",
+                  "gdpr",
+                  "privacy",
+                  "terms",
+                  "trust"
+                ],
                 "excerpt": "We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers t"
               }
             ]
@@ -151,7 +172,10 @@
             "order": 10,
             "icon": "github",
             "type": "folder",
-            "tags": ["github", "process"],
+            "tags": [
+              "github",
+              "process"
+            ],
             "excerpt": "We use GitHub for everything. Including . Most of the communication done between us and our clients during development is done through GitHub in the form of comments, pull resuests, reviews and so for",
             "children": []
           },
@@ -162,7 +186,9 @@
             "order": 10,
             "icon": "private",
             "type": "folder",
-            "tags": ["private"],
+            "tags": [
+              "private"
+            ],
             "excerpt": "This page requires a higher level of access",
             "children": []
           },

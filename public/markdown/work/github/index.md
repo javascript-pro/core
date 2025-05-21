@@ -38,16 +38,3 @@ A typical JSON Object might describe a Photo shown from the Flickr service
     }
 }
 ```
-
-```typescript
-export type TPhoto = {
-  id: string;
-  sizes?: {
-    orig: {
-      src: string;
-      width: number;
-      height: nbumber;
-    };
-  };
-};
-```
