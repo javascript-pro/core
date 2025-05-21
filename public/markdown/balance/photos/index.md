@@ -10,7 +10,6 @@ flickr:https://www.flickr.com/photos/listingslab/
 
 Flickr albumShow="zoto"
 
-
 Flickr id="54528014218"
 
 > Krone fleet truckers

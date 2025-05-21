@@ -3,8 +3,6 @@ import { TNav } from './Nav';
 import NavItem from './NavItem';
 import { TNavItem } from './NavItem';
 import { PageBreadcrumb } from './PageBreadcrumb';
-import Share from './Share';
-import { TShare } from './Share';
 import ShareThis from './ShareThis';
 import { TShareThis } from './ShareThis';
 import MightyButton from './MightyButton';
@@ -18,10 +16,9 @@ export {
   Nav,
   NavItem,
   PageBreadcrumb,
-  Share,
   ShareThis,
   MightyButton,
   Search,
 };
 
-export type { TSearch, TMightyButton, TShare, TNav, TNavItem, TShareThis };
+export type { TSearch, TMightyButton, TNav, TNavItem, TShareThis };

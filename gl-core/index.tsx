@@ -23,7 +23,6 @@ import {
   Nav,
   NavItem,
   PageBreadcrumb,
-  Share,
   MightyButton,
   Search,
   NextPrevious,
@@ -32,7 +31,6 @@ import {
 import {
   TNav,
   TNavItem,
-  TShare,
   TMightyButton,
   TSearch,
   TShareThis,
@@ -55,26 +53,17 @@ import { Flash, MovieClip, Photo } from './cartridges/Flash';
 import { TFlash, TMovieClip, TPhoto } from './cartridges/Flash';
 
 export { Core };
-
-// theme
 export { Theme, createMUITheme, Icon, ModeSwitch };
-
-// layout
 export { Header, Footer, RenderMarkdown, Responsive };
-
-// nav
 export {
   NextPrevious,
   Nav,
   NavItem,
   PageBreadcrumb,
-  Share,
   MightyButton,
   Search,
   ShareThis,
 };
-
-// uberedux
 export {
   Uberedux,
   UbereduxProvider,
@@ -86,14 +75,8 @@ export {
   setUbereduxKey,
   resetUberedux,
 };
-
-// CV
 export { CV };
-
-// Flash
 export { Flash, MovieClip, Photo };
-
-// actions
 export { exampleAction };
 
 export type {
@@ -101,7 +84,6 @@ export type {
   TCV,
   TFrontmatter,
   TMightyButton,
-  TShare,
   TFooter,
   TCore,
   TTheme,
