@@ -14,7 +14,9 @@ tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Pr
 - _Small_ team. _Big_ output
 - Real deployments from Day One
 - Readable, extensible, Open Source codebases
-- [Core](/free/core) Always Free & Open Source as a public repo on [GitHub](https://github.com/javascript-pro/core)
-- [Uberedux](/free/uberedux)
+
+## Discover Goldlabel
+
+- [About](/work/company)
+- [Photos](/balance/photos)
 - [Flash](/free/flash)
-- Where Next? Next Gen. [Gen X](/life/generation-x)?
