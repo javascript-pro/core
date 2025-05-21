@@ -1,9 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { useRouter } from 'next/navigation';
 import {
-  Box,
   IconButton,
   Dialog,
   DialogContent,
@@ -17,7 +15,6 @@ import {
   useDispatch,
   setUbereduxKey,
   Icon,
-  MainMenu,
   MightyButton,
   Search,
 } from '../../../gl-core';
@@ -28,7 +25,6 @@ export type TNav = {
 
 export default function Nav({}: TNav) {
   const dispatch = useDispatch();
-  const router = useRouter();
   const slice = useSlice();
   const { modalNav } = slice;
   const isMobile = useIsMobile();
@@ -44,44 +40,32 @@ export default function Nav({}: TNav) {
         sx={{
           boxShadow: 0,
         }}
-        color="primary"
+        color="default"
         onClick={openModalNav}
       >
-        <Icon icon="blokey" />
+        <Icon icon="search" />
       </Fab>
 
       <Dialog
         fullWidth
-        maxWidth="xs"
-        fullScreen={isMobile ? true : false}
+        maxWidth="sm"
+        fullScreen={false}
+        // fullScreen={isMobile ? true : false}
         open={modalNav}
         onClose={closeModalNav}
       >
-        <DialogTitle></DialogTitle>
+        <DialogTitle>
+          Search
+        </DialogTitle>
 
         <DialogContent>
-          {/* <MightyButton
-            sx={{ m: 1, mt: 2 }}
-            label="Home"
-            icon="home"
-            variant='contained'
-            onClick={() => {
-              console.log('Home clicked');
-              closeModalNav();
-              router.push('/');
-            }}
-          /> */}
 
           <Search
             onTrigger={(e: any) => {
-              console.log('onSearchTrigger', e);
+              // console.log('onSearchTrigger', e);
             }}
           />
-          <Box sx={{ m: 2 }}>
-            <MainMenu onSelect={closeModalNav} />
-          </Box>
 
-          {/* <pre style={{fontSize: 10}}>slice: {JSON.stringify(slice, null, 2)}</pre> */}
         </DialogContent>
 
         <DialogActions>
@@ -106,3 +90,7 @@ export default function Nav({}: TNav) {
     </>
   );
 }
+
+/*
+  <pre style={{fontSize: 10}}>slice: {JSON.stringify(slice, null, 2)}</pre>
+*/

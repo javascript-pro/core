@@ -41,7 +41,7 @@
         "description": "Some things in life ARE free",
         "slug": "/free",
         "order": 1,
-        "icon": "how",
+        "icon": "flash",
         "type": "folder",
         "excerpt": "Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or b",
         "children": [
@@ -190,6 +190,32 @@
               "private"
             ],
             "excerpt": "This page requires a higher level of access",
+            "children": []
+          },
+          {
+            "title": "JavaScript",
+            "description": "ECMA Script",
+            "slug": "/javascript",
+            "order": 40,
+            "icon": "javascript",
+            "type": "folder",
+            "tags": [
+              "JavaScript",
+              "Vanilla JavaScript",
+              "TypeScript",
+              "React",
+              "Angular",
+              "Vue",
+              "Material UI",
+              "Flash",
+              "Server Side JavaScript",
+              "Node",
+              "Gatsby",
+              "NextJS",
+              "Headless CMS",
+              "JSON"
+            ],
+            "excerpt": "",
             "children": []
           }
         ]

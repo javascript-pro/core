@@ -137,9 +137,7 @@ export default function RenderMarkdown({
         </ReactMarkdown>
       </Box>
       <Box sx={{ m: 2, display: 'flex', gap: 2, justifyContent: 'left' }}>
-        
-
-        { canScrollDown && (
+        {canScrollDown && (
           <MightyButton
             disabled={!canScrollDown}
             mode="icon"
