@@ -14,8 +14,6 @@ import {
   NextPrevious,
 } from '../gl-core';
 
-// import { TestClip } from './cartridges/Flash';
-
 export type TFrontmatter = {
   icon?: string;
   title?: string;

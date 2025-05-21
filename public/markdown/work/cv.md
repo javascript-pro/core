@@ -4,7 +4,7 @@ title: C.V.
 description: Is Goldlabel a good fit for you?
 slug: /work/cv
 icon: goldlabel
-image: /png/defaultFeatured.png
+image: /png/javascript.png
 tags: CV, jobs, work
 ---
 

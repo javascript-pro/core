@@ -4,9 +4,9 @@ title: Private
 description: Protected by Bouncer
 slug: /work/private
 icon: private
-image: /png/characters/biker.png
+image: /png/defaultFeatured.png
 tags: private
 private: true
 ---
 
-You cannot see this.
+## This page requires a higher level of access

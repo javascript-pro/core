@@ -1,8 +1,8 @@
 ---
 order: 1
+slug: /
 title: Goldlabel pr0
 description: Custom software that works
-slug: /
 icon: goldlabel
 image: /png/defaultFeatured.png
 github: https://github.com/javascript-pro/core

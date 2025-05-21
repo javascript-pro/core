@@ -4,7 +4,7 @@ title: GitHub
 description: Critical to our process
 slug: /work/github
 icon: github
-image: /png/characters/biker.png
+image: /png/javascript.png
 tags: github, process
 ---
 
