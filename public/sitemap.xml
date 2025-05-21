@@ -32,6 +32,9 @@
     <loc>https://goldlabel.pro/balance/photos</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/free/bouncer</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/free/core</loc>
   </url>
   <url>
@@ -81,15 +84,6 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work/cv</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/free/cartridges/bouncer</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/free/cartridges</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/free</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/github</loc>

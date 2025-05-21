@@ -3,8 +3,8 @@ order: 1
 title: Free & Open Source
 description: Some things in life ARE free
 slug: /free
-icon: how
-image: '/png/free.png'
+icon: flash
+image: '/png/javascript.png'
 ---
 
 ## Some things in life _are_ free — Goldlabel [Core](/free/core) is one of them.

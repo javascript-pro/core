@@ -72,6 +72,20 @@
             "icon": "uberedux",
             "type": "file",
             "excerpt": "Apps need State Management\n\nOtherwise you'd be back in jQuery callback hell. Nobody wants that. Uberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app already works a"
+          },
+          {
+            "title": "Bouncer",
+            "slug": "/bouncer",
+            "order": 130,
+            "icon": "bouncer",
+            "type": "file",
+            "tags": [
+              "cartridges",
+              "cartridge",
+              "free",
+              "bouncer"
+            ],
+            "excerpt": "Bouncer is the name of our authentication and access control system built on Firebase Authentication and Firestore. It is included in the Core as a reusable component, available globally from any cart"
           }
         ]
       },
@@ -112,52 +126,6 @@
               "work"
             ],
             "excerpt": "Chris Dorward\n\n Fullstack JavaScript Developer\n\n +44 07745 763 122  \n |  |\n\n\n Summary\n\nOver 20 years of experience delivering scalable web applications across startups, enterprises, and remotefirst te"
-          },
-          {
-            "title": "Free on GitHub",
-            "description": "Free, Gratis and for Nothing",
-            "slug": "/free",
-            "order": 2,
-            "icon": "star",
-            "type": "folder",
-            "tags": [
-              "cartridges",
-              "features",
-              "free"
-            ],
-            "excerpt": "Free, Open Source cartridges\n\n Flash\n Lingua\n Uberedux",
-            "children": [
-              {
-                "title": "Cartridges",
-                "description": "What are the free cartridges?",
-                "slug": "/cartridges",
-                "order": 20,
-                "icon": "star",
-                "type": "folder",
-                "tags": [
-                  "cartridges",
-                  "free",
-                  "bouncer"
-                ],
-                "excerpt": "What actually are Cartridges?",
-                "children": [
-                  {
-                    "title": "Bouncer",
-                    "slug": "/bouncer",
-                    "order": 130,
-                    "icon": "cartridge",
-                    "type": "file",
-                    "tags": [
-                      "cartridges",
-                      "cartridge",
-                      "free",
-                      "bouncer"
-                    ],
-                    "excerpt": "Bouncer is the name of our authentication and access control system built on Firebase Authentication and Firestore. It is included in the Core as a reusable component, available globally from any cart"
-                  }
-                ]
-              }
-            ]
           },
           {
             "title": "Company",
@@ -221,7 +189,7 @@
             "tags": [
               "private"
             ],
-            "excerpt": "You cannot see this.",
+            "excerpt": "This page requires a higher level of access",
             "children": []
           }
         ]
