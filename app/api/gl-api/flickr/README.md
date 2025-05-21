@@ -9,7 +9,7 @@ https://github.com/javascript-pro/core/issues/76
     description: "Retrieves a list of photo objects in the given album",
     result: [
         {
-            
+
         },
     ],
 }
