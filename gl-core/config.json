@@ -1,6 +1,6 @@
 {
   "app": "Goldlabel pr0",
-  "forceUpdate": true,
+  "forceUpdate": false,
   "description": "Where Next? Next Gen. Gen X?",
   "url": "https://goldlabel.pro",
   "repo": "https://github.com/javascript-pro/core",

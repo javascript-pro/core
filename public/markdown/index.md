@@ -1,6 +1,6 @@
 ---
 order: 1
-title: Goldlabel
+title: Goldlabel pr0
 description: Custom software that works
 slug: /
 icon: goldlabel
