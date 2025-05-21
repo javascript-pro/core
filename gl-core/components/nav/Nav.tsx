@@ -23,9 +23,7 @@ export type TNav = {
   title?: string | null;
 };
 
-export default function Nav({
-  
-}: TNav) {
+export default function Nav({}: TNav) {
   const dispatch = useDispatch();
   const slice = useSlice();
   const { modalNav } = slice;
@@ -56,18 +54,14 @@ export default function Nav({
         open={modalNav}
         onClose={closeModalNav}
       >
-        <DialogTitle>
-          Search
-        </DialogTitle>
+        <DialogTitle>Search</DialogTitle>
 
         <DialogContent>
-
           <Search
             onTrigger={(e: any) => {
               // console.log('onSearchTrigger', e);
             }}
           />
-
         </DialogContent>
 
         <DialogActions>

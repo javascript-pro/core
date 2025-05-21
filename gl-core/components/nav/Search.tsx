@@ -2,7 +2,15 @@
 
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { styled, alpha, InputBase, Box, List, ListItem, ListItemText } from '@mui/material';
+import {
+  styled,
+  alpha,
+  InputBase,
+  Box,
+  List,
+  ListItem,
+  ListItemText,
+} from '@mui/material';
 import { Icon } from '../../../gl-core';
 import globalNav from '../../../public/globalNav.json';
 
@@ -59,7 +67,11 @@ type FlatItem = {
 
 function flattenNav(nav: any[], acc: FlatItem[] = []): FlatItem[] {
   for (const item of nav) {
-    acc.push({ title: item.title, slug: item.slug, description: item.description || '' });
+    acc.push({
+      title: item.title,
+      slug: item.slug,
+      description: item.description || '',
+    });
     if (item.children) flattenNav(item.children, acc);
   }
   return acc;
@@ -74,7 +86,8 @@ export default function Search({ onTrigger = () => {} }: TSearch) {
     if (!q) return [];
     return flatItems.filter(
       ({ title, description }) =>
-        title.toLowerCase().includes(q) || description?.toLowerCase().includes(q),
+        title.toLowerCase().includes(q) ||
+        description?.toLowerCase().includes(q),
     );
   }, [query, flatItems]);
 
@@ -100,7 +113,10 @@ export default function Search({ onTrigger = () => {} }: TSearch) {
         <List dense>
           {results.map((item) => (
             <ListItem key={item.slug} disablePadding>
-              <Link href={item.slug} style={{ textDecoration: 'none', width: '100%' }}>
+              <Link
+                href={item.slug}
+                style={{ textDecoration: 'none', width: '100%' }}
+              >
                 <ListItemText
                   primary={item.title}
                   secondary={item.description}

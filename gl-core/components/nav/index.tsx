@@ -24,11 +24,4 @@ export {
   Search,
 };
 
-export type {
-  TSearch,
-  TMightyButton,
-  TShare,
-  TNav,
-  TNavItem,
-  TShareThis,
-};
+export type { TSearch, TMightyButton, TShare, TNav, TNavItem, TShareThis };
