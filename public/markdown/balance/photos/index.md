@@ -5,9 +5,12 @@ description: We take a lot
 slug: /balance/photos
 icon: photo
 image: /jpg/diving/rozi.jpg
-flickr=https://www.flickr.com/photos/listingslab/
+flickr:https://www.flickr.com/photos/listingslab/
 ---
 
-[Flickr id="54528014218"]
+Flickr albumShow="zoto"
+
+
+Flickr id="54528014218"
 
 > Krone fleet truckers
