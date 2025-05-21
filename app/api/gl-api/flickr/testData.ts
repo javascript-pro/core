@@ -6,15 +6,12 @@ export const testData = {
   time: Date.now(),
   lat: 0,
   lng: 0,
-  meta: { tags: [
-    'camping', 
-    'trucks'
-  ] },
+  meta: { tags: ['camping', 'trucks'] },
   sizes: {
-  orig: {
-    src: 'https://live.staticflickr.com/.../54528014218_o.jpg',
-    width: 1200,
-    height: 620,
+    orig: {
+      src: 'https://live.staticflickr.com/.../54528014218_o.jpg',
+      width: 1200,
+      height: 620,
+    },
   },
-},
-}
+};

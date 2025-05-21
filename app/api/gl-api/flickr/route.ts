@@ -29,6 +29,9 @@ const FLICKR_API = 'https://api.flickr.com/services/rest/';
 const flickrApiKey = process.env.FLICKR_KEY;
 const flickrUserId = process.env.FLICKR_USER;
 
+const CACHE_TTL = 1000 * 60 * 5; // 5 minutes
+const albumCache: Record<string, { time: number; result: TFlickrPhoto[] }> = {};
+
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const album = searchParams.get('album');
@@ -52,13 +55,26 @@ export async function GET(request: NextRequest) {
     });
   }
 
+  // Check cache
+  const cached = albumCache[album];
+  if (cached && Date.now() - cached.time < CACHE_TTL) {
+    return NextResponse.json({
+      time: Date.now(),
+      endpoint: `/api/gl-api/flickr?album=${album}`,
+      album,
+      status: 'success',
+      message: 'Served from cache',
+      result: cached.result,
+    });
+  }
+
   let status: 'success' | 'warning' = 'success';
   let message = 'All Good';
   let result: TFlickrPhoto[] = [];
 
   try {
     const flickrRes = await fetch(
-      `${FLICKR_API}?method=flickr.photosets.getPhotos&api_key=${flickrApiKey}&photoset_id=${album}&user_id=${flickrUserId}&format=json&nojsoncallback=1&extras=description,date_taken,geo,tags,url_o,url_h,url_c,url_n`
+      `${FLICKR_API}?method=flickr.photosets.getPhotos&api_key=${flickrApiKey}&photoset_id=${album}&user_id=${flickrUserId}&format=json&nojsoncallback=1&extras=description,date_taken,geo,tags,url_o,url_h,url_c,url_n`,
     );
 
     const data = await flickrRes.json();
@@ -79,20 +95,42 @@ export async function GET(request: NextRequest) {
         meta: { tags: photo.tags?.split(' ') || [] },
         sizes: {
           orig: photo.url_o
-            ? { src: photo.url_o, width: parseInt(photo.width_o), height: parseInt(photo.height_o) }
+            ? {
+                src: photo.url_o,
+                width: parseInt(photo.width_o),
+                height: parseInt(photo.height_o),
+              }
             : undefined,
           large: photo.url_h
-            ? { src: photo.url_h, width: parseInt(photo.width_h), height: parseInt(photo.height_h) }
+            ? {
+                src: photo.url_h,
+                width: parseInt(photo.width_h),
+                height: parseInt(photo.height_h),
+              }
             : undefined,
           medium: photo.url_c
-            ? { src: photo.url_c, width: parseInt(photo.width_c), height: parseInt(photo.height_c) }
+            ? {
+                src: photo.url_c,
+                width: parseInt(photo.width_c),
+                height: parseInt(photo.height_c),
+              }
             : undefined,
           small: photo.url_n
-            ? { src: photo.url_n, width: parseInt(photo.width_n), height: parseInt(photo.height_n) }
+            ? {
+                src: photo.url_n,
+                width: parseInt(photo.width_n),
+                height: parseInt(photo.height_n),
+              }
             : undefined,
         },
       };
     });
+
+    // Cache the result
+    albumCache[album] = {
+      time: Date.now(),
+      result,
+    };
   } catch (err: any) {
     status = 'warning';
     message = err.message || 'Unknown error during Flickr album lookup.';
