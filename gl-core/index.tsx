@@ -10,19 +10,16 @@ import { ModeSwitch } from './theme';
 import {
   RenderMarkdown,
   Header,
-  Main,
   Footer,
   Responsive,
 } from './components/layout';
 import {
   TRenderMarkdown,
   THeader,
-  TMain,
   TFooter,
   TResponsive,
 } from './components/layout';
 import {
-  MainMenu,
   Nav,
   NavItem,
   PageBreadcrumb,
@@ -63,11 +60,10 @@ export { Core };
 export { Theme, createMUITheme, Icon, ModeSwitch };
 
 // layout
-export { Header, Footer, Main, RenderMarkdown, Responsive };
+export { Header, Footer, RenderMarkdown, Responsive };
 
 // nav
 export {
-  MainMenu,
   NextPrevious,
   Nav,
   NavItem,
@@ -105,7 +101,6 @@ export type {
   TCV,
   TFrontmatter,
   TMightyButton,
-  TMain,
   TShare,
   TFooter,
   TCore,

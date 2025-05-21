@@ -23,7 +23,9 @@ export type TNav = {
   title?: string | null;
 };
 
-export default function Nav({}: TNav) {
+export default function Nav({
+  
+}: TNav) {
   const dispatch = useDispatch();
   const slice = useSlice();
   const { modalNav } = slice;
