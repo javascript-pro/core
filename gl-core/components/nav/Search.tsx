@@ -1,7 +1,18 @@
 'use client';
-import React from 'react';
-import { styled, alpha, InputBase } from '@mui/material';
+
+import React, { useState, useMemo } from 'react';
+import Link from 'next/link';
+import {
+  styled,
+  alpha,
+  InputBase,
+  Box,
+  List,
+  ListItem,
+  ListItemText,
+} from '@mui/material';
 import { Icon } from '../../../gl-core';
+import globalNav from '../../../public/globalNav.json';
 
 export type TSearch = {
   onTrigger?: (value: any) => void;
@@ -48,22 +59,74 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function Search({
-  onTrigger = () => {
-    console.log('No onTrigger set');
-  },
-}: TSearch) {
+type FlatItem = {
+  title: string;
+  slug: string;
+  description?: string;
+};
+
+function flattenNav(nav: any[], acc: FlatItem[] = []): FlatItem[] {
+  for (const item of nav) {
+    acc.push({
+      title: item.title,
+      slug: item.slug,
+      description: item.description || '',
+    });
+    if (item.children) flattenNav(item.children, acc);
+  }
+  return acc;
+}
+
+export default function Search({ onTrigger = () => {} }: TSearch) {
+  const [query, setQuery] = useState('');
+
+  const flatItems = useMemo(() => flattenNav(globalNav), []);
+  const results = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return [];
+    return flatItems.filter(
+      ({ title, description }) =>
+        title.toLowerCase().includes(q) ||
+        description?.toLowerCase().includes(q),
+    );
+  }, [query, flatItems]);
+
   return (
-    <SearchField>
-      <SearchIconWrapper>
-        <Icon icon="search" />
-      </SearchIconWrapper>
-      <StyledInputBase
-        autoFocus
-        onChange={onTrigger}
-        placeholder="Search…"
-        inputProps={{ 'aria-label': 'search' }}
-      />
-    </SearchField>
+    <Box>
+      <SearchField>
+        <SearchIconWrapper>
+          <Icon icon="search" />
+        </SearchIconWrapper>
+        <StyledInputBase
+          autoFocus
+          onChange={(e) => {
+            setQuery(e.target.value);
+            onTrigger(e);
+          }}
+          value={query}
+          placeholder="Search for…"
+          inputProps={{ 'aria-label': 'search' }}
+        />
+      </SearchField>
+
+      {results.length > 0 && (
+        <List dense>
+          {results.map((item) => (
+            <ListItem key={item.slug} disablePadding>
+              <Link
+                href={item.slug}
+                style={{ textDecoration: 'none', width: '100%' }}
+              >
+                <ListItemText
+                  primary={item.title}
+                  secondary={item.description}
+                  sx={{ px: 2, py: 1 }}
+                />
+              </Link>
+            </ListItem>
+          ))}
+        </List>
+      )}
+    </Box>
   );
 }

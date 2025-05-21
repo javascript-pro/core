@@ -61,7 +61,7 @@ export default function NextPrevious() {
       title: 'GitHub',
       description: 'View code',
       disabled: false,
-      visible: true,
+      visible: false,
     },
     home: {
       label: 'Home',

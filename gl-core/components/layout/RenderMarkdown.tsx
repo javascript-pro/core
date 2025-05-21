@@ -58,7 +58,7 @@ export default function RenderMarkdown({
       sx={{
         // border: "1px solid red",
         width: width ?? '100%',
-        height: 'calc(100vh - 370px)',
+        height: window.innerHeight - 500,
         maxWidth: maxWidth ?? '100%',
         minHeight: 0,
         display: 'flex',
@@ -69,10 +69,9 @@ export default function RenderMarkdown({
       <Box
         ref={scrollRef}
         sx={{
-          pl: 4,
+          px: 4,
           flexGrow: 1,
           overflowY: 'auto',
-
           minHeight: 0,
           scrollbarWidth: 'auto',
           scrollbarColor: `${theme.palette.primary.main} ${theme.palette.background.paper}`,
@@ -137,11 +136,11 @@ export default function RenderMarkdown({
           {children as string}
         </ReactMarkdown>
       </Box>
-
       <Box sx={{ m: 2, display: 'flex', gap: 2, justifyContent: 'left' }}>
         {canScrollDown && (
           <MightyButton
-            mode="listitem"
+            disabled={!canScrollDown}
+            mode="icon"
             color="inherit"
             variant="outlined"
             label="Scroll Down"
@@ -149,9 +148,11 @@ export default function RenderMarkdown({
             onClick={handleScrollDown}
           />
         )}
+
         {canScrollUp && (
           <MightyButton
-            mode="listitem"
+            disabled={!canScrollUp}
+            mode="icon"
             color="inherit"
             variant="outlined"
             label="Scroll Up"

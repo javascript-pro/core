@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { ThemeProvider } from '@mui/material';
-import { useSlice, createMUITheme } from '../';
+import { useSlice, createMUITheme } from '../../../gl-core';
 
 export type TTheme = {
   theme?: {

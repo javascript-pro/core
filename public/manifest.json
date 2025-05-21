@@ -10,7 +10,7 @@
   "splash_pages": null,
   "icons": [
     {
-      "src": "/png/iOS.png",
+      "src": "/png/favicon.png",
       "type": "image/png",
       "sizes": "180x180",
       "purpose": "any maskable"

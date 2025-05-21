@@ -4,7 +4,7 @@
     "description": "Custom software that works",
     "slug": "/",
     "order": 1,
-    "icon": "goldlabel",
+    "icon": "blokey",
     "type": "folder",
     "tags": [
       "JavaScript",
@@ -34,14 +34,14 @@
       "NextJS",
       "Headless CMS"
     ],
-    "excerpt": "Building and shipping modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codebases\n\n Discover Goldlabel",
+    "excerpt": "We build and shipp modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codebases",
     "children": [
       {
         "title": "Free & Open Source",
         "description": "Some things in life ARE free",
         "slug": "/free",
         "order": 1,
-        "icon": "how",
+        "icon": "flash",
         "type": "folder",
         "excerpt": "Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or b",
         "children": [
@@ -72,6 +72,20 @@
             "icon": "uberedux",
             "type": "file",
             "excerpt": "Apps need State Management\n\nOtherwise you'd be back in jQuery callback hell. Nobody wants that. Uberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app already works a"
+          },
+          {
+            "title": "Bouncer",
+            "slug": "/bouncer",
+            "order": 130,
+            "icon": "bouncer",
+            "type": "file",
+            "tags": [
+              "cartridges",
+              "cartridge",
+              "free",
+              "bouncer"
+            ],
+            "excerpt": "Bouncer is the name of our authentication and access control system built on Firebase Authentication and Firestore. It is included in the Core as a reusable component, available globally from any cart"
           }
         ]
       },
@@ -112,52 +126,6 @@
               "work"
             ],
             "excerpt": "Chris Dorward\n\n Fullstack JavaScript Developer\n\n +44 07745 763 122  \n |  |\n\n\n Summary\n\nOver 20 years of experience delivering scalable web applications across startups, enterprises, and remotefirst te"
-          },
-          {
-            "title": "Free on GitHub",
-            "description": "Free, Gratis and for Nothing",
-            "slug": "/free",
-            "order": 2,
-            "icon": "star",
-            "type": "folder",
-            "tags": [
-              "cartridges",
-              "features",
-              "free"
-            ],
-            "excerpt": "Free, Open Source cartridges\n\n Flash\n Lingua\n Uberedux",
-            "children": [
-              {
-                "title": "Cartridges",
-                "description": "What are the free cartridges?",
-                "slug": "/cartridges",
-                "order": 20,
-                "icon": "star",
-                "type": "folder",
-                "tags": [
-                  "cartridges",
-                  "free",
-                  "bouncer"
-                ],
-                "excerpt": "What actually are Cartridges?",
-                "children": [
-                  {
-                    "title": "Bouncer",
-                    "slug": "/bouncer",
-                    "order": 130,
-                    "icon": "cartridge",
-                    "type": "file",
-                    "tags": [
-                      "cartridges",
-                      "cartridge",
-                      "free",
-                      "bouncer"
-                    ],
-                    "excerpt": "Bouncer is the name of our authentication and access control system built on Firebase Authentication and Firestore. It is included in the Core as a reusable component, available globally from any cart"
-                  }
-                ]
-              }
-            ]
           },
           {
             "title": "Company",
@@ -208,7 +176,7 @@
               "github",
               "process"
             ],
-            "excerpt": "We use GitHub for everything. Including project management. Most of the communication done between us and our clients during development is done through GitHub in the form of comments, pull resuests, ",
+            "excerpt": "We use GitHub for everything. Including . Most of the communication done between us and our clients during development is done through GitHub in the form of comments, pull resuests, reviews and so for",
             "children": []
           },
           {
@@ -221,7 +189,33 @@
             "tags": [
               "private"
             ],
-            "excerpt": "You cannot see this.",
+            "excerpt": "This page requires a higher level of access",
+            "children": []
+          },
+          {
+            "title": "JavaScript",
+            "description": "ECMA Script",
+            "slug": "/javascript",
+            "order": 40,
+            "icon": "javascript",
+            "type": "folder",
+            "tags": [
+              "JavaScript",
+              "Vanilla JavaScript",
+              "TypeScript",
+              "React",
+              "Angular",
+              "Vue",
+              "Material UI",
+              "Flash",
+              "Server Side JavaScript",
+              "Node",
+              "Gatsby",
+              "NextJS",
+              "Headless CMS",
+              "JSON"
+            ],
+            "excerpt": "",
             "children": []
           }
         ]

@@ -8,7 +8,7 @@ import {
   ListItemIcon,
   ListItemText,
 } from '@mui/material';
-import { Icon, useSlice, useDispatch, setUbereduxKey } from '../../gl-core';
+import { Icon, useSlice, useDispatch, setUbereduxKey } from '../../../gl-core';
 
 export default function ModeSwitch() {
   const dispatch = useDispatch();

@@ -4,7 +4,8 @@ title: Company
 description: About Goldlabel Apps Ltd
 slug: /work/company
 icon: work
-image: /png/system/tick.png
+image: /png/defaultFeatured.png
+github: https://github.com/javascript-pro/core/issues/76
 ---
 
 > Goldlabel Apps Ltd is a UK Limited Company (5460545)

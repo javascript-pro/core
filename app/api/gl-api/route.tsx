@@ -15,7 +15,7 @@ export async function GET() {
     // apibase,
     endpoints: [
       {
-        flickr: 'http://localhost:3000/api/gl-api/flickr',
+        flickr: 'http://localhost:3000/api/gl-api/flickr/?album=7210000000',
       },
       {
         openai: 'http://localhost:3000/api/gl-api/openai',

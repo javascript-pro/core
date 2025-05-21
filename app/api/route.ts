@@ -8,5 +8,6 @@ export async function GET(request: NextRequest) {
   return NextResponse.json({
     time: Date.now(),
     app: `${app} API`,
+    start: 'http://localhost:3000/api/gl-api/',
   });
 }

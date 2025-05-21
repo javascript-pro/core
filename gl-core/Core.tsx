@@ -14,8 +14,6 @@ import {
   NextPrevious,
 } from '../gl-core';
 
-// import { TestClip } from './cartridges/Flash';
-
 export type TFrontmatter = {
   icon?: string;
   title?: string;
@@ -54,7 +52,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
           <Photo src={frontmatter?.image ?? null} />
           <PageBreadcrumb />
           {/* Conditionally control the size of this component. or not */}
-          <RenderMarkdown height={300}>{body}</RenderMarkdown>
+          <RenderMarkdown>{body}</RenderMarkdown>
         </MovieClip>
 
         <MovieClip id="nextprev" opacity={0} height={75}>
