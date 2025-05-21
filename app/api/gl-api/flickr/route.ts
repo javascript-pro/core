@@ -69,7 +69,7 @@ export async function GET(request: NextRequest) {
   }
 
   let status: 'success' | 'warning' = 'success';
-  let message = 'All Good';
+  let message = 'Flickr API fetched';
   let result: TFlickrPhoto[] = [];
 
   try {
