@@ -1,4 +1,3 @@
-// core/app/api/gl-api/flickr/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 
 export type TFlickrPhotoSize = {
@@ -30,10 +29,7 @@ const flickrApiKey = process.env.FLICKR_KEY;
 const flickrUserId = process.env.FLICKR_USER;
 
 const CACHE_TTL = 1000 * 60 * 5;
-const albumCache: Record<
-  string,
-  { time: number; photos: TFlickrPhoto[]; meta: any }
-> = {};
+const albumCache: Record<string, { time: number; photos: TFlickrPhoto[]; meta: any }> = {};
 const photoCache: Record<string, { time: number; photo: TFlickrPhoto }> = {};
 
 async function getPhotoWithSizes(photoId: string): Promise<TFlickrPhoto> {
@@ -133,7 +129,7 @@ export async function GET(request: NextRequest) {
     }
   }
 
-  // === LIST ALBUMS MODE ===
+  // === LIST SINGLE ALBUM MODE ===
   if (!albumId) {
     try {
       const res = await fetch(
@@ -143,27 +139,62 @@ export async function GET(request: NextRequest) {
       if (data.stat !== 'ok') throw new Error(data.message);
 
       const sets = data.photosets.photoset
-        .sort(
-          (a: any, b: any) => parseInt(b.date_create) - parseInt(a.date_create),
-        )
-        .slice(0, 12);
+        .sort((a: any, b: any) => parseInt(b.date_create) - parseInt(a.date_create))
+        .slice(0, 1); // Only the latest album
 
       const albums = await Promise.all(
         sets.map(async (set: any) => {
+          const albumId = set.id;
+
+          // Check cache
+          const cached = albumCache[albumId];
+          if (cached && Date.now() - cached.time < CACHE_TTL) {
+            return {
+              flickrId: albumId,
+              title: set.title._content,
+              description: set.description._content,
+              count: parseInt(set.photos),
+              dateCreate: parseInt(set.date_create),
+              coverPhoto: cached.meta.coverPhoto,
+              photos: cached.photos,
+              cached: true,
+            };
+          }
+
           let coverPhoto: TFlickrPhoto | null = null;
           try {
             coverPhoto = await getPhotoWithSizes(set.primary);
-          } catch (e) {
-            // Continue without crashing on missing/malformed photos
-          }
+          } catch {}
+
+          const photosRes = await fetch(
+            `${FLICKR_API}?method=flickr.photosets.getPhotos&api_key=${flickrApiKey}&photoset_id=${albumId}&user_id=${flickrUserId}&format=json&nojsoncallback=1`,
+          );
+          const photosData = await photosRes.json();
+          if (photosData.stat !== 'ok') throw new Error(photosData.message);
+
+          const photos: TFlickrPhoto[] = await Promise.all(
+            photosData.photoset.photo.map((p: any) => getPhotoWithSizes(p.id)),
+          );
+
+          const meta = {
+            title: set.title._content,
+            albumId,
+            coverPhoto,
+            description: set.description._content,
+            total: parseInt(set.photos),
+          };
+
+          albumCache[albumId] = {
+            time: Date.now(),
+            meta,
+            photos,
+          };
 
           return {
-            flickrId: set.id,
-            title: set.title._content,
-            description: set.description._content,
-            count: parseInt(set.photos),
-            dateCreate: parseInt(set.date_create),
-            coverPhoto,
+            flickrId: albumId,
+            ...meta,
+            photos,
+            cached: false,
           };
         }),
       );
@@ -172,7 +203,7 @@ export async function GET(request: NextRequest) {
         time: Date.now(),
         endpoint: `/api/gl-api/flickr`,
         status: 'success',
-        message: 'Latest 12 albums fetched with cover photos',
+        message: 'Latest album and photos fetched with sizes',
         result: albums,
       });
     } catch (err: any) {
@@ -219,32 +250,16 @@ export async function GET(request: NextRequest) {
       meta: { tags: p.tags?.split(' ') || [] },
       sizes: {
         orig: p.url_o
-          ? {
-              src: p.url_o,
-              width: parseInt(p.width_o),
-              height: parseInt(p.height_o),
-            }
+          ? { src: p.url_o, width: parseInt(p.width_o), height: parseInt(p.height_o) }
           : undefined,
         large: p.url_h
-          ? {
-              src: p.url_h,
-              width: parseInt(p.width_h),
-              height: parseInt(p.height_h),
-            }
+          ? { src: p.url_h, width: parseInt(p.width_h), height: parseInt(p.height_h) }
           : undefined,
         medium: p.url_c
-          ? {
-              src: p.url_c,
-              width: parseInt(p.width_c),
-              height: parseInt(p.height_c),
-            }
+          ? { src: p.url_c, width: parseInt(p.width_c), height: parseInt(p.height_c) }
           : undefined,
         small: p.url_n
-          ? {
-              src: p.url_n,
-              width: parseInt(p.width_n),
-              height: parseInt(p.height_n),
-            }
+          ? { src: p.url_n, width: parseInt(p.width_n), height: parseInt(p.height_n) }
           : undefined,
       },
     }));

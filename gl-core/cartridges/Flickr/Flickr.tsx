@@ -4,10 +4,10 @@ import {
   Card,
   CardHeader,
   CardContent,
-  Typography,
   CircularProgress,
 } from '@mui/material';
-import { Icon, useSlice } from '../../../gl-core';
+import { Icon, useSlice, useDispatch } from '../../../gl-core';
+import { initFlickr } from './';
 
 export type TFlickr = {
   frontmatter?: any;
@@ -18,21 +18,23 @@ export default function Flickr({
     title: "Flickr",
     description: "Herding pandas",
     icon: "flickr",
+    message: "loading..."
   }, 
 }: TFlickr) {
-  
   const flickr = useSlice().flickr;
-  const {loading} = flickr
-  const {title, description, icon} = frontmatter;
+  const dispatch = useDispatch();
+  const { loading, status, message } = flickr;
+  const { title, description, icon } = frontmatter;
+
+  React.useEffect(() => {
+    dispatch(initFlickr());
+  }, [dispatch]);
+
   return (
-    <Card
-      sx={{
-        m: 2,
-      }}
-    >
+    <Card sx={{ m: 2 }}>
       <CardHeader 
         avatar={<Icon icon={icon} />}
-        action={ loading ? <CircularProgress /> : null }
+        action={loading ? <CircularProgress color='secondary' /> : null}
         title={title}
         subheader={description}
       />
@@ -40,11 +42,12 @@ export default function Flickr({
         <pre>
           loading: {JSON.stringify(loading, null, 2)}
         </pre>
-        {frontmatter ? <>
-          {/*  */}
-        </> : <>
-          No frontmatter. No Matter
-        </>}        
+        {frontmatter ? (
+          <>{/* future frontmatter display */}</>
+        ) : (
+          <>No frontmatter. No Matter</>
+        )}
+        {status} {message}
       </CardContent>
     </Card>
   );

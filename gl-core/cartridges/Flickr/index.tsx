@@ -4,6 +4,6 @@ import { initialState as FlickrinitialState } from './initialState';
 
 import { initFlickr } from './actions/initFlickr';
 
-export { Flickr, FlickrinitialState };
+export { Flickr, initFlickr, FlickrinitialState };
 
 export type { TFlickr };

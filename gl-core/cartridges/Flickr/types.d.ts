@@ -1,3 +1,4 @@
+
 export type TFlickrState = {
   cartridge: string;
   status: TSeverity;
@@ -6,6 +7,7 @@ export type TFlickrState = {
   search: string | null;
   message: string;
   albums?: TFlickrAlbum[];
+  [key: string]: any;
 };
 
 export type TSeverity = 'success' | 'info' | 'warning' | 'error';
