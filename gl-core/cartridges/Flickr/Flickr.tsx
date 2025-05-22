@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { Box, CardHeader, CardContent, CircularProgress } from '@mui/material';
 import { Icon, useSlice, useDispatch } from '../../../gl-core';
-import { initFlickr } from './';
+import { initFlickr, AlbumCard } from './';
 
 export default function Flickr({
   frontmatter = {
@@ -27,7 +27,7 @@ export default function Flickr({
     <>
       <Box sx={{ m: 0 }}>
         <CardHeader
-          avatar={<Icon icon={icon} />}
+          // avatar={<Icon icon={icon} />}
           action={loading ? <CircularProgress color="secondary" /> : null}
           title={title}
           subheader={description}
@@ -35,14 +35,14 @@ export default function Flickr({
         <CardContent>
           {frontmatter ? (
             <>
-              Album
+              <AlbumCard />
             </>
           ) : (
             <>No frontmatter. No Matter</>
           )}
         </CardContent>
       </Box>
-      <pre>album: {JSON.stringify(album, null, 2)}</pre>      
+         
     </>
   );
 }

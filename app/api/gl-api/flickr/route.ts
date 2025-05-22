@@ -94,7 +94,6 @@ export async function GET(request: NextRequest) {
     });
   }
 
-  // === PHOTO MODE ===
   if (photoId) {
     const cached = photoCache[photoId];
     if (cached && Date.now() - cached.time < CACHE_TTL) {
@@ -132,7 +131,6 @@ export async function GET(request: NextRequest) {
     }
   }
 
-  // === LIST SINGLE ALBUM MODE ===
   if (!albumId) {
     try {
       const res = await fetch(
@@ -145,13 +143,13 @@ export async function GET(request: NextRequest) {
         .sort(
           (a: any, b: any) => parseInt(b.date_create) - parseInt(a.date_create),
         )
-        .slice(0, 1); // Only the latest album
+        .slice(0, 1); // Latest only
 
       const albums = await Promise.all(
         sets.map(async (set: any) => {
           const albumId = set.id;
+          const albumUrl = `https://www.flickr.com/photos/${flickrUserId}/albums/${albumId}`;
 
-          // Check cache
           const cached = albumCache[albumId];
           if (cached && Date.now() - cached.time < CACHE_TTL) {
             return {
@@ -162,6 +160,7 @@ export async function GET(request: NextRequest) {
               dateCreate: parseInt(set.date_create),
               coverPhoto: cached.meta.coverPhoto,
               photos: cached.photos,
+              albumUrl,
               cached: true,
             };
           }
@@ -184,6 +183,7 @@ export async function GET(request: NextRequest) {
           const meta = {
             title: set.title._content,
             albumId,
+            albumUrl,
             coverPhoto,
             description: set.description._content,
             total: parseInt(set.photos),
@@ -221,8 +221,9 @@ export async function GET(request: NextRequest) {
     }
   }
 
-  // === ALBUM MODE ===
   const cached = albumCache[albumId];
+  const albumUrl = `https://www.flickr.com/photos/${flickrUserId}/albums/${albumId}`;
+
   if (cached && Date.now() - cached.time < CACHE_TTL) {
     return NextResponse.json({
       time: Date.now(),
@@ -231,7 +232,10 @@ export async function GET(request: NextRequest) {
       status: 'success',
       message: 'Served from cache',
       result: {
-        meta: cached.meta,
+        meta: {
+          ...cached.meta,
+          albumUrl,
+        },
         photos: cached.photos,
       },
     });
@@ -288,6 +292,7 @@ export async function GET(request: NextRequest) {
     const meta = {
       title: data.photoset.title,
       albumId,
+      albumUrl,
       coverPhoto: data.photoset.primary,
       description: data.photoset.description,
       total: data.photoset.total,

@@ -10,11 +10,12 @@ export type TFlickrState = {
 };
 
 export type TAlbumCard = {
-  id: string | null;
+  id?: string | null;
 };
 
 export type TPhotoCard = {
-  id: string | null;
+  id?: string | null;
+  photo?: any;
 };
 
 export type TSeverity = 'success' | 'info' | 'warning' | 'error';
