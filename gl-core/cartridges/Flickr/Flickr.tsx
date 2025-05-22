@@ -8,17 +8,14 @@ export type TFlickr = {
   photo?: string | null;
 };
 
-export default function Flickr({ 
-  album = null,
-  photo = null,
- }: TFlickr) {
+export default function Flickr({ album = null, photo = null }: TFlickr) {
   const flickr = useSlice().flickr;
   return (
     <>
-      <Typography variant='h2'>
-        Flickr
-      </Typography>
-      <pre style={{fontSize:10}}>flickr: {JSON.stringify(flickr, null, 2)}</pre>
+      <Typography variant="h2">Flickr</Typography>
+      <pre style={{ fontSize: 10 }}>
+        flickr: {JSON.stringify(flickr, null, 2)}
+      </pre>
     </>
   );
 }

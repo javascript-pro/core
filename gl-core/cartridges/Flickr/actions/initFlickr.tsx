@@ -1,4 +1,4 @@
-import { TUbereduxDispatch, setUbereduxKey  } from '../../../../gl-core';
+import { TUbereduxDispatch, setUbereduxKey } from '../../../../gl-core';
 
 export const initFlickr = () => async (dispatch: TUbereduxDispatch) => {
   try {
