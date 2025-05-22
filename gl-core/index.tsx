@@ -42,6 +42,8 @@ import {
 import { useConfig, useIsMobile } from './hooks';
 
 import { toggleStatus } from './actions/toggleStatus';
+import { updateStatusLevel } from './actions/updateStatusLevel';
+import { updateStatusMessage } from './actions/updateStatusMessage';
 
 import {
   Uberedux,
@@ -61,7 +63,12 @@ import { TFlash, TMovieClip, TPhoto } from './cartridges/Flash';
 
 export { Core };
 export { Theme, createMUITheme, Icon, ModeSwitch };
-export { Status, toggleStatus, Header, Footer, RenderMarkdown, Responsive };
+export { Status, Header, Footer, RenderMarkdown, Responsive };
+export {
+  toggleStatus,
+  updateStatusLevel,
+  updateStatusMessage,
+}
 export {
   NextPrevious,
   Nav,

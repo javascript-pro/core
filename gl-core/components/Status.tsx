@@ -12,7 +12,10 @@ export default function Status({}: TStatus) {
   const dispatch = useDispatch();
   const status = useSlice().status;
 
-  const { level, feedback, hidden } = status;
+  const { 
+    level = "info", 
+    feedback = "Something is wrong",
+    hidden = false, } = status;
 
   const onHideStatus = () => {
     console.log('onHideStatus');
@@ -26,8 +29,8 @@ export default function Status({}: TStatus) {
       {/* <pre>status: {JSON.stringify(status, null, 2)}</pre> */}
       <Alert
         severity={level}
-        variant="filled"
-        icon={<Icon icon="blokey" />}
+        variant="outlined"
+        // icon={<Icon icon="blokey" />}
         action={
           <IconButton onClick={onHideStatus} color="inherit" size="small">
             <Icon icon="close" />

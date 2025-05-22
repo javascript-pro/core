@@ -8,7 +8,7 @@ import { store } from '../../gl-core/cartridges/Uberedux/store';
 export type TUbereduxState = {
   status: {
     level: string;
-    feedback: string;
+    message: string;
     hidden: boolean;
   };
 };

@@ -8,7 +8,7 @@ import { store } from '../../gl-core/cartridges/Uberedux/store';
 export type TUbereduxState = {
   status: {
     level: string;
-    feedback: string;
+    message: string;
     hidden: boolean;
   };
 };
@@ -18,7 +18,6 @@ export const updateStatusMessage =
     try {
       const currentStatus = (store.getState() as unknown as TUbereduxState)
         .status;
-
       const updatedStatus = {
         ...currentStatus,
         message,

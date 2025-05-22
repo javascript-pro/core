@@ -9,6 +9,14 @@ export type TFlickrState = {
   [key: string]: any;
 };
 
+export type TAlbumCard = {
+  id: string | null;
+};
+
+export type TPhotoCard = {
+  id: string | null;
+};
+
 export type TSeverity = 'success' | 'info' | 'warning' | 'error';
 
 export type TFlickrPhoto = {

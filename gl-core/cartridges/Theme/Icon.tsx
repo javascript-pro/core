@@ -123,10 +123,12 @@ import AddIcon from '@mui/icons-material/Add';
 import PreviewIcon from '@mui/icons-material/Preview';
 import FlickrIcon from '@mui/icons-material/CameraRoll';
 import PhotoIcon from '@mui/icons-material/CameraAlt';
+import AlbumIcon from '@mui/icons-material/Album';
 
 export type TIcon = {
   icon:
     | 'plus'
+    | 'album'
     | 'flickr'
     | 'photo'
     | 'preview'
@@ -712,6 +714,10 @@ export default function Icon({ icon, color }: TIcon) {
 
     case 'photo':
       iconFragment = <PhotoIcon color={color} />;
+      break;
+
+          case 'album':
+      iconFragment = <AlbumIcon color={color} />;
       break;
 
     default:
