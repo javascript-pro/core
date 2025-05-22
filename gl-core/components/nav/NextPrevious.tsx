@@ -206,6 +206,19 @@ export default function NextPrevious() {
         </>
       )}
 
+      {obj.api.visible && (
+        <MightyButton
+          sx={{ mr: 1 }}
+          mode="icon"
+          onClick={() => {
+            window.open('/api/gl-api', '_blank');
+          }}
+          label="API"
+          icon="api"
+          disabled={obj.github.disabled}
+        />
+      )}
+
       {obj.github.visible && (
         <MightyButton
           sx={{ mr: 1 }}
@@ -252,22 +265,6 @@ export default function NextPrevious() {
           icon="right"
         />
       )}
-
-      {/* {obj.this.visible && (
-        <>
-          {!isMobile ? (
-            <Typography
-              sx={{
-                my: 1,
-              }}
-              variant="body1"
-              component={'h2'}
-            >
-              {obj.this.description}
-            </Typography>
-          ) : null}
-        </>
-      )} */}
     </Box>
   );
 }

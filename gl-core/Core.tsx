@@ -1,5 +1,6 @@
 'use client';
 import * as React from 'react';
+import { usePathname } from 'next/navigation';
 import { CssBaseline } from '@mui/material';
 import {
   Theme,
@@ -13,6 +14,7 @@ import {
   Nav,
   NextPrevious,
 } from '../gl-core';
+import { Flickr } from './cartridges/Flickr'; // Adjust path if needed
 
 export type TFrontmatter = {
   icon?: string;
@@ -29,13 +31,12 @@ export type TCore = {
   children?: React.ReactNode;
 };
 
-// TestClip
-
 export default function Core({ frontmatter, body = null }: TCore) {
   const slice = useSlice();
   const { flash } = slice;
   const { showOutput } = flash;
-  // const showOutput = true;
+  const pathname = usePathname();
+  const showFlickr = pathname.includes('balance/flickr');
 
   return (
     <Theme>
@@ -48,11 +49,18 @@ export default function Core({ frontmatter, body = null }: TCore) {
         ) : null}
 
         <MovieClip id="content" opacity={0}>
-          <Header frontmatter={frontmatter} />
-          <Photo src={frontmatter?.image ?? null} />
-          <PageBreadcrumb />
-          {/* Conditionally control the size of this component. or not */}
-          <RenderMarkdown>{body}</RenderMarkdown>
+          {showFlickr ? (
+            <>
+              <Flickr frontmatter={frontmatter} />
+            </>
+          ) : (
+            <>
+              <Header frontmatter={frontmatter} />
+              <Photo src={frontmatter?.image ?? null} />
+              <PageBreadcrumb />
+              <RenderMarkdown>{body}</RenderMarkdown>
+            </>
+          )}
         </MovieClip>
 
         <MovieClip id="nextprev" opacity={0} height={75}>

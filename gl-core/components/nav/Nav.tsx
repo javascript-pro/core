@@ -38,9 +38,9 @@ export default function Nav({}: TNav) {
     <>
       <Fab
         sx={{
+          background: 0,
           boxShadow: 0,
         }}
-        color="default"
         onClick={openModalNav}
       >
         <Icon icon="search" />
