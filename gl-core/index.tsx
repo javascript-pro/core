@@ -64,11 +64,7 @@ import { TFlash, TMovieClip, TPhoto } from './cartridges/Flash';
 export { Core };
 export { Theme, createMUITheme, Icon, ModeSwitch };
 export { Status, Header, Footer, RenderMarkdown, Responsive };
-export {
-  toggleStatus,
-  updateStatusLevel,
-  updateStatusMessage,
-}
+export { toggleStatus, updateStatusLevel, updateStatusMessage };
 export {
   NextPrevious,
   Nav,

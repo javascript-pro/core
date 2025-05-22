@@ -59,8 +59,8 @@ export default function Nav({}: TNav) {
         <DialogTitle>Nav</DialogTitle>
 
         <DialogContent>
-          <MightyButton 
-            sx={{mb: 2}}
+          <MightyButton
+            sx={{ mb: 2 }}
             variant="outlined"
             color="secondary"
             label="Home"
@@ -78,7 +78,6 @@ export default function Nav({}: TNav) {
         </DialogContent>
 
         <DialogActions>
-          
           {isMobile ? (
             <>
               <IconButton onClick={closeModalNav}>

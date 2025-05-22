@@ -8,17 +8,11 @@ import {
   CardMedia,
   Typography,
 } from '@mui/material';
-import { 
-  Icon,
-  MightyButton,
-  useSlice,
-} from '../../../../gl-core';
+import { Icon, MightyButton, useSlice } from '../../../../gl-core';
 import { PhotoCard } from '../';
 import { TAlbumCard } from '../types';
 
-export default function AlbumCard({
-  id = null,
-}: TAlbumCard) {
+export default function AlbumCard({ id = null }: TAlbumCard) {
   const { album } = useSlice().flickr ?? {};
 
   if (!album) {
@@ -40,24 +34,23 @@ export default function AlbumCard({
 
   return (
     <Box>
-      
-      <CardHeader 
+      <CardHeader
         avatar={<Icon icon="album" />}
         title={title}
         subheader={description}
         action={
           <MightyButton
-            mode="icon" 
+            mode="icon"
             icon="link"
             label="View on Flickr"
             color="inherit"
-            onClick={() => window.open(albumUrl, "_blank")}
+            onClick={() => window.open(albumUrl, '_blank')}
           />
         }
       />
       <CardContent>
         {coverPhoto?.sizes?.small?.src && (
-          <CardMedia 
+          <CardMedia
             component="img"
             src={coverPhoto.sizes.small.src}
             alt={coverPhoto.title || 'Cover photo'}
@@ -76,9 +69,10 @@ export default function AlbumCard({
           </Typography>
         )} */}
 
-        {photos.length > 0 && photos.map((photo: any, i: number) => (
-          <PhotoCard key={`photo_${i}`} photo={photo} />
-        ))}
+        {photos.length > 0 &&
+          photos.map((photo: any, i: number) => (
+            <PhotoCard key={`photo_${i}`} photo={photo} />
+          ))}
       </CardContent>
     </Box>
   );

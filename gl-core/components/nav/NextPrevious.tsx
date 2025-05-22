@@ -127,8 +127,6 @@ export default function NextPrevious() {
   const thisObj = flatNav.find((item) => item.slug === pathname);
 
   if (thisObj) {
-    
-
     // UP
     if (thisObj.parent) {
       obj.up.visible = true;
