@@ -1,6 +1,7 @@
 'use client';
 
 import * as React from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 import {
   IconButton,
   Dialog,
@@ -25,6 +26,7 @@ export type TNav = {
 
 export default function Nav({}: TNav) {
   const dispatch = useDispatch();
+  const router = useRouter();
   const slice = useSlice();
   const { modalNav } = slice;
   const isMobile = useIsMobile();
@@ -43,7 +45,7 @@ export default function Nav({}: TNav) {
         }}
         onClick={openModalNav}
       >
-        <Icon icon="search" />
+        <Icon icon="blokey" />
       </Fab>
 
       <Dialog
@@ -54,9 +56,20 @@ export default function Nav({}: TNav) {
         open={modalNav}
         onClose={closeModalNav}
       >
-        <DialogTitle>Search</DialogTitle>
+        <DialogTitle>Nav</DialogTitle>
 
         <DialogContent>
+          <MightyButton 
+            sx={{mb: 2}}
+            variant="outlined"
+            color="secondary"
+            label="Home"
+            icon="home"
+            onClick={() => {
+              closeModalNav();
+              router.push('/');
+            }}
+          />
           <Search
             onTrigger={(e: any) => {
               // console.log('onSearchTrigger', e);
@@ -65,6 +78,7 @@ export default function Nav({}: TNav) {
         </DialogContent>
 
         <DialogActions>
+          
           {isMobile ? (
             <>
               <IconButton onClick={closeModalNav}>

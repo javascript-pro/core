@@ -58,7 +58,7 @@ export default function RenderMarkdown({
       sx={{
         // border: "1px solid red",
         width: width ?? '100%',
-        height: window.innerHeight - 500,
+        // height: window.innerHeight - 500,
         maxWidth: maxWidth ?? '100%',
         minHeight: 0,
         display: 'flex',

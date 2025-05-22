@@ -4,6 +4,7 @@
   "description": "Custom software that works",
   "url": "https://goldlabel.pro",
   "repo": "https://github.com/javascript-pro/core",
+  "defaultMode": "light",
   "favicon": {
     "dark": "/svg/favicon_gold.svg",
     "light": "/svg/favicon_grey.svg"

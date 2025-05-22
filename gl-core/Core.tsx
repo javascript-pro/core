@@ -43,19 +43,15 @@ export default function Core({ frontmatter, body = null }: TCore) {
     <Theme>
       <CssBaseline />
       <Flash id="core">
-        {showOutput ? (
-          <MovieClip id="output">
-            <pre>frontmatter: {JSON.stringify(frontmatter, null, 2)}</pre>
-          </MovieClip>
-        ) : null}
+        
+        <MovieClip id="status" opacity={1}>
+          <Status />
+        </MovieClip>
 
         <MovieClip id="content" opacity={0}>
-          {showFlickr ? (
-            <>
-              <Status />
-              <Flickr frontmatter={frontmatter} />
-            </>
-          ) : (
+          {showFlickr ? 
+            <Flickr frontmatter={frontmatter} />
+          : (
             <>
               <Header frontmatter={frontmatter} />
               <Status />
@@ -73,10 +69,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
         <MovieClip width={65} height={65} id="click-here" opacity={0}>
           <Nav />
         </MovieClip>
-        {/* 
-        <MovieClip id="status" opacity={1}>
-          <Status />
-        </MovieClip> */}
+        
+
       </Flash>
     </Theme>
   );
