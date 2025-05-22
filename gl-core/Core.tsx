@@ -51,8 +51,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
         <MovieClip id="content" opacity={0}>
           {showFlickr ? (
             <>
-              <Header frontmatter={frontmatter} />
-              <Flickr />
+              <Flickr frontmatter={frontmatter} />
             </>
           ) : (
             <>

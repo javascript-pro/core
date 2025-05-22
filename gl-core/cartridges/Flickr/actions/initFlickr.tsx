@@ -3,20 +3,18 @@ import { TUbereduxDispatch, setUbereduxKey } from '../../../../gl-core';
 export const initFlickr = () => async (dispatch: TUbereduxDispatch) => {
   try {
     console.log('initFlickr');
-
     /*
       Take a look in the getState().flickr
 
-      it looks like this
-
-      {
+      the initial state is ... 
+      import {TFlickrState} from './types';
+      
+      export const initialState: TFlickrState = {
         cartridge: 'flickr',
-        initting: false,
-        initComplete: false,
+        status: "success",
+        message: "ok",
         albums: [],
-        photos: [],
-      }
-
+      };
     */
 
     dispatch(setUbereduxKey({ key: 'initFlickr', value: true }));

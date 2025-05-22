@@ -30,19 +30,22 @@ const flickrApiKey = process.env.FLICKR_KEY;
 const flickrUserId = process.env.FLICKR_USER;
 
 const CACHE_TTL = 1000 * 60 * 5;
-const albumCache: Record<string, { time: number; photos: TFlickrPhoto[]; meta: any }> = {};
+const albumCache: Record<
+  string,
+  { time: number; photos: TFlickrPhoto[]; meta: any }
+> = {};
 const photoCache: Record<string, { time: number; photo: TFlickrPhoto }> = {};
 
 async function getPhotoWithSizes(photoId: string): Promise<TFlickrPhoto> {
   const infoRes = await fetch(
-    `${FLICKR_API}?method=flickr.photos.getInfo&api_key=${flickrApiKey}&photo_id=${photoId}&user_id=${flickrUserId}&format=json&nojsoncallback=1`
+    `${FLICKR_API}?method=flickr.photos.getInfo&api_key=${flickrApiKey}&photo_id=${photoId}&user_id=${flickrUserId}&format=json&nojsoncallback=1`,
   );
   const infoData = await infoRes.json();
   if (infoData.stat !== 'ok') throw new Error(infoData.message);
   const p = infoData.photo;
 
   const sizesRes = await fetch(
-    `${FLICKR_API}?method=flickr.photos.getSizes&api_key=${flickrApiKey}&photo_id=${photoId}&format=json&nojsoncallback=1`
+    `${FLICKR_API}?method=flickr.photos.getSizes&api_key=${flickrApiKey}&photo_id=${photoId}&format=json&nojsoncallback=1`,
   );
   const sizesData = await sizesRes.json();
   if (sizesData.stat !== 'ok') throw new Error(sizesData.message);
@@ -134,13 +137,15 @@ export async function GET(request: NextRequest) {
   if (!albumId) {
     try {
       const res = await fetch(
-        `${FLICKR_API}?method=flickr.photosets.getList&api_key=${flickrApiKey}&user_id=${flickrUserId}&format=json&nojsoncallback=1`
+        `${FLICKR_API}?method=flickr.photosets.getList&api_key=${flickrApiKey}&user_id=${flickrUserId}&format=json&nojsoncallback=1`,
       );
       const data = await res.json();
       if (data.stat !== 'ok') throw new Error(data.message);
 
       const sets = data.photosets.photoset
-        .sort((a: any, b: any) => parseInt(b.date_create) - parseInt(a.date_create))
+        .sort(
+          (a: any, b: any) => parseInt(b.date_create) - parseInt(a.date_create),
+        )
         .slice(0, 12);
 
       const albums = await Promise.all(
@@ -160,7 +165,7 @@ export async function GET(request: NextRequest) {
             dateCreate: parseInt(set.date_create),
             coverPhoto,
           };
-        })
+        }),
       );
 
       return NextResponse.json({
@@ -198,7 +203,7 @@ export async function GET(request: NextRequest) {
 
   try {
     const flickrRes = await fetch(
-      `${FLICKR_API}?method=flickr.photosets.getPhotos&api_key=${flickrApiKey}&photoset_id=${albumId}&user_id=${flickrUserId}&format=json&nojsoncallback=1&extras=description,date_taken,geo,tags,url_o,url_h,url_c,url_n`
+      `${FLICKR_API}?method=flickr.photosets.getPhotos&api_key=${flickrApiKey}&photoset_id=${albumId}&user_id=${flickrUserId}&format=json&nojsoncallback=1&extras=description,date_taken,geo,tags,url_o,url_h,url_c,url_n`,
     );
     const data = await flickrRes.json();
     if (data.stat !== 'ok') throw new Error(data.message);

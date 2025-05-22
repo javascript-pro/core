@@ -1,21 +1,51 @@
 'use client';
 import * as React from 'react';
-import { Typography } from '@mui/material';
-import { useSlice } from '../../';
+import { 
+  Card,
+  CardHeader,
+  CardContent,
+  Typography,
+  CircularProgress,
+} from '@mui/material';
+import { Icon, useSlice } from '../../../gl-core';
 
 export type TFlickr = {
-  album?: string | null;
-  photo?: string | null;
+  frontmatter?: any;
 };
 
-export default function Flickr({ album = null, photo = null }: TFlickr) {
+export default function Flickr({ 
+  frontmatter = {
+    title: "Flickr",
+    description: "Herding pandas",
+    icon: "flickr",
+  }, 
+}: TFlickr) {
+  
   const flickr = useSlice().flickr;
+  const {loading} = flickr
+  const {title, description, icon} = frontmatter;
   return (
-    <>
-      <Typography variant="h2">Flickr</Typography>
-      <pre style={{ fontSize: 10 }}>
-        flickr: {JSON.stringify(flickr, null, 2)}
-      </pre>
-    </>
+    <Card
+      sx={{
+        m: 2,
+      }}
+    >
+      <CardHeader 
+        avatar={<Icon icon={icon} />}
+        action={ loading ? <CircularProgress /> : null }
+        title={title}
+        subheader={description}
+      />
+      <CardContent>
+        <pre>
+          loading: {JSON.stringify(loading, null, 2)}
+        </pre>
+        {frontmatter ? <>
+          {/*  */}
+        </> : <>
+          No frontmatter. No Matter
+        </>}        
+      </CardContent>
+    </Card>
   );
 }
