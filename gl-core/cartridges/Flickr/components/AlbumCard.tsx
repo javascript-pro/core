@@ -3,22 +3,17 @@
 import * as React from 'react';
 import {
   Box,
+  Grid,
   CardContent,
   CardHeader,
   CardMedia,
   Typography,
 } from '@mui/material';
-import { 
-  Icon,
-  MightyButton,
-  useSlice,
-} from '../../../../gl-core';
+import { Icon, MightyButton, useSlice } from '../../../../gl-core';
 import { PhotoCard } from '../';
 import { TAlbumCard } from '../types';
 
-export default function AlbumCard({
-  id = null,
-}: TAlbumCard) {
+export default function AlbumCard({ id = null }: TAlbumCard) {
   const { album } = useSlice().flickr ?? {};
 
   if (!album) {
@@ -33,52 +28,54 @@ export default function AlbumCard({
     title = 'Untitled',
     description = '',
     coverPhoto,
-    // count,
     photos = [],
     albumUrl,
   } = album;
 
   return (
     <Box>
-      
-      <CardHeader 
-        avatar={<Icon icon="album" />}
+      <CardHeader
         title={title}
         subheader={description}
-        action={
+        avatar={
           <MightyButton
-            mode="icon" 
+            mode="icon"
             icon="link"
             label="View on Flickr"
             color="inherit"
-            onClick={() => window.open(albumUrl, "_blank")}
+            onClick={() => window.open(albumUrl, '_blank')}
           />
         }
       />
       <CardContent>
         {coverPhoto?.sizes?.small?.src && (
-          <CardMedia 
+          <CardMedia
             component="img"
             src={coverPhoto.sizes.small.src}
             alt={coverPhoto.title || 'Cover photo'}
           />
         )}
 
-        {/* {coverPhoto?.title && (
-          <Typography variant="body1">
-            {coverPhoto.title}
-          </Typography>
-        )}
+        <Grid container spacing={1}>
+          {photos.length > 0 &&
+            photos.map((photo: any, i: number) => {
+              if (photo.flickrId === coverPhoto?.flickrId) return null;
 
-        {coverPhoto?.description && (
-          <Typography variant="body2">
-            {coverPhoto.description}
-          </Typography>
-        )} */}
-
-        {photos.length > 0 && photos.map((photo: any, i: number) => (
-          <PhotoCard key={`photo_${i}`} photo={photo} />
-        ))}
+              return (
+                <Grid
+                  key={`photo_${i}`}
+                  size={{
+                    xs: 12,
+                    sm: 6,
+                    md: 4,
+                    lg: 3,
+                  }}
+                >
+                  <PhotoCard mode="card" photo={photo} />
+                </Grid>
+              );
+            })}
+        </Grid>
       </CardContent>
     </Box>
   );

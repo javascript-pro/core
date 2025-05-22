@@ -1,10 +1,11 @@
 'use client';
 import * as React from 'react';
-import { Box, Container, CardHeader, CardContent, CircularProgress } from '@mui/material';
-import { 
-  useSlice, 
-  useDispatch,
-} from '../../../gl-core';
+import {
+  Box,
+  CardHeader,
+  CircularProgress,
+} from '@mui/material';
+import { useSlice, useDispatch } from '../../../gl-core';
 import { initFlickr, AlbumCard } from './';
 
 export default function Flickr({
@@ -17,10 +18,10 @@ export default function Flickr({
   const flickr = useSlice().flickr;
   const dispatch = useDispatch();
   const { 
-    loading = false,
-    album = null,
-  } = flickr;
-  const { title, description, icon } = frontmatter;
+    loading = false, 
+    // album = null,
+   } = flickr;
+  const { title, description } = frontmatter;
 
   React.useEffect(() => {
     dispatch(initFlickr());
@@ -28,24 +29,19 @@ export default function Flickr({
 
   return (
     <>
-      <Box sx={{ 
-        maxWidth: 400,
-      }}>
+      <Box
+        sx={{
+          
+        }}
+      >
         <CardHeader
-          // avatar={<Icon icon={icon} />}
           action={loading ? <CircularProgress color="secondary" /> : null}
           title={title}
           subheader={description}
         />
-        <CardContent>
-          {frontmatter ? (
-            <>
-              <AlbumCard />
-            </>
-          ) : (
+          {frontmatter ? <AlbumCard /> : (
             <>No frontmatter. No Matter</>
           )}
-        </CardContent>
       </Box>
     </>
   );

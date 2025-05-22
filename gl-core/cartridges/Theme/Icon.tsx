@@ -318,7 +318,7 @@ export default function Icon({ icon, color }: TIcon) {
     case 'company':
       iconFragment = <CompanyIcon color={color} />;
       break;
-          case 'link':
+    case 'link':
       iconFragment = <LinkIcon color={color} />;
       break;
     case 'auth':
@@ -721,7 +721,7 @@ export default function Icon({ icon, color }: TIcon) {
       iconFragment = <PhotoIcon color={color} />;
       break;
 
-          case 'album':
+    case 'album':
       iconFragment = <AlbumIcon color={color} />;
       break;
 

@@ -11,9 +11,9 @@ import {
   RenderMarkdown,
   Header,
   PageBreadcrumb,
-  Nav,
+  // Nav,
   NextPrevious,
-  Status,
+  // Status,
 } from '../gl-core';
 import { Flickr } from './cartridges/Flickr'; // Adjust path if needed
 
@@ -43,15 +43,14 @@ export default function Core({ frontmatter, body = null }: TCore) {
     <Theme>
       <CssBaseline />
       <Flash id="core">
-        
-        <MovieClip id="status" opacity={1}>
+        {/* <MovieClip id="status" opacity={1}>
           <Status />
-        </MovieClip>
+        </MovieClip> */}
 
         <MovieClip id="content" opacity={0}>
-          {showFlickr ? 
+          {showFlickr ? (
             <Flickr frontmatter={frontmatter} />
-          : (
+          ) : (
             <>
               <Header frontmatter={frontmatter} />
               <Status />
@@ -66,11 +65,9 @@ export default function Core({ frontmatter, body = null }: TCore) {
           <NextPrevious />
         </MovieClip>
 
-        <MovieClip width={65} height={65} id="click-here" opacity={0}>
+        {/* <MovieClip width={65} height={65} id="click-here" opacity={0}>
           <Nav />
-        </MovieClip>
-        
-
+        </MovieClip> */}
       </Flash>
     </Theme>
   );

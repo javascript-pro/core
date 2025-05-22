@@ -1,51 +1,48 @@
 'use client';
 
 import * as React from 'react';
-import {TPhotoCard} from "../types";
-import {
-  Box,
-  CardHeader,
+import { TPhotoCard } from '../types';
+import { 
+  Box, 
+  CardHeader, 
   CardMedia,
 } from '@mui/material';
-import { Icon } from '../../../../gl-core';
+import { Icon, MightyButton } from '../../../../gl-core';
 
-export default function PhotoCard({
-  id = null,
-  photo = {
-  },
+export default function PhotoCard({ 
+  mode = "card",
+  photo = {},
+
 }: TPhotoCard) {
-  
-  // 
 
-  const {
-    title,
-    description,
-    sizes,
-  } = photo;
-
+  const { title, description, sizes, flickrUrl } = photo;
   const size = sizes.small;
 
-  return (
-    <>
+  if (mode === "card") {
+    return <>
+            <CardHeader
+              title={`${title}`}
+              subheader={`${description}`}
+              avatar={
+                <MightyButton
+                  mode="icon"
+                  icon="link"
+                  label="View on Flickr"
+                  color="inherit"
+                  onClick={() => window.open(flickrUrl, '_blank')}
+                />
+              }
+            />
+            <CardMedia
+              component="img"
+              src={size.src}
+              alt={description || 'Single Photo'}
+              sx={{
+                maxHeight: 175,
+              }}
+            />  
+          </>
+  }
 
-    {/* <pre style={{fontSize: 10}}>sizes.small: {JSON.stringify(sizes.small, null, 2)}</pre> */}
-
-      <Box>
-        <CardHeader 
-          avatar={<Icon icon="photo" />}
-          title={`${title}`}
-          subheader={`${description}`}
-        />
-          <CardMedia 
-            component="img"
-            src={size.src}
-            alt={description || 'Single Photo'}
-            height={50}
-          />
-        {/* <pre style={{fontSize: 10 }}>
-          photo: {JSON.stringify(photo, null, 2)}
-        </pre>   */}
-      </Box>    
-    </>
-  );
+  return null;
 }

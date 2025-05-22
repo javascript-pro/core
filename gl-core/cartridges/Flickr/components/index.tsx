@@ -1,7 +1,4 @@
-import AlbumCard from "./AlbumCard";
-import PhotoCard from "./PhotoCard";
+import AlbumCard from './AlbumCard';
+import PhotoCard from './PhotoCard';
 
-export {
-    AlbumCard,
-    PhotoCard,
-};
+export { AlbumCard, PhotoCard };

@@ -12,10 +12,11 @@ export default function Status({}: TStatus) {
   const dispatch = useDispatch();
   const status = useSlice().status;
 
-  const { 
-    level = "info", 
-    feedback = "Something is wrong",
-    hidden = false, } = status;
+  const {
+    level = 'info',
+    feedback = 'Something is wrong',
+    hidden = false,
+  } = status;
 
   const onHideStatus = () => {
     console.log('onHideStatus');
