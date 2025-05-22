@@ -51,7 +51,7 @@ export default function AlbumCard({ id = null }: TAlbumCard) {
         {coverPhoto?.sizes?.small?.src && (
           <CardMedia
             component="img"
-            src={coverPhoto.sizes.small.src}
+            src={coverPhoto.sizes.large.src}
             alt={coverPhoto.title || 'Cover photo'}
           />
         )}

@@ -7,15 +7,12 @@ import {
   Flash,
   MovieClip,
   Photo,
-  useSlice,
   RenderMarkdown,
   Header,
   PageBreadcrumb,
-  // Nav,
   NextPrevious,
-  // Status,
 } from '../gl-core';
-import { Flickr } from './cartridges/Flickr'; // Adjust path if needed
+import { Flickr } from './cartridges/Flickr';
 
 export type TFrontmatter = {
   icon?: string;
@@ -33,9 +30,7 @@ export type TCore = {
 };
 
 export default function Core({ frontmatter, body = null }: TCore) {
-  const slice = useSlice();
-  const { flash } = slice;
-  const { showOutput } = flash;
+
   const pathname = usePathname();
   const showFlickr = pathname.includes('balance/flickr');
 
@@ -43,10 +38,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
     <Theme>
       <CssBaseline />
       <Flash id="core">
-        {/* <MovieClip id="status" opacity={1}>
-          <Status />
-        </MovieClip> */}
-
+        
         <MovieClip id="content" opacity={0}>
           {showFlickr ? (
             <Flickr frontmatter={frontmatter} />
@@ -64,9 +56,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
           <NextPrevious />
         </MovieClip>
 
-        {/* <MovieClip width={65} height={65} id="click-here" opacity={0}>
-          <Nav />
-        </MovieClip> */}
       </Flash>
     </Theme>
   );
