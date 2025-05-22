@@ -1,4 +1,3 @@
-
 export type TFlickrState = {
   cartridge: string;
   status: TSeverity;

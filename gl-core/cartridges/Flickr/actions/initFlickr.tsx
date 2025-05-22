@@ -14,27 +14,31 @@ export const initFlickr = () => async (dispatch: TUbereduxDispatch) => {
 
     const oldFlickr = getFlickrState();
 
-    dispatch(setUbereduxKey({
-      key: 'flickr',
-      value: {
-        ...oldFlickr,
-        loading: true,
-        status: 'loading',
-        message: 'initialising flickr...',
-      },
-    }));
+    dispatch(
+      setUbereduxKey({
+        key: 'flickr',
+        value: {
+          ...oldFlickr,
+          loading: true,
+          status: 'loading',
+          message: 'initialising flickr...',
+        },
+      }),
+    );
 
     // Do more async stuff here if needed...
 
-    dispatch(setUbereduxKey({
-      key: 'flickr',
-      value: {
-        ...oldFlickr,
-        loading: false,
-        status: 'success',
-        message: 'flickr init complete',
-      },
-    }));
+    dispatch(
+      setUbereduxKey({
+        key: 'flickr',
+        value: {
+          ...oldFlickr,
+          loading: false,
+          status: 'success',
+          message: 'flickr init complete',
+        },
+      }),
+    );
 
     dispatch(setUbereduxKey({ key: 'initFlickr', value: true }));
   } catch (e: unknown) {
@@ -42,15 +46,17 @@ export const initFlickr = () => async (dispatch: TUbereduxDispatch) => {
 
     const oldFlickr = getFlickrState();
 
-    dispatch(setUbereduxKey({
-      key: 'flickr',
-      value: {
-        ...oldFlickr,
-        loading: false,
-        status: 'error',
-        message: errorMessage,
-      },
-    }));
+    dispatch(
+      setUbereduxKey({
+        key: 'flickr',
+        value: {
+          ...oldFlickr,
+          loading: false,
+          status: 'error',
+          message: errorMessage,
+        },
+      }),
+    );
 
     dispatch(setUbereduxKey({ key: 'error', value: errorMessage }));
   }

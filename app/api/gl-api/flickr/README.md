@@ -1,7 +1,5 @@
 https://github.com/javascript-pro/core/issues/76
 
-
-
 album=72177720324245676
 
 endpoints
