@@ -28,8 +28,8 @@ export default function UbereduxProvider({
                 priority
                 src="/svg/rehydrate-ad.svg"
                 alt="Rehydrating Uberedux"
-                width={250}
-                height={250}
+                width={150}
+                height={150}
                 style={{ objectFit: 'contain' }}
               />
             </div>

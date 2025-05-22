@@ -1,57 +1,63 @@
 import { setUbereduxKey } from '../../../../gl-core';
 import { TUbereduxDispatch } from '../../../../gl-core';
 import { store } from '../../Uberedux/store';
-import { TFlickrState } from '../types';
-
-// Safe helper with unknown → type cast
-const getFlickrState = (): TFlickrState => {
-  return (store.getState() as unknown as { flickr: TFlickrState }).flickr;
-};
+import { fetchAlbum } from './fetchAlbum';
 
 export const initFlickr = () => async (dispatch: TUbereduxDispatch) => {
   try {
-    console.log('initFlickr');
+    const state = store.getState();
+    const { flickr } = state.redux;
+    const { loading } = flickr;
 
-    const oldFlickr = getFlickrState();
+    if (loading) return;
 
-    dispatch(setUbereduxKey({
-      key: 'flickr',
-      value: {
-        ...oldFlickr,
-        loading: true,
-        status: 'loading',
-        message: 'initialising flickr...',
-      },
-    }));
+    dispatch(
+      setUbereduxKey({
+        key: 'flickr',
+        value: {
+          ...flickr,
+          message: 'Booting Flickr Cartridge',
+          // loading: true,
+          status: 'success',
+        },
+      }),
+    );
 
-    // Do more async stuff here if needed...
+    // Timeout fallback
+    const timeoutId = setTimeout(() => {
+      dispatch(
+        setUbereduxKey({
+          key: 'flickr',
+          value: {
+            ...flickr,
+            message: 'Flickr init timed out',
+            loading: false,
+            status: 'error',
+          },
+        }),
+      );
+    }, 10000);
 
-    dispatch(setUbereduxKey({
-      key: 'flickr',
-      value: {
-        ...oldFlickr,
-        loading: false,
-        status: 'success',
-        message: 'flickr init complete',
-      },
-    }));
+    // Await album fetch
+    await dispatch(fetchAlbum());
 
-    dispatch(setUbereduxKey({ key: 'initFlickr', value: true }));
+    clearTimeout(timeoutId); // Clear timeout if fetchAlbum succeeded
+
+    // Update success state
+    const updatedState = store.getState().redux.flickr;
+    dispatch(
+      setUbereduxKey({
+        key: 'flickr',
+        value: {
+          ...updatedState,
+          message: 'Fetched album',
+          loading: false,
+          status: 'success',
+        },
+      }),
+    );
   } catch (e: unknown) {
     const errorMessage = e instanceof Error ? e.message : String(e);
-
-    const oldFlickr = getFlickrState();
-
-    dispatch(setUbereduxKey({
-      key: 'flickr',
-      value: {
-        ...oldFlickr,
-        loading: false,
-        status: 'error',
-        message: errorMessage,
-      },
-    }));
-
     dispatch(setUbereduxKey({ key: 'error', value: errorMessage }));
   }
 };

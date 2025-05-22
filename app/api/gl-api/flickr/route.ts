@@ -29,7 +29,10 @@ const flickrApiKey = process.env.FLICKR_KEY;
 const flickrUserId = process.env.FLICKR_USER;
 
 const CACHE_TTL = 1000 * 60 * 5;
-const albumCache: Record<string, { time: number; photos: TFlickrPhoto[]; meta: any }> = {};
+const albumCache: Record<
+  string,
+  { time: number; photos: TFlickrPhoto[]; meta: any }
+> = {};
 const photoCache: Record<string, { time: number; photo: TFlickrPhoto }> = {};
 
 async function getPhotoWithSizes(photoId: string): Promise<TFlickrPhoto> {
@@ -91,7 +94,6 @@ export async function GET(request: NextRequest) {
     });
   }
 
-  // === PHOTO MODE ===
   if (photoId) {
     const cached = photoCache[photoId];
     if (cached && Date.now() - cached.time < CACHE_TTL) {
@@ -129,7 +131,6 @@ export async function GET(request: NextRequest) {
     }
   }
 
-  // === LIST SINGLE ALBUM MODE ===
   if (!albumId) {
     try {
       const res = await fetch(
@@ -139,14 +140,16 @@ export async function GET(request: NextRequest) {
       if (data.stat !== 'ok') throw new Error(data.message);
 
       const sets = data.photosets.photoset
-        .sort((a: any, b: any) => parseInt(b.date_create) - parseInt(a.date_create))
-        .slice(0, 1); // Only the latest album
+        .sort(
+          (a: any, b: any) => parseInt(b.date_create) - parseInt(a.date_create),
+        )
+        .slice(0, 1); // Latest only
 
       const albums = await Promise.all(
         sets.map(async (set: any) => {
           const albumId = set.id;
+          const albumUrl = `https://www.flickr.com/photos/${flickrUserId}/albums/${albumId}`;
 
-          // Check cache
           const cached = albumCache[albumId];
           if (cached && Date.now() - cached.time < CACHE_TTL) {
             return {
@@ -157,6 +160,7 @@ export async function GET(request: NextRequest) {
               dateCreate: parseInt(set.date_create),
               coverPhoto: cached.meta.coverPhoto,
               photos: cached.photos,
+              albumUrl,
               cached: true,
             };
           }
@@ -179,6 +183,7 @@ export async function GET(request: NextRequest) {
           const meta = {
             title: set.title._content,
             albumId,
+            albumUrl,
             coverPhoto,
             description: set.description._content,
             total: parseInt(set.photos),
@@ -216,8 +221,9 @@ export async function GET(request: NextRequest) {
     }
   }
 
-  // === ALBUM MODE ===
   const cached = albumCache[albumId];
+  const albumUrl = `https://www.flickr.com/photos/${flickrUserId}/albums/${albumId}`;
+
   if (cached && Date.now() - cached.time < CACHE_TTL) {
     return NextResponse.json({
       time: Date.now(),
@@ -226,7 +232,10 @@ export async function GET(request: NextRequest) {
       status: 'success',
       message: 'Served from cache',
       result: {
-        meta: cached.meta,
+        meta: {
+          ...cached.meta,
+          albumUrl,
+        },
         photos: cached.photos,
       },
     });
@@ -250,16 +259,32 @@ export async function GET(request: NextRequest) {
       meta: { tags: p.tags?.split(' ') || [] },
       sizes: {
         orig: p.url_o
-          ? { src: p.url_o, width: parseInt(p.width_o), height: parseInt(p.height_o) }
+          ? {
+              src: p.url_o,
+              width: parseInt(p.width_o),
+              height: parseInt(p.height_o),
+            }
           : undefined,
         large: p.url_h
-          ? { src: p.url_h, width: parseInt(p.width_h), height: parseInt(p.height_h) }
+          ? {
+              src: p.url_h,
+              width: parseInt(p.width_h),
+              height: parseInt(p.height_h),
+            }
           : undefined,
         medium: p.url_c
-          ? { src: p.url_c, width: parseInt(p.width_c), height: parseInt(p.height_c) }
+          ? {
+              src: p.url_c,
+              width: parseInt(p.width_c),
+              height: parseInt(p.height_c),
+            }
           : undefined,
         small: p.url_n
-          ? { src: p.url_n, width: parseInt(p.width_n), height: parseInt(p.height_n) }
+          ? {
+              src: p.url_n,
+              width: parseInt(p.width_n),
+              height: parseInt(p.height_n),
+            }
           : undefined,
       },
     }));
@@ -267,6 +292,7 @@ export async function GET(request: NextRequest) {
     const meta = {
       title: data.photoset.title,
       albumId,
+      albumUrl,
       coverPhoto: data.photoset.primary,
       description: data.photoset.description,
       total: data.photoset.total,

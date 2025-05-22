@@ -123,10 +123,14 @@ import AddIcon from '@mui/icons-material/Add';
 import PreviewIcon from '@mui/icons-material/Preview';
 import FlickrIcon from '@mui/icons-material/CameraRoll';
 import PhotoIcon from '@mui/icons-material/CameraAlt';
+import AlbumIcon from '@mui/icons-material/Collections';
+import LinkIcon from '@mui/icons-material/Link';
 
 export type TIcon = {
   icon:
     | 'plus'
+    | 'link'
+    | 'album'
     | 'flickr'
     | 'photo'
     | 'preview'
@@ -313,6 +317,9 @@ export default function Icon({ icon, color }: TIcon) {
       break;
     case 'company':
       iconFragment = <CompanyIcon color={color} />;
+      break;
+          case 'link':
+      iconFragment = <LinkIcon color={color} />;
       break;
     case 'auth':
       iconFragment = <AdminIcon color={color} />;
@@ -712,6 +719,10 @@ export default function Icon({ icon, color }: TIcon) {
 
     case 'photo':
       iconFragment = <PhotoIcon color={color} />;
+      break;
+
+          case 'album':
+      iconFragment = <AlbumIcon color={color} />;
       break;
 
     default:

@@ -1,9 +1,15 @@
 import Flickr from './Flickr';
-import { TFlickr } from './Flickr';
 import { initialState as FlickrinitialState } from './initialState';
-
 import { initFlickr } from './actions/initFlickr';
+import {
+    AlbumCard,
+    PhotoCard,
+} from "./components"
 
-export { Flickr, initFlickr, FlickrinitialState };
-
-export type { TFlickr };
+export { 
+    Flickr, 
+    AlbumCard,
+    PhotoCard,
+    initFlickr, 
+    FlickrinitialState,
+};

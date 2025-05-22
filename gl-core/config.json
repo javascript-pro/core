@@ -1,6 +1,6 @@
 {
   "app": "Goldlabel pr0",
-  "forceUpdate": true,
+  "forceUpdate": false,
   "description": "Custom software that works",
   "url": "https://goldlabel.pro",
   "repo": "https://github.com/javascript-pro/core",

@@ -1,29 +1,22 @@
 'use client';
 import * as React from 'react';
-import { 
-  Card,
-  CardHeader,
-  CardContent,
-  CircularProgress,
-} from '@mui/material';
+import { Box, CardHeader, CardContent, CircularProgress } from '@mui/material';
 import { Icon, useSlice, useDispatch } from '../../../gl-core';
-import { initFlickr } from './';
+import { initFlickr, AlbumCard } from './';
 
-export type TFlickr = {
-  frontmatter?: any;
-};
-
-export default function Flickr({ 
+export default function Flickr({
   frontmatter = {
-    title: "Flickr",
-    description: "Herding pandas",
-    icon: "flickr",
-    message: "loading..."
-  }, 
-}: TFlickr) {
+    title: 'Flickr',
+    description: 'Herding pandas',
+    icon: 'flickr',
+  },
+}: any) {
   const flickr = useSlice().flickr;
   const dispatch = useDispatch();
-  const { loading, status, message } = flickr;
+  const { 
+    loading = false,
+    album = null,
+  } = flickr;
   const { title, description, icon } = frontmatter;
 
   React.useEffect(() => {
@@ -31,24 +24,29 @@ export default function Flickr({
   }, [dispatch]);
 
   return (
-    <Card sx={{ m: 2 }}>
-      <CardHeader 
-        avatar={<Icon icon={icon} />}
-        action={loading ? <CircularProgress color='secondary' /> : null}
-        title={title}
-        subheader={description}
-      />
-      <CardContent>
-        <pre>
-          loading: {JSON.stringify(loading, null, 2)}
-        </pre>
-        {frontmatter ? (
-          <>{/* future frontmatter display */}</>
-        ) : (
-          <>No frontmatter. No Matter</>
-        )}
-        {status} {message}
-      </CardContent>
-    </Card>
+    <>
+      <Box sx={{ m: 0 }}>
+        <CardHeader
+          // avatar={<Icon icon={icon} />}
+          action={loading ? <CircularProgress color="secondary" /> : null}
+          title={title}
+          subheader={description}
+        />
+        <CardContent>
+          {frontmatter ? (
+            <>
+              <AlbumCard />
+            </>
+          ) : (
+            <>No frontmatter. No Matter</>
+          )}
+        </CardContent>
+      </Box>
+         
+    </>
   );
 }
+
+/*
+<pre>flickr: {JSON.stringify(flickr, null, 2)}</pre>
+*/

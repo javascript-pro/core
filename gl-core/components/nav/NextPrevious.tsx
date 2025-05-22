@@ -43,7 +43,6 @@ export default function NextPrevious() {
     home: TNextPrev;
     api: TNextPrev;
     github: TNextPrev;
-    this: TNextPrev;
     up: TNextPrev;
     prev: TNextPrev;
     next: TNextPrev;
@@ -53,7 +52,7 @@ export default function NextPrevious() {
       title: 'API',
       description: 'Base url /api/gl-api',
       disabled: false,
-      visible: true,
+      visible: false,
     },
     github: {
       // url,
@@ -69,13 +68,6 @@ export default function NextPrevious() {
       description: 'Back to the start',
       disabled: isHome,
       visible: !isHome,
-    },
-    this: {
-      label: 'This',
-      title: 'Title',
-      description: 'Where you currently are',
-      disabled: true,
-      visible: true,
     },
     up: {
       label: 'Up',
@@ -135,7 +127,7 @@ export default function NextPrevious() {
   const thisObj = flatNav.find((item) => item.slug === pathname);
 
   if (thisObj) {
-    obj.this.title = thisObj.title;
+    
 
     // UP
     if (thisObj.parent) {
@@ -168,9 +160,6 @@ export default function NextPrevious() {
     }
   }
 
-  obj.this.title = thisObj?.title as string;
-  obj.this.description = thisObj?.description as string;
-
   const navigateTo = (slug: string | undefined) => {
     if (slug) router.push(slug);
   };
@@ -194,16 +183,6 @@ export default function NextPrevious() {
           icon="home"
           disabled={obj.home.disabled}
         />
-      )}
-
-      {obj.this.visible && (
-        <>
-          <ShareThis
-            // icon={obj.this.icon}
-            title={obj.this.title}
-            description={obj.this.description}
-          />
-        </>
       )}
 
       {obj.api.visible && (
@@ -256,7 +235,7 @@ export default function NextPrevious() {
 
       {obj.next.visible && (
         <MightyButton
-          mode="icon"
+          mode="button"
           sx={{ mr: 1 }}
           color="inherit"
           disabled={obj.next.disabled}

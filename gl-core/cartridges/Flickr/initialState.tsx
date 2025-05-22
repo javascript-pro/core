@@ -1,9 +1,9 @@
-import {TFlickrState} from './types';
+import { TFlickrState } from './types';
 
 export const initialState: TFlickrState = {
   cartridge: 'flickr',
-  status: "info",
-  message: "Loading pandas",
+  status: 'warning',
+  message: 'Flickr is not ready',
   loading: false,
   loaded: false,
   search: null,
