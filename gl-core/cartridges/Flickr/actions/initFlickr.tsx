@@ -10,26 +10,12 @@ export const initFlickr = () => async (dispatch: TUbereduxDispatch) => {
       it looks like this
 
       {
-  cartridge: 'flickr',
-  initting: false,
-  initComplete: false,
-  albums: [
-    {
-      flickrId: '72177720324245676',
-      fetching: false,
-      fetched: false,
-      result: [],
-    },
-  ],
-  photos: [
-    {
-      flickrId: '54534952165',
-      fetching: false,
-      fetched: false,
-      result: null,
-    },
-  ],
-}
+        cartridge: 'flickr',
+        initting: false,
+        initComplete: false,
+        albums: [],
+        photos: [],
+      }
 
     */
 

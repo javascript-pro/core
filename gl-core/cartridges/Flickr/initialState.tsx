@@ -48,6 +48,11 @@ export const initialState: IFlickrState = {
   cartridge: 'flickr',
   initting: false,
   initComplete: false,
+  albums: [],
+  photos: [],
+};
+
+/*
   albums: [
     {
       flickrId: '72177720324245676',
@@ -64,4 +69,4 @@ export const initialState: IFlickrState = {
       result: null,
     },
   ],
-};
+*/
