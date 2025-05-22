@@ -2,8 +2,9 @@ import { setUbereduxKey } from '../../../../gl-core';
 import { TUbereduxDispatch } from '../../../../gl-core';
 import { store } from '../../Uberedux/store';
 
-export const initFlickr = () => async (dispatch: TUbereduxDispatch) => {
+export const fetchAlbum = () => async (dispatch: TUbereduxDispatch) => {
   try {
+    console.log('fetchAlbum');
     const state = store.getState()
     const {flickr} = state.redux;
     const { loading } = flickr;
@@ -25,14 +26,15 @@ export const initFlickr = () => async (dispatch: TUbereduxDispatch) => {
           key: 'flickr',
           value: {
             ...flickr,
-            message: 'Flickr init timed out',
+            message: 'Init has timed out',
             loading: false,
             status: 'error',
           },
         }),
       );
+
+
     }, 10000);
-    
 
   } catch (e: unknown) {
     const errorMessage = e instanceof Error ? e.message : String(e);

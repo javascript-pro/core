@@ -1,4 +1,4 @@
-// core/gl-core/actions/toggleStatus.tsx
+// core/gl-core/actions/updateStatusMessage.tsx
 
 import { setUbereduxKey } from '../../gl-core';
 import { TUbereduxDispatch } from '../../gl-core';
@@ -13,15 +13,15 @@ export type TUbereduxState = {
   };
 };
 
-export const toggleStatus =
-  (hidden: boolean) => async (dispatch: TUbereduxDispatch) => {
+export const updateStatusLevel =
+  (level: string) => async (dispatch: TUbereduxDispatch) => {
     try {
       const currentStatus = (store.getState() as unknown as TUbereduxState)
         .status;
 
       const updatedStatus = {
         ...currentStatus,
-        hidden,
+        level,
       };
 
       dispatch(

@@ -21,8 +21,7 @@ import {
 } from './components/layout';
 
 import Status from './components/Status';
-import {TStatus} from './components/Status';
-
+import { TStatus } from './components/Status';
 
 import {
   Nav,
@@ -43,7 +42,6 @@ import {
 import { useConfig, useIsMobile } from './hooks';
 
 import { toggleStatus } from './actions/toggleStatus';
-
 
 import {
   Uberedux,

@@ -13,12 +13,15 @@ export default function Flickr({
     title: 'Flickr',
     description: 'Herding pandas',
     icon: 'flickr',
-    message: 'loading...',
   },
 }: TFlickr) {
   const flickr = useSlice().flickr;
   const dispatch = useDispatch();
-  const { loading, status, message } = flickr;
+  const { 
+    loading = false, 
+    status = "info", 
+    message = "Herding pandas",
+  } = flickr;
   const { title, description, icon } = frontmatter;
 
   React.useEffect(() => {
@@ -26,22 +29,27 @@ export default function Flickr({
   }, [dispatch]);
 
   return (
-    <Card sx={{ m: 2 }}>
-      <CardHeader
-        avatar={<Icon icon={icon} />}
-        action={loading ? <CircularProgress color="secondary" /> : null}
-        title={title}
-        subheader={description}
-      />
-      <CardContent>
-        <pre>loading: {JSON.stringify(loading, null, 2)}</pre>
-        {frontmatter ? (
-          <>{/* future frontmatter display */}</>
-        ) : (
-          <>No frontmatter. No Matter</>
-        )}
-        {status} {message}
-      </CardContent>
-    </Card>
+    <>
+      <Card sx={{ m: 0 }}>
+        <CardHeader
+          avatar={<Icon icon={icon} />}
+          action={loading ? <CircularProgress color="secondary" /> : null}
+          title={title}
+          subheader={description}
+        />
+        <CardContent>
+          
+          {frontmatter ? (
+            <>
+              {message}
+            </>
+          ) : (
+            <>No frontmatter. No Matter</>
+          )}
+        </CardContent>
+        
+      </Card>
+      <pre>flickr: {JSON.stringify(flickr, null, 2)}</pre>
+    </>
   );
 }

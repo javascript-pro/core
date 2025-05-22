@@ -7,8 +7,8 @@ import { FlickrinitialState } from '../Flickr';
 export const initialState: any = {
   app: config.app,
   status: {
-    level: "success",
-    feedback: "Everything is working just fine",
+    level: 'success',
+    feedback: 'Everything is working just fine',
     hidden: false,
   },
   persisted: Date.now(),

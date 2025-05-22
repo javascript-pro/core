@@ -73,7 +73,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
         <MovieClip width={65} height={65} id="click-here" opacity={0}>
           <Nav />
         </MovieClip>
-{/* 
+        {/* 
         <MovieClip id="status" opacity={1}>
           <Status />
         </MovieClip> */}
