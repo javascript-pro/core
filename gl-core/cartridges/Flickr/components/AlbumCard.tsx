@@ -1,8 +1,6 @@
 'use client';
 
 import * as React from 'react';
-// import moment from 'moment';
-import {TAlbumCard} from "../types";
 import {
   Card,
   CardContent,
@@ -16,75 +14,76 @@ import {
   MightyButton,
   useSlice,
 } from '../../../../gl-core';
-import {PhotoCard} from '../';
+import { PhotoCard } from '../';
+import { TAlbumCard } from '../types';
 
 export default function AlbumCard({
   id = null,
 }: TAlbumCard) {
+  const { album } = useSlice().flickr ?? {};
 
-  const {album} = useSlice().flickr;
-  const {title, description, coverPhoto, count, photos, albumUrl} = album;
-  // console.log("album", album);
+  if (!album) {
+    return (
+      <Typography variant="body2" sx={{ padding: 2 }}>
+        No album data available.
+      </Typography>
+    );
+  }
+
+  const {
+    title = 'Untitled',
+    description = '',
+    coverPhoto,
+    count,
+    photos = [],
+    albumUrl,
+  } = album;
+
   return (
-    <>
-      {/* <pre style={{fontSize: 10 }}>
-        photos: {JSON.stringify(photos, null, 2)}
-      </pre>   */}
+    <Card>
+      <CardHeader 
+        avatar={<Icon icon="album" />}
+        title={title}
+        subheader={description}
+        action={
+          <MightyButton
+            mode="icon" 
+            icon="link"
+            label="View on Flickr"
+            color="inherit"
+            onClick={() => window.open(albumUrl, "_blank")}
+          />
+        }
+      />
 
-      <Card sx={{  }}>
-        <CardHeader 
-          avatar={<Icon icon="album" />}
-          title={`${title}`}
-          subheader={`${description}`}
-          action={<MightyButton
-              mode="icon" 
-              icon="link"
-              label="View on FLickr"
-              color="inherit"
-              onClick={() => {
-                // console.log("open albumUrl", albumUrl);
-                window.open(albumUrl, "_blank");
-              }}
-            />}
-        />
-          
-          <CardActions>
-            
-          </CardActions>
-          <CardContent>
+      <CardActions>{/* Empty for now */}</CardActions>
 
-            <CardMedia 
-              component="img"
-              src={coverPhoto.sizes.small.src}
-              alt={coverPhoto.title}
-              sx={{
-                maxWidth: 320,
-              }}
-            />
+      <CardContent>
+        {coverPhoto?.sizes?.small?.src && (
+          <CardMedia 
+            component="img"
+            src={coverPhoto.sizes.small.src}
+            alt={coverPhoto.title || 'Cover photo'}
+            sx={{ maxWidth: 320 }}
+          />
+        )}
 
-            <Typography variant='body1'>
-              {coverPhoto.title}
-            </Typography>
+        {coverPhoto?.title && (
+          <Typography variant="body1">
+            {coverPhoto.title}
+          </Typography>
+        )}
 
-            <Typography variant='body2'>
-              {coverPhoto.description}
-            </Typography>
+        {coverPhoto?.description && (
+          <Typography variant="body2">
+            {coverPhoto.description}
+          </Typography>
+        )}
 
-            {/* <Typography variant='caption'>
-              { moment(album.dateCreate * 1000).fromNow() }
-            </Typography> */}
-
-            { photos.length && <>
-              {photos.map((photo: any, i: number) => {
-                return <PhotoCard key={`photo_${i}`} photo={photo} />;
-              })}
-            </>}
-
-          </CardContent>
-
-          
-      </Card>
-
-    </>
+        {photos.length > 0 && photos.map((photo: any, i: number) => (
+          <PhotoCard key={`photo_${i}`} photo={photo} />
+        ))}
+      </CardContent>
+    </Card>
   );
 }

@@ -386,12 +386,12 @@
           },
           {
             "title": "Flickr",
-            "description": "We take a lot of photos and have had a Flickr account for 20 years",
+            "description": "Latest Album",
             "slug": "/flickr",
             "order": 129,
             "icon": "flickr",
             "type": "folder",
-            "excerpt": "glapi/flickr endpoints\n\n\n\n Links\n\n https://github.com/javascriptpro/core/issues/76",
+            "excerpt": "We take a lot of photos and have had a Flickr account for 20 years\n\n glapi/flickr endpoints\n\n\n\n Links\n\n https://github.com/javascriptpro/core/issues/76",
             "children": []
           }
         ]
