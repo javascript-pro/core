@@ -28,19 +28,21 @@ export const initFlickr = () => async (dispatch: TUbereduxDispatch) => {
 
     // Do more async stuff here if needed...
 
-    dispatch(
-      setUbereduxKey({
-        key: 'flickr',
-        value: {
-          ...oldFlickr,
-          loading: false,
-          status: 'success',
-          message: 'flickr init complete',
-        },
-      }),
-    );
+    // dispatch(
+    //   setUbereduxKey({
+    //     key: 'flickr',
+    //     value: {
+    //       ...oldFlickr,
+    //       loading: false,
+    //       status: 'success',
+    //       message: 'flickr init complete',
+    //     },
+    //   }),
+    // );
 
-    dispatch(setUbereduxKey({ key: 'initFlickr', value: true }));
+    // dispatch(setUbereduxKey({ key: 'initFlickr', value: true }));
+
+    
   } catch (e: unknown) {
     const errorMessage = e instanceof Error ? e.message : String(e);
 

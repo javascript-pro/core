@@ -1,14 +1,3 @@
----
-order: 129
-title: Flickr
-description: We take a lot of photos and have had a Flickr account for 20 years
-slug: /balance/flickr
-icon: flickr
-image: /png/bouncer/bouncer.png
-github: https://github.com/javascript-pro/core/blob/main/app/api/gl-api/flickr/route.ts
-api: /api/gl-api/flickr
----
-
 ## gl-api/flickr endpoints
 
 ```javascript
@@ -23,15 +12,15 @@ api: /api/gl-api/flickr
     examples: [
         {
             message: "Gets latest album with all photos",
-            route: '/api/gl-api/flickr',
+            route: 'http://localhost:3000/api/gl-api/flickr',
         },
         {
             message: "Gets a single album by id",
-            route:'/api/gl-api/flickr/?album=72177720324245676',
+            route:'http://localhost:3000/api/gl-api/flickr/?album=72177720324245676',
         },
         {
             message: "Gets a photo album by id",
-            route: '/api/gl-api/flickr/?photo=54534952165',
+            route: 'http://localhost:3000/api/gl-api/flickr/?photo=54534952165',
         },
     ]
 },

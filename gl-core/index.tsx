@@ -6,6 +6,7 @@ import { Icon } from './cartridges/Theme';
 import { createMUITheme } from './cartridges/Theme';
 import { TIcon } from './cartridges/Theme';
 import { ModeSwitch } from './cartridges/Theme';
+
 import {
   RenderMarkdown,
   Header,
@@ -18,6 +19,11 @@ import {
   TFooter,
   TResponsive,
 } from './components/layout';
+
+import Status from './components/Status';
+import {TStatus} from './components/Status';
+
+
 import {
   Nav,
   NavItem,
@@ -35,6 +41,10 @@ import {
   TShareThis,
 } from './components/nav';
 import { useConfig, useIsMobile } from './hooks';
+
+import { toggleStatus } from './actions/toggleStatus';
+
+
 import {
   Uberedux,
   UbereduxProvider,
@@ -53,7 +63,7 @@ import { TFlash, TMovieClip, TPhoto } from './cartridges/Flash';
 
 export { Core };
 export { Theme, createMUITheme, Icon, ModeSwitch };
-export { Header, Footer, RenderMarkdown, Responsive };
+export { Status, toggleStatus, Header, Footer, RenderMarkdown, Responsive };
 export {
   NextPrevious,
   Nav,
@@ -96,4 +106,5 @@ export type {
   TMovieClip,
   TPhoto,
   TShareThis,
+  TStatus,
 };
