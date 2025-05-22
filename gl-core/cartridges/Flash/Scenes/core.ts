@@ -21,5 +21,5 @@ const setScene = () => {
   fade('content', { fadeInOut: 'in' });
   setPosition('click-here', { screenPosition: 'bottom-right' });
   fade('click-here', { fadeInOut: 'in' });
-  playNextPrevious();
+  // playNextPrevious();
 };

@@ -2,9 +2,8 @@
 
 import * as React from 'react';
 import {
-  Card,
+  Box,
   CardContent,
-  CardActions,
   CardHeader,
   CardMedia,
   Typography,
@@ -34,13 +33,14 @@ export default function AlbumCard({
     title = 'Untitled',
     description = '',
     coverPhoto,
-    count,
+    // count,
     photos = [],
     albumUrl,
   } = album;
 
   return (
-    <Card>
+    <Box>
+      
       <CardHeader 
         avatar={<Icon icon="album" />}
         title={title}
@@ -55,20 +55,16 @@ export default function AlbumCard({
           />
         }
       />
-
-      <CardActions>{/* Empty for now */}</CardActions>
-
       <CardContent>
         {coverPhoto?.sizes?.small?.src && (
           <CardMedia 
             component="img"
             src={coverPhoto.sizes.small.src}
             alt={coverPhoto.title || 'Cover photo'}
-            sx={{ maxWidth: 320 }}
           />
         )}
 
-        {coverPhoto?.title && (
+        {/* {coverPhoto?.title && (
           <Typography variant="body1">
             {coverPhoto.title}
           </Typography>
@@ -78,12 +74,12 @@ export default function AlbumCard({
           <Typography variant="body2">
             {coverPhoto.description}
           </Typography>
-        )}
+        )} */}
 
         {photos.length > 0 && photos.map((photo: any, i: number) => (
           <PhotoCard key={`photo_${i}`} photo={photo} />
         ))}
       </CardContent>
-    </Card>
+    </Box>
   );
 }

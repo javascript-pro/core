@@ -12,7 +12,7 @@ export const initialState: any = {
     hidden: false,
   },
   persisted: Date.now(),
-  themeMode: 'light',
+  themeMode: config.defaultMode,
   modalNav: false,
   modalShare: false,
   cv: CVinitialState,

@@ -1,7 +1,10 @@
 'use client';
 import * as React from 'react';
-import { Box, CardHeader, CardContent, CircularProgress } from '@mui/material';
-import { Icon, useSlice, useDispatch } from '../../../gl-core';
+import { Box, Container, CardHeader, CardContent, CircularProgress } from '@mui/material';
+import { 
+  useSlice, 
+  useDispatch,
+} from '../../../gl-core';
 import { initFlickr, AlbumCard } from './';
 
 export default function Flickr({
@@ -25,7 +28,9 @@ export default function Flickr({
 
   return (
     <>
-      <Box sx={{ m: 0 }}>
+      <Box sx={{ 
+        maxWidth: 400,
+      }}>
         <CardHeader
           // avatar={<Icon icon={icon} />}
           action={loading ? <CircularProgress color="secondary" /> : null}
@@ -42,7 +47,6 @@ export default function Flickr({
           )}
         </CardContent>
       </Box>
-         
     </>
   );
 }
