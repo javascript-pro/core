@@ -3,6 +3,7 @@
 import * as React from 'react';
 import {
   Box,
+  Grid,
   CardContent,
   CardHeader,
   CardMedia,
@@ -27,7 +28,6 @@ export default function AlbumCard({ id = null }: TAlbumCard) {
     title = 'Untitled',
     description = '',
     coverPhoto,
-    // count,
     photos = [],
     albumUrl,
   } = album;
@@ -35,10 +35,9 @@ export default function AlbumCard({ id = null }: TAlbumCard) {
   return (
     <Box>
       <CardHeader
-        avatar={<Icon icon="album" />}
         title={title}
         subheader={description}
-        action={
+        avatar={
           <MightyButton
             mode="icon"
             icon="link"
@@ -57,22 +56,26 @@ export default function AlbumCard({ id = null }: TAlbumCard) {
           />
         )}
 
-        {/* {coverPhoto?.title && (
-          <Typography variant="body1">
-            {coverPhoto.title}
-          </Typography>
-        )}
+        <Grid container spacing={1}>
+          {photos.length > 0 &&
+            photos.map((photo: any, i: number) => {
+              if (photo.flickrId === coverPhoto?.flickrId) return null;
 
-        {coverPhoto?.description && (
-          <Typography variant="body2">
-            {coverPhoto.description}
-          </Typography>
-        )} */}
-
-        {photos.length > 0 &&
-          photos.map((photo: any, i: number) => (
-            <PhotoCard key={`photo_${i}`} photo={photo} />
-          ))}
+              return (
+                <Grid
+                  key={`photo_${i}`}
+                  size={{
+                    xs: 12,
+                    sm: 6,
+                    md: 4,
+                    lg: 3,
+                  }}
+                >
+                  <PhotoCard mode="card" photo={photo} />
+                </Grid>
+              );
+            })}
+        </Grid>
       </CardContent>
     </Box>
   );
