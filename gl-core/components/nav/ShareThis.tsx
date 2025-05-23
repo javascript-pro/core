@@ -18,8 +18,8 @@ import {
 import { MightyButton, Icon } from '../../../gl-core';
 
 export type TShareThis = {
-  title?: string;
-  description?: string;
+  title: string;
+  description: string;
   icon?: string;
   image?: string;
   url?: string;

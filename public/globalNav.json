@@ -1,6 +1,6 @@
 [
   {
-    "title": "Goldlabel pr0",
+    "title": "Goldlabel Apps",
     "description": "Custom software that works",
     "slug": "/",
     "order": 1,
@@ -34,7 +34,7 @@
       "NextJS",
       "Headless CMS"
     ],
-    "excerpt": "We build and shipp modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codebases",
+    "excerpt": "We build and ship modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codebases\n \n\n is  and . It comes w",
     "children": [
       {
         "title": "Free & Open Source",
@@ -43,8 +43,20 @@
         "order": 1,
         "icon": "flash",
         "type": "folder",
-        "excerpt": "Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or b",
+        "excerpt": "|  | \n\n Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, bre",
         "children": [
+          {
+            "title": "Public API",
+            "slug": "/api",
+            "order": 10,
+            "icon": "api",
+            "type": "file",
+            "tags": [
+              "free",
+              "api"
+            ],
+            "excerpt": "Public API\n\n glapi/flickr endpoints"
+          },
           {
             "title": "Core",
             "slug": "/core",
@@ -55,7 +67,7 @@
               "free",
               "core"
             ],
-            "excerpt": "Goldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo architecture with multiple Next.js a"
+            "excerpt": "Open Source and Free Forever\n\nGoldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo archit"
           },
           {
             "title": "Flash",
@@ -71,13 +83,13 @@
             "order": 20,
             "icon": "uberedux",
             "type": "file",
-            "excerpt": "Apps need State Management\n\nOtherwise you'd be back in jQuery callback hell. Nobody wants that. Uberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app already works a"
+            "excerpt": "Because all Apps need State Management\n\nOtherwise you'd be back in jQuery callback hell. Nobody wants that. Uberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app alr"
           },
           {
             "title": "Bouncer",
             "slug": "/bouncer",
             "order": 130,
-            "icon": "bouncer",
+            "icon": "admin",
             "type": "file",
             "tags": [
               "cartridges",
@@ -85,7 +97,19 @@
               "free",
               "bouncer"
             ],
-            "excerpt": "Bouncer is the name of our authentication and access control system built on Firebase Authentication and Firestore. It is included in the Core as a reusable component, available globally from any cart"
+            "excerpt": "Authentication and Access Control System \n\n Bouncer is the name of our authentication and access control system built on Firebase Authentication and Firestore. It is included in the Core as a reusable"
+          },
+          {
+            "title": "Open Source",
+            "slug": "/open-source",
+            "order": 1000,
+            "icon": "api",
+            "type": "file",
+            "tags": [
+              "free",
+              "opensource"
+            ],
+            "excerpt": "Why We Open Source\n\nWe’ve been building JavaScript applications for over 20 years. In that time, we’ve seen tools come and go. Trends rise, crash, and return again under a different name.\n\nWhat’s rema"
           }
         ]
       },
@@ -128,13 +152,13 @@
             "excerpt": "Chris Dorward\n\n Fullstack JavaScript Developer\n\n +44 07745 763 122  \n |  |\n\n\n Summary\n\nOver 20 years of experience delivering scalable web applications across startups, enterprises, and remotefirst te"
           },
           {
-            "title": "Company",
-            "description": "About Goldlabel Apps Ltd",
+            "title": "Goldlabel Apps Ltd",
+            "description": "UK Limited Company (5460545)",
             "slug": "/company",
             "order": 10,
             "icon": "work",
             "type": "folder",
-            "excerpt": "Goldlabel Apps Ltd is a UK Limited Company (5460545)\n\nGoldlabel Apps is a UKbased software company that designs, builds, and maintains fullstack web applications. We specialize in Next.js, Firebase, a",
+            "excerpt": "Goldlabel Apps is a UKbased software company that designs, builds, and maintains fullstack web applications. We specialize in Next.js, Firebase, and custom UI development, delivering everything from i",
             "children": [
               {
                 "title": "Working remotely",
@@ -310,7 +334,7 @@
         "order": 100,
         "icon": "balance",
         "type": "folder",
-        "excerpt": "Books\n\n Wei Zang's Food\n Weekend Portfolio\n\n Are you Generation X?\n\n Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Is this Singularity?\n\n \"Put that kind ",
+        "excerpt": "| \n\n Books\n\n Wei Zang's Food\n Weekend Portfolio\n\n Are you Generation X?\n\n Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Is this Singularity?\n\n \"Put that ",
         "children": [
           {
             "title": "Books",
@@ -386,12 +410,12 @@
           },
           {
             "title": "Flickr",
-            "description": "Latest Album",
+            "description": "Why We Still Use Flickr",
             "slug": "/flickr",
             "order": 129,
             "icon": "flickr",
             "type": "folder",
-            "excerpt": "We take a lot of photos and have had a Flickr account for 20 years\n\n glapi/flickr endpoints\n\n\n\n Links\n\n https://github.com/javascriptpro/core/issues/76",
+            "excerpt": "Why We Still Use Flickr\n\nFlickr isn’t trendy. It doesn’t chase hype. But it’s survived—and there’s a reason.\n\nFor over two decades, Flickr has offered something that’s increasingly rare: a stable, wel",
             "children": []
           }
         ]

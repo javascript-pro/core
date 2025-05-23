@@ -32,6 +32,9 @@
     <loc>https://goldlabel.pro/balance</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/free/api</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/free/bouncer</loc>
   </url>
   <url>
@@ -45,6 +48,9 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/free</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/free/open-source</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/free/uberedux</loc>

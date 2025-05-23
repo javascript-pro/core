@@ -1,23 +1,41 @@
 'use client';
 
 import * as React from 'react';
-import { CardHeader, Typography, useTheme } from '@mui/material';
-import { Icon } from '../../../gl-core';
+import { useRouter } from 'next/navigation';
+import { IconButton, CardHeader, Typography } from '@mui/material';
+import { Icon, ShareThis, useDispatch, navigateTo } from '../../../gl-core';
 
 export type THeader = {
   frontmatter?: any;
 };
 
 export default function Header({ frontmatter = null }: THeader) {
-  const { title, description, icon } = frontmatter;
-  const theme = useTheme();
+  const dispatch = useDispatch();
+  const { title, description, icon, github, api } = frontmatter;
+  const router = useRouter();
+
   return (
     <>
       <CardHeader
         sx={{
           mx: 2,
         }}
-        avatar={<Icon icon={icon as any} />}
+        avatar={
+          <>
+            <IconButton
+              onClick={() => {
+                router.push('/');
+              }}
+            >
+              <Icon icon={'blokey'} />
+            </IconButton>
+            {icon !== 'blokey' ? (
+              <IconButton disabled>
+                <Icon icon={icon as any} />
+              </IconButton>
+            ) : null}
+          </>
+        }
         title={
           <Typography sx={{}} variant={'body1'} component={'h1'}>
             {title}
@@ -28,29 +46,28 @@ export default function Header({ frontmatter = null }: THeader) {
             {description}
           </Typography>
         }
+        action={
+          <>
+            { api ? <IconButton
+                      onClick={() => dispatch(navigateTo(api, "_blank"))}
+                    >
+                      <Icon icon="api" />
+                    </IconButton> : null }
+            
+            { github ? <IconButton
+                      onClick={() => dispatch(navigateTo(github))}
+                    >
+                      <Icon icon="github" />
+                    </IconButton> : null }
+            
+            <ShareThis title={title} description={description} />
+          </>
+        }
       />
     </>
   );
 }
 
-/* 
-
-// action={<Nav />}
-// action={<IconButton
-//   size='small'
-//   onClick={onAvatarClick}
-// >
-//   <Icon icon={icon} />
-// </IconButton>}
-
-<pre>frontmatter: {JSON.stringify(frontmatter, null, 2)}</pre>
-
-
-subheader={
-  <Typography variant={'body1'} component={'h2'}>
-    {description}
-  </Typography>
-}
-
-
+/*
+<pre style={{fontSize: 10}}>frontmatter: {JSON.stringify(frontmatter, null, 2)}</pre>
 */

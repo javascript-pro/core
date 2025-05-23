@@ -6,7 +6,6 @@ slug: /work/company/remote-working
 icon: work
 image: /png/defaultFeatured.png
 tags: remote, hybrid
-github: https://github.com/javascript-pro/core/issues/76
 ---
 
 > Corporate attitudes to remote working have changed dramatically in recent years.

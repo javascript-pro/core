@@ -5,9 +5,9 @@ description: Professional Fullstack JavaScript Development
 slug: /work
 icon: work
 image: /png/javascript.png
-github: https://github.com/javascript-pro/core/issues/76
 tags: JavaScript, Vanilla JavaScript, TypeScript, React, Angular, Vue, etc, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 ---
+[JavaScript](/work/javascript) | [GitHub](/work/github)
 
 Goldlabel Core is always Free & Open Source as a public repo on [GitHub](https://github.com/javascript-pro/core)
 

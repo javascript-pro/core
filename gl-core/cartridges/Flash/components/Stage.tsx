@@ -25,7 +25,7 @@ export default function Stage({ id = null, children }: TStage) {
       sx={{
         width: '100vw',
         height: '100vh',
-        position: 'fixed',
+        position: 'absolute',
         top: 0,
         left: 0,
         zIndex: 0,

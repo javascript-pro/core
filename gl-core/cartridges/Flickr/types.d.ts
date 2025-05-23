@@ -14,7 +14,7 @@ export type TAlbumCard = {
 };
 
 export type TPhotoCard = {
-  mode?: "card"
+  mode?: 'card';
   id?: string | null;
   photo?: any;
 };

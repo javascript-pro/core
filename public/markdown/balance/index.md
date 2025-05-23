@@ -6,6 +6,7 @@ slug: /balance
 icon: balance
 image: /png/nhtfs/weizang.png
 ---
+[Flickr](/balance/flickr) | [Books](/balance/books)
 
 ### Books
 

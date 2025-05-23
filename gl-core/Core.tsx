@@ -1,21 +1,18 @@
 'use client';
 import * as React from 'react';
 import { usePathname } from 'next/navigation';
-import { CssBaseline } from '@mui/material';
+import { CssBaseline, Box } from '@mui/material';
 import {
   Theme,
   Flash,
   MovieClip,
   Photo,
-  useSlice,
   RenderMarkdown,
   Header,
   PageBreadcrumb,
-  // Nav,
   NextPrevious,
-  // Status,
 } from '../gl-core';
-import { Flickr } from './cartridges/Flickr'; // Adjust path if needed
+import { Flickr } from './cartridges/Flickr';
 
 export type TFrontmatter = {
   icon?: string;
@@ -33,9 +30,6 @@ export type TCore = {
 };
 
 export default function Core({ frontmatter, body = null }: TCore) {
-  const slice = useSlice();
-  const { flash } = slice;
-  const { showOutput } = flash;
   const pathname = usePathname();
   const showFlickr = pathname.includes('balance/flickr');
 
@@ -43,31 +37,20 @@ export default function Core({ frontmatter, body = null }: TCore) {
     <Theme>
       <CssBaseline />
       <Flash id="core">
-        {/* <MovieClip id="status" opacity={1}>
-          <Status />
-        </MovieClip> */}
-
         <MovieClip id="content" opacity={0}>
+          <Header frontmatter={frontmatter} />
+          <PageBreadcrumb />
+          <Box sx={{ height: 8 }}/>
           {showFlickr ? (
-            <Flickr frontmatter={frontmatter} />
+            <Flickr album="72157594233009954" frontmatter={frontmatter} />
           ) : (
             <>
-              <Header frontmatter={frontmatter} />
-              <Status />
               <Photo src={frontmatter?.image ?? null} />
-              <PageBreadcrumb />
-              <RenderMarkdown>{body}</RenderMarkdown>
             </>
           )}
+          <Box sx={{ height: 32 }}/>
+          <RenderMarkdown>{body}</RenderMarkdown>
         </MovieClip>
-
-        <MovieClip id="nextprev" opacity={0} height={75}>
-          <NextPrevious />
-        </MovieClip>
-
-        {/* <MovieClip width={65} height={65} id="click-here" opacity={0}>
-          <Nav />
-        </MovieClip> */}
       </Flash>
     </Theme>
   );

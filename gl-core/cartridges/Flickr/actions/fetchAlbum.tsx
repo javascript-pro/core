@@ -2,9 +2,12 @@ import { setUbereduxKey } from '../../../../gl-core';
 import { TUbereduxDispatch } from '../../../../gl-core';
 import { store } from '../../Uberedux/store';
 
-export const fetchAlbum = () => async (dispatch: TUbereduxDispatch) => {
+export const fetchAlbum = (albumId: string) => async (dispatch: TUbereduxDispatch) => {
   try {
-    const response = await fetch('/api/gl-api/flickr');
+
+    console.log("try fetching", `/api/gl-api/flickr?album=${encodeURIComponent(albumId)}`);
+
+    const response = await fetch(`/api/gl-api/flickr?album=${encodeURIComponent(albumId)}`);
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
     const json = await response.json();
 

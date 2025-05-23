@@ -1,3 +1,14 @@
+---
+order: 10
+title: Public API
+slug: /free/api
+description: Private keys are available
+icon: api
+image: /png/defaultFeatured.png
+tags: free, api
+---
+## Public API
+
 ## gl-api/flickr endpoints
 
 ```javascript
@@ -12,21 +23,17 @@
     examples: [
         {
             message: "Gets latest album with all photos",
-            route: 'http://localhost:3000/api/gl-api/flickr',
+            route: '/api/gl-api/flickr',
         },
         {
             message: "Gets a single album by id",
-            route:'http://localhost:3000/api/gl-api/flickr/?album=72177720324245676',
+            route:'/api/gl-api/flickr/?album=72177720324245676',
         },
         {
             message: "Gets a photo album by id",
-            route: 'http://localhost:3000/api/gl-api/flickr/?photo=54534952165',
+            route: '/api/gl-api/flickr/?photo=54534952165',
         },
     ]
 },
 
 ```
-
-## Links
-
-- https://github.com/javascript-pro/core/issues/76
