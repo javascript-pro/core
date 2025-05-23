@@ -8,7 +8,7 @@ body {
 }
 
 blockquote {
-  border-left: 2px solid #A6D4D1;
+  border-left: 2px solid #a6d4d1;
   padding-left: 20px;
   margin: 0;
 }
@@ -30,7 +30,7 @@ blockquote {
   color: #303030;
 }
 .gl a:hover {
-  color: #A6D4D1;
+  color: #a6d4d1;
 }
 .gl h1,
 .gl h2,

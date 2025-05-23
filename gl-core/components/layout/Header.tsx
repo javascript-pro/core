@@ -19,18 +19,22 @@ export default function Header({ frontmatter = null }: THeader) {
         sx={{
           mx: 2,
         }}
-        avatar={<>
-                  <IconButton
-                    
-                    onClick={() => {
-                      router.push('/');
-                    }}> 
-                    <Icon icon={"blokey"} />
-                  </IconButton>
-                  { icon !== "blokey" ? <IconButton disabled>
-                    <Icon icon={icon as any} />
-                  </IconButton> : null  }
-                </>}
+        avatar={
+          <>
+            <IconButton
+              onClick={() => {
+                router.push('/');
+              }}
+            >
+              <Icon icon={'blokey'} />
+            </IconButton>
+            {icon !== 'blokey' ? (
+              <IconButton disabled>
+                <Icon icon={icon as any} />
+              </IconButton>
+            ) : null}
+          </>
+        }
         title={
           <Typography sx={{}} variant={'body1'} component={'h1'}>
             {title}
@@ -50,4 +54,3 @@ export default function Header({ frontmatter = null }: THeader) {
     </>
   );
 }
-
