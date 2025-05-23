@@ -1,7 +1,7 @@
 ---
 order: 1
 slug: /
-title: Goldlabel pr0
+title: Goldlabel Apps
 description: Custom software that works
 icon: blokey
 image: /png/defaultFeatured.png
@@ -14,5 +14,7 @@ tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Pr
 - _Small_ team. _Big_ output
 - Real deployments from Day One
 - Readable, extensible, Open Source codebases
+- [Find out more](/work/company)
 
-#### [About](/work/company) | [Flickr](/balance/flickr) | [Flash](/free/flash)
+[Goldlabel Core](/free/core) is [Free](/free) and [Open Source](/free/open-source). It comes with these cartridges;  
+[Uberedux](/free/uberedux) | [Flickr](/balance/flickr) | [Flash](/free/flash)

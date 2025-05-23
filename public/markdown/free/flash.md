@@ -42,12 +42,6 @@ In response to these issues and the rise of HTML5, Adobe officially announced th
 
 Modern web applications now rely on open web standards such as HTML5, CSS3, and JavaScript, which offer better security, performance, accessibility, and compatibility across a wide range of devices. With the advent of these web technologies, there is no longer a need for proprietary plugins like Flash, and its use has been almost entirely replaced by more modern and efficient alternatives.
 
----
-
-Flash Movie Script 1
-
----
-
 Flash was popular in the development of web apps primarily during the late 1990s and throughout the 2000s. It gained significant traction and widespread adoption during this period for creating interactive and multimedia-rich web applications. Some key milestones in Flash's popularity include:
 
 1. Late 1990s: Flash was initially introduced by Macromedia (later acquired by Adobe) in 1996. By the late 1990s, it had started to gain attention as a tool for creating simple animations and interactive elements on websites.
