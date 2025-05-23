@@ -15,6 +15,8 @@ import { TAlbumCard } from '../types';
 
 export default function AlbumCard({ id = null }: TAlbumCard) {
   const { album } = useSlice().flickr ?? {};
+  const isAdmin = false;
+  const mode = "list";
 
   if (!album) {
     return (
@@ -37,7 +39,7 @@ export default function AlbumCard({ id = null }: TAlbumCard) {
       <CardHeader
         title={title}
         subheader={description}
-        avatar={
+        avatar={!isAdmin ? null : 
           <MightyButton
             mode="icon"
             icon="link"
@@ -48,19 +50,22 @@ export default function AlbumCard({ id = null }: TAlbumCard) {
         }
       />
       <CardContent>
-        {coverPhoto?.sizes?.small?.src && (
+        { coverPhoto?.sizes?.medium?.src && (
           <CardMedia
             component="img"
             src={coverPhoto.sizes.large.src}
-            alt={coverPhoto.title || 'Cover photo'}
+            alt={coverPhoto.title || 'Album Cover'}
+            sx={{
+              maxHeight: 315,
+              maxWidth: 600,
+            }}
           />
         )}
 
         <Grid container spacing={1}>
-          {photos.length > 0 &&
+          {/* {photos.length > 0 &&
             photos.map((photo: any, i: number) => {
               if (photo.flickrId === coverPhoto?.flickrId) return null;
-
               return (
                 <Grid
                   key={`photo_${i}`}
@@ -74,7 +79,7 @@ export default function AlbumCard({ id = null }: TAlbumCard) {
                   <PhotoCard mode="card" photo={photo} />
                 </Grid>
               );
-            })}
+            })} */}
         </Grid>
       </CardContent>
     </Box>

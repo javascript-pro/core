@@ -1,7 +1,7 @@
 'use client';
 import * as React from 'react';
 import { usePathname } from 'next/navigation';
-import { CssBaseline } from '@mui/material';
+import { CssBaseline, Box } from '@mui/material';
 import {
   Theme,
   Flash,
@@ -38,16 +38,18 @@ export default function Core({ frontmatter, body = null }: TCore) {
       <CssBaseline />
       <Flash id="core">
         <MovieClip id="content" opacity={0}>
+          <Header frontmatter={frontmatter} />
+          <PageBreadcrumb />
+          <Box sx={{ height: 8 }}/>
           {showFlickr ? (
             <Flickr frontmatter={frontmatter} />
           ) : (
             <>
-              <Header frontmatter={frontmatter} />
               <Photo src={frontmatter?.image ?? null} />
-              <PageBreadcrumb />
-              <RenderMarkdown>{body}</RenderMarkdown>
             </>
           )}
+          <Box sx={{ height: 32 }}/>
+          <RenderMarkdown>{body}</RenderMarkdown>
         </MovieClip>
       </Flash>
     </Theme>

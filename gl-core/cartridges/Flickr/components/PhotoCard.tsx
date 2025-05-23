@@ -8,6 +8,7 @@ import { Icon, MightyButton } from '../../../../gl-core';
 export default function PhotoCard({ mode = 'card', photo = {} }: TPhotoCard) {
   const { title, description, sizes, flickrUrl } = photo;
   const size = sizes.small;
+  const isAdmin = false; 
 
   if (mode === 'card') {
     return (
@@ -15,7 +16,7 @@ export default function PhotoCard({ mode = 'card', photo = {} }: TPhotoCard) {
         <CardHeader
           title={`${title}`}
           subheader={`${description}`}
-          avatar={
+          avatar={!isAdmin ? null : 
             <MightyButton
               mode="icon"
               icon="link"
@@ -30,7 +31,8 @@ export default function PhotoCard({ mode = 'card', photo = {} }: TPhotoCard) {
           src={size.src}
           alt={description || 'Single Photo'}
           sx={{
-            maxHeight: 175,
+            maxHeight: 320,
+            maxWidth: 320,
           }}
         />
       </>

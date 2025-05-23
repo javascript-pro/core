@@ -11,30 +11,21 @@ export default function Flickr({
     icon: 'flickr',
   },
 }: any) {
-  const flickr = useSlice().flickr;
+  //const flickr = useSlice().flickr;
   const dispatch = useDispatch();
-  const {
-    loading = false,
-    // album = null,
-  } = flickr;
-  const { title, description } = frontmatter;
+  // const {
+  //   loading = false,
+  //   // album = null,
+  // } = flickr;
+  // const { title, description } = frontmatter;
 
   React.useEffect(() => {
     dispatch(initFlickr());
   }, [dispatch]);
 
-  return (
-    <>
-      <Box sx={{}}>
-        <CardHeader
-          action={loading ? <CircularProgress color="secondary" /> : null}
-          title={title}
-          subheader={description}
-        />
-        {frontmatter ? <AlbumCard /> : <>No frontmatter. No Matter</>}
-      </Box>
-    </>
-  );
+  return <Box sx={{ mx:2}}>
+          { frontmatter ? <AlbumCard /> : <>No frontmatter. No matter.</>}
+        </Box>
 }
 
 /*

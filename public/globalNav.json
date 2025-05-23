@@ -43,7 +43,7 @@
         "order": 1,
         "icon": "flash",
         "type": "folder",
-        "excerpt": "Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or b",
+        "excerpt": "|  | \n\n Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, bre",
         "children": [
           {
             "title": "Core",
@@ -55,7 +55,7 @@
               "free",
               "core"
             ],
-            "excerpt": "Goldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo architecture with multiple Next.js a"
+            "excerpt": "Open Source and Free Forever\n\nGoldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo archit"
           },
           {
             "title": "Flash",
@@ -71,13 +71,13 @@
             "order": 20,
             "icon": "uberedux",
             "type": "file",
-            "excerpt": "Becauae all Apps need State Management\n\nOtherwise you'd be back in jQuery callback hell. Nobody wants that. Uberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app alr"
+            "excerpt": "Because all Apps need State Management\n\nOtherwise you'd be back in jQuery callback hell. Nobody wants that. Uberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app alr"
           },
           {
             "title": "Bouncer",
             "slug": "/bouncer",
             "order": 130,
-            "icon": "bouncer",
+            "icon": "admin",
             "type": "file",
             "tags": [
               "cartridges",
@@ -85,7 +85,7 @@
               "free",
               "bouncer"
             ],
-            "excerpt": "Bouncer is the name of our authentication and access control system built on Firebase Authentication and Firestore. It is included in the Core as a reusable component, available globally from any cart"
+            "excerpt": "Authentication and Access Control System \n\n Bouncer is the name of our authentication and access control system built on Firebase Authentication and Firestore. It is included in the Core as a reusable"
           },
           {
             "title": "Open Source",
