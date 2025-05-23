@@ -9,9 +9,7 @@ github: https://github.com/javascript-pro/core/blob/main/app/api/gl-api/flickr/r
 api: /api/gl-api/flickr
 ---
 
-We take a lot of photos and have had a Flickr account for 20 years
-
-
+We take a lot of photos and have been adding them to our Flickr account for more than 20 years
 
 #### Dev Links
 
