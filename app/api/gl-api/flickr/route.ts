@@ -129,7 +129,6 @@ export async function GET(request: NextRequest) {
         meta: {
           ...cached.meta,
           albumUrl,
-          description: cached.meta.description,
         },
         photos: cached.photos,
       },
@@ -170,13 +169,20 @@ export async function GET(request: NextRequest) {
 
     const coverPhoto = await getPhotoWithSizes(data.photoset.primary);
 
+    // New request to get album metadata including description
+    const infoRes = await fetch(
+      `${FLICKR_API}?method=flickr.photosets.getInfo&api_key=${flickrApiKey}&photoset_id=${albumId}&user_id=${flickrUserId}&format=json&nojsoncallback=1`,
+    );
+    const infoData = await infoRes.json();
+    if (infoData.stat !== 'ok') throw new Error(infoData.message);
+
     const meta = {
-      title: data.photoset.title,
+      title: infoData.photoset.title?._content || '',
       albumId,
       albumUrl,
       coverPhoto,
-      description: data.photoset.description?._content || data.photoset.description || '',
-      total: data.photoset.total,
+      description: infoData.photoset.description?._content || '',
+      total: parseInt(infoData.photoset.count_photos) || photos.length,
     };
 
     albumCache[albumId] = {
