@@ -21,7 +21,7 @@ export default function AlbumCard({ id = null }: TAlbumCard) {
   if (!album) {
     return (
       <Typography variant="body2" sx={{ padding: 2 }}>
-        No album data available.
+        Herding pandas...
       </Typography>
     );
   }

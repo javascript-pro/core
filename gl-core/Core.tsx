@@ -42,7 +42,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
           <PageBreadcrumb />
           <Box sx={{ height: 8 }}/>
           {showFlickr ? (
-            <Flickr frontmatter={frontmatter} />
+            <Flickr album="72157594233009954" frontmatter={frontmatter} />
           ) : (
             <>
               <Photo src={frontmatter?.image ?? null} />

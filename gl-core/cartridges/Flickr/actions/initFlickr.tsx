@@ -3,7 +3,9 @@ import { TUbereduxDispatch } from '../../../../gl-core';
 import { store } from '../../Uberedux/store';
 import { fetchAlbum } from './fetchAlbum';
 
-export const initFlickr = () => async (dispatch: TUbereduxDispatch) => {
+export const initFlickr = (
+  album: string,
+) => async (dispatch: TUbereduxDispatch) => {
   try {
     const state = store.getState();
     const { flickr } = state.redux;
@@ -39,7 +41,7 @@ export const initFlickr = () => async (dispatch: TUbereduxDispatch) => {
     }, 10000);
 
     // Await album fetch
-    await dispatch(fetchAlbum());
+    await dispatch(fetchAlbum(album));
 
     clearTimeout(timeoutId); // Clear timeout if fetchAlbum succeeded
 

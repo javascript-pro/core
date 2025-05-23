@@ -46,6 +46,18 @@
         "excerpt": "|  | \n\n Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, bre",
         "children": [
           {
+            "title": "Public API",
+            "slug": "/api",
+            "order": 10,
+            "icon": "api",
+            "type": "file",
+            "tags": [
+              "free",
+              "api"
+            ],
+            "excerpt": "Public API\n\n glapi/flickr endpoints"
+          },
+          {
             "title": "Core",
             "slug": "/core",
             "order": 10,
@@ -403,7 +415,7 @@
             "order": 129,
             "icon": "flickr",
             "type": "folder",
-            "excerpt": "We take a lot of photos and have had a Flickr account for 20 years\n\n glapi/flickr endpoints\n\n\n\n Links\n\n https://github.com/javascriptpro/core/issues/76",
+            "excerpt": "We take a lot of photos and have been adding them to our Flickr account for more than 20 years\n\n Dev Links",
             "children": []
           }
         ]

@@ -1,33 +1,30 @@
 'use client';
 import * as React from 'react';
+import { useSearchParams } from 'next/navigation';
 import { Box, CardHeader, CircularProgress } from '@mui/material';
 import { useSlice, useDispatch } from '../../../gl-core';
 import { initFlickr, AlbumCard } from './';
 
 export default function Flickr({
-  frontmatter = {
-    title: 'Flickr',
-    description: 'Herding pandas',
-    icon: 'flickr',
-  },
+  album = null,
+  frontmatter = null,
 }: any) {
-  //const flickr = useSlice().flickr;
+  const slice = useSlice();
   const dispatch = useDispatch();
-  // const {
-  //   loading = false,
-  //   // album = null,
-  // } = flickr;
-  // const { title, description } = frontmatter;
+  const searchParams = useSearchParams();
+
+  const queryAlbum = searchParams.get('album');
+  const albumId = queryAlbum || album || slice.defaultId;
 
   React.useEffect(() => {
-    dispatch(initFlickr());
-  }, [dispatch]);
+    if (albumId) {
+      dispatch(initFlickr(albumId));
+    }
+  }, [albumId, dispatch]);
 
-  return <Box sx={{ mx:2}}>
-          { frontmatter ? <AlbumCard /> : <>No frontmatter. No matter.</>}
-        </Box>
+  return (
+    <Box sx={{ mx: 2 }}>
+      {frontmatter ? <AlbumCard /> : <>No frontmatter. No matter.</>}
+    </Box>
+  );
 }
-
-/*
-<pre>flickr: {JSON.stringify(flickr, null, 2)}</pre>
-*/
