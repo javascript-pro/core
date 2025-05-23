@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { CardHeader, Typography, useTheme } from '@mui/material';
-import { Icon } from '../../../gl-core';
+import { Icon, ShareThis } from '../../../gl-core';
 
 export type THeader = {
   frontmatter?: any;
@@ -28,6 +28,9 @@ export default function Header({ frontmatter = null }: THeader) {
             {description}
           </Typography>
         }
+        action={<>
+          <ShareThis />
+        </>}
       />
     </>
   );

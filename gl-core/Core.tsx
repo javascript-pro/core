@@ -38,7 +38,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
     <Theme>
       <CssBaseline />
       <Flash id="core">
-        
         <MovieClip id="content" opacity={0}>
           {showFlickr ? (
             <Flickr frontmatter={frontmatter} />
@@ -51,11 +50,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
             </>
           )}
         </MovieClip>
-
-        <MovieClip id="nextprev" opacity={0} height={75}>
-          <NextPrevious />
-        </MovieClip>
-
       </Flash>
     </Theme>
   );
