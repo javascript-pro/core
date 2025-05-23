@@ -5,7 +5,6 @@ description: UK Limited Company (5460545)
 slug: /work/company
 icon: work
 image: /png/defaultFeatured.png
-github: https://github.com/javascript-pro/core/issues/76
 ---
 
 Goldlabel Apps is a UK-based software company that designs, builds, and maintains full-stack web applications. We specialize in Next.js, Firebase, and custom UI development, delivering everything from internal admin tools to polished public-facing websites.

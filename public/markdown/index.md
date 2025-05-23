@@ -15,6 +15,7 @@ api: /api/gl-api
 - _Small_ team. _Big_ output
 - Real deployments from Day One
 - Readable, extensible, Open Source codebases
+- [JavaScript](/work/javascript)
 - [Find out more](/work/company)
 
 [Goldlabel Core](/free/core) is [Free](/free) and [Open Source](/free/open-source). It comes with these cartridges;  

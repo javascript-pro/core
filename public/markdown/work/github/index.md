@@ -6,7 +6,7 @@ slug: /work/github
 icon: github
 image: /png/javascript.png
 tags: github, process
-github: https://github.com/javascript-pro/core/issues/76
+github: https://github.com/javascript-pro/core
 ---
 
 We use GitHub for everything. Including [project management](https://github.com/javascript-pro/core/issues/76). Most of the communication done between us and our clients during development is done through GitHub in the form of comments, pull resuests, reviews and so forth
