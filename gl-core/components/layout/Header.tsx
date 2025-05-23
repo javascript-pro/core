@@ -3,14 +3,15 @@
 import * as React from 'react';
 import { useRouter } from 'next/navigation';
 import { IconButton, CardHeader, Typography } from '@mui/material';
-import { Icon, ShareThis } from '../../../gl-core';
+import { Icon, ShareThis, useDispatch, navigateTo } from '../../../gl-core';
 
 export type THeader = {
   frontmatter?: any;
 };
 
 export default function Header({ frontmatter = null }: THeader) {
-  const { title, description, icon } = frontmatter;
+  const dispatch = useDispatch();
+  const { title, description, icon, github, api } = frontmatter;
   const router = useRouter();
 
   return (
@@ -47,6 +48,18 @@ export default function Header({ frontmatter = null }: THeader) {
         }
         action={
           <>
+            { api ? <IconButton
+                      onClick={() => dispatch(navigateTo(api, "_blank"))}
+                    >
+                      <Icon icon="api" />
+                    </IconButton> : null }
+            
+            { github ? <IconButton
+                      onClick={() => dispatch(navigateTo(github))}
+                    >
+                      <Icon icon="github" />
+                    </IconButton> : null }
+            
             <ShareThis title={title} description={description} />
           </>
         }
@@ -54,3 +67,7 @@ export default function Header({ frontmatter = null }: THeader) {
     </>
   );
 }
+
+/*
+<pre style={{fontSize: 10}}>frontmatter: {JSON.stringify(frontmatter, null, 2)}</pre>
+*/

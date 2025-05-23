@@ -1,5 +1,3 @@
 {
-  "app": "gl-api",
-  "apibase": "http://localhost:3000/api/gl-api",
-  "frontend": "http://localhost:3000/"
+  "version": "100.0.0"
 }

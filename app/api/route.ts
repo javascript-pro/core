@@ -1,13 +1,16 @@
 // core/app/api/route.ts
-import config from './gl-api/config.json';
-import { NextRequest, NextResponse } from 'next/server';
+import { 
+  // NextRequest, 
+  NextResponse,
+} from 'next/server';
+import { getBase } from './gl-api/getBase';
 
-export async function GET(request: NextRequest) {
-  const { app = '' } = config;
+export async function GET(
+  // request: NextRequest
+) {
 
   return NextResponse.json({
     time: Date.now(),
-    app: `${app} API`,
-    start: 'http://localhost:3000/api/gl-api/',
+    start: `${getBase()}/api/gl-api/`
   });
 }

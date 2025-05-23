@@ -334,7 +334,7 @@
         "order": 100,
         "icon": "balance",
         "type": "folder",
-        "excerpt": "Books\n\n Wei Zang's Food\n Weekend Portfolio\n\n Are you Generation X?\n\n Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Is this Singularity?\n\n \"Put that kind ",
+        "excerpt": "| \n\n Books\n\n Wei Zang's Food\n Weekend Portfolio\n\n Are you Generation X?\n\n Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Is this Singularity?\n\n \"Put that ",
         "children": [
           {
             "title": "Books",
@@ -410,12 +410,12 @@
           },
           {
             "title": "Flickr",
-            "description": "Latest Album",
+            "description": "Why We Still Use Flickr",
             "slug": "/flickr",
             "order": 129,
             "icon": "flickr",
             "type": "folder",
-            "excerpt": "We take a lot of photos and have been adding them to our Flickr account for more than 20 years\n\n Dev Links",
+            "excerpt": "Why We Still Use Flickr\n\nFlickr isn’t trendy. It doesn’t chase hype. But it’s survived—and there’s a reason.\n\nFor over two decades, Flickr has offered something that’s increasingly rare: a stable, wel",
             "children": []
           }
         ]

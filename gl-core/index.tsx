@@ -41,6 +41,7 @@ import {
 } from './components/nav';
 import { useConfig, useIsMobile } from './hooks';
 
+import { navigateTo } from './actions/navigateTo';
 import { toggleStatus } from './actions/toggleStatus';
 import { updateStatusLevel } from './actions/updateStatusLevel';
 import { updateStatusMessage } from './actions/updateStatusMessage';
@@ -64,7 +65,7 @@ import { TFlash, TMovieClip, TPhoto } from './cartridges/Flash';
 export { Core };
 export { Theme, createMUITheme, Icon, ModeSwitch };
 export { Status, Header, Footer, RenderMarkdown, Responsive };
-export { toggleStatus, updateStatusLevel, updateStatusMessage };
+export { toggleStatus, updateStatusLevel, updateStatusMessage, navigateTo };
 export {
   NextPrevious,
   Nav,

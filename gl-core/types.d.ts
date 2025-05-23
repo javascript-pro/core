@@ -1,6 +1,7 @@
 export type TUbereduxState = {
+  currentRoute: string;
   status: {
-    level: string;
+    level: TSeverity;
     message: string;
     hidden: boolean;
   };

@@ -5,7 +5,7 @@ import { store } from '../../Uberedux/store';
 export const fetchAlbum = (albumId: string) => async (dispatch: TUbereduxDispatch) => {
   try {
 
-    console.log("fetching", `/api/gl-api/flickr?album=${encodeURIComponent(albumId)}`);
+    console.log("try fetching", `/api/gl-api/flickr?album=${encodeURIComponent(albumId)}`);
 
     const response = await fetch(`/api/gl-api/flickr?album=${encodeURIComponent(albumId)}`);
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
