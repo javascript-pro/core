@@ -1,7 +1,8 @@
 'use client';
 
 import * as React from 'react';
-import { CardHeader, Typography, useTheme } from '@mui/material';
+import { useRouter } from 'next/navigation';
+import { IconButton, CardHeader, Typography } from '@mui/material';
 import { Icon, ShareThis } from '../../../gl-core';
 
 export type THeader = {
@@ -10,14 +11,26 @@ export type THeader = {
 
 export default function Header({ frontmatter = null }: THeader) {
   const { title, description, icon } = frontmatter;
-  const theme = useTheme();
+  const router = useRouter();
+
   return (
     <>
       <CardHeader
         sx={{
           mx: 2,
         }}
-        avatar={<Icon icon={icon as any} />}
+        avatar={<>
+                  <IconButton
+                    
+                    onClick={() => {
+                      router.push('/');
+                    }}> 
+                    <Icon icon={"blokey"} />
+                  </IconButton>
+                  { icon !== "blokey" ? <IconButton disabled>
+                    <Icon icon={icon as any} />
+                  </IconButton> : null  }
+                </>}
         title={
           <Typography sx={{}} variant={'body1'} component={'h1'}>
             {title}
@@ -30,7 +43,7 @@ export default function Header({ frontmatter = null }: THeader) {
         }
         action={
           <>
-            <ShareThis />
+            <ShareThis title={title} description={description} />
           </>
         }
       />
@@ -38,24 +51,3 @@ export default function Header({ frontmatter = null }: THeader) {
   );
 }
 
-/* 
-
-// action={<Nav />}
-// action={<IconButton
-//   size='small'
-//   onClick={onAvatarClick}
-// >
-//   <Icon icon={icon} />
-// </IconButton>}
-
-<pre>frontmatter: {JSON.stringify(frontmatter, null, 2)}</pre>
-
-
-subheader={
-  <Typography variant={'body1'} component={'h2'}>
-    {description}
-  </Typography>
-}
-
-
-*/
