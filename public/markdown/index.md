@@ -9,6 +9,7 @@ image: /png/defaultFeatured.png
 github: https://github.com/javascript-pro/core
 api: /api/gl-api
 ---
+[Work](/work) | [Life](/life) | [Balance](/balance)
 
 ## We build and ship modern web apps for clients who need real results — fast
 
@@ -21,3 +22,7 @@ api: /api/gl-api
 
 It comes with these cartridges;  
 [Bouncer](/free/bouncer) | [Uberedux](/free/uberedux) | [Flickr](/balance/flickr) | [Flash](/free/flash)
+
+
+
+

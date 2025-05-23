@@ -1,4 +1,3 @@
-// core/app/api/gl-api/flickr/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 import { getBase } from '../getBase';
 import {
@@ -127,7 +126,11 @@ export async function GET(request: NextRequest) {
       status: 'success',
       message: 'Served from cache',
       result: {
-        meta: { ...cached.meta, albumUrl },
+        meta: {
+          ...cached.meta,
+          albumUrl,
+          description: cached.meta.description,
+        },
         photos: cached.photos,
       },
     });
@@ -165,12 +168,14 @@ export async function GET(request: NextRequest) {
       },
     }));
 
+    const coverPhoto = await getPhotoWithSizes(data.photoset.primary);
+
     const meta = {
       title: data.photoset.title,
       albumId,
       albumUrl,
-      coverPhoto: data.photoset.primary,
-      description: data.photoset.description,
+      coverPhoto,
+      description: data.photoset.description?._content || data.photoset.description || '',
       total: data.photoset.total,
     };
 

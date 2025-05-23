@@ -4,7 +4,7 @@ import { store } from '../../Uberedux/store';
 import { fetchAlbum } from './fetchAlbum';
 
 export const initFlickr = (
-  album: string,
+  albumId: string,
 ) => async (dispatch: TUbereduxDispatch) => {
   try {
     const state = store.getState();
@@ -19,8 +19,10 @@ export const initFlickr = (
         value: {
           ...flickr,
           message: 'Booting Flickr Cartridge',
-          // loading: true,
+          
+          loading: true,
           status: 'success',
+          albumId,
         },
       }),
     );
@@ -35,13 +37,14 @@ export const initFlickr = (
             message: 'Flickr init timed out',
             loading: false,
             status: 'error',
+            albumId,
           },
         }),
       );
     }, 10000);
 
     // Await album fetch
-    await dispatch(fetchAlbum(album));
+    await dispatch(fetchAlbum(albumId));
 
     clearTimeout(timeoutId); // Clear timeout if fetchAlbum succeeded
 
@@ -55,6 +58,7 @@ export const initFlickr = (
           message: 'Fetched album',
           loading: false,
           status: 'success',
+          albumId,
         },
       }),
     );

@@ -1,14 +1,10 @@
 {
   "app": "Goldlabel Apps",
-  "forceUpdate": false,
+  "forceUpdate": true,
   "description": "Custom software that works",
   "url": "https://goldlabel.pro",
   "repo": "https://github.com/javascript-pro/core",
   "defaultMode": "light",
-  "favicon": {
-    "dark": "/svg/favicon_gold.svg",
-    "light": "/svg/favicon_grey.svg"
-  },
   "images": ["/png/test.png", "/png/system/tick.png"],
   "brandColor": "#C09F52",
   "themes": {

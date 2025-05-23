@@ -10,6 +10,10 @@ export default function Flickr({
   frontmatter = null,
 }: any) {
   const slice = useSlice();
+  const {
+    flickr,
+  } = slice;
+  const albumObj = flickr.album;
   const dispatch = useDispatch();
   const searchParams = useSearchParams();
 
@@ -24,7 +28,12 @@ export default function Flickr({
 
   return (
     <Box sx={{ mx: 2 }}>
-      {frontmatter ? <AlbumCard /> : <>No frontmatter. No matter.</>}
+      
+      {/* <pre style={{fontSize:10}}>
+        flickr: {JSON.stringify(flickr, null, 2)}
+      </pre> */}
+      
+      { frontmatter ? <AlbumCard /> : <>No frontmatter. No matter.</>}
     </Box>
   );
 }
