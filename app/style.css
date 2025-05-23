@@ -1,7 +1,9 @@
 #core-ssg {
   display: none;
 }
-
+ul, li {
+  list-style-type: none;
+}
 body {
   margin: 0;
   background: #a6d4d1;

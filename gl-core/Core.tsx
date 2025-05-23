@@ -10,7 +10,7 @@ import {
   RenderMarkdown,
   Header,
   PageBreadcrumb,
-  NextPrevious,
+  useIsMobile,
 } from '../gl-core';
 import { Flickr } from './cartridges/Flickr';
 
@@ -32,6 +32,10 @@ export type TCore = {
 export default function Core({ frontmatter, body = null }: TCore) {
   const pathname = usePathname();
   const showFlickr = pathname.includes('balance/flickr');
+  const isMobile = useIsMobile();
+
+  // console.log("isMobile", isMobile);
+  const maxHeight = isMobile ? 150 : 180;
 
   return (
     <Theme>
@@ -39,16 +43,21 @@ export default function Core({ frontmatter, body = null }: TCore) {
       <Flash id="core">
         <MovieClip id="content" opacity={0}>
           <Header frontmatter={frontmatter} />
-          <PageBreadcrumb />
+          {pathname !== "/" ? <PageBreadcrumb /> : null }
+          
+
           <Box sx={{ height: 8 }}/>
           {showFlickr ? (
             <Flickr album="72157594233009954" frontmatter={frontmatter} />
           ) : (
             <>
-              <Photo src={frontmatter?.image ?? null} />
+              <Photo 
+                maxHeight={maxHeight} 
+                src={frontmatter?.image ?? null} 
+              />
             </>
           )}
-          <Box sx={{ height: 32 }}/>
+          <Box sx={{ height: 16 }}/>
           <RenderMarkdown>{body}</RenderMarkdown>
         </MovieClip>
       </Flash>

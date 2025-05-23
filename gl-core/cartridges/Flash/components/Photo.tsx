@@ -4,6 +4,7 @@ import * as React from 'react';
 import { Box, CardMedia, Typography } from '@mui/material';
 
 export type TPhoto = {
+  maxHeight?: number | string | null;
   src: string | null;
 };
 
@@ -15,7 +16,10 @@ const isValidImage = (src: string | null): boolean => {
   return validExtensions.includes(ext);
 };
 
-export default function Photo({ src = null }: TPhoto) {
+export default function Photo({ 
+  src = null,
+  maxHeight = null,
+}: TPhoto) {
   if (!isValidImage(src)) {
     return (
       <Box>
@@ -31,7 +35,8 @@ export default function Photo({ src = null }: TPhoto) {
       sx={{
         width: '100%',
         maxWidth: '100%',
-        height: 310,
+        // height: 310,
+        maxHeight,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
