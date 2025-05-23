@@ -34,7 +34,7 @@
       "NextJS",
       "Headless CMS"
     ],
-    "excerpt": "We build and ship modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codebases\n \n \n\n is  and . It comes",
+    "excerpt": "We build and ship modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codebases\n \n\n is . It's  and .\n\nIt",
     "children": [
       {
         "title": "Free & Open Source",
@@ -158,7 +158,7 @@
             "order": 10,
             "icon": "work",
             "type": "folder",
-            "excerpt": "Goldlabel Apps is a UKbased software company that designs, builds, and maintains fullstack web applications. We specialize in Next.js, Firebase, and custom UI development, delivering everything from i",
+            "excerpt": "| \n\nGoldlabel Apps is a UKbased software company that designs, builds, and maintains fullstack web applications. We specialize in Next.js, Firebase, and custom UI development, delivering everything fr",
             "children": [
               {
                 "title": "Working remotely",
@@ -170,7 +170,7 @@
                   "remote",
                   "hybrid"
                 ],
-                "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years.\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communication, "
+                "excerpt": "| \n\n Corporate attitudes to remote working have changed dramatically in recent years.\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communicat"
               },
               {
                 "title": "Privacy & Cookies",
@@ -185,7 +185,7 @@
                   "terms",
                   "trust"
                 ],
-                "excerpt": "We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers t"
+                "excerpt": "| \n\n We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead develop"
               }
             ]
           },

@@ -6,6 +6,7 @@ slug: /life/food/banana-bread
 icon: food
 image: /jpg/wei-zang/wei-zangs-food.jpg
 ---
+[Air Fried Stuffed Peppers](/life/food/air-fried-peppers) | [Banana Bread](/life/food/banana-bread)
 
 Moist, flavorful, and easy to make. Perfect for using overripe bananas, this classic loaf is a crowd-pleaser for breakfast, snacks, or dessert.
 

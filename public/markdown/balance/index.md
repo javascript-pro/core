@@ -4,16 +4,11 @@ title: Balance
 description: A collection of Writing
 slug: /balance
 icon: balance
-image: /png/nhtfs/weizang.png
+image: /png/cartridge.png
 ---
 [Flickr](/balance/flickr) | [Books](/balance/books)
 
-### Books
-
-- Wei Zang's Food
-- Weekend Portfolio
-
-### Are you Generation X?
+### Are you [Generation X](/balance/books/generation-x)?
 
 > Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland
 
