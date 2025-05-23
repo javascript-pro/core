@@ -2,7 +2,7 @@
 order: 15
 slug: /free/flash
 title: 'Flash'
-description: 'Pointless reinvention of MacroMedia Flash in React'
+description: 'A Pointless reinvention of MacroMedia Flash?'
 icon: 'flash'
 image: '/png/flash.png'
 keywords: 'Catridges, Flash, SVG'

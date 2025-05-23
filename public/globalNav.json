@@ -71,7 +71,7 @@
             "order": 20,
             "icon": "uberedux",
             "type": "file",
-            "excerpt": "Apps need State Management\n\nOtherwise you'd be back in jQuery callback hell. Nobody wants that. Uberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app already works a"
+            "excerpt": "Becauae all Apps need State Management\n\nOtherwise you'd be back in jQuery callback hell. Nobody wants that. Uberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app alr"
           },
           {
             "title": "Bouncer",
@@ -140,13 +140,13 @@
             "excerpt": "Chris Dorward\n\n Fullstack JavaScript Developer\n\n +44 07745 763 122  \n |  |\n\n\n Summary\n\nOver 20 years of experience delivering scalable web applications across startups, enterprises, and remotefirst te"
           },
           {
-            "title": "Company",
-            "description": "About Goldlabel Apps Ltd",
+            "title": "Goldlabel Apps Ltd",
+            "description": "UK Limited Company (5460545)",
             "slug": "/company",
             "order": 10,
             "icon": "work",
             "type": "folder",
-            "excerpt": "Goldlabel Apps Ltd is a UK Limited Company (5460545)\n\nGoldlabel Apps is a UKbased software company that designs, builds, and maintains fullstack web applications. We specialize in Next.js, Firebase, a",
+            "excerpt": "Goldlabel Apps is a UKbased software company that designs, builds, and maintains fullstack web applications. We specialize in Next.js, Firebase, and custom UI development, delivering everything from i",
             "children": [
               {
                 "title": "Working remotely",

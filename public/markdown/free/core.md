@@ -7,8 +7,9 @@ icon: github
 image: /png/defaultFeatured.png
 tags: free, core
 ---
+## Open Source and Free Forever
 
-> Goldlabel Core is a project designed to deliver powerful, user-friendly web applications that enhance productivity and streamline tasks. The project uses a monorepo architecture with multiple Next.js applications deployed to Vercel.
+Goldlabel Core is a project designed to deliver powerful, user-friendly web applications that enhance productivity and streamline tasks. The project uses a monorepo architecture with multiple Next.js applications deployed to Vercel.
 
 Goldlabel Core is the public facing foundation of the Goldlabel Apps ecosystem. It’s a fast, static-first Next.js site powered by real-time data from Firestore and managed through a built-in admin interface.
 

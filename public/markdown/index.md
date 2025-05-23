@@ -17,4 +17,4 @@ tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Pr
 - [Find out more](/work/company)
 
 [Goldlabel Core](/free/core) is [Free](/free) and [Open Source](/free/open-source). It comes with these cartridges;  
-[Uberedux](/free/uberedux) | [Flickr](/balance/flickr) | [Flash](/free/flash)
+[Bouncer](/free/bouncer) | [Uberedux](/free/uberedux) | [Flickr](/balance/flickr) | [Flash](/free/flash)
