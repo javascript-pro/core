@@ -7,6 +7,7 @@ icon: work
 image: /png/defaultFeatured.png
 tags: remote, hybrid
 ---
+[Privacy & Cookies](/work/company/privacy-cookies) | [Working remotely](/work/company/remote-working)
 
 > Corporate attitudes to remote working have changed dramatically in recent years.
 

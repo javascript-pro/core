@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { useRouter } from 'next/navigation';
-import { IconButton, CardHeader, Typography } from '@mui/material';
+import { IconButton, CardHeader, Typography, Tooltip } from '@mui/material';
 import { Icon, ShareThis, useDispatch, navigateTo } from '../../../gl-core';
 
 export type THeader = {
@@ -21,14 +21,15 @@ export default function Header({ frontmatter = null }: THeader) {
           mx: 2,
         }}
         avatar={
-          <>
-            <IconButton
-              onClick={() => {
-                router.push('/');
-              }}
-            >
-              <Icon icon={'blokey'} />
-            </IconButton>
+          <><Tooltip title="Home">
+              <IconButton
+                onClick={() => {
+                  router.push('/');
+                }}
+              >
+                <Icon icon={'blokey'} />
+              </IconButton>
+            </Tooltip>
             {icon !== 'blokey' ? (
               <IconButton disabled>
                 <Icon icon={icon as any} />

@@ -34,7 +34,7 @@
       "NextJS",
       "Headless CMS"
     ],
-    "excerpt": "We build and ship modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codebases\n \n\n is  and . It comes w",
+    "excerpt": "We build and ship modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codebases\n \n \n\n is  and . It comes",
     "children": [
       {
         "title": "Free & Open Source",
@@ -136,7 +136,7 @@
           "NextJS",
           "Headless CMS"
         ],
-        "excerpt": "Goldlabel Core is always Free & Open Source as a public repo on \n\n \n \n\n The apps we ship are real, run in production and are developed in public\n\nThe Core is Open Source and Free forever — giving you ",
+        "excerpt": "| \n\nGoldlabel Core is always Free & Open Source as a public repo on \n\n \n \n\n The apps we ship are real, run in production and are developed in public\n\nThe Core is Open Source and Free forever — giving ",
         "children": [
           {
             "title": "C.V.",
@@ -218,7 +218,7 @@
           },
           {
             "title": "JavaScript",
-            "description": "ECMA Script",
+            "description": "JavaScript Whatever the Weather",
             "slug": "/javascript",
             "order": 40,
             "icon": "javascript",
@@ -239,7 +239,7 @@
               "Headless CMS",
               "JSON"
             ],
-            "excerpt": "",
+            "excerpt": "JavaScript Whatever the Weather\n\nWe’ve been writing JavaScript since it was still called ECMAScript.\n\nBefore the frameworks, before npm, before it ate the world—we were already deep in the language th",
             "children": []
           }
         ]
@@ -343,7 +343,7 @@
             "order": 100,
             "icon": "balance",
             "type": "folder",
-            "excerpt": "Weekend Portfolio\n\n Written for semiprofessional coders ready to go pr0\n\nIn a weekend project, you’ll build a simple but powerful AI app. The idea is simple but important: you upload an .mp3 file, and",
+            "excerpt": "Weekend Portfolio\n\n Written for semiprofessional coders ready to go pr0\n\nA series of standalone apps you can build in a weekend. Each project has modern deployment, realworld app structure\n\nIn a weeke",
             "children": [
               {
                 "title": "Wei Zang’s Food",
