@@ -34,7 +34,7 @@
       "NextJS",
       "Headless CMS"
     ],
-    "excerpt": "We build and ship modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codebases\n \n\n is . It's  and .\n\nIt",
+    "excerpt": "|  | \n\n We build and ship modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codebases\n \n\n is . It's  a",
     "children": [
       {
         "title": "Free & Open Source",
@@ -251,7 +251,7 @@
         "order": 50,
         "icon": "life",
         "type": "folder",
-        "excerpt": "I work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age I'm never going to ski like I used to. Ma",
+        "excerpt": "|  |   \n\n | \nI work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age I'm never going to ski like ",
         "children": [
           {
             "title": "Food",
@@ -260,7 +260,7 @@
             "order": 10,
             "icon": "food",
             "type": "folder",
-            "excerpt": "When I want a recipe I go the internet of course. I get annoyed by the amount of adverts on the pages where I want to follow simple instructions.\n\nFor some recipes that I've tried & tested I've stripp",
+            "excerpt": "| \n\nWhen I want a recipe I go the internet of course. I get annoyed by the amount of adverts on the pages where I want to follow simple instructions.\n\nFor some recipes that I've tried & tested I've st",
             "children": [
               {
                 "title": "Air Fried Stuffed Peppers",
@@ -283,7 +283,7 @@
                 "order": 50,
                 "icon": "food",
                 "type": "file",
-                "excerpt": "Moist, flavorful, and easy to make. Perfect for using overripe bananas, this classic loaf is a crowdpleaser for breakfast, snacks, or dessert.\n\n 125g Butter\n 175g Brown sugar\n 1 tsp Vanilla extract or"
+                "excerpt": "| \n\nMoist, flavorful, and easy to make. Perfect for using overripe bananas, this classic loaf is a crowdpleaser for breakfast, snacks, or dessert.\n\n 125g Butter\n 175g Brown sugar\n 1 tsp Vanilla extrac"
               }
             ]
           },
@@ -334,7 +334,7 @@
         "order": 100,
         "icon": "balance",
         "type": "folder",
-        "excerpt": "| \n\n Books\n\n Wei Zang's Food\n Weekend Portfolio\n\n Are you Generation X?\n\n Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Is this Singularity?\n\n \"Put that ",
+        "excerpt": "| \n\n Are you ?\n\n Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Is this Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've go",
         "children": [
           {
             "title": "Books",
@@ -358,7 +358,7 @@
                 "description": "by Douglas Coupland",
                 "slug": "/generation-x",
                 "order": 100,
-                "icon": "book",
+                "icon": "doc",
                 "type": "folder",
                 "excerpt": "The term Generation X acquired a modern application after the release of Generation X: Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Glossary\n\nMcJob A lo",
                 "children": []

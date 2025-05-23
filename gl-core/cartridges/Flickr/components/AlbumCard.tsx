@@ -10,13 +10,12 @@ import {
   Typography,
 } from '@mui/material';
 import { Icon, MightyButton, useSlice } from '../../../../gl-core';
-import { PhotoCard } from '../';
+// import { PhotoCard } from '../';
 import { TAlbumCard } from '../types';
 
 export default function AlbumCard({ id = null }: TAlbumCard) {
   const { album } = useSlice().flickr ?? {};
-  const isAdmin = false;
-  const mode = "list";
+  const isAdmin = true;
 
   if (!album) {
     return (
@@ -26,13 +25,16 @@ export default function AlbumCard({ id = null }: TAlbumCard) {
     );
   }
 
+  // const {
+  //   photos = [],
+  // } = album;
+
   const {
-    title = 'Untitled',
+    title = '',
     description = '',
     coverPhoto,
-    photos = [],
     albumUrl,
-  } = album;
+  } = album.meta;
 
   return (
     <Box>
@@ -56,7 +58,7 @@ export default function AlbumCard({ id = null }: TAlbumCard) {
             src={coverPhoto.sizes.large.src}
             alt={coverPhoto.title || 'Album Cover'}
             sx={{
-              maxHeight: 315,
+              maxHeight: 300,
               maxWidth: 600,
             }}
           />
