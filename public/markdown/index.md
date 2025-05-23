@@ -8,6 +8,7 @@ image: /png/defaultFeatured.png
 github: https://github.com/javascript-pro/core/issues/76
 tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 ---
+
 ## We build and ship modern web apps for clients who need real results — fast
 
 - _Small_ team. _Big_ output

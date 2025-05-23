@@ -30,7 +30,6 @@ export type TCore = {
 };
 
 export default function Core({ frontmatter, body = null }: TCore) {
-
   const pathname = usePathname();
   const showFlickr = pathname.includes('balance/flickr');
 

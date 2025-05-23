@@ -28,9 +28,11 @@ export default function Header({ frontmatter = null }: THeader) {
             {description}
           </Typography>
         }
-        action={<>
-          <ShareThis />
-        </>}
+        action={
+          <>
+            <ShareThis />
+          </>
+        }
       />
     </>
   );
