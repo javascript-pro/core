@@ -19,6 +19,7 @@ export type TFlickrPhoto = {
     small?: TFlickrPhotoSize;
     medium?: TFlickrPhotoSize;
     large?: TFlickrPhotoSize;
+    thumb?: TFlickrPhotoSize;
   };
 };
 

@@ -8,7 +8,7 @@ import { CardButton, useSlice } from '../../../gl-core';
 
 export default function Flickr({
   mode = 'default',
-  albumId = null,
+  id = null,
   onClick = () => {
     console.log('No onClick supplied to Flickr');
   },
@@ -16,20 +16,19 @@ export default function Flickr({
   const dispatch = useDispatch();
   const flickrSlice = useSlice().flickr;
   React.useEffect(() => {
-    if (albumId) {
-      dispatch(initFlickr(albumId));
+    if (id) {
+      dispatch(initFlickr(id));
     }
-  }, [albumId, dispatch]);
+  }, [id, dispatch]);
 
-  if (!albumId) return <>No albumId</>;
-
-  if (mode === 'default') return <>Default Album View</>;
+  if (mode === 'default') return <></>;
+  if (!id) return <>No albumId</>;
 
   if (mode === 'album-card')
     return (
       <Box sx={{}}>
         <CardButton onClick={onClick}>
-          <AlbumCard />
+          <AlbumCard id={id}/>
         </CardButton>
       </Box>
     );

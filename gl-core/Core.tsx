@@ -31,7 +31,7 @@ export type TCore = {
 
 export default function Core({ frontmatter, body = null }: TCore) {
   const pathname = usePathname();
-  const showFlickr = pathname.includes('balance/flickr');
+  // const showFlickr = pathname.includes('balance/flickr');
   const isMobile = useIsMobile();
 
   // console.log("isMobile", isMobile);
@@ -43,22 +43,28 @@ export default function Core({ frontmatter, body = null }: TCore) {
       <Flash id="core">
         <MovieClip id="content" opacity={0}>
           <Header frontmatter={frontmatter} />
-          
-
-          <Box sx={{ height: 0 }} />
-
           <Grid container spacing={1}>
             <Grid size={{
               xs: 12,
               md: 5,
             }}>
               <Photo maxHeight={maxHeight} src={frontmatter?.image ?? null} />
+              <Box sx={{
+                // border: "1px solid gold",
+                mx: 2,
+              }}>
+                <Flickr 
+                  mode="album-card"
+                  id="72177720326317140"
+                />
+              </Box>
+              
             </Grid>
             <Grid size={{
               xs: 12,
               md: 7,
             }}>
-              {pathname !== '/' ? <PageBreadcrumb /> : null}
+              { pathname !== '/' && <PageBreadcrumb />}
               <RenderMarkdown>{body}</RenderMarkdown>
             </Grid>
           </Grid>

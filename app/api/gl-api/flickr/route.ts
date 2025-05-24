@@ -7,10 +7,7 @@ const flickrApiKey = process.env.FLICKR_KEY;
 const flickrUserId = process.env.FLICKR_USER;
 
 const CACHE_TTL = 1000 * 60 * 5;
-const albumCache: Record<
-  string,
-  { time: number; photos: TFlickrPhoto[]; meta: any }
-> = {};
+const albumCache: Record<string, { time: number; photos: TFlickrPhoto[]; meta: any }> = {};
 const photoCache: Record<string, { time: number; photo: TFlickrPhoto }> = {};
 
 async function getPhotoWithSizes(photoId: string): Promise<TFlickrPhoto> {
@@ -38,6 +35,9 @@ async function getPhotoWithSizes(photoId: string): Promise<TFlickrPhoto> {
       : undefined;
   };
 
+  const getBestSquare = (): TFlickrPhotoSize | undefined =>
+    getSize('Large Square') || getSize('Square');
+
   return {
     flickrId: p.id,
     flickrUrl: `https://www.flickr.com/photos/${flickrUserId}/${p.id}`,
@@ -54,6 +54,7 @@ async function getPhotoWithSizes(photoId: string): Promise<TFlickrPhoto> {
       medium: getSize('Medium 800'),
       large: getSize('Large'),
       orig: getSize('Original'),
+      thumb: getBestSquare(), // New thumbnail entry
     },
   };
 }
@@ -180,12 +181,12 @@ export async function GET(request: NextRequest) {
               height: parseInt(p.height_n),
             }
           : undefined,
+        thumb: undefined, // Not included in bulk API call
       },
     }));
 
     const coverPhoto = await getPhotoWithSizes(data.photoset.primary);
 
-    // New request to get album metadata including description
     const infoRes = await fetch(
       `${FLICKR_API}?method=flickr.photosets.getInfo&api_key=${flickrApiKey}&photoset_id=${albumId}&user_id=${flickrUserId}&format=json&nojsoncallback=1`,
     );

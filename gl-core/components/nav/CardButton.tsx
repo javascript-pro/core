@@ -25,7 +25,7 @@ export default function CardButton({
         ...sx,
         display: 'block',
         // border: "1px solid orange",
-        background: 'rgba(0, 0, 0, 0.05)',
+        // background: 'rgba(0, 0, 0, 0.05)',
       }}
     >
       <ButtonBase
