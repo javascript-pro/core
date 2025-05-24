@@ -5,14 +5,9 @@ import { Box, CardHeader, CircularProgress } from '@mui/material';
 import { useSlice, useDispatch } from '../../../gl-core';
 import { initFlickr, AlbumCard } from './';
 
-export default function Flickr({
-  album = null,
-  frontmatter = null,
-}: any) {
+export default function Flickr({ album = null, frontmatter = null }: any) {
   const slice = useSlice();
-  const {
-    flickr,
-  } = slice;
+  const { flickr } = slice;
   const albumObj = flickr.album;
   const dispatch = useDispatch();
   const searchParams = useSearchParams();
@@ -28,12 +23,11 @@ export default function Flickr({
 
   return (
     <Box sx={{ mx: 2 }}>
-      
       {/* <pre style={{fontSize:10}}>
         flickr: {JSON.stringify(flickr, null, 2)}
       </pre> */}
-      
-      { frontmatter ? <AlbumCard /> : <>No frontmatter. No matter.</>}
+
+      {frontmatter ? <AlbumCard /> : <>No frontmatter. No matter.</>}
     </Box>
   );
 }

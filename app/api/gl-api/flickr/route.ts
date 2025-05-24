@@ -1,16 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getBase } from '../getBase';
-import {
-  TFlickrPhoto,
-  TFlickrPhotoSize,
-} from '../types';
+import { TFlickrPhoto, TFlickrPhotoSize } from '../types';
 
 const FLICKR_API = 'https://api.flickr.com/services/rest/';
 const flickrApiKey = process.env.FLICKR_KEY;
 const flickrUserId = process.env.FLICKR_USER;
 
 const CACHE_TTL = 1000 * 60 * 5;
-const albumCache: Record<string, { time: number; photos: TFlickrPhoto[]; meta: any }> = {};
+const albumCache: Record<
+  string,
+  { time: number; photos: TFlickrPhoto[]; meta: any }
+> = {};
 const photoCache: Record<string, { time: number; photo: TFlickrPhoto }> = {};
 
 async function getPhotoWithSizes(photoId: string): Promise<TFlickrPhoto> {
@@ -153,16 +153,32 @@ export async function GET(request: NextRequest) {
       meta: { tags: p.tags?.split(' ') || [] },
       sizes: {
         orig: p.url_o
-          ? { src: p.url_o, width: parseInt(p.width_o), height: parseInt(p.height_o) }
+          ? {
+              src: p.url_o,
+              width: parseInt(p.width_o),
+              height: parseInt(p.height_o),
+            }
           : undefined,
         large: p.url_h
-          ? { src: p.url_h, width: parseInt(p.width_h), height: parseInt(p.height_h) }
+          ? {
+              src: p.url_h,
+              width: parseInt(p.width_h),
+              height: parseInt(p.height_h),
+            }
           : undefined,
         medium: p.url_c
-          ? { src: p.url_c, width: parseInt(p.width_c), height: parseInt(p.height_c) }
+          ? {
+              src: p.url_c,
+              width: parseInt(p.width_c),
+              height: parseInt(p.height_c),
+            }
           : undefined,
         small: p.url_n
-          ? { src: p.url_n, width: parseInt(p.width_n), height: parseInt(p.height_n) }
+          ? {
+              src: p.url_n,
+              width: parseInt(p.width_n),
+              height: parseInt(p.height_n),
+            }
           : undefined,
       },
     }));

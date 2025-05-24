@@ -16,10 +16,7 @@ const isValidImage = (src: string | null): boolean => {
   return validExtensions.includes(ext);
 };
 
-export default function Photo({ 
-  src = null,
-  maxHeight = null,
-}: TPhoto) {
+export default function Photo({ src = null, maxHeight = null }: TPhoto) {
   if (!isValidImage(src)) {
     return (
       <Box>

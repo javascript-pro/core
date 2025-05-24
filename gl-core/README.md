@@ -10,7 +10,7 @@ cd core && yarn
 
 ```typescript
 dispatch(navigateTo(
-    url: string, 
+    url: string,
     target: "_blank" | "_self",
 ));
 ```

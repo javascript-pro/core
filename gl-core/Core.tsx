@@ -43,10 +43,9 @@ export default function Core({ frontmatter, body = null }: TCore) {
       <Flash id="core">
         <MovieClip id="content" opacity={0}>
           <Header frontmatter={frontmatter} />
-          {pathname !== "/" ? <PageBreadcrumb /> : null }
-          
+          {pathname !== '/' ? <PageBreadcrumb /> : null}
 
-          <Box sx={{ height: 8 }}/>
+          <Box sx={{ height: 8 }} />
           {showFlickr ? (
             // bilbao "72157594233009954"
             // mimizan "72177720326289602"
@@ -54,13 +53,10 @@ export default function Core({ frontmatter, body = null }: TCore) {
             <Flickr album="72177720326317140" frontmatter={frontmatter} />
           ) : (
             <>
-              <Photo 
-                maxHeight={maxHeight} 
-                src={frontmatter?.image ?? null} 
-              />
+              <Photo maxHeight={maxHeight} src={frontmatter?.image ?? null} />
             </>
           )}
-          <Box sx={{ height: 16 }}/>
+          <Box sx={{ height: 16 }} />
           <RenderMarkdown>{body}</RenderMarkdown>
         </MovieClip>
       </Flash>

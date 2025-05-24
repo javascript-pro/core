@@ -29,30 +29,27 @@ export default function AlbumCard({ id = null }: TAlbumCard) {
   //   photos = [],
   // } = album;
 
-  const {
-    title = '',
-    description = '',
-    coverPhoto,
-    albumUrl,
-  } = album.meta;
+  const { title = '', description = '', coverPhoto, albumUrl } = album.meta;
 
   return (
     <Box>
       <CardHeader
         title={title}
         subheader={description}
-        avatar={!isAdmin ? null : 
-          <MightyButton
-            mode="icon"
-            icon="flickr"
-            label="View on Flickr"
-            color="inherit"
-            onClick={() => window.open(albumUrl, '_blank')}
-          />
+        avatar={
+          !isAdmin ? null : (
+            <MightyButton
+              mode="icon"
+              icon="flickr"
+              label="View on Flickr"
+              color="inherit"
+              onClick={() => window.open(albumUrl, '_blank')}
+            />
+          )
         }
       />
       <CardContent>
-        { coverPhoto?.sizes?.medium?.src && (
+        {coverPhoto?.sizes?.medium?.src && (
           <CardMedia
             component="img"
             src={coverPhoto.sizes.large.src}
