@@ -3,12 +3,14 @@
 import * as React from 'react';
 import { TPhotoCard } from '../types';
 import { Box, CardHeader, CardMedia } from '@mui/material';
-import { Icon, MightyButton } from '../../../../gl-core';
+import { MightyButton } from '../../../../gl-core';
 
 export default function PhotoCard({ mode = 'card', photo = {} }: TPhotoCard) {
   const { title, description, sizes, flickrUrl } = photo;
   const size = sizes.small;
   const isAdmin = false;
+
+  if (mode === 'list') return <>list</>;
 
   if (mode === 'card') {
     return (

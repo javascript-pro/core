@@ -410,12 +410,12 @@
           },
           {
             "title": "Flickr",
-            "description": "Why We Still Use Flickr",
+            "description": "An API that has just worked for more than 20 years",
             "slug": "/flickr",
             "order": 129,
             "icon": "flickr",
             "type": "folder",
-            "excerpt": "Why We Still Use Flickr\n\nFlickr isn’t trendy. It doesn’t chase hype. But it’s survived—and there’s a reason.\n\nFor over two decades, Flickr has offered something that’s increasingly rare: a stable, wel",
+            "excerpt": "Why do we still use Flickr?\n\nFlickr isn’t trendy. It doesn’t chase hype. But it’s survived—and there’s a reason.\n\nFor over two decades, Flickr has offered something that’s increasingly rare: a stable,",
             "children": []
           }
         ]

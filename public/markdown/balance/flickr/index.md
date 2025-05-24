@@ -11,11 +11,7 @@ api: /api/gl-api/flickr
 
 ## Why do we still use Flickr?
 
-Flickr isn’t trendy. It doesn’t chase hype. But it’s survived—and there’s a reason.
-
-For over two decades, Flickr has offered something that’s increasingly rare: a stable, well-documented photo hosting platform with a mature API that just works.
-
-We’ve got over 3,000 photos on it, and it’s still delivering every single one.
+Flickr isn’t trendy. It doesn’t chase hype. But it’s survived—and there’s a reason for that. For over two decades, Flickr has offered something that’s increasingly rare: a stable, well-documented photo hosting platform with a mature API that just works. We’ve got over 3,000 photos on it, and it’s still delivering every single one.
 
 ### Flickr is a CDN
 

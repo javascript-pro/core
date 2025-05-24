@@ -2,20 +2,21 @@
 
 import * as React from 'react';
 import {
-  Box,
   Grid,
+  Card,
   CardContent,
   CardHeader,
-  CardMedia,
   Typography,
 } from '@mui/material';
-import { Icon, MightyButton, useSlice } from '../../../../gl-core';
-// import { PhotoCard } from '../';
+import { MightyButton, useSlice } from '../../../../gl-core';
+import { PhotoCard } from '../';
 import { TAlbumCard } from '../types';
 
 export default function AlbumCard({ id = null }: TAlbumCard) {
   const { album } = useSlice().flickr ?? {};
+  const { photos } = album;
   const isAdmin = true;
+  const showPhotos = false;
 
   if (!album) {
     return (
@@ -33,16 +34,15 @@ export default function AlbumCard({ id = null }: TAlbumCard) {
     coverPhoto?.sizes?.small?.src;
 
   return (
-    <Box>
+    <Card sx={{}}>
       <CardHeader
         title={title}
-        subheader={description}
-        avatar={
+        action={
           !isAdmin ? null : (
             <MightyButton
               mode="icon"
               icon="flickr"
-              label="View on Flickr"
+              label="View album on Flickr"
               color="inherit"
               onClick={() => window.open(albumUrl, '_blank')}
             />
@@ -50,7 +50,10 @@ export default function AlbumCard({ id = null }: TAlbumCard) {
         }
       />
       <CardContent>
-        {coverSrc && (
+        <Typography variant='body1'>
+          {description}
+        </Typography>
+        {/* {coverSrc && (
           <CardMedia
             component="img"
             src={coverSrc}
@@ -60,11 +63,10 @@ export default function AlbumCard({ id = null }: TAlbumCard) {
               maxWidth: 600,
             }}
           />
-        )}
+        )} */}
 
         <Grid container spacing={1}>
-          {/* Uncomment and update when ready to render photos
-          {photos.length > 0 &&
+          {photos.length > 0  && showPhotos &&
             photos.map((photo: any, i: number) => {
               if (photo.flickrId === coverPhoto?.flickrId) return null;
               return (
@@ -77,13 +79,12 @@ export default function AlbumCard({ id = null }: TAlbumCard) {
                     lg: 3,
                   }}
                 >
-                  <PhotoCard mode="card" photo={photo} />
+                  <PhotoCard mode="list" photo={photo} />
                 </Grid>
               );
             })}
-          */}
         </Grid>
       </CardContent>
-    </Box>
+    </Card>
   );
 }
