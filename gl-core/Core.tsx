@@ -1,6 +1,6 @@
 'use client';
 import * as React from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { CssBaseline, Box, Grid } from '@mui/material';
 import {
   Theme,
@@ -31,10 +31,8 @@ export type TCore = {
 
 export default function Core({ frontmatter, body = null }: TCore) {
   const pathname = usePathname();
-  // const showFlickr = pathname.includes('balance/flickr');
+  const router = useRouter();
   const isMobile = useIsMobile();
-
-  // console.log("isMobile", isMobile);
   const maxHeight = isMobile ? 150 : 180;
 
   return (
@@ -44,29 +42,36 @@ export default function Core({ frontmatter, body = null }: TCore) {
         <MovieClip id="content" opacity={0}>
           <Header frontmatter={frontmatter} />
           <Grid container spacing={1}>
+            
+            <Grid size={{
+              xs: 12,
+              md: 7,
+            }}>
+              <Photo maxHeight={maxHeight} src={frontmatter?.image ?? null} />
+              { pathname !== '/' && <PageBreadcrumb />}
+              <RenderMarkdown>{body}</RenderMarkdown>
+            </Grid>
+            
             <Grid size={{
               xs: 12,
               md: 5,
             }}>
-              <Photo maxHeight={maxHeight} src={frontmatter?.image ?? null} />
+              
               <Box sx={{
-                // border: "1px solid gold",
                 mx: 2,
               }}>
                 <Flickr 
                   mode="album-card"
                   id="72177720326317140"
+                  onClick={() => {
+                    console.log("c c")
+                    router.push(`/balance/flickr/album/72177720326317140`)
+                  }}
                 />
               </Box>
               
             </Grid>
-            <Grid size={{
-              xs: 12,
-              md: 7,
-            }}>
-              { pathname !== '/' && <PageBreadcrumb />}
-              <RenderMarkdown>{body}</RenderMarkdown>
-            </Grid>
+            
           </Grid>
           
         </MovieClip>

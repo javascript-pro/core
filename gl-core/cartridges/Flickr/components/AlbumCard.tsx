@@ -30,13 +30,9 @@ export default function AlbumCard({
     coverPhoto, 
     albumUrl,
   } = album.meta;
-
-  
   const {
     src,
   } = coverPhoto.sizes.thumb;
-
-  // console.log("src", src)
 
   return (
     <Box sx={{}}>
@@ -56,30 +52,29 @@ export default function AlbumCard({
       />
       <CardContent>
         <Box sx={{ display:"flex" }}>
-          <Box 
-            sx={{
-              mt: 0.5,
-              mr: 2,
-            }}>
-            <img
-              style={{
-                borderRadius: "8px",
-              }}
-              alt={title}
-              height={100}
-              width={100}
-              src={src}
-            />
-          </Box>
+          
           <Box>
             <Typography variant="body2">
               {description}
             </Typography>
           </Box>
+
+          <Box 
+            sx={{
+              mt: 0.5,
+              ml: 2,
+            }}>
+            <img
+              style={{
+                borderRadius: "3px",
+              }}
+              alt={title}
+              height={75}
+              width={75}
+              src={src}
+            />
+          </Box>
         </Box>
-        
-
-
         
       </CardContent>
     </Box>
