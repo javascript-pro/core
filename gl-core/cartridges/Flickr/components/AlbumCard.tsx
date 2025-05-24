@@ -44,7 +44,7 @@ export default function AlbumCard({ id = null }: TAlbumCard) {
         avatar={!isAdmin ? null : 
           <MightyButton
             mode="icon"
-            icon="link"
+            icon="flickr"
             label="View on Flickr"
             color="inherit"
             onClick={() => window.open(albumUrl, '_blank')}

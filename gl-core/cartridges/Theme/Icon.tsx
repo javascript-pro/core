@@ -2,6 +2,7 @@
 import * as React from 'react';
 import PingpongballIcon from './SVGIcons/PingpongballIcon';
 import OliverIcon from './SVGIcons/OliverIcon';
+import FlickrIcon from './SVGIcons/FlickrIcon';
 import OpenAIIcon from './SVGIcons/OpenAIIcon';
 import MacromediaIconIcon from './SVGIcons/MacromediaIcon';
 import BlokeyIcon from './SVGIcons/BlokeyIcon';
@@ -121,7 +122,6 @@ import JobIcon from '@mui/icons-material/EditSquare';
 import DownloadIcon from '@mui/icons-material/Download';
 import AddIcon from '@mui/icons-material/Add';
 import PreviewIcon from '@mui/icons-material/Preview';
-import FlickrIcon from '@mui/icons-material/CameraRoll';
 import PhotoIcon from '@mui/icons-material/CameraAlt';
 import AlbumIcon from '@mui/icons-material/Collections';
 import LinkIcon from '@mui/icons-material/Link';
