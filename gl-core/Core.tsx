@@ -50,7 +50,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
             // bilbao "72157594233009954"
             // mimizan "72177720326289602"
             // cartridge "72177720326317140"
-            <Flickr album="72177720326317140" frontmatter={frontmatter} />
+            <Flickr album="72157594233009954" frontmatter={frontmatter} />
           ) : (
             <>
               <Photo maxHeight={maxHeight} src={frontmatter?.image ?? null} />

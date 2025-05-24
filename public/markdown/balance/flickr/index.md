@@ -1,15 +1,15 @@
 ---
 order: 129
 title: Flickr
-description: Why We Still Use Flickr
+description: An API that has just worked for more than 20 years
 slug: /balance/flickr
 icon: flickr
-image: /png/bouncer/bouncer.png
+image: /png/test.png
 github: https://github.com/javascript-pro/core/blob/main/app/api/gl-api/flickr/route.ts
 api: /api/gl-api/flickr
 ---
 
-## Why We Still Use Flickr
+## Why do we still use Flickr?
 
 Flickr isn’t trendy. It doesn’t chase hype. But it’s survived—and there’s a reason.
 

@@ -25,11 +25,12 @@ export default function AlbumCard({ id = null }: TAlbumCard) {
     );
   }
 
-  // const {
-  //   photos = [],
-  // } = album;
-
   const { title = '', description = '', coverPhoto, albumUrl } = album.meta;
+
+  const coverSrc =
+    coverPhoto?.sizes?.large?.src ||
+    coverPhoto?.sizes?.medium?.src ||
+    coverPhoto?.sizes?.small?.src;
 
   return (
     <Box>
@@ -49,11 +50,11 @@ export default function AlbumCard({ id = null }: TAlbumCard) {
         }
       />
       <CardContent>
-        {coverPhoto?.sizes?.medium?.src && (
+        {coverSrc && (
           <CardMedia
             component="img"
-            src={coverPhoto.sizes.large.src}
-            alt={coverPhoto.title || 'Album Cover'}
+            src={coverSrc}
+            alt={coverPhoto?.title || 'Album Cover'}
             sx={{
               maxHeight: 300,
               maxWidth: 600,
@@ -62,7 +63,8 @@ export default function AlbumCard({ id = null }: TAlbumCard) {
         )}
 
         <Grid container spacing={1}>
-          {/* {photos.length > 0 &&
+          {/* Uncomment and update when ready to render photos
+          {photos.length > 0 &&
             photos.map((photo: any, i: number) => {
               if (photo.flickrId === coverPhoto?.flickrId) return null;
               return (
@@ -78,7 +80,8 @@ export default function AlbumCard({ id = null }: TAlbumCard) {
                   <PhotoCard mode="card" photo={photo} />
                 </Grid>
               );
-            })} */}
+            })}
+          */}
         </Grid>
       </CardContent>
     </Box>
