@@ -1,7 +1,7 @@
 'use client';
 import * as React from 'react';
 import { usePathname } from 'next/navigation';
-import { CssBaseline, Box } from '@mui/material';
+import { CssBaseline, Box, Grid } from '@mui/material';
 import {
   Theme,
   Flash,
@@ -43,29 +43,26 @@ export default function Core({ frontmatter, body = null }: TCore) {
       <Flash id="core">
         <MovieClip id="content" opacity={0}>
           <Header frontmatter={frontmatter} />
-          {pathname !== '/' ? <PageBreadcrumb /> : null}
+          
 
-          <Box sx={{ height: 8 }} />
+          <Box sx={{ height: 0 }} />
 
-          {showFlickr ? (
-            // bilbao "72157594233009954"
-            // mimizan "72177720326289602"
-            // cartridge "72177720326317140"
-            <Box
-              sx={{
-                width: '50%',
-                mx: 4,
-              }}
-            >
-              <Flickr mode="album-card" albumId="72177720326289602" />
-            </Box>
-          ) : (
-            <>
+          <Grid container spacing={1}>
+            <Grid size={{
+              xs: 12,
+              md: 5,
+            }}>
               <Photo maxHeight={maxHeight} src={frontmatter?.image ?? null} />
-            </>
-          )}
-          <Box sx={{ height: 16 }} />
-          <RenderMarkdown>{body}</RenderMarkdown>
+            </Grid>
+            <Grid size={{
+              xs: 12,
+              md: 7,
+            }}>
+              {pathname !== '/' ? <PageBreadcrumb /> : null}
+              <RenderMarkdown>{body}</RenderMarkdown>
+            </Grid>
+          </Grid>
+          
         </MovieClip>
       </Flash>
     </Theme>
