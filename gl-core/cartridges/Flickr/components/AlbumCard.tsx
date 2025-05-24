@@ -1,13 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import {
-  Grid,
-  Card,
-  CardContent,
-  CardHeader,
-  Typography,
-} from '@mui/material';
+import { Grid, Card, CardContent, CardHeader, Typography } from '@mui/material';
 import { MightyButton, useSlice } from '../../../../gl-core';
 import { PhotoCard } from '../';
 import { TAlbumCard } from '../types';
@@ -50,9 +44,7 @@ export default function AlbumCard({ id = null }: TAlbumCard) {
         }
       />
       <CardContent>
-        <Typography variant='body1'>
-          {description}
-        </Typography>
+        <Typography variant="body1">{description}</Typography>
         {/* {coverSrc && (
           <CardMedia
             component="img"
@@ -66,7 +58,8 @@ export default function AlbumCard({ id = null }: TAlbumCard) {
         )} */}
 
         <Grid container spacing={1}>
-          {photos.length > 0  && showPhotos &&
+          {photos.length > 0 &&
+            showPhotos &&
             photos.map((photo: any, i: number) => {
               if (photo.flickrId === coverPhoto?.flickrId) return null;
               return (

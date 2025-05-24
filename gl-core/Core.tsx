@@ -46,19 +46,18 @@ export default function Core({ frontmatter, body = null }: TCore) {
           {pathname !== '/' ? <PageBreadcrumb /> : null}
 
           <Box sx={{ height: 8 }} />
-          
+
           {showFlickr ? (
             // bilbao "72157594233009954"
             // mimizan "72177720326289602"
             // cartridge "72177720326317140"
-            <Box sx={{
-              width: "50%",
-              mx: 4,
-            }}>
-              <Flickr 
-                mode="album-card"
-                albumId="72177720326289602"
-              />
+            <Box
+              sx={{
+                width: '50%',
+                mx: 4,
+              }}
+            >
+              <Flickr mode="album-card" albumId="72177720326289602" />
             </Box>
           ) : (
             <>

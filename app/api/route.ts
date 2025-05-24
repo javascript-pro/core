@@ -6,7 +6,7 @@ import {
 import { getBase } from './gl-api/getBase';
 
 export async function GET() {
-// request: NextRequest
+  // request: NextRequest
   return NextResponse.json({
     time: Date.now(),
     start: `${getBase()}/api/gl-api/`,

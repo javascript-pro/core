@@ -7,10 +7,10 @@ import { TFlickr } from './types';
 import { CardButton, useSlice } from '../../../gl-core';
 
 export default function Flickr({
-  mode = "default",
+  mode = 'default',
   albumId = null,
   onClick = () => {
-    console.log("No onClick supplied to Flickr")
+    console.log('No onClick supplied to Flickr');
   },
 }: TFlickr) {
   const dispatch = useDispatch();
@@ -21,19 +21,22 @@ export default function Flickr({
     }
   }, [albumId, dispatch]);
 
-  if (!albumId) return <>No albumId</>
+  if (!albumId) return <>No albumId</>;
 
-  if (mode === 'default') return <>Default Album View</>
+  if (mode === 'default') return <>Default Album View</>;
 
-  if (mode === 'album-card') return (
-    <Box sx={{  }}>
-      <CardButton onClick={onClick}>
-        <AlbumCard />
-      </CardButton>
-    </Box>
+  if (mode === 'album-card')
+    return (
+      <Box sx={{}}>
+        <CardButton onClick={onClick}>
+          <AlbumCard />
+        </CardButton>
+      </Box>
+    );
+
+  return (
+    <pre style={{ fontSize: 10 }}>
+      flickrSlice: {JSON.stringify(flickrSlice, null, 2)}
+    </pre>
   );
-
-  return <pre style={{fontSize:10}}>
-          flickrSlice: {JSON.stringify(flickrSlice, null, 2)}
-        </pre>
 }
