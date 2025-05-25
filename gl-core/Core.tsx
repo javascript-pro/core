@@ -73,8 +73,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
                     mode="album-card"
                     id="72177720326317140"
                     onClick={() => {
-                      console.log("c c")
-                      router.push(`/balance/flickr/album/72177720326317140`)
+                      router.push(`/free/flickr`)
+                      // router.push(`/balance/flickr/album/72177720326317140`)
                     }}
                   />
                 </Box>

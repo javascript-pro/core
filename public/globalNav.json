@@ -1,7 +1,7 @@
 [
   {
     "title": "Goldlabel Apps",
-    "description": "Custom software that works",
+    "description": "Custom software which works",
     "slug": "/",
     "order": 1,
     "icon": "blokey",
@@ -34,7 +34,7 @@
       "NextJS",
       "Headless CMS"
     ],
-    "excerpt": "|  | \n\n We build and ship modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codebases\n \n\n is . It's  a",
+    "excerpt": "|  |  | \n\n We build and ship modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codebases\n \n\n is . It's",
     "children": [
       {
         "title": "Free & Open Source",
@@ -43,7 +43,7 @@
         "order": 1,
         "icon": "flash",
         "type": "folder",
-        "excerpt": "|  | \n\n Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, bre",
+        "excerpt": "|  |  | \n\n Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, ",
         "children": [
           {
             "title": "Public API",
@@ -84,6 +84,18 @@
             "icon": "uberedux",
             "type": "file",
             "excerpt": "Because all Apps need State Management\n\nOtherwise you'd be back in jQuery callback hell. Nobody wants that. Uberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app alr"
+          },
+          {
+            "title": "Flickr",
+            "slug": "/flickr",
+            "order": 129,
+            "icon": "flickr",
+            "type": "file",
+            "tags": [
+              "free",
+              "cartridge"
+            ],
+            "excerpt": "What does the Flickr cartridge do?\n\nIt provides a React component called <Flickr / which interacts with Next.js's built in API layer. The API safely connects to flickr and"
           },
           {
             "title": "Bouncer",
