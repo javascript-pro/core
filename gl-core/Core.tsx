@@ -41,39 +41,45 @@ export default function Core({ frontmatter, body = null }: TCore) {
       <Flash id="core">
         <MovieClip id="content" opacity={0}>
           <Header frontmatter={frontmatter} />
-          <Grid container spacing={1}>
-            
-            <Grid size={{
-              xs: 12,
-              md: 7,
-            }}>
-              <Photo maxHeight={maxHeight} src={frontmatter?.image ?? null} />
-              { pathname !== '/' && <PageBreadcrumb />}
-              <RenderMarkdown>{body}</RenderMarkdown>
-            </Grid>
-            
-            <Grid size={{
-              xs: 12,
-              md: 5,
-            }}>
-              
-              <Box sx={{
-                mx: 2,
-              }}>
-                <Flickr 
-                  mode="album-card"
-                  id="72177720326317140"
-                  onClick={() => {
-                    console.log("c c")
-                    router.push(`/balance/flickr/album/72177720326317140`)
-                  }}
-                />
-              </Box>
-              
-            </Grid>
-            
-          </Grid>
+
           
+            <Grid container spacing={1}>
+              
+              <Grid size={{
+                xs: 12,
+                md: 7,
+                lg: 8,
+              }}>
+                <Photo maxHeight={maxHeight} src={frontmatter?.image ?? null} />
+                <Box sx={{
+                  // border: "1px solid gold",
+                  p: 2
+                }}>
+                  { pathname !== '/' && <PageBreadcrumb />}
+                  <RenderMarkdown>{body}</RenderMarkdown>
+                </Box>
+              </Grid>
+              
+              <Grid size={{
+                xs: 12,
+                md: 5,
+                lg: 4,
+              }}>
+                
+                <Box sx={{
+                  mx: 2,
+                }}>
+                  <Flickr 
+                    mode="album-card"
+                    id="72177720326317140"
+                    onClick={() => {
+                      console.log("c c")
+                      router.push(`/balance/flickr/album/72177720326317140`)
+                    }}
+                  />
+                </Box>
+              </Grid>
+            </Grid>
         </MovieClip>
       </Flash>
     </Theme>

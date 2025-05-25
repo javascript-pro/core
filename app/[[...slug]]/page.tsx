@@ -7,7 +7,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import { Core, Nav } from '../../gl-core';
-// import { lighten } from '@mui/material';
 
 export type TPage = {
   slug?: string[];
@@ -80,11 +79,7 @@ async function loadFrontmatter(slugPath: string) {
         return parsed.data;
       }
     } catch (error) {
-      console.error(
-        'Something went badly wrong [restart?](/)  ',
-        slugPath,
-        error,
-      );
+      console.warn('catchall page error', slugPath, error);
     }
   }
   return {};
@@ -95,14 +90,14 @@ export async function generateMetadata({ params }: { params: any }) {
   const frontmatter = await loadFrontmatter(slugPath);
 
   const app = 'Goldlabel';
-  let title = `${frontmatter?.title}. ${frontmatter?.description}` || app;
-  const description =
-    frontmatter?.description ||
-    'We build and ship modern web apps for clients who need real results — fast';
-  const img = frontmatter.image || '/png/test.png';
-  const url = `https://goldlabel.pro/${slugPath}`;
 
-  if (title === undefined) title = '404, bro';
+  const is404 = !frontmatter?.title;
+  const title = is404
+    ? '404, bro'
+    : `${frontmatter.title}${frontmatter.description ? `. ${frontmatter.description}` : ''}`;
+  const description = is404 ? '' : frontmatter.description || '';
+  const img = frontmatter.image || '/png/defaultFeatured.png';
+  const url = `https://goldlabel.pro/${slugPath}`;
 
   return {
     title,
@@ -141,11 +136,11 @@ export default async function Page({ params }: { params: any }) {
   ];
 
   let content =
-    'Something went a bit wrong [Turn it off & off again?](/?reboot) ';
+    '> This route is not handled by Next.js App Router,  [RESTART](/?reboot)';
   let frontmatter: any = {
     icon: 'blokey',
     title: '404, bro',
-    descriptioin: 'Keep looking?',
+    description: '',
     image: '/png/defaultFeatured.png',
   };
 

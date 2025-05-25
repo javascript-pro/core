@@ -7,7 +7,7 @@ icon: flash
 image: '/png/javascript.png'
 ---
 
-[Bouncer](/free/bouncer) | [Uberedux](/free/uberedux) | [Open Source](/free/open-source)
+[Flickr](/free/flickr) | [Bouncer](/free/bouncer) | [Uberedux](/free/uberedux) | [Open Source](/free/open-source)
 
 ## Some things in life _are_ free — Goldlabel [Core](/free/core) is one of them.
 
