@@ -2,12 +2,10 @@
 import * as React from 'react';
 import {
   Box,
-  Typography,
   List,
   ListItemButton,
   ListItemText,
   ListItemIcon,
-  Toolbar,
 } from '@mui/material';
 import { useRouter } from 'next/navigation';
 import {
@@ -19,7 +17,7 @@ import {
   routeTo,
   RenderMarkdown,
 } from '../../';
-import { setAppMode, resetCV, Download } from '../CV';
+import { JD, setAppMode, resetCV, Download } from '../CV';
 
 export type TCV = {
   mode: 'alert' | 'advert' | 'app' | null;
@@ -55,9 +53,19 @@ export default function CV({
           /> }
           <Box sx={{ flexGrow: 1 }}/>
           { appMode === "cv" && <>
-            <Download />
+            <Box sx={{ mr: 1 }}>
+              <Download cv={ markdown } />
+            </Box>
           </> }
+
+          
         </Box>
+
+        { appMode === "jd" && <>
+            <Box sx={{ mx: 4 }}>
+              <JD />
+            </Box>
+          </> }
 
         { appMode === 'pristine' ? (
           <Box sx={{ mx: 4 }}>
