@@ -7,6 +7,7 @@ import {
   ListItemButton,
   ListItemText,
   ListItemIcon,
+  Toolbar,
 } from '@mui/material';
 import { useRouter } from 'next/navigation';
 import {
@@ -39,13 +40,31 @@ export default function CV({
   if (mode === 'app')
     return (
       <>
+        <Box sx={{
+          display: "flex",
+          mx: 4,
+        }}>
+          { appMode !== 'pristine' && <MightyButton
+            mode="icon"
+            label="Reset"
+            onClick={() => {
+              dispatch(resetCV());
+            }}
+            icon="reset"
+            color="secondary"
+          /> }
+          <Box sx={{ flexGrow: 1 }}/>
+          { appMode === "cv" && <>
+            <Download />
+          </> }
+        </Box>
+
         { appMode === 'pristine' ? (
-          <Box id="choice_cv" sx={{ mx: 4 }}>
+          <Box sx={{ mx: 4 }}>
             {/* <pre>appMode: {JSON.stringify(appMode, null, 2)}</pre>;  */}
-          
-            <Typography variant="h6" gutterBottom>
+            {/* <Typography variant="h6" gutterBottom>
               Need our CV, or something smarter?
-            </Typography>
+            </Typography> */}
 
             <List>
               <ListItemButton
@@ -71,37 +90,23 @@ export default function CV({
                 <ListItemText primary="View and Download our CV" />
               </ListItemButton>
             </List>
-            <Typography variant="body1">
+            {/* <Typography variant="body1">
               You can view and download our CV the traditional way. Or try our
               Job Fit AI — powered by a Large Language Model — to see how well
               we match a specific role. Paste in a job description and get an
               instant assessment.
-            </Typography>
+            </Typography> */}
           </Box>
         ) : (
           <>
-
-          <Box id="cv_reset" sx={{ mx: 4 }}>
-            <Download />
-            <MightyButton
-              mode="button"
-              label="Reset"
-              onClick={() => {
-                dispatch(resetCV());
-              }}
-              icon="reset"
-              color="secondary"
-            />
-          </Box>
-
-          <Box id="cv_cv" sx={{}}>
-            <RenderMarkdown>
-              {markdown}
-            </RenderMarkdown>
-          </Box>
-
-
-
+          { appMode === "cv" && <>
+            <Box sx={{}}>
+              <RenderMarkdown>
+                {markdown}
+              </RenderMarkdown>
+            </Box>
+          </> }
+          
           </>
         )}
       </>

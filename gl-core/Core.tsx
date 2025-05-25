@@ -52,7 +52,7 @@ export default function Core({
             />;
       break;
     case pathname.startsWith('/free/flickr'):
-      app = <Flickr mode="app" />;
+      app = <Box sx={{ mx: 0 }}><Flickr mode="app" /></Box>;
       break;
     default:
       break;

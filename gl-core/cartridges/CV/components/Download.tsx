@@ -32,11 +32,10 @@ export default function Download() {
     <Box>
       {/* <pre>markdown: {JSON.stringify(markdown, null, 2)}</pre> */}
       <MightyButton
-        fullWidth
         onClick={onDownloadClick}
         color="secondary"
         label="Download"
-        variant="contained"
+        variant="outlined"
         icon="download"
       />
     </Box>
