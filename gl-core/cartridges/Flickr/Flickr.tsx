@@ -22,8 +22,16 @@ export default function Flickr({
   }, [id, dispatch]);
 
   if (mode === 'default') return <></>;
-  if (!id) return <>No albumId</>;
 
+  if (mode === 'app')
+    return (
+      <Box sx={{}}>
+         <pre style={{ fontSize: 10 }}>
+          flickrSlice: {JSON.stringify(flickrSlice, null, 2)}
+        </pre>
+      </Box>
+    );
+    
   if (mode === 'album-card')
     return (
       <Box sx={{}}>

@@ -32,8 +32,14 @@ function Params() {
 }
 
 function formatSegment(segment: string) {
-  return segment.replace(/-/g, ' ').replace(/^\w/, (c) => c.toUpperCase());
+  if (segment.length <= 3) {
+    return segment.toUpperCase();
+  }
+  return segment
+    .replace(/-/g, ' ')
+    .replace(/^\w/, (c) => c.toUpperCase());
 }
+
 
 export function PageBreadcrumb() {
   const pathname = usePathname();

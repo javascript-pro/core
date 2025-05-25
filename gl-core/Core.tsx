@@ -30,12 +30,27 @@ export type TCore = {
   children?: React.ReactNode;
 };
 
-export default function Core({ frontmatter, body = null }: TCore) {
-  const sidebarTitle = 'Goldlabel Cartridges';
+export default function Core({ 
+  frontmatter, 
+  body = null,
+}: TCore) {
   const pathname = usePathname();
   const router = useRouter();
   const isMobile = useIsMobile();
   const maxHeight = isMobile ? 150 : 180;
+  const isApp = pathname.startsWith('/cv') || pathname.startsWith('/free/flickr');
+
+  let app = <></>;
+  switch (true) {
+    case pathname.startsWith('/cv'):
+      app = <CV mode="app" />;
+      break;
+    case pathname.startsWith('/free/flickr'):
+      app = <Flickr mode="app" />;
+      break;
+    default:
+      break;
+  }
 
   return (
     <Theme>
@@ -54,15 +69,10 @@ export default function Core({ frontmatter, body = null }: TCore) {
               }}
             >
               <Photo maxHeight={maxHeight} src={frontmatter?.image ?? null} />
-              <Box
-                sx={{
-                  // border: "1px solid gold",
-                  p: 2,
-                }}
-              >
+              <Box sx={{ p: 2 }}>
                 {pathname !== '/' && <PageBreadcrumb />}
                 <Box sx={{ height: 24 }} />
-                <RenderMarkdown>{body}</RenderMarkdown>
+                {isApp ? app : <RenderMarkdown>{body}</RenderMarkdown>}
               </Box>
             </Grid>
 
@@ -77,17 +87,13 @@ export default function Core({ frontmatter, body = null }: TCore) {
               <Box
                 id="sidebar"
                 component="aside"
-                sx={{
-                  // border: '1px solid green',
-                  mx: 2,
-                }}
+                sx={{ mx: 2 }}
               >
                 <Flickr
                   mode="album-card"
                   id="72157594233009954"
                   onClick={() => {
                     router.push(`/free/flickr`);
-                    // router.push(`/balance/flickr/album/72177720326317140`)
                   }}
                 />
                 <CV mode="advert" />

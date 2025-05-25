@@ -29,7 +29,7 @@ export default function Advert({
           <Alert 
             sx={{ width: '100%' }}
             severity="success"
-            variant='outlined'
+            variant='filled'
           >
             <Typography>
               {description}

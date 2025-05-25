@@ -1,7 +1,7 @@
 ---
 order: 2
 title: C.V.
-description: Are we a good fit for you?
+description: Large Language Model Generated Job Fit AI
 slug: /cv
 icon: doc
 image: /png/javascript.png
