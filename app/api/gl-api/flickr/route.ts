@@ -7,7 +7,10 @@ const flickrApiKey = process.env.FLICKR_KEY;
 const flickrUserId = process.env.FLICKR_USER;
 
 const CACHE_TTL = 1000 * 60 * 5;
-const albumCache: Record<string, { time: number; photos: TFlickrPhoto[]; meta: any }> = {};
+const albumCache: Record<
+  string,
+  { time: number; photos: TFlickrPhoto[]; meta: any }
+> = {};
 const photoCache: Record<string, { time: number; photo: TFlickrPhoto }> = {};
 
 async function getPhotoWithSizes(photoId: string): Promise<TFlickrPhoto> {

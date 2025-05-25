@@ -24,6 +24,7 @@ export default function CardButton({
       sx={{
         ...sx,
         display: 'block',
+        textAlign: 'left',
         // border: "1px solid orange",
         // background: 'rgba(0, 0, 0, 0.05)',
       }}

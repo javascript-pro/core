@@ -1,18 +1,15 @@
 'use client';
 
 import * as React from 'react';
-import {
-  Box,
-  CardContent,
-  CardHeader,
-  Typography,
-} from '@mui/material';
+import { Box, CardContent, CardHeader, Typography } from '@mui/material';
 import { MightyButton, useSlice } from '../../../../gl-core';
 import { TAlbumCard } from '../types';
 
-export default function AlbumCard({
-  // id = null,
-}: TAlbumCard) {
+export default function AlbumCard(
+  {
+    // id = null,
+  }: TAlbumCard,
+) {
   const { album } = useSlice().flickr ?? {};
   const isAdmin = true;
 
@@ -24,20 +21,13 @@ export default function AlbumCard({
     );
   }
 
-  const { 
-    title = '', 
-    description = '', 
-    coverPhoto, 
-    albumUrl,
-  } = album.meta;
-  const {
-    src,
-  } = coverPhoto.sizes.thumb;
+  const { title = '', description = '', coverPhoto, albumUrl } = album.meta;
+  const { src } = coverPhoto.sizes.thumb;
 
   return (
     <Box sx={{}}>
       <CardHeader
-        title={title}
+        subheader={title}
         action={
           !isAdmin ? null : (
             <MightyButton
@@ -51,31 +41,28 @@ export default function AlbumCard({
         }
       />
       <CardContent>
-        <Box sx={{ display:"flex" }}>
-          
+        <Box sx={{ display: 'flex' }}>
           <Box>
-            <Typography variant="body2">
-              {description}
-            </Typography>
+            <Typography variant="body2">{description}</Typography>
           </Box>
 
-          <Box 
+          <Box
             sx={{
               mt: 0.5,
               ml: 2,
-            }}>
+            }}
+          >
             <img
               style={{
-                borderRadius: "3px",
+                borderRadius: '3px',
               }}
               alt={title}
-              height={75}
-              width={75}
+              height={50}
+              width={50}
               src={src}
             />
           </Box>
         </Box>
-        
       </CardContent>
     </Box>
   );

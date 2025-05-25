@@ -19,4 +19,4 @@ api: /api/gl-api/flickr
 - Readable, extensible, Open Source codebases
 - [More](/work/company)
 
-[Goldlabel Core](/free/core) is [JavaScript](/work/javascript). It's [Free](/free) and [Open Source](/free/open-source). It comes with these cartridges;  [Bouncer](/free/bouncer) | [Uberedux](/free/uberedux) | [Flickr](/balance/flickr) | [Flash](/free/flash)
+[Goldlabel Core](/free/core) is [JavaScript](/work/javascript). It's [Free](/free) and [Open Source](/free/open-source). It comes with these cartridges; [Bouncer](/free/bouncer) | [Uberedux](/free/uberedux) | [Flickr](/balance/flickr) | [Flash](/free/flash)

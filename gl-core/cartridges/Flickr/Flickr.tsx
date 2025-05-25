@@ -28,7 +28,7 @@ export default function Flickr({
     return (
       <Box sx={{}}>
         <CardButton onClick={onClick}>
-          <AlbumCard id={id}/>
+          <AlbumCard id={id} />
         </CardButton>
       </Box>
     );
