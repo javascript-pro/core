@@ -55,7 +55,7 @@ import {
 import { TUbereduxDispatch } from './cartridges/Uberedux';
 import { CV } from './cartridges/CV';
 import { TCV } from './cartridges/CV';
-import Advert from './components/Advert'
+import Advert from './components/Advert';
 import { Flash, MovieClip, Photo } from './cartridges/Flash';
 import { TFlash, TMovieClip, TPhoto } from './cartridges/Flash';
 

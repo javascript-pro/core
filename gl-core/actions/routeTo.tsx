@@ -8,10 +8,8 @@ export type TUbereduxState = {
   // define shape if needed
 };
 
-export const routeTo = (
-  route: string, 
-  router: any,
-) => async (dispatch: TUbereduxDispatch) => {
+export const routeTo =
+  (route: string, router: any) => async (dispatch: TUbereduxDispatch) => {
     try {
       router.push(route);
       // console.log('routeTo', route, router);

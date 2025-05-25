@@ -1,21 +1,17 @@
 'use client';
 
 import * as React from 'react';
-import { Box, CardContent, CardHeader, Typography } from '@mui/material';
-import { MightyButton, useSlice } from '../../../../gl-core';
 import { TAlbumCard } from '../types';
+import { Box, CardContent, CardHeader, Typography } from '@mui/material';
+import { MightyButton, Icon, useSlice } from '../../../../gl-core';
 
-export default function AlbumCard(
-  {
-    // id = null,
-  }: TAlbumCard,
-) {
+export default function AlbumCard({}: TAlbumCard) {
   const { album } = useSlice().flickr ?? {};
   const isAdmin = true;
 
   if (!album || !album.meta) {
     return (
-      <Typography variant="body2" sx={{ padding: 2 }}>
+      <Typography variant="body2" sx={{ textAlign: 'left', padding: 2 }}>
         Herding pandas...
       </Typography>
     );
@@ -29,15 +25,15 @@ export default function AlbumCard(
       <CardHeader
         subheader={title}
         action={
-          !isAdmin ? null : (
-            <MightyButton
-              mode="icon"
-              icon="flickr"
-              label="View album on Flickr"
-              color="inherit"
-              onClick={() => window.open(albumUrl, '_blank')}
-            />
-          )
+          <MightyButton
+            mode="icon"
+            icon="flickr"
+            label="View album on Flickr"
+            color="inherit"
+            onClick={() => {
+              window.open(albumUrl, '_blank');
+            }}
+          />
         }
       />
       <CardContent>

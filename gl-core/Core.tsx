@@ -30,16 +30,16 @@ export type TCore = {
   children?: React.ReactNode;
 };
 
-export default function Core({ 
-  frontmatter, 
-  body = null,
-}: TCore) {
+export default function Core({ frontmatter, body = null }: TCore) {
   const pathname = usePathname();
   const router = useRouter();
   const isMobile = useIsMobile();
   const maxHeight = isMobile ? 150 : 180;
-  const isApp = pathname.startsWith('/cv') || pathname.startsWith('/free/flickr');
+  const isApp =
+    pathname.startsWith('/cv') || pathname.startsWith('/free/flickr');
 
+  const isCV = pathname === '/cv';
+  const isFlickr = pathname === '/free/flickr';
   let app = <></>;
   switch (true) {
     case pathname.startsWith('/cv'):
@@ -84,19 +84,16 @@ export default function Core({
                 lg: 3,
               }}
             >
-              <Box
-                id="sidebar"
-                component="aside"
-                sx={{ mx: 2 }}
-              >
-                <Flickr
+              <Box id="sidebar" component="aside" sx={{ mx: 2 }}>
+                {!isFlickr && <Flickr
                   mode="album-card"
                   id="72157594233009954"
                   onClick={() => {
                     router.push(`/free/flickr`);
                   }}
-                />
-                <CV mode="advert" />
+                /> }
+                { !isCV && <CV mode="advert" /> }
+                
               </Box>
             </Grid>
           </Grid>
