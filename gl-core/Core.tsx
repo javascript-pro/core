@@ -1,7 +1,7 @@
 'use client';
 import * as React from 'react';
-import { usePathname } from 'next/navigation';
-import { CssBaseline, Box } from '@mui/material';
+import { usePathname, useRouter } from 'next/navigation';
+import { CssBaseline, Box, Grid } from '@mui/material';
 import {
   Theme,
   Flash,
@@ -31,10 +31,8 @@ export type TCore = {
 
 export default function Core({ frontmatter, body = null }: TCore) {
   const pathname = usePathname();
-  const showFlickr = pathname.includes('balance/flickr');
+  const router = useRouter();
   const isMobile = useIsMobile();
-
-  // console.log("isMobile", isMobile);
   const maxHeight = isMobile ? 150 : 180;
 
   return (
@@ -43,25 +41,50 @@ export default function Core({ frontmatter, body = null }: TCore) {
       <Flash id="core">
         <MovieClip id="content" opacity={0}>
           <Header frontmatter={frontmatter} />
-          {pathname !== "/" ? <PageBreadcrumb /> : null }
-          
 
-          <Box sx={{ height: 8 }}/>
-          {showFlickr ? (
-            // bilbao "72157594233009954"
-            // mimizan "72177720326289602"
-            // cartridge "72177720326317140"
-            <Flickr album="72177720326317140" frontmatter={frontmatter} />
-          ) : (
-            <>
-              <Photo 
-                maxHeight={maxHeight} 
-                src={frontmatter?.image ?? null} 
-              />
-            </>
-          )}
-          <Box sx={{ height: 16 }}/>
-          <RenderMarkdown>{body}</RenderMarkdown>
+          <Grid container spacing={1}>
+            <Grid
+              size={{
+                xs: 12,
+                md: 7,
+                lg: 8,
+              }}
+            >
+              <Photo maxHeight={maxHeight} src={frontmatter?.image ?? null} />
+              <Box
+                sx={{
+                  // border: "1px solid gold",
+                  p: 2,
+                }}
+              >
+                {pathname !== '/' && <PageBreadcrumb />}
+                <RenderMarkdown>{body}</RenderMarkdown>
+              </Box>
+            </Grid>
+
+            <Grid
+              size={{
+                xs: 12,
+                md: 5,
+                lg: 4,
+              }}
+            >
+              <Box
+                sx={{
+                  mx: 2,
+                }}
+              >
+                <Flickr
+                  mode="album-card"
+                  id="72177720326317140"
+                  onClick={() => {
+                    router.push(`/free/flickr`);
+                    // router.push(`/balance/flickr/album/72177720326317140`)
+                  }}
+                />
+              </Box>
+            </Grid>
+          </Grid>
         </MovieClip>
       </Flash>
     </Theme>

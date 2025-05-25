@@ -3,12 +3,14 @@
 import * as React from 'react';
 import { TPhotoCard } from '../types';
 import { Box, CardHeader, CardMedia } from '@mui/material';
-import { Icon, MightyButton } from '../../../../gl-core';
+import { MightyButton } from '../../../../gl-core';
 
 export default function PhotoCard({ mode = 'card', photo = {} }: TPhotoCard) {
   const { title, description, sizes, flickrUrl } = photo;
   const size = sizes.small;
-  const isAdmin = false; 
+  const isAdmin = false;
+
+  if (mode === 'list') return <>list</>;
 
   if (mode === 'card') {
     return (
@@ -16,14 +18,16 @@ export default function PhotoCard({ mode = 'card', photo = {} }: TPhotoCard) {
         <CardHeader
           title={`${title}`}
           subheader={`${description}`}
-          avatar={!isAdmin ? null : 
-            <MightyButton
-              mode="icon"
-              icon="link"
-              label="View on Flickr"
-              color="inherit"
-              onClick={() => window.open(flickrUrl, '_blank')}
-            />
+          avatar={
+            !isAdmin ? null : (
+              <MightyButton
+                mode="icon"
+                icon="link"
+                label="View on Flickr"
+                color="inherit"
+                onClick={() => window.open(flickrUrl, '_blank')}
+              />
+            )
           }
         />
         <CardMedia

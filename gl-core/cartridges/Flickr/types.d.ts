@@ -1,3 +1,7 @@
+export type TFlickr = {
+  [key: string]: any;
+};
+
 export type TFlickrState = {
   cartridge: string;
   status: TSeverity;
@@ -14,9 +18,10 @@ export type TAlbumCard = {
 };
 
 export type TPhotoCard = {
-  mode?: 'card';
+  mode?: 'card' | 'list';
   id?: string | null;
   photo?: any;
+  [key: string]: any;
 };
 
 export type TSeverity = 'success' | 'info' | 'warning' | 'error';

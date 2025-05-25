@@ -7,6 +7,7 @@ icon: account
 image: /png/defaultFeatured.png
 tags: cookies, gdpr, privacy, terms, trust
 ---
+
 [Privacy & Cookies](/work/company/privacy-cookies) | [Working remotely](/work/company/remote-working)
 
 > We don't use cookies

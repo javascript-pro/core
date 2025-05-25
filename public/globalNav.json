@@ -1,7 +1,7 @@
 [
   {
     "title": "Goldlabel Apps",
-    "description": "Custom software that works",
+    "description": "Custom software which works",
     "slug": "/",
     "order": 1,
     "icon": "blokey",
@@ -34,7 +34,7 @@
       "NextJS",
       "Headless CMS"
     ],
-    "excerpt": "|  | \n\n We build and ship modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codebases\n \n\n is . It's  a",
+    "excerpt": "|  |  | \n\n We build and ship modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codebases\n \n\n is . It's",
     "children": [
       {
         "title": "Free & Open Source",
@@ -43,7 +43,7 @@
         "order": 1,
         "icon": "flash",
         "type": "folder",
-        "excerpt": "|  | \n\n Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, bre",
+        "excerpt": "|  |  | \n\n Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, ",
         "children": [
           {
             "title": "Public API",
@@ -86,6 +86,18 @@
             "excerpt": "Because all Apps need State Management\n\nOtherwise you'd be back in jQuery callback hell. Nobody wants that. Uberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app alr"
           },
           {
+            "title": "Flickr",
+            "slug": "/flickr",
+            "order": 129,
+            "icon": "flickr",
+            "type": "file",
+            "tags": [
+              "free",
+              "cartridge"
+            ],
+            "excerpt": "What does the Flickr cartridge do?\n\nIt provides a React component called <Flickr / which interacts with Next.js's built in API layer. The API safely connects to flickr and"
+          },
+          {
             "title": "Bouncer",
             "slug": "/bouncer",
             "order": 130,
@@ -97,7 +109,7 @@
               "free",
               "bouncer"
             ],
-            "excerpt": "Authentication and Access Control System \n\n Bouncer is the name of our authentication and access control system built on Firebase Authentication and Firestore. It is included in the Core as a reusable"
+            "excerpt": "Authentication and Access Control System\n\n Bouncer is the name of our authentication and access control system built on Firebase Authentication and Firestore. It is included in the Core as a reusable "
           },
           {
             "title": "Open Source",
@@ -251,7 +263,7 @@
         "order": 50,
         "icon": "life",
         "type": "folder",
-        "excerpt": "|  |   \n\n | \nI work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age I'm never going to ski like ",
+        "excerpt": "|  | \n\n | \nI work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age I'm never going to ski like I ",
         "children": [
           {
             "title": "Food",
@@ -410,12 +422,12 @@
           },
           {
             "title": "Flickr",
-            "description": "Why We Still Use Flickr",
+            "description": "An API that has just worked for more than 20 years",
             "slug": "/flickr",
             "order": 129,
             "icon": "flickr",
             "type": "folder",
-            "excerpt": "Why We Still Use Flickr\n\nFlickr isn’t trendy. It doesn’t chase hype. But it’s survived—and there’s a reason.\n\nFor over two decades, Flickr has offered something that’s increasingly rare: a stable, wel",
+            "excerpt": "Why would we still use Flickr?\n\nFlickr isn’t trendy. It doesn’t chase hype. But it’s survived—and there’s a reason for that. For over two decades, Flickr has offered something that’s increasingly rare",
             "children": []
           }
         ]

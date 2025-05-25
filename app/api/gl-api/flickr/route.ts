@@ -1,16 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getBase } from '../getBase';
-import {
-  TFlickrPhoto,
-  TFlickrPhotoSize,
-} from '../types';
+import { TFlickrPhoto, TFlickrPhotoSize } from '../types';
 
 const FLICKR_API = 'https://api.flickr.com/services/rest/';
 const flickrApiKey = process.env.FLICKR_KEY;
 const flickrUserId = process.env.FLICKR_USER;
 
 const CACHE_TTL = 1000 * 60 * 5;
-const albumCache: Record<string, { time: number; photos: TFlickrPhoto[]; meta: any }> = {};
+const albumCache: Record<
+  string,
+  { time: number; photos: TFlickrPhoto[]; meta: any }
+> = {};
 const photoCache: Record<string, { time: number; photo: TFlickrPhoto }> = {};
 
 async function getPhotoWithSizes(photoId: string): Promise<TFlickrPhoto> {
@@ -38,6 +38,9 @@ async function getPhotoWithSizes(photoId: string): Promise<TFlickrPhoto> {
       : undefined;
   };
 
+  const getBestSquare = (): TFlickrPhotoSize | undefined =>
+    getSize('Large Square') || getSize('Square');
+
   return {
     flickrId: p.id,
     flickrUrl: `https://www.flickr.com/photos/${flickrUserId}/${p.id}`,
@@ -54,6 +57,7 @@ async function getPhotoWithSizes(photoId: string): Promise<TFlickrPhoto> {
       medium: getSize('Medium 800'),
       large: getSize('Large'),
       orig: getSize('Original'),
+      thumb: getBestSquare(), // New thumbnail entry
     },
   };
 }
@@ -129,7 +133,6 @@ export async function GET(request: NextRequest) {
         meta: {
           ...cached.meta,
           albumUrl,
-          description: cached.meta.description,
         },
         photos: cached.photos,
       },
@@ -154,29 +157,52 @@ export async function GET(request: NextRequest) {
       meta: { tags: p.tags?.split(' ') || [] },
       sizes: {
         orig: p.url_o
-          ? { src: p.url_o, width: parseInt(p.width_o), height: parseInt(p.height_o) }
+          ? {
+              src: p.url_o,
+              width: parseInt(p.width_o),
+              height: parseInt(p.height_o),
+            }
           : undefined,
         large: p.url_h
-          ? { src: p.url_h, width: parseInt(p.width_h), height: parseInt(p.height_h) }
+          ? {
+              src: p.url_h,
+              width: parseInt(p.width_h),
+              height: parseInt(p.height_h),
+            }
           : undefined,
         medium: p.url_c
-          ? { src: p.url_c, width: parseInt(p.width_c), height: parseInt(p.height_c) }
+          ? {
+              src: p.url_c,
+              width: parseInt(p.width_c),
+              height: parseInt(p.height_c),
+            }
           : undefined,
         small: p.url_n
-          ? { src: p.url_n, width: parseInt(p.width_n), height: parseInt(p.height_n) }
+          ? {
+              src: p.url_n,
+              width: parseInt(p.width_n),
+              height: parseInt(p.height_n),
+            }
           : undefined,
+        thumb: undefined, // Not included in bulk API call
       },
     }));
 
     const coverPhoto = await getPhotoWithSizes(data.photoset.primary);
 
+    const infoRes = await fetch(
+      `${FLICKR_API}?method=flickr.photosets.getInfo&api_key=${flickrApiKey}&photoset_id=${albumId}&user_id=${flickrUserId}&format=json&nojsoncallback=1`,
+    );
+    const infoData = await infoRes.json();
+    if (infoData.stat !== 'ok') throw new Error(infoData.message);
+
     const meta = {
-      title: data.photoset.title,
+      title: infoData.photoset.title?._content || '',
       albumId,
       albumUrl,
       coverPhoto,
-      description: data.photoset.description?._content || data.photoset.description || '',
-      total: data.photoset.total,
+      description: infoData.photoset.description?._content || '',
+      total: parseInt(infoData.photoset.count_photos) || photos.length,
     };
 
     albumCache[albumId] = {

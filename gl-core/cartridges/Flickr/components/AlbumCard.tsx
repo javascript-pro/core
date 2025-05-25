@@ -1,23 +1,19 @@
 'use client';
 
 import * as React from 'react';
-import {
-  Box,
-  Grid,
-  CardContent,
-  CardHeader,
-  CardMedia,
-  Typography,
-} from '@mui/material';
-import { Icon, MightyButton, useSlice } from '../../../../gl-core';
-// import { PhotoCard } from '../';
+import { Box, CardContent, CardHeader, Typography } from '@mui/material';
+import { MightyButton, useSlice } from '../../../../gl-core';
 import { TAlbumCard } from '../types';
 
-export default function AlbumCard({ id = null }: TAlbumCard) {
+export default function AlbumCard(
+  {
+    // id = null,
+  }: TAlbumCard,
+) {
   const { album } = useSlice().flickr ?? {};
   const isAdmin = true;
 
-  if (!album) {
+  if (!album || !album.meta) {
     return (
       <Typography variant="body2" sx={{ padding: 2 }}>
         Herding pandas...
@@ -25,64 +21,48 @@ export default function AlbumCard({ id = null }: TAlbumCard) {
     );
   }
 
-  // const {
-  //   photos = [],
-  // } = album;
-
-  const {
-    title = '',
-    description = '',
-    coverPhoto,
-    albumUrl,
-  } = album.meta;
+  const { title = '', description = '', coverPhoto, albumUrl } = album.meta;
+  const { src } = coverPhoto.sizes.thumb;
 
   return (
-    <Box>
+    <Box sx={{}}>
       <CardHeader
-        title={title}
-        subheader={description}
-        avatar={!isAdmin ? null : 
-          <MightyButton
-            mode="icon"
-            icon="link"
-            label="View on Flickr"
-            color="inherit"
-            onClick={() => window.open(albumUrl, '_blank')}
-          />
+        subheader={title}
+        action={
+          !isAdmin ? null : (
+            <MightyButton
+              mode="icon"
+              icon="flickr"
+              label="View album on Flickr"
+              color="inherit"
+              onClick={() => window.open(albumUrl, '_blank')}
+            />
+          )
         }
       />
       <CardContent>
-        { coverPhoto?.sizes?.medium?.src && (
-          <CardMedia
-            component="img"
-            src={coverPhoto.sizes.large.src}
-            alt={coverPhoto.title || 'Album Cover'}
-            sx={{
-              maxHeight: 300,
-              maxWidth: 600,
-            }}
-          />
-        )}
+        <Box sx={{ display: 'flex' }}>
+          <Box>
+            <Typography variant="body2">{description}</Typography>
+          </Box>
 
-        <Grid container spacing={1}>
-          {/* {photos.length > 0 &&
-            photos.map((photo: any, i: number) => {
-              if (photo.flickrId === coverPhoto?.flickrId) return null;
-              return (
-                <Grid
-                  key={`photo_${i}`}
-                  size={{
-                    xs: 12,
-                    sm: 6,
-                    md: 4,
-                    lg: 3,
-                  }}
-                >
-                  <PhotoCard mode="card" photo={photo} />
-                </Grid>
-              );
-            })} */}
-        </Grid>
+          <Box
+            sx={{
+              mt: 0.5,
+              ml: 2,
+            }}
+          >
+            <img
+              style={{
+                borderRadius: '3px',
+              }}
+              alt={title}
+              height={50}
+              width={50}
+              src={src}
+            />
+          </Box>
+        </Box>
       </CardContent>
     </Box>
   );

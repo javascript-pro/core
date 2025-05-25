@@ -6,7 +6,10 @@ import { PageBreadcrumb } from './PageBreadcrumb';
 import ShareThis from './ShareThis';
 import { TShareThis } from './ShareThis';
 import MightyButton from './MightyButton';
+
 import { TMightyButton } from './MightyButton';
+import CardButton from './CardButton';
+import { TCardButton } from './CardButton';
 import Search from './Search';
 import { TSearch } from './Search';
 import NextPrevious from './NextPrevious';
@@ -18,7 +21,8 @@ export {
   PageBreadcrumb,
   ShareThis,
   MightyButton,
+  CardButton,
   Search,
 };
 
-export type { TSearch, TMightyButton, TNav, TNavItem, TShareThis };
+export type { TCardButton, TSearch, TMightyButton, TNav, TNavItem, TShareThis };

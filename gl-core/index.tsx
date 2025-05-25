@@ -28,6 +28,7 @@ import {
   NavItem,
   PageBreadcrumb,
   MightyButton,
+  CardButton,
   Search,
   NextPrevious,
   ShareThis,
@@ -38,6 +39,7 @@ import {
   TMightyButton,
   TSearch,
   TShareThis,
+  TCardButton,
 } from './components/nav';
 import { useConfig, useIsMobile } from './hooks';
 
@@ -71,6 +73,7 @@ export {
   Nav,
   NavItem,
   PageBreadcrumb,
+  CardButton,
   MightyButton,
   Search,
   ShareThis,
@@ -109,4 +112,5 @@ export type {
   TPhoto,
   TShareThis,
   TStatus,
+  TCardButton,
 };

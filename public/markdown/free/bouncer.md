@@ -1,14 +1,15 @@
 ---
 order: 130
 title: Bouncer
-description: Authentication and Access Control System 
+description: Authentication and Access Control System
 slug: /free/bouncer
 icon: admin
 image: /png/bouncer/bouncer.png
 tags: cartridges, cartridge, free, bouncer
 featured: true
 ---
-## Authentication and Access Control System 
+
+## Authentication and Access Control System
 
 > Bouncer is the name of our authentication and access control system built on Firebase Authentication and Firestore. It is included in the Core as a reusable component, available globally from any cartridge
 

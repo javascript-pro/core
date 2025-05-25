@@ -1,39 +1,41 @@
 'use client';
 import * as React from 'react';
-import { useSearchParams } from 'next/navigation';
-import { Box, CardHeader, CircularProgress } from '@mui/material';
-import { useSlice, useDispatch } from '../../../gl-core';
+import { Box } from '@mui/material';
+import { useDispatch } from '../../../gl-core';
 import { initFlickr, AlbumCard } from './';
+import { TFlickr } from './types';
+import { CardButton, useSlice } from '../../../gl-core';
 
 export default function Flickr({
-  album = null,
-  frontmatter = null,
-}: any) {
-  const slice = useSlice();
-  const {
-    flickr,
-  } = slice;
-  const albumObj = flickr.album;
+  mode = 'default',
+  id = null,
+  onClick = () => {
+    console.log('No onClick supplied to Flickr');
+  },
+}: TFlickr) {
   const dispatch = useDispatch();
-  const searchParams = useSearchParams();
-
-  const queryAlbum = searchParams.get('album');
-  const albumId = queryAlbum || album || slice.defaultId;
-
+  const flickrSlice = useSlice().flickr;
   React.useEffect(() => {
-    if (albumId) {
-      dispatch(initFlickr(albumId));
+    if (id) {
+      dispatch(initFlickr(id));
     }
-  }, [albumId, dispatch]);
+  }, [id, dispatch]);
+
+  if (mode === 'default') return <></>;
+  if (!id) return <>No albumId</>;
+
+  if (mode === 'album-card')
+    return (
+      <Box sx={{}}>
+        <CardButton onClick={onClick}>
+          <AlbumCard id={id} />
+        </CardButton>
+      </Box>
+    );
 
   return (
-    <Box sx={{ mx: 2 }}>
-      
-      {/* <pre style={{fontSize:10}}>
-        flickr: {JSON.stringify(flickr, null, 2)}
-      </pre> */}
-      
-      { frontmatter ? <AlbumCard /> : <>No frontmatter. No matter.</>}
-    </Box>
+    <pre style={{ fontSize: 10 }}>
+      flickrSlice: {JSON.stringify(flickrSlice, null, 2)}
+    </pre>
   );
 }

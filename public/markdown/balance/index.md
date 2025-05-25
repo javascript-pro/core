@@ -6,6 +6,7 @@ slug: /balance
 icon: balance
 image: /png/cartridge.png
 ---
+
 [Flickr](/balance/flickr) | [Books](/balance/books)
 
 ### Are you [Generation X](/balance/books/generation-x)?

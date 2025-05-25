@@ -21,7 +21,8 @@ export default function Header({ frontmatter = null }: THeader) {
           mx: 2,
         }}
         avatar={
-          <><Tooltip title="Home">
+          <>
+            <Tooltip title="Home">
               <IconButton
                 onClick={() => {
                   router.push('/');
@@ -49,18 +50,18 @@ export default function Header({ frontmatter = null }: THeader) {
         }
         action={
           <>
-            { api ? <IconButton
-                      onClick={() => dispatch(navigateTo(api, "_blank"))}
-                    >
-                      <Icon icon="api" />
-                    </IconButton> : null }
-            
-            { github ? <IconButton
-                      onClick={() => dispatch(navigateTo(github))}
-                    >
-                      <Icon icon="github" />
-                    </IconButton> : null }
-            
+            {api ? (
+              <IconButton onClick={() => dispatch(navigateTo(api, '_blank'))}>
+                <Icon icon="api" />
+              </IconButton>
+            ) : null}
+
+            {github ? (
+              <IconButton onClick={() => dispatch(navigateTo(github))}>
+                <Icon icon="github" />
+              </IconButton>
+            ) : null}
+
             <ShareThis title={title} description={description} />
           </>
         }
