@@ -13,6 +13,7 @@ import {
   useIsMobile,
 } from '../gl-core';
 import { Flickr } from './cartridges/Flickr';
+import { CV } from './cartridges/CV';
 
 export type TFrontmatter = {
   icon?: string;
@@ -30,6 +31,7 @@ export type TCore = {
 };
 
 export default function Core({ frontmatter, body = null }: TCore) {
+  const sidebarTitle = 'Goldlabel Cartridges';
   const pathname = usePathname();
   const router = useRouter();
   const isMobile = useIsMobile();
@@ -73,18 +75,22 @@ export default function Core({ frontmatter, body = null }: TCore) {
               }}
             >
               <Box
+                id="sidebar"
+                component="aside"
                 sx={{
+                  // border: '1px solid green',
                   mx: 2,
                 }}
               >
                 <Flickr
                   mode="album-card"
-                  id="72177720326317140"
+                  id="72157594233009954"
                   onClick={() => {
                     router.push(`/free/flickr`);
                     // router.push(`/balance/flickr/album/72177720326317140`)
                   }}
                 />
+                <CV mode="advert" />
               </Box>
             </Grid>
           </Grid>

@@ -1,4 +1,4 @@
-// core/gl-core/actions/toggleStatus.tsx
+// core/gl-core/actions/toggleAdvert.tsx
 
 import { setUbereduxKey } from '../../gl-core';
 import { TUbereduxDispatch } from '../../gl-core';
@@ -6,28 +6,28 @@ import { store } from '../../gl-core/cartridges/Uberedux/store';
 // import type { TUbereduxState } from '../../gl-core/types'; // Adjust if your type lives elsewhere
 
 export type TUbereduxState = {
-  status?: {
-    level?: string;
-    message?: string;
-    hidden?: boolean;
+  Advert: {
+    level: string;
+    message: string;
+    hidden: boolean;
   };
 };
 
-export const toggleStatus =
+export const toggleAdvert =
   (hidden: boolean) => async (dispatch: TUbereduxDispatch) => {
     try {
-      const currentStatus = (store.getState() as unknown as TUbereduxState)
-        .status;
+      const currentAdvert = (store.getState() as unknown as TUbereduxState)
+        .Advert;
 
-      const updatedStatus = {
-        ...currentStatus,
+      const updatedAdvert = {
+        ...currentAdvert,
         hidden,
       };
 
       dispatch(
         setUbereduxKey({
-          key: 'status',
-          value: updatedStatus,
+          key: 'Advert',
+          value: updatedAdvert,
         }),
       );
     } catch (e: unknown) {
@@ -36,7 +36,7 @@ export const toggleStatus =
         setUbereduxKey({
           key: 'error',
           value: {
-            status: 'error',
+            Advert: 'error',
             errorMessage,
           },
         }),

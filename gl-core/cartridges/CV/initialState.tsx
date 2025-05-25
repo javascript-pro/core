@@ -1,5 +1,5 @@
 export type TCVSlice = {
-  mode: 'resume' | 'jd' | 'ai';
+  appMode: 'pristine' | 'resume' | 'jd' | 'ai';
   resume: string | null;
   jd: string | null;
   fetching: boolean;
@@ -8,7 +8,7 @@ export type TCVSlice = {
 };
 
 export const initialState: TCVSlice = {
-  mode: 'resume',
+  appMode: 'pristine',
   resume: null,
   jd: null,
   validJd: false,
