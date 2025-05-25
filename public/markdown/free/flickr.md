@@ -12,4 +12,4 @@ github: https://github.com/javascript-pro/core/blob/main/app/api/gl-api/flickr/r
 
 ## What does the Flickr cartridge do?
 
-It provides a React component called <Flickr /> which interacts with Next.js's built in API layer. The API safely connects to Flickr and returns all the information the component needs to create user interface to that Flickr content.
+It provides a React component called <Flickr /> which interacts with Next.js's built in API layer. The API safely connects to Flickr and returns all the information the component needs to create user interface to that Flickr content    
