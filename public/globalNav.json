@@ -95,7 +95,7 @@
               "free",
               "cartridge"
             ],
-            "excerpt": "What does the Flickr cartridge do?\n\nIt provides a React component called <Flickr / which interacts with Next.js's built in API layer. The API safely connects to flickr and"
+            "excerpt": "What does the Flickr cartridge do?\n\nIt provides a React component called <Flickr / which interacts with Next.js's built in API layer. The API safely connects to Flickr and returns all the information "
           },
           {
             "title": "Bouncer",
