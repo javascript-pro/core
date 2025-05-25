@@ -7,11 +7,32 @@ export async function GET() {
   return NextResponse.json({
     time: Date.now(),
     base: `${getBase()}/`,
-    flickr: [
+    endpoints: [
       {
-        flickr: `${getBase()}/flickr`,
-        albums: `${getBase()}/flickr/albums`,
-        album: `${getBase()}/flickr?album=72177720326317140`,
+        title: 'OpenAI',
+        endpoints: [
+          {
+            title: 'Check status',
+            entpoint: `${getBase()}/openai`,
+          },
+        ],
+      },
+      {
+        title: 'Flickr',
+        endpoints: [
+          {
+            title: 'Check status',
+            entpoint: `${getBase()}/flickr`,
+          },
+          {
+            title: 'Fetch Albums',
+            entpoint: `${getBase()}/flickr/albums`,
+          },
+          {
+            title: 'Fetch Album',
+            entpoint: `${getBase()}/flickr/?album=72177720326317140`,
+          },
+        ],
       },
     ],
   });

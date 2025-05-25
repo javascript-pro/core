@@ -17,3 +17,7 @@ Whether you're a startup with a short deadline or an enterprise with complex wor
 > 321-323 High Road  
 > Chadwell Heath  
 > Essex RM6 6AX
+
+[goldlabel.apps@gmail.com](mailto:goldlabel.apps@gmail.com) +44 07745 763 122  
+[goldlabel.pro](https://goldlabel.pro) | [GitHub](https://github.com/javascript-pro) |
+[LinkedIn](https://www.linkedin.com/in/chris-dorward)

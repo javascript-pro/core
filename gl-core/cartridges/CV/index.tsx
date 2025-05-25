@@ -9,12 +9,14 @@ import { templatePDF } from './templatePDF';
 import { initialState as CVinitialState } from './initialState';
 import { updateCVKey } from './actions/updateCVKey';
 import { resetCV } from './actions/resetCV';
+import { setAppMode } from './actions/setAppMode';
 
 export type { TCV };
 
 export {
   CV,
   CommandBar,
+  setAppMode,
   Resume,
   JD,
   Download,

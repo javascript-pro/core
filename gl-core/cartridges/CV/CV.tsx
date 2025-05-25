@@ -1,44 +1,108 @@
 'use client';
-
 import * as React from 'react';
-import { Container, Collapse } from '@mui/material';
-import { useSlice, useDispatch } from '../../';
-import { AIResponse, JD, Resume, updateCVKey, CommandBar } from '../CV';
+import {
+  Box,
+  Button,
+  Typography,
+  List,
+  ListItemButton,
+  ListItemText,
+  ListItemIcon,
+} from '@mui/material';
+import { useRouter } from 'next/navigation';
+import {
+  MightyButton,
+  Icon,
+  Advert,
+  useSlice,
+  useDispatch,
+  routeTo,
+} from '../../';
+import { setAppMode, resetCV } from '../CV';
 
 export type TCV = {
-  originalCV?: string | null;
+  mode: 'alert' | 'advert' | 'app' | null;
+  title?: string | null;
 };
 
-export default function CV({ originalCV = null }: TCV) {
+export default function CV({ mode = null }: TCV) {
   const dispatch = useDispatch();
-  const slice = useSlice();
-  const { mode } = slice.cv;
+  const cvSlice = useSlice().cv;
+  const { appMode } = cvSlice;
+  const router = useRouter();
 
-  React.useEffect(() => {
-    const resume = slice.cv.resume;
-    if (!resume && originalCV) {
-      dispatch(updateCVKey('cv', { resume: originalCV }));
-    }
-  }, [slice.cv.resume, originalCV, dispatch]);
+  if (mode === 'app')
 
-  return (
-    <Container maxWidth="md">
-      {/* <pre>slice.cv: {JSON.stringify(slice.cv, null, 2)}</pre> */}
-      <Collapse
-        in={mode === 'resume' ? true : false}
-        timeout="auto"
-        unmountOnExit
-      >
-        <Resume />
-      </Collapse>
+    { appMode === "cv" && <>CV mode</>}
+    
+    { appMode === "jd" && <>JD mode</>}
 
-      <Collapse in={mode === 'jd' ? true : false} timeout="auto" unmountOnExit>
-        <JD />
-      </Collapse>
+    return (
+      <>
+        { appMode === 'pristine' ? (
+          <Box id="choice_cv" sx={{ mx: 4 }}>
+            {/* <pre>appMode: {JSON.stringify(appMode, null, 2)}</pre>;  */}
+          
+            <Typography variant="h4" gutterBottom>
+              Need our CV, or something smarter?
+            </Typography>
 
-      {mode === 'ai' ? <AIResponse /> : null}
+            <List>
+              <ListItemButton
+                onClick={() => {
+                  dispatch(setAppMode('jd'));
+                }}
+              >
+                <ListItemIcon>
+                  <Icon icon="openai" />
+                </ListItemIcon>
+                <ListItemText primary="Large Language Model Generated Job Fit AI" />
+              </ListItemButton>
 
-      <CommandBar />
-    </Container>
-  );
+              <ListItemButton
+                onClick={() => {
+                  dispatch(setAppMode('cv'));
+                }}
+                color="secondary"
+              >
+                <ListItemIcon>
+                  <Icon icon="doc" />
+                </ListItemIcon>
+                <ListItemText primary="View and Download our CV" />
+              </ListItemButton>
+            </List>
+            <Typography variant="body1">
+              You can view and download our CV the traditional way. Or try our
+              Job Fit AI — powered by a Large Language Model — to see how well
+              we match a specific role. Paste in a job description and get an
+              instant assessment.
+            </Typography>
+          </Box>
+        ) : (
+          <Box id="cv" sx={{ mx: 4 }}>
+            <MightyButton
+              mode="button"
+              label="Reset"
+              onClick={() => {
+                dispatch(resetCV());
+              }}
+              icon="reset"
+              color="secondary"
+            />
+          </Box>
+        )}
+      </>
+    );
+
+  if (mode === 'advert')
+    return (
+      <Advert
+        title={'C.V.'}
+        description={'Large Language Model Generated Job Fit AI'}
+        onClick={() => {
+          dispatch(routeTo('/cv', router));
+        }}
+      />
+    );
+  return <pre>cvSlice: {JSON.stringify(cvSlice, null, 2)}</pre>;
 }

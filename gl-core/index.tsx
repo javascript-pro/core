@@ -43,11 +43,6 @@ import {
 } from './components/nav';
 import { useConfig, useIsMobile } from './hooks';
 
-import { navigateTo } from './actions/navigateTo';
-import { toggleStatus } from './actions/toggleStatus';
-import { updateStatusLevel } from './actions/updateStatusLevel';
-import { updateStatusMessage } from './actions/updateStatusMessage';
-
 import {
   Uberedux,
   UbereduxProvider,
@@ -60,15 +55,32 @@ import {
 import { TUbereduxDispatch } from './cartridges/Uberedux';
 import { CV } from './cartridges/CV';
 import { TCV } from './cartridges/CV';
-
+import Advert from './components/Advert';
 import { Flash, MovieClip, Photo } from './cartridges/Flash';
 import { TFlash, TMovieClip, TPhoto } from './cartridges/Flash';
+
+import { navigateTo } from './actions/navigateTo';
+import { routeTo } from './actions/routeTo';
+import { toggleStatus } from './actions/toggleStatus';
+import { toggleAdvert } from './actions/toggleAdvert';
+
+import { updateStatusLevel } from './actions/updateStatusLevel';
+import { updateStatusMessage } from './actions/updateStatusMessage';
+export {
+  toggleStatus,
+  updateStatusLevel,
+  updateStatusMessage,
+  navigateTo,
+  routeTo,
+  toggleAdvert,
+};
 
 export { Core };
 export { Theme, createMUITheme, Icon, ModeSwitch };
 export { Status, Header, Footer, RenderMarkdown, Responsive };
-export { toggleStatus, updateStatusLevel, updateStatusMessage, navigateTo };
+
 export {
+  Advert,
   NextPrevious,
   Nav,
   NavItem,

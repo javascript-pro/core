@@ -32,6 +32,9 @@ function Params() {
 }
 
 function formatSegment(segment: string) {
+  if (segment.length <= 3) {
+    return segment.toUpperCase();
+  }
   return segment.replace(/-/g, ' ').replace(/^\w/, (c) => c.toUpperCase());
 }
 
