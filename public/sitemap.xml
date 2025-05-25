@@ -32,6 +32,9 @@
     <loc>https://goldlabel.pro/balance</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/cv</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/free/api</loc>
   </url>
   <url>
@@ -90,9 +93,6 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work/company/remote-working</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/cv</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/github</loc>

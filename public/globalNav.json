@@ -126,6 +126,20 @@
         ]
       },
       {
+        "title": "C.V.",
+        "slug": "/cv",
+        "order": 2,
+        "icon": "doc",
+        "type": "file",
+        "tags": [
+          "CV",
+          "jobs",
+          "work",
+          "resume"
+        ],
+        "excerpt": "Fullstack JavaScript Developer\n\nOver 20 years of experience delivering scalable web applications across startups, enterprises, and remotefirst teams in the UK, Europe, and Australia. Deep expertise in"
+      },
+      {
         "title": "Work",
         "description": "Professional Fullstack JavaScript Development",
         "slug": "/work",
@@ -150,19 +164,6 @@
         ],
         "excerpt": "| \n\nGoldlabel Core is always Free & Open Source as a public repo on \n\n \n \n\n The apps we ship are real, run in production and are developed in public\n\nThe Core is Open Source and Free forever — giving ",
         "children": [
-          {
-            "title": "C.V.",
-            "slug": "/cv",
-            "order": 2,
-            "icon": "goldlabel",
-            "type": "file",
-            "tags": [
-              "CV",
-              "jobs",
-              "work"
-            ],
-            "excerpt": "Chris Dorward\n\n Fullstack JavaScript Developer\n\n +44 07745 763 122  \n |  |\n\n\n Summary\n\nOver 20 years of experience delivering scalable web applications across startups, enterprises, and remotefirst te"
-          },
           {
             "title": "Goldlabel Apps Ltd",
             "description": "UK Limited Company (5460545)",

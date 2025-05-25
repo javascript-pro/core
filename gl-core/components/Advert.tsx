@@ -1,7 +1,7 @@
 'use client';
 import * as React from 'react';
 import { Stack, Typography, Alert, ButtonBase, IconButton } from '@mui/material';
-import { Icon } from '../../gl-core';
+import { Icon, routeTo, useDispatch } from '../../gl-core';
 // import { toggleAdvert } from '../';
 
 export type TAdvert = {
@@ -14,6 +14,7 @@ export default function Advert({
   title = "Default Title",
   description = "description",
   onClick = () => {
+    // dispatch(routeTo('advert', {}))
     console.log("No onClick for advert")
   }
 }: TAdvert) {

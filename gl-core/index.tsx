@@ -60,8 +60,10 @@ import { Flash, MovieClip, Photo } from './cartridges/Flash';
 import { TFlash, TMovieClip, TPhoto } from './cartridges/Flash';
 
 import { navigateTo } from './actions/navigateTo';
+import { routeTo } from './actions/routeTo';
 import { toggleStatus } from './actions/toggleStatus';
 import { toggleAdvert } from './actions/toggleAdvert';
+
 import { updateStatusLevel } from './actions/updateStatusLevel';
 import { updateStatusMessage } from './actions/updateStatusMessage';
 export {
@@ -69,6 +71,7 @@ export {
   updateStatusLevel,
   updateStatusMessage,
   navigateTo,
+  routeTo,
   toggleAdvert,
 };
 

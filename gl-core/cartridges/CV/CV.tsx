@@ -1,8 +1,8 @@
 'use client';
 
 import * as React from 'react';
-import { Container } from '@mui/material';
-import { Advert, useSlice, useDispatch } from '../../';
+import { useRouter } from 'next/navigation';
+import { Advert, useSlice, useDispatch, routeTo } from '../../';
 // import { AIResponse, JD, Resume, updateCVKey, CommandBar } from '../CV';
 
 export type TCV = {
@@ -12,28 +12,17 @@ export type TCV = {
 
 export default function CV({ 
   mode = null,
-  // title = "Default CV"
 }: TCV) {
   const dispatch = useDispatch();
   const slice = useSlice();
-  // const { mode } = slice.cv;
-
-  React.useEffect(() => {
-    // dispatch(updateCVKey('cv', ''));
-  }, [dispatch]);
-
-  if (mode === 'advert')
-    return (
-      <>
-        <Advert
+  const router = useRouter();
+  
+  if (mode === 'advert') return <Advert
           title={"C.V."}
-          description={"New. Large Language Model Generated Job fit"}
+          description={"Large Language Model Generated Job Fit AI"}
           onClick={() => {
-            console.log("CV click");
+            dispatch(routeTo('/cv', router));
           }}
         />
-      </>
-    );
-
   return <pre>slice: {JSON.stringify(slice, null, 2)}</pre>;
 }
