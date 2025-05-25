@@ -46,8 +46,9 @@ export default function Core({ frontmatter, body = null }: TCore) {
             <Grid
               size={{
                 xs: 12,
-                md: 7,
-                lg: 8,
+                sm: 6,
+                md: 8,
+                lg: 9,
               }}
             >
               <Photo maxHeight={maxHeight} src={frontmatter?.image ?? null} />
