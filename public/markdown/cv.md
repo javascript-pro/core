@@ -4,7 +4,7 @@ title: C.V.
 description: Large Language Model Generated Job Fit AI
 slug: /cv
 icon: doc
-image: /png/javascript.png
+image: /png/doc.png
 tags: CV, jobs, work, resume
 ---
 

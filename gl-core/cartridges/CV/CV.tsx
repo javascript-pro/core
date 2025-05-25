@@ -2,7 +2,6 @@
 import * as React from 'react';
 import {
   Box,
-  Button,
   Typography,
   List,
   ListItemButton,
@@ -17,33 +16,34 @@ import {
   useSlice,
   useDispatch,
   routeTo,
+  RenderMarkdown,
 } from '../../';
-import { setAppMode, resetCV } from '../CV';
+import { setAppMode, resetCV, Download } from '../CV';
 
 export type TCV = {
   mode: 'alert' | 'advert' | 'app' | null;
   title?: string | null;
+  markdown?: string | null;
 };
 
-export default function CV({ mode = null }: TCV) {
+export default function CV({ 
+  mode = null,
+  markdown = 'no markdown. no problem.',
+}: TCV) {
   const dispatch = useDispatch();
   const cvSlice = useSlice().cv;
   const { appMode } = cvSlice;
   const router = useRouter();
+  // console.log("markdown", markdown);
 
   if (mode === 'app')
-
-    { appMode === "cv" && <>CV mode</>}
-    
-    { appMode === "jd" && <>JD mode</>}
-
     return (
       <>
         { appMode === 'pristine' ? (
           <Box id="choice_cv" sx={{ mx: 4 }}>
             {/* <pre>appMode: {JSON.stringify(appMode, null, 2)}</pre>;  */}
           
-            <Typography variant="h4" gutterBottom>
+            <Typography variant="h6" gutterBottom>
               Need our CV, or something smarter?
             </Typography>
 
@@ -79,7 +79,10 @@ export default function CV({ mode = null }: TCV) {
             </Typography>
           </Box>
         ) : (
-          <Box id="cv" sx={{ mx: 4 }}>
+          <>
+
+          <Box id="cv_reset" sx={{ mx: 4 }}>
+            <Download />
             <MightyButton
               mode="button"
               label="Reset"
@@ -90,6 +93,16 @@ export default function CV({ mode = null }: TCV) {
               color="secondary"
             />
           </Box>
+
+          <Box id="cv_cv" sx={{}}>
+            <RenderMarkdown>
+              {markdown}
+            </RenderMarkdown>
+          </Box>
+
+
+
+          </>
         )}
       </>
     );
@@ -98,7 +111,7 @@ export default function CV({ mode = null }: TCV) {
     return (
       <Advert
         title={'C.V.'}
-        description={'Large Language Model Generated Job Fit AI'}
+        description={'Try our Large Language Model Generated Job Fit AI'}
         onClick={() => {
           dispatch(routeTo('/cv', router));
         }}
