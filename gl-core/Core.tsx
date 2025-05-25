@@ -59,6 +59,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                 }}
               >
                 {pathname !== '/' && <PageBreadcrumb />}
+                <Box sx={{height: 24}} />
                 <RenderMarkdown>{body}</RenderMarkdown>
               </Box>
             </Grid>
