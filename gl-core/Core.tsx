@@ -66,8 +66,9 @@ export default function Core({ frontmatter, body = null }: TCore) {
             <Grid
               size={{
                 xs: 12,
-                md: 5,
-                lg: 4,
+                sm: 6,
+                md: 4,
+                lg: 3,
               }}
             >
               <Box
