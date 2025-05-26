@@ -7,22 +7,19 @@ const flickrApiKey = process.env.FLICKR_KEY;
 const flickrUserId = process.env.FLICKR_USER;
 
 const CACHE_TTL = 1000 * 60 * 5;
-const albumCache: Record<
-  string,
-  { time: number; photos: TFlickrPhoto[]; meta: any }
-> = {};
+const albumCache: Record<string, { time: number; photos: TFlickrPhoto[]; meta: any }> = {};
 const photoCache: Record<string, { time: number; photo: TFlickrPhoto }> = {};
 
 async function getPhotoWithSizes(photoId: string): Promise<TFlickrPhoto> {
   const infoRes = await fetch(
-    `${FLICKR_API}?method=flickr.photos.getInfo&api_key=${flickrApiKey}&photo_id=${photoId}&user_id=${flickrUserId}&format=json&nojsoncallback=1`,
+    `${FLICKR_API}?method=flickr.photos.getInfo&api_key=${flickrApiKey}&photo_id=${photoId}&user_id=${flickrUserId}&format=json&nojsoncallback=1`
   );
   const infoData = await infoRes.json();
   if (infoData.stat !== 'ok') throw new Error(infoData.message);
   const p = infoData.photo;
 
   const sizesRes = await fetch(
-    `${FLICKR_API}?method=flickr.photos.getSizes&api_key=${flickrApiKey}&photo_id=${photoId}&format=json&nojsoncallback=1`,
+    `${FLICKR_API}?method=flickr.photos.getSizes&api_key=${flickrApiKey}&photo_id=${photoId}&format=json&nojsoncallback=1`
   );
   const sizesData = await sizesRes.json();
   if (sizesData.stat !== 'ok') throw new Error(sizesData.message);
@@ -57,7 +54,7 @@ async function getPhotoWithSizes(photoId: string): Promise<TFlickrPhoto> {
       medium: getSize('Medium 800'),
       large: getSize('Large'),
       orig: getSize('Original'),
-      thumb: getBestSquare(), // New thumbnail entry
+      thumb: getBestSquare(),
     },
   };
 }
@@ -141,57 +138,46 @@ export async function GET(request: NextRequest) {
 
   try {
     const flickrRes = await fetch(
-      `${FLICKR_API}?method=flickr.photosets.getPhotos&api_key=${flickrApiKey}&photoset_id=${albumId}&user_id=${flickrUserId}&format=json&nojsoncallback=1&extras=description,date_taken,geo,tags,url_o,url_h,url_c,url_n`,
+      `${FLICKR_API}?method=flickr.photosets.getPhotos&api_key=${flickrApiKey}&photoset_id=${albumId}&user_id=${flickrUserId}&format=json&nojsoncallback=1&extras=description,date_taken,geo,tags,url_o,url_h,url_c,url_n`
     );
     const data = await flickrRes.json();
     if (data.stat !== 'ok') throw new Error(data.message);
 
-    const photos: TFlickrPhoto[] = data.photoset.photo.map((p: any) => ({
-      flickrId: p.id,
-      flickrUrl: `https://www.flickr.com/photos/${flickrUserId}/${p.id}`,
-      title: p.title,
-      description: p.description?._content || '',
-      time: new Date(p.datetaken).getTime(),
-      lat: parseFloat(p.latitude) || null,
-      lng: parseFloat(p.longitude) || null,
-      meta: { tags: p.tags?.split(' ') || [] },
-      sizes: {
-        orig: p.url_o
-          ? {
-              src: p.url_o,
-              width: parseInt(p.width_o),
-              height: parseInt(p.height_o),
-            }
-          : undefined,
-        large: p.url_h
-          ? {
-              src: p.url_h,
-              width: parseInt(p.width_h),
-              height: parseInt(p.height_h),
-            }
-          : undefined,
-        medium: p.url_c
-          ? {
-              src: p.url_c,
-              width: parseInt(p.width_c),
-              height: parseInt(p.height_c),
-            }
-          : undefined,
-        small: p.url_n
-          ? {
-              src: p.url_n,
-              width: parseInt(p.width_n),
-              height: parseInt(p.height_n),
-            }
-          : undefined,
-        thumb: undefined, // Not included in bulk API call
-      },
-    }));
+    const photos: TFlickrPhoto[] = await Promise.all(
+      data.photoset.photo.map(async (p: any) => {
+        const thumb = await getPhotoWithSizes(p.id).then(photo => photo.sizes?.thumb);
+        return {
+          flickrId: p.id,
+          flickrUrl: `https://www.flickr.com/photos/${flickrUserId}/${p.id}`,
+          title: p.title,
+          description: p.description?._content || '',
+          time: new Date(p.datetaken).getTime(),
+          lat: parseFloat(p.latitude) || null,
+          lng: parseFloat(p.longitude) || null,
+          meta: { tags: p.tags?.split(' ') || [] },
+          sizes: {
+            orig: p.url_o
+              ? { src: p.url_o, width: parseInt(p.width_o), height: parseInt(p.height_o) }
+              : undefined,
+            large: p.url_h
+              ? { src: p.url_h, width: parseInt(p.width_h), height: parseInt(p.height_h) }
+              : undefined,
+            medium: p.url_c
+              ? { src: p.url_c, width: parseInt(p.width_c), height: parseInt(p.height_c) }
+              : undefined,
+            small: p.url_n
+              ? { src: p.url_n, width: parseInt(p.width_n), height: parseInt(p.height_n) }
+              : undefined,
+            thumb,
+          },
+        };
+      })
+    );
 
     const coverPhoto = await getPhotoWithSizes(data.photoset.primary);
 
     const infoRes = await fetch(
-      `${FLICKR_API}?method=flickr.photosets.getInfo&api_key=${flickrApiKey}&photoset_id=${albumId}&user_id=${flickrUserId}&format=json&nojsoncallback=1`,
+      `${FLICKR_API}?method=flickr.photosets.getInfo&api_key=${flickrApiKey}&photoset_id=${albumId}&user_id=${flickrUserId}&format=json&nojsoncallback=1`
     );
     const infoData = await infoRes.json();
     if (infoData.stat !== 'ok') throw new Error(infoData.message);
