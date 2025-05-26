@@ -88,7 +88,7 @@ import CarIcon from '@mui/icons-material/DirectionsCarOutlined';
 import BoatIcon from '@mui/icons-material/DirectionsBoatOutlined';
 import BusIcon from '@mui/icons-material/DirectionsBusOutlined';
 import PoolIcon from '@mui/icons-material/PoolOutlined';
-import DocIcon from '@mui/icons-material/ArticleOutlined';
+import DocIcon from '@mui/icons-material/Description';
 import PluginIcon from '@mui/icons-material/ExtensionOutlined';
 import LinguaIcon from '@mui/icons-material/TranslateOutlined';
 import GoogleIcon from '@mui/icons-material/Google';

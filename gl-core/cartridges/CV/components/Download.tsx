@@ -2,16 +2,15 @@
 import React from 'react';
 import { marked } from 'marked';
 import { Box } from '@mui/material';
-import { MightyButton, useSlice } from '../../../';
+import { MightyButton } from '../../../';
 import { templatePDF } from '../';
 
-export default function Download() {
-  const slice = useSlice();
-  const { resume } = slice.cv;
+export default function Download(cv: any) {
 
   const onDownloadClick = async () => {
+    // console.log('cv.cv', cv.cv);
     const { default: html2pdf } = await import('html2pdf.js');
-    const fullHTML = templatePDF(marked.parse(resume || '') as string);
+    const fullHTML = templatePDF(marked.parse(cv.cv || '') as string);
 
     const el = document.createElement('div');
     el.innerHTML = fullHTML;
@@ -32,11 +31,10 @@ export default function Download() {
     <Box>
       {/* <pre>markdown: {JSON.stringify(markdown, null, 2)}</pre> */}
       <MightyButton
-        fullWidth
         onClick={onDownloadClick}
         color="secondary"
         label="Download"
-        variant="contained"
+        variant="outlined"
         icon="download"
       />
     </Box>

@@ -3,9 +3,9 @@ import { TUbereduxDispatch } from '../../../';
 import { setUbereduxKey } from '../../../';
 import { CVinitialState } from '../';
 
-export const setAppMode = (
-  value: "cv" | "jd" | "pristine"
-): any => async (dispatch: TUbereduxDispatch, getState: () => any) => {
+export const setAppMode =
+  (value: 'cv' | 'jd' | 'pristine'): any =>
+  async (dispatch: TUbereduxDispatch, getState: () => any) => {
     try {
       const current = getState().redux.cv;
       const updated = {

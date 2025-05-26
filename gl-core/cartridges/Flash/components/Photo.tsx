@@ -32,7 +32,7 @@ export default function Photo({ src = null, maxHeight = null }: TPhoto) {
       sx={{
         width: '100%',
         maxWidth: '100%',
-        // height: 310,
+        height: 630,
         maxHeight,
         display: 'flex',
         justifyContent: 'center',
