@@ -10,7 +10,9 @@ github: https://github.com/javascript-pro/core/blob/main/app/api/gl-api/flickr/r
 api: /api/gl-api/flickr
 ---
 
-[Free](/free) | [CV](/cv) | [Work](/work) | [Life](/life) | [Balance](/balance)
+[Free](/free)
+| [CV](/cv)
+| [REST API](/work/javascript/rest-api)
 
 ## We build and ship modern web apps for clients who need real results — fast
 

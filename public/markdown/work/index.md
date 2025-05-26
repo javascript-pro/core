@@ -8,7 +8,7 @@ image: /png/javascript.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React, Angular, Vue, etc, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 ---
 
-[JavaScript](/work/javascript) | [GitHub](/work/github)
+[JavaScript](/work/javascript) | [GitHub](/work/github) | [REST API](/work//javascript/rest-api)
 
 Goldlabel Core is always Free & Open Source as a public repo on [GitHub](https://github.com/javascript-pro/core)
 
