@@ -1,12 +1,9 @@
 export type TCVSlice = {
   appMode: 'pristine' | 'resume' | 'jd' | 'cv';
-  resume?: string | null;
-  jd?: string | null;
-  fetching?: boolean;
-  validJd?: boolean;
-  fit?: string | null;
+  [key: string]: any;
 };
 
 export const initialState: TCVSlice = {
   appMode: 'cv',
+  showJD: false,
 };

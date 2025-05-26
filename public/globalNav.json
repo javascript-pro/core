@@ -34,7 +34,7 @@
       "NextJS",
       "Headless CMS"
     ],
-    "excerpt": "|  |  |  | \n\n We build and ship modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codebases\n \n\n is . I",
+    "excerpt": "| \n| \n\n We build and ship modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codebases\n \n\n is . It's  a",
     "children": [
       {
         "title": "Free & Open Source",
@@ -162,7 +162,7 @@
           "NextJS",
           "Headless CMS"
         ],
-        "excerpt": "| \n\nGoldlabel Core is always Free & Open Source as a public repo on \n\n \n \n\n The apps we ship are real, run in production and are developed in public\n\nThe Core is Open Source and Free forever — giving ",
+        "excerpt": "|  | \n\nGoldlabel Core is always Free & Open Source as a public repo on \n\n \n \n\n The apps we ship are real, run in production and are developed in public\n\nThe Core is Open Source and Free forever — givi",
         "children": [
           {
             "title": "Goldlabel Apps Ltd",
@@ -252,8 +252,25 @@
               "Headless CMS",
               "JSON"
             ],
-            "excerpt": "JavaScript Whatever the Weather\n\nWe’ve been writing JavaScript since it was still called ECMAScript.\n\nBefore the frameworks, before npm, before it ate the world—we were already deep in the language th",
-            "children": []
+            "excerpt": "| \n\n JavaScript Whatever the Weather\n\nWe’ve been writing JavaScript since it was still called ECMAScript.\n\nBefore the frameworks, before npm, before it ate the world—we were already deep in the langua",
+            "children": [
+              {
+                "title": "REST API",
+                "slug": "/rest-api",
+                "order": 50,
+                "icon": "javascript",
+                "type": "file",
+                "tags": [
+                  "JavaScript",
+                  "Node",
+                  "Next.js",
+                  "API",
+                  "REST API",
+                  "Flickr"
+                ],
+                "excerpt": "REST API\n\n Cartridge: Flickr\n\nThis is a realworld backend endpoint. It powers real UI components. You can  or see it in action on .\n\nThis REST API demonstrates how we use Next.js App Router, Edgecompa"
+              }
+            ]
           }
         ]
       },

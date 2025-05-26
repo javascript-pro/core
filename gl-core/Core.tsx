@@ -94,9 +94,11 @@ export default function Core({
               }}
             >
               <Box id="sidebar" component="aside" sx={{ mx: 2 }}>
-                { !isCV && <CV
-                            mode="advert" 
-                          /> }
+                { !isCV && <Box sx={{mx:4, mb: 2}}>
+                              <CV
+                                mode="advert" 
+                              />
+                            </Box> }
                 { !isFlickr && <Flickr
                   mode="album-card"
                   //  72157594233009954

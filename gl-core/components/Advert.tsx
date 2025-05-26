@@ -20,18 +20,22 @@ export default function Advert({
   title = 'Default Title',
   description = 'description',
   onClick = () => {
-    // dispatch(routeTo('advert', {}))
     console.log('No onClick for advert');
   },
 }: TAdvert) {
-  // const dispatch = useDispatch();
 
   return (
     <>
       <Stack sx={{ width: '100%' }} spacing={2}>
         <ButtonBase sx={{ textAlign: 'left' }} onClick={onClick}>
-          <Alert sx={{ width: '100%' }} severity="success" variant="outlined">
-            <Typography>{description}</Typography>
+          <Alert 
+            sx={{ width: '100%' }} 
+            severity="success" 
+            variant="outlined"
+            icon={<Icon icon="star" />}
+          >
+            <Typography variant='body1'>{title}</Typography>
+            <Typography variant='body2'>{description}</Typography>
           </Alert>
         </ButtonBase>
       </Stack>
