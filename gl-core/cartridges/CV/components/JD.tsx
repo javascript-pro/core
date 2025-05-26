@@ -62,8 +62,9 @@ export default function JD() {
       <TextField
         fullWidth
         multiline
+        variant='standard'
         color="secondary"
-        rows={minRows}
+        rows={5}
         inputRef={inputRef}
         label="Paste Job Description"
         value={jd || ''}

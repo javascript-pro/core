@@ -2,8 +2,6 @@
 import * as React from 'react';
 import {
   Box,
-  Button,
-  Typography,
   List,
   ListItemButton,
   ListItemText,
@@ -17,35 +15,69 @@ import {
   useSlice,
   useDispatch,
   routeTo,
+  RenderMarkdown,
 } from '../../';
-import { setAppMode, resetCV } from '../CV';
+import { JD, setAppMode, resetCV, Download } from '../CV';
 
 export type TCV = {
   mode: 'alert' | 'advert' | 'app' | null;
   title?: string | null;
+  markdown?: string | null;
 };
 
-export default function CV({ mode = null }: TCV) {
+export default function CV({ 
+  mode = null,
+  markdown = 'no markdown. no problem.',
+}: TCV) {
   const dispatch = useDispatch();
   const cvSlice = useSlice().cv;
   const { appMode } = cvSlice;
   const router = useRouter();
+  // console.log("markdown", markdown);
+
+  const showAlert = true;
+  const showToolbar = false;
 
   if (mode === 'app')
-
-    { appMode === "cv" && <>CV mode</>}
-    
-    { appMode === "jd" && <>JD mode</>}
-
     return (
       <>
-        { appMode === 'pristine' ? (
-          <Box id="choice_cv" sx={{ mx: 4 }}>
-            {/* <pre>appMode: {JSON.stringify(appMode, null, 2)}</pre>;  */}
+        <Box sx={{
+          display: "flex",
+          mx: 4,
+        }}>
           
-            <Typography variant="h4" gutterBottom>
+          { appMode !== 'pristine' && showToolbar && <MightyButton
+            mode="icon"
+            label="Reset"
+            onClick={() => {
+              dispatch(resetCV());
+            }}
+            icon="reset"
+            color="secondary"
+          /> }
+
+          <Box sx={{ flexGrow: 1 }}/>
+          { appMode === "cv" && <>
+            <Box sx={{ mr: 2 }}>
+              <Download cv={ markdown } />
+            </Box>
+          </> }
+
+          
+        </Box>
+
+        { appMode === "jd" && <>
+            <Box sx={{ mx: 4 }}>
+              <JD />
+            </Box>
+          </> }
+
+        { appMode === 'pristine' ? (
+          <Box sx={{ mx: 4 }}>
+            {/* <pre>appMode: {JSON.stringify(appMode, null, 2)}</pre>;  */}
+            {/* <Typography variant="h6" gutterBottom>
               Need our CV, or something smarter?
-            </Typography>
+            </Typography> */}
 
             <List>
               <ListItemButton
@@ -71,25 +103,24 @@ export default function CV({ mode = null }: TCV) {
                 <ListItemText primary="View and Download our CV" />
               </ListItemButton>
             </List>
-            <Typography variant="body1">
+            {/* <Typography variant="body1">
               You can view and download our CV the traditional way. Or try our
               Job Fit AI — powered by a Large Language Model — to see how well
               we match a specific role. Paste in a job description and get an
               instant assessment.
-            </Typography>
+            </Typography> */}
           </Box>
         ) : (
-          <Box id="cv" sx={{ mx: 4 }}>
-            <MightyButton
-              mode="button"
-              label="Reset"
-              onClick={() => {
-                dispatch(resetCV());
-              }}
-              icon="reset"
-              color="secondary"
-            />
-          </Box>
+          <>
+          { appMode === "cv" && <>
+            <Box sx={{}}>
+              <RenderMarkdown>
+                {markdown}
+              </RenderMarkdown>
+            </Box>
+          </> }
+          
+          </>
         )}
       </>
     );
@@ -98,7 +129,7 @@ export default function CV({ mode = null }: TCV) {
     return (
       <Advert
         title={'C.V.'}
-        description={'Large Language Model Generated Job Fit AI'}
+        description={'Try our Large Language Model Generated Job Fit AI'}
         onClick={() => {
           dispatch(routeTo('/cv', router));
         }}

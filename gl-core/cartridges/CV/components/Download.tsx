@@ -2,16 +2,23 @@
 import React from 'react';
 import { marked } from 'marked';
 import { Box } from '@mui/material';
-import { MightyButton, useSlice } from '../../../';
+import { MightyButton } from '../../../';
 import { templatePDF } from '../';
 
-export default function Download() {
-  const slice = useSlice();
-  const { resume } = slice.cv;
+export default function Download(cv: any) {
 
   const onDownloadClick = async () => {
+    // console.log('cv.cv', cv.cv);
     const { default: html2pdf } = await import('html2pdf.js');
-    const fullHTML = templatePDF(marked.parse(resume || '') as string);
+    const html = `
+      <h2>Chris Dorward</h2>
+      <h4>
+        <a href="https://goldlabel.pro">goldlabel.pro</a> | 
+        <a href="mailto:goldlabel.apps@gmail.com">goldlabel.apps@gmail.com</a> |
+        <a href="https://wa.me/447745763122">+44 07745763122</a> |
+      </h4>
+    ${marked.parse(cv.cv || '') as string}`;
+    const fullHTML = templatePDF(html);
 
     const el = document.createElement('div');
     el.innerHTML = fullHTML;
@@ -32,7 +39,6 @@ export default function Download() {
     <Box>
       {/* <pre>markdown: {JSON.stringify(markdown, null, 2)}</pre> */}
       <MightyButton
-        fullWidth
         onClick={onDownloadClick}
         color="secondary"
         label="Download"

@@ -4,13 +4,15 @@ title: C.V.
 description: Large Language Model Generated Job Fit AI
 slug: /cv
 icon: doc
-image: /png/javascript.png
+image: /png/doc.png
 tags: CV, jobs, work, resume
 ---
 
 ## Fullstack JavaScript Developer
 
-Over 20 years of experience delivering scalable web applications across startups, enterprises, and remote-first teams in the UK, Europe, and Australia. Deep expertise in React, TypeScript, current specialising in Next.js. Recently, I’ve focused on using AI as a practical development accelerator — not a shortcut, but a force multiplier. With experience and intent, AI generates production-grade results faster and cleaner. Code now ships 2–3x faster with fewer bugs.
+Over 20 years of experience delivering scalable web applications across startups, enterprises, and remote-first teams in the UK, Europe, and Australia and beyond. Deep expertise in React, TypeScript, current specialising in Next.js.
+
+Recently, I’ve focused on using AI as a practical development accelerator — not a shortcut, but a force multiplier. With experience and intent, AI generates production-grade results faster and cleaner. Code now ships 2–3x faster with fewer bugs.
 
 Proven track record building high-performance UIs, integrating automated testing and linting, and delivering through streamlined pipelines. Equally comfortable leading projects or collaborating in agile teams. Prefer a clear brief, a clean codebase, and a culture that values delivery. Outside work, I write, travel, surf, dive, and ski.
 
@@ -20,7 +22,7 @@ Proven track record building high-performance UIs, integrating automated testing
 - _Frameworks & Libraries:_ React, React Native, Next.js (App Router), Redux, Node.js, Express, jQuery
 - _Style:_ Vanilla CSS, Material UI, Tailwind CSS, Styled Components, Figma
 - _Database:_ NoSQL, Firestore, Supabase, MongoDB, DynamoDB, MySQL, PostgreSQL, SQL
-- _APIs:_ REST, GraphQL, OpenAI, Whisper/DALL·E
+- _APIs:_ [REST](https://github.com/javascript-pro/core/blob/main/app/api/gl-api/flickr/route.ts), GraphQL, OpenAI, Whisper/DALL·E
 - _Testing & QA:_ Jest, React Testing Library, Cucumber (BDD), Gherkin
 - _DevOps & Workflow:_ CI/CD (GitHub Actions, Netlify Deploy), Linux (MAMP stack), GitFlow, Agile/SCRUM, Git, GitHub, Vercel, Firebase (Auth, Firestore, Storage), Netlify, Docker, Turborepo, Webpack
 - _CMS:_ WordPress, Headless CMS (Strapi, Contentful), Drupal

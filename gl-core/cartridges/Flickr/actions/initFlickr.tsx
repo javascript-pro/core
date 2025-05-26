@@ -54,7 +54,7 @@ export const initFlickr =
           key: 'flickr',
           value: {
             ...updatedState,
-            message: 'Fetched album',
+            message: 'Album fetched OK',
             loading: false,
             status: 'success',
             albumId,

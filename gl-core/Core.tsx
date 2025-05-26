@@ -30,7 +30,10 @@ export type TCore = {
   children?: React.ReactNode;
 };
 
-export default function Core({ frontmatter, body = null }: TCore) {
+export default function Core({ 
+  frontmatter, 
+  body = null
+}: TCore) {
   const pathname = usePathname();
   const router = useRouter();
   const isMobile = useIsMobile();
@@ -43,10 +46,16 @@ export default function Core({ frontmatter, body = null }: TCore) {
   let app = <></>;
   switch (true) {
     case pathname.startsWith('/cv'):
-      app = <CV mode="app" />;
+      app = <CV 
+              mode="app"
+              markdown={body}
+            />;
       break;
     case pathname.startsWith('/free/flickr'):
-      app = <Flickr mode="app" />;
+      app = <Flickr 
+              mode="app"
+              id="72177720326317140"
+            />;
       break;
     default:
       break;
@@ -85,15 +94,17 @@ export default function Core({ frontmatter, body = null }: TCore) {
               }}
             >
               <Box id="sidebar" component="aside" sx={{ mx: 2 }}>
-                {!isFlickr && <Flickr
+                { !isCV && <CV
+                            mode="advert" 
+                          /> }
+                { !isFlickr && <Flickr
                   mode="album-card"
-                  id="72157594233009954"
+                  //  72157594233009954
+                  id="72177720326317140"
                   onClick={() => {
                     router.push(`/free/flickr`);
                   }}
                 /> }
-                { !isCV && <CV mode="advert" /> }
-                
               </Box>
             </Grid>
           </Grid>
