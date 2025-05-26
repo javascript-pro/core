@@ -50,7 +50,7 @@ export default function AlbumCard({}: TAlbumCard) {
           >
             <img
               style={{
-                borderRadius: '3px',
+                borderRadius: '4px',
               }}
               alt={title}
               height={50}

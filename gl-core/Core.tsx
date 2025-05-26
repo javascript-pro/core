@@ -52,7 +52,10 @@ export default function Core({
             />;
       break;
     case pathname.startsWith('/free/flickr'):
-      app = <Box sx={{ mx: 0 }}><Flickr mode="app" /></Box>;
+      app = <Flickr 
+              mode="app"
+              id="72177720326317140"
+            />;
       break;
     default:
       break;
@@ -96,7 +99,8 @@ export default function Core({
                           /> }
                 { !isFlickr && <Flickr
                   mode="album-card"
-                  id="72157594233009954"
+                  //  72157594233009954
+                  id="72177720326317140"
                   onClick={() => {
                     router.push(`/free/flickr`);
                   }}
