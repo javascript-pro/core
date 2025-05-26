@@ -39,6 +39,7 @@ export default function Download(cv: any) {
     <Box>
       {/* <pre>markdown: {JSON.stringify(markdown, null, 2)}</pre> */}
       <MightyButton
+        mode="icon"
         onClick={onDownloadClick}
         color="secondary"
         label="Download PDF"

@@ -63,7 +63,7 @@ export default function JD() {
         Job Description
       </Typography>
 
-      <Typography variant="body1" gutterBottom>
+      <Typography variant="body1" sx={{mb: 3}}>
         Try our Job Fit AI — powered by a Large Language Model — to see how well we match a specific role. Paste in a job description and get an instant assessment.
       </Typography>
 

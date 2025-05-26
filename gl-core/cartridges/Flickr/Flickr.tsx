@@ -9,15 +9,16 @@ import {
   ListItemButton,
   ListItemAvatar,
   ListItemText,
+  
 } from '@mui/material';
-import { useDispatch } from '../../../gl-core';
-import { initFlickr, resetFlickr, AlbumCard } from './';
+import { useDispatch, Advert, routeTo } from '../../../gl-core';
+import { initFlickr, resetFlickr } from './';
 import { TFlickr } from './types';
 import { 
   MightyButton,
-  CardButton, 
   useSlice,
 } from '../../../gl-core';
+import { useRouter } from 'next/navigation';
 
 export default function Flickr({
   mode = 'default',
@@ -26,17 +27,14 @@ export default function Flickr({
     console.log('No onClick supplied to Flickr');
   },
 }: TFlickr) {
+  const router = useRouter();
   const dispatch = useDispatch();
   const flickrSlice = useSlice().flickr;
   const {
-    album = {},
-    status = 'info',
-    message = '',
+    album = null,
   } = flickrSlice ?? {};
 
-  const showAlert = true;
   const showToolbar = false;
-
   const albumTitle = album?.meta?.title || '';
   const albumDescription = album?.meta?.description || '';
   // const albumThumbSrc = album?.meta?.coverPhoto?.sizes?.thumb?.src || '';
@@ -53,25 +51,14 @@ export default function Flickr({
     const notReady = !album?.meta || !Array.isArray(albumPhotos);
 
     if (notReady) {
-      return (
-        <Box sx={{ p: 4 }}>
-          <Alert severity="warning">Still loading...</Alert>
-        </Box>
-      );
+      return <Alert 
+              severity="warning">
+              Still loading...
+            </Alert>
     }
 
     return (
-      <Box>
-        {showAlert && (
-          <Alert
-            variant="filled"
-            severity={status}
-            sx={{ mx: 4, mb: 2 }}
-          >
-            {message}
-          </Alert>
-        )}
-
+      <Box sx={{ mx: 0 }}>
         {showToolbar && (
           <Toolbar>
             <MightyButton
@@ -131,10 +118,14 @@ export default function Flickr({
 
   if (mode === 'album-card') {
     return (
-      <Box>
-        <CardButton onClick={onClick}>
-          <AlbumCard id="72177720326317140" />
-        </CardButton>
+      <Box sx={{mx:4}}>
+        <Advert
+          title={'Flickr'}
+          description={'Photos, titles and other meta data are managed in Flickr'}
+          onClick={() => {
+            dispatch(routeTo('/free/flickr', router));
+          }}
+        />
       </Box>
     );
   }

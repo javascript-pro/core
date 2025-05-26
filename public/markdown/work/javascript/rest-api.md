@@ -12,9 +12,9 @@ api: https://goldlabel.pro/api/gl-api/flickr?album=72177720326317140
 
 ## REST API
 
-> Cartridge: Flickr
+> Cartridge: [Flickr](/free/flickr)
 
-This is a real-world backend endpoint. It powers real UI components. You can [view the code on GitHub](https://github.com/javascript-pro/core/blob/main/app/api/gl-api/flickr/route.ts) or see it in action on [Goldlabel API](https://goldlabel.pro/api/gl-api/flickr?album=72177720326317140).
+This is a real-world backend endpoint. It powers real UI components. You can view the code on [GitHub](https://github.com/javascript-pro/core/blob/main/app/api/gl-api/flickr/route.ts) or see it in action on [Goldlabel API](https://goldlabel.pro/api/gl-api/flickr?album=72177720326317140).
 
 This REST API demonstrates how we use **Next.js App Router**, **Edge-compatible server functions**, and a mature external service (Flickr) to expose real-world photo data as structured JSON. It’s built as part of our Goldlabel Core framework and serves two primary use cases:
 
