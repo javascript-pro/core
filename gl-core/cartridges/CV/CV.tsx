@@ -17,7 +17,7 @@ import {
   routeTo,
   RenderMarkdown,
 } from '../../';
-import { JD, setAppMode, resetCV, Download } from '../CV';
+import { JD, setAppMode, setCVKey, resetCV, Download } from '../CV';
 
 export type TCV = {
   mode: 'alert' | 'advert' | 'app' | null;
@@ -31,21 +31,32 @@ export default function CV({
 }: TCV) {
   const dispatch = useDispatch();
   const cvSlice = useSlice().cv;
-  const { appMode } = cvSlice;
+  const { appMode, showJD } = cvSlice;
   const router = useRouter();
   // console.log("markdown", markdown);
 
-  const showAlert = true;
   const showToolbar = false;
+
+    if (mode === 'advert')
+      return (
+        <Advert
+          title={'C.V.'}
+          description={'A simple, useful AI tool to match a Job to our CV'}
+          onClick={() => {
+            dispatch(routeTo('/cv', router));
+          }}
+        />
+    );
 
   if (mode === 'app')
     return (
       <>
+        {/* <pre>cvSlice: {JSON.stringify(cvSlice, null, 2)}</pre> */}
         <Box sx={{
           display: "flex",
           mx: 4,
         }}>
-          
+           
           { appMode !== 'pristine' && showToolbar && <MightyButton
             mode="icon"
             label="Reset"
@@ -56,17 +67,37 @@ export default function CV({
             color="secondary"
           /> }
 
-          <Box sx={{ flexGrow: 1 }}/>
-          { appMode === "cv" && <>
-            <Box sx={{ mr: 2 }}>
-              <Download cv={ markdown } />
-            </Box>
-          </> }
-
           
-        </Box>
 
-        { appMode === "jd" && <>
+              { appMode === "cv" ? <MightyButton 
+                  mode="icon"
+                  label="Paste job"
+                  icon="job"
+                  color="secondary"
+                  onClick={() => {
+                    dispatch(setCVKey("appMode", "jd"));
+                    dispatch(setCVKey("showJD", !showJD));
+                  }}
+                /> : <MightyButton 
+                  mode="icon"
+                  label="View CV"
+                  icon="doc"
+                  color="secondary"
+                  onClick={() => {
+                    dispatch(setCVKey("appMode", "cv"));
+                    dispatch(setCVKey("showJD", false));
+                  }}
+                />  }
+
+
+            { appMode === "cv" && <>
+              <Box sx={{ mr: 2, display: "flex" }}>
+                <Download cv={ markdown } />
+              </Box>
+            </> }
+          </Box>
+
+        { showJD && <>
             <Box sx={{ mx: 4 }}>
               <JD />
             </Box>
@@ -74,7 +105,7 @@ export default function CV({
 
         { appMode === 'pristine' ? (
           <Box sx={{ mx: 4 }}>
-            {/* <pre>appMode: {JSON.stringify(appMode, null, 2)}</pre>;  */}
+           
             {/* <Typography variant="h6" gutterBottom>
               Need our CV, or something smarter?
             </Typography> */}
@@ -103,17 +134,12 @@ export default function CV({
                 <ListItemText primary="View and Download our CV" />
               </ListItemButton>
             </List>
-            {/* <Typography variant="body1">
-              You can view and download our CV the traditional way. Or try our
-              Job Fit AI — powered by a Large Language Model — to see how well
-              we match a specific role. Paste in a job description and get an
-              instant assessment.
-            </Typography> */}
+            
           </Box>
         ) : (
           <>
-          { appMode === "cv" && <>
-            <Box sx={{}}>
+          { appMode === "cv" && !showJD && <>
+            <Box sx={{mt: 2}}>
               <RenderMarkdown>
                 {markdown}
               </RenderMarkdown>
@@ -125,15 +151,5 @@ export default function CV({
       </>
     );
 
-  if (mode === 'advert')
-    return (
-      <Advert
-        title={'C.V.'}
-        description={'Try our Large Language Model Generated Job Fit AI'}
-        onClick={() => {
-          dispatch(routeTo('/cv', router));
-        }}
-      />
-    );
   return <pre>cvSlice: {JSON.stringify(cvSlice, null, 2)}</pre>;
 }
