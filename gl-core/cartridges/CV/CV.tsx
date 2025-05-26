@@ -35,6 +35,9 @@ export default function CV({
   const router = useRouter();
   // console.log("markdown", markdown);
 
+  const showAlert = true;
+  const showToolbar = false;
+
   if (mode === 'app')
     return (
       <>
@@ -42,7 +45,8 @@ export default function CV({
           display: "flex",
           mx: 4,
         }}>
-          { appMode !== 'pristine' && <MightyButton
+          
+          { appMode !== 'pristine' && showToolbar && <MightyButton
             mode="icon"
             label="Reset"
             onClick={() => {
@@ -51,9 +55,10 @@ export default function CV({
             icon="reset"
             color="secondary"
           /> }
+
           <Box sx={{ flexGrow: 1 }}/>
           { appMode === "cv" && <>
-            <Box sx={{ mr: 1 }}>
+            <Box sx={{ mr: 2 }}>
               <Download cv={ markdown } />
             </Box>
           </> }
