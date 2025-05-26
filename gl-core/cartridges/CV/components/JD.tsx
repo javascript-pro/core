@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Box, TextField } from '@mui/material';
+import { Box, TextField, Typography } from '@mui/material';
 import { useSlice, useDispatch } from '../../../';
 import { updateCVKey } from '../';
 
@@ -58,17 +58,25 @@ export default function JD() {
   };
 
   return (
-    <Box sx={{ px: 2, pt: 2 }}>
+    <Box sx={{ py: 2 }}>
+      <Typography variant='h5' gutterBottom>
+        Job Description
+      </Typography>
+
+      <Typography variant="body1" gutterBottom>
+        Try our Job Fit AI — powered by a Large Language Model — to see how well we match a specific role. Paste in a job description and get an instant assessment.
+      </Typography>
+
       <TextField
         fullWidth
         multiline
-        variant='standard'
+        variant='filled'
         color="secondary"
         rows={5}
         inputRef={inputRef}
-        label="Paste Job Description"
+        label="Paste Job Description here"
         value={jd || ''}
-        // error={validJd === false}
+        error={validJd === false}
         helperText={
           validJd === false
             ? `Job descriptions must be at least ${MIN_LENGTH} characters`

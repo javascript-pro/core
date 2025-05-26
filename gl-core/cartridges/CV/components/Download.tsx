@@ -41,8 +41,8 @@ export default function Download(cv: any) {
       <MightyButton
         onClick={onDownloadClick}
         color="secondary"
-        label="Download"
-        variant="contained"
+        label="Download PDF"
+        // variant="outlined"
         icon="download"
       />
     </Box>
