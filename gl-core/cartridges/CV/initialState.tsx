@@ -6,4 +6,5 @@ export type TCVSlice = {
 export const initialState: TCVSlice = {
   appMode: 'cv',
   showJD: false,
+  validJD: false,
 };

@@ -93,7 +93,11 @@ export default function Core({
                 lg: 3,
               }}
             >
-              <Box id="sidebar" component="aside" sx={{ mx: 2 }}>
+              <Box 
+                id="sidebar" 
+                component="aside" 
+                sx={{ mx: 0 }}
+              >
                 { !isCV && <Box sx={{mx:4, mb: 2}}>
                               <CV
                                 mode="advert" 

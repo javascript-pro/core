@@ -1,12 +1,16 @@
 'use client';
 import React from 'react';
-import { Box, TextField, Typography } from '@mui/material';
+import {
+  Box,
+  TextField,
+  Typography,
+  IconButton,
+  InputAdornment,
+} from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
 import { useSlice, useDispatch } from '../../../';
 import { updateCVKey } from '../';
 
-const APPBAR_HEIGHT = 64;
-const ESTIMATED_ROW_HEIGHT = 24;
-const PADDING = 48;
 const MIN_LENGTH = 100;
 
 export default function JD() {
@@ -15,20 +19,7 @@ export default function JD() {
   const { cv } = slice;
   const { jd, validJd } = cv;
 
-  const [minRows, setMinRows] = React.useState(10);
   const inputRef = React.useRef<HTMLTextAreaElement | null>(null);
-
-  React.useEffect(() => {
-    const updateRows = () => {
-      const availableHeight = window.innerHeight - APPBAR_HEIGHT - PADDING;
-      const rows = Math.floor(availableHeight / ESTIMATED_ROW_HEIGHT);
-      setMinRows(rows > 10 ? rows : 10);
-    };
-
-    updateRows();
-    window.addEventListener('resize', updateRows);
-    return () => window.removeEventListener('resize', updateRows);
-  }, []);
 
   React.useEffect(() => {
     setTimeout(() => {
@@ -36,7 +27,7 @@ export default function JD() {
         inputRef.current.focus();
       }
     }, 1000);
-  }, [minRows]);
+  }, []);
 
   const validateJD = (text: string) => {
     const isValid = text.length >= MIN_LENGTH;
@@ -54,7 +45,11 @@ export default function JD() {
     const pasted = e.clipboardData.getData('text');
     dispatch(updateCVKey('cv', { jd: pasted }));
     validateJD(pasted);
-    e.preventDefault(); // Prevent double-paste issue
+    e.preventDefault();
+  };
+
+  const handleClear = () => {
+    dispatch(updateCVKey('cv', { jd: '', validJd: false }));
   };
 
   return (
@@ -63,28 +58,48 @@ export default function JD() {
         Job Description
       </Typography>
 
-      <Typography variant="body1" sx={{mb: 3}}>
+      <Typography variant="body1" sx={{ mb: 3 }}>
         Try our Job Fit AI — powered by a Large Language Model — to see how well we match a specific role. Paste in a job description and get an instant assessment.
       </Typography>
 
       <TextField
+        sx={{ mb: 2 }}
         fullWidth
         multiline
         variant='filled'
         color="secondary"
-        rows={5}
+        rows={3}
         inputRef={inputRef}
         label="Paste Job Description here"
         value={jd || ''}
-        error={validJd === false}
         helperText={
           validJd === false
-            ? `Job descriptions must be at least ${MIN_LENGTH} characters`
+            ? `Must be at least ${MIN_LENGTH} characters`
             : ''
         }
         onChange={handleChange}
         onPaste={handlePaste}
+        InputProps={{
+          endAdornment: jd ? (
+            <InputAdornment position="end">
+              <IconButton
+                size="small"
+                onClick={handleClear}
+                edge="end"
+                aria-label="Clear job description"
+              >
+                <CloseIcon fontSize="small" />
+              </IconButton>
+            </InputAdornment>
+          ) : null,
+        }}
       />
+
+      {validJd && (
+        <Typography variant="body2" color="success.main">
+          Ready to send.
+        </Typography>
+      )}
     </Box>
   );
 }
