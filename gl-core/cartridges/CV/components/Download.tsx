@@ -15,7 +15,7 @@ export default function Download(cv: any) {
       <h4>
         <a href="https://goldlabel.pro">goldlabel.pro</a> | 
         <a href="mailto:goldlabel.apps@gmail.com">goldlabel.apps@gmail.com</a> |
-        <a href="https://wa.me/447745763122">+44 07745763122</a> |
+        <a href="https://wa.me/447745763122">+44 07745763122</a>
       </h4>
     ${marked.parse(cv.cv || '') as string}`;
     const fullHTML = templatePDF(html);
@@ -39,11 +39,10 @@ export default function Download(cv: any) {
     <Box>
       {/* <pre>markdown: {JSON.stringify(markdown, null, 2)}</pre> */}
       <MightyButton
-        mode="icon"
         onClick={onDownloadClick}
-        color="secondary"
+        variant='contained'
         label="Download PDF"
-        // variant="outlined"
+        color="primary"
         icon="download"
       />
     </Box>

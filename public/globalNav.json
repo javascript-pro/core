@@ -268,7 +268,7 @@
                   "REST API",
                   "Flickr"
                 ],
-                "excerpt": "REST API\n\n Cartridge: Flickr\n\nThis is a realworld backend endpoint. It powers real UI components. You can  or see it in action on .\n\nThis REST API demonstrates how we use Next.js App Router, Edgecompa"
+                "excerpt": "REST API\n\n Cartridge: \n\nThis is a realworld backend endpoint. It powers real UI components. You can view the code on  or see it in action on .\n\nThis REST API demonstrates how we use Next.js App Router"
               }
             ]
           }

@@ -31,9 +31,10 @@ export default function CV({
 }: TCV) {
   const dispatch = useDispatch();
   const cvSlice = useSlice().cv;
-  const { appMode, showJD } = cvSlice;
+  const { appMode, showJD, validJD } = cvSlice;
   const router = useRouter();
-  // console.log("markdown", markdown);
+
+  // console.log("validJD", validJD);
 
   const showToolbar = false;
 
@@ -70,19 +71,19 @@ export default function CV({
           
 
               { appMode === "cv" ? <MightyButton 
-                  mode="icon"
                   label="Paste job"
                   icon="job"
-                  color="secondary"
+                  variant='contained'
+                  color="primary"
                   onClick={() => {
                     dispatch(setCVKey("appMode", "jd"));
                     dispatch(setCVKey("showJD", !showJD));
                   }}
                 /> : <MightyButton 
-                  mode="icon"
                   label="View CV"
                   icon="doc"
-                  color="secondary"
+                  color="primary"
+                  variant='contained'
                   onClick={() => {
                     dispatch(setCVKey("appMode", "cv"));
                     dispatch(setCVKey("showJD", false));
@@ -91,7 +92,7 @@ export default function CV({
 
 
             { appMode === "cv" && <>
-              <Box sx={{ mr: 2, display: "flex" }}>
+              <Box sx={{ ml: 2, display: "flex" }}>
                 <Download cv={ markdown } />
               </Box>
             </> }
