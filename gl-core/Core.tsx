@@ -67,8 +67,9 @@ export default function Core({ frontmatter, body = null }: TCore) {
           id="sidebar"
           component="aside"
           sx={{
-            mr: 4,
-            ml: isMobile ? 4 : 0,
+            mr: isMobile ? 4.5 : 4,
+            ml: isMobile ? 4.5 : 0,
+            
           }}
         >
           {!isCV && (
@@ -106,7 +107,10 @@ export default function Core({ frontmatter, body = null }: TCore) {
                 lg: 9,
               }}
             >
-              <Box sx={{ mx: isMobile ? 4 : 6 }}>
+              <Box sx={{ 
+                mx: isMobile ? 4 : 6,
+                
+              }}>
                 <Photo
                   alt={frontmatter.title}
                   maxHeight={maxHeight}
@@ -128,10 +132,10 @@ export default function Core({ frontmatter, body = null }: TCore) {
               <Box
                 sx={{
                   px: isMobile ? 0.5 : 2,
-                  mt: !isMobile ? 3 : 0,
+                  mt: !isMobile ? 0 : 0,
                 }}
               >
-                <Box sx={{ height: isMobile ? 0 : 1 }} />
+                <Box sx={{ height: isMobile ? 20 : 1 }} />
                 {isApp ? app : <RenderMarkdown>{body}</RenderMarkdown>}
               </Box>
             </Grid>

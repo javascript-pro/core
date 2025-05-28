@@ -49,7 +49,7 @@ export default function Flickr({
     }
 
     return (
-      <Box sx={{ mx: 0 }}>
+      <Box sx={{  }}>
         {showToolbar && (
           <Toolbar>
             <MightyButton
@@ -62,7 +62,7 @@ export default function Flickr({
           </Toolbar>
         )}
 
-        <Box sx={{ mx: 4 }}>
+        <Box sx={{ mx: 2 }}>
           <CardHeader
             title={albumTitle}
             subheader={albumDescription}
@@ -110,8 +110,8 @@ export default function Flickr({
   if (mode === 'album-card') {
     return (
       <Advert
-        title={'Flickr'}
-        description={'Photos, titles and other meta data are managed in Flickr'}
+        title={'Flickr Cartridge'}
+        description={'Photos, titles and other meta data managed by Flickr'}
         onClick={() => {
           dispatch(routeTo('/free/flickr', router));
         }}

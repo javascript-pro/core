@@ -1,7 +1,7 @@
 ---
 order: 129
 title: Flickr
-description: Goldlabel Cartridge
+description: Photo Cartridge
 tags: free, cartridge
 slug: /free/flickr
 icon: flickr
