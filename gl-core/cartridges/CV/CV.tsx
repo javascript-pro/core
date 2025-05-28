@@ -26,7 +26,7 @@ export type TCV = {
   markdown?: string | null;
 };
 
-export default function CV({ 
+export default function CV({
   mode = null,
   markdown = 'no markdown. no problem.',
 }: TCV) {
@@ -39,30 +39,32 @@ export default function CV({
 
   const showToolbar = false;
 
-    if (mode === 'advert')
-      return (
-        <Advert
-          title={'C.V.'}
-          description={'A simple, useful AI tool to match a Job to our CV'}
-          onClick={() => {
-            dispatch(routeTo('/cv', router));
-          }}
-        />
+  if (mode === 'advert')
+    return (
+      <Advert
+        title={'C.V.'}
+        description={'A simple, useful AI tool to match a Job to our CV'}
+        onClick={() => {
+          dispatch(routeTo('/cv', router));
+        }}
+      />
     );
 
   if (mode === 'app')
-
-    if (appMode === "prompt"){
-      return <ShowPrompt />
+    if (appMode === 'prompt') {
+      return <ShowPrompt />;
     }
-    return (
-      <>
-        {/* <pre>cvSlice: {JSON.stringify(cvSlice, null, 2)}</pre> */}
-        <Box sx={{
-          display: "flex",
+  return (
+    <>
+      {/* <pre>cvSlice: {JSON.stringify(cvSlice, null, 2)}</pre> */}
+      <Box
+        sx={{
+          display: 'flex',
           mx: 4,
-        }}>
-          { appMode !== 'pristine' && showToolbar && <MightyButton
+        }}
+      >
+        {appMode !== 'pristine' && showToolbar && (
+          <MightyButton
             mode="icon"
             label="Reset"
             onClick={() => {
@@ -70,89 +72,94 @@ export default function CV({
             }}
             icon="reset"
             color="secondary"
-          /> }
+          />
+        )}
 
-              { appMode === "cv" ? <MightyButton 
-                  label="Paste for AI Match"
-                  icon="job"
-                  variant='contained'
-                  color="primary"
-                  onClick={() => {
-                    dispatch(setCVKey("appMode", "jd"));
-                    dispatch(setCVKey("showJD", !showJD));
-                  }}
-                /> : <MightyButton 
-                  label="View & Download CV"
-                  icon="doc"
-                  color="primary"
-                  variant='contained'
-                  onClick={() => {
-                    dispatch(setCVKey("appMode", "cv"));
-                    dispatch(setCVKey("showJD", false));
-                  }}
-                />  }
+        {appMode === 'cv' ? (
+          <MightyButton
+            label="Paste for AI Match"
+            icon="job"
+            variant="contained"
+            color="primary"
+            onClick={() => {
+              dispatch(setCVKey('appMode', 'jd'));
+              dispatch(setCVKey('showJD', !showJD));
+            }}
+          />
+        ) : (
+          <MightyButton
+            label="View & Download CV"
+            icon="doc"
+            color="primary"
+            variant="contained"
+            onClick={() => {
+              dispatch(setCVKey('appMode', 'cv'));
+              dispatch(setCVKey('showJD', false));
+            }}
+          />
+        )}
 
-
-            { appMode === "cv" && <>
-              <Box sx={{ ml: 2, display: "flex" }}>
-                <Download cv={ markdown } />
-              </Box>
-            </> }
-          </Box>
-
-        { showJD && <>
-            <Box sx={{ mx: 4 }}>
-              <JD />
+        {appMode === 'cv' && (
+          <>
+            <Box sx={{ ml: 2, display: 'flex' }}>
+              <Download cv={markdown} />
             </Box>
-          </> }
+          </>
+        )}
+      </Box>
 
-        { appMode === 'pristine' ? (
+      {showJD && (
+        <>
           <Box sx={{ mx: 4 }}>
-           
-            {/* <Typography variant="h6" gutterBottom>
+            <JD />
+          </Box>
+        </>
+      )}
+
+      {appMode === 'pristine' ? (
+        <Box sx={{ mx: 4 }}>
+          {/* <Typography variant="h6" gutterBottom>
               Need our CV, or something smarter?
             </Typography> */}
 
-            <List>
-              <ListItemButton
-                onClick={() => {
-                  dispatch(setAppMode('jd'));
-                }}
-              >
-                <ListItemIcon>
-                  <Icon icon="openai" />
-                </ListItemIcon>
-                <ListItemText primary="Large Language Model Generated Job Fit AI" />
-              </ListItemButton>
+          <List>
+            <ListItemButton
+              onClick={() => {
+                dispatch(setAppMode('jd'));
+              }}
+            >
+              <ListItemIcon>
+                <Icon icon="openai" />
+              </ListItemIcon>
+              <ListItemText primary="Large Language Model Generated Job Fit AI" />
+            </ListItemButton>
 
-              <ListItemButton
-                onClick={() => {
-                  dispatch(setAppMode('cv'));
-                }}
-                color="secondary"
-              >
-                <ListItemIcon>
-                  <Icon icon="doc" />
-                </ListItemIcon>
-                <ListItemText primary="View and Download our CV" />
-              </ListItemButton>
-            </List>
-            
-          </Box>
-        ) : (
-          <>
-          { appMode === "cv" && !showJD && <>
-            <Box sx={{mt: 2}}>
-              <RenderMarkdown>
-                {markdown}
-              </RenderMarkdown>
-            </Box>
-          </> }
-          
-          </>
-        )}
-      </>
-    );
+            <ListItemButton
+              onClick={() => {
+                dispatch(setAppMode('cv'));
+              }}
+              color="secondary"
+            >
+              <ListItemIcon>
+                <Icon icon="doc" />
+              </ListItemIcon>
+              <ListItemText primary="View and Download our CV" />
+            </ListItemButton>
+          </List>
+        </Box>
+      ) : (
+        <>
+          {appMode === 'cv' && !showJD && (
+            <>
+              <Box sx={{ mt: 2 }}>
+                <RenderMarkdown>{markdown}</RenderMarkdown>
+              </Box>
+            </>
+          )}
+        </>
+      )}
+    </>
+  );
 
   return <pre>cvSlice: {JSON.stringify(cvSlice, null, 2)}</pre>;
 }

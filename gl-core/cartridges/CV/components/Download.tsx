@@ -6,7 +6,6 @@ import { MightyButton } from '../../../';
 import { templatePDF } from '../';
 
 export default function Download(cv: any) {
-
   const onDownloadClick = async () => {
     // console.log('cv.cv', cv.cv);
     const { default: html2pdf } = await import('html2pdf.js');
@@ -40,7 +39,7 @@ export default function Download(cv: any) {
       {/* <pre>markdown: {JSON.stringify(markdown, null, 2)}</pre> */}
       <MightyButton
         onClick={onDownloadClick}
-        variant='contained'
+        variant="contained"
         label="Download CV"
         color="primary"
         icon="download"

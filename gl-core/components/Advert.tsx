@@ -23,21 +23,22 @@ export default function Advert({
     console.log('No onClick for advert');
   },
 }: TAdvert) {
-
-  const isMobile = useIsMobile()
+  const isMobile = useIsMobile();
 
   return (
     <>
       <Stack sx={{ width: '100%' }} spacing={2}>
         <ButtonBase sx={{ textAlign: 'left' }} onClick={onClick}>
-          <Alert 
-            sx={{ width: '100%' }} 
-            severity="success" 
+          <Alert
+            sx={{ width: '100%' }}
+            severity="success"
             variant="outlined"
             icon={<Icon icon="star" />}
           >
-            <Typography variant='body1'>{title}</Typography>
-            { !isMobile && <Typography variant='body2'>{description}</Typography> }
+            <Typography variant="body1">{title}</Typography>
+            {!isMobile && (
+              <Typography variant="body2">{description}</Typography>
+            )}
           </Alert>
         </ButtonBase>
       </Stack>

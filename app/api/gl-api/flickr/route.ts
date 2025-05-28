@@ -13,7 +13,10 @@ const flickrUserId = process.env.FLICKR_USER;
 const CACHE_TTL = 1000 * 60 * 5;
 
 // In-memory cache for album and photo data to avoid excessive API calls
-const albumCache: Record<string, { time: number; photos: TFlickrPhoto[]; meta: any }> = {};
+const albumCache: Record<
+  string,
+  { time: number; photos: TFlickrPhoto[]; meta: any }
+> = {};
 const photoCache: Record<string, { time: number; photo: TFlickrPhoto }> = {};
 
 /**
@@ -166,10 +169,34 @@ export async function GET(request: NextRequest) {
       lng: parseFloat(p.longitude) || null,
       meta: { tags: p.tags?.split(' ') || [] },
       sizes: {
-        orig: p.url_o ? { src: p.url_o, width: parseInt(p.width_o), height: parseInt(p.height_o) } : undefined,
-        large: p.url_h ? { src: p.url_h, width: parseInt(p.width_h), height: parseInt(p.height_h) } : undefined,
-        medium: p.url_c ? { src: p.url_c, width: parseInt(p.width_c), height: parseInt(p.height_c) } : undefined,
-        small: p.url_n ? { src: p.url_n, width: parseInt(p.width_n), height: parseInt(p.height_n) } : undefined,
+        orig: p.url_o
+          ? {
+              src: p.url_o,
+              width: parseInt(p.width_o),
+              height: parseInt(p.height_o),
+            }
+          : undefined,
+        large: p.url_h
+          ? {
+              src: p.url_h,
+              width: parseInt(p.width_h),
+              height: parseInt(p.height_h),
+            }
+          : undefined,
+        medium: p.url_c
+          ? {
+              src: p.url_c,
+              width: parseInt(p.width_c),
+              height: parseInt(p.height_c),
+            }
+          : undefined,
+        small: p.url_n
+          ? {
+              src: p.url_n,
+              width: parseInt(p.width_n),
+              height: parseInt(p.height_n),
+            }
+          : undefined,
         thumb: undefined, // Will be filled next
       },
     }));
@@ -189,7 +216,7 @@ export async function GET(request: NextRequest) {
         } catch (e) {
           return photo; // Fallback if thumb fetch fails
         }
-      })
+      }),
     );
 
     const coverPhoto = await getPhotoWithSizes(data.photoset.primary);

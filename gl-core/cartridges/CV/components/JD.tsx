@@ -59,12 +59,12 @@ export default function JD() {
   };
 
   const handlePrompt = () => {
-    dispatch(updateCVKey('cv', { appMode: "prompt" }));
+    dispatch(updateCVKey('cv', { appMode: 'prompt' }));
   };
 
   return (
     <Box sx={{ py: 2 }}>
-      <Typography variant='h5' gutterBottom>
+      <Typography variant="h5" gutterBottom>
         Job Description
       </Typography>
 
@@ -72,7 +72,7 @@ export default function JD() {
         sx={{ mb: 2 }}
         fullWidth
         multiline
-        variant='filled'
+        variant="filled"
         color="secondary"
         rows={2}
         inputRef={inputRef}
@@ -99,30 +99,39 @@ export default function JD() {
             </InputAdornment>
           ) : null,
         }}
-      />      
+      />
 
-      {validJd && ( <>
-        <FormLabel component="legend" sx={{ mt: 3 }}>
-          Preferred Viewpoint
-        </FormLabel>
-     
-        <RadioGroup
-          row
-          value={viewpoint}
-          onChange={handleViewpointChange}
-          sx={{ mb: 3 }}
-        >
-          <FormControlLabel value="first" control={<Radio />} label="1st person (I am...)" />
-          <FormControlLabel value="third" control={<Radio />} label="3rd person (The candidate...)" />
-        </RadioGroup>
-        <MightyButton 
+      {validJd && (
+        <>
+          <FormLabel component="legend" sx={{ mt: 3 }}>
+            Preferred Viewpoint
+          </FormLabel>
+
+          <RadioGroup
+            row
+            value={viewpoint}
+            onChange={handleViewpointChange}
+            sx={{ mb: 3 }}
+          >
+            <FormControlLabel
+              value="first"
+              control={<Radio />}
+              label="1st person (I am...)"
+            />
+            <FormControlLabel
+              value="third"
+              control={<Radio />}
+              label="3rd person (The candidate...)"
+            />
+          </RadioGroup>
+          <MightyButton
             onClick={() => {
               handlePrompt();
             }}
             label="Analyse Job Fit"
             icon="openai"
             color="primary"
-            variant='contained'
+            variant="contained"
           />
         </>
       )}

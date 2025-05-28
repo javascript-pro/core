@@ -1,8 +1,6 @@
 'use client';
 import React from 'react';
-import {
-  Box,
-} from '@mui/material';
+import { Box } from '@mui/material';
 import { useSlice } from '../../../../gl-core';
 
 export default function ShowPrompt() {
@@ -16,8 +14,8 @@ export default function ShowPrompt() {
 
   return (
     <Box sx={{}}>
-        {promptStr}
-        {/* <pre>promptStr: {JSON.stringify(promptStr, null, 2)}</pre> */}
+      {promptStr}
+      {/* <pre>promptStr: {JSON.stringify(promptStr, null, 2)}</pre> */}
     </Box>
   );
 }
