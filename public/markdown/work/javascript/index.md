@@ -8,8 +8,6 @@ image: /png/javascript.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React, Angular, Vue, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS, JSON
 ---
 
-| [REST API](/work/javascript/rest-api)
-
 ## JavaScript Whatever the Weather
 
 We’ve been writing JavaScript since it was still called ECMAScript.
@@ -18,8 +16,8 @@ Before the frameworks, before npm, before it ate the world—we were already dee
 
 We’ve built Flash apps in ActionScript.  
 We’ve written jQuery plugins by hand.  
-We’ve moved through Backbone, Angular, React, and beyond.  
-We’ve worked in Node.js since 0.6.
+We’ve moved through Vanilla JS, React, and beyond.  
+We’ve worked in Node.js since 2006.
 
 And through it all, one thing has remained constant: _JavaScript runs the show_.
 

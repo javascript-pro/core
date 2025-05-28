@@ -64,7 +64,8 @@ export default function JD() {
 
   return (
     <Box sx={{ py: 2 }}>
-      <Typography variant="h5" gutterBottom>
+      
+      <Typography variant="h5" sx={{mt: 2, mb: 3}}>
         Job Description
       </Typography>
 

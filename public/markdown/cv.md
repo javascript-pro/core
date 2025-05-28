@@ -1,9 +1,9 @@
 ---
 order: 2
 title: C.V.
-description: Large Language Model Generated Job Fit AI
+description: Simple AI tool to match your Job to our CV
 slug: /cv
-icon: doc
+icon: openai
 image: /jpg/cv.jpg
 tags: CV, jobs, work, resume
 api: https://goldlabel.pro/markdown/cv.md

@@ -6,13 +6,13 @@ import {
   ListItemButton,
   ListItemText,
   ListItemIcon,
-  Typography,
 } from '@mui/material';
 import { useRouter } from 'next/navigation';
 import {
   MightyButton,
   Icon,
   Advert,
+  useIsMobile,
   useSlice,
   useDispatch,
   routeTo,
@@ -34,6 +34,7 @@ export default function CV({
   const cvSlice = useSlice().cv;
   const { appMode, showJD } = cvSlice;
   const router = useRouter();
+  const isMobile = useIsMobile();
 
   // console.log("appMode", appMode);
 
@@ -42,8 +43,8 @@ export default function CV({
   if (mode === 'advert')
     return (
       <Advert
-        title={'C.V.'}
-        description={'A simple, useful AI tool to match a Job to our CV'}
+        title={'C.V. Cartridge'}
+        description={'Simple AI tool to match your Job to our CV'}
         onClick={() => {
           dispatch(routeTo('/cv', router));
         }}
@@ -57,12 +58,14 @@ export default function CV({
   return (
     <>
       {/* <pre>cvSlice: {JSON.stringify(cvSlice, null, 2)}</pre> */}
+      <Box sx={{ mt: isMobile ? 1 : 2 }} />
       <Box
         sx={{
           display: 'flex',
           mx: 4,
         }}
       >
+        
         {appMode !== 'pristine' && showToolbar && (
           <MightyButton
             mode="icon"
@@ -77,8 +80,8 @@ export default function CV({
 
         {appMode === 'cv' ? (
           <MightyButton
-            label="Paste for AI Match"
-            icon="job"
+            label="AI Match"
+            icon="openai"
             variant="contained"
             color="primary"
             onClick={() => {
