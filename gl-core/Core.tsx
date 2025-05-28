@@ -69,7 +69,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
           sx={{
             mr: isMobile ? 4.5 : 4,
             ml: isMobile ? 4.5 : 0,
-            
           }}
         >
           {!isCV && (
@@ -107,16 +106,15 @@ export default function Core({ frontmatter, body = null }: TCore) {
                 lg: 9,
               }}
             >
-              <Box sx={{ 
+              {/* <Box sx={{ 
                 mx: isMobile ? 4 : 6,
-                
               }}>
                 <Photo
                   alt={frontmatter.title}
                   maxHeight={maxHeight}
                   src={frontmatter?.image ?? null}
                 />
-              </Box>
+              </Box> */}
 
               <Box
                 sx={{
@@ -132,10 +130,9 @@ export default function Core({ frontmatter, body = null }: TCore) {
               <Box
                 sx={{
                   px: isMobile ? 0.5 : 2,
-                  mt: !isMobile ? 0 : 0,
                 }}
               >
-                <Box sx={{ height: isMobile ? 20 : 1 }} />
+                <Box sx={{ mt: isMobile ? 2 : 1 }} />
                 {isApp ? app : <RenderMarkdown>{body}</RenderMarkdown>}
               </Box>
             </Grid>

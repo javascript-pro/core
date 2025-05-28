@@ -45,7 +45,7 @@ export default function Flickr({
     const notReady = !album?.meta || !Array.isArray(albumPhotos);
 
     if (notReady) {
-      return <Alert severity="warning">Still loading...</Alert>;
+      return <Alert sx={{ mx: 4 }} severity="warning">Still loading...</Alert>;
     }
 
     return (

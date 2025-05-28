@@ -129,7 +129,7 @@
         "title": "C.V.",
         "slug": "/cv",
         "order": 2,
-        "icon": "doc",
+        "icon": "openai",
         "type": "file",
         "tags": [
           "CV",
@@ -252,7 +252,7 @@
               "Headless CMS",
               "JSON"
             ],
-            "excerpt": "| \n\n JavaScript Whatever the Weather\n\nWe’ve been writing JavaScript since it was still called ECMAScript.\n\nBefore the frameworks, before npm, before it ate the world—we were already deep in the langua",
+            "excerpt": "JavaScript Whatever the Weather\n\nWe’ve been writing JavaScript since it was still called ECMAScript.\n\nBefore the frameworks, before npm, before it ate the world—we were already deep in the language th",
             "children": [
               {
                 "title": "REST API",
