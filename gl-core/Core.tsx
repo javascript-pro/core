@@ -40,7 +40,7 @@ export default function Core({
   const pathname = usePathname();
   const router = useRouter();
   const isMobile = useIsMobile();
-  const maxHeight = isMobile ? 120 : 315;
+  const maxHeight = isMobile ? 155 : 315;
   const isApp =
     pathname.startsWith('/cv') || pathname.startsWith('/free/flickr');
 
@@ -113,12 +113,19 @@ export default function Core({
                 lg: 9,
               }}
             >
-              <Photo 
-                maxHeight={maxHeight} 
-                src={frontmatter?.image ?? null}
-              />
-              { isMobile && getAside() }
-              <Box sx={{ px: 2 }}>
+              <Box sx={{ mx: 4 }}>
+                <Photo 
+                  alt={frontmatter.title}
+                  maxHeight={maxHeight} 
+                  src={frontmatter?.image ?? null}
+
+                />
+              </Box>
+              <Box sx={{ mt: isMobile ? 3 : 0 }}>
+                { isMobile && getAside() }
+              </Box>
+
+              <Box sx={{ px: isMobile ? 0.5 : 2 }}>
                 {pathname !== '/' && <PageBreadcrumb />}
                 <Box sx={{ height: 24 }} />
                 {isApp ? app : <RenderMarkdown>{body}</RenderMarkdown>}
