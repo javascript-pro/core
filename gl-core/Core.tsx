@@ -118,10 +118,12 @@ export default function Core({
                   alt={frontmatter.title}
                   maxHeight={maxHeight} 
                   src={frontmatter?.image ?? null}
-
                 />
               </Box>
-              <Box sx={{ mt: isMobile ? 3 : 0 }}>
+
+              <Box sx={{ 
+                my: isMobile ? 3 : 0,
+              }}>
                 { isMobile && getAside() }
               </Box>
 
