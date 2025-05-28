@@ -1,23 +1,19 @@
 'use client';
 import * as React from 'react';
-import { 
+import {
   CardHeader,
-  Box, 
+  Box,
   Alert,
   Toolbar,
   List,
   ListItemButton,
   ListItemAvatar,
   ListItemText,
-  
 } from '@mui/material';
 import { useDispatch, Advert, routeTo } from '../../../gl-core';
 import { initFlickr, resetFlickr } from './';
 import { TFlickr } from './types';
-import { 
-  MightyButton,
-  useSlice,
-} from '../../../gl-core';
+import { MightyButton, useSlice } from '../../../gl-core';
 import { useRouter } from 'next/navigation';
 
 export default function Flickr({
@@ -30,9 +26,7 @@ export default function Flickr({
   const router = useRouter();
   const dispatch = useDispatch();
   const flickrSlice = useSlice().flickr;
-  const {
-    album = null,
-  } = flickrSlice ?? {};
+  const { album = null } = flickrSlice ?? {};
 
   const showToolbar = false;
   const albumTitle = album?.meta?.title || '';
@@ -51,10 +45,7 @@ export default function Flickr({
     const notReady = !album?.meta || !Array.isArray(albumPhotos);
 
     if (notReady) {
-      return <Alert 
-              severity="warning">
-              Still loading...
-            </Alert>
+      return <Alert severity="warning">Still loading...</Alert>;
     }
 
     return (
@@ -72,7 +63,7 @@ export default function Flickr({
         )}
 
         <Box sx={{ mx: 4 }}>
-          <CardHeader 
+          <CardHeader
             title={albumTitle}
             subheader={albumDescription}
             action={
@@ -103,7 +94,7 @@ export default function Flickr({
                       src={thumbSrc}
                     />
                   </ListItemAvatar>
-                  <ListItemText 
+                  <ListItemText
                     primary={photoTitle}
                     secondary={photoDescription}
                   />
@@ -117,13 +108,15 @@ export default function Flickr({
   }
 
   if (mode === 'album-card') {
-    return <Advert
-            title={'Flickr'}
-            description={'Photos, titles and other meta data are managed in Flickr'}
-            onClick={() => {
-              dispatch(routeTo('/free/flickr', router));
-            }}
-          />
+    return (
+      <Advert
+        title={'Flickr'}
+        description={'Photos, titles and other meta data are managed in Flickr'}
+        onClick={() => {
+          dispatch(routeTo('/free/flickr', router));
+        }}
+      />
+    );
   }
 
   if (mode === 'default') return <></>;

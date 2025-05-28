@@ -51,10 +51,7 @@
             "order": 10,
             "icon": "api",
             "type": "file",
-            "tags": [
-              "free",
-              "api"
-            ],
+            "tags": ["free", "api"],
             "excerpt": "Public API\n\n glapi/flickr endpoints"
           },
           {
@@ -63,10 +60,7 @@
             "order": 10,
             "icon": "github",
             "type": "file",
-            "tags": [
-              "free",
-              "core"
-            ],
+            "tags": ["free", "core"],
             "excerpt": "Open Source and Free Forever\n\nGoldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo archit"
           },
           {
@@ -91,10 +85,7 @@
             "order": 129,
             "icon": "flickr",
             "type": "file",
-            "tags": [
-              "free",
-              "cartridge"
-            ],
+            "tags": ["free", "cartridge"],
             "excerpt": "What does the Flickr Cartridge do?\n\nIt provides a React component called <Flickr / which interacts with Next.js's built in API layer. The API safely connects to Flickr and returns all the information "
           },
           {
@@ -103,12 +94,7 @@
             "order": 130,
             "icon": "admin",
             "type": "file",
-            "tags": [
-              "cartridges",
-              "cartridge",
-              "free",
-              "bouncer"
-            ],
+            "tags": ["cartridges", "cartridge", "free", "bouncer"],
             "excerpt": "Authentication and Access Control System\n\n Bouncer is the name of our authentication and access control system built on Firebase Authentication and Firestore. It is included in the Core as a reusable "
           },
           {
@@ -117,10 +103,7 @@
             "order": 1000,
             "icon": "api",
             "type": "file",
-            "tags": [
-              "free",
-              "opensource"
-            ],
+            "tags": ["free", "opensource"],
             "excerpt": "Why We Open Source\n\nWe’ve been building JavaScript applications for over 20 years. In that time, we’ve seen tools come and go. Trends rise, crash, and return again under a different name.\n\nWhat’s rema"
           }
         ]
@@ -131,12 +114,7 @@
         "order": 2,
         "icon": "doc",
         "type": "file",
-        "tags": [
-          "CV",
-          "jobs",
-          "work",
-          "resume"
-        ],
+        "tags": ["CV", "jobs", "work", "resume"],
         "excerpt": "Fullstack JavaScript Developer\n\nOver 20 years of experience delivering scalable web applications across startups, enterprises, and remotefirst teams in the UK, Europe, and Australia and beyond. Deep e"
       },
       {
@@ -179,10 +157,7 @@
                 "order": 250,
                 "icon": "work",
                 "type": "file",
-                "tags": [
-                  "remote",
-                  "hybrid"
-                ],
+                "tags": ["remote", "hybrid"],
                 "excerpt": "| \n\n Corporate attitudes to remote working have changed dramatically in recent years.\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communicat"
               },
               {
@@ -191,13 +166,7 @@
                 "order": 555,
                 "icon": "account",
                 "type": "file",
-                "tags": [
-                  "cookies",
-                  "gdpr",
-                  "privacy",
-                  "terms",
-                  "trust"
-                ],
+                "tags": ["cookies", "gdpr", "privacy", "terms", "trust"],
                 "excerpt": "| \n\n We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead develop"
               }
             ]
@@ -209,10 +178,7 @@
             "order": 10,
             "icon": "github",
             "type": "folder",
-            "tags": [
-              "github",
-              "process"
-            ],
+            "tags": ["github", "process"],
             "excerpt": "We use GitHub for everything. Including . Most of the communication done between us and our clients during development is done through GitHub in the form of comments, pull resuests, reviews and so for",
             "children": []
           },
@@ -223,9 +189,7 @@
             "order": 10,
             "icon": "private",
             "type": "folder",
-            "tags": [
-              "private"
-            ],
+            "tags": ["private"],
             "excerpt": "This page requires a higher level of access",
             "children": []
           },

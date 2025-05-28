@@ -1,9 +1,6 @@
 'use client';
 import * as React from 'react';
-import { 
-  usePathname, 
-  useRouter, 
-} from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { CssBaseline, Box, Grid } from '@mui/material';
 import {
   Theme,
@@ -33,10 +30,7 @@ export type TCore = {
   children?: React.ReactNode;
 };
 
-export default function Core({ 
-  frontmatter, 
-  body = null
-}: TCore) {
+export default function Core({ frontmatter, body = null }: TCore) {
   const pathname = usePathname();
   const router = useRouter();
   const isMobile = useIsMobile();
@@ -46,54 +40,54 @@ export default function Core({
 
   const isCV = pathname === '/cv';
   const isFlickr = pathname === '/free/flickr';
-  
+
   let app = <></>;
   switch (true) {
     case pathname.startsWith('/cv'):
-      app = <CV 
-              mode="app"
-              markdown={body}
-            />;
+      app = <CV mode="app" markdown={body} />;
       break;
     case pathname.startsWith('/free/flickr'):
-      app = <Flickr 
-              mode="app"
-              id="72177720326317140"
-            />;
+      app = <Flickr mode="app" id="72177720326317140" />;
       break;
     default:
       break;
   }
 
   const getAside = () => {
-    return  <Grid
-              size={{
-                xs: 12,
-                sm: 6,
-                md: 4,
-                lg: 3,
+    return (
+      <Grid
+        size={{
+          xs: 12,
+          sm: 6,
+          md: 4,
+          lg: 3,
+        }}
+      >
+        <Box
+          id="sidebar"
+          component="aside"
+          sx={{
+            mr: 4,
+            ml: isMobile ? 4 : 0,
+          }}
+        >
+          {!isCV && (
+            <Box sx={{ mb: 2 }}>
+              <CV mode="advert" />
+            </Box>
+          )}
+          {!isFlickr && (
+            <Flickr
+              mode="album-card"
+              id="72177720326317140"
+              onClick={() => {
+                router.push(`/free/flickr`);
               }}
-            >
-              <Box 
-                id="sidebar" 
-                component="aside"
-                sx={{
-                  mr: 4,
-                  ml: isMobile ? 4 : 0,
-                }}
-              >
-                { !isCV && <Box sx={{ mb: 2 }}>
-                              <CV mode="advert" />
-                            </Box> }
-                { !isFlickr && <Flickr
-                  mode="album-card"
-                  id="72177720326317140"
-                  onClick={() => {
-                    router.push(`/free/flickr`);
-                  }}
-                /> }
-              </Box>
-            </Grid>
+            />
+          )}
+        </Box>
+      </Grid>
+    );
   };
 
   return (
@@ -104,7 +98,6 @@ export default function Core({
           <Header frontmatter={frontmatter} />
 
           <Grid container spacing={1}>
-
             <Grid
               size={{
                 xs: 12,
@@ -113,29 +106,36 @@ export default function Core({
                 lg: 9,
               }}
             >
-              <Box sx={{ mx: 4 }}>
-                <Photo 
+              <Box sx={{ mx: isMobile ? 4 : 6 }}>
+                <Photo
                   alt={frontmatter.title}
-                  maxHeight={maxHeight} 
+                  maxHeight={maxHeight}
                   src={frontmatter?.image ?? null}
                 />
               </Box>
 
-              <Box sx={{ 
-                my: isMobile ? 3 : 0,
-              }}>
-                { isMobile && getAside() }
+              <Box
+                sx={{
+                  px: isMobile ? 0.5 : 2,
+                  mt: !isMobile ? 3 : 2,
+                }}
+              >
+                {pathname !== '/' && <PageBreadcrumb />}
               </Box>
 
-              <Box sx={{ px: isMobile ? 0.5 : 2 }}>
-                {pathname !== '/' && <PageBreadcrumb />}
-                <Box sx={{ height: 24 }} />
+              <Box sx={{ mt: isMobile ? 2 : 0 }}>{isMobile && getAside()}</Box>
+
+              <Box
+                sx={{
+                  px: isMobile ? 0.5 : 2,
+                  mt: !isMobile ? 3 : 0,
+                }}
+              >
+                <Box sx={{ height: isMobile ? 0 : 1 }} />
                 {isApp ? app : <RenderMarkdown>{body}</RenderMarkdown>}
               </Box>
             </Grid>
-            
-            { !isMobile && getAside() }
-            
+            {!isMobile && getAside()}
           </Grid>
         </MovieClip>
       </Flash>

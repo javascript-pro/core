@@ -2,10 +2,8 @@
 import { TUbereduxDispatch } from '../../../';
 import { setUbereduxKey } from '../../../';
 
-export const setCVKey = (
-  key: string,
-  value: any,
-): any =>
+export const setCVKey =
+  (key: string, value: any): any =>
   async (dispatch: TUbereduxDispatch, getState: () => any) => {
     try {
       // console.log("setCVKey", key, value)

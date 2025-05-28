@@ -8,10 +8,7 @@ export type TPhotoPopup = {
   [key: string]: any;
 };
 
-export default function PhotoPopup({ 
-  photo = null,
-}: TPhotoPopup) {
-
+export default function PhotoPopup({ photo = null }: TPhotoPopup) {
   return (
     <>
       <pre style={{ fontSize: 10 }}>
