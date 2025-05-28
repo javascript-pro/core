@@ -7,7 +7,7 @@ import {
   ButtonBase,
   IconButton,
 } from '@mui/material';
-import { Icon, routeTo, useDispatch } from '../../gl-core';
+import { Icon, useIsMobile } from '../../gl-core';
 // import { toggleAdvert } from '../';
 
 export type TAdvert = {
@@ -24,6 +24,8 @@ export default function Advert({
   },
 }: TAdvert) {
 
+  const isMobile = useIsMobile()
+
   return (
     <>
       <Stack sx={{ width: '100%' }} spacing={2}>
@@ -35,7 +37,7 @@ export default function Advert({
             icon={<Icon icon="star" />}
           >
             <Typography variant='body1'>{title}</Typography>
-            <Typography variant='body2'>{description}</Typography>
+            { !isMobile && <Typography variant='body2'>{description}</Typography> }
           </Alert>
         </ButtonBase>
       </Stack>
