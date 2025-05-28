@@ -1,6 +1,7 @@
 import CV from './CV';
 import { TCV } from './CV';
 import CommandBar from './components/CommandBar';
+import ShowPrompt from './components/ShowPrompt';
 import AIResponse from './components/AIResponse';
 import Resume from './components/Resume';
 import JD from './components/JD';
@@ -16,6 +17,7 @@ export type { TCV };
 
 export {
   CV,
+  ShowPrompt,
   CommandBar,
   setAppMode,
   setCVKey,

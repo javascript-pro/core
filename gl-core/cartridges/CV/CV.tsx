@@ -6,6 +6,7 @@ import {
   ListItemButton,
   ListItemText,
   ListItemIcon,
+  Typography,
 } from '@mui/material';
 import { useRouter } from 'next/navigation';
 import {
@@ -17,7 +18,7 @@ import {
   routeTo,
   RenderMarkdown,
 } from '../../';
-import { JD, setAppMode, setCVKey, resetCV, Download } from '../CV';
+import { JD, setAppMode, setCVKey, resetCV, Download, ShowPrompt } from '../CV';
 
 export type TCV = {
   mode: 'alert' | 'advert' | 'app' | null;
@@ -31,10 +32,10 @@ export default function CV({
 }: TCV) {
   const dispatch = useDispatch();
   const cvSlice = useSlice().cv;
-  const { appMode, showJD, validJD } = cvSlice;
+  const { appMode, showJD } = cvSlice;
   const router = useRouter();
 
-  // console.log("validJD", validJD);
+  // console.log("appMode", appMode);
 
   const showToolbar = false;
 
@@ -50,6 +51,10 @@ export default function CV({
     );
 
   if (mode === 'app')
+
+    if (appMode === "prompt"){
+      return <ShowPrompt />
+    }
     return (
       <>
         {/* <pre>cvSlice: {JSON.stringify(cvSlice, null, 2)}</pre> */}
@@ -57,7 +62,6 @@ export default function CV({
           display: "flex",
           mx: 4,
         }}>
-           
           { appMode !== 'pristine' && showToolbar && <MightyButton
             mode="icon"
             label="Reset"
@@ -68,10 +72,8 @@ export default function CV({
             color="secondary"
           /> }
 
-          
-
               { appMode === "cv" ? <MightyButton 
-                  label="Paste job"
+                  label="Paste for AI Match"
                   icon="job"
                   variant='contained'
                   color="primary"
@@ -80,7 +82,7 @@ export default function CV({
                     dispatch(setCVKey("showJD", !showJD));
                   }}
                 /> : <MightyButton 
-                  label="View CV"
+                  label="View & Download CV"
                   icon="doc"
                   color="primary"
                   variant='contained'
@@ -154,3 +156,9 @@ export default function CV({
 
   return <pre>cvSlice: {JSON.stringify(cvSlice, null, 2)}</pre>;
 }
+
+/*
+<Typography variant="body1" sx={{ mb: 3 }}>
+  Try our Job Fit AI — powered by a Large Language Model — to see how well we match a specific role. Paste in a job description and get an instant assessment.
+</Typography>
+*/

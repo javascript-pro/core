@@ -6,9 +6,13 @@ import {
   Typography,
   IconButton,
   InputAdornment,
+  RadioGroup,
+  FormControlLabel,
+  Radio,
+  Tooltip,
+  FormLabel,
 } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
-import { useSlice, useDispatch } from '../../../';
+import { useSlice, useDispatch, Icon, MightyButton } from '../../../../gl-core';
 import { updateCVKey } from '../';
 
 const MIN_LENGTH = 100;
@@ -17,15 +21,13 @@ export default function JD() {
   const dispatch = useDispatch();
   const slice = useSlice();
   const { cv } = slice;
-  const { jd, validJd } = cv;
+  const { jd, validJd, viewpoint } = cv;
 
   const inputRef = React.useRef<HTMLTextAreaElement | null>(null);
 
   React.useEffect(() => {
     setTimeout(() => {
-      if (inputRef.current) {
-        inputRef.current.focus();
-      }
+      if (inputRef.current) inputRef.current.focus();
     }, 1000);
   }, []);
 
@@ -52,14 +54,18 @@ export default function JD() {
     dispatch(updateCVKey('cv', { jd: '', validJd: false }));
   };
 
+  const handleViewpointChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    dispatch(updateCVKey('cv', { viewpoint: e.target.value }));
+  };
+
+  const handlePrompt = () => {
+    dispatch(updateCVKey('cv', { appMode: "prompt" }));
+  };
+
   return (
     <Box sx={{ py: 2 }}>
       <Typography variant='h5' gutterBottom>
         Job Description
-      </Typography>
-
-      <Typography variant="body1" sx={{ mb: 3 }}>
-        Try our Job Fit AI — powered by a Large Language Model — to see how well we match a specific role. Paste in a job description and get an instant assessment.
       </Typography>
 
       <TextField
@@ -68,37 +74,57 @@ export default function JD() {
         multiline
         variant='filled'
         color="secondary"
-        rows={3}
+        rows={2}
         inputRef={inputRef}
         label="Paste Job Description here"
         value={jd || ''}
         helperText={
-          validJd === false
-            ? `Must be at least ${MIN_LENGTH} characters`
-            : ''
+          validJd === false ? `Must be at least ${MIN_LENGTH} characters` : ''
         }
         onChange={handleChange}
         onPaste={handlePaste}
         InputProps={{
           endAdornment: jd ? (
             <InputAdornment position="end">
-              <IconButton
-                size="small"
-                onClick={handleClear}
-                edge="end"
-                aria-label="Clear job description"
-              >
-                <CloseIcon fontSize="small" />
-              </IconButton>
+              <Tooltip title="Reset Job">
+                <IconButton
+                  size="small"
+                  onClick={handleClear}
+                  edge="end"
+                  aria-label="Clear job description"
+                >
+                  <Icon icon="close" />
+                </IconButton>
+              </Tooltip>
             </InputAdornment>
           ) : null,
         }}
-      />
+      />      
 
-      {validJd && (
-        <Typography variant="body2" color="success.main">
-          Ready to send.
-        </Typography>
+      {validJd && ( <>
+        <FormLabel component="legend" sx={{ mt: 3 }}>
+          Preferred Viewpoint
+        </FormLabel>
+     
+        <RadioGroup
+          row
+          value={viewpoint}
+          onChange={handleViewpointChange}
+          sx={{ mb: 3 }}
+        >
+          <FormControlLabel value="first" control={<Radio />} label="1st person (I am...)" />
+          <FormControlLabel value="third" control={<Radio />} label="3rd person (The candidate...)" />
+        </RadioGroup>
+        <MightyButton 
+            onClick={() => {
+              handlePrompt();
+            }}
+            label="Analyse Job Fit"
+            icon="openai"
+            color="primary"
+            variant='contained'
+          />
+        </>
       )}
     </Box>
   );

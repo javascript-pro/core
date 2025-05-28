@@ -8,7 +8,7 @@ export const setCVKey = (
 ): any =>
   async (dispatch: TUbereduxDispatch, getState: () => any) => {
     try {
-      console.log("setCVKey", key, value)
+      // console.log("setCVKey", key, value)
       const current = getState().redux.cv;
       const updated = {
         ...current,
