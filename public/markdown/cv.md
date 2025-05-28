@@ -4,7 +4,7 @@ title: C.V.
 description: Large Language Model Generated Job Fit AI
 slug: /cv
 icon: doc
-image: /png/doc.png
+image: /jpg/cv.jpg
 tags: CV, jobs, work, resume
 api: https://goldlabel.pro/markdown/cv.md
 ---
