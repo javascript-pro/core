@@ -32,7 +32,7 @@ export default function Advert({
           <Alert
             sx={{ width: '100%' }}
             severity="success"
-            variant="outlined"
+            // variant="filled"
             icon={<Icon icon="star" />}
           >
             <Typography variant="body1">{title}</Typography>

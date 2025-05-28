@@ -1,7 +1,7 @@
 ---
 order: 2
 title: C.V.
-description: Simple AI tool to match your Job to our CV
+description: Match your Job to our CV with AI
 slug: /cv
 icon: openai
 image: /jpg/cv.jpg
