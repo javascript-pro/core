@@ -117,17 +117,13 @@ export default function Flickr({
   }
 
   if (mode === 'album-card') {
-    return (
-      <Box sx={{mx:4}}>
-        <Advert
-          title={'Flickr'}
-          description={'Photos, titles and other meta data are managed in Flickr'}
-          onClick={() => {
-            dispatch(routeTo('/free/flickr', router));
-          }}
-        />
-      </Box>
-    );
+    return <Advert
+            title={'Flickr'}
+            description={'Photos, titles and other meta data are managed in Flickr'}
+            onClick={() => {
+              dispatch(routeTo('/free/flickr', router));
+            }}
+          />
   }
 
   if (mode === 'default') return <></>;
