@@ -1,42 +1,35 @@
 'use client';
 import React from 'react';
-import { Box, TextField } from '@mui/material';
-import { useSlice, useDispatch } from '../../../';
+import {
+  Box,
+  TextField,
+  Typography,
+  IconButton,
+  InputAdornment,
+  RadioGroup,
+  FormControlLabel,
+  Radio,
+  Tooltip,
+  FormLabel,
+} from '@mui/material';
+import { useSlice, useDispatch, Icon, MightyButton } from '../../../../gl-core';
 import { updateCVKey } from '../';
 
-const APPBAR_HEIGHT = 64;
-const ESTIMATED_ROW_HEIGHT = 24;
-const PADDING = 48;
 const MIN_LENGTH = 100;
 
 export default function JD() {
   const dispatch = useDispatch();
   const slice = useSlice();
   const { cv } = slice;
-  const { jd, validJd } = cv;
+  const { jd, validJd, viewpoint } = cv;
 
-  const [minRows, setMinRows] = React.useState(10);
   const inputRef = React.useRef<HTMLTextAreaElement | null>(null);
 
   React.useEffect(() => {
-    const updateRows = () => {
-      const availableHeight = window.innerHeight - APPBAR_HEIGHT - PADDING;
-      const rows = Math.floor(availableHeight / ESTIMATED_ROW_HEIGHT);
-      setMinRows(rows > 10 ? rows : 10);
-    };
-
-    updateRows();
-    window.addEventListener('resize', updateRows);
-    return () => window.removeEventListener('resize', updateRows);
-  }, []);
-
-  React.useEffect(() => {
     setTimeout(() => {
-      if (inputRef.current) {
-        inputRef.current.focus();
-      }
+      if (inputRef.current) inputRef.current.focus();
     }, 1000);
-  }, [minRows]);
+  }, []);
 
   const validateJD = (text: string) => {
     const isValid = text.length >= MIN_LENGTH;
@@ -54,29 +47,96 @@ export default function JD() {
     const pasted = e.clipboardData.getData('text');
     dispatch(updateCVKey('cv', { jd: pasted }));
     validateJD(pasted);
-    e.preventDefault(); // Prevent double-paste issue
+    e.preventDefault();
+  };
+
+  const handleClear = () => {
+    dispatch(updateCVKey('cv', { jd: '', validJd: false }));
+  };
+
+  const handleViewpointChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    dispatch(updateCVKey('cv', { viewpoint: e.target.value }));
+  };
+
+  const handlePrompt = () => {
+    dispatch(updateCVKey('cv', { appMode: 'prompt' }));
   };
 
   return (
-    <Box sx={{ px: 2, pt: 2 }}>
+    <Box sx={{ py: 2 }}>
+      {/* <Typography variant="h5" sx={{ mt: 2, mb: 3 }}>
+        Job Description
+      </Typography> */}
+
+          <FormLabel component="legend" sx={{ mt: 3 }}>
+            Point of View
+          </FormLabel>
+
+          <RadioGroup
+            row
+            value={viewpoint}
+            onChange={handleViewpointChange}
+            sx={{ mb: 3 }}
+          >
+            <FormControlLabel
+              value="first"
+              control={<Radio />}
+              label="1st person (I am...)"
+            />
+            <FormControlLabel
+              value="third"
+              control={<Radio />}
+              label="3rd person (The candidate is...)"
+            />
+          </RadioGroup>
+
+
       <TextField
+        sx={{ mb: 2 }}
         fullWidth
         multiline
-        variant='standard'
+        variant="filled"
         color="secondary"
-        rows={5}
+        rows={2}
         inputRef={inputRef}
-        label="Paste Job Description"
+        label="Paste Job Description here"
         value={jd || ''}
-        // error={validJd === false}
         helperText={
-          validJd === false
-            ? `Job descriptions must be at least ${MIN_LENGTH} characters`
-            : ''
+          validJd === false ? `Must be at least ${MIN_LENGTH} characters` : ''
         }
         onChange={handleChange}
         onPaste={handlePaste}
+        InputProps={{
+          endAdornment: jd ? (
+            <InputAdornment position="end">
+              <Tooltip title="Reset Job">
+                <IconButton
+                  size="small"
+                  onClick={handleClear}
+                  edge="end"
+                  aria-label="Clear job description"
+                >
+                  <Icon icon="close" />
+                </IconButton>
+              </Tooltip>
+            </InputAdornment>
+          ) : null,
+        }}
       />
+
+      {validJd && (
+        <>
+          <MightyButton
+            onClick={() => {
+              handlePrompt();
+            }}
+            label="Analyse Job Fit"
+            icon="openai"
+            color="primary"
+            variant="contained"
+          />
+        </>
+      )}
     </Box>
   );
 }

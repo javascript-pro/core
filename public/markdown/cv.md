@@ -1,11 +1,12 @@
 ---
 order: 2
 title: C.V.
-description: Large Language Model Generated Job Fit AI
+description: Match your Job to our CV with AI
 slug: /cv
-icon: doc
-image: /png/doc.png
+icon: openai
+image: /jpg/cv.jpg
 tags: CV, jobs, work, resume
+api: https://goldlabel.pro/markdown/cv.md
 ---
 
 ## Fullstack JavaScript Developer
@@ -19,14 +20,14 @@ Proven track record building high-performance UIs, integrating automated testing
 ### Skills
 
 - _Languages:_ Vanilla JavaScript (ES6+), TypeScript, HTML5, PHP
-- _Frameworks & Libraries:_ React, React Native, Next.js (App Router), Redux, Node.js, Express, jQuery
+- _Frameworks & Libraries:_ React, React Native, [Next.js (App Router)](https://github.com/javascript-pro/core), [Redux](/free/uberedux), Node.js, Express, jQuery
 - _Style:_ Vanilla CSS, Material UI, Tailwind CSS, Styled Components, Figma
 - _Database:_ NoSQL, Firestore, Supabase, MongoDB, DynamoDB, MySQL, PostgreSQL, SQL
-- _APIs:_ [REST](https://github.com/javascript-pro/core/blob/main/app/api/gl-api/flickr/route.ts), GraphQL, OpenAI, Whisper/DALL·E
+- _APIs:_ [REST](https://github.com/javascript-pro/core/blob/main/app/api/gl-api/flickr/route.ts), GraphQL, [OpenAI](https://github.com/javascript-pro/core/blob/main/app/api/gl-api/openai/route.ts), Whisper/DALL·E
 - _Testing & QA:_ Jest, React Testing Library, Cucumber (BDD), Gherkin
 - _DevOps & Workflow:_ CI/CD (GitHub Actions, Netlify Deploy), Linux (MAMP stack), GitFlow, Agile/SCRUM, Git, GitHub, Vercel, Firebase (Auth, Firestore, Storage), Netlify, Docker, Turborepo, Webpack
 - _CMS:_ WordPress, Headless CMS (Strapi, Contentful), Drupal
-- _Other:_ Progressive Web Apps (PWA), Static Site Generation (SSG), Server-Side Rendering (SSR), Raspberry Pi & Python
+- _Other:_ Progressive Web Apps (PWA), [Static Site Generation (SSG)](https://github.com/javascript-pro/core/blob/main/app/%5B%5B...slug%5D%5D/page.tsx), Server-Side Rendering (SSR), Raspberry Pi & Python
 
 ### Experience
 

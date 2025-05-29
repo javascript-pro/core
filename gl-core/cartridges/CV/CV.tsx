@@ -12,12 +12,13 @@ import {
   MightyButton,
   Icon,
   Advert,
+  useIsMobile,
   useSlice,
   useDispatch,
   routeTo,
   RenderMarkdown,
 } from '../../';
-import { JD, setAppMode, resetCV, Download } from '../CV';
+import { JD, setAppMode, setCVKey, resetCV, Download, ShowPrompt } from '../CV';
 
 export type TCV = {
   mode: 'alert' | 'advert' | 'app' | null;
@@ -25,28 +26,47 @@ export type TCV = {
   markdown?: string | null;
 };
 
-export default function CV({ 
+export default function CV({
   mode = null,
   markdown = 'no markdown. no problem.',
 }: TCV) {
   const dispatch = useDispatch();
   const cvSlice = useSlice().cv;
-  const { appMode } = cvSlice;
+  const { appMode, showJD } = cvSlice;
   const router = useRouter();
-  // console.log("markdown", markdown);
+  const isMobile = useIsMobile();
 
-  const showAlert = true;
+  // console.log("appMode", appMode);
+
   const showToolbar = false;
 
-  if (mode === 'app')
+  if (mode === 'advert')
     return (
-      <>
-        <Box sx={{
-          display: "flex",
+      <Advert
+        title={'C.V. Cartridge'}
+        description={'Simple AI tool to match your Job to our CV'}
+        onClick={() => {
+          dispatch(routeTo('/cv', router));
+        }}
+      />
+    );
+
+  if (mode === 'app')
+    if (appMode === 'prompt') {
+      return <ShowPrompt />;
+    }
+  return (
+    <>
+      {/* <pre>cvSlice: {JSON.stringify(cvSlice, null, 2)}</pre> */}
+      <Box sx={{ mt: isMobile ? 1 : 2 }} />
+      <Box
+        sx={{
+          display: 'flex',
           mx: 4,
-        }}>
-          
-          { appMode !== 'pristine' && showToolbar && <MightyButton
+        }}
+      >
+        {appMode !== 'pristine' && showToolbar && (
+          <MightyButton
             mode="icon"
             label="Reset"
             onClick={() => {
@@ -54,86 +74,100 @@ export default function CV({
             }}
             icon="reset"
             color="secondary"
-          /> }
+          />
+        )}
 
-          <Box sx={{ flexGrow: 1 }}/>
-          { appMode === "cv" && <>
-            <Box sx={{ mr: 2 }}>
-              <Download cv={ markdown } />
+        {appMode === 'cv' ? (
+          <MightyButton
+            label="AI Match"
+            icon="openai"
+            variant="contained"
+            color="primary"
+            onClick={() => {
+              dispatch(setCVKey('appMode', 'jd'));
+              dispatch(setCVKey('showJD', !showJD));
+            }}
+          />
+        ) : (
+          <MightyButton
+            label="View & Download CV"
+            icon="doc"
+            color="primary"
+            variant="contained"
+            onClick={() => {
+              dispatch(setCVKey('appMode', 'cv'));
+              dispatch(setCVKey('showJD', false));
+            }}
+          />
+        )}
+
+        {appMode === 'cv' && (
+          <>
+            <Box sx={{ ml: 2, display: 'flex' }}>
+              <Download cv={markdown} />
             </Box>
-          </> }
+          </>
+        )}
+      </Box>
 
-          
-        </Box>
-
-        { appMode === "jd" && <>
-            <Box sx={{ mx: 4 }}>
-              <JD />
-            </Box>
-          </> }
-
-        { appMode === 'pristine' ? (
+      {showJD && (
+        <>
           <Box sx={{ mx: 4 }}>
-            {/* <pre>appMode: {JSON.stringify(appMode, null, 2)}</pre>;  */}
-            {/* <Typography variant="h6" gutterBottom>
+            <JD />
+          </Box>
+        </>
+      )}
+
+      {appMode === 'pristine' ? (
+        <Box sx={{ mx: 4 }}>
+          {/* <Typography variant="h6" gutterBottom>
               Need our CV, or something smarter?
             </Typography> */}
 
-            <List>
-              <ListItemButton
-                onClick={() => {
-                  dispatch(setAppMode('jd'));
-                }}
-              >
-                <ListItemIcon>
-                  <Icon icon="openai" />
-                </ListItemIcon>
-                <ListItemText primary="Large Language Model Generated Job Fit AI" />
-              </ListItemButton>
+          <List>
+            <ListItemButton
+              onClick={() => {
+                dispatch(setAppMode('jd'));
+              }}
+            >
+              <ListItemIcon>
+                <Icon icon="openai" />
+              </ListItemIcon>
+              <ListItemText primary="Large Language Model Generated Job Fit AI" />
+            </ListItemButton>
 
-              <ListItemButton
-                onClick={() => {
-                  dispatch(setAppMode('cv'));
-                }}
-                color="secondary"
-              >
-                <ListItemIcon>
-                  <Icon icon="doc" />
-                </ListItemIcon>
-                <ListItemText primary="View and Download our CV" />
-              </ListItemButton>
-            </List>
-            {/* <Typography variant="body1">
-              You can view and download our CV the traditional way. Or try our
-              Job Fit AI — powered by a Large Language Model — to see how well
-              we match a specific role. Paste in a job description and get an
-              instant assessment.
-            </Typography> */}
-          </Box>
-        ) : (
-          <>
-          { appMode === "cv" && <>
-            <Box sx={{}}>
-              <RenderMarkdown>
-                {markdown}
-              </RenderMarkdown>
-            </Box>
-          </> }
-          
-          </>
-        )}
-      </>
-    );
+            <ListItemButton
+              onClick={() => {
+                dispatch(setAppMode('cv'));
+              }}
+              color="secondary"
+            >
+              <ListItemIcon>
+                <Icon icon="doc" />
+              </ListItemIcon>
+              <ListItemText primary="View and Download our CV" />
+            </ListItemButton>
+          </List>
+        </Box>
+      ) : (
+        <>
+          {appMode === 'cv' && !showJD && (
+            <>
+              <Box sx={{ mt: 2 }}>
+                <RenderMarkdown>{markdown}</RenderMarkdown>
+              </Box>
+            </>
+          )}
+        </>
+      )}
+    </>
+  );
 
-  if (mode === 'advert')
-    return (
-      <Advert
-        title={'C.V.'}
-        description={'Try our Large Language Model Generated Job Fit AI'}
-        onClick={() => {
-          dispatch(routeTo('/cv', router));
-        }}
-      />
-    );
   return <pre>cvSlice: {JSON.stringify(cvSlice, null, 2)}</pre>;
 }
+
+/*
+<Typography variant="body1" sx={{ mb: 3 }}>
+  Try our Job Fit AI — powered by a Large Language Model — to see how well we match a specific role. Paste in a job description and get an instant assessment.
+</Typography>
+*/

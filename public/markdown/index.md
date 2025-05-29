@@ -2,17 +2,13 @@
 order: 1
 slug: /
 title: Goldlabel Apps
-description: Custom software which works
+description: AI software which works
 icon: blokey
 tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
-image: /png/defaultFeatured.png
+image: /jpg/cv.jpg
 github: https://github.com/javascript-pro/core/blob/main/app/api/gl-api/flickr/route.ts
 api: /api/gl-api/flickr
 ---
-
-[Free](/free)
-| [CV](/cv)
-| [REST API](/work/javascript/rest-api)
 
 ## We build and ship modern web apps for clients who need real results — fast
 

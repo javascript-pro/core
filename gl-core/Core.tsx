@@ -6,7 +6,7 @@ import {
   Theme,
   Flash,
   MovieClip,
-  Photo,
+  // Photo,
   RenderMarkdown,
   Header,
   PageBreadcrumb,
@@ -37,29 +37,61 @@ export default function Core({
   const pathname = usePathname();
   const router = useRouter();
   const isMobile = useIsMobile();
-  const maxHeight = isMobile ? 150 : 180;
+  // const maxHeight = isMobile ? 155 : 315;
   const isApp =
     pathname.startsWith('/cv') || pathname.startsWith('/free/flickr');
 
   const isCV = pathname === '/cv';
   const isFlickr = pathname === '/free/flickr';
+
   let app = <></>;
   switch (true) {
     case pathname.startsWith('/cv'):
-      app = <CV 
-              mode="app"
-              markdown={body}
-            />;
+      app = <CV mode="app" markdown={body} />;
       break;
     case pathname.startsWith('/free/flickr'):
-      app = <Flickr 
-              mode="app"
-              id="72177720326317140"
-            />;
+      app = <Flickr mode="app" id="72177720326317140" />;
       break;
     default:
       break;
   }
+
+  const getAside = () => {
+    return (
+      <Grid
+        size={{
+          xs: 12,
+          // sm: 6,
+          md: 5,
+          lg: 4,
+        }}
+      >
+        <Box
+          id="sidebar"
+          component="aside"
+          sx={{
+            mr: isMobile ? 4.5 : 4,
+            ml: isMobile ? 4.5 : 0,
+          }}
+        >
+          {!isCV && (
+            <Box sx={{ mb: 2 }}>
+              <CV mode="advert" />
+            </Box>
+          )}
+          {!isFlickr && (
+            <Flickr
+              mode="album-card"
+              id="72177720326317140"
+              onClick={() => {
+                router.push(`/free/flickr`);
+              }}
+            />
+          )}
+        </Box>
+      </Grid>
+    );
+  };
 
   return (
     <Theme>
@@ -72,44 +104,49 @@ export default function Core({
             <Grid
               size={{
                 xs: 12,
-                sm: 6,
-                md: 8,
-                lg: 9,
+                // sm: 6,
+                md: 7,
+                lg: 8,
               }}
             >
-              <Photo maxHeight={maxHeight} src={frontmatter?.image ?? null} />
-              <Box sx={{ p: 2 }}>
+              {/* <Box sx={{ 
+                mx: isMobile ? 4 : 6,
+              }}>
+                <Photo
+                  alt={frontmatter.title}
+                  maxHeight={maxHeight}
+                  src={frontmatter?.image ?? null}
+                />
+              </Box> */}
+
+              <Box
+                sx={{
+                  px: isMobile ? 0.5 : 2,
+                  mt: !isMobile ? 3 : 2,
+                }}
+              >
                 {pathname !== '/' && <PageBreadcrumb />}
-                <Box sx={{ height: 24 }} />
+              </Box>
+
+              <Box sx={{ mt: isMobile ? 2 : 0 }}>{isMobile && getAside()}</Box>
+
+              <Box
+                sx={{
+                  px: isMobile ? 0.5 : 2,
+                }}
+              >
+                <Box sx={{ mt: isMobile ? 2 : 1 }} />
                 {isApp ? app : <RenderMarkdown>{body}</RenderMarkdown>}
               </Box>
             </Grid>
-
-            <Grid
-              size={{
-                xs: 12,
-                sm: 6,
-                md: 4,
-                lg: 3,
-              }}
-            >
-              <Box id="sidebar" component="aside" sx={{ mx: 2 }}>
-                { !isCV && <CV
-                            mode="advert" 
-                          /> }
-                { !isFlickr && <Flickr
-                  mode="album-card"
-                  //  72157594233009954
-                  id="72177720326317140"
-                  onClick={() => {
-                    router.push(`/free/flickr`);
-                  }}
-                /> }
-              </Box>
-            </Grid>
+            {!isMobile && getAside()}
           </Grid>
         </MovieClip>
       </Flash>
     </Theme>
   );
 }
+
+/*
+
+*/

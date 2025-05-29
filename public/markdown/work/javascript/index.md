@@ -17,8 +17,8 @@ Before the frameworks, before npm, before it ate the world—we were already dee
 
 We’ve built Flash apps in ActionScript.  
 We’ve written jQuery plugins by hand.  
-We’ve moved through Backbone, Angular, React, and beyond.  
-We’ve worked in Node.js since 0.6.
+We’ve moved through Vanilla JS, React, and beyond.  
+We’ve worked in Node.js since 2006.
 
 And through it all, one thing has remained constant: _JavaScript runs the show_.
 

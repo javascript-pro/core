@@ -1,4 +1,4 @@
-export const fitPrompt = (resume, jd) => {};
+export const firstPerson = (resume, jd) => {};
 
 // const prompt = `
 // You are a senior hiring consultant.

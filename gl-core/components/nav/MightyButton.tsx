@@ -83,10 +83,10 @@ export default function MightyButton({
       color={color}
       onClick={onClick}
     >
-      <Box sx={{ pt: 0.5, mr: 1 }}>
+      <Box sx={{ mx: 1 }}>{label}</Box>
+      <Box sx={{ pt: 0.5, ml: 1 }}>
         <Icon icon={icon as any} />
       </Box>
-      <Box sx={{ mx: 1 }}>{label}</Box>
     </Button>
   );
 }

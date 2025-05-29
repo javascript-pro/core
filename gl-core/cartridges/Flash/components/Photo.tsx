@@ -1,11 +1,13 @@
 'use client';
 
 import * as React from 'react';
-import { Box, CardMedia, Typography } from '@mui/material';
+import Image from 'next/image';
+import { Box, Typography } from '@mui/material';
 
 export type TPhoto = {
   maxHeight?: number | string | null;
   src: string | null;
+  alt?: string | null;
 };
 
 const validExtensions = ['jpg', 'jpeg', 'png', 'svg', 'webp'];
@@ -16,7 +18,11 @@ const isValidImage = (src: string | null): boolean => {
   return validExtensions.includes(ext);
 };
 
-export default function Photo({ src = null, maxHeight = null }: TPhoto) {
+export default function Photo({
+  alt = 'Featured Image',
+  src = null,
+  maxHeight = null,
+}: TPhoto) {
   if (!isValidImage(src)) {
     return (
       <Box>
@@ -41,16 +47,16 @@ export default function Photo({ src = null, maxHeight = null }: TPhoto) {
         backgroundColor: 'background.default',
       }}
     >
-      <CardMedia
-        component="img"
-        src={src as string}
-        alt="Photo"
-        sx={{
-          width: '100%',
-          height: 'auto',
-          objectFit: 'contain',
-        }}
-      />
+      <Box sx={{ position: 'relative', width: '100%', height: '100%' }}>
+        <Image
+          src={src as any}
+          alt={alt || 'Photo'}
+          fill
+          style={{ objectFit: 'cover' }}
+          sizes="100vw"
+          priority
+        />
+      </Box>
     </Box>
   );
 }

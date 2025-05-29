@@ -7,7 +7,7 @@ import {
   ButtonBase,
   IconButton,
 } from '@mui/material';
-import { Icon, routeTo, useDispatch } from '../../gl-core';
+import { Icon, useIsMobile } from '../../gl-core';
 // import { toggleAdvert } from '../';
 
 export type TAdvert = {
@@ -20,18 +20,25 @@ export default function Advert({
   title = 'Default Title',
   description = 'description',
   onClick = () => {
-    // dispatch(routeTo('advert', {}))
     console.log('No onClick for advert');
   },
 }: TAdvert) {
-  // const dispatch = useDispatch();
+  const isMobile = useIsMobile();
 
   return (
     <>
       <Stack sx={{ width: '100%' }} spacing={2}>
         <ButtonBase sx={{ textAlign: 'left' }} onClick={onClick}>
-          <Alert sx={{ width: '100%' }} severity="success" variant="outlined">
-            <Typography>{description}</Typography>
+          <Alert
+            sx={{ width: '100%' }}
+            severity="success"
+            // variant="filled"
+            icon={<Icon icon="star" />}
+          >
+            <Typography variant="body1">{title}</Typography>
+            {!isMobile && (
+              <Typography variant="body2">{description}</Typography>
+            )}
           </Alert>
         </ButtonBase>
       </Stack>

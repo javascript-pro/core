@@ -13,7 +13,10 @@ const flickrUserId = process.env.FLICKR_USER;
 const CACHE_TTL = 1000 * 60 * 5;
 
 // In-memory cache for album and photo data to avoid excessive API calls
-const albumCache: Record<string, { time: number; photos: TFlickrPhoto[]; meta: any }> = {};
+const albumCache: Record<
+  string,
+  { time: number; photos: TFlickrPhoto[]; meta: any }
+> = {};
 const photoCache: Record<string, { time: number; photo: TFlickrPhoto }> = {};
 
 /**
@@ -68,7 +71,7 @@ async function getPhotoWithSizes(photoId: string): Promise<TFlickrPhoto> {
       medium: getSize('Medium 800'),
       large: getSize('Large'),
       orig: getSize('Original'),
-      thumb: getBestSquare(), // Thumbnail image for preview use
+      thumb: getBestSquare(),
     },
   };
 }
@@ -175,8 +178,7 @@ export async function GET(request: NextRequest) {
     const data = await flickrRes.json();
     if (data.stat !== 'ok') throw new Error(data.message);
 
-    // Map API response to TFlickrPhoto[]
-    const photos: TFlickrPhoto[] = data.photoset.photo.map((p: any) => ({
+    const basePhotos: TFlickrPhoto[] = data.photoset.photo.map((p: any) => ({
       flickrId: p.id,
       flickrUrl: `https://www.flickr.com/photos/${flickrUserId}/${p.id}`,
       title: p.title,
@@ -186,15 +188,56 @@ export async function GET(request: NextRequest) {
       lng: parseFloat(p.longitude) || null,
       meta: { tags: p.tags?.split(' ') || [] },
       sizes: {
-        orig: p.url_o ? { src: p.url_o, width: parseInt(p.width_o), height: parseInt(p.height_o) } : undefined,
-        large: p.url_h ? { src: p.url_h, width: parseInt(p.width_h), height: parseInt(p.height_h) } : undefined,
-        medium: p.url_c ? { src: p.url_c, width: parseInt(p.width_c), height: parseInt(p.height_c) } : undefined,
-        small: p.url_n ? { src: p.url_n, width: parseInt(p.width_n), height: parseInt(p.height_n) } : undefined,
-        thumb: undefined, // No thumbnail in this response; fetch individually if needed
+        orig: p.url_o
+          ? {
+              src: p.url_o,
+              width: parseInt(p.width_o),
+              height: parseInt(p.height_o),
+            }
+          : undefined,
+        large: p.url_h
+          ? {
+              src: p.url_h,
+              width: parseInt(p.width_h),
+              height: parseInt(p.height_h),
+            }
+          : undefined,
+        medium: p.url_c
+          ? {
+              src: p.url_c,
+              width: parseInt(p.width_c),
+              height: parseInt(p.height_c),
+            }
+          : undefined,
+        small: p.url_n
+          ? {
+              src: p.url_n,
+              width: parseInt(p.width_n),
+              height: parseInt(p.height_n),
+            }
+          : undefined,
+        thumb: undefined, // Will be filled next
       },
     }));
 
-    // Step 2: Fetch the album's cover photo in full detail
+    // Fetch thumbnails for each photo (in parallel)
+    const photos = await Promise.all(
+      basePhotos.map(async (photo) => {
+        try {
+          const full = await getPhotoWithSizes(photo.flickrId);
+          return {
+            ...photo,
+            sizes: {
+              ...photo.sizes,
+              thumb: full.sizes?.thumb,
+            },
+          };
+        } catch (e) {
+          return photo; // Fallback if thumb fetch fails
+        }
+      }),
+    );
+
     const coverPhoto = await getPhotoWithSizes(data.photoset.primary);
 
     // Step 3: Get album metadata (title, description, etc.)
