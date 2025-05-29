@@ -9,13 +9,28 @@ export type TStage = {
 };
 
 export default function Stage({ id = null, children }: TStage) {
+  const [offsetStyle, setOffsetStyle] = React.useState({ left: 0 });
+
   React.useEffect(() => {
+    const updateOffset = () => {
+      const viewportWidth = window.innerWidth;
+      const maxWidth = 1024;
+      const shouldOffset = viewportWidth > maxWidth;
+      const left = shouldOffset ? (viewportWidth - maxWidth) / 2 : 0;
+      setOffsetStyle({ left });
+    };
+
+    // Lock page scroll
     document.body.style.overflow = 'hidden';
     document.documentElement.style.overflow = 'hidden';
+
+    updateOffset();
+    window.addEventListener('resize', updateOffset);
 
     return () => {
       document.body.style.overflow = '';
       document.documentElement.style.overflow = '';
+      window.removeEventListener('resize', updateOffset);
     };
   }, []);
 
@@ -23,15 +38,15 @@ export default function Stage({ id = null, children }: TStage) {
     <Box
       id={id || undefined}
       sx={{
-        width: '100vw',
+        width: '100%',
+        maxWidth: 1024,
         height: '100vh',
         position: 'absolute',
         top: 0,
-        left: 0,
         zIndex: 0,
         boxSizing: 'border-box',
-        // border: '10px solid blue',
-        overflow: 'auto', // key: allow scrolling of contents
+        overflow: 'auto',
+        ...offsetStyle,
       }}
     >
       {children}

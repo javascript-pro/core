@@ -64,10 +64,32 @@ export default function JD() {
 
   return (
     <Box sx={{ py: 2 }}>
-      
-      <Typography variant="h5" sx={{mt: 2, mb: 3}}>
+      {/* <Typography variant="h5" sx={{ mt: 2, mb: 3 }}>
         Job Description
-      </Typography>
+      </Typography> */}
+
+          <FormLabel component="legend" sx={{ mt: 3 }}>
+            Point of View
+          </FormLabel>
+
+          <RadioGroup
+            row
+            value={viewpoint}
+            onChange={handleViewpointChange}
+            sx={{ mb: 3 }}
+          >
+            <FormControlLabel
+              value="first"
+              control={<Radio />}
+              label="1st person (I am...)"
+            />
+            <FormControlLabel
+              value="third"
+              control={<Radio />}
+              label="3rd person (The candidate is...)"
+            />
+          </RadioGroup>
+
 
       <TextField
         sx={{ mb: 2 }}
@@ -104,27 +126,6 @@ export default function JD() {
 
       {validJd && (
         <>
-          <FormLabel component="legend" sx={{ mt: 3 }}>
-            Preferred Viewpoint
-          </FormLabel>
-
-          <RadioGroup
-            row
-            value={viewpoint}
-            onChange={handleViewpointChange}
-            sx={{ mb: 3 }}
-          >
-            <FormControlLabel
-              value="first"
-              control={<Radio />}
-              label="1st person (I am...)"
-            />
-            <FormControlLabel
-              value="third"
-              control={<Radio />}
-              label="3rd person (The candidate...)"
-            />
-          </RadioGroup>
           <MightyButton
             onClick={() => {
               handlePrompt();
