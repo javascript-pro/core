@@ -6,7 +6,7 @@ import {
   Theme,
   Flash,
   MovieClip,
-  Photo,
+  // Photo,
   RenderMarkdown,
   Header,
   PageBreadcrumb,
@@ -34,7 +34,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const pathname = usePathname();
   const router = useRouter();
   const isMobile = useIsMobile();
-  const maxHeight = isMobile ? 155 : 315;
+  // const maxHeight = isMobile ? 155 : 315;
   const isApp =
     pathname.startsWith('/cv') || pathname.startsWith('/free/flickr');
 
@@ -58,9 +58,9 @@ export default function Core({ frontmatter, body = null }: TCore) {
       <Grid
         size={{
           xs: 12,
-          sm: 6,
-          md: 4,
-          lg: 3,
+          // sm: 6,
+          md: 5,
+          lg: 4,
         }}
       >
         <Box
@@ -101,9 +101,9 @@ export default function Core({ frontmatter, body = null }: TCore) {
             <Grid
               size={{
                 xs: 12,
-                sm: 6,
-                md: 8,
-                lg: 9,
+                // sm: 6,
+                md: 7,
+                lg: 8,
               }}
             >
               {/* <Box sx={{ 

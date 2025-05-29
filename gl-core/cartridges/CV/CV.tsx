@@ -65,7 +65,6 @@ export default function CV({
           mx: 4,
         }}
       >
-        
         {appMode !== 'pristine' && showToolbar && (
           <MightyButton
             mode="icon"
