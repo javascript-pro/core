@@ -5,7 +5,7 @@ import { useSlice, useDispatch } from '../../../';
 import { updateCVKey } from '../';
 import ReactMarkdown from 'react-markdown';
 
-export default function AIResponse() {
+export default function Completion() {
   const [output, setOutput] = useState('');
   const [error, setError] = useState<string | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -35,7 +35,7 @@ export default function AIResponse() {
       });
 
       if (!res.ok || !res.body) {
-        throw new Error((await res.text()) || 'No AIResponse stream');
+        throw new Error((await res.text()) || 'No Completion stream');
       }
 
       const reader = res.body.getReader();

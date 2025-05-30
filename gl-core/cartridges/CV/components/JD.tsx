@@ -3,7 +3,6 @@ import React from 'react';
 import {
   Box,
   TextField,
-  Typography,
   IconButton,
   InputAdornment,
   RadioGroup,
@@ -11,9 +10,10 @@ import {
   Radio,
   Tooltip,
   FormLabel,
+  useTheme,
 } from '@mui/material';
 import { useSlice, useDispatch, Icon, MightyButton } from '../../../../gl-core';
-import { updateCVKey } from '../';
+import { updateCVKey, createPrompt, setCVKey } from '../';
 
 const MIN_LENGTH = 100;
 
@@ -22,6 +22,7 @@ export default function JD() {
   const slice = useSlice();
   const { cv } = slice;
   const { jd, validJd, viewpoint } = cv;
+  const linkCol = useTheme().palette.text.primary
 
   const inputRef = React.useRef<HTMLTextAreaElement | null>(null);
 
@@ -58,18 +59,34 @@ export default function JD() {
     dispatch(updateCVKey('cv', { viewpoint: e.target.value }));
   };
 
-  const handlePrompt = () => {
-    dispatch(updateCVKey('cv', { appMode: 'prompt' }));
+  const onAnalyse = () => {
+    dispatch(createPrompt());
+    dispatch(setCVKey('appMode', 'prompt'));
   };
 
   return (
     <Box sx={{ py: 2 }}>
-      {/* <Typography variant="h5" sx={{ mt: 2, mb: 3 }}>
-        Job Description
-      </Typography> */}
 
-          <FormLabel component="legend" sx={{ mt: 3 }}>
-            Point of View
+          <FormLabel component="legend" sx={{ my: 2 }}>
+            Paste a job description and tap “Analyse”. Our AI will assess how well it matches the skills and experience in our CV, from either a 1st or 3rd party perspective. Try it out with one of these example jobs — one’s a{' '}
+            <a
+              href="/txt/goodFit.txt"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: 'none', color: linkCol, fontWeight: "bold" }}
+            >
+              good fit
+            </a>
+            , the other{' '}
+            <a
+              href="/txt/badFit.txt"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: 'none', color: linkCol, fontWeight: "bold" }}
+            >
+              isn’t
+            </a>
+            .
           </FormLabel>
 
           <RadioGroup
@@ -97,7 +114,7 @@ export default function JD() {
         multiline
         variant="filled"
         color="secondary"
-        rows={2}
+        rows={10}
         inputRef={inputRef}
         label="Paste Job Description here"
         value={jd || ''}
@@ -128,9 +145,9 @@ export default function JD() {
         <>
           <MightyButton
             onClick={() => {
-              handlePrompt();
+              onAnalyse();
             }}
-            label="Analyse Job Fit"
+            label="Analyse"
             icon="openai"
             color="primary"
             variant="contained"

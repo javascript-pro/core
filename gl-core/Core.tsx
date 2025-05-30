@@ -143,7 +143,3 @@ export default function Core({ frontmatter, body = null }: TCore) {
     </Theme>
   );
 }
-
-/*
-
-*/

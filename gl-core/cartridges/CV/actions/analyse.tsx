@@ -12,15 +12,15 @@ export const analyse =
         throw new Error('Missing job description or tailored CV in state.');
       }
 
-      const AIResponse = await fetch('/api/cv/analyse', {
+      const Completion = await fetch('/api/cv/analyse', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ job, cv }),
       });
 
-      const json = await AIResponse.json();
+      const json = await Completion.json();
 
-      if (!AIResponse.ok) {
+      if (!Completion.ok) {
         throw new Error(json.error || 'Failed to analyse CV');
       }
 

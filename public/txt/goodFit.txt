@@ -1,0 +1,37 @@
+Senior React Developer – £75K – Hybrid / Cambridge
+
+We’re working with a fast-growing tech company that delivers smart, data-rich solutions used across the UK, Europe, and the US. With a brand-new Cambridge office just steps from the train station, they’re investing in a next-gen web platform and are building a new front-end team to lead the charge.
+
+As a Senior React Developer, you’ll play a central role in shaping the user experience for thousands of customers worldwide. If you're someone who enjoys turning complex data into beautifully crafted, intuitive UIs, this is your chance to have a big impact on a high-visibility product.
+
+What you’ll be doing:
+Developing new features in a modern React app used for data visualisation, maps, charts, and tables.
+
+Collaborating closely with design and backend teams to continuously improve product quality.
+
+Leading by example in engineering best practices, architecture decisions, and mentoring as the team scales.
+
+What we’re looking for:
+Strong commercial experience with React and TypeScript.
+
+Deep understanding of state management, data fetching, and client-side performance.
+
+An eye for design and UX – someone who can build elegant interfaces from basic specifications.
+
+Experience with geospatial data and time-series data visualisation is a big plus.
+
+A natural problem-solver who thrives in a collaborative, user-focused environment.
+
+Tech you’ll be using:
+React, TypeScript, Vite
+
+Material UI (MUI), Recharts, Google Maps API
+
+TanStack Query & Table, i18next, Luxon
+
+Why apply?
+Work on a product that truly makes an impact – with users that rely on it daily
+
+Join a brand-new team where your voice and expertise will shape the future
+
+Hybrid working with 3 days/week in a state-of-the-art Cambridge office

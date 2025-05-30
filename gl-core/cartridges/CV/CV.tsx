@@ -18,7 +18,7 @@ import {
   routeTo,
   RenderMarkdown,
 } from '../../';
-import { JD, setAppMode, setCVKey, resetCV, Download, ShowPrompt } from '../CV';
+import { JD, setAppMode, setCVKey, Download, ShowPrompt } from '../CV';
 
 export type TCV = {
   mode: 'alert' | 'advert' | 'app' | null;
@@ -35,10 +35,12 @@ export default function CV({
   const { appMode, showJD } = cvSlice;
   const router = useRouter();
   const isMobile = useIsMobile();
-
-  // console.log("appMode", appMode);
-
-  const showToolbar = false;
+  
+  React.useEffect(() => {
+    if (markdown) {
+      dispatch(setCVKey('cvMarkdown', markdown));
+    }
+  }, [markdown]);
 
   if (mode === 'advert')
     return (
@@ -63,20 +65,7 @@ export default function CV({
         sx={{
           display: 'flex',
           mx: 4,
-        }}
-      >
-        {appMode !== 'pristine' && showToolbar && (
-          <MightyButton
-            mode="icon"
-            label="Reset"
-            onClick={() => {
-              dispatch(resetCV());
-            }}
-            icon="reset"
-            color="secondary"
-          />
-        )}
-
+        }}>
         {appMode === 'cv' ? (
           <MightyButton
             label="AI Match"
@@ -90,7 +79,7 @@ export default function CV({
           />
         ) : (
           <MightyButton
-            label="View & Download CV"
+            label="View CV"
             icon="doc"
             color="primary"
             variant="contained"

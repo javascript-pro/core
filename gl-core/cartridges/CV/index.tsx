@@ -1,8 +1,7 @@
 import CV from './CV';
 import { TCV } from './CV';
-import CommandBar from './components/CommandBar';
 import ShowPrompt from './components/ShowPrompt';
-import AIResponse from './components/AIResponse';
+import Completion from './components/Completion';
 import Resume from './components/Resume';
 import JD from './components/JD';
 import Download from './components/Download';
@@ -12,19 +11,20 @@ import { updateCVKey } from './actions/updateCVKey';
 import { resetCV } from './actions/resetCV';
 import { setAppMode } from './actions/setAppMode';
 import { setCVKey } from './actions/setCVKey';
+import { createPrompt } from './actions/createPrompt';
 
 export type { TCV };
 
 export {
   CV,
   ShowPrompt,
-  CommandBar,
   setAppMode,
   setCVKey,
+  createPrompt,
   Resume,
   JD,
   Download,
-  AIResponse,
+  Completion,
   updateCVKey,
   resetCV,
   templatePDF,
