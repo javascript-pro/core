@@ -6,7 +6,6 @@ import {
   Theme,
   Flash,
   MovieClip,
-  // Photo,
   RenderMarkdown,
   Header,
   PageBreadcrumb,
@@ -34,61 +33,56 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const pathname = usePathname();
   const router = useRouter();
   const isMobile = useIsMobile();
-  // const maxHeight = isMobile ? 155 : 315;
-  const isApp =
-    pathname.startsWith('/cv') || pathname.startsWith('/free/flickr');
 
   const isCV = pathname === '/cv';
   const isFlickr = pathname === '/free/flickr';
+  const isApp = isCV || isFlickr;
 
   let app = <></>;
   switch (true) {
-    case pathname.startsWith('/cv'):
+    case isCV:
       app = <CV mode="app" markdown={body} />;
       break;
-    case pathname.startsWith('/free/flickr'):
+    case isFlickr:
       app = <Flickr mode="app" id="72177720326317140" />;
       break;
     default:
       break;
   }
 
-  const getAside = () => {
-    return (
-      <Grid
-        size={{
-          xs: 12,
-          // sm: 6,
-          md: 5,
-          lg: 4,
+  const getAside = () => (
+    <Grid
+      size={{
+        xs: 12,
+        md: 5,
+        lg: 4,
+      }}
+    >
+      <Box
+        id="sidebar"
+        component="aside"
+        sx={{
+          mr: isMobile ? 4.5 : 4,
+          ml: isMobile ? 4.5 : 0,
         }}
       >
-        <Box
-          id="sidebar"
-          component="aside"
-          sx={{
-            mr: isMobile ? 4.5 : 4,
-            ml: isMobile ? 4.5 : 0,
-          }}
-        >
-          {!isCV && (
-            <Box sx={{ mb: 2 }}>
-              <CV mode="advert" />
-            </Box>
-          )}
-          {!isFlickr && (
-            <Flickr
-              mode="album-card"
-              id="72177720326317140"
-              onClick={() => {
-                router.push(`/free/flickr`);
-              }}
-            />
-          )}
-        </Box>
-      </Grid>
-    );
-  };
+        {!isCV && (
+          <Box sx={{ mb: 2 }}>
+            <CV mode="advert" />
+          </Box>
+        )}
+        {!isFlickr && (
+          <Flickr
+            mode="album-card"
+            id="72177720326317140"
+            onClick={() => {
+              router.push(`/free/flickr`);
+            }}
+          />
+        )}
+      </Box>
+    </Grid>
+  );
 
   return (
     <Theme>
@@ -101,21 +95,10 @@ export default function Core({ frontmatter, body = null }: TCore) {
             <Grid
               size={{
                 xs: 12,
-                // sm: 6,
                 md: 7,
                 lg: 8,
               }}
             >
-              {/* <Box sx={{ 
-                mx: isMobile ? 4 : 6,
-              }}>
-                <Photo
-                  alt={frontmatter.title}
-                  maxHeight={maxHeight}
-                  src={frontmatter?.image ?? null}
-                />
-              </Box> */}
-
               <Box
                 sx={{
                   px: isMobile ? 0.5 : 2,
