@@ -9,13 +9,12 @@ export default function Completion() {
   const [output, setOutput] = useState('');
   const [error, setError] = useState<string | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
-
   const slice = useSlice();
   const dispatch = useDispatch();
-  const { cv } = slice;
-  const { jd, resume, fetching, fit } = cv;
+  const { prompt } = slice.cv;
 
-  // Scroll to bottom on output change
+  // console.log("prompt", prompt)
+
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
@@ -28,10 +27,10 @@ export default function Completion() {
     setError(null);
 
     try {
-      const res = await fetch('/api/gl-api/cv/fit', {
+      const res = await fetch('/api/gl-api/openai/cv', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ resume, jd }),
+        body: JSON.stringify({ prompt }),
       });
 
       if (!res.ok || !res.body) {
@@ -82,14 +81,14 @@ export default function Completion() {
   };
 
   useEffect(() => {
-    if (!resume || !jd || fetching || fit) return;
+    if (!prompt) return;
 
     const timer = setTimeout(() => {
       handleAnalyse();
     }, 250);
 
     return () => clearTimeout(timer);
-  }, [resume, jd, fetching, fit]);
+  }, [prompt]);
 
   return (
     <Box>
@@ -139,7 +138,7 @@ export default function Completion() {
             em: ({ children }) => <em>{children}</em>,
           }}
         >
-          {output || fit || ''}
+          {output || ''}
         </ReactMarkdown>
       </Box>
     </Box>

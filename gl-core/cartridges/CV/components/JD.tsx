@@ -12,7 +12,7 @@ import {
   FormLabel,
   useTheme,
 } from '@mui/material';
-import { useSlice, useDispatch, Icon, MightyButton } from '../../../../gl-core';
+import { useSlice, useIsMobile, useDispatch, Icon, MightyButton } from '../../../../gl-core';
 import { updateCVKey, createPrompt, setCVKey } from '../';
 
 const MIN_LENGTH = 100;
@@ -20,6 +20,7 @@ const MIN_LENGTH = 100;
 export default function JD() {
   const dispatch = useDispatch();
   const slice = useSlice();
+  const isMobile = useIsMobile();
   const { cv } = slice;
   const { jd, validJd, viewpoint } = cv;
   const linkCol = useTheme().palette.text.primary
@@ -61,60 +62,59 @@ export default function JD() {
 
   const onAnalyse = () => {
     dispatch(createPrompt());
-    dispatch(setCVKey('appMode', 'prompt'));
+    dispatch(setCVKey('appMode', 'completion'));
   };
 
   return (
-    <Box sx={{ py: 2 }}>
+    <Box sx={{ py: 0 }}>
 
-          <FormLabel component="legend" sx={{ my: 2 }}>
-            Paste a job description and tap “Analyse”. Our AI will assess how well it matches the skills and experience in our CV, from either a 1st or 3rd party perspective. Try it out with one of these example jobs — one’s a{' '}
-            <a
-              href="/txt/goodFit.txt"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ textDecoration: 'none', color: linkCol, fontWeight: "bold" }}
-            >
-              good fit
-            </a>
-            , the other{' '}
-            <a
-              href="/txt/badFit.txt"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ textDecoration: 'none', color: linkCol, fontWeight: "bold" }}
-            >
-              isn’t
-            </a>
-            .
-          </FormLabel>
+      <FormLabel component="legend" sx={{ my: 2 }}>
+        Paste a job description and tap “Analyse”. Our AI will assess how well it matches the skills and experience in our CV, from either a 1st or 3rd party perspective. Try it out with one of these example jobs — one’s a{' '}
+        <a
+          href="/txt/goodFit.txt"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: 'none', color: linkCol, fontWeight: "bold" }}
+        >
+          good fit
+        </a>
+        , the other{' '}
+        <a
+          href="/txt/badFit.txt"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: 'none', color: linkCol, fontWeight: "bold" }}
+        >
+          isn’t
+        </a>
+        .
+      </FormLabel>
 
-          <RadioGroup
-            row
-            value={viewpoint}
-            onChange={handleViewpointChange}
-            sx={{ mb: 3 }}
-          >
-            <FormControlLabel
-              value="first"
-              control={<Radio />}
-              label="1st person (I am...)"
-            />
-            <FormControlLabel
-              value="third"
-              control={<Radio />}
-              label="3rd person (The candidate is...)"
-            />
-          </RadioGroup>
-
+      <RadioGroup
+        row
+        value={viewpoint}
+        onChange={handleViewpointChange}
+        sx={{ mb: 3 }}
+      >
+        <FormControlLabel
+          value="third"
+          control={<Radio />}
+          label="3rd person (The candidate is...)"
+        />
+        <FormControlLabel
+          value="first"
+          control={<Radio />}
+          label="1st person (I am...)"
+        />
+      </RadioGroup>
 
       <TextField
-        sx={{ mb: 2 }}
+        sx={{ mb: 4 }}
         fullWidth
         multiline
         variant="filled"
         color="secondary"
-        rows={10}
+        rows={isMobile ?  6 : 10}
         inputRef={inputRef}
         label="Paste Job Description here"
         value={jd || ''}

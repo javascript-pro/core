@@ -1,11 +1,11 @@
 export type TCVSlice = {
-  appMode: 'pristine' | 'resume' | 'jd' | 'cv' | 'prompt';
+  appMode: 'pristine' | 'jd' | 'cv' | 'prompt' | 'completion';
   [key: string]: any;
 };
 
 export const initialState: TCVSlice = {
   appMode: 'jd',
-  viewpoint: 'first',
-  showJD: false,
+  viewpoint: 'third',
+  showJD: true,
   validJD: false,
 };

@@ -18,7 +18,7 @@ import {
   routeTo,
   RenderMarkdown,
 } from '../../';
-import { JD, setAppMode, setCVKey, Download, ShowPrompt } from '../CV';
+import { JD, setAppMode, setCVKey, Download, ShowPrompt, Completion } from '../CV';
 
 export type TCV = {
   mode: 'alert' | 'advert' | 'app' | null;
@@ -53,19 +53,26 @@ export default function CV({
       />
     );
 
-  if (mode === 'app')
+  if (mode === 'app') {
     if (appMode === 'prompt') {
       return <ShowPrompt />;
     }
+
+    if (appMode === 'completion') {
+      return <Completion />;
+    }
+  }
+
   return (
     <>
-      {/* <pre>cvSlice: {JSON.stringify(cvSlice, null, 2)}</pre> */}
       <Box sx={{ mt: isMobile ? 1 : 2 }} />
+
       <Box
         sx={{
           display: 'flex',
           mx: 4,
-        }}>
+        }}
+      >
         {appMode === 'cv' ? (
           <MightyButton
             label="AI Match"
@@ -91,28 +98,20 @@ export default function CV({
         )}
 
         {appMode === 'cv' && (
-          <>
-            <Box sx={{ ml: 2, display: 'flex' }}>
-              <Download cv={markdown} />
-            </Box>
-          </>
+          <Box sx={{ ml: 2, display: 'flex' }}>
+            <Download cv={markdown} />
+          </Box>
         )}
       </Box>
 
       {showJD && (
-        <>
-          <Box sx={{ mx: 4 }}>
-            <JD />
-          </Box>
-        </>
+        <Box sx={{ mx: 4 }}>
+          <JD />
+        </Box>
       )}
 
       {appMode === 'pristine' ? (
         <Box sx={{ mx: 4 }}>
-          {/* <Typography variant="h6" gutterBottom>
-              Need our CV, or something smarter?
-            </Typography> */}
-
           <List>
             <ListItemButton
               onClick={() => {
@@ -139,24 +138,13 @@ export default function CV({
           </List>
         </Box>
       ) : (
-        <>
-          {appMode === 'cv' && !showJD && (
-            <>
-              <Box sx={{ mt: 2 }}>
-                <RenderMarkdown>{markdown}</RenderMarkdown>
-              </Box>
-            </>
-          )}
-        </>
+        appMode === 'cv' &&
+        !showJD && (
+          <Box sx={{ mt: 2 }}>
+            <RenderMarkdown>{markdown}</RenderMarkdown>
+          </Box>
+        )
       )}
     </>
   );
-
-  return <pre>cvSlice: {JSON.stringify(cvSlice, null, 2)}</pre>;
 }
-
-/*
-<Typography variant="body1" sx={{ mb: 3 }}>
-  Try our Job Fit AI — powered by a Large Language Model — to see how well we match a specific role. Paste in a job description and get an instant assessment.
-</Typography>
-*/
