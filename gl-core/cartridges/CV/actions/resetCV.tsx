@@ -3,10 +3,15 @@ import { setUbereduxKey } from '../../../';
 import { CVinitialState } from '../';
 
 export const resetCV =
-  (): any => async (dispatch: TUbereduxDispatch, getState: () => any) => {
+  (cvMarkdown: string | null = null): any =>
+  async (dispatch: TUbereduxDispatch) => {
     try {
-      // console.log('reseting CV');
-      dispatch(setUbereduxKey({ key: 'cv', value: CVinitialState }));
+      const resetState = {
+        ...CVinitialState,
+        cvMarkdown: cvMarkdown || '',
+      };
+
+      dispatch(setUbereduxKey({ key: 'cv', value: resetState }));
     } catch (e: unknown) {
       const msg = e instanceof Error ? e.message : String(e);
       dispatch(setUbereduxKey({ key: 'error', value: msg }));

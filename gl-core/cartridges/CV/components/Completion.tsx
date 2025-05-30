@@ -1,26 +1,24 @@
 'use client';
 import React, { useState, useRef, useEffect } from 'react';
-import { Box, Alert, Typography } from '@mui/material';
-import { useSlice, useDispatch } from '../../../';
-import { updateCVKey } from '../';
 import ReactMarkdown from 'react-markdown';
+import { Box, Alert, Typography } from '@mui/material';
+import { MightyButton, useSlice, useDispatch } from '../../../../gl-core';
+import { updateCVKey, LoadingDots, resetCV } from '../../CV';
 
-export default function AIResponse() {
+export default function Completion() {
   const [output, setOutput] = useState('');
   const [error, setError] = useState<string | null>(null);
+  const [copied, setCopied] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
-
   const slice = useSlice();
   const dispatch = useDispatch();
-  const { cv } = slice;
-  const { jd, resume, fetching, fit } = cv;
+  const { prompt, fetching, completion } = slice.cv;
 
-  // Scroll to bottom on output change
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
     }
-  }, [output]);
+  }, [output, fetching]);
 
   const handleAnalyse = async () => {
     dispatch(updateCVKey('cv', { fetching: true }));
@@ -28,14 +26,14 @@ export default function AIResponse() {
     setError(null);
 
     try {
-      const res = await fetch('/api/gl-api/cv/fit', {
+      const res = await fetch('/api/gl-api/openai/cv', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ resume, jd }),
+        body: JSON.stringify({ prompt }),
       });
 
       if (!res.ok || !res.body) {
-        throw new Error((await res.text()) || 'No AIResponse stream');
+        throw new Error((await res.text()) || 'No Completion stream');
       }
 
       const reader = res.body.getReader();
@@ -72,7 +70,7 @@ export default function AIResponse() {
         }
       }
 
-      dispatch(updateCVKey('cv', { fit: finalOutput }));
+      dispatch(updateCVKey('cv', { completion: finalOutput }));
     } catch (err: any) {
       console.error('Stream error:', err);
       setError(err.message || 'Unknown error');
@@ -82,17 +80,53 @@ export default function AIResponse() {
   };
 
   useEffect(() => {
-    if (!resume || !jd || fetching || fit) return;
+    if (!prompt || completion) return;
 
     const timer = setTimeout(() => {
       handleAnalyse();
     }, 250);
 
     return () => clearTimeout(timer);
-  }, [resume, jd, fetching, fit]);
+  }, [prompt, completion]);
+
+  const handleRetry = () => {
+    const { cvMarkdown } = slice.cv;
+    dispatch(resetCV(cvMarkdown));
+    setOutput('');
+    setError(null);
+  };
+
+  const markdownToPlainText = (markdown: string): string => {
+    return markdown
+      .replace(/^###\s+(.*)$/gm, (_, title) => title.toUpperCase()) // ### Heading
+      .replace(/^##\s+(.*)$/gm, (_, title) => title.toUpperCase())  // ## Heading
+      .replace(/^#\s+(.*)$/gm, (_, title) => title.toUpperCase())   // # Heading
+      .replace(/\*\*(.*?)\*\*/g, '$1') // bold
+      .replace(/\*(.*?)\*/g, '$1') // italic
+      .replace(/_(.*?)_/g, '$1') // underscore italic
+      .replace(/`(.*?)`/g, '$1') // inline code
+      .replace(/^\s*[-*]\s+/gm, '• ') // bullet points
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // [text](link) => text
+      .replace(/\n{2,}/g, '\n\n') // collapse excessive spacing
+      .trim();
+  };
+
+  const handleCopy = async () => {
+    try {
+      const plainText = markdownToPlainText(completion || '');
+      await navigator.clipboard.writeText(plainText);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy:', err);
+      setError('Failed to copy to clipboard');
+    }
+  };
+
+  const displayText = completion || output;
 
   return (
-    <Box>
+    <Box sx={{ mx: 2 }}>
       {error && (
         <Box mt={2}>
           <Alert severity="error">{error}</Alert>
@@ -139,8 +173,33 @@ export default function AIResponse() {
             em: ({ children }) => <em>{children}</em>,
           }}
         >
-          {output || fit || ''}
+          {displayText || ''}
         </ReactMarkdown>
+
+        {fetching && (
+          <Box mt={2}>
+            <LoadingDots />
+          </Box>
+        )}
+
+        {completion && (
+          <Box mt={3} sx={{ display: 'flex', gap: 2 }}>
+            <MightyButton
+              label="Retry?"
+              icon="reset"
+              color="primary"
+              variant="contained"
+              onClick={handleRetry}
+            />
+            <MightyButton
+              label={copied ? 'Copied!' : 'Copy to clipboard'}
+              icon="copy"
+              color="primary"
+              variant="contained"
+              onClick={handleCopy}
+            />
+          </Box>
+        )}
       </Box>
     </Box>
   );

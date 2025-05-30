@@ -127,17 +127,38 @@
       },
       {
         "title": "C.V.",
+        "description": "Match your Job to our CV with AI",
         "slug": "/cv",
         "order": 2,
         "icon": "openai",
-        "type": "file",
+        "type": "folder",
         "tags": [
           "CV",
           "jobs",
           "work",
-          "resume"
+          "resume",
+          "AI",
+          "OpenAI"
         ],
-        "excerpt": "Fullstack JavaScript Developer\n\nOver 20 years of experience delivering scalable web applications across startups, enterprises, and remotefirst teams in the UK, Europe, and Australia and beyond. Deep e"
+        "excerpt": "Fullstack JavaScript Developer\n\nOver 20 years of experience delivering scalable web applications across startups, enterprises, and remotefirst teams in the UK, Europe, and Australia and beyond. Deep e",
+        "children": [
+          {
+            "title": "About C.V.",
+            "slug": "/about",
+            "order": 130,
+            "icon": "openai",
+            "type": "file",
+            "tags": [
+              "CV",
+              "jobs",
+              "work",
+              "resume",
+              "AI",
+              "OpenAI"
+            ],
+            "excerpt": "What T F?\n\n Usage"
+          }
+        ]
       },
       {
         "title": "Work",
