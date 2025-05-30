@@ -1,9 +1,9 @@
 'use client';
 import React, { useState, useRef, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { Box, Alert, Typography } from '@mui/material';
-import { useSlice, useDispatch } from '../../../../gl-core';
-import { updateCVKey, LoadingDots } from '../../CV';
+import { Box, Alert, Typography, Button } from '@mui/material';
+import { MightyButton, useSlice, useDispatch } from '../../../../gl-core';
+import { updateCVKey, LoadingDots, resetCV } from '../../CV';
 
 export default function Completion() {
   const [output, setOutput] = useState('');
@@ -11,8 +11,9 @@ export default function Completion() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const slice = useSlice();
   const dispatch = useDispatch();
-  const { prompt, fetching } = slice.cv;
+  const { prompt, fetching, completion } = slice.cv;
 
+  // Scroll to bottom as output updates
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
@@ -69,7 +70,7 @@ export default function Completion() {
         }
       }
 
-      dispatch(updateCVKey('cv', { fit: finalOutput }));
+      dispatch(updateCVKey('cv', { completion: finalOutput }));
     } catch (err: any) {
       console.error('Stream error:', err);
       setError(err.message || 'Unknown error');
@@ -78,18 +79,27 @@ export default function Completion() {
     dispatch(updateCVKey('cv', { fetching: false }));
   };
 
+  // Run only if there's a prompt and no prior completion
   useEffect(() => {
-    if (!prompt) return;
+    if (!prompt || completion) return;
 
     const timer = setTimeout(() => {
       handleAnalyse();
     }, 250);
 
     return () => clearTimeout(timer);
-  }, [prompt]);
+  }, [prompt, completion]);
+
+  const handleStartOver = () => {
+    dispatch(resetCV());
+    setOutput('');
+    setError(null);
+  };
+
+  const displayText = completion || output;
 
   return (
-    <Box>
+    <Box sx={{ mx: 2 }}>
       {error && (
         <Box mt={2}>
           <Alert severity="error">{error}</Alert>
@@ -136,12 +146,24 @@ export default function Completion() {
             em: ({ children }) => <em>{children}</em>,
           }}
         >
-          {output || ''}
+          {displayText || ''}
         </ReactMarkdown>
 
         {fetching && (
           <Box mt={2}>
             <LoadingDots />
+          </Box>
+        )}
+
+        {completion && (
+          <Box mt={3}>
+            <MightyButton
+              label="Try again?"
+              icon="reset"
+              color="primary"
+              variant="contained"
+              onClick={handleStartOver}
+            />
           </Box>
         )}
       </Box>
