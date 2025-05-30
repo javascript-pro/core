@@ -1,6 +1,5 @@
 import CV from './CV';
 import { TCV } from './CV';
-import ShowPrompt from './components/ShowPrompt';
 import Completion from './components/Completion';
 import LoadingDots from './components/LoadingDots';
 import Resume from './components/Resume';
@@ -18,7 +17,6 @@ export type { TCV };
 
 export {
   CV,
-  ShowPrompt,
   setAppMode,
   setCVKey,
   createPrompt,

@@ -89,15 +89,32 @@ export default function Completion() {
     return () => clearTimeout(timer);
   }, [prompt, completion]);
 
-  const handleStartOver = () => {
-    dispatch(resetCV());
+  const handleRetry = () => {
+    const { cvMarkdown } = slice.cv;
+    dispatch(resetCV(cvMarkdown));
     setOutput('');
     setError(null);
   };
 
+  const markdownToPlainText = (markdown: string): string => {
+    return markdown
+      .replace(/^###\s+(.*)$/gm, (_, title) => title.toUpperCase()) // ### Heading
+      .replace(/^##\s+(.*)$/gm, (_, title) => title.toUpperCase())  // ## Heading
+      .replace(/^#\s+(.*)$/gm, (_, title) => title.toUpperCase())   // # Heading
+      .replace(/\*\*(.*?)\*\*/g, '$1') // bold
+      .replace(/\*(.*?)\*/g, '$1') // italic
+      .replace(/_(.*?)_/g, '$1') // underscore italic
+      .replace(/`(.*?)`/g, '$1') // inline code
+      .replace(/^\s*[-*]\s+/gm, '• ') // bullet points
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // [text](link) => text
+      .replace(/\n{2,}/g, '\n\n') // collapse excessive spacing
+      .trim();
+  };
+
   const handleCopy = async () => {
     try {
-      await navigator.clipboard.writeText(completion || '');
+      const plainText = markdownToPlainText(completion || '');
+      await navigator.clipboard.writeText(plainText);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
@@ -172,7 +189,7 @@ export default function Completion() {
               icon="reset"
               color="primary"
               variant="contained"
-              onClick={handleStartOver}
+              onClick={handleRetry}
             />
             <MightyButton
               label={copied ? 'Copied!' : 'Copy to clipboard'}

@@ -23,7 +23,6 @@ import {
   setAppMode,
   setCVKey,
   Download,
-  ShowPrompt,
   Completion,
 } from '../CV';
 
@@ -61,10 +60,6 @@ export default function CV({
     );
 
   if (mode === 'app') {
-    if (appMode === 'prompt') {
-      return <ShowPrompt />;
-    }
-
     if (appMode === 'completion') {
       return <Completion />;
     }
