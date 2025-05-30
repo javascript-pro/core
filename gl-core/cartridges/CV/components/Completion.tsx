@@ -1,9 +1,9 @@
 'use client';
 import React, { useState, useRef, useEffect } from 'react';
-import { Box, Alert, Typography } from '@mui/material';
-import { useSlice, useDispatch } from '../../../';
-import { updateCVKey } from '../';
 import ReactMarkdown from 'react-markdown';
+import { Box, Alert, Typography } from '@mui/material';
+import { useSlice, useDispatch } from '../../../../gl-core';
+import { updateCVKey, LoadingDots } from '../../CV';
 
 export default function Completion() {
   const [output, setOutput] = useState('');
@@ -11,15 +11,13 @@ export default function Completion() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const slice = useSlice();
   const dispatch = useDispatch();
-  const { prompt } = slice.cv;
-
-  // console.log("prompt", prompt)
+  const { prompt, fetching } = slice.cv;
 
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
     }
-  }, [output]);
+  }, [output, fetching]);
 
   const handleAnalyse = async () => {
     dispatch(updateCVKey('cv', { fetching: true }));
@@ -140,6 +138,12 @@ export default function Completion() {
         >
           {output || ''}
         </ReactMarkdown>
+
+        {fetching && (
+          <Box mt={2}>
+            <LoadingDots />
+          </Box>
+        )}
       </Box>
     </Box>
   );
