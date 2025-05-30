@@ -4,7 +4,7 @@ export const runtime = 'edge';
 
 export async function POST(req: NextRequest) {
   const { prompt } = await req.json();
-  
+
   if (!prompt) {
     return new Response('Missing prompt', { status: 400 });
   }

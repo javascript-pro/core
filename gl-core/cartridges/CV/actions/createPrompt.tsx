@@ -1,19 +1,43 @@
-// core/gl-core/cartridges/CV/actions/createPrompt.tsx
-
 import { TUbereduxDispatch } from '../../../';
 import { setUbereduxKey } from '../../../';
 import { setCVKey } from '../';
 
-export const createPrompt = (): any =>
-  async (dispatch: TUbereduxDispatch, getState: () => any) => {
+export const createPrompt =
+  (): any => async (dispatch: TUbereduxDispatch, getState: () => any) => {
     try {
       const state = getState().redux;
       const { cv } = state;
       const { jd, cvMarkdown, viewpoint } = cv;
+
+      if (!jd || jd.length < 50) {
+        throw new Error('Job description is too short to analyse.');
+      }
+
+      const looksLikeCode = [
+        /import\s+[\w\s{}*]+from\s+['"].+['"]/,
+        /function\s+\w+\(/,
+        /\bconst\s+\w+\s*=/,
+        /\(\)\s*=>/,
+        /{.*}/,
+        /<\/?[A-Z][a-zA-Z]*.*>/,
+      ].some((regex) => regex.test(jd));
+
+      const hasVeryFewSentences = (jd.match(/\.\s/g) || []).length < 2;
+
+      if (looksLikeCode && hasVeryFewSentences) {
+        throw new Error(
+          'The job description appears to be source code. Please paste a proper job description.',
+        );
+      }
+
+      const titleMatch =
+        jd?.match(/(?:(?:^|\n)[#]*\s*([\w \-\/]+)\s*)/i)?.[1]?.trim() ||
+        'the job description';
+
       const prompt1st = `
 You are a senior React developer.
 
-Evaluate the following CV against the provided job description and return a structured response titled "fit".
+Evaluate the following CV against the provided job description and return a structured response titled "Match to ${titleMatch}".
 
 Start with a clear judgement: Are you a good fit for this role?
 
@@ -36,7 +60,7 @@ ${jd}
       const prompt3rd = `
 You are a senior hiring consultant.
 
-Evaluate the following CV against the provided job description and provide a structured response titled "fit".
+Evaluate the following CV against the provided job description and provide a structured response titled "Match to ${titleMatch}".
 
 Start with a clear judgement: Is this candidate a good fit for the role?
 
@@ -55,11 +79,12 @@ ${jd}
 `.trim();
 
       const prompt = viewpoint === 'first' ? prompt1st : prompt3rd;
+
       dispatch(setCVKey('prompt', prompt));
       dispatch(setCVKey('appMode', 'prompt'));
     } catch (e: unknown) {
       const msg = e instanceof Error ? e.message : String(e);
-      console.log("createPrompt error",  msg);
+      console.log('createPrompt error', msg);
       dispatch(setUbereduxKey({ key: 'error', value: msg }));
     }
   };

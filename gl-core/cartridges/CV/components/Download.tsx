@@ -40,7 +40,7 @@ export default function Download(cv: any) {
       <MightyButton
         onClick={onDownloadClick}
         variant="contained"
-        label="Download"
+        label="Download CV"
         color="primary"
         icon="download"
       />

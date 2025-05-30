@@ -55,7 +55,9 @@ export default function LoadingDots() {
 
       <style jsx global>{`
         @keyframes bounce {
-          0%, 80%, 100% {
+          0%,
+          80%,
+          100% {
             transform: scale(0);
           }
           40% {

@@ -18,7 +18,14 @@ import {
   routeTo,
   RenderMarkdown,
 } from '../../';
-import { JD, setAppMode, setCVKey, Download, ShowPrompt, Completion } from '../CV';
+import {
+  JD,
+  setAppMode,
+  setCVKey,
+  Download,
+  ShowPrompt,
+  Completion,
+} from '../CV';
 
 export type TCV = {
   mode: 'alert' | 'advert' | 'app' | null;
@@ -35,7 +42,7 @@ export default function CV({
   const { appMode, showJD } = cvSlice;
   const router = useRouter();
   const isMobile = useIsMobile();
-  
+
   React.useEffect(() => {
     if (markdown) {
       dispatch(setCVKey('cvMarkdown', markdown));
@@ -85,16 +92,22 @@ export default function CV({
             }}
           />
         ) : (
-          <MightyButton
-            label="View CV"
-            icon="doc"
-            color="primary"
-            variant="contained"
-            onClick={() => {
-              dispatch(setCVKey('appMode', 'cv'));
-              dispatch(setCVKey('showJD', false));
-            }}
-          />
+          <>
+            <MightyButton
+              label="View CV"
+              icon="doc"
+              color="primary"
+              variant="contained"
+              onClick={() => {
+                dispatch(setCVKey('appMode', 'cv'));
+                dispatch(setCVKey('showJD', false));
+              }}
+            />
+            <Box sx={{ ml: 2 }}>
+              <Download cv={markdown} />
+            </Box>
+            
+          </>
         )}
 
         {appMode === 'cv' && (

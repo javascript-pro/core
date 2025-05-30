@@ -12,7 +12,13 @@ import {
   FormLabel,
   useTheme,
 } from '@mui/material';
-import { useSlice, useIsMobile, useDispatch, Icon, MightyButton } from '../../../../gl-core';
+import {
+  useSlice,
+  useIsMobile,
+  useDispatch,
+  Icon,
+  MightyButton,
+} from '../../../../gl-core';
 import { updateCVKey, createPrompt, setCVKey } from '../';
 
 const MIN_LENGTH = 100;
@@ -23,7 +29,7 @@ export default function JD() {
   const isMobile = useIsMobile();
   const { cv } = slice;
   const { jd, validJd, viewpoint } = cv;
-  const linkCol = useTheme().palette.text.primary
+  const linkCol = useTheme().palette.text.primary;
 
   const inputRef = React.useRef<HTMLTextAreaElement | null>(null);
 
@@ -67,14 +73,15 @@ export default function JD() {
 
   return (
     <Box sx={{ py: 0 }}>
-
       <FormLabel component="legend" sx={{ my: 2 }}>
-        Paste a job description and tap “Analyse”. Our AI will assess how well it matches the skills and experience in our CV, from either a 1st or 3rd party perspective. Try it out with one of these example jobs — one’s a{' '}
+        Paste a job description and tap “Analyse”. Our AI will assess how well
+        it matches the skills and experience in our CV, from either a 1st or 3rd
+        party perspective. Try it out with one of these example jobs — one’s a{' '}
         <a
           href="/txt/goodFit.txt"
           target="_blank"
           rel="noopener noreferrer"
-          style={{ textDecoration: 'none', color: linkCol, fontWeight: "bold" }}
+          style={{ textDecoration: 'none', color: linkCol, fontWeight: 'bold' }}
         >
           good fit
         </a>
@@ -83,7 +90,7 @@ export default function JD() {
           href="/txt/badFit.txt"
           target="_blank"
           rel="noopener noreferrer"
-          style={{ textDecoration: 'none', color: linkCol, fontWeight: "bold" }}
+          style={{ textDecoration: 'none', color: linkCol, fontWeight: 'bold' }}
         >
           isn’t
         </a>
@@ -114,7 +121,7 @@ export default function JD() {
         multiline
         variant="filled"
         color="secondary"
-        rows={isMobile ?  6 : 10}
+        rows={isMobile ? 6 : 10}
         inputRef={inputRef}
         label="Paste Job Description here"
         value={jd || ''}

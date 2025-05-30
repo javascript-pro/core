@@ -6,10 +6,6 @@ import { useSlice } from '../../../../gl-core';
 export default function ShowPrompt() {
   const slice = useSlice();
   const { prompt } = slice.cv;
-  
-  return (
-    <Box sx={{}}>
-      {prompt}
-    </Box>
-  );
+
+  return <Box sx={{}}>{prompt}</Box>;
 }

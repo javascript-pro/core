@@ -1,19 +1,19 @@
 'use client';
 import React, { useState, useRef, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { Box, Alert, Typography, Button } from '@mui/material';
+import { Box, Alert, Typography } from '@mui/material';
 import { MightyButton, useSlice, useDispatch } from '../../../../gl-core';
 import { updateCVKey, LoadingDots, resetCV } from '../../CV';
 
 export default function Completion() {
   const [output, setOutput] = useState('');
   const [error, setError] = useState<string | null>(null);
+  const [copied, setCopied] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
   const slice = useSlice();
   const dispatch = useDispatch();
   const { prompt, fetching, completion } = slice.cv;
 
-  // Scroll to bottom as output updates
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
@@ -79,7 +79,6 @@ export default function Completion() {
     dispatch(updateCVKey('cv', { fetching: false }));
   };
 
-  // Run only if there's a prompt and no prior completion
   useEffect(() => {
     if (!prompt || completion) return;
 
@@ -94,6 +93,17 @@ export default function Completion() {
     dispatch(resetCV());
     setOutput('');
     setError(null);
+  };
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(completion || '');
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy:', err);
+      setError('Failed to copy to clipboard');
+    }
   };
 
   const displayText = completion || output;
@@ -156,13 +166,20 @@ export default function Completion() {
         )}
 
         {completion && (
-          <Box mt={3}>
+          <Box mt={3} sx={{ display: 'flex', gap: 2 }}>
             <MightyButton
-              label="Try again?"
+              label="Retry?"
               icon="reset"
               color="primary"
               variant="contained"
               onClick={handleStartOver}
+            />
+            <MightyButton
+              label={copied ? 'Copied!' : 'Copy to clipboard'}
+              icon="copy"
+              color="primary"
+              variant="contained"
+              onClick={handleCopy}
             />
           </Box>
         )}
