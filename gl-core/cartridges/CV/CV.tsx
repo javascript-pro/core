@@ -75,6 +75,7 @@ export default function CV({
           mx: 4,
         }}
       >
+        
         {appMode === 'cv' ? (
           <MightyButton
             label="AI Match"
@@ -110,8 +111,25 @@ export default function CV({
             <Download cv={markdown} />
           </Box>
         )}
+        <Box sx={{ ml: 1 }}>
+          <MightyButton
+            mode="icon"
+            label="About"
+            icon="about"
+            variant="contained"
+            color="primary"
+            onClick={() => {
+              dispatch(routeTo('/cv/about', router));
+            }}
+          />
+        </Box>
+          
       </Box>
 
+        
+          
+        
+        
       {showJD && (
         <Box sx={{ mx: 4 }}>
           <JD />
