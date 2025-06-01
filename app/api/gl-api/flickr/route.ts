@@ -18,6 +18,7 @@ const photoCache: Record<string, { time: number; photo: TFlickrPhoto }> = {};
  * Fetch detailed info and available sizes for a single Flickr photo
  */
 async function getPhotoWithSizes(photoId: string): Promise<TFlickrPhoto> {
+  // Step 1: Get basic photo info (title, description, geolocation, etc.)
   const infoRes = await fetch(
     `${FLICKR_API}?method=flickr.photos.getInfo&api_key=${flickrApiKey}&photo_id=${photoId}&user_id=${flickrUserId}&format=json&nojsoncallback=1`
   );
@@ -25,12 +26,14 @@ async function getPhotoWithSizes(photoId: string): Promise<TFlickrPhoto> {
   if (infoData.stat !== 'ok') throw new Error(infoData.message);
   const p = infoData.photo;
 
+  // Step 2: Get photo size information
   const sizesRes = await fetch(
     `${FLICKR_API}?method=flickr.photos.getSizes&api_key=${flickrApiKey}&photo_id=${photoId}&format=json&nojsoncallback=1`
   );
   const sizesData = await sizesRes.json();
   if (sizesData.stat !== 'ok') throw new Error(sizesData.message);
 
+  // Helper to find a photo size by its label
   const getSize = (label: string): TFlickrPhotoSize | undefined => {
     const s = sizesData.sizes.size.find((sz: any) => sz.label === label);
     return s
@@ -42,9 +45,11 @@ async function getPhotoWithSizes(photoId: string): Promise<TFlickrPhoto> {
       : undefined;
   };
 
+  // Try to find a square thumbnail version
   const getBestSquare = (): TFlickrPhotoSize | undefined =>
     getSize('Large Square') || getSize('Square');
 
+  // Construct and return TFlickrPhoto
   return {
     flickrId: p.id,
     flickrUrl: `https://www.flickr.com/photos/${flickrUserId}/${p.id}`,
@@ -74,6 +79,7 @@ export async function GET(request: NextRequest) {
   const albumId = searchParams.get('album');
   const photoId = searchParams.get('photo');
 
+  // Ensure Flickr API credentials are available
   if (!flickrApiKey || !flickrUserId) {
     return NextResponse.json({
       time: Date.now(),
@@ -83,7 +89,11 @@ export async function GET(request: NextRequest) {
     });
   }
 
+  /**
+   * If a photoId is provided, return detailed photo info
+   */
   if (photoId) {
+    // Serve from cache if available and fresh
     const cached = photoCache[photoId];
     if (cached && Date.now() - cached.time < CACHE_TTL) {
       return NextResponse.json({
@@ -96,6 +106,7 @@ export async function GET(request: NextRequest) {
     }
 
     try {
+      // Fetch from Flickr and cache it
       const result = await getPhotoWithSizes(photoId);
       photoCache[photoId] = { time: Date.now(), photo: result };
 
@@ -116,6 +127,9 @@ export async function GET(request: NextRequest) {
     }
   }
 
+  /**
+   * If no albumId is given, return usage instructions
+   */
   if (!albumId) {
     return NextResponse.json({
       time: Date.now(),
@@ -127,6 +141,7 @@ export async function GET(request: NextRequest) {
     });
   }
 
+  // Check album cache
   const cached = albumCache[albumId];
   const albumUrl = `https://www.flickr.com/photos/${flickrUserId}/albums/${albumId}`;
 
@@ -147,7 +162,11 @@ export async function GET(request: NextRequest) {
     });
   }
 
+  /**
+   * Fetch and format album data from Flickr
+   */
   try {
+    // Step 1: Get photos in the album (bulk metadata)
     const flickrRes = await fetch(
       `${FLICKR_API}?method=flickr.photosets.getPhotos&api_key=${flickrApiKey}&photoset_id=${albumId}&user_id=${flickrUserId}&format=json&nojsoncallback=1&extras=description,date_taken,geo,tags,url_o,url_h,url_c,url_n`
     );
@@ -199,6 +218,7 @@ export async function GET(request: NextRequest) {
 
     const coverPhoto = await getPhotoWithSizes(data.photoset.primary);
 
+    // Step 3: Get album metadata (title, description, etc.)
     const infoRes = await fetch(
       `${FLICKR_API}?method=flickr.photosets.getInfo&api_key=${flickrApiKey}&photoset_id=${albumId}&user_id=${flickrUserId}&format=json&nojsoncallback=1`
     );
@@ -214,6 +234,7 @@ export async function GET(request: NextRequest) {
       total: parseInt(infoData.photoset.count_photos) || photos.length,
     };
 
+    // Cache the full album response
     albumCache[albumId] = {
       time: Date.now(),
       meta,

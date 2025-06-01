@@ -7,6 +7,7 @@ icon: javascript
 image: /png/javascript.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React, Angular, Vue, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS, JSON
 ---
+| [REST API](/work/javascript/rest-api)
 
 ## JavaScript Whatever the Weather
 

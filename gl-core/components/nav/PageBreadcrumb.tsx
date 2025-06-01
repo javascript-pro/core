@@ -38,6 +38,7 @@ function formatSegment(segment: string) {
   return segment.replace(/-/g, ' ').replace(/^\w/, (c) => c.toUpperCase());
 }
 
+
 export function PageBreadcrumb() {
   const pathname = usePathname();
   const segments = pathname.replace(/\/$/, '').split('/').filter(Boolean);

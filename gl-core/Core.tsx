@@ -29,7 +29,10 @@ export type TCore = {
   children?: React.ReactNode;
 };
 
-export default function Core({ frontmatter, body = null }: TCore) {
+export default function Core({ 
+  frontmatter, 
+  body = null
+}: TCore) {
   const pathname = usePathname();
   const router = useRouter();
   const isMobile = useIsMobile();
