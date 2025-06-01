@@ -89,7 +89,7 @@ export default function CV({
         ) : (
           <>
             <MightyButton
-              label="View CV"
+              label="View"
               icon="doc"
               color="primary"
               variant="contained"
