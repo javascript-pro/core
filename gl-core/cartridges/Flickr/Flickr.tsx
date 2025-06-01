@@ -11,7 +11,7 @@ import {
   ListItemText,
 } from '@mui/material';
 import { useDispatch, Advert, routeTo } from '../../../gl-core';
-import { initFlickr, resetFlickr } from './';
+import { initFlickr, resetFlickr, PhotoPopup, photoSelect } from '../Flickr';
 import { TFlickr } from './types';
 import { MightyButton, useSlice } from '../../../gl-core';
 import { useRouter } from 'next/navigation';
@@ -19,9 +19,9 @@ import { useRouter } from 'next/navigation';
 export default function Flickr({
   mode = 'default',
   id = null,
-  onClick = () => {
-    console.log('No onClick supplied to Flickr');
-  },
+  // onClick = () => {
+  //   console.log('No onClick supplied to Flickr');
+  // },
 }: TFlickr) {
   const router = useRouter();
   const dispatch = useDispatch();
@@ -31,7 +31,6 @@ export default function Flickr({
   const showToolbar = false;
   const albumTitle = album?.meta?.title || '';
   const albumDescription = album?.meta?.description || '';
-  // const albumThumbSrc = album?.meta?.coverPhoto?.sizes?.thumb?.src || '';
   const albumPhotos = album?.photos || [];
   const albumURL = album?.meta?.albumUrl || '';
 
@@ -46,14 +45,16 @@ export default function Flickr({
 
     if (notReady) {
       return (
-        <Alert sx={{ mx: 4 }} severity="warning">
-          Still loading...
+        <Alert sx={{ mx: 4 }} severity="info">
+          Loading...
         </Alert>
       );
     }
 
     return (
-      <Box sx={{}}>
+      <Box>
+        <PhotoPopup />
+
         {showToolbar && (
           <Toolbar>
             <MightyButton
@@ -88,7 +89,10 @@ export default function Flickr({
               const thumbSrc = item?.sizes?.thumb?.src || '';
 
               return (
-                <ListItemButton key={`item_${i}`}>
+                <ListItemButton
+                  key={`item_${i}`}
+                  onClick={() => dispatch(photoSelect(item))}
+                >
                   <ListItemAvatar sx={{ mr: 2 }}>
                     <img
                       style={{ borderRadius: '4px' }}

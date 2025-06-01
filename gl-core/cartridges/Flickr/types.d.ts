@@ -10,6 +10,7 @@ export type TFlickrState = {
   search: string | null;
   message: string;
   albums?: TFlickrAlbum[];
+  photo?: any | null;
   [key: string]: any;
 };
 

@@ -34,7 +34,7 @@
       "NextJS",
       "Headless CMS"
     ],
-    "excerpt": "We build and ship modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source codebases\n \n\n is . It's  and . It ",
+    "excerpt": "We build and ship modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source \n \n \n\n is . It's  and .  \n\nIt come",
     "children": [
       {
         "title": "Free & Open Source",
@@ -126,7 +126,7 @@
         ]
       },
       {
-        "title": "C.V.",
+        "title": "Curriculum Vitae",
         "description": "Match your Job to our CV with AI",
         "slug": "/cv",
         "order": 2,
@@ -156,7 +156,7 @@
               "AI",
               "OpenAI"
             ],
-            "excerpt": "What T F?\n\n Usage"
+            "excerpt": "Applying for jobs can be time consuming \n\nEach role requires tailoring a cover letter or rewording a CV to match a job description. As developers, we know the real problem isn’t effort — it’s clarity."
           }
         ]
       },
@@ -273,7 +273,7 @@
               "Headless CMS",
               "JSON"
             ],
-            "excerpt": "JavaScript Whatever the Weather\n\nWe’ve been writing JavaScript since it was still called ECMAScript.\n\nBefore the frameworks, before npm, before it ate the world—we were already deep in the language th",
+            "excerpt": "| \n\n JavaScript Whatever the Weather\n\nWe’ve been writing JavaScript since it was still called ECMAScript.\n\nBefore the frameworks, before npm, before it ate the world—we were already deep in the langua",
             "children": [
               {
                 "title": "REST API",

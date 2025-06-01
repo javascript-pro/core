@@ -5,6 +5,7 @@ export const initialState: TFlickrState = {
   status: 'warning',
   message: 'Flickr is not ready',
   album: { photos: [] },
+  photo: null,
   loading: false,
   loaded: false,
   search: null,

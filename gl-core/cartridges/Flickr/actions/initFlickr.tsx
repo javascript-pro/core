@@ -18,7 +18,6 @@ export const initFlickr =
           value: {
             ...flickr,
             message: 'Booting Flickr Cartridge',
-
             loading: true,
             status: 'success',
             albumId,
