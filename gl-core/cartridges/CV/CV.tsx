@@ -127,9 +127,6 @@ export default function CV({
       </Box>
 
         
-          
-        
-        
       {showJD && (
         <Box sx={{ mx: 4 }}>
           <JD />
