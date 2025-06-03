@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
         Authorization: 'Basic ' + Buffer.from(`${process.env.FORWARD_EMAIL_API_KEY}:`).toString('base64'),
       },
       body: JSON.stringify({
-        from: 'notify@goldlabel.pro',
+        from: 'Goldlabel <notify@goldlabel.pro>',
         to,
         subject,
         text,
