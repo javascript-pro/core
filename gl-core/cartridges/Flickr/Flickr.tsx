@@ -11,7 +11,7 @@ import {
   ListItemText,
 } from '@mui/material';
 import { useDispatch, Advert, routeTo } from '../../../gl-core';
-import { initFlickr, resetFlickr, PhotoPopup, photoSelect } from '../Flickr';
+import { initFlickr, resetFlickr, PhotoPopup, photoSelect, AlbumSelecta } from '../Flickr';
 import { TFlickr } from './types';
 import { MightyButton, useSlice } from '../../../gl-core';
 import { useRouter } from 'next/navigation';
@@ -81,6 +81,8 @@ export default function Flickr({
               />
             }
           />
+
+          <AlbumSelecta />
 
           <List>
             {albumPhotos.map((item: any, i: number) => {

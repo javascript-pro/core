@@ -43,7 +43,7 @@
         "order": 1,
         "icon": "flash",
         "type": "folder",
-        "excerpt": "|  |  | \n\n Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, ",
+        "excerpt": "Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or b",
         "children": [
           {
             "title": "Public API",
