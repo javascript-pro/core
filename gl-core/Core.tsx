@@ -1,6 +1,8 @@
 'use client';
+
 import * as React from 'react';
 import { usePathname, useRouter } from 'next/navigation';
+import Image from 'next/image';
 import { CssBaseline, Box, Grid } from '@mui/material';
 import {
   Theme,
@@ -29,9 +31,9 @@ export type TCore = {
   children?: React.ReactNode;
 };
 
-export default function Core({ 
-  frontmatter, 
-  body = null
+export default function Core({
+  frontmatter,
+  body = null,
 }: TCore) {
   const pathname = usePathname();
   const router = useRouter();
@@ -90,8 +92,8 @@ export default function Core({
   return (
     <Theme>
       <CssBaseline />
-      <Flash id="core">
-        <MovieClip id="content" opacity={0}>
+      <Box id="core">
+        <Box id="content">
           <Header frontmatter={frontmatter} />
 
           <Grid container spacing={1}>
@@ -111,7 +113,25 @@ export default function Core({
                 {pathname !== '/' && <PageBreadcrumb />}
               </Box>
 
-              <Box sx={{ mt: isMobile ? 2 : 0 }}>{isMobile && getAside()}</Box>
+              <Box sx={{ mt: isMobile ? 2 : 0 }}>
+                
+                {frontmatter?.image && (
+                  <Box sx={{ mx: 4, mt: 2 }}>
+                    <Image
+                      priority
+                      src={frontmatter.image}
+                      alt={frontmatter.title || 'Featured image'}
+                      width={1200}
+                      height={630}
+                      style={{
+                        width: '100%',
+                        height: 'auto',
+                      }}
+                    />
+                  </Box>
+                )}
+                {isMobile && getAside()}
+              </Box>
 
               <Box
                 sx={{
@@ -124,8 +144,8 @@ export default function Core({
             </Grid>
             {!isMobile && getAside()}
           </Grid>
-        </MovieClip>
-      </Flash>
+        </Box>
+      </Box>
     </Theme>
   );
 }

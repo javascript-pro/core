@@ -26,7 +26,7 @@ export default function UbereduxProvider({
             >
               <Image
                 priority
-                src="/svg/rehydrate-ad.svg"
+                src="/svg/favicon.svg"
                 alt="Rehydrating Uberedux"
                 width={150}
                 height={150}
