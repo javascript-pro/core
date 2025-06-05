@@ -14,9 +14,11 @@ export type TAdvert = {
   title?: string | null;
   description?: string | null;
   onClick: any;
+  icon?: string;
 };
 
 export default function Advert({
+  icon = 'star',
   title = 'Default Title',
   description = 'description',
   onClick = () => {
@@ -33,7 +35,7 @@ export default function Advert({
             sx={{ width: '100%' }}
             severity="success"
             // variant="filled"
-            icon={<Icon icon="star" />}
+            icon={<Icon icon={icon as any} />}
           >
             <Typography variant="body1">{title}</Typography>
             {!isMobile && (

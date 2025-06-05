@@ -4,7 +4,7 @@ title: Open Source
 slug: /free/open-source
 description: We build in the open because it makes us better. Here’s why Open Source is a cornerstone of our work.
 icon: api
-image: /png/defaultFeatured.png
+image: /png/default.png
 tags: free, opensource
 ---
 

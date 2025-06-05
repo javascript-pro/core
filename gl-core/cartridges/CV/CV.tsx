@@ -45,7 +45,8 @@ export default function CV({
   if (mode === 'advert')
     return (
       <Advert
-        title={'C.V. Cartridge'}
+        icon="doc"
+        title={'C.V.'}
         description={'Simple AI tool to match your Job to our CV'}
         onClick={() => {
           dispatch(routeTo('/cv', router));
@@ -71,7 +72,7 @@ export default function CV({
       >
         {appMode === 'cv' ? (
           <MightyButton
-            label="AI Match"
+            label="Match"
             icon="openai"
             variant="contained"
             color="primary"

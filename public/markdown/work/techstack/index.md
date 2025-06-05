@@ -4,7 +4,7 @@ title: Techstack
 description: Protected by Bouncer
 slug: /work/techstack
 icon: techstack
-image: /png/defaultFeatured.png
+image: /png/default.png
 tags: techstack
 ---
 

@@ -1,13 +1,13 @@
 ---
 order: 20
 title: MUI Toolpad
-description: A set of components to build dashboards with React.
+description: React-based dashboards powered by live data
 slug: /work/techstack/toolpad
 icon: design
-image: /png/defaultFeatured.png
+image: /png/default.png
 tags: techstack, Design, MUI
 ---
-# MUI Toolpad
+## MUI Toolpad
 
 MUI Toolpad is a low-code builder for internal tools. It runs as part of your Next.js project and gives you a drag-and-drop environment to create React-based dashboards powered by live data.
 
@@ -20,7 +20,6 @@ We’re using Toolpad inside **Goldlabel Cloud** to build internal interfaces qu
 
 Toolpad helps us stay productive and impress outsiders. It feels like a real product — because it is.
 
----
 
 ## Why Toolpad?
 
@@ -33,7 +32,6 @@ Toolpad is not just a dashboard builder. It fits naturally into our stack:
 
 It’s perfect for building internal tools **that matter** — fast.
 
----
 
 ## Local Setup
 
@@ -51,7 +49,6 @@ npx @mui/toolpad dev
 
 From here, you can start dragging components, binding data, and building apps — no page reloads required.
 
----
 
 ## Firebase Integration
 
@@ -64,7 +61,6 @@ Toolpad can bind directly to Firebase with no middleware layer.
 
 We'll document each of these steps separately in the next chapter.
 
----
 
 ## Deployment
 
@@ -76,7 +72,6 @@ yarn build && yarn start
 
 Your dashboards are live. They can be nested under a secure route like `/admin`, gated by our Bouncer auth system.
 
----
 
 ## What It’s For
 

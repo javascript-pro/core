@@ -118,8 +118,9 @@ export default function Flickr({
   if (mode === 'album-card') {
     return (
       <Advert
-        title={'Flickr Cartridge'}
-        description={'Photos, titles and other meta data managed by Flickr'}
+        icon="flickr"
+        title={'Flickr'}
+        description={'Photos, and other meta managed on Flickr'}
         onClick={() => {
           dispatch(routeTo('/free/flickr', router));
         }}

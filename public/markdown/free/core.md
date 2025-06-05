@@ -4,7 +4,7 @@ title: Core
 slug: /free/core
 description: Open Source and Free Forever
 icon: github
-image: /png/defaultFeatured.png
+image: /png/default.png
 tags: free, core
 ---
 

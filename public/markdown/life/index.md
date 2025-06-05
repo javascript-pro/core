@@ -4,7 +4,7 @@ title: Life
 description: Well, we've all got to have one
 slug: /life
 icon: life
-image: /png/defaultFeatured.png
+image: /png/default.png
 ---
 
 [Food](/life/food) | [Aquaponics](/life/aquaponics) | [Diving](/life/diving)

@@ -4,10 +4,8 @@ title: Free & Open Source
 description: Some things in life ARE free
 slug: /free
 icon: flash
-image: '/png/javascript.png'
+image: /png/default.png
 ---
-
-[Flickr](/free/flickr) | [Bouncer](/free/bouncer) | [Uberedux](/free/uberedux) | [Open Source](/free/open-source)
 
 ## Some things in life _are_ free — Goldlabel [Core](/free/core) is one of them.
 

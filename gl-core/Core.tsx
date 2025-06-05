@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { CssBaseline, Box, Grid, Skeleton, Typography } from '@mui/material';
 import {
   Theme,
-
+  Advert,
   RenderMarkdown,
   Header,
   PageBreadcrumb,
@@ -70,11 +70,22 @@ export default function Core({ frontmatter, body = null }: TCore) {
           mt: isMobile ? 2 : 3,
         }}
       >
+        
+        <Advert
+          icon="design"
+          title={'MUI Toolpad'}
+          description={'React-based dashboards powered by live data.'}
+          onClick={() => {
+            router.push(`/work/techstack/toolpad`);
+          }}
+        />
+
         {!isCV && (
           <Box sx={{ mb: 2 }}>
             <CV mode="advert" />
           </Box>
         )}
+        
         {!isFlickr && (
           <Flickr
             mode="album-card"
@@ -84,6 +95,9 @@ export default function Core({ frontmatter, body = null }: TCore) {
             }}
           />
         )}
+
+
+
       </Box>
     </Grid>
   );

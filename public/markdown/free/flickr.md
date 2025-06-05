@@ -5,7 +5,7 @@ description: Photo Cartridge
 tags: free, cartridge
 slug: /free/flickr
 icon: flickr
-image: /jpg/flickr.jpg
+image: /png/flickr.png
 api: /api/gl-api/flickr?album=72177720326317140
 github: https://github.com/javascript-pro/core/blob/main/app/api/gl-api/flickr/route.ts
 ---
