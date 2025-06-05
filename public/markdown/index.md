@@ -14,10 +14,10 @@ api: /api/gl-api/flickr
 
 - _Small_ team. _Big_ output
 - Real deployments from Day One
-- Readable, extensible, Open Source 
+- Readable, extensible, Open Source
 - [CV](/cv/about)
 - [More](/work/company)
 
-[Goldlabel Core](/free/core) is [JavaScript](/work/javascript). It's [Free](/free) and [Open Source](/free/open-source).  
+[Goldlabel Core](/free/core) is [JavaScript](/work/javascript). It's [Free](/free) and [Open Source](/free/open-source).
 
 It comes with these cartridges; [Bouncer](/free/bouncer) | [Uberedux](/free/uberedux) | [Flickr](/balance/flickr) | [Flash](/free/flash)

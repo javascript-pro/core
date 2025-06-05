@@ -2,7 +2,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Box, Alert, Typography } from '@mui/material';
-import { MightyButton, useSlice, useDispatch, forwardEmail } from '../../../../gl-core';
+import {
+  MightyButton,
+  useSlice,
+  useDispatch,
+  forwardEmail,
+} from '../../../../gl-core';
 import { updateCVKey, LoadingDots, resetCV } from '../../CV';
 
 export default function Completion() {
@@ -74,11 +79,12 @@ export default function Completion() {
 
       // Send email
       const plain = markdownToPlainText(finalOutput);
-      dispatch(forwardEmail({
-        subject: 'CV Analysis Complete',
-        text: plain.slice(0, 2000), // limit message size
-      }));
-
+      dispatch(
+        forwardEmail({
+          subject: 'CV Analysis Complete',
+          text: plain.slice(0, 2000), // limit message size
+        }),
+      );
     } catch (err: any) {
       console.error('Stream error:', err);
       setError(err.message || 'Unknown error');
@@ -107,8 +113,8 @@ export default function Completion() {
   const markdownToPlainText = (markdown: string): string => {
     return markdown
       .replace(/^###\s+(.*)$/gm, (_, title) => title.toUpperCase()) // ### Heading
-      .replace(/^##\s+(.*)$/gm, (_, title) => title.toUpperCase())  // ## Heading
-      .replace(/^#\s+(.*)$/gm, (_, title) => title.toUpperCase())   // # Heading
+      .replace(/^##\s+(.*)$/gm, (_, title) => title.toUpperCase()) // ## Heading
+      .replace(/^#\s+(.*)$/gm, (_, title) => title.toUpperCase()) // # Heading
       .replace(/\*\*(.*?)\*\*/g, '$1') // bold
       .replace(/\*(.*?)\*/g, '$1') // italic
       .replace(/_(.*?)_/g, '$1') // underscore italic

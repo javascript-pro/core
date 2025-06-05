@@ -130,7 +130,7 @@ import AboutIcon from '@mui/icons-material/Help';
 export type TIcon = {
   icon:
     | 'plus'
-        | 'about'
+    | 'about'
     | 'link'
     | 'album'
     | 'flickr'
@@ -727,7 +727,7 @@ export default function Icon({ icon, color }: TIcon) {
       iconFragment = <AlbumIcon color={color} />;
       break;
 
-          case 'about':
+    case 'about':
       iconFragment = <AboutIcon color={color} />;
       break;
 

@@ -31,10 +31,7 @@ export type TCore = {
   children?: React.ReactNode;
 };
 
-export default function Core({
-  frontmatter,
-  body = null,
-}: TCore) {
+export default function Core({ frontmatter, body = null }: TCore) {
   const pathname = usePathname();
   const router = useRouter();
   const isMobile = useIsMobile();
@@ -114,7 +111,6 @@ export default function Core({
               </Box>
 
               <Box sx={{ mt: isMobile ? 2 : 0 }}>
-                
                 {frontmatter?.image && (
                   <Box sx={{ mx: 4, mt: 2 }}>
                     <Image

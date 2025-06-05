@@ -6,9 +6,8 @@ import { MightyButton, useDispatch, forwardEmail } from '../../../../gl-core';
 import { templatePDF } from '../';
 
 export default function Download(cv: any) {
-
   const dispatch = useDispatch();
-  
+
   const onDownloadClick = async () => {
     // console.log('cv.cv', cv.cv);
     const { default: html2pdf } = await import('html2pdf.js');
@@ -25,10 +24,12 @@ export default function Download(cv: any) {
     const el = document.createElement('div');
     el.innerHTML = fullHTML;
 
-    dispatch(forwardEmail({
-      subject: 'CV Downloaded',
-      text: `Someone downloaded the CV at ${new Date().toISOString()}.`,
-    }));
+    dispatch(
+      forwardEmail({
+        subject: 'CV Downloaded',
+        text: `Someone downloaded the CV at ${new Date().toISOString()}.`,
+      }),
+    );
 
     html2pdf()
       .from(el)

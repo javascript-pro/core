@@ -25,7 +25,10 @@ export async function POST(req: NextRequest) {
   const { subject, text, to } = await req.json();
 
   if (!subject || !text || !to) {
-    return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
+    return NextResponse.json(
+      { error: 'Missing required fields' },
+      { status: 400 },
+    );
   }
 
   try {
@@ -33,7 +36,11 @@ export async function POST(req: NextRequest) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: 'Basic ' + Buffer.from(`${process.env.FORWARD_EMAIL_API_KEY}:`).toString('base64'),
+        Authorization:
+          'Basic ' +
+          Buffer.from(`${process.env.FORWARD_EMAIL_API_KEY}:`).toString(
+            'base64',
+          ),
       },
       body: JSON.stringify({
         from: 'Goldlabel <notify@goldlabel.pro>',

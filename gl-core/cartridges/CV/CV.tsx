@@ -18,13 +18,7 @@ import {
   routeTo,
   RenderMarkdown,
 } from '../../';
-import {
-  JD,
-  setAppMode,
-  setCVKey,
-  Download,
-  Completion,
-} from '../CV';
+import { JD, setAppMode, setCVKey, Download, Completion } from '../CV';
 
 export type TCV = {
   mode: 'alert' | 'advert' | 'app' | null;
@@ -75,7 +69,6 @@ export default function CV({
           mx: 4,
         }}
       >
-        
         {appMode === 'cv' ? (
           <MightyButton
             label="AI Match"
@@ -102,7 +95,6 @@ export default function CV({
             <Box sx={{ ml: 2 }}>
               <Download cv={markdown} />
             </Box>
-            
           </>
         )}
 
@@ -123,10 +115,8 @@ export default function CV({
             }}
           />
         </Box>
-          
       </Box>
 
-        
       {showJD && (
         <Box sx={{ mx: 4 }}>
           <JD />

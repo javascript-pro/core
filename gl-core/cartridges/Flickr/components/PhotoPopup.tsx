@@ -59,9 +59,7 @@ export default function PhotoPopup() {
         title={title}
         subheader={description}
         avatar={
-          <IconButton 
-            onClick={() => window.open(photo.flickrUrl, '_blank')}
-          >
+          <IconButton onClick={() => window.open(photo.flickrUrl, '_blank')}>
             <Icon icon="flickr" />
           </IconButton>
         }
@@ -105,7 +103,6 @@ export default function PhotoPopup() {
           />
         </Box>
       </DialogContent>
-
     </Dialog>
   );
 }

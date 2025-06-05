@@ -1,7 +1,11 @@
 import { setUbereduxKey } from '../../gl-core';
 import { TUbereduxDispatch } from '../../gl-core';
 
-const safeSet = (dispatch: TUbereduxDispatch, key: string | string[], value: any) => {
+const safeSet = (
+  dispatch: TUbereduxDispatch,
+  key: string | string[],
+  value: any,
+) => {
   const finalKey = Array.isArray(key) ? key.join('.') : key;
   if (typeof finalKey !== 'string') {
     console.warn('[setUbereduxKey] Invalid key:', key);
