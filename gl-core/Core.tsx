@@ -3,11 +3,10 @@
 import * as React from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
-import { CssBaseline, Box, Grid } from '@mui/material';
+import { CssBaseline, Box, Grid, Skeleton, Typography } from '@mui/material';
 import {
   Theme,
-  Flash,
-  MovieClip,
+
   RenderMarkdown,
   Header,
   PageBreadcrumb,
@@ -40,6 +39,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const isFlickr = pathname === '/free/flickr';
   const isApp = isCV || isFlickr;
 
+  const [imageError, setImageError] = React.useState(false);
+
   let app = <></>;
   switch (true) {
     case isCV:
@@ -66,6 +67,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
         sx={{
           mr: isMobile ? 4.5 : 4,
           ml: isMobile ? 4.5 : 0,
+          mt: isMobile ? 2 : 3,
         }}
       >
         {!isCV && (
@@ -112,18 +114,32 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
               <Box sx={{ mt: isMobile ? 2 : 0 }}>
                 {frontmatter?.image && (
-                  <Box sx={{ mx: 4, mt: 2 }}>
-                    <Image
-                      priority
-                      src={frontmatter.image}
-                      alt={frontmatter.title || 'Featured image'}
-                      width={1200}
-                      height={630}
-                      style={{
-                        width: '100%',
-                        height: 'auto',
-                      }}
-                    />
+                  <Box sx={{ mx: 4, mt: 0 }}>
+                    {!imageError ? (
+                      <Image
+                        priority
+                        src={frontmatter.image}
+                        alt={frontmatter.title || 'Featured image'}
+                        width={1200}
+                        height={630}
+                        style={{
+                          width: '100%',
+                          height: 'auto',
+                        }}
+                        onError={() => setImageError(true)}
+                      />
+                    ) : (
+                      <Box>
+                        <Skeleton
+                          variant="rectangular"
+                          width="100%"
+                          height={315}
+                        />
+                        <Typography variant="body2" color="text.secondary" mt={1}>
+                          Image could not be loaded.
+                        </Typography>
+                      </Box>
+                    )}
                   </Box>
                 )}
                 {isMobile && getAside()}
