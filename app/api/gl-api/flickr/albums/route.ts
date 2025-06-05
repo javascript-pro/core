@@ -7,14 +7,14 @@ const flickrUserId = process.env.FLICKR_USER;
 
 async function getPhotoWithSizes(photoId: string): Promise<TFlickrPhoto> {
   const infoRes = await fetch(
-    `${FLICKR_API}?method=flickr.photos.getInfo&api_key=${flickrApiKey}&photo_id=${photoId}&user_id=${flickrUserId}&format=json&nojsoncallback=1`,
+    `${FLICKR_API}?method=flickr.photos.getInfo&api_key=${flickrApiKey}&photo_id=${photoId}&user_id=${flickrUserId}&format=json&nojsoncallback=1`
   );
   const infoData = await infoRes.json();
   if (infoData.stat !== 'ok') throw new Error(infoData.message);
   const p = infoData.photo;
 
   const sizesRes = await fetch(
-    `${FLICKR_API}?method=flickr.photos.getSizes&api_key=${flickrApiKey}&photo_id=${photoId}&format=json&nojsoncallback=1`,
+    `${FLICKR_API}?method=flickr.photos.getSizes&api_key=${flickrApiKey}&photo_id=${photoId}&format=json&nojsoncallback=1`
   );
   const sizesData = await sizesRes.json();
   if (sizesData.stat !== 'ok') throw new Error(sizesData.message);
@@ -58,21 +58,21 @@ export async function GET(request: NextRequest) {
 
   try {
     const res = await fetch(
-      `${FLICKR_API}?method=flickr.photosets.getList&api_key=${flickrApiKey}&user_id=${flickrUserId}&format=json&nojsoncallback=1`,
+      `${FLICKR_API}?method=flickr.photosets.getList&api_key=${flickrApiKey}&user_id=${flickrUserId}&per_page=500&format=json&nojsoncallback=1`
     );
     const data = await res.json();
     if (data.stat !== 'ok') throw new Error(data.message);
 
     const sorted = data.photosets.photoset.sort(
-      (a: any, b: any) => parseInt(b.date_create) - parseInt(a.date_create),
+      (a: any, b: any) => parseInt(b.date_create) - parseInt(a.date_create)
     );
 
     const albums = await Promise.all(
-      sorted.slice(0, 12).map(async (set: any) => {
+      sorted.map(async (set: any) => {
         let coverPhoto: TFlickrPhoto | undefined;
         try {
           coverPhoto = await getPhotoWithSizes(set.primary);
-        } catch (e) {
+        } catch {
           coverPhoto = undefined;
         }
 
@@ -85,14 +85,14 @@ export async function GET(request: NextRequest) {
           albumUrl: `https://www.flickr.com/photos/${flickrUserId}/albums/${set.id}`,
           coverPhoto,
         };
-      }),
+      })
     );
 
     return NextResponse.json({
       time: Date.now(),
       endpoint: `/api/gl-api/flickr/albums`,
       status: 'success',
-      message: 'Album list with cover photos fetched',
+      message: 'Album list with cover photos fetched (per_page=500)',
       result: albums,
     });
   } catch (err: any) {

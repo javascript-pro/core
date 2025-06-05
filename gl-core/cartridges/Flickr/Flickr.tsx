@@ -2,6 +2,7 @@
 import * as React from 'react';
 import {
   CardHeader,
+  CardActions,
   Box,
   Alert,
   Toolbar,
@@ -68,6 +69,8 @@ export default function Flickr({
         )}
 
         <Box sx={{ mx: 2 }}>
+          
+
           <CardHeader
             title={albumTitle}
             subheader={albumDescription}
@@ -81,9 +84,7 @@ export default function Flickr({
               />
             }
           />
-
           <AlbumSelecta />
-
           <List>
             {albumPhotos.map((item: any, i: number) => {
               const photoTitle = item.title || '';
@@ -112,7 +113,11 @@ export default function Flickr({
               );
             })}
           </List>
+
+          
+
         </Box>
+        
       </Box>
     );
   }
