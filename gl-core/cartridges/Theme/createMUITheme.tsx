@@ -1,6 +1,5 @@
 import config from '../../config.json';
 import { createTheme } from '@mui/material';
-// import { TTheme } from '../';
 
 export function createMUITheme(themeMode: 'light' | 'dark') {
   const mode = themeMode;
@@ -28,7 +27,7 @@ export function createMUITheme(themeMode: 'light' | 'dark') {
       },
       text: {
         primary: theme.text,
-        secondary: theme.secondary,
+        secondary: theme.primary,
       },
     },
     components: {
@@ -48,6 +47,40 @@ export function createMUITheme(themeMode: 'light' | 'dark') {
           h4: { fontWeight: 400 },
           h5: { fontWeight: 400 },
           h6: { fontWeight: 400 },
+          subtitle1: {
+            color: theme.primary,
+          },
+          subtitle2: {
+            color: theme.primary,
+          },
+        },
+      },
+      MuiFormLabel: {
+        styleOverrides: {
+          root: {
+            color: theme.primary,
+          },
+        },
+      },
+      MuiInputLabel: {
+        styleOverrides: {
+          root: {
+            color: theme.primary,
+          },
+        },
+      },
+      MuiOutlinedInput: {
+        styleOverrides: {
+          notchedOutline: {
+            borderColor: theme.primary,
+          },
+        },
+      },
+      MuiFormHelperText: {
+        styleOverrides: {
+          root: {
+            color: theme.primary,
+          },
         },
       },
     },

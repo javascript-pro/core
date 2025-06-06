@@ -1,11 +1,11 @@
 ---
-order: 10
+order: 25
 title: GitHub
 description: Critical to our process
-slug: /work/github
+slug: /work/techstack/github
 icon: github
-image: /png/javascript.png
-tags: github, process
+image: /png/bluesky/javascript.png
+tags: github, process, javascript
 github: https://github.com/javascript-pro/core
 ---
 

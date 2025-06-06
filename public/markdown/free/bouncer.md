@@ -4,7 +4,7 @@ title: Bouncer
 description: Authentication and Access Control System
 slug: /free/bouncer
 icon: admin
-image: /png/bouncer/bouncer.png
+image: /png/cartridges/bouncer.png
 tags: cartridges, cartridge, free, bouncer
 featured: true
 ---

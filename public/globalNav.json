@@ -55,7 +55,7 @@
               "free",
               "api"
             ],
-            "excerpt": "Public API\n\n glapi/flickr endpoints"
+            "excerpt": "Goldlabel Public API\n\n glapi/flickr endpoints"
           },
           {
             "title": "Core",
@@ -183,7 +183,7 @@
           "NextJS",
           "Headless CMS"
         ],
-        "excerpt": "|  | \n\nGoldlabel Core is always Free & Open Source as a public repo on \n\n \n \n\n The apps we ship are real, run in production and are developed in public\n\nThe Core is Open Source and Free forever — givi",
+        "excerpt": "|  |   \n\nGoldlabel Core is always Free & Open Source as a public repo on . The apps we ship are real, run in production and are developed in public. The Core is Open Source and Free forever — giving y",
         "children": [
           {
             "title": "Goldlabel Apps Ltd",
@@ -192,7 +192,7 @@
             "order": 10,
             "icon": "work",
             "type": "folder",
-            "excerpt": "| \n\nGoldlabel Apps is a UKbased software company that designs, builds, and maintains fullstack web applications. We specialize in Next.js, Firebase, and custom UI development, delivering everything fr",
+            "excerpt": "Goldlabel Apps is a UKbased software company that designs, builds, and maintains fullstack web applications. We specialize in Next.js, Firebase, and custom UI development, delivering everything from i",
             "children": [
               {
                 "title": "Working remotely",
@@ -204,7 +204,7 @@
                   "remote",
                   "hybrid"
                 ],
-                "excerpt": "| \n\n Corporate attitudes to remote working have changed dramatically in recent years.\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communicat"
+                "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years.\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communication, "
               },
               {
                 "title": "Privacy & Cookies",
@@ -219,23 +219,9 @@
                   "terms",
                   "trust"
                 ],
-                "excerpt": "| \n\n We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead develop"
+                "excerpt": "We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers t"
               }
             ]
-          },
-          {
-            "title": "GitHub",
-            "description": "Critical to our process",
-            "slug": "/github",
-            "order": 10,
-            "icon": "github",
-            "type": "folder",
-            "tags": [
-              "github",
-              "process"
-            ],
-            "excerpt": "We use GitHub for everything. Including . Most of the communication done between us and our clients during development is done through GitHub in the form of comments, pull resuests, reviews and so for",
-            "children": []
           },
           {
             "title": "Techstack",
@@ -250,60 +236,91 @@
             "excerpt": "This page may require a higher level of access",
             "children": [
               {
-                "title": "MUI Toolpad",
-                "slug": "/toolpad",
-                "order": 20,
-                "icon": "design",
-                "type": "file",
-                "tags": [
-                  "techstack",
-                  "Design",
-                  "MUI"
-                ],
-                "excerpt": "MUI Toolpad\n\nMUI Toolpad is a lowcode builder for internal tools. It runs as part of your Next.js project and gives you a draganddrop environment to create Reactbased dashboards powered by live data.\n"
-              }
-            ]
-          },
-          {
-            "title": "JavaScript",
-            "description": "JavaScript Whatever the Weather",
-            "slug": "/javascript",
-            "order": 40,
-            "icon": "javascript",
-            "type": "folder",
-            "tags": [
-              "JavaScript",
-              "Vanilla JavaScript",
-              "TypeScript",
-              "React",
-              "Angular",
-              "Vue",
-              "Material UI",
-              "Flash",
-              "Server Side JavaScript",
-              "Node",
-              "Gatsby",
-              "NextJS",
-              "Headless CMS",
-              "JSON"
-            ],
-            "excerpt": "| \n\n JavaScript Whatever the Weather\n\nWe’ve been writing JavaScript since it was still called ECMAScript.\n\nBefore the frameworks, before npm, before it ate the world—we were already deep in the langua",
-            "children": [
-              {
-                "title": "REST API",
-                "slug": "/rest-api",
-                "order": 50,
+                "title": "JavaScript",
+                "description": "JavaScript Whatever the Weather",
+                "slug": "/javascript",
+                "order": 5,
                 "icon": "javascript",
-                "type": "file",
+                "type": "folder",
                 "tags": [
                   "JavaScript",
+                  "Vanilla JavaScript",
+                  "TypeScript",
+                  "React",
+                  "Angular",
+                  "Vue",
+                  "Material UI",
+                  "Flash",
+                  "Server Side JavaScript",
                   "Node",
-                  "Next.js",
-                  "API",
-                  "REST API",
-                  "Flickr"
+                  "Gatsby",
+                  "NextJS",
+                  "Headless CMS",
+                  "JSON"
                 ],
-                "excerpt": "REST API\n\n Cartridge: \n\nThis is a realworld backend endpoint. It powers real UI components. You can view the code on  or see it in action on .\n\nThis REST API demonstrates how we use Next.js App Router"
+                "excerpt": "JavaScript Whatever the Weather\n\nWe’ve been writing JavaScript since it was still called ECMAScript.\n\nBefore the frameworks, before npm, before it ate the world—we were already deep in the language th",
+                "children": [
+                  {
+                    "title": "REST API",
+                    "slug": "/rest-api",
+                    "order": 50,
+                    "icon": "javascript",
+                    "type": "file",
+                    "tags": [
+                      "JavaScript",
+                      "Node",
+                      "Next.js",
+                      "API",
+                      "REST API",
+                      "Flickr"
+                    ],
+                    "excerpt": "Cartridge: \n\nA realworld REST API powered by Next.js, integrating with the Flickr platform to serve media assets as structured JSON.\n\nThis is a realworld backend endpoint. It powers real UI components"
+                  }
+                ]
+              },
+              {
+                "title": "GitHub",
+                "description": "Critical to our process",
+                "slug": "/github",
+                "order": 25,
+                "icon": "github",
+                "type": "folder",
+                "tags": [
+                  "github",
+                  "process",
+                  "javascript"
+                ],
+                "excerpt": "We use GitHub for everything. Including . Most of the communication done between us and our clients during development is done through GitHub in the form of comments, pull resuests, reviews and so for",
+                "children": []
+              },
+              {
+                "title": "Design System",
+                "description": "Based on Material",
+                "slug": "/design-sytem",
+                "order": 101,
+                "icon": "design",
+                "type": "folder",
+                "tags": [
+                  "github",
+                  "process",
+                  "design"
+                ],
+                "excerpt": "What is a Design System?\nA Design System is a collection of reusable components, standards, and guidelines that define how a product looks and behaves. It includes UI elements like buttons, forms, and",
+                "children": [
+                  {
+                    "title": "MUI Toolpad",
+                    "slug": "/toolpad",
+                    "order": 20,
+                    "icon": "design",
+                    "type": "file",
+                    "tags": [
+                      "techstack",
+                      "Design",
+                      "MUI"
+                    ],
+                    "excerpt": "MUI Toolpad is a lowcode builder for internal tools. It runs as part of your Next.js project and gives you a draganddrop environment to create Reactbased dashboards powered by live data. We’re using T"
+                  }
+                ]
               }
             ]
           }
@@ -472,16 +489,6 @@
                 "excerpt": "Written for at semiprofessional coders ready to go pr0\n\nIn a weekend project, you’ll build a simple but powerful AI app. The idea is simple but important: you upload an .mp3 file, and the app gives yo"
               }
             ]
-          },
-          {
-            "title": "Flickr",
-            "description": "An API that has just worked for more than 20 years",
-            "slug": "/flickr",
-            "order": 129,
-            "icon": "flickr",
-            "type": "folder",
-            "excerpt": "Why would we still use Flickr?\n\nFlickr isn’t trendy. It doesn’t chase hype. But it’s survived—and there’s a reason for that. For over two decades, Flickr has offered something that’s increasingly rare",
-            "children": []
           }
         ]
       }

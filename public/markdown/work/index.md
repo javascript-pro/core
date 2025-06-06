@@ -8,16 +8,9 @@ image: /png/bluesky/javascript.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React, Angular, Vue, etc, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 ---
 
-[JavaScript](/work/javascript) | [GitHub](/work/github) | [REST API](/work//javascript/rest-api)
+[JavaScript](/work/techstack/javascript) | [GitHub](/work/techstack/github) | [REST API](/work/javascript/rest-api)  
 
-Goldlabel Core is always Free & Open Source as a public repo on [GitHub](https://github.com/javascript-pro/core)
-
-- [Core](/free/core)
-- [Uberedux](/free/uberedux)
-
-> The apps we ship are real, run in production and are developed in public
-
-The Core is Open Source and Free forever — giving you statically generated sites with Firestore-powered updates and a real admin panel. Built with Next.js App Router and Material UI
+Goldlabel Core is always Free & Open Source as a public repo on [GitHub](https://github.com/javascript-pro/core). The apps we ship are real, run in production and are developed in public. The Core is Open Source and Free forever — giving you statically generated sites with Firestore-powered updates and a real admin panel. Built with Next.js App Router and Material UI
 
 #### Benefits of building with Goldlabel
 
@@ -32,6 +25,4 @@ The Core is Open Source and Free forever — giving you statically generated sit
 
 #### Work With Us
 
-We take on a limited number of new projects each month. If you need something done we’d love to hear about it. Find out if we're a [good fit](/work/cv)
-
-We're always looking for collaborators, contributors, and good ideas.
+We take on a limited number of new projects each month. If you need something done we’d love to hear about it. Find out if we're a [good fit](/cv). We're always looking for collaborators, contributors, and good ideas.

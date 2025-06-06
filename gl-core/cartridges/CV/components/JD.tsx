@@ -120,7 +120,6 @@ export default function JD() {
         fullWidth
         multiline
         variant="filled"
-        color="secondary"
         rows={isMobile ? 6 : 10}
         inputRef={inputRef}
         label="Paste Job Description here"

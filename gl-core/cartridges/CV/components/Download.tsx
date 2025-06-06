@@ -50,7 +50,6 @@ export default function Download(cv: any) {
         onClick={onDownloadClick}
         variant="outlined"
         label="Download"
-        color="secondary"
         icon="download"
       />
     </Box>

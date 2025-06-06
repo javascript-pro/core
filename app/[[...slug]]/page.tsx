@@ -96,7 +96,7 @@ export async function generateMetadata({ params }: { params: any }) {
     ? '404, bro'
     : `${frontmatter.title}${frontmatter.description ? `. ${frontmatter.description}` : ''}`;
   const description = is404 ? '' : frontmatter.description || '';
-  const img = frontmatter.image || '/png/defaultFeatured.png';
+  const img = frontmatter.image || '/png/default.png';
   const url = `https://goldlabel.pro/${slugPath}`;
 
   return {
@@ -141,7 +141,7 @@ export default async function Page({ params }: { params: any }) {
     icon: 'blokey',
     title: '404, bro',
     description: '',
-    image: '/png/defaultFeatured.png',
+    image: '/png/default.png',
   };
 
   for (const filePath of tryPaths) {
@@ -170,7 +170,7 @@ export default async function Page({ params }: { params: any }) {
           <header id="gl-header">
             <Link href={`/`} style={{ textDecoration: 'none' }}>
               <Image
-                src={'/svg/favicon_gold.svg'}
+                src={'/svg/favicon.svg'}
                 alt={title}
                 width={50}
                 height={50}
@@ -199,7 +199,6 @@ export default async function Page({ params }: { params: any }) {
                   width: '100%',
                   height: 'auto',
                   objectFit: 'cover',
-                  borderRadius: '8px',
                 }}
               />
             )}

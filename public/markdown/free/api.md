@@ -8,7 +8,7 @@ image: /png/default.png
 tags: free, api
 ---
 
-## Public API
+## Goldlabel Public API
 
 ## gl-api/flickr endpoints
 

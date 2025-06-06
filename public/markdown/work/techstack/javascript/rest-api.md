@@ -1,18 +1,17 @@
 ---
 order: 50
 title: REST API
-description: A real-world REST API powered by Next.js, integrating with the Flickr platform to serve media assets as structured JSON.
-slug: /work/rest-api
+description: Real World NextJS
+slug: /work/techstack/javascript/rest-api
 icon: javascript
-image: /png/javascript.png
+image: /png/bluesky/javascript.png
 tags: JavaScript, Node, Next.js, API, REST API, Flickr
 github: https://github.com/javascript-pro/core/tree/main/gl-core/cartridges/Flickr
 api: https://goldlabel.pro/api/gl-api/flickr?album=72177720326317140
 ---
-
-## REST API
-
 > Cartridge: [Flickr](/free/flickr)
+
+A real-world REST API powered by Next.js, integrating with the Flickr platform to serve media assets as structured JSON.
 
 This is a real-world backend endpoint. It powers real UI components. You can view the code on [GitHub](https://github.com/javascript-pro/core/blob/main/app/api/gl-api/flickr/route.ts) or see it in action on [Goldlabel API](https://goldlabel.pro/api/gl-api/flickr?album=72177720326317140).
 

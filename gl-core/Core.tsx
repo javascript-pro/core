@@ -75,7 +75,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
             title={'MUI Toolpad'}
             description={'React-based dashboards powered by live data.'}
             onClick={() => {
-              router.push(`/work/techstack/toolpad`);
+              router.push(`/work/techstack/design-sytem/toolpad`);
             }}
           />
         </Box>
@@ -103,7 +103,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
       <Box id="core">
         <Box id="content">
           <Header frontmatter={frontmatter} />
-
           <Grid container spacing={1}>
             {!isMobile && getAside()}
             <Grid
@@ -160,10 +159,14 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
               <Box
                 sx={{
+                  mb: "50px",
                   px: isMobile ? 0.5 : 2,
                 }}
               >
-                <Box sx={{ mt: isMobile ? 2 : 1 }} />
+                <Box sx={{ 
+                  
+                  mt: isMobile ? 2 : 1,
+                }} />
                 {isApp ? app : <RenderMarkdown>{body}</RenderMarkdown>}
               </Box>
             </Grid>

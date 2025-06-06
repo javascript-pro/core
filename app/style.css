@@ -12,31 +12,31 @@ blockquote {
   padding-left: 20px;
   margin: 0;
 }
-
-.gl {
-  font-family: Arial, Helvetica, sans-serif;
-  /* color: #303030; */
-}
-.gl .gl-wrap {
-  /* border: 1px solid #c4c4c4;
-  background: #efefef; */
-  margin: 20px;
-  padding: 20px;
-  border-radius: 5px;
+pre,
+code {
+  background: #1e1e1e;
+  color: #f8f8f2;
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-size: 0.95em;
 }
 
-.gl a {
-  padding-left: 8px;
-  color: #303030;
+pre {
+  padding: 16px;
+  overflow-x: auto;
+  border-radius: 4px;
+  margin: 20px 0;
 }
-.gl a:hover {
-  color: #000;
+
+code {
+  padding: 2px 6px;
+  border-radius: 3px;
 }
-.gl h1,
-.gl h2,
-.gl h3,
-.gl h4,
-.gl h5,
-.gl h6 {
-  font-weight: normal;
+
+/* Optional: inline code inside paragraphs or lists */
+p code,
+li code {
+  background: #2d2d2d;
+  color: #e6e6e6;
+  padding: 2px 6px;
+  border-radius: 3px;
 }

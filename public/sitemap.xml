@@ -26,9 +26,6 @@
     <loc>https://goldlabel.pro/balance/books/wei-zangs-food</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/flickr</loc>
-  </url>
-  <url>
     <loc>https://goldlabel.pro/balance</loc>
   </url>
   <url>
@@ -98,21 +95,24 @@
     <loc>https://goldlabel.pro/work/company/remote-working</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/github</loc>
-  </url>
-  <url>
     <loc>https://goldlabel.pro/work</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/javascript</loc>
+    <loc>https://goldlabel.pro/work/techstack/design-sytem</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/javascript/rest-api</loc>
+    <loc>https://goldlabel.pro/work/techstack/design-sytem/toolpad</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/github</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/techstack</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/toolpad</loc>
+    <loc>https://goldlabel.pro/work/techstack/javascript</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/javascript/rest-api</loc>
   </url>
 </urlset>
