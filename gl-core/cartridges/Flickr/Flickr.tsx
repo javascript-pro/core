@@ -8,6 +8,7 @@ import {
   ListItemButton,
   ListItemAvatar,
   ListItemText,
+  Typography,
 } from '@mui/material';
 import { useDispatch, Advert, routeTo, Icon } from '../../../gl-core';
 import {
@@ -55,9 +56,9 @@ export default function Flickr({
         <Box sx={{ mx: 2 }}>
 
           <CardHeader
-            title={albumTitle}
-            subheader={albumDescription}
-            action={
+            title={<Typography variant='h6'>{albumTitle}</Typography>}
+            subheader={<Typography variant='body2'>{albumDescription}</Typography>}
+            avatar={
               <MightyButton
                 mode="icon"
                 icon="flickr"

@@ -91,22 +91,22 @@ export default function RenderMarkdown({
         <ReactMarkdown
           components={{
             h1: ({ children }) => (
-              <Typography variant="h4" gutterBottom>
+              <Typography variant="h4" sx={{my: 1, fontWeight: "normal"}}>
                 {children}
               </Typography>
             ),
             h2: ({ children }) => (
-              <Typography variant="h5" gutterBottom>
+              <Typography variant="h5" sx={{my: 1, fontWeight: "normal"}}>
                 {children}
               </Typography>
             ),
             h3: ({ children }) => (
-              <Typography variant="h6" gutterBottom>
+              <Typography variant="h6" sx={{my: 1, fontWeight: "normal"}}>
                 {children}
               </Typography>
             ),
             p: ({ children }) => (
-              <Typography variant="body1">{children}</Typography>
+              <Typography variant="body1" sx={{my: 1, fontWeight: "normal"}}>{children}</Typography>
             ),
             li: ({ children }) => (
               <li>
