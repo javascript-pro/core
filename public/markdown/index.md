@@ -19,6 +19,6 @@ image: /png/default.png
 
 ### About Goldlabel
 
-[Core](/free/core) is [JavaScript](/work/javascript). It's [Free](/free) and [Open Source](/free/open-source).
+[Core](/free/core) is [JavaScript](/work/techstack/javascript). It's [Free](/free) and [Open Source](/free/open-source).
 
-It has cartridges which you drop in. Some of the Free ones are [CV](/cv/about) | [Bouncer](/free/bouncer) | [Uberedux](/free/uberedux) | [Flickr](/balance/flickr) | [Flash](/free/flash)
+It has cartridges which you drop in. Some of the Free ones are [CV](/cv/about) | [Bouncer](/free/bouncer) | [Uberedux](/free/uberedux) | [Flickr](/free/flickr) | [Flash](/free/flash)
