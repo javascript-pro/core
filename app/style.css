@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  background: #303030;
+  background: #FFF;
 }
 
 blockquote {
@@ -30,7 +30,7 @@ blockquote {
   color: #303030;
 }
 .gl a:hover {
-  color: #a6d4d1;
+  color: #000;
 }
 .gl h1,
 .gl h2,

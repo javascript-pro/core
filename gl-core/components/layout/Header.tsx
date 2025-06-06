@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { useRouter } from 'next/navigation';
 import { IconButton, CardHeader, Typography, Tooltip } from '@mui/material';
-import { Icon, ShareThis, useDispatch, navigateTo } from '../../../gl-core';
+import { Icon, ShareThis, useDispatch, navigateTo, useIsMobile } from '../../../gl-core';
 
 export type THeader = {
   frontmatter?: any;
@@ -13,6 +13,7 @@ export default function Header({ frontmatter = null }: THeader) {
   const dispatch = useDispatch();
   const { title, description, icon, github, api } = frontmatter;
   const router = useRouter();
+  const isMobile = useIsMobile();
 
   return (
     <>
@@ -39,11 +40,11 @@ export default function Header({ frontmatter = null }: THeader) {
           </>
         }
         title={
-          <Typography sx={{}} variant={'body1'} component={'h1'}>
+          <Typography sx={{}} variant={'h6'} component={'h1'}>
             {title}
           </Typography>
         }
-        subheader={
+        subheader={ !isMobile &&
           <Typography sx={{}} variant={'body2'} component={'h2'}>
             {description}
           </Typography>

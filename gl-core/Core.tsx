@@ -70,15 +70,16 @@ export default function Core({ frontmatter, body = null }: TCore) {
           mt: isMobile ? 2 : 3,
         }}
       >
-        <Advert
-          icon="design"
-          title={'MUI Toolpad'}
-          description={'React-based dashboards powered by live data.'}
-          onClick={() => {
-            router.push(`/work/techstack/toolpad`);
-          }}
-        />
-
+        <Box sx={{mb: 2}}>
+          <Advert
+            icon="design"
+            title={'MUI Toolpad'}
+            description={'React-based dashboards powered by live data.'}
+            onClick={() => {
+              router.push(`/work/techstack/toolpad`);
+            }}
+          />
+        </Box>
         {!isCV && (
           <Box sx={{ mb: 2 }}>
             <CV mode="advert" />
@@ -116,7 +117,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
               <Box
                 sx={{
                   px: isMobile ? 0.5 : 2,
-                  mt: !isMobile ? 3 : 2,
+                  mb: !isMobile ? 3 : 2,
                 }}
               >
                 {pathname !== '/' && <PageBreadcrumb />}
@@ -156,7 +157,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                     )}
                   </Box>
                 )}
-                {isMobile && getAside()}
+                
               </Box>
 
               <Box
@@ -170,7 +171,9 @@ export default function Core({ frontmatter, body = null }: TCore) {
             </Grid>
             {!isMobile && getAside()}
           </Grid>
+
         </Box>
+        {isMobile && getAside()}
       </Box>
     </Theme>
   );

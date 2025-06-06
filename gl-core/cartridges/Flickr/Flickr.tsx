@@ -60,9 +60,7 @@ export default function Flickr({
       <Box>
         <PhotoPopup />
         <Box sx={{ mx: 2 }}>
-          <Box sx={{ mx: 2 }}>
-            <AlbumSelecta />
-          </Box>
+
           <CardHeader
             title={albumTitle}
             subheader={albumDescription}
@@ -76,7 +74,9 @@ export default function Flickr({
               />
             }
           />
-          
+          <Box sx={{ mx: 2, mb: 2 }}>
+            <AlbumSelecta />
+          </Box>
           <List>
             {albumPhotos.map((item: any, i: number) => {
               const photoTitle = item.title || '';
