@@ -70,8 +70,16 @@ export default function CV({
           mx: 4,
         }}
       >
+
+        {appMode === 'cv' && (
+          <Box sx={{ mr: 2, display: 'flex' }}>
+            <Download cv={markdown} />
+          </Box>
+        )}
+
         {appMode === 'cv' ? (
           <MightyButton
+            mode="icon"
             label="Match"
             icon="openai"
             variant="contained"
@@ -83,9 +91,13 @@ export default function CV({
           />
         ) : (
           <>
+            <Box sx={{ mr: 2 }}>
+              <Download cv={markdown} />
+            </Box>
             <MightyButton
-              label="View"
-              icon="doc"
+              mode="icon"
+              label="View our CV"
+              icon="seed"
               color="primary"
               variant="contained"
               onClick={() => {
@@ -93,18 +105,12 @@ export default function CV({
                 dispatch(setCVKey('showJD', false));
               }}
             />
-            <Box sx={{ ml: 2 }}>
-              <Download cv={markdown} />
-            </Box>
+
           </>
         )}
 
-        {appMode === 'cv' && (
-          <Box sx={{ ml: 2, display: 'flex' }}>
-            <Download cv={markdown} />
-          </Box>
-        )}
-        <Box sx={{ ml: 1 }}>
+        
+        <Box sx={{ ml: 1, mt: 0.25 }}>
           <MightyButton
             mode="icon"
             label="About"
@@ -116,6 +122,7 @@ export default function CV({
             }}
           />
         </Box>
+
       </Box>
 
       {showJD && (
