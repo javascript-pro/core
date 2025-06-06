@@ -75,7 +75,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
             title={'MUI Toolpad'}
             description={'React-based dashboards powered by live data.'}
             onClick={() => {
-              router.push(`/work/techstack/toolpad`);
+              router.push(`/work/techstack/design-sytem/toolpad`);
             }}
           />
         </Box>

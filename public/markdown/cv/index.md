@@ -9,7 +9,7 @@ tags: CV, jobs, work, resume, AI, OpenAI
 github: https://github.com/javascript-pro/core/blob/main/gl-core/cartridges/CV/actions/createPrompt.tsx
 ---
 
-## Fullstack JavaScript Developer
+#### Fullstack JavaScript Developer
 
 Over 20 years of experience delivering scalable web applications across startups, enterprises, and remote-first teams in the UK, Europe, and Australia and beyond. Deep expertise in React, TypeScript, current specialising in Next.js.
 

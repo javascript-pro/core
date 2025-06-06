@@ -161,7 +161,7 @@ export default function CV({
       ) : (
         appMode === 'cv' &&
         !showJD && (
-          <Box sx={{ mt: 2 }}>
+          <Box sx={{ mt: 4 }}>
             <RenderMarkdown>{markdown}</RenderMarkdown>
           </Box>
         )

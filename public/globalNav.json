@@ -489,16 +489,6 @@
                 "excerpt": "Written for at semiprofessional coders ready to go pr0\n\nIn a weekend project, you’ll build a simple but powerful AI app. The idea is simple but important: you upload an .mp3 file, and the app gives yo"
               }
             ]
-          },
-          {
-            "title": "Flickr",
-            "description": "An API that has just worked for more than 20 years",
-            "slug": "/flickr",
-            "order": 129,
-            "icon": "flickr",
-            "type": "folder",
-            "excerpt": "Why would we still use Flickr?\n\nFlickr isn’t trendy. It doesn’t chase hype. But it’s survived—and there’s a reason for that. For over two decades, Flickr has offered something that’s increasingly rare",
-            "children": []
           }
         ]
       }
