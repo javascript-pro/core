@@ -1,18 +1,19 @@
-export type TFlickr = {
-  [key: string]: any;
-};
-
 export type TFlickrState = {
-  cartridge: string;
-  status: TSeverity;
+  cartridge?: string;
+  status?: TSeverity;
   loaded: boolean;
   loading: boolean;
-  search: string | null;
-  message: string;
+  message?: string;
   albums?: TFlickrAlbum[];
   photo?: any | null;
   [key: string]: any;
 };
+
+export type TFlickr = {
+  [key: string]: any;
+};
+
+
 
 export type TAlbumCard = {
   id?: string | null;

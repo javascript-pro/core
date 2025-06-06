@@ -92,7 +92,11 @@ export default function AlbumSelecta({
         }
       }}
       renderInput={(params) => (
-        <TextField {...params} label="Select Flickr Album" size="small" />
+        <TextField 
+          color="secondary"
+          variant='filled' {...params} 
+          label="Find an album" 
+        />
       )}
       renderOption={(props, option) => (
         <li {...props} key={option.flickrId}>
