@@ -106,9 +106,7 @@ export default function RenderMarkdown({
               </Typography>
             ),
             p: ({ children }) => (
-              <Typography variant="body1" paragraph>
-                {children}
-              </Typography>
+              <Typography variant="body1">{children}</Typography>
             ),
             li: ({ children }) => (
               <li>

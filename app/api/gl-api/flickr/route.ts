@@ -206,8 +206,8 @@ export async function GET(request: NextRequest) {
           return {
             ...photo,
             sizes: {
-              ...photo.sizes,     // Keep existing sizes from extras
-              ...full.sizes,      // Merge in fully fetched sizes (thumb, medium, large, etc.)
+              ...photo.sizes, // Keep existing sizes from extras
+              ...full.sizes, // Merge in fully fetched sizes (thumb, medium, large, etc.)
             },
           };
         } catch (e) {

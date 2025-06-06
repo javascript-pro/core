@@ -14,9 +14,11 @@ export type TAdvert = {
   title?: string | null;
   description?: string | null;
   onClick: any;
+  icon?: string;
 };
 
 export default function Advert({
+  icon = 'star',
   title = 'Default Title',
   description = 'description',
   onClick = () => {
@@ -24,6 +26,7 @@ export default function Advert({
   },
 }: TAdvert) {
   const isMobile = useIsMobile();
+  const showTagline = false;
 
   return (
     <>
@@ -32,11 +35,11 @@ export default function Advert({
           <Alert
             sx={{ width: '100%' }}
             severity="success"
-            // variant="filled"
-            icon={<Icon icon="star" />}
+            variant="outlined"
+            icon={<Icon icon={icon as any} />}
           >
             <Typography variant="body1">{title}</Typography>
-            {!isMobile && (
+            {!isMobile && showTagline && (
               <Typography variant="body2">{description}</Typography>
             )}
           </Alert>

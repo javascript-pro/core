@@ -1,11 +1,12 @@
 'use client';
+
 import * as React from 'react';
 import { usePathname, useRouter } from 'next/navigation';
-import { CssBaseline, Box, Grid } from '@mui/material';
+import Image from 'next/image';
+import { CssBaseline, Box, Grid, Skeleton, Typography } from '@mui/material';
 import {
   Theme,
-  Flash,
-  MovieClip,
+  Advert,
   RenderMarkdown,
   Header,
   PageBreadcrumb,
@@ -29,17 +30,15 @@ export type TCore = {
   children?: React.ReactNode;
 };
 
-export default function Core({ 
-  frontmatter, 
-  body = null
-}: TCore) {
+export default function Core({ frontmatter, body = null }: TCore) {
   const pathname = usePathname();
   const router = useRouter();
   const isMobile = useIsMobile();
-
   const isCV = pathname === '/cv';
   const isFlickr = pathname === '/free/flickr';
   const isApp = isCV || isFlickr;
+
+  const [imageError, setImageError] = React.useState(false);
 
   let app = <></>;
   switch (true) {
@@ -47,7 +46,7 @@ export default function Core({
       app = <CV mode="app" markdown={body} />;
       break;
     case isFlickr:
-      app = <Flickr mode="app" id="72177720326317140" />;
+      app = <Flickr mode="app" id="72177720324245676" />;
       break;
     default:
       break;
@@ -56,33 +55,44 @@ export default function Core({
   const getAside = () => (
     <Grid
       size={{
-        xs: 12,
-        md: 5,
-        lg: 4,
+        md: 3,
+        lg: 2,
       }}
     >
       <Box
         id="sidebar"
         component="aside"
         sx={{
-          mr: isMobile ? 4.5 : 4,
-          ml: isMobile ? 4.5 : 0,
+          // mr: isMobile ? 4.5 : 4,
+          ml: 5,
+          width: "100%",
+          // mt: isMobile ? 2 : 3,
         }}
       >
-        {!isCV && (
-          <Box sx={{ mb: 2 }}>
-            <CV mode="advert" />
-          </Box>
-        )}
-        {!isFlickr && (
-          <Flickr
-            mode="album-card"
-            id="72177720326317140"
+        <Box sx={{mb: 2}}>
+          <Advert
+            icon="design"
+            title={'MUI Toolpad'}
+            description={'React-based dashboards powered by live data.'}
             onClick={() => {
-              router.push(`/free/flickr`);
+              router.push(`/work/techstack/toolpad`);
             }}
           />
-        )}
+        </Box>
+        
+        <Box sx={{ mb: 2 }}>
+          <CV mode="advert" />
+        </Box>
+      
+
+        <Flickr
+          mode="album-card"
+          id="72177720326317140"
+          onClick={() => {
+            router.push(`/free/flickr`);
+          }}
+        />
+
       </Box>
     </Grid>
   );
@@ -90,28 +100,63 @@ export default function Core({
   return (
     <Theme>
       <CssBaseline />
-      <Flash id="core">
-        <MovieClip id="content" opacity={0}>
+      <Box id="core">
+        <Box id="content">
           <Header frontmatter={frontmatter} />
 
           <Grid container spacing={1}>
+            {!isMobile && getAside()}
             <Grid
               size={{
-                xs: 12,
-                md: 7,
-                lg: 8,
+                md: 9,
+                lg: 10,
               }}
             >
               <Box
                 sx={{
                   px: isMobile ? 0.5 : 2,
-                  mt: !isMobile ? 3 : 2,
+                  mb: !isMobile ? 3 : 2,
                 }}
               >
-                {pathname !== '/' && <PageBreadcrumb />}
+                { pathname !== '/' && <PageBreadcrumb />}
               </Box>
 
-              <Box sx={{ mt: isMobile ? 2 : 0 }}>{isMobile && getAside()}</Box>
+              <Box sx={{ mt: isMobile ? 2 : 0 }}>
+                {frontmatter?.image && (
+                  <Box sx={{ mx: 4, mt: 0 }}>
+                    {!imageError ? (
+                      <Image
+                        priority
+                        src={frontmatter.image}
+                        alt={frontmatter.title || 'Featured image'}
+                        width={1200}
+                        height={630}
+                        style={{
+                          width: '100%',
+                          height: 'auto',
+                        }}
+                        onError={() => setImageError(true)}
+                      />
+                    ) : (
+                      <Box>
+                        <Skeleton
+                          variant="rectangular"
+                          width="100%"
+                          height={315}
+                        />
+                        <Typography
+                          variant="body2"
+                          color="text.secondary"
+                          mt={1}
+                        >
+                          Image not found. "{frontmatter.image}"
+                        </Typography>
+                      </Box>
+                    )}
+                  </Box>
+                )}
+                
+              </Box>
 
               <Box
                 sx={{
@@ -122,10 +167,12 @@ export default function Core({
                 {isApp ? app : <RenderMarkdown>{body}</RenderMarkdown>}
               </Box>
             </Grid>
-            {!isMobile && getAside()}
+            
           </Grid>
-        </MovieClip>
-      </Flash>
+
+        </Box>
+        {/* {isMobile && getAside()} */}
+      </Box>
     </Theme>
   );
 }

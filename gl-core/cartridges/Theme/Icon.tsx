@@ -125,12 +125,12 @@ import PreviewIcon from '@mui/icons-material/Preview';
 import PhotoIcon from '@mui/icons-material/CameraAlt';
 import AlbumIcon from '@mui/icons-material/Collections';
 import LinkIcon from '@mui/icons-material/Link';
-import AboutIcon from '@mui/icons-material/Help';
+import AboutIcon from '@mui/icons-material/HelpOutlineOutlined';
 
 export type TIcon = {
   icon:
     | 'plus'
-        | 'about'
+    | 'about'
     | 'link'
     | 'album'
     | 'flickr'
@@ -727,7 +727,7 @@ export default function Icon({ icon, color }: TIcon) {
       iconFragment = <AlbumIcon color={color} />;
       break;
 
-          case 'about':
+    case 'about':
       iconFragment = <AboutIcon color={color} />;
       break;
 

@@ -1,8 +1,8 @@
 {
   "short_name": "Goldlabel",
-  "name": "Goldlabel Apps",
-  "theme_color": "#A6D4D1",
-  "background_color": "#A6D4D1",
+  "name": "Goldlabel",
+  "theme_color": "#FFF",
+  "background_color": "#FFF",
   "display": "fullscreen",
   "orientation": "portrait",
   "scope": "/",

@@ -4,12 +4,12 @@ title: About C.V.
 description: How it works
 slug: /cv/about
 icon: openai
-image: /jpg/cv.jpg
+image: /png/british.png
 tags: CV, jobs, work, resume, AI, OpenAI
 github: https://github.com/javascript-pro/core/blob/main/gl-core/cartridges/CV/actions/createPrompt.tsx
 ---
 
-## Applying for jobs can be time consuming 
+## Applying for jobs can be time consuming
 
 Each role requires tailoring a cover letter or rewording a CV to match a job description. As developers, we know the real problem isn’t effort — it’s clarity. Am I a good fit? Is this worth my time?
 
@@ -20,7 +20,7 @@ Given a CV and a job description, tell me whether the match is good — and why.
 
 > As a job seeker or recruiter, I want to quickly assess how well a CV matches a job description, so that I can focus my time on roles or candidates that are a good fit.
 
-###  Implementation
+### Implementation
 
 We built a lightweight AI-powered web app using Next.js and OpenAI's GPT-4 API. Users paste in their CV (in Markdown) and the job description. The app generates a structured fit analysis in natural language.
 

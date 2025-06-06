@@ -11,8 +11,8 @@ import { initialState } from './initialState';
 const storage = {
   ...baseStorage,
   getItem: async (key: string) => {
-    if (config.forceUpdate) {
-      console.log(`[redux] Skipping persisted state due to forceUpdate`);
+    if (!config.persist) {
+      console.log(`[Uberedux] Skipping persist`);
       return null;
     }
     return baseStorage.getItem(key);

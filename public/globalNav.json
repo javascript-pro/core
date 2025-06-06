@@ -1,6 +1,6 @@
 [
   {
-    "title": "Goldlabel Apps",
+    "title": "Goldlabel",
     "description": "AI software which works",
     "slug": "/",
     "order": 1,
@@ -34,7 +34,7 @@
       "NextJS",
       "Headless CMS"
     ],
-    "excerpt": "We build and ship modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source \n \n \n\n is . It's  and .  \n\nIt come",
+    "excerpt": "We build and ship modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source\n \n\n About Goldlabel\n\n is . It's  a",
     "children": [
       {
         "title": "Free & Open Source",
@@ -43,7 +43,7 @@
         "order": 1,
         "icon": "flash",
         "type": "folder",
-        "excerpt": "|  |  | \n\n Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, ",
+        "excerpt": "Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or b",
         "children": [
           {
             "title": "Public API",
@@ -156,7 +156,7 @@
               "AI",
               "OpenAI"
             ],
-            "excerpt": "Applying for jobs can be time consuming \n\nEach role requires tailoring a cover letter or rewording a CV to match a job description. As developers, we know the real problem isn’t effort — it’s clarity."
+            "excerpt": "Applying for jobs can be time consuming\n\nEach role requires tailoring a cover letter or rewording a CV to match a job description. As developers, we know the real problem isn’t effort — it’s clarity. "
           }
         ]
       },
@@ -238,17 +238,31 @@
             "children": []
           },
           {
-            "title": "Private",
+            "title": "Techstack",
             "description": "Protected by Bouncer",
-            "slug": "/private",
+            "slug": "/techstack",
             "order": 10,
-            "icon": "private",
+            "icon": "techstack",
             "type": "folder",
             "tags": [
-              "private"
+              "techstack"
             ],
-            "excerpt": "This page requires a higher level of access",
-            "children": []
+            "excerpt": "This page may require a higher level of access",
+            "children": [
+              {
+                "title": "MUI Toolpad",
+                "slug": "/toolpad",
+                "order": 20,
+                "icon": "design",
+                "type": "file",
+                "tags": [
+                  "techstack",
+                  "Design",
+                  "MUI"
+                ],
+                "excerpt": "MUI Toolpad\n\nMUI Toolpad is a lowcode builder for internal tools. It runs as part of your Next.js project and gives you a draganddrop environment to create Reactbased dashboards powered by live data.\n"
+              }
+            ]
           },
           {
             "title": "JavaScript",

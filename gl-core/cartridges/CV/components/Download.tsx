@@ -2,10 +2,12 @@
 import React from 'react';
 import { marked } from 'marked';
 import { Box } from '@mui/material';
-import { MightyButton } from '../../../';
+import { MightyButton, useDispatch, forwardEmail } from '../../../../gl-core';
 import { templatePDF } from '../';
 
 export default function Download(cv: any) {
+  const dispatch = useDispatch();
+
   const onDownloadClick = async () => {
     // console.log('cv.cv', cv.cv);
     const { default: html2pdf } = await import('html2pdf.js');
@@ -21,6 +23,13 @@ export default function Download(cv: any) {
 
     const el = document.createElement('div');
     el.innerHTML = fullHTML;
+
+    dispatch(
+      forwardEmail({
+        subject: 'CV Downloaded',
+        text: `Someone downloaded the CV at ${new Date().toISOString()}.`,
+      }),
+    );
 
     html2pdf()
       .from(el)
@@ -39,9 +48,9 @@ export default function Download(cv: any) {
       {/* <pre>markdown: {JSON.stringify(markdown, null, 2)}</pre> */}
       <MightyButton
         onClick={onDownloadClick}
-        variant="contained"
+        variant="outlined"
         label="Download"
-        color="primary"
+        color="secondary"
         icon="download"
       />
     </Box>

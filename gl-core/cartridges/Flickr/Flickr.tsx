@@ -2,6 +2,7 @@
 import * as React from 'react';
 import {
   CardHeader,
+  CardActions,
   Box,
   Alert,
   Toolbar,
@@ -10,8 +11,14 @@ import {
   ListItemAvatar,
   ListItemText,
 } from '@mui/material';
-import { useDispatch, Advert, routeTo } from '../../../gl-core';
-import { initFlickr, resetFlickr, PhotoPopup, photoSelect } from '../Flickr';
+import { useDispatch, Advert, routeTo, Icon } from '../../../gl-core';
+import {
+  initFlickr,
+  resetFlickr,
+  PhotoPopup,
+  photoSelect,
+  AlbumSelecta,
+} from '../Flickr';
 import { TFlickr } from './types';
 import { MightyButton, useSlice } from '../../../gl-core';
 import { useRouter } from 'next/navigation';
@@ -27,8 +34,6 @@ export default function Flickr({
   const dispatch = useDispatch();
   const flickrSlice = useSlice().flickr;
   const { album = null } = flickrSlice ?? {};
-
-  const showToolbar = false;
   const albumTitle = album?.meta?.title || '';
   const albumDescription = album?.meta?.description || '';
   const albumPhotos = album?.photos || [];
@@ -45,8 +50,8 @@ export default function Flickr({
 
     if (notReady) {
       return (
-        <Alert sx={{ mx: 4 }} severity="info">
-          Loading...
+        <Alert icon={<Icon icon="flickr"/>} sx={{ mx: 4 }} severity="info">
+          Loading from Flickr...
         </Alert>
       );
     }
@@ -54,20 +59,8 @@ export default function Flickr({
     return (
       <Box>
         <PhotoPopup />
-
-        {showToolbar && (
-          <Toolbar>
-            <MightyButton
-              mode="icon"
-              label="Resets Flickr Cartridge"
-              onClick={() => dispatch(resetFlickr())}
-              icon="reset"
-              color="secondary"
-            />
-          </Toolbar>
-        )}
-
         <Box sx={{ mx: 2 }}>
+
           <CardHeader
             title={albumTitle}
             subheader={albumDescription}
@@ -81,7 +74,9 @@ export default function Flickr({
               />
             }
           />
-
+          <Box sx={{ mx: 2, mb: 2 }}>
+            <AlbumSelecta />
+          </Box>
           <List>
             {albumPhotos.map((item: any, i: number) => {
               const photoTitle = item.title || '';
@@ -118,8 +113,9 @@ export default function Flickr({
   if (mode === 'album-card') {
     return (
       <Advert
-        title={'Flickr Cartridge'}
-        description={'Photos, titles and other meta data managed by Flickr'}
+        icon="flickr"
+        title={'Flickr'}
+        description={'Photos, and other meta managed on Flickr'}
         onClick={() => {
           dispatch(routeTo('/free/flickr', router));
         }}
