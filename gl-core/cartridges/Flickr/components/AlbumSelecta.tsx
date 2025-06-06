@@ -9,7 +9,7 @@ import {
   Typography,
 } from '@mui/material';
 import { useSlice, useDispatch } from '../../../../gl-core';
-import { fetchAlbumList } from '../../Flickr';
+import { fetchAlbumList, resetAlbum } from '../../Flickr';
 
 export type TAlbumSelecta = {
   onSelect?: (albumId: string) => void;
@@ -19,16 +19,20 @@ export type TAlbumSelecta = {
 const FRESHNESS_THRESHOLD = 1000 * 60 * 60 * 24; // 1 day
 
 export default function AlbumSelecta({
+  
   onSelect = () => {
     // console.log("onSelect");
   },
-  onAlbumSelect = (selected: any) => {
-    const { flickrId } = selected;
-    console.log("onAlbumSelect", flickrId);
-  },
+  onAlbumSelect = () => {},
 }: TAlbumSelecta) {
   const dispatch = useDispatch();
   const albumList = useSlice().flickr?.albumList;
+
+  const selectEvent = (selected: any) => {
+    const { flickrId } = selected;
+    // console.log("onAlbumSelect", flickrId);
+    dispatch(resetAlbum(flickrId));
+  }
 
   React.useEffect(() => {
     if (!albumList) return;
@@ -87,14 +91,14 @@ export default function AlbumSelecta({
       }}
       onChange={(event, selected) => {
         if (selected) {
-          onSelect?.(selected.flickrId);
-          onAlbumSelect?.(selected);
+          selectEvent?.(selected);
         }
       }}
       renderInput={(params) => (
         <TextField 
           color="secondary"
-          variant='filled' {...params} 
+          variant='filled' 
+          {...params} 
           label="Find an album" 
         />
       )}
