@@ -33,9 +33,9 @@ export default function Advert({
       <Stack sx={{ width: '100%' }} spacing={2}>
         <ButtonBase sx={{ textAlign: 'left' }} onClick={onClick}>
           <Alert
-            sx={{ width: '100%' }}
+            sx={{ width: '100%', mr: 2 }}
             severity="success"
-            variant="outlined"
+            variant="standard"
             icon={<Icon icon={icon as any} />}
           >
             <Typography variant="body1">{title}</Typography>

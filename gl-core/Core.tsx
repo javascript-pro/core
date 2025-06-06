@@ -63,10 +63,9 @@ export default function Core({ frontmatter, body = null }: TCore) {
         id="sidebar"
         component="aside"
         sx={{
-          // mr: isMobile ? 4.5 : 4,
+          mr: isMobile ? 4.5 : 4,
           ml: 5,
           width: "100%",
-          // mt: isMobile ? 2 : 3,
         }}
       >
         <Box sx={{mb: 2}}>
