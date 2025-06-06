@@ -18,13 +18,11 @@ export default function Header({ frontmatter = null }: THeader) {
   return (
     <>
       <CardHeader
-        sx={{
-          mx: 2,
-        }}
         avatar={
           <>
             <Tooltip title="Home">
               <IconButton
+                sx={{ml: -2}}
                 onClick={() => {
                   router.push('/');
                 }}
@@ -33,7 +31,7 @@ export default function Header({ frontmatter = null }: THeader) {
               </IconButton>
             </Tooltip>
             {icon !== 'blokey' ? (
-              <IconButton disabled>
+              <IconButton>
                 <Icon icon={icon as any} />
               </IconButton>
             ) : null}

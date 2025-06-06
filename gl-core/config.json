@@ -1,6 +1,6 @@
 {
   
-  "persist": false,
+  "persist": true,
   "defaultMode": "light",
   "app": "Goldlabel",
   "description": "AI software that works",

@@ -1,14 +1,12 @@
 'use client';
 import * as React from 'react';
 import {
-  Stack,
   Typography,
   Alert,
   ButtonBase,
   IconButton,
 } from '@mui/material';
 import { Icon, useIsMobile } from '../../gl-core';
-// import { toggleAdvert } from '../';
 
 export type TAdvert = {
   title?: string | null;
@@ -30,39 +28,25 @@ export default function Advert({
 
   return (
     <>
-      <Stack sx={{ width: '100%' }} spacing={2}>
-        <ButtonBase sx={{ textAlign: 'left' }} onClick={onClick}>
-          <Alert
-            sx={{ width: '100%', mr: 2 }}
-            severity="success"
-            variant="standard"
-            icon={<Icon icon={icon as any} />}
-          >
-            <Typography variant="body1">{title}</Typography>
-            {!isMobile && showTagline && (
-              <Typography variant="body2">{description}</Typography>
-            )}
-          </Alert>
-        </ButtonBase>
-      </Stack>
-    </>
-  );
-
-  return (
-    <>
-      {/* <pre>Advert: {JSON.stringify(Advert, null, 2)}</pre> */}
-      <Alert
-        severity={'success'}
-        variant="filled"
-        // icon={<Icon icon="blokey" />}
-        action={
-          <IconButton onClick={() => {}} color="inherit" size="small">
-            <Icon icon="right" />
-          </IconButton>
-        }
-      >
-        {title}
-      </Alert>
+      <ButtonBase 
+        sx={{ 
+          textAlign: 'left', 
+          mb: 1,
+          width: "100%",
+        }} 
+        onClick={onClick}>
+        <Alert
+          sx={{ width: '100%' }}
+          severity="success"
+          variant="standard"
+          icon={<Icon icon={icon as any} />}
+        >
+          <Typography variant="body1">{title}</Typography>
+          {!isMobile && showTagline && (
+            <Typography variant="body2">{description}</Typography>
+          )}
+        </Alert>
+      </ButtonBase>
     </>
   );
 }

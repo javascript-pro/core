@@ -3,14 +3,14 @@
 import * as React from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
-import { CssBaseline, Box, Grid, Skeleton, Typography } from '@mui/material';
+import { CssBaseline, Container, Box, Grid, Skeleton, Typography } from '@mui/material';
 import {
   Theme,
-  Advert,
   RenderMarkdown,
   Header,
   PageBreadcrumb,
   useIsMobile,
+  SideAds,
 } from '../gl-core';
 import { Flickr } from './cartridges/Flickr';
 import { CV } from './cartridges/CV';
@@ -57,51 +57,16 @@ export default function Core({ frontmatter, body = null }: TCore) {
       size={{
         md: 3,
         lg: 2,
-      }}
-    >
-      <Box
-        id="sidebar"
-        component="aside"
-        sx={{
-          mr: isMobile ? 4.5 : 4,
-          ml: 5,
-          width: "100%",
-        }}
-      >
-        <Box sx={{mb: 2}}>
-          <Advert
-            icon="design"
-            title={'MUI Toolpad'}
-            description={'React-based dashboards powered by live data.'}
-            onClick={() => {
-              router.push(`/work/techstack/design-sytem/toolpad`);
-            }}
-          />
-        </Box>
-        
-        <Box sx={{ mb: 2 }}>
-          <CV mode="advert" />
-        </Box>
-      
-
-        <Flickr
-          mode="album-card"
-          id="72177720326317140"
-          onClick={() => {
-            router.push(`/free/flickr`);
-          }}
-        />
-
-      </Box>
+      }}>
+        <SideAds />
     </Grid>
   );
 
   return (
     <Theme>
       <CssBaseline />
-      <Box id="core">
-        <Box id="content">
-          <Header frontmatter={frontmatter} />
+      <Container id="core">
+        <Header frontmatter={frontmatter} />
           <Grid container spacing={1}>
             {!isMobile && getAside()}
             <Grid
@@ -110,15 +75,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
                 lg: 10,
               }}
             >
-              <Box
-                sx={{
-                  px: isMobile ? 0.5 : 2,
-                  mb: !isMobile ? 3 : 2,
-                }}
-              >
-                { pathname !== '/' && <PageBreadcrumb />}
-              </Box>
-
               <Box sx={{ mt: isMobile ? 2 : 0 }}>
                 {frontmatter?.image && (
                   <Box sx={{ mx: 4, mt: 0 }}>
@@ -153,7 +109,17 @@ export default function Core({ frontmatter, body = null }: TCore) {
                     )}
                   </Box>
                 )}
-                
+
+
+                <Box
+                  sx={{
+                    px: isMobile ? 0.5 : 2,
+                    mb: !isMobile ? 3 : 2,
+                  }}
+                >
+                  { pathname !== '/' && <PageBreadcrumb />}
+                </Box>
+              
               </Box>
 
               <Box
@@ -162,19 +128,14 @@ export default function Core({ frontmatter, body = null }: TCore) {
                   px: isMobile ? 0.5 : 2,
                 }}
               >
-                <Box sx={{ 
-                  
-                  mt: isMobile ? 2 : 1,
-                }} />
                 {isApp ? app : <RenderMarkdown>{body}</RenderMarkdown>}
+                {isMobile && getAside()}
               </Box>
             </Grid>
             
           </Grid>
 
-        </Box>
-        {/* {isMobile && getAside()} */}
-      </Box>
+        </Container>
     </Theme>
   );
 }
