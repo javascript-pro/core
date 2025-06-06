@@ -34,7 +34,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const pathname = usePathname();
   const router = useRouter();
   const isMobile = useIsMobile();
-
   const isCV = pathname === '/cv';
   const isFlickr = pathname === '/free/flickr';
   const isApp = isCV || isFlickr;
@@ -47,7 +46,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
       app = <CV mode="app" markdown={body} />;
       break;
     case isFlickr:
-      app = <Flickr mode="app" id="72177720326317140" />;
+      app = <Flickr mode="app" id="72177720324245676" />;
       break;
     default:
       break;
@@ -56,18 +55,18 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const getAside = () => (
     <Grid
       size={{
-        xs: 12,
-        md: 5,
-        lg: 4,
+        md: 3,
+        lg: 2,
       }}
     >
       <Box
         id="sidebar"
         component="aside"
         sx={{
-          mr: isMobile ? 4.5 : 4,
-          ml: isMobile ? 4.5 : 0,
-          mt: isMobile ? 2 : 3,
+          // mr: isMobile ? 4.5 : 4,
+          ml: 5,
+          width: "100%",
+          // mt: isMobile ? 2 : 3,
         }}
       >
         <Box sx={{mb: 2}}>
@@ -80,21 +79,20 @@ export default function Core({ frontmatter, body = null }: TCore) {
             }}
           />
         </Box>
-        {!isCV && (
-          <Box sx={{ mb: 2 }}>
-            <CV mode="advert" />
-          </Box>
-        )}
+        
+        <Box sx={{ mb: 2 }}>
+          <CV mode="advert" />
+        </Box>
+      
 
-        {!isFlickr && (
-          <Flickr
-            mode="album-card"
-            id="72177720326317140"
-            onClick={() => {
-              router.push(`/free/flickr`);
-            }}
-          />
-        )}
+        <Flickr
+          mode="album-card"
+          id="72177720326317140"
+          onClick={() => {
+            router.push(`/free/flickr`);
+          }}
+        />
+
       </Box>
     </Grid>
   );
@@ -107,11 +105,11 @@ export default function Core({ frontmatter, body = null }: TCore) {
           <Header frontmatter={frontmatter} />
 
           <Grid container spacing={1}>
+            {!isMobile && getAside()}
             <Grid
               size={{
-                xs: 12,
-                md: 7,
-                lg: 8,
+                md: 9,
+                lg: 10,
               }}
             >
               <Box
@@ -120,7 +118,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                   mb: !isMobile ? 3 : 2,
                 }}
               >
-                {pathname !== '/' && <PageBreadcrumb />}
+                { pathname !== '/' && <PageBreadcrumb />}
               </Box>
 
               <Box sx={{ mt: isMobile ? 2 : 0 }}>
@@ -151,7 +149,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                           color="text.secondary"
                           mt={1}
                         >
-                          Image could not be loaded.
+                          Image not found. "{frontmatter.image}"
                         </Typography>
                       </Box>
                     )}
@@ -169,11 +167,11 @@ export default function Core({ frontmatter, body = null }: TCore) {
                 {isApp ? app : <RenderMarkdown>{body}</RenderMarkdown>}
               </Box>
             </Grid>
-            {!isMobile && getAside()}
+            
           </Grid>
 
         </Box>
-        {isMobile && getAside()}
+        {/* {isMobile && getAside()} */}
       </Box>
     </Theme>
   );

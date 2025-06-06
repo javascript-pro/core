@@ -1,6 +1,6 @@
 [
   {
-    "title": "Goldlabel Apps",
+    "title": "Goldlabel",
     "description": "AI software which works",
     "slug": "/",
     "order": 1,
@@ -34,7 +34,7 @@
       "NextJS",
       "Headless CMS"
     ],
-    "excerpt": "We build and ship modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source\n \n \n\n is . It's  and .\n\nIt comes w",
+    "excerpt": "We build and ship modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source\n \n\n About\n\n is . It's  and .\n\nIt c",
     "children": [
       {
         "title": "Free & Open Source",

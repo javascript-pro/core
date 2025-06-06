@@ -1,7 +1,7 @@
 ---
 order: 1
 slug: /
-title: Goldlabel Apps
+title: Goldlabel
 description: AI software which works
 icon: blokey
 tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
@@ -15,9 +15,10 @@ image: /png/default.png
 - _Small_ team. _Big_ output
 - Real deployments from Day One
 - Readable, extensible, Open Source
-- [CV](/cv/about)
-- [More](/work/company)
+- [Company](/work/company)
 
-[Goldlabel Core](/free/core) is [JavaScript](/work/javascript). It's [Free](/free) and [Open Source](/free/open-source).
+### About Goldlabel
 
-It comes with these cartridges; [Bouncer](/free/bouncer) | [Uberedux](/free/uberedux) | [Flickr](/balance/flickr) | [Flash](/free/flash)
+[Core](/free/core) is [JavaScript](/work/javascript). It's [Free](/free) and [Open Source](/free/open-source).
+
+It has cartridges which you drop in. Some of the Free ones are [CV](/cv/about) | [Bouncer](/free/bouncer) | [Uberedux](/free/uberedux) | [Flickr](/balance/flickr) | [Flash](/free/flash)

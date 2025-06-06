@@ -26,6 +26,7 @@ export default function Advert({
   },
 }: TAdvert) {
   const isMobile = useIsMobile();
+  const showTagline = false;
 
   return (
     <>
@@ -34,11 +35,11 @@ export default function Advert({
           <Alert
             sx={{ width: '100%' }}
             severity="success"
-            // variant="filled"
+            variant="outlined"
             icon={<Icon icon={icon as any} />}
           >
             <Typography variant="body1">{title}</Typography>
-            {!isMobile && (
+            {!isMobile && showTagline && (
               <Typography variant="body2">{description}</Typography>
             )}
           </Alert>
