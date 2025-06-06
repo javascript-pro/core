@@ -170,7 +170,7 @@ export default async function Page({ params }: { params: any }) {
           <header id="gl-header">
             <Link href={`/`} style={{ textDecoration: 'none' }}>
               <Image
-                src={'/svg/favicon_gold.svg'}
+                src={'/svg/favicon.svg'}
                 alt={title}
                 width={50}
                 height={50}
@@ -199,7 +199,6 @@ export default async function Page({ params }: { params: any }) {
                   width: '100%',
                   height: 'auto',
                   objectFit: 'cover',
-                  borderRadius: '8px',
                 }}
               />
             )}

@@ -1,5 +1,5 @@
 #core-ssg {
-  display: none;
+  display: block;
 }
 
 body {
@@ -15,11 +15,11 @@ blockquote {
 
 .gl {
   font-family: Arial, Helvetica, sans-serif;
-  /* color: #303030; */
+  color: #303030;
 }
 .gl .gl-wrap {
-  /* border: 1px solid #c4c4c4;
-  background: #efefef; */
+  border: 1px solid #c4c4c4;
+  /* background: #efefef; */
   margin: 20px;
   padding: 20px;
   border-radius: 5px;
