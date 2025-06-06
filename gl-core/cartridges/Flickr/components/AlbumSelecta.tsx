@@ -22,8 +22,9 @@ export default function AlbumSelecta({
   onSelect = () => {
     // console.log("onSelect");
   },
-  onAlbumSelect = (selected) => {
-    // console.log("onAlbumSelect", selected);
+  onAlbumSelect = (selected: any) => {
+    const { flickrId } = selected;
+    console.log("onAlbumSelect", flickrId);
   },
 }: TAlbumSelecta) {
   const dispatch = useDispatch();
@@ -106,3 +107,57 @@ export default function AlbumSelecta({
     />
   );
 }
+
+
+
+    /*
+    {
+    "flickrId": "72177720326289602",
+    "title": "Mimizan",
+    "description": "Surf spot on the French Atlantic coast",
+    "count": 6,
+    "dateCreate": 1747889830,
+    "albumUrl": "https://www.flickr.com/photos/24006659@N00/albums/72177720326289602",
+    "coverPhoto": {
+        "flickrId": "54538420041",
+        "flickrUrl": "https://www.flickr.com/photos/24006659@N00/54538420041",
+        "title": "Wave: 0.8-1.3 meters",
+        "description": "",
+        "time": 1747943703000,
+        "lat": null,
+        "lng": null,
+        "meta": {
+            "tags": [
+                "surf"
+            ]
+        },
+        "sizes": {
+            "thumb": {
+                "src": "https://live.staticflickr.com/65535/54538420041_7ae61cc6e0_q.jpg",
+                "width": 150,
+                "height": 150
+            },
+            "small": {
+                "src": "https://live.staticflickr.com/65535/54538420041_7ae61cc6e0_n.jpg",
+                "width": 320,
+                "height": 180
+            },
+            "medium": {
+                "src": "https://live.staticflickr.com/65535/54538420041_7ae61cc6e0_c.jpg",
+                "width": 800,
+                "height": 449
+            },
+            "large": {
+                "src": "https://live.staticflickr.com/65535/54538420041_7ae61cc6e0_b.jpg",
+                "width": 990,
+                "height": 556
+            },
+            "orig": {
+                "src": "https://live.staticflickr.com/65535/54538420041_2fbf4acb72_o.jpg",
+                "width": 990,
+                "height": 556
+            }
+        }
+    }
+}
+    */
