@@ -4,4 +4,3 @@ import PhotoCard from './PhotoCard';
 import PhotoPopup from './PhotoPopup';
 
 export { AlbumCard, PhotoCard, PhotoPopup, AlbumSelecta };
-

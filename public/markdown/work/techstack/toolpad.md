@@ -7,19 +7,19 @@ icon: design
 image: /png/default.png
 tags: techstack, Design, MUI
 ---
+
 ## MUI Toolpad
 
 MUI Toolpad is a low-code builder for internal tools. It runs as part of your Next.js project and gives you a drag-and-drop environment to create React-based dashboards powered by live data.
 
 We’re using Toolpad inside **Goldlabel Cloud** to build internal interfaces quickly — things like:
 
-- Role-based user dashboards  
-- Firestore management UIs  
-- App settings editors  
+- Role-based user dashboards
+- Firestore management UIs
+- App settings editors
 - Lightweight content tools
 
 Toolpad helps us stay productive and impress outsiders. It feels like a real product — because it is.
-
 
 ## Why Toolpad?
 
@@ -31,7 +31,6 @@ Toolpad is not just a dashboard builder. It fits naturally into our stack:
 - **Low-code, but not no-code**: You can eject to raw React when needed
 
 It’s perfect for building internal tools **that matter** — fast.
-
 
 ## Local Setup
 
@@ -49,18 +48,16 @@ npx @mui/toolpad dev
 
 From here, you can start dragging components, binding data, and building apps — no page reloads required.
 
-
 ## Firebase Integration
 
 Toolpad can bind directly to Firebase with no middleware layer.
 
-- Add Firestore as a **REST data source**  
-- Secure with a Firebase Auth token from the logged-in user  
-- Display collections with table components  
+- Add Firestore as a **REST data source**
+- Secure with a Firebase Auth token from the logged-in user
+- Display collections with table components
 - Enable CRUD actions with update bindings
 
 We'll document each of these steps separately in the next chapter.
-
 
 ## Deployment
 
@@ -72,7 +69,6 @@ yarn build && yarn start
 
 Your dashboards are live. They can be nested under a secure route like `/admin`, gated by our Bouncer auth system.
 
-
 ## What It’s For
 
 Toolpad is not for everything. We’re using it for:
@@ -83,4 +79,3 @@ Toolpad is not for everything. We’re using it for:
 - Feature toggles and settings
 
 We are **not** using it to build the public-facing UI or landing pages. Those are hand-crafted in React with MUI.
-

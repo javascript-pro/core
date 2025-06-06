@@ -19,7 +19,7 @@ export const fetchAlbumList = () => async (dispatch: TUbereduxDispatch) => {
             message: 'Fetching album list...',
           },
         },
-      })
+      }),
     );
 
     const response = await fetch(`/api/gl-api/flickr/albums`);
@@ -47,7 +47,7 @@ export const fetchAlbumList = () => async (dispatch: TUbereduxDispatch) => {
             message: 'Album list fetched successfully.',
           },
         },
-      })
+      }),
     );
   } catch (e: unknown) {
     const errorMessage = e instanceof Error ? e.message : String(e);
@@ -64,7 +64,7 @@ export const fetchAlbumList = () => async (dispatch: TUbereduxDispatch) => {
             message: errorMessage,
           },
         },
-      })
+      }),
     );
   }
 };

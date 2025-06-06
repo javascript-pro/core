@@ -7,7 +7,7 @@ export const setFlickrKey =
   (key: string, value: any): any =>
   async (dispatch: TUbereduxDispatch, getState: () => any) => {
     try {
-      console.log("setFlickrKey", key, value)
+      console.log('setFlickrKey', key, value);
       const current = getState().redux.flickr;
       const updated = {
         ...current,

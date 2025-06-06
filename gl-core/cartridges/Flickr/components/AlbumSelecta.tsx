@@ -18,14 +18,13 @@ export type TAlbumSelecta = {
 
 const FRESHNESS_THRESHOLD = 1000 * 60 * 60 * 24; // 1 day
 
-export default function AlbumSelecta({ 
+export default function AlbumSelecta({
   onSelect = () => {
     // console.log("onSelect");
-  }, 
+  },
   onAlbumSelect = (selected) => {
     // console.log("onAlbumSelect", selected);
-  }, 
-
+  },
 }: TAlbumSelecta) {
   const dispatch = useDispatch();
   const albumList = useSlice().flickr?.albumList;
@@ -34,8 +33,10 @@ export default function AlbumSelecta({
     if (!albumList) return;
 
     const now = Date.now();
-    const isStale = !albumList.lastLoad || now - albumList.lastLoad > FRESHNESS_THRESHOLD;
-    const isEmpty = !Array.isArray(albumList.list) || albumList.list.length === 0;
+    const isStale =
+      !albumList.lastLoad || now - albumList.lastLoad > FRESHNESS_THRESHOLD;
+    const isEmpty =
+      !Array.isArray(albumList.list) || albumList.list.length === 0;
 
     if ((isStale || isEmpty) && !albumList.loading) {
       dispatch(fetchAlbumList());
@@ -56,7 +57,7 @@ export default function AlbumSelecta({
   }
 
   const sortedAlbums = [...albumList.list].sort(
-    (a, b) => (b.dateCreate ?? 0) - (a.dateCreate ?? 0)
+    (a, b) => (b.dateCreate ?? 0) - (a.dateCreate ?? 0),
   );
 
   return (
@@ -69,7 +70,9 @@ export default function AlbumSelecta({
         return options.filter((album) => {
           const title = album.title?.toLowerCase() || '';
           const description = album.description?.toLowerCase() || '';
-          const tags = (album.coverPhoto?.meta?.tags || []).join(' ').toLowerCase();
+          const tags = (album.coverPhoto?.meta?.tags || [])
+            .join(' ')
+            .toLowerCase();
           const lat = album.coverPhoto?.lat?.toString() || '';
           const lng = album.coverPhoto?.lng?.toString() || '';
           return (

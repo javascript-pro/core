@@ -70,7 +70,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
           mt: isMobile ? 2 : 3,
         }}
       >
-        
         <Advert
           icon="design"
           title={'MUI Toolpad'}
@@ -85,7 +84,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
             <CV mode="advert" />
           </Box>
         )}
-        
+
         {!isFlickr && (
           <Flickr
             mode="album-card"
@@ -95,9 +94,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
             }}
           />
         )}
-
-
-
       </Box>
     </Grid>
   );
@@ -149,7 +145,11 @@ export default function Core({ frontmatter, body = null }: TCore) {
                           width="100%"
                           height={315}
                         />
-                        <Typography variant="body2" color="text.secondary" mt={1}>
+                        <Typography
+                          variant="body2"
+                          color="text.secondary"
+                          mt={1}
+                        >
                           Image could not be loaded.
                         </Typography>
                       </Box>
