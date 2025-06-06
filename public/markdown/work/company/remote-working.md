@@ -7,9 +7,6 @@ icon: work
 image: /png/default.png
 tags: remote, hybrid
 ---
-
-[Privacy & Cookies](/work/company/privacy-cookies) | [Working remotely](/work/company/remote-working)
-
 > Corporate attitudes to remote working have changed dramatically in recent years.
 
 Many businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communication, and collaboration. However, the pandemic forced many businesses to adopt remote work policies, and they quickly discovered that employees could be just as productive and engaged when working from home

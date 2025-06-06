@@ -4,7 +4,7 @@ slug: /free/flash
 title: 'Flash'
 description: 'A Pointless reinvention of MacroMedia Flash?'
 icon: 'flash'
-image: '/png/flash.png'
+image: '/png/bluesky/flash.png'
 keywords: 'Catridges, Flash, SVG'
 ---
 

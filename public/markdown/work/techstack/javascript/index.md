@@ -1,14 +1,12 @@
 ---
-order: 40
+order: 5
 title: JavaScript
 description: JavaScript Whatever the Weather
-slug: /work/javascript
+slug: /work/techstack/javascript
 icon: javascript
-image: /png/javascript.png
+image: /png/bluesky/javascript.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React, Angular, Vue, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS, JSON
 ---
-
-| [REST API](/work/javascript/rest-api)
 
 ## JavaScript Whatever the Weather
 

@@ -7,9 +7,6 @@ icon: account
 image: /png/default.png
 tags: cookies, gdpr, privacy, terms, trust
 ---
-
-[Privacy & Cookies](/work/company/privacy-cookies) | [Working remotely](/work/company/remote-working)
-
 > We don't use cookies
 
 While cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers to explore alternative approaches or supplementary technologies. Here are a few reasons why some developers might consider cookies as "old-fashioned" and explore alternatives:
