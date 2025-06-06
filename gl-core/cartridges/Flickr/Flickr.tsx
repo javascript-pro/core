@@ -11,7 +11,7 @@ import {
   ListItemAvatar,
   ListItemText,
 } from '@mui/material';
-import { useDispatch, Advert, routeTo } from '../../../gl-core';
+import { useDispatch, Advert, routeTo, Icon } from '../../../gl-core';
 import {
   initFlickr,
   resetFlickr,
@@ -34,8 +34,6 @@ export default function Flickr({
   const dispatch = useDispatch();
   const flickrSlice = useSlice().flickr;
   const { album = null } = flickrSlice ?? {};
-
-  const showToolbar = false;
   const albumTitle = album?.meta?.title || '';
   const albumDescription = album?.meta?.description || '';
   const albumPhotos = album?.photos || [];
@@ -52,8 +50,8 @@ export default function Flickr({
 
     if (notReady) {
       return (
-        <Alert sx={{ mx: 4 }} severity="info">
-          Loading...
+        <Alert icon={<Icon icon="flickr"/>} sx={{ mx: 4 }} severity="info">
+          Loading from Flickr...
         </Alert>
       );
     }
@@ -61,22 +59,8 @@ export default function Flickr({
     return (
       <Box>
         <PhotoPopup />
-
-        {showToolbar && (
-          <Toolbar>
-            <MightyButton
-              mode="icon"
-              label="Resets Flickr Cartridge"
-              onClick={() => dispatch(resetFlickr())}
-              icon="reset"
-              color="secondary"
-            />
-          </Toolbar>
-        )}
-
         <Box sx={{ mx: 2 }}>
-
-          <Box sx={{ mx: 1 }}>
+          <Box sx={{ mx: 2 }}>
             <AlbumSelecta />
           </Box>
           <CardHeader
