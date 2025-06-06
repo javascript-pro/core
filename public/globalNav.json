@@ -305,7 +305,7 @@
                   "process",
                   "design"
                 ],
-                "excerpt": "",
+                "excerpt": "What is a Design System?\nA Design System is a collection of reusable components, standards, and guidelines that define how a product looks and behaves. It includes UI elements like buttons, forms, and",
                 "children": [
                   {
                     "title": "MUI Toolpad",
@@ -318,7 +318,7 @@
                       "Design",
                       "MUI"
                     ],
-                    "excerpt": "MUI Toolpad is a lowcode builder for internal tools. It runs as part of your Next.js project and gives you a draganddrop environment to create Reactbased dashboards powered by live data.\n\nWe’re using "
+                    "excerpt": "MUI Toolpad is a lowcode builder for internal tools. It runs as part of your Next.js project and gives you a draganddrop environment to create Reactbased dashboards powered by live data. We’re using T"
                   }
                 ]
               }

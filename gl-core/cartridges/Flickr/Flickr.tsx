@@ -2,10 +2,8 @@
 import * as React from 'react';
 import {
   CardHeader,
-  CardActions,
   Box,
   Alert,
-  Toolbar,
   List,
   ListItemButton,
   ListItemAvatar,
@@ -14,10 +12,8 @@ import {
 import { useDispatch, Advert, routeTo, Icon } from '../../../gl-core';
 import {
   initFlickr,
-  resetFlickr,
   PhotoPopup,
   photoSelect,
-  AlbumSelecta,
 } from '../Flickr';
 import { TFlickr } from './types';
 import { MightyButton, useSlice } from '../../../gl-core';
@@ -26,9 +22,6 @@ import { useRouter } from 'next/navigation';
 export default function Flickr({
   mode = 'default',
   id = null,
-  // onClick = () => {
-  //   console.log('No onClick supplied to Flickr');
-  // },
 }: TFlickr) {
   const router = useRouter();
   const dispatch = useDispatch();
@@ -68,15 +61,13 @@ export default function Flickr({
               <MightyButton
                 mode="icon"
                 icon="flickr"
-                label="View album on Flickr"
+                label="View on Flickr"
                 color="inherit"
                 onClick={() => window.open(albumURL, '_blank')}
               />
             }
           />
-          <Box sx={{ mx: 2, mb: 2 }}>
-            <AlbumSelecta />
-          </Box>
+
           <List>
             {albumPhotos.map((item: any, i: number) => {
               const photoTitle = item.title || '';
