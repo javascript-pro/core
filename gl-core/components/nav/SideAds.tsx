@@ -15,12 +15,25 @@ export default function SideAds({ children = null }: TSideAds) {
     <Box sx={{}}>
       <Advert
         icon="clients"
-        title={'Clients'}
+        title={'Client Area'}
         onClick={() => {
           router.push(`/clients`);
         }}
       />
-
+      <Advert
+        icon="flickr"
+        title={'Flickr'}
+        onClick={() => {
+          router.push(`/free/flickr`);
+        }}
+      />
+      <Advert
+        icon="openai"
+        title={'C.V.'}
+        onClick={() => {
+          router.push(`/cv`);
+        }}
+      />
       {/* <Advert
         icon="javascript"
         title={'NextJS'}
@@ -35,23 +48,9 @@ export default function SideAds({ children = null }: TSideAds) {
         onClick={() => {
           router.push(`/work/techstack/design-sytem/toolpad`);
         }}
-      /> */}
+      /> 
 
-      <Advert
-        icon="flickr"
-        title={'Flickr'}
-        onClick={() => {
-          router.push(`/free/flickr`);
-        }}
-      />
-
-      <Advert
-        icon="openai"
-        title={'C.V.'}
-        onClick={() => {
-          router.push(`/cv`);
-        }}
-      />
+      */}
     </Box>
   );
 }

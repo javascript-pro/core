@@ -1,9 +1,8 @@
-import BouncerModal from './BouncerModal';
-import { IBouncerModal } from './BouncerModal';
+// core/gl-core/cartridges/Bouncer/index.tsx
+import Bouncer from './Bouncer';
+import { TBouncer, TBouncerState, TAuthForm } from './types';
+import { initialState as BouncerinitialState } from './initialState';
+import { AuthForm } from './components';
 
-import BouncerBtn from './BouncerBtn';
-import { IBouncerBtn } from './BouncerBtn';
-
-export { BouncerBtn, BouncerModal };
-
-export type { IBouncerBtn, IBouncerModal };
+export { Bouncer, AuthForm, BouncerinitialState };
+export type { TBouncer, TBouncerState, TAuthForm };

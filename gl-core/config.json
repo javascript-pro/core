@@ -1,26 +1,41 @@
 {
   "persist": true,
   "app": "Goldlabel",
-  "description": "AI software thatw orks",
-  "themeMode": "dark",
+  "description": "AI software which just works",
+
   "url": "https://goldlabel.pro",
   "repo": "https://github.com/javascript-pro/core",
-  "images": [
+  "images": {
+    "favicon": "/png/favicon.png"
+  },
+  "imagesArr": [
     "/png/favicon.png",
     "/png/default.png",
     "/png/bluesky/javascript.png"
   ],
   "brandColor": "#A6D4D1",
+  "themeMode": "dark",
   "themes": {
+    "bouncer": {
+      "mode": "light",
+      "primary": "#303030",
+      "secondary": "#A6D4D1",
+      "background": "#FFFFFF",
+      "paper": "#FFFFFF",
+      "text": "#303030",
+      "border": "#303030"
+    },
     "dark": {
+      "mode": "dark",
       "primary": "#A6D4D1",
       "secondary": "#303030",
       "background": "#303030",
       "paper": "#303030",
-      "text": "#fffFFF",
+      "text": "#FFFFFF",
       "border": "#C09F52"
     },
     "light": {
+      "mode": "light",
       "primary": "#303030",
       "secondary": "#A6D4D1",
       "background": "#FFFFFF",

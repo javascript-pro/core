@@ -1,3 +1,5 @@
+export type TSeverity = 'success' | 'info' | 'warning' | 'error';
+
 export type TUbereduxState = {
   currentRoute: string;
   status: {
@@ -5,6 +7,5 @@ export type TUbereduxState = {
     message: string;
     hidden: boolean;
   };
+  [key: string]: any;
 };
-
-export type TSeverity = 'success' | 'info' | 'warning' | 'error';

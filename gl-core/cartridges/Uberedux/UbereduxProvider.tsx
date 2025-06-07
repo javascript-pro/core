@@ -27,9 +27,9 @@ export default function UbereduxProvider({
               <Image
                 priority
                 src="/svg/favicon.svg"
-                alt="Rehydrating Uberedux"
-                width={150}
-                height={150}
+                alt="Uberedux"
+                width={50}
+                height={50}
                 style={{ objectFit: 'contain' }}
               />
             </div>
