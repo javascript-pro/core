@@ -13,7 +13,6 @@ export default function SideAds({ children = null }: TSideAds) {
   const router = useRouter();
   return (
     <Box sx={{}}>
-
       <Advert
         icon="clients"
         title={'Clients'}
@@ -21,7 +20,6 @@ export default function SideAds({ children = null }: TSideAds) {
           router.push(`/clients`);
         }}
       />
-
 
       {/* <Advert
         icon="javascript"

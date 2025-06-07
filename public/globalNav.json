@@ -41,7 +41,7 @@
         "description": "You need to be signed in",
         "slug": "/clients",
         "order": 1,
-        "icon": "bouncer",
+        "icon": "clients",
         "type": "folder",
         "tags": [
           "Fallmanager"

@@ -294,10 +294,9 @@ export default function Icon({ icon, color }: TIcon) {
       iconFragment = <AddIcon color={color} />;
       break;
 
-          case 'clients':
+    case 'clients':
       iconFragment = <ClientsIcon color={color} />;
       break;
-
 
     case 'flash':
       iconFragment = <MacromediaIconIcon color={color} />;

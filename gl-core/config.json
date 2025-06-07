@@ -1,21 +1,17 @@
 {
   "persist": true,
-  "defaultMode": "dark",
   "app": "Goldlabel",
-  "description": "AI software that works",
+  "description": "AI software thatw orks",
+  "themeMode": "dark",
   "url": "https://goldlabel.pro",
   "repo": "https://github.com/javascript-pro/core",
-  "images": ["/png/default.png", "/png/bluesky/javascript.png"],
+  "images": [
+    "/png/favicon.png",
+    "/png/default.png",
+    "/png/bluesky/javascript.png"
+  ],
   "brandColor": "#A6D4D1",
   "themes": {
-    "light": {
-      "primary": "#303030",
-      "secondary": "#A6D4D1",
-      "background": "#FFFFFF",
-      "paper": "#FFFFFF",
-      "text": "#303030",
-      "border": "#A6D4D1"
-    },
     "dark": {
       "primary": "#A6D4D1",
       "secondary": "#303030",
@@ -23,16 +19,14 @@
       "paper": "#303030",
       "text": "#fffFFF",
       "border": "#C09F52"
+    },
+    "light": {
+      "primary": "#303030",
+      "secondary": "#A6D4D1",
+      "background": "#FFFFFF",
+      "paper": "#FFFFFF",
+      "text": "#303030",
+      "border": "#A6D4D1"
     }
-  },
-  "cartridges": [
-    {
-      "light": {
-        "mapbox": "mapbox://styles/listingslab/cm67sb391003b01qz2cb6grth"
-      },
-      "dark": {
-        "mapbox": "mapbox://styles/listingslab/cm67sb391003b01qz2cb6grth"
-      }
-    }
-  ]
+  }
 }
