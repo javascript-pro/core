@@ -1,20 +1,19 @@
 'use client';
+// core/gl-core/cartridges/Bouncer/Bouncer.tsx
 import * as React from 'react';
 import { IconButton, Tooltip } from '@mui/material';
-import { Icon } from '../../';
-// import { useKey } from '../../../gl-core/cartridges/Uberedux';
+import { Icon } from '../../../gl-core';
+import { TBouncer } from '../Bouncer'
 
-export interface IBouncerBtn {
-  anyKey?: any;
-  tooltip: string;
-}
-
-export default function BouncerBtn({ tooltip }: IBouncerBtn) {
+export default function Bouncer({ 
+  
+ }: TBouncer) {
+  
   // const [authModalOpen, setAuthModalOpen] = useKey('authModalOpen');
 
   return (
     <>
-      <Tooltip title={tooltip}>
+      <Tooltip title={"tooltip"}>
         <IconButton
           onClick={() => {
             console.log('bouncer click');

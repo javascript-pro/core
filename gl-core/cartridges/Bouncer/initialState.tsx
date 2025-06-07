@@ -1,10 +1,8 @@
-// import { UbereduxState } from '../../types';
+// core/gl-core/cartridges/Bouncer/initialState.tsx
+import { TBouncerState } from '../Bouncer';
 
-// export interface IBoucerState {}
-
-export const initialState: any = {
+export const initialState: TBouncerState = {
   cartridge: 'bouncer',
-  modalOpen: true,
   authed: false,
   fingerprint: null,
 };

@@ -33,6 +33,7 @@ import {
   NextPrevious,
   ShareThis,
   SideAds,
+  TopRightMenu,
 } from './components/nav';
 import {
   TNav,
@@ -91,6 +92,7 @@ export {
   Search,
   ShareThis,
   SideAds,
+  TopRightMenu,
 };
 export {
   Uberedux,

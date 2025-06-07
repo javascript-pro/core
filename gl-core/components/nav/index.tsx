@@ -14,6 +14,8 @@ import { TCardButton } from './CardButton';
 import Search from './Search';
 import { TSearch } from './Search';
 import NextPrevious from './NextPrevious';
+import TopRightMenu from './TopRightMenu';
+
 
 export {
   NextPrevious,
@@ -25,6 +27,7 @@ export {
   CardButton,
   Search,
   SideAds,
+  TopRightMenu,
 };
 
 export type {

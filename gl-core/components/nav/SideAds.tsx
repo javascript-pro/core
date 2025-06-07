@@ -35,7 +35,7 @@ export default function SideAds({ children = null }: TSideAds) {
         onClick={() => {
           router.push(`/work/techstack/design-sytem/toolpad`);
         }}
-      /> */}
+      /> 
 
       <Advert
         icon="flickr"
@@ -52,6 +52,9 @@ export default function SideAds({ children = null }: TSideAds) {
           router.push(`/cv`);
         }}
       />
+
+      */}
+      
     </Box>
   );
 }
