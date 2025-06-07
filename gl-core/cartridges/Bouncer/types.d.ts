@@ -5,8 +5,21 @@ export type TBouncer = {
 };
 
 export type TBouncerState = {
-  [key: string]: any;
+  cartridge: string;
+  authed: boolean;
+  user: {
+    fingerprint: string;
+  } | null;
+  feedback: TFeedback | null;
 };
+
+export type TSeverity = "success" |  "info" |  "warning" | "error";
+
+export type TFeedback = {
+  severity?: TSeverity;
+  title?: string;
+  description?: string;
+} | null;
 
 export type TAuthForm = {
   onClose?: () => void;

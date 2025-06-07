@@ -8,8 +8,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import { Core, Nav } from '../../gl-core';
-
-import {Bouncer} from '../../gl-core/cartridges/Bouncer';
+import { Bouncer } from '../../gl-core/cartridges/Bouncer';
 
 export type TPage = {
   slug?: string[];
@@ -159,6 +158,11 @@ export default async function Page({ params }: { params: any }) {
     } catch (error) {
       console.error('Failed to load markdown for', slugPath, error);
     }
+  }
+
+  // Restrict content rendering if bouncer is set
+  if (frontmatter.bouncer === true) {
+    return <Bouncer />;
   }
 
   const type = 'page';
