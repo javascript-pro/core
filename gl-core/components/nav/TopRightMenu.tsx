@@ -1,7 +1,6 @@
 // core/gl-core/components/nav/TopRightMenu.tsx
 
 'use client';
-
 import * as React from 'react';
 import {
   Box,
@@ -9,6 +8,7 @@ import {
   ListItemButton,
   ListItemText,
   ListItemIcon,
+  IconButton,
 } from '@mui/material';
 import { Icon } from '../../../gl-core';
 
@@ -25,7 +25,16 @@ export default function TopRightMenu({
   },
 }: TTopRightMenu) {
   // console.log("frontmatter", frontmatter);
+  const mode = "button";
   const { title, description, icon } = frontmatter;
+
+  if (mode === "button") {
+    return <>
+      <IconButton disabled>
+        <Icon icon="menu" />
+      </IconButton>
+    </>
+  }
 
   return (
     <Box>

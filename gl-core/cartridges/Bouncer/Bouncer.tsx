@@ -9,11 +9,8 @@ import { AuthForm } from '../Bouncer';
 
 export default function Bouncer({
   frontmatter = null,
-  content = null,
 }: TBouncer) {
-  // const [authModalOpen, setAuthModalOpen] = useKey('authModalOpen');
-  // console.log("Bouncer", frontmatter, content);
-
+  
   return (
     <Theme theme={config.themes.bouncer as any}>
       <Container maxWidth={'xs'} sx={{ pt: 5 }}>

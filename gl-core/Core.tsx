@@ -76,7 +76,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
       <Container id="core">
         <Header frontmatter={frontmatter} />
         <Grid container spacing={1}>
-          {!isMobile && getAside()}
+          
           <Grid
             size={{
               md: 9,
@@ -134,6 +134,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
               {isMobile && getAside()}
             </Box>
           </Grid>
+          {!isMobile && getAside()}
         </Grid>
       </Container>
     </Theme>
