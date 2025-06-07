@@ -53,7 +53,7 @@
             "description": "Fallmanagement-System für eine deutsche Anwaltskanzlei",
             "slug": "/fallmanager",
             "order": 1,
-            "icon": "bouncer",
+            "icon": "clients",
             "type": "folder",
             "tags": [
               "Fallmanager"
@@ -64,7 +64,7 @@
                 "title": "Prototype",
                 "slug": "/prototype",
                 "order": 15,
-                "icon": "bouncer",
+                "icon": "clients",
                 "type": "file",
                 "tags": [
                   "Fallmanager"
@@ -75,7 +75,7 @@
                 "title": "Database",
                 "slug": "/database",
                 "order": 20,
-                "icon": "bouncer",
+                "icon": "clients",
                 "type": "file",
                 "tags": [
                   "Fallmanager"

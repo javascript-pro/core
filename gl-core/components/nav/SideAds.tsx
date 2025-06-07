@@ -54,7 +54,6 @@ export default function SideAds({ children = null }: TSideAds) {
       />
 
       */}
-      
     </Box>
   );
 }

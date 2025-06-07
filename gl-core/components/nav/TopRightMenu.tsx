@@ -3,7 +3,7 @@
 'use client';
 
 import * as React from 'react';
-import { 
+import {
   Box,
   List,
   ListItemButton,
@@ -17,46 +17,33 @@ export type TTopRightMenu = {
   [key: string]: any;
 };
 
-export default function TopRightMenu({ 
+export default function TopRightMenu({
   frontmatter = {
-    icon: "home",
-    title: "title",
-    description: "description",
+    icon: 'home',
+    title: 'title',
+    description: 'description',
   },
 }: TTopRightMenu) {
-  
   // console.log("frontmatter", frontmatter);
-  const { 
-    title, 
-    description, 
-    icon,
-  } = frontmatter;
+  const { title, description, icon } = frontmatter;
 
   return (
     <Box>
-     <List>
-      <ListItemButton>
-        <ListItemIcon>
-          <Icon icon={icon} />
-        </ListItemIcon>
-        <ListItemText 
-          primary={title}
-          secondary={description}
-        />
-      </ListItemButton>
+      <List>
+        <ListItemButton>
+          <ListItemIcon>
+            <Icon icon={icon} />
+          </ListItemIcon>
+          <ListItemText primary={title} secondary={description} />
+        </ListItemButton>
 
-      <ListItemButton>
-        <ListItemIcon>
-          <Icon icon="github" />
-        </ListItemIcon>
-        <ListItemText 
-          primary={"GitHub"}
-          secondary={""}
-        />
-      </ListItemButton>
-
-     </List>
-
+        <ListItemButton>
+          <ListItemIcon>
+            <Icon icon="github" />
+          </ListItemIcon>
+          <ListItemText primary={'GitHub'} secondary={''} />
+        </ListItemButton>
+      </List>
     </Box>
   );
 }

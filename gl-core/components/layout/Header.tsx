@@ -3,11 +3,7 @@
 import * as React from 'react';
 import { useRouter } from 'next/navigation';
 import { IconButton, CardHeader, Typography, Tooltip } from '@mui/material';
-import {
-  Icon,
-  useIsMobile,
-  TopRightMenu,
-} from '../../../gl-core';
+import { Icon, useIsMobile, TopRightMenu } from '../../../gl-core';
 
 export type THeader = {
   frontmatter?: any;
