@@ -6,8 +6,8 @@ export const initialState: TBouncerState = {
   authed: false,
   user: null,
   feedback: {
-    severity: "success",
-    title: "Intialising Bouncer",
-    description: "Going well so far",
-  }
+    severity: 'success',
+    title: 'Intialising Bouncer',
+    description: 'Going well so far',
+  },
 };

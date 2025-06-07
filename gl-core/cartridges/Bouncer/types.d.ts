@@ -13,7 +13,7 @@ export type TBouncerState = {
   feedback: TFeedback | null;
 };
 
-export type TSeverity = "success" |  "info" |  "warning" | "error";
+export type TSeverity = 'success' | 'info' | 'warning' | 'error';
 
 export type TFeedback = {
   severity?: TSeverity;
