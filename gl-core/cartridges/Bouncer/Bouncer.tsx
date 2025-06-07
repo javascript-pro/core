@@ -2,9 +2,13 @@
 // core/gl-core/cartridges/Bouncer/Bouncer.tsx
 import * as React from 'react';
 import {
-  Button, 
+  Button,
   Container,
-  IconButton, Tooltip, Typography, Card } from '@mui/material';
+  IconButton,
+  Tooltip,
+  Typography,
+  Card,
+} from '@mui/material';
 import { Icon } from '../../../gl-core';
 import { TBouncer } from '../Bouncer';
 import { AuthForm } from '../Bouncer';
@@ -17,7 +21,7 @@ export default function Bouncer({
   // console.log("Bouncer", frontmatter, content);
 
   return (
-    <Container maxWidth={"xs"} sx={{pt: 5}}>
+    <Container maxWidth={'xs'} sx={{ pt: 5 }}>
       <AuthForm frontmatter={frontmatter} />
     </Container>
   );

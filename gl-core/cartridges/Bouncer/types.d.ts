@@ -32,4 +32,4 @@ export type TAuthForm = {
 export type TFrontmatter = {
   title?: string;
   [key: string]: any;
-}
+};
