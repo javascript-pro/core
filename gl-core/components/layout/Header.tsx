@@ -3,21 +3,15 @@
 import * as React from 'react';
 import { useRouter } from 'next/navigation';
 import { IconButton, CardHeader, Typography, Tooltip } from '@mui/material';
-import {
-  Icon,
-  ShareThis,
-  useDispatch,
-  navigateTo,
-  useIsMobile,
-} from '../../../gl-core';
+import { Icon, useIsMobile, TopRightMenu } from '../../../gl-core';
 
 export type THeader = {
   frontmatter?: any;
+  [key: string]: any;
 };
 
 export default function Header({ frontmatter = null }: THeader) {
-  const dispatch = useDispatch();
-  const { title, description, icon, github, api } = frontmatter;
+  const { title, description, icon } = frontmatter;
   const router = useRouter();
   const isMobile = useIsMobile();
 
@@ -36,11 +30,9 @@ export default function Header({ frontmatter = null }: THeader) {
                 <Icon icon={'blokey'} />
               </IconButton>
             </Tooltip>
-            {icon !== 'blokey' ? (
-              <IconButton>
-                <Icon icon={icon as any} />
-              </IconButton>
-            ) : null}
+            <IconButton>
+              <Icon icon={icon as any} />
+            </IconButton>
           </>
         }
         title={
@@ -55,23 +47,7 @@ export default function Header({ frontmatter = null }: THeader) {
             </Typography>
           )
         }
-        action={
-          <>
-            {api ? (
-              <IconButton onClick={() => dispatch(navigateTo(api, '_blank'))}>
-                <Icon icon="api" />
-              </IconButton>
-            ) : null}
-
-            {github ? (
-              <IconButton onClick={() => dispatch(navigateTo(github))}>
-                <Icon icon="github" />
-              </IconButton>
-            ) : null}
-
-            <ShareThis title={title} description={description} />
-          </>
-        }
+        action={<TopRightMenu frontmatter={frontmatter} />}
       />
     </>
   );

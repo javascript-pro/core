@@ -37,11 +37,11 @@
     "excerpt": "We build and ship modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source\n \n\n About Goldlabel\n\n is . It's  a",
     "children": [
       {
-        "title": "Clients",
-        "description": "You need to be signed in",
+        "title": "Client Area",
+        "description": "Please Sign In",
         "slug": "/clients",
         "order": 1,
-        "icon": "bouncer",
+        "icon": "clients",
         "type": "folder",
         "tags": [
           "Fallmanager"
@@ -53,18 +53,18 @@
             "description": "Fallmanagement-System für eine deutsche Anwaltskanzlei",
             "slug": "/fallmanager",
             "order": 1,
-            "icon": "bouncer",
+            "icon": "clients",
             "type": "folder",
             "tags": [
               "Fallmanager"
             ],
-            "excerpt": "FallmanagementSystem für eine deutsche Anwaltskanzlei. Zentrale Verwaltung von Falldaten, Dokumentenerstellung und Fristenüberwachung.\n\nhttps://verkehrsrechtanwaltsaarland.de",
+            "excerpt": "FallmanagementSystem für . Zentrale Verwaltung von Falldaten, Dokumentenerstellung und Fristenüberwachung",
             "children": [
               {
                 "title": "Prototype",
                 "slug": "/prototype",
                 "order": 15,
-                "icon": "bouncer",
+                "icon": "clients",
                 "type": "file",
                 "tags": [
                   "Fallmanager"
@@ -75,7 +75,7 @@
                 "title": "Database",
                 "slug": "/database",
                 "order": 20,
-                "icon": "bouncer",
+                "icon": "clients",
                 "type": "file",
                 "tags": [
                   "Fallmanager"

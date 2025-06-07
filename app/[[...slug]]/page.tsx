@@ -1,3 +1,4 @@
+// core/app/[[...slug]]/page.tsx
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -7,6 +8,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import { Core, Nav } from '../../gl-core';
+import { Bouncer } from '../../gl-core/cartridges/Bouncer';
 
 export type TPage = {
   slug?: string[];
@@ -158,10 +160,15 @@ export default async function Page({ params }: { params: any }) {
     }
   }
 
+  // Restrict content rendering if bouncer is set
+  if (frontmatter.bouncer === true) {
+    return <Bouncer frontmatter={frontmatter} content={content} />;
+  }
+
   const type = 'page';
   const navItem = findNavItem(slugPath, globalNav[0]);
   const title = navItem?.title || 'Goldlabel';
-  const ogImage = frontmatter.image || '/png/test.png';
+  const ogImage = frontmatter.image || '/png/default.png';
 
   return (
     <Core type={type} frontmatter={frontmatter} body={content}>

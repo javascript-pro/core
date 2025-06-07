@@ -3,21 +3,23 @@
 import * as React from 'react';
 import { ThemeProvider } from '@mui/material';
 import { useSlice, createMUITheme } from '../../../gl-core';
+import { subMUITheme } from '../Theme';
+import { TTheme } from '../Theme/types';
 
-export type TTheme = {
-  theme?: {
-    primary: string;
-    secondary: string;
-    background: string;
-    paper: string;
-    text: string;
-    border: string;
-  };
-  children: React.ReactNode;
-};
-
-export default function Theme({ children = null }: TTheme) {
+export default function Theme({
+  theme = {
+    mode: 'dark',
+    primary: '#A6D4D1',
+    secondary: '#303030',
+    background: '#303030',
+    paper: '#303030',
+    text: '#FFFFFF',
+    border: '#C09F52',
+  },
+  children = null,
+}: TTheme) {
   const slice = useSlice();
-  const theme = createMUITheme(slice.themeMode);
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+  // console.log()
+  const newtheme = subMUITheme(theme);
+  return <ThemeProvider theme={newtheme}>{children}</ThemeProvider>;
 }

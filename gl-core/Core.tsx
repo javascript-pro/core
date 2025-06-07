@@ -1,7 +1,7 @@
 'use client';
-
+import config from './config.json';
 import * as React from 'react';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import {
   CssBaseline,
@@ -39,7 +39,6 @@ export type TCore = {
 
 export default function Core({ frontmatter, body = null }: TCore) {
   const pathname = usePathname();
-  const router = useRouter();
   const isMobile = useIsMobile();
   const isCV = pathname === '/cv';
   const isFlickr = pathname === '/free/flickr';
@@ -70,13 +69,14 @@ export default function Core({ frontmatter, body = null }: TCore) {
     </Grid>
   );
 
+  console.log('CORE');
   return (
-    <Theme>
+    <Theme theme={config.themes.dark as any}>
       <CssBaseline />
       <Container id="core">
         <Header frontmatter={frontmatter} />
         <Grid container spacing={1}>
-          {!isMobile && getAside()}
+          
           <Grid
             size={{
               md: 9,
@@ -134,6 +134,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
               {isMobile && getAside()}
             </Box>
           </Grid>
+          {!isMobile && getAside()}
         </Grid>
       </Container>
     </Theme>

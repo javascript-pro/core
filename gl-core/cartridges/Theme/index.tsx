@@ -1,12 +1,10 @@
-import Theme from './Theme';
-import { TTheme } from './Theme';
-import Icon from './Icon';
 import { TIcon } from './Icon';
-
+import Theme from './Theme';
+import Icon from './Icon';
 import ModeSwitch from './ModeSwitch';
-
 import { createMUITheme } from './createMUITheme';
+import { subMUITheme } from './subMUITheme';
 
-export { Theme, Icon, ModeSwitch, createMUITheme };
+export { Theme, Icon, ModeSwitch, createMUITheme, subMUITheme };
 
-export type { TIcon, TTheme };
+export type { TIcon };

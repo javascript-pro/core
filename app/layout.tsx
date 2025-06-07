@@ -22,7 +22,7 @@ export default async function RootLayout({
     <html lang="en">
       <head>
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#FFFFFF" />
+        <meta name="theme-color" content="#303030" />
         <link rel="icon" href="/svg/favicon.svg" type="image/x-icon" />
         <link rel="shortcut icon" href="/svg/favicon.svg" type="image/x-icon" />
         <link
