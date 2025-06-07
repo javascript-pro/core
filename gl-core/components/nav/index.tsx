@@ -27,4 +27,12 @@ export {
   SideAds,
 };
 
-export type { TSideAds, TCardButton, TSearch, TMightyButton, TNav, TNavItem, TShareThis };
+export type {
+  TSideAds,
+  TCardButton,
+  TSearch,
+  TMightyButton,
+  TNav,
+  TNavItem,
+  TShareThis,
+};

@@ -9,6 +9,7 @@ tags: JavaScript, Node, Next.js, API, REST API, Flickr
 github: https://github.com/javascript-pro/core/tree/main/gl-core/cartridges/Flickr
 api: https://goldlabel.pro/api/gl-api/flickr?album=72177720326317140
 ---
+
 > Cartridge: [Flickr](/free/flickr)
 
 A real-world REST API powered by Next.js, integrating with the Flickr platform to serve media assets as structured JSON.

@@ -1,11 +1,6 @@
 'use client';
 import * as React from 'react';
-import {
-  Typography,
-  Alert,
-  ButtonBase,
-  IconButton,
-} from '@mui/material';
+import { Typography, Alert, ButtonBase, IconButton } from '@mui/material';
 import { Icon, useIsMobile } from '../../gl-core';
 
 export type TAdvert = {
@@ -28,13 +23,14 @@ export default function Advert({
 
   return (
     <>
-      <ButtonBase 
-        sx={{ 
-          textAlign: 'left', 
+      <ButtonBase
+        sx={{
+          textAlign: 'left',
           mb: 1,
-          width: "100%",
-        }} 
-        onClick={onClick}>
+          width: '100%',
+        }}
+        onClick={onClick}
+      >
         <Alert
           sx={{ width: '100%' }}
           severity="success"

@@ -8,7 +8,7 @@ image: /png/default.png
 tags: techstack, Design, MUI
 ---
 
-> MUI Toolpad is a low-code builder for internal tools. It runs as part of your Next.js project and gives you a drag-and-drop environment to create React-based dashboards powered by live data. We’re using Toolpad inside Goldlabel Cloud to build internal interfaces quickly 
+> MUI Toolpad is a low-code builder for internal tools. It runs as part of your Next.js project and gives you a drag-and-drop environment to create React-based dashboards powered by live data. We’re using Toolpad inside Goldlabel Cloud to build internal interfaces quickly
 
 #### Features
 
@@ -54,7 +54,6 @@ Toolpad can bind directly to Firebase with no middleware layer.
 - Secure with a Firebase Auth token from the logged-in user
 - Display collections with table components
 - Enable CRUD actions with update bindings
-
 
 #### What it’s not for
 

@@ -1,7 +1,6 @@
 {
-  
   "persist": true,
-  "defaultMode": "light",
+  "defaultMode": "dark",
   "app": "Goldlabel",
   "description": "AI software that works",
   "url": "https://goldlabel.pro",

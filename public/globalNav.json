@@ -4,7 +4,7 @@
     "description": "AI software which works",
     "slug": "/",
     "order": 1,
-    "icon": "blokey",
+    "icon": "home",
     "type": "folder",
     "tags": [
       "JavaScript",
@@ -36,6 +36,56 @@
     ],
     "excerpt": "We build and ship modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source\n \n\n About Goldlabel\n\n is . It's  a",
     "children": [
+      {
+        "title": "Clients",
+        "description": "You need to be signed in",
+        "slug": "/clients",
+        "order": 1,
+        "icon": "bouncer",
+        "type": "folder",
+        "tags": [
+          "Fallmanager"
+        ],
+        "excerpt": "FallmanagementSystem für eine deutsche Anwaltskanzlei. Zentrale Verwaltung von Falldaten, Dokumentenerstellung und Fristenüberwachung.",
+        "children": [
+          {
+            "title": "Fallmanager",
+            "description": "Fallmanagement-System für eine deutsche Anwaltskanzlei",
+            "slug": "/fallmanager",
+            "order": 1,
+            "icon": "bouncer",
+            "type": "folder",
+            "tags": [
+              "Fallmanager"
+            ],
+            "excerpt": "FallmanagementSystem für eine deutsche Anwaltskanzlei. Zentrale Verwaltung von Falldaten, Dokumentenerstellung und Fristenüberwachung.\n\nhttps://verkehrsrechtanwaltsaarland.de",
+            "children": [
+              {
+                "title": "Prototype",
+                "slug": "/prototype",
+                "order": 15,
+                "icon": "bouncer",
+                "type": "file",
+                "tags": [
+                  "Fallmanager"
+                ],
+                "excerpt": "Fallmanager Prototype"
+              },
+              {
+                "title": "Database",
+                "slug": "/database",
+                "order": 20,
+                "icon": "bouncer",
+                "type": "file",
+                "tags": [
+                  "Fallmanager"
+                ],
+                "excerpt": "Fallmanager Database"
+              }
+            ]
+          }
+        ]
+      },
       {
         "title": "Free & Open Source",
         "description": "Some things in life ARE free",
@@ -183,7 +233,7 @@
           "NextJS",
           "Headless CMS"
         ],
-        "excerpt": "|  |   \n\nGoldlabel Core is always Free & Open Source as a public repo on . The apps we ship are real, run in production and are developed in public. The Core is Open Source and Free forever — giving y",
+        "excerpt": "|  | \n\nGoldlabel Core is always Free & Open Source as a public repo on . The apps we ship are real, run in production and are developed in public. The Core is Open Source and Free forever — giving you",
         "children": [
           {
             "title": "Goldlabel Apps Ltd",
@@ -261,6 +311,22 @@
                 "excerpt": "JavaScript Whatever the Weather\n\nWe’ve been writing JavaScript since it was still called ECMAScript.\n\nBefore the frameworks, before npm, before it ate the world—we were already deep in the language th",
                 "children": [
                   {
+                    "title": "Next.js",
+                    "slug": "/next-js",
+                    "order": 15,
+                    "icon": "javascript",
+                    "type": "file",
+                    "tags": [
+                      "JavaScript",
+                      "Node",
+                      "Next.js",
+                      "API",
+                      "REST API",
+                      "React"
+                    ],
+                    "excerpt": "Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with seamless backend capabilities, creating a unified developer experience. It simplifies the proce"
+                  },
+                  {
                     "title": "REST API",
                     "slug": "/rest-api",
                     "order": 50,
@@ -305,7 +371,7 @@
                   "process",
                   "design"
                 ],
-                "excerpt": "What is a Design System?\nA Design System is a collection of reusable components, standards, and guidelines that define how a product looks and behaves. It includes UI elements like buttons, forms, and",
+                "excerpt": "What is a Design System?\n\nA Design System is a collection of reusable components, standards, and guidelines that define how a product looks and behaves. It includes UI elements like buttons, forms, an",
                 "children": [
                   {
                     "title": "MUI Toolpad",

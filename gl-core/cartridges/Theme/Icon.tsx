@@ -126,11 +126,13 @@ import PhotoIcon from '@mui/icons-material/CameraAlt';
 import AlbumIcon from '@mui/icons-material/Collections';
 import LinkIcon from '@mui/icons-material/Link';
 import AboutIcon from '@mui/icons-material/HelpOutlineOutlined';
+import ClientsIcon from '@mui/icons-material/PeopleAltOutlined';
 
 export type TIcon = {
   icon:
     | 'plus'
     | 'about'
+    | 'clients'
     | 'link'
     | 'album'
     | 'flickr'
@@ -291,6 +293,11 @@ export default function Icon({ icon, color }: TIcon) {
     case 'add':
       iconFragment = <AddIcon color={color} />;
       break;
+
+          case 'clients':
+      iconFragment = <ClientsIcon color={color} />;
+      break;
+
 
     case 'flash':
       iconFragment = <MacromediaIconIcon color={color} />;

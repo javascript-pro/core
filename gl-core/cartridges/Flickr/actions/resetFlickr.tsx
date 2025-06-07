@@ -3,7 +3,8 @@ import { setUbereduxKey } from '../../../';
 import { FlickrinitialState, initFlickr } from '../';
 
 export const resetFlickr =
-  (flickrId: string): any => async (dispatch: TUbereduxDispatch, getState: () => any) => {
+  (flickrId: string): any =>
+  async (dispatch: TUbereduxDispatch, getState: () => any) => {
     try {
       dispatch(setUbereduxKey({ key: 'flickr', value: FlickrinitialState }));
       dispatch(initFlickr(flickrId));

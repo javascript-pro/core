@@ -70,7 +70,6 @@ export default function CV({
           mx: 4,
         }}
       >
-
         {appMode === 'cv' && (
           <Box sx={{ mr: 2, display: 'flex' }}>
             <Download cv={markdown} />
@@ -105,11 +104,9 @@ export default function CV({
                 dispatch(setCVKey('showJD', false));
               }}
             />
-
           </>
         )}
 
-        
         <Box sx={{ ml: 1, mt: 0.25 }}>
           <MightyButton
             mode="icon"
@@ -122,7 +119,6 @@ export default function CV({
             }}
           />
         </Box>
-
       </Box>
 
       {showJD && (

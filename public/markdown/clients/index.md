@@ -3,7 +3,7 @@ order: 1
 slug: /clients
 title: Clients
 description: You need to be signed in
-icon: bouncer
+icon: clients
 tags: Fallmanager
 image: /png/default.png
 bouncer: true
