@@ -15,7 +15,7 @@ export default function SideAds({ children = null }: TSideAds) {
     <Box sx={{}}>
       <Advert
         icon="clients"
-        title={'Clients'}
+        title={'Client Area'}
         onClick={() => {
           router.push(`/clients`);
         }}

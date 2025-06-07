@@ -162,7 +162,7 @@ export default async function Page({ params }: { params: any }) {
 
   // Restrict content rendering if bouncer is set
   if (frontmatter.bouncer === true) {
-    return <Bouncer />;
+    return <Bouncer frontmatter={frontmatter} content={content}/>;
   }
 
   const type = 'page';

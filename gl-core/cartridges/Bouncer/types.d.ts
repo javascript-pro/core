@@ -1,6 +1,8 @@
 // core/gl-core/cartridges/Bouncer/types.d.ts
 
 export type TBouncer = {
+  frontmatter?: any;
+  content?: any;
   [key: string]: any;
 };
 
@@ -22,6 +24,12 @@ export type TFeedback = {
 } | null;
 
 export type TAuthForm = {
+  frontmatter?: any;
   onClose?: () => void;
   [key: string]: any;
 };
+
+export type TFrontmatter = {
+  title?: string;
+  [key: string]: any;
+}

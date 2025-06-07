@@ -1,80 +1,93 @@
 'use client';
 // core/gl-core/cartridges/Bouncer/components/AuthForm.tsx
 import * as React from 'react';
-import config from '../../../config.json';
 import {
+  IconButton,
+  Card,
+  CardHeader,
+  CardContent, 
+  CardActions,
   Button,
-  DialogContent,
-  DialogTitle,
   TextField,
   Typography,
 } from '@mui/material';
+import { Icon } from '../../../../gl-core';
 import { TAuthForm } from '../../Bouncer';
 
-export default function AuthForm({}: TAuthForm) {
+export default function AuthForm({
+  frontmatter = {
+    icon: "settings",
+    title: "title",
+    description: "description",
+  },
+}: TAuthForm) {
+
+  // console.log("frontmatter", frontmatter);
+
   return (
-    <>
-      <DialogTitle>
-        <Typography
+    <Card>
+      <CardHeader 
+        avatar={<IconButton disabled>
+                  <Icon icon={frontmatter.icon}/>
+                </IconButton>}
+        title={<Typography variant="h6">
+                { frontmatter.title }
+              </Typography>}
+        subheader={<Typography variant="body2">
+                { frontmatter.description }
+              </Typography>}
+      />
+      <CardContent>
+        <TextField
+          autoFocus
+          label="Email"
+          type="email"
+          variant='standard'
+          fullWidth
           sx={{
-            mt: 2,
+            mb: 2,
           }}
-        >
-          {config.app} Auth Form
-        </Typography>
-      </DialogTitle>
+        />
+        <TextField
+          label="Password"
+          type="password"
+          variant='standard'
+          fullWidth
+          sx={{
+            mb: 2,
+          }}
 
-      <DialogContent sx={{ mt: 3 }}>
-        <>
-          <TextField
-            fullWidth
-            id="email"
-            sx={{
-              mb: 2,
-            }}
-            label="Email"
-          />
-          <TextField
-            fullWidth
-            id="password"
-            sx={{
-              mb: 2,
-            }}
-            label="Password"
-            type="password"
-          />
-        </>
+        />
+      </CardContent>
 
-        <Button
-          size="small"
-          sx={{}}
-          color="inherit"
-          variant="text"
+      <CardActions>
+
+
+        <Button 
+          variant="contained"
+          sx={{ ml: 1 }}
           onClick={() => {
-            console.log('New Account');
-          }}
-        >
-          New Account
+            console.log('Sign In');
+          }} 
+          >
+          Sign In
         </Button>
 
         <Button
-          size="small"
           sx={{}}
-          color="inherit"
-          variant="text"
           onClick={() => {
-            console.log('Reset password');
+            console.log('Reset Password');
           }}
         >
-          Reset password
+          Reset Password
         </Button>
 
-        <Button sx={{ ml: 1 }} variant="contained">
-          Login
-        </Button>
 
-        {/* <pre>authModalMode: {JSON.stringify(authModalMode, null, 2)}</pre> */}
-      </DialogContent>
-    </>
+      </CardActions>
+    </Card>
   );
 }
+
+/* 
+<pre>authModalMode: {JSON.stringify(authModalMode, null, 2)}</pre> 
+*/

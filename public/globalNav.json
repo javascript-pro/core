@@ -37,8 +37,8 @@
     "excerpt": "We build and ship modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source\n \n\n About Goldlabel\n\n is . It's  a",
     "children": [
       {
-        "title": "Clients",
-        "description": "You need to be signed in",
+        "title": "Client Area",
+        "description": "Please Sign In",
         "slug": "/clients",
         "order": 1,
         "icon": "clients",

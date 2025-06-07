@@ -2,10 +2,13 @@
   "persist": true,
   "app": "Goldlabel",
   "description": "AI software which just works",
-  
+
   "url": "https://goldlabel.pro",
   "repo": "https://github.com/javascript-pro/core",
-  "images": [
+  "images": {
+    "favicon": "/png/favicon.png"
+  },
+  "imagesArr": [
     "/png/favicon.png",
     "/png/default.png",
     "/png/bluesky/javascript.png"
