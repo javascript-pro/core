@@ -4,8 +4,8 @@ import { useTheme, SvgIcon } from '@mui/material';
 export default function FlickrIcon(props: any) {
   const theme = useTheme();
   let color1 = theme.palette.primary.main;
-// fill="#0059D4"
-// fill="#DA1593"
+  // fill="#0059D4"
+  // fill="#DA1593"
   return (
     <SvgIcon {...props}>
       <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

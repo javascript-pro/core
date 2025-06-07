@@ -4,7 +4,7 @@ import { useTheme, SvgIcon } from '@mui/material';
 export default function OpenAIIcon(props: any) {
   let mainColor = 'black';
   const theme = useTheme();
-  mainColor = theme.palette.text.primary;
+  mainColor = theme.palette.primary.main;
 
   return (
     <SvgIcon {...props}>

@@ -11,19 +11,12 @@ import {
   Typography,
 } from '@mui/material';
 import { useDispatch, Advert, routeTo, Icon } from '../../../gl-core';
-import {
-  initFlickr,
-  PhotoPopup,
-  photoSelect,
-} from '../Flickr';
+import { initFlickr, PhotoPopup, photoSelect } from '../Flickr';
 import { TFlickr } from './types';
 import { MightyButton, useSlice } from '../../../gl-core';
 import { useRouter } from 'next/navigation';
 
-export default function Flickr({
-  mode = 'default',
-  id = null,
-}: TFlickr) {
+export default function Flickr({ mode = 'default', id = null }: TFlickr) {
   const router = useRouter();
   const dispatch = useDispatch();
   const flickrSlice = useSlice().flickr;
@@ -44,7 +37,7 @@ export default function Flickr({
 
     if (notReady) {
       return (
-        <Alert icon={<Icon icon="flickr"/>} sx={{ mx: 4 }} severity="info">
+        <Alert icon={<Icon icon="flickr" />} sx={{ mx: 4 }} severity="info">
           Loading from Flickr...
         </Alert>
       );
@@ -54,10 +47,11 @@ export default function Flickr({
       <Box>
         <PhotoPopup />
         <Box sx={{ mx: 2 }}>
-
           <CardHeader
-            title={<Typography variant='h6'>{albumTitle}</Typography>}
-            subheader={<Typography variant='body2'>{albumDescription}</Typography>}
+            title={<Typography variant="h6">{albumTitle}</Typography>}
+            subheader={
+              <Typography variant="body2">{albumDescription}</Typography>
+            }
             avatar={
               <MightyButton
                 mode="icon"

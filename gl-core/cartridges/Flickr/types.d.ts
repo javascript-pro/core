@@ -13,8 +13,6 @@ export type TFlickr = {
   [key: string]: any;
 };
 
-
-
 export type TAlbumCard = {
   id?: string | null;
 };

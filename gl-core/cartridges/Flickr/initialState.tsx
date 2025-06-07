@@ -9,9 +9,9 @@ export const initialState: TFlickrState = {
   loading: false,
   loaded: false,
   albumList: {
-  lastLoad: Date.now(),
-  loading: false,
-  loaded: false,
-  list: [],
+    lastLoad: Date.now(),
+    loading: false,
+    loaded: false,
+    list: [],
   },
 };

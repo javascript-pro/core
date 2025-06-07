@@ -29,6 +29,18 @@
     <loc>https://goldlabel.pro/balance</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/clients/fallmanager/database</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/clients/fallmanager</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/clients/fallmanager/prototype</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/clients</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/cv/about</loc>
   </url>
   <url>
@@ -111,6 +123,9 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work/techstack/javascript</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/javascript/next-js</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/techstack/javascript/rest-api</loc>

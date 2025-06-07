@@ -25,7 +25,11 @@ export default async function RootLayout({
         <meta name="theme-color" content="#FFFFFF" />
         <link rel="icon" href="/svg/favicon.svg" type="image/x-icon" />
         <link rel="shortcut icon" href="/svg/favicon.svg" type="image/x-icon" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/png/apple-touch-icon" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/png/apple-touch-icon"
+        />
       </head>
       <body>
         <UbereduxProvider>{children}</UbereduxProvider>

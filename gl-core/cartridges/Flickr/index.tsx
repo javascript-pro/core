@@ -22,5 +22,5 @@ export {
   photoSelect,
   fetchAlbum,
   fetchAlbumList,
-  setFlickrKey,  
+  setFlickrKey,
 };

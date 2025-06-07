@@ -32,6 +32,7 @@ import {
   Search,
   NextPrevious,
   ShareThis,
+  SideAds,
 } from './components/nav';
 import {
   TNav,
@@ -89,6 +90,7 @@ export {
   MightyButton,
   Search,
   ShareThis,
+  SideAds,
 };
 export {
   Uberedux,

@@ -90,7 +90,7 @@ export default function AlbumSelecta({
         });
       }}
       onChange={(event, selected) => {
-        console.log("onChange", event, selected)
+        console.log('onChange', event, selected);
         if (selected) selectEvent(selected);
       }}
       renderInput={(params) => (
@@ -102,20 +102,22 @@ export default function AlbumSelecta({
         />
       )}
       renderOption={(props, option) => {
-        const thumbSrc =
-          option.coverPhoto?.sizes?.thumb?.src || undefined;
+        const thumbSrc = option.coverPhoto?.sizes?.thumb?.src || undefined;
 
         return (
-          <ListItemButton key={option.flickrId} onClick={() => {
-            selectEvent(option)
-          }}>
+          <ListItemButton
+            key={option.flickrId}
+            onClick={() => {
+              selectEvent(option);
+            }}
+          >
             <ListItemAvatar>
-               <Avatar
-                  alt={option.title}
-                  variant="square"
-                  src={thumbSrc}
-                  sx={{ width: 50, height: 50, mr: 1 }}
-                />
+              <Avatar
+                alt={option.title}
+                variant="square"
+                src={thumbSrc}
+                sx={{ width: 50, height: 50, mr: 1 }}
+              />
             </ListItemAvatar>
             <ListItemText
               primary={option.title || 'Untitled'}

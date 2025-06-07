@@ -3,7 +3,13 @@
 import * as React from 'react';
 import { useRouter } from 'next/navigation';
 import { IconButton, CardHeader, Typography, Tooltip } from '@mui/material';
-import { Icon, ShareThis, useDispatch, navigateTo, useIsMobile } from '../../../gl-core';
+import {
+  Icon,
+  ShareThis,
+  useDispatch,
+  navigateTo,
+  useIsMobile,
+} from '../../../gl-core';
 
 export type THeader = {
   frontmatter?: any;
@@ -18,13 +24,11 @@ export default function Header({ frontmatter = null }: THeader) {
   return (
     <>
       <CardHeader
-        sx={{
-          mx: 2,
-        }}
         avatar={
           <>
             <Tooltip title="Home">
               <IconButton
+                sx={{ ml: -2 }}
                 onClick={() => {
                   router.push('/');
                 }}
@@ -33,7 +37,7 @@ export default function Header({ frontmatter = null }: THeader) {
               </IconButton>
             </Tooltip>
             {icon !== 'blokey' ? (
-              <IconButton disabled>
+              <IconButton>
                 <Icon icon={icon as any} />
               </IconButton>
             ) : null}
@@ -44,10 +48,12 @@ export default function Header({ frontmatter = null }: THeader) {
             {title}
           </Typography>
         }
-        subheader={ !isMobile &&
-          <Typography sx={{}} variant={'body2'} component={'h2'}>
-            {description}
-          </Typography>
+        subheader={
+          !isMobile && (
+            <Typography sx={{}} variant={'body2'} component={'h2'}>
+              {description}
+            </Typography>
+          )
         }
         action={
           <>
