@@ -1,15 +1,9 @@
 'use client';
 // core/gl-core/cartridges/Bouncer/Bouncer.tsx
 import * as React from 'react';
-import {
-  Button,
-  Container,
-  IconButton,
-  Tooltip,
-  Typography,
-  Card,
-} from '@mui/material';
-import { Icon } from '../../../gl-core';
+import config from '../../config.json';
+import { Container } from '@mui/material';
+import { Theme } from '../../../gl-core';
 import { TBouncer } from '../Bouncer';
 import { AuthForm } from '../Bouncer';
 
@@ -21,8 +15,10 @@ export default function Bouncer({
   // console.log("Bouncer", frontmatter, content);
 
   return (
-    <Container maxWidth={'xs'} sx={{ pt: 5 }}>
-      <AuthForm frontmatter={frontmatter} />
-    </Container>
+    <Theme theme={config.themes.bouncer as any}>
+      <Container maxWidth={'xs'} sx={{ pt: 5 }}>
+        <AuthForm frontmatter={frontmatter} />
+      </Container>
+    </Theme>
   );
 }

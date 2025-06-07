@@ -1,7 +1,6 @@
 import Core from './Core';
 import { TCore, TFrontmatter } from './Core';
 import { Theme } from './cartridges/Theme';
-import { TTheme } from './cartridges/Theme';
 import { Icon } from './cartridges/Theme';
 import { createMUITheme } from './cartridges/Theme';
 import { TIcon } from './cartridges/Theme';
@@ -115,7 +114,6 @@ export type {
   TMightyButton,
   TFooter,
   TCore,
-  TTheme,
   TRenderMarkdown,
   TIcon,
   TNav,

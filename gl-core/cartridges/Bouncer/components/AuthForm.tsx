@@ -2,6 +2,7 @@
 // core/gl-core/cartridges/Bouncer/components/AuthForm.tsx
 import * as React from 'react';
 import {
+  Box,
   IconButton,
   Card,
   CardHeader,
@@ -44,7 +45,8 @@ export default function AuthForm({
           variant="standard"
           fullWidth
           sx={{
-            mb: 2,
+            mb: 1,
+            mx: 1,
           }}
         />
         <TextField
@@ -53,30 +55,39 @@ export default function AuthForm({
           variant="standard"
           fullWidth
           sx={{
-            mb: 2,
+            mb: 1,
+            mx: 1,
           }}
         />
       </CardContent>
 
-      <CardActions>
-        <Button
-          variant="contained"
-          sx={{ ml: 1 }}
-          onClick={() => {
-            console.log('Sign In');
-          }}
-        >
-          Sign In
-        </Button>
+      <CardActions sx={{}}>
+        
+        <Box>
+          <Button
+            sx={{ ml: 1 }}
+            onClick={() => {
+              console.log('Password?');
+            }}
+          >
+            Password?
+          </Button>
+        </Box>
 
-        <Button
-          sx={{}}
-          onClick={() => {
-            console.log('Reset Password');
-          }}
-        >
-          Reset Password
-        </Button>
+        <Box sx={{ flexGrow: 1 }}>
+          <Button
+            fullWidth
+            variant="outlined"
+            sx={{ ml: 1 }}
+            onClick={() => {
+              console.log('Sign In');
+            }}
+          >
+            Sign In
+          </Button>
+        </Box>
+
+
       </CardActions>
     </Card>
   );

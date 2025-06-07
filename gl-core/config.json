@@ -18,8 +18,8 @@
   "themes": {
     "bouncer": {
       "mode": "light",
-      "primary": "#C09F52",
-      "secondary": "#303030",
+      "primary": "#303030",
+      "secondary": "#A6D4D1",
       "background": "#FFFFFF",
       "paper": "#FFFFFF",
       "text": "#303030",
