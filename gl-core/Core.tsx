@@ -69,7 +69,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
   );
 
   // console.log('CORE');
-  
+
   return (
     <Theme theme={config.themes.dark as any}>
       <CssBaseline />

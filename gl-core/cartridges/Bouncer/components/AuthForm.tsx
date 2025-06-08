@@ -1,11 +1,8 @@
 'use client';
 // core/gl-core/cartridges/Bouncer/components/AuthForm.tsx
 import * as React from 'react';
-import config from '../../../config.json';
-import { useRouter } from 'next/navigation';
 import {
   Box,
-  Tooltip,
   IconButton,
   Card,
   CardHeader,
@@ -14,7 +11,6 @@ import {
   Button,
   TextField,
   Typography,
-  Avatar,
 } from '@mui/material';
 import { Icon, navigateTo, useDispatch } from '../../../../gl-core';
 import { TAuthForm } from '../../Bouncer';
@@ -32,18 +28,10 @@ export default function AuthForm({
   return (
     <Card>
       <CardHeader
-        avatar={
-          <>
-            <Tooltip title={`${config.app} Home`}>
-              <IconButton onClick={() => dispatch(navigateTo('/'))}>
-                <Avatar src={config.images.favicon} alt={config.app} />
-              </IconButton>
-            </Tooltip>
-          </>
-        }
+        avatar={<Icon icon={frontmatter.icon} />}
         action={
-          <IconButton disabled>
-            <Icon icon={frontmatter.icon} />
+          <IconButton onClick={() => dispatch(navigateTo('/'))}>
+            <Icon icon={"close"} />
           </IconButton>
         }
         title={<Typography variant="h6">{frontmatter.title}</Typography>}
@@ -77,17 +65,18 @@ export default function AuthForm({
 
       <CardActions sx={{}}>
         <Box sx={{ flexGrow: 1 }} />
-        {canResetPassword && <Box>
-          <Button
-            sx={{ ml: 1 }}
-            onClick={() => {
-              console.log('Password?');
-            }}
-          >
-            Password?
-          </Button>
-        </Box>}
-        
+        {canResetPassword && (
+          <Box>
+            <Button
+              sx={{ ml: 1 }}
+              onClick={() => {
+                console.log('Password?');
+              }}
+            >
+              Password?
+            </Button>
+          </Box>
+        )}
 
         <Box sx={{}}>
           <Button

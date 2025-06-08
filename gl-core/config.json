@@ -16,7 +16,7 @@
   "themeMode": "dark",
   "themes": {
     "bouncer": {
-      "mode": "dark",
+      "mode": "light",
       "primary": "#303030",
       "secondary": "#000000",
       "background": "#A6D4D1",

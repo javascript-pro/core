@@ -2,9 +2,8 @@
 order: 1
 slug: /clients
 title: Client Area
-description: Please Sign In
 icon: clients
-tags: Fallmanager
+tags: Fallmanager, clients, work
 image: /png/default.png
 bouncer: true
 ---
