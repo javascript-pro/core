@@ -434,6 +434,14 @@
                 "icon": "food",
                 "type": "file",
                 "excerpt": "| \n\nMoist, flavorful, and easy to make. Perfect for using overripe bananas, this classic loaf is a crowdpleaser for breakfast, snacks, or dessert.\n\n 125g Butter\n 175g Brown sugar\n 1 tsp Vanilla extrac"
+              },
+              {
+                "title": "Lemon Meringue Pie",
+                "slug": "/lemon-meringue-pie",
+                "order": 76,
+                "icon": "food",
+                "type": "file",
+                "excerpt": "Ingredients\n\n For the pastry\n\n 4 oz (110 g) plain flour, plus a little extra for rolling out\n a pinch of salt\n 1 oz (25 g) softened butter, cut into smallish lumps\n 1 oz (25 g) softened pure lard, cut"
               }
             ]
           },

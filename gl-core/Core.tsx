@@ -76,8 +76,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const getAside = () => (
     <Grid
       size={{
-        md: 3,
-        lg: 2,
+        md: 4,
+        lg: 3,
       }}
     >
       <SideAds />
@@ -94,8 +94,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
         <Grid container spacing={1}>
           <Grid
             size={{
-              md: 9,
-              lg: 10,
+              md: 8,
+              lg: 9,
             }}
           >
             <Box sx={{ mt: isMobile ? 2 : 0 }}>
