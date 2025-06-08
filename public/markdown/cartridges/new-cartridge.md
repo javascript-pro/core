@@ -4,10 +4,10 @@ slug: /cartridges/new-cartridge
 title: New Cartridge
 description: Template for bootstrapping a new cartridge
 icon: cartridge
-image: /png/default.png
-bouncer: true
+image: /png/cartridges/test.png
 ---
 
 ## ✅ NewCartridge
 
-This is a template from which you can init a new cartridge
+Template from which you can bootstrap a new cartridge
+

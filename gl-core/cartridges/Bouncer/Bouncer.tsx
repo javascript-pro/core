@@ -13,7 +13,6 @@ import {
   Feedback,
   useUser,
   updateUser,
-  SignoutButton,
 } from '../Bouncer';
 
 export default function Bouncer({
@@ -53,15 +52,7 @@ export default function Bouncer({
     px: 2,
   };
 
-  const theme = {
-    mode: 'light',
-    primary: '#303030',
-    secondary: '#A6D4D1',
-    background: '#FFF',
-    paper: '#FFF',
-    text: '#303030',
-    border: '#303030',
-  };
+  const theme = config.themes.dark;
 
   return (
     <>

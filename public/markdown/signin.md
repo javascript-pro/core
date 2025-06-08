@@ -6,3 +6,5 @@ icon: signin
 image: /png/default.png
 bouncer: true
 ---
+
+You are signed in using the Bouncer cartridge

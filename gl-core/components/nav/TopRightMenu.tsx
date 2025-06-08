@@ -64,7 +64,7 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           horizontal: 'right',
         }}
       >
-        <Box sx={{ minWidth: 220 }} />
+        <Box sx={{ width: 250 }} />
         <ShareMenu frontmatter={frontmatter} />
         <Divider />
         {user ? (
