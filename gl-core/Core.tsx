@@ -43,7 +43,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const isCV = pathname === '/cv';
   const isFlickr = pathname === '/free/flickr';
   const isApp = isCV || isFlickr;
-
   const [imageError, setImageError] = React.useState(false);
 
   let app = <></>;
@@ -69,14 +68,14 @@ export default function Core({ frontmatter, body = null }: TCore) {
     </Grid>
   );
 
-  console.log('CORE');
+  // console.log('CORE');
+
   return (
     <Theme theme={config.themes.dark as any}>
       <CssBaseline />
       <Container id="core">
         <Header frontmatter={frontmatter} />
         <Grid container spacing={1}>
-          
           <Grid
             size={{
               md: 9,

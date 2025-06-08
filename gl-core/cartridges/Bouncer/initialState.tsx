@@ -3,11 +3,7 @@ import { TBouncerState } from '../Bouncer';
 
 export const initialState: TBouncerState = {
   cartridge: 'bouncer',
-  authed: false,
+  authing: true,
   user: null,
-  feedback: {
-    severity: 'success',
-    title: 'Intialising Bouncer',
-    description: 'Going well so far',
-  },
+  feedback: null,
 };
