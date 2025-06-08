@@ -91,7 +91,7 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           </MenuItem>
         )}
         <Divider />
-        <Typography variant='caption' sx={{ ml:2.5 }}>
+        <Typography variant="caption" sx={{ ml: 2.5 }}>
           {version}
         </Typography>
       </Menu>
