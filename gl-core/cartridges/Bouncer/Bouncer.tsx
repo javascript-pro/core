@@ -3,15 +3,17 @@
 
 import * as React from 'react';
 import config from '../../config.json';
-import { Box } from '@mui/material';
-import { TBouncer } from '../Bouncer';
-import { Authed, AuthForm, Feedback, useUser } from '../Bouncer';
-import { Theme, useDispatch } from '../../../gl-core';
 import { onAuthStateChanged, User as FirebaseUser } from 'firebase/auth';
 import { auth } from '../../lib/firebase';
-import { updateUser } from '../Bouncer';
+import { Box, Card } from '@mui/material';
+import { Theme, useDispatch } from '../../../gl-core';
+import { TBouncer } from '../Bouncer';
+import { AuthForm, Feedback, useUser, updateUser, SignoutButton } from '../Bouncer';
 
-export default function Bouncer({ frontmatter = null }: TBouncer) {
+export default function Bouncer({ 
+  frontmatter = null,
+  content = null,
+}: TBouncer) {
   const dispatch = useDispatch();
   const user = useUser();
 
@@ -36,23 +38,25 @@ export default function Bouncer({ frontmatter = null }: TBouncer) {
     return () => unsubscribe();
   }, [dispatch]);
 
+  const sxAuth = {
+    minHeight: '100vh',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    overflow: 'auto',
+    px: 2,
+  }
+
   return (
     <Theme theme={config.themes.bouncer as any}>
       <Feedback />
-      <Box
-        sx={{
-          minHeight: '100vh',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          overflow: 'auto',
-          px: 2,
-        }}
-      >
+      <Box sx={!user ? sxAuth : null}>
         {user ? (
-          <Authed frontmatter={frontmatter} />
+          <>
+            <SignoutButton />
+          </>
         ) : (
-          <AuthForm frontmatter={frontmatter} />
+          <AuthForm frontmatter={frontmatter} content={content} />
         )}
       </Box>
     </Theme>
