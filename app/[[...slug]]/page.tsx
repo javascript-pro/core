@@ -160,18 +160,16 @@ export default async function Page({ params }: { params: any }) {
     }
   }
 
-  // Restrict content rendering if bouncer is set
   if (frontmatter.bouncer === true) {
     return <Bouncer frontmatter={frontmatter} content={content} />;
   }
 
-  const type = 'page';
   const navItem = findNavItem(slugPath, globalNav[0]);
   const title = navItem?.title || 'Goldlabel';
   const ogImage = frontmatter.image || '/png/default.png';
 
   return (
-    <Core type={type} frontmatter={frontmatter} body={content}>
+    <Core frontmatter={frontmatter} body={content}>
       <div id="core-ssg" className="gl">
         <div className="gl-wrap">
           <header id="gl-header">

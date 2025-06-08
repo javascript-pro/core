@@ -31,7 +31,6 @@ export type TFrontmatter = {
 };
 
 export type TCore = {
-  type?: 'page' | 'file' | 'folder' | 'cv';
   frontmatter?: any;
   body?: string | null;
   children?: React.ReactNode;
@@ -39,16 +38,21 @@ export type TCore = {
 
 export default function Core({ frontmatter, body = null }: TCore) {
   const pathname = usePathname();
+  // console.log("pathname", pathname)
   const isMobile = useIsMobile();
   const isCV = pathname === '/cv';
   const isFlickr = pathname === '/free/flickr';
-  const isApp = isCV || isFlickr;
+  const isFallmanager = pathname === '/clients/fallmanager';
+  const isApp = isCV || isFlickr || isFallmanager;
   const [imageError, setImageError] = React.useState(false);
 
   let app = <></>;
   switch (true) {
     case isCV:
       app = <CV mode="app" markdown={body} />;
+      break;
+    case isFallmanager:
+      app = <>Fallmanager</>;
       break;
     case isFlickr:
       app = <Flickr mode="app" id="72177720324245676" />;
@@ -67,8 +71,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
       <SideAds />
     </Grid>
   );
-
-  // console.log('CORE');
 
   return (
     <Theme theme={config.themes.dark as any}>

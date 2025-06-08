@@ -24,14 +24,8 @@ export default function Feedback({}: TAuthForm) {
   if (!feedback || feedback.hidden || !feedback.title) return null;
 
   return (
-    <Snackbar
-      open
-      anchorOrigin={{ vertical: 'top', horizontal: 'left' }}
-    >
-      <Alert
-        severity={feedback.severity}
-        sx={{ width: '100%' }}
-      >
+    <Snackbar open anchorOrigin={{ vertical: 'top', horizontal: 'left' }}>
+      <Alert severity={feedback.severity} sx={{ width: '100%' }}>
         <strong>{feedback.title}</strong>
         <br />
         {feedback.description}

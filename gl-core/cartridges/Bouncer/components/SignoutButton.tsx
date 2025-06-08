@@ -23,11 +23,7 @@ export default function SignoutButton({}: TSignoutButton) {
         zIndex: 1000,
       }}
     >
-      <Fab
-        color="primary"
-        onClick={handleSignout}
-        aria-label="sign out"
-      >
+      <Fab color="primary" onClick={handleSignout} aria-label="sign out">
         <Icon icon="signout" />
       </Fab>
     </Box>
