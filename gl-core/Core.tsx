@@ -76,7 +76,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
       <Container id="core">
         <Header frontmatter={frontmatter} />
         <Grid container spacing={1}>
-          
           <Grid
             size={{
               md: 9,

@@ -7,10 +7,7 @@ import { Theme } from '../../../gl-core';
 import { TBouncer } from '../Bouncer';
 import { AuthForm } from '../Bouncer';
 
-export default function Bouncer({
-  frontmatter = null,
-}: TBouncer) {
-  
+export default function Bouncer({ frontmatter = null }: TBouncer) {
   return (
     <Theme theme={config.themes.bouncer as any}>
       <Container maxWidth={'xs'} sx={{ pt: 5 }}>

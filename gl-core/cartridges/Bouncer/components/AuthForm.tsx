@@ -1,7 +1,7 @@
 'use client';
 // core/gl-core/cartridges/Bouncer/components/AuthForm.tsx
 import * as React from 'react';
-import config from '../../../config.json'
+import config from '../../../config.json';
 import { useRouter } from 'next/navigation';
 import {
   Box,
@@ -32,19 +32,20 @@ export default function AuthForm({
   return (
     <Card>
       <CardHeader
-        avatar={<>
+        avatar={
+          <>
             <Tooltip title={`${config.app} Home`}>
-              <IconButton
-                onClick={() => dispatch(navigateTo("/"))}
-              >
-                <Avatar src={config.images.favicon} alt={config.app}/>
+              <IconButton onClick={() => dispatch(navigateTo('/'))}>
+                <Avatar src={config.images.favicon} alt={config.app} />
               </IconButton>
             </Tooltip>
           </>
         }
-        action={<IconButton disabled>
-              <Icon icon={frontmatter.icon} />
-            </IconButton>}
+        action={
+          <IconButton disabled>
+            <Icon icon={frontmatter.icon} />
+          </IconButton>
+        }
         title={<Typography variant="h6">{frontmatter.title}</Typography>}
         subheader={
           <Typography variant="body2">{frontmatter.description}</Typography>
@@ -87,7 +88,7 @@ export default function AuthForm({
           </Button>
         </Box>
 
-        <Box sx={{ }}>
+        <Box sx={{}}>
           <Button
             variant="contained"
             sx={{ mx: 1 }}
