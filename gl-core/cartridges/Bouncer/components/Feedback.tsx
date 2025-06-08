@@ -10,6 +10,7 @@ import { useDispatch } from '../../../../gl-core';
 export default function Feedback({}: TAuthForm) {
   const feedback = useFeedback();
   const dispatch = useDispatch();
+  const turnOffFeedback = true;
 
   React.useEffect(() => {
     if (feedback && !feedback.hidden) {
@@ -21,7 +22,7 @@ export default function Feedback({}: TAuthForm) {
     }
   }, [feedback, dispatch]);
 
-  if (!feedback || feedback.hidden || !feedback.title) return null;
+  if (turnOffFeedback || !feedback || feedback.hidden || !feedback.title) return null;
 
   return (
     <Snackbar open anchorOrigin={{ vertical: 'top', horizontal: 'left' }}>

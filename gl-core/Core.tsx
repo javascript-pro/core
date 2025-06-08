@@ -51,14 +51,19 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
   let app = <></>;
   switch (true) {
-        case isFallmanager:
+    case isFallmanager:
       fullScreen = true;
-      app = <Card sx={{ p: 1 }}>import Fallmanager Cartridge</Card>;
+      app = <>
+        <SignoutButton />
+        <Card sx={{ p: 1 }}>
+          import Fallmanager Cartridge 
+          from https://github.com/javascript-pro/fallmanager (private)
+        </Card>
+      </>;
       break;
     case isCV:
       app = <CV mode="app" markdown={body} />;
       break;
-
     case isFlickr:
       app = <Flickr mode="app" id="72177720326317140" />;
       break;
@@ -145,8 +150,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
           {!isMobile && getAside()}
         </Grid>
       </Container>
-      { user && <SignoutButton /> }
-      
+      {user && <SignoutButton />}
     </Theme>
   );
 }
