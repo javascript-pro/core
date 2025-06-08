@@ -38,13 +38,15 @@
     "children": [
       {
         "title": "Client Area",
-        "description": "Please Sign In",
+        "description": "description",
         "slug": "/clients",
         "order": 1,
         "icon": "clients",
         "type": "folder",
         "tags": [
-          "Fallmanager"
+          "Fallmanager",
+          "clients",
+          "work"
         ],
         "excerpt": "FallmanagementSystem für eine deutsche Anwaltskanzlei. Zentrale Verwaltung von Falldaten, Dokumentenerstellung und Fristenüberwachung.",
         "children": [

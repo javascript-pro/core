@@ -14,6 +14,11 @@ import {
 } from '@mui/material';
 import { Icon, navigateTo, useDispatch } from '../../../../gl-core';
 import { TAuthForm } from '../../Bouncer';
+import { updateFeedback } from '../../Bouncer/actions/updateFeedback';
+
+function isValidEmail(email: string) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
 
 export default function AuthForm({
   frontmatter = {
@@ -22,16 +27,45 @@ export default function AuthForm({
     description: 'description',
   },
 }: TAuthForm) {
-  // console.log("frontmatter", frontmatter);
   const dispatch = useDispatch();
   const canResetPassword = false;
+
+  const [email, setEmail] = React.useState('');
+  const [password, setPassword] = React.useState('');
+
+  const isFormValid = React.useMemo(() => {
+    return isValidEmail(email) && password.length >= 6;
+  }, [email, password]);
+
+  React.useEffect(() => {
+    if (!email && !password) {
+      // dispatch(updateFeedback({
+      //   severity: 'info',
+      //   title: 'Waiting for Input',
+      //   description: 'Please enter your email and password.',
+      // }));
+    } else if (!isValidEmail(email)) {
+      dispatch(updateFeedback({
+        severity: 'info',
+        title: 'Please enter a valid email address',
+      }));
+    } else if (password.length < 6) {
+      dispatch(updateFeedback({
+        severity: 'info',
+        title: 'Password must be at least 6 characters',
+      }));
+    } else {
+      dispatch(updateFeedback(null));
+    }
+  }, [email, password, dispatch]);
+
   return (
     <Card>
       <CardHeader
         avatar={<Icon icon={frontmatter.icon} />}
         action={
           <IconButton onClick={() => dispatch(navigateTo('/'))}>
-            <Icon icon={"close"} />
+            <Icon icon={'close'} />
           </IconButton>
         }
         title={<Typography variant="h6">{frontmatter.title}</Typography>}
@@ -46,54 +80,39 @@ export default function AuthForm({
           type="email"
           variant="standard"
           fullWidth
-          sx={{
-            mb: 1,
-            mx: 1,
-          }}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <TextField
           label="Password"
           type="password"
           variant="standard"
           fullWidth
-          sx={{
-            mb: 1,
-            mx: 1,
-          }}
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          sx={{ mt: 2 }}
         />
       </CardContent>
 
-      <CardActions sx={{}}>
-        <Box sx={{ flexGrow: 1 }} />
+      <CardActions>
         {canResetPassword && (
           <Box>
-            <Button
-              sx={{ ml: 1 }}
-              onClick={() => {
-                console.log('Password?');
-              }}
-            >
+            <Button onClick={() => console.log('Password?')}>
               Password?
             </Button>
           </Box>
         )}
-
-        <Box sx={{}}>
           <Button
-            variant="contained"
-            sx={{ mx: 1 }}
+            fullWidth
+            variant={isFormValid ? 'contained' : 'outlined'}
+            disabled={!isFormValid}
             onClick={() => {
               console.log('Sign In');
             }}
           >
             Sign In
           </Button>
-        </Box>
       </CardActions>
     </Card>
   );
 }
-
-/* 
-<pre>authModalMode: {JSON.stringify(authModalMode, null, 2)}</pre> 
-*/

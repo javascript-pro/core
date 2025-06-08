@@ -8,9 +8,12 @@ export type TBouncer = {
 
 export type TBouncerState = {
   cartridge: string;
+  email: string | null;
+  authing: boolean;
   authed: boolean;
   user: {
-    fingerprint: string;
+    email: string | null;
+    fingerprint: string | null;
   } | null;
   feedback: TFeedback | null;
 };
@@ -18,6 +21,7 @@ export type TBouncerState = {
 export type TSeverity = 'success' | 'info' | 'warning' | 'error';
 
 export type TFeedback = {
+  hidden?: boolean;
   severity?: TSeverity;
   title?: string;
   description?: string;
