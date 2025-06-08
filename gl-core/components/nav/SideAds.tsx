@@ -21,6 +21,13 @@ export default function SideAds({ children = null }: TSideAds) {
         }}
       />
       <Advert
+        icon="fallmanager"
+        title={'Fallmanager'}
+        onClick={() => {
+          router.push(`/clients/fallmanager`);
+        }}
+      />
+      <Advert
         icon="flickr"
         title={'Flickr'}
         onClick={() => {

@@ -57,7 +57,9 @@ export default function Bouncer({
     <>
       <Feedback />
       <Box sx={!user ? sxAuth : null}>
-        {user ? <Core frontmatter={frontmatter} body={content} /> : (
+        {user ? (
+          <Core frontmatter={frontmatter} body={content} />
+        ) : (
           <Theme theme={config.themes.bouncer as any}>
             <AuthForm frontmatter={frontmatter} content={content} />
           </Theme>
