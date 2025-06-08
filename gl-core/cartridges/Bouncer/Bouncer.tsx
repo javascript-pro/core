@@ -25,12 +25,12 @@ export default function Bouncer({ frontmatter = null }: TBouncer) {
             updateUser({
               uid,
               email,
-            })
+            }),
           );
         } else {
           dispatch(updateUser(null));
         }
-      }
+      },
     );
 
     return () => unsubscribe();

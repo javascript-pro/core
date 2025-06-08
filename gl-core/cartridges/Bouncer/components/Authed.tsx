@@ -6,14 +6,11 @@ import { TAuthed } from '../../Bouncer/types';
 import { SignoutButton, useUser } from '../../Bouncer';
 
 export default function Authed({}: TAuthed) {
-
   const user = useUser();
 
   return (
     <Paper>
-      <pre style={{fontSize: 10}}>
-        user: {JSON.stringify(user, null, 2)}
-      </pre>
+      <pre style={{ fontSize: 10 }}>user: {JSON.stringify(user, null, 2)}</pre>
       <SignoutButton />
     </Paper>
   );

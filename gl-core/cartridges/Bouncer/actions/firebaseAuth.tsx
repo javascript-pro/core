@@ -6,13 +6,14 @@ import { TUbereduxDispatch } from '../../../';
 import { auth } from '../../../lib/firebase';
 import { updateFeedback } from './updateFeedback';
 
-export const firebaseAuth = (
-  mode: 'signin' | 'signout',
-  creds?: {
-    email: string;
-    password: string;
-  }
-): any =>
+export const firebaseAuth =
+  (
+    mode: 'signin' | 'signout',
+    creds?: {
+      email: string;
+      password: string;
+    },
+  ): any =>
   async (dispatch: TUbereduxDispatch, getState: () => any) => {
     try {
       if (mode === 'signin') {
@@ -23,14 +24,14 @@ export const firebaseAuth = (
         const result = await signInWithEmailAndPassword(
           auth,
           creds.email,
-          creds.password
+          creds.password,
         );
 
         dispatch(
           updateFeedback({
             severity: 'success',
             title: `Welcome ${result.user.displayName || result.user.email}`,
-          })
+          }),
         );
       }
 
@@ -41,7 +42,7 @@ export const firebaseAuth = (
           updateFeedback({
             severity: 'info',
             title: 'You have been signed out',
-          })
+          }),
         );
       }
     } catch (e: unknown) {
@@ -52,7 +53,7 @@ export const firebaseAuth = (
           severity: 'error',
           title: 'Firebase Error',
           description: msg,
-        })
+        }),
       );
 
       dispatch(setUbereduxKey({ key: 'error', value: msg }));

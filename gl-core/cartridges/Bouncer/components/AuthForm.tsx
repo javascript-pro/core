@@ -14,10 +14,7 @@ import {
 } from '@mui/material';
 import { Icon, navigateTo, useDispatch } from '../../../../gl-core';
 import { TAuthForm } from '../../Bouncer';
-import { 
-  firebaseAuth,
-  updateFeedback,
-} from '../../Bouncer';
+import { firebaseAuth, updateFeedback } from '../../Bouncer';
 
 function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -40,12 +37,14 @@ export default function AuthForm({
     return isValidEmail(email) && password.length >= 6;
   }, [email, password]);
 
-    const onSignIn = () => {
-      dispatch(firebaseAuth("signin", {
+  const onSignIn = () => {
+    dispatch(
+      firebaseAuth('signin', {
         email,
         password,
-      }))
-    }
+      }),
+    );
+  };
 
   React.useEffect(() => {
     if (!email && !password) {
@@ -118,7 +117,8 @@ export default function AuthForm({
           fullWidth
           onClick={onSignIn}
           variant={isFormValid ? 'contained' : 'outlined'}
-          disabled={!isFormValid}>
+          disabled={!isFormValid}
+        >
           Sign In
         </Button>
       </CardActions>
