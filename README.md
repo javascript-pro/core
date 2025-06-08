@@ -17,7 +17,7 @@ From this version on there are some aspects of the software which are not free a
 
 [Charles Darwin](https://goldlabel.pro/balance/sci-fi/charles-darwin), On the Origin of Species By Means of Natural Selection, or The Preservation Of Favoured Race In The Struggle For Life (1859)
 
-![Wei Zang](https://goldlabel.pro/png/nhtfs/weizang.png)
+![Wei Zang](https://goldlabel.pro/png/cartridges/weizang.png)
 
 ### Free Cartridges
 
