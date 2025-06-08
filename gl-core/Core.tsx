@@ -22,6 +22,7 @@ import {
 } from '../gl-core';
 import { Flickr } from './cartridges/Flickr';
 import { CV } from './cartridges/CV';
+import { SignoutButton, useUser } from './cartridges/Bouncer';
 
 export type TFrontmatter = {
   icon?: string;
@@ -38,27 +39,28 @@ export type TCore = {
 };
 
 export default function Core({ frontmatter, body = null }: TCore) {
+  let fullScreen = false;
   const pathname = usePathname();
-  // console.log("pathname", pathname)
+  const user = useUser();
   const isMobile = useIsMobile();
   const isCV = pathname === '/cv';
   const isFlickr = pathname === '/free/flickr';
   const isFallmanager = pathname === '/clients/fallmanager';
   const isApp = isCV || isFlickr || isFallmanager;
-  let fullScreen = false;
   const [imageError, setImageError] = React.useState(false);
 
   let app = <></>;
   switch (true) {
+        case isFallmanager:
+      fullScreen = true;
+      app = <Card sx={{ p: 1 }}>import Fallmanager Cartridge</Card>;
+      break;
     case isCV:
       app = <CV mode="app" markdown={body} />;
       break;
-    case isFallmanager:
-      fullScreen = true;
-      app = <Card sx={{ p: 2 }}>Fallmanager</Card>;
-      break;
+
     case isFlickr:
-      app = <Flickr mode="app" id="72177720324245676" />;
+      app = <Flickr mode="app" id="72177720326317140" />;
       break;
     default:
       break;
@@ -75,7 +77,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
     </Grid>
   );
 
-  if (fullScreen) return app;
+  if (fullScreen) return <>{app}</>;
 
   return (
     <Theme theme={config.themes.dark as any}>
@@ -143,6 +145,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
           {!isMobile && getAside()}
         </Grid>
       </Container>
+      { user && <SignoutButton /> }
+      
     </Theme>
   );
 }

@@ -21,17 +21,19 @@ export type TTopRightMenu = {
   [key: string]: any;
 };
 
-export default function TopRightMenu({
-  // frontmatter = {
-  //   icon: 'home',
-  //   title: 'title',
-  //   description: 'description',
-  // },
-}: TTopRightMenu) {
+export default function TopRightMenu(
+  {
+    // frontmatter = {
+    //   icon: 'home',
+    //   title: 'title',
+    //   description: 'description',
+    // },
+  }: TTopRightMenu,
+) {
   // const { title, icon } = frontmatter;
   const dispatch = useDispatch();
   const user = useUser();
-  console.log('user', user);
+  // console.log('user', user);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
