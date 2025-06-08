@@ -3,37 +3,29 @@
 'use client';
 import * as React from 'react';
 import {
+  Box,
+  Divider,
   IconButton,
   Menu,
   MenuItem,
   ListItemIcon,
   ListItemText,
 } from '@mui/material';
-import { Icon, useDispatch, navigateTo } from '../../../gl-core';
+import { Icon, useDispatch, navigateTo, ShareMenu } from '../../../gl-core';
 import { firebaseAuth, useUser } from '../../cartridges/Bouncer';
 
 export type TTopRightMenu = {
   frontmatter?: {
-    icon?: string;
     title?: string;
     description?: string;
-  };
+    icon?: string;
+  } | null;
   [key: string]: any;
 };
 
-export default function TopRightMenu(
-  {
-    // frontmatter = {
-    //   icon: 'home',
-    //   title: 'title',
-    //   description: 'description',
-    // },
-  }: TTopRightMenu,
-) {
-  // const { title, icon } = frontmatter;
+export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
   const dispatch = useDispatch();
   const user = useUser();
-  // console.log('user', user);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
@@ -72,13 +64,9 @@ export default function TopRightMenu(
           horizontal: 'right',
         }}
       >
-        {/* <MenuItem>
-          <ListItemIcon>
-            <Icon icon={icon as any} />
-          </ListItemIcon>
-          <ListItemText primary={title} />
-        </MenuItem> */}
-
+        <Box sx={{ minWidth: 220 }} />
+        <ShareMenu frontmatter={frontmatter} />
+        <Divider />
         {user ? (
           <MenuItem onClick={handleSignout}>
             <ListItemIcon>

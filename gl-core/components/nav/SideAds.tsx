@@ -14,14 +14,6 @@ export default function SideAds({ children = null }: TSideAds) {
   return (
     <Box sx={{}}>
       <Advert
-        icon="food"
-        title={'Lemon Meringue Pie'}
-        onClick={() => {
-          router.push(`/life/food/lemon-meringue-pie`);
-        }}
-      />
-
-      <Advert
         icon="fallmanager"
         title={'Fallmanager'}
         onClick={() => {
@@ -40,6 +32,13 @@ export default function SideAds({ children = null }: TSideAds) {
         title={'C.V.'}
         onClick={() => {
           router.push(`/cv`);
+        }}
+      />
+      <Advert
+        icon="food"
+        title={'Lemon Meringue Pie'}
+        onClick={() => {
+          router.push(`/life/food/lemon-meringue-pie`);
         }}
       />
     </Box>
