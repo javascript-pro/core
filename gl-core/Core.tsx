@@ -87,7 +87,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
   if (fullScreen) return <>{app}</>;
 
   return (
-    <Theme theme={config.themes.dark as any}>
+    <Theme theme={config.themes.lemon as any}>
       <CssBaseline />
       <Container id="core">
         <Header frontmatter={frontmatter} />

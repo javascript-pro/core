@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Provider } from 'react-redux';
 import { store, persistor } from './store';
 import { PersistGate } from 'redux-persist/integration/react';
+import { Icon } from '../../../gl-core';
 
 export default function UbereduxProvider({
   children,

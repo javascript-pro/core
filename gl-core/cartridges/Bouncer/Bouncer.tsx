@@ -53,6 +53,16 @@ export default function Bouncer({
     px: 2,
   };
 
+  const theme = {
+    "mode": "light",
+    "primary": "#303030",
+    "secondary": "#A6D4D1",
+    "background": "#FFF",
+    "paper": "#FFF",
+    "text": "#303030",
+    "border": "#303030"
+  };
+
   return (
     <>
       <Feedback />
@@ -60,7 +70,7 @@ export default function Bouncer({
         {user ? (
           <Core frontmatter={frontmatter} body={content} />
         ) : (
-          <Theme theme={config.themes.bouncer as any}>
+          <Theme theme={theme as any}>
             <AuthForm frontmatter={frontmatter} content={content} />
           </Theme>
         )}

@@ -15,13 +15,13 @@
   "brandColor": "#A6D4D1",
   "themeMode": "dark",
   "themes": {
-    "bouncer": {
-      "mode": "light",
-      "primary": "#303030",
-      "secondary": "#A6D4D1",
-      "background": "#A6D4D1",
-      "paper": "#CAF9F6",
-      "text": "#303030",
+    "lemon": {
+      "mode": "dark",
+      "primary": "#e8c10b",
+      "secondary": "#fae45c",
+      "background": "#303030",
+      "paper": "#303030",
+      "text": "#fffceb",
       "border": "#303030"
     },
     "dark": {

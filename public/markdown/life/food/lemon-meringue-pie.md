@@ -4,10 +4,12 @@ title: Lemon Meringue Pie
 description: Delia Smith
 slug: /life/food/lemon-meringue-pie
 icon: food
-image: /jpg/wei-zang/wei-zangs-food.jpg
+image: /jpg/food/lemon-meringue-pie.jpg
 ---
 
-## Ingredients
+> Apparently "Lemonading" is an actual word that even people on Radio 4 use. So when life gives you lemons...
+
+### Ingredients
 
 #### For the pastry
 
@@ -29,7 +31,7 @@ image: /jpg/wei-zang/wei-zangs-food.jpg
 - 3 large egg whites
 - 6 oz (175 g) golden caster sugar
 
-## Method
+### Method
 
 Start by making the pastry.
 
