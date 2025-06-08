@@ -2,7 +2,6 @@
   "persist": true,
   "app": "Goldlabel",
   "description": "AI software which just works",
-
   "url": "https://goldlabel.pro",
   "repo": "https://github.com/javascript-pro/core",
   "images": {
@@ -17,11 +16,11 @@
   "themeMode": "dark",
   "themes": {
     "bouncer": {
-      "mode": "light",
+      "mode": "dark",
       "primary": "#303030",
-      "secondary": "#A6D4D1",
-      "background": "#FFFFFF",
-      "paper": "#FFFFFF",
+      "secondary": "#000000",
+      "background": "#A6D4D1",
+      "paper": "#A6D4D1",
       "text": "#303030",
       "border": "#303030"
     },

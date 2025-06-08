@@ -28,7 +28,7 @@ export default function AuthForm({
 }: TAuthForm) {
   // console.log("frontmatter", frontmatter);
   const dispatch = useDispatch();
-
+  const canResetPassword = false;
   return (
     <Card>
       <CardHeader
@@ -77,7 +77,7 @@ export default function AuthForm({
 
       <CardActions sx={{}}>
         <Box sx={{ flexGrow: 1 }} />
-        <Box>
+        {canResetPassword && <Box>
           <Button
             sx={{ ml: 1 }}
             onClick={() => {
@@ -86,7 +86,8 @@ export default function AuthForm({
           >
             Password?
           </Button>
-        </Box>
+        </Box>}
+        
 
         <Box sx={{}}>
           <Button
