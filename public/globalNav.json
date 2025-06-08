@@ -51,7 +51,7 @@
             "order": 2200,
             "icon": "cartridge",
             "type": "file",
-            "excerpt": "✅ NewCartridge\n\nThis is a template from which you can init a new cartridge"
+            "excerpt": "✅ NewCartridge\n\nTemplate from which you can bootstrap a new cartridge"
           }
         ]
       },
@@ -593,7 +593,7 @@
         "order": 2000,
         "icon": "signin",
         "type": "file",
-        "excerpt": ""
+        "excerpt": "You are signed in using the Bouncer cartridge"
       }
     ]
   }
