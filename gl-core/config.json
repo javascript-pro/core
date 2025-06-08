@@ -1,5 +1,5 @@
 {
-  "persist": false,
+  "persist": true,
   "app": "Goldlabel",
   "description": "AI software which just works",
   "url": "https://goldlabel.pro",

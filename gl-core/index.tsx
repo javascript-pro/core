@@ -44,7 +44,7 @@ import {
   TCardButton,
   TShareMenu,
 } from './components/nav';
-import { useConfig, useIsMobile } from './hooks';
+import { useConfig, useIsMobile, useVersion } from './hooks';
 
 import {
   Uberedux,
@@ -101,6 +101,7 @@ export {
   UbereduxProvider,
   useConfig,
   useIsMobile,
+  useVersion,
   useSlice,
   useDispatch,
   useKey,

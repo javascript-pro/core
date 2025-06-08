@@ -7,8 +7,8 @@ import { BouncerinitialState } from '../Bouncer';
 import { NewCartridgeinitialState } from '../NewCartridge';
 
 export const initialState: any = {
-  app: config.app,
   persisted: Date.now(),
+  config,
   version: pJSON.version,
   cv: CVinitialState,
   flash: FlashinitialState,
