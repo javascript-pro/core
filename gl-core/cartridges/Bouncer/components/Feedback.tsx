@@ -22,7 +22,8 @@ export default function Feedback({}: TAuthForm) {
     }
   }, [feedback, dispatch]);
 
-  if (turnOffFeedback || !feedback || feedback.hidden || !feedback.title) return null;
+  if (turnOffFeedback || !feedback || feedback.hidden || !feedback.title)
+    return null;
 
   return (
     <Snackbar open anchorOrigin={{ vertical: 'top', horizontal: 'left' }}>

@@ -53,13 +53,15 @@ export default function Core({ frontmatter, body = null }: TCore) {
   switch (true) {
     case isFallmanager:
       fullScreen = true;
-      app = <>
-        <SignoutButton />
-        <Card sx={{ p: 1 }}>
-          import Fallmanager Cartridge 
-          from https://github.com/javascript-pro/fallmanager (private)
-        </Card>
-      </>;
+      app = (
+        <>
+          <SignoutButton />
+          <Card sx={{ p: 1 }}>
+            import Fallmanager Cartridge from
+            https://github.com/javascript-pro/fallmanager (private)
+          </Card>
+        </>
+      );
       break;
     case isCV:
       app = <CV mode="app" markdown={body} />;
