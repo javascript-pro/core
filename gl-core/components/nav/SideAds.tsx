@@ -14,13 +14,6 @@ export default function SideAds({ children = null }: TSideAds) {
   return (
     <Box sx={{}}>
       <Advert
-        icon="clients"
-        title={'Client Area'}
-        onClick={() => {
-          router.push(`/clients`);
-        }}
-      />
-      <Advert
         icon="fallmanager"
         title={'Fallmanager'}
         onClick={() => {
@@ -41,23 +34,6 @@ export default function SideAds({ children = null }: TSideAds) {
           router.push(`/cv`);
         }}
       />
-      {/* <Advert
-        icon="javascript"
-        title={'NextJS'}
-        onClick={() => {
-          router.push(`/work/techstack/javascript/next-js`);
-        }}
-      />
-
-      <Advert
-        icon="design"
-        title={'MUI Toolpad'}
-        onClick={() => {
-          router.push(`/work/techstack/design-sytem/toolpad`);
-        }}
-      /> 
-
-      */}
     </Box>
   );
 }

@@ -163,7 +163,7 @@ export type TIcon = {
     | 'forget'
     | 'folder'
     | 'fingerprint'
-        | 'fallmanager'
+    | 'fallmanager'
     | 'youtube'
     | 'boot'
     | 'hide'
@@ -664,10 +664,9 @@ export default function Icon({ icon, color }: TIcon) {
       iconFragment = <PingpongballIcon color={color} />;
       break;
 
-          case 'fallmanager':
+    case 'fallmanager':
       iconFragment = <FallmanagerIcon color={color} />;
       break;
-
 
     case 'account':
       iconFragment = <AccountIcon color={color} />;

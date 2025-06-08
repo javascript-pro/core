@@ -8,6 +8,7 @@ import {
   Container,
   Box,
   Grid,
+  Card,
   Skeleton,
   Typography,
 } from '@mui/material';
@@ -44,6 +45,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const isFlickr = pathname === '/free/flickr';
   const isFallmanager = pathname === '/clients/fallmanager';
   const isApp = isCV || isFlickr || isFallmanager;
+  let fullScreen = false;
   const [imageError, setImageError] = React.useState(false);
 
   let app = <></>;
@@ -52,7 +54,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
       app = <CV mode="app" markdown={body} />;
       break;
     case isFallmanager:
-      app = <>Fallmanager</>;
+      fullScreen = true;
+      app = <Card sx={{ p: 2 }}>Fallmanager</Card>;
       break;
     case isFlickr:
       app = <Flickr mode="app" id="72177720324245676" />;
@@ -71,6 +74,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
       <SideAds />
     </Grid>
   );
+
+  if (fullScreen) return app;
 
   return (
     <Theme theme={config.themes.dark as any}>

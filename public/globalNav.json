@@ -55,7 +55,7 @@
             "description": "Fallmanagement-System für eine deutsche Anwaltskanzlei",
             "slug": "/fallmanager",
             "order": 1,
-            "icon": "clients",
+            "icon": "fallmanager",
             "type": "folder",
             "tags": [
               "Fallmanager"
@@ -66,18 +66,18 @@
                 "title": "Prototype",
                 "slug": "/prototype",
                 "order": 15,
-                "icon": "clients",
+                "icon": "fallmanager",
                 "type": "file",
                 "tags": [
                   "Fallmanager"
                 ],
-                "excerpt": "Fallmanager Prototype"
+                "excerpt": "Prototype\n\nThis section documents the early prototype of the Fallmanager system developed for a German law firm specializing in accident claims.\n\n Purpose\n\nThe goal of the prototype is to validate cor"
               },
               {
                 "title": "Database",
                 "slug": "/database",
                 "order": 20,
-                "icon": "clients",
+                "icon": "fallmanager",
                 "type": "file",
                 "tags": [
                   "Fallmanager"
@@ -559,6 +559,14 @@
             ]
           }
         ]
+      },
+      {
+        "title": "Sign in please",
+        "slug": "/signin",
+        "order": 2000,
+        "icon": "signin",
+        "type": "file",
+        "excerpt": ""
       }
     ]
   }

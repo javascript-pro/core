@@ -3,74 +3,96 @@
 'use client';
 import * as React from 'react';
 import {
-  Box,
-  List,
-  ListItemButton,
-  ListItemText,
-  ListItemIcon,
   IconButton,
+  Menu,
+  MenuItem,
+  ListItemIcon,
+  ListItemText,
 } from '@mui/material';
-import { Icon } from '../../../gl-core';
+import { Icon, useDispatch, navigateTo } from '../../../gl-core';
+import { firebaseAuth, useUser } from '../../cartridges/Bouncer';
 
 export type TTopRightMenu = {
-  frontmatter?: any;
+  frontmatter?: {
+    icon?: string;
+    title?: string;
+    description?: string;
+  };
   [key: string]: any;
 };
 
 export default function TopRightMenu({
-  frontmatter = {
-    icon: 'home',
-    title: 'title',
-    description: 'description',
-  },
+  // frontmatter = {
+  //   icon: 'home',
+  //   title: 'title',
+  //   description: 'description',
+  // },
 }: TTopRightMenu) {
-  // console.log("frontmatter", frontmatter);
-  const mode = 'button';
-  const { title, description, icon } = frontmatter;
+  // const { title, icon } = frontmatter;
+  const dispatch = useDispatch();
+  const user = useUser();
+  console.log('user', user);
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
 
-  if (mode === 'button') {
-    return (
-      <>
-        <IconButton disabled>
-          <Icon icon="menu" />
-        </IconButton>
-      </>
-    );
-  }
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const handleSignout = () => {
+    dispatch(firebaseAuth('signout'));
+  };
+
+  const handleSignin = () => {
+    dispatch(navigateTo('/signin'));
+  };
 
   return (
-    <Box>
-      <List>
-        <ListItemButton>
+    <>
+      <IconButton onClick={handleClick}>
+        <Icon icon="menu" />
+      </IconButton>
+      <Menu
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        onClick={handleClose}
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'right',
+        }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'right',
+        }}
+      >
+        {/* <MenuItem>
           <ListItemIcon>
-            <Icon icon={icon} />
+            <Icon icon={icon as any} />
           </ListItemIcon>
-          <ListItemText primary={title} secondary={description} />
-        </ListItemButton>
+          <ListItemText primary={title} />
+        </MenuItem> */}
 
-        <ListItemButton>
-          <ListItemIcon>
-            <Icon icon="github" />
-          </ListItemIcon>
-          <ListItemText primary={'GitHub'} secondary={''} />
-        </ListItemButton>
-      </List>
-    </Box>
+        {user ? (
+          <MenuItem onClick={handleSignout}>
+            <ListItemIcon>
+              <Icon icon="signout" />
+            </ListItemIcon>
+            <ListItemText primary="Sign Out" />
+          </MenuItem>
+        ) : (
+          <MenuItem onClick={handleSignin}>
+            <ListItemIcon>
+              <Icon icon="signin" />
+            </ListItemIcon>
+            <ListItemText primary="Sign In" />
+          </MenuItem>
+        )}
+      </Menu>
+    </>
   );
 }
-
-/*
-  {api ? (
-    <IconButton onClick={() => dispatch(navigateTo(api, '_blank'))}>
-      <Icon icon="api" />
-    </IconButton>
-  ) : null}
-
-  {github ? (
-    <IconButton onClick={() => dispatch(navigateTo(github))}>
-      <Icon icon="github" />
-    </IconButton>
-  ) : null}
-
-  <ShareThis title={title} description={description} />
-*/
