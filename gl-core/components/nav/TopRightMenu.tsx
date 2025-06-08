@@ -1,15 +1,15 @@
-// core/gl-core/components/nav/TopRightMenu.tsx
 'use client';
 import * as React from 'react';
 import {
   Box,
-  Divider,
+  CardHeader,
   IconButton,
   Menu,
   MenuItem,
   ListItemIcon,
   ListItemText,
   Typography,
+  Collapse,
 } from '@mui/material';
 import {
   Icon,
@@ -17,6 +17,7 @@ import {
   navigateTo,
   ShareMenu,
   useVersion,
+  
 } from '../../../gl-core';
 import { firebaseAuth, useUser } from '../../cartridges/Bouncer';
 
@@ -33,9 +34,9 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
   const dispatch = useDispatch();
   const user = useUser();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const [shareOpen, setShareOpen] = React.useState(false);
   const open = Boolean(anchorEl);
   const version = useVersion();
-  // console.log('version', version);
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -43,6 +44,7 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
 
   const handleClose = () => {
     setAnchorEl(null);
+    setShareOpen(false); // collapse share section when closing menu
   };
 
   const handleSignout = () => {
@@ -63,18 +65,32 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
         open={open}
         onClose={handleClose}
         onClick={handleClose}
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'right',
-        }}
-        transformOrigin={{
-          vertical: 'top',
-          horizontal: 'right',
-        }}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+        transformOrigin={{ vertical: 'top', horizontal: 'right' }}
       >
-        <Box sx={{ width: 250 }} />
-        <ShareMenu frontmatter={frontmatter} />
-        <Divider />
+        <CardHeader 
+          sx={{ width: 275 }} 
+          avatar={<Icon icon={frontmatter.icon as any} />}
+          title={<Typography variant="h6">{frontmatter.title}</Typography>}
+        />
+
+        <MenuItem onClick={(e) => {
+          e.stopPropagation();
+          e.preventDefault();
+          setShareOpen((prev) => !prev);
+        }}>
+          <ListItemIcon>
+            <Icon icon="share" />
+          </ListItemIcon>
+          <ListItemText primary="Share" />
+        </MenuItem>
+
+        <Collapse in={shareOpen} timeout="auto" unmountOnExit>
+          <Box sx={{ px: 2, pt: 1 }}>
+            <ShareMenu frontmatter={frontmatter} />
+          </Box>
+        </Collapse>
+
         {user ? (
           <MenuItem onClick={handleSignout}>
             <ListItemIcon>
@@ -90,10 +106,17 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
             <ListItemText primary="Sign In" />
           </MenuItem>
         )}
-        <Divider />
-        <Typography variant="caption" sx={{ ml: 2.5 }}>
-          {version}
-        </Typography>
+
+        <Box sx={{ px: 2, py: 1 }}>
+          {user?.email && (
+            <Typography variant="caption" color="text.secondary">
+              {user.email}
+            </Typography>
+          )}
+          <Typography variant="caption" color="text.secondary">
+            Version: {version}
+          </Typography>
+        </Box>
       </Menu>
     </>
   );

@@ -53,6 +53,7 @@ import {
   useDispatch,
   useKey,
   setUbereduxKey,
+  useVersionCheck,
   resetUberedux,
 } from './cartridges/Uberedux';
 import { TUbereduxDispatch } from './cartridges/Uberedux';
@@ -105,6 +106,7 @@ export {
   useSlice,
   useDispatch,
   useKey,
+  useVersionCheck,
   setUbereduxKey,
   resetUberedux,
 };

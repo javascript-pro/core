@@ -10,6 +10,7 @@ export const initialState: any = {
   persisted: Date.now(),
   config,
   version: pJSON.version,
+  themeMode: "dark",
   cv: CVinitialState,
   flash: FlashinitialState,
   flickr: FlickrinitialState,

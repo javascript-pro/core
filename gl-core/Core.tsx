@@ -1,4 +1,5 @@
 'use client';
+
 import config from './config.json';
 import * as React from 'react';
 import { usePathname } from 'next/navigation';
@@ -19,6 +20,7 @@ import {
   PageBreadcrumb,
   useIsMobile,
   SideAds,
+  useVersionCheck,
 } from '../gl-core';
 import { Flickr } from './cartridges/Flickr';
 import { CV } from './cartridges/CV';
@@ -42,11 +44,14 @@ export default function Core({ frontmatter, body = null }: TCore) {
   let fullScreen = false;
   const pathname = usePathname();
   const user = useUser();
+  useVersionCheck(); // Version check runs on mount
   const isMobile = useIsMobile();
+
   const isCV = pathname === '/cv';
   const isFlickr = pathname === '/free/flickr';
   const isFallmanager = pathname === '/clients/fallmanager';
   const isApp = isCV || isFlickr || isFallmanager;
+
   const [imageError, setImageError] = React.useState(false);
 
   let app = <></>;
