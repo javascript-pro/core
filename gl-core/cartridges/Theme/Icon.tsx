@@ -2,6 +2,7 @@
 import * as React from 'react';
 import PingpongballIcon from './SVGIcons/PingpongballIcon';
 import OliverIcon from './SVGIcons/OliverIcon';
+import FallmanagerIcon from './SVGIcons/FallmanagerIcon';
 import FlickrIcon from './SVGIcons/FlickrIcon';
 import OpenAIIcon from './SVGIcons/OpenAIIcon';
 import MacromediaIconIcon from './SVGIcons/MacromediaIcon';
@@ -162,6 +163,7 @@ export type TIcon = {
     | 'forget'
     | 'folder'
     | 'fingerprint'
+    | 'fallmanager'
     | 'youtube'
     | 'boot'
     | 'hide'
@@ -661,6 +663,11 @@ export default function Icon({ icon, color }: TIcon) {
     case 'pingpong':
       iconFragment = <PingpongballIcon color={color} />;
       break;
+
+    case 'fallmanager':
+      iconFragment = <FallmanagerIcon color={color} />;
+      break;
+
     case 'account':
       iconFragment = <AccountIcon color={color} />;
       break;

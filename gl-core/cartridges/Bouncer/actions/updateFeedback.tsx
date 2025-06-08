@@ -17,7 +17,7 @@ export const updateFeedback =
       const updated = {
         ...currentBouncer,
         feedback: {
-          hidden: false,
+          // hidden: false,
           ...feedback,
         },
       };

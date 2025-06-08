@@ -8,6 +8,7 @@ import {
   Container,
   Box,
   Grid,
+  Card,
   Skeleton,
   Typography,
 } from '@mui/material';
@@ -21,6 +22,7 @@ import {
 } from '../gl-core';
 import { Flickr } from './cartridges/Flickr';
 import { CV } from './cartridges/CV';
+import { SignoutButton, useUser } from './cartridges/Bouncer';
 
 export type TFrontmatter = {
   icon?: string;
@@ -31,27 +33,41 @@ export type TFrontmatter = {
 };
 
 export type TCore = {
-  type?: 'page' | 'file' | 'folder' | 'cv';
   frontmatter?: any;
   body?: string | null;
   children?: React.ReactNode;
 };
 
 export default function Core({ frontmatter, body = null }: TCore) {
+  let fullScreen = false;
   const pathname = usePathname();
+  const user = useUser();
   const isMobile = useIsMobile();
   const isCV = pathname === '/cv';
   const isFlickr = pathname === '/free/flickr';
-  const isApp = isCV || isFlickr;
+  const isFallmanager = pathname === '/clients/fallmanager';
+  const isApp = isCV || isFlickr || isFallmanager;
   const [imageError, setImageError] = React.useState(false);
 
   let app = <></>;
   switch (true) {
+    case isFallmanager:
+      fullScreen = true;
+      app = (
+        <>
+          <SignoutButton />
+          <Card sx={{ p: 1 }}>
+            import Fallmanager Cartridge from
+            https://github.com/javascript-pro/fallmanager (private)
+          </Card>
+        </>
+      );
+      break;
     case isCV:
       app = <CV mode="app" markdown={body} />;
       break;
     case isFlickr:
-      app = <Flickr mode="app" id="72177720324245676" />;
+      app = <Flickr mode="app" id="72177720326317140" />;
       break;
     default:
       break;
@@ -60,15 +76,15 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const getAside = () => (
     <Grid
       size={{
-        md: 3,
-        lg: 2,
+        md: 4,
+        lg: 3,
       }}
     >
       <SideAds />
     </Grid>
   );
 
-  // console.log('CORE');
+  if (fullScreen) return <>{app}</>;
 
   return (
     <Theme theme={config.themes.dark as any}>
@@ -78,8 +94,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
         <Grid container spacing={1}>
           <Grid
             size={{
-              md: 9,
-              lg: 10,
+              md: 8,
+              lg: 9,
             }}
           >
             <Box sx={{ mt: isMobile ? 2 : 0 }}>

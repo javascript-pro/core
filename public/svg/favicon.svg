@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="512px" height="513px" viewBox="0 0 512 513" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>favicon</title>
-    <g id="favicon" stroke="none" fill="none" fill-rule="evenodd" stroke-width="1">
-        <g id="mc_blokey" transform="translate(122, 89)" fill="#303030">
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FAE45C" offset="0%"></stop>
+            <stop stop-color="#E8C10B" offset="100%"></stop>
+        </linearGradient>
+        <path d="M146.141456,-1 L365.858544,-1 C416.675112,-1 435.102427,4.29105984 453.680205,14.2265641 C472.257983,24.1620684 486.837932,38.7420171 496.773436,57.3197949 C506.70894,75.8975727 512,94.3248882 512,145.141456 L512,364.858544 C512,415.675112 506.70894,434.102427 496.773436,452.680205 C486.837932,471.257983 472.257983,485.837932 453.680205,495.773436 C435.102427,505.70894 416.675112,511 365.858544,511 L146.141456,511 C95.3248882,511 76.8975727,505.70894 58.3197949,495.773436 C39.7420171,485.837932 25.1620684,471.257983 15.2265641,452.680205 C5.29105984,434.102427 0,415.675112 0,364.858544 L7.25467311e-15,145.141456 C-4.215174e-15,94.3248882 5.29105984,75.8975727 15.2265641,57.3197949 C25.1620684,38.7420171 39.7420171,24.1620684 58.3197949,14.2265641 C76.8975727,4.29105984 95.3248882,-1 146.141456,-1 Z" id="path-2"></path>
+    </defs>
+    <g id="favicon" stroke="none" fill="none" transform="translate(0, 1)" fill-rule="evenodd">
+        <g id="lemon">
+            <use fill="#854D4D" xlink:href="#path-2"></use>
+            <use fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+        </g>
+        <g id="mc_blokey" stroke-width="1" transform="translate(122, 89)" fill="#303030">
             <path d="M222.392421,113.9515 C215.0978,106.678 202.566015,93.25 178.250611,93.25 C174.322738,93.25 151.690709,93.25 130.742054,93.25 C79.3056235,93.0635 37.408313,51.2875 37.408313,0 L0,0 C0,58.934 39.4657702,108.916 93.5207824,125.1415 L93.5207824,373 L130.929095,373 L130.929095,261.1 L168.337408,261.1 L168.337408,373 L205.745721,373 L205.745721,150.1325 L279.627139,223.8 L306,197.5035 L222.392421,113.9515 Z" id="body" fill-rule="nonzero"></path>
             <circle id="head" fill-rule="nonzero" cx="150.5" cy="37.5" r="37.5"></circle>
         </g>

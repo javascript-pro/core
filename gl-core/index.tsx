@@ -33,6 +33,7 @@ import {
   ShareThis,
   SideAds,
   TopRightMenu,
+  ShareMenu,
 } from './components/nav';
 import {
   TNav,
@@ -41,6 +42,7 @@ import {
   TSearch,
   TShareThis,
   TCardButton,
+  TShareMenu,
 } from './components/nav';
 import { useConfig, useIsMobile } from './hooks';
 
@@ -92,6 +94,7 @@ export {
   ShareThis,
   SideAds,
   TopRightMenu,
+  ShareMenu,
 };
 export {
   Uberedux,
@@ -127,4 +130,5 @@ export type {
   TShareThis,
   TStatus,
   TCardButton,
+  TShareMenu,
 };

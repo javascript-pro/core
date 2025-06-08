@@ -2,16 +2,23 @@
 // core/gl-core/cartridges/Bouncer/Bouncer.tsx
 
 import * as React from 'react';
-import config from '../../config.json';
-import { Box } from '@mui/material';
 import { TBouncer } from '../Bouncer';
-import { Authed, AuthForm, Feedback, useUser } from '../Bouncer';
-import { Theme, useDispatch } from '../../../gl-core';
-import { onAuthStateChanged, User as FirebaseUser } from 'firebase/auth';
+import config from '../../config.json';
 import { auth } from '../../lib/firebase';
-import { updateUser } from '../Bouncer';
+import { onAuthStateChanged, User as FirebaseUser } from 'firebase/auth';
+import { Box } from '@mui/material';
+import { Theme, useDispatch, Core } from '../../../gl-core';
+import {
+  AuthForm,
+  Feedback,
+  useUser,
+  updateUser,
+} from '../Bouncer';
 
-export default function Bouncer({ frontmatter = null }: TBouncer) {
+export default function Bouncer({
+  frontmatter = null,
+  content = null,
+}: TBouncer) {
   const dispatch = useDispatch();
   const user = useUser();
 
@@ -36,25 +43,29 @@ export default function Bouncer({ frontmatter = null }: TBouncer) {
     return () => unsubscribe();
   }, [dispatch]);
 
+  const sxAuth = {
+    minHeight: '100vh',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    overflow: 'auto',
+    px: 2,
+  };
+
+  const theme = config.themes.dark;
+
   return (
-    <Theme theme={config.themes.bouncer as any}>
+    <>
       <Feedback />
-      <Box
-        sx={{
-          minHeight: '100vh',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          overflow: 'auto',
-          px: 2,
-        }}
-      >
+      <Box sx={!user ? sxAuth : null}>
         {user ? (
-          <Authed frontmatter={frontmatter} />
+          <Core frontmatter={frontmatter} body={content} />
         ) : (
-          <AuthForm frontmatter={frontmatter} />
+          <Theme theme={theme as any}>
+            <AuthForm frontmatter={frontmatter} content={content} />
+          </Theme>
         )}
       </Box>
-    </Theme>
+    </>
   );
 }

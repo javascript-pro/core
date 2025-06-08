@@ -3,7 +3,7 @@ order: 1
 slug: /clients/fallmanager
 title: Fallmanager
 description: Fallmanagement-System für eine deutsche Anwaltskanzlei
-icon: clients
+icon: fallmanager
 tags: Fallmanager
 image: /png/default.png
 bouncer: true

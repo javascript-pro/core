@@ -8,8 +8,8 @@ image: /png/default.png
 bouncer: true
 ---
 
-#### [verkehrsrecht-anwalt-saarland.de](https://verkehrsrecht-anwalt-saarland.de/)
+## [Fallmanager](/clients/fallmanager/)
 
 > Fallmanagement-System für eine deutsche Anwaltskanzlei. Zentrale Verwaltung von Falldaten, Dokumentenerstellung und Fristenüberwachung.
 
-- [Prototype](/clients/fallmanager/prototype)
+[web](https://verkehrsrecht-anwalt-saarland.de/)

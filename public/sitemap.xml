@@ -29,6 +29,12 @@
     <loc>https://goldlabel.pro/balance</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/cartridges</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/cartridges/new-cartridge</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/clients/fallmanager/database</loc>
   </url>
   <url>
@@ -95,7 +101,13 @@
     <loc>https://goldlabel.pro/life/food</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/life/food/lemon-meringue-pie</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/life</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/signin</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/company</loc>

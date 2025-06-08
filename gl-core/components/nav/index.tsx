@@ -15,7 +15,8 @@ import Search from './Search';
 import { TSearch } from './Search';
 import NextPrevious from './NextPrevious';
 import TopRightMenu from './TopRightMenu';
-
+import ShareMenu from './ShareMenu';
+import { TShareMenu } from './ShareMenu';
 export {
   NextPrevious,
   Nav,
@@ -27,6 +28,7 @@ export {
   Search,
   SideAds,
   TopRightMenu,
+  ShareMenu,
 };
 
 export type {
@@ -37,4 +39,5 @@ export type {
   TNav,
   TNavItem,
   TShareThis,
+  TShareMenu,
 };
