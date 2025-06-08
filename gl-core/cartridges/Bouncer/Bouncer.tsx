@@ -54,13 +54,13 @@ export default function Bouncer({
   };
 
   const theme = {
-    "mode": "light",
-    "primary": "#303030",
-    "secondary": "#A6D4D1",
-    "background": "#FFF",
-    "paper": "#FFF",
-    "text": "#303030",
-    "border": "#303030"
+    mode: 'light',
+    primary: '#303030',
+    secondary: '#A6D4D1',
+    background: '#FFF',
+    paper: '#FFF',
+    text: '#303030',
+    border: '#303030',
   };
 
   return (

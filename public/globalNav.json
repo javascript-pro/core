@@ -37,6 +37,25 @@
     "excerpt": "We build and ship modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source\n \n\n About Goldlabel\n\n is . It's  a",
     "children": [
       {
+        "title": "Cartridges",
+        "description": "description",
+        "slug": "/cartridges",
+        "order": 1,
+        "icon": "cartridges",
+        "type": "folder",
+        "excerpt": "cartridges",
+        "children": [
+          {
+            "title": "New Cartridge",
+            "slug": "/new-cartridge",
+            "order": 2200,
+            "icon": "cartridge",
+            "type": "file",
+            "excerpt": "✅ NewCartridge\n\nThis is a template from which you can init a new cartridge"
+          }
+        ]
+      },
+      {
         "title": "Client Area",
         "description": "description",
         "slug": "/clients",
@@ -436,12 +455,12 @@
                 "excerpt": "| \n\nMoist, flavorful, and easy to make. Perfect for using overripe bananas, this classic loaf is a crowdpleaser for breakfast, snacks, or dessert.\n\n 125g Butter\n 175g Brown sugar\n 1 tsp Vanilla extrac"
               },
               {
-                "title": "Lemon Meringue Pie",
+                "title": "Delia Smith's Lemon Meringue Pie",
                 "slug": "/lemon-meringue-pie",
                 "order": 76,
                 "icon": "food",
                 "type": "file",
-                "excerpt": "Apparently \"Lemonading\" is an actual word that even people on Radio 4 use. So when life gives you lemons...\n\n Ingredients\n\n For the pastry\n\n 4 oz (110 g) plain flour, plus a little extra for rolling o"
+                "excerpt": "\"Lemonading\" is an actual word that even people on Radio 4 use. So when life gives you lemons...\n\n Ingredients\n\n For the pastry\n\n 4 oz (110 g) plain flour, plus a little extra for rolling out\n a pinch"
               }
             ]
           },

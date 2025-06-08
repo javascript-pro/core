@@ -1,0 +1,16 @@
+{
+  "title": "New Cartridge",
+  "description": "Template for bootstrapping a new cartridge",
+  "icon": "cartridge",
+  "slug": "/cartridges/new-cartridge",
+  "theme": {
+    "name": "lemon",
+    "mode": "dark",
+    "primary": "#e8c10b",
+    "secondary": "#fae45c",
+    "background": "#303030",
+    "paper": "#303030",
+    "text": "#fffceb",
+    "border": "#303030"
+  }
+}

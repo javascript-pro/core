@@ -1,13 +1,13 @@
 ---
 order: 76
-title: Lemon Meringue Pie
-description: Delia Smith
+title: Delia Smith's Lemon Meringue Pie
+description: Apparently lemonading is a real word
 slug: /life/food/lemon-meringue-pie
 icon: food
 image: /jpg/food/lemon-meringue-pie.jpg
 ---
 
-> Apparently "Lemonading" is an actual word that even people on Radio 4 use. So when life gives you lemons...
+> "Lemonading" is an actual word that even people on Radio 4 use. So when life gives you lemons...
 
 ### Ingredients
 

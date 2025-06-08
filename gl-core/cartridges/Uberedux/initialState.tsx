@@ -4,6 +4,7 @@ import { CVinitialState } from '../CV';
 import { FlashinitialState } from '../Flash';
 import { FlickrinitialState } from '../Flickr';
 import { BouncerinitialState } from '../Bouncer';
+import { NewCartridgeinitialState } from '../NewCartridge';
 
 export const initialState: any = {
   app: config.app,
@@ -13,4 +14,5 @@ export const initialState: any = {
   flash: FlashinitialState,
   flickr: FlickrinitialState,
   bouncer: BouncerinitialState,
+  newcartridge: NewCartridgeinitialState,
 };
