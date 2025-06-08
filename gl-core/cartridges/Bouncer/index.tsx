@@ -2,10 +2,17 @@
 import Bouncer from './Bouncer';
 import { TBouncer, TBouncerState, TAuthForm } from './types';
 import { initialState as BouncerinitialState } from './initialState';
-import { AuthForm, Feedback } from './components';
-import { useBouncer, useFeedback } from './hooks';
-import {updateFeedback} from './actions';
-export { Bouncer, Feedback, AuthForm, BouncerinitialState };
-export { useBouncer, useFeedback };
-export {updateFeedback}
+import { Authed, AuthForm, Feedback, SignoutButton } from './components';
+import { useBouncer, useFeedback, useUser } from './hooks';
+import { updateFeedback, updateUser, firebaseAuth } from './actions';
+export {
+  Bouncer,
+  SignoutButton,
+  Authed,
+  Feedback,
+  AuthForm,
+  BouncerinitialState,
+};
+export { useBouncer, useFeedback, useUser };
+export { updateFeedback, updateUser, firebaseAuth };
 export type { TBouncer, TBouncerState, TAuthForm };

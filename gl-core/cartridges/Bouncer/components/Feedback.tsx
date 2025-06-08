@@ -8,7 +8,7 @@ import { useFeedback } from '../../Bouncer';
 
 export default function Feedback({}: TAuthForm) {
   const feedback = useFeedback();
-  if (!feedback) return null
+  if (!feedback) return null;
   return (
     <Snackbar
       open={!feedback.hidden}

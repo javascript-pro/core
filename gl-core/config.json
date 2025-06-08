@@ -18,9 +18,9 @@
     "bouncer": {
       "mode": "light",
       "primary": "#303030",
-      "secondary": "#000000",
+      "secondary": "#A6D4D1",
       "background": "#A6D4D1",
-      "paper": "#A6D4D1",
+      "paper": "#CAF9F6",
       "text": "#303030",
       "border": "#303030"
     },

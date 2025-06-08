@@ -14,7 +14,10 @@ import {
 } from '@mui/material';
 import { Icon, navigateTo, useDispatch } from '../../../../gl-core';
 import { TAuthForm } from '../../Bouncer';
-import { updateFeedback } from '../../Bouncer/actions/updateFeedback';
+import { 
+  firebaseAuth,
+  updateFeedback,
+} from '../../Bouncer';
 
 function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -37,6 +40,13 @@ export default function AuthForm({
     return isValidEmail(email) && password.length >= 6;
   }, [email, password]);
 
+    const onSignIn = () => {
+      dispatch(firebaseAuth("signin", {
+        email,
+        password,
+      }))
+    }
+
   React.useEffect(() => {
     if (!email && !password) {
       // dispatch(updateFeedback({
@@ -45,15 +55,19 @@ export default function AuthForm({
       //   description: 'Please enter your email and password.',
       // }));
     } else if (!isValidEmail(email)) {
-      dispatch(updateFeedback({
-        severity: 'info',
-        title: 'Please enter a valid email address',
-      }));
+      dispatch(
+        updateFeedback({
+          severity: 'info',
+          title: 'Please enter a valid email address',
+        }),
+      );
     } else if (password.length < 6) {
-      dispatch(updateFeedback({
-        severity: 'info',
-        title: 'Password must be at least 6 characters',
-      }));
+      dispatch(
+        updateFeedback({
+          severity: 'info',
+          title: 'Password must be at least 6 characters',
+        }),
+      );
     } else {
       dispatch(updateFeedback(null));
     }
@@ -78,7 +92,7 @@ export default function AuthForm({
           autoFocus
           label="Email"
           type="email"
-          variant="standard"
+          variant="filled"
           fullWidth
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -86,7 +100,7 @@ export default function AuthForm({
         <TextField
           label="Password"
           type="password"
-          variant="standard"
+          variant="filled"
           fullWidth
           value={password}
           onChange={(e) => setPassword(e.target.value)}
@@ -97,21 +111,16 @@ export default function AuthForm({
       <CardActions>
         {canResetPassword && (
           <Box>
-            <Button onClick={() => console.log('Password?')}>
-              Password?
-            </Button>
+            <Button onClick={() => console.log('Password?')}>Password?</Button>
           </Box>
         )}
-          <Button
-            fullWidth
-            variant={isFormValid ? 'contained' : 'outlined'}
-            disabled={!isFormValid}
-            onClick={() => {
-              console.log('Sign In');
-            }}
-          >
-            Sign In
-          </Button>
+        <Button
+          fullWidth
+          onClick={onSignIn}
+          variant={isFormValid ? 'contained' : 'outlined'}
+          disabled={!isFormValid}>
+          Sign In
+        </Button>
       </CardActions>
     </Card>
   );

@@ -1,21 +1,31 @@
 // core/gl-core/cartridges/Bouncer/types.d.ts
 
+export type TUser = {
+  [key: string]: any;
+} | null;
+
 export type TBouncer = {
   frontmatter?: any;
   content?: any;
   [key: string]: any;
 };
 
+export type TAuthed = {
+  [key: string]: any;
+};
+
+export type TSignoutButton = {
+  [key: string]: any;
+};
+
 export type TBouncerState = {
   cartridge: string;
-  email: string | null;
+  feedback: TFeedback | null;
   authing: boolean;
-  authed: boolean;
   user: {
     email: string | null;
     fingerprint: string | null;
   } | null;
-  feedback: TFeedback | null;
 };
 
 export type TSeverity = 'success' | 'info' | 'warning' | 'error';

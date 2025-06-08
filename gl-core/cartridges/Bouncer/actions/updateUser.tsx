@@ -1,26 +1,18 @@
-// core/gl-core/cartridges/Bouncer/actions/updateFeedback.tsx
-/*
-    Takes a TFeedback typed object || null
-    Updates bouncer.feedback
-    Always sets hidden: false
-*/
+// core/gl-core/cartridges/Bouncer/actions/updateUser.ts
 import { TUbereduxDispatch } from '../../../';
 import { setUbereduxKey } from '../../../../gl-core';
-import { TFeedback } from '../types';
+import { TUser } from '../types';
 
-export const updateFeedback =
-  (feedback: TFeedback): any =>
+export const updateUser =
+  (user: TUser | null): any =>
   async (dispatch: TUbereduxDispatch, getState: () => any) => {
     try {
-      // console.log('updateFeedback', feedback);
       const currentBouncer = getState().redux.bouncer;
       const updated = {
         ...currentBouncer,
-        feedback: {
-          hidden: false,
-          ...feedback,
-        },
+        user: user === null ? null : { ...user },
       };
+
       dispatch(setUbereduxKey({ key: 'bouncer', value: updated }));
     } catch (e: unknown) {
       const msg = e instanceof Error ? e.message : String(e);
