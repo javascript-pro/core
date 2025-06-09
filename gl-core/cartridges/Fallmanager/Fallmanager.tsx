@@ -8,7 +8,6 @@ import { Theme } from '../../../gl-core';
 import { Layout } from '../Fallmanager';
 
 export default function Fallmanager({ payload = null }: TFallmanager) {
-
   return (
     <Theme theme={config.theme as any}>
       <Layout>

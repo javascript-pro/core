@@ -1,3 +1,4 @@
+// core/app/layout.tsx
 import * as React from 'react';
 import path from 'path';
 import fs from 'fs/promises';
@@ -18,17 +19,27 @@ export default async function RootLayout({
     console.error('Failed to load globalNav.json:', err);
   }
 
+  let shortcutIcon = "/svg/favicon.svg";
+  let appleTouchIcon = '/png/apple-touch-icon.png';
+
+  /*
+    if ( pathname contains 'fallmanager' ){
+      shortcutIcon = "/_clients_/fallmanager/icon.svg";
+      appleTouchIcon = "/_clients_/fallmanager/apple-touch-icon.svg";
+    }
+  */
+
   return (
     <html lang="en">
       <head>
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#303030" />
-        <link rel="icon" href="/svg/favicon.svg" type="image/x-icon" />
-        <link rel="shortcut icon" href="/svg/favicon.svg" type="image/x-icon" />
+        <link rel="icon" href={shortcutIcon} type="image/x-icon" />
+        <link rel="shortcut icon" href={shortcutIcon} type="image/x-icon" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/png/apple-touch-icon"
+          href={appleTouchIcon}
         />
       </head>
       <body>
