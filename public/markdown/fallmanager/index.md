@@ -1,12 +1,13 @@
 ---
 order: 1
-slug: /clients/fallmanager
+slug: /fallmanager
 title: Fallmanager
-description: Fallmanagement-System für eine deutsche Anwaltskanzlei
+description: Zentrale Verwaltung von Falldaten
 icon: fallmanager
-tags: Fallmanager
-image: /png/default.png
+image: /png/_clients_/fallmanager/fallmanager.png
 bouncer: true
 ---
 
 > Fallmanagement-System für [verkehrsrecht-anwalt-saarland.de](https://verkehrsrecht-anwalt-saarland.de). Zentrale Verwaltung von Falldaten, Dokumentenerstellung und Fristenüberwachung
+
+login with email chertwig@gmx.net

@@ -5,15 +5,17 @@ import { FlashinitialState } from '../Flash';
 import { FlickrinitialState } from '../Flickr';
 import { BouncerinitialState } from '../Bouncer';
 import { NewCartridgeinitialState } from '../NewCartridge';
+import { FallmanagerinitialState } from '../Fallmanager';
 
 export const initialState: any = {
   persisted: Date.now(),
   config,
   version: pJSON.version,
-  themeMode: "dark",
+  themeMode: 'dark',
   cv: CVinitialState,
   flash: FlashinitialState,
   flickr: FlickrinitialState,
   bouncer: BouncerinitialState,
   newcartridge: NewCartridgeinitialState,
+  fallmanager: FallmanagerinitialState,
 };
