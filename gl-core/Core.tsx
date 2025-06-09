@@ -9,7 +9,6 @@ import {
   Container,
   Box,
   Grid,
-  Card,
   Skeleton,
   Typography,
 } from '@mui/material';
@@ -26,7 +25,7 @@ import { Flickr } from './cartridges/Flickr';
 import { CV } from './cartridges/CV';
 import { NewCartridge } from './cartridges/NewCartridge';
 import { Fallmanager } from './cartridges/Fallmanager';
-import { SignoutButton, useUser } from './cartridges/Bouncer';
+import { useUser } from './cartridges/Bouncer';
 
 export type TFrontmatter = {
   icon?: string;
@@ -46,7 +45,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
   let fullScreen = false;
   const pathname = usePathname();
   const user = useUser();
-  useVersionCheck(); // Version check runs on mount
+  useVersionCheck();
   const isMobile = useIsMobile();
 
   const isCV = pathname === '/cv';

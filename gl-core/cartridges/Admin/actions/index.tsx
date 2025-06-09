@@ -1,9 +1,9 @@
-// core/gl-core/cartridges/Admin/actions/index.tsx
-import { updateKey } from './updateKey';
-import { createAdmin } from './crud/createAdmin';
-import { readAdmin } from './crud/readAdmin';
-import { updateAdmin } from './crud/updateAdmin';
-import { deleteAdmin } from './crud/deleteAdmin';
+// core/gl-core/cartridges/Doc/actions/index.tsx
+import { setSliceKey } from './setSliceKey';
+import { createDoc } from './crud/createDoc';
+import { readDoc } from './crud/readDoc';
+import { updateDoc } from './crud/updateDoc';
+import { deleteDoc } from './crud/deleteDoc';
 
-export { updateKey };
-export { createAdmin, readAdmin, updateAdmin, deleteAdmin };
+export { setSliceKey };
+export { createDoc, readDoc, updateDoc, deleteDoc };

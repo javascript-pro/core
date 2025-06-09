@@ -1,9 +1,9 @@
-// core/gl-core/cartridges/Admin/actions/crud/updateAdmin.tsx
+// core/gl-core/cartridges/Admin/actions/crud/updateDoc.tsx
 import { TUbereduxDispatch } from '../../../../';
 import { setUbereduxKey } from '../../../../../gl-core';
 import { TAdmin } from '../../types';
 
-export const updateAdmin =
+export const updateDoc =
   (fbId = 'abcd-1234-mnbv-0987', title = 'New Admin Title'): TAdmin =>
   async (dispatch: TUbereduxDispatch, getState: () => any) => {
     try {

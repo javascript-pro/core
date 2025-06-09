@@ -1,9 +1,9 @@
-// core/gl-core/cartridges/Admin/actions/updateKey.tsx
+// core/gl-core/cartridges/Admin/actions/setSliceKey.tsx
 
 import { TUbereduxDispatch } from '../../../';
 import { setUbereduxKey } from '../../../';
 
-export const updateKey =
+export const setSliceKey =
   (key: string, value: any): any =>
   async (dispatch: TUbereduxDispatch, getState: () => any) => {
     try {

@@ -1,9 +1,9 @@
-// core/gl-core/cartridges/Admin/actions/crud/deleteAdmin.tsx
+// core/gl-core/cartridges/Admin/actions/crud/deleteDoc.tsx
 import { TUbereduxDispatch } from '../../../../';
 import { setUbereduxKey } from '../../../../../gl-core';
 import { TAdmin } from '../../types';
 
-export const deleteAdmin =
+export const deleteDoc =
   (fbId = 'abcd-1234-mnbv-0987', title = 'New Admin Title'): TAdmin =>
   async (dispatch: TUbereduxDispatch, getState: () => any) => {
     try {

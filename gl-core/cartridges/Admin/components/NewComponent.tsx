@@ -6,6 +6,5 @@ import { TNewComponent } from '../types';
 
 export default function NewComponent({ payload = null }: TNewComponent) {
   console.log('NewComponent', payload);
-
   return <Box sx={{ p: 1, border: '1px solid gold' }}>NewComponent</Box>;
 }

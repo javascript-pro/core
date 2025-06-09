@@ -1,33 +1,21 @@
+// core/gl-core/cartridges/Admin/components/Layout.tsx
+'use client';
+
 import * as React from 'react';
 import { TLayout } from '../types';
-import { styled } from '@mui/material/styles';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
-import Fab from '@mui/material/Fab';
-
+import {
+  AppBar,
+  Box,
+  CssBaseline,
+  Toolbar,
+  Typography,
+  IconButton,
+  Fab,
+  styled,
+} from '@mui/material';
+import { useRouter } from 'next/navigation';
 import { Icon, useDispatch } from '../../../../gl-core';
 import { firebaseAuth } from '../../Bouncer';
-
-const messages = [
-  {
-    id: 1,
-    primary: 'Brunch this week?',
-    secondary:
-      "I'll be in the neighbourhood this week. Let's grab a bite to eat",
-    person: '/svg/flags/ar.svg',
-  },
-  {
-    id: 2,
-    primary: 'Birthday Gift',
-    secondary: `Do you have a suggestion for a good present for John on his work
-      anniversary. I am really confused & would love your thoughts on it.`,
-    person: '/svg/flags/de.svg',
-  },
-];
 
 const StyledFab = styled(Fab)({
   position: 'absolute',
@@ -40,9 +28,14 @@ const StyledFab = styled(Fab)({
 
 export default function Layout({ children = null }: TLayout) {
   const dispatch = useDispatch();
+  const router = useRouter();
 
   const handleSignout = () => {
     dispatch(firebaseAuth('signout'));
+  };
+
+  const handleBack = () => {
+    router.back();
   };
 
   return (
@@ -50,20 +43,15 @@ export default function Layout({ children = null }: TLayout) {
       <CssBaseline />
 
       <Box sx={{ pb: '50px' }}>
-        <Typography
-          variant="h5"
-          gutterBottom
-          component="div"
-          sx={{ p: 2, pb: 0 }}
-        >
-          Latest Activity
+        <Typography variant="h6" sx={{ p: 2, pb: 0 }}>
+          Admin Cartridge
         </Typography>
       </Box>
 
-      <AppBar position="fixed" color="primary" sx={{ top: 'auto', bottom: 0 }}>
+      <AppBar position="fixed" color="default" sx={{ top: 'auto', bottom: 0 }}>
         <Toolbar>
-          <IconButton color="inherit" aria-label="Open Sidebar">
-            <Icon icon="menu" />
+          <IconButton onClick={handleBack} color="inherit" aria-label="Go Back">
+            <Icon icon="left" />
           </IconButton>
           <StyledFab color="secondary" aria-label="Add Case">
             <Icon icon="add" />
