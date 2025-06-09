@@ -4,7 +4,7 @@ slug: /fallmanager
 title: Fallmanager
 description: Zentrale Verwaltung von Falldaten
 icon: fallmanager
-image: /png/_clients_/fallmanager/default.png
+image: /png/_clients_/fallmanager/fallmanager.png
 bouncer: true
 ---
 

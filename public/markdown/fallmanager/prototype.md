@@ -4,7 +4,7 @@ order: 15
 slug: /fallmanager/prototype
 description: Fallmanagement-System für eine deutsche Anwaltskanzlei
 icon: fallmanager
-image: /png/_clients_/fallmanager/default.png
+image: /png/_clients_/fallmanager/fallmanager.png
 bouncer: true
 ---
 
