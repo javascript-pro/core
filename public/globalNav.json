@@ -86,14 +86,6 @@
             "icon": "fallmanager",
             "type": "file",
             "excerpt": "Prototype\n\nThis section documents the early prototype of the Fallmanager system developed for a German law firm specializing in accident claims.\n\n Purpose\n\nThe goal of the prototype is to validate cor"
-          },
-          {
-            "title": "Database",
-            "slug": "/database",
-            "order": 20,
-            "icon": "fallmanager",
-            "type": "file",
-            "excerpt": "Fallmanager Database"
           }
         ]
       },
