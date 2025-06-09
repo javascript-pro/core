@@ -1,10 +1,10 @@
-// core/gl-core/cartridges/Bouncermanager/actions/crud/deleteBouncer.tsx
+// core/gl-core/cartridges/Admin/actions/crud/deleteAdmin.tsx
 import { TUbereduxDispatch } from '../../../../';
 import { setUbereduxKey } from '../../../../../gl-core';
-import { TBouncer } from '../../types';
+import { TAdmin } from '../../types';
 
-export const deleteBouncer =
-  (fbId = 'abcd-1234-mnbv-0987', title = 'New Bouncer Title'): TBouncer =>
+export const deleteAdmin =
+  (fbId = 'abcd-1234-mnbv-0987', title = 'New Admin Title'): TAdmin =>
   async (dispatch: TUbereduxDispatch, getState: () => any) => {
     try {
       console.log('deleteall', fbId, title);

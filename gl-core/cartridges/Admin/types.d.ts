@@ -1,12 +1,12 @@
-// core/gl-core/cartridges/Fallmanager/types.d.ts
+// core/gl-core/cartridges/Admin/types.d.ts
 
-export type TFall = {
+export type TAdmin = {
   fbId?: string;
   title?: string;
   [key: string]: any;
 };
 
-export type TFallmanager = {
+export type TAdmin = {
   payload?: any;
   [key: string]: any;
 };
@@ -16,7 +16,7 @@ export type TLayout = {
   [key: string]: any;
 };
 
-export type TFallmanagerState = {
+export type TAdminState = {
   lingua?: any;
   [key: string]: any;
 };
