@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {TLayout} from '../types';
+import { TLayout } from '../types';
 import { styled } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -81,11 +81,7 @@ const StyledFab = styled(Fab)({
   margin: '0 auto',
 });
 
-export default function Layout({
-  children = null,
-}: TLayout) {
-
-
+export default function Layout({ children = null }: TLayout) {
   return (
     <React.Fragment>
       <CssBaseline />
@@ -96,7 +92,7 @@ export default function Layout({
           component="div"
           sx={{ p: 2, pb: 0 }}
         >
-          Inbox
+          Latest Activity
         </Typography>
         <List sx={{ mb: 2 }}>
           {messages.map(({ id, primary, secondary, person }) => (
