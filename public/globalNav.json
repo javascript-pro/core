@@ -72,12 +72,12 @@
       },
       {
         "title": "Fallmanager",
-        "description": "Fallmanagement-System für eine deutsche Anwaltskanzlei",
+        "description": "Zentrale Verwaltung von Falldaten",
         "slug": "/fallmanager",
         "order": 1,
         "icon": "fallmanager",
         "type": "folder",
-        "excerpt": "FallmanagementSystem für . Zentrale Verwaltung von Falldaten, Dokumentenerstellung und Fristenüberwachung",
+        "excerpt": "FallmanagementSystem für . Zentrale Verwaltung von Falldaten, Dokumentenerstellung und Fristenüberwachung\n\nlogin with email chertwig@gmx.net",
         "children": [
           {
             "title": "Prototype",
