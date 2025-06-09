@@ -17,7 +17,6 @@ import {
   navigateTo,
   ShareMenu,
   useVersion,
-  
 } from '../../../gl-core';
 import { firebaseAuth, useUser } from '../../cartridges/Bouncer';
 
@@ -68,17 +67,19 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
         transformOrigin={{ vertical: 'top', horizontal: 'right' }}
       >
-        <CardHeader 
-          sx={{ width: 275 }} 
+        <CardHeader
+          sx={{ width: 275 }}
           avatar={<Icon icon={frontmatter.icon as any} />}
           title={<Typography variant="h6">{frontmatter.title}</Typography>}
         />
 
-        <MenuItem onClick={(e) => {
-          e.stopPropagation();
-          e.preventDefault();
-          setShareOpen((prev) => !prev);
-        }}>
+        <MenuItem
+          onClick={(e) => {
+            e.stopPropagation();
+            e.preventDefault();
+            setShareOpen((prev) => !prev);
+          }}
+        >
           <ListItemIcon>
             <Icon icon="share" />
           </ListItemIcon>

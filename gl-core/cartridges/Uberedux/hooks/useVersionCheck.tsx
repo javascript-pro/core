@@ -10,14 +10,14 @@ import { useDispatch } from 'react-redux';
 export function useVersionCheck() {
   const currentVersion = pJSON.version;
   const persistedVersion = useSelector(
-    (state: TRootState) => state.redux.version
+    (state: TRootState) => state.redux.version,
   );
   const dispatch = useDispatch();
 
   useEffect(() => {
     if (!persistedVersion || persistedVersion !== currentVersion) {
       const confirmed = window.confirm(
-        `This app has updated to v${currentVersion}. Click OK to reload and clear your saved data.`
+        `This app has updated to v${currentVersion}. Click OK to reload and clear your saved data.`,
       );
       if (confirmed) {
         dispatch(resetUberedux());

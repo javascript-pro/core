@@ -24,6 +24,7 @@ import {
 } from '../gl-core';
 import { Flickr } from './cartridges/Flickr';
 import { CV } from './cartridges/CV';
+import { NewCartridge } from './cartridges/NewCartridge';
 import { SignoutButton, useUser } from './cartridges/Bouncer';
 
 export type TFrontmatter = {
@@ -50,7 +51,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const isCV = pathname === '/cv';
   const isFlickr = pathname === '/free/flickr';
   const isFallmanager = pathname === '/clients/fallmanager';
-  const isApp = isCV || isFlickr || isFallmanager;
+  const isNewCartridge = pathname === '/cartridges/new-cartridge';
+  const isApp = isCV || isFlickr || isFallmanager || isNewCartridge;
 
   const [imageError, setImageError] = React.useState(false);
 
@@ -68,6 +70,12 @@ export default function Core({ frontmatter, body = null }: TCore) {
         </>
       );
       break;
+
+    case isNewCartridge:
+      // fullScreen = true;
+      app = <NewCartridge />;
+      break;
+
     case isCV:
       app = <CV mode="app" markdown={body} />;
       break;
