@@ -19,7 +19,7 @@ export default async function RootLayout({
     console.error('Failed to load globalNav.json:', err);
   }
 
-  let shortcutIcon = "/svg/favicon.svg";
+  let shortcutIcon = '/svg/favicon.svg';
   let appleTouchIcon = '/png/apple-touch-icon.png';
 
   /*
@@ -36,11 +36,7 @@ export default async function RootLayout({
         <meta name="theme-color" content="#303030" />
         <link rel="icon" href={shortcutIcon} type="image/x-icon" />
         <link rel="shortcut icon" href={shortcutIcon} type="image/x-icon" />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href={appleTouchIcon}
-        />
+        <link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon} />
       </head>
       <body>
         <UbereduxProvider>{children}</UbereduxProvider>

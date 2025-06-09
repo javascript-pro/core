@@ -26,7 +26,7 @@ const messages = [
     secondary: `Do you have a suggestion for a good present for John on his work
       anniversary. I am really confused & would love your thoughts on it.`,
     person: '/svg/flags/de.svg',
-  }
+  },
 ];
 
 const StyledFab = styled(Fab)({
@@ -39,11 +39,10 @@ const StyledFab = styled(Fab)({
 });
 
 export default function Layout({ children = null }: TLayout) {
-
   const dispatch = useDispatch();
 
   const handleSignout = () => {
-    dispatch(firebaseAuth("signout"));
+    dispatch(firebaseAuth('signout'));
   };
 
   return (
@@ -63,21 +62,18 @@ export default function Layout({ children = null }: TLayout) {
 
       <AppBar position="fixed" color="primary" sx={{ top: 'auto', bottom: 0 }}>
         <Toolbar>
-          <IconButton 
-            color="inherit" 
-            aria-label="Open Sidebar">
+          <IconButton color="inherit" aria-label="Open Sidebar">
             <Icon icon="menu" />
           </IconButton>
-          <StyledFab 
-            color="secondary" 
-            aria-label="Add Case">
+          <StyledFab color="secondary" aria-label="Add Case">
             <Icon icon="add" />
           </StyledFab>
           <Box sx={{ flexGrow: 1 }} />
-          <IconButton 
+          <IconButton
             aria-label="Signout"
             color="inherit"
-            onClick={handleSignout}>
+            onClick={handleSignout}
+          >
             <Icon icon="signout" />
           </IconButton>
         </Toolbar>
