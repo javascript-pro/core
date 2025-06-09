@@ -13,25 +13,25 @@ import {
   Typography,
 } from '@mui/material';
 import { Icon, navigateTo, useDispatch } from '../../../../gl-core';
-import { TAuthForm } from '../../Bouncer';
-import { firebaseAuth, updateFeedback } from '../../Bouncer';
+import { TAuthForm } from '../../../types';
+import { firebaseAuth } from '../../Bouncer';
 
 function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
-export default function AuthForm({
-  frontmatter = {
-    icon: 'settings',
-    title: 'title',
-    description: 'description',
-  },
-}: TAuthForm) {
+export default function AuthForm({ frontmatter }: TAuthForm) {
   const dispatch = useDispatch();
   const canResetPassword = false;
 
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
+
+  const {
+    icon = 'signin',
+    title = 'Sign in to your account',
+    description = 'Enter your email and password',
+  } = frontmatter || {};
 
   const isFormValid = React.useMemo(() => {
     return isValidEmail(email) && password.length >= 6;
@@ -48,43 +48,27 @@ export default function AuthForm({
 
   React.useEffect(() => {
     if (!email && !password) {
-      // dispatch(updateFeedback({
-      //   severity: 'info',
-      //   title: 'Waiting for Input',
-      //   description: 'Please enter your email and password.',
-      // }));
+      // Feedback: waiting for input
     } else if (!isValidEmail(email)) {
-      dispatch(
-        updateFeedback({
-          severity: 'info',
-          title: 'Please enter a valid email address',
-        }),
-      );
+      // Feedback: invalid email
     } else if (password.length < 6) {
-      dispatch(
-        updateFeedback({
-          severity: 'info',
-          title: 'Password must be at least 6 characters',
-        }),
-      );
+      // Feedback: weak password
     } else {
-      dispatch(updateFeedback(null));
+      // Feedback: null
     }
   }, [email, password, dispatch]);
 
   return (
     <Card>
       <CardHeader
-        avatar={<Icon icon={frontmatter.icon} />}
+        avatar={<Icon icon={icon} />}
         action={
           <IconButton onClick={() => dispatch(navigateTo('/'))}>
-            <Icon icon={'close'} />
+            <Icon icon="close" />
           </IconButton>
         }
-        title={<Typography variant="h6">{frontmatter.title}</Typography>}
-        subheader={
-          <Typography variant="body2">{frontmatter.description}</Typography>
-        }
+        title={<Typography variant="h6">{title}</Typography>}
+        subheader={<Typography variant="body2">{description}</Typography>}
       />
       <CardContent>
         <TextField

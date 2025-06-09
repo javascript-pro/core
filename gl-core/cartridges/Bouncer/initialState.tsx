@@ -1,7 +1,7 @@
 // core/gl-core/cartridges/Bouncer/initialState.tsx
-import { TBouncerState } from '../Bouncer';
+// import { TBouncerState } from '../Bouncer';
 
-export const initialState: TBouncerState = {
+export const initialState: any = {
   cartridge: 'bouncer',
   authing: true,
   user: null,

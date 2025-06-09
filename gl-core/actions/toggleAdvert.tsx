@@ -1,7 +1,7 @@
 // core/gl-core/actions/toggleAdvert.tsx
 
 import { setUbereduxKey } from '../../gl-core';
-import { TUbereduxDispatch } from '../../gl-core';
+import { TUbereduxDispatch } from '../../gl-core/types';
 import { store } from '../../gl-core/cartridges/Uberedux/store';
 // import type { TUbereduxState } from '../../gl-core/types'; // Adjust if your type lives elsewhere
 

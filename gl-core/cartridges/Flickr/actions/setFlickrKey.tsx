@@ -1,6 +1,6 @@
 // core/gl-core/cartridges/Flickr/actions/setFlickrKey.tsx
 
-import { TUbereduxDispatch } from '../../../';
+import { TUbereduxDispatch } from '../../../../gl-core/types';
 import { setUbereduxKey } from '../../../';
 
 export const setFlickrKey =

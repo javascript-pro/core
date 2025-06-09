@@ -1,5 +1,4 @@
-export type TSeverity = 'success' | 'info' | 'warning' | 'error';
-
+import {TUbereduxDispatch} from './cartridges/Uberedux/store'
 export type TUbereduxState = {
   currentRoute: string;
   status: {
@@ -9,3 +8,22 @@ export type TUbereduxState = {
   };
   [key: string]: any;
 };
+
+export type TSeverity = 'success' | 'info' | 'warning' | 'error';
+
+export type TFeedback = {
+  hidden?: boolean;
+  severity?: TSeverity;
+  title?: string;
+  description?: string;
+} | null;
+
+export type TAuthForm = {
+  frontmatter?: any;
+  onClose?: () => void;
+  [key: string]: any;
+};
+
+export {
+  TUbereduxDispatch,
+}

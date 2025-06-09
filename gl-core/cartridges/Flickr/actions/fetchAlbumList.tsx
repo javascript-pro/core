@@ -1,5 +1,5 @@
 import { setUbereduxKey } from '../../../../gl-core';
-import { TUbereduxDispatch } from '../../../../gl-core';
+import { TUbereduxDispatch } from '../../../../gl-core/types';
 import { store } from '../../Uberedux/store';
 
 export const fetchAlbumList = () => async (dispatch: TUbereduxDispatch) => {

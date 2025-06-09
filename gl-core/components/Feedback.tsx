@@ -3,9 +3,8 @@
 
 import * as React from 'react';
 import { Snackbar, Alert } from '@mui/material';
-import { TAuthForm } from '../../Bouncer';
-import { useFeedback, updateFeedback } from '../../Bouncer';
-import { useDispatch } from '../../../../gl-core';
+import { TAuthForm } from '../../gl-core/types';
+import { useFeedback, useDispatch } from '../../gl-core';
 
 export default function Feedback({}: TAuthForm) {
   const feedback = useFeedback();
@@ -15,7 +14,7 @@ export default function Feedback({}: TAuthForm) {
   React.useEffect(() => {
     if (feedback && !feedback.hidden) {
       const timer = setTimeout(() => {
-        dispatch(updateFeedback(null));
+        // dispatch(updateFeedback(null));
       }, 4000);
 
       return () => clearTimeout(timer);

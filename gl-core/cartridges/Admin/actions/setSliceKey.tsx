@@ -1,6 +1,6 @@
 // core/gl-core/cartridges/Admin/actions/setSliceKey.tsx
 
-import { TUbereduxDispatch } from '../../../';
+import { TUbereduxDispatch } from '../../../../gl-core/types';
 import { setUbereduxKey } from '../../../';
 
 export const setSliceKey =

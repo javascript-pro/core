@@ -2,9 +2,8 @@
 
 import { signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import { setUbereduxKey } from '../../../../gl-core';
-import { TUbereduxDispatch } from '../../../';
+import { TUbereduxDispatch } from  '../../../../gl-core/types';
 import { auth } from '../../../lib/firebase';
-import { updateFeedback } from './updateFeedback';
 
 export const firebaseAuth =
   (
@@ -27,34 +26,34 @@ export const firebaseAuth =
           creds.password,
         );
 
-        dispatch(
-          updateFeedback({
-            severity: 'success',
-            title: `Welcome ${result.user.displayName || result.user.email}`,
-          }),
-        );
+        // dispatch(
+        //   updateFeedback({
+        //     severity: 'success',
+        //     title: `Welcome ${result.user.displayName || result.user.email}`,
+        //   }),
+        // );
       }
 
       if (mode === 'signout') {
         await signOut(auth);
 
-        dispatch(
-          updateFeedback({
-            severity: 'info',
-            title: 'You have been signed out',
-          }),
-        );
+        // dispatch(
+        //   updateFeedback({
+        //     severity: 'info',
+        //     title: 'You have been signed out',
+        //   }),
+        // );
       }
     } catch (e: unknown) {
       const msg = e instanceof Error ? e.message : String(e);
 
-      dispatch(
-        updateFeedback({
-          severity: 'error',
-          title: 'Firebase Error',
-          description: msg,
-        }),
-      );
+      // dispatch(
+      //   updateFeedback({
+      //     severity: 'error',
+      //     title: 'Firebase Error',
+      //     description: msg,
+      //   }),
+      // );
 
       dispatch(setUbereduxKey({ key: 'error', value: msg }));
     }

@@ -1,5 +1,5 @@
 // core/gl-core/cartridges/Admin/actions/crud/createDoc.tsx
-import { TUbereduxDispatch } from '../../../../';
+import { TUbereduxDispatch } from '../../../../../gl-core/types';
 import { setUbereduxKey } from '../../../../../gl-core';
 import { TAdmin } from '../../types';
 

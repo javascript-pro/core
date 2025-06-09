@@ -1,5 +1,5 @@
 // core/gl-core/cartridges/Fallmanager/actions/crud/updateFall.tsx
-import { TUbereduxDispatch } from '../../../../';
+import { TUbereduxDispatch } from '../../../../../gl-core/types';
 import { setUbereduxKey } from '../../../../../gl-core';
 import { TFall } from '../../types';
 

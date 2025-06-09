@@ -7,6 +7,8 @@ export type TUser = {
 export type TBouncer = {
   frontmatter?: any;
   content?: any;
+  slug: string;
+  children?: React.ReactNode;
   [key: string]: any;
 };
 
@@ -30,18 +32,6 @@ export type TBouncerState = {
 
 export type TSeverity = 'success' | 'info' | 'warning' | 'error';
 
-export type TFeedback = {
-  hidden?: boolean;
-  severity?: TSeverity;
-  title?: string;
-  description?: string;
-} | null;
-
-export type TAuthForm = {
-  frontmatter?: any;
-  onClose?: () => void;
-  [key: string]: any;
-};
 
 export type TFrontmatter = {
   title?: string;

@@ -1,5 +1,6 @@
 // core/gl-core/cartridges/Flickr/actions/resetAlbum.tsx
-import { TUbereduxDispatch, setUbereduxKey } from '../../../';
+import { setUbereduxKey } from '../../../';
+import { TUbereduxDispatch } from '../../../../gl-core/types';
 
 const API_ENDPOINT = '/api/gl-api/flickr';
 
