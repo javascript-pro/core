@@ -35,15 +35,6 @@
     <loc>https://goldlabel.pro/cartridges/new-cartridge</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/clients/fallmanager/database</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/clients/fallmanager</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/clients/fallmanager/prototype</loc>
-  </url>
-  <url>
     <loc>https://goldlabel.pro/clients</loc>
   </url>
   <url>
@@ -51,6 +42,15 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/cv</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/fallmanager/database</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/fallmanager</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/fallmanager/prototype</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/free/api</loc>

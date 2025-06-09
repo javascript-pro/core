@@ -1,11 +1,10 @@
 ---
 order: 1
-slug: /clients/fallmanager
+slug: /fallmanager
 title: Fallmanager
-description: Fallmanagement-System für eine deutsche Anwaltskanzlei
+description: Zentrale Verwaltung von Falldaten
 icon: fallmanager
-tags: Fallmanager
-image: /png/default.png
+image: /png/_clients_/fallmanager/default.png
 bouncer: true
 ---
 

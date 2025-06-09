@@ -68,42 +68,32 @@
           "work"
         ],
         "excerpt": "FallmanagementSystem für eine deutsche Anwaltskanzlei. Zentrale Verwaltung von Falldaten, Dokumentenerstellung und Fristenüberwachung.",
+        "children": []
+      },
+      {
+        "title": "Fallmanager",
+        "description": "Fallmanagement-System für eine deutsche Anwaltskanzlei",
+        "slug": "/fallmanager",
+        "order": 1,
+        "icon": "fallmanager",
+        "type": "folder",
+        "excerpt": "FallmanagementSystem für . Zentrale Verwaltung von Falldaten, Dokumentenerstellung und Fristenüberwachung",
         "children": [
           {
-            "title": "Fallmanager",
-            "description": "Fallmanagement-System für eine deutsche Anwaltskanzlei",
-            "slug": "/fallmanager",
-            "order": 1,
+            "title": "Prototype",
+            "slug": "/prototype",
+            "order": 15,
             "icon": "fallmanager",
-            "type": "folder",
-            "tags": [
-              "Fallmanager"
-            ],
-            "excerpt": "FallmanagementSystem für . Zentrale Verwaltung von Falldaten, Dokumentenerstellung und Fristenüberwachung",
-            "children": [
-              {
-                "title": "Prototype",
-                "slug": "/prototype",
-                "order": 15,
-                "icon": "fallmanager",
-                "type": "file",
-                "tags": [
-                  "Fallmanager"
-                ],
-                "excerpt": "Prototype\n\nThis section documents the early prototype of the Fallmanager system developed for a German law firm specializing in accident claims.\n\n Purpose\n\nThe goal of the prototype is to validate cor"
-              },
-              {
-                "title": "Database",
-                "slug": "/database",
-                "order": 20,
-                "icon": "fallmanager",
-                "type": "file",
-                "tags": [
-                  "Fallmanager"
-                ],
-                "excerpt": "Fallmanager Database"
-              }
-            ]
+            "type": "file",
+            "excerpt": "Prototype\n\nThis section documents the early prototype of the Fallmanager system developed for a German law firm specializing in accident claims.\n\n Purpose\n\nThe goal of the prototype is to validate cor"
+          },
+          {
+            "title": "Database",
+            "slug": "/database",
+            "order": 20,
+            "icon": "fallmanager",
+            "type": "file",
+            "excerpt": "Fallmanager Database"
           }
         ]
       },

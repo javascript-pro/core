@@ -5,6 +5,7 @@ import { FlashinitialState } from '../Flash';
 import { FlickrinitialState } from '../Flickr';
 import { BouncerinitialState } from '../Bouncer';
 import { NewCartridgeinitialState } from '../NewCartridge';
+import { FallmanagerinitialState } from '../Fallmanager';
 
 export const initialState: any = {
   persisted: Date.now(),
@@ -16,4 +17,5 @@ export const initialState: any = {
   flickr: FlickrinitialState,
   bouncer: BouncerinitialState,
   newcartridge: NewCartridgeinitialState,
+  fallmanager: FallmanagerinitialState,
 };

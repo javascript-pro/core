@@ -1,11 +1,10 @@
 ---
 title: Prototype
 order: 15
-slug: /clients/fallmanager/prototype
+slug: /fallmanager/prototype
 description: Fallmanagement-System für eine deutsche Anwaltskanzlei
 icon: fallmanager
-tags: Fallmanager
-image: /png/default.png
+image: /png/_clients_/fallmanager/default.png
 bouncer: true
 ---
 
