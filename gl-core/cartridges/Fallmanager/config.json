@@ -2,15 +2,15 @@
   "title": "Fallmanager",
   "description": "Fallmanagement-System für eine deutsche Anwaltskanzlei. Zentrale Verwaltung von Falldaten, Dokumentenerstellung und Fristenüberwachung.",
   "icon": "fallmanager",
-  "slug": "/clients/fallmanager",
+  "slug": "/fallmanager",
   "theme": {
     "name": "fallmanager",
     "mode": "light",
-    "primary": "#e8c10b",
-    "secondary": "#fae45c",
-    "background": "#ddd",
-    "paper": "#ccc",
-    "text": "#000",
-    "border": "#303030"
+    "primary": "#305DA5",
+    "secondary": "#34056B",
+    "background": "#FFFFFF",
+    "paper": "#FFFFFF",
+    "text": "#414142",
+    "border": "#414142"
   }
 }
