@@ -5,6 +5,11 @@ export type TFallmanager = {
   [key: string]: any;
 };
 
+export type TLayout = {
+  children?: React.ReactNode;
+  [key: string]: any;
+};
+
 export type TFallmanagerState = {
   lingua?: any;
   [key: string]: any;
