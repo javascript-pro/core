@@ -1,5 +1,5 @@
 // core/gl-core/cartridges/Bouncermanager/actions/crud/updateBouncer.tsx
-import { TUbereduxDispatch } from  '../../../../../gl-core/types';
+import { TUbereduxDispatch } from '../../../../../gl-core/types';
 import { setUbereduxKey } from '../../../../../gl-core';
 
 export const updateBouncer =

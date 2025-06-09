@@ -32,7 +32,6 @@ export type TBouncerState = {
 
 export type TSeverity = 'success' | 'info' | 'warning' | 'error';
 
-
 export type TFrontmatter = {
   title?: string;
   [key: string]: any;

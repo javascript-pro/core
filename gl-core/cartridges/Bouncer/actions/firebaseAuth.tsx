@@ -2,7 +2,7 @@
 
 import { signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import { setUbereduxKey } from '../../../../gl-core';
-import { TUbereduxDispatch } from  '../../../../gl-core/types';
+import { TUbereduxDispatch } from '../../../../gl-core/types';
 import { auth } from '../../../lib/firebase';
 
 export const firebaseAuth =

@@ -1,4 +1,4 @@
-import {TUbereduxDispatch} from './cartridges/Uberedux/store'
+import { TUbereduxDispatch } from './cartridges/Uberedux/store';
 export type TUbereduxState = {
   currentRoute: string;
   status: {
@@ -24,6 +24,4 @@ export type TAuthForm = {
   [key: string]: any;
 };
 
-export {
-  TUbereduxDispatch,
-}
+export { TUbereduxDispatch };

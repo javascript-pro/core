@@ -11,8 +11,7 @@ import { setUbereduxKey } from '../../gl-core';
 import { TFeedback } from '../types';
 
 export const updateFeedback =
-  (feedback: TFeedback | null) =>
-  async (dispatch: TUbereduxDispatch) => {
+  (feedback: TFeedback | null) => async (dispatch: TUbereduxDispatch) => {
     try {
       console.log('updateFeedback', feedback);
 
