@@ -25,6 +25,7 @@ import {
 import { Flickr } from './cartridges/Flickr';
 import { CV } from './cartridges/CV';
 import { NewCartridge } from './cartridges/NewCartridge';
+import { Fallmanager } from './cartridges/Fallmanager';
 import { SignoutButton, useUser } from './cartridges/Bouncer';
 
 export type TFrontmatter = {
@@ -50,7 +51,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
   const isCV = pathname === '/cv';
   const isFlickr = pathname === '/free/flickr';
-  const isFallmanager = pathname === '/clients/fallmanager';
+  const isFallmanager = pathname === '/fallmanager';
   const isNewCartridge = pathname === '/cartridges/new-cartridge';
   const isApp = isCV || isFlickr || isFallmanager || isNewCartridge;
 
@@ -60,28 +61,21 @@ export default function Core({ frontmatter, body = null }: TCore) {
   switch (true) {
     case isFallmanager:
       fullScreen = true;
-      app = (
-        <>
-          <SignoutButton />
-          <Card sx={{ p: 1 }}>
-            import Fallmanager Cartridge from
-            https://github.com/javascript-pro/fallmanager (private)
-          </Card>
-        </>
-      );
+      app = <Fallmanager />;
       break;
 
     case isNewCartridge:
-      // fullScreen = true;
       app = <NewCartridge />;
       break;
 
     case isCV:
       app = <CV mode="app" markdown={body} />;
       break;
+
     case isFlickr:
       app = <Flickr mode="app" id="72177720326317140" />;
       break;
+
     default:
       break;
   }
