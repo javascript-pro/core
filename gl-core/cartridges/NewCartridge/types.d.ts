@@ -5,6 +5,7 @@ export type TNewCartridge = {
 };
 
 export type TNewCartridgeState = {
+  lingua?: any;
   [key: string]: any;
 };
 

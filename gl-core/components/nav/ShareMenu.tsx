@@ -29,12 +29,6 @@ export default function ShareMenu({ frontmatter = null }: TShareMenu) {
 
   return (
     <>
-      <CardHeader
-        avatar={<Icon icon={icon as any} />}
-        title={<Typography variant="h6">{title}</Typography>}
-        // subheader={<Typography>{description}</Typography>}
-      />
-
       <MenuItem
         onClick={() => {
           navigator.clipboard.writeText(url);

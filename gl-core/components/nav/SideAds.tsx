@@ -20,7 +20,15 @@ export default function SideAds({ children = null }: TSideAds) {
           router.push(`/clients/fallmanager`);
         }}
       />
-      
+
+      {/* <Advert
+        icon="cartridge"
+        title={'New Cartridge'}
+        onClick={() => {
+          router.push(`/cartridges/new-cartridge`);
+        }}
+      /> */}
+
       <Advert
         icon="cartridge"
         title={'New Cartridge'}

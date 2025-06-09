@@ -51,7 +51,7 @@
             "order": 2200,
             "icon": "cartridge",
             "type": "file",
-            "excerpt": "✅ NewCartridge\n\nThis is a template from which you can init a new cartridge"
+            "excerpt": "Overview\n\n Purpose\n\n is a template designed to help developers quickly bootstrap a new Cartridge in a modular application framework such as Goldlabel. Cartridges are featurespecific, plugandplay compo"
           }
         ]
       },
@@ -593,7 +593,7 @@
         "order": 2000,
         "icon": "signin",
         "type": "file",
-        "excerpt": ""
+        "excerpt": "You are signed in using the Bouncer cartridge"
       }
     ]
   }
