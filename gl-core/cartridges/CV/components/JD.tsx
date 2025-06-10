@@ -80,7 +80,6 @@ export default function JD() {
         onChange={handleViewpointChange}
         sx={{ my: 2 }}
       >
-        
         <FormControlLabel
           value="first"
           control={<Radio />}

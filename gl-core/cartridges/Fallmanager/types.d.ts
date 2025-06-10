@@ -1,5 +1,11 @@
 // core/gl-core/cartridges/Fallmanager/types.d.ts
 
+export type TFallmanagerState = {
+  cartridge: string;
+  screen: "upload" | "read"
+  lingua?: any;
+};
+
 export type TFall = {
   fbId?: string;
   title?: string;
@@ -13,11 +19,6 @@ export type TFallmanager = {
 
 export type TLayout = {
   children?: React.ReactNode;
-  [key: string]: any;
-};
-
-export type TFallmanagerState = {
-  lingua?: any;
   [key: string]: any;
 };
 

@@ -3,16 +3,22 @@
 import * as React from 'react';
 import config from './config.json';
 import { TFallmanager } from './types';
-// import { Box, Button, Typography } from '@mui/material';
+import { Card, Button, Typography } from '@mui/material';
 import { Theme } from '../../../gl-core';
-import { Layout } from '../Fallmanager';
+import { UploadFile, useFallmanager } from '../Fallmanager';
 
 export default function Fallmanager({ payload = null }: TFallmanager) {
+
+  const slice = useFallmanager();
   return (
     <Theme theme={config.theme as any}>
-      <Layout>
+      <Card>
         <>A bunch of chillen</>
-      </Layout>
+
+        <pre style={{ fontSize: 10 }}>
+          slice : {JSON.stringify(slice, null, 2)}
+        </pre>
+      </Card>
     </Theme>
   );
 }
