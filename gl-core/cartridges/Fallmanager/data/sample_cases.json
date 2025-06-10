@@ -73,14 +73,8 @@
       "status": "open"
     },
     "progress": {
-      "documentsReceived": [
-        "beatae.mp3",
-        "eaque.flac",
-        "et.js"
-      ],
-      "correspondenceLog": [
-        "Adipisci reiciendis tempora ducimus numquam."
-      ],
+      "documentsReceived": ["beatae.mp3", "eaque.flac", "et.js"],
+      "correspondenceLog": ["Adipisci reiciendis tempora ducimus numquam."],
       "actions": [
         "generate dynamic web services",
         "re-intermediate web-enabled e-markets",
@@ -172,15 +166,9 @@
       "status": "closed"
     },
     "progress": {
-      "documentsReceived": [
-        "placeat.tiff"
-      ],
-      "correspondenceLog": [
-        "Deserunt voluptates iste unde."
-      ],
-      "actions": [
-        "monetize e-business platforms"
-      ]
+      "documentsReceived": ["placeat.tiff"],
+      "correspondenceLog": ["Deserunt voluptates iste unde."],
+      "actions": ["monetize e-business platforms"]
     }
   },
   {
@@ -359,10 +347,7 @@
       "status": "pending"
     },
     "progress": {
-      "documentsReceived": [
-        "dolorem.mp4",
-        "laboriosam.txt"
-      ],
+      "documentsReceived": ["dolorem.mp4", "laboriosam.txt"],
       "correspondenceLog": [
         "Aspernatur molestias odit officia temporibus.",
         "Maiores quas voluptas quis quam similique.",
@@ -460,9 +445,7 @@
     },
     "progress": {
       "documentsReceived": [],
-      "correspondenceLog": [
-        "Facilis excepturi eum."
-      ],
+      "correspondenceLog": ["Facilis excepturi eum."],
       "actions": [
         "aggregate magnetic experiences",
         "visualize user-centric architectures"
@@ -638,18 +621,13 @@
       "status": "pending"
     },
     "progress": {
-      "documentsReceived": [
-        "dicta.pptx",
-        "quasi.mp4"
-      ],
+      "documentsReceived": ["dicta.pptx", "quasi.mp4"],
       "correspondenceLog": [
         "Sunt voluptatem similique rem.",
         "Iusto tenetur eum labore dolorum veritatis quod.",
         "Ipsam eos porro vero sint."
       ],
-      "actions": [
-        "visualize enterprise methodologies"
-      ]
+      "actions": ["visualize enterprise methodologies"]
     }
   },
   {
@@ -731,9 +709,7 @@
         "Architecto eius eveniet tenetur eius veniam.",
         "Quae eveniet unde cumque nisi optio nobis."
       ],
-      "actions": [
-        "incentivize rich e-services"
-      ]
+      "actions": ["incentivize rich e-services"]
     }
   },
   {
@@ -815,18 +791,13 @@
       "status": "open"
     },
     "progress": {
-      "documentsReceived": [
-        "quae.webm"
-      ],
+      "documentsReceived": ["quae.webm"],
       "correspondenceLog": [
         "Eos maxime enim porro est.",
         "Mollitia aut veniam asperiores debitis aliquam.",
         "Voluptatibus incidunt blanditiis nulla."
       ],
-      "actions": [
-        "drive user-centric e-services",
-        "deploy compelling content"
-      ]
+      "actions": ["drive user-centric e-services", "deploy compelling content"]
     }
   },
   {
@@ -913,18 +884,12 @@
       "status": "closed"
     },
     "progress": {
-      "documentsReceived": [
-        "recusandae.js",
-        "debitis.json",
-        "sint.json"
-      ],
+      "documentsReceived": ["recusandae.js", "debitis.json", "sint.json"],
       "correspondenceLog": [
         "Impedit molestiae fugit in unde.",
         "Iusto aliquam minima explicabo totam placeat aut."
       ],
-      "actions": [
-        "deliver frictionless networks"
-      ]
+      "actions": ["deliver frictionless networks"]
     }
   }
 ]
