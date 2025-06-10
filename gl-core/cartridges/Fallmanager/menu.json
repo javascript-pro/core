@@ -1,34 +1,30 @@
 [
-    {
-        "label": "Dashboard",
-        "slug": "/fallmanager/dashboard"
-    },
-    {
-        "label": "Cases",
-        "slug": "/fallmanager/cases",
-        "subitems": [
-            {        
-                "label": "View Cases",
-                "slug": "/fallmanager/cases"
-            },
-            {        
-                "label": "New Case",
-                "slug": "/fallmanager/cases/new"
-            }
-        ]
-    },
-    {
-        "label": "Uploads",
-        "slug": "/fallmanager/uploads",
-        "subitems": [
-            {        
-                "label": "View Uploads",
-                "slug": "/fallmanager/uploads"
-            },
-            {        
-                "label": "New Upload",
-                "slug": "/fallmanager/uploads/new"
-            }
-        ]
-    }
+  {
+    "label": "Cases",
+    "slug": "/fallmanager/cases",
+    "subitems": [
+      {
+        "label": "View",
+        "slug": "/fallmanager/cases"
+      },
+      {
+        "label": "New",
+        "slug": "/fallmanager/cases/new"
+      }
+    ]
+  },
+  {
+    "label": "Uploads",
+    "slug": "/fallmanager/uploads",
+    "subitems": [
+      {
+        "label": "View",
+        "slug": "/fallmanager/uploads"
+      },
+      {
+        "label": "New",
+        "slug": "/fallmanager/uploads/new"
+      }
+    ]
+  }
 ]

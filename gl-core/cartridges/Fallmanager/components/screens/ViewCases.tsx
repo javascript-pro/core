@@ -1,13 +1,55 @@
 'use client';
-// core/gl-core/cartridges/Fallmanager/components/screens/ViewCases.tsx
 import * as React from 'react';
-import { Box } from '@mui/material';
+import { 
+  Box, 
+  Typography,
+  Button,
+  Toolbar,
+} from '@mui/material';
+import { onSnapshot } from 'firebase/firestore';
+import { fallmanagerCollection } from '../../../../firebase';
 
-export default function UploadFile() {
-  console.log('UploadFile');
+import { useDispatch, MightyButton, navigateTo } from '../../../../../gl-core';
 
-  return <Box sx={{ p: 1, border: '1px solid green' }}>
-    ViewCases
-    
-  </Box>;
+export default function ViewCases() {
+  const [cases, setCases] = React.useState<any[]>([]);
+  const dispatch = useDispatch();
+
+
+  React.useEffect(() => {
+    const unsubscribe = onSnapshot(fallmanagerCollection, (snapshot) => {
+      const items = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+      setCases(items);
+    });
+
+    return () => unsubscribe(); // clean up on unmount
+  }, []);
+
+
+  const handleNewClick = () => {
+    dispatch(navigateTo("/fallmanager/cases/new"))
+  };
+
+
+  return (
+    <Box sx={{ p: 1 }}>
+
+      <MightyButton
+        sx={{mb: 2}}
+        variant="outlined"
+        onClick={handleNewClick}
+        label="New Case"
+        icon="plus"
+      />
+          
+      <Typography variant="h6" gutterBottom>
+        Viewing {cases.length} cases
+      </Typography>
+      <ul>
+        {cases.map(fall => (
+          <li key={fall.id}>{fall.title ?? 'Kein Titel'}</li>
+        ))}
+      </ul>
+    </Box>
+  );
 }

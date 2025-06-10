@@ -1,8 +1,8 @@
 // core/gl-core/cartridges/Fallmanager/components/index.tsx
-import Layout from './Layout';
+
 import UserInfo from './UserInfo';
 import StickyHeader from './StickyHeader';
-import { UploadFile, ViewCases, Dashboard, NewCase, Uploads } from './screens'
+import { UploadFile, ViewCases, Dashboard, NewCase, Uploads } from './screens';
 
-export { UploadFile, ViewCases, Dashboard, NewCase, Uploads }
-export { Layout, UserInfo, StickyHeader };
+export { UploadFile, ViewCases, Dashboard, NewCase, Uploads };
+export { UserInfo, StickyHeader };

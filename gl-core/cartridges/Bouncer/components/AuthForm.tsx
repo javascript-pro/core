@@ -28,8 +28,8 @@ export default function AuthForm({ frontmatter }: TAuthForm) {
   const canResetPassword = false;
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
-  const title = 'Sign in';
-  const description = 'please';
+  const title = 'Sign In';
+  const description = '(please)';
   const icon = 'signin';
 
   const isFormValid = React.useMemo(() => {
@@ -75,18 +75,18 @@ export default function AuthForm({ frontmatter }: TAuthForm) {
         />
         <CardContent>
           <TextField
+            id="email"
             autoFocus
             label="Email"
             type="email"
-            variant="filled"
             fullWidth
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <TextField
+            id="password"
             label="Password"
             type="password"
-            variant="filled"
             fullWidth
             value={password}
             onChange={(e) => setPassword(e.target.value)}
