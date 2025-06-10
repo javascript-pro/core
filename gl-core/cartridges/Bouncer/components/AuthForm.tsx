@@ -62,7 +62,7 @@ export default function AuthForm({ frontmatter }: TAuthForm) {
   }, [email, password, dispatch]);
 
   return (
-    <Container maxWidth={"xs"} sx={{pt:2}}>
+    <Container maxWidth={'xs'} sx={{ pt: 2 }}>
       <Card>
         <CardHeader
           avatar={
@@ -98,7 +98,9 @@ export default function AuthForm({ frontmatter }: TAuthForm) {
           <Box sx={{ flexGrow: 1 }} />
           {canResetPassword && (
             <Box>
-              <Button onClick={() => console.log('Password?')}>Password?</Button>
+              <Button onClick={() => console.log('Password?')}>
+                Password?
+              </Button>
             </Box>
           )}
 

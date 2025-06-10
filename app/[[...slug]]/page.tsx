@@ -94,7 +94,7 @@ export async function generateMetadata({ params }: { params: any }) {
 
   const is404 = !frontmatter?.title;
   const title = is404
-    ? '404, bro'
+    ? 'Goldlabel'
     : `${frontmatter.title}${frontmatter.description ? `. ${frontmatter.description}` : ''}`;
   const description = is404 ? '' : frontmatter.description || '';
   const img = frontmatter.image || '/png/default.png';

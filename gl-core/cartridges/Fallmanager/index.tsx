@@ -9,9 +9,11 @@ import {
   deleteFall,
   updateKey,
 } from './actions';
-import { Layout, UploadFile, UserInfo, StickyHeader } from './components';
+import { Layout, UserInfo, StickyHeader } from './components';
+import { UploadFile, ViewCases, Dashboard, NewCase, Uploads } from './components/screens'
 
-export { Fallmanager, Layout, UploadFile, UserInfo, StickyHeader };
+export { UploadFile, ViewCases, Dashboard, NewCase, Uploads }
+export { Fallmanager, Layout, UserInfo, StickyHeader };
 export { createFall, readFall, updateFall, deleteFall };
 export { updateKey };
 export { initialStateFallmanager, useFallmanager };
