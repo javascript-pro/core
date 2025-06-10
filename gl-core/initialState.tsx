@@ -14,10 +14,11 @@ export const initialState: any = {
   persisted: Date.now(),
   config,
   feedbackHidden: false,
-  feedback: {
-    title: "Oh no",
+  feedback: null,
+  feedback_: {
+    title: 'Oh no',
     description: "Bollixing' bollix",
-    severity: "error",
+    severity: 'error',
   },
   admin: initialStateAdmin,
   bouncer: initialStateBouncer,

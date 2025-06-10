@@ -13,7 +13,7 @@ import { TFeedback } from '../types';
 export const updateFeedback =
   (feedback: TFeedback | null) => async (dispatch: TUbereduxDispatch) => {
     try {
-      const updated = {...(feedback || {})};
+      const updated = { ...(feedback || {}) };
       dispatch(
         setUbereduxKey({
           key: 'feedback',

@@ -137,7 +137,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
               <Box
                 sx={{
                   px: isMobile ? 0.5 : 2,
-                  mb: !isMobile ? 3 : 2,
+                  my: !isMobile ? 3 : 2,
                 }}
               >
                 {pathname !== '/' && <PageBreadcrumb />}

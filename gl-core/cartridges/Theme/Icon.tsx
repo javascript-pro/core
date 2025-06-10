@@ -129,11 +129,13 @@ import LinkIcon from '@mui/icons-material/Link';
 import AboutIcon from '@mui/icons-material/HelpOutlineOutlined';
 import ClientsIcon from '@mui/icons-material/PeopleAltOutlined';
 import MoreIcon from '@mui/icons-material/MoreVert';
+import DogIcon from '@mui/icons-material/Pets';
 
 export type TIcon = {
   icon:
     | 'more'
     | 'plus'
+        | 'dog'
     | 'about'
     | 'clients'
     | 'link'
@@ -312,7 +314,9 @@ export default function Icon({ icon, color }: TIcon) {
     case 'design':
       iconFragment = <DesignIcon color={color} />;
       break;
-
+    case 'dog':
+      iconFragment = <DogIcon color={color} />;
+      break;
     case 'bouncer':
       iconFragment = <BlokeyIcon color={color} />;
       break;
