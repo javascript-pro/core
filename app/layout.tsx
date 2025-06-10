@@ -33,7 +33,7 @@ export default async function RootLayout({
     <html lang="en">
       <head>
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#303030" />
+        <meta name="theme-color" content="#5E7978" />
         <link rel="icon" href={shortcutIcon} type="image/x-icon" />
         <link rel="shortcut icon" href={shortcutIcon} type="image/x-icon" />
         <link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon} />

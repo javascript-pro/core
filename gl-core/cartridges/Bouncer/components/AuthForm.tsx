@@ -79,6 +79,7 @@ export default function AuthForm({ frontmatter }: TAuthForm) {
           <CardContent>
             <TextField
               id="email"
+              variant="filled"
               autoFocus
               label="Email"
               type="email"
@@ -88,6 +89,7 @@ export default function AuthForm({ frontmatter }: TAuthForm) {
             />
             <TextField
               id="password"
+              variant="filled"
               label="Password"
               type="password"
               fullWidth

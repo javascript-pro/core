@@ -7,6 +7,7 @@ import Image from 'next/image';
 import {
   CssBaseline,
   Container,
+  Paper,
   Box,
   Grid,
   Skeleton,
@@ -95,67 +96,74 @@ export default function Core({ frontmatter, body = null }: TCore) {
       <CssBaseline />
       <IncludeAll />
       <Container id="core">
-        <Header frontmatter={frontmatter} />
-        <Grid container spacing={1}>
-          <Grid
-            size={{
-              md: 8,
-              lg: 9,
-            }}
-          >
-            <Box sx={{ mt: isMobile ? 2 : 0 }}>
-              {frontmatter?.image && (
-                <Box sx={{ mx: 4, mt: 0 }}>
-                  {!imageError ? (
-                    <Image
-                      priority
-                      src={frontmatter.image}
-                      alt={frontmatter.title || 'Featured image'}
-                      width={1200}
-                      height={630}
-                      style={{
-                        width: '100%',
-                        height: 'auto',
-                      }}
-                      onError={() => setImageError(true)}
-                    />
-                  ) : (
-                    <Box>
-                      <Skeleton
-                        variant="rectangular"
-                        width="100%"
-                        height={315}
+        <Box
+          sx={{
+            minHeight: '100vh',
+            // m: 1,
+          }}
+        >
+          <Header frontmatter={frontmatter} />
+          <Grid container spacing={1}>
+            <Grid
+              size={{
+                md: 8,
+                lg: 9,
+              }}
+            >
+              <Box sx={{ mt: isMobile ? 2 : 0 }}>
+                {frontmatter?.image && (
+                  <Box sx={{ mx: 4, mt: 0 }}>
+                    {!imageError ? (
+                      <Image
+                        priority
+                        src={frontmatter.image}
+                        alt={frontmatter.title || 'Featured image'}
+                        width={1200}
+                        height={630}
+                        style={{
+                          width: '100%',
+                          height: 'auto',
+                        }}
+                        onError={() => setImageError(true)}
                       />
-                      <Typography variant="body2" color="text.secondary" mt={1}>
-                        Image not found. "{frontmatter.image}"
-                      </Typography>
-                    </Box>
-                  )}
+                    ) : (
+                      <Box>
+                        <Skeleton
+                          variant="rectangular"
+                          width="100%"
+                          height={315}
+                        />
+                        <Typography variant="body2" color="text.secondary" mt={1}>
+                          Image not found. "{frontmatter.image}"
+                        </Typography>
+                      </Box>
+                    )}
+                  </Box>
+                )}
+
+                <Box
+                  sx={{
+                    px: isMobile ? 0.5 : 2,
+                    my: !isMobile ? 3 : 2,
+                  }}
+                >
+                  {pathname !== '/' && <PageBreadcrumb />}
                 </Box>
-              )}
+              </Box>
 
               <Box
                 sx={{
+                  mb: '50px',
                   px: isMobile ? 0.5 : 2,
-                  my: !isMobile ? 3 : 2,
                 }}
               >
-                {pathname !== '/' && <PageBreadcrumb />}
+                {isApp ? app : <RenderMarkdown>{body}</RenderMarkdown>}
+                {isMobile && getAside()}
               </Box>
-            </Box>
-
-            <Box
-              sx={{
-                mb: '50px',
-                px: isMobile ? 0.5 : 2,
-              }}
-            >
-              {isApp ? app : <RenderMarkdown>{body}</RenderMarkdown>}
-              {isMobile && getAside()}
-            </Box>
+            </Grid>
+            {!isMobile && getAside()}
           </Grid>
-          {!isMobile && getAside()}
-        </Grid>
+        </Box>
       </Container>
     </Theme>
   );

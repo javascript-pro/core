@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { useRouter } from 'next/navigation';
-import { IconButton, CardHeader, Typography, Tooltip } from '@mui/material';
+import { Box, IconButton, CardHeader, Typography, Tooltip } from '@mui/material';
 import { Icon, useIsMobile, TopRightMenu } from '../../../gl-core';
 
 export type THeader = {
@@ -22,7 +22,6 @@ export default function Header({ frontmatter = null }: THeader) {
           <>
             <Tooltip title="Home">
               <IconButton
-                sx={{ ml: -2 }}
                 onClick={() => {
                   router.push('/');
                 }}
@@ -30,9 +29,9 @@ export default function Header({ frontmatter = null }: THeader) {
                 <Icon icon={'blokey'} />
               </IconButton>
             </Tooltip>
-            <IconButton>
+            <Box sx={{m: 1}}>
               <Icon icon={icon as any} />
-            </IconButton>
+            </Box>
           </>
         }
         title={
