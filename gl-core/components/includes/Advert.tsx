@@ -1,7 +1,7 @@
 'use client';
 import * as React from 'react';
 import { Typography, Alert, ButtonBase, IconButton } from '@mui/material';
-import { Icon, useIsMobile } from '../../gl-core';
+import { Icon, useIsMobile } from '../../../gl-core';
 
 export type TAdvert = {
   title?: string | null;

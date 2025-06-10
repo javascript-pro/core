@@ -33,7 +33,7 @@ export default function Fallmanager() {
         elevation={1}
         sx={{
           boxShadow: 0,
-          background: "white",
+          background: 'white',
           pb: 1,
         }}
       >

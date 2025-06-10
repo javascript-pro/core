@@ -24,7 +24,7 @@ export const fallmanagerCollection = collection(db, 'fallmanager');
 
 export const uploadsCollectionQuery = query(
   collection(db, 'uploads'),
-  where('cartridge', '==', 'fallmanager')
+  where('cartridge', '==', 'fallmanager'),
 );
 
 // Storage path for Fallmanager uploads

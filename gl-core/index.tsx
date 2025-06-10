@@ -4,25 +4,22 @@ import { Icon } from './cartridges/Theme';
 import { createMUITheme } from './cartridges/Theme';
 import { ModeSwitch } from './cartridges/Theme';
 import {
+  Advert,
+  Status,
   RenderMarkdown,
   Header,
   Footer,
-  Responsive,
-} from './components/layout';
-import Status from './components/Status';
-import {
   Nav,
   NavItem,
   PageBreadcrumb,
   MightyButton,
-  CardButton,
   Search,
   NextPrevious,
   ShareThis,
   SideAds,
   TopRightMenu,
   ShareMenu,
-} from './components/nav';
+} from './components';
 import { useConfig, useIsMobile, useVersion, useFeedback } from './hooks';
 
 import {
@@ -35,9 +32,10 @@ import {
   useVersionCheck,
   resetUberedux,
 } from './cartridges/Uberedux';
+
 import { CV } from './cartridges/CV';
-import Advert from './components/Advert';
 import { Flash, MovieClip, Photo } from './cartridges/Flash';
+
 import { navigateTo } from './actions/navigateTo';
 import { routeTo } from './actions/routeTo';
 import { toggleStatus } from './actions/toggleStatus';
@@ -57,7 +55,7 @@ export {
 
 export { Core };
 export { Theme, createMUITheme, Icon, ModeSwitch };
-export { Status, Header, Footer, RenderMarkdown, Responsive };
+export { Status, Header, Footer, RenderMarkdown };
 
 export {
   Advert,
@@ -65,7 +63,6 @@ export {
   Nav,
   NavItem,
   PageBreadcrumb,
-  CardButton,
   MightyButton,
   Search,
   ShareThis,

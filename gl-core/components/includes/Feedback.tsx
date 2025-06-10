@@ -3,8 +3,8 @@
 
 import * as React from 'react';
 import { Snackbar, Alert } from '@mui/material';
-import { TAuthForm } from '../../gl-core/types';
-import { useFeedback, useDispatch } from '../../gl-core';
+import { TAuthForm } from '../../../gl-core/types';
+import { useFeedback, useDispatch } from '../../../gl-core';
 
 export default function Feedback({}: TAuthForm) {
   const feedback = useFeedback();

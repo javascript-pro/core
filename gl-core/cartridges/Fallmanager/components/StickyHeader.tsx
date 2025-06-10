@@ -15,7 +15,12 @@ import {
   MenuItem,
   Toolbar,
 } from '@mui/material';
-import { Icon, useDispatch, navigateTo, MightyButton } from '../../../../gl-core';
+import {
+  Icon,
+  useDispatch,
+  navigateTo,
+  MightyButton,
+} from '../../../../gl-core';
 import { firebaseAuth } from '../../Bouncer';
 
 export default function StickyHeader() {
@@ -61,11 +66,7 @@ export default function StickyHeader() {
           </IconButton>
         }
         action={
-          <MightyButton
-            mode="icon"
-            icon="signout"
-            onClick={handleSignout}
-          />
+          <MightyButton mode="icon" icon="signout" onClick={handleSignout} />
         }
         // title={<Typography variant="h6">{config.title}</Typography>}
         // subheader={
