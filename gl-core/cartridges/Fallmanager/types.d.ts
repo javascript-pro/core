@@ -2,7 +2,7 @@
 
 export type TFallmanagerState = {
   cartridge: string;
-  screen: "upload" | "read"
+  screen: 'upload' | 'read';
   lingua?: any;
 };
 

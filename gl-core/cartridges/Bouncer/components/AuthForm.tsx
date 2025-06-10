@@ -4,6 +4,7 @@ import * as React from 'react';
 import { TAuthForm } from '../../../types';
 import { useRouter } from 'next/navigation';
 import {
+  Container,
   Box,
   IconButton,
   Card,
@@ -61,54 +62,56 @@ export default function AuthForm({ frontmatter }: TAuthForm) {
   }, [email, password, dispatch]);
 
   return (
-    <Card>
-      <CardHeader
-        avatar={
-          <IconButton onClick={handleBack}>
-            <Icon icon="left" />
-          </IconButton>
-        }
-        title={<Typography variant="h6">{title}</Typography>}
-        subheader={<Typography variant="body2">{description}</Typography>}
-      />
-      <CardContent>
-        <TextField
-          autoFocus
-          label="Email"
-          type="email"
-          variant="filled"
-          fullWidth
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+    <Container maxWidth={"xs"} sx={{pt:2}}>
+      <Card>
+        <CardHeader
+          avatar={
+            <IconButton onClick={handleBack}>
+              <Icon icon="left" />
+            </IconButton>
+          }
+          title={<Typography variant="h6">{title}</Typography>}
+          subheader={<Typography variant="body2">{description}</Typography>}
         />
-        <TextField
-          label="Password"
-          type="password"
-          variant="filled"
-          fullWidth
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          sx={{ mt: 2 }}
-        />
-      </CardContent>
+        <CardContent>
+          <TextField
+            autoFocus
+            label="Email"
+            type="email"
+            variant="filled"
+            fullWidth
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <TextField
+            label="Password"
+            type="password"
+            variant="filled"
+            fullWidth
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            sx={{ mt: 2 }}
+          />
+        </CardContent>
 
-      <CardActions>
-        <Box sx={{ flexGrow: 1 }} />
-        {canResetPassword && (
-          <Box>
-            <Button onClick={() => console.log('Password?')}>Password?</Button>
-          </Box>
-        )}
+        <CardActions>
+          <Box sx={{ flexGrow: 1 }} />
+          {canResetPassword && (
+            <Box>
+              <Button onClick={() => console.log('Password?')}>Password?</Button>
+            </Box>
+          )}
 
-        <MightyButton
-          sx={{ mx: 1, mb: 1 }}
-          onClick={onSignIn}
-          variant={isFormValid ? 'contained' : 'outlined'}
-          disabled={!isFormValid}
-          label="Sign in"
-          icon={icon}
-        />
-      </CardActions>
-    </Card>
+          <MightyButton
+            sx={{ mx: 1, mb: 1 }}
+            onClick={onSignIn}
+            variant={isFormValid ? 'contained' : 'outlined'}
+            disabled={!isFormValid}
+            label="Sign in"
+            icon={icon}
+          />
+        </CardActions>
+      </Card>
+    </Container>
   );
 }

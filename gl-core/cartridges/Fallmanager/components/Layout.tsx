@@ -8,26 +8,8 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import Fab from '@mui/material/Fab';
-
 import { Icon, useDispatch } from '../../../../gl-core';
 import { firebaseAuth } from '../../Bouncer';
-
-const messages = [
-  {
-    id: 1,
-    primary: 'Brunch this week?',
-    secondary:
-      "I'll be in the neighbourhood this week. Let's grab a bite to eat",
-    person: '/svg/flags/ar.svg',
-  },
-  {
-    id: 2,
-    primary: 'Birthday Gift',
-    secondary: `Do you have a suggestion for a good present for John on his work
-      anniversary. I am really confused & would love your thoughts on it.`,
-    person: '/svg/flags/de.svg',
-  },
-];
 
 const StyledFab = styled(Fab)({
   position: 'absolute',

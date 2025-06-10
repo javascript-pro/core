@@ -1,7 +1,6 @@
 // core/gl-core/cartridges/Fallmanager/index.tsx
 import Fallmanager from './Fallmanager';
 import { initialState as initialStateFallmanager } from './initialState';
-
 import { useFallmanager } from './hooks';
 import {
   createFall,
@@ -10,9 +9,9 @@ import {
   deleteFall,
   updateKey,
 } from './actions';
-import { NewComponent, Layout, UploadFile } from './components';
+import { Layout, UploadFile, UserInfo, StickyHeader } from './components';
 
-export { Fallmanager, NewComponent, Layout, UploadFile };
+export { Fallmanager, Layout, UploadFile, UserInfo, StickyHeader };
 export { createFall, readFall, updateFall, deleteFall };
 export { updateKey };
 export { initialStateFallmanager, useFallmanager };
