@@ -25,7 +25,7 @@ import { Flickr } from './cartridges/Flickr';
 import { CV } from './cartridges/CV';
 import { NewCartridge } from './cartridges/NewCartridge';
 import { Fallmanager } from './cartridges/Fallmanager';
-import { useUser } from './cartridges/Bouncer';
+import { Bouncer, useUser } from './cartridges/Bouncer';
 
 export type TFrontmatter = {
   icon?: string;
@@ -60,21 +60,18 @@ export default function Core({ frontmatter, body = null }: TCore) {
   switch (true) {
     case isFallmanager:
       fullScreen = true;
-      app = <Fallmanager />;
+      app = (
+        <Bouncer>
+          <Fallmanager />
+        </Bouncer>
+      );
       break;
-
-    case isNewCartridge:
-      app = <NewCartridge />;
-      break;
-
     case isCV:
       app = <CV mode="app" markdown={body} />;
       break;
-
     case isFlickr:
       app = <Flickr mode="app" id="72177720326317140" />;
       break;
-
     default:
       break;
   }

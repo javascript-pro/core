@@ -11,6 +11,7 @@ import {
   Tooltip,
   FormLabel,
   useTheme,
+  Typography,
 } from '@mui/material';
 import {
   useSlice,
@@ -73,45 +74,22 @@ export default function JD() {
 
   return (
     <Box sx={{ py: 0 }}>
-      <FormLabel component="legend" sx={{ my: 2 }}>
-        Paste a job description and tap “Analyse”. Our AI will assess how well
-        it matches the skills and experience in our CV, from either a 1st or 3rd
-        party perspective. Try it out with one of these example jobs — one’s a{' '}
-        <a
-          href="/txt/goodFit.txt"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ textDecoration: 'none', color: linkCol, fontWeight: 'bold' }}
-        >
-          good fit
-        </a>
-        , the other{' '}
-        <a
-          href="/txt/badFit.txt"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ textDecoration: 'none', color: linkCol, fontWeight: 'bold' }}
-        >
-          isn’t
-        </a>
-        .
-      </FormLabel>
-
       <RadioGroup
         row
         value={viewpoint}
         onChange={handleViewpointChange}
-        sx={{ mb: 3 }}
+        sx={{ my: 2 }}
       >
-        <FormControlLabel
-          value="third"
-          control={<Radio />}
-          label="3rd person (The candidate is...)"
-        />
+        
         <FormControlLabel
           value="first"
           control={<Radio />}
           label="1st person (I am...)"
+        />
+        <FormControlLabel
+          value="third"
+          control={<Radio />}
+          label="3rd person (The candidate is...)"
         />
       </RadioGroup>
 
@@ -160,6 +138,30 @@ export default function JD() {
           />
         </>
       )}
+
+      <Typography>
+        Paste a job description and tap “Analyse”. Our AI will assess how well
+        it matches the skills and experience in our CV, from either a 1st or 3rd
+        party perspective. Try it out with one of these example jobs — one’s a{' '}
+        <a
+          href="/txt/goodFit.txt"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: 'none', color: linkCol, fontWeight: 'bold' }}
+        >
+          good fit
+        </a>
+        , the other{' '}
+        <a
+          href="/txt/badFit.txt"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: 'none', color: linkCol, fontWeight: 'bold' }}
+        >
+          isn’t
+        </a>
+        .
+      </Typography>
     </Box>
   );
 }

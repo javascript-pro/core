@@ -48,8 +48,8 @@ export default function Download(cv: any) {
       {/* <pre>markdown: {JSON.stringify(markdown, null, 2)}</pre> */}
       <MightyButton
         onClick={onDownloadClick}
-        variant="outlined"
-        label="Download"
+        variant="contained"
+        label="CV"
         icon="download"
       />
     </Box>

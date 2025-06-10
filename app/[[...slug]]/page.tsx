@@ -8,7 +8,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import { Core, Nav } from '../../gl-core';
-import { Bouncer } from '../../gl-core/cartridges/Bouncer';
 
 export type TPage = {
   slug?: string[];
@@ -158,12 +157,6 @@ export default async function Page({ params }: { params: any }) {
     } catch (error) {
       console.error('Failed to load markdown for', slugPath, error);
     }
-  }
-
-  if (frontmatter.bouncer === true) {
-    return (
-      <Bouncer slug="public" frontmatter={frontmatter} content={content} />
-    );
   }
 
   const navItem = findNavItem(slugPath, globalNav[0]);
