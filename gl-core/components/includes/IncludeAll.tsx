@@ -1,7 +1,7 @@
 'use client';
 import * as React from 'react';
 import { Box } from '@mui/material';
-import { Feedback } from "./"
+import { Feedback } from './';
 
 export default function IncludeAll() {
   return (
@@ -11,4 +11,3 @@ export default function IncludeAll() {
     </Box>
   );
 }
-

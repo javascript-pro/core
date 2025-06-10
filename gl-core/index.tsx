@@ -77,12 +77,12 @@ export {
   UbereduxProvider,
   useConfig,
   useIsMobile,
+  useFeedback,
   useVersion,
   useSlice,
   useDispatch,
   useKey,
   useVersionCheck,
-  useFeedback,
   setUbereduxKey,
   resetUberedux,
 };

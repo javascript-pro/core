@@ -6,10 +6,13 @@ import { Snackbar, Alert } from '@mui/material';
 import { TAuthForm } from '../../../gl-core/types';
 import { useFeedback, useDispatch } from '../../../gl-core';
 
+
 export default function Feedback({}: TAuthForm) {
   const feedback = useFeedback();
   const dispatch = useDispatch();
-  const turnOffFeedback = false;
+
+  console.log("FEEDBACK", feedback)
+  
 
   React.useEffect(() => {
     if (feedback && !feedback.hidden) {
@@ -21,17 +24,21 @@ export default function Feedback({}: TAuthForm) {
     }
   }, [feedback, dispatch]);
 
+  if (!feedback) return null
+
+  const {title, description, severity} = feedback;
+
   return (
     <Snackbar open anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}>
-      <Alert 
-        severity={"success"} 
-        sx={{ 
+      <Alert
+        severity={severity}
+        sx={{
           minWidth: 280,
         }}
       >
-        <strong>{"feedback.title"}</strong>
+        <strong>{title}</strong>
         <br />
-        {"feedback.description"}
+        {description}
       </Alert>
     </Snackbar>
   );
