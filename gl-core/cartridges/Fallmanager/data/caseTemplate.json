@@ -1,0 +1,79 @@
+{
+  "caseId": "",
+  "createdAt": "",
+  "updatedAt": "",
+  "caseClosed": false,
+  "metadata": {
+    "referenceNumber": "",
+    "accidentDate": "",
+    "accidentLocation": "",
+    "description": "",
+    "mandateReceived": false
+  },
+  "client": {
+    "firstName": "",
+    "lastName": "",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "isDriver": false,
+    "isOwner": false
+  },
+  "vehicle": {
+    "licensePlate": "",
+    "make": "",
+    "model": "",
+    "year": "",
+    "vehicleOwner": {
+      "name": "",
+      "address": "",
+      "phone": ""
+    }
+  },
+  "driver": {
+    "name": "",
+    "address": "",
+    "phone": "",
+    "licenseNumber": ""
+  },
+  "insurance": {
+    "insurerName": "",
+    "policyNumber": "",
+    "contactPerson": "",
+    "contactPhone": "",
+    "email": "",
+    "damageClaimReported": false,
+    "acknowledged": false
+  },
+  "policeReport": {
+    "reportNumber": "",
+    "station": "",
+    "officerName": "",
+    "contactPhone": "",
+    "reportAvailable": false
+  },
+  "expertOpinion": {
+    "appointed": false,
+    "expertName": "",
+    "reportDelivered": false,
+    "reportDate": "",
+    "damageValue": 0
+  },
+  "damages": [
+    {
+      "position": "",
+      "estimatedCost": 0,
+      "description": ""
+    }
+  ],
+  "authority": {
+    "prosecutorOffice": "",
+    "proceedingNumber": "",
+    "status": ""
+  },
+  "progress": {
+    "documentsReceived": [],
+    "correspondenceLog": [],
+    "actions": []
+  }
+}

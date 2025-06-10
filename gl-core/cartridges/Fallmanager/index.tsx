@@ -10,12 +10,7 @@ import {
   updateKey,
 } from './actions';
 import { UserInfo, StickyHeader } from './components';
-import {
-  UploadFile,
-  ViewCases,
-  NewCase,
-  Uploads,
-} from './components/screens';
+import { UploadFile, ViewCases, NewCase, Uploads } from './components/screens';
 
 export { UploadFile, ViewCases, NewCase, Uploads };
 export { Fallmanager, UserInfo, StickyHeader };

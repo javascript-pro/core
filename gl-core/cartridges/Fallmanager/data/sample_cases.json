@@ -1,0 +1,930 @@
+[
+  {
+    "caseId": "007e425d-f234-492f-80ff-64dc13b4ee67",
+    "createdAt": "2025-03-14T04:52:00",
+    "updatedAt": "2025-03-20T04:52:00",
+    "caseClosed": false,
+    "metadata": {
+      "referenceNumber": "AZ-9609-jw",
+      "accidentDate": "2025-03-17",
+      "accidentLocation": "Dorothe-Putz-Straße 4/7\n19020 Dresden",
+      "description": "Sed quod delectus ab. Consectetur vero sit explicabo distinctio occaecati.",
+      "mandateReceived": false
+    },
+    "client": {
+      "firstName": "Franz Josef",
+      "lastName": "Loos",
+      "address": "Evangelia-Steinberg-Weg 8/8\n11552 Eberswalde",
+      "phone": "(04000) 90333",
+      "email": "anne-rose51@hotmail.de",
+      "isDriver": false,
+      "isOwner": true
+    },
+    "vehicle": {
+      "licensePlate": "B-T-98",
+      "make": "Weinhage",
+      "model": "repellat",
+      "year": 2006,
+      "vehicleOwner": {
+        "name": "Ing. Britta Trapp",
+        "address": "Vincent-Scholtz-Weg 2\n97178 Haldensleben",
+        "phone": "03527 87476"
+      }
+    },
+    "driver": {
+      "name": "Aleksandr Zänker",
+      "address": "Pärtzeltplatz 259\n43294 Moers",
+      "phone": "+49(0)2810106986",
+      "licenseNumber": "D54280872"
+    },
+    "insurance": {
+      "insurerName": "Sontag",
+      "policyNumber": "P-99607860",
+      "contactPerson": "Herr Horst Geißler",
+      "contactPhone": "0591838523",
+      "email": "meisteranika@gmail.com",
+      "damageClaimReported": false,
+      "acknowledged": false
+    },
+    "policeReport": {
+      "reportNumber": "PR-410/79",
+      "station": "Schwarzenberg",
+      "officerName": "Lissy Pechel",
+      "contactPhone": "+49(0)2552 744834",
+      "reportAvailable": true
+    },
+    "expertOpinion": {
+      "appointed": false,
+      "expertName": "Reza Atzler-Schönland",
+      "reportDelivered": false,
+      "reportDate": "",
+      "damageValue": 8133
+    },
+    "damages": [
+      {
+        "position": "Position 1",
+        "estimatedCost": 1584,
+        "description": "Tenetur alias natus nam cupiditate doloribus aliquam cum."
+      }
+    ],
+    "authority": {
+      "prosecutorOffice": "Wismar",
+      "proceedingNumber": "ST-45071",
+      "status": "open"
+    },
+    "progress": {
+      "documentsReceived": [
+        "beatae.mp3",
+        "eaque.flac",
+        "et.js"
+      ],
+      "correspondenceLog": [
+        "Adipisci reiciendis tempora ducimus numquam."
+      ],
+      "actions": [
+        "generate dynamic web services",
+        "re-intermediate web-enabled e-markets",
+        "e-enable e-business synergies"
+      ]
+    }
+  },
+  {
+    "caseId": "0fbfcee5-4d95-4bbd-ac37-218d504791b9",
+    "createdAt": "2025-05-12T09:27:13",
+    "updatedAt": "2025-06-06T09:27:13",
+    "caseClosed": true,
+    "metadata": {
+      "referenceNumber": "AZ-0641-pX",
+      "accidentDate": "2025-05-11",
+      "accidentLocation": "Hanns-Ditschlerin-Ring 023\n08941 Stadtroda",
+      "description": "Veniam nobis esse ratione. Voluptas ducimus commodi voluptas.",
+      "mandateReceived": false
+    },
+    "client": {
+      "firstName": "Anatol",
+      "lastName": "Hübel",
+      "address": "Kabusstr. 8/6\n21988 Höxter",
+      "phone": "(00801) 21188",
+      "email": "tgerlach@web.de",
+      "isDriver": true,
+      "isOwner": false
+    },
+    "vehicle": {
+      "licensePlate": "KA-H-736",
+      "make": "Heinz Ruppert KGaA",
+      "model": "quae",
+      "year": 2010,
+      "vehicleOwner": {
+        "name": "Kenneth Seifert",
+        "address": "Diedrich-Ring-Straße 4/8\n02473 Bogen",
+        "phone": "+49(0)0178 067344"
+      }
+    },
+    "driver": {
+      "name": "Marek Wieloch",
+      "address": "Maurizio-Meister-Straße 8\n98151 Gotha",
+      "phone": "+49(0) 363160022",
+      "licenseNumber": "D67497583"
+    },
+    "insurance": {
+      "insurerName": "Bolzmann GmbH & Co. OHG",
+      "policyNumber": "P-89609657",
+      "contactPerson": "Herr Jose Berger B.Sc.",
+      "contactPhone": "+49(0)0526211019",
+      "email": "guntherscholl@trapp.com",
+      "damageClaimReported": true,
+      "acknowledged": false
+    },
+    "policeReport": {
+      "reportNumber": "PR-940/92",
+      "station": "Reutlingen",
+      "officerName": "Frederik Stumpf",
+      "contactPhone": "(08210) 99735",
+      "reportAvailable": true
+    },
+    "expertOpinion": {
+      "appointed": true,
+      "expertName": "Hansjürgen Junken-Dietz",
+      "reportDelivered": true,
+      "reportDate": "",
+      "damageValue": 9004
+    },
+    "damages": [
+      {
+        "position": "Position 1",
+        "estimatedCost": 813,
+        "description": "Qui quaerat totam laboriosam."
+      },
+      {
+        "position": "Position 2",
+        "estimatedCost": 1708,
+        "description": "Quidem in quasi iusto."
+      },
+      {
+        "position": "Position 3",
+        "estimatedCost": 1261,
+        "description": "Vero nulla odio dolores excepturi."
+      }
+    ],
+    "authority": {
+      "prosecutorOffice": "Suhl",
+      "proceedingNumber": "ST-77748",
+      "status": "closed"
+    },
+    "progress": {
+      "documentsReceived": [
+        "placeat.tiff"
+      ],
+      "correspondenceLog": [
+        "Deserunt voluptates iste unde."
+      ],
+      "actions": [
+        "monetize e-business platforms"
+      ]
+    }
+  },
+  {
+    "caseId": "24b072ef-a16c-4667-bfb6-7627f09c0b7c",
+    "createdAt": "2025-03-14T01:49:33",
+    "updatedAt": "2025-03-22T01:49:33",
+    "caseClosed": false,
+    "metadata": {
+      "referenceNumber": "AZ-2364-Co",
+      "accidentDate": "2025-04-14",
+      "accidentLocation": "Döhngasse 79\n45542 Wismar",
+      "description": "Exercitationem eos expedita. Voluptates quos nisi itaque error. Aliquid eos quae.",
+      "mandateReceived": false
+    },
+    "client": {
+      "firstName": "Kristina",
+      "lastName": "Kraushaar",
+      "address": "Kästerweg 5/2\n62268 Bad Kissingen",
+      "phone": "07216 58444",
+      "email": "bernfriedbirnbaum@juncken.net",
+      "isDriver": true,
+      "isOwner": false
+    },
+    "vehicle": {
+      "licensePlate": "BC-Z-81",
+      "make": "Schenk",
+      "model": "distinctio",
+      "year": 2006,
+      "vehicleOwner": {
+        "name": "Karoline Weiß MBA.",
+        "address": "Eberthallee 91\n67463 Pegnitz",
+        "phone": "+49 (0) 6498 238999"
+      }
+    },
+    "driver": {
+      "name": "Fadime Trupp",
+      "address": "Schuchhardtgasse 220\n39020 Mittweida",
+      "phone": "+49(0)0988 06289",
+      "licenseNumber": "D10012054"
+    },
+    "insurance": {
+      "insurerName": "Stiebitz KGaA",
+      "policyNumber": "P-29367778",
+      "contactPerson": "Herr Fedor Wilms",
+      "contactPhone": "+49(0)4402 822384",
+      "email": "sibille11@yahoo.de",
+      "damageClaimReported": false,
+      "acknowledged": true
+    },
+    "policeReport": {
+      "reportNumber": "PR-277/58",
+      "station": "Herzberg",
+      "officerName": "Carmen Möchlichen B.Sc.",
+      "contactPhone": "0568154667",
+      "reportAvailable": false
+    },
+    "expertOpinion": {
+      "appointed": true,
+      "expertName": "Inken Ullrich-Otto",
+      "reportDelivered": false,
+      "reportDate": "1993-07-15",
+      "damageValue": 5329
+    },
+    "damages": [
+      {
+        "position": "Position 1",
+        "estimatedCost": 2255,
+        "description": "Quisquam quia veritatis dolorem."
+      },
+      {
+        "position": "Position 2",
+        "estimatedCost": 1111,
+        "description": "Expedita itaque vitae dolorum."
+      }
+    ],
+    "authority": {
+      "prosecutorOffice": "Höxter",
+      "proceedingNumber": "ST-41406",
+      "status": "open"
+    },
+    "progress": {
+      "documentsReceived": [],
+      "correspondenceLog": [
+        "At dolorem pariatur dignissimos sint fuga sed.",
+        "Expedita rem eligendi impedit harum laudantium.",
+        "Dolor esse est ex culpa eaque assumenda."
+      ],
+      "actions": [
+        "grow collaborative e-business",
+        "morph innovative portals",
+        "engineer clicks-and-mortar systems"
+      ]
+    }
+  },
+  {
+    "caseId": "ade3dfb8-8c42-417c-bad1-7481059407a7",
+    "createdAt": "2025-04-26T15:53:41",
+    "updatedAt": "2025-05-13T15:53:41",
+    "caseClosed": false,
+    "metadata": {
+      "referenceNumber": "AZ-2565-xl",
+      "accidentDate": "2025-03-16",
+      "accidentLocation": "Ole-Trupp-Gasse 61\n73429 Ebersberg",
+      "description": "Repellendus necessitatibus ratione quos. Vel ex dignissimos repellat fugiat reiciendis nulla.",
+      "mandateReceived": true
+    },
+    "client": {
+      "firstName": "Andy",
+      "lastName": "Beckmann",
+      "address": "Caren-Meister-Weg 352\n59402 Dessau",
+      "phone": "03633 25327",
+      "email": "sontagtom@aol.de",
+      "isDriver": false,
+      "isOwner": false
+    },
+    "vehicle": {
+      "licensePlate": "HX-N-71",
+      "make": "Bauer AG",
+      "model": "voluptates",
+      "year": 2007,
+      "vehicleOwner": {
+        "name": "Hans-Theo Wilms-Klotz",
+        "address": "Rebecca-Eberhardt-Weg 0/1\n06375 Iserlohn",
+        "phone": "(06196) 89204"
+      }
+    },
+    "driver": {
+      "name": "Univ.Prof. Attila Tlustek MBA.",
+      "address": "Daniela-Ring-Gasse 25\n16166 Mallersdorf",
+      "phone": "+49(0)8603907071",
+      "licenseNumber": "D23265822"
+    },
+    "insurance": {
+      "insurerName": "Sorgatz Schacht GmbH",
+      "policyNumber": "P-30421684",
+      "contactPerson": "Herr Willibert Kambs B.Eng.",
+      "contactPhone": "+49(0) 884663430",
+      "email": "olachmann@martin.de",
+      "damageClaimReported": true,
+      "acknowledged": false
+    },
+    "policeReport": {
+      "reportNumber": "PR-695/00",
+      "station": "Mühlhausen",
+      "officerName": "Heide Döhn",
+      "contactPhone": "00153948949",
+      "reportAvailable": false
+    },
+    "expertOpinion": {
+      "appointed": false,
+      "expertName": "Nikolaos Hande",
+      "reportDelivered": false,
+      "reportDate": "",
+      "damageValue": 10857
+    },
+    "damages": [
+      {
+        "position": "Position 1",
+        "estimatedCost": 1127,
+        "description": "Ullam quas ipsam modi molestias incidunt optio."
+      },
+      {
+        "position": "Position 2",
+        "estimatedCost": 969,
+        "description": "Corporis eius eos aspernatur sit."
+      },
+      {
+        "position": "Position 3",
+        "estimatedCost": 2001,
+        "description": "Officiis impedit voluptas modi."
+      }
+    ],
+    "authority": {
+      "prosecutorOffice": "Lübben",
+      "proceedingNumber": "ST-98002",
+      "status": "pending"
+    },
+    "progress": {
+      "documentsReceived": [
+        "dolorem.mp4",
+        "laboriosam.txt"
+      ],
+      "correspondenceLog": [
+        "Aspernatur molestias odit officia temporibus.",
+        "Maiores quas voluptas quis quam similique.",
+        "Voluptatem cum dolore ab soluta ipsam."
+      ],
+      "actions": [
+        "reinvent rich initiatives",
+        "implement 24/365 e-services",
+        "target synergistic channels"
+      ]
+    }
+  },
+  {
+    "caseId": "f60bccd2-00c8-4863-9cf6-dd230ae2e52f",
+    "createdAt": "2025-05-21T10:34:43",
+    "updatedAt": "2025-05-26T10:34:43",
+    "caseClosed": true,
+    "metadata": {
+      "referenceNumber": "AZ-4174-Wm",
+      "accidentDate": "2025-05-09",
+      "accidentLocation": "Karl-August-Weimer-Platz 27\n78974 Wernigerode",
+      "description": "Ea quisquam fugit. Unde ipsam quae dolorem. Distinctio at nam nostrum mollitia officiis.",
+      "mandateReceived": true
+    },
+    "client": {
+      "firstName": "Frida",
+      "lastName": "Zimmer",
+      "address": "Anne-Rose-Döring-Allee 66\n93230 Ribnitz-Damgarten",
+      "phone": "04043 90777",
+      "email": "buttewiebke@gmx.de",
+      "isDriver": true,
+      "isOwner": true
+    },
+    "vehicle": {
+      "licensePlate": "HD-D-912",
+      "make": "Geisel",
+      "model": "provident",
+      "year": 2021,
+      "vehicleOwner": {
+        "name": "Univ.Prof. Anna-Lena Wohlgemut",
+        "address": "Johann-Zirme-Ring 463\n53539 Lemgo",
+        "phone": "+49(0)2523509103"
+      }
+    },
+    "driver": {
+      "name": "Klaudia Harloff-Thies",
+      "address": "Schmiedtweg 9/3\n68511 Nördlingen",
+      "phone": "+49(0)8926883802",
+      "licenseNumber": "D70628154"
+    },
+    "insurance": {
+      "insurerName": "Holt AG & Co. KGaA",
+      "policyNumber": "P-68354385",
+      "contactPerson": "Marlene Hendriks",
+      "contactPhone": "04612 925379",
+      "email": "rosalia14@gmx.de",
+      "damageClaimReported": false,
+      "acknowledged": true
+    },
+    "policeReport": {
+      "reportNumber": "PR-888/55",
+      "station": "Geldern",
+      "officerName": "Waldtraut Drub-Staude",
+      "contactPhone": "01309628117",
+      "reportAvailable": false
+    },
+    "expertOpinion": {
+      "appointed": false,
+      "expertName": "Kristiane Bohnbach MBA.",
+      "reportDelivered": false,
+      "reportDate": "1979-05-31",
+      "damageValue": 6174
+    },
+    "damages": [
+      {
+        "position": "Position 1",
+        "estimatedCost": 710,
+        "description": "In repellendus cupiditate maxime unde."
+      },
+      {
+        "position": "Position 2",
+        "estimatedCost": 2382,
+        "description": "Natus praesentium architecto explicabo."
+      },
+      {
+        "position": "Position 3",
+        "estimatedCost": 1175,
+        "description": "Voluptates autem inventore ullam distinctio impedit eius."
+      }
+    ],
+    "authority": {
+      "prosecutorOffice": "Bützow",
+      "proceedingNumber": "ST-47620",
+      "status": "pending"
+    },
+    "progress": {
+      "documentsReceived": [],
+      "correspondenceLog": [
+        "Facilis excepturi eum."
+      ],
+      "actions": [
+        "aggregate magnetic experiences",
+        "visualize user-centric architectures"
+      ]
+    }
+  },
+  {
+    "caseId": "086f0d08-c45b-4043-ba9c-9391a6a2777a",
+    "createdAt": "2025-04-20T14:37:13",
+    "updatedAt": "2025-04-27T14:37:13",
+    "caseClosed": true,
+    "metadata": {
+      "referenceNumber": "AZ-4775-fz",
+      "accidentDate": "2025-03-03",
+      "accidentLocation": "Mansring 4\n52945 Zeulenroda",
+      "description": "Praesentium nesciunt nesciunt. Dolorum unde eligendi vero temporibus architecto numquam ratione.",
+      "mandateReceived": true
+    },
+    "client": {
+      "firstName": "Marianne",
+      "lastName": "Hänel",
+      "address": "Erik-Lange-Platz 7/8\n75048 Northeim",
+      "phone": "05988 657708",
+      "email": "milkahesse@googlemail.com",
+      "isDriver": false,
+      "isOwner": false
+    },
+    "vehicle": {
+      "licensePlate": "OD-SK-183",
+      "make": "Scholz",
+      "model": "eligendi",
+      "year": 2006,
+      "vehicleOwner": {
+        "name": "Univ.Prof. Betty Jacobi Jäckel MBA.",
+        "address": "Gießstraße 7\n52344 Demmin",
+        "phone": "+49 (0) 1661 979414"
+      }
+    },
+    "driver": {
+      "name": "Theodoros Ritter",
+      "address": "Alban-Bauer-Platz 1\n71709 Hofgeismar",
+      "phone": "+49 (0) 1536 985995",
+      "licenseNumber": "D85358764"
+    },
+    "insurance": {
+      "insurerName": "Bolander",
+      "policyNumber": "P-61594549",
+      "contactPerson": "Wolfram Tintzmann",
+      "contactPhone": "+49(0) 611358959",
+      "email": "diether90@doerr.net",
+      "damageClaimReported": false,
+      "acknowledged": false
+    },
+    "policeReport": {
+      "reportNumber": "PR-705/77",
+      "station": "Peine",
+      "officerName": "Univ.Prof. Tobias Kühnert",
+      "contactPhone": "+49(0)8114 917406",
+      "reportAvailable": false
+    },
+    "expertOpinion": {
+      "appointed": true,
+      "expertName": "Ladislaus Höfig",
+      "reportDelivered": true,
+      "reportDate": "1978-08-01",
+      "damageValue": 3931
+    },
+    "damages": [
+      {
+        "position": "Position 1",
+        "estimatedCost": 1587,
+        "description": "Dicta vero voluptas deserunt."
+      },
+      {
+        "position": "Position 2",
+        "estimatedCost": 1186,
+        "description": "Impedit ipsum esse eius."
+      }
+    ],
+    "authority": {
+      "prosecutorOffice": "Sangerhausen",
+      "proceedingNumber": "ST-08168",
+      "status": "pending"
+    },
+    "progress": {
+      "documentsReceived": [],
+      "correspondenceLog": [
+        "Nisi natus harum ad optio praesentium expedita.",
+        "Iusto sint consequuntur rerum."
+      ],
+      "actions": [
+        "re-contextualize user-centric action-items",
+        "synthesize holistic channels"
+      ]
+    }
+  },
+  {
+    "caseId": "06406e2c-e88d-4455-9440-36a300907307",
+    "createdAt": "2025-03-19T01:07:44",
+    "updatedAt": "2025-04-11T01:07:44",
+    "caseClosed": false,
+    "metadata": {
+      "referenceNumber": "AZ-4260-nw",
+      "accidentDate": "2025-02-13",
+      "accidentLocation": "Miroslawa-Juncken-Ring 908\n56877 Osterode am Harz",
+      "description": "Illum amet officia ut. Beatae excepturi harum necessitatibus qui rerum error.",
+      "mandateReceived": true
+    },
+    "client": {
+      "firstName": "Brunhilde",
+      "lastName": "Schmidtke",
+      "address": "Holtgasse 03\n20533 Strasburg",
+      "phone": "00407 10104",
+      "email": "julia05@googlemail.com",
+      "isDriver": true,
+      "isOwner": false
+    },
+    "vehicle": {
+      "licensePlate": "LU-G-17",
+      "make": "Hartmann Nette e.V.",
+      "model": "aspernatur",
+      "year": 2006,
+      "vehicleOwner": {
+        "name": "Ismail Zahn",
+        "address": "Ringplatz 77\n36868 Berchtesgaden",
+        "phone": "(09630) 487566"
+      }
+    },
+    "driver": {
+      "name": "Gönül Etzler-Oderwald",
+      "address": "Klappring 041\n78293 Bremen",
+      "phone": "0877345869",
+      "licenseNumber": "D00727004"
+    },
+    "insurance": {
+      "insurerName": "Kaul",
+      "policyNumber": "P-65162737",
+      "contactPerson": "Diane Eimer",
+      "contactPhone": "03120 18685",
+      "email": "eminjopich@googlemail.com",
+      "damageClaimReported": true,
+      "acknowledged": true
+    },
+    "policeReport": {
+      "reportNumber": "PR-752/00",
+      "station": "Büsingen am Hochrhein",
+      "officerName": "Klaus-Peter Losekann",
+      "contactPhone": "(02726) 41854",
+      "reportAvailable": true
+    },
+    "expertOpinion": {
+      "appointed": true,
+      "expertName": "Wojciech Dörschner",
+      "reportDelivered": false,
+      "reportDate": "",
+      "damageValue": 3815
+    },
+    "damages": [
+      {
+        "position": "Position 1",
+        "estimatedCost": 2180,
+        "description": "Natus quos at adipisci."
+      },
+      {
+        "position": "Position 2",
+        "estimatedCost": 514,
+        "description": "Ratione modi aut voluptatum iste omnis alias."
+      }
+    ],
+    "authority": {
+      "prosecutorOffice": "Ebermannstadt",
+      "proceedingNumber": "ST-10651",
+      "status": "pending"
+    },
+    "progress": {
+      "documentsReceived": [
+        "dicta.pptx",
+        "quasi.mp4"
+      ],
+      "correspondenceLog": [
+        "Sunt voluptatem similique rem.",
+        "Iusto tenetur eum labore dolorum veritatis quod.",
+        "Ipsam eos porro vero sint."
+      ],
+      "actions": [
+        "visualize enterprise methodologies"
+      ]
+    }
+  },
+  {
+    "caseId": "8f3b03ee-3994-47e6-8e7e-7eb258e83826",
+    "createdAt": "2025-03-13T11:30:48",
+    "updatedAt": "2025-03-28T11:30:48",
+    "caseClosed": false,
+    "metadata": {
+      "referenceNumber": "AZ-2548-Dt",
+      "accidentDate": "2025-04-13",
+      "accidentLocation": "Maria-Luise-Schaaf-Straße 3/0\n15138 Garmisch-Partenkirchen",
+      "description": "Repellendus debitis et odit facilis doloremque dolorem. Saepe nam perspiciatis reiciendis.",
+      "mandateReceived": true
+    },
+    "client": {
+      "firstName": "Lambert",
+      "lastName": "Pölitz",
+      "address": "Isidor-Koch II-Allee 125\n84843 Brilon",
+      "phone": "+49(0) 269114399",
+      "email": "schottinmarliese@rohleder.com",
+      "isDriver": false,
+      "isOwner": false
+    },
+    "vehicle": {
+      "licensePlate": "MZ-JG-745",
+      "make": "Höfig AG",
+      "model": "animi",
+      "year": 2006,
+      "vehicleOwner": {
+        "name": "Dipl.-Ing. Alberto Pruschke",
+        "address": "John-Geisler-Allee 0/0\n00757 Iserlohn",
+        "phone": "0433817713"
+      }
+    },
+    "driver": {
+      "name": "Horst-Dieter Pölitz-Pruschke",
+      "address": "Weihmannweg 319\n66392 Pößneck",
+      "phone": "(05964) 007703",
+      "licenseNumber": "D95725713"
+    },
+    "insurance": {
+      "insurerName": "Hamann",
+      "policyNumber": "P-72345139",
+      "contactPerson": "Conny Karz",
+      "contactPhone": "(01047) 087217",
+      "email": "bertramjaentsch@aol.de",
+      "damageClaimReported": true,
+      "acknowledged": false
+    },
+    "policeReport": {
+      "reportNumber": "PR-315/88",
+      "station": "Waren",
+      "officerName": "Hiltraud Harloff",
+      "contactPhone": "+49(0) 016322097",
+      "reportAvailable": false
+    },
+    "expertOpinion": {
+      "appointed": true,
+      "expertName": "Herr Niklas Reuter B.Eng.",
+      "reportDelivered": false,
+      "reportDate": "",
+      "damageValue": 708
+    },
+    "damages": [
+      {
+        "position": "Position 1",
+        "estimatedCost": 1680,
+        "description": "Et ipsam placeat exercitationem cupiditate tempora ab."
+      }
+    ],
+    "authority": {
+      "prosecutorOffice": "Rochlitz",
+      "proceedingNumber": "ST-27802",
+      "status": "pending"
+    },
+    "progress": {
+      "documentsReceived": [],
+      "correspondenceLog": [
+        "Architecto eius eveniet tenetur eius veniam.",
+        "Quae eveniet unde cumque nisi optio nobis."
+      ],
+      "actions": [
+        "incentivize rich e-services"
+      ]
+    }
+  },
+  {
+    "caseId": "4538f43d-7adf-4b74-a1dd-8a4d7ec27890",
+    "createdAt": "2025-06-05T04:31:09",
+    "updatedAt": "2025-06-07T04:31:09",
+    "caseClosed": true,
+    "metadata": {
+      "referenceNumber": "AZ-4709-df",
+      "accidentDate": "2025-02-14",
+      "accidentLocation": "Aleksej-Barkholz-Gasse 7\n93549 Nabburg",
+      "description": "Ad minus dignissimos sed facilis voluptas. Quo unde quos.",
+      "mandateReceived": true
+    },
+    "client": {
+      "firstName": "Margarethe",
+      "lastName": "Jacobi Jäckel",
+      "address": "Loosplatz 44\n26081 Lobenstein",
+      "phone": "03816614556",
+      "email": "mosemannfredy@aol.de",
+      "isDriver": true,
+      "isOwner": false
+    },
+    "vehicle": {
+      "licensePlate": "LD-J-5151",
+      "make": "Meyer AG",
+      "model": "a",
+      "year": 2012,
+      "vehicleOwner": {
+        "name": "Krzysztof Briemer",
+        "address": "Schmidtstr. 44\n77954 Staßfurt",
+        "phone": "+49(0) 396451128"
+      }
+    },
+    "driver": {
+      "name": "Univ.Prof. Dörte Tlustek",
+      "address": "Urs-Kitzmann-Gasse 3\n78967 Augsburg",
+      "phone": "+49(0)2490 443928",
+      "licenseNumber": "D92144840"
+    },
+    "insurance": {
+      "insurerName": "Gröttner Seidel e.V.",
+      "policyNumber": "P-87762613",
+      "contactPerson": "Aziz Hamann B.Sc.",
+      "contactPhone": "+49(0) 206180093",
+      "email": "dussen-vansylvio@wilms.com",
+      "damageClaimReported": true,
+      "acknowledged": false
+    },
+    "policeReport": {
+      "reportNumber": "PR-608/34",
+      "station": "Wesel",
+      "officerName": "Bernfried Salz-Matthäi",
+      "contactPhone": "05453 09661",
+      "reportAvailable": true
+    },
+    "expertOpinion": {
+      "appointed": true,
+      "expertName": "Walther Herrmann",
+      "reportDelivered": false,
+      "reportDate": "1974-01-01",
+      "damageValue": 11518
+    },
+    "damages": [
+      {
+        "position": "Position 1",
+        "estimatedCost": 1893,
+        "description": "Laborum doloremque inventore id optio dolores omnis."
+      },
+      {
+        "position": "Position 2",
+        "estimatedCost": 1526,
+        "description": "Veniam commodi voluptate."
+      }
+    ],
+    "authority": {
+      "prosecutorOffice": "Bamberg",
+      "proceedingNumber": "ST-78512",
+      "status": "open"
+    },
+    "progress": {
+      "documentsReceived": [
+        "quae.webm"
+      ],
+      "correspondenceLog": [
+        "Eos maxime enim porro est.",
+        "Mollitia aut veniam asperiores debitis aliquam.",
+        "Voluptatibus incidunt blanditiis nulla."
+      ],
+      "actions": [
+        "drive user-centric e-services",
+        "deploy compelling content"
+      ]
+    }
+  },
+  {
+    "caseId": "8c52ea9b-5c0f-42fe-b919-f5a281a402c0",
+    "createdAt": "2025-06-06T03:56:03",
+    "updatedAt": "2025-06-15T03:56:03",
+    "caseClosed": false,
+    "metadata": {
+      "referenceNumber": "AZ-6398-CA",
+      "accidentDate": "2025-02-14",
+      "accidentLocation": "Toralf-Eberth-Straße 366\n22651 Borken",
+      "description": "Fugiat consequatur eaque ipsum. Possimus reprehenderit ut facere quod beatae libero earum.",
+      "mandateReceived": false
+    },
+    "client": {
+      "firstName": "Anke",
+      "lastName": "Jessel",
+      "address": "Jonas-Geißler-Gasse 6\n95523 Querfurt",
+      "phone": "08354 08223",
+      "email": "iklemt@hotmail.de",
+      "isDriver": false,
+      "isOwner": true
+    },
+    "vehicle": {
+      "licensePlate": "WZ-H-24",
+      "make": "Tintzmann Mans GmbH & Co. OHG",
+      "model": "itaque",
+      "year": 2023,
+      "vehicleOwner": {
+        "name": "Prof. Fanny Hendriks B.Eng.",
+        "address": "Judith-Grein Groth-Weg 7/4\n71055 Kehl",
+        "phone": "(04599) 638108"
+      }
+    },
+    "driver": {
+      "name": "Czeslaw Misicher",
+      "address": "Krebsstraße 4/9\n92684 Böblingen",
+      "phone": "00025 23280",
+      "licenseNumber": "D18293337"
+    },
+    "insurance": {
+      "insurerName": "Zirme e.V.",
+      "policyNumber": "P-27388205",
+      "contactPerson": "René Klotz",
+      "contactPhone": "05792 73986",
+      "email": "gislinde19@lorch.net",
+      "damageClaimReported": true,
+      "acknowledged": false
+    },
+    "policeReport": {
+      "reportNumber": "PR-647/00",
+      "station": "Lübben",
+      "officerName": "Gordana Junk",
+      "contactPhone": "+49(0)5354951781",
+      "reportAvailable": true
+    },
+    "expertOpinion": {
+      "appointed": false,
+      "expertName": "Prof. Mina Bonbach B.A.",
+      "reportDelivered": true,
+      "reportDate": "",
+      "damageValue": 13244
+    },
+    "damages": [
+      {
+        "position": "Position 1",
+        "estimatedCost": 997,
+        "description": "Adipisci fuga soluta quaerat consequuntur at."
+      },
+      {
+        "position": "Position 2",
+        "estimatedCost": 584,
+        "description": "Culpa consequuntur assumenda reprehenderit."
+      },
+      {
+        "position": "Position 3",
+        "estimatedCost": 2250,
+        "description": "Illo rerum voluptatum nobis."
+      }
+    ],
+    "authority": {
+      "prosecutorOffice": "Main-Höchst",
+      "proceedingNumber": "ST-05957",
+      "status": "closed"
+    },
+    "progress": {
+      "documentsReceived": [
+        "recusandae.js",
+        "debitis.json",
+        "sint.json"
+      ],
+      "correspondenceLog": [
+        "Impedit molestiae fugit in unde.",
+        "Iusto aliquam minima explicabo totam placeat aut."
+      ],
+      "actions": [
+        "deliver frictionless networks"
+      ]
+    }
+  }
+]

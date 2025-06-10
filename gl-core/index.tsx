@@ -21,7 +21,13 @@ import {
   ShareMenu,
   IncludeAll,
 } from './components';
-import { useConfig, useIsMobile, useVersion, useFeedback } from './hooks';
+import {
+  useLoading,
+  useConfig,
+  useIsMobile,
+  useVersion,
+  useFeedback,
+} from './hooks';
 
 import {
   Uberedux,
@@ -72,9 +78,8 @@ export {
   ShareMenu,
   IncludeAll,
 };
+export { Uberedux, UbereduxProvider, setUbereduxKey, resetUberedux };
 export {
-  Uberedux,
-  UbereduxProvider,
   useConfig,
   useIsMobile,
   useFeedback,
@@ -82,9 +87,8 @@ export {
   useSlice,
   useDispatch,
   useKey,
+  useLoading,
   useVersionCheck,
-  setUbereduxKey,
-  resetUberedux,
 };
 export { CV };
 export { Flash, MovieClip, Photo };

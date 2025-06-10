@@ -2,7 +2,7 @@
 // core/gl-core/cartridges/Fallmanager/components/StickyHeader.tsx
 import * as React from 'react';
 import config from '../config.json';
-import menu from '../menu.json';
+import menu from '../data/menu.json';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import {

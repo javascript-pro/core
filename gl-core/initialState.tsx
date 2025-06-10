@@ -13,6 +13,7 @@ export const initialState: any = {
   version: pJSON.version,
   persisted: Date.now(),
   config,
+  isLoading: false,
   feedbackHidden: false,
   feedback: null,
   feedback_: {

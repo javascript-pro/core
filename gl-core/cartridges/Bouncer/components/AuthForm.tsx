@@ -15,8 +15,10 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import { Icon, MightyButton, useDispatch } from '../../../../gl-core';
+import { Theme, Icon, MightyButton, useDispatch } from '../../../../gl-core';
 import { firebaseAuth } from '../../Bouncer';
+
+import config from '../../../config.json';
 
 function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -62,58 +64,60 @@ export default function AuthForm({ frontmatter }: TAuthForm) {
   }, [email, password, dispatch]);
 
   return (
-    <Container maxWidth={'xs'} sx={{ pt: 2 }}>
-      <Card>
-        <CardHeader
-          avatar={
-            <IconButton onClick={handleBack}>
-              <Icon icon="left" />
-            </IconButton>
-          }
-          title={<Typography variant="h6">{title}</Typography>}
-          subheader={<Typography variant="body2">{description}</Typography>}
-        />
-        <CardContent>
-          <TextField
-            id="email"
-            autoFocus
-            label="Email"
-            type="email"
-            fullWidth
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+    <Theme theme={config.themes.dark as any}>
+      <Container maxWidth={'xs'} sx={{ pt: 2 }}>
+        <Card>
+          <CardHeader
+            avatar={
+              <IconButton onClick={handleBack}>
+                <Icon icon="left" />
+              </IconButton>
+            }
+            title={<Typography variant="h6">{title}</Typography>}
+            subheader={<Typography variant="body2">{description}</Typography>}
           />
-          <TextField
-            id="password"
-            label="Password"
-            type="password"
-            fullWidth
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            sx={{ mt: 2 }}
-          />
-        </CardContent>
+          <CardContent>
+            <TextField
+              id="email"
+              autoFocus
+              label="Email"
+              type="email"
+              fullWidth
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <TextField
+              id="password"
+              label="Password"
+              type="password"
+              fullWidth
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              sx={{ mt: 2 }}
+            />
+          </CardContent>
 
-        <CardActions>
-          <Box sx={{ flexGrow: 1 }} />
-          {canResetPassword && (
-            <Box>
-              <Button onClick={() => console.log('Password?')}>
-                Password?
-              </Button>
-            </Box>
-          )}
+          <CardActions>
+            <Box sx={{ flexGrow: 1 }} />
+            {canResetPassword && (
+              <Box>
+                <Button onClick={() => console.log('Password?')}>
+                  Password?
+                </Button>
+              </Box>
+            )}
 
-          <MightyButton
-            sx={{ mx: 1, mb: 1 }}
-            onClick={onSignIn}
-            variant={isFormValid ? 'contained' : 'outlined'}
-            disabled={!isFormValid}
-            label="Sign in"
-            icon={icon}
-          />
-        </CardActions>
-      </Card>
-    </Container>
+            <MightyButton
+              sx={{ mx: 1, mb: 1 }}
+              onClick={onSignIn}
+              variant={isFormValid ? 'contained' : 'outlined'}
+              disabled={!isFormValid}
+              label="Sign in"
+              icon={icon}
+            />
+          </CardActions>
+        </Card>
+      </Container>
+    </Theme>
   );
 }
