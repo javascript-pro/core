@@ -14,20 +14,12 @@ export default function SideAds({ children = null }: TSideAds) {
   return (
     <Box sx={{}}>
       <Advert
-        icon="admin"
-        title={'Admin'}
-        onClick={() => {
-          router.push(`/admin`);
-        }}
-      />
-
-      {/* <Advert
         icon="fallmanager"
         title={'Fallmanager'}
         onClick={() => {
           router.push(`/fallmanager`);
         }}
-      /> */}
+      />
 
       <Advert
         icon="flickr"

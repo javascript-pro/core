@@ -1,6 +1,8 @@
 'use client';
 // core/gl-core/cartridges/Bouncer/components/AuthForm.tsx
 import * as React from 'react';
+import { TAuthForm } from '../../../types';
+import { useRouter } from 'next/navigation';
 import {
   Box,
   IconButton,
@@ -12,8 +14,7 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import { Icon, navigateTo, useDispatch } from '../../../../gl-core';
-import { TAuthForm } from '../../../types';
+import { Icon, MightyButton, useDispatch } from '../../../../gl-core';
 import { firebaseAuth } from '../../Bouncer';
 
 function isValidEmail(email: string) {
@@ -22,16 +23,13 @@ function isValidEmail(email: string) {
 
 export default function AuthForm({ frontmatter }: TAuthForm) {
   const dispatch = useDispatch();
+  const router = useRouter();
   const canResetPassword = false;
-
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
-
-  const {
-    icon = 'signin',
-    title = 'Sign in to your account',
-    description = 'Enter your email and password',
-  } = frontmatter || {};
+  const title = 'Sign in';
+  const description = 'please';
+  const icon = 'signin';
 
   const isFormValid = React.useMemo(() => {
     return isValidEmail(email) && password.length >= 6;
@@ -44,6 +42,10 @@ export default function AuthForm({ frontmatter }: TAuthForm) {
         password,
       }),
     );
+  };
+
+  const handleBack = () => {
+    router.back();
   };
 
   React.useEffect(() => {
@@ -61,10 +63,9 @@ export default function AuthForm({ frontmatter }: TAuthForm) {
   return (
     <Card>
       <CardHeader
-        avatar={<Icon icon={icon} />}
-        action={
-          <IconButton onClick={() => dispatch(navigateTo('/'))}>
-            <Icon icon="close" />
+        avatar={
+          <IconButton onClick={handleBack}>
+            <Icon icon="left" />
           </IconButton>
         }
         title={<Typography variant="h6">{title}</Typography>}
@@ -92,19 +93,21 @@ export default function AuthForm({ frontmatter }: TAuthForm) {
       </CardContent>
 
       <CardActions>
+        <Box sx={{ flexGrow: 1 }} />
         {canResetPassword && (
           <Box>
             <Button onClick={() => console.log('Password?')}>Password?</Button>
           </Box>
         )}
-        <Button
-          fullWidth
+
+        <MightyButton
+          sx={{ mx: 1, mb: 1 }}
           onClick={onSignIn}
           variant={isFormValid ? 'contained' : 'outlined'}
           disabled={!isFormValid}
-        >
-          Sign In
-        </Button>
+          label="Sign in"
+          icon={icon}
+        />
       </CardActions>
     </Card>
   );

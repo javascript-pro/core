@@ -1,6 +1,5 @@
 // core/gl-core/cartridges/Admin/components/Layout.tsx
 'use client';
-
 import * as React from 'react';
 import { TLayout } from '../types';
 import {
