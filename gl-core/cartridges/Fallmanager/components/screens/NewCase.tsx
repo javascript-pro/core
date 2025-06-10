@@ -15,7 +15,7 @@ import {
   Checkbox,
   Grid,
 } from '@mui/material';
-import {createFall} from '../../../Fallmanager';
+import { createFall } from '../../../Fallmanager';
 
 export type CaseFormValues = z.infer<typeof caseSchema>;
 
@@ -25,37 +25,37 @@ export default function NewCase() {
     defaultValues: {
       caseClosed: false,
       metadata: {
-        mandateReceived: false
+        mandateReceived: false,
       },
       client: {
         isDriver: false,
-        isOwner: false
+        isOwner: false,
       },
       insurance: {
         damageClaimReported: false,
-        acknowledged: false
+        acknowledged: false,
       },
       policeReport: {
-        reportAvailable: false
+        reportAvailable: false,
       },
       expertOpinion: {
         appointed: false,
         reportDelivered: false,
-        damageValue: 0
+        damageValue: 0,
       },
       damages: [],
       progress: {
         documentsReceived: [],
         correspondenceLog: [],
-        actions: []
-      }
-    }
+        actions: [],
+      },
+    },
   });
 
   const {
     register,
     handleSubmit,
-    formState: { errors }
+    formState: { errors },
   } = methods;
 
   const onSubmit = async (data: CaseFormValues) => {
@@ -81,13 +81,25 @@ export default function NewCase() {
             <Typography variant="h6">Unfalldaten</Typography>
             <Grid container spacing={2}>
               <Grid size={{ xs: 12, sm: 6 }}>
-                <TextField label="Aktenzeichen" fullWidth {...register('metadata.referenceNumber')} />
+                <TextField
+                  label="Aktenzeichen"
+                  fullWidth
+                  {...register('metadata.referenceNumber')}
+                />
               </Grid>
               <Grid size={{ xs: 12, sm: 6 }}>
-                <TextField label="Unfalldatum" fullWidth {...register('metadata.accidentDate')} />
+                <TextField
+                  label="Unfalldatum"
+                  fullWidth
+                  {...register('metadata.accidentDate')}
+                />
               </Grid>
               <Grid size={{ xs: 12 }}>
-                <TextField label="Unfallort" fullWidth {...register('metadata.accidentLocation')} />
+                <TextField
+                  label="Unfallort"
+                  fullWidth
+                  {...register('metadata.accidentLocation')}
+                />
               </Grid>
               <Grid size={{ xs: 12 }}>
                 <TextField
@@ -100,7 +112,9 @@ export default function NewCase() {
               </Grid>
               <Grid size={{ xs: 12 }}>
                 <FormControlLabel
-                  control={<Checkbox {...register('metadata.mandateReceived')} />}
+                  control={
+                    <Checkbox {...register('metadata.mandateReceived')} />
+                  }
                   label="Mandat erhalten"
                 />
               </Grid>
@@ -112,23 +126,49 @@ export default function NewCase() {
             <Typography variant="h6">Mandant</Typography>
             <Grid container spacing={2}>
               <Grid size={{ xs: 12, sm: 6 }}>
-                <TextField label="Vorname" fullWidth {...register('client.firstName')} />
+                <TextField
+                  label="Vorname"
+                  fullWidth
+                  {...register('client.firstName')}
+                />
               </Grid>
               <Grid size={{ xs: 12, sm: 6 }}>
-                <TextField label="Nachname" fullWidth {...register('client.lastName')} />
+                <TextField
+                  label="Nachname"
+                  fullWidth
+                  {...register('client.lastName')}
+                />
               </Grid>
               <Grid size={{ xs: 12 }}>
-                <TextField label="Adresse" fullWidth {...register('client.address')} />
+                <TextField
+                  label="Adresse"
+                  fullWidth
+                  {...register('client.address')}
+                />
               </Grid>
               <Grid size={{ xs: 12, sm: 6 }}>
-                <TextField label="Telefon" fullWidth {...register('client.phone')} />
+                <TextField
+                  label="Telefon"
+                  fullWidth
+                  {...register('client.phone')}
+                />
               </Grid>
               <Grid size={{ xs: 12, sm: 6 }}>
-                <TextField label="E-Mail" fullWidth {...register('client.email')} />
+                <TextField
+                  label="E-Mail"
+                  fullWidth
+                  {...register('client.email')}
+                />
               </Grid>
               <Grid size={{ xs: 12 }}>
-                <FormControlLabel control={<Checkbox {...register('client.isDriver')} />} label="Ist Fahrer" />
-                <FormControlLabel control={<Checkbox {...register('client.isOwner')} />} label="Ist Halter" />
+                <FormControlLabel
+                  control={<Checkbox {...register('client.isDriver')} />}
+                  label="Ist Fahrer"
+                />
+                <FormControlLabel
+                  control={<Checkbox {...register('client.isOwner')} />}
+                  label="Ist Halter"
+                />
               </Grid>
             </Grid>
           </Stack>

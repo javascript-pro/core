@@ -67,7 +67,7 @@ export const caseSchema = z.object({
       position: z.string(),
       estimatedCost: z.number(),
       description: z.string(),
-    })
+    }),
   ),
   authority: z.object({
     prosecutorOffice: z.string(),
