@@ -19,6 +19,7 @@ import {
   SideAds,
   TopRightMenu,
   ShareMenu,
+  IncludeAll,
 } from './components';
 import { useConfig, useIsMobile, useVersion, useFeedback } from './hooks';
 
@@ -69,6 +70,7 @@ export {
   SideAds,
   TopRightMenu,
   ShareMenu,
+  IncludeAll,
 };
 export {
   Uberedux,

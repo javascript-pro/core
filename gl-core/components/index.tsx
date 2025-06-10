@@ -1,3 +1,4 @@
+import { IncludeAll, Advert, Feedback, Status } from './includes';
 import {
   NextPrevious,
   Nav,
@@ -10,11 +11,9 @@ import {
   TopRightMenu,
   ShareMenu,
 } from './nav';
-import { Advert, Feedback, Status } from './includes';
 import { Header, Footer, RenderMarkdown } from './layout';
 
-export { Advert, Feedback, Status };
-
+export { IncludeAll, Advert, Feedback, Status };
 export { Header, Footer, RenderMarkdown };
 export {
   NextPrevious,

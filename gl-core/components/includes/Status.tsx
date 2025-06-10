@@ -1,6 +1,6 @@
 'use client';
 import * as React from 'react';
-import { Alert, Button, IconButton } from '@mui/material';
+import { Alert, IconButton } from '@mui/material';
 import { useSlice, Icon, useDispatch } from '../../../gl-core';
 import { toggleStatus } from '../../../gl-core';
 

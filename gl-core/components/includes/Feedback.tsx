@@ -9,7 +9,7 @@ import { useFeedback, useDispatch } from '../../../gl-core';
 export default function Feedback({}: TAuthForm) {
   const feedback = useFeedback();
   const dispatch = useDispatch();
-  const turnOffFeedback = true;
+  const turnOffFeedback = false;
 
   React.useEffect(() => {
     if (feedback && !feedback.hidden) {
@@ -21,15 +21,17 @@ export default function Feedback({}: TAuthForm) {
     }
   }, [feedback, dispatch]);
 
-  if (turnOffFeedback || !feedback || feedback.hidden || !feedback.title)
-    return null;
-
   return (
-    <Snackbar open anchorOrigin={{ vertical: 'top', horizontal: 'left' }}>
-      <Alert severity={feedback.severity} sx={{ width: '100%' }}>
-        <strong>{feedback.title}</strong>
+    <Snackbar open anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}>
+      <Alert 
+        severity={"success"} 
+        sx={{ 
+          minWidth: 280,
+        }}
+      >
+        <strong>{"feedback.title"}</strong>
         <br />
-        {feedback.description}
+        {"feedback.description"}
       </Alert>
     </Snackbar>
   );

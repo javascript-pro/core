@@ -20,10 +20,10 @@ import {
   useIsMobile,
   SideAds,
   useVersionCheck,
+  IncludeAll,
 } from '../gl-core';
 import { Flickr } from './cartridges/Flickr';
 import { CV } from './cartridges/CV';
-import { NewCartridge } from './cartridges/NewCartridge';
 import { Fallmanager } from './cartridges/Fallmanager';
 import { Bouncer, useUser } from './cartridges/Bouncer';
 
@@ -62,6 +62,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
       fullScreen = true;
       app = (
         <Bouncer>
+          <IncludeAll />
           <Fallmanager />
         </Bouncer>
       );
@@ -92,6 +93,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
   return (
     <Theme theme={config.themes.dark as any}>
       <CssBaseline />
+      <IncludeAll />
       <Container id="core">
         <Header frontmatter={frontmatter} />
         <Grid container spacing={1}>
