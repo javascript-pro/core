@@ -42,6 +42,14 @@ export default function SideAds({ children = null }: TSideAds) {
           router.push(`/life/food/lemon-meringue-pie`);
         }}
       />
+
+      <Advert
+        icon="dog"
+        title={'dog'}
+        onClick={() => {
+          router.push(`/balance/puppy-thing`);
+        }}
+      />
     </Box>
   );
 }

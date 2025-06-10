@@ -135,7 +135,7 @@ export type TIcon = {
   icon:
     | 'more'
     | 'plus'
-        | 'dog'
+    | 'dog'
     | 'about'
     | 'clients'
     | 'link'

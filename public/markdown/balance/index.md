@@ -14,4 +14,3 @@ image: /png/default.png
 ### Is _this_ Singularity?
 
 > "Put that kind of AI into a drone with a gun... then yeh, you've got a big problem." _Bloke down the pub said, yesterday_
-
