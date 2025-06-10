@@ -57,6 +57,7 @@ export default function StickyHeader() {
         avatar={
           <IconButton onClick={handleLogoClick} sx={{ p: 0 }}>
             <Image
+              priority
               src="/_clients_/fallmanager/jpg/logo.jpg"
               alt="Fallmanager Logo"
               width={236}

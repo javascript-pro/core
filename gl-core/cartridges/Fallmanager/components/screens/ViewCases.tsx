@@ -27,7 +27,8 @@ export default function ViewCases() {
     <Box sx={{ p: 1 }}>
       <MightyButton
         sx={{ mb: 2 }}
-        variant="outlined"
+        variant="contained"
+        color="secondary"
         onClick={handleNewClick}
         label="New Case"
         icon="plus"
