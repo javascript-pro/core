@@ -68,7 +68,7 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
         transformOrigin={{ vertical: 'top', horizontal: 'right' }}
       >
-        <MenuItem
+        {/* <MenuItem
           sx={{
             my: 2,
           }}
@@ -78,7 +78,7 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
             <Icon icon="admin" />
           </ListItemIcon>
           <ListItemText primary="Admin" />
-        </MenuItem>
+        </MenuItem> */}
 
         {user ? (
           <MenuItem onClick={handleSignout}>

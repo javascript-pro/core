@@ -1,6 +1,7 @@
 'use client';
 // core/gl-core/cartridges/Bouncer/components/AuthForm.tsx
 import * as React from 'react';
+import { TAuthForm } from '../../../types';
 import { useRouter } from 'next/navigation';
 import {
   Box,
@@ -14,7 +15,6 @@ import {
   Typography,
 } from '@mui/material';
 import { Icon, MightyButton, useDispatch } from '../../../../gl-core';
-import { TAuthForm } from '../../../types';
 import { firebaseAuth } from '../../Bouncer';
 
 function isValidEmail(email: string) {
@@ -25,15 +25,11 @@ export default function AuthForm({ frontmatter }: TAuthForm) {
   const dispatch = useDispatch();
   const router = useRouter();
   const canResetPassword = false;
-
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
-
-  const {
-    icon = 'signin',
-    title = 'Sign in to your account',
-    description = 'Enter your email and password',
-  } = frontmatter || {};
+  const title = 'Sign in';
+  const description = 'please';
+  const icon = 'signin';
 
   const isFormValid = React.useMemo(() => {
     return isValidEmail(email) && password.length >= 6;

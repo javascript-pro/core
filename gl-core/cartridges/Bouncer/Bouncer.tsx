@@ -2,19 +2,12 @@
 // core/gl-core/cartridges/Bouncer/Bouncer.tsx
 
 import * as React from 'react';
-import config from '../../config.json';
 import { auth } from '../../lib/firebase';
 import { onAuthStateChanged, User as FirebaseUser } from 'firebase/auth';
-import { Box, Card, CardHeader } from '@mui/material';
-import { Theme, useDispatch, Core } from '../../../gl-core';
+import { useDispatch } from '../../../gl-core';
 import { AuthForm, useUser, updateUser } from '../Bouncer';
 
-export default function Bouncer({
-  frontmatter = null,
-  content = null,
-  slug = null,
-  children = null,
-}: any) {
+export default function Bouncer({ children = null }: any) {
   const dispatch = useDispatch();
   const user = useUser();
 
@@ -39,35 +32,6 @@ export default function Bouncer({
     return () => unsubscribe();
   }, [dispatch]);
 
-  const sxAuth = {
-    minHeight: '100vh',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    overflow: 'auto',
-    px: 2,
-  };
-
-  const theme = config.themes.dark;
-
-  const getAuthForm = () => {
-    return (
-      <Theme theme={theme as any}>
-        <AuthForm frontmatter={frontmatter} content={content} />
-      </Theme>
-    );
-  };
-  return (
-    <Box sx={!user ? sxAuth : null}>
-      {user ? (
-        slug === 'admin' ? (
-          <Core frontmatter={frontmatter} body={content} />
-        ) : (
-          getAuthForm()
-        )
-      ) : (
-        getAuthForm()
-      )}
-    </Box>
-  );
+  if (user) return children;
+  return <AuthForm />;
 }
