@@ -1,6 +1,7 @@
 'use client';
 // core/gl-core/cartridges/Bouncer/components/AuthForm.tsx
 import * as React from 'react';
+import { useRouter } from 'next/navigation';
 import {
   Box,
   IconButton,
@@ -12,7 +13,7 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import { Icon, navigateTo, useDispatch } from '../../../../gl-core';
+import { Icon, MightyButton, useDispatch } from '../../../../gl-core';
 import { TAuthForm } from '../../../types';
 import { firebaseAuth } from '../../Bouncer';
 
@@ -22,6 +23,7 @@ function isValidEmail(email: string) {
 
 export default function AuthForm({ frontmatter }: TAuthForm) {
   const dispatch = useDispatch();
+  const router = useRouter();
   const canResetPassword = false;
 
   const [email, setEmail] = React.useState('');
@@ -46,6 +48,10 @@ export default function AuthForm({ frontmatter }: TAuthForm) {
     );
   };
 
+  const handleBack = () => {
+    router.back();
+  };
+
   React.useEffect(() => {
     if (!email && !password) {
       // Feedback: waiting for input
@@ -61,10 +67,9 @@ export default function AuthForm({ frontmatter }: TAuthForm) {
   return (
     <Card>
       <CardHeader
-        avatar={<Icon icon={icon} />}
-        action={
-          <IconButton onClick={() => dispatch(navigateTo('/'))}>
-            <Icon icon="close" />
+        avatar={
+          <IconButton onClick={handleBack}>
+            <Icon icon="left" />
           </IconButton>
         }
         title={<Typography variant="h6">{title}</Typography>}
@@ -92,19 +97,21 @@ export default function AuthForm({ frontmatter }: TAuthForm) {
       </CardContent>
 
       <CardActions>
+        <Box sx={{ flexGrow: 1 }} />
         {canResetPassword && (
           <Box>
             <Button onClick={() => console.log('Password?')}>Password?</Button>
           </Box>
         )}
-        <Button
-          fullWidth
+
+        <MightyButton
+          sx={{ mx: 1, mb: 1 }}
           onClick={onSignIn}
           variant={isFormValid ? 'contained' : 'outlined'}
           disabled={!isFormValid}
-        >
-          Sign In
-        </Button>
+          label="Sign in"
+          icon={icon}
+        />
       </CardActions>
     </Card>
   );

@@ -156,7 +156,7 @@ export default function JD() {
             label="Analyse"
             icon="openai"
             color="primary"
-            variant="contained"
+            variant="outlined"
           />
         </>
       )}

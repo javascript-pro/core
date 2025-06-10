@@ -128,9 +128,11 @@ import AlbumIcon from '@mui/icons-material/Collections';
 import LinkIcon from '@mui/icons-material/Link';
 import AboutIcon from '@mui/icons-material/HelpOutlineOutlined';
 import ClientsIcon from '@mui/icons-material/PeopleAltOutlined';
+import MoreIcon from '@mui/icons-material/MoreVert';
 
 export type TIcon = {
   icon:
+    | 'more'
     | 'plus'
     | 'about'
     | 'clients'
@@ -318,7 +320,9 @@ export default function Icon({ icon, color }: TIcon) {
     case 'uberedux':
       iconFragment = <UbereduxIcon color={color} />;
       break;
-
+    case 'more':
+      iconFragment = <MoreIcon color={color} />;
+      break;
     case 'forget':
       iconFragment = <ForgetIcon color={color} />;
       break;
