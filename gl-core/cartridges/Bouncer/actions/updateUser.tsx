@@ -1,5 +1,5 @@
 // core/gl-core/cartridges/Bouncer/actions/updateUser.ts
-import { TUbereduxDispatch } from '../../../';
+import { TUbereduxDispatch } from '../../../../gl-core/types';
 import { setUbereduxKey } from '../../../../gl-core';
 import { TUser } from '../types';
 

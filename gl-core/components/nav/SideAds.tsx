@@ -22,14 +22,6 @@ export default function SideAds({ children = null }: TSideAds) {
       />
 
       <Advert
-        icon="cartridge"
-        title={'New Cartridge'}
-        onClick={() => {
-          router.push(`/cartridges/new-cartridge`);
-        }}
-      />
-
-      <Advert
         icon="flickr"
         title={'Flickr'}
         onClick={() => {

@@ -1,6 +1,8 @@
 'use client';
 // core/gl-core/cartridges/Bouncer/components/AuthForm.tsx
 import * as React from 'react';
+import { TAuthForm } from '../../../types';
+import { useRouter } from 'next/navigation';
 import {
   Box,
   IconButton,
@@ -12,26 +14,22 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import { Icon, navigateTo, useDispatch } from '../../../../gl-core';
-import { TAuthForm } from '../../Bouncer';
-import { firebaseAuth, updateFeedback } from '../../Bouncer';
+import { Icon, MightyButton, useDispatch } from '../../../../gl-core';
+import { firebaseAuth } from '../../Bouncer';
 
 function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
-export default function AuthForm({
-  frontmatter = {
-    icon: 'settings',
-    title: 'title',
-    description: 'description',
-  },
-}: TAuthForm) {
+export default function AuthForm({ frontmatter }: TAuthForm) {
   const dispatch = useDispatch();
+  const router = useRouter();
   const canResetPassword = false;
-
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
+  const title = 'Sign in';
+  const description = 'please';
+  const icon = 'signin';
 
   const isFormValid = React.useMemo(() => {
     return isValidEmail(email) && password.length >= 6;
@@ -46,45 +44,32 @@ export default function AuthForm({
     );
   };
 
+  const handleBack = () => {
+    router.back();
+  };
+
   React.useEffect(() => {
     if (!email && !password) {
-      // dispatch(updateFeedback({
-      //   severity: 'info',
-      //   title: 'Waiting for Input',
-      //   description: 'Please enter your email and password.',
-      // }));
+      // Feedback: waiting for input
     } else if (!isValidEmail(email)) {
-      dispatch(
-        updateFeedback({
-          severity: 'info',
-          title: 'Please enter a valid email address',
-        }),
-      );
+      // Feedback: invalid email
     } else if (password.length < 6) {
-      dispatch(
-        updateFeedback({
-          severity: 'info',
-          title: 'Password must be at least 6 characters',
-        }),
-      );
+      // Feedback: weak password
     } else {
-      dispatch(updateFeedback(null));
+      // Feedback: null
     }
   }, [email, password, dispatch]);
 
   return (
     <Card>
       <CardHeader
-        avatar={<Icon icon={frontmatter.icon} />}
-        action={
-          <IconButton onClick={() => dispatch(navigateTo('/'))}>
-            <Icon icon={'close'} />
+        avatar={
+          <IconButton onClick={handleBack}>
+            <Icon icon="left" />
           </IconButton>
         }
-        title={<Typography variant="h6">{frontmatter.title}</Typography>}
-        subheader={
-          <Typography variant="body2">{frontmatter.description}</Typography>
-        }
+        title={<Typography variant="h6">{title}</Typography>}
+        subheader={<Typography variant="body2">{description}</Typography>}
       />
       <CardContent>
         <TextField
@@ -108,19 +93,21 @@ export default function AuthForm({
       </CardContent>
 
       <CardActions>
+        <Box sx={{ flexGrow: 1 }} />
         {canResetPassword && (
           <Box>
             <Button onClick={() => console.log('Password?')}>Password?</Button>
           </Box>
         )}
-        <Button
-          fullWidth
+
+        <MightyButton
+          sx={{ mx: 1, mb: 1 }}
           onClick={onSignIn}
           variant={isFormValid ? 'contained' : 'outlined'}
           disabled={!isFormValid}
-        >
-          Sign In
-        </Button>
+          label="Sign in"
+          icon={icon}
+        />
       </CardActions>
     </Card>
   );

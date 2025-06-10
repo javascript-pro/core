@@ -1,9 +1,9 @@
 // core/gl-core/cartridges/Fallmanager/types.d.ts
 
 export type TFall = {
-    fbId? : string;
-    title?: string;
-    [key: string]: any;
+  fbId?: string;
+  title?: string;
+  [key: string]: any;
 };
 
 export type TFallmanager = {

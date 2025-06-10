@@ -1,27 +1,15 @@
 import Core from './Core';
-import { TCore, TFrontmatter } from './Core';
 import { Theme } from './cartridges/Theme';
 import { Icon } from './cartridges/Theme';
 import { createMUITheme } from './cartridges/Theme';
-import { TIcon } from './cartridges/Theme';
 import { ModeSwitch } from './cartridges/Theme';
-
 import {
   RenderMarkdown,
   Header,
   Footer,
   Responsive,
 } from './components/layout';
-import {
-  TRenderMarkdown,
-  THeader,
-  TFooter,
-  TResponsive,
-} from './components/layout';
-
 import Status from './components/Status';
-import { TStatus } from './components/Status';
-
 import {
   Nav,
   NavItem,
@@ -35,16 +23,7 @@ import {
   TopRightMenu,
   ShareMenu,
 } from './components/nav';
-import {
-  TNav,
-  TNavItem,
-  TMightyButton,
-  TSearch,
-  TShareThis,
-  TCardButton,
-  TShareMenu,
-} from './components/nav';
-import { useConfig, useIsMobile, useVersion } from './hooks';
+import { useConfig, useIsMobile, useVersion, useFeedback } from './hooks';
 
 import {
   Uberedux,
@@ -56,12 +35,9 @@ import {
   useVersionCheck,
   resetUberedux,
 } from './cartridges/Uberedux';
-import { TUbereduxDispatch } from './cartridges/Uberedux';
 import { CV } from './cartridges/CV';
-import { TCV } from './cartridges/CV';
 import Advert from './components/Advert';
 import { Flash, MovieClip, Photo } from './cartridges/Flash';
-import { TFlash, TMovieClip, TPhoto } from './cartridges/Flash';
 import { navigateTo } from './actions/navigateTo';
 import { routeTo } from './actions/routeTo';
 import { toggleStatus } from './actions/toggleStatus';
@@ -107,31 +83,9 @@ export {
   useDispatch,
   useKey,
   useVersionCheck,
+  useFeedback,
   setUbereduxKey,
   resetUberedux,
 };
 export { CV };
 export { Flash, MovieClip, Photo };
-
-export type {
-  TSearch,
-  TCV,
-  TFrontmatter,
-  TMightyButton,
-  TFooter,
-  TCore,
-  TRenderMarkdown,
-  TIcon,
-  TNav,
-  THeader,
-  TUbereduxDispatch,
-  TNavItem,
-  TResponsive,
-  TFlash,
-  TMovieClip,
-  TPhoto,
-  TShareThis,
-  TStatus,
-  TCardButton,
-  TShareMenu,
-};

@@ -161,7 +161,9 @@ export default async function Page({ params }: { params: any }) {
   }
 
   if (frontmatter.bouncer === true) {
-    return <Bouncer frontmatter={frontmatter} content={content} />;
+    return (
+      <Bouncer slug="public" frontmatter={frontmatter} content={content} />
+    );
   }
 
   const navItem = findNavItem(slugPath, globalNav[0]);
@@ -171,6 +173,10 @@ export default async function Page({ params }: { params: any }) {
   return (
     <Core frontmatter={frontmatter} body={content}>
       <div id="core-ssg" className="gl">
+        {/* 
+          This is SSG content
+          It's indexable to search engines, but not used in the actual app yet
+        */}
         <div className="gl-wrap">
           <header id="gl-header">
             <Link href={`/`} style={{ textDecoration: 'none' }}>
@@ -211,7 +217,6 @@ export default async function Page({ params }: { params: any }) {
               <ReactMarkdown>{content}</ReactMarkdown>
             </article>
           </main>
-
           <footer id="gl-footer">{renderNav(globalNav[0])}</footer>
         </div>
       </div>

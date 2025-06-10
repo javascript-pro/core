@@ -2,6 +2,7 @@
 import * as React from 'react';
 import {
   Box,
+  Card,
   CardHeader,
   IconButton,
   Menu,
@@ -50,14 +51,14 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
     dispatch(firebaseAuth('signout'));
   };
 
-  const handleSignin = () => {
-    dispatch(navigateTo('/signin'));
+  const handleAdmin = () => {
+    dispatch(navigateTo('/admin'));
   };
 
   return (
     <>
       <IconButton onClick={handleClick}>
-        <Icon icon="menu" />
+        <Icon icon="more" />
       </IconButton>
       <Menu
         anchorEl={anchorEl}
@@ -67,13 +68,36 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
         transformOrigin={{ vertical: 'top', horizontal: 'right' }}
       >
-        <CardHeader
-          sx={{ width: 275 }}
-          avatar={<Icon icon={frontmatter.icon as any} />}
-          title={<Typography variant="h6">{frontmatter.title}</Typography>}
-        />
+        {/* <MenuItem
+          sx={{
+            my: 2,
+          }}
+          onClick={handleAdmin}
+        >
+          <ListItemIcon>
+            <Icon icon="admin" />
+          </ListItemIcon>
+          <ListItemText primary="Admin" />
+        </MenuItem> */}
+
+        {user ? (
+          <MenuItem onClick={handleSignout}>
+            <ListItemIcon>
+              <Icon icon="signout" />
+            </ListItemIcon>
+            <ListItemText primary="Sign Out" />
+          </MenuItem>
+        ) : null}
+        <Card>
+          <CardHeader
+            sx={{ width: 275 }}
+            avatar={<Icon icon={frontmatter?.icon as any} />}
+            title={<Typography variant="h6">{frontmatter?.title}</Typography>}
+          />
+        </Card>
 
         <MenuItem
+          sx={{ my: 2 }}
           onClick={(e) => {
             e.stopPropagation();
             e.preventDefault();
@@ -92,31 +116,13 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           </Box>
         </Collapse>
 
-        {user ? (
-          <MenuItem onClick={handleSignout}>
-            <ListItemIcon>
-              <Icon icon="signout" />
-            </ListItemIcon>
-            <ListItemText primary="Sign Out" />
-          </MenuItem>
-        ) : (
-          <MenuItem onClick={handleSignin}>
-            <ListItemIcon>
-              <Icon icon="signin" />
-            </ListItemIcon>
-            <ListItemText primary="Sign In" />
-          </MenuItem>
-        )}
-
         <Box sx={{ px: 2, py: 1 }}>
           {user?.email && (
             <Typography variant="caption" color="text.secondary">
               {user.email}
             </Typography>
           )}
-          <Typography variant="caption" color="text.secondary">
-            Version: {version}
-          </Typography>
+          <Typography variant="caption">vs {version}</Typography>
         </Box>
       </Menu>
     </>
