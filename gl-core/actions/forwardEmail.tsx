@@ -1,5 +1,5 @@
 import { setUbereduxKey } from '../../gl-core';
-import { TUbereduxDispatch } from '../../gl-core';
+import { TUbereduxDispatch } from '../../gl-core/types';
 
 const safeSet = (
   dispatch: TUbereduxDispatch,

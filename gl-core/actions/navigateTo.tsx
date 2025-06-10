@@ -1,7 +1,7 @@
 // core/gl-core/actions/navigateTo.tsx
 
 import { setUbereduxKey } from '../../gl-core';
-import { TUbereduxDispatch } from '../../gl-core';
+import { TUbereduxDispatch } from '../../gl-core/types';
 // import { store } from '../../gl-core/cartridges/Uberedux/store';
 
 export type TUbereduxState = {

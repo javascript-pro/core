@@ -56,40 +56,6 @@
         ]
       },
       {
-        "title": "Client Area",
-        "description": "description",
-        "slug": "/clients",
-        "order": 1,
-        "icon": "clients",
-        "type": "folder",
-        "tags": [
-          "Fallmanager",
-          "clients",
-          "work"
-        ],
-        "excerpt": "FallmanagementSystem für eine deutsche Anwaltskanzlei. Zentrale Verwaltung von Falldaten, Dokumentenerstellung und Fristenüberwachung.",
-        "children": []
-      },
-      {
-        "title": "Fallmanager",
-        "description": "Zentrale Verwaltung von Falldaten",
-        "slug": "/fallmanager",
-        "order": 1,
-        "icon": "fallmanager",
-        "type": "folder",
-        "excerpt": "FallmanagementSystem für . Zentrale Verwaltung von Falldaten, Dokumentenerstellung und Fristenüberwachung\n\nlogin with email chertwig@gmx.net",
-        "children": [
-          {
-            "title": "Prototype",
-            "slug": "/prototype",
-            "order": 15,
-            "icon": "fallmanager",
-            "type": "file",
-            "excerpt": "Prototype\n\nThis section documents the early prototype of the Fallmanager system developed for a German law firm specializing in accident claims.\n\n Purpose\n\nThe goal of the prototype is to validate cor"
-          }
-        ]
-      },
-      {
         "title": "Free & Open Source",
         "description": "Some things in life ARE free",
         "slug": "/free",

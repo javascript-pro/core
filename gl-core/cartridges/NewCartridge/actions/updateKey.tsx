@@ -1,6 +1,6 @@
 // core/gl-core/cartridges/NewCartridge/actions/updateKey.tsx
 
-import { TUbereduxDispatch } from '../../../';
+import { TUbereduxDispatch } from '../../../../gl-core/types';
 import { setUbereduxKey } from '../../../';
 
 export const updateKey =

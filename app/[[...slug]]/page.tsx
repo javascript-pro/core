@@ -161,7 +161,9 @@ export default async function Page({ params }: { params: any }) {
   }
 
   if (frontmatter.bouncer === true) {
-    return <Bouncer frontmatter={frontmatter} content={content} />;
+    return (
+      <Bouncer slug="public" frontmatter={frontmatter} content={content} />
+    );
   }
 
   const navItem = findNavItem(slugPath, globalNav[0]);

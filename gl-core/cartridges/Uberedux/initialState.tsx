@@ -6,12 +6,14 @@ import { FlickrinitialState } from '../Flickr';
 import { BouncerinitialState } from '../Bouncer';
 import { NewCartridgeinitialState } from '../NewCartridge';
 import { FallmanagerinitialState } from '../Fallmanager';
+import { initialStateAdmin } from '../Admin';
 
 export const initialState: any = {
   persisted: Date.now(),
   config,
   version: pJSON.version,
   themeMode: 'dark',
+  admin: initialStateAdmin,
   cv: CVinitialState,
   flash: FlashinitialState,
   flickr: FlickrinitialState,
