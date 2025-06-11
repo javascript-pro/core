@@ -2,8 +2,7 @@
 
 /*
     Takes a TFeedback typed object || null
-    Updates bouncer.feedback
-    Always sets hidden: false
+    Updates redux.feedback
 */
 
 import { TUbereduxDispatch } from '../../gl-core/types';

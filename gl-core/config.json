@@ -13,6 +13,15 @@
     "/png/bluesky/javascript.png"
   ],
   "themes": {
+    "light": {
+      "mode": "light",
+      "primary": "#5E7978",
+      "secondary": "#5E7978",
+      "background": "#FFF",
+      "paper": "#FFF",
+      "text": "#303030",
+      "border": "#5E7978"
+    },
     "dark": {
       "mode": "dark",
       "primary": "#A6D4D1",
@@ -21,15 +30,6 @@
       "paper": "#5E7978",
       "text": "#FFFFFF",
       "border": "#C09F52"
-    },
-    "light": {
-      "mode": "light",
-      "primary": "#e8c10b",
-      "secondary": "#A6D4D1",
-      "background": "#FFFFFF",
-      "paper": "#FFFFFF",
-      "text": "#303030",
-      "border": "#A6D4D1"
     }
   }
 }

@@ -103,6 +103,22 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           </MenuItem>
         ) : null}
 
+
+        <MenuItem
+          sx={{ my: 2 }}
+          onClick={(e) => {
+            // e.stopPropagation();
+            // e.preventDefault();
+            // setShareOpen((prev) => !prev);
+            console.log("factorySettings")
+          }}
+        >
+          <ListItemIcon>
+            <Icon icon="reset" />
+          </ListItemIcon>
+          <ListItemText primary="Factory settings" />
+        </MenuItem>
+
         <Box sx={{ pr: 3, py: 1, textAlign: 'right' }}>
           <Typography
             sx={{

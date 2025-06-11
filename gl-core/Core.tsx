@@ -22,6 +22,7 @@ import {
   SideAds,
   useVersionCheck,
   IncludeAll,
+  useThemeMode,
 } from '../gl-core';
 import { Flickr } from './cartridges/Flickr';
 import { CV } from './cartridges/CV';
@@ -45,7 +46,7 @@ export type TCore = {
 export default function Core({ frontmatter, body = null }: TCore) {
   let fullScreen = false;
   const pathname = usePathname();
-  const user = useUser();
+  const themeMode = useThemeMode();
   useVersionCheck();
   const isMobile = useIsMobile();
 
@@ -92,7 +93,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
   if (fullScreen) return <>{app}</>;
 
   return (
-    <Theme theme={config.themes.dark as any}>
+    <Theme theme={config.themes[themeMode] as any}>
       <CssBaseline />
       <IncludeAll />
       <Container id="core">

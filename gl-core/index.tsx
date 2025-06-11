@@ -41,12 +41,8 @@ import { routeTo } from './actions/routeTo';
 import { toggleStatus } from './actions/toggleStatus';
 import { toggleAdvert } from './actions/toggleAdvert';
 import { forwardEmail } from './actions/forwardEmail';
-import { updateStatusLevel } from './actions/updateStatusLevel';
-import { updateStatusMessage } from './actions/updateStatusMessage';
 export {
   toggleStatus,
-  updateStatusLevel,
-  updateStatusMessage,
   navigateTo,
   routeTo,
   toggleAdvert,

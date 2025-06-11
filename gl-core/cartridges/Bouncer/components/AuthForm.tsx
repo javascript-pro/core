@@ -15,7 +15,7 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import { Theme, Icon, MightyButton, useDispatch } from '../../../../gl-core';
+import { Theme, Icon, MightyButton, useDispatch, useThemeMode } from '../../../../gl-core';
 import { firebaseAuth } from '../../Bouncer';
 
 import config from '../../../config.json';
@@ -30,6 +30,7 @@ export default function AuthForm({ frontmatter }: TAuthForm) {
   const canResetPassword = false;
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
+  const themeMode = useThemeMode();
   const title = 'Sign In';
   const description = '(please)';
   const icon = 'signin';
@@ -64,7 +65,7 @@ export default function AuthForm({ frontmatter }: TAuthForm) {
   }, [email, password, dispatch]);
 
   return (
-    <Theme theme={config.themes.dark as any}>
+    <Theme theme={config.themes[themeMode] as any}>
       <Container maxWidth={'xs'} sx={{ pt: 2 }}>
         <Card>
           <CardHeader

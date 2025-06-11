@@ -28,6 +28,7 @@ export default function Header({ frontmatter = null }: THeader) {
           <>
             <Tooltip title="Home">
               <IconButton
+                sx={{ml: 3}}
                 onClick={() => {
                   router.push('/');
                 }}
@@ -35,9 +36,9 @@ export default function Header({ frontmatter = null }: THeader) {
                 <Icon icon={'blokey'} />
               </IconButton>
             </Tooltip>
-            <Box sx={{ m: 1 }}>
+            {/* <Box sx={{ m: 1 }}>
               <Icon icon={icon as any} />
-            </Box>
+            </Box> */}
           </>
         }
         title={

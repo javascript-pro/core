@@ -16,8 +16,8 @@ export const initialState: any = {
   isLoading: false,
   themeMode: 'light',
   feedbackHidden: false,
-  feedback_: null,
-  feedback: {
+  feedback: null,
+  feedback_: {
     title: 'Gosh, this is good',
     description: 'innit',
     severity: 'info',

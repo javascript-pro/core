@@ -14,6 +14,14 @@ export default function SideAds({ children = null }: TSideAds) {
   return (
     <Box sx={{}}>
       <Advert
+        icon="flash"
+        title={'Flash'}
+        onClick={() => {
+          router.push(`/free/flash`);
+        }}
+      />
+
+      <Advert
         icon="fallmanager"
         title={'Fallmanager'}
         onClick={() => {
@@ -50,6 +58,7 @@ export default function SideAds({ children = null }: TSideAds) {
           router.push(`/balance/puppy-thing`);
         }}
       />
+
     </Box>
   );
 }
