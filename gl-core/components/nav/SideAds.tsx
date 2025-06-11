@@ -14,6 +14,14 @@ export default function SideAds() {
   return (
     <Box sx={{}}>
       <Advert
+        icon="home"
+        title={'Home'}
+        onClick={() => {
+          dispatch(navigateTo('/'));
+        }}
+      />
+
+      <Advert
         icon="flash"
         title={'Flash'}
         onClick={() => {

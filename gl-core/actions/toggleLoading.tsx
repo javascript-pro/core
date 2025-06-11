@@ -3,7 +3,7 @@ import { TUbereduxDispatch } from '../../gl-core/types';
 import { setUbereduxKey } from '../../gl-core';
 
 export type TLoading = {
-  status?: "idle" | "loading";
+  status?: 'idle' | 'loading';
   message?: string;
 };
 
