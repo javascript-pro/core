@@ -37,7 +37,7 @@
     "@reduxjs/toolkit": "^2.6.1",
     "@toolpad/core": "^0.14.0",
     "clsx": "2.1.1",
-    "date-fns": "3.6.0",
+    "date-fns": "^4.1.0",
     "dinero.js": "2.0.0-alpha.10",
     "firebase": "^11.5.0",
     "firebase-admin": "^13.4.0",
