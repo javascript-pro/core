@@ -1,9 +1,8 @@
 // core/gl-core/cartridges/Bouncer/actions/firebaseAuth.tsx
-
-import { signInWithEmailAndPassword, signOut } from 'firebase/auth';
-import { setUbereduxKey } from '../../../../gl-core';
-import { TUbereduxDispatch } from '../../../../gl-core/types';
 import { auth } from '../../../lib/firebase';
+import { signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import { TUbereduxDispatch } from '../../../../gl-core/types';
+import { setUbereduxKey, toggleFeedback } from '../../../../gl-core';
 
 export const firebaseAuth =
   (
@@ -16,8 +15,15 @@ export const firebaseAuth =
   async (dispatch: TUbereduxDispatch, getState: () => any) => {
     try {
       if (mode === 'signin') {
-        if (!creds?.email || !creds?.password) {
-          throw new Error('Email and password are required to sign in');
+        if (!creds || !creds.email || !creds.password) {
+          dispatch(
+            toggleFeedback({
+              severity: 'warning',
+              title: 'Sign-in failed',
+              description: 'Please enter both your email and password before signing in.',
+            }),
+          );
+          return;
         }
 
         const result = await signInWithEmailAndPassword(
@@ -26,35 +32,59 @@ export const firebaseAuth =
           creds.password,
         );
 
-        // dispatch(
-        //   toggleFeedback({
-        //     severity: 'success',
-        //     title: `Welcome ${result.user.displayName || result.user.email}`,
-        //   }),
-        // );
+        dispatch(
+          toggleFeedback({
+            severity: 'success',
+            title: `Welcome back`,
+            description: `Signed in as ${result.user.email}`,
+          }),
+        );
+
+        return;
       }
 
       if (mode === 'signout') {
         await signOut(auth);
 
-        // dispatch(
-        //   toggleFeedback({
-        //     severity: 'info',
-        //     title: 'You have been signed out',
-        //   }),
-        // );
+        dispatch(
+          toggleFeedback({
+            severity: 'info',
+            title: 'Signed out',
+            description: 'You have been signed out successfully.',
+          }),
+        );
+
+        return;
       }
     } catch (e: unknown) {
-      const msg = e instanceof Error ? e.message : String(e);
+      let friendlyMessage = 'Something went wrong during authentication.';
+      let detailedMessage: string;
 
-      // dispatch(
-      //   toggleFeedback({
-      //     severity: 'error',
-      //     title: 'Firebase Error',
-      //     description: msg,
-      //   }),
-      // );
+      if (e instanceof Error) {
+        detailedMessage = e.message;
 
-      dispatch(setUbereduxKey({ key: 'error', value: msg }));
+        // Match common Firebase Auth errors
+        if (detailedMessage.includes('auth/user-not-found')) {
+          friendlyMessage = 'No account found with that email address.';
+        } else if (detailedMessage.includes('auth/wrong-password')) {
+          friendlyMessage = 'The password entered is incorrect.';
+        } else if (detailedMessage.includes('auth/invalid-email')) {
+          friendlyMessage = 'The email address format is invalid.';
+        } else if (detailedMessage.includes('auth/too-many-requests')) {
+          friendlyMessage = 'Too many failed attempts. Please wait a moment and try again.';
+        }
+      } else {
+        detailedMessage = String(e);
+      }
+
+      dispatch(
+        toggleFeedback({
+          severity: 'error',
+          title: 'Error',
+          description: friendlyMessage,
+        }),
+      );
+
+      dispatch(setUbereduxKey({ key: 'error', value: detailedMessage }));
     }
   };

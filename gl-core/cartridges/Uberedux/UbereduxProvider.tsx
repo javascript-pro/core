@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Provider } from 'react-redux';
 import { store, persistor } from './store';
 import { PersistGate } from 'redux-persist/integration/react';
+import { LoadingOverlay } from '../../../gl-core';
 
 export default function UbereduxProvider({
   children,
@@ -14,27 +15,7 @@ export default function UbereduxProvider({
   return (
     <Provider store={store}>
       <PersistGate
-        loading={
-          <>
-            <div
-              style={{
-                height: '100vh',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
-              <Image
-                priority
-                src="/svg/favicon.svg"
-                alt="Uberedux"
-                width={50}
-                height={50}
-                style={{ objectFit: 'contain' }}
-              />
-            </div>
-          </>
-        }
+        loading={<LoadingOverlay />}
         persistor={persistor}
       >
         {children}

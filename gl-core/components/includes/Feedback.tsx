@@ -18,8 +18,8 @@ export default function Feedback({}: TAuthForm) {
   React.useEffect(() => {
     if (feedback && !feedback.hidden) {
       const timer = setTimeout(() => {
-        console.log('toggleFeedback(null)');
-        // dispatch(toggleFeedback(null));
+        // console.log('toggleFeedback(null)');
+        dispatch(toggleFeedback(null));
       }, 4000);
 
       return () => clearTimeout(timer);
@@ -37,7 +37,7 @@ export default function Feedback({}: TAuthForm) {
   return (
     <Snackbar
       open
-      anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+      anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
       onClose={handleClose}
     >
       <Alert

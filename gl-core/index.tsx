@@ -16,9 +16,10 @@ import {
   TopRightMenu,
   ShareMenu,
   IncludeAll,
+  LoadingOverlay,
 } from './components';
 import {
-  useLoading,
+  useIsLoading,
   useConfig,
   useIsMobile,
   useVersion,
@@ -56,6 +57,7 @@ export {
   TopRightMenu,
   ShareMenu,
   IncludeAll,
+  LoadingOverlay,
 };
 export { Uberedux, UbereduxProvider, setUbereduxKey, resetUberedux };
 export {
@@ -66,6 +68,6 @@ export {
   useSlice,
   useDispatch,
   useKey,
-  useLoading,
+  useIsLoading,
   useVersionCheck,
 };

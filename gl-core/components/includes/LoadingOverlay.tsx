@@ -1,12 +1,29 @@
 'use client';
 import * as React from 'react';
-import { Box } from '@mui/material';
+import { Backdrop, CircularProgress } from '@mui/material';
+import { useIsLoading } from '../../../gl-core'
 
-export default function LoadingOverlay() {
+
+export default function LoadingOverlay({ 
+  // message = 'Doing shit...'
+}: { message?: string }) {
+
+  const isLoading = useIsLoading();
+  if (!isLoading) return null;
+
   return (
-    <Box>
-      {/* <pre>status: {JSON.stringify(status, null, 2)}</pre> */}
-      LoadingOverlay
-    </Box>
+    <Backdrop
+      open
+      sx={{
+        zIndex: (theme) => theme.zIndex.modal + 1,
+        color: '#fff',
+        flexDirection: 'column',
+      }}
+    >
+      <CircularProgress color="inherit" />
+      {/* <Typography variant="body1" sx={{ mt: 2 }}>
+        {message}
+      </Typography> */}
+    </Backdrop>
   );
 }
