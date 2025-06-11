@@ -1,3 +1,4 @@
+// core/gl-core/components/FieldUpload.tsx
 'use client';
 import * as React from 'react';
 import { Box, Button, Typography, IconButton } from '@mui/material';
@@ -8,7 +9,9 @@ export type TFieldUpload = {
   label?: string;
   accept?: string;
   multiple?: boolean;
+  fileName?: string | null;
   onSelect?: (file: File | null) => void;
+  onReset?: () => void;
 };
 
 export default function FieldUpload({
@@ -16,10 +19,11 @@ export default function FieldUpload({
   label = 'Choose File',
   accept = '.pdf,.docx,.jpg,.jpeg,.png,.json',
   multiple = false,
+  fileName = null,
   onSelect,
+  onReset,
 }: TFieldUpload) {
   const inputRef = React.useRef<HTMLInputElement | null>(null);
-  const [fileName, setFileName] = React.useState<string | null>(null);
 
   const handleClick = () => {
     inputRef.current?.click();
@@ -29,19 +33,17 @@ export default function FieldUpload({
     const files = event.target.files;
     if (files && files.length > 0) {
       const file = files[0];
-      setFileName(file.name);
       onSelect?.(file);
     } else {
-      setFileName(null);
       onSelect?.(null);
     }
   };
 
-  const handleReset = () => {
+  const handleClear = () => {
     if (inputRef.current) {
       inputRef.current.value = '';
     }
-    setFileName(null);
+    onReset?.();
     onSelect?.(null);
   };
 
@@ -69,10 +71,10 @@ export default function FieldUpload({
 
       {fileName && (
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mt: 1 }}>
-          <Typography variant="h6" sx={{ wordBreak: 'break-all' }}>
-            Uploading: {fileName}
+          <Typography variant="body2" sx={{ wordBreak: 'break-all' }}>
+            Selected: {fileName}
           </Typography>
-          <IconButton size="small" onClick={handleReset}>
+          <IconButton size="small" onClick={handleClear}>
             <Icon icon="close" />
           </IconButton>
         </Box>

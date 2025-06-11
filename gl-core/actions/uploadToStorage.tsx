@@ -38,7 +38,7 @@ export const uploadToStorage =
       const q = query(
         uploadsRef,
         where('name', '==', file.name),
-        where('size', '==', file.size)
+        where('size', '==', file.size),
       );
 
       const existing = await getDocs(q);

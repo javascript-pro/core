@@ -1,6 +1,5 @@
-'use client';
 // core/gl-core/cartridges/Fallmanager/components/screens/UploadNew.tsx
-
+'use client';
 import * as React from 'react';
 import { Box } from '@mui/material';
 import config from '../../fallmanager.json';
@@ -11,85 +10,73 @@ import {
   MightyButton,
 } from '../../../../../gl-core';
 
-export type TFileType = {
-  title: string;
-  description?: string;
-  extension: string;
-  icon: string;
-};
-
 export default function UploadNew() {
   const dispatch = useDispatch();
   const [selectedFile, setSelectedFile] = React.useState<File | null>(null);
-  const [isValid, setIsValid] = React.useState(false);
+  const [fileName, setFileName] = React.useState<string | null>(null);
 
-  const allowedFileTypes: TFileType[] = [
-    {
-      title: 'JSON',
-      description: 'JavaScript Notation Language',
-      extension: '.json',
-      icon: 'json',
-    },
-    {
-      title: 'PDF',
-      description: 'Portable Document Format',
-      extension: '.pdf',
-      icon: 'pdf',
-    },
-    {
-      title: 'Scanned Image',
-      description: 'JPG',
-      extension: '.jpg',
-      icon: 'jpg',
-    },
-    { title: 'Word Document', extension: '.docx', icon: 'word' },
-  ];
+  const allowedFileTypes = ['.json', '.pdf', '.jpg', '.docx'];
 
   const handleFileSelect = (file: File | null) => {
     if (!file) {
       setSelectedFile(null);
-      setIsValid(false);
+      setFileName(null);
       return;
     }
 
-    const isAllowed = allowedFileTypes.some((type) =>
-      file.name.toLowerCase().endsWith(type.extension),
+    const isAllowed = allowedFileTypes.some((ext) =>
+      file.name.toLowerCase().endsWith(ext),
     );
 
     if (!isAllowed) {
       alert('Unsupported file type.');
       setSelectedFile(null);
-      setIsValid(false);
+      setFileName(null);
       return;
     }
 
     setSelectedFile(file);
-    setIsValid(true);
+    setFileName(file.name);
   };
 
-  const handleUploadClick = () => {
-    if (!selectedFile || !isValid) return;
+  const handleReset = () => {
+    setSelectedFile(null);
+    setFileName(null);
+  };
 
-    dispatch(
+  const handleUploadClick = async () => {
+    if (!selectedFile) {
+      alert('Please select a valid file before uploading.');
+      return;
+    }
+
+    await dispatch(
       uploadToStorage({
         file: selectedFile,
         slug: config.slug,
       }),
     );
+
+    // ✅ Reset on successful upload
+    handleReset();
   };
 
   return (
-    <Box sx={{ display: 'flex', gap: 2 }}>  
-      {isValid && (
+    <Box sx={{ display: 'flex', gap: 2 }}>
+      <FieldUpload
+        label="Choose file"
+        fileName={fileName}
+        onSelect={handleFileSelect}
+        onReset={handleReset}
+      />
+      {selectedFile && (
         <MightyButton
           label="Upload"
           icon="upload"
           onClick={handleUploadClick}
-          variant="outlined"
-          color="secondary"
+          variant="contained"
         />
       )}
-      <FieldUpload label="Choose file" onSelect={handleFileSelect} />
     </Box>
   );
 }

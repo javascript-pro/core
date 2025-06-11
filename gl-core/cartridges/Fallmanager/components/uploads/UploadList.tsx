@@ -44,8 +44,8 @@ export default function UploadList() {
   }, [dispatch]);
 
   const handleItemClick = (item: any) => {
-    console.log("handleItemClick", item)
-  }
+    console.log('handleItemClick', item);
+  };
 
   return (
     <Box>
@@ -66,7 +66,7 @@ export default function UploadList() {
             <ListItemButton
               key={`upload_${i}`}
               onClick={() => {
-                handleItemClick(upload)
+                handleItemClick(upload);
               }}
             >
               <ListItemText
