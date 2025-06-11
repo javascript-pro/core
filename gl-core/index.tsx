@@ -35,18 +35,32 @@ import {
   useVersionCheck,
   resetUberedux,
 } from './cartridges/Uberedux';
-import { navigateTo } from './actions/navigateTo';
-import { routeTo } from './actions/routeTo';
-import { forwardEmail } from './actions/forwardEmail';
-import { toggleFeedback } from './actions/toggleFeedback';
-import { toggleLoading } from './actions/toggleLoading';
+import {
+  switchTheme,
+  navigateTo,
+  routeTo,
+  forwardEmail,
+  toggleFeedback,
+  toggleLoading,
+} from './actions';
 
 export { Core };
-export { Theme, Icon, ModeSwitch, useThemeMode };
-export { Header, Footer, RenderMarkdown };
-export { navigateTo, routeTo, forwardEmail, toggleFeedback, toggleLoading };
+export {
+  switchTheme,
+  navigateTo,
+  routeTo,
+  forwardEmail,
+  toggleFeedback,
+  toggleLoading,
+};
 export {
   Advert,
+  Header,
+  Footer,
+  RenderMarkdown,
+  Theme,
+  Icon,
+  ModeSwitch,
   NextPrevious,
   Nav,
   NavItem,
@@ -71,4 +85,5 @@ export {
   useKey,
   useLoading,
   useVersionCheck,
+  useThemeMode,
 };

@@ -1,8 +1,8 @@
+// core/gl-core/cartridges/Theme/components/ModeSwitch.tsx
 'use client';
 
 import * as React from 'react';
 import {
-  Box,
   Typography,
   ListItemButton,
   ListItemIcon,
