@@ -5,7 +5,7 @@ import config from '../../config.json';
 import { persistStore, persistReducer } from 'redux-persist';
 import baseStorage from 'redux-persist/lib/storage';
 import { combineReducers } from 'redux';
-import { initialState } from './initialState';
+import { initialState } from '../../initialState';
 
 // Wrapped storage that optionally skips loading persisted state
 const storage = {

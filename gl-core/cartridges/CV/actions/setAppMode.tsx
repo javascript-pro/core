@@ -1,7 +1,6 @@
 // core/gl-core/cartridges/CV/actions/setAppMode.tsx
 import { TUbereduxDispatch } from '../../../../gl-core/types';
 import { setUbereduxKey } from '../../../';
-import { CVinitialState } from '../';
 
 export const setAppMode =
   (value: 'cv' | 'jd' | 'pristine'): any =>

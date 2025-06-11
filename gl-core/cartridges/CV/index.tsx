@@ -6,7 +6,7 @@ import Resume from './components/Resume';
 import JD from './components/JD';
 import Download from './components/Download';
 import { templatePDF } from './templatePDF';
-import { initialState as CVinitialState } from './initialState';
+import { initialState as initialStateCV } from './initialState';
 import { updateCVKey } from './actions/updateCVKey';
 import { resetCV } from './actions/resetCV';
 import { setAppMode } from './actions/setAppMode';
@@ -28,5 +28,5 @@ export {
   updateCVKey,
   resetCV,
   templatePDF,
-  CVinitialState,
+  initialStateCV,
 };

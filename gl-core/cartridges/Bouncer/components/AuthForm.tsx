@@ -4,6 +4,7 @@ import * as React from 'react';
 import { TAuthForm } from '../../../types';
 import { useRouter } from 'next/navigation';
 import {
+  Container,
   Box,
   IconButton,
   Card,
@@ -14,8 +15,10 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import { Icon, MightyButton, useDispatch } from '../../../../gl-core';
+import { Theme, Icon, MightyButton, useDispatch } from '../../../../gl-core';
 import { firebaseAuth } from '../../Bouncer';
+
+import config from '../../../config.json';
 
 function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -27,8 +30,8 @@ export default function AuthForm({ frontmatter }: TAuthForm) {
   const canResetPassword = false;
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
-  const title = 'Sign in';
-  const description = 'please';
+  const title = 'Sign In';
+  const description = '(please)';
   const icon = 'signin';
 
   const isFormValid = React.useMemo(() => {
@@ -61,54 +64,62 @@ export default function AuthForm({ frontmatter }: TAuthForm) {
   }, [email, password, dispatch]);
 
   return (
-    <Card>
-      <CardHeader
-        avatar={
-          <IconButton onClick={handleBack}>
-            <Icon icon="left" />
-          </IconButton>
-        }
-        title={<Typography variant="h6">{title}</Typography>}
-        subheader={<Typography variant="body2">{description}</Typography>}
-      />
-      <CardContent>
-        <TextField
-          autoFocus
-          label="Email"
-          type="email"
-          variant="filled"
-          fullWidth
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <TextField
-          label="Password"
-          type="password"
-          variant="filled"
-          fullWidth
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          sx={{ mt: 2 }}
-        />
-      </CardContent>
+    <Theme theme={config.themes.dark as any}>
+      <Container maxWidth={'xs'} sx={{ pt: 2 }}>
+        <Card>
+          <CardHeader
+            avatar={
+              <IconButton onClick={handleBack}>
+                <Icon icon="left" />
+              </IconButton>
+            }
+            title={<Typography variant="h6">{title}</Typography>}
+            subheader={<Typography variant="body2">{description}</Typography>}
+          />
+          <CardContent>
+            <TextField
+              id="email"
+              variant="filled"
+              autoFocus
+              label="Email"
+              type="email"
+              fullWidth
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <TextField
+              id="password"
+              variant="filled"
+              label="Password"
+              type="password"
+              fullWidth
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              sx={{ mt: 2 }}
+            />
+          </CardContent>
 
-      <CardActions>
-        <Box sx={{ flexGrow: 1 }} />
-        {canResetPassword && (
-          <Box>
-            <Button onClick={() => console.log('Password?')}>Password?</Button>
-          </Box>
-        )}
+          <CardActions>
+            <Box sx={{ flexGrow: 1 }} />
+            {canResetPassword && (
+              <Box>
+                <Button onClick={() => console.log('Password?')}>
+                  Password?
+                </Button>
+              </Box>
+            )}
 
-        <MightyButton
-          sx={{ mx: 1, mb: 1 }}
-          onClick={onSignIn}
-          variant={isFormValid ? 'contained' : 'outlined'}
-          disabled={!isFormValid}
-          label="Sign in"
-          icon={icon}
-        />
-      </CardActions>
-    </Card>
+            <MightyButton
+              sx={{ mx: 1, mb: 1 }}
+              onClick={onSignIn}
+              variant={isFormValid ? 'contained' : 'outlined'}
+              disabled={!isFormValid}
+              label="Sign in"
+              icon={icon}
+            />
+          </CardActions>
+        </Card>
+      </Container>
+    </Theme>
   );
 }

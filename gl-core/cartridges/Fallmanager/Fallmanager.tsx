@@ -1,18 +1,56 @@
 'use client';
-// core/gl-core/cartridges/Fallmanager/Fallmanager.tsx
 import * as React from 'react';
 import config from './config.json';
-import { TFallmanager } from './types';
-// import { Box, Button, Typography } from '@mui/material';
+import { AppBar, CssBaseline, Paper } from '@mui/material';
 import { Theme } from '../../../gl-core';
-import { Layout } from '../Fallmanager';
+import {
+  StickyHeader,
+  NewCase,
+  ViewCases,
+  Uploads,
+  UploadFile,
+} from '../Fallmanager';
+import { usePathname } from 'next/navigation';
 
-export default function Fallmanager({ payload = null }: TFallmanager) {
+export default function Fallmanager() {
+  const pathname = usePathname();
+  const views: Record<string, React.ReactNode> = {
+    '/fallmanager': <ViewCases />,
+    '/fallmanager/cases': <ViewCases />,
+    '/fallmanager/cases/new': <NewCase />,
+    '/fallmanager/uploads': <Uploads />,
+    '/fallmanager/uploads/new': <UploadFile />,
+  };
+
+  const view = views[pathname] ?? <ViewCases />;
+
   return (
     <Theme theme={config.theme as any}>
-      <Layout>
-        <>A bunch of chillen</>
-      </Layout>
+      <CssBaseline />
+      <AppBar
+        position="sticky"
+        color="default"
+        elevation={1}
+        sx={{
+          boxShadow: 0,
+          background: 'white',
+          pb: 1,
+        }}
+      >
+        <StickyHeader />
+      </AppBar>
+
+      <Paper
+        square
+        sx={{
+          minHeight: '100vh',
+          display: 'flex',
+          flexDirection: 'column',
+          padding: 2,
+        }}
+      >
+        {view}
+      </Paper>
     </Theme>
   );
 }

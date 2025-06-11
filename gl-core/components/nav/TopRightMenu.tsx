@@ -44,15 +44,11 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
 
   const handleClose = () => {
     setAnchorEl(null);
-    setShareOpen(false); // collapse share section when closing menu
+    setShareOpen(false);
   };
 
   const handleSignout = () => {
     dispatch(firebaseAuth('signout'));
-  };
-
-  const handleAdmin = () => {
-    dispatch(navigateTo('/admin'));
   };
 
   return (
@@ -60,6 +56,7 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
       <IconButton onClick={handleClick}>
         <Icon icon="more" />
       </IconButton>
+
       <Menu
         anchorEl={anchorEl}
         open={open}
@@ -68,33 +65,14 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
         transformOrigin={{ vertical: 'top', horizontal: 'right' }}
       >
-        {/* <MenuItem
-          sx={{
-            my: 2,
-          }}
-          onClick={handleAdmin}
-        >
-          <ListItemIcon>
-            <Icon icon="admin" />
-          </ListItemIcon>
-          <ListItemText primary="Admin" />
-        </MenuItem> */}
-
-        {user ? (
-          <MenuItem onClick={handleSignout}>
-            <ListItemIcon>
-              <Icon icon="signout" />
-            </ListItemIcon>
-            <ListItemText primary="Sign Out" />
-          </MenuItem>
-        ) : null}
-        <Card>
-          <CardHeader
-            sx={{ width: 275 }}
-            avatar={<Icon icon={frontmatter?.icon as any} />}
-            title={<Typography variant="h6">{frontmatter?.title}</Typography>}
-          />
-        </Card>
+        <CardHeader
+          sx={{ width: 275 }}
+          avatar={<Icon icon={frontmatter?.icon as any} />}
+          title={<Typography variant="body1">{frontmatter?.title}</Typography>}
+          subheader={
+            <Typography variant="body2">{frontmatter?.description}</Typography>
+          }
+        />
 
         <MenuItem
           sx={{ my: 2 }}
@@ -116,13 +94,25 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           </Box>
         </Collapse>
 
-        <Box sx={{ px: 2, py: 1 }}>
-          {user?.email && (
-            <Typography variant="caption" color="text.secondary">
-              {user.email}
-            </Typography>
-          )}
-          <Typography variant="caption">vs {version}</Typography>
+        {user ? (
+          <MenuItem onClick={handleSignout}>
+            <ListItemIcon>
+              <Icon icon="signout" />
+            </ListItemIcon>
+            <ListItemText secondary={user.email} primary={'Sign Out'} />
+          </MenuItem>
+        ) : null}
+
+        <Box sx={{ pr: 3, py: 1, textAlign: 'right' }}>
+          <Typography
+            sx={{
+              width: '100%',
+              flexGrow: 1,
+            }}
+            variant="caption"
+          >
+            vs {version}
+          </Typography>
         </Box>
       </Menu>
     </>

@@ -7,6 +7,7 @@ import Image from 'next/image';
 import {
   CssBaseline,
   Container,
+  Paper,
   Box,
   Grid,
   Skeleton,
@@ -20,12 +21,12 @@ import {
   useIsMobile,
   SideAds,
   useVersionCheck,
+  IncludeAll,
 } from '../gl-core';
 import { Flickr } from './cartridges/Flickr';
 import { CV } from './cartridges/CV';
-import { NewCartridge } from './cartridges/NewCartridge';
 import { Fallmanager } from './cartridges/Fallmanager';
-import { useUser } from './cartridges/Bouncer';
+import { Bouncer, useUser } from './cartridges/Bouncer';
 
 export type TFrontmatter = {
   icon?: string;
@@ -50,7 +51,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
   const isCV = pathname === '/cv';
   const isFlickr = pathname === '/free/flickr';
-  const isFallmanager = pathname === '/fallmanager';
+  const isFallmanager = pathname.startsWith('/fallmanager');
   const isNewCartridge = pathname === '/cartridges/new-cartridge';
   const isApp = isCV || isFlickr || isFallmanager || isNewCartridge;
 
@@ -60,21 +61,19 @@ export default function Core({ frontmatter, body = null }: TCore) {
   switch (true) {
     case isFallmanager:
       fullScreen = true;
-      app = <Fallmanager />;
+      app = (
+        <Bouncer>
+          <IncludeAll />
+          <Fallmanager />
+        </Bouncer>
+      );
       break;
-
-    case isNewCartridge:
-      app = <NewCartridge />;
-      break;
-
     case isCV:
       app = <CV mode="app" markdown={body} />;
       break;
-
     case isFlickr:
       app = <Flickr mode="app" id="72177720326317140" />;
       break;
-
     default:
       break;
   }
@@ -95,68 +94,80 @@ export default function Core({ frontmatter, body = null }: TCore) {
   return (
     <Theme theme={config.themes.dark as any}>
       <CssBaseline />
+      <IncludeAll />
       <Container id="core">
-        <Header frontmatter={frontmatter} />
-        <Grid container spacing={1}>
-          <Grid
-            size={{
-              md: 8,
-              lg: 9,
-            }}
-          >
-            <Box sx={{ mt: isMobile ? 2 : 0 }}>
-              {frontmatter?.image && (
-                <Box sx={{ mx: 4, mt: 0 }}>
-                  {!imageError ? (
-                    <Image
-                      priority
-                      src={frontmatter.image}
-                      alt={frontmatter.title || 'Featured image'}
-                      width={1200}
-                      height={630}
-                      style={{
-                        width: '100%',
-                        height: 'auto',
-                      }}
-                      onError={() => setImageError(true)}
-                    />
-                  ) : (
-                    <Box>
-                      <Skeleton
-                        variant="rectangular"
-                        width="100%"
-                        height={315}
+        <Box
+          sx={{
+            minHeight: '100vh',
+            // m: 1,
+          }}
+        >
+          <Header frontmatter={frontmatter} />
+          <Grid container spacing={1}>
+            <Grid
+              size={{
+                md: 8,
+                lg: 9,
+              }}
+            >
+              <Box sx={{ mt: isMobile ? 2 : 0 }}>
+                {frontmatter?.image && (
+                  <Box sx={{ mx: 4, mt: 0 }}>
+                    {!imageError ? (
+                      <Image
+                        priority
+                        src={frontmatter.image}
+                        alt={frontmatter.title || 'Featured image'}
+                        width={1200}
+                        height={630}
+                        style={{
+                          width: '100%',
+                          height: 'auto',
+                        }}
+                        onError={() => setImageError(true)}
                       />
-                      <Typography variant="body2" color="text.secondary" mt={1}>
-                        Image not found. "{frontmatter.image}"
-                      </Typography>
-                    </Box>
-                  )}
+                    ) : (
+                      <Box>
+                        <Skeleton
+                          variant="rectangular"
+                          width="100%"
+                          height={315}
+                        />
+                        <Typography
+                          variant="body2"
+                          color="text.secondary"
+                          mt={1}
+                        >
+                          Image not found. "{frontmatter.image}"
+                        </Typography>
+                      </Box>
+                    )}
+                  </Box>
+                )}
+
+                <Box
+                  sx={{
+                    px: isMobile ? 0.5 : 2,
+                    my: !isMobile ? 3 : 2,
+                  }}
+                >
+                  {pathname !== '/' && <PageBreadcrumb />}
                 </Box>
-              )}
+              </Box>
 
               <Box
                 sx={{
+                  mb: '50px',
                   px: isMobile ? 0.5 : 2,
-                  mb: !isMobile ? 3 : 2,
                 }}
               >
-                {pathname !== '/' && <PageBreadcrumb />}
+                {isApp ? app : <RenderMarkdown>{body}</RenderMarkdown>}
+                {isMobile && getAside()}
               </Box>
-            </Box>
-
-            <Box
-              sx={{
-                mb: '50px',
-                px: isMobile ? 0.5 : 2,
-              }}
-            >
-              {isApp ? app : <RenderMarkdown>{body}</RenderMarkdown>}
-              {isMobile && getAside()}
-            </Box>
+            </Grid>
+            {!isMobile && getAside()}
           </Grid>
-          {!isMobile && getAside()}
-        </Grid>
+        </Box>
       </Container>
     </Theme>
   );

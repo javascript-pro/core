@@ -1,13 +1,13 @@
 import { TUbereduxDispatch } from '../../../../gl-core/types';
 import { setUbereduxKey } from '../../../';
-import { CVinitialState } from '../';
+import { initialStateCV } from '../';
 
 export const resetCV =
   (cvMarkdown: string | null = null): any =>
   async (dispatch: TUbereduxDispatch) => {
     try {
       const resetState = {
-        ...CVinitialState,
+        ...initialStateCV,
         cvMarkdown: cvMarkdown || '',
       };
 

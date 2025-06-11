@@ -1,6 +1,6 @@
 {
   "title": "Fallmanager",
-  "description": "Fallmanagement-System für eine deutsche Anwaltskanzlei. Zentrale Verwaltung von Falldaten, Dokumentenerstellung und Fristenüberwachung.",
+  "description": "Zentrale Verwaltung von Falldaten",
   "icon": "fallmanager",
   "slug": "/fallmanager",
   "theme": {
