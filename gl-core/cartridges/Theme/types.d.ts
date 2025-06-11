@@ -11,5 +11,4 @@ export type TTheme = {
     text: string;
     border: string;
   };
-  [key: string]: any;
 };

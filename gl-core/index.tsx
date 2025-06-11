@@ -1,8 +1,6 @@
 import Core from './Core';
-import { Theme } from './cartridges/Theme';
-import { Icon } from './cartridges/Theme';
-import { createMUITheme } from './cartridges/Theme';
-import { ModeSwitch } from './cartridges/Theme';
+import { Theme, Icon, useThemeMode, ModeSwitch } from './cartridges/Theme';
+
 import {
   Advert,
   Status,
@@ -28,7 +26,6 @@ import {
   useVersion,
   useFeedback,
 } from './hooks';
-
 import {
   Uberedux,
   UbereduxProvider,
@@ -57,7 +54,7 @@ export {
 };
 
 export { Core };
-export { Theme, createMUITheme, Icon, ModeSwitch };
+export { Theme, Icon, ModeSwitch, useThemeMode };
 export { Status, Header, Footer, RenderMarkdown };
 
 export {

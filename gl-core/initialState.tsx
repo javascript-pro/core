@@ -6,19 +6,20 @@ import { initialStateFallmanager } from './cartridges/Fallmanager';
 import { initialStateBouncer } from './cartridges/Bouncer';
 
 export const initialState: any = {
-  version: pJSON.version,
-  persisted: Date.now(),
-  config,
-  isLoading: false,
-  feedbackHidden: false,
-  feedback_: null,
-  feedback: {
-    title: 'Hello',
-    description: "And welcome",
-    severity: 'success',
-  },
   bouncer: initialStateBouncer,
   fallmanager: initialStateFallmanager,
   cv: initialStateCV,
   flickr: initialStateFlickr,
+  version: pJSON.version,
+  persisted: Date.now(),
+  config,
+  isLoading: false,
+  themeMode: 'light',
+  feedbackHidden: false,
+  feedback_: null,
+  feedback: {
+    title: 'Gosh, this is good',
+    description: 'innit',
+    severity: 'info',
+  },
 };
