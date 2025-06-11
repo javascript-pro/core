@@ -2,15 +2,17 @@
 import Bouncer from './Bouncer';
 import { initialState as initialStateBouncer } from './initialState';
 import { Authed, AuthForm, SignoutButton } from './components';
-import { useBouncer, useUser } from './hooks';
+import { useBouncer, useUser, useEmail } from './hooks';
 import { updateUser, firebaseAuth } from './actions';
 import {
   createBouncer,
   readBouncer,
   updateBouncer,
   deleteBouncer,
+  bouncerKey,
 } from './actions';
+export { initialStateBouncer };
 export { Bouncer, SignoutButton, Authed, AuthForm };
-export { initialStateBouncer, useBouncer, useUser };
+export { useBouncer, useUser, useEmail };
 export { updateUser, firebaseAuth };
-export { createBouncer, readBouncer, updateBouncer, deleteBouncer };
+export { bouncerKey, createBouncer, readBouncer, updateBouncer, deleteBouncer };

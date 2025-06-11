@@ -1,7 +1,8 @@
 'use client';
 // core/gl-core/cartridges/Bouncer/components/AuthForm.tsx
+
 import * as React from 'react';
-import { TAuthForm } from '../../../types';
+import config from '../../../config.json';
 import { useRouter } from 'next/navigation';
 import {
   Container,
@@ -22,19 +23,18 @@ import {
   useDispatch,
   useThemeMode,
 } from '../../../../gl-core';
-import { firebaseAuth } from '../../Bouncer';
-
-import config from '../../../config.json';
+import { firebaseAuth, useEmail } from '../../Bouncer';
+import { bouncerKey } from '../actions/bouncerKey';
 
 function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
-export default function AuthForm({ frontmatter }: TAuthForm) {
+export default function AuthForm() {
   const dispatch = useDispatch();
   const router = useRouter();
   const canResetPassword = false;
-  const [email, setEmail] = React.useState('');
+  const email = useEmail(); // From Redux persisted state
   const [password, setPassword] = React.useState('');
   const themeMode = useThemeMode();
   const title = 'Sign In';
@@ -58,6 +58,10 @@ export default function AuthForm({ frontmatter }: TAuthForm) {
     router.back();
   };
 
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    dispatch(bouncerKey('email', e.target.value));
+  };
+
   React.useEffect(() => {
     if (!email && !password) {
       // Feedback: waiting for input
@@ -72,7 +76,7 @@ export default function AuthForm({ frontmatter }: TAuthForm) {
 
   return (
     <Theme theme={config.themes[themeMode] as any}>
-      <Container maxWidth={'xs'} sx={{ pt: 2 }}>
+      <Container maxWidth="xs" sx={{ pt: 2 }}>
         <Card>
           <CardHeader
             avatar={
@@ -92,7 +96,7 @@ export default function AuthForm({ frontmatter }: TAuthForm) {
               type="email"
               fullWidth
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={handleEmailChange}
             />
             <TextField
               id="password"

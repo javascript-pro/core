@@ -12,11 +12,11 @@ import { TFeedback } from '../types';
 export const toggleFeedback =
   (feedback: TFeedback | null) => async (dispatch: TUbereduxDispatch) => {
     try {
-      const updated = { ...(feedback || {}) };
+      const value = feedback === null ? null : { ...feedback };
       dispatch(
         setUbereduxKey({
           key: 'feedback',
-          value: updated,
+          value,
         }),
       );
     } catch (e: unknown) {

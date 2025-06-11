@@ -52,12 +52,15 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
   };
 
   const handleFactorySettings = () => {
-    dispatch(toggleFeedback({
-      title: "dfasfljf",
-      severity: "warning",
-      description: "dasdasdasfads"
-    }))
-  }
+    dispatch(
+      toggleFeedback({
+        mode: "confirm",
+        severity: 'error',
+        title: 'Reset to factory settings?',
+        description: 'are you sure?',
+      }),
+    );
+  };
 
   return (
     <>

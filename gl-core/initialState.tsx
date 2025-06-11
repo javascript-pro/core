@@ -17,9 +17,4 @@ export const initialState: any = {
   themeMode: 'light',
   feedbackHidden: false,
   feedback: null,
-  feedback_: {
-    title: 'Gosh, this is good',
-    description: 'innit',
-    severity: 'info',
-  },
 };

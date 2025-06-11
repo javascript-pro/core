@@ -12,6 +12,7 @@ export type TUbereduxState = {
 export type TSeverity = 'success' | 'info' | 'warning' | 'error';
 
 export type TFeedback = {
+  mode?: "confirm" | "alert"; 
   severity?: TSeverity;
   title?: string;
   description?: string;
