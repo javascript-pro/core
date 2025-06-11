@@ -15,7 +15,13 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import { Theme, Icon, MightyButton, useDispatch, useThemeMode } from '../../../../gl-core';
+import {
+  Theme,
+  Icon,
+  MightyButton,
+  useDispatch,
+  useThemeMode,
+} from '../../../../gl-core';
 import { firebaseAuth } from '../../Bouncer';
 
 import config from '../../../config.json';

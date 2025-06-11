@@ -58,7 +58,6 @@ export default function SideAds({ children = null }: TSideAds) {
           router.push(`/balance/puppy-thing`);
         }}
       />
-
     </Box>
   );
 }

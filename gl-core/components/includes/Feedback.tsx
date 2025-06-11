@@ -13,7 +13,7 @@ export default function Feedback({}: TAuthForm) {
   React.useEffect(() => {
     if (feedback && !feedback.hidden) {
       const timer = setTimeout(() => {
-        // dispatch(updateFeedback(null));
+        // dispatch(toggleFeedback(null));
       }, 4000);
 
       return () => clearTimeout(timer);

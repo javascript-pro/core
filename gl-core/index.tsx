@@ -1,9 +1,7 @@
 import Core from './Core';
 import { Theme, Icon, useThemeMode, ModeSwitch } from './cartridges/Theme';
-
 import {
   Advert,
-  Status,
   RenderMarkdown,
   Header,
   Footer,
@@ -38,21 +36,12 @@ import {
 } from './cartridges/Uberedux';
 import { navigateTo } from './actions/navigateTo';
 import { routeTo } from './actions/routeTo';
-import { toggleStatus } from './actions/toggleStatus';
-import { toggleAdvert } from './actions/toggleAdvert';
 import { forwardEmail } from './actions/forwardEmail';
-export {
-  toggleStatus,
-  navigateTo,
-  routeTo,
-  toggleAdvert,
-  forwardEmail,
-};
 
 export { Core };
 export { Theme, Icon, ModeSwitch, useThemeMode };
-export { Status, Header, Footer, RenderMarkdown };
-
+export { Header, Footer, RenderMarkdown };
+export { navigateTo, routeTo, forwardEmail };
 export {
   Advert,
   NextPrevious,

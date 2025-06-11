@@ -1,10 +1,4 @@
-import {
-  IncludeAll,
-  Advert,
-  Feedback,
-  Status,
-  LoadingOverlay,
-} from './includes';
+import { IncludeAll, Advert, Feedback, LoadingOverlay } from './includes';
 import {
   NextPrevious,
   Nav,
@@ -19,7 +13,7 @@ import {
 } from './nav';
 import { Header, Footer, RenderMarkdown } from './layout';
 
-export { IncludeAll, Advert, Feedback, Status, LoadingOverlay };
+export { IncludeAll, Advert, Feedback, LoadingOverlay };
 export { Header, Footer, RenderMarkdown };
 export {
   NextPrevious,

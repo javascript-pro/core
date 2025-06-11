@@ -27,7 +27,7 @@ export const firebaseAuth =
         );
 
         // dispatch(
-        //   updateFeedback({
+        //   toggleFeedback({
         //     severity: 'success',
         //     title: `Welcome ${result.user.displayName || result.user.email}`,
         //   }),
@@ -38,7 +38,7 @@ export const firebaseAuth =
         await signOut(auth);
 
         // dispatch(
-        //   updateFeedback({
+        //   toggleFeedback({
         //     severity: 'info',
         //     title: 'You have been signed out',
         //   }),
@@ -48,7 +48,7 @@ export const firebaseAuth =
       const msg = e instanceof Error ? e.message : String(e);
 
       // dispatch(
-      //   updateFeedback({
+      //   toggleFeedback({
       //     severity: 'error',
       //     title: 'Firebase Error',
       //     description: msg,

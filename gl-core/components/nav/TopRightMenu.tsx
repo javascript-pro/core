@@ -103,14 +103,13 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           </MenuItem>
         ) : null}
 
-
         <MenuItem
           sx={{ my: 2 }}
           onClick={(e) => {
             // e.stopPropagation();
             // e.preventDefault();
             // setShareOpen((prev) => !prev);
-            console.log("factorySettings")
+            console.log('factorySettings');
           }}
         >
           <ListItemIcon>

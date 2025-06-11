@@ -6,7 +6,6 @@ export type TTheme = {
 };
 
 export function subMUITheme(t: TTheme) {
-  // console.log('subMUITheme', t);
   return createTheme({
     palette: {
       mode: t.mode,
