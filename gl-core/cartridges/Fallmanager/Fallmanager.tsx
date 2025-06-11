@@ -3,16 +3,20 @@ import * as React from 'react';
 import config from './fallmanager.json';
 import { AppBar, CssBaseline, Paper } from '@mui/material';
 import { Theme } from '../../../gl-core';
-import { StickyHeader, Uploads } from '../Fallmanager';
+import { StickyHeader, Uploads, UploadEdit } from '../Fallmanager';
 import { usePathname } from 'next/navigation';
 
 export default function Fallmanager() {
   const pathname = usePathname();
-  const views: Record<string, React.ReactNode> = {
-    '/fallmanager': <Uploads />,
-  };
 
-  const view = views[pathname] ?? <Uploads />;
+  let view: React.ReactNode = <Uploads />;
+
+  if (pathname === '/fallmanager') {
+    view = <Uploads />;
+  } else if (pathname.startsWith('/fallmanager/uploads/')) {
+    const slug = pathname.split('/').pop() || '';
+    view = <UploadEdit slug={slug} />;
+  }
 
   return (
     <Theme theme={config.theme as any}>
