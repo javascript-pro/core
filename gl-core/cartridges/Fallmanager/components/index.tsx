@@ -2,7 +2,7 @@
 
 import UserInfo from './UserInfo';
 import StickyHeader from './StickyHeader';
-import { Files, Uploads } from './screens';
+import { Uploads, UploadNew, UploadList, UploadEdit } from './uploads';
 
-export { Files, Uploads };
+export { Uploads, UploadNew, UploadList, UploadEdit };
 export { UserInfo, StickyHeader };

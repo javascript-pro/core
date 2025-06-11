@@ -1,7 +1,8 @@
 'use client';
 import React from 'react';
 import { Box } from '@mui/material';
-import { Advert, useDispatch, navigateTo } from '../../../gl-core';
+import { Advert, useDispatch, routeTo } from '../../../gl-core';
+import { useRouter } from 'next/navigation';
 
 export type TSideAds = {
   children?: React.ReactNode;
@@ -10,14 +11,14 @@ export type TSideAds = {
 
 export default function SideAds() {
   const dispatch = useDispatch();
-
+  const router = useRouter();
   return (
     <Box sx={{}}>
       <Advert
         icon="home"
         title={'Home'}
         onClick={() => {
-          dispatch(navigateTo('/'));
+          dispatch(routeTo('/', router));
         }}
       />
 
@@ -25,7 +26,7 @@ export default function SideAds() {
         icon="flash"
         title={'Flash'}
         onClick={() => {
-          dispatch(navigateTo('/free/flash'));
+          dispatch(routeTo('/free/flash', router));
         }}
       />
 
@@ -33,7 +34,7 @@ export default function SideAds() {
         icon="fallmanager"
         title={'Fallmanager'}
         onClick={() => {
-          dispatch(navigateTo('/fallmanager'));
+          dispatch(routeTo('/fallmanager', router));
         }}
       />
 
@@ -41,21 +42,21 @@ export default function SideAds() {
         icon="flickr"
         title={'Flickr'}
         onClick={() => {
-          dispatch(navigateTo('/free/flickr'));
+          dispatch(routeTo('/free/flickr', router));
         }}
       />
       <Advert
         icon="openai"
         title={'C.V.'}
         onClick={() => {
-          dispatch(navigateTo('/cv'));
+          dispatch(routeTo('/cv', router));
         }}
       />
       <Advert
         icon="food"
         title={'Lemonading'}
         onClick={() => {
-          dispatch(navigateTo('/life/food/lemon-meringue-pie'));
+          dispatch(routeTo('/life/food/lemon-meringue-pie', router));
         }}
       />
 
@@ -63,7 +64,7 @@ export default function SideAds() {
         icon="dog"
         title={'dog'}
         onClick={() => {
-          dispatch(navigateTo('/balance/puppy-thing'));
+          dispatch(routeTo('/balance/puppy-thing', router));
         }}
       />
 
@@ -71,7 +72,7 @@ export default function SideAds() {
         icon="contact"
         title={'Contact Us'}
         onClick={() => {
-          dispatch(navigateTo('/work/company'));
+          dispatch(routeTo('/work/company', router));
         }}
       />
     </Box>

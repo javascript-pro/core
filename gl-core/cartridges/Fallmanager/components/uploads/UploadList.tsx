@@ -1,17 +1,16 @@
 'use client';
-// core/gl-core/cartridges/Fallmanager/components/screens/Uploads.tsx
+// core/gl-core/cartridges/Fallmanager/components/screens/UploadList.tsx
 import * as React from 'react';
+import { db } from '../../../../../gl-core/lib/firebase';
 import {
   Box,
   List,
   ListItem,
+  ListItemButton,
   ListItemText,
-  Link,
-  Typography,
 } from '@mui/material';
 import { useDispatch } from '../../../../../gl-core';
 import { incomingChange, useFallmanager } from '../../../Fallmanager';
-import { db } from '../../../../../gl-core/lib/firebase';
 import {
   collection,
   query,
@@ -21,7 +20,7 @@ import {
 } from 'firebase/firestore';
 import { formatDistanceToNow } from 'date-fns';
 
-export default function Uploads() {
+export default function UploadList() {
   const dispatch = useDispatch();
   const slice = useFallmanager();
   const uploads = slice?.uploads || [];
@@ -38,25 +37,25 @@ export default function Uploads() {
         id: doc.id,
         ...doc.data(),
       }));
-      console.log("data", data)
       dispatch(incomingChange('uploads', data));
     });
 
     return () => unsubscribe();
   }, [dispatch]);
 
+  const handleItemClick = (item: any) => {
+    console.log("handleItemClick", item)
+  }
+
   return (
-    <Box sx={{ p: 1 }}>
-      <Typography variant="subtitle2" sx={{ mb: 1 }}>
-        Recent Uploads (Fallmanager)
-      </Typography>
+    <Box>
       <List dense>
         {uploads.length === 0 && (
           <ListItem>
             <ListItemText primary="No uploads yet." />
           </ListItem>
         )}
-        {uploads.map((upload: any) => {
+        {uploads.map((upload: any, i: number) => {
           const timeAgo = upload.uploadedAt?.seconds
             ? formatDistanceToNow(new Date(upload.uploadedAt.seconds * 1000), {
                 addSuffix: true,
@@ -64,16 +63,17 @@ export default function Uploads() {
             : 'just now';
 
           return (
-            <ListItem key={upload.id} disableGutters>
+            <ListItemButton
+              key={`upload_${i}`}
+              onClick={() => {
+                handleItemClick(upload)
+              }}
+            >
               <ListItemText
-                primary={
-                  <Link href={upload.url} target="_blank" rel="noopener">
-                    {upload.name}
-                  </Link>
-                }
-                secondary={`${upload.type} – uploaded ${timeAgo}`}
+                primary={upload.name}
+                secondary={`Uploaded ${timeAgo}`}
               />
-            </ListItem>
+            </ListItemButton>
           );
         })}
       </List>

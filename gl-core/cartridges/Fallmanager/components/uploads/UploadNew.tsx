@@ -1,16 +1,15 @@
 'use client';
-// core/gl-core/cartridges/Fallmanager/components/screens/Files.tsx
+// core/gl-core/cartridges/Fallmanager/components/screens/UploadNew.tsx
+
 import * as React from 'react';
+import { Box } from '@mui/material';
 import config from '../../fallmanager.json';
-import { Box, Grid } from '@mui/material';
 import {
   FieldUpload,
   useDispatch,
-  toggleFeedback,
   uploadToStorage,
   MightyButton,
 } from '../../../../../gl-core';
-import { Uploads } from '../../../Fallmanager';
 
 export type TFileType = {
   title: string;
@@ -19,9 +18,10 @@ export type TFileType = {
   icon: string;
 };
 
-export default function Files() {
+export default function UploadNew() {
   const dispatch = useDispatch();
   const [selectedFile, setSelectedFile] = React.useState<File | null>(null);
+  const [isValid, setIsValid] = React.useState(false);
 
   const allowedFileTypes: TFileType[] = [
     {
@@ -45,16 +45,12 @@ export default function Files() {
     { title: 'Word Document', extension: '.docx', icon: 'word' },
   ];
 
-  React.useEffect(() => {
-    dispatch(
-      toggleFeedback({
-        title: 'Upload a file',
-      }),
-    );
-  }, [dispatch]);
-
   const handleFileSelect = (file: File | null) => {
-    if (!file) return setSelectedFile(null);
+    if (!file) {
+      setSelectedFile(null);
+      setIsValid(false);
+      return;
+    }
 
     const isAllowed = allowedFileTypes.some((type) =>
       file.name.toLowerCase().endsWith(type.extension),
@@ -62,17 +58,17 @@ export default function Files() {
 
     if (!isAllowed) {
       alert('Unsupported file type.');
-      return setSelectedFile(null);
+      setSelectedFile(null);
+      setIsValid(false);
+      return;
     }
 
     setSelectedFile(file);
+    setIsValid(true);
   };
 
   const handleUploadClick = () => {
-    if (!selectedFile) {
-      alert('Please select a valid file before uploading.');
-      return;
-    }
+    if (!selectedFile || !isValid) return;
 
     dispatch(
       uploadToStorage({
@@ -83,20 +79,17 @@ export default function Files() {
   };
 
   return (
-    <Grid container spacing={2}>
-      <Grid size={{ xs: 12, sm: 6 }}>
-        <Uploads />
-      </Grid>
-
-      <Grid size={{ xs: 12, sm: 6 }}>
-        <FieldUpload onSelect={handleFileSelect} />
+    <Box sx={{ display: 'flex', gap: 2 }}>  
+      {isValid && (
         <MightyButton
           label="Upload"
           icon="upload"
           onClick={handleUploadClick}
-          variant="contained"
+          variant="outlined"
+          color="secondary"
         />
-      </Grid>
-    </Grid>
+      )}
+      <FieldUpload label="Choose file" onSelect={handleFileSelect} />
+    </Box>
   );
 }

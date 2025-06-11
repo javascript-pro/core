@@ -1,6 +1,6 @@
 'use client';
 import * as React from 'react';
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, Typography, IconButton } from '@mui/material';
 import { Icon } from '../../../gl-core';
 
 export type TFieldUpload = {
@@ -37,8 +37,16 @@ export default function FieldUpload({
     }
   };
 
+  const handleReset = () => {
+    if (inputRef.current) {
+      inputRef.current.value = '';
+    }
+    setFileName(null);
+    onSelect?.(null);
+  };
+
   return (
-    <Box sx={{ p: 1 }}>
+    <Box>
       <input
         id={id}
         ref={inputRef}
@@ -48,17 +56,26 @@ export default function FieldUpload({
         multiple={multiple}
         onChange={handleChange}
       />
-      <Button
-        variant="outlined"
-        onClick={handleClick}
-        startIcon={<Icon icon="link" />}
-      >
-        {label}
-      </Button>
+
+      {!fileName && (
+        <Button
+          variant="outlined"
+          onClick={handleClick}
+          startIcon={<Icon icon="link" />}
+        >
+          {label}
+        </Button>
+      )}
+
       {fileName && (
-        <Typography variant="body2" sx={{ mt: 1 }}>
-          Selected: {fileName}
-        </Typography>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mt: 1 }}>
+          <Typography variant="h6" sx={{ wordBreak: 'break-all' }}>
+            Uploading: {fileName}
+          </Typography>
+          <IconButton size="small" onClick={handleReset}>
+            <Icon icon="close" />
+          </IconButton>
+        </Box>
       )}
     </Box>
   );
