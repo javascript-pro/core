@@ -1,5 +1,5 @@
 import Flickr from './Flickr';
-import { initialState as FlickrinitialState } from './initialState';
+import { initialState as initialStateFlickr } from './initialState';
 import { initFlickr } from './actions/initFlickr';
 import { photoSelect } from './actions/photoSelect';
 import { fetchAlbum } from './actions/fetchAlbum';
@@ -10,7 +10,7 @@ import { setFlickrKey } from './actions/setFlickrKey';
 import { AlbumCard, PhotoCard, PhotoPopup, AlbumSelecta } from './components';
 
 export {
-  FlickrinitialState,
+  initialStateFlickr,
   Flickr,
   PhotoPopup,
   resetFlickr,

@@ -39,10 +39,6 @@ import {
   useVersionCheck,
   resetUberedux,
 } from './cartridges/Uberedux';
-
-import { CV } from './cartridges/CV';
-import { Flash, MovieClip, Photo } from './cartridges/Flash';
-
 import { navigateTo } from './actions/navigateTo';
 import { routeTo } from './actions/routeTo';
 import { toggleStatus } from './actions/toggleStatus';
@@ -90,5 +86,3 @@ export {
   useLoading,
   useVersionCheck,
 };
-export { CV };
-export { Flash, MovieClip, Photo };
