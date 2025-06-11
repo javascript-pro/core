@@ -2,6 +2,6 @@
 import { useSelector } from 'react-redux';
 import { TRootState } from '../../gl-core/types';
 
-export function useIsLoading() {
-  return useSelector((state: TRootState) => state.redux.isLoading);
+export function useLoading() {
+  return useSelector((state: TRootState) => state.redux.loading);
 }

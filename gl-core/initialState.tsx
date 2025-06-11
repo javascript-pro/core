@@ -13,8 +13,10 @@ export const initialState: any = {
   version: pJSON.version,
   persisted: Date.now(),
   config,
-  isLoading: false,
   themeMode: 'light',
-  feedbackHidden: false,
+  loading: {
+    status: "loading",
+    message: "facking loading, mate. hold up"
+  },
   feedback: null,
 };

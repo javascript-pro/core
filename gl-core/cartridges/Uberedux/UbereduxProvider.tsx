@@ -14,10 +14,7 @@ export default function UbereduxProvider({
 }) {
   return (
     <Provider store={store}>
-      <PersistGate
-        loading={<LoadingOverlay />}
-        persistor={persistor}
-      >
+      <PersistGate loading={<LoadingOverlay />} persistor={persistor}>
         {children}
       </PersistGate>
     </Provider>

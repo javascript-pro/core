@@ -20,7 +20,8 @@ export const firebaseAuth =
             toggleFeedback({
               severity: 'warning',
               title: 'Sign-in failed',
-              description: 'Please enter both your email and password before signing in.',
+              description:
+                'Please enter both your email and password before signing in.',
             }),
           );
           return;
@@ -71,7 +72,8 @@ export const firebaseAuth =
         } else if (detailedMessage.includes('auth/invalid-email')) {
           friendlyMessage = 'The email address format is invalid.';
         } else if (detailedMessage.includes('auth/too-many-requests')) {
-          friendlyMessage = 'Too many failed attempts. Please wait a moment and try again.';
+          friendlyMessage =
+            'Too many failed attempts. Please wait a moment and try again.';
         }
       } else {
         detailedMessage = String(e);

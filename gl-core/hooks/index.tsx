@@ -2,6 +2,6 @@ import { useConfig } from './useConfig';
 import { useIsMobile } from './useIsMobile';
 import { useVersion } from './useVersion';
 import { useFeedback } from './useFeedback';
-import { useIsLoading } from './useIsLoading';
+import { useLoading } from './useLoading';
 
-export { useIsLoading, useConfig, useIsMobile, useVersion, useFeedback };
+export { useLoading, useConfig, useIsMobile, useVersion, useFeedback };

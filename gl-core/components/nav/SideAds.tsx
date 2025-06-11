@@ -1,23 +1,24 @@
 'use client';
 import React from 'react';
-import { useRouter } from 'next/navigation';
 import { Box } from '@mui/material';
-import { Advert } from '../../../gl-core';
+import { Advert, useDispatch, navigateTo } from '../../../gl-core';
 
 export type TSideAds = {
   children?: React.ReactNode;
   [key: string]: any;
 };
 
-export default function SideAds({ children = null }: TSideAds) {
-  const router = useRouter();
+export default function SideAds() {
+  const dispatch = useDispatch();
+
   return (
     <Box sx={{}}>
+
       <Advert
         icon="flash"
         title={'Flash'}
         onClick={() => {
-          router.push(`/free/flash`);
+          dispatch(navigateTo('/free/flash'));
         }}
       />
 
@@ -25,7 +26,7 @@ export default function SideAds({ children = null }: TSideAds) {
         icon="fallmanager"
         title={'Fallmanager'}
         onClick={() => {
-          router.push(`/fallmanager`);
+          dispatch(navigateTo('/fallmanager'));
         }}
       />
 
@@ -33,21 +34,21 @@ export default function SideAds({ children = null }: TSideAds) {
         icon="flickr"
         title={'Flickr'}
         onClick={() => {
-          router.push(`/free/flickr`);
+          dispatch(navigateTo('/free/flickr'));
         }}
       />
       <Advert
         icon="openai"
         title={'C.V.'}
         onClick={() => {
-          router.push(`/cv`);
+          dispatch(navigateTo('/cv'));
         }}
       />
       <Advert
         icon="food"
-        title={'Lemon Meringue Pie'}
+        title={'Lemonading'}
         onClick={() => {
-          router.push(`/life/food/lemon-meringue-pie`);
+          dispatch(navigateTo('/life/food/lemon-meringue-pie'));
         }}
       />
 
@@ -55,7 +56,15 @@ export default function SideAds({ children = null }: TSideAds) {
         icon="dog"
         title={'dog'}
         onClick={() => {
-          router.push(`/balance/puppy-thing`);
+          dispatch(navigateTo('/balance/puppy-thing'));
+        }}
+      />
+
+      <Advert
+        icon="contact"
+        title={'Contact Us'}
+        onClick={() => {
+          dispatch(navigateTo('/work/company'));
         }}
       />
     </Box>

@@ -19,7 +19,7 @@ import {
   LoadingOverlay,
 } from './components';
 import {
-  useIsLoading,
+  useLoading,
   useConfig,
   useIsMobile,
   useVersion,
@@ -39,11 +39,12 @@ import { navigateTo } from './actions/navigateTo';
 import { routeTo } from './actions/routeTo';
 import { forwardEmail } from './actions/forwardEmail';
 import { toggleFeedback } from './actions/toggleFeedback';
+import { toggleLoading } from './actions/toggleLoading';
 
 export { Core };
 export { Theme, Icon, ModeSwitch, useThemeMode };
 export { Header, Footer, RenderMarkdown };
-export { navigateTo, routeTo, forwardEmail, toggleFeedback };
+export { navigateTo, routeTo, forwardEmail, toggleFeedback, toggleLoading };
 export {
   Advert,
   NextPrevious,
@@ -68,6 +69,6 @@ export {
   useSlice,
   useDispatch,
   useKey,
-  useIsLoading,
+  useLoading,
   useVersionCheck,
 };

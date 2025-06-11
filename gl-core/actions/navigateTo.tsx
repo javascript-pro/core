@@ -21,8 +21,11 @@ export const navigateTo =
               ? '_blank'
               : '_self'; // fallback to _self for unknown cases
 
+      // console.log('navigateTo', url, resolvedTarget);
+      // window.open(url, resolvedTarget);
+
       console.log('navigateTo', url, resolvedTarget);
-      window.open(url, resolvedTarget);
+
     } catch (e: unknown) {
       const errorMessage = e instanceof Error ? e.message : String(e);
       dispatch(

@@ -1,29 +1,30 @@
 'use client';
+
 import * as React from 'react';
-import { Backdrop, CircularProgress } from '@mui/material';
-import { useIsLoading } from '../../../gl-core'
+import { useLoading, useDispatch, toggleLoading } from '../../../gl-core';
+import { Box, CircularProgress, Backdrop, Typography } from '@mui/material';
 
+export default function LoadingOverlay() {
+  const loading = useLoading() ?? { status: 'idle', message: '' };
+  const dispatch = useDispatch();
 
-export default function LoadingOverlay({ 
-  // message = 'Doing shit...'
-}: { message?: string }) {
+  React.useEffect(() => {
+    if (loading.status === 'loading') {
+      const timer = setTimeout(() => {
+        dispatch(toggleLoading(null));
+      }, 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [loading.status, dispatch]);
 
-  const isLoading = useIsLoading();
-  if (!isLoading) return null;
+  if (loading.status !== 'loading') return null;
 
   return (
-    <Backdrop
-      open
-      sx={{
-        zIndex: (theme) => theme.zIndex.modal + 1,
-        color: '#fff',
-        flexDirection: 'column',
-      }}
-    >
-      <CircularProgress color="inherit" />
-      {/* <Typography variant="body1" sx={{ mt: 2 }}>
-        {message}
-      </Typography> */}
+    <Backdrop open={true} sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.modal + 1 }}>
+      <Box display="flex" flexDirection="column" alignItems="center" gap={2}>
+        <CircularProgress color="inherit" />
+        <Typography variant="body1">{loading.message || 'Loading…'}</Typography>
+      </Box>
     </Backdrop>
   );
 }
