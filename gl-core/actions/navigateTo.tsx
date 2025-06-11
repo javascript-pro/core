@@ -1,8 +1,7 @@
 // core/gl-core/actions/navigateTo.tsx
 
-import { setUbereduxKey } from '../../gl-core';
+import { setUbereduxKey, toggleLoading } from '../../gl-core';
 import { TUbereduxDispatch } from '../../gl-core/types';
-// import { store } from '../../gl-core/cartridges/Uberedux/store';
 
 export type TUbereduxState = {
   // define shape if needed
@@ -19,9 +18,19 @@ export const navigateTo =
             ? '_self'
             : url.startsWith('http')
               ? '_blank'
-              : '_self'; // fallback to _self for unknown cases
+              : '_self';
 
-      console.log('navigateTo', url, resolvedTarget);
+      /*
+        dispatch(
+          toggleLoading({
+            status: 'loading',
+            message: `to... ${url}`,
+          }),
+        );
+        setTimeout(() => {
+          window.open(url, resolvedTarget);
+        }, 1000);
+      */
       window.open(url, resolvedTarget);
     } catch (e: unknown) {
       const errorMessage = e instanceof Error ? e.message : String(e);

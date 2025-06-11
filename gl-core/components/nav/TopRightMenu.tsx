@@ -15,7 +15,7 @@ import {
 import {
   Icon,
   useDispatch,
-  navigateTo,
+  toggleFeedback,
   ShareMenu,
   useVersion,
 } from '../../../gl-core';
@@ -49,6 +49,17 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
 
   const handleSignout = () => {
     dispatch(firebaseAuth('signout'));
+  };
+
+  const handleFactorySettings = () => {
+    dispatch(
+      toggleFeedback({
+        mode: 'confirm',
+        severity: 'error',
+        title: 'Reset to factory settings?',
+        description: 'are you sure?',
+      }),
+    );
   };
 
   return (
@@ -102,6 +113,22 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
             <ListItemText secondary={user.email} primary={'Sign Out'} />
           </MenuItem>
         ) : null}
+
+        <MenuItem
+          sx={{ my: 2 }}
+          onClick={(e) => {
+            // e.stopPropagation();
+            // e.preventDefault();
+            // setShareOpen((prev) => !prev);
+            console.log('factorySettings');
+            handleFactorySettings();
+          }}
+        >
+          <ListItemIcon>
+            <Icon icon="reset" />
+          </ListItemIcon>
+          <ListItemText primary="Factory settings" />
+        </MenuItem>
 
         <Box sx={{ pr: 3, py: 1, textAlign: 'right' }}>
           <Typography

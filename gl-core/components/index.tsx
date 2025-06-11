@@ -1,10 +1,4 @@
-import {
-  IncludeAll,
-  Advert,
-  Feedback,
-  Status,
-  LoadingOverlay,
-} from './includes';
+import { IncludeAll, Advert, Feedback, LoadingOverlay } from './includes';
 import {
   NextPrevious,
   Nav,
@@ -17,9 +11,10 @@ import {
   TopRightMenu,
   ShareMenu,
 } from './nav';
+import { FieldUpload } from './forms';
 import { Header, Footer, RenderMarkdown } from './layout';
 
-export { IncludeAll, Advert, Feedback, Status, LoadingOverlay };
+export { IncludeAll, Advert, Feedback, LoadingOverlay };
 export { Header, Footer, RenderMarkdown };
 export {
   NextPrevious,
@@ -32,4 +27,5 @@ export {
   SideAds,
   TopRightMenu,
   ShareMenu,
+  FieldUpload,
 };

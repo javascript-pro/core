@@ -1,10 +1,15 @@
 'use client';
-// core/gl-core/cartridges/Bouncer/components/Feedback.tsx
+// core/gl-core/components/includes/Feedback.tsx
 
 import * as React from 'react';
-import { Snackbar, Alert } from '@mui/material';
+import { Snackbar, Alert, IconButton } from '@mui/material';
 import { TAuthForm } from '../../../gl-core/types';
-import { useFeedback, useDispatch } from '../../../gl-core';
+import {
+  useFeedback,
+  useDispatch,
+  toggleFeedback,
+  Icon,
+} from '../../../gl-core';
 
 export default function Feedback({}: TAuthForm) {
   const feedback = useFeedback();
@@ -13,24 +18,41 @@ export default function Feedback({}: TAuthForm) {
   React.useEffect(() => {
     if (feedback && !feedback.hidden) {
       const timer = setTimeout(() => {
-        // dispatch(updateFeedback(null));
+        // console.log('toggleFeedback(null)');
+        dispatch(toggleFeedback(null));
       }, 4000);
 
       return () => clearTimeout(timer);
     }
   }, [feedback, dispatch]);
 
-  if (!feedback) return null;
+  if (!feedback || feedback.hidden) return null;
 
   const { title, description, severity } = feedback;
 
+  const handleClose = () => {
+    dispatch(toggleFeedback(null));
+  };
+
   return (
-    <Snackbar open anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}>
+    <Snackbar
+      open
+      anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+      onClose={handleClose}
+    >
       <Alert
         severity={severity}
-        sx={{
-          minWidth: 280,
-        }}
+        sx={{ minWidth: 250 }}
+        action={
+          <IconButton
+            aria-label="close"
+            color="inherit"
+            size="small"
+            onClick={handleClose}
+          >
+            <Icon icon="close" />
+          </IconButton>
+        }
       >
         <strong>{title}</strong>
         <br />

@@ -8,12 +8,18 @@ import {
   updateFall,
   deleteFall,
   updateKey,
+  incomingChange,
 } from './actions';
 import { UserInfo, StickyHeader } from './components';
-import { UploadFile, ViewCases, NewCase, Uploads } from './components/screens';
+import {
+  Uploads,
+  UploadNew,
+  UploadList,
+  UploadEdit,
+} from './components/uploads';
 
-export { UploadFile, ViewCases, NewCase, Uploads };
+export { Uploads, UploadNew, UploadList, UploadEdit };
 export { Fallmanager, UserInfo, StickyHeader };
 export { createFall, readFall, updateFall, deleteFall };
-export { updateKey };
+export { updateKey, incomingChange };
 export { initialStateFallmanager, useFallmanager };

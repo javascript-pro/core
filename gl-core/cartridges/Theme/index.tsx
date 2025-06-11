@@ -1,6 +1,6 @@
 import Theme from './Theme';
-import Icon from './Icon';
-import ModeSwitch from './ModeSwitch';
+import Icon from './components/Icon';
+import ModeSwitch from './components/ModeSwitch';
 import { subMUITheme } from './subMUITheme';
 import { useThemeMode } from './hooks';
 

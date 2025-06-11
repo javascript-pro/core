@@ -1,28 +1,18 @@
 'use client';
 import * as React from 'react';
-import config from './config.json';
+import config from './fallmanager.json';
 import { AppBar, CssBaseline, Paper } from '@mui/material';
 import { Theme } from '../../../gl-core';
-import {
-  StickyHeader,
-  NewCase,
-  ViewCases,
-  Uploads,
-  UploadFile,
-} from '../Fallmanager';
+import { StickyHeader, Uploads } from '../Fallmanager';
 import { usePathname } from 'next/navigation';
 
 export default function Fallmanager() {
   const pathname = usePathname();
   const views: Record<string, React.ReactNode> = {
-    '/fallmanager': <ViewCases />,
-    '/fallmanager/cases': <ViewCases />,
-    '/fallmanager/cases/new': <NewCase />,
-    '/fallmanager/uploads': <Uploads />,
-    '/fallmanager/uploads/new': <UploadFile />,
+    '/fallmanager': <Uploads />,
   };
 
-  const view = views[pathname] ?? <ViewCases />;
+  const view = views[pathname] ?? <Uploads />;
 
   return (
     <Theme theme={config.theme as any}>

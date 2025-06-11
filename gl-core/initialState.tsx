@@ -13,13 +13,7 @@ export const initialState: any = {
   version: pJSON.version,
   persisted: Date.now(),
   config,
-  isLoading: false,
   themeMode: 'light',
-  feedbackHidden: false,
-  feedback_: null,
-  feedback: {
-    title: 'Gosh, this is good',
-    description: 'innit',
-    severity: 'info',
-  },
+  loading: null,
+  feedback: null,
 };

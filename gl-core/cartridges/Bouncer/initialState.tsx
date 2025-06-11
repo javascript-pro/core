@@ -1,8 +1,8 @@
 // core/gl-core/cartridges/Bouncer/initialState.tsx
-// import { TBouncerState } from '../Bouncer';
 
 export const initialState: any = {
   cartridge: 'bouncer',
+  email: 'goldlabel.apps@gmail.com',
   authing: true,
   user: null,
   feedback: null,

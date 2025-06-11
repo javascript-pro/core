@@ -1,14 +1,19 @@
+// core/gl-core/cartridges/Theme/components/ModeSwitch.tsx
 'use client';
 
 import * as React from 'react';
 import {
-  Box,
   Typography,
   ListItemButton,
   ListItemIcon,
   ListItemText,
 } from '@mui/material';
-import { Icon, useSlice, useDispatch, setUbereduxKey } from '../../../gl-core';
+import {
+  Icon,
+  useSlice,
+  useDispatch,
+  setUbereduxKey,
+} from '../../../../gl-core';
 
 export default function ModeSwitch() {
   const dispatch = useDispatch();

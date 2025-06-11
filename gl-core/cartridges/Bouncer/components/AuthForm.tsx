@@ -1,13 +1,14 @@
 'use client';
 // core/gl-core/cartridges/Bouncer/components/AuthForm.tsx
+
 import * as React from 'react';
-import { TAuthForm } from '../../../types';
+import config from '../../../config.json';
 import { useRouter } from 'next/navigation';
 import {
   Container,
+  CssBaseline,
   Box,
   IconButton,
-  Card,
   CardHeader,
   CardContent,
   CardActions,
@@ -15,28 +16,64 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import { Theme, Icon, MightyButton, useDispatch } from '../../../../gl-core';
-import { firebaseAuth } from '../../Bouncer';
-
-import config from '../../../config.json';
+import {
+  Theme,
+  IncludeAll,
+  Icon,
+  MightyButton,
+  useDispatch,
+  useThemeMode,
+  toggleFeedback,
+} from '../../../../gl-core';
+import { firebaseAuth, useEmail } from '../../Bouncer';
+import { bouncerKey } from '../actions/bouncerKey';
 
 function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
-export default function AuthForm({ frontmatter }: TAuthForm) {
+function getFeedback(email: string, password: string) {
+  if (!email && !password) {
+    return {
+      title: 'Please enter email and password',
+      severity: 'info',
+    };
+  }
+
+  if (!isValidEmail(email)) {
+    return {
+      title: 'Email',
+      description: 'Please use a valid email address',
+      severity: 'warning',
+    };
+  }
+
+  if (password.length < 6) {
+    return {
+      title: 'Password',
+      description: 'Password must be at least 6 characters',
+      severity: 'warning',
+    };
+  }
+
+  return null;
+}
+
+export default function AuthForm() {
   const dispatch = useDispatch();
   const router = useRouter();
   const canResetPassword = false;
-  const [email, setEmail] = React.useState('');
+  const email = useEmail(); // From Redux persisted state
   const [password, setPassword] = React.useState('');
-  const title = 'Sign In';
-  const description = '(please)';
+  const themeMode = useThemeMode();
+  const title = 'Not in those shoes, mate';
   const icon = 'signin';
 
   const isFormValid = React.useMemo(() => {
     return isValidEmail(email) && password.length >= 6;
   }, [email, password]);
+
+  const shouldFocusPassword = isValidEmail(email);
 
   const onSignIn = () => {
     dispatch(
@@ -51,74 +88,85 @@ export default function AuthForm({ frontmatter }: TAuthForm) {
     router.back();
   };
 
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    dispatch(bouncerKey('email', e.target.value));
+  };
+
   React.useEffect(() => {
-    if (!email && !password) {
-      // Feedback: waiting for input
-    } else if (!isValidEmail(email)) {
-      // Feedback: invalid email
-    } else if (password.length < 6) {
-      // Feedback: weak password
-    } else {
-      // Feedback: null
-    }
-  }, [email, password, dispatch]);
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Enter') {
+        if (isFormValid) {
+          onSignIn();
+        } else {
+          const feedback = getFeedback(email, password);
+          if (feedback) dispatch(toggleFeedback(feedback as any));
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [dispatch, email, password, isFormValid]);
 
   return (
-    <Theme theme={config.themes.dark as any}>
-      <Container maxWidth={'xs'} sx={{ pt: 2 }}>
-        <Card>
-          <CardHeader
-            avatar={
-              <IconButton onClick={handleBack}>
-                <Icon icon="left" />
-              </IconButton>
-            }
-            title={<Typography variant="h6">{title}</Typography>}
-            subheader={<Typography variant="body2">{description}</Typography>}
+    <Theme theme={config.themes[themeMode] as any}>
+      <CssBaseline />
+      <IncludeAll />
+      <Container maxWidth="xs" sx={{ pt: 2 }}>
+        <CardHeader
+          avatar={
+            <IconButton onClick={handleBack}>
+              <Icon icon="left" />
+            </IconButton>
+          }
+          title={<Typography variant="h6">{title}</Typography>}
+        />
+        <CardContent>
+          <TextField
+            id="email"
+            variant="outlined"
+            color="secondary"
+            label="Email"
+            type="email"
+            fullWidth
+            value={email}
+            onChange={handleEmailChange}
+            autoFocus={!shouldFocusPassword}
           />
-          <CardContent>
-            <TextField
-              id="email"
-              variant="filled"
-              autoFocus
-              label="Email"
-              type="email"
-              fullWidth
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <TextField
-              id="password"
-              variant="filled"
-              label="Password"
-              type="password"
-              fullWidth
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              sx={{ mt: 2 }}
-            />
-          </CardContent>
+          <TextField
+            id="password"
+            variant="outlined"
+            color="secondary"
+            label="Password"
+            type="password"
+            fullWidth
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            autoFocus={shouldFocusPassword}
+            sx={{ mt: 2 }}
+          />
+        </CardContent>
 
-          <CardActions>
-            <Box sx={{ flexGrow: 1 }} />
-            {canResetPassword && (
-              <Box>
-                <Button onClick={() => console.log('Password?')}>
-                  Password?
-                </Button>
-              </Box>
-            )}
+        <CardActions>
+          <Box sx={{ flexGrow: 1 }} />
+          {canResetPassword && (
+            <Box>
+              <Button onClick={() => console.log('Password?')}>
+                Password?
+              </Button>
+            </Box>
+          )}
 
-            <MightyButton
-              sx={{ mx: 1, mb: 1 }}
-              onClick={onSignIn}
-              variant={isFormValid ? 'contained' : 'outlined'}
-              disabled={!isFormValid}
-              label="Sign in"
-              icon={icon}
-            />
-          </CardActions>
-        </Card>
+          <MightyButton
+            fullWidth
+            sx={{ mx: 1, mb: 1 }}
+            onClick={onSignIn}
+            variant={isFormValid ? 'contained' : 'text'}
+            disabled={!isFormValid}
+            label="Sign in"
+            icon={icon}
+          />
+        </CardActions>
       </Container>
     </Theme>
   );

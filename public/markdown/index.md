@@ -10,15 +10,14 @@ api: /api/gl-api/flickr
 image: /png/default.png
 ---
 
-## We build and ship modern web apps for clients who need real results — fast
+### We build and ship modern web apps for clients who need real results — fast
 
 - _Small_ team. _Big_ output
 - Real deployments from Day One
 - Readable, extensible, Open Source
-- [Company](/work/company)
 
-### About Goldlabel
+[Goldlabel Core](/free/core) is [JavaScript](/work/techstack/javascript). It's [Free](/free) and [Open Source](/free/open-source)
 
-[Core](/free/core) is [JavaScript](/work/techstack/javascript). It's [Free](/free) and [Open Source](/free/open-source).
+It has cartridges which work a little like WordPress plugins. Some Free ones are [CV](/cv/about), [Bouncer](/free/bouncer), [Uberedux](/free/uberedux) & [Flickr](/free/flickr)
 
-It has cartridges which you drop in. Some of the Free ones are [CV](/cv/about) | [Bouncer](/free/bouncer) | [Uberedux](/free/uberedux) | [Flickr](/free/flickr) | [Flash](/free/flash)
+[Contact Us](/work/company)

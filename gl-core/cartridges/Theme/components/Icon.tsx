@@ -130,10 +130,12 @@ import AboutIcon from '@mui/icons-material/HelpOutlineOutlined';
 import ClientsIcon from '@mui/icons-material/PeopleAltOutlined';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import DogIcon from '@mui/icons-material/Pets';
+import UploadIcon from '@mui/icons-material/FileUpload';
 
 export type TIcon = {
   icon:
     | 'more'
+    | 'upload'
     | 'plus'
     | 'dog'
     | 'about'
@@ -746,6 +748,9 @@ export default function Icon({ icon, color }: TIcon) {
 
     case 'album':
       iconFragment = <AlbumIcon color={color} />;
+      break;
+    case 'upload':
+      iconFragment = <UploadIcon color={color} />;
       break;
 
     case 'about':

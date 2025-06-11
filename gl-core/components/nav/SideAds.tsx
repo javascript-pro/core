@@ -1,23 +1,40 @@
 'use client';
 import React from 'react';
-import { useRouter } from 'next/navigation';
 import { Box } from '@mui/material';
-import { Advert } from '../../../gl-core';
+import { Advert, useDispatch, routeTo } from '../../../gl-core';
+import { useRouter } from 'next/navigation';
 
 export type TSideAds = {
   children?: React.ReactNode;
   [key: string]: any;
 };
 
-export default function SideAds({ children = null }: TSideAds) {
+export default function SideAds() {
+  const dispatch = useDispatch();
   const router = useRouter();
   return (
     <Box sx={{}}>
       <Advert
+        icon="home"
+        title={'Home'}
+        onClick={() => {
+          dispatch(routeTo('/', router));
+        }}
+      />
+
+      <Advert
+        icon="flash"
+        title={'Flash'}
+        onClick={() => {
+          dispatch(routeTo('/free/flash', router));
+        }}
+      />
+
+      <Advert
         icon="fallmanager"
         title={'Fallmanager'}
         onClick={() => {
-          router.push(`/fallmanager`);
+          dispatch(routeTo('/fallmanager', router));
         }}
       />
 
@@ -25,21 +42,37 @@ export default function SideAds({ children = null }: TSideAds) {
         icon="flickr"
         title={'Flickr'}
         onClick={() => {
-          router.push(`/free/flickr`);
+          dispatch(routeTo('/free/flickr', router));
         }}
       />
       <Advert
         icon="openai"
         title={'C.V.'}
         onClick={() => {
-          router.push(`/cv`);
+          dispatch(routeTo('/cv', router));
         }}
       />
       <Advert
         icon="food"
-        title={'Lemon Meringue Pie'}
+        title={'Lemonading'}
         onClick={() => {
-          router.push(`/life/food/lemon-meringue-pie`);
+          dispatch(routeTo('/life/food/lemon-meringue-pie', router));
+        }}
+      />
+
+      <Advert
+        icon="dog"
+        title={'dog'}
+        onClick={() => {
+          dispatch(routeTo('/balance/puppy-thing', router));
+        }}
+      />
+
+      <Advert
+        icon="contact"
+        title={'Contact Us'}
+        onClick={() => {
+          dispatch(routeTo('/work/company', router));
         }}
       />
 

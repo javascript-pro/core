@@ -1,0 +1,99 @@
+import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+import {
+  collection,
+  addDoc,
+  serverTimestamp,
+  query,
+  where,
+  getDocs,
+} from 'firebase/firestore';
+import { storage, db } from '../../gl-core/lib/firebase';
+import { TUbereduxDispatch } from '../../gl-core/types';
+import { setUbereduxKey, toggleFeedback } from '../../gl-core';
+
+interface UploadArgs {
+  file: File;
+  slug: string;
+}
+
+function generateSlugFromFilename(name: string): string {
+  const baseName = name.replace(/\.[^/.]+$/, ''); // Remove extension
+  return encodeURIComponent(baseName.toLowerCase().replace(/\s+/g, '-'));
+}
+
+function getFileExtension(filename: string): string {
+  const match = filename.match(/\.([0-9a-z]+)(?:[\?#]|$)/i);
+  return match ? `.${match[1].toLowerCase()}` : '';
+}
+
+export const uploadToStorage =
+  ({ file, slug }: UploadArgs) =>
+  async (dispatch: TUbereduxDispatch, getState: () => any) => {
+    try {
+      const cleanSlug = generateSlugFromFilename(file.name);
+      const extension = getFileExtension(file.name);
+      const uploadsRef = collection(db, 'uploads');
+
+      // Check for existing upload with same name and size
+      const q = query(
+        uploadsRef,
+        where('name', '==', file.name),
+        where('size', '==', file.size),
+      );
+
+      const existing = await getDocs(q);
+
+      if (!existing.empty) {
+        dispatch(
+          toggleFeedback({
+            severity: 'warning',
+            title: 'File already uploaded',
+            description: `The file "${file.name}" already exists in the system.`,
+          }),
+        );
+        return;
+      }
+
+      const filename = `${Date.now()}_${file.name}`;
+      const storageRef = ref(storage, `fallmanager/${filename}`);
+
+      dispatch(
+        toggleFeedback({
+          severity: 'info',
+          title: `Uploading ${filename}...`,
+        }),
+      );
+
+      const snapshot = await uploadBytes(storageRef, file);
+      const url = await getDownloadURL(snapshot.ref);
+
+      await addDoc(uploadsRef, {
+        name: file.name,
+        cartridge: slug,
+        slug: cleanSlug,
+        url,
+        type: file.type,
+        size: file.size,
+        extension,
+        uploadedAt: serverTimestamp(),
+      });
+
+      dispatch(
+        toggleFeedback({
+          severity: 'success',
+          title: 'Upload complete',
+          description: `File "${file.name}" uploaded successfully.`,
+        }),
+      );
+    } catch (e: unknown) {
+      const msg = e instanceof Error ? e.message : String(e);
+      dispatch(setUbereduxKey({ key: 'error', value: msg }));
+      dispatch(
+        toggleFeedback({
+          severity: 'error',
+          title: 'Upload failed',
+          description: msg,
+        }),
+      );
+    }
+  };
