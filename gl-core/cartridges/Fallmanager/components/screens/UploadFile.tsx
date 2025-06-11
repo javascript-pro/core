@@ -1,19 +1,77 @@
 'use client';
 // core/gl-core/cartridges/Fallmanager/components/screens/UploadFile.tsx
 import * as React from 'react';
-import { Box } from '@mui/material';
-import { FieldUpload } from '../../../../../gl-core';
+import config from '../../fallmanager.json';
+import { 
+  Box,
+} from '@mui/material';
+import {
+  FieldUpload,
+  useDispatch,
+  toggleFeedback,
+  uploadToStorage,
+  MightyButton,
+} from '../../../../../gl-core';
+
+export type TFileType = {
+  title: string;
+  description?: string;
+  extension: string;
+  icon: string;
+};
 
 export default function UploadFile() {
-  console.log('UploadFile');
+  const dispatch = useDispatch();
+
+  React.useEffect(() => {
+    dispatch(
+      toggleFeedback({
+        title: 'Upload a file',
+      }),
+    );
+  }, [dispatch]);
+
+  const handleUploadClick = (file) => {
+    dispatch(
+      uploadToStorage({
+        file,
+        slug: config.slug,
+      }),
+    );
+  };
+
+  const allowedFileTypes: TFileType[] = [
+    {
+      title: 'JSON',
+      description: 'JavaScript Notation Language',
+      extension: '.json',
+      icon: 'json',
+    },
+    {
+      title: 'PDF',
+      description: 'Portable Document Format',
+      extension: '.pdf',
+      icon: 'pdf',
+    },
+    {
+      title: 'Scanned Image',
+      description: 'JPG',
+      extension: '.jpg',
+      icon: 'jpg',
+    },
+    {
+      title: 'Word Document',
+      extension: '.docx',
+      icon: 'word',
+    },
+  ];
+
+  console.log('allowedFileType', allowedFileTypes);
 
   return (
     <Box sx={{ p: 1, border: '1px solid gold' }}>
       In this component we offer the user an upload form. We have a Firebase
       storage folder and we will be uploading the file to that.
-      <br />
-      <br />
-      <FieldUpload />
       <br />
       <br />
       The user can upload 1 file at a time by clicking a button labelled Upload
@@ -35,6 +93,15 @@ export default function UploadFile() {
       <br />
       This allows the upload thing to be used by other things as well as
       Fallmanager
+      <Box sx={{ my: 2}}>
+        <FieldUpload />
+        <MightyButton 
+          label="Upload"
+          icon="upload"
+          onClick={handleUploadClick as any}
+          variant="contained"
+        />
+      </Box>
     </Box>
   );
 }

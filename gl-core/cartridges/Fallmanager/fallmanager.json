@@ -2,7 +2,7 @@
   "title": "Fallmanager",
   "description": "Zentrale Verwaltung von Falldaten",
   "icon": "fallmanager",
-  "slug": "/fallmanager",
+  "slug": "fallmanager",
   "theme": {
     "name": "fallmanager",
     "mode": "light",

@@ -1,7 +1,7 @@
 'use client';
 import * as React from 'react';
 import { Box, Button } from '@mui/material';
-import { Icon } from '../../../gl-core'
+import { Icon } from '../../../gl-core';
 /*
   this component is generic and should be well typed
   it should accept certain props, like id, which will 
@@ -14,17 +14,15 @@ import { Icon } from '../../../gl-core'
 
 export type TFieldUplaod = {
   id?: string;
-}
+};
 
 export default function FieldUpload() {
-
-
-
-  return <Box sx={{ p: 1, border: '1px solid blue' }}>
-            <Box>
-              <Icon icon="upload" />
-              Field
-            </Box>
-            <Button>Upload Now</Button>
-          </Box>;
+  return (
+    <Box sx={{ p: 1, border: '1px solid blue' }}>
+      <Box>
+        <Icon icon="upload" />
+        Field
+      </Box>
+    </Box>
+  );
 }

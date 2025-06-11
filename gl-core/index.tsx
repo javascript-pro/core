@@ -43,6 +43,7 @@ import {
   forwardEmail,
   toggleFeedback,
   toggleLoading,
+  uploadToStorage,
 } from './actions';
 
 export { Core };
@@ -53,6 +54,7 @@ export {
   forwardEmail,
   toggleFeedback,
   toggleLoading,
+  uploadToStorage,
 };
 export {
   Advert,
