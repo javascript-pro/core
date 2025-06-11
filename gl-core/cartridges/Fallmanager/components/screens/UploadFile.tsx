@@ -2,9 +2,7 @@
 // core/gl-core/cartridges/Fallmanager/components/screens/UploadFile.tsx
 import * as React from 'react';
 import config from '../../fallmanager.json';
-import { 
-  Box,
-} from '@mui/material';
+import { Box } from '@mui/material';
 import {
   FieldUpload,
   useDispatch,
@@ -93,9 +91,9 @@ export default function UploadFile() {
       <br />
       This allows the upload thing to be used by other things as well as
       Fallmanager
-      <Box sx={{ my: 2}}>
+      <Box sx={{ my: 2 }}>
         <FieldUpload />
-        <MightyButton 
+        <MightyButton
           label="Upload"
           icon="upload"
           onClick={handleUploadClick as any}

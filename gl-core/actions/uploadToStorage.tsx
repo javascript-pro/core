@@ -15,9 +15,11 @@ export const uploadToStorage =
       // console.log('uploadToStorage');
       // console.log('file:', file);
       // console.log('slug:', slug);
-      dispatch(toggleFeedback ({
-        title: "Uploading file..."
-      }))
+      dispatch(
+        toggleFeedback({
+          title: 'Uploading file...',
+        }),
+      );
       // TODO: Implement the actual upload logic here.
     } catch (e: unknown) {
       const msg = e instanceof Error ? e.message : String(e);
