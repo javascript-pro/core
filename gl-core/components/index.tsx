@@ -11,6 +11,7 @@ import {
   TopRightMenu,
   ShareMenu,
 } from './nav';
+import { FieldUpload } from './forms';
 import { Header, Footer, RenderMarkdown } from './layout';
 
 export { IncludeAll, Advert, Feedback, LoadingOverlay };
@@ -26,4 +27,5 @@ export {
   SideAds,
   TopRightMenu,
   ShareMenu,
+  FieldUpload,
 };

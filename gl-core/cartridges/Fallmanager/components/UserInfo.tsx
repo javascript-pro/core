@@ -10,12 +10,12 @@ export type TUserInfo = {
 
 export default function UserInfo() {
   const user = useUser();
-  console.log('UserInfo', user);
+  // console.log('UserInfo', user);
   const { email } = user;
   return (
     <>
       <Box>
-        <Typography>Signed in as {email}</Typography>
+        <Typography variant="caption">{email}</Typography>
         {/* <pre>email : {JSON.stringify(email, null, 2)}</pre> */}
       </Box>
     </>

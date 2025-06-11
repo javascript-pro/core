@@ -3,17 +3,10 @@
 import * as React from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import {
-  Box,
-  CardHeader,
-  IconButton,
-} from '@mui/material';
-import {
-  MightyButton,
-  useDispatch,
-  navigateTo,
-} from '../../../../gl-core';
+import { Box, CardHeader, IconButton } from '@mui/material';
+import { MightyButton, useDispatch } from '../../../../gl-core';
 import { firebaseAuth } from '../../Bouncer';
+import { UserInfo } from '../../Fallmanager';
 
 export default function StickyHeader() {
   const router = useRouter();
@@ -43,7 +36,9 @@ export default function StickyHeader() {
           </IconButton>
         }
         action={
-          <MightyButton mode="icon" icon="signout" onClick={handleSignout} />
+          <>
+            <UserInfo />
+          </>
         }
       />
     </Box>

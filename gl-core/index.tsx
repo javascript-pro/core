@@ -17,6 +17,7 @@ import {
   ShareMenu,
   IncludeAll,
   LoadingOverlay,
+  FieldUpload,
 } from './components';
 import {
   useLoading,
@@ -73,6 +74,7 @@ export {
   ShareMenu,
   IncludeAll,
   LoadingOverlay,
+  FieldUpload,
 };
 export { Uberedux, UbereduxProvider, setUbereduxKey, resetUberedux };
 export {
