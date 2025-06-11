@@ -34,7 +34,7 @@
       "NextJS",
       "Headless CMS"
     ],
-    "excerpt": "We build and ship modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source\n \n\n About Goldlabel\n\n is . It's  a",
+    "excerpt": "We build and ship modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source\n\n is . It's  and \n\nIt has cartridg",
     "children": [
       {
         "title": "Cartridges",
@@ -211,7 +211,7 @@
             "order": 10,
             "icon": "work",
             "type": "folder",
-            "excerpt": "Goldlabel Apps is a UKbased software company that designs, builds, and maintains fullstack web applications. We specialize in Next.js, Firebase, and custom UI development, delivering everything from i",
+            "excerpt": "Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX\n\nGoldlabel Apps is a UKbased software company that designs, builds, and maintains fullstack web applications. We specialize in",
             "children": [
               {
                 "title": "Working remotely",
@@ -544,12 +544,12 @@
         ]
       },
       {
-        "title": "Sign in please",
-        "slug": "/signin",
+        "title": "Contact",
+        "slug": "/contact",
         "order": 2000,
-        "icon": "signin",
+        "icon": "contact",
         "type": "file",
-        "excerpt": "You are signed in using the Bouncer cartridge"
+        "excerpt": "Show a contact form"
       }
     ]
   }

@@ -7,7 +7,6 @@ import Image from 'next/image';
 import {
   CssBaseline,
   Container,
-  Paper,
   Box,
   Grid,
   Skeleton,
@@ -23,11 +22,13 @@ import {
   useVersionCheck,
   IncludeAll,
   useThemeMode,
+  toggleLoading,
+  useDispatch,
 } from '../gl-core';
 import { Flickr } from './cartridges/Flickr';
 import { CV } from './cartridges/CV';
 import { Fallmanager } from './cartridges/Fallmanager';
-import { Bouncer, useUser } from './cartridges/Bouncer';
+import { Bouncer } from './cartridges/Bouncer';
 
 export type TFrontmatter = {
   icon?: string;
@@ -49,6 +50,12 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const themeMode = useThemeMode();
   useVersionCheck();
   const isMobile = useIsMobile();
+  const dispatch = useDispatch();
+
+  // Reset loading on mount
+  React.useEffect(() => {
+    dispatch(toggleLoading(null));
+  }, [dispatch]);
 
   const isCV = pathname === '/cv';
   const isFlickr = pathname === '/free/flickr';
@@ -97,12 +104,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
       <CssBaseline />
       <IncludeAll />
       <Container id="core">
-        <Box
-          sx={{
-            minHeight: '100vh',
-            // m: 1,
-          }}
-        >
+        <Box sx={{ minHeight: '100vh' }}>
           <Header frontmatter={frontmatter} />
           <Grid container spacing={1}>
             <Grid
@@ -146,22 +148,12 @@ export default function Core({ frontmatter, body = null }: TCore) {
                   </Box>
                 )}
 
-                <Box
-                  sx={{
-                    px: isMobile ? 0.5 : 2,
-                    my: !isMobile ? 3 : 2,
-                  }}
-                >
+                <Box sx={{ px: isMobile ? 0.5 : 2, my: !isMobile ? 3 : 2 }}>
                   {pathname !== '/' && <PageBreadcrumb />}
                 </Box>
               </Box>
 
-              <Box
-                sx={{
-                  mb: '50px',
-                  px: isMobile ? 0.5 : 2,
-                }}
-              >
+              <Box sx={{ mb: '50px', px: isMobile ? 0.5 : 2 }}>
                 {isApp ? app : <RenderMarkdown>{body}</RenderMarkdown>}
                 {isMobile && getAside()}
               </Box>

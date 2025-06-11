@@ -18,8 +18,6 @@ export type TFeedback = {
   description?: string;
 } | null;
 
-
-
 export type TAuthForm = {
   frontmatter?: any;
   onClose?: () => void;

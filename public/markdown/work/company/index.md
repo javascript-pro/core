@@ -18,4 +18,4 @@ Whether you're a startup with a short deadline or an enterprise with complex wor
 
 [goldlabel.apps@gmail.com](mailto:goldlabel.apps@gmail.com)  
 [+44 07745 763 122 ](https://wa.me/447745763122)  
-[GitHub](https://github.com/javascript-pro) | [LinkedIn](https://www.linkedin.com/in/chris-dorward)  
+[GitHub](https://github.com/javascript-pro) | [LinkedIn](https://www.linkedin.com/in/chris-dorward)

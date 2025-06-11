@@ -13,7 +13,6 @@ export default function SideAds() {
 
   return (
     <Box sx={{}}>
-
       <Advert
         icon="flash"
         title={'Flash'}

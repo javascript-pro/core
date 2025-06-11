@@ -14,9 +14,6 @@ export const initialState: any = {
   persisted: Date.now(),
   config,
   themeMode: 'light',
-  loading: {
-    status: "loading",
-    message: "facking loading, mate. hold up"
-  },
+  loading: null,
   feedback: null,
 };

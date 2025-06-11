@@ -38,6 +38,9 @@
     <loc>https://goldlabel.pro/cartridges/new-cartridge</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/contact</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/cv/about</loc>
   </url>
   <url>
@@ -96,9 +99,6 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/life</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/signin</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/company</loc>
