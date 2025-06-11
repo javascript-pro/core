@@ -6,6 +6,7 @@ import config from '../../../config.json';
 import { useRouter } from 'next/navigation';
 import {
   Container,
+  CssBaseline,
   Box,
   IconButton,
   Card,
@@ -96,8 +97,9 @@ export default function AuthForm() {
 
   return (
     <Theme theme={config.themes[themeMode] as any}>
+      <CssBaseline />
       <Container maxWidth="xs" sx={{ pt: 2 }}>
-        <Card>
+        
           <CardHeader
             avatar={
               <IconButton onClick={handleBack}>
@@ -105,12 +107,13 @@ export default function AuthForm() {
               </IconButton>
             }
             title={<Typography variant="h6">{title}</Typography>}
-            subheader={<Typography variant="body2">{description}</Typography>}
+            // subheader={<Typography variant="body2">{description}</Typography>}
           />
           <CardContent>
             <TextField
               id="email"
-              variant="filled"
+              variant="outlined"
+              color="secondary"
               label="Email"
               type="email"
               fullWidth
@@ -120,7 +123,8 @@ export default function AuthForm() {
             />
             <TextField
               id="password"
-              variant="filled"
+              variant="outlined"
+              color="secondary"
               label="Password"
               type="password"
               fullWidth
@@ -142,15 +146,16 @@ export default function AuthForm() {
             )}
 
             <MightyButton
+              fullWidth
               sx={{ mx: 1, mb: 1 }}
               onClick={onSignIn}
-              variant={isFormValid ? 'contained' : 'outlined'}
+              variant={isFormValid ? 'contained' : 'text'}
               disabled={!isFormValid}
               label="Sign in"
               icon={icon}
             />
           </CardActions>
-        </Card>
+          
       </Container>
     </Theme>
   );
