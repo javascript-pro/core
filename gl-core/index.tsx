@@ -37,11 +37,12 @@ import {
 import { navigateTo } from './actions/navigateTo';
 import { routeTo } from './actions/routeTo';
 import { forwardEmail } from './actions/forwardEmail';
+import { toggleFeedback } from './actions/toggleFeedback';
 
 export { Core };
 export { Theme, Icon, ModeSwitch, useThemeMode };
 export { Header, Footer, RenderMarkdown };
-export { navigateTo, routeTo, forwardEmail };
+export { navigateTo, routeTo, forwardEmail, toggleFeedback };
 export {
   Advert,
   NextPrevious,

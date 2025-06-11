@@ -15,7 +15,7 @@ import {
 import {
   Icon,
   useDispatch,
-  navigateTo,
+  toggleFeedback,
   ShareMenu,
   useVersion,
 } from '../../../gl-core';
@@ -50,6 +50,14 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
   const handleSignout = () => {
     dispatch(firebaseAuth('signout'));
   };
+
+  const handleFactorySettings = () => {
+    dispatch(toggleFeedback({
+      title: "dfasfljf",
+      severity: "warning",
+      description: "dasdasdasfads"
+    }))
+  }
 
   return (
     <>
@@ -110,6 +118,7 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
             // e.preventDefault();
             // setShareOpen((prev) => !prev);
             console.log('factorySettings');
+            handleFactorySettings();
           }}
         >
           <ListItemIcon>

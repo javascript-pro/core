@@ -1,4 +1,4 @@
-// core/gl-core/cartridges/Bouncer/actions/updateFeedback.tsx
+// core/gl-core/cartridges/Bouncer/actions/toggleFeedback.tsx
 
 /*
     Takes a TFeedback typed object || null
@@ -9,7 +9,7 @@ import { TUbereduxDispatch } from '../../gl-core/types';
 import { setUbereduxKey } from '../../gl-core';
 import { TFeedback } from '../types';
 
-export const updateFeedback =
+export const toggleFeedback =
   (feedback: TFeedback | null) => async (dispatch: TUbereduxDispatch) => {
     try {
       const updated = { ...(feedback || {}) };
