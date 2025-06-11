@@ -2,7 +2,7 @@
 
 export const initialState: any = {
   cartridge: 'bouncer',
-  email: 'bobs@cunt.com',
+  email: 'goldlabel.apps@gmail.com',
   authing: true,
   user: null,
   feedback: null,

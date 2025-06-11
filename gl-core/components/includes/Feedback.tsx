@@ -4,7 +4,12 @@
 import * as React from 'react';
 import { Snackbar, Alert, IconButton } from '@mui/material';
 import { TAuthForm } from '../../../gl-core/types';
-import { useFeedback, useDispatch, toggleFeedback, Icon } from '../../../gl-core';
+import {
+  useFeedback,
+  useDispatch,
+  toggleFeedback,
+  Icon,
+} from '../../../gl-core';
 
 export default function Feedback({}: TAuthForm) {
   const feedback = useFeedback();
@@ -13,7 +18,7 @@ export default function Feedback({}: TAuthForm) {
   React.useEffect(() => {
     if (feedback && !feedback.hidden) {
       const timer = setTimeout(() => {
-        console.log("toggleFeedback(null)");
+        console.log('toggleFeedback(null)');
         // dispatch(toggleFeedback(null));
       }, 4000);
 
@@ -47,8 +52,11 @@ export default function Feedback({}: TAuthForm) {
           >
             <Icon icon="close" />
           </IconButton>
-        }>
-        <strong>{title}</strong><br />{description}
+        }
+      >
+        <strong>{title}</strong>
+        <br />
+        {description}
       </Alert>
     </Snackbar>
   );

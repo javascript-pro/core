@@ -22,6 +22,7 @@ import {
   MightyButton,
   useDispatch,
   useThemeMode,
+  toggleFeedback,
 } from '../../../../gl-core';
 import { firebaseAuth, useEmail } from '../../Bouncer';
 import { bouncerKey } from '../actions/bouncerKey';
@@ -44,6 +45,8 @@ export default function AuthForm() {
   const isFormValid = React.useMemo(() => {
     return isValidEmail(email) && password.length >= 6;
   }, [email, password]);
+
+  const shouldFocusPassword = isValidEmail(email);
 
   const onSignIn = () => {
     dispatch(
@@ -74,6 +77,23 @@ export default function AuthForm() {
     }
   }, [email, password, dispatch]);
 
+  React.useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Enter') {
+        dispatch(
+          toggleFeedback({
+            title: 'Enter pressed',
+            description: 'You need to fill in the form, bro',
+            severity: 'info',
+          }),
+        );
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [dispatch]);
+
   return (
     <Theme theme={config.themes[themeMode] as any}>
       <Container maxWidth="xs" sx={{ pt: 2 }}>
@@ -91,12 +111,12 @@ export default function AuthForm() {
             <TextField
               id="email"
               variant="filled"
-              autoFocus
               label="Email"
               type="email"
               fullWidth
               value={email}
               onChange={handleEmailChange}
+              autoFocus={!shouldFocusPassword}
             />
             <TextField
               id="password"
@@ -106,6 +126,7 @@ export default function AuthForm() {
               fullWidth
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              autoFocus={shouldFocusPassword}
               sx={{ mt: 2 }}
             />
           </CardContent>
