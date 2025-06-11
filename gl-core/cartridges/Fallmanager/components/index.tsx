@@ -2,7 +2,7 @@
 
 import UserInfo from './UserInfo';
 import StickyHeader from './StickyHeader';
-import { UploadFile, ViewCases, NewCase, Uploads } from './screens';
+import { Files, Uploads } from './screens';
 
-export { UploadFile, ViewCases, NewCase, Uploads };
+export { Files, Uploads };
 export { UserInfo, StickyHeader };

@@ -11,9 +11,9 @@ import {
   incomingChange,
 } from './actions';
 import { UserInfo, StickyHeader } from './components';
-import { UploadFile, ViewCases, NewCase, Uploads } from './components/screens';
+import { Uploads, Files } from './components/screens';
 
-export { UploadFile, ViewCases, NewCase, Uploads };
+export { Files, Uploads };
 export { Fallmanager, UserInfo, StickyHeader };
 export { createFall, readFall, updateFall, deleteFall };
 export { updateKey, incomingChange };

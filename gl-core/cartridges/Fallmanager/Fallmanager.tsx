@@ -5,24 +5,18 @@ import { AppBar, CssBaseline, Paper } from '@mui/material';
 import { Theme } from '../../../gl-core';
 import {
   StickyHeader,
-  NewCase,
-  ViewCases,
   Uploads,
-  UploadFile,
+  Files,
 } from '../Fallmanager';
 import { usePathname } from 'next/navigation';
 
 export default function Fallmanager() {
   const pathname = usePathname();
   const views: Record<string, React.ReactNode> = {
-    '/fallmanager': <><UploadFile /><Uploads /></>,
-    '/fallmanager/cases': <ViewCases />,
-    '/fallmanager/cases/new': <NewCase />,
-    '/fallmanager/uploads': <Uploads />,
-    '/fallmanager/uploads/new': <UploadFile />,
+    '/fallmanager': <Files />
   };
 
-  const view = views[pathname] ?? <ViewCases />;
+  const view = views[pathname] ?? <Files />;
 
   return (
     <Theme theme={config.theme as any}>
