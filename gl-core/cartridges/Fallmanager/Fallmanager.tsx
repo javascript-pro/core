@@ -15,7 +15,7 @@ import { usePathname } from 'next/navigation';
 export default function Fallmanager() {
   const pathname = usePathname();
   const views: Record<string, React.ReactNode> = {
-    '/fallmanager': <ViewCases />,
+    '/fallmanager': <UploadFile />,
     '/fallmanager/cases': <ViewCases />,
     '/fallmanager/cases/new': <NewCase />,
     '/fallmanager/uploads': <Uploads />,
