@@ -133,7 +133,11 @@ export default function Core({ frontmatter, body = null }: TCore) {
                           width="100%"
                           height={315}
                         />
-                        <Typography variant="body2" color="text.secondary" mt={1}>
+                        <Typography
+                          variant="body2"
+                          color="text.secondary"
+                          mt={1}
+                        >
                           Image not found. "{frontmatter.image}"
                         </Typography>
                       </Box>

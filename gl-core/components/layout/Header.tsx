@@ -2,7 +2,13 @@
 
 import * as React from 'react';
 import { useRouter } from 'next/navigation';
-import { Box, IconButton, CardHeader, Typography, Tooltip } from '@mui/material';
+import {
+  Box,
+  IconButton,
+  CardHeader,
+  Typography,
+  Tooltip,
+} from '@mui/material';
 import { Icon, useIsMobile, TopRightMenu } from '../../../gl-core';
 
 export type THeader = {
@@ -29,7 +35,7 @@ export default function Header({ frontmatter = null }: THeader) {
                 <Icon icon={'blokey'} />
               </IconButton>
             </Tooltip>
-            <Box sx={{m: 1}}>
+            <Box sx={{ m: 1 }}>
               <Icon icon={icon as any} />
             </Box>
           </>
