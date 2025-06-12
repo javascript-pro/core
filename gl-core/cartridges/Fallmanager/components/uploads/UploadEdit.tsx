@@ -9,6 +9,8 @@ import {
   CircularProgress,
   Alert,
   CardHeader,
+  CardActions,
+  CardContent,
   Typography,
   IconButton,
 } from '@mui/material';
@@ -43,6 +45,10 @@ export default function UploadEdit({ slug }: UploadEditProps) {
       await dispatch(deleteUpload(doc.id));
       dispatch(routeTo('/fallmanager/uploads', router));
     }
+  };
+
+  const handleCopy = () => {
+    // copy link to clipboard
   };
 
   const handleClose = () => {
@@ -126,17 +132,20 @@ export default function UploadEdit({ slug }: UploadEditProps) {
       <>
         <CardHeader
           title={<Typography variant="h6">{doc.name || 'Untitled'}</Typography>}
-          // subheader={
-          //   <>
-          //     <Typography variant="body2">
-          //       {formatFileSize(doc.size)},{doc.type || ''}
-          //     </Typography>
-          //     <Typography variant="body2">
-          //       Uploaded {moment(doc.uploadedAt.seconds * 1000).fromNow()}
-          //     </Typography>
-          //   </>
-          // }
-          avatar={
+          avatar={<>
+            <IconButton
+              color="secondary"
+              onClick={() => {
+                dispatch(
+                  routeTo(
+                    `/fallmanager`,
+                    router,
+                  ),
+                );
+              }}
+            >
+              <Icon icon={"left"} />
+            </IconButton>
             <IconButton
               color="secondary"
               onClick={() => {
@@ -150,38 +159,49 @@ export default function UploadEdit({ slug }: UploadEditProps) {
             >
               <Icon icon={icon.icon as any} />
             </IconButton>
-          }
-          action={
-            <>
-              <CustomButton
-                mode="icon"
-                color="secondary"
-                onClick={handleDelete as any}
-                icon="delete"
-                label="Delete"
-                variant="outlined"
-              />
-              <CustomButton
-                mode="icon"
-                color="secondary"
-                sx={{ ml: 1 }}
-                label="View"
-                variant="outlined"
-                icon="view"
-                onClick={handleDownload}
-              />
-              <CustomButton
-                color="secondary"
-                sx={{ ml: 1 }}
-                onClick={handleClose as any}
-                icon="save"
-                label="Save & Close"
-                variant="outlined"
-              />
             </>
           }
         />
       </>
+      <CardContent>
+        <Typography variant="body2">
+          {formatFileSize(doc.size)}
+        </Typography>
+        <Typography variant="body2">
+          {doc.type}
+        </Typography>
+        <Typography variant="body2">
+          Uploaded {moment(doc.uploadedAt.seconds * 1000).fromNow()}
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <>
+          <CustomButton
+            sx={{ ml: 1 }}  
+            onClick={handleDelete as any}
+            icon="delete"
+            label="Delete"
+          />
+          <CustomButton
+            sx={{ ml: 1 }}
+            label="View"
+            icon="link"
+            onClick={handleDownload}
+          />
+          <CustomButton
+            sx={{ ml: 1 }}
+            label="Copy link"
+            icon="copy"
+            onClick={handleCopy}
+          />
+          <CustomButton
+            sx={{ ml: 1 }}
+            onClick={handleClose as any}
+            icon="save"
+            label="Save & Close"
+          />
+        </>
+      </CardActions>
       {/* <pre>doc: {JSON.stringify(doc, null, 2)}</pre> */}
     </Box>
   );

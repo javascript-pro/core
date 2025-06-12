@@ -17,7 +17,7 @@ export type TCustomButton = {
 };
 
 export default function CustomButton({
-  mode = null,
+  mode = "icon",
   disabled = false,
   color = 'secondary',
   sx = null,

@@ -15,11 +15,19 @@ import MdIcon from '@mui/icons-material/DataArray';
 import RtfIcon from '@mui/icons-material/TextFieldsOutlined';
 import OdtIcon from '@mui/icons-material/Code';
 import DownloadIcon from '@mui/icons-material/DownloadOutlined';
-import ViewIcon from '@mui/icons-material/Visibility';
+import ViewIcon from '@mui/icons-material/VisibilityOutlined';
+import CloseIcon from '@mui/icons-material/CloseOutlined';
+import LinkIcon from '@mui/icons-material/LinkOutlined';
+import CopyIcon from '@mui/icons-material/CopyAllOutlined';
+import LeftIcon from '@mui/icons-material/ArrowBack';
 
 export type TIconNames =
   | 'home'
+  | 'link' 
+  | 'copy' 
+  | 'left' 
   | 'view'
+  | 'close' 
   | 'default'
   | 'fallmanager'
   | 'save'
@@ -59,6 +67,15 @@ export default function Icon({ icon, color }: TIcon) {
     case 'default':
       iconFragment = <FallmanagerIcon color={color} />;
       break;
+    case 'copy':
+      iconFragment = <CopyIcon color={color} />;
+      break;
+    case 'left':
+      iconFragment = <LeftIcon color={color} />;
+      break;
+    case 'link':
+      iconFragment = <LinkIcon color={color} />;
+      break;
     case 'view':
       iconFragment = <ViewIcon color={color} />;
       break;
@@ -94,6 +111,9 @@ export default function Icon({ icon, color }: TIcon) {
       break;
     case 'save':
       iconFragment = <SaveIcon color={color} />;
+      break;
+    case 'close':
+      iconFragment = <CloseIcon color={color} />;
       break;
     case 'delete':
       iconFragment = <DeleteIcon color={color} />;

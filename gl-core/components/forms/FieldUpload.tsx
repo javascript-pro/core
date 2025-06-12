@@ -16,7 +16,7 @@ export default function FieldUpload({
   id = 'file-upload',
   color = 'inherit',
   label = 'Choose File',
-  accept = '.pdf,.docx,.doc,.jpg,.jpeg,.png,.json,.txt,.rtf,.md,.jpeg,.odt',
+  accept = '.pdf,.docx,.odt,.doc,.jpg,.jpeg,.png,.json,.txt,.rtf,.md,.jpeg,',
   multiple = false,
   onSelect,
 }: TFieldUpload) {
@@ -30,7 +30,7 @@ export default function FieldUpload({
     const files = event.target.files;
     if (files && files.length > 0) {
       onSelect?.(files[0]);
-      inputRef.current!.value = ''; // reset so selecting same file again retriggers
+      inputRef.current!.value = '';
     }
   };
 

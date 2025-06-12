@@ -21,7 +21,7 @@ export default function UploadNew() {
     '.png',
     '.jpeg',
     '.txt',
-    '.oct',
+    '.odt',
     '.rtf',
     '.md',
   ];
