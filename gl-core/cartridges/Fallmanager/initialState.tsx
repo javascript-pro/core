@@ -5,7 +5,7 @@ import { TFallmanagerState } from './types';
 
 export const initialState: TFallmanagerState = {
   cartridge: 'fallmanager',
-  fileTypes: [{slug:"one"}]
+  fileTypes: [{ slug: 'one' }],
 };
 
 /*

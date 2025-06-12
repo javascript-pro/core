@@ -16,22 +16,24 @@ import RtfIcon from '@mui/icons-material/TextFieldsOutlined';
 import OdtIcon from '@mui/icons-material/Code';
 import DownloadIcon from '@mui/icons-material/DownloadOutlined';
 
-export type TIconNames = 'home' | 
-'default' | 
-'fallmanager' | 
-'save' | 
-'download' |
-'dog' |
-'pdf' |  
-'word' |
-'png' |  
-'jpg' | 
-'jpeg' | 
-'txt' | 
-'md' | 
-'rtf' | 
-'odt' | 
-'delete';
+export type TIconNames =
+  | 'home'
+  | 'default'
+  | 'fallmanager'
+  | 'save'
+  | 'download'
+  | 'dog'
+  | 'pdf'
+  | 'word'
+  | 'docx'
+  | 'png'
+  | 'jpg'
+  | 'jpeg'
+  | 'txt'
+  | 'md'
+  | 'rtf'
+  | 'odt'
+  | 'delete';
 
 export type TIcon = {
   color?: any;
@@ -69,6 +71,9 @@ export default function Icon({ icon, color }: TIcon) {
       break;
     case 'png':
       iconFragment = <PngIcon color={color} />;
+      break;
+    case 'docx':
+      iconFragment = <WordIcon color={color} />;
       break;
     case 'word':
       iconFragment = <WordIcon color={color} />;

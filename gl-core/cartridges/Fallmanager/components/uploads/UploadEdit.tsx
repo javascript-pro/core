@@ -9,7 +9,6 @@ import {
   CircularProgress,
   Alert,
   CardHeader,
-  CardContent,
   Typography,
   IconButton,
 } from '@mui/material';
@@ -49,7 +48,7 @@ export default function UploadEdit({ slug }: UploadEditProps) {
   };
 
   const handleDownload = () => {
-    console.log("handleDownload")
+    console.log('handleDownload');
   };
 
   React.useEffect(() => {
@@ -88,7 +87,7 @@ export default function UploadEdit({ slug }: UploadEditProps) {
     return () => unsubscribe();
   }, [slug, dispatch]);
 
-  const icon = getIconByExtension(doc?.extension || "")
+  const icon = getIconByExtension(doc?.extension || '');
 
   if (loading) {
     return (
@@ -115,15 +114,15 @@ export default function UploadEdit({ slug }: UploadEditProps) {
     <Box sx={{ p: 2 }}>
       <>
         <CardHeader
-          title={<Typography variant="h4">{doc.name || 'Untitled'}</Typography>}
-          subheader={<>
-                      <Typography variant="body2">
-                        {formatFileSize(doc.size)}, 
-                        {doc.type || ''}
-                      </Typography>
-                      <Typography variant="body2">
-                        Uploaded {moment(doc.uploadedAt.seconds * 1000).fromNow()}
-                      </Typography>
+          title={<Typography variant="h6">{doc.name || 'Untitled'}</Typography>}
+          subheader={
+            <>
+              <Typography variant="body2">
+                {formatFileSize(doc.size)},{doc.type || ''}
+              </Typography>
+              <Typography variant="body2">
+                Uploaded {moment(doc.uploadedAt.seconds * 1000).fromNow()}
+              </Typography>
             </>
           }
           avatar={
@@ -148,7 +147,7 @@ export default function UploadEdit({ slug }: UploadEditProps) {
                 label="Delete"
                 variant="outlined"
               />
-              <CustomButton 
+              <CustomButton
                 sx={{ ml: 1 }}
                 label="Download"
                 variant="outlined"
@@ -165,15 +164,8 @@ export default function UploadEdit({ slug }: UploadEditProps) {
             </>
           }
         />
-
-        <CardContent>
-
-          
-          {/* <pre>doc: 
-            {JSON.stringify(doc, null, 2)}
-          </pre> */}
-        </CardContent>
       </>
+      <pre style={{ fontSize: 14 }}>icon: {JSON.stringify(icon, null, 2)}</pre>
     </Box>
   );
 }

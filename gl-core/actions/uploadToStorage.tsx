@@ -1,3 +1,5 @@
+// core/gl-core/cartridges/Fallmanager/actions/uploadFile.tsx
+
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import {
   collection,
@@ -54,8 +56,10 @@ export const uploadToStorage =
         return;
       }
 
-      const filename = `${Date.now()}_${file.name}`;
-      const storageRef = ref(storage, `fallmanager/${filename}`);
+      const timestamp = Date.now();
+      const filename = `${timestamp}_${file.name}`;
+      const storagePath = `fallmanager/${filename}`;
+      const storageRef = ref(storage, storagePath);
 
       dispatch(
         toggleFeedback({
@@ -68,7 +72,9 @@ export const uploadToStorage =
       const url = await getDownloadURL(snapshot.ref);
 
       await addDoc(uploadsRef, {
-        name: file.name,
+        name: file.name,            // original name
+        filename,                   // unique storage file name
+        storagePath,                // exact path used in Firebase Storage
         cartridge: slug,
         slug: cleanSlug,
         url,

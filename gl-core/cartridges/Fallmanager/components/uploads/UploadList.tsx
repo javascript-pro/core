@@ -1,5 +1,6 @@
 'use client';
 // core/gl-core/cartridges/Fallmanager/components/screens/UploadList.tsx
+
 import * as React from 'react';
 import { db } from '../../../../../gl-core/lib/firebase';
 import {
@@ -11,8 +12,8 @@ import {
   ListItemIcon,
 } from '@mui/material';
 import { useRouter } from 'next/navigation';
-import { useDispatch, routeTo, Icon } from '../../../../../gl-core';
-import { incomingChange, useFallmanager } from '../../../Fallmanager';
+import { useDispatch, routeTo } from '../../../../../gl-core';
+import { incomingChange, useFallmanager, Icon } from '../../../Fallmanager';
 import {
   collection,
   query,
@@ -21,6 +22,7 @@ import {
   onSnapshot,
 } from 'firebase/firestore';
 import { formatDistanceToNow } from 'date-fns';
+import { getIconByExtension } from '../../../Fallmanager/lib/getIconByExtension';
 
 export default function UploadList() {
   const dispatch = useDispatch();
@@ -46,7 +48,6 @@ export default function UploadList() {
     return () => unsubscribe();
   }, [dispatch]);
 
-  // RE-ADDED: handleItemClick
   const handleItemClick = (item: any) => {
     if (item.slug) {
       dispatch(routeTo(`/fallmanager/uploads/${item.slug}`, router));
@@ -68,6 +69,8 @@ export default function UploadList() {
               })
             : 'just now';
 
+          const icon = getIconByExtension(upload.extension || 'default');
+
           return (
             <ListItemButton
               key={`upload_${i}`}
@@ -76,12 +79,9 @@ export default function UploadList() {
               }}
             >
               <ListItemIcon>
-                <Icon icon="doc" color="secondary"/>
+                <Icon icon={icon.icon as any} color="secondary" />
               </ListItemIcon>
-              <ListItemText
-                primary={upload.name}
-                // secondary={`Uploaded ${timeAgo}`}
-              />
+              <ListItemText primary={upload.name} />
             </ListItemButton>
           );
         })}
