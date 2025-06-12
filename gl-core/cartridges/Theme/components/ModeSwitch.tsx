@@ -4,7 +4,7 @@
 import * as React from 'react';
 import {
   Typography,
-  ListItemButton,
+  MenuItem,
   ListItemIcon,
   ListItemText,
 } from '@mui/material';
@@ -26,7 +26,7 @@ export default function ModeSwitch() {
   };
 
   return (
-    <ListItemButton onClick={handleToggle}>
+    <MenuItem onClick={handleToggle}>
       <ListItemIcon>
         <Icon icon={themeMode === 'dark' ? 'lightmode' : ('darkmode' as any)} />
       </ListItemIcon>
@@ -37,6 +37,6 @@ export default function ModeSwitch() {
           </Typography>
         }
       />
-    </ListItemButton>
+    </MenuItem>
   );
 }

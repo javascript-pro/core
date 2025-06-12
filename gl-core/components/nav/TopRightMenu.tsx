@@ -2,7 +2,6 @@
 import * as React from 'react';
 import {
   Box,
-  Card,
   CardHeader,
   IconButton,
   Menu,
@@ -18,6 +17,7 @@ import {
   toggleFeedback,
   ShareMenu,
   useVersion,
+  ModeSwitch,
 } from '../../../gl-core';
 import { firebaseAuth, useUser } from '../../cartridges/Bouncer';
 
@@ -55,9 +55,9 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
     dispatch(
       toggleFeedback({
         mode: 'confirm',
-        severity: 'error',
+        severity: 'warning',
         title: 'Reset to factory settings?',
-        description: 'are you sure?',
+        description: 'Are you sure?',
       }),
     );
   };
@@ -117,10 +117,6 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
         <MenuItem
           sx={{ my: 2 }}
           onClick={(e) => {
-            // e.stopPropagation();
-            // e.preventDefault();
-            // setShareOpen((prev) => !prev);
-            console.log('factorySettings');
             handleFactorySettings();
           }}
         >
@@ -129,6 +125,8 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           </ListItemIcon>
           <ListItemText primary="Factory settings" />
         </MenuItem>
+
+        <ModeSwitch />
 
         <Box sx={{ pr: 3, py: 1, textAlign: 'right' }}>
           <Typography

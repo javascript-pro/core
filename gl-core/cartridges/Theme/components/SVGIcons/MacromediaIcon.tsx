@@ -3,7 +3,7 @@ import { useTheme, SvgIcon } from '@mui/material';
 
 const MacromediaIcon = (props: any) => {
   const theme = useTheme();
-  let color1 = theme.palette.secondary.main;
+  let color1 = theme.palette.primary.main;
   return (
     <SvgIcon {...props}>
       <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">

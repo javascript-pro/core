@@ -13,7 +13,7 @@ export const initialState: any = {
   version: pJSON.version,
   persisted: Date.now(),
   config,
-  themeMode: 'light',
+  themeMode: 'dark',
   loading: null,
   feedback: null,
 };
