@@ -7,25 +7,18 @@ import {
   FieldUpload,
   useDispatch,
   uploadToStorage,
-  MightyButton,
 } from '../../../../../gl-core';
-import { useFileTypes } from '../../../Fallmanager';
 
 export default function UploadNew() {
   const dispatch = useDispatch();
-  const [selectedFile, setSelectedFile] = React.useState<File | null>(null);
-  const [fileName, setFileName] = React.useState<string | null>(null);
 
-  const fileTypes = useFileTypes();
+  const allowedFileTypes = [
+    '.json', '.pdf', '.jpg', '.docx', '.doc',
+    '.png', '.jpeg', '.txt', '.oct', '.rtf', '.md',
+  ];
 
-  const allowedFileTypes = ['.json', '.pdf', '.jpg', '.docx'];
-
-  const handleFileSelect = (file: File | null) => {
-    if (!file) {
-      setSelectedFile(null);
-      setFileName(null);
-      return;
-    }
+  const handleFileSelect = async (file: File | null) => {
+    if (!file) return;
 
     const isAllowed = allowedFileTypes.some((ext) =>
       file.name.toLowerCase().endsWith(ext),
@@ -33,53 +26,28 @@ export default function UploadNew() {
 
     if (!isAllowed) {
       alert('Unsupported file type.');
-      setSelectedFile(null);
-      setFileName(null);
       return;
     }
 
-    setSelectedFile(file);
-    setFileName(file.name);
-  };
-
-  const handleReset = () => {
-    setSelectedFile(null);
-    setFileName(null);
-  };
-
-  const handleUploadClick = async () => {
-    if (!selectedFile) {
-      alert('Please select a valid file before uploading.');
-      return;
+    try {
+      await dispatch(
+        uploadToStorage({
+          file,
+          slug: config.slug,
+        }),
+      );
+    } catch (error) {
+      const msg = error instanceof Error ? error.message : String(error);
+      alert(`Upload failed: ${msg}`);
     }
-
-    await dispatch(
-      uploadToStorage({
-        file: selectedFile,
-        slug: config.slug,
-      }),
-    );
-
-    // ✅ Resets field on successful upload
-    handleReset();
   };
 
   return (
     <Box sx={{ display: 'flex', gap: 1 }}>
       <FieldUpload
-        label="Choose file"
-        fileName={fileName}
+        label="Upload"
         onSelect={handleFileSelect}
-        onReset={handleReset}
       />
-      {selectedFile && (
-        <MightyButton
-          label="Upload"
-          icon="upload"
-          onClick={handleUploadClick}
-          variant="contained"
-        />
-      )}
     </Box>
   );
 }

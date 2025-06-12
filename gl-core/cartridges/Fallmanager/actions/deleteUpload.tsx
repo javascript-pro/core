@@ -1,10 +1,6 @@
 // core/gl-core/cartridges/Fallmanager/actions/deleteUpload.tsx
 
-import {
-  doc,
-  getDoc,
-  deleteDoc,
-} from 'firebase/firestore';
+import { doc, getDoc, deleteDoc } from 'firebase/firestore';
 import { deleteObject, ref } from 'firebase/storage';
 import { db, storage } from '../../../../gl-core/lib/firebase';
 import { TUbereduxDispatch } from '../../../../gl-core/types';
@@ -20,7 +16,7 @@ export const deleteUpload =
     try {
       if (typeof window !== 'undefined') {
         const confirmed = window.confirm(
-          'Are you sure you want to permanently delete this upload? This action cannot be undone.'
+          'Are you sure you want to permanently delete this upload? This action cannot be undone.',
         );
         if (!confirmed) return;
       }
@@ -35,7 +31,7 @@ export const deleteUpload =
           toggleFeedback({
             severity: 'error',
             title: `No document found with id: ${id}`,
-          })
+          }),
         );
         return;
       }
@@ -48,7 +44,7 @@ export const deleteUpload =
           toggleFeedback({
             severity: 'error',
             title: 'Missing storage path for file',
-          })
+          }),
         );
         return;
       }
@@ -62,7 +58,7 @@ export const deleteUpload =
         toggleFeedback({
           severity: 'success',
           title: 'Upload deleted successfully',
-        })
+        }),
       );
     } catch (e: unknown) {
       const msg = e instanceof Error ? e.message : String(e);
@@ -71,7 +67,7 @@ export const deleteUpload =
         toggleFeedback({
           severity: 'error',
           title: msg,
-        })
+        }),
       );
     }
   };

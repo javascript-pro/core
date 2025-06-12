@@ -49,8 +49,8 @@ export const uploadToStorage =
         dispatch(
           toggleFeedback({
             severity: 'warning',
-            title: 'File already uploaded',
-            description: `The file "${file.name}" already exists in the system.`,
+            title: 'Already uploaded',
+            description: `"${file.name}" has already been uploaded`,
           }),
         );
         return;
@@ -64,7 +64,7 @@ export const uploadToStorage =
       dispatch(
         toggleFeedback({
           severity: 'info',
-          title: `Uploading ${filename}...`,
+          title: `Uploading ${file.name}...`,
         }),
       );
 
@@ -72,9 +72,9 @@ export const uploadToStorage =
       const url = await getDownloadURL(snapshot.ref);
 
       await addDoc(uploadsRef, {
-        name: file.name,            // original name
-        filename,                   // unique storage file name
-        storagePath,                // exact path used in Firebase Storage
+        name: file.name, // original name
+        filename, // unique storage file name
+        storagePath, // exact path used in Firebase Storage
         cartridge: slug,
         slug: cleanSlug,
         url,
@@ -88,7 +88,7 @@ export const uploadToStorage =
         toggleFeedback({
           severity: 'success',
           title: 'Upload complete',
-          description: `File "${file.name}" uploaded successfully.`,
+          description: `"${file.name}" uploaded`,
         }),
       );
     } catch (e: unknown) {
