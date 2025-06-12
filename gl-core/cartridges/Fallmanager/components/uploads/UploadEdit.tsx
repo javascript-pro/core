@@ -1,9 +1,10 @@
+// core/gl-core/cartridges/Fallmanager/components/uploads/UploadEdit.tsx
 'use client';
 import * as React from 'react';
 import moment from 'moment';
 import { useRouter } from 'next/navigation';
-import { db } from '../../../../../gl-core/lib/firebase';
 import { collection, query, where, onSnapshot } from 'firebase/firestore';
+import { db } from '../../../../../gl-core/lib/firebase';
 import {
   Box,
   CircularProgress,
@@ -48,7 +49,7 @@ export default function UploadEdit({ slug }: UploadEditProps) {
   };
 
   const handleCopy = () => {
-    // copy link to clipboard
+    // Copy link to clipboard
   };
 
   const handleClose = () => {
@@ -108,7 +109,7 @@ export default function UploadEdit({ slug }: UploadEditProps) {
 
   if (loading) {
     return (
-      <Box sx={{ p: 3, textAlign: 'center' }}>
+      <Box sx={{ textAlign: 'center' }}>
         <CircularProgress />
         <Typography variant="body2" sx={{ mt: 2 }}>
           Loading...
@@ -119,7 +120,7 @@ export default function UploadEdit({ slug }: UploadEditProps) {
 
   if (!doc) {
     return (
-      <Box sx={{ p: 3 }}>
+      <Box sx={{}}>
         <Alert severity="warning">
           No document loaded. Please check the slug.
         </Alert>
@@ -128,7 +129,7 @@ export default function UploadEdit({ slug }: UploadEditProps) {
   }
 
   return (
-    <Box sx={{ p: 2 }}>
+    <Box sx={{}}>
       <>
         <CardHeader
           title={<Typography variant="h6">{doc.name || 'Untitled'}</Typography>}

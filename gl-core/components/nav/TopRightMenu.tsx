@@ -88,7 +88,6 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           }
         />
 
-
         <MenuItem
           sx={{ my: 2 }}
           onClick={(e) => {
