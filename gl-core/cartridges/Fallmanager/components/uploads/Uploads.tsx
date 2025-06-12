@@ -2,8 +2,8 @@
 // core/gl-core/cartridges/Fallmanager/components/screens/Uploads.tsx
 
 import * as React from 'react';
-import { Grid } from '@mui/material';
-import { UploadList, UploadNew, UploadEdit } from '../../../Fallmanager';
+import { Grid, Box } from '@mui/material';
+import { UploadList, UploadNew } from '../../../Fallmanager';
 
 export default function Uploads() {
   return (
@@ -13,7 +13,9 @@ export default function Uploads() {
           xs: 12,
         }}
       >
-        <UploadNew />
+        <Box sx={{ mb: 2 }}>
+          <UploadNew />
+        </Box>
         <UploadList />
       </Grid>
     </Grid>

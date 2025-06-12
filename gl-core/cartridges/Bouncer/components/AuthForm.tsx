@@ -66,7 +66,7 @@ export default function AuthForm() {
   const email = useEmail(); // From Redux persisted state
   const [password, setPassword] = React.useState('');
   const themeMode = useThemeMode();
-  const title = 'Not in those shoes, mate';
+  const title = 'Yeh, not in those shoes, mate';
   const icon = 'signin';
 
   const isFormValid = React.useMemo(() => {

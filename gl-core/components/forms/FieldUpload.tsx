@@ -1,27 +1,24 @@
 // core/gl-core/components/FieldUpload.tsx
 'use client';
 import * as React from 'react';
-import { Box, Button, Typography, IconButton } from '@mui/material';
-import { Icon } from '../../../gl-core';
+import { Box, Button } from '@mui/material';
 
 export type TFieldUpload = {
   id?: string;
   label?: string;
+  color?: string;
   accept?: string;
   multiple?: boolean;
-  fileName?: string | null;
   onSelect?: (file: File | null) => void;
-  onReset?: () => void;
 };
 
 export default function FieldUpload({
   id = 'file-upload',
+  color = 'inherit',
   label = 'Choose File',
-  accept = '.pdf,.docx,.jpg,.jpeg,.png,.json',
+  accept = '.pdf,.docx,.odt,.doc,.jpg,.jpeg,.png,.json,.txt,.rtf,.md,.jpeg,',
   multiple = false,
-  fileName = null,
   onSelect,
-  onReset,
 }: TFieldUpload) {
   const inputRef = React.useRef<HTMLInputElement | null>(null);
 
@@ -32,19 +29,9 @@ export default function FieldUpload({
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
     if (files && files.length > 0) {
-      const file = files[0];
-      onSelect?.(file);
-    } else {
-      onSelect?.(null);
+      onSelect?.(files[0]);
+      inputRef.current!.value = '';
     }
-  };
-
-  const handleClear = () => {
-    if (inputRef.current) {
-      inputRef.current.value = '';
-    }
-    onReset?.();
-    onSelect?.(null);
   };
 
   return (
@@ -58,27 +45,9 @@ export default function FieldUpload({
         multiple={multiple}
         onChange={handleChange}
       />
-
-      {!fileName && (
-        <Button
-          variant="outlined"
-          onClick={handleClick}
-          startIcon={<Icon icon="link" />}
-        >
-          {label}
-        </Button>
-      )}
-
-      {fileName && (
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mt: 1 }}>
-          <Typography variant="body2" sx={{ wordBreak: 'break-all' }}>
-            Selected: {fileName}
-          </Typography>
-          <IconButton size="small" onClick={handleClear}>
-            <Icon icon="close" />
-          </IconButton>
-        </Box>
-      )}
+      <Button color={color as any} variant="contained" onClick={handleClick}>
+        {label}
+      </Button>
     </Box>
   );
 }

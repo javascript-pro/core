@@ -1,35 +1,72 @@
 'use client';
 import * as React from 'react';
+import moment from 'moment';
 import { useRouter } from 'next/navigation';
+import { db } from '../../../../../gl-core/lib/firebase';
+import { collection, query, where, onSnapshot } from 'firebase/firestore';
 import {
   Box,
-  IconButton,
   CircularProgress,
   Alert,
-  Card,
   CardHeader,
+  CardActions,
   CardContent,
   Typography,
+  IconButton,
 } from '@mui/material';
-import { Icon, useDispatch, toggleFeedback } from '../../../../../gl-core';
-import { db } from '../../../../../gl-core/lib/firebase';
+import { useDispatch, toggleFeedback, routeTo } from '../../../../../gl-core';
 import {
-  collection,
-  query,
-  where,
-  onSnapshot,
-  DocumentData,
-} from 'firebase/firestore';
+  Icon,
+  deleteUpload,
+  CustomButton,
+  formatFileSize,
+  getIconByExtension,
+} from '../../../Fallmanager';
 
 type UploadEditProps = {
   slug: string;
 };
 
+type UploadDoc = {
+  id: string;
+  name?: string;
+  slug?: string;
+  [key: string]: any;
+};
+
 export default function UploadEdit({ slug }: UploadEditProps) {
   const router = useRouter();
   const dispatch = useDispatch();
-  const [doc, setDoc] = React.useState<DocumentData | null>(null);
+  const [doc, setDoc] = React.useState<UploadDoc | null>(null);
   const [loading, setLoading] = React.useState(true);
+
+  const handleDelete = async () => {
+    if (doc?.id) {
+      await dispatch(deleteUpload(doc.id));
+      dispatch(routeTo('/fallmanager/uploads', router));
+    }
+  };
+
+  const handleCopy = () => {
+    // copy link to clipboard
+  };
+
+  const handleClose = () => {
+    dispatch(routeTo('/fallmanager', router));
+  };
+
+  const handleDownload = () => {
+    if (doc?.url) {
+      window.open(doc.url, '_blank');
+    } else {
+      dispatch(
+        toggleFeedback({
+          severity: 'error',
+          title: 'No download URL found for this document.',
+        }),
+      );
+    }
+  };
 
   React.useEffect(() => {
     if (!slug) {
@@ -47,7 +84,11 @@ export default function UploadEdit({ slug }: UploadEditProps) {
 
     const unsubscribe = onSnapshot(q, (snapshot) => {
       if (!snapshot.empty) {
-        setDoc(snapshot.docs[0].data());
+        const docSnap = snapshot.docs[0];
+        setDoc({
+          id: docSnap.id,
+          ...docSnap.data(),
+        });
       } else {
         dispatch(
           toggleFeedback({
@@ -62,6 +103,8 @@ export default function UploadEdit({ slug }: UploadEditProps) {
 
     return () => unsubscribe();
   }, [slug, dispatch]);
+
+  const icon = getIconByExtension(doc?.extension || '');
 
   if (loading) {
     return (
@@ -86,19 +129,80 @@ export default function UploadEdit({ slug }: UploadEditProps) {
 
   return (
     <Box sx={{ p: 2 }}>
-      <Card>
+      <>
         <CardHeader
           title={<Typography variant="h6">{doc.name || 'Untitled'}</Typography>}
-          avatar={
-            <IconButton onClick={() => router.back()}>
-              <Icon icon="left" />
+          avatar={<>
+            <IconButton
+              color="secondary"
+              onClick={() => {
+                dispatch(
+                  routeTo(
+                    `/fallmanager`,
+                    router,
+                  ),
+                );
+              }}
+            >
+              <Icon icon={"left"} />
             </IconButton>
+            <IconButton
+              color="secondary"
+              onClick={() => {
+                dispatch(
+                  routeTo(
+                    `/fallmanager/uploads/?filter=${doc.extension}`,
+                    router,
+                  ),
+                );
+              }}
+            >
+              <Icon icon={icon.icon as any} />
+            </IconButton>
+            </>
           }
         />
-        <CardContent>
-          <pre>{JSON.stringify(doc, null, 2)}</pre>
-        </CardContent>
-      </Card>
+      </>
+      <CardContent>
+        <Typography variant="body2">
+          {formatFileSize(doc.size)}
+        </Typography>
+        <Typography variant="body2">
+          {doc.type}
+        </Typography>
+        <Typography variant="body2">
+          Uploaded {moment(doc.uploadedAt.seconds * 1000).fromNow()}
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <>
+          <CustomButton
+            sx={{ ml: 1 }}  
+            onClick={handleDelete as any}
+            icon="delete"
+            label="Delete"
+          />
+          <CustomButton
+            sx={{ ml: 1 }}
+            label="View"
+            icon="link"
+            onClick={handleDownload}
+          />
+          <CustomButton
+            sx={{ ml: 1 }}
+            label="Copy link"
+            icon="copy"
+            onClick={handleCopy}
+          />
+          <CustomButton
+            sx={{ ml: 1 }}
+            onClick={handleClose as any}
+            icon="save"
+            label="Save & Close"
+          />
+        </>
+      </CardActions>
+      {/* <pre>doc: {JSON.stringify(doc, null, 2)}</pre> */}
     </Box>
   );
 }

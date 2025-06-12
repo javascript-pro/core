@@ -1,3 +1,5 @@
+// core/gl-core/cartridges/Fallmanager/actions/uploadFile.tsx
+
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import {
   collection,
@@ -47,20 +49,23 @@ export const uploadToStorage =
         dispatch(
           toggleFeedback({
             severity: 'warning',
-            title: 'File already uploaded',
-            description: `The file "${file.name}" already exists in the system.`,
+            title: 'Already uploaded',
+            description: `"${file.name}" has already been uploaded`,
           }),
         );
         return;
       }
 
-      const filename = `${Date.now()}_${file.name}`;
-      const storageRef = ref(storage, `fallmanager/${filename}`);
+      const timestamp = Date.now();
+      const filename = `${timestamp}_${file.name}`;
+      const storagePath = `fallmanager/${filename}`;
+      const storageRef = ref(storage, storagePath);
+      const name = file.name.replace(/\.[^/.]+$/, '');
 
       dispatch(
         toggleFeedback({
           severity: 'info',
-          title: `Uploading ${filename}...`,
+          title: `Uploading ${name}...`,
         }),
       );
 
@@ -68,7 +73,9 @@ export const uploadToStorage =
       const url = await getDownloadURL(snapshot.ref);
 
       await addDoc(uploadsRef, {
-        name: file.name,
+        name, // original name without extension
+        filename, // unique storage file name
+        storagePath, // exact path used in Firebase Storage
         cartridge: slug,
         slug: cleanSlug,
         url,
@@ -82,7 +89,7 @@ export const uploadToStorage =
         toggleFeedback({
           severity: 'success',
           title: 'Upload complete',
-          description: `File "${file.name}" uploaded successfully.`,
+          description: `"${name}" uploaded`,
         }),
       );
     } catch (e: unknown) {
