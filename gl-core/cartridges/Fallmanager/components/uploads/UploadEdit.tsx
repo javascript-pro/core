@@ -37,10 +37,12 @@ export default function UploadEdit({ slug }: UploadEditProps) {
   const dispatch = useDispatch();
   const [doc, setDoc] = React.useState<UploadDoc | null>(null);
   const [loading, setLoading] = React.useState(true);
-  // const fileTypes = useFileTypes();
 
-  const handleDelete = () => {
-    if (doc?.id) dispatch(deleteUpload(doc?.id));
+  const handleDelete = async () => {
+    if (doc?.id) {
+      await dispatch(deleteUpload(doc.id));
+      dispatch(routeTo('/fallmanager/uploads', router));
+    }
   };
 
   const handleClose = () => {
@@ -48,7 +50,16 @@ export default function UploadEdit({ slug }: UploadEditProps) {
   };
 
   const handleDownload = () => {
-    console.log('handleDownload');
+    if (doc?.url) {
+      window.open(doc.url, '_blank');
+    } else {
+      dispatch(
+        toggleFeedback({
+          severity: 'error',
+          title: 'No download URL found for this document.',
+        }),
+      );
+    }
   };
 
   React.useEffect(() => {
@@ -115,18 +126,19 @@ export default function UploadEdit({ slug }: UploadEditProps) {
       <>
         <CardHeader
           title={<Typography variant="h6">{doc.name || 'Untitled'}</Typography>}
-          subheader={
-            <>
-              <Typography variant="body2">
-                {formatFileSize(doc.size)},{doc.type || ''}
-              </Typography>
-              <Typography variant="body2">
-                Uploaded {moment(doc.uploadedAt.seconds * 1000).fromNow()}
-              </Typography>
-            </>
-          }
+          // subheader={
+          //   <>
+          //     <Typography variant="body2">
+          //       {formatFileSize(doc.size)},{doc.type || ''}
+          //     </Typography>
+          //     <Typography variant="body2">
+          //       Uploaded {moment(doc.uploadedAt.seconds * 1000).fromNow()}
+          //     </Typography>
+          //   </>
+          // }
           avatar={
             <IconButton
+              color="secondary"
               onClick={() => {
                 dispatch(
                   routeTo(
@@ -142,30 +154,35 @@ export default function UploadEdit({ slug }: UploadEditProps) {
           action={
             <>
               <CustomButton
+                mode="icon"
+                color="secondary"
                 onClick={handleDelete as any}
                 icon="delete"
                 label="Delete"
                 variant="outlined"
               />
               <CustomButton
+                mode="icon"
+                color="secondary"
                 sx={{ ml: 1 }}
-                label="Download"
+                label="View"
                 variant="outlined"
-                icon="download"
+                icon="view"
                 onClick={handleDownload}
               />
               <CustomButton
+                color="secondary"
                 sx={{ ml: 1 }}
                 onClick={handleClose as any}
                 icon="save"
                 label="Save & Close"
-                variant="contained"
+                variant="outlined"
               />
             </>
           }
         />
       </>
-      <pre style={{ fontSize: 14 }}>icon: {JSON.stringify(icon, null, 2)}</pre>
+      {/* <pre>doc: {JSON.stringify(doc, null, 2)}</pre> */}
     </Box>
   );
 }

@@ -15,9 +15,11 @@ import MdIcon from '@mui/icons-material/DataArray';
 import RtfIcon from '@mui/icons-material/TextFieldsOutlined';
 import OdtIcon from '@mui/icons-material/Code';
 import DownloadIcon from '@mui/icons-material/DownloadOutlined';
+import ViewIcon from '@mui/icons-material/Visibility';
 
 export type TIconNames =
   | 'home'
+  | 'view'
   | 'default'
   | 'fallmanager'
   | 'save'
@@ -56,6 +58,9 @@ export default function Icon({ icon, color }: TIcon) {
       break;
     case 'default':
       iconFragment = <FallmanagerIcon color={color} />;
+      break;
+    case 'view':
+      iconFragment = <ViewIcon color={color} />;
       break;
     case 'md':
       iconFragment = <MdIcon color={color} />;

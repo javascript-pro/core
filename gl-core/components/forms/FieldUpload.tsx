@@ -6,6 +6,7 @@ import { Box, Button } from '@mui/material';
 export type TFieldUpload = {
   id?: string;
   label?: string;
+  color?: string;
   accept?: string;
   multiple?: boolean;
   onSelect?: (file: File | null) => void;
@@ -13,8 +14,9 @@ export type TFieldUpload = {
 
 export default function FieldUpload({
   id = 'file-upload',
+  color = 'inherit',
   label = 'Choose File',
-  accept = '.pdf,.docx,.doc,.jpg,.jpeg,.png,.json,.txt,.rtf,.md,.jpeg,.oct',
+  accept = '.pdf,.docx,.doc,.jpg,.jpeg,.png,.json,.txt,.rtf,.md,.jpeg,.odt',
   multiple = false,
   onSelect,
 }: TFieldUpload) {
@@ -43,10 +45,7 @@ export default function FieldUpload({
         multiple={multiple}
         onChange={handleChange}
       />
-      <Button
-        variant="contained"
-        onClick={handleClick}
-      >
+      <Button color={color as any} variant="contained" onClick={handleClick}>
         {label}
       </Button>
     </Box>

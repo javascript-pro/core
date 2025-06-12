@@ -60,11 +60,12 @@ export const uploadToStorage =
       const filename = `${timestamp}_${file.name}`;
       const storagePath = `fallmanager/${filename}`;
       const storageRef = ref(storage, storagePath);
+      const name = file.name.replace(/\.[^/.]+$/, '');
 
       dispatch(
         toggleFeedback({
           severity: 'info',
-          title: `Uploading ${file.name}...`,
+          title: `Uploading ${name}...`,
         }),
       );
 
@@ -72,7 +73,7 @@ export const uploadToStorage =
       const url = await getDownloadURL(snapshot.ref);
 
       await addDoc(uploadsRef, {
-        name: file.name, // original name
+        name, // original name without extension
         filename, // unique storage file name
         storagePath, // exact path used in Firebase Storage
         cartridge: slug,
@@ -88,7 +89,7 @@ export const uploadToStorage =
         toggleFeedback({
           severity: 'success',
           title: 'Upload complete',
-          description: `"${file.name}" uploaded`,
+          description: `"${name}" uploaded`,
         }),
       );
     } catch (e: unknown) {

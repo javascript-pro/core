@@ -13,8 +13,17 @@ export default function UploadNew() {
   const dispatch = useDispatch();
 
   const allowedFileTypes = [
-    '.json', '.pdf', '.jpg', '.docx', '.doc',
-    '.png', '.jpeg', '.txt', '.oct', '.rtf', '.md',
+    '.json',
+    '.pdf',
+    '.jpg',
+    '.docx',
+    '.doc',
+    '.png',
+    '.jpeg',
+    '.txt',
+    '.oct',
+    '.rtf',
+    '.md',
   ];
 
   const handleFileSelect = async (file: File | null) => {
@@ -45,7 +54,8 @@ export default function UploadNew() {
   return (
     <Box sx={{ display: 'flex', gap: 1 }}>
       <FieldUpload
-        label="Upload"
+        color="secondary"
+        label="New Upload"
         onSelect={handleFileSelect}
       />
     </Box>
