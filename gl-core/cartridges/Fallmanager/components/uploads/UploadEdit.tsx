@@ -132,44 +132,36 @@ export default function UploadEdit({ slug }: UploadEditProps) {
       <>
         <CardHeader
           title={<Typography variant="h6">{doc.name || 'Untitled'}</Typography>}
-          avatar={<>
-            <IconButton
-              color="secondary"
-              onClick={() => {
-                dispatch(
-                  routeTo(
-                    `/fallmanager`,
-                    router,
-                  ),
-                );
-              }}
-            >
-              <Icon icon={"left"} />
-            </IconButton>
-            <IconButton
-              color="secondary"
-              onClick={() => {
-                dispatch(
-                  routeTo(
-                    `/fallmanager/uploads/?filter=${doc.extension}`,
-                    router,
-                  ),
-                );
-              }}
-            >
-              <Icon icon={icon.icon as any} />
-            </IconButton>
+          avatar={
+            <>
+              <IconButton
+                color="secondary"
+                onClick={() => {
+                  dispatch(routeTo(`/fallmanager`, router));
+                }}
+              >
+                <Icon icon={'left'} />
+              </IconButton>
+              <IconButton
+                color="secondary"
+                onClick={() => {
+                  dispatch(
+                    routeTo(
+                      `/fallmanager/uploads/?filter=${doc.extension}`,
+                      router,
+                    ),
+                  );
+                }}
+              >
+                <Icon icon={icon.icon as any} />
+              </IconButton>
             </>
           }
         />
       </>
       <CardContent>
-        <Typography variant="body2">
-          {formatFileSize(doc.size)}
-        </Typography>
-        <Typography variant="body2">
-          {doc.type}
-        </Typography>
+        <Typography variant="body2">{formatFileSize(doc.size)}</Typography>
+        <Typography variant="body2">{doc.type}</Typography>
         <Typography variant="body2">
           Uploaded {moment(doc.uploadedAt.seconds * 1000).fromNow()}
         </Typography>
@@ -177,7 +169,7 @@ export default function UploadEdit({ slug }: UploadEditProps) {
       <CardActions>
         <>
           <CustomButton
-            sx={{ ml: 1 }}  
+            sx={{ ml: 1 }}
             onClick={handleDelete as any}
             icon="delete"
             label="Delete"

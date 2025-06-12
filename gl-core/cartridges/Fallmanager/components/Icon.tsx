@@ -23,11 +23,11 @@ import LeftIcon from '@mui/icons-material/ArrowBack';
 
 export type TIconNames =
   | 'home'
-  | 'link' 
-  | 'copy' 
-  | 'left' 
+  | 'link'
+  | 'copy'
+  | 'left'
   | 'view'
-  | 'close' 
+  | 'close'
   | 'default'
   | 'fallmanager'
   | 'save'
