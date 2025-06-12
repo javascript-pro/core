@@ -63,10 +63,10 @@ export default function AuthForm() {
   const dispatch = useDispatch();
   const router = useRouter();
   const canResetPassword = false;
-  const email = useEmail(); // From Redux persisted state
+  const email = useEmail();
   const [password, setPassword] = React.useState('');
   const themeMode = useThemeMode();
-  const title = 'Yeh, not in those shoes, mate';
+  const title = 'Signin required';
   const icon = 'signin';
 
   const isFormValid = React.useMemo(() => {
@@ -124,7 +124,7 @@ export default function AuthForm() {
         <CardContent>
           <TextField
             id="email"
-            variant="outlined"
+            variant="filled"
             color="secondary"
             label="Email"
             type="email"
@@ -135,7 +135,7 @@ export default function AuthForm() {
           />
           <TextField
             id="password"
-            variant="outlined"
+            variant="filled"
             color="secondary"
             label="Password"
             type="password"
@@ -158,7 +158,6 @@ export default function AuthForm() {
           )}
 
           <MightyButton
-            fullWidth
             sx={{ mx: 1, mb: 1 }}
             onClick={onSignIn}
             variant={isFormValid ? 'contained' : 'text'}
