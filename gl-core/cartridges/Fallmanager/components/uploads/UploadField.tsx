@@ -1,27 +1,25 @@
-// core/gl-core/components/FieldUpload.tsx
+// core/gl-core/cartridges/Fallmanager/components/uploads/UploadField.tsx
 'use client';
 import * as React from 'react';
 import { Box, Button } from '@mui/material';
+import { CustomButton } from '../../../Fallmanager';
 
-export type TFieldUpload = {
+export type TUploadField = {
   id?: string;
   label?: string;
   color?: string;
   accept?: string;
   multiple?: boolean;
   onSelect?: (file: File | null) => void;
-  buttonComponent?: React.ReactNode;
 };
 
-export default function FieldUpload({
+export default function UploadField({
   id = 'file-upload',
-  color = 'inherit',
   label = 'Choose File',
   accept = '.pdf,.docx,.odt,.doc,.jpg,.jpeg,.png,.json,.txt,.rtf,.md,.jpeg,',
   multiple = false,
-  buttonComponent = null,
   onSelect,
-}: TFieldUpload) {
+}: TUploadField) {
   const inputRef = React.useRef<HTMLInputElement | null>(null);
 
   const handleClick = () => {
@@ -47,13 +45,13 @@ export default function FieldUpload({
         multiple={multiple}
         onChange={handleChange}
       />
-      {buttonComponent ? (
-        buttonComponent
-      ) : (
-        <Button color={color as any} variant="contained" onClick={handleClick}>
-          {label}
-        </Button>
-      )}
+      <CustomButton 
+        mode="button"
+        label={label} 
+        variant="outlined"
+        onClick={handleClick}
+        icon="upload" />
+      
     </Box>
   );
 }

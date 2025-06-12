@@ -1,5 +1,6 @@
 'use client';
 import * as React from 'react';
+import { useRouter } from 'next/navigation';
 import {
   Box,
   CardHeader,
@@ -18,6 +19,7 @@ import {
   ShareMenu,
   useVersion,
   ModeSwitch,
+  routeTo,
 } from '../../../gl-core';
 import { firebaseAuth, useUser } from '../../cartridges/Bouncer';
 
@@ -32,6 +34,7 @@ export type TTopRightMenu = {
 
 export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
   const dispatch = useDispatch();
+  const router = useRouter();
   const user = useUser();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [shareOpen, setShareOpen] = React.useState(false);
@@ -84,6 +87,18 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
             <Typography variant="body2">{frontmatter?.description}</Typography>
           }
         />
+
+        <MenuItem
+          sx={{ my: 2 }}
+          onClick={(e) => {
+            dispatch(routeTo('/fallmanager', router));
+          }}
+        >
+          <ListItemIcon>
+            <Icon icon="right" />
+          </ListItemIcon>
+          <ListItemText primary="Fallmanager" />
+        </MenuItem>
 
         <MenuItem
           sx={{ my: 2 }}

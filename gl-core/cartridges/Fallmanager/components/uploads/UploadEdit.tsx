@@ -2,8 +2,8 @@
 import * as React from 'react';
 import moment from 'moment';
 import { useRouter } from 'next/navigation';
-import { db } from '../../../../../gl-core/lib/firebase';
 import { collection, query, where, onSnapshot } from 'firebase/firestore';
+import { db } from '../../../../../gl-core/lib/firebase';
 import {
   Box,
   CircularProgress,
@@ -31,6 +31,14 @@ type UploadDoc = {
   id: string;
   name?: string;
   slug?: string;
+  url?: string;
+  extension?: string;
+  type?: string;
+  size?: number;
+  uploadedAt?: {
+    seconds: number;
+    nanoseconds: number;
+  };
   [key: string]: any;
 };
 
@@ -48,7 +56,34 @@ export default function UploadEdit({ slug }: UploadEditProps) {
   };
 
   const handleCopy = () => {
-    // copy link to clipboard
+    if (doc?.url) {
+      navigator.clipboard
+        .writeText(doc.url)
+        .then(() => {
+          dispatch(
+            toggleFeedback({
+              severity: 'success',
+              title: 'Link copied to clipboard',
+            }),
+          );
+        })
+        .catch((err) => {
+          dispatch(
+            toggleFeedback({
+              severity: 'error',
+              title: 'Failed to copy link',
+              description: err.message,
+            }),
+          );
+        });
+    } else {
+      dispatch(
+        toggleFeedback({
+          severity: 'warning',
+          title: 'No link available to copy',
+        }),
+      );
+    }
   };
 
   const handleClose = () => {
@@ -108,7 +143,7 @@ export default function UploadEdit({ slug }: UploadEditProps) {
 
   if (loading) {
     return (
-      <Box sx={{ p: 3, textAlign: 'center' }}>
+      <Box sx={{ textAlign: 'center' }}>
         <CircularProgress />
         <Typography variant="body2" sx={{ mt: 2 }}>
           Loading...
@@ -119,7 +154,7 @@ export default function UploadEdit({ slug }: UploadEditProps) {
 
   if (!doc) {
     return (
-      <Box sx={{ p: 3 }}>
+      <Box>
         <Alert severity="warning">
           No document loaded. Please check the slug.
         </Alert>
@@ -128,23 +163,18 @@ export default function UploadEdit({ slug }: UploadEditProps) {
   }
 
   return (
-    <Box sx={{ p: 2 }}>
-      <>
-        <CardHeader
-          title={<Typography variant="h6">{doc.name || 'Untitled'}</Typography>}
-          avatar={<>
+    <Box>
+      <CardHeader
+        title={<Typography variant="h6">{doc.name || 'Untitled'}</Typography>}
+        avatar={
+          <>
             <IconButton
               color="secondary"
               onClick={() => {
-                dispatch(
-                  routeTo(
-                    `/fallmanager`,
-                    router,
-                  ),
-                );
+                dispatch(routeTo(`/fallmanager`, router));
               }}
             >
-              <Icon icon={"left"} />
+              <Icon icon={'left'} />
             </IconButton>
             <IconButton
               color="secondary"
@@ -159,50 +189,42 @@ export default function UploadEdit({ slug }: UploadEditProps) {
             >
               <Icon icon={icon.icon as any} />
             </IconButton>
-            </>
-          }
-        />
-      </>
+          </>
+        }
+      />
       <CardContent>
+        <Typography variant="body2">{formatFileSize(doc.size)}</Typography>
+        <Typography variant="body2">{doc.type}</Typography>
         <Typography variant="body2">
-          {formatFileSize(doc.size)}
-        </Typography>
-        <Typography variant="body2">
-          {doc.type}
-        </Typography>
-        <Typography variant="body2">
-          Uploaded {moment(doc.uploadedAt.seconds * 1000).fromNow()}
+          Uploaded {moment(doc.uploadedAt?.seconds * 1000).fromNow()}
         </Typography>
       </CardContent>
       <CardActions>
-        <>
-          <CustomButton
-            sx={{ ml: 1 }}  
-            onClick={handleDelete as any}
-            icon="delete"
-            label="Delete"
-          />
-          <CustomButton
-            sx={{ ml: 1 }}
-            label="View"
-            icon="link"
-            onClick={handleDownload}
-          />
-          <CustomButton
-            sx={{ ml: 1 }}
-            label="Copy link"
-            icon="copy"
-            onClick={handleCopy}
-          />
-          <CustomButton
-            sx={{ ml: 1 }}
-            onClick={handleClose as any}
-            icon="save"
-            label="Save & Close"
-          />
-        </>
+        <CustomButton
+          sx={{ ml: 1 }}
+          onClick={handleDelete as any}
+          icon="delete"
+          label="Delete"
+        />
+        <CustomButton
+          sx={{ ml: 1 }}
+          label="View"
+          icon="link"
+          onClick={handleDownload}
+        />
+        <CustomButton
+          sx={{ ml: 1 }}
+          label="Copy link"
+          icon="copy"
+          onClick={handleCopy}
+        />
+        {/* <CustomButton
+          sx={{ ml: 1 }}
+          onClick={handleClose}
+          icon="save"
+          label="Save & Close"
+        /> */}
       </CardActions>
-      {/* <pre>doc: {JSON.stringify(doc, null, 2)}</pre> */}
     </Box>
   );
 }

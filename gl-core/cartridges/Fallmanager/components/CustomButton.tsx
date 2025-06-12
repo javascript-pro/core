@@ -5,7 +5,7 @@ import { Box, Button, IconButton, Tooltip } from '@mui/material';
 import { Icon } from '../../Fallmanager';
 
 export type TCustomButton = {
-  mode?: 'icon' | null;
+  mode?: 'icon' | 'button' | null;
   disabled?: boolean;
   label?: string | undefined;
   variant?: 'contained' | 'outlined' | 'text' | undefined;
@@ -17,9 +17,9 @@ export type TCustomButton = {
 };
 
 export default function CustomButton({
-  mode = "icon",
+  mode = 'icon',
   disabled = false,
-  color = 'secondary',
+  color = 'primary',
   sx = null,
   icon = undefined,
   variant = undefined,

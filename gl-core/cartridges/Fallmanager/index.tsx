@@ -9,11 +9,12 @@ import {
   UploadNew,
   UploadList,
   UploadEdit,
+  UploadField,
 } from './components/uploads';
 import { getIconByExtension, formatFileSize } from './lib';
 
 export { getIconByExtension, formatFileSize };
-export { Uploads, UploadNew, UploadList, UploadEdit };
+export { Uploads, UploadNew, UploadList, UploadEdit, UploadField };
 export { Fallmanager, CustomButton, Icon, UserInfo, StickyHeader };
 export { updateKey, incomingChange, deleteUpload };
 export { initialStateFallmanager, useFallmanager, useFileTypes };

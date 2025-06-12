@@ -3,11 +3,8 @@
 import * as React from 'react';
 import { Box } from '@mui/material';
 import config from '../../data/config.json';
-import {
-  FieldUpload,
-  useDispatch,
-  uploadToStorage,
-} from '../../../../../gl-core';
+import { useDispatch, uploadToStorage } from '../../../../../gl-core';
+import { UploadField } from '../../../Fallmanager';
 
 export default function UploadNew() {
   const dispatch = useDispatch();
@@ -53,9 +50,9 @@ export default function UploadNew() {
 
   return (
     <Box sx={{ display: 'flex', gap: 1 }}>
-      <FieldUpload
+      <UploadField
         color="secondary"
-        label="New Upload"
+        label="New"
         onSelect={handleFileSelect}
       />
     </Box>
