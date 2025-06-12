@@ -8,10 +8,11 @@ import { UploadList, UploadNew, UploadEdit } from '../../../Fallmanager';
 export default function Uploads() {
   return (
     <Grid container spacing={2}>
-      <Grid 
-        size={{ 
+      <Grid
+        size={{
           xs: 12,
-       }}>
+        }}
+      >
         <UploadNew />
         <UploadList />
       </Grid>

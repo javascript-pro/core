@@ -1,6 +1,6 @@
 'use client';
 import * as React from 'react';
-import config from './fallmanager.json';
+import config from './data/config.json';
 import { AppBar, CssBaseline, Paper } from '@mui/material';
 import { Theme } from '../../../gl-core';
 import { StickyHeader, Uploads, UploadEdit } from '../Fallmanager';

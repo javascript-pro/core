@@ -2,7 +2,7 @@
 'use client';
 import * as React from 'react';
 import { Box } from '@mui/material';
-import config from '../../fallmanager.json';
+import config from '../../data/config.json';
 import {
   FieldUpload,
   useDispatch,

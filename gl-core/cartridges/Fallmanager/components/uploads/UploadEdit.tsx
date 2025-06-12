@@ -11,11 +11,7 @@ import {
   CardContent,
   Typography,
 } from '@mui/material';
-import {
-  Icon,
-  useDispatch,
-  toggleFeedback,
-} from '../../../../../gl-core';
+import { Icon, useDispatch, toggleFeedback } from '../../../../../gl-core';
 import { db } from '../../../../../gl-core/lib/firebase';
 import {
   collection,
@@ -47,10 +43,7 @@ export default function UploadEdit({ slug }: UploadEditProps) {
       return;
     }
 
-    const q = query(
-      collection(db, 'uploads'),
-      where('slug', '==', slug),
-    );
+    const q = query(collection(db, 'uploads'), where('slug', '==', slug));
 
     const unsubscribe = onSnapshot(q, (snapshot) => {
       if (!snapshot.empty) {
@@ -94,13 +87,13 @@ export default function UploadEdit({ slug }: UploadEditProps) {
   return (
     <Box sx={{ p: 2 }}>
       <Card>
-        <CardHeader 
-          title={<Typography variant="h6">
-                  {doc.name || 'Untitled'}
-                </Typography>}
-          avatar={<IconButton onClick={() => router.back()}>
-                    <Icon icon="left"/>
-                  </IconButton>}
+        <CardHeader
+          title={<Typography variant="h6">{doc.name || 'Untitled'}</Typography>}
+          avatar={
+            <IconButton onClick={() => router.back()}>
+              <Icon icon="left" />
+            </IconButton>
+          }
         />
         <CardContent>
           <pre>{JSON.stringify(doc, null, 2)}</pre>
