@@ -36,6 +36,7 @@ import {
   useVersionCheck,
   resetUberedux,
 } from './cartridges/Uberedux';
+import { normalizeError } from './lib';
 import {
   switchTheme,
   navigateTo,
@@ -91,3 +92,4 @@ export {
   useVersionCheck,
   useThemeMode,
 };
+export { normalizeError };

@@ -1,8 +1,10 @@
 // core/gl-core/cartridges/Bouncer/actions/firebaseAuth.tsx
+
 import { auth } from '../../../lib/firebase';
 import { signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import { TUbereduxDispatch } from '../../../../gl-core/types';
 import { setUbereduxKey, toggleFeedback } from '../../../../gl-core';
+import { normalizeError } from '../../../../gl-core/lib/normalizeError';
 
 export const firebaseAuth =
   (
@@ -36,7 +38,7 @@ export const firebaseAuth =
         dispatch(
           toggleFeedback({
             severity: 'success',
-            title: `Welcome back`,
+            title: 'Welcome back',
             description: `Signed in as ${result.user.email}`,
           }),
         );
@@ -58,35 +60,33 @@ export const firebaseAuth =
         return;
       }
     } catch (e: unknown) {
+      const rawMessage = normalizeError(e);
+
+      // Friendly message mapping (Firebase + generic)
       let friendlyMessage = 'Something went wrong during authentication.';
-      let detailedMessage: string;
 
-      if (e instanceof Error) {
-        detailedMessage = e.message;
-
-        // Match common Firebase Auth errors
-        if (detailedMessage.includes('auth/user-not-found')) {
-          friendlyMessage = 'No account found with that email address.';
-        } else if (detailedMessage.includes('auth/wrong-password')) {
-          friendlyMessage = 'The password entered is incorrect.';
-        } else if (detailedMessage.includes('auth/invalid-email')) {
-          friendlyMessage = 'The email address format is invalid.';
-        } else if (detailedMessage.includes('auth/too-many-requests')) {
-          friendlyMessage =
-            'Too many failed attempts. Please wait a moment and try again.';
-        }
-      } else {
-        detailedMessage = String(e);
+      if (rawMessage.includes('auth/user-not-found')) {
+        friendlyMessage = 'No account found with that email address.';
+      } else if (rawMessage.includes('auth/wrong-password')) {
+        friendlyMessage = 'The password entered is incorrect.';
+      } else if (rawMessage.includes('auth/invalid-email')) {
+        friendlyMessage = 'The email address format is invalid.';
+      } else if (rawMessage.includes('auth/too-many-requests')) {
+        friendlyMessage =
+          'Too many failed attempts. Please wait a moment and try again.';
+      } else if (rawMessage.includes('Visibility check was unavailable')) {
+        friendlyMessage =
+          'A server issue occurred. Please try again shortly or contact support.';
       }
 
       dispatch(
         toggleFeedback({
           severity: 'error',
-          title: 'Error',
+          title: 'Authentication Error',
           description: friendlyMessage,
         }),
       );
 
-      dispatch(setUbereduxKey({ key: 'error', value: detailedMessage }));
+      dispatch(setUbereduxKey({ key: 'error', value: rawMessage }));
     }
   };

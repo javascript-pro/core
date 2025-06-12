@@ -65,6 +65,7 @@ export default function AuthForm() {
   const canResetPassword = false;
   const email = useEmail();
   const [password, setPassword] = React.useState('');
+  const [signingIn, setSigningIn] = React.useState(false);
   const themeMode = useThemeMode();
   const title = 'Signin required';
   const icon = 'signin';
@@ -75,13 +76,20 @@ export default function AuthForm() {
 
   const shouldFocusPassword = isValidEmail(email);
 
-  const onSignIn = () => {
-    dispatch(
-      firebaseAuth('signin', {
-        email,
-        password,
-      }),
-    );
+  const onSignIn = async () => {
+    setSigningIn(true);
+    try {
+      await dispatch(
+        firebaseAuth('signin', {
+          email,
+          password,
+        }),
+      );
+    } catch (e) {
+      // You could handle specific error logging here if needed
+    } finally {
+      setSigningIn(false);
+    }
   };
 
   const handleBack = () => {
@@ -116,7 +124,7 @@ export default function AuthForm() {
         <CardHeader
           avatar={
             <IconButton onClick={handleBack}>
-              <Icon icon="left" />
+              <Icon icon="blokey" />
             </IconButton>
           }
           title={<Typography variant="h6">{title}</Typography>}
@@ -132,6 +140,7 @@ export default function AuthForm() {
             value={email}
             onChange={handleEmailChange}
             autoFocus={!shouldFocusPassword}
+            disabled={signingIn}
           />
           <TextField
             id="password"
@@ -144,6 +153,7 @@ export default function AuthForm() {
             onChange={(e) => setPassword(e.target.value)}
             autoFocus={shouldFocusPassword}
             sx={{ mt: 2 }}
+            disabled={signingIn}
           />
         </CardContent>
 
@@ -161,7 +171,7 @@ export default function AuthForm() {
             sx={{ mx: 1, mb: 1 }}
             onClick={onSignIn}
             variant={isFormValid ? 'contained' : 'text'}
-            disabled={!isFormValid}
+            disabled={!isFormValid || signingIn}
             label="Sign in"
             icon={icon}
           />

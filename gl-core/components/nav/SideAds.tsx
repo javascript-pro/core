@@ -22,14 +22,6 @@ export default function SideAds() {
         }}
       />
       <Advert
-        icon="fallmanager"
-        title={'Fallmanager'}
-        onClick={() => {
-          dispatch(routeTo('/fallmanager', router));
-        }}
-      />
-
-      <Advert
         icon="flickr"
         title={'Flickr'}
         onClick={() => {

@@ -37,8 +37,12 @@ export default function Flickr({ mode = 'default', id = null }: TFlickr) {
 
     if (notReady) {
       return (
-        <Alert icon={<Icon icon="flickr" />} sx={{ mx: 4 }} severity="info">
-          Loading from Flickr...
+        <Alert
+          variant='outlined'
+          icon={<Icon icon="flickr" />} 
+          sx={{ mx: 4 }} 
+          severity="success">
+          Loading Flickr album...
         </Alert>
       );
     }
