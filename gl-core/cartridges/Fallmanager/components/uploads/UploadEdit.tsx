@@ -1,6 +1,8 @@
 'use client';
 import * as React from 'react';
 import { useRouter } from 'next/navigation';
+import { db } from '../../../../../gl-core/lib/firebase';
+import { collection, query, where, onSnapshot } from 'firebase/firestore';
 import {
   Box,
   IconButton,
@@ -9,27 +11,40 @@ import {
   Card,
   CardHeader,
   CardContent,
+  CardActions,
   Typography,
 } from '@mui/material';
-import { Icon, useDispatch, toggleFeedback } from '../../../../../gl-core';
-import { db } from '../../../../../gl-core/lib/firebase';
 import {
-  collection,
-  query,
-  where,
-  onSnapshot,
-  DocumentData,
-} from 'firebase/firestore';
+  useDispatch,
+  toggleFeedback,
+  routeTo,
+} from '../../../../../gl-core';
+import { Icon, deleteUpload, CustomButton } from '../../../Fallmanager';
 
 type UploadEditProps = {
   slug: string;
 };
 
+type UploadDoc = {
+  id: string;
+  name?: string;
+  slug?: string;
+  [key: string]: any;
+};
+
 export default function UploadEdit({ slug }: UploadEditProps) {
   const router = useRouter();
   const dispatch = useDispatch();
-  const [doc, setDoc] = React.useState<DocumentData | null>(null);
+  const [doc, setDoc] = React.useState<UploadDoc | null>(null);
   const [loading, setLoading] = React.useState(true);
+
+  const handleDelete = () => {
+    if (doc?.id) dispatch(deleteUpload(doc?.id));
+  };
+
+  const handleClose = () => {
+    dispatch(routeTo('/fallmanager', router));
+  };
 
   React.useEffect(() => {
     if (!slug) {
@@ -47,7 +62,11 @@ export default function UploadEdit({ slug }: UploadEditProps) {
 
     const unsubscribe = onSnapshot(q, (snapshot) => {
       if (!snapshot.empty) {
-        setDoc(snapshot.docs[0].data());
+        const docSnap = snapshot.docs[0];
+        setDoc({
+          id: docSnap.id,
+          ...docSnap.data(),
+        });
       } else {
         dispatch(
           toggleFeedback({
@@ -89,13 +108,41 @@ export default function UploadEdit({ slug }: UploadEditProps) {
       <Card>
         <CardHeader
           title={<Typography variant="h6">{doc.name || 'Untitled'}</Typography>}
+          subheader={<Typography variant="body2">{doc.type || 'Untitled'}</Typography>}
           avatar={
-            <IconButton onClick={() => router.back()}>
-              <Icon icon="left" />
+            <IconButton onClick={() => {
+              dispatch(routeTo(`/fallmanager/uploads/?filter=${doc.extension}`, router))}
+            }>
+              <Icon icon={doc.icon} />
             </IconButton>
           }
+          action={
+            <>
+              <CustomButton
+                onClick={handleDelete as any}
+                icon="delete"
+                label="Delete"
+                variant="outlined"
+              />
+              <CustomButton
+                sx={{ml:1}}
+                onClick={handleClose as any}
+                icon="save"
+                label="Save & Close"
+                variant="contained"
+              />
+            </>
+          }
         />
+
+        <CardActions>
+          <Box sx={{ flexGrow: 1 }} />
+        </CardActions>
+
         <CardContent>
+          <Typography variant='h1'>
+            {doc.extension}
+          </Typography>
           <pre>{JSON.stringify(doc, null, 2)}</pre>
         </CardContent>
       </Card>

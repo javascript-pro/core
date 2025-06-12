@@ -3,13 +3,11 @@ import { TUbereduxDispatch } from '../../../../gl-core/types';
 import { setUbereduxKey } from '../../../../gl-core';
 
 export type TUpload = {
-    id: string;
-}
+  id: string;
+};
 
 export const deleteUpload =
-  (
-    id = 'notset'
-): any =>
+  (id = 'notset'): any =>
   async (dispatch: TUbereduxDispatch, getState: () => any) => {
     try {
       console.log('deleteUpload', id);

@@ -9,11 +9,14 @@ import {
   uploadToStorage,
   MightyButton,
 } from '../../../../../gl-core';
+import { useFileTypes } from '../../../Fallmanager';
 
 export default function UploadNew() {
   const dispatch = useDispatch();
   const [selectedFile, setSelectedFile] = React.useState<File | null>(null);
   const [fileName, setFileName] = React.useState<string | null>(null);
+
+  const fileTypes = useFileTypes();
 
   const allowedFileTypes = ['.json', '.pdf', '.jpg', '.docx'];
 
@@ -57,12 +60,12 @@ export default function UploadNew() {
       }),
     );
 
-    // ✅ Reset on successful upload
+    // ✅ Resets field on successful upload
     handleReset();
   };
 
   return (
-    <Box sx={{ display: 'flex', gap: 2 }}>
+    <Box sx={{ display: 'flex', gap: 1 }}>
       <FieldUpload
         label="Choose file"
         fileName={fileName}

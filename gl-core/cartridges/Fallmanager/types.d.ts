@@ -4,6 +4,14 @@ export type TFallmanagerState = {
   cartridge: string;
   screen: 'upload' | 'read';
   lingua?: any;
+  fileTypes: TFileType[];
+};
+
+export type TFileType = {
+  slug: string;
+  icon: string;
+  title?: string;
+  description?: string;
 };
 
 export type TFall = {
