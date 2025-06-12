@@ -1,4 +1,3 @@
-// core/gl-core/cartridges/Fallmanager/components/uploads/UploadEdit.tsx
 'use client';
 import * as React from 'react';
 import moment from 'moment';
@@ -32,6 +31,14 @@ type UploadDoc = {
   id: string;
   name?: string;
   slug?: string;
+  url?: string;
+  extension?: string;
+  type?: string;
+  size?: number;
+  uploadedAt?: {
+    seconds: number;
+    nanoseconds: number;
+  };
   [key: string]: any;
 };
 
@@ -49,7 +56,34 @@ export default function UploadEdit({ slug }: UploadEditProps) {
   };
 
   const handleCopy = () => {
-    // Copy link to clipboard
+    if (doc?.url) {
+      navigator.clipboard
+        .writeText(doc.url)
+        .then(() => {
+          dispatch(
+            toggleFeedback({
+              severity: 'success',
+              title: 'Link copied to clipboard',
+            }),
+          );
+        })
+        .catch((err) => {
+          dispatch(
+            toggleFeedback({
+              severity: 'error',
+              title: 'Failed to copy link',
+              description: err.message,
+            }),
+          );
+        });
+    } else {
+      dispatch(
+        toggleFeedback({
+          severity: 'warning',
+          title: 'No link available to copy',
+        }),
+      );
+    }
   };
 
   const handleClose = () => {
@@ -120,7 +154,7 @@ export default function UploadEdit({ slug }: UploadEditProps) {
 
   if (!doc) {
     return (
-      <Box sx={{}}>
+      <Box>
         <Alert severity="warning">
           No document loaded. Please check the slug.
         </Alert>
@@ -129,73 +163,68 @@ export default function UploadEdit({ slug }: UploadEditProps) {
   }
 
   return (
-    <Box sx={{}}>
-      <>
-        <CardHeader
-          title={<Typography variant="h6">{doc.name || 'Untitled'}</Typography>}
-          avatar={
-            <>
-              <IconButton
-                color="secondary"
-                onClick={() => {
-                  dispatch(routeTo(`/fallmanager`, router));
-                }}
-              >
-                <Icon icon={'left'} />
-              </IconButton>
-              <IconButton
-                color="secondary"
-                onClick={() => {
-                  dispatch(
-                    routeTo(
-                      `/fallmanager/uploads/?filter=${doc.extension}`,
-                      router,
-                    ),
-                  );
-                }}
-              >
-                <Icon icon={icon.icon as any} />
-              </IconButton>
-            </>
-          }
-        />
-      </>
+    <Box>
+      <CardHeader
+        title={<Typography variant="h6">{doc.name || 'Untitled'}</Typography>}
+        avatar={
+          <>
+            <IconButton
+              color="secondary"
+              onClick={() => {
+                dispatch(routeTo(`/fallmanager`, router));
+              }}
+            >
+              <Icon icon={'left'} />
+            </IconButton>
+            <IconButton
+              color="secondary"
+              onClick={() => {
+                dispatch(
+                  routeTo(
+                    `/fallmanager/uploads/?filter=${doc.extension}`,
+                    router,
+                  ),
+                );
+              }}
+            >
+              <Icon icon={icon.icon as any} />
+            </IconButton>
+          </>
+        }
+      />
       <CardContent>
         <Typography variant="body2">{formatFileSize(doc.size)}</Typography>
         <Typography variant="body2">{doc.type}</Typography>
         <Typography variant="body2">
-          Uploaded {moment(doc.uploadedAt.seconds * 1000).fromNow()}
+          Uploaded {moment(doc.uploadedAt?.seconds * 1000).fromNow()}
         </Typography>
       </CardContent>
       <CardActions>
-        <>
-          <CustomButton
-            sx={{ ml: 1 }}
-            onClick={handleDelete as any}
-            icon="delete"
-            label="Delete"
-          />
-          <CustomButton
-            sx={{ ml: 1 }}
-            label="View"
-            icon="link"
-            onClick={handleDownload}
-          />
-          <CustomButton
-            sx={{ ml: 1 }}
-            label="Copy link"
-            icon="copy"
-            onClick={handleCopy}
-          />
-          <CustomButton
-            sx={{ ml: 1 }}
-            onClick={handleClose as any}
-            icon="save"
-            label="Save & Close"
-          />
-        </>
+        <CustomButton
+          sx={{ ml: 1 }}
+          onClick={handleDelete as any}
+          icon="delete"
+          label="Delete"
+        />
+        <CustomButton
+          sx={{ ml: 1 }}
+          label="View"
+          icon="link"
+          onClick={handleDownload}
+        />
+        <CustomButton
+          sx={{ ml: 1 }}
+          label="Copy link"
+          icon="copy"
+          onClick={handleCopy}
+        />
+        {/* <CustomButton
+          sx={{ ml: 1 }}
+          onClick={handleClose}
+          icon="save"
+          label="Save & Close"
+        /> */}
       </CardActions>
-      {/* <pre>doc: {JSON.stringify(doc, null, 2)}</pre> */}
     </Box>
   );
 }

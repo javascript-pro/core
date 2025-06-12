@@ -3,5 +3,5 @@ import Uploads from './Uploads';
 import UploadList from './UploadList';
 import UploadNew from './UploadNew';
 import UploadEdit from './UploadEdit';
-
-export { Uploads, UploadList, UploadNew, UploadEdit };
+import UploadField from './UploadField';
+export { Uploads, UploadList, UploadNew, UploadEdit, UploadField };

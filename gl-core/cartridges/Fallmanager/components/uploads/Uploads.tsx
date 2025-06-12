@@ -1,24 +1,17 @@
 'use client';
 // core/gl-core/cartridges/Fallmanager/components/screens/Uploads.tsx
-
 import * as React from 'react';
-import { Grid, Box } from '@mui/material';
+import { Typography, Box, CardHeader } from '@mui/material';
 import { UploadList, UploadNew } from '../../../Fallmanager';
 
 export default function Uploads() {
   return (
-    <Grid container spacing={2}>
-      <Grid
-        size={{
-          xs: 12,
-        }}
-      >
-        card header
-        <Box sx={{ mb: 2 }}>
-          <UploadNew />
-        </Box>
-        <UploadList />
-      </Grid>
-    </Grid>
+    <Box>
+      <CardHeader 
+        title={<Typography variant='h6'>Uploads</Typography>}
+        avatar={<UploadNew />}
+      />
+      <UploadList />
+    </Box>
   );
 }
