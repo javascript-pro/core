@@ -76,7 +76,7 @@ export default function UploadList() {
               }}
             >
               <ListItemIcon>
-                <Icon icon="doc" />
+                <Icon icon="doc" color="secondary"/>
               </ListItemIcon>
               <ListItemText
                 primary={upload.name}

@@ -5,9 +5,13 @@ import { TFallmanagerState } from './types';
 
 export const initialState: TFallmanagerState = {
   cartridge: 'fallmanager',
+  fileTypes: [{slug:"one"}]
+};
+
+/*
   // lingua,
   // screen: 'upload',
   // fileTypes: [{
   //   slug: 'docx',
   // }],
-};
+*/

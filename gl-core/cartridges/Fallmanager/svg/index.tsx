@@ -1,3 +1,2 @@
-import WindowsIcon from './WindowsIcon';
-
-export { WindowsIcon };
+import FallmanagerIcon from './FallmanagerIcon';
+export { FallmanagerIcon };

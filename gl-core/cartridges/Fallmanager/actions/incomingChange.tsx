@@ -7,7 +7,7 @@ export const incomingChange =
   (key: string, value: any): any =>
   async (dispatch: TUbereduxDispatch, getState: () => any) => {
     try {
-      const current = getState().redux.fallmanager || {};
+      const current = getState().redux.fallmanager;
       const updated = {
         ...current,
         [key]: value,

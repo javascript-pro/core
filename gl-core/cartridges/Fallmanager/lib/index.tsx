@@ -1,3 +1,3 @@
 import { getIconByExtension } from './getIconByExtension';
-
-export { getIconByExtension };
+import {formatFileSize} from './formatFileSize';
+export { getIconByExtension, formatFileSize };

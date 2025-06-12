@@ -19,7 +19,7 @@ export type TCustomButton = {
 export default function CustomButton({
   mode = null,
   disabled = false,
-  color = 'primary',
+  color = 'secondary',
   sx = null,
   icon = undefined,
   variant = undefined,

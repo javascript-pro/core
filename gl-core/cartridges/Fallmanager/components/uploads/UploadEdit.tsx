@@ -1,5 +1,6 @@
 'use client';
 import * as React from 'react';
+import moment from 'moment';
 import { useRouter } from 'next/navigation';
 import { db } from '../../../../../gl-core/lib/firebase';
 import { collection, query, where, onSnapshot } from 'firebase/firestore';
@@ -7,19 +8,18 @@ import {
   Box,
   CircularProgress,
   Alert,
-  Card,
   CardHeader,
   CardContent,
-  CardActions,
   Typography,
+  IconButton,
 } from '@mui/material';
 import { useDispatch, toggleFeedback, routeTo } from '../../../../../gl-core';
 import {
   Icon,
   deleteUpload,
   CustomButton,
-  useFileTypes,
-  useFallmanager,
+  formatFileSize,
+  getIconByExtension,
 } from '../../../Fallmanager';
 
 type UploadEditProps = {
@@ -38,8 +38,7 @@ export default function UploadEdit({ slug }: UploadEditProps) {
   const dispatch = useDispatch();
   const [doc, setDoc] = React.useState<UploadDoc | null>(null);
   const [loading, setLoading] = React.useState(true);
-
-  const fileTypes = useFallmanager();
+  // const fileTypes = useFileTypes();
 
   const handleDelete = () => {
     if (doc?.id) dispatch(deleteUpload(doc?.id));
@@ -47,6 +46,10 @@ export default function UploadEdit({ slug }: UploadEditProps) {
 
   const handleClose = () => {
     dispatch(routeTo('/fallmanager', router));
+  };
+
+  const handleDownload = () => {
+    console.log("handleDownload")
   };
 
   React.useEffect(() => {
@@ -85,6 +88,8 @@ export default function UploadEdit({ slug }: UploadEditProps) {
     return () => unsubscribe();
   }, [slug, dispatch]);
 
+  const icon = getIconByExtension(doc?.extension || "")
+
   if (loading) {
     return (
       <Box sx={{ p: 3, textAlign: 'center' }}>
@@ -108,26 +113,33 @@ export default function UploadEdit({ slug }: UploadEditProps) {
 
   return (
     <Box sx={{ p: 2 }}>
-      <Card>
+      <>
         <CardHeader
           title={<Typography variant="h4">{doc.name || 'Untitled'}</Typography>}
-          subheader={
-            <Typography variant="body2">{doc.type || 'Untitled'}</Typography>
+          subheader={<>
+                      <Typography variant="body2">
+                        {formatFileSize(doc.size)}, 
+                        {doc.type || ''}
+                      </Typography>
+                      <Typography variant="body2">
+                        Uploaded {moment(doc.uploadedAt.seconds * 1000).fromNow()}
+                      </Typography>
+            </>
           }
-          // avatar={
-          //   <IconButton
-          //     onClick={() => {
-          //       dispatch(
-          //         routeTo(
-          //           `/fallmanager/uploads/?filter=${doc.extension}`,
-          //           router,
-          //         ),
-          //       );
-          //     }}
-          //   >
-          //     <Icon icon={doc.icon} />
-          //   </IconButton>
-          // }
+          avatar={
+            <IconButton
+              onClick={() => {
+                dispatch(
+                  routeTo(
+                    `/fallmanager/uploads/?filter=${doc.extension}`,
+                    router,
+                  ),
+                );
+              }}
+            >
+              <Icon icon={icon.icon as any} />
+            </IconButton>
+          }
           action={
             <>
               <CustomButton
@@ -135,6 +147,13 @@ export default function UploadEdit({ slug }: UploadEditProps) {
                 icon="delete"
                 label="Delete"
                 variant="outlined"
+              />
+              <CustomButton 
+                sx={{ ml: 1 }}
+                label="Download"
+                variant="outlined"
+                icon="download"
+                onClick={handleDownload}
               />
               <CustomButton
                 sx={{ ml: 1 }}
@@ -147,16 +166,14 @@ export default function UploadEdit({ slug }: UploadEditProps) {
           }
         />
 
-        <CardActions>
-          <Box sx={{ flexGrow: 1 }} />
-        </CardActions>
-
         <CardContent>
-          <Typography variant="h1">{doc.extension}</Typography>
-          <pre>{JSON.stringify(fileTypes, null, 2)}</pre>
-          <pre>{JSON.stringify(doc, null, 2)}</pre>
+
+          
+          {/* <pre>doc: 
+            {JSON.stringify(doc, null, 2)}
+          </pre> */}
         </CardContent>
-      </Card>
+      </>
     </Box>
   );
 }

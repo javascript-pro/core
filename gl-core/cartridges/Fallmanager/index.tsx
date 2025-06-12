@@ -10,9 +10,9 @@ import {
   UploadList,
   UploadEdit,
 } from './components/uploads';
-import { getIconByExtension } from './lib';
+import { getIconByExtension, formatFileSize } from './lib';
 
-export { getIconByExtension };
+export { getIconByExtension, formatFileSize };
 export { Uploads, UploadNew, UploadList, UploadEdit };
 export { Fallmanager, CustomButton, Icon, UserInfo, StickyHeader };
 export { updateKey, incomingChange, deleteUpload };
