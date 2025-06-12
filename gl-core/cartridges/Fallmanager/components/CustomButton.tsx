@@ -1,12 +1,7 @@
 // core/gl-core/cartridges/Fallmanager/components/CustomButton.tsx
 'use client';
 import React from 'react';
-import {
-  Box,
-  Button,
-  IconButton,
-  Tooltip,
-} from '@mui/material';
+import { Box, Button, IconButton, Tooltip } from '@mui/material';
 import { Icon } from '../../Fallmanager';
 
 export type TCustomButton = {
@@ -34,7 +29,6 @@ export default function CustomButton({
     console.log('no onClick');
   },
 }: TCustomButton) {
-
   if (mode === 'icon') {
     return (
       <Tooltip title={label} enterTouchDelay={0} leaveTouchDelay={3000}>

@@ -5,7 +5,6 @@ import { db } from '../../../../../gl-core/lib/firebase';
 import { collection, query, where, onSnapshot } from 'firebase/firestore';
 import {
   Box,
-  IconButton,
   CircularProgress,
   Alert,
   Card,
@@ -14,12 +13,14 @@ import {
   CardActions,
   Typography,
 } from '@mui/material';
+import { useDispatch, toggleFeedback, routeTo } from '../../../../../gl-core';
 import {
-  useDispatch,
-  toggleFeedback,
-  routeTo,
-} from '../../../../../gl-core';
-import { Icon, deleteUpload, CustomButton } from '../../../Fallmanager';
+  Icon,
+  deleteUpload,
+  CustomButton,
+  useFileTypes,
+  useFallmanager,
+} from '../../../Fallmanager';
 
 type UploadEditProps = {
   slug: string;
@@ -37,6 +38,8 @@ export default function UploadEdit({ slug }: UploadEditProps) {
   const dispatch = useDispatch();
   const [doc, setDoc] = React.useState<UploadDoc | null>(null);
   const [loading, setLoading] = React.useState(true);
+
+  const fileTypes = useFallmanager();
 
   const handleDelete = () => {
     if (doc?.id) dispatch(deleteUpload(doc?.id));
@@ -107,15 +110,24 @@ export default function UploadEdit({ slug }: UploadEditProps) {
     <Box sx={{ p: 2 }}>
       <Card>
         <CardHeader
-          title={<Typography variant="h6">{doc.name || 'Untitled'}</Typography>}
-          subheader={<Typography variant="body2">{doc.type || 'Untitled'}</Typography>}
-          avatar={
-            <IconButton onClick={() => {
-              dispatch(routeTo(`/fallmanager/uploads/?filter=${doc.extension}`, router))}
-            }>
-              <Icon icon={doc.icon} />
-            </IconButton>
+          title={<Typography variant="h4">{doc.name || 'Untitled'}</Typography>}
+          subheader={
+            <Typography variant="body2">{doc.type || 'Untitled'}</Typography>
           }
+          // avatar={
+          //   <IconButton
+          //     onClick={() => {
+          //       dispatch(
+          //         routeTo(
+          //           `/fallmanager/uploads/?filter=${doc.extension}`,
+          //           router,
+          //         ),
+          //       );
+          //     }}
+          //   >
+          //     <Icon icon={doc.icon} />
+          //   </IconButton>
+          // }
           action={
             <>
               <CustomButton
@@ -125,7 +137,7 @@ export default function UploadEdit({ slug }: UploadEditProps) {
                 variant="outlined"
               />
               <CustomButton
-                sx={{ml:1}}
+                sx={{ ml: 1 }}
                 onClick={handleClose as any}
                 icon="save"
                 label="Save & Close"
@@ -140,9 +152,8 @@ export default function UploadEdit({ slug }: UploadEditProps) {
         </CardActions>
 
         <CardContent>
-          <Typography variant='h1'>
-            {doc.extension}
-          </Typography>
+          <Typography variant="h1">{doc.extension}</Typography>
+          <pre>{JSON.stringify(fileTypes, null, 2)}</pre>
           <pre>{JSON.stringify(doc, null, 2)}</pre>
         </CardContent>
       </Card>

@@ -1,3 +1,3 @@
-import { getIcon } from './getIcon';
+import { getIconByExtension } from './getIconByExtension';
 
-export { getIcon };
+export { getIconByExtension };
