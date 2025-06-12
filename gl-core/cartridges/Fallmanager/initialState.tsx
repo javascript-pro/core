@@ -4,6 +4,6 @@ import lingua from './data/lingua.json';
 
 export const initialState: TFallmanagerState = {
   cartridge: 'fallmanager',
-  screen: 'upload',
   lingua,
+  screen: 'upload',
 };

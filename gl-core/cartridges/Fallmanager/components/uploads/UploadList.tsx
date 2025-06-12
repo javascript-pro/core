@@ -8,8 +8,10 @@ import {
   ListItem,
   ListItemButton,
   ListItemText,
+  ListItemIcon,
 } from '@mui/material';
-import { useDispatch } from '../../../../../gl-core';
+import { useRouter } from 'next/navigation';
+import { useDispatch, routeTo, Icon } from '../../../../../gl-core';
 import { incomingChange, useFallmanager } from '../../../Fallmanager';
 import {
   collection,
@@ -23,6 +25,7 @@ import { formatDistanceToNow } from 'date-fns';
 export default function UploadList() {
   const dispatch = useDispatch();
   const slice = useFallmanager();
+  const router = useRouter();
   const uploads = slice?.uploads || [];
 
   React.useEffect(() => {
@@ -43,8 +46,11 @@ export default function UploadList() {
     return () => unsubscribe();
   }, [dispatch]);
 
+  // RE-ADDED: handleItemClick
   const handleItemClick = (item: any) => {
-    console.log('handleItemClick', item);
+    if (item.slug) {
+      dispatch(routeTo(`/fallmanager/uploads/${item.slug}`, router));
+    }
   };
 
   return (
@@ -69,9 +75,12 @@ export default function UploadList() {
                 handleItemClick(upload);
               }}
             >
+              <ListItemIcon>
+                <Icon icon="doc" />
+              </ListItemIcon>
               <ListItemText
                 primary={upload.name}
-                secondary={`Uploaded ${timeAgo}`}
+                // secondary={`Uploaded ${timeAgo}`}
               />
             </ListItemButton>
           );

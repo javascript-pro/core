@@ -3,12 +3,9 @@ import Fallmanager from './Fallmanager';
 import { initialState as initialStateFallmanager } from './initialState';
 import { useFallmanager } from './hooks';
 import {
-  createFall,
-  readFall,
-  updateFall,
-  deleteFall,
   updateKey,
   incomingChange,
+  deleteUpload,
 } from './actions';
 import { UserInfo, StickyHeader } from './components';
 import {
@@ -20,6 +17,5 @@ import {
 
 export { Uploads, UploadNew, UploadList, UploadEdit };
 export { Fallmanager, UserInfo, StickyHeader };
-export { createFall, readFall, updateFall, deleteFall };
-export { updateKey, incomingChange };
+export { updateKey, incomingChange, deleteUpload };
 export { initialStateFallmanager, useFallmanager };
