@@ -20,7 +20,9 @@ export default function UserInfo() {
   const dispatch = useDispatch();
   const { uid } = user;
 
-  const [userDoc, setUserDoc] = React.useState<Record<string, any> | null>(null);
+  const [userDoc, setUserDoc] = React.useState<Record<string, any> | null>(
+    null,
+  );
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
@@ -55,13 +57,16 @@ export default function UserInfo() {
   return (
     <>
       <Box
-        sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer', gap: 1 }}
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          cursor: 'pointer',
+          gap: 1,
+        }}
         onClick={handleClick}
       >
         <Typography variant="body2">{userDoc?.name}</Typography>
         <Avatar src={userDoc?.avatar} />
-        
-        
       </Box>
 
       <Menu
@@ -73,9 +78,10 @@ export default function UserInfo() {
           horizontal: 'left',
         }}
       >
-
-        <Box sx={{width: 175}} />
-        <Typography variant="caption" sx={{mx: 2}}>{userDoc?.email}</Typography>
+        <Box sx={{ width: 175 }} />
+        <Typography variant="caption" sx={{ mx: 2 }}>
+          {userDoc?.email}
+        </Typography>
         <MenuItem onClick={handleSignout}>
           <ListItemIcon>
             <Icon icon="signout" />

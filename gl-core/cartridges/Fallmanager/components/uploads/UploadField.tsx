@@ -45,13 +45,13 @@ export default function UploadField({
         multiple={multiple}
         onChange={handleChange}
       />
-      <CustomButton 
+      <CustomButton
         mode="button"
-        label={label} 
+        label={label}
         variant="outlined"
         onClick={handleClick}
-        icon="upload" />
-      
+        icon="upload"
+      />
     </Box>
   );
 }

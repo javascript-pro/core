@@ -7,8 +7,8 @@ import { UploadList, UploadNew } from '../../../Fallmanager';
 export default function Uploads() {
   return (
     <Box>
-      <CardHeader 
-        title={<Typography variant='h6'>Uploads</Typography>}
+      <CardHeader
+        title={<Typography variant="h6">Uploads</Typography>}
         avatar={<UploadNew />}
       />
       <UploadList />
