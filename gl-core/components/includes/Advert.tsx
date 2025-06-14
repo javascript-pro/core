@@ -32,7 +32,7 @@ export default function Advert({
         onClick={onClick}
       >
         <Alert
-          sx={{ width: '100%' }}
+          sx={{ width: '100%', border: 0 }}
           severity="success"
           variant="outlined"
           icon={<Icon icon={icon as any} />}
