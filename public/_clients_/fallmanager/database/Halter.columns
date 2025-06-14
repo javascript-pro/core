@@ -1,0 +1,8 @@
+"name","type","length","leftDigits","rightDigits"
+"HalterID","STRING","0","0","0"
+"Vorname","STRING","0","0","0"
+"Nachname","STRING","0","0","0"
+"Straße","STRING","0","0","0"
+"PLZ","STRING","0","0","0"
+"Ort","STRING","0","0","0"
+"VersicherungsscheinNr","STRING","0","0","0"

@@ -63,12 +63,12 @@ export const firebaseAuth =
       const rawMessage = normalizeError(e);
 
       // Friendly message mapping (Firebase + generic)
-      let friendlyMessage = 'Something went wrong during authentication.';
+      let friendlyMessage = 'Connectivity error';
 
       if (rawMessage.includes('auth/user-not-found')) {
-        friendlyMessage = 'No account found with that email address.';
+        friendlyMessage = 'Wrong email';
       } else if (rawMessage.includes('auth/wrong-password')) {
-        friendlyMessage = 'The password entered is incorrect.';
+        friendlyMessage = 'Wrong password';
       } else if (rawMessage.includes('auth/invalid-email')) {
         friendlyMessage = 'The email address format is invalid.';
       } else if (rawMessage.includes('auth/too-many-requests')) {
@@ -81,8 +81,8 @@ export const firebaseAuth =
 
       dispatch(
         toggleFeedback({
-          severity: 'error',
-          title: 'Authentication Error',
+          severity: 'warning',
+          title: 'Firebase',
           description: friendlyMessage,
         }),
       );

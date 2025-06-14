@@ -86,7 +86,7 @@ export default function UserInfo() {
         }}
       >
         <Box sx={{ width: 175 }} />
-        
+
         <MenuItem onClick={handleHome} sx={{ mt: 1 }}>
           <ListItemIcon>
             <Icon icon="home" />
@@ -99,7 +99,7 @@ export default function UserInfo() {
           </ListItemIcon>
           <ListItemText primary="Sign out" />
         </MenuItem>
-        <Typography variant="caption" sx={{p:2}}>
+        <Typography variant="caption" sx={{ p: 2 }}>
           {userDoc?.email}
         </Typography>
         {/* You can add more MenuItem components here */}

@@ -1,0 +1,8 @@
+"name","type","length","leftDigits","rightDigits"
+"StaatsanwaltschaftID","STRING","0","0","0"
+"Staatsanwaltschaft am LG","STRING","0","0","0"
+"Straße","STRING","0","0","0"
+"PLZ","STRING","0","0","0"
+"Ort","STRING","0","0","0"
+"E-Mail","STRING","0","0","0"
+"beAsafeid","STRING","0","0","0"
