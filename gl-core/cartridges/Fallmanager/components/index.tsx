@@ -4,6 +4,7 @@ import UserInfo from './UserInfo';
 import StickyHeader from './StickyHeader';
 import Icon from './Icon';
 import CustomButton from './CustomButton';
+import Dashboard from './Dashboard';
 import {
   Uploads,
   UploadNew,
@@ -11,6 +12,6 @@ import {
   UploadEdit,
   UploadField,
 } from './uploads';
-
+export {Dashboard}
 export { Uploads, UploadNew, UploadList, UploadEdit, UploadField };
 export { CustomButton, Icon, UserInfo, StickyHeader };

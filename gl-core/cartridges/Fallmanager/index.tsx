@@ -3,7 +3,7 @@ import Fallmanager from './Fallmanager';
 import { initialState as initialStateFallmanager } from './initialState';
 import { useFallmanager, useFileTypes } from './hooks';
 import { updateKey, incomingChange, deleteUpload } from './actions';
-import { UserInfo, StickyHeader, Icon, CustomButton } from './components';
+import { UserInfo, StickyHeader, Icon, CustomButton, Dashboard } from './components';
 import {
   Uploads,
   UploadNew,
@@ -15,6 +15,6 @@ import { getIconByExtension, formatFileSize } from './lib';
 
 export { getIconByExtension, formatFileSize };
 export { Uploads, UploadNew, UploadList, UploadEdit, UploadField };
-export { Fallmanager, CustomButton, Icon, UserInfo, StickyHeader };
+export { Fallmanager, CustomButton, Icon, UserInfo, StickyHeader, Dashboard };
 export { updateKey, incomingChange, deleteUpload };
 export { initialStateFallmanager, useFallmanager, useFileTypes };
