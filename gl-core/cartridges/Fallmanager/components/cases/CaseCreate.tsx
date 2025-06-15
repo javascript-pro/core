@@ -20,28 +20,36 @@ import {
   newCase,
 } from '../../../Fallmanager';
 
+function generateSlug(input: string) {
+  return input
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w\-]+/g, '')
+    .replace(/\-\-+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
 export default function CaseCreate() {
   const dispatch = useDispatch();
   const isMobile = useIsMobile();
   const newCaseOpen = useNewCaseOpen();
 
-  const [clientName, setClientName] = React.useState('');
-  const [isValid, setIsValid] = React.useState(false);
+  const [party1, setParty1] = React.useState('');
+  const [party2, setParty2] = React.useState('');
   const [touched, setTouched] = React.useState(false);
 
-  const validate = (value: string) => {
-    setIsValid(value.trim().length >= 6);
+  const isValid = party1.trim().length >= 6 && party2.trim().length >= 6;
+
+  const handleParty1Change = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setParty1(e.target.value);
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    setClientName(value);
-    validate(value);
+  const handleParty2Change = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setParty2(e.target.value);
   };
 
   const handleBlur = () => {
     setTouched(true);
-    validate(clientName);
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -50,21 +58,33 @@ export default function CaseCreate() {
       if (isValid) {
         handleOpenNewCase();
       } else {
-        setTouched(true); // show validation message
+        setTouched(true);
       }
     }
   };
 
   const handleOpenNewCase = async () => {
     if (!isValid) return;
-    await dispatch(newCase({ clientName }));
-    handleClose(); // Reset UI after case creation
+
+    const caseName = `${party1.trim()} versus ${party2.trim()}`;
+    const slug = generateSlug(caseName);
+
+    await dispatch(
+      newCase({
+        party1: party1.trim(),
+        party2: party2.trim(),
+        caseName,
+        slug,
+      })
+    );
+
+    handleClose();
   };
 
   const handleClose = () => {
     dispatch(toggleNewCaseOpen(false));
-    setClientName('');
-    setIsValid(false);
+    setParty1('');
+    setParty2('');
     setTouched(false);
   };
 
@@ -90,25 +110,47 @@ export default function CaseCreate() {
 
       <DialogContent>
         <Typography>
-          What information do we need to open a new case? Start with the name of
-          the client, Joe Bloggs
+          To create a new case, enter the names of both parties. The case name will be generated automatically.
         </Typography>
+
         <Box sx={{ my: 2 }}>
           <InputTextField
-            value={clientName}
+            value={party1}
             autoFocus
             variant="filled"
-            id="create-case-client-name"
-            label="Client Name"
+            id="create-case-party1"
+            label="Party 1"
             helperText={
-              touched && !isValid
-                ? 'Client name must be at least 6 characters'
-                : 'eg: Peter Schmidt'
+              touched && party1.trim().length < 6
+                ? 'Must be at least 6 characters'
+                : 'e.g. Peter Schmidt'
             }
-            onChange={handleInputChange}
+            onChange={handleParty1Change}
             onBlur={handleBlur}
             onKeyDown={handleKeyDown}
-            error={touched && !isValid}
+          />
+        </Box>
+
+        <Box sx={{ mb: 2, textAlign: 'center' }}>
+          <Typography variant="subtitle1" color="textSecondary">
+            versus
+          </Typography>
+        </Box>
+
+        <Box sx={{ mb: 2 }}>
+          <InputTextField
+            value={party2}
+            variant="filled"
+            id="create-case-party2"
+            label="Party 2"
+            helperText={
+              touched && party2.trim().length < 6
+                ? 'Must be at least 6 characters'
+                : 'e.g. Allianz Versicherung'
+            }
+            onChange={handleParty2Change}
+            onBlur={handleBlur}
+            onKeyDown={handleKeyDown}
           />
         </Box>
       </DialogContent>

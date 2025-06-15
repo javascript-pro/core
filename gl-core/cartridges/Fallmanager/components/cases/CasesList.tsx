@@ -14,7 +14,13 @@ import {
 import { useRouter } from 'next/navigation';
 import { useDispatch, routeTo } from '../../../../../gl-core';
 import { incomingChange, useFallmanager, Icon } from '../../../Fallmanager';
-import { collection, query, orderBy, onSnapshot } from 'firebase/firestore';
+import {
+  collection,
+  query,
+  where,
+  orderBy,
+  onSnapshot,
+} from 'firebase/firestore';
 import { formatDistanceToNow } from 'date-fns';
 
 export default function CasesList() {
@@ -26,7 +32,8 @@ export default function CasesList() {
   React.useEffect(() => {
     const q = query(
       collection(db, 'fallmanager'),
-      orderBy('createdAt', 'desc'),
+      // where('caseClosed', '!=', true),
+      orderBy('createdAt', 'desc')
     );
 
     const unsubscribe = onSnapshot(q, (snapshot) => {

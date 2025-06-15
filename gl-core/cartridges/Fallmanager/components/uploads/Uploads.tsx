@@ -20,7 +20,7 @@ export default function Uploads() {
         title="Files"
         // subheader="Last 10 files"
         avatar={
-          <IconButton color="secondary" onClick={handleAvatarClick}>
+          <IconButton disabled color="secondary" onClick={handleAvatarClick}>
             <Icon icon="uploads" />
           </IconButton>
         }

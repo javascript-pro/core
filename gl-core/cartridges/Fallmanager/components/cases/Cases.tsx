@@ -9,6 +9,7 @@ import {
   CaseCreate,
   toggleNewCaseOpen,
   CasesList,
+  CustomButton,
 } from '../../../Fallmanager';
 
 export default function Cases() {
@@ -30,14 +31,18 @@ export default function Cases() {
         title="Cases"
         // subheader="Total open cases"
         avatar={
-          <IconButton color="secondary" onClick={handleAvatarClick}>
+          <IconButton disabled color="secondary" onClick={handleAvatarClick}>
             <Icon icon="cases" />
           </IconButton>
         }
         action={
-          <IconButton color="secondary" onClick={handleActionClick}>
-            <Icon icon="new" />
-          </IconButton>
+            <CustomButton
+              mode="button"
+              label="New Case"
+              variant="outlined"
+              icon="new"
+              onClick={handleActionClick}
+            />
         }
       />
       <CardContent>

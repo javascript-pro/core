@@ -8,6 +8,7 @@ import {
   incomingChange,
   deleteUpload,
   newCase,
+  closeCase,
 } from './actions';
 import {
   UserInfo,
@@ -43,4 +44,4 @@ export {
 };
 export { toggleNewCaseOpen, updateKey, incomingChange, deleteUpload, newCase };
 export { useFallmanager, useNewCaseOpen };
-export { Cases, CaseCreate, CasesList, CaseDetail };
+export { Cases, CaseCreate, CasesList, CaseDetail, closeCase };

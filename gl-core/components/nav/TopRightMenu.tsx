@@ -88,6 +88,18 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
         <MenuItem
           sx={{ my: 2 }}
           onClick={(e) => {
+            handleFactorySettings();
+          }}
+        >
+          <ListItemIcon>
+            <Icon icon="reset" />
+          </ListItemIcon>
+          <ListItemText primary="Factory settings" />
+        </MenuItem>
+        
+        <MenuItem
+          sx={{ my: 2 }}
+          onClick={(e) => {
             dispatch(routeTo('/fallmanager', router));
           }}
         >
@@ -117,17 +129,7 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           </Box>
         </Collapse>
 
-        <MenuItem
-          sx={{ my: 2 }}
-          onClick={(e) => {
-            handleFactorySettings();
-          }}
-        >
-          <ListItemIcon>
-            <Icon icon="reset" />
-          </ListItemIcon>
-          <ListItemText primary="Factory settings" />
-        </MenuItem>
+
 
         <ModeSwitch />
 

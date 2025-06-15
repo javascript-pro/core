@@ -4,14 +4,15 @@ import * as React from 'react';
 import { useRouter } from 'next/navigation';
 import { Grid, Card, CardHeader, CardContent, IconButton } from '@mui/material';
 import { useUser } from '../../Bouncer';
-import { useDispatch, routeTo } from '../../../../gl-core';
+import { useDispatch } from '../../../../gl-core';
 import {
   CustomButton,
   Cases,
   Uploads,
-  Icon,
   toggleNewCaseOpen,
+  UploadField,
 } from '../../Fallmanager';
+
 
 export default function Dashboard() {
   const router = useRouter();
@@ -38,15 +39,20 @@ export default function Dashboard() {
         //     <Icon icon="home" />
         //   </IconButton>
         // }
-        action={
-          <CustomButton
-            mode="button"
-            color="secondary"
-            label="New Case"
-            variant="contained"
-            icon="case"
-            onClick={handleNewCase}
-          />
+        action={<>
+            <UploadField 
+              label="New File"
+            />
+            <CustomButton
+              sx={{ml:1}}
+              mode="button"
+              color="secondary"
+              label="New Case"
+              variant="contained"
+              icon="case"
+              onClick={handleNewCase}
+            />
+          </>
         }
       />
       <CardContent>

@@ -3,5 +3,6 @@ import { updateKey } from './updateKey';
 import { incomingChange } from './incomingChange';
 import { deleteUpload } from './deleteUpload';
 import { newCase } from './newCase';
+import {closeCase} from './closeCase'
 import { toggleNewCaseOpen } from './toggleNewCaseOpen';
-export { updateKey, incomingChange, deleteUpload, newCase, toggleNewCaseOpen };
+export { updateKey, closeCase, incomingChange, deleteUpload, newCase, toggleNewCaseOpen };
