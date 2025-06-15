@@ -14,8 +14,8 @@ import {
 } from './uploads';
 import InputTextField from './InputTextField';
 export { InputTextField };
-import { Cases, CaseCreate } from './cases';
-export { Cases, CaseCreate };
+import { Cases, CaseCreate, CasesList, CaseDetail } from './cases';
+export { Cases, CaseCreate, CasesList, CaseDetail };
 export { Dashboard };
 export { Uploads, UploadNew, UploadList, UploadEdit, UploadField };
 export { CustomButton, Icon, UserInfo, StickyHeader };

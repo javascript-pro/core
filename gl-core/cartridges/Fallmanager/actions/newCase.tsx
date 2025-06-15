@@ -1,20 +1,33 @@
 // core/gl-core/cartridges/Fallmanager/actions/newCase.tsx
-import { doc, getDoc, deleteDoc } from 'firebase/firestore';
-import { deleteObject, ref } from 'firebase/storage';
-import { db, storage } from '../../../../gl-core/lib/firebase';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { db } from '../../../../gl-core/lib/firebase';
 import { TUbereduxDispatch } from '../../../../gl-core/types';
 import { toggleFeedback, setUbereduxKey } from '../../../../gl-core';
 
 export const newCase =
-  (newCaseObj = null): any =>
+  (newCaseObj: { clientName: string } | null): any =>
   async (dispatch: TUbereduxDispatch, getState: () => any) => {
     try {
-      console.log('newCaseObj', newCaseObj);
+      if (!newCaseObj || typeof newCaseObj.clientName !== 'string') {
+        dispatch(
+          toggleFeedback({
+            severity: 'error',
+            title: 'Call this action with a valid case object',
+          }),
+        );
+        return;
+      }
+
+      const docRef = await addDoc(collection(db, 'fallmanager'), {
+        ...newCaseObj,
+        createdAt: serverTimestamp(),
+      });
 
       dispatch(
         toggleFeedback({
-          severity: 'error',
-          title: 'Call this action with a valid newCase object',
+          severity: 'success',
+          title: 'Case created',
+          description: `Document ID: ${docRef.id}`,
         }),
       );
     } catch (e: unknown) {

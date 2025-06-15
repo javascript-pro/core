@@ -17,7 +17,9 @@ import {
   Dashboard,
   Cases,
   CaseCreate,
+  CasesList,
   InputTextField,
+  CaseDetail,
 } from './components';
 import {
   Uploads,
@@ -41,4 +43,4 @@ export {
 };
 export { toggleNewCaseOpen, updateKey, incomingChange, deleteUpload, newCase };
 export { useFallmanager, useNewCaseOpen };
-export { Cases, CaseCreate };
+export { Cases, CaseCreate, CasesList, CaseDetail };

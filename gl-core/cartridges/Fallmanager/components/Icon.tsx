@@ -24,9 +24,11 @@ import UploadIcon from '@mui/icons-material/DocumentScanner';
 import SignoutIcon from '@mui/icons-material/ExitToApp';
 import CaseIcon from '@mui/icons-material/WorkOutlined';
 import NewIcon from '@mui/icons-material/AddOutlined';
+import ClientIcon from '@mui/icons-material/Person';
 
 export type TIconNames =
   | 'home'
+  | 'client'
   | 'new'
   | 'case'
   | 'cases'
@@ -70,6 +72,9 @@ export default function Icon({ icon, color }: TIcon) {
       break;
     case 'fallmanager':
       iconFragment = <FallmanagerIcon color={color} />;
+      break;
+    case 'client':
+      iconFragment = <ClientIcon color={color} />;
       break;
     case 'new':
       iconFragment = <NewIcon color={color} />;

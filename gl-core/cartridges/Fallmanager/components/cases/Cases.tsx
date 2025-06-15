@@ -2,14 +2,17 @@
 
 'use client';
 import * as React from 'react';
-import { useRouter } from 'next/navigation';
 import { IconButton, Card, CardHeader, CardContent } from '@mui/material';
-import { routeTo, useDispatch } from '../../../../../gl-core';
-import { Icon, CaseCreate, toggleNewCaseOpen } from '../../../Fallmanager';
+import { useDispatch } from '../../../../../gl-core';
+import {
+  Icon,
+  CaseCreate,
+  toggleNewCaseOpen,
+  CasesList,
+} from '../../../Fallmanager';
 
 export default function Cases() {
   const dispatch = useDispatch();
-  const router = useRouter();
 
   const handleAvatarClick = () => {
     console.log('AvatarClick');
@@ -37,7 +40,9 @@ export default function Cases() {
           </IconButton>
         }
       />
-      <CardContent>List open cases</CardContent>
+      <CardContent>
+        <CasesList />
+      </CardContent>
     </Card>
   );
 }
