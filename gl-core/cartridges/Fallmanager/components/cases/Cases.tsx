@@ -2,13 +2,36 @@
 
 'use client';
 import * as React from 'react';
-import { Typography, Box, Card, CardHeader, CardContent } from '@mui/material';
-// import {  } from '../../../Fallmanager';
+import { useRouter } from 'next/navigation';
+import { 
+  IconButton,
+  Card, CardHeader, CardContent } from '@mui/material';
+import { 
+    routeTo,
+    useDispatch,
+}from '../../../../../gl-core';
+  import { Icon } from '../../../Fallmanager';
 
 export default function Cases() {
+
+  const dispatch = useDispatch();
+  const router = useRouter();
+  
+  const handleAvatarClick = () => {
+    console.log("AvatarClick");
+
+  }
+
+
   return (
     <Card>
-      <CardHeader title="Cases" subheader="X open cases" />
+      <CardHeader
+        title="Cases"
+        subheader="Total open cases"
+        avatar={<IconButton color="secondary" onClick={handleAvatarClick}>
+          <Icon icon="cases" />
+        </IconButton>}
+      />
       <CardContent>List open cases</CardContent>
     </Card>
   );

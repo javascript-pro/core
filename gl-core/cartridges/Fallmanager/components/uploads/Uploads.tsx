@@ -1,14 +1,38 @@
 'use client';
 // core/gl-core/cartridges/Fallmanager/components/screens/Uploads.tsx
 import * as React from 'react';
-import { Typography, Box, Card, CardHeader, CardContent } from '@mui/material';
-import { UploadList, UploadNew } from '../../../Fallmanager';
+import { useRouter } from 'next/navigation';
+import { 
+  IconButton,
+  Card, CardHeader, CardContent } from '@mui/material';
+import { 
+    routeTo,
+    useDispatch,
+}from '../../../../../gl-core';
+import { Icon, UploadList } from '../../../Fallmanager';
 
 export default function Uploads() {
+
+  const dispatch = useDispatch();
+  const router = useRouter();
+  
+  const handleAvatarClick = () => {
+    console.log("AvatarClick");
+
+  }
+
   return (
-    <Card>
-      <CardHeader title="Uploads" subheader="X files" />
-      <CardContent>List files uploaded</CardContent>
+    <Card sx={{background: "rgba(0,0,0,0.05)"}}>
+      <CardHeader
+        title="Files"
+        subheader="Last 10 files"
+        avatar={<IconButton color="secondary" onClick={handleAvatarClick}>
+                  <Icon icon="uploads" />
+                </IconButton>}
+      />
+      <CardContent>
+        <UploadList />
+      </CardContent>
     </Card>
   );
 }
@@ -19,6 +43,6 @@ export default function Uploads() {
         title={<Typography variant="h6">Uploads</Typography>}
         avatar={<UploadNew />}
       />
-      <UploadList />
+      
     </Box>
 */
