@@ -22,9 +22,12 @@ import CopyIcon from '@mui/icons-material/CopyAllOutlined';
 import LeftIcon from '@mui/icons-material/ArrowBack';
 import UploadIcon from '@mui/icons-material/UploadFile';
 import SignoutIcon from '@mui/icons-material/ExitToApp';
+import CaseIcon from '@mui/icons-material/WorkOffOutlined';
 
 export type TIconNames =
   | 'home'
+  | 'case'
+  | 'cases'
   | 'upload'
   | 'signout'
   | 'link'
@@ -64,6 +67,12 @@ export default function Icon({ icon, color }: TIcon) {
       break;
     case 'fallmanager':
       iconFragment = <FallmanagerIcon color={color} />;
+      break;
+    case 'cases':
+      iconFragment = <CaseIcon color={color} />;
+      break;
+    case 'case':
+      iconFragment = <CaseIcon color={color} />;
       break;
     case 'upload':
       iconFragment = <UploadIcon color={color} />;
