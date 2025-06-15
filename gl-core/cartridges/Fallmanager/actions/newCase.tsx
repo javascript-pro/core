@@ -36,14 +36,14 @@ export const newCase =
       const docRef = await addDoc(collection(db, 'fallmanager'), {
         ...newCaseObj,
         createdAt: serverTimestamp(),
-        caseClosed: false, // default to open
+        caseClosed: false,
       });
 
       dispatch(
         toggleFeedback({
           severity: 'success',
           title: 'Case created',
-          description: `Document ID: ${docRef.id}`,
+          description: `${newCaseObj.caseName}`,
         }),
       );
     } catch (e: unknown) {

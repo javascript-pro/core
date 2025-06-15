@@ -30,19 +30,14 @@ export default function Cases() {
       <CardHeader
         title="Cases"
         // subheader="Total open cases"
-        avatar={
-          <IconButton disabled color="secondary" onClick={handleAvatarClick}>
-            <Icon icon="cases" />
-          </IconButton>
-        }
         action={
-            <CustomButton
-              mode="button"
-              label="New Case"
-              variant="outlined"
-              icon="new"
-              onClick={handleActionClick}
-            />
+          <CustomButton
+            mode="button"
+            label="New Case"
+            variant="outlined"
+            icon="new"
+            onClick={handleActionClick}
+          />
         }
       />
       <CardContent>

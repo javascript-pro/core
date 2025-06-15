@@ -51,12 +51,12 @@ export default function UserInfo() {
     setAnchorEl(null);
   };
 
-    const handleFactorySettings = () => {
-      dispatch(resetUberedux());
-      setTimeout(() => {
-        window.location.reload();
-      }, 500);
-    };
+  const handleFactorySettings = () => {
+    dispatch(resetUberedux());
+    setTimeout(() => {
+      window.location.reload();
+    }, 500);
+  };
 
   const handleHome = () => {
     dispatch(routeTo('/', router));

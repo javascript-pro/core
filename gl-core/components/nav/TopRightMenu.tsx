@@ -96,7 +96,7 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           </ListItemIcon>
           <ListItemText primary="Factory settings" />
         </MenuItem>
-        
+
         <MenuItem
           sx={{ my: 2 }}
           onClick={(e) => {
@@ -128,8 +128,6 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
             <ShareMenu frontmatter={frontmatter} />
           </Box>
         </Collapse>
-
-
 
         <ModeSwitch />
 

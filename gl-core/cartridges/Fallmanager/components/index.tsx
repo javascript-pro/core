@@ -5,6 +5,7 @@ import StickyHeader from './StickyHeader';
 import Icon from './Icon';
 import CustomButton from './CustomButton';
 import Dashboard from './Dashboard';
+import EditableTextField from './EditableTextField';
 import {
   Uploads,
   UploadNew,
@@ -13,7 +14,7 @@ import {
   UploadField,
 } from './uploads';
 import InputTextField from './InputTextField';
-export { InputTextField };
+export { InputTextField, EditableTextField };
 import { Cases, CaseCreate, CasesList, CaseDetail } from './cases';
 export { Cases, CaseCreate, CasesList, CaseDetail };
 export { Dashboard };

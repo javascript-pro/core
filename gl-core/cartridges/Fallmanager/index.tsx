@@ -21,6 +21,7 @@ import {
   CasesList,
   InputTextField,
   CaseDetail,
+  EditableTextField,
 } from './components';
 import {
   Uploads,
@@ -41,6 +42,7 @@ export {
   UserInfo,
   StickyHeader,
   Dashboard,
+  EditableTextField,
 };
 export { toggleNewCaseOpen, updateKey, incomingChange, deleteUpload, newCase };
 export { useFallmanager, useNewCaseOpen };

@@ -75,7 +75,7 @@ export default function CaseCreate() {
         party2: party2.trim(),
         caseName,
         slug,
-      })
+      }),
     );
 
     handleClose();
@@ -110,7 +110,8 @@ export default function CaseCreate() {
 
       <DialogContent>
         <Typography>
-          To create a new case, enter the names of both parties. The case name will be generated automatically.
+          To create a new case, enter the names of both parties. The case name
+          will be generated automatically.
         </Typography>
 
         <Box sx={{ my: 2 }}>

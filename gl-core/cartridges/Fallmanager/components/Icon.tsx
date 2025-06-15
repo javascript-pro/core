@@ -34,7 +34,7 @@ export type TIconNames =
   | 'client'
   | 'new'
   | 'case'
-    | 'caseclosed'
+  | 'caseclosed'
   | 'cases'
   | 'uploads'
   | 'upload'
@@ -89,7 +89,7 @@ export default function Icon({ icon, color }: TIcon) {
     case 'case':
       iconFragment = <CaseIcon color={color} />;
       break;
-          case 'caseclosed':
+    case 'caseclosed':
       iconFragment = <CaseClosedIcon color={color} />;
       break;
     case 'uploads':

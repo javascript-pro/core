@@ -4,13 +4,15 @@ import * as React from 'react';
 import { useRouter } from 'next/navigation';
 import { doc, onSnapshot } from 'firebase/firestore';
 import { db } from '../../../../../gl-core/lib/firebase';
-import { 
+import {
   Card,
   CardHeader,
   CardContent,
-  Box, 
-  Typography, CircularProgress, 
-  IconButton} from '@mui/material';
+  Box,
+  Typography,
+  CircularProgress,
+  IconButton,
+} from '@mui/material';
 import { useDispatch, routeTo } from '../../../../../gl-core';
 import { useUser } from '../../../Bouncer';
 import { closeCase, CustomButton, Icon } from '../../../Fallmanager';
@@ -21,7 +23,7 @@ export type TCaseDatail = {
 
 export default function CaseDetail({ id }: TCaseDatail) {
   const dispatch = useDispatch();
-    const router = useRouter();
+  const router = useRouter();
   const user = useUser();
   const [data, setData] = React.useState<any | null>(null);
   const [loading, setLoading] = React.useState(true);
@@ -57,18 +59,20 @@ export default function CaseDetail({ id }: TCaseDatail) {
 
   return (
     <Card>
-
-      <CardHeader 
+      <CardHeader
         title={clientName}
-        avatar={<IconButton onClick={handleBack}><Icon icon="left" /></IconButton>}
+        avatar={
+          <IconButton onClick={handleBack}>
+            <Icon icon="left" />
+          </IconButton>
+        }
       />
-      
 
       {caseClosed && closedAt && closedBy && (
         <>
           <Typography sx={{ my: 2 }} variant="h6">
-            Case closed on{' '}
-            {new Date(closedAt.seconds * 1000).toLocaleString()} by {closedBy.email}
+            Case closed on {new Date(closedAt.seconds * 1000).toLocaleString()}{' '}
+            by {closedBy.email}
           </Typography>
         </>
       )}

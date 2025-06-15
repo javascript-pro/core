@@ -33,7 +33,7 @@ export default function CasesList() {
     const q = query(
       collection(db, 'fallmanager'),
       // where('caseClosed', '!=', true),
-      orderBy('createdAt', 'desc')
+      orderBy('createdAt', 'desc'),
     );
 
     const unsubscribe = onSnapshot(q, (snapshot) => {
@@ -62,6 +62,11 @@ export default function CasesList() {
           </ListItem>
         )}
         {cases.map((caseItem: any, i: number) => {
+
+          // console.log("caseItem", caseItem.)
+          const { caseClosed } = caseItem;
+          if (caseClosed) return null;
+          
           const timeAgo = caseItem.createdAt?.seconds
             ? formatDistanceToNow(new Date(caseItem.createdAt.seconds * 1000), {
                 addSuffix: true,
@@ -76,10 +81,10 @@ export default function CasesList() {
               }}
             >
               <ListItemIcon>
-                <Icon icon="client" color="secondary" />
+                <Icon icon="case" color="secondary" />
               </ListItemIcon>
               <ListItemText
-                primary={caseItem.clientName || 'Unnamed Case'}
+                primary={caseItem.caseName || 'Unnamed Case'}
                 secondary={`Created ${timeAgo}`}
               />
             </ListItemButton>

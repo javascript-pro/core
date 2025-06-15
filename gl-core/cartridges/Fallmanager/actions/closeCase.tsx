@@ -3,7 +3,8 @@ import { db } from '../../../../gl-core/lib/firebase';
 import { TUbereduxDispatch } from '../../../../gl-core/types';
 import { toggleFeedback, setUbereduxKey } from '../../../../gl-core';
 
-export const closeCase = (id: string, user: any): any =>
+export const closeCase =
+  (id: string, user: any): any =>
   async (dispatch: TUbereduxDispatch, getState: () => any) => {
     try {
       const ref = doc(db, 'fallmanager', id);

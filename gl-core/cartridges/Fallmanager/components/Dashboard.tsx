@@ -10,9 +10,7 @@ import {
   Cases,
   Uploads,
   toggleNewCaseOpen,
-  UploadField,
 } from '../../Fallmanager';
-
 
 export default function Dashboard() {
   const router = useRouter();
@@ -33,18 +31,11 @@ export default function Dashboard() {
     <Card sx={{ background: 'rgba(0,0,0,0.05)' }}>
       <CardHeader
         title="Fallmanager"
-        subheader={`${email}`}
-        // avatar={
-        //   <IconButton color="secondary" onClick={handleAvatarClick}>
-        //     <Icon icon="home" />
-        //   </IconButton>
-        // }
-        action={<>
-            <UploadField 
-              label="New File"
-            />
+        // subheader={`${email}`}
+        action={
+          <>
             <CustomButton
-              sx={{ml:1}}
+              sx={{ ml: 1 }}
               mode="button"
               color="secondary"
               label="New Case"
