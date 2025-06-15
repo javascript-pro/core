@@ -5,7 +5,6 @@ import { useRouter } from 'next/navigation';
 import { doc, onSnapshot } from 'firebase/firestore';
 import { db } from '../../../../../gl-core/lib/firebase';
 import {
-  Card,
   CardHeader,
   CardContent,
   Box,
@@ -40,6 +39,12 @@ export default function CaseDetail({ id }: TCaseDatail) {
     await dispatch(routeTo('/fallmanager', router));
   };
 
+  
+  const handleSaveQuit = async () => {
+    // await dispatch(reopenCase(data.id, user));
+    console.log("handleSaveQuit")
+  };
+
   const handleReopen = async () => {
     await dispatch(reopenCase(data.id, user));
   };
@@ -70,7 +75,7 @@ export default function CaseDetail({ id }: TCaseDatail) {
   const { caseName, caseClosed, closedAt, closedBy, createdAt } = data;
 
   return (
-    <Card>
+    <Box>
       <CardHeader
         title={<Typography variant="h6">{caseName}</Typography>}
         subheader={
@@ -87,16 +92,38 @@ export default function CaseDetail({ id }: TCaseDatail) {
             </Typography>
           ) : null
         }
-        avatar={
-          <IconButton onClick={handleBack}>
-            <Icon icon="home" />
-          </IconButton>
+        action={<>
+            <IconButton onClick={handleBack}>
+              <Icon icon="home" />
+            </IconButton>
+            { !caseClosed ? <CustomButton
+              sx={{ ml: 1 }}
+              variant="outlined"
+              label="Close case"
+              icon="caseclosed"
+              onClick={handleCloseCase}
+            /> : <CustomButton
+                  sx={{ my: 2 }}
+                  mode="button"
+                  variant="outlined"
+                  label="Reopen case?"
+                  icon="case"
+                  onClick={handleReopen}
+                /> }
+            <CustomButton
+                sx={{ ml: 1 }}
+                variant="outlined"
+                label="Save & Quit"
+                icon="save"
+                onClick={handleBack}
+              />
+          </>
         }
       />
 
       <CardContent>
         <Grid container spacing={1}>
-          <Grid size={{xs:6}}>
+          <Grid size={{ xs: 6 }}>
             {caseClosed ? (
               <Box sx={{ my: 2 }}>
                 <Typography variant="body2" sx={{ fontWeight: 500 }}>
@@ -120,16 +147,19 @@ export default function CaseDetail({ id }: TCaseDatail) {
             )}
           </Grid>
 
-          <Grid size={{xs:6}}>
+          <Grid size={{ xs: 6 }}>
+            
+            
+            <Box>
             {caseClosed ? (
-              <Box sx={{ my: 2 }}>
+              <>
                 <Typography variant="body2" sx={{ fontWeight: 500 }}>
                   Party 2
                 </Typography>
                 <Typography variant="subtitle1">
                   {data?.party2 || '—'}
                 </Typography>
-              </Box>
+              </>
             ) : (
               <EditableTextField
                 id="case-party2"
@@ -142,33 +172,27 @@ export default function CaseDetail({ id }: TCaseDatail) {
                 }}
               />
             )}
+            </Box>
+            
           </Grid>
         </Grid>
       </CardContent>
 
       <CardActions>
-        {caseClosed ? (
-          <Box>
-            <CustomButton
-              sx={{ my: 2 }}
-              mode="button"
-              variant="outlined"
-              label="Reopen case"
-              icon="case"
-              onClick={handleReopen}
-            />
+        <Box sx={{display: "flex"}}>
+          <Box sx={{flexGrow: 1}}/>
+            <Box>
+             <CustomButton
+                sx={{ ml: 1 }}
+                mode="button"
+                variant="outlined"
+                label="Save & Quit"
+                icon="save"
+                onClick={handleBack}
+              />
           </Box>
-        ) : (
-          <CustomButton
-            sx={{ my: 2 }}
-            mode="button"
-            variant="outlined"
-            label="Close case"
-            icon="caseclosed"
-            onClick={handleCloseCase}
-          />
-        )}
+        </Box>
       </CardActions>
-    </Card>
+    </Box>
   );
 }

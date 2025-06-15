@@ -17,7 +17,6 @@ import { incomingChange, useFallmanager, Icon } from '../../../Fallmanager';
 import {
   collection,
   query,
-  where,
   orderBy,
   onSnapshot,
 } from 'firebase/firestore';
@@ -32,7 +31,6 @@ export default function CasesList() {
   React.useEffect(() => {
     const q = query(
       collection(db, 'fallmanager'),
-      // where('caseClosed', '!=', true),
       orderBy('createdAt', 'desc'),
     );
 
@@ -62,29 +60,31 @@ export default function CasesList() {
           </ListItem>
         )}
         {cases.map((caseItem: any, i: number) => {
-          // console.log("caseItem", caseItem.)
-          const { caseClosed } = caseItem;
-          // if (caseClosed) return null;
+          const { caseClosed, createdAt, closedAt } = caseItem;
 
-          const timeAgo = caseItem.createdAt?.seconds
-            ? formatDistanceToNow(new Date(caseItem.createdAt.seconds * 1000), {
-                addSuffix: true,
-              })
-            : 'just now';
+          const subheader = caseClosed && closedAt?.seconds
+            ? `Closed on ${new Date(closedAt.seconds * 1000).toLocaleDateString()}`
+            : createdAt?.seconds
+            ? `Opened ${formatDistanceToNow(
+                new Date(createdAt.seconds * 1000),
+                { addSuffix: true }
+              )}`
+            : 'Created just now';
 
           return (
             <ListItemButton
               key={`case_${i}`}
-              onClick={() => {
-                handleItemClick(caseItem);
-              }}
+              onClick={() => handleItemClick(caseItem)}
             >
               <ListItemIcon>
-                <Icon icon={caseClosed ? "caseclosed" : "case"} color="secondary" />
+                <Icon
+                  icon={caseClosed ? 'caseclosed' : 'case'}
+                  color="secondary"
+                />
               </ListItemIcon>
               <ListItemText
                 primary={caseItem.caseName || 'Unnamed Case'}
-                secondary={`Created ${timeAgo}`}
+                secondary={subheader}
               />
             </ListItemButton>
           );
