@@ -5,6 +5,7 @@ import { deleteUpload } from './deleteUpload';
 import { newCase } from './newCase';
 import { closeCase } from './closeCase';
 import { toggleNewCaseOpen } from './toggleNewCaseOpen';
+import {reopenCase} from './reopenCase'
 export {
   updateKey,
   closeCase,
@@ -12,4 +13,5 @@ export {
   deleteUpload,
   newCase,
   toggleNewCaseOpen,
+  reopenCase,
 };

@@ -16,10 +16,7 @@ export default function Uploads() {
 
   return (
     <Card sx={{ background: 'rgba(0,0,0,0.04)' }}>
-      <CardHeader
-        title="Files"
-        action={<UploadNew />}
-      />
+      <CardHeader title="Files" action={<UploadNew />} />
       <CardContent>
         <UploadList />
       </CardContent>

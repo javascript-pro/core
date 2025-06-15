@@ -38,7 +38,7 @@ export default function CaseCreate() {
   const [party2, setParty2] = React.useState('');
   const [touched, setTouched] = React.useState(false);
 
-  const isValid = party1.trim().length >= 6 && party2.trim().length >= 6;
+  const isValid = party1.trim().length >= 3 && party2.trim().length >= 3;
 
   const handleParty1Change = (e: React.ChangeEvent<HTMLInputElement>) => {
     setParty1(e.target.value);
@@ -122,9 +122,9 @@ export default function CaseCreate() {
             id="create-case-party1"
             label="Party 1"
             helperText={
-              touched && party1.trim().length < 6
-                ? 'Must be at least 6 characters'
-                : 'e.g. Peter Schmidt'
+              touched && party1.trim().length < 3
+                ? 'Must be at least 3 characters'
+                : 'e.g. Herr Peter Schmidt'
             }
             onChange={handleParty1Change}
             onBlur={handleBlur}
@@ -145,8 +145,8 @@ export default function CaseCreate() {
             id="create-case-party2"
             label="Party 2"
             helperText={
-              touched && party2.trim().length < 6
-                ? 'Must be at least 6 characters'
+              touched && party2.trim().length < 3
+                ? 'Must be at least 3 characters'
                 : 'e.g. Allianz Versicherung'
             }
             onChange={handleParty2Change}

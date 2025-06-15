@@ -62,11 +62,10 @@ export default function CasesList() {
           </ListItem>
         )}
         {cases.map((caseItem: any, i: number) => {
-
           // console.log("caseItem", caseItem.)
           const { caseClosed } = caseItem;
-          if (caseClosed) return null;
-          
+          // if (caseClosed) return null;
+
           const timeAgo = caseItem.createdAt?.seconds
             ? formatDistanceToNow(new Date(caseItem.createdAt.seconds * 1000), {
                 addSuffix: true,
@@ -81,7 +80,7 @@ export default function CasesList() {
               }}
             >
               <ListItemIcon>
-                <Icon icon="case" color="secondary" />
+                <Icon icon={caseClosed ? "caseclosed" : "case"} color="secondary" />
               </ListItemIcon>
               <ListItemText
                 primary={caseItem.caseName || 'Unnamed Case'}

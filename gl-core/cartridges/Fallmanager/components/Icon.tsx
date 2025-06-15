@@ -28,10 +28,13 @@ import CaseClosedIcon from '@mui/icons-material/WorkOffOutlined';
 
 import NewIcon from '@mui/icons-material/AddOutlined';
 import ClientIcon from '@mui/icons-material/Person';
-
+import EditIcon from '@mui/icons-material/EditOutlined';
+import CheckIcon from '@mui/icons-material/CheckOutlined';
 export type TIconNames =
   | 'home'
   | 'client'
+    | 'check'
+  | 'edit'
   | 'new'
   | 'case'
   | 'caseclosed'
@@ -89,13 +92,19 @@ export default function Icon({ icon, color }: TIcon) {
     case 'case':
       iconFragment = <CaseIcon color={color} />;
       break;
-    case 'caseclosed':
+    case 'edit':
+      iconFragment = <EditIcon color={color} />;
+      break;
+      case 'caseclosed':
       iconFragment = <CaseClosedIcon color={color} />;
       break;
     case 'uploads':
       iconFragment = <UploadIcon color={color} />;
       break;
-    case 'upload':
+    case 'check':
+      iconFragment = <CheckIcon color={color} />;
+      break;
+      case 'upload':
       iconFragment = <UploadIcon color={color} />;
       break;
     case 'download':

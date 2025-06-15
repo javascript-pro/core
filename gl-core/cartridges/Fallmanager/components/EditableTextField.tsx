@@ -1,53 +1,99 @@
-// core/gl-core/cartridges/Fallmanager/components/EditableTextField.tsx
 'use client';
 import * as React from 'react';
-import { TextField } from '@mui/material';
+import {
+  Box,
+  TextField,
+  IconButton,
+  Typography,
+  Button,
+  InputAdornment,
+} from '@mui/material';
+import { Icon } from '../../Fallmanager';
 
 export type TEditableTextField = {
   id?: string;
   label?: string;
   value?: string;
-  variant?: 'filled' | 'contained' | 'standard';
+  sx?: any;
+  variant?: 'filled' | 'outlined' | 'standard';
   autoFocus?: boolean;
   error?: boolean | null;
-  color?: string;
   helperText?: string | null;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
-  onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
+  onSave?: (newValue: string) => void;
 };
 
 export default function EditableTextField({
-  id = 'input-text',
-  label = 'Input Text Field',
+  id = 'editable-text',
+  label = 'Editable Text Field',
   value = '',
-  variant = 'standard',
+  sx = null,
+  variant = 'filled',
   autoFocus = false,
   error = null,
-  color,
   helperText = null,
-  onChange = () => {
-    console.log('No onChange handler set');
-  },
-  onBlur = () => {},
-  onKeyDown,
+  onSave = () => {},
 }: TEditableTextField) {
-  
-  const inputRef = React.useRef<HTMLInputElement | null>(null);
+  const [editMode, setEditMode] = React.useState(false);
+  const [draftValue, setDraftValue] = React.useState(value);
+
+  const handleEdit = () => {
+    setDraftValue(value || '');
+    setEditMode(true);
+  };
+
+  const handleCancel = () => {
+    setEditMode(false);
+    setDraftValue(value || '');
+  };
+
+  const handleSave = () => {
+    if (draftValue.trim() !== value?.trim()) {
+      onSave(draftValue.trim());
+    }
+    setEditMode(false);
+  };
 
   return (
-    <TextField
-      fullWidth
-      id={id}
-      label={label}
-      value={value}
-      autoFocus={autoFocus}
-      error={Boolean(error)}
-      helperText={helperText}
-      onChange={onChange}
-      onBlur={onBlur}
-      onKeyDown={onKeyDown}
-      inputRef={inputRef}
-    />
+    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1, ...sx }}>
+      {editMode ? (
+        <TextField
+          fullWidth
+          variant={variant}
+          id={id}
+          label={label}
+          value={draftValue}
+          autoFocus={autoFocus}
+          error={Boolean(error)}
+          helperText={helperText}
+          onChange={(e) => setDraftValue(e.target.value)}
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <IconButton onClick={handleSave} disabled={draftValue.trim().length === 0}>
+                  <Icon icon="check" />
+                </IconButton>
+                <IconButton onClick={handleCancel}>
+                  <Icon icon="close" />
+                </IconButton>
+              </InputAdornment>
+            ),
+          }}
+        />
+      ) : (
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+          <IconButton onClick={handleEdit}>
+            <Icon icon="edit" />
+          </IconButton>
+          <Box sx={{ flexGrow: 1 }}>
+            <Typography variant="caption" sx={{ fontWeight: 500 }}>
+              {label}
+            </Typography>
+            <Typography variant="h6" color="textSecondary">
+              {value || '—'}
+            </Typography>
+          </Box>
+        </Box>
+      )}
+    </Box>
   );
 }

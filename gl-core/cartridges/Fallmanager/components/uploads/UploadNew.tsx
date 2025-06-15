@@ -50,7 +50,11 @@ export default function UploadNew() {
 
   return (
     <Box sx={{ display: 'flex', gap: 1 }}>
-      <UploadField color="secondary" label="Upload" onSelect={handleFileSelect} />
+      <UploadField
+        color="secondary"
+        label="Upload"
+        onSelect={handleFileSelect}
+      />
     </Box>
   );
 }
