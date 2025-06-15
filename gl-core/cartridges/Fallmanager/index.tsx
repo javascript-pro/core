@@ -2,7 +2,13 @@
 import Fallmanager from './Fallmanager';
 import { initialState as initialStateFallmanager } from './initialState';
 import { useFallmanager, useNewCaseOpen } from './hooks';
-import { updateKey, incomingChange, deleteUpload, newCase } from './actions';
+import {
+  toggleNewCaseOpen,
+  updateKey,
+  incomingChange,
+  deleteUpload,
+  newCase,
+} from './actions';
 import {
   UserInfo,
   StickyHeader,
@@ -33,6 +39,6 @@ export {
   StickyHeader,
   Dashboard,
 };
-export { updateKey, incomingChange, deleteUpload, newCase };
+export { toggleNewCaseOpen, updateKey, incomingChange, deleteUpload, newCase };
 export { useFallmanager, useNewCaseOpen };
 export { Cases, CaseCreate };

@@ -174,7 +174,7 @@ export default function UploadEdit({ slug }: UploadEditProps) {
                 dispatch(routeTo(`/fallmanager`, router));
               }}
             >
-              <Icon icon={'left'} />
+              <Icon icon={'home'} />
             </IconButton>
             <IconButton
               color="secondary"

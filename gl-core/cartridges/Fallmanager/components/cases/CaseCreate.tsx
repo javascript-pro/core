@@ -6,44 +6,79 @@
 import * as React from 'react';
 import { useRouter } from 'next/navigation';
 import {
+  Box,
   Dialog,
   DialogTitle,
   CardHeader,
   IconButton,
   DialogContent,
   DialogActions,
+  Typography,
 } from '@mui/material';
-import { routeTo, useDispatch } from '../../../../../gl-core';
+import { useIsMobile, useDispatch } from '../../../../../gl-core';
 import {
   Icon,
   CustomButton,
   useFallmanager,
+  toggleNewCaseOpen,
   useNewCaseOpen,
+  InputTextField,
 } from '../../../Fallmanager';
 
 export default function CaseCreate() {
   const dispatch = useDispatch();
+  const isMobile = useIsMobile();
   const router = useRouter();
   const newCaseOpen = useNewCaseOpen();
-
-  console.log('CaseCreate', newCaseOpen);
 
   const handleOpenNewCase = () => {
     console.log('handleOpenNewCase');
   };
 
+  const handleClose = () => {
+    dispatch(toggleNewCaseOpen(false));
+  };
+
   return (
-    <Dialog open={newCaseOpen}>
+    <Dialog 
+      fullWidth
+      maxWidth="xs"
+      fullScreen={isMobile}
+      open={newCaseOpen}
+      onClose={handleClose} 
+    >
       <DialogTitle>
-        <CardHeader title={'Open a new case'} action={<>Close</>} />
+        <CardHeader
+          title={'New case'}
+          avatar={<Icon icon="case" />}
+          action={
+            <IconButton onClick={handleClose}>
+              <Icon icon="close" />
+            </IconButton>
+          }
+        />
       </DialogTitle>
 
       <DialogContent>
-        What information do we need to open a new case? let's start with the
+        <Typography>
+            What information do we need to open a new case? 
+            Start with the
         name of the client, Joe Bloggs
+          </Typography>
+        <Box sx={{ my: 2 }}>
+          
+          <InputTextField
+            autoFocus
+            variant='filled'
+            id="create-case-client-name"
+            label="Client Name"
+            helperText="eg: Peter Schmidt"
+          />
+        </Box>
       </DialogContent>
       <DialogActions>
         <CustomButton
+          disabled
           mode="button"
           icon="save"
           onClick={handleOpenNewCase}

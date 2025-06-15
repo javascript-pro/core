@@ -4,7 +4,7 @@ import * as React from 'react';
 import { useRouter } from 'next/navigation';
 import { IconButton, Card, CardHeader, CardContent } from '@mui/material';
 import { routeTo, useDispatch } from '../../../../../gl-core';
-import { Icon, UploadList } from '../../../Fallmanager';
+import { Icon, UploadList, UploadNew } from '../../../Fallmanager';
 
 export default function Uploads() {
   const dispatch = useDispatch();
@@ -15,17 +15,20 @@ export default function Uploads() {
   };
 
   return (
-    <Card sx={{ background: 'rgba(0,0,0,0.05)' }}>
+    <Card sx={{ background: 'rgba(0,0,0,0.04)' }}>
       <CardHeader
         title="Files"
-        subheader="Last 10 files"
+        // subheader="Last 10 files"
         avatar={
           <IconButton color="secondary" onClick={handleAvatarClick}>
             <Icon icon="uploads" />
           </IconButton>
         }
+        action={<UploadNew />}
       />
-      <CardContent></CardContent>
+      <CardContent>
+        <UploadList />
+      </CardContent>
     </Card>
   );
 }

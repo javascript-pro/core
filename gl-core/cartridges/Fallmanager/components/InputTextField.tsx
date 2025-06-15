@@ -7,15 +7,21 @@ import { CustomButton, Icon } from '../../Fallmanager';
 export type TUploadField = {
   id?: string;
   label?: string;
+  variant?: 'filled' | 'contained' | 'standard';
+  autoFocus: boolean;
+  error?: boolean | null;
   color?: string;
-  helperText?: string;
+  helperText?: string | null;
   onChange?: () => void;
 };
 
 export default function InputTextField({
   id = 'input-text',
-  label = 'Input Text',
-  helperText = 'dlaishjdfilj',
+  error = null,
+  autoFocus = false,
+  variant = "standard",
+  label = 'Input Text Field',
+  helperText = null,
   onChange = () => {
     console.log('No onChange event set');
   },
@@ -33,7 +39,12 @@ export default function InputTextField({
 
   return (
     <TextField
+      fullWidth
+      autoFocus={autoFocus}
+      error={error as any}
+      variant={variant as any}
       id={id}
+      label={label}
       helperText={helperText}
       ref={inputRef}
       onChange={handleChange}

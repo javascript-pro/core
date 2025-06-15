@@ -46,11 +46,10 @@ export default function UploadField({
         onChange={handleChange}
       />
       <CustomButton
-        mode="button"
         label={label}
         variant="outlined"
         onClick={handleClick}
-        icon="upload"
+        icon="new"
       />
     </Box>
   );
