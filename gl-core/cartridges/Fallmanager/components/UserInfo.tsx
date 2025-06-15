@@ -10,7 +10,7 @@ import {
   ListItemIcon,
   ListItemText,
 } from '@mui/material';
-import { useDispatch, routeTo } from '../../../../gl-core';
+import { useDispatch, routeTo, resetUberedux } from '../../../../gl-core';
 import { Icon } from '../../Fallmanager';
 import { useUser, firebaseAuth } from '../../Bouncer';
 import { db } from '../../../../gl-core/lib/firebase';
@@ -49,6 +49,13 @@ export default function UserInfo() {
 
   const handleClose = () => {
     setAnchorEl(null);
+  };
+
+  const handleFactorySettings = () => {
+    dispatch(resetUberedux());
+    setTimeout(() => {
+      window.location.reload();
+    }, 500);
   };
 
   const handleHome = () => {
@@ -92,6 +99,17 @@ export default function UserInfo() {
             <Icon icon="home" />
           </ListItemIcon>
           <ListItemText primary="Home" />
+        </MenuItem>
+        <MenuItem
+          sx={{ my: 2 }}
+          onClick={(e) => {
+            handleFactorySettings();
+          }}
+        >
+          <ListItemIcon>
+            <Icon icon="fallmanager" />
+          </ListItemIcon>
+          <ListItemText primary="Factory settings" />
         </MenuItem>
         <MenuItem onClick={handleSignout}>
           <ListItemIcon>

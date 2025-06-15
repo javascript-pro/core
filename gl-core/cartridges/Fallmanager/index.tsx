@@ -8,6 +8,8 @@ import {
   incomingChange,
   deleteUpload,
   newCase,
+  closeCase,
+  reopenCase,
 } from './actions';
 import {
   UserInfo,
@@ -17,7 +19,10 @@ import {
   Dashboard,
   Cases,
   CaseCreate,
+  CasesList,
   InputTextField,
+  CaseDetail,
+  EditableTextField,
 } from './components';
 import {
   Uploads,
@@ -38,7 +43,8 @@ export {
   UserInfo,
   StickyHeader,
   Dashboard,
+  EditableTextField,
 };
 export { toggleNewCaseOpen, updateKey, incomingChange, deleteUpload, newCase };
 export { useFallmanager, useNewCaseOpen };
-export { Cases, CaseCreate };
+export { Cases, CaseCreate, CasesList, CaseDetail, closeCase, reopenCase };

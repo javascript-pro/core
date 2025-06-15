@@ -16,16 +16,7 @@ export default function Uploads() {
 
   return (
     <Card sx={{ background: 'rgba(0,0,0,0.04)' }}>
-      <CardHeader
-        title="Files"
-        // subheader="Last 10 files"
-        avatar={
-          <IconButton color="secondary" onClick={handleAvatarClick}>
-            <Icon icon="uploads" />
-          </IconButton>
-        }
-        action={<UploadNew />}
-      />
+      <CardHeader title="Files" action={<UploadNew />} />
       <CardContent>
         <UploadList />
       </CardContent>

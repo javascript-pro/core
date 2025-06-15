@@ -1,7 +1,6 @@
 // core/gl-core/cartridges/Fallmanager/components/uploads/UploadField.tsx
 'use client';
 import * as React from 'react';
-import { Box, Button } from '@mui/material';
 import { CustomButton } from '../../../Fallmanager';
 
 export type TUploadField = {
@@ -35,7 +34,7 @@ export default function UploadField({
   };
 
   return (
-    <Box>
+    <>
       <input
         id={id}
         ref={inputRef}
@@ -46,11 +45,12 @@ export default function UploadField({
         onChange={handleChange}
       />
       <CustomButton
+        mode="button"
         label={label}
         variant="outlined"
         onClick={handleClick}
         icon="new"
       />
-    </Box>
+    </>
   );
 }
