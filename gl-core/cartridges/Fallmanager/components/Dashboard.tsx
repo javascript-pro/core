@@ -5,8 +5,13 @@ import { useRouter } from 'next/navigation';
 import { Grid, Card, CardHeader, CardContent, IconButton } from '@mui/material';
 import { useUser } from '../../Bouncer';
 import { useDispatch, routeTo } from '../../../../gl-core';
-import { CustomButton, Cases, Uploads, Icon, toggleNewCaseOpen } from '../../Fallmanager';
-
+import {
+  CustomButton,
+  Cases,
+  Uploads,
+  Icon,
+  toggleNewCaseOpen,
+} from '../../Fallmanager';
 
 export default function Dashboard() {
   const router = useRouter();
@@ -16,7 +21,7 @@ export default function Dashboard() {
   // console.log("email", email);
 
   const handleNewCase = () => {
-    dispatch(toggleNewCaseOpen(true))
+    dispatch(toggleNewCaseOpen(true));
   };
 
   // const handleAvatarClick = () => {
@@ -33,14 +38,16 @@ export default function Dashboard() {
         //     <Icon icon="home" />
         //   </IconButton>
         // }
-        action={<CustomButton 
-                  mode="button"
-                  color="secondary"
-                  label="New Case"
-                  variant='contained'
-                  icon="case" 
-                  onClick={handleNewCase}
-                />}
+        action={
+          <CustomButton
+            mode="button"
+            color="secondary"
+            label="New Case"
+            variant="contained"
+            icon="case"
+            onClick={handleNewCase}
+          />
+        }
       />
       <CardContent>
         <Grid container spacing={1}>

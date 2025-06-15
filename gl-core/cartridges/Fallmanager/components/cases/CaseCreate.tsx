@@ -40,12 +40,12 @@ export default function CaseCreate() {
   };
 
   return (
-    <Dialog 
+    <Dialog
       fullWidth
       maxWidth="xs"
       fullScreen={isMobile}
       open={newCaseOpen}
-      onClose={handleClose} 
+      onClose={handleClose}
     >
       <DialogTitle>
         <CardHeader
@@ -61,15 +61,13 @@ export default function CaseCreate() {
 
       <DialogContent>
         <Typography>
-            What information do we need to open a new case? 
-            Start with the
-        name of the client, Joe Bloggs
-          </Typography>
+          What information do we need to open a new case? Start with the name of
+          the client, Joe Bloggs
+        </Typography>
         <Box sx={{ my: 2 }}>
-          
           <InputTextField
             autoFocus
-            variant='filled'
+            variant="filled"
             id="create-case-client-name"
             label="Client Name"
             helperText="eg: Peter Schmidt"

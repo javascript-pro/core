@@ -19,7 +19,7 @@ export default function InputTextField({
   id = 'input-text',
   error = null,
   autoFocus = false,
-  variant = "standard",
+  variant = 'standard',
   label = 'Input Text Field',
   helperText = null,
   onChange = () => {
