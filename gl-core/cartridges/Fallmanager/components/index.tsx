@@ -12,6 +12,8 @@ import {
   UploadEdit,
   UploadField,
 } from './uploads';
-export {Dashboard}
+import { Cases } from './cases';
+export { Cases };
+export { Dashboard };
 export { Uploads, UploadNew, UploadList, UploadEdit, UploadField };
 export { CustomButton, Icon, UserInfo, StickyHeader };
