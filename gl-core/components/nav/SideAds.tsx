@@ -42,14 +42,6 @@ export default function SideAds() {
           dispatch(routeTo('/work/company', router));
         }}
       />
-
-      <Advert
-        icon="dog"
-        title={'dog'}
-        onClick={() => {
-          router.push(`/balance/puppy-thing`);
-        }}
-      />
     </Box>
   );
 }

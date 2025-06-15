@@ -3,8 +3,8 @@
 export type TFallmanagerState = {
   cartridge: string;
   screen?: 'upload' | 'read';
-  lingua?: any;
   fileTypes?: TFileType[];
+  newCaseOpen: boolean;
 };
 
 export type TFileType = {

@@ -16,6 +16,7 @@ import {
   Icon,
   useDispatch,
   toggleFeedback,
+  resetUberedux,
   ShareMenu,
   useVersion,
   ModeSwitch,
@@ -55,14 +56,10 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
   };
 
   const handleFactorySettings = () => {
-    dispatch(
-      toggleFeedback({
-        mode: 'confirm',
-        severity: 'warning',
-        title: 'Reset to factory settings?',
-        description: 'Are you sure?',
-      }),
-    );
+    dispatch(resetUberedux());
+    setTimeout(() => {
+      window.location.reload();
+    }, 500);
   };
 
   return (
@@ -95,7 +92,7 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           }}
         >
           <ListItemIcon>
-            <Icon icon="right" />
+            <Icon icon="clients" />
           </ListItemIcon>
           <ListItemText primary="Fallmanager" />
         </MenuItem>
@@ -120,15 +117,6 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           </Box>
         </Collapse>
 
-        {user ? (
-          <MenuItem onClick={handleSignout}>
-            <ListItemIcon>
-              <Icon icon="signout" />
-            </ListItemIcon>
-            <ListItemText secondary={user.email} primary={'Sign Out'} />
-          </MenuItem>
-        ) : null}
-
         <MenuItem
           sx={{ my: 2 }}
           onClick={(e) => {
@@ -142,6 +130,15 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
         </MenuItem>
 
         <ModeSwitch />
+
+        {user ? (
+          <MenuItem onClick={handleSignout} sx={{ mt: 1 }}>
+            <ListItemIcon>
+              <Icon icon="signout" />
+            </ListItemIcon>
+            <ListItemText primary={user.email} />
+          </MenuItem>
+        ) : null}
 
         <Box sx={{ pr: 3, py: 1, textAlign: 'right' }}>
           <Typography

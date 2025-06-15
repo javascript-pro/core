@@ -4,7 +4,7 @@ import * as React from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { Box, CardHeader, IconButton } from '@mui/material';
-import { MightyButton, useDispatch } from '../../../../gl-core';
+import { useDispatch } from '../../../../gl-core';
 import { firebaseAuth } from '../../Bouncer';
 import { UserInfo } from '../../Fallmanager';
 
@@ -23,6 +23,7 @@ export default function StickyHeader() {
   return (
     <Box>
       <CardHeader
+        sx={{ mx: 2 }}
         avatar={
           <IconButton onClick={handleLogoClick} sx={{ p: 0 }}>
             <Image

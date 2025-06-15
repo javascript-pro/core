@@ -20,11 +20,17 @@ import CloseIcon from '@mui/icons-material/CloseOutlined';
 import LinkIcon from '@mui/icons-material/LinkOutlined';
 import CopyIcon from '@mui/icons-material/CopyAllOutlined';
 import LeftIcon from '@mui/icons-material/ArrowBack';
-import UploadIcon from '@mui/icons-material/UploadFile';
+import UploadIcon from '@mui/icons-material/DocumentScanner';
 import SignoutIcon from '@mui/icons-material/ExitToApp';
+import CaseIcon from '@mui/icons-material/WorkOutlined';
+import NewIcon from '@mui/icons-material/AddOutlined';
 
 export type TIconNames =
   | 'home'
+  | 'new'
+  | 'case'
+  | 'cases'
+  | 'uploads'
   | 'upload'
   | 'signout'
   | 'link'
@@ -64,6 +70,18 @@ export default function Icon({ icon, color }: TIcon) {
       break;
     case 'fallmanager':
       iconFragment = <FallmanagerIcon color={color} />;
+      break;
+    case 'new':
+      iconFragment = <NewIcon color={color} />;
+      break;
+    case 'cases':
+      iconFragment = <CaseIcon color={color} />;
+      break;
+    case 'case':
+      iconFragment = <CaseIcon color={color} />;
+      break;
+    case 'uploads':
+      iconFragment = <UploadIcon color={color} />;
       break;
     case 'upload':
       iconFragment = <UploadIcon color={color} />;

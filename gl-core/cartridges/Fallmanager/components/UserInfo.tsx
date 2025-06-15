@@ -1,5 +1,6 @@
 'use client';
 import * as React from 'react';
+import { useRouter } from 'next/navigation';
 import {
   Box,
   Avatar,
@@ -9,7 +10,7 @@ import {
   ListItemIcon,
   ListItemText,
 } from '@mui/material';
-import { useDispatch } from '../../../../gl-core';
+import { useDispatch, routeTo } from '../../../../gl-core';
 import { Icon } from '../../Fallmanager';
 import { useUser, firebaseAuth } from '../../Bouncer';
 import { db } from '../../../../gl-core/lib/firebase';
@@ -17,10 +18,13 @@ import { doc, onSnapshot } from 'firebase/firestore';
 
 export default function UserInfo() {
   const user = useUser();
+  const router = useRouter();
   const dispatch = useDispatch();
   const { uid } = user;
 
-  const [userDoc, setUserDoc] = React.useState<Record<string, any> | null>(null);
+  const [userDoc, setUserDoc] = React.useState<Record<string, any> | null>(
+    null,
+  );
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
@@ -47,6 +51,11 @@ export default function UserInfo() {
     setAnchorEl(null);
   };
 
+  const handleHome = () => {
+    dispatch(routeTo('/', router));
+    handleClose();
+  };
+
   const handleSignout = () => {
     dispatch(firebaseAuth('signout'));
     handleClose();
@@ -55,13 +64,16 @@ export default function UserInfo() {
   return (
     <>
       <Box
-        sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer', gap: 1 }}
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          cursor: 'pointer',
+          gap: 1,
+        }}
         onClick={handleClick}
       >
-        <Typography variant="body2">{userDoc?.name}</Typography>
+        <Typography variant="h6">{userDoc?.name}</Typography>
         <Avatar src={userDoc?.avatar} />
-        
-        
       </Box>
 
       <Menu
@@ -73,16 +85,23 @@ export default function UserInfo() {
           horizontal: 'left',
         }}
       >
+        <Box sx={{ width: 175 }} />
 
-        <Box sx={{width: 175}} />
-        <Typography variant="caption" sx={{mx: 2}}>{userDoc?.email}</Typography>
+        <MenuItem onClick={handleHome} sx={{ mt: 1 }}>
+          <ListItemIcon>
+            <Icon icon="home" />
+          </ListItemIcon>
+          <ListItemText primary="Home" />
+        </MenuItem>
         <MenuItem onClick={handleSignout}>
           <ListItemIcon>
             <Icon icon="signout" />
           </ListItemIcon>
           <ListItemText primary="Sign out" />
         </MenuItem>
-
+        <Typography variant="caption" sx={{ p: 2 }}>
+          {userDoc?.email}
+        </Typography>
         {/* You can add more MenuItem components here */}
       </Menu>
     </>
