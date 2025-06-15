@@ -27,7 +27,7 @@ import NewIcon from '@mui/icons-material/AddOutlined';
 
 export type TIconNames =
   | 'home'
-  | 'new' 
+  | 'new'
   | 'case'
   | 'cases'
   | 'uploads'
@@ -74,7 +74,7 @@ export default function Icon({ icon, color }: TIcon) {
     case 'new':
       iconFragment = <NewIcon color={color} />;
       break;
-      case 'cases':
+    case 'cases':
       iconFragment = <CaseIcon color={color} />;
       break;
     case 'case':
@@ -83,7 +83,7 @@ export default function Icon({ icon, color }: TIcon) {
     case 'uploads':
       iconFragment = <UploadIcon color={color} />;
       break;
-          case 'upload':
+    case 'upload':
       iconFragment = <UploadIcon color={color} />;
       break;
     case 'download':

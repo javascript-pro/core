@@ -11,21 +11,23 @@ export default function Dashboard() {
   const router = useRouter();
   const dispatch = useDispatch();
   const user = useUser();
-  const {email} = user;
+  const { email } = user;
   // console.log("email", email);
 
   const handleAvatarClick = () => {
-    dispatch(routeTo("/", router));
-  }
+    dispatch(routeTo('/', router));
+  };
 
   return (
-    <Card sx={{background: "rgba(0,0,0,0.05)"}}>
+    <Card sx={{ background: 'rgba(0,0,0,0.05)' }}>
       <CardHeader
         title="Fallmanager"
         subheader={`${email}`}
-        avatar={<IconButton color="secondary" onClick={handleAvatarClick}>
-                  <Icon icon="home" />
-                </IconButton>}
+        avatar={
+          <IconButton color="secondary" onClick={handleAvatarClick}>
+            <Icon icon="home" />
+          </IconButton>
+        }
       />
       <CardContent>
         <Grid container spacing={1}>

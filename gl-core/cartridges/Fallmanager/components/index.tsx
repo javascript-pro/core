@@ -12,8 +12,10 @@ import {
   UploadEdit,
   UploadField,
 } from './uploads';
-import { Cases } from './cases';
-export { Cases };
+import InputTextField from './InputTextField';
+export { InputTextField };
+import { Cases, CaseCreate } from './cases';
+export { Cases, CaseCreate };
 export { Dashboard };
 export { Uploads, UploadNew, UploadList, UploadEdit, UploadField };
 export { CustomButton, Icon, UserInfo, StickyHeader };

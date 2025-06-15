@@ -1,5 +1,5 @@
 // core/gl-core/cartridges/Fallmanager/hooks/index.tsx
 import { useFallmanager } from './useFallmanager';
-import { useFileTypes } from './useFileTypes';
+import { useNewCaseOpen } from './useNewCaseOpen';
 
-export { useFallmanager, useFileTypes };
+export { useFallmanager, useNewCaseOpen };

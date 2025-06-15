@@ -16,6 +16,7 @@ import {
   Icon,
   useDispatch,
   toggleFeedback,
+  resetUberedux,
   ShareMenu,
   useVersion,
   ModeSwitch,
@@ -55,14 +56,10 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
   };
 
   const handleFactorySettings = () => {
-    dispatch(
-      toggleFeedback({
-        mode: 'confirm',
-        severity: 'warning',
-        title: 'Reset to factory settings?',
-        description: 'Are you sure?',
-      }),
-    );
+    dispatch(resetUberedux());
+    setTimeout(() => {
+      window.location.reload();
+    }, 500);
   };
 
   return (
@@ -120,7 +117,7 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           </Box>
         </Collapse>
 
-        {/* <MenuItem
+        <MenuItem
           sx={{ my: 2 }}
           onClick={(e) => {
             handleFactorySettings();
@@ -130,7 +127,7 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
             <Icon icon="reset" />
           </ListItemIcon>
           <ListItemText primary="Factory settings" />
-        </MenuItem> */}
+        </MenuItem>
 
         <ModeSwitch />
 
