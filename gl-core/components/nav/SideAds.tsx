@@ -29,7 +29,6 @@ export default function SideAds() {
           dispatch(routeTo('/work/techstack/git/gitkraken', router));
         }}
       />
-      
 
       <Advert
         icon="flickr"

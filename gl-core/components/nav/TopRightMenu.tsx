@@ -136,7 +136,7 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
             <ListItemIcon>
               <Icon icon="signout" />
             </ListItemIcon>
-            <ListItemText primary={"Sign out"} />
+            <ListItemText primary={'Sign out'} />
           </MenuItem>
         ) : null}
 
