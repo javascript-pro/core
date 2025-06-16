@@ -314,9 +314,9 @@
                 ]
               },
               {
-                "title": "GitHub",
+                "title": "Git",
                 "description": "Critical to our process",
-                "slug": "/github",
+                "slug": "/git",
                 "order": 25,
                 "icon": "github",
                 "type": "folder",
@@ -326,7 +326,23 @@
                   "javascript"
                 ],
                 "excerpt": "We use GitHub for everything. Including . Most of the communication done between us and our clients during development is done through GitHub in the form of comments, pull resuests, reviews and so for",
-                "children": []
+                "children": [
+                  {
+                    "title": "GitKraken",
+                    "slug": "/gitkraken",
+                    "order": 30,
+                    "icon": "github",
+                    "type": "file",
+                    "tags": [
+                      "github",
+                      "process",
+                      "javascript",
+                      "tools",
+                      "gitkraken"
+                    ],
+                    "excerpt": ""
+                  }
+                ]
               },
               {
                 "title": "Design System",

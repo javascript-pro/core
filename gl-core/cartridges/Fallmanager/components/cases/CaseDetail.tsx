@@ -39,10 +39,9 @@ export default function CaseDetail({ id }: TCaseDatail) {
     await dispatch(routeTo('/fallmanager', router));
   };
 
-  
   const handleSaveQuit = async () => {
     // await dispatch(reopenCase(data.id, user));
-    console.log("handleSaveQuit")
+    console.log('handleSaveQuit');
   };
 
   const handleReopen = async () => {
@@ -92,31 +91,36 @@ export default function CaseDetail({ id }: TCaseDatail) {
             </Typography>
           ) : null
         }
-        action={<>
+        action={
+          <>
             <IconButton onClick={handleBack}>
               <Icon icon="home" />
             </IconButton>
-            { !caseClosed ? <CustomButton
-              sx={{ ml: 1 }}
-              variant="outlined"
-              label="Close case"
-              icon="caseclosed"
-              onClick={handleCloseCase}
-            /> : <CustomButton
-                  sx={{ my: 2 }}
-                  mode="button"
-                  variant="outlined"
-                  label="Reopen case?"
-                  icon="case"
-                  onClick={handleReopen}
-                /> }
-            <CustomButton
+            {!caseClosed ? (
+              <CustomButton
                 sx={{ ml: 1 }}
                 variant="outlined"
-                label="Save & Quit"
-                icon="save"
-                onClick={handleBack}
+                label="Close case"
+                icon="caseclosed"
+                onClick={handleCloseCase}
               />
+            ) : (
+              <CustomButton
+                sx={{ my: 2 }}
+                mode="button"
+                variant="outlined"
+                label="Reopen case?"
+                icon="case"
+                onClick={handleReopen}
+              />
+            )}
+            <CustomButton
+              sx={{ ml: 1 }}
+              variant="outlined"
+              label="Save & Quit"
+              icon="save"
+              onClick={handleBack}
+            />
           </>
         }
       />
@@ -148,48 +152,45 @@ export default function CaseDetail({ id }: TCaseDatail) {
           </Grid>
 
           <Grid size={{ xs: 6 }}>
-            
-            
             <Box>
-            {caseClosed ? (
-              <>
-                <Typography variant="body2" sx={{ fontWeight: 500 }}>
-                  Party 2
-                </Typography>
-                <Typography variant="subtitle1">
-                  {data?.party2 || '—'}
-                </Typography>
-              </>
-            ) : (
-              <EditableTextField
-                id="case-party2"
-                sx={{ my: 2 }}
-                label="Party 2"
-                value={data?.party2}
-                onSave={(newValue) => {
-                  console.log('save party2', newValue);
-                  // dispatch(updateCaseField(data.id, 'party2', newValue));
-                }}
-              />
-            )}
+              {caseClosed ? (
+                <>
+                  <Typography variant="body2" sx={{ fontWeight: 500 }}>
+                    Party 2
+                  </Typography>
+                  <Typography variant="subtitle1">
+                    {data?.party2 || '—'}
+                  </Typography>
+                </>
+              ) : (
+                <EditableTextField
+                  id="case-party2"
+                  sx={{ my: 2 }}
+                  label="Party 2"
+                  value={data?.party2}
+                  onSave={(newValue) => {
+                    console.log('save party2', newValue);
+                    // dispatch(updateCaseField(data.id, 'party2', newValue));
+                  }}
+                />
+              )}
             </Box>
-            
           </Grid>
         </Grid>
       </CardContent>
 
       <CardActions>
-        <Box sx={{display: "flex"}}>
-          <Box sx={{flexGrow: 1}}/>
-            <Box>
-             <CustomButton
-                sx={{ ml: 1 }}
-                mode="button"
-                variant="outlined"
-                label="Save & Quit"
-                icon="save"
-                onClick={handleBack}
-              />
+        <Box sx={{ display: 'flex' }}>
+          <Box sx={{ flexGrow: 1 }} />
+          <Box>
+            <CustomButton
+              sx={{ ml: 1 }}
+              mode="button"
+              variant="outlined"
+              label="Save & Quit"
+              icon="save"
+              onClick={handleBack}
+            />
           </Box>
         </Box>
       </CardActions>

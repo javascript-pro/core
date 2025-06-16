@@ -21,6 +21,16 @@ export default function SideAds() {
           dispatch(routeTo('/', router));
         }}
       />
+
+      <Advert
+        icon="github"
+        title={'GitKraken'}
+        onClick={() => {
+          dispatch(routeTo('/work/techstack/git/gitkraken', router));
+        }}
+      />
+      
+
       <Advert
         icon="flickr"
         title={'Flickr'}

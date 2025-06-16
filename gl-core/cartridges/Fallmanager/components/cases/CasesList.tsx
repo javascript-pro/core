@@ -14,12 +14,7 @@ import {
 import { useRouter } from 'next/navigation';
 import { useDispatch, routeTo } from '../../../../../gl-core';
 import { incomingChange, useFallmanager, Icon } from '../../../Fallmanager';
-import {
-  collection,
-  query,
-  orderBy,
-  onSnapshot,
-} from 'firebase/firestore';
+import { collection, query, orderBy, onSnapshot } from 'firebase/firestore';
 import { formatDistanceToNow } from 'date-fns';
 
 export default function CasesList() {
@@ -62,14 +57,15 @@ export default function CasesList() {
         {cases.map((caseItem: any, i: number) => {
           const { caseClosed, createdAt, closedAt } = caseItem;
 
-          const subheader = caseClosed && closedAt?.seconds
-            ? `Closed on ${new Date(closedAt.seconds * 1000).toLocaleDateString()}`
-            : createdAt?.seconds
-            ? `Opened ${formatDistanceToNow(
-                new Date(createdAt.seconds * 1000),
-                { addSuffix: true }
-              )}`
-            : 'Created just now';
+          const subheader =
+            caseClosed && closedAt?.seconds
+              ? `Closed on ${new Date(closedAt.seconds * 1000).toLocaleDateString()}`
+              : createdAt?.seconds
+                ? `Opened ${formatDistanceToNow(
+                    new Date(createdAt.seconds * 1000),
+                    { addSuffix: true },
+                  )}`
+                : 'Created just now';
 
           return (
             <ListItemButton
