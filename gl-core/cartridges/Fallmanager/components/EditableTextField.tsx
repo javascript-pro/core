@@ -69,7 +69,10 @@ export default function EditableTextField({
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
-                <IconButton onClick={handleSave} disabled={draftValue.trim().length === 0}>
+                <IconButton
+                  onClick={handleSave}
+                  disabled={draftValue.trim().length === 0}
+                >
                   <Icon icon="check" />
                 </IconButton>
                 <IconButton onClick={handleCancel}>

@@ -1,8 +1,8 @@
 ---
 order: 25
-title: GitHub
+title: Git
 description: Critical to our process
-slug: /work/techstack/github
+slug: /work/techstack/git
 icon: github
 image: /png/bluesky/javascript.png
 tags: github, process, javascript

@@ -132,11 +132,11 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
         <ModeSwitch />
 
         {user ? (
-          <MenuItem onClick={handleSignout} sx={{ mt: 1 }}>
+          <MenuItem onClick={handleSignout} sx={{ my: 2 }}>
             <ListItemIcon>
               <Icon icon="signout" />
             </ListItemIcon>
-            <ListItemText primary={user.email} />
+            <ListItemText primary={"Sign out"} />
           </MenuItem>
         ) : null}
 

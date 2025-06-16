@@ -33,7 +33,7 @@ import CheckIcon from '@mui/icons-material/CheckOutlined';
 export type TIconNames =
   | 'home'
   | 'client'
-    | 'check'
+  | 'check'
   | 'edit'
   | 'new'
   | 'case'
@@ -95,7 +95,7 @@ export default function Icon({ icon, color }: TIcon) {
     case 'edit':
       iconFragment = <EditIcon color={color} />;
       break;
-      case 'caseclosed':
+    case 'caseclosed':
       iconFragment = <CaseClosedIcon color={color} />;
       break;
     case 'uploads':
@@ -104,7 +104,7 @@ export default function Icon({ icon, color }: TIcon) {
     case 'check':
       iconFragment = <CheckIcon color={color} />;
       break;
-      case 'upload':
+    case 'upload':
       iconFragment = <UploadIcon color={color} />;
       break;
     case 'download':

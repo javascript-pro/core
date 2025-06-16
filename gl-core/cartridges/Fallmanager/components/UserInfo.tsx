@@ -111,15 +111,18 @@ export default function UserInfo() {
           </ListItemIcon>
           <ListItemText primary="Factory settings" />
         </MenuItem>
+
+        <MenuItem sx={{ my: 2 }} onClick={() => {}}>
+          <ListItemText primary="Language" secondary={user?.lang} />
+        </MenuItem>
+
         <MenuItem onClick={handleSignout}>
           <ListItemIcon>
             <Icon icon="signout" />
           </ListItemIcon>
           <ListItemText primary="Sign out" />
         </MenuItem>
-        <Typography variant="caption" sx={{ p: 2 }}>
-          {userDoc?.email}
-        </Typography>
+
         {/* You can add more MenuItem components here */}
       </Menu>
     </>
