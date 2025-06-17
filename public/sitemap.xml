@@ -32,12 +32,6 @@
     <loc>https://goldlabel.pro/balance/puppy-thing</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/cartridges</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/cartridges/new-cartridge</loc>
-  </url>
-  <url>
     <loc>https://goldlabel.pro/cv/about</loc>
   </url>
   <url>
@@ -105,6 +99,15 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work/company/remote-working</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/core/cartridges</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/core/cartridges/lingua</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/core/cartridges/new-cartridge</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work</loc>

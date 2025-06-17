@@ -9,4 +9,3 @@ github: https://github.com/javascript-pro/core/tree/main/gl-core/cartridges/Ling
 ---
 
 ## Lingua
-

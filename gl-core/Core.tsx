@@ -52,9 +52,16 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const isMobile = useIsMobile();
   const dispatch = useDispatch();
 
+  // --- Run-once effect: Only triggers when Core mounts the first time ---
+  React.useEffect(() => {
+    // One-time startup logic goes here
+    // console.log('Core app booted');
+    // Example: analytics.init(); or fetchInitialData();
+  }, []);
+
   // Reset loading on mount
   React.useEffect(() => {
-    dispatch(toggleLoading(null));
+    dispatch(toggleLoading(false));
   }, [dispatch]);
 
   const isCV = pathname === '/cv';

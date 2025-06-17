@@ -2,15 +2,9 @@
 import { TUbereduxDispatch } from '../../gl-core/types';
 import { setUbereduxKey } from '../../gl-core';
 
-export type TLoading = {
-  status?: 'idle' | 'loading';
-  message?: string;
-};
-
 export const toggleLoading =
-  (loading: TLoading | null) => async (dispatch: TUbereduxDispatch) => {
+  (value: boolean) => async (dispatch: TUbereduxDispatch) => {
     try {
-      const value = loading === null ? null : { ...loading };
       dispatch(
         setUbereduxKey({
           key: 'loading',

@@ -37,25 +37,6 @@
     "excerpt": "We build and ship modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source\n\n is . It's  and \n\nIt has cartridg",
     "children": [
       {
-        "title": "Cartridges",
-        "description": "description",
-        "slug": "/cartridges",
-        "order": 1,
-        "icon": "cartridges",
-        "type": "folder",
-        "excerpt": "cartridges",
-        "children": [
-          {
-            "title": "New Cartridge",
-            "slug": "/new-cartridge",
-            "order": 2200,
-            "icon": "cartridge",
-            "type": "file",
-            "excerpt": "Overview\n\n Purpose\n\n is a template designed to help developers quickly bootstrap a new Cartridge in a modular application framework such as Goldlabel. Cartridges are featurespecific, plugandplay compo"
-          }
-        ]
-      },
-      {
         "title": "Free & Open Source",
         "description": "Some things in life ARE free",
         "slug": "/free",
