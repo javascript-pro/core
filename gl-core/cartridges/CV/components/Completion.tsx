@@ -199,7 +199,7 @@ export default function Completion() {
         {completion && (
           <Box mt={3} sx={{ display: 'flex', gap: 2 }}>
             <MightyButton
-              label="Retry?"
+              label="Reset"
               icon="reset"
               color="primary"
               variant="contained"
