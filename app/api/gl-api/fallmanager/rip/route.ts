@@ -1,17 +1,48 @@
-// core/gl-api/fallmanager/rip/route.ts
-
+// core/app/api/gl-api/fallmanager/rip/route.ts
 export const runtime = 'nodejs';
 
 import { NextRequest, NextResponse } from 'next/server';
-import { db } from '../../../../../gl-core/lib/firebase';
-import { doc, getDoc, updateDoc } from 'firebase/firestore';
+import { adminDb } from '../../../../../gl-core/lib/firebaseAdmin';
 import vision from '@google-cloud/vision';
 import { join } from 'path';
 import { tmpdir } from 'os';
 import { writeFile, unlink } from 'fs/promises';
 import fetch from 'node-fetch';
+import {
+  getDocument,
+  GlobalWorkerOptions,
+  PDFWorker,
+} from 'pdfjs-dist/build/pdf.js';
 
-const visionClient = new vision.ImageAnnotatorClient();
+// --- PATCH: force fake worker, never try to require worker file ---
+GlobalWorkerOptions.workerSrc = false as any;
+(PDFWorker as any).getWorkerSrc = () => null;
+
+// --- Vision Client with base64 credentials from .env ---
+const visionClient = new vision.ImageAnnotatorClient(
+  process.env.GOOGLE_CLOUD_SERVICE_ACCOUNT_BASE64
+    ? {
+        credentials: JSON.parse(
+          Buffer.from(
+            process.env.GOOGLE_CLOUD_SERVICE_ACCOUNT_BASE64,
+            'base64',
+          ).toString('utf-8'),
+        ),
+      }
+    : undefined,
+);
+
+async function extractPdfText(buffer: Buffer): Promise<string> {
+  const uint8Array = new Uint8Array(buffer);
+  const pdf = await getDocument({ data: uint8Array }).promise;
+  let text = '';
+  for (let i = 1; i <= pdf.numPages; i++) {
+    const page = await pdf.getPage(i);
+    const content = await page.getTextContent();
+    text += content.items.map((item) => (item as any).str).join(' ') + ' ';
+  }
+  return text.trim();
+}
 
 export async function POST(req: NextRequest) {
   const { uploadId } = await req.json();
@@ -21,11 +52,10 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    // 1. Get the upload document
-    const ref = doc(db, 'uploads', uploadId);
-    const snap = await getDoc(ref);
+    const ref = adminDb.collection('uploads').doc(uploadId);
+    const snap = await ref.get();
 
-    if (!snap.exists()) {
+    if (!snap.exists) {
       return NextResponse.json({ error: 'Upload not found' }, { status: 404 });
     }
 
@@ -40,16 +70,24 @@ export async function POST(req: NextRequest) {
     }
 
     const ext = extension.toLowerCase();
+
     const response = await fetch(url);
-    const buffer = Buffer.from(await response.arrayBuffer());
+    if (!response.ok) {
+      throw new Error(
+        `Failed to fetch file from URL: ${url} (status ${response.status})`,
+      );
+    }
+    const arrayBuffer = await response.arrayBuffer();
+    const buffer = Buffer.from(arrayBuffer);
+
+    if (!buffer || !buffer.length) {
+      throw new Error('Fetched file is empty or invalid');
+    }
 
     let plainText = '';
 
-    // 2. Extract text based on extension
     if (ext === '.pdf') {
-      const pdfParse = await import('pdf-parse');
-      const result = await pdfParse.default(buffer);
-      plainText = result.text;
+      plainText = await extractPdfText(buffer);
     } else if (ext === '.docx') {
       const mammoth = await import('mammoth');
       const tmpPath = join(tmpdir(), `${uploadId}.docx`);
@@ -72,8 +110,13 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // 3. Update Firestore document with the extracted plain text
-    await updateDoc(ref, {
+    // Normalize to single paragraph
+    plainText = plainText
+      .replace(/[\r\n]+/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+
+    await ref.update({
       plainText,
       rippedAt: new Date(),
     });

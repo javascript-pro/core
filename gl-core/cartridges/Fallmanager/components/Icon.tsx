@@ -22,10 +22,9 @@ import CopyIcon from '@mui/icons-material/CopyAllOutlined';
 import LeftIcon from '@mui/icons-material/ArrowBack';
 import UploadIcon from '@mui/icons-material/InsertDriveFile';
 import SignoutIcon from '@mui/icons-material/ExitToApp';
-
+import RipIcon from '@mui/icons-material/TextRotateVertical';
 import CaseIcon from '@mui/icons-material/WorkOutlined';
 import CaseClosedIcon from '@mui/icons-material/WorkOffOutlined';
-
 import NewIcon from '@mui/icons-material/AddOutlined';
 import ClientIcon from '@mui/icons-material/Person';
 import EditIcon from '@mui/icons-material/EditOutlined';
@@ -36,6 +35,7 @@ export type TIconNames =
   | 'check'
   | 'edit'
   | 'new'
+  | 'rip'
   | 'case'
   | 'caseclosed'
   | 'cases'
@@ -166,6 +166,9 @@ export default function Icon({ icon, color }: TIcon) {
       break;
     case 'delete':
       iconFragment = <DeleteIcon color={color} />;
+      break;
+    case 'rip':
+      iconFragment = <RipIcon color={color} />;
       break;
     case 'dog':
       iconFragment = <DogIcon color={color} />;

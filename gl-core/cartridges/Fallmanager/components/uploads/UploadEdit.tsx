@@ -48,6 +48,11 @@ export default function UploadEdit({ slug }: UploadEditProps) {
   const [doc, setDoc] = React.useState<UploadDoc | null>(null);
   const [loading, setLoading] = React.useState(true);
 
+  // Text extraction state
+  const [extracting, setExtracting] = React.useState(false);
+  const [extractError, setExtractError] = React.useState<string | null>(null);
+  const [extractedText, setExtractedText] = React.useState<string | null>(null);
+
   const handleDelete = async () => {
     if (doc?.id) {
       await dispatch(deleteUpload(doc.id));
@@ -100,6 +105,44 @@ export default function UploadEdit({ slug }: UploadEditProps) {
           title: 'No download URL found for this document.',
         }),
       );
+    }
+  };
+
+  // ---- Extract text ("rip") logic ----
+  const handleExtractText = async () => {
+    if (!doc?.id) {
+      setExtractError('No upload ID available.');
+      return;
+    }
+    setExtractError(null);
+    setExtractedText(null);
+    setExtracting(true);
+
+    try {
+      const apiRes = await fetch('/api/gl-api/fallmanager/rip', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ uploadId: doc.id }),
+      });
+
+      if (!apiRes.ok) {
+        const errorText = await apiRes.text();
+        throw new Error(`API error: ${errorText}`);
+      }
+
+      const result = await apiRes.json();
+
+      if (typeof result.plainText !== 'string') {
+        throw new Error('Unexpected API response');
+      }
+
+      setExtractedText(result.plainText);
+    } catch (err: any) {
+      setExtractError(err.message || 'Failed to extract text');
+    } finally {
+      setExtracting(false);
     }
   };
 
@@ -193,11 +236,53 @@ export default function UploadEdit({ slug }: UploadEditProps) {
         }
       />
       <CardContent>
-        <Typography variant="body2">{formatFileSize(doc.size)}</Typography>
+        <Typography variant="body2">
+          {formatFileSize(doc.size as number)}
+        </Typography>
         <Typography variant="body2">{doc.type}</Typography>
         <Typography variant="body2">
-          Uploaded {moment(doc.uploadedAt?.seconds * 1000).fromNow()}
+          Uploaded{' '}
+          {moment((doc.uploadedAt?.seconds as number) * 1000).fromNow()}
         </Typography>
+
+        {/* --- Extract Text Section --- */}
+        <Box sx={{ mt: 3 }}>
+          <CustomButton
+            sx={{ mb: 1 }}
+            mode="button"
+            variant="contained"
+            label={extracting ? 'Extracting…' : 'Extract Text'}
+            icon="rip"
+            onClick={handleExtractText}
+            disabled={extracting}
+          />
+          {extracting && (
+            <Typography variant="body2" sx={{ mt: 1 }}>
+              Extracting text from file…
+            </Typography>
+          )}
+          {extractError && (
+            <Alert severity="error" sx={{ mt: 1 }}>
+              {extractError}
+            </Alert>
+          )}
+          {extractedText && (
+            <Box
+              sx={{
+                mt: 2,
+                whiteSpace: 'pre-wrap',
+                p: 2,
+                bgcolor: '#fafafa',
+                borderRadius: 1,
+              }}
+            >
+              <Typography variant="subtitle2" gutterBottom>
+                Extracted Text:
+              </Typography>
+              <Typography variant="body2">{extractedText}</Typography>
+            </Box>
+          )}
+        </Box>
       </CardContent>
       <CardActions>
         <CustomButton
@@ -218,12 +303,6 @@ export default function UploadEdit({ slug }: UploadEditProps) {
           icon="copy"
           onClick={handleCopy}
         />
-        {/* <CustomButton
-          sx={{ ml: 1 }}
-          onClick={handleClose}
-          icon="save"
-          label="Save & Close"
-        /> */}
       </CardActions>
     </Box>
   );
