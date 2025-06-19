@@ -14,9 +14,9 @@ export default function Download(cv: any) {
     const html = `
       <h2>Chris Dorward</h2>
       <h4>
-        <a href="https://goldlabel.pro">goldlabel.pro</a> | 
-        <a href="mailto:goldlabel.apps@gmail.com">goldlabel.apps@gmail.com</a> 
-        <br />Currently in Portugal till 7th July 25, +351 932 961 263
+        <a href="https://goldlabel.pro/cv">goldlabel.pro</a> | 
+        <a href="mailto:goldlabel.apps@gmail.com">goldlabel.apps@gmail.com</a> | 
+        <a href="https://wa.me/447745763122">+44 07745763122</a>
       </h4>
     ${marked.parse(cv.cv || '') as string}`;
     const fullHTML = templatePDF(html);
