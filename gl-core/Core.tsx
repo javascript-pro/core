@@ -24,6 +24,7 @@ import {
   useThemeMode,
   toggleLoading,
   useDispatch,
+  IndexNav,
 } from '../gl-core';
 import { Flickr } from './cartridges/Flickr';
 import { CV } from './cartridges/CV';
@@ -51,6 +52,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
   useVersionCheck();
   const isMobile = useIsMobile();
   const dispatch = useDispatch();
+  const isIndexPage = frontmatter?.isIndex === true;
 
   // --- Run-once effect: Only triggers when Core mounts the first time ---
   React.useEffect(() => {
@@ -159,6 +161,12 @@ export default function Core({ frontmatter, body = null }: TCore) {
                   {pathname !== '/' && <PageBreadcrumb />}
                 </Box>
               </Box>
+
+              {isIndexPage && (
+                <Box sx={{ mb: '50px', px: isMobile ? 0.5 : 2 }}>
+                  <IndexNav />
+                </Box>
+              )}
 
               <Box sx={{ mb: '50px', px: isMobile ? 0.5 : 2 }}>
                 {isApp ? app : <RenderMarkdown>{body}</RenderMarkdown>}

@@ -3,7 +3,6 @@ import * as React from 'react';
 import { useRouter } from 'next/navigation';
 import {
   Box,
-  CardHeader,
   IconButton,
   Menu,
   MenuItem,
@@ -15,7 +14,6 @@ import {
 import {
   Icon,
   useDispatch,
-  toggleFeedback,
   resetUberedux,
   ShareMenu,
   useVersion,
@@ -39,6 +37,7 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
   const user = useUser();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [shareOpen, setShareOpen] = React.useState(false);
+  const [clientsOpen, setClientsOpen] = React.useState(false);
   const open = Boolean(anchorEl);
   const version = useVersion();
 
@@ -49,6 +48,7 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
   const handleClose = () => {
     setAnchorEl(null);
     setShareOpen(false);
+    setClientsOpen(false);
   };
 
   const handleSignout = () => {
@@ -76,41 +76,9 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
         transformOrigin={{ vertical: 'top', horizontal: 'right' }}
       >
-        <CardHeader
-          sx={{ width: 275 }}
-          avatar={<Icon icon={frontmatter?.icon as any} />}
-          title={<Typography variant="body1">{frontmatter?.title}</Typography>}
-          subheader={
-            <Typography variant="body2">{frontmatter?.description}</Typography>
-          }
-        />
-
+        {/* Share Menu */}
         <MenuItem
-          sx={{ my: 2 }}
-          onClick={(e) => {
-            handleFactorySettings();
-          }}
-        >
-          <ListItemIcon>
-            <Icon icon="reset" />
-          </ListItemIcon>
-          <ListItemText primary="Factory settings" />
-        </MenuItem>
-
-        <MenuItem
-          sx={{ my: 2 }}
-          onClick={(e) => {
-            dispatch(routeTo('/fallmanager', router));
-          }}
-        >
-          <ListItemIcon>
-            <Icon icon="clients" />
-          </ListItemIcon>
-          <ListItemText primary="Fallmanager" />
-        </MenuItem>
-
-        <MenuItem
-          sx={{ my: 2 }}
+          sx={{ width: 250, my: 2 }}
           onClick={(e) => {
             e.stopPropagation();
             e.preventDefault();
@@ -129,8 +97,55 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           </Box>
         </Collapse>
 
+        {/* Clients Menu */}
+        <MenuItem
+          sx={{ my: 2 }}
+          onClick={(e) => {
+            e.stopPropagation();
+            e.preventDefault();
+            setClientsOpen((prev) => !prev);
+          }}
+        >
+          <ListItemIcon>
+            <Icon icon="clients" />
+          </ListItemIcon>
+          <ListItemText primary="Clients" />
+        </MenuItem>
+
+        <Collapse in={clientsOpen} timeout="auto" unmountOnExit>
+          <Box sx={{ px: 2, pt: 1 }}>
+            <MenuItem
+              onClick={(e) => {
+                e.stopPropagation();
+                e.preventDefault();
+                dispatch(routeTo('/fallmanager', router));
+              }}
+            >
+              <ListItemIcon>
+                <Icon icon="bouncer" />
+              </ListItemIcon>
+              <ListItemText primary="Fallmanager" />
+            </MenuItem>
+          </Box>
+        </Collapse>
+
+        {/* Factory Reset */}
+        <MenuItem
+          sx={{ my: 2 }}
+          onClick={(e) => {
+            handleFactorySettings();
+          }}
+        >
+          <ListItemIcon>
+            <Icon icon="reset" />
+          </ListItemIcon>
+          <ListItemText primary="Factory settings" />
+        </MenuItem>
+
+        {/* Theme Switcher */}
         <ModeSwitch />
 
+        {/* Sign out */}
         {user ? (
           <MenuItem onClick={handleSignout} sx={{ my: 2 }}>
             <ListItemIcon>
@@ -140,6 +155,7 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           </MenuItem>
         ) : null}
 
+        {/* App Version */}
         <Box sx={{ pr: 3, py: 1, textAlign: 'right' }}>
           <Typography
             sx={{

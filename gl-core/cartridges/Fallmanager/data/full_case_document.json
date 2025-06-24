@@ -1,0 +1,176 @@
+{
+  "caseId": "2025-0001",
+  "status": "closed",
+  "createdAt": "2025-06-01T08:00:00Z",
+  "updatedAt": "2025-06-24T10:30:00Z",
+  "client": {
+    "clientId": "C123",
+    "firstName": "Max",
+    "lastName": "Mustermann",
+    "address": {
+      "street": "Beispielstr. 1",
+      "zip": "10115",
+      "city": "Berlin"
+    },
+    "phone": "+49-30-123456",
+    "email": "max@beispiel.de",
+    "vatDeductible": true
+  },
+  "accident": {
+    "date": "2025-06-10T14:30:00Z",
+    "location": {
+      "street": "Musterweg 5",
+      "city": "Berlin"
+    },
+    "description": "Rear-end collision at traffic light. Client was stationary when hit from behind.",
+    "weather": "rainy"
+  },
+  "vehicles": [
+    {
+      "role": "client",
+      "plate": "B-AB 1234",
+      "make": "Volkswagen",
+      "model": "Golf",
+      "owner": {
+        "name": "Max Mustermann",
+        "address": {
+          "street": "Beispielstr. 1",
+          "zip": "10115",
+          "city": "Berlin"
+        }
+      },
+      "driver": {
+        "name": "Max Mustermann",
+        "licenseNumber": "D-1234567890"
+      }
+    },
+    {
+      "role": "opponent",
+      "plate": "B-CD 5678",
+      "make": "BMW",
+      "model": "X3",
+      "owner": {
+        "name": "Erika M\u00fcller",
+        "address": {
+          "street": "Anderestr. 3",
+          "zip": "10117",
+          "city": "Berlin"
+        }
+      },
+      "driver": {
+        "name": "Erika M\u00fcller",
+        "licenseNumber": "D-0987654321"
+      }
+    }
+  ],
+  "insurer": {
+    "insurerId": "I789",
+    "name": "Beispiel Versicherung AG",
+    "address": {
+      "street": "Versicherungsallee 7",
+      "zip": "10179",
+      "city": "Berlin"
+    },
+    "phone": "+49-30-987654",
+    "policyNumber": "P-2025-001"
+  },
+  "policeReport": {
+    "stationId": "P001",
+    "reportNumber": "POL-2025-55",
+    "dateFiled": "2025-06-11T09:00:00Z"
+  },
+  "prosecutor": {
+    "name": "Staatsanwaltschaft Berlin",
+    "fileNumber": "STA-2025-33",
+    "contact": {
+      "phone": "+49-30-112233",
+      "email": "kontakt@sta-berlin.de"
+    }
+  },
+  "expert": {
+    "name": "Dr. Gutachter",
+    "reportNumber": "EX-2025-03",
+    "date": "2025-06-13T11:00:00Z"
+  },
+  "damageItems": [
+    {
+      "itemId": "D001",
+      "description": "Rear bumper replacement",
+      "netCost": 450.0,
+      "grossCost": 535.5
+    },
+    {
+      "itemId": "D002",
+      "description": "Paintwork repair",
+      "netCost": 300.0,
+      "grossCost": 357.0
+    }
+  ],
+  "medicalRecords": [
+    {
+      "recordId": "M001",
+      "injuries": ["whiplash"],
+      "provider": "Klinik Berlin-Mitte",
+      "reportRef": "MED-2025-78"
+    }
+  ],
+  "witnesses": [
+    {
+      "name": "Hans Becker",
+      "contact": {
+        "phone": "+49-30-334455",
+        "email": "h.becker@example.com"
+      },
+      "statement": "I was driving behind the client and saw the other driver hit them without braking."
+    }
+  ],
+  "attachments": [
+    {
+      "fileId": "F123",
+      "type": "photo",
+      "description": "damage-photo1.jpg",
+      "uploadedAt": "2025-06-10T15:00:00Z"
+    },
+    {
+      "fileId": "F124",
+      "type": "pdf",
+      "description": "insurance-letter.pdf",
+      "uploadedAt": "2025-06-11T12:30:00Z"
+    }
+  ],
+  "legalProceedings": [
+    {
+      "docketNumber": "LG-2025-100",
+      "date": "2025-08-01T10:00:00Z",
+      "type": "hearing"
+    }
+  ],
+  "tasks": [
+    {
+      "taskId": "T001",
+      "description": "Request medical report",
+      "dueDate": "2025-06-15T00:00:00Z",
+      "completed": true
+    },
+    {
+      "taskId": "T002",
+      "description": "Send expert report to insurer",
+      "dueDate": "2025-06-16T00:00:00Z",
+      "completed": true
+    }
+  ],
+  "communications": [
+    {
+      "commId": "C001",
+      "date": "2025-06-12T11:30:00Z",
+      "mode": "email",
+      "summary": "Sent summary of incident to insurer"
+    },
+    {
+      "commId": "C002",
+      "date": "2025-06-14T09:00:00Z",
+      "mode": "call",
+      "summary": "Phone call with client to explain next steps"
+    }
+  ]
+}
