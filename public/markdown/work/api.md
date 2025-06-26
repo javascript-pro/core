@@ -1,7 +1,7 @@
 ---
 order: 10
 title: Public API
-slug: /free/api
+slug: /work/api
 description: Private keys are available
 icon: api
 image: /png/default.png

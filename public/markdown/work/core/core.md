@@ -1,7 +1,7 @@
 ---
 order: 10
 title: Core
-slug: /free/core
+slug: /work/core
 description: Open Source and Free Forever
 icon: github
 image: /png/default.png

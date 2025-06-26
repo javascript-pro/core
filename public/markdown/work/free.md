@@ -2,7 +2,7 @@
 order: 1
 title: Free & Open Source
 description: Some things in life ARE free
-slug: /free
+slug: /work/free
 icon: flash
 image: /png/default.png
 ---

@@ -1,6 +1,6 @@
 ---
 order: 1
-slug: /cartridges
+slug: /work/core/cartridges
 title: Cartridges
 icon: cartridges
 image: /png/default.png

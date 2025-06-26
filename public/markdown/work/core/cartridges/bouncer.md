@@ -2,7 +2,7 @@
 order: 130
 title: Bouncer
 description: Authentication and Access Control System
-slug: /free/bouncer
+slug: /work/core/cartridges/bouncer
 icon: admin
 image: /png/bluesky/bouncer.png
 tags: cartridges, cartridge, free, bouncer

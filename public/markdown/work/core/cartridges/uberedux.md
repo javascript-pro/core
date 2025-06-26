@@ -1,6 +1,6 @@
 ---
 order: 20
-slug: /free/uberedux
+slug: /work/core/cartridges/uberedux
 title: 'Uberedux'
 description: 'Because all Apps need State Management'
 icon: 'uberedux'

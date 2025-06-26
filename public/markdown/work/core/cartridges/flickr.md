@@ -3,7 +3,7 @@ order: 129
 title: Flickr
 description: Photo Cartridge
 tags: free, cartridge
-slug: /free/flickr
+slug: /work/core/cartridges/flickr
 icon: flickr
 image: /png/cartridges/flickr.png
 api: /api/gl-api/flickr?album=72177720326317140

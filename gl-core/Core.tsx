@@ -122,6 +122,12 @@ export default function Core({ frontmatter, body = null }: TCore) {
                 lg: 9,
               }}
             >
+              {isIndexPage && (
+                <Box sx={{ mx: 4, mt: 0 }}>
+                  <IndexNav />
+                </Box>
+              )}
+
               <Box sx={{ mt: isMobile ? 2 : 0 }}>
                 {frontmatter?.image && (
                   <Box sx={{ mx: 4, mt: 0 }}>
@@ -161,12 +167,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
                   {pathname !== '/' && <PageBreadcrumb />}
                 </Box>
               </Box>
-
-              {isIndexPage && (
-                <Box sx={{ mb: '50px', px: isMobile ? 0.5 : 2 }}>
-                  <IndexNav />
-                </Box>
-              )}
 
               <Box sx={{ mb: '50px', px: isMobile ? 0.5 : 2 }}>
                 {isApp ? app : <RenderMarkdown>{body}</RenderMarkdown>}

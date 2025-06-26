@@ -32,36 +32,6 @@
     <loc>https://goldlabel.pro/balance/puppy-thing</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/cv/about</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/cv</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/free/api</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/free/bouncer</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/free/core</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/free/flash</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/free/flickr</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/free</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/free/open-source</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/free/uberedux</loc>
-  </url>
-  <url>
     <loc>https://goldlabel.pro/</loc>
   </url>
   <url>
@@ -92,6 +62,9 @@
     <loc>https://goldlabel.pro/life</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/work/api</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/work/company</loc>
   </url>
   <url>
@@ -99,6 +72,15 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work/company/remote-working</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/core/cartridges/bouncer</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/core/cartridges/flash</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/core/cartridges/flickr</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/core/cartridges</loc>
@@ -110,7 +92,25 @@
     <loc>https://goldlabel.pro/work/core/cartridges/new-cartridge</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/work/core/cartridges/uberedux</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/core/core</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/cv/about</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/cv</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/free</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/work</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/open-source</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/techstack/design-sytem</loc>

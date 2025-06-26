@@ -1,6 +1,6 @@
 ---
 order: 15
-slug: /free/flash
+slug: /work/core/cartridges/flash
 title: 'Flash'
 description: 'A Pointless reinvention of MacroMedia Flash?'
 icon: 'flash'

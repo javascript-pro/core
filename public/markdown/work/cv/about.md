@@ -2,7 +2,7 @@
 order: 130
 title: About C.V.
 description: How it works
-slug: /cv/about
+slug: /work/cv/about
 icon: openai
 image: /png/default.png
 tags: CV, jobs, work, resume, AI, OpenAI
