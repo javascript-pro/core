@@ -5,6 +5,7 @@
     "slug": "/",
     "order": 1,
     "icon": "home",
+    "image": "/png/default.png",
     "type": "folder",
     "tags": [
       "JavaScript",
@@ -42,6 +43,7 @@
         "slug": "/work",
         "order": 10,
         "icon": "work",
+        "image": "/png/bluesky/javascript.png",
         "type": "folder",
         "tags": [
           "JavaScript",
@@ -66,6 +68,7 @@
             "slug": "/free",
             "order": 1,
             "icon": "flash",
+            "image": "/png/default.png",
             "type": "file",
             "excerpt": "Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or b"
           },
@@ -75,6 +78,7 @@
             "slug": "/cv",
             "order": 2,
             "icon": "openai",
+            "image": "/png/default.png",
             "type": "folder",
             "tags": [
               "CV",
@@ -91,6 +95,7 @@
                 "slug": "/about",
                 "order": 130,
                 "icon": "openai",
+                "image": "/png/default.png",
                 "type": "file",
                 "tags": [
                   "CV",
@@ -109,6 +114,7 @@
             "slug": "/api",
             "order": 10,
             "icon": "api",
+            "image": "/png/default.png",
             "type": "file",
             "tags": [
               "free",
@@ -122,6 +128,7 @@
             "slug": "/company",
             "order": 10,
             "icon": "work",
+            "image": "/png/default.png",
             "type": "folder",
             "excerpt": "Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX\n\nGoldlabel Apps is a UKbased software company that designs, builds, and maintains fullstack web applications. We specialize in",
             "children": [
@@ -130,6 +137,7 @@
                 "slug": "/remote-working",
                 "order": 250,
                 "icon": "work",
+                "image": "/png/default.png",
                 "type": "file",
                 "tags": [
                   "remote",
@@ -142,6 +150,7 @@
                 "slug": "/privacy-cookies",
                 "order": 555,
                 "icon": "account",
+                "image": "/png/default.png",
                 "type": "file",
                 "tags": [
                   "cookies",
@@ -160,6 +169,7 @@
             "slug": "/techstack",
             "order": 10,
             "icon": "techstack",
+            "image": "/png/default.png",
             "type": "folder",
             "tags": [
               "techstack"
@@ -172,6 +182,7 @@
                 "slug": "/javascript",
                 "order": 5,
                 "icon": "javascript",
+                "image": "/png/bluesky/javascript.png",
                 "type": "folder",
                 "tags": [
                   "JavaScript",
@@ -196,6 +207,7 @@
                     "slug": "/next-js",
                     "order": 15,
                     "icon": "javascript",
+                    "image": "/png/bluesky/javascript.png",
                     "type": "file",
                     "tags": [
                       "JavaScript",
@@ -212,6 +224,7 @@
                     "slug": "/rest-api",
                     "order": 50,
                     "icon": "javascript",
+                    "image": "/png/bluesky/javascript.png",
                     "type": "file",
                     "tags": [
                       "JavaScript",
@@ -231,6 +244,7 @@
                 "slug": "/git",
                 "order": 25,
                 "icon": "github",
+                "image": "/png/bluesky/javascript.png",
                 "type": "folder",
                 "tags": [
                   "github",
@@ -244,6 +258,7 @@
                     "slug": "/gitkraken",
                     "order": 30,
                     "icon": "github",
+                    "image": "/png/gitkraken.png",
                     "type": "file",
                     "tags": [
                       "github",
@@ -262,6 +277,7 @@
                 "slug": "/design-sytem",
                 "order": 101,
                 "icon": "design",
+                "image": "/png/bluesky/uberedux.png",
                 "type": "folder",
                 "tags": [
                   "github",
@@ -275,6 +291,7 @@
                     "slug": "/toolpad",
                     "order": 20,
                     "icon": "design",
+                    "image": "/png/default.png",
                     "type": "file",
                     "tags": [
                       "techstack",
@@ -292,6 +309,7 @@
             "slug": "/open-source",
             "order": 1000,
             "icon": "api",
+            "image": "/png/default.png",
             "type": "file",
             "tags": [
               "free",
@@ -308,8 +326,9 @@
         "slug": "/life",
         "order": 50,
         "icon": "life",
+        "image": "/jpg/wei-zang/wei-zangs-food.jpg",
         "type": "folder",
-        "excerpt": "|  | \n\n | \nI work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age I'm never going to ski like I ",
+        "excerpt": "I work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age I'm never going to ski like I used to. Ma",
         "children": [
           {
             "title": "Food",
@@ -317,6 +336,7 @@
             "slug": "/food",
             "order": 10,
             "icon": "food",
+            "image": "/jpg/wei-zang/wei-zangs-food.jpg",
             "type": "folder",
             "excerpt": "| \n\nWhen I want a recipe I go the internet of course. I get annoyed by the amount of adverts on the pages where I want to follow simple instructions.\n\nFor some recipes that I've tried & tested I've st",
             "children": [
@@ -325,6 +345,7 @@
                 "slug": "/air-fried-peppers",
                 "order": 35,
                 "icon": "food",
+                "image": "/jpg/wei-zang/wei-zangs-food.jpg",
                 "type": "file",
                 "tags": [
                   "food",
@@ -340,6 +361,7 @@
                 "slug": "/banana-bread",
                 "order": 50,
                 "icon": "food",
+                "image": "/jpg/wei-zang/wei-zangs-food.jpg",
                 "type": "file",
                 "excerpt": "| \n\nMoist, flavorful, and easy to make. Perfect for using overripe bananas, this classic loaf is a crowdpleaser for breakfast, snacks, or dessert.\n\n 125g Butter\n 175g Brown sugar\n 1 tsp Vanilla extrac"
               },
@@ -348,6 +370,7 @@
                 "slug": "/lemon-meringue-pie",
                 "order": 76,
                 "icon": "food",
+                "image": "/jpg/food/lemon-meringue-pie.jpg",
                 "type": "file",
                 "excerpt": "\"Lemonading\" is an actual word that even people on Radio 4 use. So when life gives you lemons...\n\n Ingredients\n\n For the pastry\n\n 4 oz (110 g) plain flour, plus a little extra for rolling out\n a pinch"
               }
@@ -359,6 +382,7 @@
             "slug": "/diving",
             "order": 100,
             "icon": "diving",
+            "image": "/png/cartridges/diving.png",
             "type": "folder",
             "excerpt": "This section of the site is a quiet space for sharing some of the places I’ve been, the gear I’ve trusted, and the small moments I remember best — that sound when you first descend, the feeling of hov",
             "children": [
@@ -367,6 +391,7 @@
                 "slug": "/why-dive",
                 "order": 50,
                 "icon": "diving",
+                "image": "/png/cartridges/diving.png",
                 "type": "file",
                 "excerpt": "I’ve been diving for over 25 years. I’m not an instructor, and I don’t dive every weekend — but it’s something that’s been part of my life for a long time. I trained as a PADI Divemaster (though my ce"
               }
@@ -378,6 +403,7 @@
             "slug": "/aquaponics",
             "order": 200,
             "icon": "fish",
+            "image": "/png/cartridges/aquaponics.png",
             "type": "folder",
             "excerpt": "Aquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closedloop system.",
             "children": [
@@ -386,6 +412,7 @@
                 "slug": "/overview",
                 "order": 50,
                 "icon": "fish",
+                "image": "/png/cartridges/aquaponics.png",
                 "type": "file",
                 "excerpt": "What: Aquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closedloop system.\n\nWho: Ideal for urban growers, hobbyists"
               }
@@ -399,6 +426,7 @@
         "slug": "/balance",
         "order": 100,
         "icon": "balance",
+        "image": "/png/default.png",
         "type": "folder",
         "excerpt": "Are you ?\n\n Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Is this Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a b",
         "children": [
@@ -407,6 +435,7 @@
             "slug": "/puppy-thing",
             "order": 30,
             "icon": "dog",
+            "image": "/jpg/blog/puppy-fing.jpg",
             "type": "file",
             "excerpt": "I put an Attenborough series on for the dogs. Later I notice there’s a polar bear and a baby seal on the TV. I look at the doggy. He's got genuine concern in his eyes which also say\n\n\"that puppy fing’"
           },
@@ -416,6 +445,7 @@
             "slug": "/books",
             "order": 100,
             "icon": "balance",
+            "image": "/jpg/products/speak-write.jpg",
             "type": "folder",
             "excerpt": "Weekend Portfolio\n\n Written for semiprofessional coders ready to go pr0\n\nA series of standalone apps you can build in a weekend. Each project has modern deployment, realworld app structure\n\nIn a weeke",
             "children": [
@@ -424,6 +454,7 @@
                 "slug": "/wei-zangs-food",
                 "order": 11,
                 "icon": "food",
+                "image": "/jpg/wei-zang/wei-zangs-food.jpg",
                 "type": "file",
                 "excerpt": "I never learned to cook. No one taught me. That’s why I can tell you about it.\n\nPeople who are taught spend too long worrying about what’s “right.” I just ate what I liked, cooked it, guessed. Like de"
               },
@@ -433,6 +464,7 @@
                 "slug": "/generation-x",
                 "order": 100,
                 "icon": "doc",
+                "image": "/jpg/gen-x/cassetes.jpg",
                 "type": "folder",
                 "excerpt": "The term Generation X acquired a modern application after the release of Generation X: Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Glossary\n\nMcJob A lo",
                 "children": []
@@ -443,6 +475,7 @@
                 "slug": "/sci-fi",
                 "order": 120,
                 "icon": "folder",
+                "image": "/jpg/photos/einstein.jpg",
                 "type": "folder",
                 "excerpt": "Because we can carefully observe constellations when the Sun is not blocking their path, we know what position the stars should be in when the Sun is keeping us from seeing them. However, according to",
                 "children": [
@@ -451,6 +484,7 @@
                     "slug": "/einstein",
                     "order": 30,
                     "icon": "doc",
+                    "image": "/jpg/photos/einstein.jpg",
                     "type": "file",
                     "excerpt": "Let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series.\n\n Let's share some of Einstein's contributions which are fundamental t"
                   },
@@ -459,6 +493,7 @@
                     "slug": "/relativity",
                     "order": 30,
                     "icon": "doc",
+                    "image": "/jpg/photos/einstein.jpg",
                     "type": "file",
                     "excerpt": "Really just the name for Einstein's study of gravitation. And here we're going to introduce my alltime favorite analogy for general relativity, the bowling ball on the trampoline. Let's imagine that f"
                   },
@@ -467,6 +502,7 @@
                     "slug": "/charles-darwin",
                     "order": 2000,
                     "icon": "doc",
+                    "image": "/jpg/photos/darwin.jpg",
                     "type": "file",
                     "excerpt": "Judging from the past, we may safely infer that no one living species will transmit its unaltered likeness to a distant futurity. And of the species now living very few will transmit progeny of any ki"
                   }
@@ -477,6 +513,7 @@
                 "slug": "/weekend-portfolio",
                 "order": 160,
                 "icon": "speak-write",
+                "image": "/jpg/products/speak-write.jpg",
                 "type": "file",
                 "excerpt": "Written for at semiprofessional coders ready to go pr0\n\nIn a weekend project, you’ll build a simple but powerful AI app. The idea is simple but important: you upload an .mp3 file, and the app gives yo"
               }

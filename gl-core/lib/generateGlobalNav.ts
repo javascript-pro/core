@@ -10,6 +10,7 @@ type NavNode = {
   slug: string;
   order?: number;
   icon?: string;
+  image?: string; // Added image
   type: 'folder' | 'file';
   tags?: string[];
   excerpt?: string;
@@ -72,6 +73,7 @@ export async function getMarkdownPagesRecursively(
       slug: createSlug(baseSlug),
       order: indexData.order ?? 0,
       icon: indexData.icon,
+      image: indexData.image, // Pass image from frontmatter
       type: 'folder',
       tags: parseTags(indexData.tags),
       excerpt: extractExcerpt(indexContent),
@@ -106,6 +108,7 @@ export async function getMarkdownPagesRecursively(
         slug: fileSlug,
         order: data.order ?? 0,
         icon: data.icon,
+        image: data.image, // Pass image from frontmatter
         type: 'file',
         tags: parseTags(data.tags),
         excerpt: extractExcerpt(content),

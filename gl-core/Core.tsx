@@ -116,18 +116,24 @@ export default function Core({ frontmatter, body = null }: TCore) {
         <Box sx={{ minHeight: '100vh' }}>
           <Header frontmatter={frontmatter} />
           <Grid container spacing={1}>
+            {isIndexPage && (
+              <Grid
+                size={{
+                  xs: 12,
+                }}
+              >
+                <Box sx={{ mx: 4, mb: 2 }}>
+                  <IndexNav />
+                </Box>
+              </Grid>
+            )}
+
             <Grid
               size={{
                 md: 8,
                 lg: 9,
               }}
             >
-              {isIndexPage && (
-                <Box sx={{ mx: 4, mt: 0 }}>
-                  <IndexNav />
-                </Box>
-              )}
-
               <Box sx={{ mt: isMobile ? 2 : 0 }}>
                 {frontmatter?.image && (
                   <Box sx={{ mx: 4, mt: 0 }}>
@@ -170,7 +176,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
               <Box sx={{ mb: '50px', px: isMobile ? 0.5 : 2 }}>
                 {isApp ? app : <RenderMarkdown>{body}</RenderMarkdown>}
-                {isMobile && getAside()}
               </Box>
             </Grid>
             {!isMobile && getAside()}

@@ -3,8 +3,14 @@
 import * as React from 'react';
 import { usePathname } from 'next/navigation';
 import navJSON from '../../../public/globalNav.json';
-import { Grid } from '@mui/material';
-import { Icon } from '../../../gl-core';
+import {
+  Grid,
+  Card,
+  CardActionArea,
+  CardContent,
+  Typography,
+  CardMedia,
+} from '@mui/material';
 
 function normalizeSlug(slug: string) {
   if (!slug) return '/';
@@ -26,23 +32,50 @@ export default function IndexNav() {
   const pathname = usePathname();
   const currentNode = findCurrentNavNode(pathname, navJSON[0]);
   const children = currentNode?.children || [];
+
   const displayItems = children.map((child: any) => ({
     title: child.title,
     slug: child.slug,
-    icon: child.icon,
+    description: child.description || '',
+    image: child.image || '', // can be empty if not present
   }));
+
+  console.log('children', children);
 
   return (
     <Grid container spacing={2}>
       {displayItems.map((item, index) => (
         <Grid
-          key={index}
           size={{
-            xs: 12,
-            md: 6,
+            md: 4,
           }}
+          key={index}
         >
-          <pre>{JSON.stringify(item, null, 2)}</pre>
+          <Card elevation={3} sx={{ height: '100%' }}>
+            <CardActionArea
+              component="a"
+              href={item.slug}
+              sx={{ height: '100%' }}
+            >
+              {item.image && (
+                <CardMedia
+                  component="img"
+                  height="140"
+                  image={item.image}
+                  alt={item.title}
+                  sx={{ objectFit: 'cover', borderBottom: '1px solid #eee' }}
+                />
+              )}
+              <CardContent>
+                <Typography variant="h6" component="div" gutterBottom>
+                  {item.title}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {item.description}
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
         </Grid>
       ))}
     </Grid>
