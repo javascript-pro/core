@@ -2,11 +2,12 @@
 
 import config from './config.json';
 import * as React from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation'; // updated import here
 import Image from 'next/image';
 import {
   CssBaseline,
   Container,
+  Paper,
   Box,
   Grid,
   Skeleton,
@@ -24,7 +25,6 @@ import {
   useThemeMode,
   toggleLoading,
   useDispatch,
-  IndexNav,
 } from '../gl-core';
 import { Flickr } from './cartridges/Flickr';
 import { CV } from './cartridges/CV';
@@ -48,26 +48,30 @@ export type TCore = {
 export default function Core({ frontmatter, body = null }: TCore) {
   let fullScreen = false;
   const pathname = usePathname();
+  const router = useRouter();
   const themeMode = useThemeMode();
   useVersionCheck();
   const isMobile = useIsMobile();
   const dispatch = useDispatch();
-  const isIndexPage = frontmatter?.isIndex === true;
 
-  // --- Run-once effect: Only triggers when Core mounts the first time ---
+  // Redirect /cv to /work/cv
   React.useEffect(() => {
-    // One-time startup logic goes here
-    // console.log('Core app booted');
-    // Example: analytics.init(); or fetchInitialData();
-  }, []);
+    if (pathname === '/cv') {
+      router.replace('/work/cv');
+    }
+    if (pathname === '/free/flickr') {
+      router.replace('/work/core/cartridges/flickr');
+    }
+    
+  }, [pathname, router]);
 
   // Reset loading on mount
   React.useEffect(() => {
     dispatch(toggleLoading(false));
   }, [dispatch]);
 
-  const isCV = pathname === '/cv';
-  const isFlickr = pathname === '/free/flickr';
+  const isCV = pathname === '/work/cv';
+  const isFlickr = pathname === '/work/core/cartridges/flickr';
   const isFallmanager = pathname.startsWith('/fallmanager');
   const isNewCartridge = pathname === '/cartridges/new-cartridge';
   const isApp = isCV || isFlickr || isFallmanager || isNewCartridge;
@@ -116,18 +120,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
         <Box sx={{ minHeight: '100vh' }}>
           <Header frontmatter={frontmatter} />
           <Grid container spacing={1}>
-            {isIndexPage && (
-              <Grid
-                size={{
-                  xs: 12,
-                }}
-              >
-                <Box sx={{ mx: 4, mb: 2 }}>
-                  <IndexNav />
-                </Box>
-              </Grid>
-            )}
-
             <Grid
               size={{
                 md: 8,
@@ -176,6 +168,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
               <Box sx={{ mb: '50px', px: isMobile ? 0.5 : 2 }}>
                 {isApp ? app : <RenderMarkdown>{body}</RenderMarkdown>}
+                {isMobile && getAside()}
               </Box>
             </Grid>
             {!isMobile && getAside()}

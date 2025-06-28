@@ -61,11 +61,11 @@
           "NextJS",
           "Headless CMS"
         ],
-        "excerpt": "|  | \n\nGoldlabel Core is always Free & Open Source as a public repo on . The apps we ship are real, run in production and are developed in public. The Core is Open Source and Free forever — giving you",
+        "excerpt": "Goldlabel Core is always Free & Open Source as a public repo on . The apps we ship are real, run in production and are developed in public. The Core is Open Source and Free forever — giving you static",
         "children": [
           {
             "title": "Free & Open Source",
-            "slug": "/free",
+            "slug": "/work/free",
             "order": 1,
             "icon": "flash",
             "image": "/png/default.png",
@@ -75,7 +75,7 @@
           {
             "title": "Curriculum Vitae",
             "description": "Match your Job to our CV with AI",
-            "slug": "/cv",
+            "slug": "/work/cv",
             "order": 2,
             "icon": "openai",
             "image": "/png/default.png",
@@ -92,7 +92,7 @@
             "children": [
               {
                 "title": "About C.V.",
-                "slug": "/about",
+                "slug": "/work/cv/about",
                 "order": 130,
                 "icon": "openai",
                 "image": "/png/default.png",
@@ -111,7 +111,7 @@
           },
           {
             "title": "Public API",
-            "slug": "/api",
+            "slug": "/work/api",
             "order": 10,
             "icon": "api",
             "image": "/png/default.png",
@@ -125,7 +125,7 @@
           {
             "title": "Goldlabel Apps Ltd",
             "description": "UK Limited Company (5460545)",
-            "slug": "/company",
+            "slug": "/work/company",
             "order": 10,
             "icon": "work",
             "image": "/png/default.png",
@@ -134,7 +134,7 @@
             "children": [
               {
                 "title": "Working remotely",
-                "slug": "/remote-working",
+                "slug": "/work/company/remote-working",
                 "order": 250,
                 "icon": "work",
                 "image": "/png/default.png",
@@ -147,7 +147,7 @@
               },
               {
                 "title": "Privacy & Cookies",
-                "slug": "/privacy-cookies",
+                "slug": "/work/company/privacy-cookies",
                 "order": 555,
                 "icon": "account",
                 "image": "/png/default.png",
@@ -166,7 +166,7 @@
           {
             "title": "Techstack",
             "description": "Protected by Bouncer",
-            "slug": "/techstack",
+            "slug": "/work/techstack",
             "order": 10,
             "icon": "techstack",
             "image": "/png/default.png",
@@ -179,7 +179,7 @@
               {
                 "title": "JavaScript",
                 "description": "JavaScript Whatever the Weather",
-                "slug": "/javascript",
+                "slug": "/work/techstack/javascript",
                 "order": 5,
                 "icon": "javascript",
                 "image": "/png/bluesky/javascript.png",
@@ -204,7 +204,7 @@
                 "children": [
                   {
                     "title": "Next.js",
-                    "slug": "/next-js",
+                    "slug": "/work/techstack/javascript/next-js",
                     "order": 15,
                     "icon": "javascript",
                     "image": "/png/bluesky/javascript.png",
@@ -221,7 +221,7 @@
                   },
                   {
                     "title": "REST API",
-                    "slug": "/rest-api",
+                    "slug": "/work/techstack/javascript/rest-api",
                     "order": 50,
                     "icon": "javascript",
                     "image": "/png/bluesky/javascript.png",
@@ -241,7 +241,7 @@
               {
                 "title": "Git",
                 "description": "Critical to our process",
-                "slug": "/git",
+                "slug": "/work/techstack/git",
                 "order": 25,
                 "icon": "github",
                 "image": "/png/bluesky/javascript.png",
@@ -255,7 +255,7 @@
                 "children": [
                   {
                     "title": "GitKraken",
-                    "slug": "/gitkraken",
+                    "slug": "/work/techstack/git/gitkraken",
                     "order": 30,
                     "icon": "github",
                     "image": "/png/gitkraken.png",
@@ -274,7 +274,7 @@
               {
                 "title": "Design System",
                 "description": "Based on Material",
-                "slug": "/design-sytem",
+                "slug": "/work/techstack/design-sytem",
                 "order": 101,
                 "icon": "design",
                 "image": "/png/bluesky/uberedux.png",
@@ -288,7 +288,7 @@
                 "children": [
                   {
                     "title": "MUI Toolpad",
-                    "slug": "/toolpad",
+                    "slug": "/work/techstack/design-sytem/toolpad",
                     "order": 20,
                     "icon": "design",
                     "image": "/png/default.png",
@@ -306,7 +306,7 @@
           },
           {
             "title": "Open Source",
-            "slug": "/open-source",
+            "slug": "/work/open-source",
             "order": 1000,
             "icon": "api",
             "image": "/png/default.png",
@@ -333,16 +333,16 @@
           {
             "title": "Food",
             "description": "Right sleep. Right food.",
-            "slug": "/food",
+            "slug": "/life/food",
             "order": 10,
             "icon": "food",
             "image": "/jpg/wei-zang/wei-zangs-food.jpg",
             "type": "folder",
-            "excerpt": "| \n\nWhen I want a recipe I go the internet of course. I get annoyed by the amount of adverts on the pages where I want to follow simple instructions.\n\nFor some recipes that I've tried & tested I've st",
+            "excerpt": "When I want a recipe I go the internet of course. I get annoyed by the amount of adverts on the pages where I want to follow simple instructions.\n\nFor some recipes that I've tried & tested I've stripp",
             "children": [
               {
                 "title": "Air Fried Stuffed Peppers",
-                "slug": "/air-fried-peppers",
+                "slug": "/life/food/air-fried-peppers",
                 "order": 35,
                 "icon": "food",
                 "image": "/jpg/wei-zang/wei-zangs-food.jpg",
@@ -358,7 +358,7 @@
               },
               {
                 "title": "Banana Bread",
-                "slug": "/banana-bread",
+                "slug": "/life/food/banana-bread",
                 "order": 50,
                 "icon": "food",
                 "image": "/jpg/wei-zang/wei-zangs-food.jpg",
@@ -367,7 +367,7 @@
               },
               {
                 "title": "Delia Smith's Lemon Meringue Pie",
-                "slug": "/lemon-meringue-pie",
+                "slug": "/life/food/lemon-meringue-pie",
                 "order": 76,
                 "icon": "food",
                 "image": "/jpg/food/lemon-meringue-pie.jpg",
@@ -379,7 +379,7 @@
           {
             "title": "Diving",
             "description": "Fish are friends. Not food.",
-            "slug": "/diving",
+            "slug": "/life/diving",
             "order": 100,
             "icon": "diving",
             "image": "/png/cartridges/diving.png",
@@ -388,7 +388,7 @@
             "children": [
               {
                 "title": "Why dive?",
-                "slug": "/why-dive",
+                "slug": "/life/diving/why-dive",
                 "order": 50,
                 "icon": "diving",
                 "image": "/png/cartridges/diving.png",
@@ -400,16 +400,16 @@
           {
             "title": "Aquaponics",
             "description": "Fish are food. Not friends.",
-            "slug": "/aquaponics",
+            "slug": "/life/aquaponics",
             "order": 200,
             "icon": "fish",
-            "image": "/png/cartridges/aquaponics.png",
+            "image": "/jpg/aquaponics/aquaponics.jpg",
             "type": "folder",
             "excerpt": "Aquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closedloop system.",
             "children": [
               {
                 "title": "Aquaponics 5 Ws",
-                "slug": "/overview",
+                "slug": "/life/aquaponics/overview",
                 "order": 50,
                 "icon": "fish",
                 "image": "/png/cartridges/aquaponics.png",
@@ -432,7 +432,7 @@
         "children": [
           {
             "title": "dog",
-            "slug": "/puppy-thing",
+            "slug": "/balance/puppy-thing",
             "order": 30,
             "icon": "dog",
             "image": "/jpg/blog/puppy-fing.jpg",
@@ -442,7 +442,7 @@
           {
             "title": "Books",
             "description": "It's hard to collate stuff into meaningful e-books, but we've done our best",
-            "slug": "/books",
+            "slug": "/balance/books",
             "order": 100,
             "icon": "balance",
             "image": "/jpg/products/speak-write.jpg",
@@ -451,7 +451,7 @@
             "children": [
               {
                 "title": "Wei Zang’s Food",
-                "slug": "/wei-zangs-food",
+                "slug": "/balance/books/wei-zangs-food",
                 "order": 11,
                 "icon": "food",
                 "image": "/jpg/wei-zang/wei-zangs-food.jpg",
@@ -461,7 +461,7 @@
               {
                 "title": "Generation X",
                 "description": "by Douglas Coupland",
-                "slug": "/generation-x",
+                "slug": "/balance/books/generation-x",
                 "order": 100,
                 "icon": "doc",
                 "image": "/jpg/gen-x/cassetes.jpg",
@@ -472,7 +472,7 @@
               {
                 "title": "Science Fiction",
                 "description": "and Speculative Fiction",
-                "slug": "/sci-fi",
+                "slug": "/balance/books/sci-fi",
                 "order": 120,
                 "icon": "folder",
                 "image": "/jpg/photos/einstein.jpg",
@@ -481,7 +481,7 @@
                 "children": [
                   {
                     "title": "Einstein",
-                    "slug": "/einstein",
+                    "slug": "/balance/books/sci-fi/einstein",
                     "order": 30,
                     "icon": "doc",
                     "image": "/jpg/photos/einstein.jpg",
@@ -490,7 +490,7 @@
                   },
                   {
                     "title": "General Relativity",
-                    "slug": "/relativity",
+                    "slug": "/balance/books/sci-fi/relativity",
                     "order": 30,
                     "icon": "doc",
                     "image": "/jpg/photos/einstein.jpg",
@@ -499,7 +499,7 @@
                   },
                   {
                     "title": "Charles Darwin",
-                    "slug": "/charles-darwin",
+                    "slug": "/balance/books/sci-fi/charles-darwin",
                     "order": 2000,
                     "icon": "doc",
                     "image": "/jpg/photos/darwin.jpg",
@@ -510,7 +510,7 @@
               },
               {
                 "title": "Weekend Portfolio",
-                "slug": "/weekend-portfolio",
+                "slug": "/balance/books/weekend-portfolio",
                 "order": 160,
                 "icon": "speak-write",
                 "image": "/jpg/products/speak-write.jpg",

@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import navJSON from '../../../public/globalNav.json';
 import {
   Grid,
@@ -11,6 +11,7 @@ import {
   Typography,
   CardMedia,
 } from '@mui/material';
+import { useDispatch, routeTo } from '../../../gl-core';
 
 function normalizeSlug(slug: string) {
   if (!slug) return '/';
@@ -29,6 +30,8 @@ function findCurrentNavNode(pathname: string, node: any): any | null {
 }
 
 export default function IndexNav() {
+  const router = useRouter();
+  const dispatch = useDispatch();
   const pathname = usePathname();
   const currentNode = findCurrentNavNode(pathname, navJSON[0]);
   const children = currentNode?.children || [];
@@ -40,44 +43,51 @@ export default function IndexNav() {
     image: child.image || '', // can be empty if not present
   }));
 
-  console.log('children', children);
+  const handleClick = (slug: string) => {
+    dispatch(routeTo(slug, router));
+  };
 
   return (
     <Grid container spacing={2}>
-      {displayItems.map((item, index) => (
-        <Grid
-          size={{
-            md: 4,
-          }}
-          key={index}
-        >
-          <Card elevation={3} sx={{ height: '100%' }}>
-            <CardActionArea
-              component="a"
-              href={item.slug}
-              sx={{ height: '100%' }}
-            >
-              {item.image && (
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image={item.image}
-                  alt={item.title}
-                  sx={{ objectFit: 'cover', borderBottom: '1px solid #eee' }}
-                />
-              )}
-              <CardContent>
-                <Typography variant="h6" component="div" gutterBottom>
-                  {item.title}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {item.description}
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-        </Grid>
-      ))}
+      {displayItems.map((item, index) => {
+        console.log('item', item);
+        return (
+          <Grid
+            size={{
+              md: 4,
+            }}
+            key={index}
+          >
+            <Card elevation={3} sx={{ height: '100%' }}>
+              <CardActionArea
+                component="a"
+                onClick={() => {
+                  handleClick(item.slug);
+                }}
+                sx={{ height: '100%' }}
+              >
+                {item.image && (
+                  <CardMedia
+                    component="img"
+                    height="140"
+                    image={item.image}
+                    alt={item.title}
+                    sx={{ objectFit: 'cover', borderBottom: '1px solid #eee' }}
+                  />
+                )}
+                <CardContent>
+                  <Typography variant="h6" component="div" gutterBottom>
+                    {item.title}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {item.description}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Grid>
+        );
+      })}
     </Grid>
   );
 }
