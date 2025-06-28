@@ -10,6 +10,7 @@ import {
   Tooltip,
 } from '@mui/material';
 import { Icon, useIsMobile, TopRightMenu } from '../../../gl-core';
+import { Lingua } from '../../cartridges/Lingua';
 
 export type THeader = {
   frontmatter?: any;
@@ -53,7 +54,12 @@ export default function Header({ frontmatter = null }: THeader) {
             </Typography>
           )
         }
-        action={<TopRightMenu frontmatter={frontmatter} />}
+        action={
+          <Box sx={{ display: 'flex' }}>
+            <Lingua />
+            <TopRightMenu frontmatter={frontmatter} />
+          </Box>
+        }
       />
     </>
   );

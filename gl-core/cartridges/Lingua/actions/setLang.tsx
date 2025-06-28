@@ -1,18 +1,18 @@
-// core/gl-core/cartridges/SelectLang/actions/updateKey.tsx
+// core/gl-core/cartridges/Lingua/actions/setLang.tsx
 
 import { TUbereduxDispatch } from '../../../../gl-core/types';
 import { setUbereduxKey } from '../../../';
 
-export const updateKey =
-  (key: string, value: any): any =>
+export const setLang =
+  (lang: string): any =>
   async (dispatch: TUbereduxDispatch, getState: () => any) => {
     try {
       const current = getState().redux.lingua;
       const updated = {
         ...current,
-        [key]: value,
+        lang
       };
-      dispatch(setUbereduxKey({ key: 'newcartridge', value: updated }));
+      dispatch(setUbereduxKey({ key: 'lingua', value: updated }));
     } catch (e: unknown) {
       const msg = e instanceof Error ? e.message : String(e);
       dispatch(setUbereduxKey({ key: 'error', value: msg }));
