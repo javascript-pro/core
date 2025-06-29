@@ -56,7 +56,7 @@ export default function Header({ frontmatter = null }: THeader) {
         }
         action={
           <Box sx={{ display: 'flex' }}>
-            <Lingua />
+            {/* <Lingua /> */}
             <TopRightMenu frontmatter={frontmatter} />
           </Box>
         }

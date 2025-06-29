@@ -10,7 +10,7 @@ export const setLang =
       const current = getState().redux.lingua;
       const updated = {
         ...current,
-        lang
+        lang,
       };
       dispatch(setUbereduxKey({ key: 'lingua', value: updated }));
     } catch (e: unknown) {

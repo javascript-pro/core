@@ -1,7 +1,14 @@
 'use client';
 
 import * as React from 'react';
-import { Box, MenuItem, Select, ListItemIcon, ListItemText, SelectChangeEvent } from '@mui/material';
+import {
+  Box,
+  MenuItem,
+  Select,
+  ListItemIcon,
+  ListItemText,
+  SelectChangeEvent,
+} from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import { setLang } from '../../Lingua/actions/setLang';
 
@@ -45,7 +52,12 @@ export default function SelectLang() {
               <img
                 src={`/svg/flags/${selected}.svg`}
                 alt={lang?.default || (selected as string)}
-                style={{ width: 24, height: 16, marginRight: 8, objectFit: 'contain' }}
+                style={{
+                  width: 24,
+                  height: 16,
+                  marginRight: 8,
+                  objectFit: 'contain',
+                }}
               />
               {lang?.default || (selected as string)}
             </Box>
