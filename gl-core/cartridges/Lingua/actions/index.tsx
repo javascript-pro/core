@@ -1,4 +1,4 @@
-// core/gl-core/cartridges/NewCartridge/actions/index.tsx
-import { updateKey } from './updateKey';
+// core/gl-core/cartridges/Lingua/actions/setLang.tsx
+import { setLang } from './setLang';
 
-export { updateKey };
+export { setLang };

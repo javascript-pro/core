@@ -62,7 +62,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
     if (pathname === '/free/flickr') {
       router.replace('/work/core/cartridges/flickr');
     }
-    
   }, [pathname, router]);
 
   // Reset loading on mount
