@@ -7,7 +7,11 @@ import {
   adminStorage,
 } from '../../../../../gl-core/lib/firebaseAdmin';
 import { v4 as uuidv4 } from 'uuid';
-import { getDocument, GlobalWorkerOptions, PDFWorker } from 'pdfjs-dist/build/pdf.js';
+import {
+  getDocument,
+  GlobalWorkerOptions,
+  PDFWorker,
+} from 'pdfjs-dist/build/pdf.js';
 import { createCanvas } from 'canvas';
 
 // --- PATCH: force fake worker, never try to require worker file ---
