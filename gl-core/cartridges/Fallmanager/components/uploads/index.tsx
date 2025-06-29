@@ -4,4 +4,13 @@ import UploadList from './UploadList';
 import UploadNew from './UploadNew';
 import UploadEdit from './UploadEdit';
 import UploadField from './UploadField';
-export { Uploads, UploadList, UploadNew, UploadEdit, UploadField };
+import UploadHandler from './UploadHandler';
+
+export {
+  Uploads,
+  UploadList,
+  UploadNew,
+  UploadEdit,
+  UploadField,
+  UploadHandler,
+};

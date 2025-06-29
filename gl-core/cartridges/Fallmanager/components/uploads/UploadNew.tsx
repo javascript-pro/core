@@ -2,7 +2,7 @@
 'use client';
 import * as React from 'react';
 import { Box } from '@mui/material';
-import config from '../../data/config.json';
+import config from '../../config.json';
 import { useDispatch, uploadToStorage } from '../../../../../gl-core';
 import { UploadField } from '../../../Fallmanager';
 

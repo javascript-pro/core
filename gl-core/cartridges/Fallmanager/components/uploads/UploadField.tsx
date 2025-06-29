@@ -13,9 +13,9 @@ export type TUploadField = {
 };
 
 export default function UploadField({
-  id = 'file-upload',
-  label = 'Choose File',
-  accept = '.pdf,.docx,.odt,.doc,.jpg,.jpeg,.png,.json,.txt,.rtf,.md,.jpeg,',
+  id = 'new-upload',
+  label = 'Upload new file',
+  accept = '.pdf',
   multiple = false,
   onSelect,
 }: TUploadField) {
@@ -47,9 +47,9 @@ export default function UploadField({
       <CustomButton
         mode="button"
         label={label}
-        variant="outlined"
+        variant="contained"
         onClick={handleClick}
-        icon="new"
+        icon="upload"
       />
     </>
   );

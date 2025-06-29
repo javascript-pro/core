@@ -1,64 +1,44 @@
 'use client';
 
 import * as React from 'react';
-import config from './data/config.json';
-import { AppBar, CssBaseline, Paper } from '@mui/material';
+import config from './config.json';
+import { Box, Container, AppBar, CssBaseline, Paper } from '@mui/material';
 import { Theme } from '../../../gl-core';
-import {
-  StickyHeader,
-  Uploads,
-  UploadEdit,
-  Dashboard,
-  CaseDetail,
-} from '../Fallmanager';
+import { useFallmanager, StickyHeader, UploadHandler } from '../Fallmanager';
 import { usePathname } from 'next/navigation';
 
 export default function Fallmanager() {
   const pathname = usePathname();
-
-  let view: React.ReactNode = null;
-
-  if (pathname === '/fallmanager') {
-    view = <Dashboard />;
-  } else if (pathname === '/fallmanager/uploads') {
-    view = <Uploads />;
-  } else if (pathname.startsWith('/fallmanager/uploads/')) {
-    const slug = pathname.split('/').pop() || '';
-    view = <UploadEdit slug={slug} />;
-  } else if (pathname.startsWith('/fallmanager/cases/')) {
-    const id = pathname.split('/').pop() || '';
-    view = <CaseDetail id={id} />;
-  } else {
-    view = <Dashboard />; // fallback
-  }
-
+  const slice = useFallmanager();
   return (
     <Theme theme={config.theme as any}>
       <CssBaseline />
-      <AppBar
-        position="sticky"
-        color="default"
-        elevation={1}
-        sx={{
-          boxShadow: 0,
-          background: 'white',
-          pb: 1,
-        }}
-      >
-        <StickyHeader />
-      </AppBar>
+      <Container maxWidth="md">
+        <AppBar
+          position="sticky"
+          color="default"
+          elevation={1}
+          sx={{
+            boxShadow: 0,
+            background: 'white',
+            pb: 1,
+          }}
+        >
+          <StickyHeader />
+        </AppBar>
 
-      <Paper
-        square
-        sx={{
-          minHeight: '100vh',
-          display: 'flex',
-          flexDirection: 'column',
-          padding: 2,
-        }}
-      >
-        {view}
-      </Paper>
+        <Box
+          sx={{
+            minHeight: '100vh',
+            display: 'flex',
+            flexDirection: 'column',
+            mx: 4,
+          }}
+        >
+          <UploadHandler />
+          {/* <pre>slice: {JSON.stringify(slice, null, 2)}</pre> */}
+        </Box>
+      </Container>
     </Theme>
   );
 }

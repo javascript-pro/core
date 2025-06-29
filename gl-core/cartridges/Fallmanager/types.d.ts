@@ -1,11 +1,8 @@
 // core/gl-core/cartridges/Fallmanager/types.d.ts
 
 export type TFallmanagerState = {
-  cartridge: string;
-  screen?: 'upload' | 'read';
-  lingua?: any;
-  fileTypes?: TFileType[];
-  newCaseOpen: boolean;
+  lang: string;
+  lingua: any;
 };
 
 export type TFileType = {

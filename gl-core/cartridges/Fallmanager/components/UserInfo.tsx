@@ -55,7 +55,7 @@ export default function UserInfo() {
     dispatch(resetUberedux());
     setTimeout(() => {
       window.location.reload();
-    }, 500);
+    }, 250);
   };
 
   const handleHome = () => {
@@ -92,13 +92,13 @@ export default function UserInfo() {
           horizontal: 'left',
         }}
       >
-        <Box sx={{ width: 175 }} />
+        <Box sx={{ width: 185 }} />
 
         <MenuItem onClick={handleHome} sx={{ mt: 1 }}>
           <ListItemIcon>
             <Icon icon="home" />
           </ListItemIcon>
-          <ListItemText primary="Home" />
+          <ListItemText primary="Goldlabel Home" />
         </MenuItem>
         <MenuItem
           sx={{ my: 2 }}
@@ -107,20 +107,16 @@ export default function UserInfo() {
           }}
         >
           <ListItemIcon>
-            <Icon icon="fallmanager" />
+            <Icon icon="reset" />
           </ListItemIcon>
-          <ListItemText primary="Factory settings" />
-        </MenuItem>
-
-        <MenuItem sx={{ my: 2 }} onClick={() => {}}>
-          <ListItemText primary="Language" secondary={user?.lang} />
+          <ListItemText primary="Reset" />
         </MenuItem>
 
         <MenuItem onClick={handleSignout}>
           <ListItemIcon>
             <Icon icon="signout" />
           </ListItemIcon>
-          <ListItemText primary="Sign out" />
+          <ListItemText primary="Sign Out" />
         </MenuItem>
 
         {/* You can add more MenuItem components here */}

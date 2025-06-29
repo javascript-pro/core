@@ -1,0 +1,19 @@
+{
+  "title": "Fallmanager",
+  "langs": {
+    "en": {
+      "title": "English",
+      "description": "Switch to English"
+    },
+    "de": {
+      "title": "Deutsch",
+      "description": "Wechseln Sie zu Deutsch"
+    }
+  },
+  "keys": {
+    ":new_upload:": {
+      "en": "Upload New File",
+      "de": "Fälle"
+    }
+  }
+}

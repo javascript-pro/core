@@ -1,5 +1,3 @@
-// core/gl-core/lib/firebaseAdmin.ts
-
 import {
   initializeApp,
   getApps,
@@ -7,11 +5,11 @@ import {
   applicationDefault,
 } from 'firebase-admin/app';
 import { getFirestore } from 'firebase-admin/firestore';
+import { getStorage } from 'firebase-admin/storage';
 
 let credential;
 
 if (process.env.FIREBASE_SERVICE_ACCOUNT_BASE64) {
-  // Decode base64 and parse JSON
   const serviceAccount = JSON.parse(
     Buffer.from(process.env.FIREBASE_SERVICE_ACCOUNT_BASE64, 'base64').toString(
       'utf-8',
@@ -19,13 +17,19 @@ if (process.env.FIREBASE_SERVICE_ACCOUNT_BASE64) {
   );
   credential = cert(serviceAccount);
 } else if (process.env.FIREBASE_SERVICE_ACCOUNT) {
-  // Parse direct JSON string (for compatibility)
   credential = cert(JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT));
 } else {
-  // Fall back to GCP Application Default Credentials if available
   credential = applicationDefault();
 }
 
-const app = getApps().length ? getApps()[0] : initializeApp({ credential });
+const storageBucket = process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET;
+
+const app = getApps().length
+  ? getApps()[0]
+  : initializeApp({
+      credential,
+      storageBucket, // <------ Specify the bucket name here!
+    });
 
 export const adminDb = getFirestore(app);
+export const adminStorage = getStorage(app);

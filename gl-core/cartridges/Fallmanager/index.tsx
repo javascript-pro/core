@@ -30,11 +30,19 @@ import {
   UploadList,
   UploadEdit,
   UploadField,
+  UploadHandler,
 } from './components/uploads';
 import { getIconByExtension, formatFileSize } from './lib';
 export { initialStateFallmanager };
 export { getIconByExtension, formatFileSize };
-export { Uploads, UploadNew, UploadList, UploadEdit, UploadField };
+export {
+  Uploads,
+  UploadNew,
+  UploadList,
+  UploadEdit,
+  UploadField,
+  UploadHandler,
+};
 export {
   Fallmanager,
   InputTextField,

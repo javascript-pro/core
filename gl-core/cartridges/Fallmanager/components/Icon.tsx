@@ -20,7 +20,7 @@ import CloseIcon from '@mui/icons-material/CloseOutlined';
 import LinkIcon from '@mui/icons-material/LinkOutlined';
 import CopyIcon from '@mui/icons-material/CopyAllOutlined';
 import LeftIcon from '@mui/icons-material/ArrowBack';
-import UploadIcon from '@mui/icons-material/InsertDriveFile';
+import UploadIcon from '@mui/icons-material/Publish';
 import SignoutIcon from '@mui/icons-material/ExitToApp';
 import RipIcon from '@mui/icons-material/TextRotateVertical';
 import CaseIcon from '@mui/icons-material/WorkOutlined';
@@ -29,8 +29,11 @@ import NewIcon from '@mui/icons-material/AddOutlined';
 import ClientIcon from '@mui/icons-material/Person';
 import EditIcon from '@mui/icons-material/EditOutlined';
 import CheckIcon from '@mui/icons-material/CheckOutlined';
+import ResetIcon from '@mui/icons-material/RotateLeft';
+
 export type TIconNames =
   | 'home'
+  | 'reset'
   | 'client'
   | 'check'
   | 'edit'
@@ -172,6 +175,9 @@ export default function Icon({ icon, color }: TIcon) {
       break;
     case 'dog':
       iconFragment = <DogIcon color={color} />;
+      break;
+    case 'reset':
+      iconFragment = <ResetIcon color={color} />;
       break;
     default:
       iconFragment = <ErrorIcon color={'error'} />;
