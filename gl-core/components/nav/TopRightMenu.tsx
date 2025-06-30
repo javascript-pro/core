@@ -97,38 +97,6 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           </Box>
         </Collapse>
 
-        {/* Clients Menu */}
-        <MenuItem
-          sx={{ my: 2 }}
-          onClick={(e) => {
-            e.stopPropagation();
-            e.preventDefault();
-            setClientsOpen((prev) => !prev);
-          }}
-        >
-          <ListItemIcon>
-            <Icon icon="clients" />
-          </ListItemIcon>
-          <ListItemText primary="Clients" />
-        </MenuItem>
-
-        <Collapse in={clientsOpen} timeout="auto" unmountOnExit>
-          <Box sx={{ px: 2, pt: 1 }}>
-            <MenuItem
-              onClick={(e) => {
-                e.stopPropagation();
-                e.preventDefault();
-                dispatch(routeTo('/fallmanager', router));
-              }}
-            >
-              <ListItemIcon>
-                <Icon icon="bouncer" />
-              </ListItemIcon>
-              <ListItemText primary="Fallmanager" />
-            </MenuItem>
-          </Box>
-        </Collapse>
-
         {/* Factory Reset */}
         <MenuItem
           sx={{ my: 2 }}

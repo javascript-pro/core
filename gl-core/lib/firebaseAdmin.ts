@@ -1,3 +1,4 @@
+import * as admin from 'firebase-admin';
 import {
   initializeApp,
   getApps,
@@ -28,8 +29,9 @@ const app = getApps().length
   ? getApps()[0]
   : initializeApp({
       credential,
-      storageBucket, // <------ Specify the bucket name here!
+      storageBucket,
     });
 
 export const adminDb = getFirestore(app);
 export const adminStorage = getStorage(app);
+export { admin }; // 👈 Export full admin namespace
