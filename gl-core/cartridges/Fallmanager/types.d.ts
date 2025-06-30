@@ -1,7 +1,7 @@
 // core/gl-core/cartridges/Fallmanager/types.d.ts
 
 export type TFallmanagerState = {
-  currentLang: TLanguageCode;
+  language: TLanguageCode;
   languages: Record<TLanguageCode, TLanguageEntry>;
   theme: TTheme;
 };
@@ -22,4 +22,3 @@ export type TTheme = {
   text: string;
   border: string;
 };
-
