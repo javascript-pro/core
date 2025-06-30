@@ -80,7 +80,14 @@
             "icon": "openai",
             "image": "/png/default.png",
             "type": "folder",
-            "tags": ["CV", "jobs", "work", "resume", "AI", "OpenAI"],
+            "tags": [
+              "CV",
+              "jobs",
+              "work",
+              "resume",
+              "AI",
+              "OpenAI"
+            ],
             "excerpt": "Fullstack JavaScript Developer\n\nOver 20 years of experience delivering scalable web applications across startups, enterprises, and remotefirst teams in the UK, Europe, and Australia and beyond. Deep e",
             "children": [
               {
@@ -90,7 +97,14 @@
                 "icon": "openai",
                 "image": "/png/default.png",
                 "type": "file",
-                "tags": ["CV", "jobs", "work", "resume", "AI", "OpenAI"],
+                "tags": [
+                  "CV",
+                  "jobs",
+                  "work",
+                  "resume",
+                  "AI",
+                  "OpenAI"
+                ],
                 "excerpt": "Applying for jobs can be time consuming\n\nEach role requires tailoring a cover letter or rewording a CV to match a job description. As developers, we know the real problem isn’t effort — it’s clarity. "
               }
             ]
@@ -102,7 +116,10 @@
             "icon": "api",
             "image": "/png/default.png",
             "type": "file",
-            "tags": ["free", "api"],
+            "tags": [
+              "free",
+              "api"
+            ],
             "excerpt": "Goldlabel Public API\n\n glapi/flickr endpoints"
           },
           {
@@ -122,7 +139,10 @@
                 "icon": "work",
                 "image": "/png/default.png",
                 "type": "file",
-                "tags": ["remote", "hybrid"],
+                "tags": [
+                  "remote",
+                  "hybrid"
+                ],
                 "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years.\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communication, "
               },
               {
@@ -132,7 +152,13 @@
                 "icon": "account",
                 "image": "/png/default.png",
                 "type": "file",
-                "tags": ["cookies", "gdpr", "privacy", "terms", "trust"],
+                "tags": [
+                  "cookies",
+                  "gdpr",
+                  "privacy",
+                  "terms",
+                  "trust"
+                ],
                 "excerpt": "We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers t"
               }
             ]
@@ -145,7 +171,9 @@
             "icon": "techstack",
             "image": "/png/default.png",
             "type": "folder",
-            "tags": ["techstack"],
+            "tags": [
+              "techstack"
+            ],
             "excerpt": "This page may require a higher level of access",
             "children": [
               {
@@ -218,7 +246,11 @@
                 "icon": "github",
                 "image": "/png/bluesky/javascript.png",
                 "type": "folder",
-                "tags": ["github", "process", "javascript"],
+                "tags": [
+                  "github",
+                  "process",
+                  "javascript"
+                ],
                 "excerpt": "We use GitHub for everything. Including . Most of the communication done between us and our clients during development is done through GitHub in the form of comments, pull resuests, reviews and so for",
                 "children": [
                   {
@@ -247,7 +279,11 @@
                 "icon": "design",
                 "image": "/png/bluesky/uberedux.png",
                 "type": "folder",
-                "tags": ["github", "process", "design"],
+                "tags": [
+                  "github",
+                  "process",
+                  "design"
+                ],
                 "excerpt": "What is a Design System?\n\nA Design System is a collection of reusable components, standards, and guidelines that define how a product looks and behaves. It includes UI elements like buttons, forms, an",
                 "children": [
                   {
@@ -257,7 +293,11 @@
                     "icon": "design",
                     "image": "/png/default.png",
                     "type": "file",
-                    "tags": ["techstack", "Design", "MUI"],
+                    "tags": [
+                      "techstack",
+                      "Design",
+                      "MUI"
+                    ],
                     "excerpt": "MUI Toolpad is a lowcode builder for internal tools. It runs as part of your Next.js project and gives you a draganddrop environment to create Reactbased dashboards powered by live data. We’re using T"
                   }
                 ]
@@ -271,7 +311,11 @@
             "icon": "api",
             "image": "/png/default.png",
             "type": "file",
-            "tags": ["free", "opensource", "work"],
+            "tags": [
+              "free",
+              "opensource",
+              "work"
+            ],
             "excerpt": "Why We Open Source\n\nWe’ve been building JavaScript applications for over 20 years. In that time, we’ve seen tools come and go. Trends rise, crash, and return again under a different name.\n\nWhat’s rema"
           }
         ]
