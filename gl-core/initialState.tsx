@@ -4,8 +4,10 @@ import { initialStateCV } from './cartridges/CV';
 import { initialStateFlickr } from './cartridges/Flickr';
 import { initialStateLingua } from './cartridges/Lingua';
 import { initialStateBouncer } from './cartridges/Bouncer';
+import { initialStateFallmanager } from './cartridges/Fallmanager';
 
 export const initialState: any = {
+  fallmanager: initialStateFallmanager,
   bouncer: initialStateBouncer,
   cv: initialStateCV,
   flickr: initialStateFlickr,

@@ -2,7 +2,7 @@
 import { TFallmanagerState } from './types';
 
 export const initialState: TFallmanagerState = {
-  currentLang: 'de',
+  language: 'de',
   languages: {
     en: {
       title: 'English',

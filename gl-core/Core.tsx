@@ -7,7 +7,6 @@ import Image from 'next/image';
 import {
   CssBaseline,
   Container,
-  Paper,
   Box,
   Grid,
   Skeleton,
@@ -26,6 +25,7 @@ import {
   toggleLoading,
   useDispatch,
 } from '../gl-core';
+import { Fallmanager } from './cartridges/Fallmanager';
 import { Flickr } from './cartridges/Flickr';
 import { CV } from './cartridges/CV';
 import { Bouncer } from './cartridges/Bouncer';
@@ -70,13 +70,22 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
   const isCV = pathname === '/work/cv';
   const isFlickr = pathname === '/work/core/cartridges/flickr';
-  const isNewCartridge = pathname === '/cartridges/new-cartridge';
-  const isApp = isCV || isFlickr || isNewCartridge;
+  const isFallmanager = pathname.startsWith('/fallmanager');
+  const isApp = isCV || isFlickr || isFallmanager;
 
   const [imageError, setImageError] = React.useState(false);
 
   let app = <></>;
   switch (true) {
+    case isFallmanager:
+      fullScreen = true;
+      app = (
+        <Bouncer>
+          <IncludeAll />
+          <Fallmanager />
+        </Bouncer>
+      );
+      break;
     case isCV:
       app = <CV mode="app" markdown={body} />;
       break;
