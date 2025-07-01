@@ -2,6 +2,7 @@
 import { TFallmanagerState } from './types';
 
 export const initialState: TFallmanagerState = {
+  aktuellerFall: null,
   language: 'de',
   languages: {
     en: {
@@ -11,6 +12,12 @@ export const initialState: TFallmanagerState = {
     de: {
       title: 'Deutsch',
       description: 'Wechseln Sie zu Deutsch',
+    },
+  },
+  translations: {
+    caseList: {
+      en: 'Cases',
+      de: 'Fälle',
     },
   },
   theme: {
