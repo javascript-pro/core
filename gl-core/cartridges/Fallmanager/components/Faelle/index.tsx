@@ -3,8 +3,4 @@ import Faelle from './Faelle';
 import Fall from './Fall';
 import Fallliste from './Fallliste';
 
-export {
-    Faelle,
-    Fall,
-    Fallliste,
-};
+export { Faelle, Fall, Fallliste };

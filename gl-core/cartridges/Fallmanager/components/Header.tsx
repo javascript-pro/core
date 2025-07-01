@@ -2,30 +2,30 @@
 'use client';
 
 import * as React from 'react';
-import { useRouter } from 'next/navigation';
-import Image from 'next/image';
+import { useRouter, usePathname } from 'next/navigation';
 import {
   AppBar,
   CardHeader,
-  ButtonBase,
   IconButton,
   Box,
+  Typography,
+  useTheme,
 } from '@mui/material';
-import { useDispatch, resetUberedux, Icon } from '../../../../gl-core';
-import { Sprachauswahl } from '../../Fallmanager';
+import { useDispatch, Icon } from '../../../../gl-core';
+import { Sprachauswahl, zuruecksetzen, useTranslation } from '../../Fallmanager';
 
-export default function StickyHeader() {
+export default function Header() {
   const router = useRouter();
+  const pathname = usePathname();
   const dispatch = useDispatch();
+  const t = useTranslation();
+  const theme = useTheme();
 
-  const handleLogoClick = () => {
-    window.open('/fallmanager', '_self');
+  const handleHome = () => {
+    dispatch(zuruecksetzen());
   };
 
-  const handleReset = () => {
-    dispatch(resetUberedux());
-    window.open('/fallmanager', '_self');
-  };
+  const title = pathname === '/fallmanager' ? t('caseList') : t('caseEdit');
 
   return (
     <AppBar
@@ -34,31 +34,21 @@ export default function StickyHeader() {
       elevation={1}
       sx={{
         boxShadow: 0,
-        background: 'white',
-        pb: 1,
+        backgroundColor: theme.palette.background.default,
       }}
     >
       <CardHeader
+        title={
+          <Typography variant="h6">
+            {title}
+          </Typography>
+        }
         avatar={
-          <ButtonBase onClick={handleLogoClick} sx={{ p: 0 }}>
-            <Image
-              priority
-              src="/_clients_/fallmanager/jpg/logo.jpg"
-              alt="Fallmanager Logo"
-              width={236}
-              height={60}
-              style={{ borderRadius: '4px' }}
-            />
-          </ButtonBase>
+          <IconButton onClick={handleHome} size="small">
+            <Icon icon="home" />
+          </IconButton>
         }
-        action={
-          <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
-            <Sprachauswahl />
-            <IconButton onClick={handleReset} size="small" sx={{ mt: 1 }}>
-              <Icon icon="reset" />
-            </IconButton>
-          </Box>
-        }
+        action={<Sprachauswahl />}
       />
     </AppBar>
   );
