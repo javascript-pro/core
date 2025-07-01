@@ -4,8 +4,7 @@ import { setUbereduxKey } from '../../../../gl-core';
 import { initialStateFallmanager } from '../../Fallmanager';
 
 export const zuruecksetzen =
-  (): any =>
-  async (dispatch: TUbereduxDispatch, getState: () => any) => {
+  (): any => async (dispatch: TUbereduxDispatch, getState: () => any) => {
     try {
       const language = getState().redux.fallmanager.language;
 
@@ -16,7 +15,7 @@ export const zuruecksetzen =
             ...initialStateFallmanager,
             language,
           },
-        })
+        }),
       );
     } catch (e: unknown) {
       const msg = e instanceof Error ? e.message : String(e);

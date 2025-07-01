@@ -3,14 +3,13 @@ import { initialState as initialStateFallmanager } from './initialState';
 import { useFallmanagerSlice, useTranslation } from './hooks';
 import { setzeSprache, setzeAktuellerFall, zuruecksetzen } from './actions';
 import {
-  Header,
-  Sprachauswahl,
-  Dateiliste,
-  Hochladen,
-  Fallliste,
+  BearbeitbarText,
+  Datei,
   Faelle,
   Fall,
-  BearbeitbarText,
+  Fallliste,
+  Header,
+  Sprachauswahl,
 } from './components';
 
 export {
@@ -24,12 +23,11 @@ export {
 };
 
 export {
-  Header,
-  Sprachauswahl,
-  Dateiliste,
-  Hochladen,
-  Fallliste,
+  BearbeitbarText,
+  Datei,
   Faelle,
   Fall,
-  BearbeitbarText,
+  Fallliste,
+  Header,
+  Sprachauswahl,
 };

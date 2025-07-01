@@ -1,17 +1,29 @@
 // core/app/api/gl-api/fallmanager/hochladen/route.ts
 export const runtime = 'nodejs';
+
+import { v4 as uuidv4 } from 'uuid';
+import { NextRequest, NextResponse } from 'next/server';
 import {
   adminDb,
   adminStorage,
   admin,
 } from '../../../../../gl-core/lib/firebaseAdmin';
-import { NextRequest, NextResponse } from 'next/server';
-import { v4 as uuidv4 } from 'uuid';
+
+const ALLOWED_EXTENSIONS = ['pdf'];
 
 export async function POST(req: NextRequest) {
   try {
     const formData = await req.formData();
     const file = formData.get('file');
+    const fallId = formData.get('fallId');
+
+    if (typeof fallId !== 'string' || !fallId.trim()) {
+      return NextResponse.json(
+        { error: 'Fall-ID fehlt oder ist ungültig' },
+        { status: 400 },
+      );
+    }
+
     if (!(file instanceof File)) {
       return NextResponse.json(
         { error: 'Keine Datei hochgeladen' },
@@ -20,9 +32,13 @@ export async function POST(req: NextRequest) {
     }
 
     const extension = file.name.split('.').pop()?.toLowerCase() || '';
-    if (extension !== 'pdf') {
+    const mimeType = file.type || 'application/octet-stream';
+
+    if (!ALLOWED_EXTENSIONS.includes(extension)) {
       return NextResponse.json(
-        { error: 'Only PDF files are allowed' },
+        {
+          error: `Nur folgende Dateitypen sind erlaubt: ${ALLOWED_EXTENSIONS.join(', ')}`,
+        },
         { status: 400 },
       );
     }
@@ -31,11 +47,11 @@ export async function POST(req: NextRequest) {
     const buffer = Buffer.from(arrayBuffer);
 
     const fileId = uuidv4();
-    const storagePath = `fallmanager/${fileId}.${extension}`;
+    const storagePath = `fallmanager/${fallId}/${fileId}.${extension}`;
     const bucket = adminStorage.bucket();
 
     await bucket.file(storagePath).save(buffer, {
-      contentType: file.type || 'application/pdf',
+      contentType: mimeType,
     });
 
     const [downloadUrl] = await bucket.file(storagePath).getSignedUrl({
@@ -43,17 +59,24 @@ export async function POST(req: NextRequest) {
       expires: Date.now() + 6 * 3600 * 1000, // 6 hours
     });
 
-    await adminDb.collection('fallmanager_pdf').doc(fileId).set({
+    const fileData = {
       fileId,
       fileName: file.name,
       fileSize: file.size,
-      mimeType: file.type,
+      mimeType,
       extension,
       storagePath,
       downloadUrl,
       status: 'uploaded',
       createdAt: admin.firestore.Timestamp.now(),
-    });
+    };
+
+    await adminDb
+      .collection('fallmanager')
+      .doc(fallId)
+      .update({
+        dateien: admin.firestore.FieldValue.arrayUnion(fileData),
+      });
 
     return NextResponse.json({
       ok: true,
@@ -62,8 +85,9 @@ export async function POST(req: NextRequest) {
       downloadUrl,
     });
   } catch (err: any) {
+    console.error('Fehler beim Datei-Upload:', err);
     return NextResponse.json(
-      { error: err.message || String(err) },
+      { error: err.message || 'Unbekannter Fehler beim Hochladen' },
       { status: 500 },
     );
   }
