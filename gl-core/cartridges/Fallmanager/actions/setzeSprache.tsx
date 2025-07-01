@@ -1,9 +1,9 @@
-// core/gl-core/cartridges/Lingua/actions/setLanguage.tsx
+// core/gl-core/cartridges/Fallmanager/actions/setzeSprache.tsx
 import { TUbereduxDispatch } from '../../../../gl-core/types';
 import { TLanguageCode } from '../types';
-import { setUbereduxKey } from '../../../';
+import { setUbereduxKey } from '../../../../gl-core';
 
-export const setLanguage =
+export const setzeSprache =
   (language: TLanguageCode): any =>
   async (dispatch: TUbereduxDispatch, getState: () => any) => {
     try {

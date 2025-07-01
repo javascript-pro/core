@@ -1,11 +1,13 @@
 // core/gl-core/cartridges/Fallmanager/Fallmanager.tsx
 'use client';
-
 import * as React from 'react';
 import { CssBaseline, Container } from '@mui/material';
 import { Theme } from '../../../gl-core';
-
-import { useFallmanagerSlice, Header } from '../Fallmanager';
+import { 
+  useFallmanagerSlice, 
+  Header,
+  Faelle,
+} from '../Fallmanager';
 
 export default function Fallmanager() {
   const fallmanagerSlice = useFallmanagerSlice();
@@ -16,8 +18,12 @@ export default function Fallmanager() {
       <CssBaseline />
       <Container>
         <Header />
-        <pre>fallmanagerSlice: {JSON.stringify(fallmanagerSlice, null, 2)}</pre>
+        <Faelle />
       </Container>
     </Theme>
   );
 }
+
+/*
+  <pre>fallmanagerSlice: {JSON.stringify(fallmanagerSlice, null, 2)}</pre>
+*/

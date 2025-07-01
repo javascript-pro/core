@@ -1,9 +1,11 @@
 // core/gl-core/cartridges/Fallmanager/types.d.ts
 
 export type TFallmanagerState = {
+  aktuellerFall: any;
   language: TLanguageCode;
   languages: Record<TLanguageCode, TLanguageEntry>;
   theme: TTheme;
+  translations: Record<string, Record<TLanguageCode, string>>;
 };
 
 export type TLanguageCode = 'en' | 'de';

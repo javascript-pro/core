@@ -1,6 +1,5 @@
-// core/gl-core/cartridges/Fallmanager/components/SelectLanguage.tsx
+// core/gl-core/cartridges/Fallmanager/components/Sprachauswahl.tsx
 'use client';
-
 import * as React from 'react';
 import {
   Box,
@@ -11,7 +10,7 @@ import {
   SelectChangeEvent,
 } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
-import { setLanguage } from '../../Fallmanager';
+import { setzeSprache } from '../../Fallmanager';
 import { TLanguageCode } from '../types';
 
 type LanguageInfo = {
@@ -30,14 +29,14 @@ type RootState = {
   };
 };
 
-export default function SelectLang() {
+export default function Sprachauswahl() {
   const dispatch = useDispatch();
   const { language, languages } = useSelector(
-    (state: RootState) => state.redux.fallmanager
+    (state: RootState) => state.redux.fallmanager,
   );
 
   const handleChange = (event: SelectChangeEvent<string>) => {
-    dispatch(setLanguage(event.target.value as TLanguageCode));
+    dispatch(setzeSprache(event.target.value as TLanguageCode));
   };
 
   return (
@@ -45,9 +44,11 @@ export default function SelectLang() {
       <Select
         value={language}
         onChange={handleChange}
-        variant="outlined"
+        variant="standard"
         size="small"
-        sx={{ minWidth: 180 }}
+        sx={{ 
+          minWidth: 160,
+        }}
         renderValue={(selected) => {
           const lang = languages[selected as string];
           return (
@@ -57,8 +58,8 @@ export default function SelectLang() {
                 alt={lang?.title || selected}
                 style={{
                   width: 24,
-                  height: 16,
-                  marginRight: 8,
+                  height: 24,
+                  marginRight: 16,
                   objectFit: 'contain',
                 }}
               />

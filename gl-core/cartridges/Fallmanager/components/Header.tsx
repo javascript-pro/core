@@ -1,12 +1,18 @@
 // core/gl-core/cartridges/Fallmanager/components/Header.tsx
 'use client';
+
 import * as React from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import { AppBar, CardHeader, ButtonBase } from '@mui/material';
-import { useDispatch } from '../../../../gl-core';
-import { firebaseAuth } from '../../Bouncer';
-import {SelectLanguage} from '../../Fallmanager'
+import {
+  AppBar,
+  CardHeader,
+  ButtonBase,
+  IconButton,
+  Box,
+} from '@mui/material';
+import { useDispatch, resetUberedux, Icon } from '../../../../gl-core';
+import { Sprachauswahl } from '../../Fallmanager';
 
 export default function StickyHeader() {
   const router = useRouter();
@@ -16,8 +22,9 @@ export default function StickyHeader() {
     window.open('/fallmanager', '_self');
   };
 
-  const handleSignout = () => {
-    dispatch(firebaseAuth('signout'));
+  const handleReset = () => {
+    dispatch(resetUberedux());
+    window.open('/fallmanager', '_self');
   };
 
   return (
@@ -44,7 +51,14 @@ export default function StickyHeader() {
             />
           </ButtonBase>
         }
-        action={<><SelectLanguage/></>}
+        action={
+          <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
+            <Sprachauswahl />
+            <IconButton onClick={handleReset} size="small" sx={{ mt: 1 }}>
+              <Icon icon="reset" />
+            </IconButton>
+          </Box>
+        }
       />
     </AppBar>
   );
