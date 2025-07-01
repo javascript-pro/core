@@ -6,7 +6,7 @@ import { TRootState } from '../../Uberedux/store';
 
 export function useTranslation() {
   const { language, translations } = useSelector(
-    (state: TRootState) => state.redux.fallmanager
+    (state: TRootState) => state.redux.fallmanager,
   );
 
   return function t(key: string): string {

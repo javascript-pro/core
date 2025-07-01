@@ -13,7 +13,10 @@ export async function POST(req: NextRequest) {
     const formData = await req.formData();
     const file = formData.get('file');
     if (!(file instanceof File)) {
-      return NextResponse.json({ error: 'Keine Datei hochgeladen' }, { status: 400 });
+      return NextResponse.json(
+        { error: 'Keine Datei hochgeladen' },
+        { status: 400 },
+      );
     }
 
     const extension = file.name.split('.').pop()?.toLowerCase() || '';

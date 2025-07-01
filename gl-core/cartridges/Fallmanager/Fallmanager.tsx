@@ -3,11 +3,7 @@
 import * as React from 'react';
 import { CssBaseline, Container } from '@mui/material';
 import { Theme } from '../../../gl-core';
-import { 
-  useFallmanagerSlice, 
-  Header,
-  Faelle,
-} from '../Fallmanager';
+import { useFallmanagerSlice, Header, Faelle } from '../Fallmanager';
 
 export default function Fallmanager() {
   const fallmanagerSlice = useFallmanagerSlice();

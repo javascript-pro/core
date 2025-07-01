@@ -40,13 +40,13 @@ export default function Sprachauswahl() {
   };
 
   return (
-    <Box sx={{ display: 'inline-block', minWidth: 200 }}>
+    <Box sx={{ display: 'inline-block', mr: 1 }}>
       <Select
         value={language}
         onChange={handleChange}
-        variant="standard"
+        variant="outlined"
         size="small"
-        sx={{ 
+        sx={{
           minWidth: 160,
         }}
         renderValue={(selected) => {
