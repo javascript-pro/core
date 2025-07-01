@@ -1,4 +1,4 @@
-// core/gl-core/cartridges/Fallmanager/components/Faelle/Faelle.tsx
+// core/gl-core/cartridges/Fallmanager/components/Faelle.tsx
 'use client';
 
 import * as React from 'react';
@@ -8,21 +8,13 @@ import {
   Fallliste,
   Fall,
   useTranslation,
-} from '../../../Fallmanager';
+} from '../../Fallmanager';
 
 export default function Faelle() {
   const { aktuellerFall } = useFallmanagerSlice();
   const t = useTranslation();
 
-  return (
-    <Box>
-      {aktuellerFall === null ? (
-        <Fallliste />
-      ) : (
-        <Fall />
-      )}
-    </Box>
-  );
+  return <Box>{aktuellerFall === null ? <Fallliste /> : <Fall />}</Box>;
 }
 
 /*

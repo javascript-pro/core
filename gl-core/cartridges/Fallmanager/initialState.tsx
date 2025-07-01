@@ -1,6 +1,6 @@
 // core/gl-core/cartridges/Fallmanager/initialState.tsx
 import { TFallmanagerState } from './types';
-import {translations} from './translations';
+import { translations } from './translations';
 
 export const initialState: TFallmanagerState = {
   aktuellerFall: null,

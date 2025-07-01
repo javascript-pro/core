@@ -1,9 +1,19 @@
 // core/gl-core/cartridges/Fallmanager/components/index.tsx
+
+import BearbeitbarText from './BearbeitbarText';
+import Datei from './Datei';
+import Faelle from './Faelle';
+import Fall from './Fall';
+import Fallliste from './Fallliste';
 import Header from './Header';
 import Sprachauswahl from './Sprachauswahl';
-import { Dateiliste, Hochladen } from './Dateien';
-import { Faelle, Fallliste, Fall } from './Faelle';
-import BearbeitbarText from './BearbeitbarText';
-export { Header, Sprachauswahl, BearbeitbarText };
-export { Dateiliste, Hochladen };
-export { Faelle, Fallliste, Fall };
+
+export {
+  BearbeitbarText,
+  Datei,
+  Faelle,
+  Fall,
+  Fallliste,
+  Header,
+  Sprachauswahl,
+};

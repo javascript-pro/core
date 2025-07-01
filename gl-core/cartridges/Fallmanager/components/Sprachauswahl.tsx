@@ -40,30 +40,27 @@ export default function Sprachauswahl() {
   };
 
   return (
-    <Box sx={{ display: 'inline-block', mr: 1 }}>
-      <Select
+    <Select
         value={language}
         onChange={handleChange}
-        variant="outlined"
-        size="small"
-        sx={{
-          minWidth: 160,
-        }}
+        variant="standard"
+        disableUnderline
         renderValue={(selected) => {
           const lang = languages[selected as string];
           return (
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              {lang?.title || selected}
               <img
                 src={`/svg/flags/${selected}.svg`}
                 alt={lang?.title || selected}
                 style={{
                   width: 24,
                   height: 24,
-                  marginRight: 16,
+                  marginLeft: 16,
+                  marginRight: 8,
                   objectFit: 'contain',
                 }}
               />
-              {lang?.title || selected}
             </Box>
           );
         }}
@@ -81,6 +78,5 @@ export default function Sprachauswahl() {
           </MenuItem>
         ))}
       </Select>
-    </Box>
   );
 }

@@ -12,7 +12,11 @@ import {
   useTheme,
 } from '@mui/material';
 import { useDispatch, Icon } from '../../../../gl-core';
-import { Sprachauswahl, zuruecksetzen, useTranslation } from '../../Fallmanager';
+import {
+  Sprachauswahl,
+  zuruecksetzen,
+  useTranslation,
+} from '../../Fallmanager';
 
 export default function Header() {
   const router = useRouter();
@@ -38,11 +42,7 @@ export default function Header() {
       }}
     >
       <CardHeader
-        title={
-          <Typography variant="h6">
-            {title}
-          </Typography>
-        }
+        title={<Typography variant="h6">{title}</Typography>}
         avatar={
           <IconButton onClick={handleHome} size="small">
             <Icon icon="home" />

@@ -1,12 +1,12 @@
-// core/gl-core/cartridges/Fallmanager/components/Faelle/Fallliste.tsx
+// core/gl-core/cartridges/Fallmanager/components/Fallliste.tsx
 'use client';
 
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import { Box, Typography, Paper, ButtonBase } from '@mui/material';
 import { collection, onSnapshot, DocumentData } from 'firebase/firestore';
-import { db } from '../../../../lib/firebase';
-import { useTranslation, setzeAktuellerFall } from '../../../Fallmanager';
+import { db } from '../../../lib/firebase';
+import { useTranslation, setzeAktuellerFall } from '../../Fallmanager';
 import { useRouter } from 'next/navigation';
 import { useDispatch } from 'react-redux';
 
@@ -17,13 +17,16 @@ export default function Fallliste() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const unsubscribe = onSnapshot(collection(db, 'fallmanager'), (snapshot) => {
-      const data = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
-      setDocs(data);
-    });
+    const unsubscribe = onSnapshot(
+      collection(db, 'fallmanager'),
+      (snapshot) => {
+        const data = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setDocs(data);
+      },
+    );
 
     return () => unsubscribe();
   }, []);
