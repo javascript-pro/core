@@ -5,7 +5,7 @@
     "slug": "/",
     "order": 1,
     "icon": "home",
-    "image": "/png/default.png",
+    "image": "/png/og.png",
     "type": "folder",
     "tags": [
       "JavaScript",
@@ -68,7 +68,7 @@
             "slug": "/work/free",
             "order": 1,
             "icon": "flash",
-            "image": "/png/default.png",
+            "image": "/png/og.png",
             "type": "file",
             "excerpt": "Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or b"
           },
@@ -78,7 +78,7 @@
             "slug": "/work/cv",
             "order": 2,
             "icon": "openai",
-            "image": "/png/default.png",
+            "image": "/png/og.png",
             "type": "folder",
             "tags": [
               "CV",
@@ -95,7 +95,7 @@
                 "slug": "/work/cv/about",
                 "order": 130,
                 "icon": "openai",
-                "image": "/png/default.png",
+                "image": "/png/og.png",
                 "type": "file",
                 "tags": [
                   "CV",
@@ -114,7 +114,7 @@
             "slug": "/work/api",
             "order": 10,
             "icon": "api",
-            "image": "/png/default.png",
+            "image": "/png/og.png",
             "type": "file",
             "tags": [
               "free",
@@ -128,7 +128,7 @@
             "slug": "/work/company",
             "order": 10,
             "icon": "work",
-            "image": "/png/default.png",
+            "image": "/png/og.png",
             "type": "folder",
             "excerpt": "Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX\n\nGoldlabel Apps is a UKbased software company that designs, builds, and maintains fullstack web applications. We specialize in",
             "children": [
@@ -137,7 +137,7 @@
                 "slug": "/work/company/remote-working",
                 "order": 250,
                 "icon": "work",
-                "image": "/png/default.png",
+                "image": "/png/og.png",
                 "type": "file",
                 "tags": [
                   "remote",
@@ -150,7 +150,7 @@
                 "slug": "/work/company/privacy-cookies",
                 "order": 555,
                 "icon": "account",
-                "image": "/png/default.png",
+                "image": "/png/og.png",
                 "type": "file",
                 "tags": [
                   "cookies",
@@ -169,7 +169,7 @@
             "slug": "/work/techstack",
             "order": 10,
             "icon": "techstack",
-            "image": "/png/default.png",
+            "image": "/png/og.png",
             "type": "folder",
             "tags": [
               "techstack"
@@ -291,7 +291,7 @@
                     "slug": "/work/techstack/design-sytem/toolpad",
                     "order": 20,
                     "icon": "design",
-                    "image": "/png/default.png",
+                    "image": "/png/og.png",
                     "type": "file",
                     "tags": [
                       "techstack",
@@ -309,7 +309,7 @@
             "slug": "/work/open-source",
             "order": 1000,
             "icon": "api",
-            "image": "/png/default.png",
+            "image": "/png/og.png",
             "type": "file",
             "tags": [
               "free",
@@ -426,7 +426,7 @@
         "slug": "/balance",
         "order": 100,
         "icon": "balance",
-        "image": "/png/default.png",
+        "image": "/png/og.png",
         "type": "folder",
         "excerpt": "Are you ?\n\n Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Is this Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a b",
         "children": [

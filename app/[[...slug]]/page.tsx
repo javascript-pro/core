@@ -97,7 +97,7 @@ export async function generateMetadata({ params }: { params: any }) {
     ? 'Goldlabel'
     : `${frontmatter.title}${frontmatter.description ? `. ${frontmatter.description}` : ''}`;
   const description = is404 ? '' : frontmatter.description || '';
-  const img = frontmatter.image || '/png/default.png';
+  const img = frontmatter.image || '/png/og.png';
   const url = `https://goldlabel.pro/${slugPath}`;
 
   return {
@@ -157,9 +157,9 @@ export default async function Page({ params }: { params: any }) {
     '> This route is not handled by Next.js App Router,  [RESTART](/?reboot)';
   let frontmatter: any = {
     icon: 'blokey',
-    title: '404, bro',
+    title: 'Goldlabel',
     description: '',
-    image: '/png/default.png',
+    image: '/png/og.png',
   };
   let isIndex = false;
 
@@ -180,7 +180,7 @@ export default async function Page({ params }: { params: any }) {
 
   const navItem = findNavItem(slugPath, globalNav[0]);
   const title = navItem?.title || 'Goldlabel';
-  const ogImage = frontmatter.image || '/png/default.png';
+  const ogImage = frontmatter.image || '/png/og.png';
 
   return (
     <Core frontmatter={{ ...frontmatter, isIndex }} body={content}>

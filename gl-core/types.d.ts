@@ -9,6 +9,12 @@ export type TUbereduxState = {
   [key: string]: any;
 };
 
+export type TCore = {
+  frontmatter?: any;
+  body?: string | null;
+  children?: React.ReactNode;
+};
+
 export type TSeverity = 'success' | 'info' | 'warning' | 'error';
 
 export type TFeedback = {
@@ -25,3 +31,11 @@ export type TAuthForm = {
 };
 
 export { TUbereduxDispatch, TRootState };
+
+export type TFrontmatter = {
+  icon?: string;
+  title?: string;
+  description?: string;
+  image?: string;
+  [key: string]: any;
+};

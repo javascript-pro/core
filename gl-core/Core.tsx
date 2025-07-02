@@ -1,18 +1,12 @@
+// core/gl-core/Core.tsx
 'use client';
 
 import config from './config.json';
+import { TCore } from './types';
 import * as React from 'react';
 import { usePathname, useRouter } from 'next/navigation'; // updated import here
 import Image from 'next/image';
-import {
-  CssBaseline,
-  Container,
-  Paper,
-  Box,
-  Grid,
-  Skeleton,
-  Typography,
-} from '@mui/material';
+import { CssBaseline, Box, Grid, Skeleton, Typography } from '@mui/material';
 import {
   Theme,
   RenderMarkdown,
@@ -26,23 +20,10 @@ import {
   toggleLoading,
   useDispatch,
 } from '../gl-core';
+
 import { Flickr } from './cartridges/Flickr';
 import { CV } from './cartridges/CV';
-import { Bouncer } from './cartridges/Bouncer';
-
-export type TFrontmatter = {
-  icon?: string;
-  title?: string;
-  description?: string;
-  image?: string;
-  [key: string]: any;
-};
-
-export type TCore = {
-  frontmatter?: any;
-  body?: string | null;
-  children?: React.ReactNode;
-};
+// import { Bouncer } from './cartridges/Bouncer';
 
 export default function Core({ frontmatter, body = null }: TCore) {
   let fullScreen = false;
@@ -104,7 +85,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
     <Theme theme={config.themes[themeMode] as any}>
       <CssBaseline />
       <IncludeAll />
-      <Container id="core">
+      <Box id="core">
         <Box sx={{ minHeight: '100vh' }}>
           <Header frontmatter={frontmatter} />
           <Grid container spacing={1}>
@@ -156,13 +137,12 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
               <Box sx={{ mb: '50px', px: isMobile ? 0.5 : 2 }}>
                 {isApp ? app : <RenderMarkdown>{body}</RenderMarkdown>}
-                {isMobile && getAside()}
               </Box>
             </Grid>
             {!isMobile && getAside()}
           </Grid>
         </Box>
-      </Container>
+      </Box>
     </Theme>
   );
 }
