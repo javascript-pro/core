@@ -1,7 +1,8 @@
-// core/gl-core/cartridges/Fallmanager/components/Faelle.tsx
 'use client';
 
 import * as React from 'react';
+import { useEffect } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 import { Box } from '@mui/material';
 import {
   useFallmanagerSlice,
@@ -13,10 +14,14 @@ import {
 export default function Faelle() {
   const { aktuellerFall } = useFallmanagerSlice();
   const t = useTranslation();
+  const pathname = usePathname();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (aktuellerFall === null && pathname !== '/fallmanager') {
+      router.replace('/fallmanager');
+    }
+  }, [aktuellerFall, pathname, router]);
 
   return <Box>{aktuellerFall === null ? <Fallliste /> : <Fall />}</Box>;
 }
-
-/*
-  <pre>{JSON.stringify(aktuellerFall, null, 2)}</pre>
-*/
