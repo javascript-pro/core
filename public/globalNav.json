@@ -5,7 +5,7 @@
     "slug": "/",
     "order": 1,
     "icon": "home",
-    "image": "/png/3rdParty/openai.png",
+    "image": "/png/og.png",
     "type": "folder",
     "tags": [
       "JavaScript",
@@ -417,6 +417,17 @@
                 "excerpt": "What: Aquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closedloop system.\n\nWho: Ideal for urban growers, hobbyists"
               }
             ]
+          },
+          {
+            "title": "Motorbikes",
+            "description": "Watch your toes",
+            "slug": "/life/motorbikes",
+            "order": 200,
+            "icon": "motorbikes",
+            "image": "/png/n64/biker.png",
+            "type": "folder",
+            "excerpt": "Every man in posession of a good fortune is in need of a new motorbike",
+            "children": []
           }
         ]
       },
@@ -445,7 +456,7 @@
             "slug": "/balance/books",
             "order": 100,
             "icon": "balance",
-            "image": "/jpg/speak-write.jpg",
+            "image": "/jpg/cassetes.jpg",
             "type": "folder",
             "excerpt": "Weekend Portfolio\n\n Written for semiprofessional coders ready to go pr0\n\nA series of standalone apps you can build in a weekend. Each project has modern deployment, realworld app structure\n\nIn a weeke",
             "children": [
@@ -457,6 +468,24 @@
                 "image": "/jpg/wei-zangs-food.jpg",
                 "type": "file",
                 "excerpt": "I never learned to cook. No one taught me. That’s why I can tell you about it.\n\nPeople who are taught spend too long worrying about what’s “right.” I just ate what I liked, cooked it, guessed. Like de"
+              },
+              {
+                "title": "Einstein",
+                "slug": "/balance/books/einstein",
+                "order": 30,
+                "icon": "doc",
+                "image": "/jpg/einstein.jpg",
+                "type": "file",
+                "excerpt": "Let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series.\n\n Let's share some of Einstein's contributions which are fundamental t"
+              },
+              {
+                "title": "General Relativity",
+                "slug": "/balance/books/relativity",
+                "order": 30,
+                "icon": "doc",
+                "image": "/jpg/einstein.jpg",
+                "type": "file",
+                "excerpt": "Really just the name for Einstein's study of gravitation. And here we're going to introduce my alltime favorite analogy for general relativity, the bowling ball on the trampoline. Let's imagine that f"
               },
               {
                 "title": "Generation X",
@@ -471,51 +500,30 @@
               },
               {
                 "title": "Science Fiction",
-                "description": "and Speculative Fiction",
                 "slug": "/balance/books/sci-fi",
                 "order": 120,
                 "icon": "folder",
                 "image": "/jpg/einstein.jpg",
-                "type": "folder",
-                "excerpt": "Because we can carefully observe constellations when the Sun is not blocking their path, we know what position the stars should be in when the Sun is keeping us from seeing them. However, according to",
-                "children": [
-                  {
-                    "title": "Einstein",
-                    "slug": "/balance/books/sci-fi/einstein",
-                    "order": 30,
-                    "icon": "doc",
-                    "image": "/jpg/einstein.jpg",
-                    "type": "file",
-                    "excerpt": "Let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series.\n\n Let's share some of Einstein's contributions which are fundamental t"
-                  },
-                  {
-                    "title": "General Relativity",
-                    "slug": "/balance/books/sci-fi/relativity",
-                    "order": 30,
-                    "icon": "doc",
-                    "image": "/jpg/einstein.jpg",
-                    "type": "file",
-                    "excerpt": "Really just the name for Einstein's study of gravitation. And here we're going to introduce my alltime favorite analogy for general relativity, the bowling ball on the trampoline. Let's imagine that f"
-                  },
-                  {
-                    "title": "Charles Darwin",
-                    "slug": "/balance/books/sci-fi/charles-darwin",
-                    "order": 2000,
-                    "icon": "doc",
-                    "image": "/jpg/darwin.jpg",
-                    "type": "file",
-                    "excerpt": "Judging from the past, we may safely infer that no one living species will transmit its unaltered likeness to a distant futurity. And of the species now living very few will transmit progeny of any ki"
-                  }
-                ]
+                "type": "file",
+                "excerpt": "Because we can carefully observe constellations when the Sun is not blocking their path, we know what position the stars should be in when the Sun is keeping us from seeing them. However, according to"
               },
               {
                 "title": "Weekend Portfolio",
                 "slug": "/balance/books/weekend-portfolio",
                 "order": 160,
                 "icon": "speak-write",
-                "image": "/jpg/speak-write.jpg",
+                "image": "/jpg/cassetes.jpg",
                 "type": "file",
                 "excerpt": "Written for at semiprofessional coders ready to go pr0\n\nIn a weekend project, you’ll build a simple but powerful AI app. The idea is simple but important: you upload an .mp3 file, and the app gives yo"
+              },
+              {
+                "title": "Charles Darwin",
+                "slug": "/balance/books/charles-darwin",
+                "order": 2000,
+                "icon": "doc",
+                "image": "/jpg/darwin.jpg",
+                "type": "file",
+                "excerpt": "Judging from the past, we may safely infer that no one living species will transmit its unaltered likeness to a distant futurity. And of the species now living very few will transmit progeny of any ki"
               }
             ]
           }

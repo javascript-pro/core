@@ -2,7 +2,7 @@
 order: 30
 title: Einstein
 description: Albert. The Godfather of modern physics
-slug: /balance/books/sci-fi/einstein
+slug: /balance/books/einstein
 icon: doc
 image: /jpg/einstein.jpg
 ---

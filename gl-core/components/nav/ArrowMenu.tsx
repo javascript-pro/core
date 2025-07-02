@@ -84,6 +84,8 @@ export default function ArrowMenu() {
     if (rightSibling) dispatch(routeTo(rightSibling.slug, router));
   };
 
+  const upLabel = parentItem?.slug === '/' ? 'Home' : parentItem?.title || '↑';
+
   return (
     <Box
       id="arrowMenu"
@@ -97,9 +99,20 @@ export default function ArrowMenu() {
           zIndex: 1300,
           width: '100%',
         }),
+        backgroundColor: theme.palette.background.default,
+        borderTop: `1px solid ${
+          theme.palette.mode === 'dark'
+            ? theme.palette.grey[800]
+            : theme.palette.grey[300]
+        }`,
+        borderBottom: `1px solid ${
+          theme.palette.mode === 'dark'
+            ? theme.palette.grey[800]
+            : theme.palette.grey[300]
+        }`,
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center',
+        alignItems: 'left',
         justifyContent: 'space-between',
         p: 1,
         boxShadow: 0,
@@ -107,28 +120,28 @@ export default function ArrowMenu() {
       })}
     >
       <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
-        {showLeft && (
-          <Typography
-            variant="caption"
-            sx={{ fontSize: '0.75rem', cursor: 'pointer' }}
-            onClick={handleLeft}
-          >
-            ← {leftSibling?.title}
-          </Typography>
-        )}
         {showUp && (
           <Typography
             variant="caption"
             sx={{ fontSize: '0.75rem', cursor: 'pointer' }}
             onClick={handleUp}
           >
-            ↑ {parentItem?.title}
+            ↑ {upLabel}
+          </Typography>
+        )}
+        {showLeft && (
+          <Typography
+            variant="caption"
+            sx={{ fontSize: '0.75rem', cursor: 'pointer', mt: 1 }}
+            onClick={handleLeft}
+          >
+            ← {leftSibling?.title}
           </Typography>
         )}
         {showRight && (
           <Typography
             variant="caption"
-            sx={{ fontSize: '0.75rem', cursor: 'pointer' }}
+            sx={{ fontSize: '0.75rem', cursor: 'pointer', mt: 1 }}
             onClick={handleRight}
           >
             {rightSibling?.title} →
