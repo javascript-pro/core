@@ -4,7 +4,7 @@ title: Public API
 slug: /work/api
 description: Private keys are available
 icon: api
-image: /png/default.png
+image: /png/og.png
 tags: free, api
 ---
 

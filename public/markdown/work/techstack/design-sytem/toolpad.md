@@ -4,7 +4,7 @@ title: MUI Toolpad
 description: React-based dashboards powered by live data
 slug: /work/techstack/design-system/toolpad
 icon: design
-image: /png/default.png
+image: /png/og.png
 tags: techstack, Design, MUI
 ---
 

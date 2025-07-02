@@ -4,7 +4,7 @@ title: Curriculum Vitae
 description: Match your Job to our CV with AI
 slug: /work/cv
 icon: openai
-image: /png/default.png
+image: /png/og.png
 tags: CV, jobs, work, resume, AI, OpenAI
 github: https://github.com/javascript-pro/core/blob/main/gl-core/cartridges/CV/actions/createPrompt.tsx
 ---
