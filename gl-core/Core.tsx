@@ -14,7 +14,7 @@ import {
   Header,
   PageBreadcrumb,
   useIsMobile,
-  SideAds,
+  // SideAds,
   useVersionCheck,
   IncludeAll,
   useThemeMode,
@@ -127,12 +127,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
               <Box sx={{ mb: '175px', px: isMobile ? 0.5 : 2 }}>
                 {isApp ? app : <RenderMarkdown>{body}</RenderMarkdown>}
-
-                {isMobile ? (
-                  <>
-                    <ArrowMenu />
-                  </>
-                ) : null}
+                {isMobile ? <ArrowMenu /> : null}
               </Box>
             </Grid>
             {!isMobile && (
@@ -142,7 +137,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                   lg: 3,
                 }}
               >
-                <SideAds />
+                {/* <SideAds /> */}
                 {!isMobile ? (
                   <>
                     <ArrowMenu />

@@ -5,7 +5,7 @@
     "slug": "/",
     "order": 1,
     "icon": "home",
-    "image": "/png/og.png",
+    "image": "/png/3rdParty/openai.png",
     "type": "folder",
     "tags": [
       "JavaScript",

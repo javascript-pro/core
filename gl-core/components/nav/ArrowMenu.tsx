@@ -1,12 +1,11 @@
-// core/gl-core/components/nav/ArrowMenu.tsx
 'use client';
 
 import * as React from 'react';
-import { Box, IconButton, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { usePathname, useRouter } from 'next/navigation';
 
 import { Advert, useDispatch, routeTo } from '../../../gl-core';
-import { Icon, useIsMobile } from '../../../gl-core';
+import { useIsMobile } from '../../../gl-core';
 import globalNav from '../../../public/globalNav.json';
 
 function normalizeSlug(slug: string): string {
@@ -88,85 +87,52 @@ export default function ArrowMenu() {
   return (
     <Box
       id="arrowMenu"
-      sx={{
-        position: 'fixed',
-        bottom: 8,
-        left: isMobile ? '50%' : 'auto',
-        right: isMobile ? 'auto' : 12,
-        transform: isMobile ? 'translateX(-50%)' : 'none',
-        zIndex: 1300,
+      sx={(theme) => ({
+        ...(isMobile && {
+          position: 'fixed',
+          bottom: 8,
+          left: 0,
+          right: 0,
+          transform: 'none',
+          zIndex: 1300,
+          width: '100%',
+        }),
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'space-between',
         p: 1,
-        borderRadius: 1,
-        // backgroundColor: 'rgba(0,0,0,0.35)',
-        // backdropFilter: 'blur(4px)',
         boxShadow: 0,
         minWidth: 'auto',
-      }}
+      })}
     >
-      {showUp && (
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            mb: 1,
-          }}
-        >
-          <IconButton color="primary" size="small" onClick={handleUp}>
-            <Icon icon={parentItem?.icon || 'up'} />
-          </IconButton>
+      <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
+        {showLeft && (
           <Typography
             variant="caption"
-            sx={{ fontSize: '0.6rem', textAlign: 'center' }}
+            sx={{ fontSize: '0.75rem', cursor: 'pointer' }}
+            onClick={handleLeft}
           >
-            {parentItem?.title}
+            ← {leftSibling?.title}
           </Typography>
-        </Box>
-      )}
-
-      <Box sx={{ display: 'flex', gap: 1 }}>
-        {showLeft && (
-          <Box
-            sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-            }}
-          >
-            <IconButton color="primary" size="small" onClick={handleLeft}>
-              <Icon icon={leftSibling?.icon || 'left'} />
-            </IconButton>
-            <Typography
-              variant="caption"
-              sx={{ fontSize: '0.6rem', textAlign: 'center' }}
-            >
-              {leftSibling?.title}
-            </Typography>
-          </Box>
         )}
-
-        {showRight && (
-          <Box
-            sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-            }}
+        {showUp && (
+          <Typography
+            variant="caption"
+            sx={{ fontSize: '0.75rem', cursor: 'pointer' }}
+            onClick={handleUp}
           >
-            <IconButton color="primary" size="small" onClick={handleRight}>
-              <Icon icon={rightSibling?.icon || 'right'} />
-            </IconButton>
-            <Typography
-              variant="caption"
-              sx={{ fontSize: '0.6rem', textAlign: 'center' }}
-            >
-              {rightSibling?.title}
-            </Typography>
-          </Box>
+            ↑ {parentItem?.title}
+          </Typography>
+        )}
+        {showRight && (
+          <Typography
+            variant="caption"
+            sx={{ fontSize: '0.75rem', cursor: 'pointer' }}
+            onClick={handleRight}
+          >
+            {rightSibling?.title} →
+          </Typography>
         )}
       </Box>
 
@@ -176,28 +142,14 @@ export default function ArrowMenu() {
           {currentItem.children
             .filter((child) => child.type === 'folder')
             .map((child) => (
-              <Box
+              <Typography
                 key={child.slug}
-                sx={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                }}
+                variant="caption"
+                sx={{ fontSize: '0.75rem', cursor: 'pointer' }}
+                onClick={() => dispatch(routeTo(child.slug, router))}
               >
-                <IconButton
-                  color="primary"
-                  size="small"
-                  onClick={() => dispatch(routeTo(child.slug, router))}
-                >
-                  <Icon icon={child.icon || 'down'} />
-                </IconButton>
-                <Typography
-                  variant="caption"
-                  sx={{ fontSize: '0.6rem', textAlign: 'center' }}
-                >
-                  {child.title}
-                </Typography>
-              </Box>
+                ↓ {child.title}
+              </Typography>
             ))}
         </Box>
       )}
