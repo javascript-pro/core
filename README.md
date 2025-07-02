@@ -2,7 +2,9 @@
 
 > An entirely working app, free to use and modify as ever. Always Free & Open Source.
 
-✅ New Features
+✅ Newest Features
+
+> Lingua
 
 - Bouncer Authenication System
 - CV

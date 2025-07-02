@@ -36,7 +36,7 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
   const router = useRouter();
   const user = useUser();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const [shareOpen, setShareOpen] = React.useState(false);
+  const [shareOpen, setShareOpen] = React.useState(true);
   const [clientsOpen, setClientsOpen] = React.useState(false);
   const open = Boolean(anchorEl);
   const version = useVersion();
@@ -107,7 +107,7 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           <ListItemIcon>
             <Icon icon="reset" />
           </ListItemIcon>
-          <ListItemText primary="Factory settings" />
+          <ListItemText primary="Reset" />
         </MenuItem>
 
         {/* Theme Switcher */}

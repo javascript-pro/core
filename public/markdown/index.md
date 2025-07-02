@@ -15,9 +15,3 @@ image: /png/default.png
 - _Small_ team. _Big_ output
 - Real deployments from Day One
 - Readable, extensible, Open Source
-
-[Goldlabel Core](/free/core) is [JavaScript](/work/techstack/javascript). It's [Free](/free) and [Open Source](/free/open-source)
-
-It has cartridges which work a little like WordPress plugins. Some Free ones are [CV](/cv/about), [Bouncer](/free/bouncer), [Uberedux](/free/uberedux) & [Flickr](/free/flickr)
-
-[Contact Us](/work/company)
