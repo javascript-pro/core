@@ -8,6 +8,7 @@ import { usePathname, useRouter } from 'next/navigation'; // updated import here
 import Image from 'next/image';
 import { CssBaseline, Box, Grid, Skeleton, Typography } from '@mui/material';
 import {
+  ArrowMenu,
   Theme,
   RenderMarkdown,
   Header,
@@ -68,17 +69,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
       break;
   }
 
-  const getAside = () => (
-    <Grid
-      size={{
-        md: 4,
-        lg: 3,
-      }}
-    >
-      <SideAds />
-    </Grid>
-  );
-
   if (fullScreen) return <>{app}</>;
 
   return (
@@ -123,7 +113,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                           color="text.secondary"
                           mt={1}
                         >
-                          Image not found. "{frontmatter.image}"
+                          "{frontmatter.image}" not found.
                         </Typography>
                       </Box>
                     )}
@@ -137,9 +127,29 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
               <Box sx={{ mb: '50px', px: isMobile ? 0.5 : 2 }}>
                 {isApp ? app : <RenderMarkdown>{body}</RenderMarkdown>}
+
+                {isMobile ? (
+                  <>
+                    <ArrowMenu />
+                  </>
+                ) : null}
               </Box>
             </Grid>
-            {!isMobile && getAside()}
+            {!isMobile && (
+              <Grid
+                size={{
+                  md: 4,
+                  lg: 3,
+                }}
+              >
+                <SideAds />
+                {!isMobile ? (
+                  <>
+                    <ArrowMenu />
+                  </>
+                ) : null}
+              </Grid>
+            )}
           </Grid>
         </Box>
       </Box>

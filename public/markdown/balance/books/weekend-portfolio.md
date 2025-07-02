@@ -4,7 +4,7 @@ title: Weekend Portfolio
 description: Build a simple but powerful AI app
 slug: /balance/books/weekend-portfolio
 icon: speak-write
-image: /jpg/products/speak-write.jpg
+image: /jpg/speak-write.jpg
 ---
 
 > Written for at semi-professional coders ready to go pr0

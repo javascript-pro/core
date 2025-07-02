@@ -4,7 +4,7 @@ title: JavaScript
 description: JavaScript Whatever the Weather
 slug: /work/techstack/javascript
 icon: javascript
-image: /png/bluesky/javascript.png
+image: /png/clouds/default_whitecloud.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React, Angular, Vue, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS, JSON
 ---
 

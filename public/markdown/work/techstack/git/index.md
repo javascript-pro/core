@@ -4,7 +4,7 @@ title: Git
 description: Critical to our process
 slug: /work/techstack/git
 icon: github
-image: /png/bluesky/javascript.png
+image: /png/clouds/default_whitecloud.png
 tags: github, process, javascript
 github: https://github.com/javascript-pro/core
 ---

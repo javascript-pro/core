@@ -4,7 +4,7 @@ slug: /work/core/cartridges/flash
 title: 'Flash'
 description: 'A Pointless reinvention of MacroMedia Flash?'
 icon: 'flash'
-image: '/png/bluesky/flash.png'
+image: /png/clouds/default_whitecloud.png
 keywords: 'Catridges, Flash, SVG'
 ---
 

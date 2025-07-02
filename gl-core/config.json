@@ -7,10 +7,7 @@
   "images": {
     "favicon": "/png/favicon.png"
   },
-  "imagesArr": [
-    "/png/apple-touch-icon.png",
-    "/png/og.png"
-  ],
+  "imagesArr": ["/png/apple-touch-icon.png", "/png/og.png"],
   "themes": {
     "light": {
       "mode": "light",
