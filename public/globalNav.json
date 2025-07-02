@@ -130,7 +130,7 @@
             "icon": "work",
             "image": "/png/og.png",
             "type": "folder",
-            "excerpt": "Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX\n\nGoldlabel Apps is a UKbased software company that designs, builds, and maintains fullstack web applications. We specialize in",
+            "excerpt": "| \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX\n\nGoldlabel Apps is a UKbased software company that designs, builds, and maintains fullstack web applications. We speciali",
             "children": [
               {
                 "title": "Working remotely",
@@ -244,7 +244,7 @@
                 "slug": "/work/techstack/git",
                 "order": 25,
                 "icon": "github",
-                "image": "/png/clouds/default_whitecloud.png",
+                "image": "/png/3rdParty/gitkraken.png",
                 "type": "folder",
                 "tags": [
                   "github",
@@ -258,7 +258,7 @@
                     "slug": "/work/techstack/git/gitkraken",
                     "order": 30,
                     "icon": "github",
-                    "image": "/png/gitkraken.png",
+                    "image": "/png/3rdParty/gitkraken.png",
                     "type": "file",
                     "tags": [
                       "github",

@@ -9,9 +9,13 @@ import { Advert, useDispatch, routeTo } from '../../../gl-core';
 import { Icon, useIsMobile } from '../../../gl-core';
 import globalNav from '../../../public/globalNav.json';
 
+function normalizeSlug(slug: string): string {
+  return slug.replace(/\/+$/, '');
+}
+
 function findNavItemBySlug(nav: any[], slug: string): any | null {
   for (const item of nav) {
-    if (item.slug === slug) return item;
+    if (normalizeSlug(item.slug) === slug) return item;
     if (item.children) {
       const match = findNavItemBySlug(item.children, slug);
       if (match) return match;
@@ -26,7 +30,7 @@ function findParentBySlug(
   parent: any = null,
 ): any | null {
   for (const item of nav) {
-    if (item.slug === slug) return parent;
+    if (normalizeSlug(item.slug) === slug) return parent;
     if (item.children) {
       const found = findParentBySlug(item.children, slug, item);
       if (found) return found;
@@ -39,7 +43,7 @@ export default function ArrowMenu() {
   const dispatch = useDispatch();
   const router = useRouter();
   const isMobile = useIsMobile();
-  const pathname = usePathname();
+  const pathname = normalizeSlug(usePathname());
 
   const currentItem = React.useMemo(() => {
     return findNavItemBySlug(globalNav, pathname);
@@ -50,14 +54,13 @@ export default function ArrowMenu() {
   }, [pathname]);
 
   const siblings = React.useMemo(() => {
-    if (!parentItem || !parentItem.children) return [];
+    if (!parentItem?.children) return [];
     return parentItem.children
-      .filter((child: any) => child.type === 'file')
       .sort((a, b) => (a.order ?? 9999) - (b.order ?? 9999));
   }, [parentItem]);
 
   const currentIndex = siblings.findIndex(
-    (child: any) => child.slug === pathname,
+    (child: any) => normalizeSlug(child.slug) === pathname,
   );
   const leftSibling = currentIndex > 0 ? siblings[currentIndex - 1] : null;
   const rightSibling =
