@@ -4,7 +4,7 @@ title: Next.js
 description: React on the frontend with seamless backend capabilities
 slug: /work/techstack/javascript/next-js
 icon: javascript
-image: /png/bluesky/javascript.png
+image: /png/clouds/default_whitecloud.png
 tags: JavaScript, Node, Next.js, API, REST API, React
 ---
 

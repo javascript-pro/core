@@ -4,7 +4,7 @@ title: Work
 description: Professional Fullstack JavaScript Development
 slug: /work
 icon: work
-image: /png/bluesky/javascript.png
+image: /png/clouds/default_whitecloud.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React, Angular, Vue, etc, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 ---
 

@@ -4,7 +4,7 @@ title: Diving
 description: Fish are friends. Not food.
 slug: /life/diving
 icon: diving
-image: /png/cartridges/diving.png
+image: /png/n64/diving.png
 ---
 
 This section of the site is a quiet space for sharing some of the places I’ve been, the gear I’ve trusted, and the small moments I remember best — that sound when you first descend, the feeling of hovering, the shift in time when you're deep and weightless.

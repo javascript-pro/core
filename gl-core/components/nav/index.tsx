@@ -1,3 +1,4 @@
+import ArrowMenu from './ArrowMenu';
 import Nav from './Nav';
 import IndexNav from './IndexNav';
 import NavItem from './NavItem';
@@ -8,6 +9,7 @@ import Search from './Search';
 import TopRightMenu from './TopRightMenu';
 import ShareMenu from './ShareMenu';
 export {
+  ArrowMenu,
   IndexNav,
   Nav,
   NavItem,

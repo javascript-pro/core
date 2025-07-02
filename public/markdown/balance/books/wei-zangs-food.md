@@ -4,7 +4,7 @@ title: Wei Zang’s Food
 description: 魏藏美食
 slug: /balance/books/wei-zangs-food
 icon: food
-image: /jpg/wei-zang/wei-zangs-food.jpg
+image: /jpg/wei-zangs-food.jpg
 featured: false
 epub: wei-zangs-food.epub
 ---

@@ -17,6 +17,7 @@ import {
   LoadingOverlay,
   FieldUpload,
   IndexNav,
+  ArrowMenu,
 } from './components';
 import {
   useLoading,
@@ -76,6 +77,7 @@ export {
   IncludeAll,
   LoadingOverlay,
   FieldUpload,
+  ArrowMenu,
 };
 export { Uberedux, UbereduxProvider, setUbereduxKey, resetUberedux };
 export {

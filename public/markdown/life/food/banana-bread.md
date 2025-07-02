@@ -4,7 +4,7 @@ title: 'Banana Bread'
 description: Proper crowd pleaser
 slug: /life/food/banana-bread
 icon: food
-image: /jpg/wei-zang/wei-zangs-food.jpg
+image: /jpg/wei-zangs-food.jpg
 ---
 
 [Air Fried Stuffed Peppers](/life/food/air-fried-peppers) | [Banana Bread](/life/food/banana-bread)

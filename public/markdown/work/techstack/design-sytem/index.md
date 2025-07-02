@@ -4,7 +4,7 @@ title: Design System
 description: Based on Material
 slug: /work/techstack/design-system
 icon: design
-image: /png/bluesky/uberedux.png
+image: /png/clouds/default_whitecloud.png
 tags: github, process, design
 ---
 
