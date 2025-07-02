@@ -52,30 +52,18 @@ export default function ArrowMenu() {
   const siblings = React.useMemo(() => {
     if (!parentItem || !parentItem.children) return [];
     return parentItem.children
-      .filter(
-        (child: any) =>
-          child.type === 'file' && typeof child.order === 'number',
-      )
-      .sort((a, b) => a.order - b.order);
+      .filter((child: any) => child.type === 'file')
+      .sort((a, b) => (a.order ?? 9999) - (b.order ?? 9999));
   }, [parentItem]);
 
-  const leftSibling = React.useMemo(() => {
-    if (!currentItem) return null;
-    return (
-      siblings
-        .filter((s) => s.order < currentItem.order)
-        .sort((a, b) => b.order - a.order)[0] || null
-    );
-  }, [siblings, currentItem]);
-
-  const rightSibling = React.useMemo(() => {
-    if (!currentItem) return null;
-    return (
-      siblings
-        .filter((s) => s.order > currentItem.order)
-        .sort((a, b) => a.order - b.order)[0] || null
-    );
-  }, [siblings, currentItem]);
+  const currentIndex = siblings.findIndex(
+    (child: any) => child.slug === pathname,
+  );
+  const leftSibling = currentIndex > 0 ? siblings[currentIndex - 1] : null;
+  const rightSibling =
+    currentIndex >= 0 && currentIndex < siblings.length - 1
+      ? siblings[currentIndex + 1]
+      : null;
 
   const showUp = !!parentItem;
   const showLeft = !!leftSibling;

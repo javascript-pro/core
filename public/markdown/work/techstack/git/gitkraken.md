@@ -4,7 +4,7 @@ title: GitKraken
 description: Best thing since sliced bread and chocolate spread
 slug: /work/techstack/git/gitkraken
 icon: github
-image: /png/gitkraken.png
+image: /png/3rdParty/gitkraken.png
 tags: github, process, javascript, tools, gitkraken,
 github: https://github.com/javascript-pro/core
 ---

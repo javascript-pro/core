@@ -125,7 +125,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                 </Box>
               </Box>
 
-              <Box sx={{ mb: '50px', px: isMobile ? 0.5 : 2 }}>
+              <Box sx={{ mb: '175px', px: isMobile ? 0.5 : 2 }}>
                 {isApp ? app : <RenderMarkdown>{body}</RenderMarkdown>}
 
                 {isMobile ? (
