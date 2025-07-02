@@ -1,10 +1,5 @@
 // core/gl-core/actions/toggleFeedback.tsx
 
-/*
-    Takes a TFeedback typed object || null
-    Updates redux.feedback
-*/
-
 import { TUbereduxDispatch } from '../../gl-core/types';
 import { setUbereduxKey } from '../../gl-core';
 import { TFeedback } from '../types';

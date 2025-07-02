@@ -132,8 +132,25 @@ export default async function Page({ params }: { params: any }) {
   const slugPath = params.slug ? params.slug.join('/') : '';
 
   const tryPaths = [
-    path.join(process.cwd(), 'public', 'markdown', `${slugPath}.md`),
-    path.join(process.cwd(), 'public', 'markdown', slugPath, 'index.md'),
+    {
+      filePath: path.join(
+        process.cwd(),
+        'public',
+        'markdown',
+        `${slugPath}.md`,
+      ),
+      isIndex: false,
+    },
+    {
+      filePath: path.join(
+        process.cwd(),
+        'public',
+        'markdown',
+        slugPath,
+        'index.md',
+      ),
+      isIndex: true,
+    },
   ];
 
   let content =
@@ -144,14 +161,16 @@ export default async function Page({ params }: { params: any }) {
     description: '',
     image: '/png/default.png',
   };
+  let isIndex = false;
 
-  for (const filePath of tryPaths) {
+  for (const { filePath, isIndex: indexFlag } of tryPaths) {
     try {
       if (fs.existsSync(filePath)) {
         const fileContent = fs.readFileSync(filePath, 'utf8');
         const parsed = matter(fileContent);
         content = parsed.content;
         frontmatter = parsed.data;
+        isIndex = indexFlag;
         break;
       }
     } catch (error) {
@@ -164,12 +183,9 @@ export default async function Page({ params }: { params: any }) {
   const ogImage = frontmatter.image || '/png/default.png';
 
   return (
-    <Core frontmatter={frontmatter} body={content}>
+    <Core frontmatter={{ ...frontmatter, isIndex }} body={content}>
       <div id="core-ssg" className="gl">
-        {/* 
-          This is SSG content
-          It's indexable to search engines, but not used in the actual app yet
-        */}
+        {/* This is SSG content */}
         <div className="gl-wrap">
           <header id="gl-header">
             <Link href={`/`} style={{ textDecoration: 'none' }}>

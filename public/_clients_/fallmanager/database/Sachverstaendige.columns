@@ -1,7 +1,0 @@
-"name","type","length","leftDigits","rightDigits"
-"SachverstaendigeID","STRING","0","0","0"
-"Name","STRING","0","0","0"
-"Straße","STRING","0","0","0"
-"PLZ","STRING","0","0","0"
-"Ort","STRING","0","0","0"
-"EMail","STRING","0","0","0"

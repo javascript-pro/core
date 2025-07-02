@@ -1,15 +1,14 @@
 import fs from 'fs/promises';
 import path from 'path';
-// import matter from 'gray-matter';
 
 const MARKDOWN_ROOT = path.join(process.cwd(), 'public/markdown');
 const OUTPUT_PATH = path.join(process.cwd(), 'public', 'sitemap.xml');
-
 const BASE_URL = 'https://goldlabel.pro';
 
+// Always accumulate path segments as an array
 async function getAllMarkdownSlugs(
   dir: string,
-  baseSlug = '',
+  segments: string[] = [],
 ): Promise<string[]> {
   const entries = await fs.readdir(dir, { withFileTypes: true });
 
@@ -19,17 +18,22 @@ async function getAllMarkdownSlugs(
     const fullPath = path.join(dir, entry.name);
 
     if (entry.isDirectory()) {
-      const childSlug = path.join(baseSlug, entry.name);
-      const childSlugs = await getAllMarkdownSlugs(fullPath, childSlug);
+      // Push the folder name as a new segment
+      const nextSegments = [...segments, entry.name];
+      const childSlugs = await getAllMarkdownSlugs(fullPath, nextSegments);
       slugs.push(...childSlugs);
     }
 
     if (entry.isFile() && entry.name.endsWith('.md')) {
       if (entry.name === 'index.md') {
-        slugs.push(baseSlug || '/');
+        // Folder index: use the path so far, or "/" for the root
+        const slug = segments.length === 0 ? '/' : '/' + segments.join('/');
+        slugs.push(slug);
       } else {
-        const fileSlug = path.join(baseSlug, entry.name.replace(/\.md$/, ''));
-        slugs.push(fileSlug);
+        // File: add file name (without extension) as a segment
+        const baseName = entry.name.replace(/\.md$/, '');
+        const slug = '/' + [...segments, baseName].join('/');
+        slugs.push(slug);
       }
     }
   }
@@ -40,7 +44,7 @@ async function getAllMarkdownSlugs(
 function generateSitemapXml(slugs: string[]): string {
   const urls = slugs
     .map((slug) => {
-      const fullUrl = new URL(slug.replace(/\\/g, '/'), BASE_URL).href;
+      const fullUrl = BASE_URL + slug; // No new URL() needed; always absolute
       return `
   <url>
     <loc>${fullUrl}</loc>

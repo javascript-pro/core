@@ -2,7 +2,7 @@
 
 import config from './config.json';
 import * as React from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation'; // updated import here
 import Image from 'next/image';
 import {
   CssBaseline,
@@ -28,7 +28,6 @@ import {
 } from '../gl-core';
 import { Flickr } from './cartridges/Flickr';
 import { CV } from './cartridges/CV';
-import { Fallmanager } from './cartridges/Fallmanager';
 import { Bouncer } from './cartridges/Bouncer';
 
 export type TFrontmatter = {
@@ -48,35 +47,36 @@ export type TCore = {
 export default function Core({ frontmatter, body = null }: TCore) {
   let fullScreen = false;
   const pathname = usePathname();
+  const router = useRouter();
   const themeMode = useThemeMode();
   useVersionCheck();
   const isMobile = useIsMobile();
   const dispatch = useDispatch();
 
+  // Redirect /cv to /work/cv
+  React.useEffect(() => {
+    if (pathname === '/cv') {
+      router.replace('/work/cv');
+    }
+    if (pathname === '/free/flickr') {
+      router.replace('/work/core/cartridges/flickr');
+    }
+  }, [pathname, router]);
+
   // Reset loading on mount
   React.useEffect(() => {
-    dispatch(toggleLoading(null));
+    dispatch(toggleLoading(false));
   }, [dispatch]);
 
-  const isCV = pathname === '/cv';
-  const isFlickr = pathname === '/free/flickr';
-  const isFallmanager = pathname.startsWith('/fallmanager');
+  const isCV = pathname === '/work/cv';
+  const isFlickr = pathname === '/work/core/cartridges/flickr';
   const isNewCartridge = pathname === '/cartridges/new-cartridge';
-  const isApp = isCV || isFlickr || isFallmanager || isNewCartridge;
+  const isApp = isCV || isFlickr || isNewCartridge;
 
   const [imageError, setImageError] = React.useState(false);
 
   let app = <></>;
   switch (true) {
-    case isFallmanager:
-      fullScreen = true;
-      app = (
-        <Bouncer>
-          <IncludeAll />
-          <Fallmanager />
-        </Bouncer>
-      );
-      break;
     case isCV:
       app = <CV mode="app" markdown={body} />;
       break;

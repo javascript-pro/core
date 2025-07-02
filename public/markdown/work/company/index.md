@@ -4,7 +4,7 @@ title: Goldlabel Apps Ltd
 description: UK Limited Company (5460545)
 slug: /work/company
 icon: work
-image: /png/default.png
+image: /png/og.png
 ---
 
 > Goldlabel Apps Ltd  

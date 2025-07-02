@@ -11,6 +11,7 @@ export const navigateTo =
   (url: string, target?: '_self' | '_blank') =>
   async (dispatch: TUbereduxDispatch) => {
     try {
+      dispatch(toggleLoading(true));
       const resolvedTarget =
         typeof target !== 'undefined'
           ? target
@@ -19,18 +20,6 @@ export const navigateTo =
             : url.startsWith('http')
               ? '_blank'
               : '_self';
-
-      /*
-        dispatch(
-          toggleLoading({
-            status: 'loading',
-            message: `to... ${url}`,
-          }),
-        );
-        setTimeout(() => {
-          window.open(url, resolvedTarget);
-        }, 1000);
-      */
       window.open(url, resolvedTarget);
     } catch (e: unknown) {
       const errorMessage = e instanceof Error ? e.message : String(e);

@@ -5,6 +5,7 @@ import {
   FacebookShareButton,
   LinkedinShareButton,
   WhatsappShareButton,
+  TwitterShareButton,
 } from 'react-share';
 import {
   Box,
@@ -53,6 +54,17 @@ export default function ShareMenu({ frontmatter = null }: TShareMenu) {
             <ListItemText primary="Facebook" />
           </Box>
         </FacebookShareButton>
+      </MenuItem>
+
+      <MenuItem sx={{ p: 0 }}>
+        <TwitterShareButton title={title} url={url}>
+          <Box display="flex" alignItems="center" px={2} py={1}>
+            <ListItemIcon>
+              <Icon icon="twitter" />
+            </ListItemIcon>
+            <ListItemText primary="Twitter (X)" />
+          </Box>
+        </TwitterShareButton>
       </MenuItem>
 
       <MenuItem sx={{ p: 0 }}>

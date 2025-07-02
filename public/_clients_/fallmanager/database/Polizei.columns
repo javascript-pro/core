@@ -1,8 +1,0 @@
-"name","type","length","leftDigits","rightDigits"
-"PoilzeiID","STRING","0","0","0"
-"Dienststelle","STRING","0","0","0"
-"Straße","STRING","0","0","0"
-"PLZ","STRING","0","0","0"
-"Ort","STRING","0","0","0"
-"EMail","STRING","0","0","0"
-"Fax","STRING","0","0","0"
