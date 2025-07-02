@@ -55,8 +55,9 @@ export default function ArrowMenu() {
 
   const siblings = React.useMemo(() => {
     if (!parentItem?.children) return [];
-    return parentItem.children
-      .sort((a, b) => (a.order ?? 9999) - (b.order ?? 9999));
+    return parentItem.children.sort(
+      (a, b) => (a.order ?? 9999) - (b.order ?? 9999),
+    );
   }, [parentItem]);
 
   const currentIndex = siblings.findIndex(
@@ -89,7 +90,7 @@ export default function ArrowMenu() {
       id="arrowMenu"
       sx={{
         position: 'fixed',
-        bottom: 12,
+        bottom: 8,
         left: isMobile ? '50%' : 'auto',
         right: isMobile ? 'auto' : 12,
         transform: isMobile ? 'translateX(-50%)' : 'none',
@@ -98,11 +99,11 @@ export default function ArrowMenu() {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'space-between',
-        p: 2,
-        borderRadius: '10px',
-        backgroundColor: 'rgba(0,0,0,0.35)',
-        backdropFilter: 'blur(4px)',
-        boxShadow: 2,
+        p: 1,
+        borderRadius: 1,
+        // backgroundColor: 'rgba(0,0,0,0.35)',
+        // backdropFilter: 'blur(4px)',
+        boxShadow: 0,
         minWidth: 'auto',
       }}
     >
