@@ -137,67 +137,68 @@ export default function Fall() {
   return (
     <Box sx={{ mx: 2 }}>
       <Card>
-
-
         <CardContent>
+          <Grid container spacing={2}>
 
-            <Grid container spacing={2}>
-              <Grid 
+            <Grid
+              size={{
+                xs: 12,
+                md: 8,
+              }}
+            >
+              <BearbeitbarText
+                value={fallData.title || ''}
+                onSave={handleTitleSave}
+                label={t('caseTitle')}
+              />
+            </Grid>
+            
+            {fallData.dateien?.length > 0 && (
+              <Grid
                 size={{
                   xs: 12,
-                  md: 8,
-                }}>
-                  <BearbeitbarText
-                    value={fallData.title || ''}
-                    onSave={handleTitleSave}
-                    label={t('caseTitle')}
-                  />
-              </Grid>
+                  md: 4,
+                }}
+              >
+                {uploadError && (
+                  <Box my={3}>
+                    <Alert severity="error" sx={{ mt: 2 }}>
+                      {uploadError}
+                    </Alert>
+                  </Box>
+                )}
 
-              {fallData.dateien?.length > 0 && (
-                 <Grid 
-                    size={{
-                      xs: 12,
-                      md: 4,
-                    }}>
-                      
-                    {uploadError && (
-                      <Box my={3}>
-                        <Alert severity="error" sx={{ mt: 2 }}>
-                          {uploadError}
-                        </Alert>
-                      </Box>
-                    )}
-          
-                      <Button 
-                        fullWidth
-                        component="label" 
-                        variant="contained" 
-                        disabled={uploading}
-                      >
-                        {uploading ? t('uploading') : t('newPDF')}
-                        <input
-                          type="file"
-                          hidden
-                          accept="application/pdf"
-                          onChange={handleFileUpload}
-                        />
-                      </Button>
-                      {fallData.dateien.map((file: any) => (
-                        <Datei key={file.fileId} />
-                      ))}
-                </Grid>
-              )}
-            </Grid>
+                <Button
+                  // fullWidth
+                  color="secondary"
+                  variant="outlined"
+                  disabled={uploading}
+                  sx={{ mb: 2 }}
+                >
+                  {uploading ? t('uploading') : t('newPDF')}
+                  <input
+                    type="file"
+                    hidden
+                    accept="application/pdf"
+                    onChange={handleFileUpload}
+                  />
+                </Button>
+                {fallData.dateien.map((file: any) => (
+                  <Datei key={file.fileId} />
+                ))}
+              </Grid>
+            )}
+
+            
+          </Grid>
         </CardContent>
 
         <CardActions>
-
+          <Box sx={{ flexGrow: 1 }} />
           <Button variant="outlined" onClick={handleBackToList}>
             {t('saveClose')}
           </Button>
         </CardActions>
-
       </Card>
     </Box>
   );

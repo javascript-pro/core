@@ -59,9 +59,9 @@ export default function Fallliste() {
             <Typography variant="h6">
               {doc.title || doc.name || `Fall ${doc.id}`}
             </Typography>
-            <Typography variant="body2" color="text.secondary">
+            {/* <Typography variant="body2" color="text.secondary">
               {doc.description || t('noDescription')}
-            </Typography>
+            </Typography> */}
           </Paper>
         </ButtonBase>
       ))}

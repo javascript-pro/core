@@ -1,5 +1,5 @@
-// core/gl-core/cartridges/Fallmanager/components/Sprachauswahl.tsx
 'use client';
+
 import * as React from 'react';
 import {
   Box,
@@ -41,31 +41,45 @@ export default function Sprachauswahl() {
 
   return (
     <Select
-        value={language}
-        onChange={handleChange}
-        variant="standard"
-        disableUnderline
-        renderValue={(selected) => {
-          const lang = languages[selected as string];
-          return (
-            <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              {lang?.title || selected}
-              <img
-                src={`/svg/flags/${selected}.svg`}
-                alt={lang?.title || selected}
-                style={{
-                  width: 24,
-                  height: 24,
-                  marginLeft: 16,
-                  marginRight: 8,
-                  objectFit: 'contain',
-                }}
-              />
-            </Box>
-          );
-        }}
-      >
-        {Object.entries(languages).map(([code, data]) => (
+      value={language}
+      onChange={handleChange}
+      variant="standard"
+      disableUnderline
+      renderValue={(selected) => {
+        const lang = languages[selected as string];
+        return (
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <img
+              src={`/svg/flags/${selected}.svg`}
+              alt={lang?.title || selected}
+              style={{
+                width: 24,
+                height: 24,
+                marginLeft: 16,
+                marginRight: 8,
+                objectFit: 'contain',
+              }}
+            />
+          </Box>
+        );
+      }}
+    >
+      {/* Current language shown as disabled item */}
+      <MenuItem value={language} disabled>
+        <ListItemIcon sx={{ minWidth: 32 }}>
+          <img
+            src={`/svg/flags/${language}.svg`}
+            alt={languages[language].title}
+            style={{ width: 24, height: 16, objectFit: 'contain' }}
+          />
+        </ListItemIcon>
+        <ListItemText primary={languages[language].description} />
+      </MenuItem>
+
+      {/* Other available languages */}
+      {Object.entries(languages)
+        .filter(([code]) => code !== language)
+        .map(([code, data]) => (
           <MenuItem key={code} value={code}>
             <ListItemIcon sx={{ minWidth: 32 }}>
               <img
@@ -77,6 +91,6 @@ export default function Sprachauswahl() {
             <ListItemText primary={data.description} />
           </MenuItem>
         ))}
-      </Select>
+    </Select>
   );
 }

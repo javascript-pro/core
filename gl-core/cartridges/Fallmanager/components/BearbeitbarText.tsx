@@ -48,15 +48,14 @@ export default function BearbeitbarText({
     if (changed) {
       onSave(current.trim());
       dispatch(
-      toggleFeedback({
-        severity: 'success',
-        title: `${label} saved`,
-      }),
-    );
+        toggleFeedback({
+          severity: 'success',
+          title: `${label} saved`,
+        }),
+      );
     }
     setEditing(false);
     setChanged(false);
-    
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -86,12 +85,14 @@ export default function BearbeitbarText({
     };
 
     document.addEventListener('mousedown', handleClickOutside);
-    return () =>
-      document.removeEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [editing, changed]);
 
   return (
-    <Box ref={containerRef} sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+    <Box
+      ref={containerRef}
+      sx={{ display: 'flex', alignItems: 'center', gap: 1 }}
+    >
       {editing ? (
         <TextField
           fullWidth
@@ -99,8 +100,7 @@ export default function BearbeitbarText({
           value={current}
           onChange={handleChange}
           onKeyDown={handleKeyDown}
-          // autoFocus
-          // label={label}
+          label={label}
           InputProps={{
             endAdornment: (
               <InputAdornment position="end">
