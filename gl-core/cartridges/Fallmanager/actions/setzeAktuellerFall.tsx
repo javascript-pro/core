@@ -1,18 +1,17 @@
-// core/gl-core/cartridges/Bouncer/actions/bouncerKey.ts
+// core/gl-core/cartridges/Fallmanager/actions/setzeAktuellerFall.tsx
 import { TUbereduxDispatch } from '../../../../gl-core/types';
-import { setUbereduxKey } from '../../../';
+import { setUbereduxKey } from '../../../../gl-core';
 
-export const bouncerKey =
-  (key: string, value: any): any =>
+export const setzeAktuellerFall =
+  (aktuellerFall: any): any =>
   async (dispatch: TUbereduxDispatch, getState: () => any) => {
     try {
-      // console.log('bouncerKey', key, value);
-      const current = getState().redux.bouncer;
+      const current = getState().redux.fallmanager;
       const updated = {
         ...current,
-        [key]: value,
+        aktuellerFall,
       };
-      dispatch(setUbereduxKey({ key: 'bouncer', value: updated }));
+      dispatch(setUbereduxKey({ key: 'fallmanager', value: updated }));
     } catch (e: unknown) {
       const msg = e instanceof Error ? e.message : String(e);
       dispatch(setUbereduxKey({ key: 'error', value: msg }));
