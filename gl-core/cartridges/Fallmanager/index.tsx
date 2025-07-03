@@ -1,7 +1,7 @@
 import Fallmanager from './Fallmanager';
 import { initialState as initialStateFallmanager } from './initialState';
 import { useFallmanagerSlice, useLingua } from './hooks';
-import { setzeSprache, setzeAktuellerFall, zuruecksetzen } from './actions';
+import { setzeSprache, setzeAktuellerFall, zuruecksetzen,toggleNewCase } from './actions';
 import {
   BearbeitbarText,
   Datei,
@@ -10,6 +10,7 @@ import {
   Fallliste,
   Header,
   Sprachauswahl,
+  NewCase,
 } from './components';
 
 export {
@@ -20,6 +21,7 @@ export {
   setzeSprache,
   setzeAktuellerFall,
   zuruecksetzen,
+  toggleNewCase,
 };
 
 export {
@@ -30,4 +32,5 @@ export {
   Fallliste,
   Header,
   Sprachauswahl,
+  NewCase,
 };

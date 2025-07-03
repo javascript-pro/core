@@ -22,7 +22,10 @@ export const languages: Record<
   },
 };
 
-type LinguaKey = 'APP_TITLE' | 'NEW_CASE' | 'UPLOAD_PDF';
+type LinguaKey = 'APP_TITLE' 
+| 'NEW_CASE' 
+| 'NEW_CASE_HELP'
+| 'UPLOAD_PDF';
 
 type TranslationEntry = Record<TLinguaCodes, string>;
 
@@ -39,6 +42,14 @@ export const lingua: Record<LinguaKey, TranslationEntry> = {
     pt: 'Novo Caso',
     zh: '新案件',
   },
+
+NEW_CASE_HELP: {
+  en: 'New cases must have a valid client name',
+  de: 'Neue Fälle müssen einen gültigen Kundennamen haben',
+  pt: 'Os novos casos devem ter um nome de cliente válido',
+  zh: '新案件必须有有效的客户姓名',
+},
+
   UPLOAD_PDF: {
     en: 'Upload PDF',
     de: 'PDF hochladen',
