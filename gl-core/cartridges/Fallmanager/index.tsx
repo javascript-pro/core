@@ -7,6 +7,7 @@ import {
   zuruecksetzen,
   saveNewCase,
   toggleNewCase,
+  deleteCase,
 } from './actions';
 import {
   BearbeitbarText,
@@ -28,6 +29,7 @@ export {
   setzeAktuellerFall,
   zuruecksetzen,
   toggleNewCase,
+  deleteCase,
   saveNewCase,
 };
 

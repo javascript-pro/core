@@ -1,4 +1,3 @@
-// core/gl-core/cartridges/Fallmanager/components/Fall.tsx
 'use client';
 
 import * as React from 'react';
@@ -13,29 +12,32 @@ import {
   LinearProgress,
   Grid,
 } from '@mui/material';
-import { useParams, useRouter } from 'next/navigation';
-import { doc, onSnapshot, DocumentData, updateDoc } from 'firebase/firestore';
-import { db } from '../../../lib/firebase';
+import { usePathname, useRouter } from 'next/navigation';
 import {
-  useLingua,
-  setzeAktuellerFall,
-  BearbeitbarText,
-} from '../../Fallmanager';
-import { useDispatch } from '../../../../gl-core';
+  doc,
+  onSnapshot,
+  DocumentData,
+  updateDoc,
+  serverTimestamp,
+} from 'firebase/firestore';
+import { db } from '../../../lib/firebase';
+import { useLingua, BearbeitbarText } from '../../Fallmanager';
 import Datei from './Datei';
+import { useDispatch } from '../../../../gl-core';
+import { deleteCase } from '../actions/deleteCase';
 
 export default function Fall() {
-  const { slug } = useParams() as { slug?: string[] };
-  const id = slug?.[2];
+  const pathname = usePathname();
+  const id = pathname.split('/fallmanager/')[1];
+  const router = useRouter();
+  const t = useLingua();
+  const dispatch = useDispatch();
+
   const [fallData, setFallData] = useState<DocumentData | null>(null);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [uploading, setUploading] = useState(false);
   const [uploadError, setUploadError] = useState<string | null>(null);
-
-  const t = useLingua();
-  const router = useRouter();
-  const dispatch = useDispatch();
 
   useEffect(() => {
     if (!id) return;
@@ -43,8 +45,7 @@ export default function Fall() {
     const unsub = onSnapshot(doc(db, 'fallmanager', id), (snapshot) => {
       setLoading(false);
       if (snapshot.exists()) {
-        const data = { id: snapshot.id, ...snapshot.data() };
-        setFallData(data);
+        setFallData({ id: snapshot.id, ...snapshot.data() });
       } else {
         setFallData(null);
       }
@@ -53,27 +54,27 @@ export default function Fall() {
     return () => unsub();
   }, [id]);
 
-  const handleBackToList = () => {
-    dispatch(setzeAktuellerFall(null));
+  const handleBack = () => {
     router.push('/fallmanager');
   };
 
-  const handleTitleSave = async (newTitle: string) => {
+  const handleClientNameSave = async (clientName: string) => {
     if (!fallData || !id) return;
     setSaving(true);
     try {
       await updateDoc(doc(db, 'fallmanager', id), {
-        title: newTitle,
+        clientName,
+        updatedAt: serverTimestamp(),
       });
-    } catch (e) {
-      console.error('Fehler beim Speichern des Titels:', e);
+    } catch (err) {
+      console.error('error', err);
     } finally {
       setSaving(false);
     }
   };
 
   const handleFileUpload = async (
-    event: React.ChangeEvent<HTMLInputElement>,
+    event: React.ChangeEvent<HTMLInputElement>
   ) => {
     const file = event.target.files?.[0];
     if (!file || !id) return;
@@ -90,18 +91,29 @@ export default function Fall() {
         method: 'POST',
         body: formData,
       });
+      const result = await res.json();
+      if (!res.ok) throw new Error(result.error || 'Upload failed');
 
-      const data = await res.json();
-
-      if (!res.ok) {
-        throw new Error(data.error || 'Fehler beim Hochladen');
-      }
+      await updateDoc(doc(db, 'fallmanager', id), {
+        updatedAt: serverTimestamp(),
+      });
     } catch (err: any) {
       console.error(err);
       setUploadError(err.message);
     } finally {
       setUploading(false);
-      event.target.value = ''; // Reset input
+      event.target.value = '';
+    }
+  };
+
+  const handleDelete = async () => {
+    if (!id) return;
+    const confirm = window.confirm(t('DELETE_CONFIRM') || 'Wirklich löschen?');
+    if (!confirm) return;
+
+    const success = await dispatch(deleteCase(id));
+    if (success) {
+      router.push('/fallmanager');
     }
   };
 
@@ -119,11 +131,7 @@ export default function Fall() {
         <Alert
           severity="info"
           action={
-            <Button
-              color="secondary"
-              variant="contained"
-              onClick={handleBackToList}
-            >
+            <Button variant="contained" onClick={handleBack}>
               {t('back')}
             </Button>
           }
@@ -139,61 +147,35 @@ export default function Fall() {
       <Card>
         <CardContent>
           <Grid container spacing={2}>
-            <Grid
-              size={{
-                xs: 12,
-                md: 8,
-              }}
-            >
+            <Grid size={{ xs: 12, md: 8 }}>
               <BearbeitbarText
-                value={fallData.title || ''}
-                onSave={handleTitleSave}
-                label={t('caseTitle')}
+                value={fallData.clientName || ''}
+                onSave={handleClientNameSave}
+                label={t('CLIENT_NAME')}
               />
             </Grid>
 
-            {fallData.dateien?.length > 0 && (
-              <Grid
-                size={{
-                  xs: 12,
-                  md: 4,
-                }}
-              >
-                {uploadError && (
-                  <Box my={3}>
-                    <Alert severity="error" sx={{ mt: 2 }}>
-                      {uploadError}
-                    </Alert>
-                  </Box>
-                )}
+            <Grid size={{ xs: 12, md: 4 }}>
+              {uploadError && (
+                <Alert severity="error" sx={{ mt: 2 }}>
+                  {uploadError}
+                </Alert>
+              )}
 
-                <Button
-                  // fullWidth
-                  color="secondary"
-                  variant="outlined"
-                  disabled={uploading}
-                  sx={{ mb: 2 }}
-                >
-                  {uploading ? t('uploading') : t('newPDF')}
-                  <input
-                    type="file"
-                    hidden
-                    accept="application/pdf"
-                    onChange={handleFileUpload}
-                  />
-                </Button>
-                {fallData.dateien.map((file: any) => (
-                  <Datei key={file.fileId} />
-                ))}
-              </Grid>
-            )}
+              {fallData.dateien?.map((file: any) => (
+                <Datei key={file.fileId} />
+              ))}
+            </Grid>
           </Grid>
         </CardContent>
 
         <CardActions>
           <Box sx={{ flexGrow: 1 }} />
-          <Button variant="outlined" onClick={handleBackToList}>
-            {t('saveClose')}
+          <Button variant="outlined" onClick={handleBack}>
+            {t('CANCEL')}
+          </Button>
+          <Button variant="contained" color="error" onClick={handleDelete}>
+            {t('DELETE')}
           </Button>
         </CardActions>
       </Card>

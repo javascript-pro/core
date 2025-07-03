@@ -3,7 +3,6 @@
 import * as React from 'react';
 import {
   Box,
-  Typography,
   TextField,
   IconButton,
   Tooltip,
@@ -69,7 +68,6 @@ export default function BearbeitbarText({
     }
   };
 
-  // Close edit mode on outside click (only if not changed)
   React.useEffect(() => {
     if (!editing) return;
 
@@ -93,51 +91,48 @@ export default function BearbeitbarText({
       ref={containerRef}
       sx={{ display: 'flex', alignItems: 'center', gap: 1 }}
     >
-      {editing ? (
-        <TextField
-          fullWidth
-          variant="filled"
-          value={current}
-          onChange={handleChange}
-          onKeyDown={handleKeyDown}
-          label={label}
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position="end">
-                <Tooltip title="Speichern">
-                  <span>
-                    <IconButton
-                      onClick={handleSave}
-                      disabled={!changed}
-                      color="primary"
-                      size="small"
-                    >
-                      <Icon icon="save" />
-                    </IconButton>
-                  </span>
-                </Tooltip>
-                <Tooltip title="Abbrechen">
-                  <IconButton
-                    onClick={handleCancel}
-                    color="inherit"
-                    size="small"
-                  >
-                    <Icon icon="close" />
-                  </IconButton>
-                </Tooltip>
-              </InputAdornment>
-            ),
-          }}
-        />
-      ) : (
-        <Typography
-          variant="h6"
-          sx={{ flexGrow: 1, cursor: 'pointer' }}
-          onClick={handleEdit}
-        >
-          {value}
-        </Typography>
-      )}
+      <TextField
+        fullWidth
+        variant={editing ? 'filled' : 'standard'}
+        value={editing ? current : value}
+        label={label}
+        onClick={!editing ? handleEdit : undefined}
+        onChange={editing ? handleChange : undefined}
+        onKeyDown={editing ? handleKeyDown : undefined}
+        InputProps={
+          editing
+            ? {
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <Tooltip title="Speichern">
+                      <span>
+                        <IconButton
+                          onClick={handleSave}
+                          disabled={!changed}
+                          color="primary"
+                          size="small"
+                        >
+                          <Icon icon="save" />
+                        </IconButton>
+                      </span>
+                    </Tooltip>
+                    <Tooltip title="Abbrechen">
+                      <IconButton
+                        onClick={handleCancel}
+                        color="inherit"
+                        size="small"
+                      >
+                        <Icon icon="close" />
+                      </IconButton>
+                    </Tooltip>
+                  </InputAdornment>
+                ),
+              }
+            : {
+                readOnly: true,
+              }
+        }
+      />
     </Box>
   );
 }

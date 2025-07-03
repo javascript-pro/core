@@ -11,6 +11,7 @@ import {
   orderBy,
 } from 'firebase/firestore';
 import { db } from '../../../lib/firebase';
+import { Icon } from '../../../../gl-core';
 import { useLingua, setzeAktuellerFall } from '../../Fallmanager';
 import { useRouter } from 'next/navigation';
 import { useDispatch } from 'react-redux';
@@ -40,7 +41,7 @@ export default function Fallliste() {
 
   const handleClick = (doc: DocumentData) => {
     dispatch(setzeAktuellerFall(doc as any));
-    router.push(`/fallmanager/fall/${doc.id}`);
+    router.push(`/fallmanager/${doc.id}`);
   };
 
   return (
@@ -65,6 +66,7 @@ export default function Fallliste() {
           >
             <Card sx={{ maxWidth: 320, height: '100%' }}>
               <CardHeader
+                avatar={<Icon icon="doc" color="disabled" />}
                 title={doc.clientName || 'No client name'}
                 // subheader={`id: ${doc.id}`}
                 titleTypographyProps={{
@@ -76,7 +78,6 @@ export default function Fallliste() {
                   sx: { overflow: 'hidden', textOverflow: 'ellipsis' },
                 }}
               />
-              <CardContent sx={{ height: 0, padding: 0 }} />
             </Card>
           </ButtonBase>
         </Grid>

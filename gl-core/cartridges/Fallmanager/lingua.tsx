@@ -29,6 +29,8 @@ type LinguaKey =
   | 'UPLOAD_PDF'
   | 'CLIENT_NAME'
   | 'CANCEL'
+  | 'DELETE'
+  | 'DELETE_CONFIRM'
   | 'CLIENT_NAME_TOO_SHORT'
   | 'SUBMIT';
 
@@ -40,6 +42,18 @@ export const lingua: Record<LinguaKey, TranslationEntry> = {
     de: 'Fallmanager',
     pt: 'Gestor de Casos',
     zh: '案件管理器',
+  },
+  DELETE: {
+    en: 'Delete',
+    de: '',
+    pt: '',
+    zh: '',
+  },
+  DELETE_CONFIRM:{
+    en: 'Are you sure?',
+    de: '',
+    pt: '',
+    zh: '',
   },
   CANCEL: {
     en: 'Cancel',

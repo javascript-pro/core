@@ -56,6 +56,9 @@ export default function Header() {
         }
         action={
           <Box sx={{ display: 'flex' }}>
+            <Box sx={{ pt: 0.5, pr: 1 }}>
+              <Sprachauswahl />
+            </Box>
             <Box>
               <Button
                 onClick={handleNewCase}
@@ -64,9 +67,6 @@ export default function Header() {
               >
                 {t('NEW_CASE')}
               </Button>
-            </Box>
-            <Box sx={{ pt: 0.5 }}>
-              <Sprachauswahl />
             </Box>
           </Box>
         }

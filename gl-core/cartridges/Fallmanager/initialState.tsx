@@ -4,7 +4,6 @@ import { TFallmanagerState } from './types';
 import { lingua, languages } from './lingua';
 
 export const initialState: TFallmanagerState = {
-  aktuellerFall: null,
   newCase: {
     open: false,
   },

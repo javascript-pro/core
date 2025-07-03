@@ -2,7 +2,6 @@
 
 export type TFallmanagerState = {
   newCase: any;
-  aktuellerFall: any;
   language: TLanguageCode;
   languages: Record<TLanguageCode, TLanguageEntry>;
   theme: TTheme;
