@@ -5,6 +5,7 @@ import * as React from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import {
   AppBar,
+  Button,
   CardHeader,
   IconButton,
   Box,
@@ -15,21 +16,21 @@ import { useDispatch, Icon } from '../../../../gl-core';
 import {
   Sprachauswahl,
   zuruecksetzen,
-  useTranslation,
+  useLingua,
 } from '../../Fallmanager';
 
 export default function Header() {
   const router = useRouter();
   const pathname = usePathname();
   const dispatch = useDispatch();
-  const t = useTranslation();
+  const t = useLingua();
   const theme = useTheme();
 
   const handleHome = () => {
     dispatch(zuruecksetzen());
   };
 
-  const title = pathname === '/fallmanager' ? t('caseList') : t('caseEdit');
+  const title = t("APP_TITLE");
 
   return (
     <AppBar
@@ -48,7 +49,19 @@ export default function Header() {
             <Icon icon="home" />
           </IconButton>
         }
-        action={<Sprachauswahl />}
+        action={<Box sx={{display:'flex'}}>
+                  <Box>
+                    <Button
+                      sx={{mr:1}}
+                      variant="contained"
+                    >
+                      {t("NEW_CASE")}
+                    </Button>
+                  </Box>
+                  <Box sx={{pt:0.5}}>
+                    <Sprachauswahl />
+                  </Box>
+                </Box>}
       />
     </AppBar>
   );

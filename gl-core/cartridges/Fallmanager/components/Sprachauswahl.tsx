@@ -73,7 +73,7 @@ export default function Sprachauswahl() {
             style={{ width: 24, height: 16, objectFit: 'contain' }}
           />
         </ListItemIcon>
-        <ListItemText primary={languages[language].description} />
+        <ListItemText primary={languages[language].title} />
       </MenuItem>
 
       {/* Other available languages */}
@@ -88,7 +88,7 @@ export default function Sprachauswahl() {
                 style={{ width: 24, height: 16, objectFit: 'contain' }}
               />
             </ListItemIcon>
-            <ListItemText primary={data.description} />
+            <ListItemText primary={data.title} />
           </MenuItem>
         ))}
     </Select>

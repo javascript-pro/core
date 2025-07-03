@@ -8,12 +8,12 @@ import {
   useFallmanagerSlice,
   Fallliste,
   Fall,
-  useTranslation,
+  useLingua,
 } from '../../Fallmanager';
 
 export default function Faelle() {
   const { aktuellerFall } = useFallmanagerSlice();
-  const t = useTranslation();
+  const t = useLingua();
   const pathname = usePathname();
   const router = useRouter();
 

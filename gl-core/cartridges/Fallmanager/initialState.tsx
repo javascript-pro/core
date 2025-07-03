@@ -1,21 +1,13 @@
 // core/gl-core/cartridges/Fallmanager/initialState.tsx
+
 import { TFallmanagerState } from './types';
-import { translations } from './translations';
+import { lingua, languages } from './lingua';
 
 export const initialState: TFallmanagerState = {
   aktuellerFall: null,
-  language: 'de',
-  languages: {
-    en: {
-      title: 'English',
-      description: 'Switch to English',
-    },
-    de: {
-      title: 'Deutsch',
-      description: 'Wechseln Sie zu Deutsch',
-    },
-  },
-  translations,
+  lingua,
+  language: 'en',
+  languages,
   theme: {
     mode: 'light',
     primary: '#414142',

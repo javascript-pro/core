@@ -17,7 +17,7 @@ import { useParams, useRouter } from 'next/navigation';
 import { doc, onSnapshot, DocumentData, updateDoc } from 'firebase/firestore';
 import { db } from '../../../lib/firebase';
 import {
-  useTranslation,
+  useLingua,
   setzeAktuellerFall,
   BearbeitbarText,
 } from '../../Fallmanager';
@@ -33,7 +33,7 @@ export default function Fall() {
   const [uploading, setUploading] = useState(false);
   const [uploadError, setUploadError] = useState<string | null>(null);
 
-  const t = useTranslation();
+  const t = useLingua();
   const router = useRouter();
   const dispatch = useDispatch();
 

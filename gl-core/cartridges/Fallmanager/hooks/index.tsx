@@ -1,5 +1,5 @@
 // core/gl-core/cartridges/Fallmanager/hooks/index.tsx
-import { useTranslation } from './useTranslation';
+import { useLingua } from './useLingua';
 import { useFallmanagerSlice } from './useFallmanagerSlice';
 
-export { useFallmanagerSlice, useTranslation };
+export { useFallmanagerSlice, useLingua };

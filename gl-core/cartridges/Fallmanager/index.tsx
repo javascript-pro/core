@@ -1,6 +1,6 @@
 import Fallmanager from './Fallmanager';
 import { initialState as initialStateFallmanager } from './initialState';
-import { useFallmanagerSlice, useTranslation } from './hooks';
+import { useFallmanagerSlice, useLingua } from './hooks';
 import { setzeSprache, setzeAktuellerFall, zuruecksetzen } from './actions';
 import {
   BearbeitbarText,
@@ -16,7 +16,7 @@ export {
   Fallmanager,
   initialStateFallmanager,
   useFallmanagerSlice,
-  useTranslation,
+  useLingua,
   setzeSprache,
   setzeAktuellerFall,
   zuruecksetzen,

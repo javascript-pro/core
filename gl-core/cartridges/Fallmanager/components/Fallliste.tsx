@@ -6,13 +6,13 @@ import { useEffect, useState } from 'react';
 import { Box, Typography, Paper, ButtonBase } from '@mui/material';
 import { collection, onSnapshot, DocumentData } from 'firebase/firestore';
 import { db } from '../../../lib/firebase';
-import { useTranslation, setzeAktuellerFall } from '../../Fallmanager';
+import { useLingua, setzeAktuellerFall } from '../../Fallmanager';
 import { useRouter } from 'next/navigation';
 import { useDispatch } from 'react-redux';
 
 export default function Fallliste() {
   const [docs, setDocs] = useState<DocumentData[]>([]);
-  const t = useTranslation();
+  const t = useLingua();
   const router = useRouter();
   const dispatch = useDispatch();
 
