@@ -6,7 +6,7 @@ import { lingua, languages } from './lingua';
 export const initialState: TFallmanagerState = {
   aktuellerFall: null,
   newCase: {
-    open: true,
+    open: false,
   },
   lingua,
   language: 'en',

@@ -29,6 +29,7 @@ type LinguaKey =
   | 'UPLOAD_PDF'
   | 'CLIENT_NAME'
   | 'CANCEL'
+  | 'CLIENT_NAME_TOO_SHORT'
   | 'SUBMIT';
 
 type TranslationEntry = Record<TLinguaCodes, string>;
@@ -45,6 +46,12 @@ export const lingua: Record<LinguaKey, TranslationEntry> = {
     de: 'Abbrechen',
     pt: 'Cancelar',
     zh: '取消',
+  },
+  CLIENT_NAME_TOO_SHORT: {
+    en: 'Client name too short',
+    de: 'Kundenname zu kurz',
+    pt: 'Nome do cliente muito curto',
+    zh: '客户名称太短',
   },
   SUBMIT: {
     en: 'Submit',

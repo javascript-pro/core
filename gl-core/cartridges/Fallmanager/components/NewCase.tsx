@@ -29,6 +29,7 @@ export default function NewCase() {
 
   const isValid = clientName.trim().length >= 6;
 
+  // Handle focusing input when dialog opens
   useEffect(() => {
     if (newCase.open) {
       const timer = setInterval(() => {
@@ -42,7 +43,7 @@ export default function NewCase() {
         if (e.key === 'Escape') {
           inputRef.current?.blur();
         }
-        if (e.key === 'Enter' && isValid) {
+        if (e.key === 'Enter' && isValid && !newCase.saving) {
           handleSubmit();
         }
       };
@@ -56,14 +57,21 @@ export default function NewCase() {
     } else {
       setClientName('');
     }
-  }, [newCase.open, isValid]);
+  }, [newCase.open, isValid, newCase.saving]);
+
+  // Close dialog after successful save
+  useEffect(() => {
+    if (newCase.id && newCase.saving === false) {
+      dispatch(toggleNewCase(false));
+    }
+  }, [newCase.id, newCase.saving, dispatch]);
 
   const handleClose = () => {
     dispatch(toggleNewCase(false));
   };
 
   const handleSubmit = () => {
-    if (!isValid) return;
+    if (!isValid || newCase.saving) return;
     dispatch(saveNewCase(clientName));
   };
 
@@ -93,7 +101,7 @@ export default function NewCase() {
         />
       </DialogContent>
       <DialogActions>
-        <Button onClick={handleClose}>
+        <Button onClick={handleClose} disabled={newCase.saving}>
           {t('CANCEL') || 'Cancel'}
         </Button>
         {newCase.saving ? (

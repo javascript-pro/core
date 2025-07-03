@@ -1,10 +1,15 @@
-// core/gl-core/cartridges/Fallmanager/components/Fallliste.tsx
 'use client';
 
 import * as React from 'react';
 import { useEffect, useState } from 'react';
-import { Box, Typography, Paper, ButtonBase } from '@mui/material';
-import { collection, onSnapshot, DocumentData } from 'firebase/firestore';
+import { Card, CardHeader, CardContent, Grid, ButtonBase } from '@mui/material';
+import {
+  collection,
+  onSnapshot,
+  DocumentData,
+  query,
+  orderBy,
+} from 'firebase/firestore';
 import { db } from '../../../lib/firebase';
 import { useLingua, setzeAktuellerFall } from '../../Fallmanager';
 import { useRouter } from 'next/navigation';
@@ -17,16 +22,18 @@ export default function Fallliste() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const unsubscribe = onSnapshot(
+    const q = query(
       collection(db, 'fallmanager'),
-      (snapshot) => {
-        const data = snapshot.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
-        setDocs(data);
-      },
+      orderBy('createdAt', 'desc'),
     );
+
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      const data = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setDocs(data);
+    });
 
     return () => unsubscribe();
   }, []);
@@ -37,34 +44,43 @@ export default function Fallliste() {
   };
 
   return (
-    <Box sx={{ mx: 2 }}>
+    <Grid container spacing={1}>
       {docs.map((doc) => (
-        <ButtonBase
+        <Grid
           key={doc.id}
-          onClick={() => handleClick(doc)}
-          sx={{ width: '100%', mb: 2, textAlign: 'left' }}
+          size={{
+            xs: 12,
+            sm: 6,
+            md: 4,
+            lg: 3,
+          }}
         >
-          <Paper
-            elevation={1}
+          <ButtonBase
+            onClick={() => handleClick(doc)}
             sx={{
-              p: 2,
               width: '100%',
-              borderRadius: 1,
-              bgcolor: '#f5f5f5',
-              '&:hover': {
-                bgcolor: '#e0e0e0',
-              },
+              textAlign: 'left',
+              display: 'block',
             }}
           >
-            <Typography variant="h6">
-              {doc.title || doc.name || `Fall ${doc.id}`}
-            </Typography>
-            {/* <Typography variant="body2" color="text.secondary">
-              {doc.description || t('noDescription')}
-            </Typography> */}
-          </Paper>
-        </ButtonBase>
+            <Card sx={{ maxWidth: 320, height: '100%' }}>
+              <CardHeader
+                title={doc.clientName || 'No client name'}
+                // subheader={`id: ${doc.id}`}
+                titleTypographyProps={{
+                  noWrap: true,
+                  sx: { overflow: 'hidden', textOverflow: 'ellipsis' },
+                }}
+                subheaderTypographyProps={{
+                  noWrap: true,
+                  sx: { overflow: 'hidden', textOverflow: 'ellipsis' },
+                }}
+              />
+              <CardContent sx={{ height: 0, padding: 0 }} />
+            </Card>
+          </ButtonBase>
+        </Grid>
       ))}
-    </Box>
+    </Grid>
   );
 }
