@@ -4,7 +4,7 @@ title: Balance
 description: A collection of Writing
 slug: /balance
 icon: balance
-image: /png/og.png
+image: /jpg/90s-high-school.jpg
 ---
 
 ### Are you [Generation X](/balance/books/generation-x)?

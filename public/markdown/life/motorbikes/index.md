@@ -1,10 +1,12 @@
 ---
 order: 200
 title: Motorbikes
-description: Watch your toes
+description: A truth universally acknowledged
 slug: /life/motorbikes
 icon: motorbikes
-image: /png/n64/biker.png
+image: /jpg/motorbikes.jpg
 ---
 
-> Every man in posession of a good fortune is in need of a new motorbike
+> “It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a motorbike.”
+
+― Jane Austen, Pride and Prejudice

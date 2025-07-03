@@ -244,16 +244,17 @@
                 "slug": "/work/techstack/blockchain",
                 "order": 10,
                 "icon": "blockchain",
-                "image": "/png/3rdParty/blockchain.png",
+                "image": "/jpg/bitcoin.jpg",
                 "type": "folder",
                 "tags": [
                   "techstack",
                   "blockchain",
                   "web3",
                   "casino",
-                  "igaming"
+                  "igaming",
+                  "experience"
                 ],
-                "excerpt": "“Working for an iGaming company in Malta, I worked on a Bitcoinnative casino platform. The idea was to create a fully cryptobased gambling experience—no fiat rails, no KYC, no intermediaries. It was d",
+                "excerpt": "Role: Senior engineer with deep involvement in the frontend and wallet integration\n\nWorking for an iGaming company in Malta, I worked on a Bitcoinnative casino platform. The idea was to create a fully",
                 "children": []
               },
               {
@@ -442,7 +443,7 @@
             "slug": "/life/motorbikes",
             "order": 200,
             "icon": "motorbikes",
-            "image": "/png/n64/biker.png",
+            "image": "/jpg/motorbikes.jpg",
             "type": "folder",
             "excerpt": "Every man in posession of a good fortune is in need of a new motorbike",
             "children": []
