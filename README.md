@@ -1,13 +1,14 @@
 # Goldlabel Core
 
-> An entirely working app, free to use and modify as ever. Always Free & Open Source.
+Entirely working Next.js App. Free to use and modify as ever.  
+Always Free & Open Source.
 
 ✅ Newest Features
 
 > Lingua
 
-- Bouncer Authenication System
+- Bouncer
 - CV
 - Flickr
 
-![Wei Zang](https://goldlabel.pro/png/cartridges/weizang.png)
+![OG Image](https://goldlabel.pro/png/cartridges/lingua.png)
