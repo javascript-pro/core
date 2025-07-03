@@ -1,43 +1,58 @@
 ---
-order: 10
-title: Blockchain
-description: What is our experience of Web3?
-slug: /work/techstack//blockchain
-icon: blockchain
-image: /jpg/bitcoin.jpg
-tags: techstack, blockchain, web3, casino, igaming, experience
+order: 150
+title: Blockchain Crypto Casino
+description: Building a Bitcoin-Powered Gambling Platform
+slug: /work/techstack/blockchain
+icon: bitcoin
+image: /png/3rdParty/bitcoin.png
+git: https://github.com/javascript-pro/bitcoin-hash
+tags: techstack, crypto, blockchain, web3, casino, igaming, experience, bitcoin, malta
 ---
+# Blockchain Crypto Casino
 
-> Role: Senior engineer with deep involvement in the frontend and wallet integration
+> In 2018, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online gambling world but was pivoting into blockchain as a way to skirt regulatory overhead and payment processor restrictions.
 
-Working for an iGaming company in Malta, I worked on a Bitcoin-native casino platform. The idea was to create a fully crypto-based gambling experience—no fiat rails, no KYC, no intermediaries. It was designed for people who already had Bitcoin and wanted to play anonymously. The CTO led the project, but I was responsible for building and integrating large parts of the frontend and wallet interaction layer.
+The idea was to create a casino that ran entirely on Bitcoin. Players didn’t need to sign up with an email, provide any personal information, or go through a bank. They could simply send Bitcoin to the site, play games, and withdraw any winnings — all in a matter of minutes.
 
-We weren’t using smart contracts—this was pure Bitcoin, so we had to handle all the UTXO management, confirmations, and transaction broadcasts ourselves. We used a custom backend that talked to a Bitcoin full node via JSON-RPC, and a React frontend that showed real-time balance updates, bets, and outcomes. I also worked on the provably fair game mechanics—mostly commit-reveal using hashed server seeds and client inputs.
+### Key features
 
-From a technical perspective, it was an interesting mix: building a modern web app on a very rigid blockchain. There were a lot of edge cases around fee volatility, unconfirmed transactions, and keeping the user experience smooth while everything settled on-chain.
+- WebSocket-driven live play (e.g., roulette, dice)
+- Bitcoin deposits & withdrawals via ElectrumX
+- In-browser entropy generation for provable fairness
+- Session-based wallets with automatic hot-wallet sweeping
 
-- No smart contracts: “Bitcoin doesn’t have an EVM—we had to roll everything ourselves”
-- Provable fairness: commit-reveal using hash(secret + nonce)
-- Stack: React, TypeScript, RPC connection to bitcoind, WebSocket updates, possibly Lightning
+### My Role
 
-Challenges:
+While I wasn’t the lead, I worked closely with the CTO to build out the frontend and middleware layers. This included integrating live WebSocket games, connecting to Electrum servers for blockchain transaction monitoring, and helping define the client API contract.
 
-- Confirmations and latency
-- UX during pending transactions
-- Seed/nonce verification for fairness
-- Fee estimation and batching
+I also helped with:
 
-Security:
+- Creating a responsive React UI for multiple games
+- Implementing realtime transaction feedback via WebSockets
+- Writing middleware to validate Bitcoin deposit addresses
+- Working on wallet entropy sources for provable fairness
 
-- Non-custodial for users, with a warm wallet managed server-side
-- Basic rate-limiting and abuse prevention at the wallet level
+### Technical Challenges
 
-What made it Web3?
+- **Latency**: Keeping gameplay snappy while querying Bitcoin balances over Electrum
+- **Security**: Preventing double spends and replay attacks
+- **UX**: Explaining trustless randomness to non-technical users
+- **Architecture**: Designing microservices to isolate financial logic
 
-It wasn’t Web3 in the Ethereum sense—there were no smart contracts or tokens—but it followed the same values: no intermediaries, crypto-native, provable fairness, and full transparency.
+### Outcome
 
-Would you do it differently today?
+The platform launched in private beta and attracted a small but active cohort of users — mostly from forums and crypto communities. Due to legal ambiguity and lack of licensing, the company eventually wound down operations voluntarily.
 
-I’d look at using a Layer 2 like Lightning or even switch to an EVM-compatible chain to move more logic on-chain. But for the use case—low-stakes, high-frequency play—Bitcoin was still the most familiar currency for the audience.
+Still, it served as a successful proof-of-concept for anonymous, crypto-native gaming.
 
-Let me know if you want a quick cheat sheet or a couple of natural conversation responses to practice.
+### Reflections
+
+This project taught me how to move fast in an unregulated space — balancing engineering idealism with pragmatic risk. It also gave me early exposure to the realities of building with Bitcoin: slow confirmation times, Electrum quirks, and the limitations of designing around unfinalized transactions.
+
+It’s also a great reminder of what you _can_ build when traditional financial rails are removed from the equation.
+
+### Technical Assessment
+
+Before joining the team, I completed a technical assessment to demonstrate my understanding of Bitcoin fundamentals and general coding ability. The task involved working directly with Bitcoin hashing algorithms — a core concept behind how transactions are verified on the blockchain. 
+
+The code is here on [GitHub](https://github.com/javascript-pro/bitcoin-hash). While it’s a simple project, it reflects the kind of low-level thinking and hands-on problem solving that this space often demands.
