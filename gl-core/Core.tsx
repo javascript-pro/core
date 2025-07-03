@@ -14,7 +14,6 @@ import {
   Header,
   PageBreadcrumb,
   useIsMobile,
-  // SideAds,
   useVersionCheck,
   IncludeAll,
   useThemeMode,
@@ -24,7 +23,8 @@ import {
 
 import { Flickr } from './cartridges/Flickr';
 import { CV } from './cartridges/CV';
-// import { Bouncer } from './cartridges/Bouncer';
+import { Bouncer } from './cartridges/Bouncer';
+import { Fallmanager } from './cartridges/Fallmanager';
 
 export default function Core({ frontmatter, body = null }: TCore) {
   let fullScreen = false;
