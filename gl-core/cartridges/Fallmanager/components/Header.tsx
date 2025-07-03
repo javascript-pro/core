@@ -13,7 +13,12 @@ import {
   useTheme,
 } from '@mui/material';
 import { useDispatch, Icon } from '../../../../gl-core';
-import { Sprachauswahl, zuruecksetzen, useLingua, toggleNewCase } from '../../Fallmanager';
+import {
+  Sprachauswahl,
+  zuruecksetzen,
+  useLingua,
+  toggleNewCase,
+} from '../../Fallmanager';
 
 export default function Header() {
   const router = useRouter();
@@ -52,7 +57,11 @@ export default function Header() {
         action={
           <Box sx={{ display: 'flex' }}>
             <Box>
-              <Button onClick={handleNewCase} sx={{ mr: 1 }} variant="contained">
+              <Button
+                onClick={handleNewCase}
+                sx={{ mr: 1 }}
+                variant="contained"
+              >
                 {t('NEW_CASE')}
               </Button>
             </Box>
