@@ -6,7 +6,6 @@ export type TFallmanagerState = {
   languages: Record<TLanguageCode, TLanguageEntry>;
   theme: TTheme;
   lingua: Record<string, Record<TLanguageCode, string>>;
-  
 };
 
 export type TLanguageCode = 'en' | 'de' | 'pt';

@@ -13,11 +13,7 @@ import {
   useTheme,
 } from '@mui/material';
 import { useDispatch, Icon } from '../../../../gl-core';
-import {
-  Sprachauswahl,
-  zuruecksetzen,
-  useLingua,
-} from '../../Fallmanager';
+import { Sprachauswahl, zuruecksetzen, useLingua } from '../../Fallmanager';
 
 export default function Header() {
   const router = useRouter();
@@ -30,7 +26,7 @@ export default function Header() {
     dispatch(zuruecksetzen());
   };
 
-  const title = t("APP_TITLE");
+  const title = t('APP_TITLE');
 
   return (
     <AppBar
@@ -49,19 +45,18 @@ export default function Header() {
             <Icon icon="home" />
           </IconButton>
         }
-        action={<Box sx={{display:'flex'}}>
-                  <Box>
-                    <Button
-                      sx={{mr:1}}
-                      variant="contained"
-                    >
-                      {t("NEW_CASE")}
-                    </Button>
-                  </Box>
-                  <Box sx={{pt:0.5}}>
-                    <Sprachauswahl />
-                  </Box>
-                </Box>}
+        action={
+          <Box sx={{ display: 'flex' }}>
+            <Box>
+              <Button sx={{ mr: 1 }} variant="contained">
+                {t('NEW_CASE')}
+              </Button>
+            </Box>
+            <Box sx={{ pt: 0.5 }}>
+              <Sprachauswahl />
+            </Box>
+          </Box>
+        }
       />
     </AppBar>
   );

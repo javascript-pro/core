@@ -1,6 +1,9 @@
 export type TLinguaCodes = 'en' | 'de' | 'pt' | 'zh';
 
-export const languages: Record<TLinguaCodes, { title: string; description: string }> = {
+export const languages: Record<
+  TLinguaCodes,
+  { title: string; description: string }
+> = {
   en: {
     title: 'English',
     description: 'Switch to English',
