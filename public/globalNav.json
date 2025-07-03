@@ -239,6 +239,24 @@
                 ]
               },
               {
+                "title": "Blockchain",
+                "description": "What is our experience of Web3?",
+                "slug": "/work/techstack/blockchain",
+                "order": 10,
+                "icon": "blockchain",
+                "image": "/png/3rdParty/blockchain.png",
+                "type": "folder",
+                "tags": [
+                  "techstack",
+                  "blockchain",
+                  "web3",
+                  "casino",
+                  "igaming"
+                ],
+                "excerpt": "“Working for an iGaming company in Malta, I worked on a Bitcoinnative casino platform. The idea was to create a fully cryptobased gambling experience—no fiat rails, no KYC, no intermediaries. It was d",
+                "children": []
+              },
+              {
                 "title": "Git",
                 "description": "Critical to our process",
                 "slug": "/work/techstack/git",
