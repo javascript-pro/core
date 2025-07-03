@@ -139,7 +139,6 @@ export default function Fall() {
       <Card>
         <CardContent>
           <Grid container spacing={2}>
-
             <Grid
               size={{
                 xs: 12,
@@ -152,7 +151,7 @@ export default function Fall() {
                 label={t('caseTitle')}
               />
             </Grid>
-            
+
             {fallData.dateien?.length > 0 && (
               <Grid
                 size={{
@@ -188,8 +187,6 @@ export default function Fall() {
                 ))}
               </Grid>
             )}
-
-            
           </Grid>
         </CardContent>
 
