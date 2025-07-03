@@ -8,9 +8,10 @@ image: /png/3rdParty/bitcoin.png
 git: https://github.com/javascript-pro/bitcoin-hash
 tags: techstack, crypto, blockchain, web3, casino, igaming, experience, bitcoin, malta
 ---
+
 # Blockchain Crypto Casino
 
-> In 2018, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online gambling world but was pivoting into blockchain as a way to skirt regulatory overhead and payment processor restrictions.
+> In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online gambling world but was pivoting into blockchain as a way to skirt regulatory overhead and payment processor restrictions.
 
 The idea was to create a casino that ran entirely on Bitcoin. Players didn’t need to sign up with an email, provide any personal information, or go through a bank. They could simply send Bitcoin to the site, play games, and withdraw any winnings — all in a matter of minutes.
 
@@ -53,6 +54,6 @@ It’s also a great reminder of what you _can_ build when traditional financial 
 
 ### Technical Assessment
 
-Before joining the team, I completed a technical assessment to demonstrate my understanding of Bitcoin fundamentals and general coding ability. The task involved working directly with Bitcoin hashing algorithms — a core concept behind how transactions are verified on the blockchain. 
+Before joining the team, I completed a technical assessment to demonstrate my understanding of Bitcoin fundamentals and general coding ability. The task involved working directly with Bitcoin hashing algorithms — a core concept behind how transactions are verified on the blockchain.
 
 The code is here on [GitHub](https://github.com/javascript-pro/bitcoin-hash). While it’s a simple project, it reflects the kind of low-level thinking and hands-on problem solving that this space often demands.
