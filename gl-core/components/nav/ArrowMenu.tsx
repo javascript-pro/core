@@ -100,19 +100,9 @@ export default function ArrowMenu() {
           width: '100%',
         }),
         backgroundColor: theme.palette.background.default,
-        borderTop: `1px solid ${
-          theme.palette.mode === 'dark'
-            ? theme.palette.grey[800]
-            : theme.palette.grey[300]
-        }`,
-        borderBottom: `1px solid ${
-          theme.palette.mode === 'dark'
-            ? theme.palette.grey[800]
-            : theme.palette.grey[300]
-        }`,
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'left',
+        alignItems: 'center',
         justifyContent: 'space-between',
         p: 1,
         boxShadow: 0,
@@ -120,15 +110,6 @@ export default function ArrowMenu() {
       })}
     >
       <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
-        {showUp && (
-          <Typography
-            variant="caption"
-            sx={{ fontSize: '0.75rem', cursor: 'pointer' }}
-            onClick={handleUp}
-          >
-            ↑ {upLabel}
-          </Typography>
-        )}
         {showLeft && (
           <Typography
             variant="caption"
@@ -136,6 +117,15 @@ export default function ArrowMenu() {
             onClick={handleLeft}
           >
             ← {leftSibling?.title}
+          </Typography>
+        )}
+        {showUp && (
+          <Typography
+            variant="caption"
+            sx={{ fontSize: '0.75rem', cursor: 'pointer' }}
+            onClick={handleUp}
+          >
+            ↑ {upLabel}
           </Typography>
         )}
         {showRight && (

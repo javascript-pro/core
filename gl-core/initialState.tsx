@@ -7,6 +7,7 @@ import { initialStateBouncer } from './cartridges/Bouncer';
 import { initialStateFallmanager } from './cartridges/Fallmanager';
 
 export const initialState: any = {
+  themeMode: 'light',
   fallmanager: initialStateFallmanager,
   bouncer: initialStateBouncer,
   cv: initialStateCV,
@@ -15,7 +16,6 @@ export const initialState: any = {
   version: pJSON.version,
   persisted: Date.now(),
   config,
-  themeMode: 'dark',
   loading: null,
   feedback: null,
 };

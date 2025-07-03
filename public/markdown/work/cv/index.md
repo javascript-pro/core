@@ -1,7 +1,7 @@
 ---
 order: 2
-title: Curriculum Vitae
-description: Match your Job to our CV with AI
+title: CV
+description: Match your Job to our Curriculum Vitae with AI
 slug: /work/cv
 icon: openai
 image: /png/og.png
