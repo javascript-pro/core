@@ -1,5 +1,5 @@
+// core/gl-core/cartridges/Fallmanager/components/Fall.tsx
 'use client';
-
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import {
@@ -21,10 +21,8 @@ import {
   serverTimestamp,
 } from 'firebase/firestore';
 import { db } from '../../../lib/firebase';
-import { useLingua, BearbeitbarText } from '../../Fallmanager';
-import Datei from './Datei';
+import { useLingua, BearbeitbarText, deleteCase } from '../../Fallmanager';
 import { useDispatch } from '../../../../gl-core';
-import { deleteCase } from '../actions/deleteCase';
 
 export default function Fall() {
   const pathname = usePathname();
@@ -36,8 +34,6 @@ export default function Fall() {
   const [fallData, setFallData] = useState<DocumentData | null>(null);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
-  const [uploading, setUploading] = useState(false);
-  const [uploadError, setUploadError] = useState<string | null>(null);
 
   useEffect(() => {
     if (!id) return;
@@ -73,42 +69,9 @@ export default function Fall() {
     }
   };
 
-  const handleFileUpload = async (
-    event: React.ChangeEvent<HTMLInputElement>,
-  ) => {
-    const file = event.target.files?.[0];
-    if (!file || !id) return;
-
-    setUploading(true);
-    setUploadError(null);
-
-    const formData = new FormData();
-    formData.append('file', file);
-    formData.append('fallId', id);
-
-    try {
-      const res = await fetch('/api/gl-api/fallmanager/hochladen', {
-        method: 'POST',
-        body: formData,
-      });
-      const result = await res.json();
-      if (!res.ok) throw new Error(result.error || 'Upload failed');
-
-      await updateDoc(doc(db, 'fallmanager', id), {
-        updatedAt: serverTimestamp(),
-      });
-    } catch (err: any) {
-      console.error(err);
-      setUploadError(err.message);
-    } finally {
-      setUploading(false);
-      event.target.value = '';
-    }
-  };
-
   const handleDelete = async () => {
     if (!id) return;
-    const confirm = window.confirm(t('DELETE_CONFIRM') || 'Wirklich löschen?');
+    const confirm = window.confirm(t('DELETE_CONFIRM'));
     if (!confirm) return;
 
     const success = await dispatch(deleteCase(id));
@@ -132,11 +95,11 @@ export default function Fall() {
           severity="info"
           action={
             <Button variant="contained" onClick={handleBack}>
-              {t('back')}
+              {t('BACK')}
             </Button>
           }
         >
-          {t('notFound')}
+          {t('NOT_FOUND')}
         </Alert>
       </Box>
     );
@@ -155,17 +118,7 @@ export default function Fall() {
               />
             </Grid>
 
-            <Grid size={{ xs: 12, md: 4 }}>
-              {uploadError && (
-                <Alert severity="error" sx={{ mt: 2 }}>
-                  {uploadError}
-                </Alert>
-              )}
-
-              {fallData.dateien?.map((file: any) => (
-                <Datei key={file.fileId} />
-              ))}
-            </Grid>
+            <Grid size={{ xs: 12, md: 4 }}>Grid Right</Grid>
           </Grid>
         </CardContent>
 

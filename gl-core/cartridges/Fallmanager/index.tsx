@@ -13,7 +13,6 @@ import {
 import {
   BearbeitbarText,
   Datei,
-  Faelle,
   Fall,
   Fallliste,
   Header,
@@ -38,7 +37,6 @@ export {
 export {
   BearbeitbarText,
   Datei,
-  Faelle,
   Fall,
   Fallliste,
   Header,

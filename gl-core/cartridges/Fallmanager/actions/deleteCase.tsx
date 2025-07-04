@@ -11,11 +11,6 @@ export const deleteCase =
     try {
       if (!id) return null;
 
-      const confirmed = window.confirm(
-        'Vorgang wirklich löschen? Dieser Schritt kann nicht rückgängig gemacht werden.',
-      );
-      if (!confirmed) return null;
-
       // Optional: set loading or UI feedback state here
       const current = getState().redux.fallmanager;
 

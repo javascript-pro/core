@@ -42,7 +42,7 @@ This object is used throughout the Fallmanager system for:
 
 Keeping it centralized makes the codebase easier to maintain and extend as we move toward a production-ready system.
 
-## Example Case 
+## Example Case
 
 ```json
 [
@@ -73,6 +73,6 @@ Keeping it centralized makes the codebase easier to maintain and extend as we mo
         "uploadedAt": "2025-06-18T14:00:00Z"
       }
     ]
-  },
+  }
 ]
 ```
