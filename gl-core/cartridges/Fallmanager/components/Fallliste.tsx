@@ -45,7 +45,10 @@ export default function Fallliste() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const q = query(collection(db, 'fallmanager'), orderBy('createdAt', 'desc'));
+    const q = query(
+      collection(db, 'fallmanager'),
+      orderBy('createdAt', 'desc'),
+    );
 
     const unsubscribe = onSnapshot(q, (snapshot) => {
       const data = snapshot.docs.map((doc) => ({
@@ -101,7 +104,7 @@ export default function Fallliste() {
         <Container sx={{ mt: 4 }}>
           <Alert
             sx={{ pt: 2 }}
-            severity="warning"
+            severity="info"
             action={
               <Stack direction="row" spacing={1}>
                 <Button onClick={handleSeed} variant="outlined">
@@ -126,12 +129,12 @@ export default function Fallliste() {
               doc.status === 'in_review'
                 ? t('STATUS_IN_REVIEW')
                 : doc.status === 'in_progress'
-                ? t('STATUS_IN_PROGRESS')
-                : doc.status === 'completed'
-                ? t('STATUS_COMPLETED')
-                : doc.status === 'archived'
-                ? t('STATUS_ARCHIVED')
-                : '';
+                  ? t('STATUS_IN_PROGRESS')
+                  : doc.status === 'completed'
+                    ? t('STATUS_COMPLETED')
+                    : doc.status === 'archived'
+                      ? t('STATUS_ARCHIVED')
+                      : '';
 
             return (
               <ListItem key={doc.id} disablePadding sx={{ mb: 1 }}>
@@ -144,22 +147,16 @@ export default function Fallliste() {
                           {doc.clientName || 'No client name'}
                         </Typography>
                       }
-                      // subheader={
-                      //   <Typography
-                      //     variant="body2"
-                      //     color="text.secondary"
-                      //     noWrap
-                      //   >
-                      //     {status}
-                      //   </Typography>
-                      // }
+                      action={
+                        <Typography
+                          variant="caption"
+                          color="text.secondary"
+                          mb={0.5}
+                        >
+                          {completion}% {t('COMPLETED')}
+                        </Typography>
+                      }
                     />
-                    <CardContent sx={{ pt: 0 }}>
-                      <Typography variant="caption" color="text.secondary" mb={0.5}>
-                        {t('COMPLETION')}: {completion}%
-                      </Typography>
-                      <LinearProgress variant="determinate" value={completion} />
-                    </CardContent>
                   </Card>
                 </ListItemButton>
               </ListItem>

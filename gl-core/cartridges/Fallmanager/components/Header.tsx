@@ -13,7 +13,13 @@ import {
   IconButton,
 } from '@mui/material';
 import { Icon, useDispatch, routeTo } from '../../../../gl-core';
-import { useFallmanagerSlice, Sprachauswahl, useLingua, toggleNewCase, resetTranslations } from '../../Fallmanager';
+import {
+  useFallmanagerSlice,
+  Sprachauswahl,
+  useLingua,
+  toggleNewCase,
+  resetTranslations,
+} from '../../Fallmanager';
 
 export default function Header() {
   const slice = useFallmanagerSlice();
@@ -56,14 +62,16 @@ export default function Header() {
         title={<Typography variant="h6">{t('APP_TITLE')}</Typography>}
         action={
           <Box sx={{ display: 'flex' }}>
-
             <Box>
-              <IconButton color="secondary" onClick={handleReset} title={t('RESET')}>
+              <IconButton
+                color="secondary"
+                onClick={handleReset}
+                title={t('RESET')}
+              >
                 <Icon icon="reset" />
               </IconButton>
             </Box>
 
-            
             <Box sx={{ pt: 0.5, pr: 1 }}>
               <Sprachauswahl />
             </Box>

@@ -4,26 +4,11 @@ export const languages: Record<
   TLinguaCodes,
   { title: string; description: string }
 > = {
-  en: {
-    title: 'English',
-    description: 'Switch to English',
-  },
-  de: {
-    title: 'Deutsch',
-    description: 'Wechseln Sie zu Deutsch',
-  },
-  pt: {
-    title: 'Português',
-    description: 'Mudar para Português',
-  },
-  zh: {
-    title: '中文',
-    description: '切换到中文',
-  },
-  fr: {
-    title: 'Français',
-    description: 'Passer en français',
-  },
+  en: { title: 'English', description: 'Switch to English' },
+  de: { title: 'Deutsch', description: 'Wechseln Sie zu Deutsch' },
+  pt: { title: 'Português', description: 'Mudar para Português' },
+  zh: { title: '中文', description: '切换到中文' },
+  fr: { title: 'Français', description: 'Passer en français' },
 };
 
 export type LinguaKey =
@@ -53,7 +38,19 @@ export type LinguaKey =
   | 'STATUS_ARCHIVED'
   | 'SAVED'
   | 'NEW_WORD'
-  | 'COMPLETION';
+  | 'COMPLETED'
+  | 'COMPLETION'
+  | 'SECTION_BASIC_INFO'
+  | 'SECTION_ACCIDENT_INSURANCE'
+  | 'SECTION_DOCUMENTS'
+  | 'SECTION_WITNESSES'
+  | 'POLICE_REPORT_NUMBER'
+  | 'OPPOSING_INSURANCE'
+  | 'OPPOSING_CLAIM_NUMBER'
+  | 'ACCIDENT_REPORT'
+  | 'DAMAGE_ASSESSMENT'
+  | 'REPAIR_INVOICE'
+  | 'SETTLEMENT_LETTER';
 
 export type TranslationEntry = Record<TLinguaCodes, string>;
 
@@ -126,14 +123,14 @@ export const lingua: Record<LinguaKey, TranslationEntry> = {
     de: 'Versicherungsscheinnummer',
     pt: 'Número da Apólice',
     zh: '保单号',
-    fr: "Numéro de police",
+    fr: 'Numéro de police',
   },
   CLAIM_NUMBER: {
     en: 'Claim Number',
     de: 'Schadensnummer',
     pt: 'Número do Sinistro',
     zh: '理赔编号',
-    fr: "Numéro de sinistre",
+    fr: 'Numéro de sinistre',
   },
   CANCEL: {
     en: 'Cancel',
@@ -226,6 +223,13 @@ export const lingua: Record<LinguaKey, TranslationEntry> = {
     zh: '已归档',
     fr: 'Archivé',
   },
+  COMPLETED: {
+    en: 'Completed',
+    de: 'Abgeschlossen',
+    pt: 'Concluído',
+    zh: '已完成',
+    fr: 'Terminé',
+  },
   COMPLETION: {
     en: 'Completion',
     de: 'Fertigstellung',
@@ -242,9 +246,86 @@ export const lingua: Record<LinguaKey, TranslationEntry> = {
   },
   NEW_WORD: {
     en: 'New Word',
-    de: '',
-    pt: '',
-    zh: '',
-    fr: '',
+    de: 'Neues Wort',
+    pt: 'Nova Palavra',
+    zh: '新词',
+    fr: 'Nouveau mot',
+  },
+  SECTION_BASIC_INFO: {
+    en: 'Basic Information',
+    de: 'Grunddaten',
+    pt: 'Informações Básicas',
+    zh: '基本信息',
+    fr: 'Informations de base',
+  },
+  SECTION_ACCIDENT_INSURANCE: {
+    en: 'Accident & Insurance',
+    de: 'Unfall & Versicherung',
+    pt: 'Acidente e Seguro',
+    zh: '事故与保险',
+    fr: 'Accident et assurance',
+  },
+  SECTION_DOCUMENTS: {
+    en: 'Documents',
+    de: 'Dokumente',
+    pt: 'Documentos',
+    zh: '文档',
+    fr: 'Documents',
+  },
+  SECTION_WITNESSES: {
+    en: 'Witnesses',
+    de: 'Zeugen',
+    pt: 'Testemunhas',
+    zh: '证人',
+    fr: 'Témoins',
+  },
+  POLICE_REPORT_NUMBER: {
+    en: 'Police Report Number',
+    de: 'Polizeiberichtnummer',
+    pt: 'Número do Relatório Policial',
+    zh: '警方报告编号',
+    fr: 'Numéro du rapport de police',
+  },
+  OPPOSING_INSURANCE: {
+    en: 'Opposing Insurance',
+    de: 'Gegnerische Versicherung',
+    pt: 'Seguradora Adversa',
+    zh: '对方保险公司',
+    fr: 'Assurance adverse',
+  },
+  OPPOSING_CLAIM_NUMBER: {
+    en: 'Opposing Claim Number',
+    de: 'Gegnerische Schadensnummer',
+    pt: 'Número de Sinistro da Parte Adversa',
+    zh: '对方理赔编号',
+    fr: 'Numéro de sinistre adverse',
+  },
+  ACCIDENT_REPORT: {
+    en: 'Accident Report Received',
+    de: 'Unfallbericht erhalten',
+    pt: 'Relatório de Acidente Recebido',
+    zh: '收到事故报告',
+    fr: "Rapport d'accident reçu",
+  },
+  DAMAGE_ASSESSMENT: {
+    en: 'Damage Assessment Received',
+    de: 'Schadensgutachten erhalten',
+    pt: 'Avaliação de Danos Recebida',
+    zh: '收到损坏评估',
+    fr: 'Évaluation des dommages reçue',
+  },
+  REPAIR_INVOICE: {
+    en: 'Repair Invoice Received',
+    de: 'Reparaturrechnung erhalten',
+    pt: 'Fatura de Reparação Recebida',
+    zh: '收到维修发票',
+    fr: 'Facture de réparation reçue',
+  },
+  SETTLEMENT_LETTER: {
+    en: 'Settlement Letter Received',
+    de: 'Abrechnungsschreiben erhalten',
+    pt: 'Carta de Liquidação Recebida',
+    zh: '收到结算函',
+    fr: 'Lettre de règlement reçue',
   },
 };

@@ -14,6 +14,10 @@ import {
   Select,
   MenuItem,
   IconButton,
+  Divider,
+  Chip,
+  Stack,
+  Grid,
 } from '@mui/material';
 import { usePathname, useRouter } from 'next/navigation';
 import {
@@ -102,53 +106,158 @@ export default function Fall() {
     </Box>
   );
 
+  const renderBooleanRow = (field: string, label: string) => {
+    const val = fallData?.[field];
+    const icon = val === true ? 'tick' : 'close';
+    const color = val === true ? 'secondary' : 'warning';
+    return (
+      <Box display="flex" alignItems="center" mb={1}>
+        <Box mr={2}>
+          <Icon icon={icon} color={color} />
+        </Box>
+        <Typography variant="body2">{label}</Typography>
+      </Box>
+    );
+  };
+
   return (
-    <Card>
+    <>
       <CardHeader
-        title={fallData.clientName || t('CLIENT_NAME')}
-        // subheader={`ID: ${id}`}
+        // title={}
+        avatar={
+          <Stack direction="row" spacing={1}>
+            <FormControl sx={{ minWidth: 180 }} size="small">
+              <InputLabel>{t('STATUS')}</InputLabel>
+              <Select
+                value={fallData.status || ''}
+                variant="standard"
+                label={t('STATUS')}
+                onChange={(e) => handleUpdate('status', e.target.value)}
+              >
+                <MenuItem value="in_review">{t('STATUS_IN_REVIEW')}</MenuItem>
+                <MenuItem value="in_progress">
+                  {t('STATUS_IN_PROGRESS')}
+                </MenuItem>
+                <MenuItem value="completed">{t('STATUS_COMPLETED')}</MenuItem>
+                <MenuItem value="archived">{t('STATUS_ARCHIVED')}</MenuItem>
+              </Select>
+            </FormControl>
+          </Stack>
+        }
         action={
-          <Box>
-            <IconButton color="secondary" onClick={handleDelete} title={t('DELETE')}>
+          <Stack direction="row" spacing={1}>
+            <IconButton
+              color="secondary"
+              onClick={handleDelete}
+              title={t('DELETE')}
+            >
               <Icon icon="delete" />
             </IconButton>
-            <IconButton color="secondary" onClick={handleCancel} title={t('CANCEL')}>
+            <IconButton
+              color="secondary"
+              onClick={handleCancel}
+              title={t('CANCEL')}
+            >
               <Icon icon="cancel" />
             </IconButton>
-          </Box>
+          </Stack>
         }
       />
-      <CardContent>
-        <Box display="flex" alignItems="center" gap={2} mb={3}>
-          <Box flexGrow={1}>
-            <Typography variant="body2" mb={0.5}>
-              {t('COMPLETION')}: {completion}%
-            </Typography>
-            <LinearProgress variant="determinate" value={completion} />
-          </Box>
-          <FormControl sx={{ minWidth: 180 }} size="small">
-            <InputLabel>{t('STATUS')}</InputLabel>
-            <Select
-              value={fallData.status || ''}
-              label={t('STATUS')}
-              onChange={(e) => handleUpdate('status', e.target.value)}
-            >
-              <MenuItem value="in_review">{t('STATUS_IN_REVIEW')}</MenuItem>
-              <MenuItem value="in_progress">{t('STATUS_IN_PROGRESS')}</MenuItem>
-              <MenuItem value="completed">{t('STATUS_COMPLETED')}</MenuItem>
-              <MenuItem value="archived">{t('STATUS_ARCHIVED')}</MenuItem>
-            </Select>
-          </FormControl>
-        </Box>
 
-        {renderEditableRow('clientName', t('CLIENT_NAME'))}
-        {renderEditableRow('carRegistration', t('CAR_REGISTRATION'))}
+      <CardContent>
+        <Grid container spacing={1} sx={{ border: '1px solid red' }}>
+          <Grid
+            sx={{ border: '1px solid green' }}
+            size={{
+              xs: 12,
+            }}
+          >
+            <>
+              <Typography variant="button" mb={0.5}>
+                {completion}% {t('COMPLETED')}
+              </Typography>
+              <LinearProgress
+                color="secondary"
+                variant="determinate"
+                value={completion}
+              />
+            </>
+          </Grid>
+
+          <Grid
+            sx={{ border: '1px solid green' }}
+            size={{
+              xs: 12,
+              sm: 6,
+            }}
+          >
+            {/* Grunddaten */}
+            <Card>
+              <CardHeader title={t('SECTION_BASIC_INFO')} />
+              <CardContent>
+                {renderEditableRow('clientName', t('CLIENT_NAME'))}
+                {renderEditableRow('carRegistration', t('CAR_REGISTRATION'))}
+              </CardContent>
+            </Card>
+          </Grid>
+
+          <Grid
+            sx={{ border: '1px solid orange' }}
+            size={{
+              xs: 12,
+              sm: 6,
+            }}
+          >
+            <Card>
+              <CardHeader title={t('SECTION_DOCUMENTS')} />
+              {/* Dokumente */}
+              <CardContent>
+                {renderBooleanRow('accidentReport', t('ACCIDENT_REPORT'))}
+                {renderBooleanRow('damageAssessment', t('DAMAGE_ASSESSMENT'))}
+                {renderBooleanRow('repairInvoiceReceived', t('REPAIR_INVOICE'))}
+                {renderBooleanRow(
+                  'settlementLetterReceived',
+                  t('SETTLEMENT_LETTER'),
+                )}
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
+
+        {/* Unfall & Versicherung */}
+        <Typography variant="h6" mt={4} gutterBottom>
+          {t('SECTION_ACCIDENT_INSURANCE')}
+        </Typography>
+        <Divider sx={{ mb: 2 }} />
         {renderEditableRow('dateOfAccident', t('DATE_OF_ACCIDENT'))}
         {renderEditableRow('placeOfAccident', t('PLACE_OF_ACCIDENT'))}
+        {renderEditableRow('policeReportNumber', t('POLICE_REPORT_NUMBER'))}
         {renderEditableRow('insuranceCompany', t('INSURANCE_COMPANY'))}
         {renderEditableRow('policyNumber', t('POLICY_NUMBER'))}
         {renderEditableRow('claimNumber', t('CLAIM_NUMBER'))}
+        {renderEditableRow('opposingInsurance', t('OPPOSING_INSURANCE'))}
+        {renderEditableRow('opposingClaimNumber', t('OPPOSING_CLAIM_NUMBER'))}
+
+        {/* Zeugen */}
+        {fallData.witnesses?.length > 0 && (
+          <>
+            <Typography variant="h6" mt={4} gutterBottom>
+              {t('SECTION_WITNESSES')}
+            </Typography>
+            <Divider sx={{ mb: 2 }} />
+            <Box>
+              {fallData.witnesses.map((w: any, idx: number) => (
+                <Chip
+                  key={idx}
+                  label={`${w.name} (${w.contact})`}
+                  variant="outlined"
+                  sx={{ mr: 1, mb: 1 }}
+                />
+              ))}
+            </Box>
+          </>
+        )}
       </CardContent>
-    </Card>
+    </>
   );
 }

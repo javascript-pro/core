@@ -8,11 +8,8 @@ import {
   Tooltip,
   InputAdornment,
 } from '@mui/material';
-import {
-  useLingua,
-} from '../../Fallmanager';
+import { useLingua } from '../../Fallmanager';
 import { Icon, useDispatch, toggleFeedback } from '../../../../gl-core';
-
 
 type BearbeitbarTextProps = {
   value: string;

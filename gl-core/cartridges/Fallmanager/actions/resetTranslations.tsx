@@ -6,7 +6,6 @@ import { lingua, languages } from '../lingua';
 export const resetTranslations =
   (): any => async (dispatch: TUbereduxDispatch, getState: () => any) => {
     try {
-      console.log("resetTranslations")
       const current = getState().redux.fallmanager;
       const updated = {
         ...current,
