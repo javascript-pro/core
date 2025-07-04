@@ -10,7 +10,7 @@ import {
   SelectChangeEvent,
 } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
-import { setzeSprache } from '../../Fallmanager';
+import { setzeSprache, zuruecksetzen } from '../../Fallmanager'; // <-- Add resetTranslations
 import { TLanguageCode } from '../types';
 
 type LanguageInfo = {
@@ -51,7 +51,6 @@ export default function Sprachauswahl() {
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <img
               src={`/svg/flags/${selected}.svg`}
-              alt={lang?.title || selected}
               style={{
                 width: 24,
                 height: 24,
@@ -65,15 +64,14 @@ export default function Sprachauswahl() {
       }}
     >
       {/* Current language shown as disabled item */}
-      <MenuItem value={language} disabled>
+      <MenuItem sx={{ display: 'none' }} value={language} disabled>
         <ListItemIcon sx={{ minWidth: 32 }}>
           <img
             src={`/svg/flags/${language}.svg`}
-            alt={languages[language].title}
             style={{ width: 24, height: 16, objectFit: 'contain' }}
           />
         </ListItemIcon>
-        <ListItemText primary={languages[language].description} />
+        {/* <ListItemText primary={languages[language].title} /> */}
       </MenuItem>
 
       {/* Other available languages */}
@@ -88,7 +86,7 @@ export default function Sprachauswahl() {
                 style={{ width: 24, height: 16, objectFit: 'contain' }}
               />
             </ListItemIcon>
-            <ListItemText primary={data.description} />
+            <ListItemText primary={data.title} />
           </MenuItem>
         ))}
     </Select>

@@ -1,25 +1,32 @@
 // core/gl-core/cartridges/Fallmanager/Fallmanager.tsx
 'use client';
+
 import * as React from 'react';
+import { usePathname } from 'next/navigation';
 import { CssBaseline, Container } from '@mui/material';
 import { Theme } from '../../../gl-core';
-import { useFallmanagerSlice, Header, Faelle } from '../Fallmanager';
+import {
+  NewCase,
+  Header,
+  Fallliste,
+  Fall,
+  useFallmanagerSlice,
+} from '../Fallmanager';
 
 export default function Fallmanager() {
-  const fallmanagerSlice = useFallmanagerSlice();
-  const { theme } = fallmanagerSlice;
+  const { theme } = useFallmanagerSlice();
+  const pathname = usePathname();
+
+  const isListView = pathname === '/fallmanager';
 
   return (
     <Theme theme={theme}>
       <CssBaseline />
       <Container>
+        <NewCase />
         <Header />
-        <Faelle />
+        {isListView ? <Fallliste /> : <Fall />}
       </Container>
     </Theme>
   );
 }
-
-/*
-  <pre>fallmanagerSlice: {JSON.stringify(fallmanagerSlice, null, 2)}</pre>
-*/

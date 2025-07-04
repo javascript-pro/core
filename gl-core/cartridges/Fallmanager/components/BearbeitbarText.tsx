@@ -3,12 +3,12 @@
 import * as React from 'react';
 import {
   Box,
-  Typography,
   TextField,
   IconButton,
   Tooltip,
   InputAdornment,
 } from '@mui/material';
+import { useLingua } from '../../Fallmanager';
 import { Icon, useDispatch, toggleFeedback } from '../../../../gl-core';
 
 type BearbeitbarTextProps = {
@@ -22,6 +22,7 @@ export default function BearbeitbarText({
   onSave,
   label,
 }: BearbeitbarTextProps) {
+  const t = useLingua();
   const [editing, setEditing] = React.useState(false);
   const [current, setCurrent] = React.useState(value);
   const [changed, setChanged] = React.useState(false);
@@ -38,10 +39,9 @@ export default function BearbeitbarText({
     setChanged(e.target.value !== value);
   };
 
-  const handleCancel = () => {
-    setCurrent(value);
-    setChanged(false);
-    setEditing(false);
+  const handleClear = () => {
+    setCurrent('');
+    setChanged(true);
   };
 
   const handleSave = () => {
@@ -50,7 +50,7 @@ export default function BearbeitbarText({
       dispatch(
         toggleFeedback({
           severity: 'success',
-          title: `${label} saved`,
+          title: `${label} ${t('SAVED')}`,
         }),
       );
     }
@@ -65,11 +65,10 @@ export default function BearbeitbarText({
     }
     if (e.key === 'Escape') {
       e.preventDefault();
-      handleCancel();
+      handleClear(); // Also clears on Escape
     }
   };
 
-  // Close edit mode on outside click (only if not changed)
   React.useEffect(() => {
     if (!editing) return;
 
@@ -91,53 +90,50 @@ export default function BearbeitbarText({
   return (
     <Box
       ref={containerRef}
-      sx={{ display: 'flex', alignItems: 'center', gap: 1 }}
+      sx={{ display: 'flex', alignItems: 'center', gap: 1, my: 0 }}
     >
-      {editing ? (
-        <TextField
-          fullWidth
-          variant="filled"
-          value={current}
-          onChange={handleChange}
-          onKeyDown={handleKeyDown}
-          label={label}
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position="end">
-                <Tooltip title="Speichern">
-                  <span>
-                    <IconButton
-                      onClick={handleSave}
-                      disabled={!changed}
-                      color="primary"
-                      size="small"
-                    >
-                      <Icon icon="save" />
-                    </IconButton>
-                  </span>
-                </Tooltip>
-                <Tooltip title="Abbrechen">
-                  <IconButton
-                    onClick={handleCancel}
-                    color="inherit"
-                    size="small"
-                  >
-                    <Icon icon="close" />
-                  </IconButton>
-                </Tooltip>
-              </InputAdornment>
-            ),
-          }}
-        />
-      ) : (
-        <Typography
-          variant="h6"
-          sx={{ flexGrow: 1, cursor: 'pointer' }}
-          onClick={handleEdit}
-        >
-          {value}
-        </Typography>
-      )}
+      <TextField
+        fullWidth
+        variant={editing ? 'filled' : 'standard'}
+        value={editing ? current : value}
+        label={label}
+        onClick={!editing ? handleEdit : undefined}
+        onChange={editing ? handleChange : undefined}
+        onKeyDown={editing ? handleKeyDown : undefined}
+        InputProps={
+          editing
+            ? {
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <Tooltip title="Save">
+                      <span>
+                        <IconButton
+                          onClick={handleSave}
+                          disabled={!changed}
+                          color="secondary"
+                          size="small"
+                        >
+                          <Icon icon="save" />
+                        </IconButton>
+                      </span>
+                    </Tooltip>
+                    <Tooltip title="Clear">
+                      <IconButton
+                        onClick={handleClear}
+                        color="secondary"
+                        size="small"
+                      >
+                        <Icon icon="close" />
+                      </IconButton>
+                    </Tooltip>
+                  </InputAdornment>
+                ),
+              }
+            : {
+                readOnly: true,
+              }
+        }
+      />
     </Box>
   );
 }

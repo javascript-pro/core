@@ -308,7 +308,7 @@
                 "slug": "/work/techstack/blockchain",
                 "order": 150,
                 "icon": "bitcoin",
-                "image": "/jpg/bitcoin.jpg",
+                "image": "/png/3rdParty/bitcoin.png",
                 "type": "folder",
                 "tags": [
                   "techstack",
@@ -321,7 +321,7 @@
                   "bitcoin",
                   "malta"
                 ],
-                "excerpt": "In 2018, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online gambling world but was pivoti",
+                "excerpt": "Blockchain Crypto Casino\n\n In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online ga",
                 "children": []
               }
             ]

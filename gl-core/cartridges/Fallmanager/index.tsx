@@ -1,33 +1,47 @@
 import Fallmanager from './Fallmanager';
 import { initialState as initialStateFallmanager } from './initialState';
-import { useFallmanagerSlice, useTranslation } from './hooks';
-import { setzeSprache, setzeAktuellerFall, zuruecksetzen } from './actions';
+import { useFallmanagerSlice, useLingua } from './hooks';
+import {
+  setzeSprache,
+  setzeAktuellerFall,
+  zuruecksetzen,
+  saveNewCase,
+  toggleNewCase,
+  deleteCase,
+  resetTranslations,
+  seedFirebase,
+} from './actions';
 import {
   BearbeitbarText,
   Datei,
-  Faelle,
   Fall,
   Fallliste,
   Header,
   Sprachauswahl,
+  NewCase,
 } from './components';
 
 export {
   Fallmanager,
   initialStateFallmanager,
   useFallmanagerSlice,
-  useTranslation,
+  useLingua,
   setzeSprache,
   setzeAktuellerFall,
   zuruecksetzen,
+  toggleNewCase,
+  deleteCase,
+  saveNewCase,
+  resetTranslations,
+  seedFirebase,
 };
 
 export {
   BearbeitbarText,
   Datei,
-  Faelle,
   Fall,
   Fallliste,
   Header,
   Sprachauswahl,
+  NewCase,
 };

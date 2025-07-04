@@ -5,31 +5,43 @@ import * as React from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import {
   AppBar,
+  Button,
   CardHeader,
-  IconButton,
   Box,
   Typography,
   useTheme,
+  IconButton,
 } from '@mui/material';
-import { useDispatch, Icon } from '../../../../gl-core';
+import { Icon, useDispatch, routeTo } from '../../../../gl-core';
 import {
+  useFallmanagerSlice,
   Sprachauswahl,
-  zuruecksetzen,
-  useTranslation,
+  useLingua,
+  toggleNewCase,
+  resetTranslations,
 } from '../../Fallmanager';
 
 export default function Header() {
+  const slice = useFallmanagerSlice();
+  const dispatch = useDispatch();
   const router = useRouter();
   const pathname = usePathname();
-  const dispatch = useDispatch();
-  const t = useTranslation();
+  const t = useLingua();
   const theme = useTheme();
 
-  const handleHome = () => {
-    dispatch(zuruecksetzen());
+  const handleNewCase = () => {
+    dispatch(toggleNewCase(true));
   };
 
-  const title = pathname === '/fallmanager' ? t('caseList') : t('caseEdit');
+  const handleAvatarClick = () => {
+    if (pathname !== '/fallmanager') {
+      dispatch(routeTo('/fallmanager', router));
+    }
+  };
+
+  const handleReset = () => {
+    dispatch(resetTranslations());
+  };
 
   return (
     <AppBar
@@ -42,14 +54,44 @@ export default function Header() {
       }}
     >
       <CardHeader
-        title={<Typography variant="h6">{title}</Typography>}
         avatar={
-          <IconButton onClick={handleHome} size="small">
-            <Icon icon="home" />
+          <IconButton onClick={handleAvatarClick}>
+            <Icon icon="cases" color="secondary" />
           </IconButton>
         }
-        action={<Sprachauswahl />}
+        title={<Typography variant="h6">{t('APP_TITLE')}</Typography>}
+        action={
+          <Box sx={{ display: 'flex' }}>
+            <Box>
+              <IconButton
+                color="secondary"
+                onClick={handleReset}
+                title={t('RESET')}
+              >
+                <Icon icon="reset" />
+              </IconButton>
+            </Box>
+
+            <Box sx={{ pt: 0.5, pr: 1 }}>
+              <Sprachauswahl />
+            </Box>
+            <Box>
+              <Button
+                onClick={handleNewCase}
+                sx={{ mr: 1 }}
+                color="secondary"
+                variant="contained"
+              >
+                {t('NEW_CASE')}
+              </Button>
+            </Box>
+          </Box>
+        }
       />
     </AppBar>
   );
 }
+
+/*
+<pre>{JSON.stringify(slice.lingua.NEW_CASE, null, 2)}</pre>
+*/
