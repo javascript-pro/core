@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import {
   Container,
   Card,
@@ -16,8 +17,9 @@ import {
   ListItemButton,
   Stack,
   Typography,
-  LinearProgress,
-  CardContent,
+  Chip,
+  TextField,
+  Toolbar,
 } from '@mui/material';
 import {
   collection,
@@ -27,19 +29,18 @@ import {
   orderBy,
 } from 'firebase/firestore';
 import { db } from '../../../lib/firebase';
-import { Icon } from '../../../../gl-core';
+import { Icon, MightyButton, useDispatch } from '../../../../gl-core';
 import {
   useLingua,
   setzeAktuellerFall,
   toggleNewCase,
   seedFirebase,
 } from '../../Fallmanager';
-import { useRouter } from 'next/navigation';
-import { useDispatch } from 'react-redux';
 
 export default function Fallliste() {
   const [docs, setDocs] = useState<DocumentData[]>([]);
   const [loading, setLoading] = useState(true);
+  const [search, setSearch] = useState('');
   const t = useLingua();
   const router = useRouter();
   const dispatch = useDispatch();
@@ -75,6 +76,10 @@ export default function Fallliste() {
     dispatch(seedFirebase());
   };
 
+  const handleAiHelp = () => {
+    console.log("handleAiHelp");
+  };
+
   const getCompletion = (doc: DocumentData): number => {
     const fieldsToCheck = [
       doc.clientName,
@@ -93,6 +98,10 @@ export default function Fallliste() {
     const filled = fieldsToCheck.filter(Boolean).length;
     return Math.round((filled / total) * 100);
   };
+
+  const filteredDocs = docs.filter((doc) =>
+    doc.clientName?.toLowerCase().includes(search.toLowerCase()),
+  );
 
   return (
     <Box>
@@ -122,52 +131,64 @@ export default function Fallliste() {
           </Alert>
         </Container>
       ) : (
-        <List disablePadding>
-          {docs.map((doc) => {
-            const completion = getCompletion(doc);
-            const status =
-              doc.status === 'in_review'
-                ? t('STATUS_IN_REVIEW')
-                : doc.status === 'in_progress'
-                  ? t('STATUS_IN_PROGRESS')
-                  : doc.status === 'completed'
-                    ? t('STATUS_COMPLETED')
-                    : doc.status === 'archived'
-                      ? t('STATUS_ARCHIVED')
-                      : '';
+        <>
+          <Toolbar sx={{ px: 2, justifyContent: 'space-between', flexWrap: 'wrap' }}>
+            <Stack direction="row" spacing={1} flexWrap="wrap">
+              
+              <MightyButton 
+                label={t('NEW_CASE')}
+                icon="plus"
+                onClick={handleNewCase}
+              />
 
-            return (
-              <ListItem key={doc.id} disablePadding sx={{ mb: 1 }}>
-                <ListItemButton onClick={() => handleClick(doc)}>
-                  <Card sx={{ width: '100%' }}>
-                    <CardHeader
-                      avatar={<Icon icon="case" color="secondary" />}
-                      title={
-                        <Typography variant="body1" noWrap>
-                          {doc.clientName}
-                        </Typography>
-                      }
-                      subheader={
-                        <Typography variant="body2" noWrap>
-                          {doc.status}
-                        </Typography>
-                      }
-                      action={
-                        <Typography
-                          variant="caption"
-                          color="text.secondary"
-                          mb={0.5}
-                        >
-                          {completion}% {t('COMPLETED')}
-                        </Typography>
-                      }
-                    />
-                  </Card>
-                </ListItemButton>
-              </ListItem>
-            );
-          })}
-        </List>
+              <MightyButton 
+                label={t('NEW_WITH_AI')}
+                icon="openai"
+                onClick={handleAiHelp}
+              />
+
+            </Stack>
+            <TextField
+              size="small"
+              label={t('SEARCH')}
+              variant="outlined"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
+          </Toolbar>
+
+          <List>
+            {filteredDocs.map((doc) => {
+              const completion = getCompletion(doc);
+
+              return (
+                <ListItem key={doc.id} disablePadding>
+                  <ListItemButton onClick={() => handleClick(doc)}>
+                    <Card sx={{ mx:1, width: '100%' }}>
+                      <CardHeader
+                        avatar={<Icon icon="case" color="secondary" />}
+                        title={
+                          <Typography variant="body1" noWrap>
+                            {doc.clientName}
+                          </Typography>
+                        }
+                        action={
+                          <Chip
+                            label={`${completion}% ${t('COMPLETED')}`}
+                            variant="outlined"
+                            size="small"
+                            color="primary"
+                            sx={{ fontWeight: 500, height: 24 }}
+                          />
+                        }
+                      />
+                    </Card>
+                  </ListItemButton>
+                </ListItem>
+              );
+            })}
+          </List>
+        </>
       )}
     </Box>
   );

@@ -14,7 +14,8 @@ export const languages: Record<
 export type LinguaKey =
   | 'APP_TITLE'
   | 'NEW_CASE'
-  | 'NEW_CASE_HELP'
+  | 'NEW_CASE_HELP_MANUAL'
+  | 'NEW_CASE_HELP_AI'
   | 'UPLOAD_PDF'
   | 'CLIENT_NAME'
   | 'CAR_REGISTRATION'
@@ -50,6 +51,9 @@ export type LinguaKey =
   | 'ACCIDENT_REPORT'
   | 'DAMAGE_ASSESSMENT'
   | 'REPAIR_INVOICE'
+  | 'SEARCH'
+  | 'NEW_WITH_AI'
+  | 'SAVE_AND_CLOSE'
   | 'SETTLEMENT_LETTER';
 
 export type TranslationEntry = Record<TLinguaCodes, string>;
@@ -62,6 +66,13 @@ export const lingua: Record<LinguaKey, TranslationEntry> = {
     zh: '案件管理器',
     fr: 'Gestionnaire de dossiers',
   },
+SAVE_AND_CLOSE: {
+  en: 'Save and Close',
+  de: 'Speichern und Schließen',
+  pt: 'Guardar e Fechar',
+  zh: '保存并关闭',
+  fr: 'Enregistrer et fermer',
+},
   NEW_CASE: {
     en: 'New Case',
     de: 'Neuer Fall',
@@ -69,12 +80,19 @@ export const lingua: Record<LinguaKey, TranslationEntry> = {
     zh: '新案件',
     fr: 'Nouveau dossier',
   },
-  NEW_CASE_HELP: {
-    en: 'New cases must have a valid client name. Either enter it manually or upload the first file for this case and get the client name from it',
-    de: 'Neue Fälle müssen einen gültigen Kundennamen haben. Geben Sie ihn entweder manuell ein oder laden Sie die erste Datei für diesen Fall hoch, um den Namen daraus zu übernehmen',
-    pt: 'Novos casos devem ter um nome de cliente válido. Insira-o manualmente ou envie o primeiro ficheiro deste caso para extrair o nome',
-    zh: '新案件必须有有效的客户名称。您可以手动输入，或上传此案件的首个文件以提取客户名称',
-    fr: 'Les nouveaux dossiers doivent comporter un nom de client valide. Entrez-le manuellement ou importez le premier fichier du dossier pour en extraire le nom',
+  NEW_CASE_HELP_MANUAL: {
+    en: 'If you are reading this you are on the manual workflow',
+    de: '',
+    pt: '',
+    zh: '',
+    fr: '',
+  },
+  NEW_CASE_HELP_AI: {
+    en: 'If you are reading this you are on the AI workflow',
+    de: '',
+    pt: '',
+    zh: '',
+    fr: '',
   },
   UPLOAD_PDF: {
     en: 'Upload PDF',
@@ -131,6 +149,20 @@ export const lingua: Record<LinguaKey, TranslationEntry> = {
     pt: 'Número do Sinistro',
     zh: '理赔编号',
     fr: 'Numéro de sinistre',
+  },
+  NEW_WITH_AI: {
+    en: 'New with AI',
+    de: 'Neu mit KI',
+    pt: 'Novo com IA',
+    zh: '使用 AI 新建',
+    fr: 'Nouveau avec IA',
+  },
+  SEARCH: {
+    en: 'Search',
+    de: 'Suche',
+    pt: 'Pesquisar',
+    zh: '搜索',
+    fr: 'Rechercher',
   },
   CANCEL: {
     en: 'Cancel',

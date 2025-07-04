@@ -46,16 +46,16 @@ export default function Sprachauswahl() {
       variant="standard"
       disableUnderline
       renderValue={(selected) => {
-        const lang = languages[selected as string];
+        
         return (
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <img
               src={`/svg/flags/${selected}.svg`}
               style={{
-                width: 24,
-                height: 24,
+                width: 32,
+                height: 32,
                 marginLeft: 16,
-                marginRight: 8,
+                marginRight: 16,
                 objectFit: 'contain',
               }}
             />
@@ -68,7 +68,7 @@ export default function Sprachauswahl() {
         <ListItemIcon sx={{ minWidth: 32 }}>
           <img
             src={`/svg/flags/${language}.svg`}
-            style={{ width: 24, height: 16, objectFit: 'contain' }}
+            style={{ width: 32, height: 32, objectFit: 'contain' }}
           />
         </ListItemIcon>
         {/* <ListItemText primary={languages[language].title} /> */}
@@ -83,7 +83,7 @@ export default function Sprachauswahl() {
               <img
                 src={`/svg/flags/${code}.svg`}
                 alt={data.title}
-                style={{ width: 24, height: 16, objectFit: 'contain' }}
+                style={{ width: 32, height: 32, marginRight: 16, objectFit: 'contain' }}
               />
             </ListItemIcon>
             <ListItemText primary={data.title} />

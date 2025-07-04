@@ -91,7 +91,7 @@ export default function NewCase() {
       <DialogTitle>{t('NEW_CASE')}</DialogTitle>
       <DialogContent>
         <Typography variant="body2" sx={{ mb: 2 }}>
-          {t('NEW_CASE_HELP')}
+          {t('NEW_CASE_HELP_MANUAL')}
         </Typography>
         <TextField
           inputRef={inputRef}
