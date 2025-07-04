@@ -8,7 +8,11 @@ import {
   Tooltip,
   InputAdornment,
 } from '@mui/material';
+import {
+  useLingua,
+} from '../../Fallmanager';
 import { Icon, useDispatch, toggleFeedback } from '../../../../gl-core';
+
 
 type BearbeitbarTextProps = {
   value: string;
@@ -21,6 +25,7 @@ export default function BearbeitbarText({
   onSave,
   label,
 }: BearbeitbarTextProps) {
+  const t = useLingua();
   const [editing, setEditing] = React.useState(false);
   const [current, setCurrent] = React.useState(value);
   const [changed, setChanged] = React.useState(false);
@@ -37,10 +42,9 @@ export default function BearbeitbarText({
     setChanged(e.target.value !== value);
   };
 
-  const handleCancel = () => {
-    setCurrent(value);
-    setChanged(false);
-    setEditing(false);
+  const handleClear = () => {
+    setCurrent('');
+    setChanged(true);
   };
 
   const handleSave = () => {
@@ -49,7 +53,7 @@ export default function BearbeitbarText({
       dispatch(
         toggleFeedback({
           severity: 'success',
-          title: `${label} saved`,
+          title: `${label} ${t('SAVED')}`,
         }),
       );
     }
@@ -64,7 +68,7 @@ export default function BearbeitbarText({
     }
     if (e.key === 'Escape') {
       e.preventDefault();
-      handleCancel();
+      handleClear(); // Also clears on Escape
     }
   };
 
@@ -89,7 +93,7 @@ export default function BearbeitbarText({
   return (
     <Box
       ref={containerRef}
-      sx={{ display: 'flex', alignItems: 'center', gap: 1, my: 2 }}
+      sx={{ display: 'flex', alignItems: 'center', gap: 1, my: 0 }}
     >
       <TextField
         fullWidth
@@ -104,22 +108,22 @@ export default function BearbeitbarText({
             ? {
                 endAdornment: (
                   <InputAdornment position="end">
-                    <Tooltip title="Speichern">
+                    <Tooltip title="Save">
                       <span>
                         <IconButton
                           onClick={handleSave}
                           disabled={!changed}
-                          color="primary"
+                          color="secondary"
                           size="small"
                         >
                           <Icon icon="save" />
                         </IconButton>
                       </span>
                     </Tooltip>
-                    <Tooltip title="Abbrechen">
+                    <Tooltip title="Clear">
                       <IconButton
-                        onClick={handleCancel}
-                        color="inherit"
+                        onClick={handleClear}
+                        color="secondary"
                         size="small"
                       >
                         <Icon icon="close" />

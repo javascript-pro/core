@@ -13,9 +13,10 @@ import {
   IconButton,
 } from '@mui/material';
 import { Icon, useDispatch, routeTo } from '../../../../gl-core';
-import { Sprachauswahl, useLingua, toggleNewCase } from '../../Fallmanager';
+import { useFallmanagerSlice, Sprachauswahl, useLingua, toggleNewCase, resetTranslations } from '../../Fallmanager';
 
 export default function Header() {
+  const slice = useFallmanagerSlice();
   const dispatch = useDispatch();
   const router = useRouter();
   const pathname = usePathname();
@@ -30,6 +31,10 @@ export default function Header() {
     if (pathname !== '/fallmanager') {
       dispatch(routeTo('/fallmanager', router));
     }
+  };
+
+  const handleReset = () => {
+    dispatch(resetTranslations());
   };
 
   return (
@@ -51,6 +56,14 @@ export default function Header() {
         title={<Typography variant="h6">{t('APP_TITLE')}</Typography>}
         action={
           <Box sx={{ display: 'flex' }}>
+
+            <Box>
+              <IconButton color="secondary" onClick={handleReset} title={t('RESET')}>
+                <Icon icon="reset" />
+              </IconButton>
+            </Box>
+
+            
             <Box sx={{ pt: 0.5, pr: 1 }}>
               <Sprachauswahl />
             </Box>
@@ -70,3 +83,7 @@ export default function Header() {
     </AppBar>
   );
 }
+
+/*
+<pre>{JSON.stringify(slice.lingua.NEW_CASE, null, 2)}</pre>
+*/

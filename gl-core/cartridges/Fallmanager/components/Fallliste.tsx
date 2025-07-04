@@ -16,6 +16,8 @@ import {
   ListItemButton,
   Stack,
   Typography,
+  LinearProgress,
+  CardContent,
 } from '@mui/material';
 import {
   collection,
@@ -43,10 +45,7 @@ export default function Fallliste() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const q = query(
-      collection(db, 'fallmanager'),
-      orderBy('createdAt', 'desc'),
-    );
+    const q = query(collection(db, 'fallmanager'), orderBy('createdAt', 'desc'));
 
     const unsubscribe = onSnapshot(q, (snapshot) => {
       const data = snapshot.docs.map((doc) => ({
@@ -73,6 +72,25 @@ export default function Fallliste() {
     dispatch(seedFirebase());
   };
 
+  const getCompletion = (doc: DocumentData): number => {
+    const fieldsToCheck = [
+      doc.clientName,
+      doc.carRegistration,
+      doc.dateOfAccident,
+      doc.placeOfAccident,
+      doc.insuranceCompany,
+      doc.policyNumber,
+      doc.claimNumber,
+      doc.accidentReport,
+      doc.damageAssessment,
+      doc.repairInvoiceReceived,
+      doc.settlementLetterReceived,
+    ];
+    const total = fieldsToCheck.length;
+    const filled = fieldsToCheck.filter(Boolean).length;
+    return Math.round((filled / total) * 100);
+  };
+
   return (
     <Box>
       {loading ? (
@@ -80,17 +98,16 @@ export default function Fallliste() {
           <CircularProgress />
         </Box>
       ) : docs.length === 0 ? (
-        <Container sx={{ mt: 2 }}>
+        <Container sx={{ mt: 4 }}>
           <Alert
             sx={{ pt: 2 }}
-            variant="filled"
-            severity="info"
+            severity="warning"
             action={
               <Stack direction="row" spacing={1}>
-                <Button onClick={handleSeed} variant="contained">
+                <Button onClick={handleSeed} variant="outlined">
                   {t('SEED_DATABASE')}
                 </Button>
-                <Button onClick={handleNewCase} variant="contained">
+                <Button onClick={handleNewCase} variant="outlined">
                   {t('FIRST_CASE')}
                 </Button>
               </Stack>
@@ -103,26 +120,51 @@ export default function Fallliste() {
         </Container>
       ) : (
         <List disablePadding>
-          {docs.map((doc) => (
-            <ListItem key={doc.id} disablePadding sx={{ mb: 1 }}>
-              <ListItemButton onClick={() => handleClick(doc)}>
-                <Card sx={{ width: '100%' }}>
-                  <CardHeader
-                    avatar={<Icon icon="case" color="secondary" />}
-                    title={doc.clientName || 'No client name'}
-                    titleTypographyProps={{
-                      noWrap: true,
-                      sx: { overflow: 'hidden', textOverflow: 'ellipsis' },
-                    }}
-                    subheaderTypographyProps={{
-                      noWrap: true,
-                      sx: { overflow: 'hidden', textOverflow: 'ellipsis' },
-                    }}
-                  />
-                </Card>
-              </ListItemButton>
-            </ListItem>
-          ))}
+          {docs.map((doc) => {
+            const completion = getCompletion(doc);
+            const status =
+              doc.status === 'in_review'
+                ? t('STATUS_IN_REVIEW')
+                : doc.status === 'in_progress'
+                ? t('STATUS_IN_PROGRESS')
+                : doc.status === 'completed'
+                ? t('STATUS_COMPLETED')
+                : doc.status === 'archived'
+                ? t('STATUS_ARCHIVED')
+                : '';
+
+            return (
+              <ListItem key={doc.id} disablePadding sx={{ mb: 1 }}>
+                <ListItemButton onClick={() => handleClick(doc)}>
+                  <Card sx={{ width: '100%' }}>
+                    <CardHeader
+                      avatar={<Icon icon="case" color="secondary" />}
+                      title={
+                        <Typography variant="subtitle1" noWrap>
+                          {doc.clientName || 'No client name'}
+                        </Typography>
+                      }
+                      // subheader={
+                      //   <Typography
+                      //     variant="body2"
+                      //     color="text.secondary"
+                      //     noWrap
+                      //   >
+                      //     {status}
+                      //   </Typography>
+                      // }
+                    />
+                    <CardContent sx={{ pt: 0 }}>
+                      <Typography variant="caption" color="text.secondary" mb={0.5}>
+                        {t('COMPLETION')}: {completion}%
+                      </Typography>
+                      <LinearProgress variant="determinate" value={completion} />
+                    </CardContent>
+                  </Card>
+                </ListItemButton>
+              </ListItem>
+            );
+          })}
         </List>
       )}
     </Box>

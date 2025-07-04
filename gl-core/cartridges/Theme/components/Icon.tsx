@@ -135,10 +135,12 @@ import CaseIcon from '@mui/icons-material/WorkOutlined';
 import CaseClosedIcon from '@mui/icons-material/WorkOffOutlined';
 import CasesIcon from '@mui/icons-material/Cases';
 import CaseClockIcon from '@mui/icons-material/WorkHistoryOutlined';
+import TickIcon from '@mui/icons-material/DoneOutline';
 
 export type TIcon = {
   icon:
     | 'more'
+    | 'tick'
     | 'case'
     | 'caseclosed'
     | 'cases'
@@ -300,6 +302,10 @@ export default function Icon({ icon, color }: TIcon) {
   switch (icon) {
     case 'core':
       iconFragment = <CoreIcon color={color} />;
+      break;
+
+    case 'tick':
+      iconFragment = <TickIcon color={color} />;
       break;
 
     case 'case':
