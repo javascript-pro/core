@@ -64,7 +64,7 @@ export default function Sprachauswahl() {
       }}
     >
       {/* Current language shown as disabled item */}
-      <MenuItem sx={{display: "none"}} value={language} disabled>
+      <MenuItem sx={{ display: 'none' }} value={language} disabled>
         <ListItemIcon sx={{ minWidth: 32 }}>
           <img
             src={`/svg/flags/${language}.svg`}
@@ -89,7 +89,6 @@ export default function Sprachauswahl() {
             <ListItemText primary={data.title} />
           </MenuItem>
         ))}
-
     </Select>
   );
 }

@@ -1,28 +1,44 @@
-# ❗ Fallmanager Proof of Concept
+// core/gl-core/cartridges/Fallmanager/README.md
 
-This Proof of Concept (POC) demonstrates how **Fallmanager** can streamline legal case preparation by combining AI-assisted document processing with a structured workflow.
+## Proof of Concept
 
-## 💡 Core Concept
+Demonstrates how we could streamline legal case preparation by combining AI-assisted document processing with a structured workflow.
 
-When Kanzlei staff receive documents (e.g. insurance letters, client statements), they typically have to extract key details manually and enter them into a system. This POC shows how **uploading those PDFs can trigger automatic extraction of structured data** using a Large Language Model (LLM).
+When Kanzlei staff receive documents (e.g. insurance letters, client statements), they typically have to extract key details manually and enter them into a system. This POC shows how uploading those PDFs can trigger automatic extraction of structured data using a Large Language Model (LLM).
 
-The system then **pre-fills editable case fields**, speeding up the process and reducing repetitive work — while still keeping the administrator fully in control.
+The system then pre-fills editable case fields, thus speeding up the process and reducing repetitive work — while still keeping the administrator fully in control.
 
-## ✅ What This POC Does
+#### [caseObj.tsx](./caseObj.tsx)
 
-- Starts a **new case** in Firestore with a unique ID
-- Lets the user upload **PDF documents**
-- Automatically extracts structured case data using an LLM
-- Pre-fills relevant fields for review and manual correction
-- Allows generation of a **summary PDF letter**
-- Closes the case when complete
+This file defines the **single source of truth** for the structure of a legal case (a `Fall`).
 
-## 🔐 About Login and Infrastructure
+It exports two things:
 
-This POC is built on the **Goldlabel framework**, which includes reusable cartridges for rapid prototyping:
+- `CaseData` — the full TypeScript interface describing all fields of a case
+- `emptyCase` — a blank template that can be used for initializing new cases or form defaults
 
-- `Bouncer` provides authentication — not as part of Fallmanager’s business logic, but to ensure data privacy from the start
-- `Uberedux` provides state management
-- `Theme` gives us consistent design out of the box
+##### Key Groups
 
-These modules are deliberately separated from the Fallmanager domain logic so we can focus development time on the things that matter most to the Kanzlei — automating admin and accelerating case handling.
+The case object is grouped for UI and logic into the following domains:
+
+| Group             | Fields                                                                 |
+|------------------|-------------------------------------------------------------------------|
+| **Client Info**  | `clientName`, `carRegistration`                                         |
+| **Case Metadata**| `caseId`, `status`, `createdAt`, `updatedAt`                            |
+| **Accident Info**| `dateOfAccident`, `placeOfAccident`, `policeReportNumber`, `witnesses`  |
+| **Insurance Info**| `insuranceCompany`, `policyNumber`, `claimNumber`, `opposingInsurance`, `opposingClaimNumber` |
+| **Checklist Flags**| `accidentReport`, `damageAssessment`, `repairInvoiceReceived`, `settlementLetterReceived` |
+| **Documents**    | `documents[]` (type, filename, uploadedAt)                              |
+
+##### Why This Matters
+
+This object is used throughout the Fallmanager system for:
+
+- LLM-based extraction
+- Case editor UIs
+- Firestore reads/writes
+- Validation and transformation
+- Workflow logic (e.g. flags and status updates)
+
+Keeping it centralized makes the codebase easier to maintain and extend as we move toward a production-ready system.
+
