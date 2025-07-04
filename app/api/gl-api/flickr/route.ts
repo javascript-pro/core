@@ -20,7 +20,7 @@ const photoCache: Record<string, { time: number; photo: TFlickrPhoto }> = {};
 async function getPhotoWithSizes(photoId: string): Promise<TFlickrPhoto> {
   // Step 1: Get basic photo info (title, description, geolocation, etc.)
   const infoRes = await fetch(
-    `${FLICKR_API}?method=flickr.photos.getInfo&api_key=${flickrApiKey}&photo_id=${photoId}&user_id=${flickrUserId}&format=json&nojsoncallback=1`,
+    `${FLICKR_API}?method=flickr.photos.getInfo&api_key=${flickrApiKey}&photo_id=${photoId}&user_id=${flickrUserId}&format=json&nojsoncallback=1`
   );
   const infoData = await infoRes.json();
   if (infoData.stat !== 'ok') throw new Error(infoData.message);
@@ -28,7 +28,7 @@ async function getPhotoWithSizes(photoId: string): Promise<TFlickrPhoto> {
 
   // Step 2: Get photo size information
   const sizesRes = await fetch(
-    `${FLICKR_API}?method=flickr.photos.getSizes&api_key=${flickrApiKey}&photo_id=${photoId}&format=json&nojsoncallback=1`,
+    `${FLICKR_API}?method=flickr.photos.getSizes&api_key=${flickrApiKey}&photo_id=${photoId}&format=json&nojsoncallback=1`
   );
   const sizesData = await sizesRes.json();
   if (sizesData.stat !== 'ok') throw new Error(sizesData.message);
@@ -168,7 +168,7 @@ export async function GET(request: NextRequest) {
   try {
     // Step 1: Get photos in the album (bulk metadata)
     const flickrRes = await fetch(
-      `${FLICKR_API}?method=flickr.photosets.getPhotos&api_key=${flickrApiKey}&photoset_id=${albumId}&user_id=${flickrUserId}&format=json&nojsoncallback=1&extras=description,date_taken,geo,tags,url_o,url_h,url_c,url_n`,
+      `${FLICKR_API}?method=flickr.photosets.getPhotos&api_key=${flickrApiKey}&photoset_id=${albumId}&user_id=${flickrUserId}&format=json&nojsoncallback=1&extras=description,date_taken,geo,tags,url_o,url_h,url_c,url_n`
     );
     const data = await flickrRes.json();
     if (data.stat !== 'ok') throw new Error(data.message);
@@ -184,32 +184,16 @@ export async function GET(request: NextRequest) {
       meta: { tags: p.tags?.split(' ') || [] },
       sizes: {
         orig: p.url_o
-          ? {
-              src: p.url_o,
-              width: parseInt(p.width_o),
-              height: parseInt(p.height_o),
-            }
+          ? { src: p.url_o, width: parseInt(p.width_o), height: parseInt(p.height_o) }
           : undefined,
         large: p.url_h
-          ? {
-              src: p.url_h,
-              width: parseInt(p.width_h),
-              height: parseInt(p.height_h),
-            }
+          ? { src: p.url_h, width: parseInt(p.width_h), height: parseInt(p.height_h) }
           : undefined,
         medium: p.url_c
-          ? {
-              src: p.url_c,
-              width: parseInt(p.width_c),
-              height: parseInt(p.height_c),
-            }
+          ? { src: p.url_c, width: parseInt(p.width_c), height: parseInt(p.height_c) }
           : undefined,
         small: p.url_n
-          ? {
-              src: p.url_n,
-              width: parseInt(p.width_n),
-              height: parseInt(p.height_n),
-            }
+          ? { src: p.url_n, width: parseInt(p.width_n), height: parseInt(p.height_n) }
           : undefined,
         thumb: undefined,
       },
@@ -229,14 +213,14 @@ export async function GET(request: NextRequest) {
         } catch (e) {
           return photo; // Fallback if size fetch fails
         }
-      }),
+      })
     );
 
     const coverPhoto = await getPhotoWithSizes(data.photoset.primary);
 
     // Step 3: Get album metadata (title, description, etc.)
     const infoRes = await fetch(
-      `${FLICKR_API}?method=flickr.photosets.getInfo&api_key=${flickrApiKey}&photoset_id=${albumId}&user_id=${flickrUserId}&format=json&nojsoncallback=1`,
+      `${FLICKR_API}?method=flickr.photosets.getInfo&api_key=${flickrApiKey}&photoset_id=${albumId}&user_id=${flickrUserId}&format=json&nojsoncallback=1`
     );
     const infoData = await infoRes.json();
     if (infoData.stat !== 'ok') throw new Error(infoData.message);
