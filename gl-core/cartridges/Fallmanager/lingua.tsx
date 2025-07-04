@@ -32,6 +32,7 @@ type LinguaKey =
   | 'DELETE'
   | 'DELETE_CONFIRM'
   | 'CLIENT_NAME_TOO_SHORT'
+  | 'NOT_FOUND'
   | 'SUBMIT';
 
 type TranslationEntry = Record<TLinguaCodes, string>;
@@ -42,6 +43,12 @@ export const lingua: Record<LinguaKey, TranslationEntry> = {
     de: 'Fallmanager',
     pt: 'Gestor de Casos',
     zh: '案件管理器',
+  },
+  NOT_FOUND: {
+    en: 'Nothing found',
+    de: 'Nichts gefunden',
+    pt: 'Nada encontrado',
+    zh: '未找到任何内容',
   },
   DELETE: {
     en: 'Delete',

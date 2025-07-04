@@ -2,7 +2,17 @@
 
 import * as React from 'react';
 import { useEffect, useState } from 'react';
-import { Card, CardHeader, CardContent, Grid, ButtonBase } from '@mui/material';
+import {
+  Card,
+  CardHeader,
+  ButtonBase,
+  Alert,
+  Box,
+  CircularProgress,
+  List,
+  ListItem,
+  ListItemButton,
+} from '@mui/material';
 import {
   collection,
   onSnapshot,
@@ -18,15 +28,13 @@ import { useDispatch } from 'react-redux';
 
 export default function Fallliste() {
   const [docs, setDocs] = useState<DocumentData[]>([]);
+  const [loading, setLoading] = useState(true);
   const t = useLingua();
   const router = useRouter();
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const q = query(
-      collection(db, 'fallmanager'),
-      orderBy('createdAt', 'desc'),
-    );
+    const q = query(collection(db, 'fallmanager'), orderBy('createdAt', 'desc'));
 
     const unsubscribe = onSnapshot(q, (snapshot) => {
       const data = snapshot.docs.map((doc) => ({
@@ -34,6 +42,7 @@ export default function Fallliste() {
         ...doc.data(),
       }));
       setDocs(data);
+      setLoading(false);
     });
 
     return () => unsubscribe();
@@ -45,41 +54,39 @@ export default function Fallliste() {
   };
 
   return (
-    <Grid container spacing={1}>
-      {docs.map((doc) => (
-        <Grid
-          key={doc.id}
-          size={{
-            xs: 12,
-            sm: 6,
-          }}
-        >
-          <ButtonBase
-            onClick={() => handleClick(doc)}
-            sx={{
-              width: '100%',
-              textAlign: 'left',
-              display: 'block',
-            }}
-          >
-            <Card sx={{ height: '100%' }}>
-              <CardHeader
-                avatar={<Icon icon="doc" color="disabled" />}
-                title={doc.clientName || 'No client name'}
-                // subheader={`id: ${doc.id}`}
-                titleTypographyProps={{
-                  noWrap: true,
-                  sx: { overflow: 'hidden', textOverflow: 'ellipsis' },
-                }}
-                subheaderTypographyProps={{
-                  noWrap: true,
-                  sx: { overflow: 'hidden', textOverflow: 'ellipsis' },
-                }}
-              />
-            </Card>
-          </ButtonBase>
-        </Grid>
-      ))}
-    </Grid>
+    <Box>
+      {loading ? (
+        <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
+          <CircularProgress />
+        </Box>
+      ) : docs.length === 0 ? (
+        <Alert severity="info" sx={{ mb: 2 }}>
+          {t('NOT_FOUND')}
+        </Alert>
+      ) : (
+        <List disablePadding>
+          {docs.map((doc) => (
+            <ListItem key={doc.id} disablePadding sx={{ mb: 1 }}>
+              <ListItemButton onClick={() => handleClick(doc)}>
+                <Card sx={{ width: '100%' }}>
+                  <CardHeader
+                    avatar={<Icon icon="doc" color="disabled" />}
+                    title={doc.clientName || 'No client name'}
+                    titleTypographyProps={{
+                      noWrap: true,
+                      sx: { overflow: 'hidden', textOverflow: 'ellipsis' },
+                    }}
+                    subheaderTypographyProps={{
+                      noWrap: true,
+                      sx: { overflow: 'hidden', textOverflow: 'ellipsis' },
+                    }}
+                  />
+                </Card>
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+      )}
+    </Box>
   );
 }
