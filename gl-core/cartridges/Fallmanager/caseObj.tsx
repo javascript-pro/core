@@ -61,7 +61,7 @@ export const emptyCase: CaseData = {
   carRegistration: '',
 
   caseId: '',
-  status: 'in_review',
+  status: 'in_progress',
   createdAt: new Date().toISOString(),
   updatedAt: new Date().toISOString(),
 

@@ -1,6 +1,6 @@
 [
   {
-    "status": "completed",
+    "status": "in_progress",
     "createdAt": "2025-06-22T00:00:00Z",
     "updatedAt": "2025-06-23T00:00:00Z",
     "dateOfAccident": "2025-06-22",
@@ -11,10 +11,10 @@
     "insuranceCompany": "HUK Coburg",
     "policyNumber": "POL-6592",
     "claimNumber": "CLM-25413",
-    "opposingInsurance": "R+V",
-    "opposingClaimNumber": "OPP-98745",
+    "opposingInsurance": "",
+    "opposingClaimNumber": "",
     "accidentReport": false,
-    "damageAssessment": null,
+    "damageAssessment": true,
     "repairInvoiceReceived": false,
     "settlementLetterReceived": null,
     "witnesses": [
@@ -32,7 +32,7 @@
     ]
   },
   {
-    "status": "archived",
+    "status": "in_progress",
     "createdAt": "2025-06-01T00:00:00Z",
     "updatedAt": "2025-06-30T00:00:00Z",
     "dateOfAccident": "2025-06-01",
@@ -40,11 +40,11 @@
     "carRegistration": "SB-CC7954",
     "placeOfAccident": "",
     "policeReportNumber": "",
-    "insuranceCompany": "R+V",
-    "policyNumber": "POL-9034",
-    "claimNumber": "CLM-63476",
+    "insuranceCompany": "",
+    "policyNumber": "",
+    "claimNumber": "",
     "opposingInsurance": "",
-    "opposingClaimNumber": "OPP-15810",
+    "opposingClaimNumber": "",
     "accidentReport": null,
     "damageAssessment": true,
     "repairInvoiceReceived": null,

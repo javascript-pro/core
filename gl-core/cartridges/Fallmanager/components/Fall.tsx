@@ -14,7 +14,6 @@ import {
   Select,
   MenuItem,
   IconButton,
-  Chip,
   Stack,
   Grid,
 } from '@mui/material';
@@ -123,27 +122,30 @@ export default function Fall() {
     <>
       <CardHeader
         // title={}
-        avatar={<>
-        <Box sx={{mr:2}}>
-          <FormControl size="small">
-            <InputLabel>{t('STATUS')}</InputLabel>
-            <Select
-              value={fallData.status || ''}
-              label={t('STATUS')}
-              onChange={(e) => handleUpdate('status', e.target.value)}
+        avatar={
+          <>
+            <Box sx={{ mr: 2 }}>
+              <FormControl size="small">
+                <InputLabel>{t('STATUS')}</InputLabel>
+                <Select
+                  value={fallData.status || ''}
+                  label={t('STATUS')}
+                  onChange={(e) => handleUpdate('status', e.target.value)}
+                >
+                  <MenuItem value="in_review">{t('STATUS_IN_REVIEW')}</MenuItem>
+                  <MenuItem value="in_progress">
+                    {t('STATUS_IN_PROGRESS')}
+                  </MenuItem>
+                  <MenuItem value="completed">{t('STATUS_COMPLETED')}</MenuItem>
+                  <MenuItem value="archived">{t('STATUS_ARCHIVED')}</MenuItem>
+                </Select>
+              </FormControl>
+            </Box>
+            <Box
+              sx={{
+                display: 'block',
+              }}
             >
-              <MenuItem value="in_review">{t('STATUS_IN_REVIEW')}</MenuItem>
-              <MenuItem value="in_progress">
-                {t('STATUS_IN_PROGRESS')}
-              </MenuItem>
-              <MenuItem value="completed">{t('STATUS_COMPLETED')}</MenuItem>
-              <MenuItem value="archived">{t('STATUS_ARCHIVED')}</MenuItem>
-            </Select>
-          </FormControl>
-        </Box>
-        <Box sx={{
-              display: "block",
-            }}>
               <Typography variant="button" mb={0.5}>
                 {completion}% {t('COMPLETED')}
               </Typography>
@@ -152,11 +154,11 @@ export default function Fall() {
                 variant="determinate"
                 value={completion}
               />
-            </Box></>}
+            </Box>
+          </>
+        }
         action={
           <Stack direction="row" spacing={2}>
-            
-            
             <IconButton
               color="secondary"
               onClick={handleDelete}
@@ -177,25 +179,23 @@ export default function Fall() {
 
       <CardContent>
         <Grid container spacing={1}>
-
           <Grid
             size={{
               xs: 12,
               sm: 6,
             }}
           >
-
             {/* Grunddaten */}
             <Card>
               <CardHeader title={t('SECTION_BASIC_INFO')} />
               <CardContent>
                 {renderEditableRow('clientName', t('CLIENT_NAME'))}
                 {renderEditableRow('insuranceCompany', t('INSURANCE_COMPANY'))}
-                {renderEditableRow('carRegistration', t('CAR_REGISTRATION'))}
+                {renderEditableRow('policyNumber', t('POLICY_NUMBER'))}
               </CardContent>
             </Card>
 
-            <Card sx={{my: 2}}>
+            <Card sx={{ my: 2 }}>
               <CardHeader title={t('SECTION_DOCUMENTS')} />
               {/* Dokumente */}
               <CardContent>
@@ -209,22 +209,6 @@ export default function Fall() {
               </CardContent>
             </Card>
 
-            <Card sx={{my: 2}}>
-              <CardHeader title={t('SECTION_WITNESSES')} />
-              {/* witnesses */}
-              <CardContent>
-                {fallData.witnesses.map((w: any, idx: number) => (
-                  <Chip
-                    key={idx}
-                    label={`${w.name} (${w.contact})`}
-                    variant="outlined"
-                    sx={{ mr: 1, mb: 1 }}
-                  />
-                ))}
-              </CardContent>
-            </Card>
-
-
           </Grid>
 
           <Grid
@@ -233,22 +217,30 @@ export default function Fall() {
               sm: 6,
             }}
           >
-
             <Card>
               {/* Unfall & Versicherung */}
               <CardHeader title={t('SECTION_ACCIDENT_INSURANCE')} />
               <CardContent>
+                {renderEditableRow('carRegistration', t('CAR_REGISTRATION'))}
                 {renderEditableRow('dateOfAccident', t('DATE_OF_ACCIDENT'))}
                 {renderEditableRow('placeOfAccident', t('PLACE_OF_ACCIDENT'))}
-                {renderEditableRow('policeReportNumber', t('POLICE_REPORT_NUMBER'))}
+                {renderEditableRow(
+                  'policeReportNumber',
+                  t('POLICE_REPORT_NUMBER'),
+                )}
+
                 
-                {renderEditableRow('policyNumber', t('POLICY_NUMBER'))}
                 {renderEditableRow('claimNumber', t('CLAIM_NUMBER'))}
-                {renderEditableRow('opposingInsurance', t('OPPOSING_INSURANCE'))}
-                {renderEditableRow('opposingClaimNumber', t('OPPOSING_CLAIM_NUMBER'))}
+                {renderEditableRow(
+                  'opposingInsurance',
+                  t('OPPOSING_INSURANCE'),
+                )}
+                {renderEditableRow(
+                  'opposingClaimNumber',
+                  t('OPPOSING_CLAIM_NUMBER'),
+                )}
               </CardContent>
             </Card>
-
           </Grid>
         </Grid>
       </CardContent>
