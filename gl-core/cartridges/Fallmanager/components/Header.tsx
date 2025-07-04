@@ -62,7 +62,11 @@ export default function Header() {
         title={<Typography variant="h6">{t('APP_TITLE')}</Typography>}
         action={
           <Box sx={{ display: 'flex' }}>
-            <Box>
+            <Box sx={{ pt: 0.5, pr: 1 }}>
+              <Sprachauswahl />
+            </Box>
+
+            <Box sx={{ mt: 0.5 }}>
               <IconButton
                 color="secondary"
                 onClick={handleReset}
@@ -70,20 +74,6 @@ export default function Header() {
               >
                 <Icon icon="reset" />
               </IconButton>
-            </Box>
-
-            <Box sx={{ pt: 0.5, pr: 1 }}>
-              <Sprachauswahl />
-            </Box>
-            <Box>
-              <Button
-                onClick={handleNewCase}
-                sx={{ mr: 1 }}
-                color="secondary"
-                variant="contained"
-              >
-                {t('NEW_CASE')}
-              </Button>
             </Box>
           </Box>
         }

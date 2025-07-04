@@ -29,7 +29,7 @@ import {
 } from 'firebase/firestore';
 import { db } from '../../../lib/firebase';
 import { useLingua, BearbeitbarText } from '../../Fallmanager';
-import { useDispatch, Icon } from '../../../../gl-core';
+import { useDispatch, Icon, MightyButton } from '../../../../gl-core';
 
 export default function Fall() {
   const pathname = usePathname();
@@ -112,7 +112,12 @@ export default function Fall() {
     const color = val ? 'secondary' : 'warning';
 
     return (
-      <Box display="flex" alignItems="center" justifyContent="space-between" mb={2}>
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="space-between"
+        mb={2}
+      >
         <Box display="flex" alignItems="center">
           <Box mr={2}>
             <Icon icon={icon} color={color} />
@@ -134,7 +139,11 @@ export default function Fall() {
     return (
       <Box display="flex" alignItems="center" mb={2}>
         <Box mr={2}>
-          {val ? <Icon icon="tick" color="secondary" /> : <Icon icon="close" color="warning" />}
+          {val ? (
+            <Icon icon="tick" color="secondary" />
+          ) : (
+            <Icon icon="close" color="warning" />
+          )}
         </Box>
         <Box flexGrow={1}>
           <TextField
@@ -165,7 +174,9 @@ export default function Fall() {
                   onChange={(e) => handleUpdate('status', e.target.value)}
                 >
                   <MenuItem value="in_review">{t('STATUS_IN_REVIEW')}</MenuItem>
-                  <MenuItem value="in_progress">{t('STATUS_IN_PROGRESS')}</MenuItem>
+                  <MenuItem value="in_progress">
+                    {t('STATUS_IN_PROGRESS')}
+                  </MenuItem>
                   <MenuItem value="completed">{t('STATUS_COMPLETED')}</MenuItem>
                   <MenuItem value="archived">{t('STATUS_ARCHIVED')}</MenuItem>
                 </Select>
@@ -185,20 +196,17 @@ export default function Fall() {
         }
         action={
           <Stack direction="row" spacing={2}>
-            <IconButton
-              color="secondary"
+            <MightyButton
+              icon="delete"
               onClick={handleDelete}
-              title={t('DELETE')}
-            >
-              <Icon icon="delete" />
-            </IconButton>
-            <IconButton
-              color="secondary"
+              label={t('DELETE')}
+            />
+
+            <MightyButton
+              icon="close"
               onClick={handleCancel}
-              title={t('CANCEL')}
-            >
-              <Icon icon="cancel" />
-            </IconButton>
+              label={t('SAVE_AND_CLOSE')}
+            />
           </Stack>
         }
       />
@@ -211,7 +219,6 @@ export default function Fall() {
               <CardContent>
                 {renderEditableRow('clientName', t('CLIENT_NAME'))}
                 {renderEditableRow('insuranceCompany', t('INSURANCE_COMPANY'))}
-                {renderEditableRow('policyNumber', t('POLICY_NUMBER'))}
               </CardContent>
             </Card>
 
@@ -219,9 +226,18 @@ export default function Fall() {
               <CardHeader title={t('SECTION_DOCUMENTS')} />
               <CardContent>
                 {renderBooleanSwitch('accidentReport', t('ACCIDENT_REPORT'))}
-                {renderBooleanSwitch('damageAssessment', t('DAMAGE_ASSESSMENT'))}
-                {renderBooleanSwitch('repairInvoiceReceived', t('REPAIR_INVOICE'))}
-                {renderBooleanSwitch('settlementLetterReceived', t('SETTLEMENT_LETTER'))}
+                {renderBooleanSwitch(
+                  'damageAssessment',
+                  t('DAMAGE_ASSESSMENT'),
+                )}
+                {renderBooleanSwitch(
+                  'repairInvoiceReceived',
+                  t('REPAIR_INVOICE'),
+                )}
+                {renderBooleanSwitch(
+                  'settlementLetterReceived',
+                  t('SETTLEMENT_LETTER'),
+                )}
               </CardContent>
             </Card>
           </Grid>
@@ -232,12 +248,21 @@ export default function Fall() {
               <CardContent>
                 {renderDateRow('dateOfAccident', t('DATE_OF_ACCIDENT'))}
                 {renderEditableRow('carRegistration', t('CAR_REGISTRATION'))}
-                
+                {renderEditableRow('policyNumber', t('POLICY_NUMBER'))}
                 {renderEditableRow('placeOfAccident', t('PLACE_OF_ACCIDENT'))}
-                {renderEditableRow('policeReportNumber', t('POLICE_REPORT_NUMBER'))}
+                {renderEditableRow(
+                  'policeReportNumber',
+                  t('POLICE_REPORT_NUMBER'),
+                )}
                 {renderEditableRow('claimNumber', t('CLAIM_NUMBER'))}
-                {renderEditableRow('opposingInsurance', t('OPPOSING_INSURANCE'))}
-                {renderEditableRow('opposingClaimNumber', t('OPPOSING_CLAIM_NUMBER'))}
+                {renderEditableRow(
+                  'opposingInsurance',
+                  t('OPPOSING_INSURANCE'),
+                )}
+                {renderEditableRow(
+                  'opposingClaimNumber',
+                  t('OPPOSING_CLAIM_NUMBER'),
+                )}
               </CardContent>
             </Card>
           </Grid>
