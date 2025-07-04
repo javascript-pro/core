@@ -81,5 +81,5 @@ export const emptyCase: CaseData = {
   repairInvoiceReceived: false,
   settlementLetterReceived: false,
 
-  documents: []
+  documents: [],
 };

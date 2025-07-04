@@ -21,14 +21,14 @@ It exports two things:
 
 The case object is grouped for UI and logic into the following domains:
 
-| Group             | Fields                                                                 |
-|------------------|-------------------------------------------------------------------------|
-| **Client Info**  | `clientName`, `carRegistration`                                         |
-| **Case Metadata**| `caseId`, `status`, `createdAt`, `updatedAt`                            |
-| **Accident Info**| `dateOfAccident`, `placeOfAccident`, `policeReportNumber`, `witnesses`  |
-| **Insurance Info**| `insuranceCompany`, `policyNumber`, `claimNumber`, `opposingInsurance`, `opposingClaimNumber` |
-| **Checklist Flags**| `accidentReport`, `damageAssessment`, `repairInvoiceReceived`, `settlementLetterReceived` |
-| **Documents**    | `documents[]` (type, filename, uploadedAt)                              |
+| Group               | Fields                                                                                        |
+| ------------------- | --------------------------------------------------------------------------------------------- |
+| **Client Info**     | `clientName`, `carRegistration`                                                               |
+| **Case Metadata**   | `caseId`, `status`, `createdAt`, `updatedAt`                                                  |
+| **Accident Info**   | `dateOfAccident`, `placeOfAccident`, `policeReportNumber`, `witnesses`                        |
+| **Insurance Info**  | `insuranceCompany`, `policyNumber`, `claimNumber`, `opposingInsurance`, `opposingClaimNumber` |
+| **Checklist Flags** | `accidentReport`, `damageAssessment`, `repairInvoiceReceived`, `settlementLetterReceived`     |
+| **Documents**       | `documents[]` (type, filename, uploadedAt)                                                    |
 
 ##### Why This Matters
 
@@ -42,3 +42,37 @@ This object is used throughout the Fallmanager system for:
 
 Keeping it centralized makes the codebase easier to maintain and extend as we move toward a production-ready system.
 
+## Example Case 
+
+```json
+[
+  {
+    "clientName": "Alexandra St\u00f6ckel",
+    "carRegistration": "SB-AT2008",
+    "caseId": "case-001",
+    "status": "in_review",
+    "createdAt": "2025-06-17T10:00:00Z",
+    "updatedAt": "2025-07-01T09:45:00Z",
+    "dateOfAccident": "2025-06-16",
+    "placeOfAccident": "Friedrichsthal",
+    "policeReportNumber": "Pol-FTH-2025-0616-01",
+    "witnesses": [],
+    "insuranceCompany": "HUK COBURG Allgemeine",
+    "policyNumber": "xxx",
+    "claimNumber": "25-11-511/524665-U",
+    "opposingInsurance": "Allianz",
+    "opposingClaimNumber": "GH-85-2025",
+    "accidentReport": true,
+    "damageAssessment": true,
+    "repairInvoiceReceived": false,
+    "settlementLetterReceived": false,
+    "documents": [
+      {
+        "type": "Gutachten",
+        "filename": "gutachten-sv-weber.pdf",
+        "uploadedAt": "2025-06-18T14:00:00Z"
+      }
+    ]
+  },
+]
+```

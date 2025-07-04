@@ -1,0 +1,124 @@
+[
+  {
+    "clientName": "Alexandra St\u00f6ckel",
+    "carRegistration": "SB-AT2008",
+    "caseId": "case-001",
+    "status": "in_review",
+    "createdAt": "2025-06-17T10:00:00Z",
+    "updatedAt": "2025-07-01T09:45:00Z",
+    "dateOfAccident": "2025-06-16",
+    "placeOfAccident": "Friedrichsthal",
+    "policeReportNumber": "Pol-FTH-2025-0616-01",
+    "witnesses": [],
+    "insuranceCompany": "HUK COBURG Allgemeine",
+    "policyNumber": "xxx",
+    "claimNumber": "25-11-511/524665-U",
+    "opposingInsurance": "Allianz",
+    "opposingClaimNumber": "GH-85-2025",
+    "accidentReport": true,
+    "damageAssessment": true,
+    "repairInvoiceReceived": false,
+    "settlementLetterReceived": false,
+    "documents": [
+      {
+        "type": "Gutachten",
+        "filename": "gutachten-sv-weber.pdf",
+        "uploadedAt": "2025-06-18T14:00:00Z"
+      }
+    ]
+  },
+  {
+    "clientName": "Elisabeth Karrenbauer",
+    "carRegistration": "SB-EG86",
+    "caseId": "case-002",
+    "status": "in_progress",
+    "createdAt": "2025-06-17T15:30:00Z",
+    "updatedAt": "2025-06-25T11:00:00Z",
+    "dateOfAccident": "2025-06-03",
+    "placeOfAccident": "Saarbr\u00fccken",
+    "policeReportNumber": "Pol-SB-2025-0603-KAR",
+    "witnesses": [],
+    "insuranceCompany": "ADAC Autoversicherung",
+    "policyNumber": "AD-2025-KAR-01",
+    "claimNumber": "AD2025-40820619-G002",
+    "opposingInsurance": "DEVK",
+    "opposingClaimNumber": "2025.11.24.02076.9",
+    "accidentReport": true,
+    "damageAssessment": true,
+    "repairInvoiceReceived": true,
+    "settlementLetterReceived": true,
+    "documents": [
+      {
+        "type": "Gutachten",
+        "filename": "gutachten-breier.pdf",
+        "uploadedAt": "2025-06-17T15:30:00Z"
+      },
+      {
+        "type": "Abrechnungsschreiben",
+        "filename": "devk-schreiben.pdf",
+        "uploadedAt": "2025-06-20T08:00:00Z"
+      }
+    ]
+  },
+  {
+    "clientName": "Klima Becker GmbH",
+    "carRegistration": "SB-VW333",
+    "caseId": "case-003",
+    "status": "in_review",
+    "createdAt": "2025-06-16T12:00:00Z",
+    "updatedAt": "2025-06-30T09:00:00Z",
+    "dateOfAccident": "2025-06-14",
+    "placeOfAccident": "Saarbr\u00fccken",
+    "policeReportNumber": "Pol-SB-2025-0614-KB",
+    "witnesses": [],
+    "insuranceCompany": "R+V",
+    "policyNumber": "RV2025-KB-001",
+    "claimNumber": "R+V-14-06-2025-KB",
+    "opposingInsurance": "DEVK",
+    "opposingClaimNumber": "DEVK-22-KB",
+    "accidentReport": true,
+    "damageAssessment": true,
+    "repairInvoiceReceived": false,
+    "settlementLetterReceived": false,
+    "documents": [
+      {
+        "type": "Gutachten",
+        "filename": "gutachten-haupenthal.pdf",
+        "uploadedAt": "2025-06-17T10:00:00Z"
+      }
+    ]
+  },
+  {
+    "clientName": "Dorothee Steeb",
+    "carRegistration": "NK-GH85",
+    "caseId": "case-004",
+    "status": "archived",
+    "createdAt": "2025-06-17T08:00:00Z",
+    "updatedAt": "2025-06-28T12:00:00Z",
+    "dateOfAccident": "2025-06-15",
+    "placeOfAccident": "Unknown",
+    "policeReportNumber": "Pol-Unknown-2025-0615-DS",
+    "witnesses": [
+      {
+        "name": "Julia Meier",
+        "contact": "+49 176 12345678"
+      }
+    ],
+    "insuranceCompany": "Allianz",
+    "policyNumber": "ALZ2025-DS-88",
+    "claimNumber": "ALZ-2025-GH85-512",
+    "opposingInsurance": "HUK Coburg",
+    "opposingClaimNumber": "HUK-DS-2025",
+    "accidentReport": true,
+    "damageAssessment": true,
+    "repairInvoiceReceived": true,
+    "settlementLetterReceived": true,
+    "documents": [
+      {
+        "type": "Gutachten",
+        "filename": "gutachten-haertner.pdf",
+        "uploadedAt": "2025-06-18T10:30:00Z"
+      }
+    ]
+  }
+]
