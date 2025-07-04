@@ -4,10 +4,10 @@ import * as React from 'react';
 import { useEffect, useState } from 'react';
 import {
   Box,
-Accordion,
-AccordionSummary,
-AccordionDetails,
-Typography,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Typography,
   Card,
   CardHeader,
   CardContent,
@@ -100,39 +100,36 @@ export default function Fall() {
   return (
     <Box sx={{ mx: 2 }}>
       <Card>
-        <CardHeader 
-          avatar={<Icon icon="case" />}
+        <CardHeader
+          avatar={<Icon icon="case" color="secondary" />}
           title={fallData.clientName}
-          action={<>
-            <Tooltip title={t('DELETE')}>
-              <IconButton onClick={handleDelete}>
-                <Icon icon="delete"  />
-              </IconButton>
-            </Tooltip>
-            <Tooltip title={t('CANCEL')}>
-            <IconButton onClick={handleBack}>
-              <Icon icon="cancel"  />
-            </IconButton>
-          </Tooltip>
-
-          </>}
-          
+          action={
+            <>
+              <Tooltip title={t('DELETE')}>
+                <IconButton onClick={handleDelete}>
+                  <Icon icon="delete" />
+                </IconButton>
+              </Tooltip>
+              <Tooltip title={t('CANCEL')}>
+                <IconButton onClick={handleBack}>
+                  <Icon icon="cancel" />
+                </IconButton>
+              </Tooltip>
+            </>
+          }
         />
         <CardActions>
           <Box sx={{ flexGrow: 1 }} />
-
-          
-
-          
         </CardActions>
         <CardContent>
           <Grid container spacing={1}>
-
             <Grid size={{ xs: 12, md: 6 }}>
-              <Accordion>
-                <AccordionSummary expandIcon={<Icon icon="down" />}>
-                  <Icon icon="api" />
-                  <Typography sx={{ml:2}} variant="subtitle1">JSON</Typography>
+              <Accordion defaultExpanded sx={{boxShadow: 0}}>
+                <AccordionSummary expandIcon={<Icon icon="down" color="secondary" />}>
+                  <Icon icon="api" color="secondary" />
+                  <Typography sx={{ ml: 2 }} variant="subtitle1">
+                    JSON
+                  </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                   <pre>{JSON.stringify(fallData, null, 2)}</pre>
@@ -147,12 +144,8 @@ export default function Fall() {
                 label={t('CLIENT_NAME')}
               />
             </Grid>
-
-
           </Grid>
         </CardContent>
-
-
       </Card>
     </Box>
   );

@@ -10,17 +10,26 @@ import {
   Box,
   Typography,
   useTheme,
+  IconButton,
 } from '@mui/material';
-import { useDispatch } from '../../../../gl-core';
+import { Icon, useDispatch, routeTo } from '../../../../gl-core';
 import { Sprachauswahl, useLingua, toggleNewCase } from '../../Fallmanager';
 
 export default function Header() {
   const dispatch = useDispatch();
+  const router = useRouter();
+  const pathname = usePathname();
   const t = useLingua();
   const theme = useTheme();
 
   const handleNewCase = () => {
     dispatch(toggleNewCase(true));
+  };
+
+  const handleAvatarClick = () => {
+    if (pathname !== '/fallmanager') {
+      dispatch(routeTo('/fallmanager', router));
+    }
   };
 
   return (
@@ -34,6 +43,11 @@ export default function Header() {
       }}
     >
       <CardHeader
+        avatar={
+          <IconButton onClick={handleAvatarClick}>
+            <Icon icon="cases" color="secondary" />
+          </IconButton>
+        }
         title={<Typography variant="h6">{t('APP_TITLE')}</Typography>}
         action={
           <Box sx={{ display: 'flex' }}>
@@ -44,6 +58,7 @@ export default function Header() {
               <Button
                 onClick={handleNewCase}
                 sx={{ mr: 1 }}
+                color="secondary"
                 variant="contained"
               >
                 {t('NEW_CASE')}

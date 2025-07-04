@@ -53,10 +53,10 @@ export const lingua: Record<LinguaKey, TranslationEntry> = {
     zh: '填充数据库',
   },
   NOT_FOUND: {
-    en: 'Nothing found',
-    de: 'Nichts gefunden',
-    pt: 'Nada encontrado',
-    zh: '未找到任何内容',
+    en: 'Nothing to see here :(',
+    de: 'Hier gibt’s nichts zu sehen :(',
+    pt: 'Nada para ver aqui :(',
+    zh: '这里什么都没有 :(',
   },
   DELETE: {
     en: 'Delete',

@@ -82,14 +82,15 @@ export default function Fallliste() {
       ) : docs.length === 0 ? (
         <Container sx={{ mt: 2 }}>
           <Alert
-            variant="outlined"
+            sx={{pt:2}}
+            variant="filled"
             severity="info"
             action={
               <Stack direction="row" spacing={1}>
-                <Button onClick={handleSeed} variant="outlined">
+                <Button onClick={handleSeed} variant="contained">
                   {t('SEED_DATABASE')}
                 </Button>
-                <Button onClick={handleNewCase} variant="outlined">
+                <Button onClick={handleNewCase} variant="contained">
                   {t('FIRST_CASE')}
                 </Button>
               </Stack>

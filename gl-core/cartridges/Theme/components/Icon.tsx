@@ -133,7 +133,7 @@ import DogIcon from '@mui/icons-material/Pets';
 import UploadIcon from '@mui/icons-material/FileUpload';
 import CaseIcon from '@mui/icons-material/WorkOutlined';
 import CaseClosedIcon from '@mui/icons-material/WorkOffOutlined';
-import CasesIcon from '@mui/icons-material/CasesOutlined';
+import CasesIcon from '@mui/icons-material/Cases';
 import CaseClockIcon from '@mui/icons-material/WorkHistoryOutlined';
 
 export type TIcon = {
