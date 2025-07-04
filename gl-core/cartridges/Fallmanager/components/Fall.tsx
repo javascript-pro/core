@@ -4,13 +4,18 @@ import * as React from 'react';
 import { useEffect, useState } from 'react';
 import {
   Box,
-  Alert,
-  Button,
+Accordion,
+AccordionSummary,
+AccordionDetails,
+Typography,
   Card,
+  CardHeader,
   CardContent,
   CardActions,
   LinearProgress,
   Grid,
+  Tooltip,
+  IconButton,
 } from '@mui/material';
 import { usePathname, useRouter } from 'next/navigation';
 import {
@@ -22,7 +27,7 @@ import {
 } from 'firebase/firestore';
 import { db } from '../../../lib/firebase';
 import { useLingua, BearbeitbarText, deleteCase } from '../../Fallmanager';
-import { useDispatch } from '../../../../gl-core';
+import { useDispatch, Icon } from '../../../../gl-core';
 
 export default function Fall() {
   const pathname = usePathname();
@@ -89,28 +94,53 @@ export default function Fall() {
   }
 
   if (!fallData) {
-    return (
-      <Box sx={{ mx: 2 }}>
-        <Alert
-          severity="info"
-          action={
-            <Button variant="contained" onClick={handleBack}>
-              {t('BACK')}
-            </Button>
-          }
-        >
-          {t('NOT_FOUND')}
-        </Alert>
-      </Box>
-    );
+    return null;
   }
 
   return (
     <Box sx={{ mx: 2 }}>
       <Card>
+        <CardHeader 
+          avatar={<Icon icon="case" />}
+          title={fallData.clientName}
+          action={<>
+            <Tooltip title={t('DELETE')}>
+              <IconButton onClick={handleDelete}>
+                <Icon icon="delete"  />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title={t('CANCEL')}>
+            <IconButton onClick={handleBack}>
+              <Icon icon="cancel"  />
+            </IconButton>
+          </Tooltip>
+
+          </>}
+          
+        />
+        <CardActions>
+          <Box sx={{ flexGrow: 1 }} />
+
+          
+
+          
+        </CardActions>
         <CardContent>
-          <Grid container spacing={2}>
-            <Grid size={{ xs: 12, md: 8 }}>
+          <Grid container spacing={1}>
+
+            <Grid size={{ xs: 12, md: 6 }}>
+              <Accordion>
+                <AccordionSummary expandIcon={<Icon icon="down" />}>
+                  <Icon icon="api" />
+                  <Typography sx={{ml:2}} variant="subtitle1">JSON</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <pre>{JSON.stringify(fallData, null, 2)}</pre>
+                </AccordionDetails>
+              </Accordion>
+            </Grid>
+
+            <Grid size={{ xs: 12, md: 6 }}>
               <BearbeitbarText
                 value={fallData.clientName || ''}
                 onSave={handleClientNameSave}
@@ -118,19 +148,11 @@ export default function Fall() {
               />
             </Grid>
 
-            <Grid size={{ xs: 12, md: 4 }}>Grid Right</Grid>
+
           </Grid>
         </CardContent>
 
-        <CardActions>
-          <Box sx={{ flexGrow: 1 }} />
-          <Button variant="outlined" onClick={handleBack}>
-            {t('CANCEL')}
-          </Button>
-          <Button variant="contained" color="error" onClick={handleDelete}>
-            {t('DELETE')}
-          </Button>
-        </CardActions>
+
       </Card>
     </Box>
   );

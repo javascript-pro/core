@@ -131,10 +131,18 @@ import ClientsIcon from '@mui/icons-material/PeopleAltOutlined';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import DogIcon from '@mui/icons-material/Pets';
 import UploadIcon from '@mui/icons-material/FileUpload';
+import CaseIcon from '@mui/icons-material/WorkOutlined';
+import CaseClosedIcon from '@mui/icons-material/WorkOffOutlined';
+import CasesIcon from '@mui/icons-material/CasesOutlined';
+import CaseClockIcon from '@mui/icons-material/WorkHistoryOutlined';
 
 export type TIcon = {
   icon:
     | 'more'
+    | 'case'
+    | 'caseclosed'
+    | 'cases'
+    | 'caseclock'
     | 'upload'
     | 'plus'
     | 'dog'
@@ -292,6 +300,22 @@ export default function Icon({ icon, color }: TIcon) {
   switch (icon) {
     case 'core':
       iconFragment = <CoreIcon color={color} />;
+      break;
+
+    case 'case':
+      iconFragment = <CaseIcon color={color} />;
+      break;
+
+    case 'caseclosed':
+      iconFragment = <CaseClosedIcon color={color} />;
+      break;
+
+    case 'cases':
+      iconFragment = <CasesIcon color={color} />;
+      break;
+
+    case 'caseclock':
+      iconFragment = <CaseClockIcon color={color} />;
       break;
 
     case 'plus':

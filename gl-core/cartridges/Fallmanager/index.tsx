@@ -9,6 +9,7 @@ import {
   toggleNewCase,
   deleteCase,
   resetTranslations,
+  seedFirebase,
 } from './actions';
 import {
   BearbeitbarText,
@@ -32,6 +33,7 @@ export {
   deleteCase,
   saveNewCase,
   resetTranslations,
+  seedFirebase,
 };
 
 export {

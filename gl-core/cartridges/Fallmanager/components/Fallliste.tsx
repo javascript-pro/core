@@ -3,15 +3,19 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import {
+  Container,
   Card,
   CardHeader,
-  ButtonBase,
+  Button,
   Alert,
+  AlertTitle,
   Box,
   CircularProgress,
   List,
   ListItem,
   ListItemButton,
+  Stack,
+  Typography,
 } from '@mui/material';
 import {
   collection,
@@ -22,7 +26,12 @@ import {
 } from 'firebase/firestore';
 import { db } from '../../../lib/firebase';
 import { Icon } from '../../../../gl-core';
-import { useLingua, setzeAktuellerFall } from '../../Fallmanager';
+import {
+  useLingua,
+  setzeAktuellerFall,
+  toggleNewCase,
+  seedFirebase,
+} from '../../Fallmanager';
 import { useRouter } from 'next/navigation';
 import { useDispatch } from 'react-redux';
 
@@ -34,7 +43,10 @@ export default function Fallliste() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const q = query(collection(db, 'fallmanager'), orderBy('createdAt', 'desc'));
+    const q = query(
+      collection(db, 'fallmanager'),
+      orderBy('createdAt', 'desc'),
+    );
 
     const unsubscribe = onSnapshot(q, (snapshot) => {
       const data = snapshot.docs.map((doc) => ({
@@ -53,6 +65,14 @@ export default function Fallliste() {
     router.push(`/fallmanager/${doc.id}`);
   };
 
+  const handleNewCase = () => {
+    dispatch(toggleNewCase(true));
+  };
+
+  const handleSeed = () => {
+    dispatch(seedFirebase());
+  };
+
   return (
     <Box>
       {loading ? (
@@ -60,9 +80,26 @@ export default function Fallliste() {
           <CircularProgress />
         </Box>
       ) : docs.length === 0 ? (
-        <Alert severity="info" sx={{ mb: 2 }}>
-          {t('NOT_FOUND')}
-        </Alert>
+        <Container sx={{ mt: 2 }}>
+          <Alert
+            variant="outlined"
+            severity="info"
+            action={
+              <Stack direction="row" spacing={1}>
+                <Button onClick={handleSeed} variant="outlined">
+                  {t('SEED_DATABASE')}
+                </Button>
+                <Button onClick={handleNewCase} variant="outlined">
+                  {t('FIRST_CASE')}
+                </Button>
+              </Stack>
+            }
+          >
+            <AlertTitle>
+              <Typography variant="h6">{t('NOT_FOUND')}</Typography>
+            </AlertTitle>
+          </Alert>
+        </Container>
       ) : (
         <List disablePadding>
           {docs.map((doc) => (
@@ -70,7 +107,7 @@ export default function Fallliste() {
               <ListItemButton onClick={() => handleClick(doc)}>
                 <Card sx={{ width: '100%' }}>
                   <CardHeader
-                    avatar={<Icon icon="doc" color="disabled" />}
+                    avatar={<Icon icon="case" color="secondary" />}
                     title={doc.clientName || 'No client name'}
                     titleTypographyProps={{
                       noWrap: true,

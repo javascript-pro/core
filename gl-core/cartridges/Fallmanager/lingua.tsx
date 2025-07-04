@@ -33,6 +33,8 @@ type LinguaKey =
   | 'DELETE_CONFIRM'
   | 'CLIENT_NAME_TOO_SHORT'
   | 'NOT_FOUND'
+  | 'SEED_DATABASE'
+  | 'FIRST_CASE'
   | 'SUBMIT';
 
 type TranslationEntry = Record<TLinguaCodes, string>;
@@ -43,6 +45,12 @@ export const lingua: Record<LinguaKey, TranslationEntry> = {
     de: 'Fallmanager',
     pt: 'Gestor de Casos',
     zh: '案件管理器',
+  },
+  SEED_DATABASE: {
+    en: 'Seed database',
+    de: 'Datenbank befüllen',
+    pt: 'Popular base de dados',
+    zh: '填充数据库',
   },
   NOT_FOUND: {
     en: 'Nothing found',
@@ -91,6 +99,12 @@ export const lingua: Record<LinguaKey, TranslationEntry> = {
     de: 'Neuer Fall',
     pt: 'Novo Caso',
     zh: '新案件',
+  },
+  FIRST_CASE: {
+    en: 'Create first Case',
+    de: 'Ersten Fall anlegen',
+    pt: 'Criar primeiro caso',
+    zh: '创建第一个案件',
   },
   NEW_CASE_HELP: {
     en: 'New cases must have a valid client name. Either enter it manually or upload the first file for this case and get the client name from it',
