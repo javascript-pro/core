@@ -196,19 +196,17 @@ export default function Fall() {
         }
         action={
           <Stack direction="row" spacing={2}>
-
-            <MightyButton 
+            <MightyButton
               icon="delete"
               onClick={handleDelete}
               label={t('DELETE')}
             />
 
-            <MightyButton 
+            <MightyButton
               icon="close"
               onClick={handleCancel}
               label={t('SAVE_AND_CLOSE')}
             />
-
           </Stack>
         }
       />
@@ -221,7 +219,6 @@ export default function Fall() {
               <CardContent>
                 {renderEditableRow('clientName', t('CLIENT_NAME'))}
                 {renderEditableRow('insuranceCompany', t('INSURANCE_COMPANY'))}
-                
               </CardContent>
             </Card>
 

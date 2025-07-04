@@ -46,7 +46,6 @@ export default function Sprachauswahl() {
       variant="standard"
       disableUnderline
       renderValue={(selected) => {
-        
         return (
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <img
@@ -83,7 +82,12 @@ export default function Sprachauswahl() {
               <img
                 src={`/svg/flags/${code}.svg`}
                 alt={data.title}
-                style={{ width: 32, height: 32, marginRight: 16, objectFit: 'contain' }}
+                style={{
+                  width: 32,
+                  height: 32,
+                  marginRight: 16,
+                  objectFit: 'contain',
+                }}
               />
             </ListItemIcon>
             <ListItemText primary={data.title} />

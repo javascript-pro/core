@@ -66,13 +66,13 @@ export const lingua: Record<LinguaKey, TranslationEntry> = {
     zh: '案件管理器',
     fr: 'Gestionnaire de dossiers',
   },
-SAVE_AND_CLOSE: {
-  en: 'Save and Close',
-  de: 'Speichern und Schließen',
-  pt: 'Guardar e Fechar',
-  zh: '保存并关闭',
-  fr: 'Enregistrer et fermer',
-},
+  SAVE_AND_CLOSE: {
+    en: 'Save and Close',
+    de: 'Speichern und Schließen',
+    pt: 'Guardar e Fechar',
+    zh: '保存并关闭',
+    fr: 'Enregistrer et fermer',
+  },
   NEW_CASE: {
     en: 'New Case',
     de: 'Neuer Fall',

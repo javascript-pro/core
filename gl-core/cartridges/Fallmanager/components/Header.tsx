@@ -62,13 +62,11 @@ export default function Header() {
         title={<Typography variant="h6">{t('APP_TITLE')}</Typography>}
         action={
           <Box sx={{ display: 'flex' }}>
-            
-
             <Box sx={{ pt: 0.5, pr: 1 }}>
               <Sprachauswahl />
             </Box>
 
-            <Box sx={{mt: 0.5}}>
+            <Box sx={{ mt: 0.5 }}>
               <IconButton
                 color="secondary"
                 onClick={handleReset}

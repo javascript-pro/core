@@ -77,7 +77,7 @@ export default function Fallliste() {
   };
 
   const handleAiHelp = () => {
-    console.log("handleAiHelp");
+    console.log('handleAiHelp');
   };
 
   const getCompletion = (doc: DocumentData): number => {
@@ -132,21 +132,21 @@ export default function Fallliste() {
         </Container>
       ) : (
         <>
-          <Toolbar sx={{ px: 2, justifyContent: 'space-between', flexWrap: 'wrap' }}>
+          <Toolbar
+            sx={{ px: 2, justifyContent: 'space-between', flexWrap: 'wrap' }}
+          >
             <Stack direction="row" spacing={1} flexWrap="wrap">
-              
-              <MightyButton 
+              <MightyButton
                 label={t('NEW_CASE')}
                 icon="plus"
                 onClick={handleNewCase}
               />
 
-              <MightyButton 
+              <MightyButton
                 label={t('NEW_WITH_AI')}
                 icon="openai"
                 onClick={handleAiHelp}
               />
-
             </Stack>
             <TextField
               size="small"
@@ -164,7 +164,7 @@ export default function Fallliste() {
               return (
                 <ListItem key={doc.id} disablePadding>
                   <ListItemButton onClick={() => handleClick(doc)}>
-                    <Card sx={{ mx:1, width: '100%' }}>
+                    <Card sx={{ mx: 1, width: '100%' }}>
                       <CardHeader
                         avatar={<Icon icon="case" color="secondary" />}
                         title={
