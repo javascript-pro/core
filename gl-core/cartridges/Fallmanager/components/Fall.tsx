@@ -16,6 +16,8 @@ import {
   IconButton,
   Stack,
   Grid,
+  Switch,
+  TextField,
 } from '@mui/material';
 import { usePathname, useRouter } from 'next/navigation';
 import {
@@ -104,16 +106,47 @@ export default function Fall() {
     </Box>
   );
 
-  const renderBooleanRow = (field: string, label: string) => {
-    const val = fallData?.[field];
-    const icon = val === true ? 'tick' : 'close';
-    const color = val === true ? 'secondary' : 'warning';
+  const renderBooleanSwitch = (field: string, label: string) => {
+    const val = Boolean(fallData?.[field]);
+    const icon = val ? 'tick' : 'close';
+    const color = val ? 'secondary' : 'warning';
+
     return (
-      <Box display="flex" alignItems="center" mb={1}>
-        <Box mr={2}>
-          <Icon icon={icon} color={color} />
+      <Box display="flex" alignItems="center" justifyContent="space-between" mb={2}>
+        <Box display="flex" alignItems="center">
+          <Box mr={2}>
+            <Icon icon={icon} color={color} />
+          </Box>
+          <Typography variant="body2">{label}</Typography>
         </Box>
-        <Typography variant="body2">{label}</Typography>
+        <Switch
+          checked={val}
+          color="secondary"
+          onChange={(e) => handleUpdate(field, e.target.checked)}
+        />
+      </Box>
+    );
+  };
+
+  const renderDateRow = (field: string, label: string) => {
+    const val = fallData?.[field] || '';
+
+    return (
+      <Box display="flex" alignItems="center" mb={2}>
+        <Box mr={2}>
+          {val ? <Icon icon="tick" color="secondary" /> : <Icon icon="close" color="warning" />}
+        </Box>
+        <Box flexGrow={1}>
+          <TextField
+            label={label}
+            type="date"
+            size="small"
+            fullWidth
+            value={val.slice(0, 10)}
+            InputLabelProps={{ shrink: true }}
+            onChange={(e) => handleUpdate(field, e.target.value)}
+          />
+        </Box>
       </Box>
     );
   };
@@ -121,7 +154,6 @@ export default function Fall() {
   return (
     <>
       <CardHeader
-        // title={}
         avatar={
           <>
             <Box sx={{ mr: 2 }}>
@@ -133,19 +165,13 @@ export default function Fall() {
                   onChange={(e) => handleUpdate('status', e.target.value)}
                 >
                   <MenuItem value="in_review">{t('STATUS_IN_REVIEW')}</MenuItem>
-                  <MenuItem value="in_progress">
-                    {t('STATUS_IN_PROGRESS')}
-                  </MenuItem>
+                  <MenuItem value="in_progress">{t('STATUS_IN_PROGRESS')}</MenuItem>
                   <MenuItem value="completed">{t('STATUS_COMPLETED')}</MenuItem>
                   <MenuItem value="archived">{t('STATUS_ARCHIVED')}</MenuItem>
                 </Select>
               </FormControl>
             </Box>
-            <Box
-              sx={{
-                display: 'block',
-              }}
-            >
+            <Box sx={{ display: 'block' }}>
               <Typography variant="button" mb={0.5}>
                 {completion}% {t('COMPLETED')}
               </Typography>
@@ -179,13 +205,7 @@ export default function Fall() {
 
       <CardContent>
         <Grid container spacing={1}>
-          <Grid
-            size={{
-              xs: 12,
-              sm: 6,
-            }}
-          >
-            {/* Grunddaten */}
+          <Grid size={{ xs: 12, sm: 6 }}>
             <Card>
               <CardHeader title={t('SECTION_BASIC_INFO')} />
               <CardContent>
@@ -197,48 +217,27 @@ export default function Fall() {
 
             <Card sx={{ my: 2 }}>
               <CardHeader title={t('SECTION_DOCUMENTS')} />
-              {/* Dokumente */}
               <CardContent>
-                {renderBooleanRow('accidentReport', t('ACCIDENT_REPORT'))}
-                {renderBooleanRow('damageAssessment', t('DAMAGE_ASSESSMENT'))}
-                {renderBooleanRow('repairInvoiceReceived', t('REPAIR_INVOICE'))}
-                {renderBooleanRow(
-                  'settlementLetterReceived',
-                  t('SETTLEMENT_LETTER'),
-                )}
+                {renderBooleanSwitch('accidentReport', t('ACCIDENT_REPORT'))}
+                {renderBooleanSwitch('damageAssessment', t('DAMAGE_ASSESSMENT'))}
+                {renderBooleanSwitch('repairInvoiceReceived', t('REPAIR_INVOICE'))}
+                {renderBooleanSwitch('settlementLetterReceived', t('SETTLEMENT_LETTER'))}
               </CardContent>
             </Card>
-
           </Grid>
 
-          <Grid
-            size={{
-              xs: 12,
-              sm: 6,
-            }}
-          >
+          <Grid size={{ xs: 12, sm: 6 }}>
             <Card>
-              {/* Unfall & Versicherung */}
               <CardHeader title={t('SECTION_ACCIDENT_INSURANCE')} />
               <CardContent>
+                {renderDateRow('dateOfAccident', t('DATE_OF_ACCIDENT'))}
                 {renderEditableRow('carRegistration', t('CAR_REGISTRATION'))}
-                {renderEditableRow('dateOfAccident', t('DATE_OF_ACCIDENT'))}
-                {renderEditableRow('placeOfAccident', t('PLACE_OF_ACCIDENT'))}
-                {renderEditableRow(
-                  'policeReportNumber',
-                  t('POLICE_REPORT_NUMBER'),
-                )}
-
                 
+                {renderEditableRow('placeOfAccident', t('PLACE_OF_ACCIDENT'))}
+                {renderEditableRow('policeReportNumber', t('POLICE_REPORT_NUMBER'))}
                 {renderEditableRow('claimNumber', t('CLAIM_NUMBER'))}
-                {renderEditableRow(
-                  'opposingInsurance',
-                  t('OPPOSING_INSURANCE'),
-                )}
-                {renderEditableRow(
-                  'opposingClaimNumber',
-                  t('OPPOSING_CLAIM_NUMBER'),
-                )}
+                {renderEditableRow('opposingInsurance', t('OPPOSING_INSURANCE'))}
+                {renderEditableRow('opposingClaimNumber', t('OPPOSING_CLAIM_NUMBER'))}
               </CardContent>
             </Card>
           </Grid>
