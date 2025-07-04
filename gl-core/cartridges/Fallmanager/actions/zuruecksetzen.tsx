@@ -13,7 +13,6 @@ export const zuruecksetzen =
           key: 'fallmanager',
           value: {
             ...initialStateFallmanager,
-            language,
           },
         }),
       );

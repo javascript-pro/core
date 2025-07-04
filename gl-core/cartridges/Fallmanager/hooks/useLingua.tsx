@@ -9,6 +9,8 @@ export function useLingua() {
     (state: TRootState) => state.redux.fallmanager,
   );
 
+  // console.log('language', language);
+
   return function t(key: string): string {
     return lingua[key]?.[language as TLanguageCode] || key;
   };

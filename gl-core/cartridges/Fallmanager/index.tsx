@@ -8,6 +8,7 @@ import {
   saveNewCase,
   toggleNewCase,
   deleteCase,
+  resetTranslations,
 } from './actions';
 import {
   BearbeitbarText,
@@ -31,6 +32,7 @@ export {
   toggleNewCase,
   deleteCase,
   saveNewCase,
+  resetTranslations,
 };
 
 export {

@@ -4,7 +4,8 @@ import { setzeAktuellerFall } from './setzeAktuellerFall';
 import { zuruecksetzen } from './zuruecksetzen';
 import { toggleNewCase } from './toggleNewCase';
 import { saveNewCase } from './saveNewCase';
-import {deleteCase} from './deleteCase';
+import { deleteCase } from './deleteCase';
+import { resetTranslations } from './resetTranslations';
 export {
   deleteCase,
   saveNewCase,
@@ -12,4 +13,5 @@ export {
   setzeAktuellerFall,
   zuruecksetzen,
   toggleNewCase,
+  resetTranslations,
 };

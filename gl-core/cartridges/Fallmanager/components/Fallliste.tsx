@@ -52,8 +52,6 @@ export default function Fallliste() {
           size={{
             xs: 12,
             sm: 6,
-            md: 4,
-            lg: 3,
           }}
         >
           <ButtonBase
@@ -64,7 +62,7 @@ export default function Fallliste() {
               display: 'block',
             }}
           >
-            <Card sx={{ maxWidth: 320, height: '100%' }}>
+            <Card sx={{ height: '100%' }}>
               <CardHeader
                 avatar={<Icon icon="doc" color="disabled" />}
                 title={doc.clientName || 'No client name'}

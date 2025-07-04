@@ -45,15 +45,15 @@ export const lingua: Record<LinguaKey, TranslationEntry> = {
   },
   DELETE: {
     en: 'Delete',
-    de: '',
-    pt: '',
-    zh: '',
+    de: 'Löschen',
+    pt: 'Eliminar',
+    zh: '删除',
   },
-  DELETE_CONFIRM:{
+  DELETE_CONFIRM: {
     en: 'Are you sure?',
-    de: '',
-    pt: '',
-    zh: '',
+    de: 'Sind Sie sicher?',
+    pt: 'Tem a certeza?',
+    zh: '你确定吗？',
   },
   CANCEL: {
     en: 'Cancel',

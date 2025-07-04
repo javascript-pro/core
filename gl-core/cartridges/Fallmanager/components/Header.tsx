@@ -7,35 +7,21 @@ import {
   AppBar,
   Button,
   CardHeader,
-  IconButton,
   Box,
   Typography,
   useTheme,
 } from '@mui/material';
-import { useDispatch, Icon } from '../../../../gl-core';
-import {
-  Sprachauswahl,
-  zuruecksetzen,
-  useLingua,
-  toggleNewCase,
-} from '../../Fallmanager';
+import { useDispatch } from '../../../../gl-core';
+import { Sprachauswahl, useLingua, toggleNewCase } from '../../Fallmanager';
 
 export default function Header() {
-  const router = useRouter();
-  const pathname = usePathname();
   const dispatch = useDispatch();
   const t = useLingua();
   const theme = useTheme();
 
-  const handleHome = () => {
-    dispatch(zuruecksetzen());
-  };
-
   const handleNewCase = () => {
     dispatch(toggleNewCase(true));
   };
-
-  const title = t('APP_TITLE');
 
   return (
     <AppBar
@@ -48,12 +34,7 @@ export default function Header() {
       }}
     >
       <CardHeader
-        title={<Typography variant="h6">{title}</Typography>}
-        avatar={
-          <IconButton onClick={handleHome} size="small">
-            <Icon icon="home" />
-          </IconButton>
-        }
+        title={<Typography variant="h6">{t('APP_TITLE')}</Typography>}
         action={
           <Box sx={{ display: 'flex' }}>
             <Box sx={{ pt: 0.5, pr: 1 }}>
