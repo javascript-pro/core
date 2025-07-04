@@ -14,7 +14,6 @@ import {
   Select,
   MenuItem,
   IconButton,
-  Divider,
   Chip,
   Stack,
   Grid,
@@ -77,7 +76,7 @@ export default function Fall() {
   };
 
   const handleDelete = async () => {
-    const confirm = window.confirm(t('DELETE_CONFIRM') || 'Are you sure?');
+    const confirm = window.confirm(t('DELETE_CONFIRM'));
     if (!confirm) return;
     await deleteDoc(doc(db, 'fallmanager', id));
     router.push('/fallmanager');
@@ -124,28 +123,40 @@ export default function Fall() {
     <>
       <CardHeader
         // title={}
-        avatar={
-          <Stack direction="row" spacing={1}>
-            <FormControl sx={{ minWidth: 180 }} size="small">
-              <InputLabel>{t('STATUS')}</InputLabel>
-              <Select
-                value={fallData.status || ''}
-                variant="standard"
-                label={t('STATUS')}
-                onChange={(e) => handleUpdate('status', e.target.value)}
-              >
-                <MenuItem value="in_review">{t('STATUS_IN_REVIEW')}</MenuItem>
-                <MenuItem value="in_progress">
-                  {t('STATUS_IN_PROGRESS')}
-                </MenuItem>
-                <MenuItem value="completed">{t('STATUS_COMPLETED')}</MenuItem>
-                <MenuItem value="archived">{t('STATUS_ARCHIVED')}</MenuItem>
-              </Select>
-            </FormControl>
-          </Stack>
-        }
+        avatar={<>
+        <Box sx={{mr:2}}>
+          <FormControl size="small">
+            <InputLabel>{t('STATUS')}</InputLabel>
+            <Select
+              value={fallData.status || ''}
+              label={t('STATUS')}
+              onChange={(e) => handleUpdate('status', e.target.value)}
+            >
+              <MenuItem value="in_review">{t('STATUS_IN_REVIEW')}</MenuItem>
+              <MenuItem value="in_progress">
+                {t('STATUS_IN_PROGRESS')}
+              </MenuItem>
+              <MenuItem value="completed">{t('STATUS_COMPLETED')}</MenuItem>
+              <MenuItem value="archived">{t('STATUS_ARCHIVED')}</MenuItem>
+            </Select>
+          </FormControl>
+        </Box>
+        <Box sx={{
+              display: "block",
+            }}>
+              <Typography variant="button" mb={0.5}>
+                {completion}% {t('COMPLETED')}
+              </Typography>
+              <LinearProgress
+                color="secondary"
+                variant="determinate"
+                value={completion}
+              />
+            </Box></>}
         action={
-          <Stack direction="row" spacing={1}>
+          <Stack direction="row" spacing={2}>
+            
+            
             <IconButton
               color="secondary"
               onClick={handleDelete}
@@ -165,50 +176,26 @@ export default function Fall() {
       />
 
       <CardContent>
-        <Grid container spacing={1} sx={{ border: '1px solid red' }}>
-          <Grid
-            sx={{ border: '1px solid green' }}
-            size={{
-              xs: 12,
-            }}
-          >
-            <>
-              <Typography variant="button" mb={0.5}>
-                {completion}% {t('COMPLETED')}
-              </Typography>
-              <LinearProgress
-                color="secondary"
-                variant="determinate"
-                value={completion}
-              />
-            </>
-          </Grid>
+        <Grid container spacing={1}>
 
           <Grid
-            sx={{ border: '1px solid green' }}
             size={{
               xs: 12,
               sm: 6,
             }}
           >
+
             {/* Grunddaten */}
             <Card>
               <CardHeader title={t('SECTION_BASIC_INFO')} />
               <CardContent>
                 {renderEditableRow('clientName', t('CLIENT_NAME'))}
+                {renderEditableRow('insuranceCompany', t('INSURANCE_COMPANY'))}
                 {renderEditableRow('carRegistration', t('CAR_REGISTRATION'))}
               </CardContent>
             </Card>
-          </Grid>
 
-          <Grid
-            sx={{ border: '1px solid orange' }}
-            size={{
-              xs: 12,
-              sm: 6,
-            }}
-          >
-            <Card>
+            <Card sx={{my: 2}}>
               <CardHeader title={t('SECTION_DOCUMENTS')} />
               {/* Dokumente */}
               <CardContent>
@@ -221,42 +208,49 @@ export default function Fall() {
                 )}
               </CardContent>
             </Card>
+
+            <Card sx={{my: 2}}>
+              <CardHeader title={t('SECTION_WITNESSES')} />
+              {/* witnesses */}
+              <CardContent>
+                {fallData.witnesses.map((w: any, idx: number) => (
+                  <Chip
+                    key={idx}
+                    label={`${w.name} (${w.contact})`}
+                    variant="outlined"
+                    sx={{ mr: 1, mb: 1 }}
+                  />
+                ))}
+              </CardContent>
+            </Card>
+
+
+          </Grid>
+
+          <Grid
+            size={{
+              xs: 12,
+              sm: 6,
+            }}
+          >
+
+            <Card>
+              {/* Unfall & Versicherung */}
+              <CardHeader title={t('SECTION_ACCIDENT_INSURANCE')} />
+              <CardContent>
+                {renderEditableRow('dateOfAccident', t('DATE_OF_ACCIDENT'))}
+                {renderEditableRow('placeOfAccident', t('PLACE_OF_ACCIDENT'))}
+                {renderEditableRow('policeReportNumber', t('POLICE_REPORT_NUMBER'))}
+                
+                {renderEditableRow('policyNumber', t('POLICY_NUMBER'))}
+                {renderEditableRow('claimNumber', t('CLAIM_NUMBER'))}
+                {renderEditableRow('opposingInsurance', t('OPPOSING_INSURANCE'))}
+                {renderEditableRow('opposingClaimNumber', t('OPPOSING_CLAIM_NUMBER'))}
+              </CardContent>
+            </Card>
+
           </Grid>
         </Grid>
-
-        {/* Unfall & Versicherung */}
-        <Typography variant="h6" mt={4} gutterBottom>
-          {t('SECTION_ACCIDENT_INSURANCE')}
-        </Typography>
-        <Divider sx={{ mb: 2 }} />
-        {renderEditableRow('dateOfAccident', t('DATE_OF_ACCIDENT'))}
-        {renderEditableRow('placeOfAccident', t('PLACE_OF_ACCIDENT'))}
-        {renderEditableRow('policeReportNumber', t('POLICE_REPORT_NUMBER'))}
-        {renderEditableRow('insuranceCompany', t('INSURANCE_COMPANY'))}
-        {renderEditableRow('policyNumber', t('POLICY_NUMBER'))}
-        {renderEditableRow('claimNumber', t('CLAIM_NUMBER'))}
-        {renderEditableRow('opposingInsurance', t('OPPOSING_INSURANCE'))}
-        {renderEditableRow('opposingClaimNumber', t('OPPOSING_CLAIM_NUMBER'))}
-
-        {/* Zeugen */}
-        {fallData.witnesses?.length > 0 && (
-          <>
-            <Typography variant="h6" mt={4} gutterBottom>
-              {t('SECTION_WITNESSES')}
-            </Typography>
-            <Divider sx={{ mb: 2 }} />
-            <Box>
-              {fallData.witnesses.map((w: any, idx: number) => (
-                <Chip
-                  key={idx}
-                  label={`${w.name} (${w.contact})`}
-                  variant="outlined"
-                  sx={{ mr: 1, mb: 1 }}
-                />
-              ))}
-            </Box>
-          </>
-        )}
       </CardContent>
     </>
   );

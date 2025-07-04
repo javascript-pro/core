@@ -143,8 +143,13 @@ export default function Fallliste() {
                     <CardHeader
                       avatar={<Icon icon="case" color="secondary" />}
                       title={
-                        <Typography variant="subtitle1" noWrap>
-                          {doc.clientName || 'No client name'}
+                        <Typography variant="body1" noWrap>
+                          {doc.clientName}
+                        </Typography>
+                      }
+                      subheader={
+                        <Typography variant="body2" noWrap>
+                          {doc.status}
                         </Typography>
                       }
                       action={
