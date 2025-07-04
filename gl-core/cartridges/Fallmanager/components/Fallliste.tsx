@@ -82,7 +82,7 @@ export default function Fallliste() {
       ) : docs.length === 0 ? (
         <Container sx={{ mt: 2 }}>
           <Alert
-            sx={{pt:2}}
+            sx={{ pt: 2 }}
             variant="filled"
             severity="info"
             action={

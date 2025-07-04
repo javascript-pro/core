@@ -26,10 +26,16 @@ export default function NewCase() {
   const { newCase } = useFallmanagerSlice();
   const [clientName, setClientName] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
+  const nameRef = useRef(clientName);
 
   const isValid = clientName.trim().length >= 6;
 
-  // Handle focusing input when dialog opens
+  // Keep latest clientName in ref
+  useEffect(() => {
+    nameRef.current = clientName;
+  }, [clientName]);
+
+  // Handle focusing and keydown when dialog opens
   useEffect(() => {
     if (newCase.open) {
       const timer = setInterval(() => {
@@ -40,11 +46,14 @@ export default function NewCase() {
       }, 333);
 
       const handleKeyDown = (e: KeyboardEvent) => {
+        const name = nameRef.current.trim();
+        const isValidNow = name.length >= 6;
+
         if (e.key === 'Escape') {
           inputRef.current?.blur();
         }
-        if (e.key === 'Enter' && isValid && !newCase.saving) {
-          handleSubmit();
+        if (e.key === 'Enter' && isValidNow && !newCase.saving) {
+          dispatch(saveNewCase(name));
         }
       };
 
@@ -57,7 +66,7 @@ export default function NewCase() {
     } else {
       setClientName('');
     }
-  }, [newCase.open, isValid, newCase.saving]);
+  }, [newCase.open, newCase.saving, dispatch]);
 
   // Close dialog after successful save
   useEffect(() => {
@@ -72,7 +81,7 @@ export default function NewCase() {
 
   const handleSubmit = () => {
     if (!isValid || newCase.saving) return;
-    dispatch(saveNewCase(clientName));
+    dispatch(saveNewCase(clientName.trim()));
   };
 
   if (!newCase.open) return null;

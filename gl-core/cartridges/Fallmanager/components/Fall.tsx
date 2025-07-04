@@ -1,33 +1,36 @@
-// core/gl-core/cartridges/Fallmanager/components/Fall.tsx
 'use client';
+
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import {
   Box,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
   Typography,
   Card,
   CardHeader,
   CardContent,
-  CardActions,
   LinearProgress,
-  Grid,
-  Tooltip,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
   IconButton,
 } from '@mui/material';
+import CheckIcon from '@mui/icons-material/CheckCircle';
+import CloseIcon from '@mui/icons-material/Cancel';
+import DeleteIcon from '@mui/icons-material/Delete';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+
 import { usePathname, useRouter } from 'next/navigation';
 import {
   doc,
   onSnapshot,
   DocumentData,
   updateDoc,
-  serverTimestamp,
+  deleteDoc,
 } from 'firebase/firestore';
 import { db } from '../../../lib/firebase';
-import { useLingua, BearbeitbarText, deleteCase } from '../../Fallmanager';
-import { useDispatch, Icon } from '../../../../gl-core';
+import { useLingua, BearbeitbarText } from '../../Fallmanager';
+import { useDispatch } from '../../../../gl-core';
 
 export default function Fall() {
   const pathname = usePathname();
@@ -38,115 +41,118 @@ export default function Fall() {
 
   const [fallData, setFallData] = useState<DocumentData | null>(null);
   const [loading, setLoading] = useState(true);
-  const [saving, setSaving] = useState(false);
 
   useEffect(() => {
-    if (!id) return;
-
-    const unsub = onSnapshot(doc(db, 'fallmanager', id), (snapshot) => {
+    const unsub = onSnapshot(doc(db, 'fallmanager', id), (snap) => {
+      setFallData(snap.data() || null);
       setLoading(false);
-      if (snapshot.exists()) {
-        setFallData({ id: snapshot.id, ...snapshot.data() });
-      } else {
-        setFallData(null);
-      }
     });
-
     return () => unsub();
   }, [id]);
 
-  const handleBack = () => {
-    router.push('/fallmanager');
-  };
+  if (loading || !fallData) return <LinearProgress />;
 
-  const handleClientNameSave = async (clientName: string) => {
-    if (!fallData || !id) return;
-    setSaving(true);
-    try {
-      await updateDoc(doc(db, 'fallmanager', id), {
-        clientName,
-        updatedAt: serverTimestamp(),
-      });
-    } catch (err) {
-      console.error('error', err);
-    } finally {
-      setSaving(false);
-    }
+  const fieldsToCheck = [
+    fallData.clientName,
+    fallData.carRegistration,
+    fallData.dateOfAccident,
+    fallData.placeOfAccident,
+    fallData.insuranceCompany,
+    fallData.policyNumber,
+    fallData.claimNumber,
+    fallData.accidentReport,
+    fallData.damageAssessment,
+    fallData.repairInvoiceReceived,
+    fallData.settlementLetterReceived,
+  ];
+
+  const totalFields = fieldsToCheck.length;
+  const filledFields = fieldsToCheck.filter(Boolean).length;
+  const completion = Math.round((filledFields / totalFields) * 100);
+
+  const handleUpdate = (field: string, value: any) => {
+    return updateDoc(doc(db, 'fallmanager', id), {
+      [field]: value,
+      updatedAt: new Date().toISOString(),
+    });
   };
 
   const handleDelete = async () => {
-    if (!id) return;
-    const confirm = window.confirm(t('DELETE_CONFIRM'));
+    const confirm = window.confirm(t('DELETE_CONFIRM') || 'Are you sure?');
     if (!confirm) return;
-
-    const success = await dispatch(deleteCase(id));
-    if (success) {
-      router.push('/fallmanager');
-    }
+    await deleteDoc(doc(db, 'fallmanager', id));
+    router.push('/fallmanager');
   };
 
-  if (loading) {
-    return (
-      <Box sx={{ mx: 2 }}>
-        <LinearProgress />
-      </Box>
-    );
-  }
+  const handleCancel = () => {
+    router.push('/fallmanager');
+  };
 
-  if (!fallData) {
-    return null;
-  }
+  const renderEditableRow = (field: string, label: string) => (
+    <Box display="flex" alignItems="center" mb={2}>
+      <Box flexGrow={1}>
+        <BearbeitbarText
+          label={label}
+          value={fallData?.[field]}
+          onSave={(newVal) => handleUpdate(field, newVal)}
+        />
+      </Box>
+      <Box ml={2}>
+        {fallData?.[field] ? (
+          <CheckIcon color="success" />
+        ) : (
+          <CloseIcon color="error" />
+        )}
+      </Box>
+    </Box>
+  );
 
   return (
-    <Box sx={{ mx: 2 }}>
-      <Card>
-        <CardHeader
-          avatar={<Icon icon="case" color="secondary" />}
-          title={fallData.clientName}
-          action={
-            <>
-              <Tooltip title={t('DELETE')}>
-                <IconButton onClick={handleDelete}>
-                  <Icon icon="delete" />
-                </IconButton>
-              </Tooltip>
-              <Tooltip title={t('CANCEL')}>
-                <IconButton onClick={handleBack}>
-                  <Icon icon="cancel" />
-                </IconButton>
-              </Tooltip>
-            </>
-          }
-        />
-        <CardActions>
-          <Box sx={{ flexGrow: 1 }} />
-        </CardActions>
-        <CardContent>
-          <Grid container spacing={1}>
-            <Grid size={{ xs: 12, md: 6 }}>
-              <Accordion defaultExpanded sx={{boxShadow: 0}}>
-                <AccordionSummary expandIcon={<Icon icon="down" color="secondary" />}>
-                  <Icon icon="api" color="secondary" />
-                  <Typography sx={{ ml: 2 }} variant="subtitle1">
-                    JSON
-                  </Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <pre>{JSON.stringify(fallData, null, 2)}</pre>
-                </AccordionDetails>
-              </Accordion>
-            </Grid>
+    <Card>
+      <CardHeader
+        title={fallData.clientName || t('CLIENT_NAME')}
+        subheader={`ID: ${id}`}
+        action={
+          <Box>
+            <IconButton onClick={handleDelete} title={t('DELETE')}>
+              <DeleteIcon />
+            </IconButton>
+            <IconButton onClick={handleCancel} title={t('CANCEL')}>
+              <ExitToAppIcon />
+            </IconButton>
+          </Box>
+        }
+      />
+      <CardContent>
+        <Box mb={2}>
+          <Typography variant="body2">
+            {t('COMPLETION')}: {completion}%
+          </Typography>
+          <LinearProgress variant="determinate" value={completion} />
+        </Box>
 
-            <Grid size={{ xs: 12, md: 6 }}>
-              <BearbeitbarText
-                value={fallData.clientName || ''}
-                onSave={handleClientNameSave}
-                label={t('CLIENT_NAME')}
-              />
-            </Grid>
-          </Grid>
-        </CardContent>
-      </Card>
-    </Box>
+        <FormControl fullWidth size="small" sx={{ mb: 2 }}>
+          <InputLabel>{t('STATUS')}</InputLabel>
+          <Select
+            value={fallData.status || ''}
+            label={t('STATUS')}
+            onChange={(e) => handleUpdate('status', e.target.value)}
+          >
+            <MenuItem value="in_review">{t('STATUS_IN_REVIEW')}</MenuItem>
+            <MenuItem value="in_progress">{t('STATUS_IN_PROGRESS')}</MenuItem>
+            <MenuItem value="completed">{t('STATUS_COMPLETED')}</MenuItem>
+            <MenuItem value="archived">{t('STATUS_ARCHIVED')}</MenuItem>
+          </Select>
+        </FormControl>
+
+        {renderEditableRow('clientName', t('CLIENT_NAME'))}
+        {renderEditableRow('carRegistration', t('CAR_REGISTRATION'))}
+        {renderEditableRow('dateOfAccident', t('DATE_OF_ACCIDENT'))}
+        {renderEditableRow('placeOfAccident', t('PLACE_OF_ACCIDENT'))}
+        {renderEditableRow('insuranceCompany', t('INSURANCE_COMPANY'))}
+        {renderEditableRow('policyNumber', t('POLICY_NUMBER') || 'Policy Number')}
+        {renderEditableRow('claimNumber', t('CLAIM_NUMBER'))}
+      </CardContent>
+    </Card>
   );
 }

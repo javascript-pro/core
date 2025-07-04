@@ -4,12 +4,12 @@ import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../../../lib/firebase';
 import { TUbereduxDispatch } from '../../../../gl-core/types';
 import { setUbereduxKey } from '../../../../gl-core';
+import { emptyCase } from '../caseObj';
 
 export const saveNewCase =
   (clientName: string): any =>
   async (dispatch: TUbereduxDispatch, getState: () => any) => {
     try {
-      // console.log('saveNewCase', clientName);
       const current = getState().redux.fallmanager;
 
       // Start saving state
@@ -26,21 +26,26 @@ export const saveNewCase =
         }),
       );
 
-      // Create new Firestore doc
-      const docRef = await addDoc(collection(db, 'fallmanager'), {
+      // Clone and update the emptyCase template
+      const newCaseData = {
+        ...emptyCase,
         clientName,
-        createdAt: serverTimestamp(),
-      });
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      };
 
-      // Update redux with new case and ID
+      // Save to Firestore
+      const docRef = await addDoc(collection(db, 'fallmanager'), newCaseData);
+
+      // Save new case state with generated ID
       dispatch(
         setUbereduxKey({
           key: 'fallmanager',
           value: {
             ...current,
             newCase: {
-              clientName,
-              id: docRef.id,
+              ...newCaseData,
+              caseId: docRef.id,
               saving: false,
             },
           },

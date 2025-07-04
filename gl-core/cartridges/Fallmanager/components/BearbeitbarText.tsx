@@ -89,7 +89,7 @@ export default function BearbeitbarText({
   return (
     <Box
       ref={containerRef}
-      sx={{ display: 'flex', alignItems: 'center', gap: 1 }}
+      sx={{ display: 'flex', alignItems: 'center', gap: 1, my: 2 }}
     >
       <TextField
         fullWidth
