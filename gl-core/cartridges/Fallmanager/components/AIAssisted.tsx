@@ -30,7 +30,10 @@ export default function AIAssisted() {
 
   const [file, setFile] = useState<File | null>(null);
   const [uploading, setUploading] = useState(false);
-  const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
+  const [message, setMessage] = useState<{
+    type: 'success' | 'error';
+    text: string;
+  } | null>(null);
   const [uploadedData, setUploadedData] = useState<any | null>(null);
 
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -139,7 +142,15 @@ export default function AIAssisted() {
           {message && <Alert severity={message.type}>{message.text}</Alert>}
 
           {uploadedData && (
-            <Paper variant="outlined" sx={{ p: 2, whiteSpace: 'pre-wrap', fontFamily: 'monospace', fontSize: 12 }}>
+            <Paper
+              variant="outlined"
+              sx={{
+                p: 2,
+                whiteSpace: 'pre-wrap',
+                fontFamily: 'monospace',
+                fontSize: 12,
+              }}
+            >
               <pre>{JSON.stringify(uploadedData, null, 2)}</pre>
             </Paper>
           )}
