@@ -19,6 +19,7 @@ import {
   Header,
   Sprachauswahl,
   NewCase,
+  AIAssisted,
 } from './components';
 
 export {
@@ -44,4 +45,5 @@ export {
   Header,
   Sprachauswahl,
   NewCase,
+  AIAssisted,
 };

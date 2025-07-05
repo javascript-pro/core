@@ -138,15 +138,17 @@ export default function Fallliste() {
             <Stack direction="row" spacing={1} flexWrap="wrap">
               <MightyButton
                 label={t('NEW_CASE')}
-                variant='contained'
+                variant="contained"
                 color="secondary"
-                icon="plus"
+                icon="case"
                 onClick={handleNewCase}
               />
 
               <MightyButton
                 label={t('NEW_WITH_AI')}
-                icon="openai"
+                variant="contained"
+                color="secondary"
+                icon="aicase"
                 onClick={handleAiHelp}
               />
             </Stack>

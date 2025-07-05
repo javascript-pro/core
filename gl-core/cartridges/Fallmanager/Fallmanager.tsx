@@ -11,6 +11,7 @@ import {
   Fallliste,
   Fall,
   useFallmanagerSlice,
+  AIAssisted,
 } from '../Fallmanager';
 
 export default function Fallmanager() {
@@ -23,6 +24,7 @@ export default function Fallmanager() {
     <Theme theme={theme}>
       <CssBaseline />
       <Container>
+        <AIAssisted />
         <NewCase />
         <Header />
         {isListView ? <Fallliste /> : <Fall />}

@@ -1,3 +1,4 @@
+// core/gl-core/cartridges/Fallmanager/components/AIAssisted.tsx
 'use client';
 
 import * as React from 'react';
@@ -22,7 +23,7 @@ import {
 } from '../../Fallmanager';
 import { useDispatch, Icon } from '../../../../gl-core';
 
-export default function NewCase() {
+export default function AIAssisted() {
   const dispatch = useDispatch();
   const t = useLingua();
   const { newCase } = useFallmanagerSlice();

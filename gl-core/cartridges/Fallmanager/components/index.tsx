@@ -7,6 +7,7 @@ import Fallliste from './Fallliste';
 import Header from './Header';
 import Sprachauswahl from './Sprachauswahl';
 import NewCase from './NewCase';
+import AIAssisted from './AIAssisted';
 
 export {
   BearbeitbarText,
@@ -16,4 +17,5 @@ export {
   Header,
   Sprachauswahl,
   NewCase,
+  AIAssisted,
 };

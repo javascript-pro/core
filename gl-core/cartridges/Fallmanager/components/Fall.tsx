@@ -1,6 +1,5 @@
 // core/gl-core/cartridges/Fallmanager/components/Fall.tsx
 'use client';
-
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import {
@@ -204,6 +203,8 @@ export default function Fall() {
 
             <MightyButton
               icon="close"
+              variant="contained"
+              color="secondary"
               onClick={handleCancel}
               label={t('SAVE_AND_CLOSE')}
             />

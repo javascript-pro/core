@@ -70,9 +70,8 @@ export default function Header() {
     dispatch(resetTranslations());
   };
 
-  const title = isCasePage && clientName
-    ? `${clientName}`
-    : `${t('APP_TITLE')}`;
+  const title =
+    isCasePage && clientName ? `${clientName}` : `${t('APP_TITLE')}`;
   const subheader =
     isCasePage && createdAt ? `Created ${moment(createdAt).fromNow()}` : '';
 
@@ -88,7 +87,7 @@ export default function Header() {
     >
       <CardHeader
         avatar={
-          <IconButton 
+          <IconButton
             onClick={handleAvatarClick}
             disabled={pathname === '/fallmanager'}
           >
