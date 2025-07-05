@@ -39,7 +39,7 @@ export async function POST(req: NextRequest) {
     const buffer = Buffer.from(arrayBuffer);
 
     const fileId = uuidv4();
-    const storagePath = `ai-assist/${fileId}.${extension}`;
+    const storagePath = `AIAssist/${fileId}.${extension}`;
     const bucket = adminStorage.bucket();
 
     await bucket.file(storagePath).save(buffer, {
@@ -59,10 +59,7 @@ export async function POST(req: NextRequest) {
       extension,
       storagePath,
       downloadUrl,
-      status: 'uploaded',
       createdAt: admin.firestore.Timestamp.now(),
-      uploadedBy: null, // optionally populated if auth is used
-      parsedText: '', // reserved for later AI processing
     };
 
     const docRef = await adminDb.collection('AIAssist').add(fileData);

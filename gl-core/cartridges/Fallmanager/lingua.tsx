@@ -59,6 +59,11 @@ export type LinguaKey =
   | 'SECTION_ACCIDENT_DETAILS'
   | 'SECTION_OPPOSING_PARTY'
   | 'SECTION_SETTLEMENT'
+  | 'UPLOAD_SUCCESS'
+  | 'DATE'
+  | 'DOWNLOAD'
+    | 'VIEW'
+  | 'ANALYSE'
   | 'SETTLEMENT_LETTER';
 
 export type TranslationEntry = Record<TLinguaCodes, string>;
@@ -71,6 +76,47 @@ export const lingua: Record<LinguaKey, TranslationEntry> = {
     zh: '案件管理器',
     fr: 'Gestionnaire de dossiers',
   },
+VIEW: {
+  en: 'View',
+  de: 'Ansehen',
+  pt: 'Ver',
+  fr: 'Voir',
+  zh: '查看',
+},
+
+
+  UPLOAD_SUCCESS: {
+    en: 'Upload successful',
+    de: 'Upload erfolgreich',
+    pt: 'Upload realizado com sucesso',
+    fr: 'Téléversement réussi',
+    zh: '上传成功',
+  },
+
+  DOWNLOAD: {
+    en: 'Download',
+    de: 'Herunterladen',
+    pt: 'Baixar',
+    fr: 'Télécharger',
+    zh: '下载',
+  },
+
+  DATE: {
+    en: 'Date',
+    de: 'Datum',
+    pt: 'Data',
+    fr: 'Date',
+    zh: '日期',
+  },
+
+  ANALYSE: {
+    en: 'Analyse with AI',
+    de: 'Mit KI analysieren',
+    pt: 'Analisar com IA',
+    fr: 'Analyser avec IA',
+    zh: '使用 AI 分析',
+  },
+
   SECTION_SETTLEMENT: {
     en: 'Settlement',
     de: 'Abrechnung',
