@@ -1,21 +1,18 @@
-// core/gl-core/cartridges/Fallmanager/actions/analyse.tsx
 'use client';
 
 import { TUbereduxDispatch } from '../../../../gl-core/types';
 import { setUbereduxKey, toggleFeedback } from '../../../../gl-core';
 
 export const analyse =
-  (id: string): any =>
-  async (dispatch: TUbereduxDispatch, getState: () => any) => {
+  (id: string) =>
+  async (dispatch: TUbereduxDispatch, getState: () => any): Promise<void> => {
     try {
-      dispatch(
-        toggleFeedback({
-          severity: 'info',
-          title: 'Analysing...',
-        }),
-      );
+      if (!id || typeof id !== 'string') {
+        throw new Error('Invalid ID for analysis');
+      }
 
-      const res = await fetch('/api/gl-api/fallmanager/ki', {
+      // Fetch new endpoint instead
+      const res = await fetch('/api/gl-api/fallmanager/pdf-co', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id }),
@@ -24,17 +21,20 @@ export const analyse =
       const data = await res.json();
 
       if (!res.ok) {
-        throw new Error(data.error || 'Unknown error');
+        throw new Error(data?.error || 'PDF.co analysis failed');
       }
 
       dispatch(
         toggleFeedback({
           severity: 'success',
-          title: 'AI analysis done',
+          title: 'AI-Analysed',
         }),
       );
+
+      // Optional: forward result into Redux
+      // dispatch(setUbereduxKey({ key: 'docData', value: data.result }));
     } catch (e: unknown) {
-      const msg = e instanceof Error ? e.message : String(e);
+      const msg = e instanceof Error ? e.message : 'Unbekannter Fehler';
       dispatch(setUbereduxKey({ key: 'error', value: msg }));
       dispatch(
         toggleFeedback({

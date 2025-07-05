@@ -42,12 +42,6 @@ export const deleteFile =
       await deleteObject(fileRef);
       await deleteDoc(docRef);
 
-      dispatch(
-        toggleFeedback({
-          severity: 'success',
-          title: 'Datei gelöscht',
-        }),
-      );
     } catch (e: unknown) {
       const msg = e instanceof Error ? e.message : String(e);
       dispatch(setUbereduxKey({ key: 'error', value: msg }));

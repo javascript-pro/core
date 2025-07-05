@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { useRef, useState, useMemo, useEffect } from 'react';
+import { useRef, useState, useEffect, useMemo } from 'react';
 import {
   Dialog,
   CardHeader,
@@ -21,7 +21,6 @@ import {
   toggleAICase,
   updateAICase,
   deleteFile,
-  analyse,
 } from '../../Fallmanager';
 import {
   useDispatch,
@@ -39,7 +38,6 @@ export default function AIAssisted() {
 
   const [file, setFile] = useState<File | null>(null);
   const [uploading, setUploading] = useState(false);
-
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleClose = () => {
@@ -72,7 +70,6 @@ export default function AIAssisted() {
 
   const handleSubmit = async (file: File) => {
     setUploading(true);
-
     handleFeedback('info', t('UPLOAD_STARTING'));
 
     try {
@@ -85,6 +82,8 @@ export default function AIAssisted() {
       });
 
       const data = await res.json();
+      if (!res.ok) throw new Error(data?.error || 'Upload failed');
+
       handleFeedback('success', t('UPLOAD_SUCCESS'));
       dispatch(updateAICase({ uploaded: data }));
     } catch (err: any) {
@@ -174,123 +173,134 @@ function FirestoreSubscription({
   onReset: () => void;
 }) {
   const t = useLingua();
+  const { language } = useFallmanagerSlice();
   const dispatch = useDispatch();
   const [docData, setDocData] = useState<any | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [analysisResult, setAnalysisResult] = useState<any | null>(null);
+  const [processingStep, setProcessingStep] = useState<'waiting' | 'converting' | 'converted' | 'analyzing' | 'done'>('waiting');
+  const [error, setError] = useState<string | null>(null);
 
   const docRef = useMemo(() => doc(db, 'AIAssist', docId), [docId]);
 
-  const handleViewClick = () => {
-    if (docData?.downloadUrl) {
-      window.open(docData.downloadUrl, '_blank', 'noopener,noreferrer');
-    }
-  };
-
-  const handleDeleteClick = () => {
-    dispatch(deleteFile(docId));
-  };
-
-  const handleAnalyseClick = () => {
-    dispatch(analyse(docId));
+  const updateFeedback = (message: string, severity: 'info' | 'success' | 'error' = 'info') => {
+    dispatch(toggleFeedback({ severity, title: message }));
   };
 
   useEffect(() => {
     const unsub = onSnapshot(
       docRef,
-      (snap) => {
-        if (snap.exists()) {
-          setDocData(snap.data());
-          setLoading(false);
-        } else {
-          onReset();
+      async (snap) => {
+        if (!snap.exists()) return onReset();
+
+        const data = snap.data();
+        setDocData(data);
+
+        // Step 1: Trigger conversion if not done
+        if (!data?.docData?.rawText && processingStep === 'waiting') {
+          setProcessingStep('converting');
+          updateFeedback('Extrahiere Text mit PDF-Co...');
+
+          try {
+            const res = await fetch('/api/gl-api/fallmanager/pdf-co', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ id: docId }),
+            });
+
+            const result = await res.json();
+            if (!res.ok) throw new Error(result.error || 'PDF-Analyse fehlgeschlagen');
+            updateFeedback('Text erfolgreich extrahiert', 'success');
+            setProcessingStep('converted');
+          } catch (e: any) {
+            setError(e.message);
+            updateFeedback(e.message || 'Fehler beim PDF-Co-Aufruf', 'error');
+          }
+        }
+
+        // Step 2: Trigger KI if rawText exists and openai is not set
+        if (data?.docData?.rawText && !data?.docData?.openai && processingStep === 'converted') {
+          setProcessingStep('analyzing');
+          updateFeedback('Starte KI-Analyse...');
+
+          try {
+            const res = await fetch('/api/gl-api/fallmanager/ki', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                id: docId,
+                rawText: data.docData.rawText,
+              }),
+            });
+
+            const result = await res.json();
+            if (!res.ok) throw new Error(result.error || 'KI fehlgeschlagen');
+            updateFeedback('KI erfolgreich abgeschlossen', 'success');
+            setProcessingStep('done');
+          } catch (e: any) {
+            setError(e.message);
+            updateFeedback(e.message || 'Fehler bei KI-Aufruf', 'error');
+          }
         }
       },
       (err) => {
         console.error(err);
+        updateFeedback('Fehler bei Dokument-Überwachung', 'error');
+        onReset();
       },
     );
+
     return () => unsub();
-  }, [docRef, onReset]);
+  }, [docRef, docId, processingStep]);
 
-  useEffect(() => {
-    const fetchAnalysis = async () => {
-      try {
-        const res = await fetch(`/api/gl-api/fallmanager/ki?id=${docId}`);
+  if (!docData) return <LinearProgress sx={{ mt: 2 }} />;
 
-        if (!res.ok) {
-          console.warn('API returned error:', res.status);
-          return;
-        }
-
-        const text = await res.text();
-        if (!text) {
-          console.warn('Empty response from analysis endpoint');
-          return;
-        }
-
-        try {
-          const json = JSON.parse(text);
-          setAnalysisResult(json);
-        } catch (err) {
-          console.error('Invalid JSON in analysis response:', err);
-        }
-      } catch (err) {
-        console.error('Failed to fetch analysis result:', err);
-      }
-    };
-
-    if (docData?.AIAssisted && !analysisResult) {
-      fetchAnalysis();
-    }
-  }, [docData, docId, analysisResult]);
-
-  if (loading) return <LinearProgress sx={{ mt: 2 }} />;
-  if (!docData) return null;
-
-  const hasBeenAnalysed = !!docData?.AIAssisted;
-  const date = new Date(docData.createdAt?.seconds * 1000).toLocaleString();
+  const summaryText =
+    docData?.docData?.openai?.summary?.[language] ||
+    docData?.docData?.openai?.summary?.['en'];
 
   return (
-    <Box sx={{ p: 2, border: '1px solid', borderColor: 'divider', borderRadius: 2 }}>
+    <Box sx={{ p: 2 }}>
       <Stack spacing={1}>
-        {hasBeenAnalysed && analysisResult ? (
-          <pre>{JSON.stringify(analysisResult, null, 2)}</pre>
-        ) : (
-          <>
-            <CardHeader
-              title={docData.fileName}
-              subheader={
-                <>
-                  {date} · {docData.mimeType} ·{' '}
-                  {(docData.fileSize / 1024).toFixed(1)} KB
-                </>
-              }
-              action={
-                <>
-                  <MightyButton
-                    mode="icon"
-                    label={t('VIEW')}
-                    icon="link"
-                    onClick={handleViewClick}
-                  />
-                  <MightyButton
-                    mode="icon"
-                    label={t('DELETE')}
-                    icon="delete"
-                    onClick={handleDeleteClick}
-                  />
-                </>
-              }
-            />
+        <CardHeader
+          title={docData.fileName}
+          subheader={`${new Date(docData.createdAt?.seconds * 1000).toLocaleString()} · ${docData.mimeType} · ${(docData.fileSize / 1024).toFixed(1)} KB`}
+          action={
+            <>
+              <MightyButton mode="icon" label={t('VIEW')} icon="link" onClick={() => window.open(docData.downloadUrl, '_blank')} />
+              <MightyButton mode="icon" label={t('DELETE')} icon="delete" onClick={() => dispatch(deleteFile(docId))} />
+            </>
+          }
+        />
 
-            <MightyButton
-              label={t('ANALYSE')}
-              variant="contained"
-              icon="openai"
-              onClick={handleAnalyseClick}
-            />
-          </>
+        {error && (
+          <Typography variant="body2" color="error">
+            {error}
+          </Typography>
+        )}
+
+        {summaryText && (
+          <Typography
+            variant="body1"
+            sx={{ fontWeight: 500, whiteSpace: 'pre-wrap', mb: 2 }}
+          >
+            {summaryText}
+          </Typography>
+        )}
+
+        {docData?.docData?.openai && (
+          <Typography
+            variant="body2"
+            sx={{
+              whiteSpace: 'pre-wrap',
+              fontFamily: 'monospace',
+              fontSize: '0.75rem',
+              backgroundColor: 'action.hover',
+              borderRadius: 1,
+              p: 2,
+              mt: 1,
+            }}
+          >
+            {JSON.stringify(docData.docData.openai, null, 2)}
+          </Typography>
         )}
       </Stack>
     </Box>

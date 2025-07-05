@@ -6,7 +6,6 @@ import {
   Container,
   Card,
   CardHeader,
-  Button,
   Alert,
   AlertTitle,
   Box,
@@ -148,7 +147,7 @@ export default function Fallliste() {
               <Stack direction="row" spacing={1}>
                 <MightyButton
                   label={t('SEED_DATABASE')}
-                  variant="contained"
+                  variant="text"
                   icon="api"
                   onClick={handleSeed}
                 />
