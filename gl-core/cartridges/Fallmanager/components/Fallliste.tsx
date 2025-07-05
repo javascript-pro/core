@@ -1,3 +1,4 @@
+// core/gl-core/cartridges/Fallmanager/components/Fallliste.tsx
 'use client';
 
 import * as React from 'react';
@@ -20,6 +21,9 @@ import {
   TextField,
   Toolbar,
   Tooltip,
+  FormGroup,
+  FormControlLabel,
+  Checkbox,
 } from '@mui/material';
 import {
   collection,
@@ -38,10 +42,14 @@ import {
   seedFirebase,
 } from '../../Fallmanager';
 
+const ALL_STATUSES = ['in_review', 'in_progress', 'completed', 'archived'];
+
 export default function Fallliste() {
   const [docs, setDocs] = useState<DocumentData[]>([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState('');
+  const [visibleStatuses, setVisibleStatuses] =
+    useState<string[]>(ALL_STATUSES);
   const t = useLingua();
   const router = useRouter();
   const dispatch = useDispatch();
@@ -81,23 +89,33 @@ export default function Fallliste() {
     dispatch(toggleAICase(true));
   };
 
+  const handleStatusToggle = (status: string) => {
+    setVisibleStatuses((prev) =>
+      prev.includes(status)
+        ? prev.filter((s) => s !== status)
+        : [...prev, status],
+    );
+  };
+
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'in_review':
-        return { icon: 'warning', color: 'info' };
+        return { icon: 'star', color: 'secondary' };
       case 'in_progress':
-        return { icon: 'work', color: 'warning' };
+        return { icon: 'work', color: 'secondary' };
       case 'completed':
-        return { icon: 'tick', color: 'success' };
+        return { icon: 'tick', color: 'secondary' };
       case 'archived':
-        return { icon: 'delete', color: 'disabled' };
+        return { icon: 'delete', color: 'secondary' };
       default:
-        return { icon: 'settings', color: 'action' };
+        return { icon: 'settings', color: 'secondary' };
     }
   };
 
-  const filteredDocs = docs.filter((doc) =>
-    doc.clientName?.toLowerCase().includes(search.toLowerCase()),
+  const filteredDocs = docs.filter(
+    (doc) =>
+      doc.clientName?.toLowerCase().includes(search.toLowerCase()) &&
+      visibleStatuses.includes(doc.status),
   );
 
   return (
@@ -142,7 +160,7 @@ export default function Fallliste() {
               />
 
               <MightyButton
-                label={t('NEW_WITH_AI')}
+                label={t('NEW_AI_CASE')}
                 variant="contained"
                 color="secondary"
                 icon="aicase"
@@ -157,6 +175,31 @@ export default function Fallliste() {
               onChange={(e) => setSearch(e.target.value)}
             />
           </Toolbar>
+
+          <Box px={3} py={1}>
+            <FormGroup row>
+              {ALL_STATUSES.map((status) => {
+                const { icon, color } = getStatusIcon(status);
+                return (
+                  <FormControlLabel
+                    key={status}
+                    control={
+                      <Checkbox
+                        checked={visibleStatuses.includes(status)}
+                        onChange={() => handleStatusToggle(status)}
+                      />
+                    }
+                    label={
+                      <Box display="flex" alignItems="center">
+                        <Icon icon={icon as any} color={color} />
+                        {/* <Box ml={1}>{t(`STATUS_${status.toUpperCase()}`)}</Box> */}
+                      </Box>
+                    }
+                  />
+                );
+              })}
+            </FormGroup>
+          </Box>
 
           <List>
             {filteredDocs.map((doc) => {
@@ -175,8 +218,10 @@ export default function Fallliste() {
                         action={
                           <Tooltip title={doc.status || t('UNKNOWN')}>
                             <Box sx={{ pr: 1, pt: 1 }}>
-                              {doc.status}
-                              <Icon icon={icon.icon as any} color={icon.color} />
+                              <Icon
+                                icon={icon.icon as any}
+                                color={icon.color}
+                              />
                             </Box>
                           </Tooltip>
                         }

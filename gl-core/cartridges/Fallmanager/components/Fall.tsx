@@ -1,4 +1,3 @@
-// core/gl-core/cartridges/Fallmanager/components/Fall.tsx
 'use client';
 import * as React from 'react';
 import { useEffect, useState } from 'react';
@@ -85,6 +84,21 @@ export default function Fall() {
     router.push('/fallmanager');
   };
 
+  const getStatusIcon = (status: string) => {
+    switch (status) {
+      case 'in_review':
+        return { icon: 'star', color: 'secondary' };
+      case 'in_progress':
+        return { icon: 'work', color: 'secondary' };
+      case 'completed':
+        return { icon: 'tick', color: 'secondary' };
+      case 'archived':
+        return { icon: 'delete', color: 'secondary' };
+      default:
+        return { icon: 'settings', color: 'secondary' };
+    }
+  };
+
   const renderEditableRow = (field: string, label: string) => (
     <Box display="flex" alignItems="center" mb={2}>
       <Box mr={2}>
@@ -118,13 +132,12 @@ export default function Fall() {
       >
         <Box display="flex" alignItems="center">
           <Box mr={2}>
-            <Icon icon={icon} color={color} />
+            <Icon icon={icon as any} color={color} />
           </Box>
           <Typography variant="body2">{label}</Typography>
         </Box>
         <Switch
           checked={val}
-          color="secondary"
           onChange={(e) => handleUpdate(field, e.target.checked)}
         />
       </Box>
@@ -171,12 +184,21 @@ export default function Fall() {
                   label={t('STATUS')}
                   onChange={(e) => handleUpdate('status', e.target.value)}
                 >
-                  <MenuItem value="in_review">{t('STATUS_IN_REVIEW')}</MenuItem>
-                  <MenuItem value="in_progress">
-                    {t('STATUS_IN_PROGRESS')}
-                  </MenuItem>
-                  <MenuItem value="completed">{t('STATUS_COMPLETED')}</MenuItem>
-                  <MenuItem value="archived">{t('STATUS_ARCHIVED')}</MenuItem>
+                  {['in_review', 'in_progress', 'completed', 'archived'].map(
+                    (status) => {
+                      const { icon, color } = getStatusIcon(status);
+                      return (
+                        <MenuItem key={status} value={status}>
+                          <Box display="flex" alignItems="center">
+                            <Icon icon={icon as any} color={color} />
+                            <Box ml={1}>
+                              {t(`STATUS_${status.toUpperCase()}`)}
+                            </Box>
+                          </Box>
+                        </MenuItem>
+                      );
+                    },
+                  )}
                 </Select>
               </FormControl>
             </Box>
@@ -200,7 +222,6 @@ export default function Fall() {
               onClick={handleDelete}
               label={t('DELETE')}
             />
-
             <MightyButton
               icon="close"
               variant="contained"
