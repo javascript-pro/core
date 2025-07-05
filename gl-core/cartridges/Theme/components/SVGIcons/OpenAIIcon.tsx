@@ -2,9 +2,7 @@ import * as React from 'react';
 import { useTheme, SvgIcon } from '@mui/material';
 
 export default function OpenAIIcon(props: any) {
-  let mainColor = 'black';
-  const theme = useTheme();
-  mainColor = theme.palette.primary.main;
+  const mainColor = 'currentColor';
 
   return (
     <SvgIcon {...props}>

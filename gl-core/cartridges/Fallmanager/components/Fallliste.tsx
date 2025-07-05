@@ -158,6 +158,12 @@ export default function Fallliste() {
                   icon="case"
                   onClick={handleNewCase}
                 />
+                <MightyButton
+                  label={t('NEW_AI_CASE')}
+                  variant="contained"
+                  icon="aicase"
+                  onClick={handleAIAssistClick}
+                />
               </Stack>
             }
           >
@@ -212,7 +218,7 @@ export default function Fallliste() {
             <Stack direction="row" spacing={1}>
               <MightyButton
                 label={t('NEW_CASE')}
-                variant="contained"
+                variant="outlined"
                 icon="case"
                 onClick={handleNewCase}
               />

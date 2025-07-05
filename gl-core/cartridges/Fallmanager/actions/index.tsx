@@ -9,6 +9,8 @@ import { resetTranslations } from './resetTranslations';
 import { resetFallmanager } from './resetFallmanager';
 import { seedFirebase } from './seedFirebase';
 import { toggleAICase } from './toggleAICase';
+import {updateAICase} from './updateAICase';
+
 export {
   seedFirebase,
   deleteCase,
@@ -20,4 +22,5 @@ export {
   toggleAICase,
   resetTranslations,
   resetFallmanager,
+  updateAICase,
 };

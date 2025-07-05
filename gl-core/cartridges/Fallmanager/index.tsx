@@ -12,6 +12,7 @@ import {
   resetTranslations,
   resetFallmanager,
   seedFirebase,
+  updateAICase,
 } from './actions';
 import {
   BearbeitbarText,
@@ -39,6 +40,7 @@ export {
   resetTranslations,
   resetFallmanager,
   seedFirebase,
+  updateAICase,
 };
 
 export {
