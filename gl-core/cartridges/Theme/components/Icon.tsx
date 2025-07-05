@@ -258,6 +258,7 @@ export type TIcon = {
     | 'diveshop'
     | 'diving'
     | 'news'
+    | 'aicase'
     | 'activities'
     | 'left'
     | 'down'
@@ -321,6 +322,10 @@ export default function Icon({ icon, color }: TIcon) {
       break;
 
     case 'caseclock':
+      iconFragment = <CaseClockIcon color={color} />;
+      break;
+
+    case 'aicase':
       iconFragment = <CaseClockIcon color={color} />;
       break;
 

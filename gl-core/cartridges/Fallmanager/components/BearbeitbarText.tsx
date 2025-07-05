@@ -110,7 +110,6 @@ export default function BearbeitbarText({
                         <IconButton
                           onClick={handleSave}
                           disabled={!changed}
-                          color="secondary"
                           size="small"
                         >
                           <Icon icon="save" />
@@ -118,11 +117,7 @@ export default function BearbeitbarText({
                       </span>
                     </Tooltip>
                     <Tooltip title="Clear">
-                      <IconButton
-                        onClick={handleClear}
-                        color="secondary"
-                        size="small"
-                      >
+                      <IconButton onClick={handleClear} size="small">
                         <Icon icon="close" />
                       </IconButton>
                     </Tooltip>

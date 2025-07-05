@@ -3,7 +3,9 @@
 import * as React from 'react';
 import { useEffect, useRef, useState } from 'react';
 import {
+  Box,
   Dialog,
+  CardHeader,
   DialogTitle,
   DialogContent,
   DialogActions,
@@ -18,7 +20,7 @@ import {
   toggleNewCase,
   saveNewCase,
 } from '../../Fallmanager';
-import { useDispatch } from '../../../../gl-core';
+import { useDispatch, Icon } from '../../../../gl-core';
 
 export default function NewCase() {
   const dispatch = useDispatch();
@@ -88,7 +90,9 @@ export default function NewCase() {
 
   return (
     <Dialog open onClose={handleClose} fullWidth maxWidth="sm">
-      <DialogTitle>{t('NEW_CASE')}</DialogTitle>
+      <DialogTitle>
+        <CardHeader avatar={<Icon icon="case" />} title={t('NEW_CASE')} />
+      </DialogTitle>
       <DialogContent>
         <Typography variant="body2" sx={{ mb: 2 }}>
           {t('NEW_CASE_HELP_MANUAL')}

@@ -15,14 +15,6 @@ export async function POST(req: NextRequest) {
   try {
     const formData = await req.formData();
     const file = formData.get('file');
-    const fallId = formData.get('fallId');
-
-    if (typeof fallId !== 'string' || !fallId.trim()) {
-      return NextResponse.json(
-        { error: 'Fall-ID fehlt oder ist ungültig' },
-        { status: 400 },
-      );
-    }
 
     if (!(file instanceof File)) {
       return NextResponse.json(
@@ -47,7 +39,7 @@ export async function POST(req: NextRequest) {
     const buffer = Buffer.from(arrayBuffer);
 
     const fileId = uuidv4();
-    const storagePath = `fallmanager/${fallId}/${fileId}.${extension}`;
+    const storagePath = `ai-assist/${fileId}.${extension}`;
     const bucket = adminStorage.bucket();
 
     await bucket.file(storagePath).save(buffer, {
@@ -69,26 +61,19 @@ export async function POST(req: NextRequest) {
       downloadUrl,
       status: 'uploaded',
       createdAt: admin.firestore.Timestamp.now(),
+      uploadedBy: null, // optionally populated if auth is used
+      parsedText: '', // reserved for later AI processing
     };
 
-    await adminDb
-      .collection('fallmanager')
-      .doc(fallId)
-      .update({
-        dateien: admin.firestore.FieldValue.arrayUnion(fileData),
-      });
+    const docRef = await adminDb.collection('AIAssist').add(fileData);
 
     return NextResponse.json({
       ok: true,
-      fileId,
-      fileName: file.name,
+      docId: docRef.id,
       downloadUrl,
+      ...fileData,
     });
   } catch (err: any) {
-    console.error('Fehler beim Datei-Upload:', err);
-    return NextResponse.json(
-      { error: err.message || 'Unbekannter Fehler beim Hochladen' },
-      { status: 500 },
-    );
+    return NextResponse.json({ error: err.message }, { status: 500 });
   }
 }

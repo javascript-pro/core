@@ -1,5 +1,4 @@
 'use client';
-
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import {
@@ -13,9 +12,7 @@ import {
   InputLabel,
   Select,
   MenuItem,
-  IconButton,
   Stack,
-  Grid,
   Switch,
   TextField,
 } from '@mui/material';
@@ -37,7 +34,6 @@ export default function Fall() {
   const router = useRouter();
   const t = useLingua();
   const dispatch = useDispatch();
-
   const [fallData, setFallData] = useState<DocumentData | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -87,11 +83,26 @@ export default function Fall() {
     router.push('/fallmanager');
   };
 
+  const getStatusIcon = (status: string) => {
+    switch (status) {
+      case 'in_review':
+        return { icon: 'star', color: 'secondary' };
+      case 'in_progress':
+        return { icon: 'work', color: 'secondary' };
+      case 'completed':
+        return { icon: 'tick', color: 'secondary' };
+      case 'archived':
+        return { icon: 'delete', color: 'secondary' };
+      default:
+        return { icon: 'settings', color: 'secondary' };
+    }
+  };
+
   const renderEditableRow = (field: string, label: string) => (
     <Box display="flex" alignItems="center" mb={2}>
       <Box mr={2}>
         {fallData?.[field] ? (
-          <Icon icon="tick" color="secondary" />
+          <Icon icon="tick" />
         ) : (
           <Icon icon="close" color="warning" />
         )}
@@ -120,13 +131,12 @@ export default function Fall() {
       >
         <Box display="flex" alignItems="center">
           <Box mr={2}>
-            <Icon icon={icon} color={color} />
+            <Icon icon={icon as any} color={color} />
           </Box>
           <Typography variant="body2">{label}</Typography>
         </Box>
         <Switch
           checked={val}
-          color="secondary"
           onChange={(e) => handleUpdate(field, e.target.checked)}
         />
       </Box>
@@ -139,11 +149,7 @@ export default function Fall() {
     return (
       <Box display="flex" alignItems="center" mb={2}>
         <Box mr={2}>
-          {val ? (
-            <Icon icon="tick" color="secondary" />
-          ) : (
-            <Icon icon="close" color="warning" />
-          )}
+          {val ? <Icon icon="tick" /> : <Icon icon="close" color="warning" />}
         </Box>
         <Box flexGrow={1}>
           <TextField
@@ -171,14 +177,26 @@ export default function Fall() {
                 <Select
                   value={fallData.status || ''}
                   label={t('STATUS')}
-                  onChange={(e) => handleUpdate('status', e.target.value)}
+                  onChange={async (e) => {
+                    await handleUpdate('status', e.target.value);
+                    router.push('/fallmanager');
+                  }}
                 >
-                  <MenuItem value="in_review">{t('STATUS_IN_REVIEW')}</MenuItem>
-                  <MenuItem value="in_progress">
-                    {t('STATUS_IN_PROGRESS')}
-                  </MenuItem>
-                  <MenuItem value="completed">{t('STATUS_COMPLETED')}</MenuItem>
-                  <MenuItem value="archived">{t('STATUS_ARCHIVED')}</MenuItem>
+                  {['in_review', 'in_progress', 'completed', 'archived'].map(
+                    (status) => {
+                      const { icon, color } = getStatusIcon(status);
+                      return (
+                        <MenuItem key={status} value={status}>
+                          <Box display="flex" alignItems="center">
+                            <Icon icon={icon as any} color={color} />
+                            <Box ml={1}>
+                              {t(`STATUS_${status.toUpperCase()}`)}
+                            </Box>
+                          </Box>
+                        </MenuItem>
+                      );
+                    },
+                  )}
                 </Select>
               </FormControl>
             </Box>
@@ -186,24 +204,21 @@ export default function Fall() {
               <Typography variant="button" mb={0.5}>
                 {completion}% {t('COMPLETED')}
               </Typography>
-              <LinearProgress
-                color="secondary"
-                variant="determinate"
-                value={completion}
-              />
+              <LinearProgress variant="determinate" value={completion} />
             </Box>
           </>
         }
         action={
           <Stack direction="row" spacing={2}>
             <MightyButton
+              mode="icon"
               icon="delete"
               onClick={handleDelete}
               label={t('DELETE')}
             />
-
             <MightyButton
               icon="close"
+              variant="contained"
               onClick={handleCancel}
               label={t('SAVE_AND_CLOSE')}
             />
@@ -212,61 +227,67 @@ export default function Fall() {
       />
 
       <CardContent>
-        <Grid container spacing={1}>
-          <Grid size={{ xs: 12, sm: 6 }}>
-            <Card>
-              <CardHeader title={t('SECTION_BASIC_INFO')} />
-              <CardContent>
-                {renderEditableRow('clientName', t('CLIENT_NAME'))}
-                {renderEditableRow('insuranceCompany', t('INSURANCE_COMPANY'))}
-              </CardContent>
-            </Card>
+        <Box
+          display="grid"
+          gridTemplateColumns={{ xs: '1fr', sm: '1fr 1fr' }}
+          gap={2}
+        >
+          <Card>
+            <CardHeader title={t('SECTION_BASIC_INFO')} />
+            <CardContent>
+              {renderEditableRow('clientName', t('CLIENT_NAME'))}
+              {renderEditableRow('insuranceCompany', t('INSURANCE_COMPANY'))}
+              {renderEditableRow('policyNumber', t('POLICY_NUMBER'))}
+              {renderEditableRow('claimNumber', t('CLAIM_NUMBER'))}
+            </CardContent>
+          </Card>
 
-            <Card sx={{ my: 2 }}>
-              <CardHeader title={t('SECTION_DOCUMENTS')} />
-              <CardContent>
-                {renderBooleanSwitch('accidentReport', t('ACCIDENT_REPORT'))}
-                {renderBooleanSwitch(
-                  'damageAssessment',
-                  t('DAMAGE_ASSESSMENT'),
-                )}
-                {renderBooleanSwitch(
-                  'repairInvoiceReceived',
-                  t('REPAIR_INVOICE'),
-                )}
-                {renderBooleanSwitch(
-                  'settlementLetterReceived',
-                  t('SETTLEMENT_LETTER'),
-                )}
-              </CardContent>
-            </Card>
-          </Grid>
+          <Card>
+            <CardHeader title={t('SECTION_ACCIDENT_DETAILS')} />
+            <CardContent>
+              {renderDateRow('dateOfAccident', t('DATE_OF_ACCIDENT'))}
+              {renderEditableRow('carRegistration', t('CAR_REGISTRATION'))}
+              {renderEditableRow('placeOfAccident', t('PLACE_OF_ACCIDENT'))}
+              {renderEditableRow(
+                'policeReportNumber',
+                t('POLICE_REPORT_NUMBER'),
+              )}
+            </CardContent>
+          </Card>
 
-          <Grid size={{ xs: 12, sm: 6 }}>
-            <Card>
-              <CardHeader title={t('SECTION_ACCIDENT_INSURANCE')} />
-              <CardContent>
-                {renderDateRow('dateOfAccident', t('DATE_OF_ACCIDENT'))}
-                {renderEditableRow('carRegistration', t('CAR_REGISTRATION'))}
-                {renderEditableRow('policyNumber', t('POLICY_NUMBER'))}
-                {renderEditableRow('placeOfAccident', t('PLACE_OF_ACCIDENT'))}
-                {renderEditableRow(
-                  'policeReportNumber',
-                  t('POLICE_REPORT_NUMBER'),
-                )}
-                {renderEditableRow('claimNumber', t('CLAIM_NUMBER'))}
-                {renderEditableRow(
-                  'opposingInsurance',
-                  t('OPPOSING_INSURANCE'),
-                )}
-                {renderEditableRow(
-                  'opposingClaimNumber',
-                  t('OPPOSING_CLAIM_NUMBER'),
-                )}
-              </CardContent>
-            </Card>
-          </Grid>
-        </Grid>
+          <Card>
+            <CardHeader title={t('SECTION_DOCUMENTS')} />
+            <CardContent>
+              {renderBooleanSwitch('accidentReport', t('ACCIDENT_REPORT'))}
+              {renderBooleanSwitch('damageAssessment', t('DAMAGE_ASSESSMENT'))}
+              {renderBooleanSwitch(
+                'repairInvoiceReceived',
+                t('REPAIR_INVOICE'),
+              )}
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader title={t('SECTION_OPPOSING_PARTY')} />
+            <CardContent>
+              {renderEditableRow('opposingInsurance', t('OPPOSING_INSURANCE'))}
+              {renderEditableRow(
+                'opposingClaimNumber',
+                t('OPPOSING_CLAIM_NUMBER'),
+              )}
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader title={t('SECTION_SETTLEMENT')} />
+            <CardContent>
+              {renderBooleanSwitch(
+                'settlementLetterReceived',
+                t('SETTLEMENT_LETTER'),
+              )}
+            </CardContent>
+          </Card>
+        </Box>
       </CardContent>
     </>
   );

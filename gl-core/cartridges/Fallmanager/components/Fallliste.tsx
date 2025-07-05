@@ -1,5 +1,4 @@
 'use client';
-
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -17,9 +16,12 @@ import {
   ListItemButton,
   Stack,
   Typography,
-  Chip,
   TextField,
   Toolbar,
+  Tooltip,
+  FormGroup,
+  FormControlLabel,
+  Checkbox,
 } from '@mui/material';
 import {
   collection,
@@ -34,13 +36,30 @@ import {
   useLingua,
   setzeAktuellerFall,
   toggleNewCase,
+  toggleAICase,
   seedFirebase,
+  useFallmanagerSlice,
 } from '../../Fallmanager';
+import { updateMemory } from '../actions/updateMemory';
+
+const ALL_STATUSES = ['in_review', 'in_progress', 'completed', 'archived'];
 
 export default function Fallliste() {
+  const slice = useFallmanagerSlice();
+  const memory =
+    slice?.memory && typeof slice.memory === 'object' ? slice.memory : {};
+
   const [docs, setDocs] = useState<DocumentData[]>([]);
   const [loading, setLoading] = useState(true);
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState(
+    typeof memory.search === 'string' ? memory.search : '',
+  );
+  const [visibleStatuses, setVisibleStatuses] = useState<string[]>(
+    Array.isArray(memory.visibleStatuses)
+      ? memory.visibleStatuses
+      : ALL_STATUSES,
+  );
+
   const t = useLingua();
   const router = useRouter();
   const dispatch = useDispatch();
@@ -76,31 +95,42 @@ export default function Fallliste() {
     dispatch(seedFirebase());
   };
 
-  const handleAiHelp = () => {
-    console.log('handleAiHelp');
+  const handleAIAssistClick = () => {
+    dispatch(toggleAICase(true));
   };
 
-  const getCompletion = (doc: DocumentData): number => {
-    const fieldsToCheck = [
-      doc.clientName,
-      doc.carRegistration,
-      doc.dateOfAccident,
-      doc.placeOfAccident,
-      doc.insuranceCompany,
-      doc.policyNumber,
-      doc.claimNumber,
-      doc.accidentReport,
-      doc.damageAssessment,
-      doc.repairInvoiceReceived,
-      doc.settlementLetterReceived,
-    ];
-    const total = fieldsToCheck.length;
-    const filled = fieldsToCheck.filter(Boolean).length;
-    return Math.round((filled / total) * 100);
+  const handleSearchChange = (value: string) => {
+    setSearch(value);
+    dispatch(updateMemory({ search: value }));
   };
 
-  const filteredDocs = docs.filter((doc) =>
-    doc.clientName?.toLowerCase().includes(search.toLowerCase()),
+  const handleStatusToggle = (status: string) => {
+    const next = visibleStatuses.includes(status)
+      ? visibleStatuses.filter((s) => s !== status)
+      : [...visibleStatuses, status];
+    setVisibleStatuses(next);
+    dispatch(updateMemory({ visibleStatuses: next }));
+  };
+
+  const getStatusIcon = (status: string) => {
+    switch (status) {
+      case 'in_review':
+        return { icon: 'star', color: 'secondary' };
+      case 'in_progress':
+        return { icon: 'work', color: 'secondary' };
+      case 'completed':
+        return { icon: 'tick', color: 'secondary' };
+      case 'archived':
+        return { icon: 'delete', color: 'secondary' };
+      default:
+        return { icon: 'settings', color: 'secondary' };
+    }
+  };
+
+  const filteredDocs = docs.filter(
+    (doc) =>
+      doc.clientName?.toLowerCase().includes(search.toLowerCase()) &&
+      visibleStatuses.includes(doc.status),
   );
 
   return (
@@ -116,12 +146,18 @@ export default function Fallliste() {
             severity="info"
             action={
               <Stack direction="row" spacing={1}>
-                <Button onClick={handleSeed} variant="outlined">
-                  {t('SEED_DATABASE')}
-                </Button>
-                <Button onClick={handleNewCase} variant="outlined">
-                  {t('FIRST_CASE')}
-                </Button>
+                <MightyButton
+                  label={t('SEED_DATABASE')}
+                  variant="contained"
+                  icon="api"
+                  onClick={handleSeed}
+                />
+                <MightyButton
+                  label={t('NEW_CASE')}
+                  variant="contained"
+                  icon="case"
+                  onClick={handleNewCase}
+                />
               </Stack>
             }
           >
@@ -132,54 +168,86 @@ export default function Fallliste() {
         </Container>
       ) : (
         <>
-          <Toolbar
-            sx={{ px: 2, justifyContent: 'space-between', flexWrap: 'wrap' }}
-          >
-            <Stack direction="row" spacing={1} flexWrap="wrap">
-              <MightyButton
-                label={t('NEW_CASE')}
-                icon="plus"
-                onClick={handleNewCase}
+          <Toolbar sx={{ px: 2, flexWrap: 'wrap', gap: 2 }}>
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                flexWrap: 'wrap',
+                gap: 2,
+                flexGrow: 1,
+              }}
+            >
+              <TextField
+                size="small"
+                label={t('FIND_CASE')}
+                variant="outlined"
+                value={search}
+                onChange={(e) => handleSearchChange(e.target.value)}
               />
 
+              <FormGroup row>
+                {ALL_STATUSES.map((status) => {
+                  const { icon, color } = getStatusIcon(status);
+                  return (
+                    <FormControlLabel
+                      key={status}
+                      control={
+                        <Checkbox
+                          checked={visibleStatuses.includes(status)}
+                          onChange={() => handleStatusToggle(status)}
+                        />
+                      }
+                      label={
+                        <Box display="flex" alignItems="center">
+                          <Icon icon={icon as any} color={color} />
+                        </Box>
+                      }
+                    />
+                  );
+                })}
+              </FormGroup>
+            </Box>
+
+            <Stack direction="row" spacing={1}>
               <MightyButton
-                label={t('NEW_WITH_AI')}
-                icon="openai"
-                onClick={handleAiHelp}
+                label={t('NEW_CASE')}
+                variant="contained"
+                icon="case"
+                onClick={handleNewCase}
+              />
+              <MightyButton
+                label={t('NEW_AI_CASE')}
+                variant="contained"
+                icon="aicase"
+                onClick={handleAIAssistClick}
               />
             </Stack>
-            <TextField
-              size="small"
-              label={t('SEARCH')}
-              variant="outlined"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
           </Toolbar>
 
           <List>
             {filteredDocs.map((doc) => {
-              const completion = getCompletion(doc);
-
+              const icon = getStatusIcon(doc.status);
               return (
                 <ListItem key={doc.id} disablePadding>
                   <ListItemButton onClick={() => handleClick(doc)}>
                     <Card sx={{ mx: 1, width: '100%' }}>
                       <CardHeader
-                        avatar={<Icon icon="case" color="secondary" />}
+                        avatar={<Icon icon="case" />}
                         title={
                           <Typography variant="body1" noWrap>
                             {doc.clientName}
                           </Typography>
                         }
                         action={
-                          <Chip
-                            label={`${completion}% ${t('COMPLETED')}`}
-                            variant="outlined"
-                            size="small"
-                            color="primary"
-                            sx={{ fontWeight: 500, height: 24 }}
-                          />
+                          <Tooltip title={doc.status || t('UNKNOWN')}>
+                            <Box sx={{ pr: 1, pt: 1 }}>
+                              <Icon
+                                icon={icon.icon as any}
+                                color={icon.color}
+                              />
+                            </Box>
+                          </Tooltip>
                         }
                       />
                     </Card>

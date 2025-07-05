@@ -7,8 +7,10 @@ import {
   zuruecksetzen,
   saveNewCase,
   toggleNewCase,
+  toggleAICase,
   deleteCase,
   resetTranslations,
+  resetFallmanager,
   seedFirebase,
 } from './actions';
 import {
@@ -19,6 +21,7 @@ import {
   Header,
   Sprachauswahl,
   NewCase,
+  AIAssisted,
 } from './components';
 
 export {
@@ -30,9 +33,11 @@ export {
   setzeAktuellerFall,
   zuruecksetzen,
   toggleNewCase,
+  toggleAICase,
   deleteCase,
   saveNewCase,
   resetTranslations,
+  resetFallmanager,
   seedFirebase,
 };
 
@@ -44,4 +49,5 @@ export {
   Header,
   Sprachauswahl,
   NewCase,
+  AIAssisted,
 };
