@@ -113,15 +113,18 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
         {/* Theme Switcher */}
         <ModeSwitch />
 
-        <MenuItem onClick={() => {
-          dispatch(routeTo("/fallmanager", router));
-        }} sx={{ my: 2 }}>
+        <MenuItem
+          onClick={() => {
+            dispatch(routeTo('/fallmanager', router));
+          }}
+          sx={{ my: 2 }}
+        >
           <ListItemIcon>
             <Icon icon="auth" />
           </ListItemIcon>
           <ListItemText primary={'WIP'} />
         </MenuItem>
-        
+
         {/* Sign out */}
         {user ? (
           <MenuItem onClick={handleSignout} sx={{ my: 2 }}>
@@ -131,8 +134,6 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
             <ListItemText primary={'Sign out'} />
           </MenuItem>
         ) : null}
-
-        
 
         {/* App Version */}
         <Box sx={{ pr: 3, py: 1, textAlign: 'right' }}>
