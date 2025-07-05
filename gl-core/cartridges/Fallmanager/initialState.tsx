@@ -7,6 +7,9 @@ export const initialState: TFallmanagerState = {
   newCase: {
     open: false,
   },
+  aiCase: {
+    open: false,
+  },
   lingua,
   language: 'en',
   languages,

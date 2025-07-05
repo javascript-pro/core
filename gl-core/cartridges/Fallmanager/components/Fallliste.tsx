@@ -17,9 +17,9 @@ import {
   ListItemButton,
   Stack,
   Typography,
-  Chip,
   TextField,
   Toolbar,
+  Tooltip,
 } from '@mui/material';
 import {
   collection,
@@ -34,6 +34,7 @@ import {
   useLingua,
   setzeAktuellerFall,
   toggleNewCase,
+  toggleAICase,
   seedFirebase,
 } from '../../Fallmanager';
 
@@ -76,27 +77,23 @@ export default function Fallliste() {
     dispatch(seedFirebase());
   };
 
-  const handleAiHelp = () => {
-    console.log('handleAiHelp');
+  const handleAIAssistClick = () => {
+    dispatch(toggleAICase(true));
   };
 
-  const getCompletion = (doc: DocumentData): number => {
-    const fieldsToCheck = [
-      doc.clientName,
-      doc.carRegistration,
-      doc.dateOfAccident,
-      doc.placeOfAccident,
-      doc.insuranceCompany,
-      doc.policyNumber,
-      doc.claimNumber,
-      doc.accidentReport,
-      doc.damageAssessment,
-      doc.repairInvoiceReceived,
-      doc.settlementLetterReceived,
-    ];
-    const total = fieldsToCheck.length;
-    const filled = fieldsToCheck.filter(Boolean).length;
-    return Math.round((filled / total) * 100);
+  const getStatusIcon = (status: string) => {
+    switch (status) {
+      case 'in_review':
+        return { icon: 'warning', color: 'info' };
+      case 'in_progress':
+        return { icon: 'work', color: 'warning' };
+      case 'completed':
+        return { icon: 'tick', color: 'success' };
+      case 'archived':
+        return { icon: 'delete', color: 'disabled' };
+      default:
+        return { icon: 'settings', color: 'action' };
+    }
   };
 
   const filteredDocs = docs.filter((doc) =>
@@ -149,7 +146,7 @@ export default function Fallliste() {
                 variant="contained"
                 color="secondary"
                 icon="aicase"
-                onClick={handleAiHelp}
+                onClick={handleAIAssistClick}
               />
             </Stack>
             <TextField
@@ -163,8 +160,7 @@ export default function Fallliste() {
 
           <List>
             {filteredDocs.map((doc) => {
-              const completion = getCompletion(doc);
-
+              const icon = getStatusIcon(doc.status);
               return (
                 <ListItem key={doc.id} disablePadding>
                   <ListItemButton onClick={() => handleClick(doc)}>
@@ -176,15 +172,14 @@ export default function Fallliste() {
                             {doc.clientName}
                           </Typography>
                         }
-                        // action={
-                        //   <Chip
-                        //     label={`${completion}% ${t('COMPLETED')}`}
-                        //     variant="outlined"
-                        //     size="small"
-                        //     color="primary"
-                        //     sx={{ fontWeight: 500, height: 24 }}
-                        //   />
-                        // }
+                        action={
+                          <Tooltip title={doc.status || t('UNKNOWN')}>
+                            <Box sx={{ pr: 1, pt: 1 }}>
+                              {doc.status}
+                              <Icon icon={icon.icon as any} color={icon.color} />
+                            </Box>
+                          </Tooltip>
+                        }
                       />
                     </Card>
                   </ListItemButton>
