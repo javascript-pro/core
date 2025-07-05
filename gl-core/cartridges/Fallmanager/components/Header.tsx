@@ -95,6 +95,7 @@ export default function Header() {
           <Box sx={{ display: 'flex' }}>
             <Box sx={{ mt: 0.5 }}>
               <MightyButton
+                mode="icon"
                 icon="reset"
                 variant="text"
                 onClick={handleReset}

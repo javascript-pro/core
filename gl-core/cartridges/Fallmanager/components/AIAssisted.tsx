@@ -151,7 +151,10 @@ export default function AIAssisted() {
 
           {uploadedData && (
             <Stack spacing={2}>
-              <FirestoreSubscription docId={uploadedData.docId} onReset={handleReset} />
+              <FirestoreSubscription
+                docId={uploadedData.docId}
+                onReset={handleReset}
+              />
             </Stack>
           )}
         </Stack>
@@ -176,12 +179,17 @@ function FirestoreSubscription({
   const { language } = useFallmanagerSlice();
   const dispatch = useDispatch();
   const [docData, setDocData] = useState<any | null>(null);
-  const [processingStep, setProcessingStep] = useState<'waiting' | 'converting' | 'converted' | 'analyzing' | 'done'>('waiting');
+  const [processingStep, setProcessingStep] = useState<
+    'waiting' | 'converting' | 'converted' | 'analyzing' | 'done'
+  >('waiting');
   const [error, setError] = useState<string | null>(null);
 
   const docRef = useMemo(() => doc(db, 'AIAssist', docId), [docId]);
 
-  const updateFeedback = (message: string, severity: 'info' | 'success' | 'error' = 'info') => {
+  const updateFeedback = (
+    message: string,
+    severity: 'info' | 'success' | 'error' = 'info',
+  ) => {
     dispatch(toggleFeedback({ severity, title: message }));
   };
 
@@ -207,7 +215,8 @@ function FirestoreSubscription({
             });
 
             const result = await res.json();
-            if (!res.ok) throw new Error(result.error || 'PDF-Analyse fehlgeschlagen');
+            if (!res.ok)
+              throw new Error(result.error || 'PDF-Analyse fehlgeschlagen');
             updateFeedback('Text erfolgreich extrahiert', 'success');
             setProcessingStep('converted');
           } catch (e: any) {
@@ -217,7 +226,11 @@ function FirestoreSubscription({
         }
 
         // Step 2: Trigger KI if rawText exists and openai is not set
-        if (data?.docData?.rawText && !data?.docData?.openai && processingStep === 'converted') {
+        if (
+          data?.docData?.rawText &&
+          !data?.docData?.openai &&
+          processingStep === 'converted'
+        ) {
           setProcessingStep('analyzing');
           updateFeedback('Starte KI-Analyse...');
 
@@ -265,8 +278,18 @@ function FirestoreSubscription({
           subheader={`${new Date(docData.createdAt?.seconds * 1000).toLocaleString()} · ${docData.mimeType} · ${(docData.fileSize / 1024).toFixed(1)} KB`}
           action={
             <>
-              <MightyButton mode="icon" label={t('VIEW')} icon="link" onClick={() => window.open(docData.downloadUrl, '_blank')} />
-              <MightyButton mode="icon" label={t('DELETE')} icon="delete" onClick={() => dispatch(deleteFile(docId))} />
+              <MightyButton
+                mode="icon"
+                label={t('VIEW')}
+                icon="link"
+                onClick={() => window.open(docData.downloadUrl, '_blank')}
+              />
+              <MightyButton
+                mode="icon"
+                label={t('DELETE')}
+                icon="delete"
+                onClick={() => dispatch(deleteFile(docId))}
+              />
             </>
           }
         />

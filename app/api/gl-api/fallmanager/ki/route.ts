@@ -114,14 +114,20 @@ export async function POST(req: NextRequest) {
     const id: string = body?.id;
 
     if (!id || typeof id !== 'string') {
-      return NextResponse.json({ error: 'Missing or invalid ID' }, { status: 400 });
+      return NextResponse.json(
+        { error: 'Missing or invalid ID' },
+        { status: 400 },
+      );
     }
 
     const docRef = adminDb.collection('AIAssist').doc(id);
     const docSnap = await docRef.get();
 
     if (!docSnap.exists) {
-      return NextResponse.json({ error: 'Document not found' }, { status: 404 });
+      return NextResponse.json(
+        { error: 'Document not found' },
+        { status: 404 },
+      );
     }
 
     const docData = docSnap.data() as {
@@ -131,24 +137,30 @@ export async function POST(req: NextRequest) {
     const rawText = docData?.docData?.rawText;
 
     if (!rawText || typeof rawText !== 'string' || rawText.length < 20) {
-      return NextResponse.json({ error: 'Missing or invalid rawText' }, { status: 400 });
+      return NextResponse.json(
+        { error: 'Missing or invalid rawText' },
+        { status: 400 },
+      );
     }
 
-    const openaiRes = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${OPENAI_API_KEY}`,
-        'Content-Type': 'application/json',
+    const openaiRes = await fetch(
+      'https://api.openai.com/v1/chat/completions',
+      {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${OPENAI_API_KEY}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          model: 'gpt-4-turbo',
+          messages: [
+            { role: 'system', content: systemPrompt },
+            { role: 'user', content: `${userPrompt}\n\n${rawText}` },
+          ],
+          temperature: 0.2,
+        }),
       },
-      body: JSON.stringify({
-        model: 'gpt-4-turbo',
-        messages: [
-          { role: 'system', content: systemPrompt },
-          { role: 'user', content: `${userPrompt}\n\n${rawText}` },
-        ],
-        temperature: 0.2,
-      }),
-    });
+    );
 
     const result = (await openaiRes.json()) as OpenAIChatResponse;
 
@@ -161,14 +173,20 @@ export async function POST(req: NextRequest) {
 
     const content = result.choices?.[0]?.message?.content;
     if (!content || typeof content !== 'string') {
-      return NextResponse.json({ error: 'Invalid OpenAI response format' }, { status: 500 });
+      return NextResponse.json(
+        { error: 'Invalid OpenAI response format' },
+        { status: 500 },
+      );
     }
 
     let parsed: ParsedDocData;
     try {
       parsed = JSON.parse(content);
     } catch {
-      return NextResponse.json({ error: 'Failed to parse OpenAI response' }, { status: 500 });
+      return NextResponse.json(
+        { error: 'Failed to parse OpenAI response' },
+        { status: 500 },
+      );
     }
 
     await docRef.update({
@@ -179,7 +197,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: true, id, docData: parsed });
   } catch (err: unknown) {
     const error = err instanceof Error ? err.message : 'Unknown error';
-    console.log('✅ error', error)
+    console.log('✅ error', error);
     return NextResponse.json({ error }, { status: 500 });
   }
 }
