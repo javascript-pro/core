@@ -62,7 +62,8 @@ export type LinguaKey =
   | 'UPLOAD_SUCCESS'
   | 'DATE'
   | 'DOWNLOAD'
-    | 'VIEW'
+  | 'UPLOAD_STARTING'
+  | 'VIEW'
   | 'ANALYSE'
   | 'SETTLEMENT_LETTER';
 
@@ -76,15 +77,20 @@ export const lingua: Record<LinguaKey, TranslationEntry> = {
     zh: '案件管理器',
     fr: 'Gestionnaire de dossiers',
   },
-VIEW: {
-  en: 'View',
-  de: 'Ansehen',
-  pt: 'Ver',
-  fr: 'Voir',
-  zh: '查看',
-},
-
-
+  VIEW: {
+    en: 'View',
+    de: 'Ansehen',
+    pt: 'Ver',
+    fr: 'Voir',
+    zh: '查看',
+  },
+  UPLOAD_STARTING: {
+    en: 'Uploading PDF...',
+    de: 'PDF wird hochgeladen...',
+    pt: 'A carregar o PDF...',
+    zh: '正在上传 PDF...',
+    fr: 'Téléversement du PDF...',
+  },
   UPLOAD_SUCCESS: {
     en: 'Upload successful',
     de: 'Upload erfolgreich',

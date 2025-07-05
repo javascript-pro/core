@@ -10,11 +10,9 @@ import {
   DialogActions,
   Typography,
   Button,
-  CircularProgress,
+  LinearProgress,
   Stack,
-  Paper,
   ButtonBase,
-  Alert,
   Box,
 } from '@mui/material';
 import {
@@ -22,6 +20,8 @@ import {
   useLingua,
   toggleAICase,
   updateAICase,
+  deleteFile,
+  analyse,
 } from '../../Fallmanager';
 import {
   useDispatch,
@@ -48,6 +48,11 @@ export default function AIAssisted() {
     setFile(null);
   };
 
+  const handleReset = () => {
+    dispatch(updateAICase({ uploaded: null }));
+    setFile(null);
+  };
+
   const handleFeedback = (
     severity: 'success' | 'error' | 'info' | 'warning',
     title: string,
@@ -68,6 +73,8 @@ export default function AIAssisted() {
   const handleSubmit = async (file: File) => {
     setUploading(true);
 
+    handleFeedback('info', t('UPLOAD_STARTING'));
+
     try {
       const formData = new FormData();
       formData.append('file', file);
@@ -78,14 +85,8 @@ export default function AIAssisted() {
       });
 
       const data = await res.json();
-
-      if (!res.ok) {
-        throw new Error(data.error || 'Upload failed');
-      }
-
       handleFeedback('success', t('UPLOAD_SUCCESS'));
       dispatch(updateAICase({ uploaded: data }));
-      console.log('AI Assist upload created:', data.docId);
     } catch (err: any) {
       handleFeedback('error', err.message || 'Unbekannter Fehler');
     } finally {
@@ -116,23 +117,18 @@ export default function AIAssisted() {
                 onChange={handleFileChange}
               />
 
-              <ButtonBase
-                onClick={() => fileInputRef.current?.click()}
-                sx={{
-                  width: '100%',
-                  borderRadius: 2,
-                  overflow: 'hidden',
-                  border: '1px dashed',
-                  borderColor: 'divider',
-                }}
-              >
-                <Paper
-                  elevation={0}
+              {!uploading && (
+                <ButtonBase
+                  onClick={() => fileInputRef.current?.click()}
                   sx={{
                     width: '100%',
+                    borderRadius: 2,
+                    overflow: 'hidden',
+                    border: '1px dashed',
+                    borderColor: 'divider',
+                    backgroundColor: file ? 'background.paper' : 'action.hover',
                     p: 2,
                     textAlign: 'left',
-                    backgroundColor: file ? 'background.paper' : 'action.hover',
                   }}
                 >
                   {file ? (
@@ -147,20 +143,16 @@ export default function AIAssisted() {
                       {t('UPLOAD_PDF')}
                     </Typography>
                   )}
-                </Paper>
-              </ButtonBase>
-
-              {uploading && (
-                <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
-                  <CircularProgress size={24} />
-                </Box>
+                </ButtonBase>
               )}
+
+              {uploading && <LinearProgress sx={{ mt: 2 }} />}
             </>
           )}
 
           {uploadedData && (
             <Stack spacing={2}>
-              <FirestoreSubscription docId={uploadedData.docId} />
+              <FirestoreSubscription docId={uploadedData.docId} onReset={handleReset} />
             </Stack>
           )}
         </Stack>
@@ -174,13 +166,34 @@ export default function AIAssisted() {
   );
 }
 
-function FirestoreSubscription({ docId }: { docId: string }) {
+function FirestoreSubscription({
+  docId,
+  onReset,
+}: {
+  docId: string;
+  onReset: () => void;
+}) {
   const t = useLingua();
+  const dispatch = useDispatch();
   const [docData, setDocData] = useState<any | null>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [analysisResult, setAnalysisResult] = useState<any | null>(null);
 
   const docRef = useMemo(() => doc(db, 'AIAssist', docId), [docId]);
+
+  const handleViewClick = () => {
+    if (docData?.downloadUrl) {
+      window.open(docData.downloadUrl, '_blank', 'noopener,noreferrer');
+    }
+  };
+
+  const handleDeleteClick = () => {
+    dispatch(deleteFile(docId));
+  };
+
+  const handleAnalyseClick = () => {
+    dispatch(analyse(docId));
+  };
 
   useEffect(() => {
     const unsub = onSnapshot(
@@ -190,52 +203,96 @@ function FirestoreSubscription({ docId }: { docId: string }) {
           setDocData(snap.data());
           setLoading(false);
         } else {
-          setError('Dokument nicht gefunden');
+          onReset();
         }
       },
       (err) => {
         console.error(err);
-        setError('Fehler beim Abonnieren');
       },
     );
     return () => unsub();
-  }, [docRef]);
+  }, [docRef, onReset]);
 
-  if (error) return <Alert severity="error">{error}</Alert>;
-  if (loading) return <CircularProgress size={20} />;
+  useEffect(() => {
+    const fetchAnalysis = async () => {
+      try {
+        const res = await fetch(`/api/gl-api/fallmanager/ki?id=${docId}`);
 
-  const hasOpenAI = !!docData?.openai;
+        if (!res.ok) {
+          console.warn('API returned error:', res.status);
+          return;
+        }
+
+        const text = await res.text();
+        if (!text) {
+          console.warn('Empty response from analysis endpoint');
+          return;
+        }
+
+        try {
+          const json = JSON.parse(text);
+          setAnalysisResult(json);
+        } catch (err) {
+          console.error('Invalid JSON in analysis response:', err);
+        }
+      } catch (err) {
+        console.error('Failed to fetch analysis result:', err);
+      }
+    };
+
+    if (docData?.AIAssisted && !analysisResult) {
+      fetchAnalysis();
+    }
+  }, [docData, docId, analysisResult]);
+
+  if (loading) return <LinearProgress sx={{ mt: 2 }} />;
+  if (!docData) return null;
+
+  const hasBeenAnalysed = !!docData?.AIAssisted;
   const date = new Date(docData.createdAt?.seconds * 1000).toLocaleString();
 
   return (
-    <Paper elevation={1} sx={{ p: 2 }}>
+    <Box sx={{ p: 2, border: '1px solid', borderColor: 'divider', borderRadius: 2 }}>
       <Stack spacing={1}>
-        <Typography variant="h6">{docData.fileName}</Typography>
-        <Typography variant="body2" color="text.secondary">
-          {docData.mimeType} · {(docData.fileSize / 1024).toFixed(1)} KB
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {t('DATE')}: {date}
-        </Typography>
-        <Button
-          variant="outlined"
-          href={docData.downloadUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          startIcon={<Icon icon="link" />}
-          sx={{ alignSelf: 'flex-start' }}
-        >
-          {t('VIEW')}
-        </Button>
+        {hasBeenAnalysed && analysisResult ? (
+          <pre>{JSON.stringify(analysisResult, null, 2)}</pre>
+        ) : (
+          <>
+            <CardHeader
+              title={docData.fileName}
+              subheader={
+                <>
+                  {date} · {docData.mimeType} ·{' '}
+                  {(docData.fileSize / 1024).toFixed(1)} KB
+                </>
+              }
+              action={
+                <>
+                  <MightyButton
+                    mode="icon"
+                    label={t('VIEW')}
+                    icon="link"
+                    onClick={handleViewClick}
+                  />
+                  <MightyButton
+                    mode="icon"
+                    label={t('DELETE')}
+                    icon="delete"
+                    onClick={handleDeleteClick}
+                  />
+                </>
+              }
+            />
 
-        {!hasOpenAI && (
-          <MightyButton
-            label={t('ANALYSE')}
-            variant="contained"
-            icon="openai"
-          />
+            <MightyButton
+              label={t('ANALYSE')}
+              variant="contained"
+              icon="openai"
+              onClick={handleAnalyseClick}
+            />
+          </>
         )}
       </Stack>
-    </Paper>
+    </Box>
   );
 }

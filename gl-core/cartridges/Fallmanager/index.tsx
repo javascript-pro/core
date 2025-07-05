@@ -13,6 +13,8 @@ import {
   resetFallmanager,
   seedFirebase,
   updateAICase,
+  deleteFile,
+  analyse,
 } from './actions';
 import {
   BearbeitbarText,
@@ -41,6 +43,8 @@ export {
   resetFallmanager,
   seedFirebase,
   updateAICase,
+  deleteFile,
+  analyse,
 };
 
 export {
