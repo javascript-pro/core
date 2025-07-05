@@ -1,3 +1,4 @@
+// core/gl-core/cartridges/Fallmanager/components/Fall.tsx
 'use client';
 
 import * as React from 'react';
@@ -13,7 +14,6 @@ import {
   InputLabel,
   Select,
   MenuItem,
-  IconButton,
   Stack,
   Grid,
   Switch,
@@ -37,7 +37,6 @@ export default function Fall() {
   const router = useRouter();
   const t = useLingua();
   const dispatch = useDispatch();
-
   const [fallData, setFallData] = useState<DocumentData | null>(null);
   const [loading, setLoading] = useState(true);
 
