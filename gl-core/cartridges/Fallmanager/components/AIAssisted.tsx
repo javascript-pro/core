@@ -41,10 +41,7 @@ export default function AIAssisted() {
   return (
     <Dialog open onClose={handleClose} fullWidth maxWidth="sm">
       <DialogTitle>
-        <CardHeader
-          avatar={<Icon icon="aicase" color="secondary" />}
-          title={t('NEW_AI_CASE')}
-        />
+        <CardHeader avatar={<Icon icon="aicase" />} title={t('NEW_AI_CASE')} />
       </DialogTitle>
       <DialogContent>
         <Typography variant="body2" sx={{ mb: 2 }}>
@@ -66,7 +63,7 @@ export default function AIAssisted() {
         ) : (
           <Button
             variant="contained"
-            color="secondary"
+            
             onClick={handleSubmit}
           >
             {t('SUBMIT') || 'Submit'}

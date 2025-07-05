@@ -1,6 +1,7 @@
 // core/gl-core/cartridges/Fallmanager/types.d.ts
 
 export type TFallmanagerState = {
+  memory: any;
   newCase: any;
   aiCase: any;
   language: TLanguageCode;

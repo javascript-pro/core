@@ -91,10 +91,7 @@ export default function NewCase() {
   return (
     <Dialog open onClose={handleClose} fullWidth maxWidth="sm">
       <DialogTitle>
-        <CardHeader
-          avatar={<Icon icon="case" color="secondary" />}
-          title={t('NEW_CASE')}
-        />
+        <CardHeader avatar={<Icon icon="case" />} title={t('NEW_CASE')} />
       </DialogTitle>
       <DialogContent>
         <Typography variant="body2" sx={{ mb: 2 }}>
@@ -125,7 +122,6 @@ export default function NewCase() {
         ) : (
           <Button
             variant="contained"
-            color="secondary"
             onClick={handleSubmit}
             disabled={!isValid}
           >

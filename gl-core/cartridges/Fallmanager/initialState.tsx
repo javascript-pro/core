@@ -4,6 +4,7 @@ import { TFallmanagerState } from './types';
 import { lingua, languages } from './lingua';
 
 export const initialState: TFallmanagerState = {
+  memory: null,
   newCase: {
     open: false,
   },

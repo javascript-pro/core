@@ -10,6 +10,7 @@ import {
   toggleAICase,
   deleteCase,
   resetTranslations,
+  resetFallmanager,
   seedFirebase,
 } from './actions';
 import {
@@ -36,6 +37,7 @@ export {
   deleteCase,
   saveNewCase,
   resetTranslations,
+  resetFallmanager,
   seedFirebase,
 };
 

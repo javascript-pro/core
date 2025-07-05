@@ -1,6 +1,4 @@
-// core/gl-core/cartridges/Fallmanager/components/Fallliste.tsx
 'use client';
-
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -40,16 +38,28 @@ import {
   toggleNewCase,
   toggleAICase,
   seedFirebase,
+  useFallmanagerSlice,
 } from '../../Fallmanager';
+import { updateMemory } from '../actions/updateMemory';
 
 const ALL_STATUSES = ['in_review', 'in_progress', 'completed', 'archived'];
 
 export default function Fallliste() {
+  const slice = useFallmanagerSlice();
+  const memory =
+    slice?.memory && typeof slice.memory === 'object' ? slice.memory : {};
+
   const [docs, setDocs] = useState<DocumentData[]>([]);
   const [loading, setLoading] = useState(true);
-  const [search, setSearch] = useState('');
-  const [visibleStatuses, setVisibleStatuses] =
-    useState<string[]>(ALL_STATUSES);
+  const [search, setSearch] = useState(
+    typeof memory.search === 'string' ? memory.search : '',
+  );
+  const [visibleStatuses, setVisibleStatuses] = useState<string[]>(
+    Array.isArray(memory.visibleStatuses)
+      ? memory.visibleStatuses
+      : ALL_STATUSES,
+  );
+
   const t = useLingua();
   const router = useRouter();
   const dispatch = useDispatch();
@@ -89,12 +99,17 @@ export default function Fallliste() {
     dispatch(toggleAICase(true));
   };
 
+  const handleSearchChange = (value: string) => {
+    setSearch(value);
+    dispatch(updateMemory({ search: value }));
+  };
+
   const handleStatusToggle = (status: string) => {
-    setVisibleStatuses((prev) =>
-      prev.includes(status)
-        ? prev.filter((s) => s !== status)
-        : [...prev, status],
-    );
+    const next = visibleStatuses.includes(status)
+      ? visibleStatuses.filter((s) => s !== status)
+      : [...visibleStatuses, status];
+    setVisibleStatuses(next);
+    dispatch(updateMemory({ visibleStatuses: next }));
   };
 
   const getStatusIcon = (status: string) => {
@@ -147,59 +162,62 @@ export default function Fallliste() {
         </Container>
       ) : (
         <>
-          <Toolbar
-            sx={{ px: 2, justifyContent: 'space-between', flexWrap: 'wrap' }}
-          >
-            <Stack direction="row" spacing={1} flexWrap="wrap">
+          <Toolbar sx={{ px: 2, flexWrap: 'wrap', gap: 2 }}>
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                flexWrap: 'wrap',
+                gap: 2,
+                flexGrow: 1,
+              }}
+            >
+              <TextField
+                size="small"
+                label={t('FIND_CASE')}
+                variant="outlined"
+                value={search}
+                onChange={(e) => handleSearchChange(e.target.value)}
+              />
+
+              <FormGroup row>
+                {ALL_STATUSES.map((status) => {
+                  const { icon, color } = getStatusIcon(status);
+                  return (
+                    <FormControlLabel
+                      key={status}
+                      control={
+                        <Checkbox
+                          checked={visibleStatuses.includes(status)}
+                          onChange={() => handleStatusToggle(status)}
+                        />
+                      }
+                      label={
+                        <Box display="flex" alignItems="center">
+                          <Icon icon={icon as any} color={color} />
+                        </Box>
+                      }
+                    />
+                  );
+                })}
+              </FormGroup>
+            </Box>
+
+            <Stack direction="row" spacing={1}>
               <MightyButton
                 label={t('NEW_CASE')}
                 variant="contained"
-                color="secondary"
                 icon="case"
                 onClick={handleNewCase}
               />
-
               <MightyButton
                 label={t('NEW_AI_CASE')}
                 variant="contained"
-                color="secondary"
                 icon="aicase"
                 onClick={handleAIAssistClick}
               />
             </Stack>
-            <TextField
-              size="small"
-              label={t('FIND_CASE')}
-              variant="outlined"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
           </Toolbar>
-
-          <Box px={3} py={1}>
-            <FormGroup row>
-              {ALL_STATUSES.map((status) => {
-                const { icon, color } = getStatusIcon(status);
-                return (
-                  <FormControlLabel
-                    key={status}
-                    control={
-                      <Checkbox
-                        checked={visibleStatuses.includes(status)}
-                        onChange={() => handleStatusToggle(status)}
-                      />
-                    }
-                    label={
-                      <Box display="flex" alignItems="center">
-                        <Icon icon={icon as any} color={color} />
-                        {/* <Box ml={1}>{t(`STATUS_${status.toUpperCase()}`)}</Box> */}
-                      </Box>
-                    }
-                  />
-                );
-              })}
-            </FormGroup>
-          </Box>
 
           <List>
             {filteredDocs.map((doc) => {
@@ -209,7 +227,7 @@ export default function Fallliste() {
                   <ListItemButton onClick={() => handleClick(doc)}>
                     <Card sx={{ mx: 1, width: '100%' }}>
                       <CardHeader
-                        avatar={<Icon icon="case" color="secondary" />}
+                        avatar={<Icon icon="case" />}
                         title={
                           <Typography variant="body1" noWrap>
                             {doc.clientName}

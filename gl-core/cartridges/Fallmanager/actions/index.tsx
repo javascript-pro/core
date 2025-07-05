@@ -6,6 +6,7 @@ import { toggleNewCase } from './toggleNewCase';
 import { saveNewCase } from './saveNewCase';
 import { deleteCase } from './deleteCase';
 import { resetTranslations } from './resetTranslations';
+import { resetFallmanager } from './resetFallmanager';
 import { seedFirebase } from './seedFirebase';
 import { toggleAICase } from './toggleAICase';
 export {
@@ -18,4 +19,5 @@ export {
   toggleNewCase,
   toggleAICase,
   resetTranslations,
+  resetFallmanager,
 };

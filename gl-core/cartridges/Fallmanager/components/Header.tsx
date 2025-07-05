@@ -12,13 +12,12 @@ import {
   useTheme,
   IconButton,
 } from '@mui/material';
-import { Icon, useDispatch, routeTo } from '../../../../gl-core';
+import { Icon, useDispatch, routeTo, MightyButton } from '../../../../gl-core';
 import {
   useFallmanagerSlice,
   Sprachauswahl,
   useLingua,
-  toggleNewCase,
-  resetTranslations,
+  resetFallmanager,
 } from '../../Fallmanager';
 import { db } from '../../../lib/firebase';
 import { doc, onSnapshot } from 'firebase/firestore';
@@ -67,7 +66,7 @@ export default function Header() {
   };
 
   const handleReset = () => {
-    dispatch(resetTranslations());
+    dispatch(resetFallmanager());
   };
 
   const title =
@@ -87,11 +86,8 @@ export default function Header() {
     >
       <CardHeader
         avatar={
-          <IconButton
-            onClick={handleAvatarClick}
-            disabled={pathname === '/fallmanager'}
-          >
-            <Icon icon={isCasePage ? 'case' : 'cases'} color="secondary" />
+          <IconButton onClick={handleAvatarClick}>
+            <Icon icon={isCasePage ? 'case' : 'cases'} />
           </IconButton>
         }
         title={<Typography variant="h6">{title}</Typography>}
@@ -104,17 +100,17 @@ export default function Header() {
         }
         action={
           <Box sx={{ display: 'flex' }}>
+            <Box sx={{ mt: 0.5 }}>
+              <MightyButton
+                icon="reset"
+                variant="outlined"
+                onClick={handleReset}
+                label={t('RESET')}
+              />
+            </Box>
+
             <Box sx={{ pt: 0.5, pr: 1 }}>
               <Sprachauswahl />
-            </Box>
-            <Box sx={{ mt: 0.5 }}>
-              <IconButton
-                color="secondary"
-                onClick={handleReset}
-                title={t('RESET')}
-              >
-                <Icon icon="reset" />
-              </IconButton>
             </Box>
           </Box>
         }

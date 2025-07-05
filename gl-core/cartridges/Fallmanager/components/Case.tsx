@@ -119,11 +119,7 @@ export default function Case() {
         <Alert
           severity="info"
           action={
-            <Button
-              color="secondary"
-              variant="contained"
-              onClick={handleBackToList}
-            >
+            <Button variant="contained" onClick={handleBackToList}>
               {t('back')}
             </Button>
           }
@@ -169,7 +165,7 @@ export default function Case() {
 
                 <Button
                   // fullWidth
-                  color="secondary"
+
                   variant="outlined"
                   disabled={uploading}
                   sx={{ mb: 2 }}

@@ -13,7 +13,6 @@ import {
   Select,
   MenuItem,
   Stack,
-  Grid,
   Switch,
   TextField,
 } from '@mui/material';
@@ -103,7 +102,7 @@ export default function Fall() {
     <Box display="flex" alignItems="center" mb={2}>
       <Box mr={2}>
         {fallData?.[field] ? (
-          <Icon icon="tick" color="secondary" />
+          <Icon icon="tick" />
         ) : (
           <Icon icon="close" color="warning" />
         )}
@@ -150,11 +149,7 @@ export default function Fall() {
     return (
       <Box display="flex" alignItems="center" mb={2}>
         <Box mr={2}>
-          {val ? (
-            <Icon icon="tick" color="secondary" />
-          ) : (
-            <Icon icon="close" color="warning" />
-          )}
+          {val ? <Icon icon="tick" /> : <Icon icon="close" color="warning" />}
         </Box>
         <Box flexGrow={1}>
           <TextField
@@ -182,7 +177,10 @@ export default function Fall() {
                 <Select
                   value={fallData.status || ''}
                   label={t('STATUS')}
-                  onChange={(e) => handleUpdate('status', e.target.value)}
+                  onChange={async (e) => {
+                    await handleUpdate('status', e.target.value);
+                    router.push('/fallmanager');
+                  }}
                 >
                   {['in_review', 'in_progress', 'completed', 'archived'].map(
                     (status) => {
@@ -206,11 +204,7 @@ export default function Fall() {
               <Typography variant="button" mb={0.5}>
                 {completion}% {t('COMPLETED')}
               </Typography>
-              <LinearProgress
-                color="secondary"
-                variant="determinate"
-                value={completion}
-              />
+              <LinearProgress variant="determinate" value={completion} />
             </Box>
           </>
         }
@@ -225,7 +219,6 @@ export default function Fall() {
             <MightyButton
               icon="close"
               variant="contained"
-              color="secondary"
               onClick={handleCancel}
               label={t('SAVE_AND_CLOSE')}
             />
@@ -234,61 +227,67 @@ export default function Fall() {
       />
 
       <CardContent>
-        <Grid container spacing={1}>
-          <Grid size={{ xs: 12, sm: 6 }}>
-            <Card>
-              <CardHeader title={t('SECTION_BASIC_INFO')} />
-              <CardContent>
-                {renderEditableRow('clientName', t('CLIENT_NAME'))}
-                {renderEditableRow('insuranceCompany', t('INSURANCE_COMPANY'))}
-              </CardContent>
-            </Card>
+        <Box
+          display="grid"
+          gridTemplateColumns={{ xs: '1fr', sm: '1fr 1fr' }}
+          gap={2}
+        >
+          <Card>
+            <CardHeader title={t('SECTION_BASIC_INFO')} />
+            <CardContent>
+              {renderEditableRow('clientName', t('CLIENT_NAME'))}
+              {renderEditableRow('insuranceCompany', t('INSURANCE_COMPANY'))}
+              {renderEditableRow('policyNumber', t('POLICY_NUMBER'))}
+              {renderEditableRow('claimNumber', t('CLAIM_NUMBER'))}
+            </CardContent>
+          </Card>
 
-            <Card sx={{ my: 2 }}>
-              <CardHeader title={t('SECTION_DOCUMENTS')} />
-              <CardContent>
-                {renderBooleanSwitch('accidentReport', t('ACCIDENT_REPORT'))}
-                {renderBooleanSwitch(
-                  'damageAssessment',
-                  t('DAMAGE_ASSESSMENT'),
-                )}
-                {renderBooleanSwitch(
-                  'repairInvoiceReceived',
-                  t('REPAIR_INVOICE'),
-                )}
-                {renderBooleanSwitch(
-                  'settlementLetterReceived',
-                  t('SETTLEMENT_LETTER'),
-                )}
-              </CardContent>
-            </Card>
-          </Grid>
+          <Card>
+            <CardHeader title={t('SECTION_ACCIDENT_DETAILS')} />
+            <CardContent>
+              {renderDateRow('dateOfAccident', t('DATE_OF_ACCIDENT'))}
+              {renderEditableRow('carRegistration', t('CAR_REGISTRATION'))}
+              {renderEditableRow('placeOfAccident', t('PLACE_OF_ACCIDENT'))}
+              {renderEditableRow(
+                'policeReportNumber',
+                t('POLICE_REPORT_NUMBER'),
+              )}
+            </CardContent>
+          </Card>
 
-          <Grid size={{ xs: 12, sm: 6 }}>
-            <Card>
-              <CardHeader title={t('SECTION_ACCIDENT_INSURANCE')} />
-              <CardContent>
-                {renderDateRow('dateOfAccident', t('DATE_OF_ACCIDENT'))}
-                {renderEditableRow('carRegistration', t('CAR_REGISTRATION'))}
-                {renderEditableRow('policyNumber', t('POLICY_NUMBER'))}
-                {renderEditableRow('placeOfAccident', t('PLACE_OF_ACCIDENT'))}
-                {renderEditableRow(
-                  'policeReportNumber',
-                  t('POLICE_REPORT_NUMBER'),
-                )}
-                {renderEditableRow('claimNumber', t('CLAIM_NUMBER'))}
-                {renderEditableRow(
-                  'opposingInsurance',
-                  t('OPPOSING_INSURANCE'),
-                )}
-                {renderEditableRow(
-                  'opposingClaimNumber',
-                  t('OPPOSING_CLAIM_NUMBER'),
-                )}
-              </CardContent>
-            </Card>
-          </Grid>
-        </Grid>
+          <Card>
+            <CardHeader title={t('SECTION_DOCUMENTS')} />
+            <CardContent>
+              {renderBooleanSwitch('accidentReport', t('ACCIDENT_REPORT'))}
+              {renderBooleanSwitch('damageAssessment', t('DAMAGE_ASSESSMENT'))}
+              {renderBooleanSwitch(
+                'repairInvoiceReceived',
+                t('REPAIR_INVOICE'),
+              )}
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader title={t('SECTION_OPPOSING_PARTY')} />
+            <CardContent>
+              {renderEditableRow('opposingInsurance', t('OPPOSING_INSURANCE'))}
+              {renderEditableRow(
+                'opposingClaimNumber',
+                t('OPPOSING_CLAIM_NUMBER'),
+              )}
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader title={t('SECTION_SETTLEMENT')} />
+            <CardContent>
+              {renderBooleanSwitch(
+                'settlementLetterReceived',
+                t('SETTLEMENT_LETTER'),
+              )}
+            </CardContent>
+          </Card>
+        </Box>
       </CardContent>
     </>
   );

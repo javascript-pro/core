@@ -56,6 +56,9 @@ export type LinguaKey =
   | 'SEARCH'
   | 'NEW_WITH_AI'
   | 'SAVE_AND_CLOSE'
+  | 'SECTION_ACCIDENT_DETAILS'
+  | 'SECTION_OPPOSING_PARTY'
+  | 'SECTION_SETTLEMENT'
   | 'SETTLEMENT_LETTER';
 
 export type TranslationEntry = Record<TLinguaCodes, string>;
@@ -68,6 +71,29 @@ export const lingua: Record<LinguaKey, TranslationEntry> = {
     zh: '案件管理器',
     fr: 'Gestionnaire de dossiers',
   },
+  SECTION_SETTLEMENT: {
+    en: 'Settlement',
+    de: 'Abrechnung',
+    pt: 'Liquidação',
+    zh: '结算',
+    fr: 'Règlement',
+  },
+
+  SECTION_ACCIDENT_DETAILS: {
+    en: 'Accident Details',
+    de: 'Unfalldetails',
+    pt: 'Detalhes do Acidente',
+    zh: '事故详情',
+    fr: "Détails de l'accident",
+  },
+  SECTION_OPPOSING_PARTY: {
+    en: 'Opposing Party',
+    de: 'Gegnerische Partei',
+    pt: 'Parte Adversa',
+    zh: '对方当事人',
+    fr: 'Partie adverse',
+  },
+
   SAVE_AND_CLOSE: {
     en: 'Save and Close',
     de: 'Speichern und Schließen',
