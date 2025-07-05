@@ -49,8 +49,10 @@ export type LinguaKey =
   | 'OPPOSING_INSURANCE'
   | 'OPPOSING_CLAIM_NUMBER'
   | 'ACCIDENT_REPORT'
+  | 'FIND_CASE'
   | 'DAMAGE_ASSESSMENT'
   | 'REPAIR_INVOICE'
+  | 'NEW_AI_CASE'
   | 'SEARCH'
   | 'NEW_WITH_AI'
   | 'SAVE_AND_CLOSE'
@@ -73,27 +75,39 @@ export const lingua: Record<LinguaKey, TranslationEntry> = {
     zh: '保存并关闭',
     fr: 'Enregistrer et fermer',
   },
-  NEW_CASE: {
-    en: 'New Case',
-    de: 'Neuer Fall',
-    pt: 'Novo Caso',
-    zh: '新案件',
-    fr: 'Nouveau dossier',
-  },
-  NEW_CASE_HELP_MANUAL: {
-    en: 'If you are reading this you are on the manual workflow',
-    de: '',
-    pt: '',
-    zh: '',
-    fr: '',
-  },
-  NEW_CASE_HELP_AI: {
-    en: 'If you are reading this you are on the AI workflow',
-    de: '',
-    pt: '',
-    zh: '',
-    fr: '',
-  },
+NEW_CASE: {
+  en: 'New Manual Case',
+  de: 'Neuer manueller Fall',
+  pt: 'Novo Caso Manual',
+  zh: '新建手动案件',
+  fr: 'Nouveau dossier manuel',
+},
+
+NEW_AI_CASE: {
+  en: 'New AI Assisted Case',
+  de: 'Neuer KI-gestützter Fall',
+  pt: 'Novo Caso com Assistência de IA',
+  zh: '新建 AI 辅助案件',
+  fr: 'Nouveau dossier assisté par IA',
+},
+
+NEW_CASE_HELP_MANUAL: {
+  en: 'This is the manual case creation workflow. It begins with just one required field — the client’s name — and allows you to enter all other case details by hand.',
+  de: 'Dies ist der manuelle Arbeitsablauf zur Fallanlage. Er beginnt mit nur einem Pflichtfeld – dem Namen des Mandanten – und ermöglicht es Ihnen, alle weiteren Falldaten manuell einzugeben.',
+  pt: 'Este é o fluxo de criação manual de casos. Começa com apenas um campo obrigatório — o nome do cliente — e permite inserir todos os outros dados manualmente.',
+  zh: '这是手动创建案件的流程。您只需填写一个必填字段 —— 客户姓名 —— 然后手动录入其余的案件信息。',
+  fr: 'Il s’agit du processus de création de dossier manuel. Il commence par un seul champ obligatoire — le nom du client — et vous permet de saisir manuellement toutes les autres informations du dossier.',
+},
+
+
+NEW_CASE_HELP_AI: {
+  en: 'This is the AI-assisted workflow. Upload any document, and the AI will analyse it, extract relevant information, and create a case that’s already mostly filled in.',
+  de: 'Dies ist der KI-gestützte Arbeitsablauf. Laden Sie ein beliebiges Dokument hoch – die KI analysiert es, extrahiert relevante Informationen und erstellt einen weitgehend vorausgefüllten Fall.',
+  pt: 'Este é o fluxo assistido por IA. Carregue qualquer documento e a IA irá analisá-lo, extrair informações relevantes e criar um caso já em grande parte preenchido.',
+  zh: '这是由人工智能辅助的流程。上传任意文档，AI 会分析内容、提取关键信息，并创建一个已大部分填好的案件。',
+  fr: 'Il s’agit du processus assisté par l’IA. Téléversez un document, et l’IA l’analysera, extraira les informations pertinentes et créera un dossier déjà largement rempli.',
+},
+
   UPLOAD_PDF: {
     en: 'Upload PDF',
     de: 'PDF hochladen',
@@ -157,6 +171,14 @@ export const lingua: Record<LinguaKey, TranslationEntry> = {
     zh: '使用 AI 新建',
     fr: 'Nouveau avec IA',
   },
+FIND_CASE: {
+  en: 'Find case',
+  de: 'Fall finden',
+  pt: 'Encontrar caso',
+  zh: '查找案件',
+  fr: 'Rechercher un dossier',
+},
+
   SEARCH: {
     en: 'Search',
     de: 'Suche',

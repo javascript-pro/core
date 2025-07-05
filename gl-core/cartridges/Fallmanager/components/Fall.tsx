@@ -196,6 +196,7 @@ export default function Fall() {
         action={
           <Stack direction="row" spacing={2}>
             <MightyButton
+              mode="icon"
               icon="delete"
               onClick={handleDelete}
               label={t('DELETE')}

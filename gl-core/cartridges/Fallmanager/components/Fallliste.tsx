@@ -138,6 +138,8 @@ export default function Fallliste() {
             <Stack direction="row" spacing={1} flexWrap="wrap">
               <MightyButton
                 label={t('NEW_CASE')}
+                variant='contained'
+                color="secondary"
                 icon="plus"
                 onClick={handleNewCase}
               />
@@ -150,7 +152,7 @@ export default function Fallliste() {
             </Stack>
             <TextField
               size="small"
-              label={t('SEARCH')}
+              label={t('FIND_CASE')}
               variant="outlined"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
@@ -172,15 +174,15 @@ export default function Fallliste() {
                             {doc.clientName}
                           </Typography>
                         }
-                        action={
-                          <Chip
-                            label={`${completion}% ${t('COMPLETED')}`}
-                            variant="outlined"
-                            size="small"
-                            color="primary"
-                            sx={{ fontWeight: 500, height: 24 }}
-                          />
-                        }
+                        // action={
+                        //   <Chip
+                        //     label={`${completion}% ${t('COMPLETED')}`}
+                        //     variant="outlined"
+                        //     size="small"
+                        //     color="primary"
+                        //     sx={{ fontWeight: 500, height: 24 }}
+                        //   />
+                        // }
                       />
                     </Card>
                   </ListItemButton>

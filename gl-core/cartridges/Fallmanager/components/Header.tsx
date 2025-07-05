@@ -1,11 +1,11 @@
-// core/gl-core/cartridges/Fallmanager/components/Header.tsx
 'use client';
 
 import * as React from 'react';
+import moment from 'moment';
+import { useEffect, useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import {
   AppBar,
-  Button,
   CardHeader,
   Box,
   Typography,
@@ -20,6 +20,8 @@ import {
   toggleNewCase,
   resetTranslations,
 } from '../../Fallmanager';
+import { db } from '../../../lib/firebase';
+import { doc, onSnapshot } from 'firebase/firestore';
 
 export default function Header() {
   const slice = useFallmanagerSlice();
@@ -29,9 +31,34 @@ export default function Header() {
   const t = useLingua();
   const theme = useTheme();
 
-  const handleNewCase = () => {
-    dispatch(toggleNewCase(true));
-  };
+  const [clientName, setClientName] = useState<string | null>(null);
+  const [createdAt, setCreatedAt] = useState<any>(null);
+
+  // Detect caseId from path
+  const pathParts = pathname.split('/');
+  const isCasePage = pathParts.length === 3 && pathParts[1] === 'fallmanager';
+  const caseId = isCasePage ? pathParts[2] : null;
+
+  useEffect(() => {
+    if (!caseId) {
+      setClientName(null);
+      setCreatedAt(null);
+      return;
+    }
+
+    const unsub = onSnapshot(doc(db, 'fallmanager', caseId), (snap) => {
+      if (snap.exists()) {
+        const data = snap.data();
+        setClientName(data?.clientName || '(no name)');
+        setCreatedAt(data?.createdAt || null);
+      } else {
+        setClientName('(not found)');
+        setCreatedAt(null);
+      }
+    });
+
+    return () => unsub();
+  }, [caseId]);
 
   const handleAvatarClick = () => {
     if (pathname !== '/fallmanager') {
@@ -42,6 +69,12 @@ export default function Header() {
   const handleReset = () => {
     dispatch(resetTranslations());
   };
+
+  const title = isCasePage && clientName
+    ? `${clientName}`
+    : `${t('APP_TITLE')}`;
+  const subheader =
+    isCasePage && createdAt ? `Created ${moment(createdAt).fromNow()}` : '';
 
   return (
     <AppBar
@@ -55,17 +88,26 @@ export default function Header() {
     >
       <CardHeader
         avatar={
-          <IconButton onClick={handleAvatarClick}>
-            <Icon icon="cases" color="secondary" />
+          <IconButton 
+            onClick={handleAvatarClick}
+            disabled={pathname === '/fallmanager'}
+          >
+            <Icon icon={isCasePage ? 'case' : 'cases'} color="secondary" />
           </IconButton>
         }
-        title={<Typography variant="h6">{t('APP_TITLE')}</Typography>}
+        title={<Typography variant="h6">{title}</Typography>}
+        subheader={
+          subheader ? (
+            <Typography variant="body2" color="text.secondary">
+              {subheader}
+            </Typography>
+          ) : null
+        }
         action={
           <Box sx={{ display: 'flex' }}>
             <Box sx={{ pt: 0.5, pr: 1 }}>
               <Sprachauswahl />
             </Box>
-
             <Box sx={{ mt: 0.5 }}>
               <IconButton
                 color="secondary"
@@ -81,7 +123,3 @@ export default function Header() {
     </AppBar>
   );
 }
-
-/*
-<pre>{JSON.stringify(slice.lingua.NEW_CASE, null, 2)}</pre>
-*/
