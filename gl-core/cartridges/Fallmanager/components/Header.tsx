@@ -91,19 +91,12 @@ export default function Header() {
           </IconButton>
         }
         title={<Typography variant="h6">{title}</Typography>}
-        subheader={
-          subheader ? (
-            <Typography variant="body2" color="text.secondary">
-              {subheader}
-            </Typography>
-          ) : null
-        }
         action={
           <Box sx={{ display: 'flex' }}>
             <Box sx={{ mt: 0.5 }}>
               <MightyButton
                 icon="reset"
-                variant="outlined"
+                variant="text"
                 onClick={handleReset}
                 label={t('RESET')}
               />

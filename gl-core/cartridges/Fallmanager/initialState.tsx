@@ -16,8 +16,8 @@ export const initialState: TFallmanagerState = {
   languages,
   theme: {
     mode: 'light',
-    primary: '#414142',
-    secondary: '#305DA5',
+    primary: '#305DA5',
+    secondary: '#414142',
     background: '#eee',
     paper: '#FFFFFF',
     text: '#414142',
