@@ -261,7 +261,7 @@ export const lingua: Record<LinguaKey, TranslationEntry> = {
     fr: 'Remplir la base de données',
   },
   FIRST_CASE: {
-    en: 'Create first Case',
+    en: 'First Case',
     de: 'Ersten Fall anlegen',
     pt: 'Criar primeiro caso',
     zh: '创建第一个案件',

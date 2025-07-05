@@ -145,14 +145,20 @@ export default function Fallliste() {
             sx={{ pt: 2 }}
             severity="info"
             action={
-              <Stack direction="row" spacing={1}>
-                <Button onClick={handleSeed} variant="outlined">
-                  {t('SEED_DATABASE')}
-                </Button>
-                <Button onClick={handleNewCase} variant="outlined">
-                  {t('FIRST_CASE')}
-                </Button>
-              </Stack>
+                <Stack direction="row" spacing={1}>
+                  <MightyButton
+                    label={t('SEED_DATABASE')}
+                    variant="contained"
+                    icon="api"
+                    onClick={handleSeed}
+                  />
+                  <MightyButton
+                    label={t('NEW_CASE')}
+                    variant="contained"
+                    icon="case"
+                    onClick={handleNewCase}
+                  />
+                </Stack>
             }
           >
             <AlertTitle>
