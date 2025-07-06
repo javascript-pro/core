@@ -8,8 +8,10 @@ import Header from './Header';
 import Sprachauswahl from './Sprachauswahl';
 import NewCase from './NewCase';
 import AIAssisted from './AIAssisted';
-
+import TopRightMenu from './TopRightMenu';
+import Files from './Files';
 export {
+  Files,
   BearbeitbarText,
   Datei,
   Fall,
@@ -18,4 +20,5 @@ export {
   Sprachauswahl,
   NewCase,
   AIAssisted,
+  TopRightMenu,
 };

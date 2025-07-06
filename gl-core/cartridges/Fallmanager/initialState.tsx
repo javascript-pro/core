@@ -4,6 +4,12 @@ import { TFallmanagerState } from './types';
 import { lingua, languages } from './lingua';
 
 export const initialState: TFallmanagerState = {
+  assist: {
+    assisting: false,
+    step: 0,
+  },
+  files: null,
+  cases: null,
   memory: null,
   newCase: {
     open: false,

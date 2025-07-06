@@ -38,7 +38,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const docRef = adminDb.collection('AIAssist').doc(id);
+    const docRef = adminDb.collection('files').doc(id);
     const snapshot = await docRef.get();
 
     if (!snapshot.exists) {
