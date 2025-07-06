@@ -6,14 +6,10 @@ import {
   Container,
   Card,
   CardHeader,
-  Button,
   Alert,
   AlertTitle,
   Box,
   CircularProgress,
-  List,
-  ListItem,
-  ListItemButton,
   Stack,
   Typography,
   TextField,
@@ -22,6 +18,11 @@ import {
   FormGroup,
   FormControlLabel,
   Checkbox,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
 } from '@mui/material';
 import {
   collection,
@@ -140,36 +141,37 @@ export default function Fallliste() {
           <CircularProgress />
         </Box>
       ) : docs.length === 0 ? (
-        <Container sx={{ mt: 4 }}>
-          <Alert
-            sx={{ pt: 2 }}
-            severity="info"
-            action={
-              <Stack direction="row" spacing={1}>
-                <MightyButton
-                  label={t('SEED_DATABASE')}
-                  variant="contained"
-                  icon="api"
-                  onClick={handleSeed}
-                />
-                <MightyButton
-                  label={t('NEW_CASE')}
-                  variant="contained"
-                  icon="case"
-                  onClick={handleNewCase}
-                />
-                <MightyButton
-                  label={t('NEW_AI_CASE')}
-                  variant="contained"
-                  icon="aicase"
-                  onClick={handleAIAssistClick}
-                />
-              </Stack>
-            }
-          >
+        <Container sx={{}}>
+          <Alert sx={{ pt: 2 }} severity="info">
             <AlertTitle>
               <Typography variant="h6">{t('NOT_FOUND')}</Typography>
             </AlertTitle>
+            <List>
+              <ListItem disablePadding>
+                <ListItemButton onClick={handleNewCase}>
+                  <ListItemIcon>
+                    <Icon icon="case" />
+                  </ListItemIcon>
+                  <ListItemText primary={t('NEW_CASE')} />
+                </ListItemButton>
+              </ListItem>
+              <ListItem disablePadding>
+                <ListItemButton onClick={handleAIAssistClick}>
+                  <ListItemIcon>
+                    <Icon icon="aicase" />
+                  </ListItemIcon>
+                  <ListItemText primary={t('NEW_AI_CASE')} />
+                </ListItemButton>
+              </ListItem>
+              <ListItem disablePadding>
+                <ListItemButton onClick={handleSeed}>
+                  <ListItemIcon>
+                    <Icon icon="api" />
+                  </ListItemIcon>
+                  <ListItemText primary={t('SEED_DATABASE')} />
+                </ListItemButton>
+              </ListItem>
+            </List>
           </Alert>
         </Container>
       ) : (

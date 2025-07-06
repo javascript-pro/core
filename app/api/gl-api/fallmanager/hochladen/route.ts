@@ -39,7 +39,7 @@ export async function POST(req: NextRequest) {
     const buffer = Buffer.from(arrayBuffer);
 
     const fileId = uuidv4();
-    const storagePath = `AIAssist/${fileId}.${extension}`;
+    const storagePath = `fallmanager/${fileId}.${extension}`;
     const bucket = adminStorage.bucket();
 
     await bucket.file(storagePath).save(buffer, {
@@ -64,7 +64,7 @@ export async function POST(req: NextRequest) {
       parsedText: '', // reserved for later AI processing
     };
 
-    const docRef = await adminDb.collection('AIAssist').add(fileData);
+    const docRef = await adminDb.collection('files').add(fileData);
 
     return NextResponse.json({
       ok: true,

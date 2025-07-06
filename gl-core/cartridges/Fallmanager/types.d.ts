@@ -1,6 +1,9 @@
 // core/gl-core/cartridges/Fallmanager/types.d.ts
 
 export type TFallmanagerState = {
+  assist: any;
+  cases: any;
+  files: any;
   memory: any;
   newCase: any;
   aiCase: any;

@@ -13,6 +13,11 @@ import {
   resetFallmanager,
   seedFirebase,
   updateAICase,
+  deleteFile,
+  analyse,
+  incomingCases,
+  incomingFiles,
+  updateAssist,
 } from './actions';
 import {
   BearbeitbarText,
@@ -23,6 +28,8 @@ import {
   Sprachauswahl,
   NewCase,
   AIAssisted,
+  TopRightMenu,
+  Files,
 } from './components';
 
 export {
@@ -41,6 +48,11 @@ export {
   resetFallmanager,
   seedFirebase,
   updateAICase,
+  deleteFile,
+  analyse,
+  incomingCases,
+  incomingFiles,
+  updateAssist,
 };
 
 export {
@@ -52,4 +64,6 @@ export {
   Sprachauswahl,
   NewCase,
   AIAssisted,
+  TopRightMenu,
+  Files,
 };
