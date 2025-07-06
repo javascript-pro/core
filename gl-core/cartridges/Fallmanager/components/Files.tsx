@@ -4,7 +4,6 @@ import {
   Box,
   List,
   ListItem,
-  ListItemIcon,
   ListItemText,
   Typography,
   IconButton,
@@ -14,11 +13,7 @@ import {
 } from '@mui/material';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import { Icon, useDispatch } from '../../../../gl-core';
-import {
-  useLingua,
-  useFallmanagerSlice,
-  deleteFile,
-} from '../../Fallmanager';
+import { useLingua, useFallmanagerSlice, deleteFile } from '../../Fallmanager';
 
 export default function Files() {
   const dispatch = useDispatch();
@@ -95,9 +90,9 @@ export default function Files() {
                   </>
                 }
               >
-                <ListItemIcon>
+                {/* <ListItemIcon>
                   <PictureAsPdfIcon color="primary" />
-                </ListItemIcon>
+                </ListItemIcon> */}
                 <ListItemText
                   primary={file.fileName}
                   secondary={
