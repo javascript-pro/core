@@ -141,7 +141,7 @@ export default function Fallliste() {
           <CircularProgress />
         </Box>
       ) : docs.length === 0 ? (
-        <Container sx={{  }}>
+        <Container sx={{}}>
           <Alert sx={{ pt: 2 }} severity="info">
             <AlertTitle>
               <Typography variant="h6">{t('NOT_FOUND')}</Typography>
