@@ -51,23 +51,24 @@ export default function Sprachauswahl() {
             <img
               src={`/svg/flags/${selected}.svg`}
               style={{
-                width: 32,
-                height: 32,
+                width: 24,
+                height: 24,
                 marginLeft: 16,
                 marginRight: 16,
                 objectFit: 'contain',
               }}
             />
+            <ListItemText primary={languages[language].title} /> 
           </Box>
         );
       }}
     >
       {/* Current language shown as disabled item */}
-      <MenuItem sx={{ display: 'none' }} value={language} disabled>
-        <ListItemIcon sx={{ minWidth: 32 }}>
+      <MenuItem sx={{ display: "none", width: 200 }} value={language} disabled>
+        <ListItemIcon sx={{ minWidth: 24 }}>
           <img
             src={`/svg/flags/${language}.svg`}
-            style={{ width: 32, height: 32, objectFit: 'contain' }}
+            style={{ width: 24, height: 24, objectFit: 'contain' }}
           />
         </ListItemIcon>
         {/* <ListItemText primary={languages[language].title} /> */}
@@ -78,13 +79,13 @@ export default function Sprachauswahl() {
         .filter(([code]) => code !== language)
         .map(([code, data]) => (
           <MenuItem key={code} value={code}>
-            <ListItemIcon sx={{ minWidth: 32 }}>
+            <ListItemIcon sx={{ minWidth: 24 }}>
               <img
                 src={`/svg/flags/${code}.svg`}
                 alt={data.title}
                 style={{
-                  width: 32,
-                  height: 32,
+                  width: 24,
+                  height: 24,
                   marginRight: 16,
                   objectFit: 'contain',
                 }}

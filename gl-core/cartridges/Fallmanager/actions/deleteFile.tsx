@@ -11,7 +11,7 @@ export const deleteFile =
   (id: string): any =>
   async (dispatch: TUbereduxDispatch, getState: () => any) => {
     try {
-      const docRef = doc(db, 'AIAssist', id);
+      const docRef = doc(db, 'files', id);
       const snapshot = await getDoc(docRef);
 
       if (!snapshot.exists()) {

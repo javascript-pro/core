@@ -8,6 +8,7 @@ import Header from './Header';
 import Sprachauswahl from './Sprachauswahl';
 import NewCase from './NewCase';
 import AIAssisted from './AIAssisted';
+import TopRightMenu from './TopRightMenu';
 
 export {
   BearbeitbarText,
@@ -18,4 +19,5 @@ export {
   Sprachauswahl,
   NewCase,
   AIAssisted,
+  TopRightMenu,
 };

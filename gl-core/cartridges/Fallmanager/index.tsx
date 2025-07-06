@@ -15,6 +15,9 @@ import {
   updateAICase,
   deleteFile,
   analyse,
+  incomingCases,
+  incomingFiles,
+  updateAssist,
 } from './actions';
 import {
   BearbeitbarText,
@@ -25,6 +28,7 @@ import {
   Sprachauswahl,
   NewCase,
   AIAssisted,
+  TopRightMenu,
 } from './components';
 
 export {
@@ -45,6 +49,9 @@ export {
   updateAICase,
   deleteFile,
   analyse,
+  incomingCases,
+  incomingFiles,
+  updateAssist,
 };
 
 export {
@@ -56,4 +63,5 @@ export {
   Sprachauswahl,
   NewCase,
   AIAssisted,
+  TopRightMenu,
 };

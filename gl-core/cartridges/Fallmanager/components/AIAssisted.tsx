@@ -14,15 +14,12 @@ import {
   DialogActions,
   Typography,
   Button,
-  LinearProgress,
   Stack,
 } from '@mui/material';
 import { useFallmanagerSlice, useLingua } from '../../Fallmanager';
 import {
   useDispatch,
   Icon,
-  MightyButton,
-  toggleFeedback,
 } from '../../../../gl-core';
 
 export default function AIAssisted() {
