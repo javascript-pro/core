@@ -2,44 +2,55 @@
 import * as React from 'react';
 import {
   Box,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  Typography,
   Card,
   CardHeader,
+  List,
+  ListItemButton,
+  ListItemText,
+  Typography,
   IconButton,
   Tooltip,
+  CircularProgress,
+  Fade,
+  ListItemSecondaryAction,
 } from '@mui/material';
-import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
-import DownloadIcon from '@mui/icons-material/Download';
-import { Icon, MightyButton, useDispatch } from '../../../../gl-core';
-import {
-  useLingua,
-  useFallmanagerSlice,
-  seedFirebase,
-} from '../../Fallmanager';
+import { useRouter } from 'next/navigation';
+import { Icon, useDispatch } from '../../../../gl-core';
+import { useLingua, useFallmanagerSlice, deleteFile } from '../../Fallmanager';
 
 export default function Files() {
   const dispatch = useDispatch();
   const t = useLingua();
+  const router = useRouter();
   const { files } = useFallmanagerSlice();
+
+  const [deleting, setDeleting] = React.useState<Record<string, boolean>>({});
 
   const fileArray = React.useMemo(() => {
     if (!files || typeof files !== 'object') return [];
     return Object.values(files);
   }, [files]);
 
-  const handleSeed = () => {
-    dispatch(seedFirebase());
+  const handleDelete = async (file: any) => {
+    setDeleting((prev) => ({ ...prev, [file.id]: true }));
+    await dispatch(deleteFile(file.id));
+    setDeleting((prev) => {
+      const updated = { ...prev };
+      delete updated[file.id];
+      return updated;
+    });
   };
 
   return (
-    <Box sx={{}}>
+    <Card>
+      <CardHeader 
+        title="Files"
+        avatar={<Icon icon="doc" color="primary" />}
+      />
       {fileArray.length === 0 ? (
-        <Typography sx={{ px: 2, py: 1 }}>{t('NO_FILES_FOUND')}</Typography>
+        <Typography sx={{ px: 2, py: 1 }}>
+          {t('NO_FILES_FOUND')}
+        </Typography>
       ) : (
         <List dense>
           {fileArray.map((file: any) => {
@@ -47,39 +58,61 @@ export default function Files() {
               ? new Date(file.createdAt.seconds * 1000).toLocaleString()
               : 'Unknown date';
             const sizeKb = (file.fileSize / 1024).toFixed(1);
+            const isDeleting = !!deleting[file.id];
 
             return (
-              <ListItem
+              <ListItemButton
                 key={file.id}
-                secondaryAction={
+                onClick={() => router.push(`/fallmanager/file/${file.id}`)}
+                disabled={isDeleting}
+              >
+                <ListItemText
+                  primary={file.fileName}
+                  secondary={`${sizeKb} KB — ${uploadedAt}`}
+                />
+                <ListItemSecondaryAction>
                   <Tooltip title="Download">
                     <IconButton
                       color="primary"
                       href={file.downloadUrl}
                       target="_blank"
                       rel="noopener noreferrer"
+                      disabled={isDeleting}
+                      onClick={(e) => e.stopPropagation()}
                     >
                       <Icon icon="link" />
                     </IconButton>
                   </Tooltip>
-                }
-              >
-                <ListItemIcon>
-                  <PictureAsPdfIcon color="primary" />
-                </ListItemIcon>
-                <ListItemText
-                  primary={file.fileName}
-                  secondary={
-                    <>
-                      {`${sizeKb} KB`} — {uploadedAt}
-                    </>
-                  }
-                />
-              </ListItem>
+
+                  <Tooltip title="Delete">
+                    <span>
+                      <IconButton
+                        color="primary"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleDelete(file);
+                        }}
+                        disabled={isDeleting}
+                      >
+                        {isDeleting ? (
+                          <Fade in>
+                            <CircularProgress
+                              size={20}
+                              sx={{ color: 'error.main' }}
+                            />
+                          </Fade>
+                        ) : (
+                          <Icon icon="delete" />
+                        )}
+                      </IconButton>
+                    </span>
+                  </Tooltip>
+                </ListItemSecondaryAction>
+              </ListItemButton>
             );
           })}
         </List>
       )}
-    </Box>
+    </Card>
   );
 }

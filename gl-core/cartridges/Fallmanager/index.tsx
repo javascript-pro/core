@@ -30,6 +30,7 @@ import {
   AIAssisted,
   TopRightMenu,
   Files,
+  FileEdit,
 } from './components';
 
 export {
@@ -66,4 +67,5 @@ export {
   AIAssisted,
   TopRightMenu,
   Files,
+  FileEdit,
 };
