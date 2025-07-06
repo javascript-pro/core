@@ -38,51 +38,48 @@ export default function Files() {
 
   return (
     <Box sx={{}}>
-        
-        {fileArray.length === 0 ? (
-          <Typography sx={{ px: 2, py: 1 }}>
-            {t('NO_FILES_FOUND')}
-          </Typography>
-        ) : (
-          <List dense>
-            {fileArray.map((file: any) => {
-              const uploadedAt = file.createdAt?.seconds
-                ? new Date(file.createdAt.seconds * 1000).toLocaleString()
-                : 'Unknown date';
-              const sizeKb = (file.fileSize / 1024).toFixed(1);
+      {fileArray.length === 0 ? (
+        <Typography sx={{ px: 2, py: 1 }}>{t('NO_FILES_FOUND')}</Typography>
+      ) : (
+        <List dense>
+          {fileArray.map((file: any) => {
+            const uploadedAt = file.createdAt?.seconds
+              ? new Date(file.createdAt.seconds * 1000).toLocaleString()
+              : 'Unknown date';
+            const sizeKb = (file.fileSize / 1024).toFixed(1);
 
-              return (
-                <ListItem
-                  key={file.id}
-                  divider
-                  secondaryAction={
-                    <Tooltip title="Download">
-                      <IconButton
-                        href={file.downloadUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <DownloadIcon />
-                      </IconButton>
-                    </Tooltip>
+            return (
+              <ListItem
+                key={file.id}
+                secondaryAction={
+                  <Tooltip title="Download">
+                    <IconButton
+                      color="primary"
+                      href={file.downloadUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Icon icon="link" />
+                    </IconButton>
+                  </Tooltip>
+                }
+              >
+                <ListItemIcon>
+                  <PictureAsPdfIcon color="primary" />
+                </ListItemIcon>
+                <ListItemText
+                  primary={file.fileName}
+                  secondary={
+                    <>
+                      {`${sizeKb} KB`} — {uploadedAt}
+                    </>
                   }
-                >
-                  <ListItemIcon>
-                    <PictureAsPdfIcon color="error" />
-                  </ListItemIcon>
-                  <ListItemText
-                    primary={file.fileName}
-                    secondary={
-                      <>
-                        {`${sizeKb} KB`} — {uploadedAt}
-                      </>
-                    }
-                  />
-                </ListItem>
-              );
-            })}
-          </List>
-        )}
+                />
+              </ListItem>
+            );
+          })}
+        </List>
+      )}
     </Box>
   );
 }
