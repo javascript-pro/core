@@ -29,6 +29,7 @@ import {
   NewCase,
   AIAssisted,
   TopRightMenu,
+  Files,
 } from './components';
 
 export {
@@ -64,4 +65,5 @@ export {
   NewCase,
   AIAssisted,
   TopRightMenu,
+  Files,
 };

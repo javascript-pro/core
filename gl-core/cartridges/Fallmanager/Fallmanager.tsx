@@ -2,11 +2,11 @@
 import * as React from 'react';
 import {
   CssBaseline,
+  Grid,
   Container,
   Box,
   ButtonBase,
   Typography,
-  Stack,
   LinearProgress,
   Stepper,
   Step,
@@ -15,7 +15,6 @@ import {
   Alert,
   IconButton,
 } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
 import { useEffect, useRef, useState } from 'react';
 import {
   collection,
@@ -31,10 +30,11 @@ import {
   incomingFiles,
   useLingua,
   updateAssist,
+  Files,
 } from '../Fallmanager';
 import { db } from '../../lib/firebase';
 
-const steps = ['Select File', 'File Selected.', 'Uploading...', 'Uploaded'];
+const steps = ['Select PDF', 'PDF Selected', 'Uploading...', 'Uploaded'];
 
 export default function Fallmanager() {
   const dispatch = useDispatch();
@@ -194,49 +194,47 @@ export default function Fallmanager() {
   return (
     <Theme theme={theme}>
       <CssBaseline />
-      <Container maxWidth="sm">
+      <Container maxWidth="md">
         <Header />
-
-        <Box sx={{ my: 4 }}>
-          <Stepper activeStep={getStep()} alternativeLabel>
-            {steps.map((label, index) => (
-              <Step key={index}>
-                <StepLabel>{label}</StepLabel>
-              </Step>
-            ))}
-          </Stepper>
-        </Box>
-
-        <input
-          ref={fileInputRef}
-          type="file"
-          hidden
-          accept="application/pdf"
-          onChange={handleFileChange}
-        />
-
-        <Stack spacing={2} sx={{ my: 2 }}>
-          {assist.step < 1 && (
+        <Grid container spacing={2}>
+          <Grid size={{xs: 12, md: 6}} sx={{border: "1px solid red"}}>
+            <Stepper activeStep={getStep()} alternativeLabel sx={{mt:3}}>
+              {steps.map((label, index) => (
+                <Step key={index}>
+                  <StepLabel>{label}</StepLabel>
+                </Step>
+              ))}
+            </Stepper>
+          {assist.step < 1 && (<>
+            <input
+              ref={fileInputRef}
+              type="file"
+              hidden
+              accept="application/pdf"
+              onChange={handleFileChange}
+            />
             <ButtonBase
-              onClick={() => fileInputRef.current?.click()}
               sx={{
-                width: '100%',
-                borderRadius: 2,
-                overflow: 'hidden',
-                border: '1px dashed',
-                borderColor: 'divider',
-                backgroundColor: file ? 'background.paper' : 'action.hover',
-                p: 2,
-                textAlign: 'left',
+                width:"100%",
+                border: "1px solid orange",
+                p:2,
+                my:3
               }}
+              onClick={() => fileInputRef.current?.click()}
+              
             >
-              <Stack direction="row" spacing={1} alignItems="center">
                 <Icon icon="upload" color="primary" />
                 <Typography variant="body2">Select PDF</Typography>
-              </Stack>
             </ButtonBase>
+            </>
           )}
+          </Grid>
+          <Grid size={{xs: 12, md: 6}} sx={{border:"1px solid green"}}>
+            <Files />
+          </Grid>
+        </Grid>
 
+        
           {assist.step >= 1 && assist.feedback?.title && (
             <Alert severity={assist.feedback.severity || 'successs'}>
               <strong>{assist.feedback.title}</strong>
@@ -259,7 +257,8 @@ export default function Fallmanager() {
             <Box>
               <Typography variant="body1">{assist.selected.name}</Typography>
               <Typography variant="body2">
-                {assist.selected.type} · {(assist.selected.size / 1024).toFixed(1)} KB
+                {assist.selected.type} ·{' '}
+                {(assist.selected.size / 1024).toFixed(1)} KB
               </Typography>
             </Box>
           )}
@@ -267,7 +266,14 @@ export default function Fallmanager() {
           {uploading && <LinearProgress />}
 
           {assist.step === 3 && uploadedDoc && (
-            <Box sx={{ p: 2, bgcolor: 'background.paper', borderRadius: 2, overflow: 'auto' }}>
+            <Box
+              sx={{
+                p: 2,
+                bgcolor: 'background.paper',
+                borderRadius: 2,
+                overflow: 'auto',
+              }}
+            >
               <Typography variant="subtitle2" gutterBottom>
                 Uploaded Document
               </Typography>
@@ -276,7 +282,7 @@ export default function Fallmanager() {
               </pre>
             </Box>
           )}
-        </Stack>
+          
 
         {assist.step === 1 && (
           <Button
@@ -292,12 +298,13 @@ export default function Fallmanager() {
         {(file || assist.step) && (
           <Box display="flex" justifyContent="flex-end">
             <IconButton onClick={handleCancel} color="secondary">
-              <CloseIcon />
+              <Icon icon="close" />
             </IconButton>
           </Box>
         )}
-        <pre>files: {JSON.stringify(files, null, 2)}</pre>
-        <pre>{JSON.stringify(assist, null, 2)}</pre>
+
+        {/* <pre>files: {JSON.stringify(files, null, 2)}</pre>
+        <pre>{JSON.stringify(assist, null, 2)}</pre> */}
       </Container>
     </Theme>
   );
