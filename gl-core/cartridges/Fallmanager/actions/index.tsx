@@ -13,8 +13,8 @@ import { updateAICase } from './updateAICase';
 import { updateAssist } from './updateAssist';
 import { deleteFile } from './deleteFile';
 import { analyse } from './analyse';
-import {incomingCases} from './incomingCases';
-import {incomingFiles} from './incomingFiles';
+import { incomingCases } from './incomingCases';
+import { incomingFiles } from './incomingFiles';
 
 export {
   incomingCases,

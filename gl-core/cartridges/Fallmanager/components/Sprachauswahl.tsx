@@ -58,13 +58,13 @@ export default function Sprachauswahl() {
                 objectFit: 'contain',
               }}
             />
-            <ListItemText primary={languages[language].title} /> 
+            <ListItemText primary={languages[language].title} />
           </Box>
         );
       }}
     >
       {/* Current language shown as disabled item */}
-      <MenuItem sx={{ display: "none", width: 200 }} value={language} disabled>
+      <MenuItem sx={{ display: 'none', width: 200 }} value={language} disabled>
         <ListItemIcon sx={{ minWidth: 24 }}>
           <img
             src={`/svg/flags/${language}.svg`}

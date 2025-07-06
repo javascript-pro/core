@@ -23,10 +23,7 @@ import {
   QuerySnapshot,
   DocumentData,
 } from 'firebase/firestore';
-import {
-  Theme,
-  useDispatch,
-} from '../../../gl-core';
+import { Theme, useDispatch, Icon } from '../../../gl-core';
 import {
   Header,
   useFallmanagerSlice,
@@ -37,7 +34,7 @@ import {
 } from '../Fallmanager';
 import { db } from '../../lib/firebase';
 
-const steps = ['Start', 'File selected', 'Uploading'];
+const steps = ['Select File', 'File Selected.', 'Uploading...', 'Uploaded'];
 
 export default function Fallmanager() {
   const dispatch = useDispatch();
@@ -45,6 +42,7 @@ export default function Fallmanager() {
   const { theme, files, assist } = useFallmanagerSlice();
 
   const [file, setFile] = useState<File | null>(null);
+  const [uploadedDoc, setUploadedDoc] = useState<any>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -75,10 +73,11 @@ export default function Fallmanager() {
 
   const handleCancel = () => {
     setFile(null);
+    setUploadedDoc(null);
     dispatch(updateAssist({ reset: true }));
   };
 
-  const handleYes = () => {
+  const uploadFile = async (file: File) => {
     dispatch(
       updateAssist({
         step: 2,
@@ -89,11 +88,66 @@ export default function Fallmanager() {
         },
       }),
     );
+
+    const formData = new FormData();
+    formData.append('file', file);
+
+    try {
+      const res = await fetch('/api/gl-api/fallmanager/hochladen', {
+        method: 'POST',
+        body: formData,
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || 'Unknown upload error');
+      }
+
+      setUploadedDoc(data);
+
+      dispatch(
+        updateAssist({
+          step: 3,
+          feedback: {
+            severity: 'success',
+            title: 'Upload complete',
+            message: `File ID: ${data.docId}`,
+          },
+        }),
+      );
+    } catch (err: any) {
+      console.error('Upload failed:', err);
+      dispatch(
+        updateAssist({
+          feedback: {
+            severity: 'error',
+            title: 'Upload failed',
+            message: err.message || 'Something went wrong',
+          },
+        }),
+      );
+    }
+  };
+
+  const handleYes = () => {
+    if (!file) {
+      dispatch(
+        updateAssist({
+          feedback: {
+            severity: 'error',
+            title: 'No file found',
+            message: 'Please select a file again.',
+          },
+        }),
+      );
+      return;
+    }
+
+    uploadFile(file);
   };
 
   const getStep = () => assist.step ?? 0;
-
-  const selectedFile = assist.selected;
   const uploading = assist.step >= 2;
 
   useEffect(() => {
@@ -129,6 +183,13 @@ export default function Fallmanager() {
     );
     return () => unsub();
   }, [dispatch]);
+
+  useEffect(() => {
+    if (assist.step === 3) {
+      const timeout = setTimeout(() => handleCancel(), 5000);
+      return () => clearTimeout(timeout);
+    }
+  }, [assist.step]);
 
   return (
     <Theme theme={theme}>
@@ -169,23 +230,15 @@ export default function Fallmanager() {
                 textAlign: 'left',
               }}
             >
-              {file?.name ? (
-                <Stack spacing={0.5}>
-                  <Typography variant="subtitle2">{file.name}</Typography>
-                  <Typography variant="caption" color="text.secondary">
-                    {file.type} · {(file.size / 1024).toFixed(1)} KB
-                  </Typography>
-                </Stack>
-              ) : (
-                <Typography variant="body2" color="text.secondary">
-                  Select file
-                </Typography>
-              )}
+              <Stack direction="row" spacing={1} alignItems="center">
+                <Icon icon="upload" color="primary" />
+                <Typography variant="body2">Select PDF</Typography>
+              </Stack>
             </ButtonBase>
           )}
 
           {assist.step >= 1 && assist.feedback?.title && (
-            <Alert severity={assist.feedback.severity || 'info'}>
+            <Alert severity={assist.feedback.severity || 'successs'}>
               <strong>{assist.feedback.title}</strong>
               {assist.feedback.message && (
                 <>
@@ -193,33 +246,48 @@ export default function Fallmanager() {
                   {assist.feedback.message}
                 </>
               )}
+              {assist.selected?.name && (
+                <>
+                  <br />
+                  <em>{assist.selected.name}</em>
+                </>
+              )}
             </Alert>
           )}
 
-          {assist.step === 1 && selectedFile && (
-            <Stack>
-              <Typography variant="subtitle2">{selectedFile.name}</Typography>
-              <Typography variant="caption" color="text.secondary">
-                {selectedFile.type} · {(selectedFile.size / 1024).toFixed(1)} KB
+          {assist.step === 1 && assist.selected && (
+            <Box>
+              <Typography variant="body1">{assist.selected.name}</Typography>
+              <Typography variant="body2">
+                {assist.selected.type} · {(assist.selected.size / 1024).toFixed(1)} KB
               </Typography>
-            </Stack>
+            </Box>
           )}
 
           {uploading && <LinearProgress />}
 
-          {assist.step === 1 && (
-            <Button
-              onClick={handleYes}
-              variant="contained"
-              color="primary"
-              size="large"
-              fullWidth
-              disabled={uploading}
-            >
-              YES
-            </Button>
+          {assist.step === 3 && uploadedDoc && (
+            <Box sx={{ p: 2, bgcolor: 'background.paper', borderRadius: 2, overflow: 'auto' }}>
+              <Typography variant="subtitle2" gutterBottom>
+                Uploaded Document
+              </Typography>
+              <pre style={{ fontSize: 12, whiteSpace: 'pre-wrap' }}>
+                {JSON.stringify(uploadedDoc, null, 2)}
+              </pre>
+            </Box>
           )}
         </Stack>
+
+        {assist.step === 1 && (
+          <Button
+            onClick={handleYes}
+            variant="contained"
+            color="primary"
+            disabled={uploading}
+          >
+            YES
+          </Button>
+        )}
 
         {(file || assist.step) && (
           <Box display="flex" justifyContent="flex-end">
@@ -228,6 +296,8 @@ export default function Fallmanager() {
             </IconButton>
           </Box>
         )}
+        <pre>files: {JSON.stringify(files, null, 2)}</pre>
+        <pre>{JSON.stringify(assist, null, 2)}</pre>
       </Container>
     </Theme>
   );

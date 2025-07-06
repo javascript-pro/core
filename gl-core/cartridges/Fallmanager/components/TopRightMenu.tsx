@@ -3,7 +3,15 @@
 import * as React from 'react';
 import moment from 'moment';
 import { useState } from 'react';
-import { IconButton, Menu, MenuItem, Box, ListItemIcon, ListItemText, Divider } from '@mui/material';
+import {
+  IconButton,
+  Menu,
+  MenuItem,
+  Box,
+  ListItemIcon,
+  ListItemText,
+  Divider,
+} from '@mui/material';
 import { Icon, useDispatch, routeTo, MightyButton } from '../../../../gl-core';
 import {
   useFallmanagerSlice,
@@ -51,7 +59,6 @@ export default function TopRightMenu() {
           horizontal: 'right',
         }}
       >
-
         <MenuItem onClick={handleReset}>
           <ListItemIcon>
             <Icon icon="reset" />
@@ -59,12 +66,11 @@ export default function TopRightMenu() {
           <ListItemText>{t('RESET')}</ListItemText>
         </MenuItem>
 
-        <MenuItem >
+        <MenuItem>
           <Box sx={{ width: 200 }}>
             <Sprachauswahl />
           </Box>
         </MenuItem>
-        
       </Menu>
     </>
   );

@@ -10,10 +10,7 @@ import {
   IconButton,
 } from '@mui/material';
 import { Icon, useDispatch, routeTo } from '../../../../gl-core';
-import {
-  useLingua,
-  TopRightMenu,
-} from '../../Fallmanager';
+import { useLingua, TopRightMenu } from '../../Fallmanager';
 
 export default function Header() {
   const dispatch = useDispatch();
@@ -43,7 +40,7 @@ export default function Header() {
       <CardHeader
         avatar={
           <IconButton color="primary" onClick={handleAvatarClick}>
-            <Icon icon={"cases"} />
+            <Icon icon={'cases'} />
           </IconButton>
         }
         title={<Typography variant="h6">{title}</Typography>}

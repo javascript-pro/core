@@ -17,10 +17,7 @@ import {
   Stack,
 } from '@mui/material';
 import { useFallmanagerSlice, useLingua } from '../../Fallmanager';
-import {
-  useDispatch,
-  Icon,
-} from '../../../../gl-core';
+import { useDispatch, Icon } from '../../../../gl-core';
 
 export default function AIAssisted() {
   const dispatch = useDispatch();

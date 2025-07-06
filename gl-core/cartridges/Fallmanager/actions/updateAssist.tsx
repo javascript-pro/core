@@ -13,9 +13,9 @@ export const updateAssist =
         ...current,
         assist: updates.reset
           ? {
-            "assisting": false,
-            "step": 0
-          }
+              assisting: false,
+              step: 0,
+            }
           : {
               ...current.assist,
               ...updates,
@@ -28,4 +28,3 @@ export const updateAssist =
       dispatch(setUbereduxKey({ key: 'error', value: msg }));
     }
   };
-
