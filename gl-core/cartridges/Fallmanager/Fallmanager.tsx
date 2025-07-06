@@ -4,7 +4,6 @@ import {
   CssBaseline,
   Grid,
   Card,
-  CardHeader,
   CardContent,
   Container,
   Box,
@@ -14,7 +13,6 @@ import {
   Stepper,
   Step,
   StepLabel,
-  Button,
   Alert,
   IconButton,
 } from '@mui/material';
@@ -71,6 +69,10 @@ export default function Fallmanager() {
           step: 1,
         }),
       );
+
+      setTimeout(() => {
+        uploadFile(selected);
+      }, 250);
     }
   };
 
@@ -133,23 +135,6 @@ export default function Fallmanager() {
     }
   };
 
-  const handleYes = () => {
-    if (!file) {
-      dispatch(
-        updateAssist({
-          feedback: {
-            severity: 'error',
-            title: 'No file found',
-            message: 'Please select a file again.',
-          },
-        }),
-      );
-      return;
-    }
-
-    uploadFile(file);
-  };
-
   const getStep = () => assist.step ?? 0;
   const uploading = assist.step >= 2;
 
@@ -202,10 +187,6 @@ export default function Fallmanager() {
         <Grid container spacing={2}>
           <Grid size={{ xs: 12, md: 6 }}>
             <Card>
-              {/* <CardHeader 
-                title="New File"
-                subheader="Select PDF"
-              /> */}
               <CardContent>
                 {assist.step < 1 && (
                   <>
@@ -231,7 +212,7 @@ export default function Fallmanager() {
                 )}
 
                 {assist.step >= 1 && assist.feedback?.title && (
-                  <Alert severity={assist.feedback.severity || 'successs'}>
+                  <Alert severity={assist.feedback.severity || 'success'}>
                     <strong>{assist.feedback.title}</strong>
                     {assist.feedback.message && (
                       <>
@@ -280,17 +261,6 @@ export default function Fallmanager() {
                   </Box>
                 )}
 
-                {assist.step === 1 && (
-                  <Button
-                    onClick={handleYes}
-                    variant="contained"
-                    color="primary"
-                    disabled={uploading}
-                  >
-                    YES
-                  </Button>
-                )}
-
                 {(file || assist.step) && (
                   <Box display="flex" justifyContent="flex-end">
                     <IconButton onClick={handleCancel} color="secondary">
@@ -309,13 +279,11 @@ export default function Fallmanager() {
               </CardContent>
             </Card>
           </Grid>
+
           <Grid size={{ xs: 12, md: 6 }}>
             <Files />
           </Grid>
         </Grid>
-
-        {/* <pre>files: {JSON.stringify(files, null, 2)}</pre>
-        <pre>{JSON.stringify(assist, null, 2)}</pre> */}
       </Container>
     </Theme>
   );
