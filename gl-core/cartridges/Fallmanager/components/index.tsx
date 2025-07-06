@@ -10,8 +10,11 @@ import NewCase from './NewCase';
 import AIAssisted from './AIAssisted';
 import TopRightMenu from './TopRightMenu';
 import Files from './Files';
+import FileEdit from './FileEdit';
+
 export {
   Files,
+  FileEdit,
   BearbeitbarText,
   Datei,
   Fall,

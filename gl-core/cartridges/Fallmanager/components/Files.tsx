@@ -2,22 +2,26 @@
 import * as React from 'react';
 import {
   Box,
+  Card,
+  CardHeader,
   List,
-  ListItem,
+  ListItemButton,
   ListItemText,
   Typography,
   IconButton,
   Tooltip,
   CircularProgress,
   Fade,
+  ListItemSecondaryAction,
 } from '@mui/material';
-import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
+import { useRouter } from 'next/navigation';
 import { Icon, useDispatch } from '../../../../gl-core';
 import { useLingua, useFallmanagerSlice, deleteFile } from '../../Fallmanager';
 
 export default function Files() {
   const dispatch = useDispatch();
   const t = useLingua();
+  const router = useRouter();
   const { files } = useFallmanagerSlice();
 
   const [deleting, setDeleting] = React.useState<Record<string, boolean>>({});
@@ -38,9 +42,15 @@ export default function Files() {
   };
 
   return (
-    <Box>
+    <Card>
+      <CardHeader 
+        title="Files"
+        avatar={<Icon icon="doc" color="primary" />}
+      />
       {fileArray.length === 0 ? (
-        <Typography sx={{ px: 2, py: 1 }}>{t('NO_FILES_FOUND')}</Typography>
+        <Typography sx={{ px: 2, py: 1 }}>
+          {t('NO_FILES_FOUND')}
+        </Typography>
       ) : (
         <List dense>
           {fileArray.map((file: any) => {
@@ -51,61 +61,58 @@ export default function Files() {
             const isDeleting = !!deleting[file.id];
 
             return (
-              <ListItem
+              <ListItemButton
                 key={file.id}
-                secondaryAction={
-                  <>
-                    <Tooltip title="Download">
-                      <IconButton
-                        color="primary"
-                        href={file.downloadUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        disabled={isDeleting}
-                      >
-                        <Icon icon="link" />
-                      </IconButton>
-                    </Tooltip>
-
-                    <Tooltip title="Delete">
-                      <span>
-                        <IconButton
-                          color="primary"
-                          onClick={() => handleDelete(file)}
-                          disabled={isDeleting}
-                        >
-                          {isDeleting ? (
-                            <Fade in={true}>
-                              <CircularProgress
-                                size={20}
-                                sx={{ color: 'error.main' }}
-                              />
-                            </Fade>
-                          ) : (
-                            <Icon icon="delete" />
-                          )}
-                        </IconButton>
-                      </span>
-                    </Tooltip>
-                  </>
-                }
+                onClick={() => router.push(`/fallmanager/file/${file.id}`)}
+                disabled={isDeleting}
               >
-                {/* <ListItemIcon>
-                  <PictureAsPdfIcon color="primary" />
-                </ListItemIcon> */}
                 <ListItemText
                   primary={file.fileName}
-                  secondary={
-                    <>
-                      {`${sizeKb} KB`} — {uploadedAt}
-                    </>
-                  }
+                  secondary={`${sizeKb} KB — ${uploadedAt}`}
                 />
-              </ListItem>
+                <ListItemSecondaryAction>
+                  <Tooltip title="Download">
+                    <IconButton
+                      color="primary"
+                      href={file.downloadUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      disabled={isDeleting}
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <Icon icon="link" />
+                    </IconButton>
+                  </Tooltip>
+
+                  <Tooltip title="Delete">
+                    <span>
+                      <IconButton
+                        color="primary"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleDelete(file);
+                        }}
+                        disabled={isDeleting}
+                      >
+                        {isDeleting ? (
+                          <Fade in>
+                            <CircularProgress
+                              size={20}
+                              sx={{ color: 'error.main' }}
+                            />
+                          </Fade>
+                        ) : (
+                          <Icon icon="delete" />
+                        )}
+                      </IconButton>
+                    </span>
+                  </Tooltip>
+                </ListItemSecondaryAction>
+              </ListItemButton>
             );
           })}
         </List>
       )}
-    </Box>
+    </Card>
   );
 }

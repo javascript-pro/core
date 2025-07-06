@@ -5,6 +5,7 @@ import {
   Grid,
   Card,
   CardContent,
+  CardHeader,
   Container,
   Box,
   ButtonBase,
@@ -17,6 +18,7 @@ import {
   IconButton,
 } from '@mui/material';
 import { useEffect, useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import {
   collection,
   onSnapshot,
@@ -32,6 +34,7 @@ import {
   useLingua,
   updateAssist,
   Files,
+  FileEdit,
 } from '../Fallmanager';
 import { db } from '../../lib/firebase';
 
@@ -45,6 +48,11 @@ export default function Fallmanager() {
   const [file, setFile] = useState<File | null>(null);
   const [uploadedDoc, setUploadedDoc] = useState<any>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const pathname = usePathname();
+  const segments = pathname?.split('/') || [];
+  const isEditing = segments.includes('file') && segments.length > 3;
+  const fileId = isEditing ? segments[segments.length - 1] : null;
 
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const selected = e.target.files?.[0] || null;
@@ -184,106 +192,115 @@ export default function Fallmanager() {
       <CssBaseline />
       <Container>
         <Header />
-        <Grid container spacing={2}>
-          <Grid size={{ xs: 12, md: 6 }}>
-            <Card>
-              <CardContent>
-                {assist.step < 1 && (
-                  <>
-                    <input
-                      ref={fileInputRef}
-                      type="file"
-                      hidden
-                      accept="application/pdf"
-                      onChange={handleFileChange}
-                    />
-                    <ButtonBase
+
+        {isEditing && fileId ? (
+          <FileEdit id={fileId} />
+        ) : (
+          <Grid container spacing={2}>
+            <Grid size={{ xs: 12, md: 6 }}>
+              <Card>
+                <CardHeader 
+                  title="Upload File"
+                  avatar={<Icon icon="aicase" color="primary" />}
+                />
+                <CardContent>
+                  {assist.step < 1 && (
+                    <>
+                      <input
+                        ref={fileInputRef}
+                        type="file"
+                        hidden
+                        accept="application/pdf"
+                        onChange={handleFileChange}
+                      />
+                      <ButtonBase
+                        sx={{
+                          width: '100%',
+                          p: 2,
+                          my: 3,
+                        }}
+                        onClick={() => fileInputRef.current?.click()}
+                      >
+                        <Icon icon="upload" color="primary" />
+                        <Typography variant="body2">Select PDF</Typography>
+                      </ButtonBase>
+                    </>
+                  )}
+
+                  {assist.step >= 1 && assist.feedback?.title && (
+                    <Alert severity={assist.feedback.severity || 'success'}>
+                      <strong>{assist.feedback.title}</strong>
+                      {assist.feedback.message && (
+                        <>
+                          <br />
+                          {assist.feedback.message}
+                        </>
+                      )}
+                      {assist.selected?.name && (
+                        <>
+                          <br />
+                          <em>{assist.selected.name}</em>
+                        </>
+                      )}
+                    </Alert>
+                  )}
+
+                  {assist.step === 1 && assist.selected && (
+                    <Box>
+                      <Typography variant="body1">
+                        {assist.selected.name}
+                      </Typography>
+                      <Typography variant="body2">
+                        {assist.selected.type} ·{' '}
+                        {(assist.selected.size / 1024).toFixed(1)} KB
+                      </Typography>
+                    </Box>
+                  )}
+
+                  {uploading && <LinearProgress />}
+
+                  {assist.step === 3 && uploadedDoc && (
+                    <Box
                       sx={{
-                        width: '100%',
                         p: 2,
-                        my: 3,
+                        bgcolor: 'background.paper',
+                        borderRadius: 2,
+                        overflow: 'auto',
                       }}
-                      onClick={() => fileInputRef.current?.click()}
                     >
-                      <Icon icon="upload" color="primary" />
-                      <Typography variant="body2">Select PDF</Typography>
-                    </ButtonBase>
-                  </>
-                )}
+                      <Typography variant="subtitle2" gutterBottom>
+                        Uploaded Document
+                      </Typography>
+                      <pre style={{ fontSize: 12, whiteSpace: 'pre-wrap' }}>
+                        {JSON.stringify(uploadedDoc, null, 2)}
+                      </pre>
+                    </Box>
+                  )}
 
-                {assist.step >= 1 && assist.feedback?.title && (
-                  <Alert severity={assist.feedback.severity || 'success'}>
-                    <strong>{assist.feedback.title}</strong>
-                    {assist.feedback.message && (
-                      <>
-                        <br />
-                        {assist.feedback.message}
-                      </>
-                    )}
-                    {assist.selected?.name && (
-                      <>
-                        <br />
-                        <em>{assist.selected.name}</em>
-                      </>
-                    )}
-                  </Alert>
-                )}
+                  {(file || assist.step) && (
+                    <Box display="flex" justifyContent="flex-end">
+                      <IconButton onClick={handleCancel} color="secondary">
+                        <Icon icon="close" />
+                      </IconButton>
+                    </Box>
+                  )}
 
-                {assist.step === 1 && assist.selected && (
-                  <Box>
-                    <Typography variant="body1">
-                      {assist.selected.name}
-                    </Typography>
-                    <Typography variant="body2">
-                      {assist.selected.type} ·{' '}
-                      {(assist.selected.size / 1024).toFixed(1)} KB
-                    </Typography>
-                  </Box>
-                )}
+                  <Stepper activeStep={getStep()}>
+                    {steps.map((label, index) => (
+                      <Step key={index}>
+                        <StepLabel>{label}</StepLabel>
+                      </Step>
+                    ))}
+                  </Stepper>
+                </CardContent>
+              </Card>
+            </Grid>
 
-                {uploading && <LinearProgress />}
-
-                {assist.step === 3 && uploadedDoc && (
-                  <Box
-                    sx={{
-                      p: 2,
-                      bgcolor: 'background.paper',
-                      borderRadius: 2,
-                      overflow: 'auto',
-                    }}
-                  >
-                    <Typography variant="subtitle2" gutterBottom>
-                      Uploaded Document
-                    </Typography>
-                    <pre style={{ fontSize: 12, whiteSpace: 'pre-wrap' }}>
-                      {JSON.stringify(uploadedDoc, null, 2)}
-                    </pre>
-                  </Box>
-                )}
-
-                {(file || assist.step) && (
-                  <Box display="flex" justifyContent="flex-end">
-                    <IconButton onClick={handleCancel} color="secondary">
-                      <Icon icon="close" />
-                    </IconButton>
-                  </Box>
-                )}
-
-                <Stepper activeStep={getStep()}>
-                  {steps.map((label, index) => (
-                    <Step key={index}>
-                      <StepLabel>{label}</StepLabel>
-                    </Step>
-                  ))}
-                </Stepper>
-              </CardContent>
-            </Card>
+            <Grid size={{ xs: 12, md: 6 }}>
+              <Files />
+            </Grid>
           </Grid>
-
-          <Grid size={{ xs: 12, md: 6 }}>
-            <Files />
-          </Grid>
-        </Grid>
+        )}
       </Container>
     </Theme>
   );
