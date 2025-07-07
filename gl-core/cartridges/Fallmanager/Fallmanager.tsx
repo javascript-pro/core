@@ -1,11 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import {
-  CssBaseline,
-  Grid,
-  Container,
-} from '@mui/material';
+import { CssBaseline, Grid, Container } from '@mui/material';
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import {

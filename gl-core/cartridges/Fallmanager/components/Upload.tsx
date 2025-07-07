@@ -3,15 +3,15 @@
 import * as React from 'react';
 import { useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { useFallmanagerSlice, updateAssist } from '../../Fallmanager';
-import { useDispatch, Icon, MightyButton } from '../../../../gl-core';
-import { IconButton, LinearProgress } from '@mui/material';
+import { useFallmanagerSlice, updateAssist, useLingua } from '../../Fallmanager';
+import { useDispatch, MightyButton } from '../../../../gl-core';
+import { LinearProgress } from '@mui/material';
 
 export default function Upload() {
   const dispatch = useDispatch();
   const router = useRouter();
   const { assist } = useFallmanagerSlice();
-
+  const t = useLingua();
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [file, setFile] = useState<File | null>(null);
   const [uploading, setUploading] = useState(false);
@@ -93,7 +93,6 @@ export default function Upload() {
         setUploading(false);
         router.push(`/fallmanager/file/${data.docId}`);
       }, 500);
-
     } catch (err: any) {
       console.error('Upload failed:', err);
       dispatch(
@@ -122,17 +121,15 @@ export default function Upload() {
         accept="application/pdf"
         onChange={handleFileChange}
       />
-        <MightyButton 
-          label="Upload PDF"
-          variant='contained'
-          onClick={handleClick}
-          color="primary"
-          icon="upload"
-        />
+      <MightyButton
+        label={t('UPLOAD_FILE')}
+        variant="contained"
+        onClick={handleClick}
+        color="primary"
+        icon="upload"
+      />
 
-      {uploading && (
-        <LinearProgress sx={{ width: "100%", mt: 1 }} />
-      )}
+      {uploading && <LinearProgress sx={{ width: '100%', mt: 1 }} />}
     </>
   );
 }

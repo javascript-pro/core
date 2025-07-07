@@ -1,3 +1,4 @@
+// core/gl-core/cartridges/Fallmanager/components/FileEdit.tsx
 'use client';
 import * as React from 'react';
 import {
@@ -25,7 +26,7 @@ export default function FileEdit({ id }: { id: string }) {
       <Box sx={{ p: 4 }}>
         <CircularProgress />
         <Typography sx={{ mt: 2 }}>
-          {t('LOADING_FILE') || 'Datei wird geladen...'}
+          {t('LOADING_FILE')}
         </Typography>
       </Box>
     );
@@ -38,40 +39,13 @@ export default function FileEdit({ id }: { id: string }) {
   const sizeKb = (file.fileSize / 1024).toFixed(1);
 
   return (
-    <Card sx={{ my: 4 }}>
+    <Card sx={{ my: 0 }}>
       <CardHeader
         title={file.fileName}
-        subheader={`${sizeKb} KB — ${uploadedAt}`}
+        // subheader={`${sizeKb} KB — ${uploadedAt}`}
       />
       <CardContent>
-        <Stack spacing={2}>
-          <Typography variant="body2" color="text.secondary">
-            Datei-ID: {file.id}
-          </Typography>
-
-          <Typography variant="body2" color="text.secondary">
-            Download-Link:
-          </Typography>
-          <Typography
-            component="a"
-            href={file.downloadUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            sx={{ wordBreak: 'break-all', color: 'primary.main' }}
-          >
-            {file.downloadUrl}
-          </Typography>
-
-          {/* Optional: back button */}
-          <Box>
-            <Button
-              variant="outlined"
-              onClick={() => router.push('/fallmanager')}
-            >
-              {t('BACK_TO_LIST') || 'Zurück zur Liste'}
-            </Button>
-          </Box>
-        </Stack>
+        <pre>{JSON.stringify(file, null, 2)}</pre>    
       </CardContent>
     </Card>
   );
