@@ -1,7 +1,7 @@
+// core/gl-core/cartridges/Fallmanager/components/Files.tsx
 'use client';
 import * as React from 'react';
 import {
-  Box,
   Card,
   CardHeader,
   List,
@@ -16,7 +16,7 @@ import {
 } from '@mui/material';
 import { useRouter } from 'next/navigation';
 import { Icon, useDispatch } from '../../../../gl-core';
-import { useLingua, useFallmanagerSlice, deleteFile } from '../../Fallmanager';
+import { useLingua, useFallmanagerSlice, deleteFile, Upload } from '../../Fallmanager';
 
 export default function Files() {
   const dispatch = useDispatch();
@@ -44,13 +44,12 @@ export default function Files() {
   return (
     <Card>
       <CardHeader 
-        title="Files"
+        title="Files" 
         avatar={<Icon icon="doc" color="primary" />}
+        action={<Upload/>}
       />
       {fileArray.length === 0 ? (
-        <Typography sx={{ px: 2, py: 1 }}>
-          {t('NO_FILES_FOUND')}
-        </Typography>
+        <Typography sx={{ px: 2, py: 1 }}>{t('NO_FILES_FOUND')}</Typography>
       ) : (
         <List dense>
           {fileArray.map((file: any) => {

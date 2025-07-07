@@ -11,9 +11,11 @@ import AIAssisted from './AIAssisted';
 import TopRightMenu from './TopRightMenu';
 import Files from './Files';
 import FileEdit from './FileEdit';
+import Upload from './Upload';
 
 export {
   Files,
+  Upload,
   FileEdit,
   BearbeitbarText,
   Datei,

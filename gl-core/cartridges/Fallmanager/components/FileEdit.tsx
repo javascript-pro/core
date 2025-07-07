@@ -24,7 +24,9 @@ export default function FileEdit({ id }: { id: string }) {
     return (
       <Box sx={{ p: 4 }}>
         <CircularProgress />
-        <Typography sx={{ mt: 2 }}>{t('LOADING_FILE') || 'Datei wird geladen...'}</Typography>
+        <Typography sx={{ mt: 2 }}>
+          {t('LOADING_FILE') || 'Datei wird geladen...'}
+        </Typography>
       </Box>
     );
   }
@@ -62,7 +64,10 @@ export default function FileEdit({ id }: { id: string }) {
 
           {/* Optional: back button */}
           <Box>
-            <Button variant="outlined" onClick={() => router.push('/fallmanager')}>
+            <Button
+              variant="outlined"
+              onClick={() => router.push('/fallmanager')}
+            >
               {t('BACK_TO_LIST') || 'Zurück zur Liste'}
             </Button>
           </Box>
