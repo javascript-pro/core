@@ -140,7 +140,9 @@ export default function Upload() {
         />
       )}
 
-      {uploading && <LinearProgress sx={{ width: 200, border: "1px solid red", mt: 1 }} />}
+      {uploading && (
+        <LinearProgress sx={{ width: 200, border: '1px solid red', mt: 1 }} />
+      )}
     </>
   );
 }

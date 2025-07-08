@@ -18,10 +18,7 @@ import { useEffect, useState } from 'react';
 import moment from 'moment';
 import { doc, onSnapshot } from 'firebase/firestore';
 import { db } from '../../../lib/firebase';
-import {
-  useFallmanagerSlice,
-  useLingua,
-} from '../../Fallmanager';
+import { useFallmanagerSlice, useLingua } from '../../Fallmanager';
 import { useDispatch } from '../../../../gl-core';
 
 type FileMeta = {
@@ -40,11 +37,13 @@ export default function FileEdit({ id }: { id: string }) {
   const { files } = useFallmanagerSlice();
 
   const [liveFile, setLiveFile] = useState<FileMeta | null>(
-    files?.[id] || null
+    files?.[id] || null,
   );
   const [loading, setLoading] = useState(!files?.[id]);
   const [processing, setProcessing] = useState(false);
-  const [generationMessage, setGenerationMessage] = useState<string | null>(null);
+  const [generationMessage, setGenerationMessage] = useState<string | null>(
+    null,
+  );
   const [thumbnailLoaded, setThumbnailLoaded] = useState(false);
 
   useEffect(() => {
@@ -54,7 +53,11 @@ export default function FileEdit({ id }: { id: string }) {
         setLiveFile(fileData);
         setLoading(false);
 
-        if (!fileData.thumbnail && !fileData.thumbnailProcessing && !processing) {
+        if (
+          !fileData.thumbnail &&
+          !fileData.thumbnailProcessing &&
+          !processing
+        ) {
           setProcessing(true);
           setGenerationMessage(null);
 
@@ -115,9 +118,7 @@ export default function FileEdit({ id }: { id: string }) {
       <CardContent>
         {generationMessage && (
           <Alert
-            severity={
-              generationMessage.startsWith('✅') ? 'success' : 'error'
-            }
+            severity={generationMessage.startsWith('✅') ? 'success' : 'error'}
             sx={{ mb: 2 }}
           >
             {generationMessage}

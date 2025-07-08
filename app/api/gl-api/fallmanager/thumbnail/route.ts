@@ -3,7 +3,10 @@ export const runtime = 'nodejs';
 
 import { NextRequest, NextResponse } from 'next/server';
 import fetch from 'node-fetch';
-import { adminDb, adminStorage } from '../../../../../gl-core/lib/firebaseAdmin';
+import {
+  adminDb,
+  adminStorage,
+} from '../../../../../gl-core/lib/firebaseAdmin';
 import { v4 as uuidv4 } from 'uuid';
 import { tmpdir } from 'os';
 import { join } from 'path';
@@ -33,26 +36,38 @@ export async function POST(req: NextRequest) {
   try {
     const { id } = await req.json();
     if (!id || typeof id !== 'string') {
-      return NextResponse.json({ error: 'Missing or invalid id' }, { status: 400 });
+      return NextResponse.json(
+        { error: 'Missing or invalid id' },
+        { status: 400 },
+      );
     }
 
     const docRef = adminDb.collection('files').doc(id);
     const snapshot = await docRef.get();
 
     if (!snapshot.exists) {
-      return NextResponse.json({ error: `Document with id '${id}' not found` }, { status: 404 });
+      return NextResponse.json(
+        { error: `Document with id '${id}' not found` },
+        { status: 404 },
+      );
     }
 
     const docData = snapshot.data() as FileDoc;
 
     if (!docData.storagePath) {
-      return NextResponse.json({ error: 'Missing storagePath' }, { status: 400 });
+      return NextResponse.json(
+        { error: 'Missing storagePath' },
+        { status: 400 },
+      );
     }
 
     const originalPath = docData.storagePath;
     const fileId = originalPath.split('/').pop()?.split('.')[0];
     if (!fileId) {
-      return NextResponse.json({ error: 'Unable to parse fileId from storagePath' }, { status: 400 });
+      return NextResponse.json(
+        { error: 'Unable to parse fileId from storagePath' },
+        { status: 400 },
+      );
     }
 
     // Mark doc as processing
@@ -84,28 +99,37 @@ export async function POST(req: NextRequest) {
     console.log('📄 Raw PDF.co response:', rawText);
 
     if (!pdfCoRes.ok) {
-      return NextResponse.json({
-        error: 'PDF.co request failed',
-        detail: rawText,
-      }, { status: pdfCoRes.status });
+      return NextResponse.json(
+        {
+          error: 'PDF.co request failed',
+          detail: rawText,
+        },
+        { status: pdfCoRes.status },
+      );
     }
 
     const pdfCoData = JSON.parse(rawText) as PDFCoImageResponse;
     const imageUrl = pdfCoData.url || pdfCoData.urls?.[0];
 
     if (!imageUrl) {
-      return NextResponse.json({
-        error: 'Invalid image URL(s) returned from PDF.co',
-        detail: pdfCoData,
-      }, { status: 500 });
+      return NextResponse.json(
+        {
+          error: 'Invalid image URL(s) returned from PDF.co',
+          detail: pdfCoData,
+        },
+        { status: 500 },
+      );
     }
 
     // Download image from PDF.co
     const imageRes = await fetch(imageUrl);
     if (!imageRes.ok) {
       return NextResponse.json(
-        { error: 'Failed to download image from PDF.co', detail: await imageRes.text() },
-        { status: imageRes.status }
+        {
+          error: 'Failed to download image from PDF.co',
+          detail: await imageRes.text(),
+        },
+        { status: imageRes.status },
       );
     }
 
@@ -134,6 +158,9 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: true, thumbnail: thumbnailUrl });
   } catch (err: any) {
     console.error('❌ Thumbnail generation error:', err);
-    return NextResponse.json({ error: err.message || 'Unknown error' }, { status: 500 });
+    return NextResponse.json(
+      { error: err.message || 'Unknown error' },
+      { status: 500 },
+    );
   }
 }

@@ -10,6 +10,7 @@ import {
   Fade,
   Typography,
   Tooltip,
+  Box,
 } from '@mui/material';
 import { useRouter } from 'next/navigation';
 import { Icon, useDispatch } from '../../../../gl-core';
@@ -38,6 +39,8 @@ export default function Files() {
       return {
         id: file.id,
         fileName: file.fileName,
+        fileType: file.mimeType?.split('/')?.[1] || 'PDF',
+        pageCount: file.docData?.pageCount ?? '—',
         size: (file.fileSize / 1024).toFixed(1) + ' KB',
         uploadedAt: uploadedAt ? uploadedAt.toISOString() : null,
         uploadedFromNow: uploadedAt ? moment(uploadedAt).fromNow() : 'Unknown',
@@ -61,19 +64,31 @@ export default function Files() {
     {
       field: 'thumbnail',
       headerName: '',
-      width: 80,
+      width: 100,
       renderCell: (params) =>
         params.row.thumbnail ? (
-          <img
-            src={params.row.thumbnail}
-            alt="Thumbnail"
-            style={{
-              width: 60,
-              height: 80,
-              objectFit: 'cover',
-              borderRadius: 2,
+          <Box
+            onClick={(e) => {
+              e.stopPropagation();
+              window.open(
+                params.row.downloadUrl,
+                '_blank',
+                'noopener,noreferrer',
+              );
             }}
-          />
+            sx={{ cursor: 'pointer' }}
+          >
+            <img
+              src={params.row.thumbnail}
+              alt="Thumbnail"
+              style={{
+                width: 60,
+                height: 80,
+                objectFit: 'cover',
+                borderRadius: 2,
+              }}
+            />
+          </Box>
         ) : (
           <span />
         ),
@@ -86,9 +101,19 @@ export default function Files() {
       flex: 2,
     },
     {
+      field: 'fileType',
+      headerName: 'Type',
+      width: 100,
+    },
+    {
+      field: 'pageCount',
+      headerName: 'Pages',
+      width: 100,
+    },
+    {
       field: 'size',
       headerName: t('FILESIZE'),
-      flex: 1,
+      width: 100,
     },
     {
       field: 'uploadedFromNow',
@@ -154,7 +179,7 @@ export default function Files() {
       {rows.length === 0 ? (
         <Typography sx={{ px: 2, py: 1 }}>{t('NO_FILES')}</Typography>
       ) : (
-        <div style={{ height: 600, width: '100%' }}>
+        <div style={{ height: 700, width: '100%' }}>
           <DataGrid
             rows={rows}
             columns={columns}
