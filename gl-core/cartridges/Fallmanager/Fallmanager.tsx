@@ -80,7 +80,7 @@ export default function Fallmanager() {
             </Grid>
           </Grid>
         )}
-        <pre>{JSON.stringify(files, null, 2)}</pre>
+        {/* <pre>{JSON.stringify(files, null, 2)}</pre> */}
       </Container>
     </Theme>
   );
