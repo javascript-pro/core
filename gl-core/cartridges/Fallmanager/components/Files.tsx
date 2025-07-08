@@ -1,7 +1,7 @@
+// core/gl-core/cartridges/Fallmanager/components/Files.tsx
 'use client';
 import * as React from 'react';
 import {
-  Box,
   Card,
   CardHeader,
   List,
@@ -16,7 +16,12 @@ import {
 } from '@mui/material';
 import { useRouter } from 'next/navigation';
 import { Icon, useDispatch } from '../../../../gl-core';
-import { useLingua, useFallmanagerSlice, deleteFile } from '../../Fallmanager';
+import {
+  useLingua,
+  useFallmanagerSlice,
+  deleteFile,
+  Upload,
+} from '../../Fallmanager';
 
 export default function Files() {
   const dispatch = useDispatch();
@@ -43,14 +48,9 @@ export default function Files() {
 
   return (
     <Card>
-      <CardHeader 
-        title="Files"
-        avatar={<Icon icon="doc" color="primary" />}
-      />
+      <CardHeader title={t('ALL_FILES')} action={<Upload />} />
       {fileArray.length === 0 ? (
-        <Typography sx={{ px: 2, py: 1 }}>
-          {t('NO_FILES_FOUND')}
-        </Typography>
+        <Typography sx={{ px: 2, py: 1 }}>{t('NO_FILES')}</Typography>
       ) : (
         <List dense>
           {fileArray.map((file: any) => {
@@ -68,22 +68,20 @@ export default function Files() {
               >
                 <ListItemText
                   primary={file.fileName}
-                  secondary={`${sizeKb} KB — ${uploadedAt}`}
+                  // secondary={`${sizeKb} KB — ${uploadedAt}`}
                 />
-                <ListItemSecondaryAction>
-                  <Tooltip title="Download">
-                    <IconButton
-                      color="primary"
-                      href={file.downloadUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      disabled={isDeleting}
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <Icon icon="link" />
-                    </IconButton>
-                  </Tooltip>
+              </ListItemButton>
+            );
+          })}
+        </List>
+      )}
+    </Card>
+  );
+}
 
+/*
+<ListItemSecondaryAction>
+                  
                   <Tooltip title="Delete">
                     <span>
                       <IconButton
@@ -108,11 +106,4 @@ export default function Files() {
                     </span>
                   </Tooltip>
                 </ListItemSecondaryAction>
-              </ListItemButton>
-            );
-          })}
-        </List>
-      )}
-    </Card>
-  );
-}
+*/

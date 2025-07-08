@@ -5,7 +5,7 @@ import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../../../lib/firebase';
 import { TUbereduxDispatch } from '../../../../gl-core/types';
 import { setUbereduxKey } from '../../../../gl-core';
-import seedData from '../sampleCases.json';
+import seedData from '../data/sampleCases.json';
 
 export const seedFirebase =
   (): any => async (dispatch: TUbereduxDispatch, getState: () => any) => {

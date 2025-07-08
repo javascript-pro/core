@@ -4,7 +4,7 @@ import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../../../lib/firebase';
 import { TUbereduxDispatch } from '../../../../gl-core/types';
 import { setUbereduxKey } from '../../../../gl-core';
-import { emptyCase } from '../caseObj';
+import { emptyCase } from '../data/caseObj';
 
 export const saveNewCase =
   (clientName: string): any =>

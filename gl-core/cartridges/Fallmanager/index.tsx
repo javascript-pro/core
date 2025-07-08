@@ -31,6 +31,7 @@ import {
   TopRightMenu,
   Files,
   FileEdit,
+  Upload,
 } from './components';
 
 export {
@@ -68,4 +69,5 @@ export {
   TopRightMenu,
   Files,
   FileEdit,
+  Upload,
 };
