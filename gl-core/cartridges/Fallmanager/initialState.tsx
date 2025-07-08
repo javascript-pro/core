@@ -1,7 +1,7 @@
 // core/gl-core/cartridges/Fallmanager/initialState.tsx
 
 import { TFallmanagerState } from './types';
-import { lingua, languages } from './lingua';
+import { lingua } from './lingua';
 
 export const initialState: TFallmanagerState = {
   assist: {
@@ -19,7 +19,6 @@ export const initialState: TFallmanagerState = {
   },
   lingua,
   language: 'en',
-  languages,
   theme: {
     mode: 'light',
     primary: '#305DA5',

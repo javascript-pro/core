@@ -9,7 +9,7 @@ import {
   resetFallmanager,
   useLingua,
 } from '../../Fallmanager';
-import { useDispatch, MightyButton, toggleFeedback } from '../../../../gl-core';
+import { useDispatch, MightyButton } from '../../../../gl-core';
 import { LinearProgress } from '@mui/material';
 
 export default function Upload() {
@@ -22,7 +22,6 @@ export default function Upload() {
   const [uploading, setUploading] = useState(false);
 
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const t = useLingua();
     const selected = e.target.files?.[0] || null;
     setFile(selected);
 
@@ -78,14 +77,6 @@ export default function Upload() {
       const data = await res.json();
 
       if (!res.ok) {
-        // dispatch(
-        //   toggleFeedback({
-        //     severity: 'error',
-        //     title: `${t('RESULT_NOT_OK')}`,
-        //     description: `${data.error}`,
-        //   }),
-        // );
-
         dispatch(resetFallmanager());
         setTimeout(() => {
           window.open('/fallmanager', '_self');
@@ -104,7 +95,6 @@ export default function Upload() {
         }),
       );
 
-      // Allow 500ms for state update before routing
       setTimeout(() => {
         dispatch(updateAssist({ reset: true }));
         setFile(null);
@@ -139,15 +129,20 @@ export default function Upload() {
         accept="application/pdf"
         onChange={handleFileChange}
       />
-      <MightyButton
-        label={t('UPLOAD_FILE')}
-        variant="contained"
-        onClick={handleClick}
-        color="primary"
-        icon="upload"
-      />
 
-      {uploading && <LinearProgress sx={{ width: '100%', mt: 1 }} />}
+      {!uploading && (
+        <MightyButton
+          label={t('UPLOAD_FILE')}
+          variant="contained"
+          onClick={handleClick}
+          color="primary"
+          icon="upload"
+        />
+      )}
+
+      {uploading && (
+        <LinearProgress sx={{ width: 200, border: '1px solid red', mt: 1 }} />
+      )}
     </>
   );
 }

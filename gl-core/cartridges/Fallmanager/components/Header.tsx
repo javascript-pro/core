@@ -1,8 +1,10 @@
+// core/gl-core/cartridges/Fallmanager/components/Header.tsx
 'use client';
 
 import * as React from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import {
+  Box,
   AppBar,
   CardHeader,
   Typography,
@@ -10,7 +12,7 @@ import {
   IconButton,
 } from '@mui/material';
 import { Icon, useDispatch, routeTo } from '../../../../gl-core';
-import { useLingua, TopRightMenu } from '../../Fallmanager';
+import { useLingua, TopRightMenu, SwitchLang } from '../../Fallmanager';
 
 export default function Header() {
   const dispatch = useDispatch();
@@ -44,7 +46,14 @@ export default function Header() {
           </IconButton>
         }
         title={<Typography variant="h6">{title}</Typography>}
-        action={<TopRightMenu />}
+        action={
+          <Box sx={{ display: 'flex' }}>
+            <SwitchLang />
+            <Box sx={{ ml: 2 }}>
+              <TopRightMenu />
+            </Box>
+          </Box>
+        }
       />
     </AppBar>
   );

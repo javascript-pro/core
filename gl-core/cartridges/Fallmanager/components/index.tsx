@@ -12,9 +12,10 @@ import TopRightMenu from './TopRightMenu';
 import Files from './Files';
 import FileEdit from './FileEdit';
 import Upload from './Upload';
-
+import SwitchLang from './SwitchLang';
 export {
   Files,
+  SwitchLang,
   Upload,
   FileEdit,
   BearbeitbarText,

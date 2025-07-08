@@ -9,7 +9,6 @@ import {
   toggleNewCase,
   toggleAICase,
   deleteCase,
-  resetTranslations,
   resetFallmanager,
   seedFirebase,
   updateAICase,
@@ -18,6 +17,7 @@ import {
   incomingCases,
   incomingFiles,
   updateAssist,
+  updateFileMeta,
 } from './actions';
 import {
   BearbeitbarText,
@@ -31,6 +31,7 @@ import {
   TopRightMenu,
   Files,
   FileEdit,
+  SwitchLang,
   Upload,
 } from './components';
 
@@ -46,7 +47,6 @@ export {
   toggleAICase,
   deleteCase,
   saveNewCase,
-  resetTranslations,
   resetFallmanager,
   seedFirebase,
   updateAICase,
@@ -55,6 +55,7 @@ export {
   incomingCases,
   incomingFiles,
   updateAssist,
+  updateFileMeta,
 };
 
 export {
@@ -70,4 +71,5 @@ export {
   Files,
   FileEdit,
   Upload,
+  SwitchLang,
 };

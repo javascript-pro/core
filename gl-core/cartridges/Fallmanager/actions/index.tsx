@@ -5,7 +5,6 @@ import { zuruecksetzen } from './zuruecksetzen';
 import { toggleNewCase } from './toggleNewCase';
 import { saveNewCase } from './saveNewCase';
 import { deleteCase } from './deleteCase';
-import { resetTranslations } from './resetTranslations';
 import { resetFallmanager } from './resetFallmanager';
 import { seedFirebase } from './seedFirebase';
 import { toggleAICase } from './toggleAICase';
@@ -15,6 +14,7 @@ import { deleteFile } from './deleteFile';
 import { analyse } from './analyse';
 import { incomingCases } from './incomingCases';
 import { incomingFiles } from './incomingFiles';
+import { updateFileMeta } from './updateFileMeta';
 
 export {
   incomingCases,
@@ -28,9 +28,9 @@ export {
   zuruecksetzen,
   toggleNewCase,
   toggleAICase,
-  resetTranslations,
   resetFallmanager,
   updateAICase,
   updateAssist,
+  updateFileMeta,
   deleteFile,
 };

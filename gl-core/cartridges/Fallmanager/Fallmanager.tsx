@@ -24,13 +24,14 @@ import Upload from './components/Upload';
 
 export default function Fallmanager() {
   const dispatch = useDispatch();
-  const { theme } = useFallmanagerSlice();
+  const { theme, files } = useFallmanagerSlice();
 
   const pathname = usePathname();
   const segments = pathname?.split('/') || [];
   const isEditing = segments.includes('file') && segments.length > 3;
   const fileId = isEditing ? segments[segments.length - 1] : null;
 
+  // 🔁 Always subscribe to case updates on mount
   useEffect(() => {
     const unsub = onSnapshot(
       collection(db, 'fallmanager'),
@@ -48,6 +49,7 @@ export default function Fallmanager() {
     return () => unsub();
   }, [dispatch]);
 
+  // 🔁 Always subscribe to file updates on mount — ensures files reload after Redux resets
   useEffect(() => {
     const unsub = onSnapshot(
       collection(db, 'files'),
@@ -79,6 +81,7 @@ export default function Fallmanager() {
             </Grid>
           </Grid>
         )}
+        {/* <pre>{JSON.stringify(files, null, 2)}</pre> */}
       </Container>
     </Theme>
   );

@@ -8,7 +8,6 @@ export type TFallmanagerState = {
   newCase: any;
   aiCase: any;
   language: TLanguageCode;
-  languages: Record<TLanguageCode, TLanguageEntry>;
   theme: TTheme;
   lingua: Record<string, Record<TLanguageCode, string>>;
 };
