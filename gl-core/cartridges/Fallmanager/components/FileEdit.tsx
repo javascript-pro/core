@@ -162,87 +162,7 @@ export default function FileEdit({ id }: { id: string }) {
 
       <CardContent>
         <Grid container spacing={2}>
-          {/* File details and raw text */}
-          <Grid size={{ xs: 12, md: 8 }}>
-            
-
-            {/* <Typography sx={{ m: 2 }}>
-              {`${liveFile.fileSize ? (liveFile.fileSize / 1024).toFixed(1) + ' KB' : '—'} — ` +
-                `${liveFile.createdAt?.seconds ? moment.unix(liveFile.createdAt.seconds).fromNow() : t('UNKNOWN_DATE')}`}
-            </Typography> */}
-
-            {/* Text Extraction Indicator */}
-            {liveFile.rawTextProcessing && (
-              <Box sx={{ mt: 3 }}>
-                <Typography variant="body2" sx={{ mb: 1 }}>
-                  {t('EXTRACTING_TEXT') || 'Extracting text...'}
-                </Typography>
-                <LinearProgress />
-              </Box>
-            )}
-
-            {/* Raw Text Output */}
-            {liveFile.rawText && (
-              <Box sx={{ mt: 3 }}>
-                <Typography variant="subtitle2" sx={{ mb: 1 }}>
-                  {t('EXTRACTED_TEXT') || 'Extracted text:'}
-                </Typography>
-                <Box
-                  component="pre"
-                  sx={{
-                    whiteSpace: 'pre-wrap',
-                    backgroundColor: 'background.paper',
-                    p: 2,
-                    maxHeight: 300,
-                    overflowY: 'auto',
-                    border: '1px solid',
-                    borderColor: 'divider',
-                    borderRadius: 1,
-                    fontSize: '0.875rem',
-                  }}
-                >
-                  {liveFile.rawText}
-                </Box>
-              </Box>
-            )}
-
-            <Accordion>
-              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                <Typography variant="h6">{t('FILE_DETAILS')}</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Divider sx={{ mb: 2 }} />
-                <List dense disablePadding>
-                  {Object.entries(liveFile).map(([key, value]) => {
-                    if (
-                      key === 'thumbnail' ||
-                      key === 'downloadUrl' ||
-                      key === 'rawText' ||
-                      key === 'rawTextProcessing'
-                    )
-                      return null;
-                    if (key === 'createdAt' && value?.seconds) {
-                      value = moment.unix(value.seconds).format('LLL');
-                    }
-                    return (
-                      <ListItem key={key} disableGutters>
-                        <ListItemText
-                          primary={key}
-                          secondary={
-                            typeof value === 'string' ||
-                            typeof value === 'number'
-                              ? value.toString()
-                              : JSON.stringify(value, null, 2)
-                          }
-                        />
-                      </ListItem>
-                    );
-                  })}
-                </List>
-              </AccordionDetails>
-            </Accordion>
-            
-          </Grid>
+          
 
           {/* Thumbnail & progress */}
           <Grid size={{ xs: 12, md: 4 }}>
@@ -286,8 +206,92 @@ export default function FileEdit({ id }: { id: string }) {
               </Box>
             )}
           </Grid>
+
+          {/* File details and raw text */}
+          <Grid size={{ xs: 12, md: 8 }}>
+            
+
+            {/* <Typography sx={{ m: 2 }}>
+              {`${liveFile.fileSize ? (liveFile.fileSize / 1024).toFixed(1) + ' KB' : '—'} — ` +
+                `${liveFile.createdAt?.seconds ? moment.unix(liveFile.createdAt.seconds).fromNow() : t('UNKNOWN_DATE')}`}
+            </Typography> */}
+
+            {/* Text Extraction Indicator */}
+            {liveFile.rawTextProcessing && (
+              <Box sx={{ mt: 3 }}>
+                <Typography variant="body2" sx={{ mb: 1 }}>
+                  {t('EXTRACTING_TEXT') || 'Extracting text...'}
+                </Typography>
+                <LinearProgress />
+              </Box>
+            )}
+
+            {/* Raw Text Output */}
+            {liveFile.rawText && (
+              <Box sx={{ mt: 3 }}>
+                <Typography variant="subtitle2" sx={{ mb: 1 }}>
+                  {t('EXTRACTED_TEXT') || 'Extracted text:'}
+                </Typography>
+                <Box
+                  component="pre"
+                  sx={{
+                    whiteSpace: 'pre-wrap',
+                    backgroundColor: 'background.paper',
+                    p: 2,
+                    maxHeight: 300,
+                    overflowY: 'auto',
+                    border: '1px solid',
+                    borderColor: 'divider',
+                    borderRadius: 1,
+                    fontSize: '0.875rem',
+                  }}
+                >
+                  {liveFile.rawText}
+                </Box>
+              </Box>
+            )}
+          </Grid>
+          
         </Grid>
       </CardContent>
     </Card>
   );
 }
+
+/*
+<Accordion>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography variant="h6">{t('FILE_DETAILS')}</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Divider sx={{ mb: 2 }} />
+                <List dense disablePadding>
+                  {Object.entries(liveFile).map(([key, value]) => {
+                    if (
+                      key === 'thumbnail' ||
+                      key === 'downloadUrl' ||
+                      key === 'rawText' ||
+                      key === 'rawTextProcessing'
+                    )
+                      return null;
+                    if (key === 'createdAt' && value?.seconds) {
+                      value = moment.unix(value.seconds).format('LLL');
+                    }
+                    return (
+                      <ListItem key={key} disableGutters>
+                        <ListItemText
+                          primary={key}
+                          secondary={
+                            typeof value === 'string' ||
+                            typeof value === 'number'
+                              ? value.toString()
+                              : JSON.stringify(value, null, 2)
+                          }
+                        />
+                      </ListItem>
+                    );
+                  })}
+                </List>
+              </AccordionDetails>
+            </Accordion>
+*/
