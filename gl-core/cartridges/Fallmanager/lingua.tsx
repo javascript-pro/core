@@ -3,7 +3,14 @@ export const lingua: any = {
     en: 'File name',
     de: 'Dateiname',
   },
-
+CONFIRM_DELETE: {
+  en: 'Are you sure you want to delete this file?',
+  de: 'Möchten Sie diese Datei wirklich löschen?',
+},
+CANCEL: {
+  en: 'Cancel',
+  de: 'Abbrechen',
+},
   TIME_CREATED: {
     en: 'Time created',
     de: 'Erstellungszeit',

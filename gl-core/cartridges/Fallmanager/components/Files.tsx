@@ -4,13 +4,18 @@ import * as React from 'react';
 import moment from 'moment';
 import { DataGrid, GridColDef, GridActionsCellItem } from '@mui/x-data-grid';
 import {
-  Card,
+  Box,
   CardHeader,
   CircularProgress,
   Fade,
   Typography,
   Tooltip,
-  Box,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
+  Button,
+  Backdrop,
 } from '@mui/material';
 import { useRouter } from 'next/navigation';
 import { Icon, useDispatch } from '../../../../gl-core';
@@ -28,6 +33,8 @@ export default function Files() {
   const { files } = useFallmanagerSlice();
 
   const [deleting, setDeleting] = React.useState<Record<string, boolean>>({});
+  const [confirmDeleteId, setConfirmDeleteId] = React.useState<string | null>(null);
+  const [deletingOverlay, setDeletingOverlay] = React.useState(false);
 
   const rows = React.useMemo(() => {
     if (!files || typeof files !== 'object') return [];
@@ -40,7 +47,6 @@ export default function Files() {
         id: file.id,
         fileName: file.fileName,
         fileType: file.mimeType?.split('/')?.[1] || 'PDF',
-        pageCount: file.docData?.pageCount ?? '—',
         size: (file.fileSize / 1024).toFixed(1) + ' KB',
         uploadedAt: uploadedAt ? uploadedAt.toISOString() : null,
         uploadedFromNow: uploadedAt ? moment(uploadedAt).fromNow() : 'Unknown',
@@ -51,6 +57,8 @@ export default function Files() {
   }, [files]);
 
   const handleDelete = async (id: string) => {
+    setConfirmDeleteId(null); // close dialog
+    setDeletingOverlay(true); // show overlay
     setDeleting((prev) => ({ ...prev, [id]: true }));
     await dispatch(deleteFile(id));
     setDeleting((prev) => {
@@ -58,6 +66,7 @@ export default function Files() {
       delete updated[id];
       return updated;
     });
+    setDeletingOverlay(false); // hide overlay
   };
 
   const columns: GridColDef[] = [
@@ -106,11 +115,6 @@ export default function Files() {
       width: 100,
     },
     {
-      field: 'pageCount',
-      headerName: 'Pages',
-      width: 100,
-    },
-    {
       field: 'size',
       headerName: t('FILESIZE'),
       width: 100,
@@ -145,6 +149,7 @@ export default function Files() {
             onClick={() => window.open(url, '_blank', 'noopener,noreferrer')}
           />,
           <GridActionsCellItem
+            showInMenu
             key="delete"
             icon={
               deleting[id] ? (
@@ -156,7 +161,7 @@ export default function Files() {
               )
             }
             label={t('DELETE')}
-            onClick={() => handleDelete(id)}
+            onClick={() => setConfirmDeleteId(id)}
             disabled={!!deleting[id]}
           />,
         ];
@@ -194,6 +199,10 @@ export default function Files() {
               '& .MuiDataGrid-cell': {
                 py: 1,
               },
+              '& .MuiDataGrid-columnHeaderTitle': {
+                color: 'text.secondary',
+                fontWeight: 500,
+              },
               '& .MuiDataGrid-row:hover': {
                 backgroundColor: 'rgba(0, 0, 0, 0.04)',
               },
@@ -201,6 +210,44 @@ export default function Files() {
           />
         </div>
       )}
+
+      {/* Confirmation Dialog */}
+      <Dialog
+        open={!!confirmDeleteId}
+        onClose={() => setConfirmDeleteId(null)}
+      >
+        <DialogTitle>{t('DELETE')}</DialogTitle>
+        <DialogContent>
+          <Typography>
+            {t('CONFIRM_DELETE') || 'Are you sure you want to delete this file?'}
+          </Typography>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setConfirmDeleteId(null)}>
+            {t('CANCEL') || 'Cancel'}
+          </Button>
+          <Button
+            onClick={() => confirmDeleteId && handleDelete(confirmDeleteId)}
+            color="error"
+            variant="contained"
+          >
+            {t('DELETE') || 'Delete'}
+          </Button>
+        </DialogActions>
+      </Dialog>
+
+      {/* Fullscreen Deleting Overlay */}
+      <Backdrop
+        open={deletingOverlay}
+        sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.modal + 1 }}
+      >
+        <Box display="flex" flexDirection="column" alignItems="center" gap={2}>
+          <CircularProgress color="inherit" />
+          <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
+            DELETING...
+          </Typography>
+        </Box>
+      </Backdrop>
     </>
   );
 }
