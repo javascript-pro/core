@@ -105,12 +105,11 @@ export const lingua: any = {
   },
 
   EXTRACTING_TEXT: {
-  en: 'Extracting text...',
-  de: 'Text wird extrahiert...',
-},
-EXTRACTED_TEXT: {
-  en: 'Extracted text:',
-  de: 'Extrahierter Text:',
-},
-
+    en: 'Extracting text...',
+    de: 'Text wird extrahiert...',
+  },
+  EXTRACTED_TEXT: {
+    en: 'Extracted text:',
+    de: 'Extrahierter Text:',
+  },
 };

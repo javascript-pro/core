@@ -51,7 +51,9 @@ export default function FileEdit({ id }: { id: string }) {
   const dispatch = useDispatch();
   const { files } = useFallmanagerSlice();
 
-  const [liveFile, setLiveFile] = useState<FileMeta | null>(files?.[id] || null);
+  const [liveFile, setLiveFile] = useState<FileMeta | null>(
+    files?.[id] || null,
+  );
   const [loading, setLoading] = useState(!files?.[id]);
   const [processing, setProcessing] = useState(false);
   const [thumbnailLoaded, setThumbnailLoaded] = useState(false);
@@ -65,11 +67,7 @@ export default function FileEdit({ id }: { id: string }) {
       setLoading(false);
 
       // 🔁 Generate thumbnail
-      if (
-        !fileData.thumbnail &&
-        !fileData.thumbnailProcessing &&
-        !processing
-      ) {
+      if (!fileData.thumbnail && !fileData.thumbnailProcessing && !processing) {
         setProcessing(true);
         try {
           const res = await fetch(`/api/gl-api/fallmanager/thumbnail`, {
@@ -79,23 +77,30 @@ export default function FileEdit({ id }: { id: string }) {
           });
           const json = await res.json();
           if (!res.ok) {
-            dispatch(toggleFeedback({
-              severity: 'error',
-              title: 'Error',
-              description: json.error || 'Failed to start thumbnail generation.',
-            }));
+            dispatch(
+              toggleFeedback({
+                severity: 'error',
+                title: 'Error',
+                description:
+                  json.error || 'Failed to start thumbnail generation.',
+              }),
+            );
           } else {
-            dispatch(toggleFeedback({
-              severity: 'success',
-              title: 'Thumbnail generation started.',
-            }));
+            dispatch(
+              toggleFeedback({
+                severity: 'success',
+                title: 'Thumbnail generation started.',
+              }),
+            );
           }
         } catch (err) {
           console.error('Thumbnail generation error:', err);
-          dispatch(toggleFeedback({
-            severity: 'warning',
-            title: 'Unable to trigger thumbnail generation.',
-          }));
+          dispatch(
+            toggleFeedback({
+              severity: 'warning',
+              title: 'Unable to trigger thumbnail generation.',
+            }),
+          );
         } finally {
           setProcessing(false);
         }
@@ -111,23 +116,29 @@ export default function FileEdit({ id }: { id: string }) {
           });
           const json = await res.json();
           if (!res.ok) {
-            dispatch(toggleFeedback({
-              severity: 'error',
-              title: 'Text extraction failed',
-              description: json.error || 'Could not extract text from PDF.',
-            }));
+            dispatch(
+              toggleFeedback({
+                severity: 'error',
+                title: 'Text extraction failed',
+                description: json.error || 'Could not extract text from PDF.',
+              }),
+            );
           } else {
-            dispatch(toggleFeedback({
-              severity: 'success',
-              title: 'Raw text extracted',
-            }));
+            dispatch(
+              toggleFeedback({
+                severity: 'success',
+                title: 'Raw text extracted',
+              }),
+            );
           }
         } catch (err) {
           console.error('Raw text extraction error:', err);
-          dispatch(toggleFeedback({
-            severity: 'warning',
-            title: 'Unable to trigger raw text extraction.',
-          }));
+          dispatch(
+            toggleFeedback({
+              severity: 'warning',
+              title: 'Unable to trigger raw text extraction.',
+            }),
+          );
         }
       }
     });
@@ -162,8 +173,6 @@ export default function FileEdit({ id }: { id: string }) {
 
       <CardContent>
         <Grid container spacing={2}>
-          
-
           {/* Thumbnail & progress */}
           <Grid size={{ xs: 12, md: 4 }}>
             {liveFile.thumbnail && liveFile.downloadUrl && (
@@ -209,8 +218,6 @@ export default function FileEdit({ id }: { id: string }) {
 
           {/* File details and raw text */}
           <Grid size={{ xs: 12, md: 8 }}>
-            
-
             {/* <Typography sx={{ m: 2 }}>
               {`${liveFile.fileSize ? (liveFile.fileSize / 1024).toFixed(1) + ' KB' : '—'} — ` +
                 `${liveFile.createdAt?.seconds ? moment.unix(liveFile.createdAt.seconds).fromNow() : t('UNKNOWN_DATE')}`}
@@ -251,7 +258,6 @@ export default function FileEdit({ id }: { id: string }) {
               </Box>
             )}
           </Grid>
-          
         </Grid>
       </CardContent>
     </Card>

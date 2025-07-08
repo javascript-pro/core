@@ -29,14 +29,20 @@ export async function POST(req: NextRequest) {
   const { id } = await req.json();
 
   if (!id || typeof id !== 'string') {
-    return NextResponse.json({ error: 'Missing or invalid id' }, { status: 400 });
+    return NextResponse.json(
+      { error: 'Missing or invalid id' },
+      { status: 400 },
+    );
   }
 
   const docRef = adminDb.collection('files').doc(id);
   const snapshot = await docRef.get();
 
   if (!snapshot.exists) {
-    return NextResponse.json({ error: `Document with id '${id}' not found` }, { status: 404 });
+    return NextResponse.json(
+      { error: `Document with id '${id}' not found` },
+      { status: 404 },
+    );
   }
 
   const docData = snapshot.data() as FileDoc;
