@@ -39,6 +39,8 @@ type FileMeta = {
   createdAt?: { seconds: number };
   thumbnail?: string;
   thumbnailProcessing?: boolean;
+  rawText?: string;
+  rawTextProcessing?: boolean;
   downloadUrl?: string;
   [key: string]: any;
 };
@@ -56,55 +58,76 @@ export default function FileEdit({ id }: { id: string }) {
 
   useEffect(() => {
     const unsub = onSnapshot(doc(db, 'files', id), async (docSnap) => {
-      if (docSnap.exists()) {
-        const fileData: FileMeta = { id, ...docSnap.data() } as FileMeta;
-        setLiveFile(fileData);
-        setLoading(false);
+      if (!docSnap.exists()) return;
 
-        if (
-          !fileData.thumbnail &&
-          !fileData.thumbnailProcessing &&
-          !processing
-        ) {
-          setProcessing(true);
+      const fileData: FileMeta = { id, ...docSnap.data() } as FileMeta;
+      setLiveFile(fileData);
+      setLoading(false);
 
-          try {
-            const res = await fetch(`/api/gl-api/fallmanager/thumbnail`, {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ id }),
-            });
-
-            const json = await res.json();
-
-            if (!res.ok) {
-              dispatch(
-                toggleFeedback({
-                  severity: 'error',
-                  title: 'Error',
-                  description:
-                    json.error || 'Failed to start thumbnail generation.',
-                }),
-              );
-            } else {
-              dispatch(
-                toggleFeedback({
-                  severity: 'success',
-                  title: 'Thumbnail generation started.',
-                }),
-              );
-            }
-          } catch (err) {
-            console.error('Thumbnail generation error:', err);
-            dispatch(
-              toggleFeedback({
-                severity: 'warning',
-                title: 'Unable to trigger thumbnail generation.',
-              }),
-            );
-          } finally {
-            setProcessing(false);
+      // 🔁 Generate thumbnail
+      if (
+        !fileData.thumbnail &&
+        !fileData.thumbnailProcessing &&
+        !processing
+      ) {
+        setProcessing(true);
+        try {
+          const res = await fetch(`/api/gl-api/fallmanager/thumbnail`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id }),
+          });
+          const json = await res.json();
+          if (!res.ok) {
+            dispatch(toggleFeedback({
+              severity: 'error',
+              title: 'Error',
+              description: json.error || 'Failed to start thumbnail generation.',
+            }));
+          } else {
+            dispatch(toggleFeedback({
+              severity: 'success',
+              title: 'Thumbnail generation started.',
+            }));
           }
+        } catch (err) {
+          console.error('Thumbnail generation error:', err);
+          dispatch(toggleFeedback({
+            severity: 'warning',
+            title: 'Unable to trigger thumbnail generation.',
+          }));
+        } finally {
+          setProcessing(false);
+        }
+      }
+
+      // 🔁 Generate raw text
+      if (!fileData.rawText && !fileData.rawTextProcessing) {
+        try {
+          const res = await fetch(`/api/gl-api/fallmanager/raw`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id }),
+          });
+          const json = await res.json();
+          if (!res.ok) {
+            dispatch(toggleFeedback({
+              severity: 'error',
+              title: 'Text extraction failed',
+              description: json.error || 'Could not extract text from PDF.',
+            }));
+          } else {
+            dispatch(toggleFeedback({
+              severity: 'success',
+              title: 'Raw text extracted',
+            }));
+          }
+        } catch (err) {
+          console.error('Raw text extraction error:', err);
+          dispatch(toggleFeedback({
+            severity: 'warning',
+            title: 'Unable to trigger raw text extraction.',
+          }));
         }
       }
     });
@@ -126,19 +149,63 @@ export default function FileEdit({ id }: { id: string }) {
       <CardHeader
         avatar={
           <Tooltip title={t('ALL_FILES')}>
-            <IconButton color="primary" onClick={() => router.push('/fallmanager')}>
+            <IconButton
+              color="primary"
+              onClick={() => router.push('/fallmanager')}
+            >
               <Icon icon="left" />
             </IconButton>
           </Tooltip>
         }
         title={liveFile.fileName || t('UNKNOWN_FILENAME')}
-        
       />
 
       <CardContent>
         <Grid container spacing={2}>
-          {/* File details in Accordion */}
+          {/* File details and raw text */}
           <Grid size={{ xs: 12, md: 8 }}>
+            
+
+            {/* <Typography sx={{ m: 2 }}>
+              {`${liveFile.fileSize ? (liveFile.fileSize / 1024).toFixed(1) + ' KB' : '—'} — ` +
+                `${liveFile.createdAt?.seconds ? moment.unix(liveFile.createdAt.seconds).fromNow() : t('UNKNOWN_DATE')}`}
+            </Typography> */}
+
+            {/* Text Extraction Indicator */}
+            {liveFile.rawTextProcessing && (
+              <Box sx={{ mt: 3 }}>
+                <Typography variant="body2" sx={{ mb: 1 }}>
+                  {t('EXTRACTING_TEXT') || 'Extracting text...'}
+                </Typography>
+                <LinearProgress />
+              </Box>
+            )}
+
+            {/* Raw Text Output */}
+            {liveFile.rawText && (
+              <Box sx={{ mt: 3 }}>
+                <Typography variant="subtitle2" sx={{ mb: 1 }}>
+                  {t('EXTRACTED_TEXT') || 'Extracted text:'}
+                </Typography>
+                <Box
+                  component="pre"
+                  sx={{
+                    whiteSpace: 'pre-wrap',
+                    backgroundColor: 'background.paper',
+                    p: 2,
+                    maxHeight: 300,
+                    overflowY: 'auto',
+                    border: '1px solid',
+                    borderColor: 'divider',
+                    borderRadius: 1,
+                    fontSize: '0.875rem',
+                  }}
+                >
+                  {liveFile.rawText}
+                </Box>
+              </Box>
+            )}
+
             <Accordion>
               <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography variant="h6">{t('FILE_DETAILS')}</Typography>
@@ -147,7 +214,13 @@ export default function FileEdit({ id }: { id: string }) {
                 <Divider sx={{ mb: 2 }} />
                 <List dense disablePadding>
                   {Object.entries(liveFile).map(([key, value]) => {
-                    if (key === 'thumbnail' || key === 'downloadUrl') return null;
+                    if (
+                      key === 'thumbnail' ||
+                      key === 'downloadUrl' ||
+                      key === 'rawText' ||
+                      key === 'rawTextProcessing'
+                    )
+                      return null;
                     if (key === 'createdAt' && value?.seconds) {
                       value = moment.unix(value.seconds).format('LLL');
                     }
@@ -156,7 +229,8 @@ export default function FileEdit({ id }: { id: string }) {
                         <ListItemText
                           primary={key}
                           secondary={
-                            typeof value === 'string' || typeof value === 'number'
+                            typeof value === 'string' ||
+                            typeof value === 'number'
                               ? value.toString()
                               : JSON.stringify(value, null, 2)
                           }
@@ -167,13 +241,7 @@ export default function FileEdit({ id }: { id: string }) {
                 </List>
               </AccordionDetails>
             </Accordion>
-            <Typography sx={{m:2}}>
-            {
-              `${liveFile.fileSize ? (liveFile.fileSize / 1024).toFixed(1) + ' KB' : '—'} — ` +
-              `${liveFile.createdAt?.seconds ? moment.unix(liveFile.createdAt.seconds).fromNow() : t('UNKNOWN_DATE')}`
-            }
-            </Typography>
-
+            
           </Grid>
 
           {/* Thumbnail & progress */}

@@ -103,4 +103,14 @@ export const lingua: any = {
     en: 'Generating...',
     de: 'Generierung läuft...',
   },
+
+  EXTRACTING_TEXT: {
+  en: 'Extracting text...',
+  de: 'Text wird extrahiert...',
+},
+EXTRACTED_TEXT: {
+  en: 'Extracted text:',
+  de: 'Extrahierter Text:',
+},
+
 };

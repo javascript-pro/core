@@ -225,11 +225,8 @@ export default function Files() {
 
       {/* Confirmation Dialog */}
       <Dialog open={!!confirmDeleteId} onClose={() => setConfirmDeleteId(null)}>
-        
         <DialogContent>
-          <Typography>
-            {t('CONFIRM_DELETE')}
-          </Typography>
+          <Typography>{t('CONFIRM_DELETE')}</Typography>
           <Typography fontWeight="bold" mt={1}>
             {getConfirmFileName()}
           </Typography>
