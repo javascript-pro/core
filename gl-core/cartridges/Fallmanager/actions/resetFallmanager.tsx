@@ -15,11 +15,11 @@ export const resetFallmanager = (): any => async (dispatch: any) => {
     ]);
 
     const cases = Object.fromEntries(
-      casesSnap.docs.map((doc) => [doc.id, { id: doc.id, ...doc.data() }])
+      casesSnap.docs.map((doc) => [doc.id, { id: doc.id, ...doc.data() }]),
     );
 
     const files = Object.fromEntries(
-      filesSnap.docs.map((doc) => [doc.id, { id: doc.id, ...doc.data() }])
+      filesSnap.docs.map((doc) => [doc.id, { id: doc.id, ...doc.data() }]),
     );
 
     dispatch(incomingCases(cases));

@@ -20,9 +20,7 @@ export default function SwitchLang() {
 
   return (
     <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-      <IconButton
-        onClick={() => setLanguage('en')}
-      >
+      <IconButton onClick={() => setLanguage('en')}>
         <Avatar
           src="/svg/flags/en.svg"
           alt="English"
@@ -37,9 +35,7 @@ export default function SwitchLang() {
         color="primary"
       />
 
-      <IconButton
-        onClick={() => setLanguage('de')}
-      >
+      <IconButton onClick={() => setLanguage('de')}>
         <Avatar
           src="/svg/flags/de.svg"
           alt="Deutsch"

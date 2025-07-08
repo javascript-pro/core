@@ -2899,6 +2899,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mui/x-data-grid@npm:^8.7.0":
+  version: 8.7.0
+  resolution: "@mui/x-data-grid@npm:8.7.0"
+  dependencies:
+    "@babel/runtime": "npm:^7.27.6"
+    "@mui/utils": "npm:^7.1.1"
+    "@mui/x-internals": "npm:8.7.0"
+    clsx: "npm:^2.1.1"
+    prop-types: "npm:^15.8.1"
+    use-sync-external-store: "npm:^1.5.0"
+  peerDependencies:
+    "@emotion/react": ^11.9.0
+    "@emotion/styled": ^11.8.1
+    "@mui/material": ^5.15.14 || ^6.0.0 || ^7.0.0
+    "@mui/system": ^5.15.14 || ^6.0.0 || ^7.0.0
+    react: ^17.0.0 || ^18.0.0 || ^19.0.0
+    react-dom: ^17.0.0 || ^18.0.0 || ^19.0.0
+  peerDependenciesMeta:
+    "@emotion/react":
+      optional: true
+    "@emotion/styled":
+      optional: true
+  checksum: 10c0/cb77a88b336a4809dcec2e1f0252700eb8467913eb19adea32b6c65c0a0f3ac68311d82f4f83f8ef6269d2e90ddd83518c378cfcb8f1a45dfc7d59fd2a749fe9
+  languageName: node
+  linkType: hard
+
 "@mui/x-internals@npm:8.6.0":
   version: 8.6.0
   resolution: "@mui/x-internals@npm:8.6.0"
@@ -2910,6 +2936,20 @@ __metadata:
     "@mui/system": ^5.15.14 || ^6.0.0 || ^7.0.0
     react: ^17.0.0 || ^18.0.0 || ^19.0.0
   checksum: 10c0/15dbb3df47b39ab5116bed44955acbc00c19eb58cfbd8ddc39d63d44d7134d860469a5b68584396861abfbee22bd6559790b219ce2a09a065b31acdbf2f0e4b5
+  languageName: node
+  linkType: hard
+
+"@mui/x-internals@npm:8.7.0":
+  version: 8.7.0
+  resolution: "@mui/x-internals@npm:8.7.0"
+  dependencies:
+    "@babel/runtime": "npm:^7.27.6"
+    "@mui/utils": "npm:^7.1.1"
+    reselect: "npm:^5.1.1"
+  peerDependencies:
+    "@mui/system": ^5.15.14 || ^6.0.0 || ^7.0.0
+    react: ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: 10c0/c3fab5603a046db85f739195576de4581cf9afed7c6b299322b6745ad9336534afb1e62e8fa9fc5a37e1e9eee942b51c7bccf2ccecf591efa27650a513071eed
   languageName: node
   linkType: hard
 
@@ -5671,6 +5711,7 @@ __metadata:
     "@hookform/resolvers": "npm:^5.1.1"
     "@mui/icons-material": "npm:^7.0.1"
     "@mui/material": "npm:^7.1.1"
+    "@mui/x-data-grid": "npm:^8.7.0"
     "@mui/x-tree-view": "npm:^8.3.0"
     "@next/eslint-plugin-next": "npm:^15.2.4"
     "@reduxjs/toolkit": "npm:^2.6.1"

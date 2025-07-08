@@ -23,7 +23,7 @@ import { db } from '../../lib/firebase';
 
 export default function Fallmanager() {
   const dispatch = useDispatch();
-  const { theme } = useFallmanagerSlice();
+  const { theme, files } = useFallmanagerSlice();
 
   const pathname = usePathname();
   const segments = pathname?.split('/') || [];
@@ -80,6 +80,7 @@ export default function Fallmanager() {
             </Grid>
           </Grid>
         )}
+        <pre>{JSON.stringify(files, null, 2)}</pre>
       </Container>
     </Theme>
   );

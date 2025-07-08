@@ -46,12 +46,14 @@ export default function Header() {
           </IconButton>
         }
         title={<Typography variant="h6">{title}</Typography>}
-        action={<Box sx={{display: "flex"}}>
-                  <SwitchLang />
-                  <Box sx={{ml:2}}>
-                    <TopRightMenu />
-                  </Box>
-                </Box>}
+        action={
+          <Box sx={{ display: 'flex' }}>
+            <SwitchLang />
+            <Box sx={{ ml: 2 }}>
+              <TopRightMenu />
+            </Box>
+          </Box>
+        }
       />
     </AppBar>
   );
