@@ -3,17 +3,25 @@ export const lingua: any = {
     en: 'File name',
     de: 'Dateiname',
   },
-CONFIRM_DELETE: {
-  en: 'Are you sure you want to delete this file?',
-  de: 'Möchten Sie diese Datei wirklich löschen?',
-},
-CANCEL: {
-  en: 'Cancel',
-  de: 'Abbrechen',
-},
+
+  FILE_DETAILS: {
+    en: 'File details',
+    de: 'Dateidetails',
+  },
+
+  CONFIRM_DELETE: {
+    en: 'Are you sure you want to delete this file?',
+    de: 'Sind Sie sicher, dass Sie diese Datei löschen möchten?',
+  },
+
+  CANCEL: {
+    en: 'Cancel',
+    de: 'Abbrechen',
+  },
+
   TIME_CREATED: {
     en: 'Time created',
-    de: 'Erstellungszeit',
+    de: 'Erstellungsdatum',
   },
 
   THUMBNAIL_GENERATING: {
@@ -52,12 +60,12 @@ CANCEL: {
   },
 
   NO_FILES: {
-    en: 'No Files to display',
-    de: 'Keine Dateien zum Anzeigen',
+    en: 'No files to display',
+    de: 'Keine Dateien verfügbar',
   },
 
   ALL_FILES: {
-    en: 'All Files',
+    en: 'All files',
     de: 'Alle Dateien',
   },
 
@@ -78,7 +86,7 @@ CANCEL: {
 
   THUMBNAIL_READY: {
     en: 'Thumbnail ready',
-    de: 'Vorschaubild vorhanden',
+    de: 'Vorschaubild verfügbar',
   },
 
   NO_THUMBNAIL: {
@@ -87,12 +95,12 @@ CANCEL: {
   },
 
   GENERATE_THUMBNAIL: {
-    en: 'Generate Thumbnail',
+    en: 'Generate thumbnail',
     de: 'Vorschaubild generieren',
   },
 
   GENERATING_THUMBNAIL: {
     en: 'Generating...',
-    de: 'Wird generiert...',
+    de: 'Generierung läuft...',
   },
 };

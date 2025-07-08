@@ -33,8 +33,13 @@ export default function Files() {
   const { files } = useFallmanagerSlice();
 
   const [deleting, setDeleting] = React.useState<Record<string, boolean>>({});
-  const [confirmDeleteId, setConfirmDeleteId] = React.useState<string | null>(null);
+  const [confirmDeleteId, setConfirmDeleteId] = React.useState<string | null>(
+    null,
+  );
   const [deletingOverlay, setDeletingOverlay] = React.useState(false);
+  const [deletingFileName, setDeletingFileName] = React.useState<string | null>(
+    null,
+  );
 
   const rows = React.useMemo(() => {
     if (!files || typeof files !== 'object') return [];
@@ -57,6 +62,8 @@ export default function Files() {
   }, [files]);
 
   const handleDelete = async (id: string) => {
+    const fileToDelete = rows.find((row) => row.id === id);
+    setDeletingFileName(fileToDelete?.fileName || '...');
     setConfirmDeleteId(null); // close dialog
     setDeletingOverlay(true); // show overlay
     setDeleting((prev) => ({ ...prev, [id]: true }));
@@ -66,10 +73,16 @@ export default function Files() {
       delete updated[id];
       return updated;
     });
-    setDeletingOverlay(false); // hide overlay
+    setDeletingOverlay(false);
+    setDeletingFileName(null);
   };
 
   const columns: GridColDef[] = [
+    {
+      field: 'fileName',
+      headerName: t('FILENAME'),
+      flex: 2,
+    },
     {
       field: 'thumbnail',
       headerName: '',
@@ -90,6 +103,7 @@ export default function Files() {
             <img
               src={params.row.thumbnail}
               alt="Thumbnail"
+              title={t('VIEW_FILE')}
               style={{
                 width: 60,
                 height: 80,
@@ -103,11 +117,6 @@ export default function Files() {
         ),
       sortable: false,
       filterable: false,
-    },
-    {
-      field: 'fileName',
-      headerName: t('FILENAME'),
-      flex: 2,
     },
     {
       field: 'fileType',
@@ -166,7 +175,7 @@ export default function Files() {
           />,
         ];
       },
-      flex: 1,
+      width: 80,
     },
   ];
 
@@ -174,13 +183,16 @@ export default function Files() {
     router.push(`/fallmanager/file/${params.id}`);
   };
 
+  const getConfirmFileName = () => {
+    if (!confirmDeleteId) return '...';
+    const match = rows.find((r) => r.id === confirmDeleteId);
+    return match?.fileName || '...';
+  };
+
   return (
     <>
-      <CardHeader
-        avatar={<Icon icon="files" color="primary" />}
-        title={t('ALL_FILES')}
-        action={<Upload />}
-      />
+      <CardHeader avatar={<Upload />} />
+
       {rows.length === 0 ? (
         <Typography sx={{ px: 2, py: 1 }}>{t('NO_FILES')}</Typography>
       ) : (
@@ -212,26 +224,26 @@ export default function Files() {
       )}
 
       {/* Confirmation Dialog */}
-      <Dialog
-        open={!!confirmDeleteId}
-        onClose={() => setConfirmDeleteId(null)}
-      >
-        <DialogTitle>{t('DELETE')}</DialogTitle>
+      <Dialog open={!!confirmDeleteId} onClose={() => setConfirmDeleteId(null)}>
+        
         <DialogContent>
           <Typography>
-            {t('CONFIRM_DELETE') || 'Are you sure you want to delete this file?'}
+            {t('CONFIRM_DELETE')}
+          </Typography>
+          <Typography fontWeight="bold" mt={1}>
+            {getConfirmFileName()}
           </Typography>
         </DialogContent>
         <DialogActions>
           <Button onClick={() => setConfirmDeleteId(null)}>
-            {t('CANCEL') || 'Cancel'}
+            {t('CANCEL')}
           </Button>
           <Button
             onClick={() => confirmDeleteId && handleDelete(confirmDeleteId)}
             color="error"
             variant="contained"
           >
-            {t('DELETE') || 'Delete'}
+            {t('DELETE')}
           </Button>
         </DialogActions>
       </Dialog>
@@ -243,8 +255,12 @@ export default function Files() {
       >
         <Box display="flex" flexDirection="column" alignItems="center" gap={2}>
           <CircularProgress color="inherit" />
-          <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
-            DELETING...
+          <Typography
+            variant="h6"
+            sx={{ fontWeight: 'bold', textAlign: 'center' }}
+          >
+            {t('DELETING')}
+            {deletingFileName ? ` “${deletingFileName}”...` : '...'}
           </Typography>
         </Box>
       </Backdrop>

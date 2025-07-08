@@ -10,16 +10,27 @@ import {
   CardMedia,
   CircularProgress,
   LinearProgress,
-  Alert,
   Skeleton,
+  Grid,
+  Divider,
+  List,
+  ListItem,
+  ListItemText,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  CardActionArea,
+  IconButton,
+  Tooltip,
 } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import moment from 'moment';
 import { doc, onSnapshot } from 'firebase/firestore';
 import { db } from '../../../lib/firebase';
 import { useFallmanagerSlice, useLingua } from '../../Fallmanager';
-import { useDispatch } from '../../../../gl-core';
+import { useDispatch, toggleFeedback, Icon } from '../../../../gl-core';
 
 type FileMeta = {
   id: string;
@@ -28,6 +39,8 @@ type FileMeta = {
   createdAt?: { seconds: number };
   thumbnail?: string;
   thumbnailProcessing?: boolean;
+  downloadUrl?: string;
+  [key: string]: any;
 };
 
 export default function FileEdit({ id }: { id: string }) {
@@ -36,14 +49,9 @@ export default function FileEdit({ id }: { id: string }) {
   const dispatch = useDispatch();
   const { files } = useFallmanagerSlice();
 
-  const [liveFile, setLiveFile] = useState<FileMeta | null>(
-    files?.[id] || null,
-  );
+  const [liveFile, setLiveFile] = useState<FileMeta | null>(files?.[id] || null);
   const [loading, setLoading] = useState(!files?.[id]);
   const [processing, setProcessing] = useState(false);
-  const [generationMessage, setGenerationMessage] = useState<string | null>(
-    null,
-  );
   const [thumbnailLoaded, setThumbnailLoaded] = useState(false);
 
   useEffect(() => {
@@ -59,7 +67,6 @@ export default function FileEdit({ id }: { id: string }) {
           !processing
         ) {
           setProcessing(true);
-          setGenerationMessage(null);
 
           try {
             const res = await fetch(`/api/gl-api/fallmanager/thumbnail`, {
@@ -69,14 +76,32 @@ export default function FileEdit({ id }: { id: string }) {
             });
 
             const json = await res.json();
+
             if (!res.ok) {
-              setGenerationMessage(`❌ ${json.error || 'Unknown error'}`);
+              dispatch(
+                toggleFeedback({
+                  severity: 'error',
+                  title: 'Error',
+                  description:
+                    json.error || 'Failed to start thumbnail generation.',
+                }),
+              );
             } else {
-              setGenerationMessage('✅ Thumbnail generation started');
+              dispatch(
+                toggleFeedback({
+                  severity: 'success',
+                  title: 'Thumbnail generation started.',
+                }),
+              );
             }
           } catch (err) {
             console.error('Thumbnail generation error:', err);
-            setGenerationMessage('❌ Failed to trigger thumbnail generation');
+            dispatch(
+              toggleFeedback({
+                severity: 'warning',
+                title: 'Unable to trigger thumbnail generation.',
+              }),
+            );
           } finally {
             setProcessing(false);
           }
@@ -85,7 +110,7 @@ export default function FileEdit({ id }: { id: string }) {
     });
 
     return () => unsub();
-  }, [id, processing]);
+  }, [id, processing, dispatch]);
 
   if (loading || !liveFile) {
     return (
@@ -96,56 +121,104 @@ export default function FileEdit({ id }: { id: string }) {
     );
   }
 
-  const uploadedAt = liveFile.createdAt?.seconds
-    ? moment.unix(liveFile.createdAt.seconds).fromNow()
-    : t('UNKNOWN_DATE');
-
-  const sizeKb = liveFile.fileSize
-    ? (liveFile.fileSize / 1024).toFixed(1)
-    : '—';
-
   return (
-    <Card sx={{ my: 0 }}>
+    <Card>
       <CardHeader
+        avatar={
+          <Tooltip title={t('ALL_FILES')}>
+            <IconButton color="primary" onClick={() => router.push('/fallmanager')}>
+              <Icon icon="left" />
+            </IconButton>
+          </Tooltip>
+        }
         title={liveFile.fileName || t('UNKNOWN_FILENAME')}
-        subheader={`${sizeKb} KB — ${uploadedAt}`}
+        
       />
 
-      {liveFile.thumbnailProcessing && (
-        <LinearProgress sx={{ width: '100%', mb: 1 }} />
-      )}
-
       <CardContent>
-        {generationMessage && (
-          <Alert
-            severity={generationMessage.startsWith('✅') ? 'success' : 'error'}
-            sx={{ mb: 2 }}
-          >
-            {generationMessage}
-          </Alert>
-        )}
+        <Grid container spacing={2}>
+          {/* File details in Accordion */}
+          <Grid size={{ xs: 12, md: 8 }}>
+            <Accordion>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography variant="h6">{t('FILE_DETAILS')}</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Divider sx={{ mb: 2 }} />
+                <List dense disablePadding>
+                  {Object.entries(liveFile).map(([key, value]) => {
+                    if (key === 'thumbnail' || key === 'downloadUrl') return null;
+                    if (key === 'createdAt' && value?.seconds) {
+                      value = moment.unix(value.seconds).format('LLL');
+                    }
+                    return (
+                      <ListItem key={key} disableGutters>
+                        <ListItemText
+                          primary={key}
+                          secondary={
+                            typeof value === 'string' || typeof value === 'number'
+                              ? value.toString()
+                              : JSON.stringify(value, null, 2)
+                          }
+                        />
+                      </ListItem>
+                    );
+                  })}
+                </List>
+              </AccordionDetails>
+            </Accordion>
+            <Typography sx={{m:2}}>
+            {
+              `${liveFile.fileSize ? (liveFile.fileSize / 1024).toFixed(1) + ' KB' : '—'} — ` +
+              `${liveFile.createdAt?.seconds ? moment.unix(liveFile.createdAt.seconds).fromNow() : t('UNKNOWN_DATE')}`
+            }
+            </Typography>
 
-        {liveFile.thumbnail ? (
-          <>
-            {!thumbnailLoaded && (
-              <Skeleton
-                variant="rectangular"
-                height={340}
-                width="100%"
-                animation="wave"
-              />
+          </Grid>
+
+          {/* Thumbnail & progress */}
+          <Grid size={{ xs: 12, md: 4 }}>
+            {liveFile.thumbnail && liveFile.downloadUrl && (
+              <>
+                {!thumbnailLoaded && (
+                  <Skeleton
+                    variant="rectangular"
+                    height={450}
+                    width="100%"
+                    animation="wave"
+                  />
+                )}
+                <CardActionArea
+                  onClick={() => window.open(liveFile.downloadUrl!, '_blank')}
+                  title={t('VIEW_FILE')}
+                >
+                  <CardMedia
+                    component="img"
+                    height="450"
+                    image={liveFile.thumbnail}
+                    alt="PDF thumbnail"
+                    onLoad={() => setThumbnailLoaded(true)}
+                    onError={() => setThumbnailLoaded(true)}
+                    sx={{
+                      display: thumbnailLoaded ? 'block' : 'none',
+                      borderRadius: 1,
+                      cursor: 'pointer',
+                    }}
+                  />
+                </CardActionArea>
+              </>
             )}
-            <CardMedia
-              component="img"
-              height="340"
-              image={liveFile.thumbnail}
-              alt="PDF thumbnail"
-              onLoad={() => setThumbnailLoaded(true)}
-              onError={() => setThumbnailLoaded(true)}
-              sx={{ display: thumbnailLoaded ? 'block' : 'none' }}
-            />
-          </>
-        ) : null}
+
+            {liveFile.thumbnailProcessing && (
+              <Box sx={{ mt: 2 }}>
+                <Typography variant="body2" sx={{ mb: 1 }}>
+                  {t('GENERATING_THUMBNAIL')}
+                </Typography>
+                <LinearProgress />
+              </Box>
+            )}
+          </Grid>
+        </Grid>
       </CardContent>
     </Card>
   );
