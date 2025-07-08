@@ -1,4 +1,3 @@
-// core/gl-core/cartridges/Fallmanager/actions/deleteFile.tsx
 'use client';
 
 import { deleteDoc, doc, getDoc } from 'firebase/firestore';
@@ -37,9 +36,26 @@ export const deleteFile =
         return;
       }
 
+      // Delete main file
       const fileRef = ref(storage, path);
-
       await deleteObject(fileRef);
+
+      // Attempt to delete thumbnail if it exists
+      if (typeof data.thumbnail === 'string') {
+        try {
+          const thumbUrl = data.thumbnail;
+          const match = thumbUrl.match(/\/([^/]+\/[^/?#]+)$/); // e.g. fallmanager/abc-thumb.jpg
+          if (match && match[1]) {
+            const thumbPath = match[1];
+            const thumbRef = ref(storage, thumbPath);
+            await deleteObject(thumbRef);
+          }
+        } catch (err) {
+          console.warn('⚠️ Thumbnail deletion failed:', err);
+        }
+      }
+
+      // Delete Firestore document
       await deleteDoc(docRef);
     } catch (e: unknown) {
       const msg = e instanceof Error ? e.message : String(e);

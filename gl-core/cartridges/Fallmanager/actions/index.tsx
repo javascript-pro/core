@@ -14,6 +14,7 @@ import { deleteFile } from './deleteFile';
 import { analyse } from './analyse';
 import { incomingCases } from './incomingCases';
 import { incomingFiles } from './incomingFiles';
+import { updateFileMeta } from './updateFileMeta';
 
 export {
   incomingCases,
@@ -30,5 +31,6 @@ export {
   resetFallmanager,
   updateAICase,
   updateAssist,
+  updateFileMeta,
   deleteFile,
 };

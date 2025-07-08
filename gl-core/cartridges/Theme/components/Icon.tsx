@@ -136,6 +136,7 @@ import CaseClosedIcon from '@mui/icons-material/WorkOffOutlined';
 import CasesIcon from '@mui/icons-material/Cases';
 import CaseClockIcon from '@mui/icons-material/WorkHistoryOutlined';
 import TickIcon from '@mui/icons-material/DoneOutline';
+import FilesIcon from '@mui/icons-material/Topic';
 
 export type TIcon = {
   icon:
@@ -293,6 +294,7 @@ export type TIcon = {
     | 'safari'
     | 'firefox'
     | 'plugins'
+    | 'files'
     | 'bouncer';
   color?: any;
 };
@@ -307,6 +309,10 @@ export default function Icon({ icon, color }: TIcon) {
 
     case 'tick':
       iconFragment = <TickIcon color={color} />;
+      break;
+
+    case 'files':
+      iconFragment = <FilesIcon color={color} />;
       break;
 
     case 'case':

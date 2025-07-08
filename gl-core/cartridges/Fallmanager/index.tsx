@@ -17,6 +17,7 @@ import {
   incomingCases,
   incomingFiles,
   updateAssist,
+  updateFileMeta,
 } from './actions';
 import {
   BearbeitbarText,
@@ -54,6 +55,7 @@ export {
   incomingCases,
   incomingFiles,
   updateAssist,
+  updateFileMeta,
 };
 
 export {
