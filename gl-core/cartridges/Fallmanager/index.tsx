@@ -9,7 +9,6 @@ import {
   toggleNewCase,
   toggleAICase,
   deleteCase,
-  resetTranslations,
   resetFallmanager,
   seedFirebase,
   updateAICase,
@@ -31,6 +30,7 @@ import {
   TopRightMenu,
   Files,
   FileEdit,
+  SwitchLang,
   Upload,
 } from './components';
 
@@ -46,7 +46,6 @@ export {
   toggleAICase,
   deleteCase,
   saveNewCase,
-  resetTranslations,
   resetFallmanager,
   seedFirebase,
   updateAICase,
@@ -70,4 +69,5 @@ export {
   Files,
   FileEdit,
   Upload,
+  SwitchLang,
 };

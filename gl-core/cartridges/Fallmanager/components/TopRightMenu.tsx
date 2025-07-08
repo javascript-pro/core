@@ -15,7 +15,6 @@ import {
 import { Icon, useDispatch, routeTo, MightyButton } from '../../../../gl-core';
 import {
   useFallmanagerSlice,
-  Sprachauswahl,
   useLingua,
   resetFallmanager,
 } from '../../Fallmanager';
@@ -64,12 +63,6 @@ export default function TopRightMenu() {
             <Icon icon="reset" />
           </ListItemIcon>
           <ListItemText>{t('RESET')}</ListItemText>
-        </MenuItem>
-
-        <MenuItem>
-          <Box sx={{ width: 200 }}>
-            <Sprachauswahl />
-          </Box>
         </MenuItem>
       </Menu>
     </>

@@ -1,5 +1,5 @@
-// core/gl-core/cartridges/Fallmanager/components/Files.tsx
 'use client';
+
 import * as React from 'react';
 import {
   Card,
@@ -70,21 +70,12 @@ export default function Files() {
                   primary={file.fileName}
                   // secondary={`${sizeKb} KB — ${uploadedAt}`}
                 />
-              </ListItemButton>
-            );
-          })}
-        </List>
-      )}
-    </Card>
-  );
-}
 
-/*
-<ListItemSecondaryAction>
-                  
-                  <Tooltip title="Delete">
+                <ListItemSecondaryAction>
+                  <Tooltip title={t('DELETE')}>
                     <span>
                       <IconButton
+                        edge="end"
                         color="primary"
                         onClick={(e) => {
                           e.stopPropagation();
@@ -106,4 +97,11 @@ export default function Files() {
                     </span>
                   </Tooltip>
                 </ListItemSecondaryAction>
-*/
+              </ListItemButton>
+            );
+          })}
+        </List>
+      )}
+    </Card>
+  );
+}

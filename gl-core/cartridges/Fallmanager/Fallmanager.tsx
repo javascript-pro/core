@@ -20,7 +20,6 @@ import {
   Files,
 } from '../Fallmanager';
 import { db } from '../../lib/firebase';
-import Upload from './components/Upload';
 
 export default function Fallmanager() {
   const dispatch = useDispatch();
@@ -31,6 +30,7 @@ export default function Fallmanager() {
   const isEditing = segments.includes('file') && segments.length > 3;
   const fileId = isEditing ? segments[segments.length - 1] : null;
 
+  // 🔁 Always subscribe to case updates on mount
   useEffect(() => {
     const unsub = onSnapshot(
       collection(db, 'fallmanager'),
@@ -48,6 +48,7 @@ export default function Fallmanager() {
     return () => unsub();
   }, [dispatch]);
 
+  // 🔁 Always subscribe to file updates on mount — ensures files reload after Redux resets
   useEffect(() => {
     const unsub = onSnapshot(
       collection(db, 'files'),

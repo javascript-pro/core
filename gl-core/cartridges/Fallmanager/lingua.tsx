@@ -1,41 +1,19 @@
-export type TLinguaCodes = 'en' | 'de';
-
-/*
-Record<
-  TLinguaCodes,
-  { title: string; description: string }
-> 
-*/
-export const languages: any = {
-  en: { title: 'English', description: 'Switch to English' },
-  de: { title: 'Deutsch', description: 'Wechseln Sie zu Deutsch' },
-};
-
-export type LinguaKey =
-  | 'ALL_FILES'
-  | 'NO_FILES'
-  | 'UPLOAD_FILE'
-  | 'RESULT_NOT_OK'
-  | 'APP_TITLE';
-
-export type TranslationEntry = Record<TLinguaCodes, string>;
-// Record<LinguaKey, TranslationEntry>
 export const lingua: any = {
   RESULT_NOT_OK: {
     en: 'That is not OK',
-    de: 'nein.',
+    de: 'Das ist nicht in Ordnung',
   },
   UPLOAD_FILE: {
     en: 'Upload file',
-    de: 'Datai hochladen',
+    de: 'Datei hochladen',
   },
   NO_FILES: {
     en: 'No Files to display',
-    de: 'Keine Datai',
+    de: 'Keine Dateien zum Anzeigen',
   },
   ALL_FILES: {
     en: 'All Files',
-    de: 'Alle Datai',
+    de: 'Alle Dateien',
   },
   APP_TITLE: {
     en: 'Case Manager',
