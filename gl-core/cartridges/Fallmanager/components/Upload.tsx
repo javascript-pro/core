@@ -3,8 +3,13 @@
 import * as React from 'react';
 import { useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { useFallmanagerSlice, updateAssist, useLingua } from '../../Fallmanager';
-import { useDispatch, MightyButton } from '../../../../gl-core';
+import {
+  useFallmanagerSlice,
+  updateAssist,
+  resetFallmanager,
+  useLingua,
+} from '../../Fallmanager';
+import { useDispatch, MightyButton, toggleFeedback } from '../../../../gl-core';
 import { LinearProgress } from '@mui/material';
 
 export default function Upload() {
@@ -17,6 +22,7 @@ export default function Upload() {
   const [uploading, setUploading] = useState(false);
 
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const t = useLingua();
     const selected = e.target.files?.[0] || null;
     setFile(selected);
 
@@ -72,7 +78,19 @@ export default function Upload() {
       const data = await res.json();
 
       if (!res.ok) {
-        throw new Error(data.error || 'Unknown upload error');
+        // dispatch(
+        //   toggleFeedback({
+        //     severity: 'error',
+        //     title: `${t('RESULT_NOT_OK')}`,
+        //     description: `${data.error}`,
+        //   }),
+        // );
+
+        dispatch(resetFallmanager());
+        setTimeout(() => {
+          window.open('/fallmanager', '_self');
+        }, 100);
+        return;
       }
 
       dispatch(

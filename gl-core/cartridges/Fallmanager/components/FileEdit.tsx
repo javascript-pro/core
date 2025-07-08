@@ -8,8 +8,6 @@ import {
   CardContent,
   CardHeader,
   CircularProgress,
-  Button,
-  Stack,
 } from '@mui/material';
 import { useRouter } from 'next/navigation';
 import { useFallmanagerSlice, useLingua } from '../../Fallmanager';
@@ -25,9 +23,7 @@ export default function FileEdit({ id }: { id: string }) {
     return (
       <Box sx={{ p: 4 }}>
         <CircularProgress />
-        <Typography sx={{ mt: 2 }}>
-          {t('LOADING_FILE')}
-        </Typography>
+        <Typography sx={{ mt: 2 }}>{t('LOADING_FILE')}</Typography>
       </Box>
     );
   }
@@ -45,7 +41,7 @@ export default function FileEdit({ id }: { id: string }) {
         // subheader={`${sizeKb} KB — ${uploadedAt}`}
       />
       <CardContent>
-        <pre>{JSON.stringify(file, null, 2)}</pre>    
+        <pre>{JSON.stringify(file, null, 2)}</pre>
       </CardContent>
     </Card>
   );

@@ -48,10 +48,7 @@ export default function Files() {
 
   return (
     <Card>
-      <CardHeader
-        title={t('ALL_FILES')}
-        action={<Upload />}
-      />
+      <CardHeader title={t('ALL_FILES')} action={<Upload />} />
       {fileArray.length === 0 ? (
         <Typography sx={{ px: 2, py: 1 }}>{t('NO_FILES')}</Typography>
       ) : (
@@ -73,7 +70,6 @@ export default function Files() {
                   primary={file.fileName}
                   // secondary={`${sizeKb} KB — ${uploadedAt}`}
                 />
-                
               </ListItemButton>
             );
           })}
