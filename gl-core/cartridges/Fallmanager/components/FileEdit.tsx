@@ -52,13 +52,10 @@ export default function FileEdit({ id }: { id: string }) {
   const dispatch = useDispatch();
   const { files } = useFallmanagerSlice();
 
-  const [liveFile, setLiveFile] = React.useState<FileMeta | null>(
-    files?.[id] || null,
-  );
+  const [liveFile, setLiveFile] = React.useState<FileMeta | null>(files?.[id] || null);
   const [loading, setLoading] = React.useState(!files?.[id]);
   const [processing, setProcessing] = React.useState(false);
   const [thumbnailLoaded, setThumbnailLoaded] = React.useState(false);
-
   const [showConfirmDelete, setShowConfirmDelete] = React.useState(false);
   const [deleting, setDeleting] = React.useState(false);
 
@@ -84,15 +81,14 @@ export default function FileEdit({ id }: { id: string }) {
               toggleFeedback({
                 severity: 'error',
                 title: 'Error',
-                description:
-                  json.error || 'Failed to start thumbnail generation.',
+                description: json.error || 'Failed to start thumbnail generation.',
               }),
             );
           } else {
             dispatch(
               toggleFeedback({
                 severity: 'success',
-                title: 'Thumbnail generation started',
+                title: 'Thumbnail generated',
               }),
             );
           }
@@ -267,7 +263,7 @@ export default function FileEdit({ id }: { id: string }) {
                         fontSize: '0.875rem',
                       }}
                     >
-                      {liveFile.rawText.replace(/\s+/g, '')}
+                      {liveFile.rawText.replace(/\s+/g, ' ')}
                     </Box>
                   </AccordionDetails>
                 </Accordion>
@@ -291,6 +287,8 @@ export default function FileEdit({ id }: { id: string }) {
       <Dialog
         open={showConfirmDelete}
         onClose={() => setShowConfirmDelete(false)}
+        fullWidth
+        maxWidth="sm"
       >
         <DialogTitle>{t('ARE_YOU_SURE')}</DialogTitle>
         <DialogContent>

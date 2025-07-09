@@ -110,7 +110,7 @@ export const lingua: any = {
     en: 'Generate thumbnail',
     de: 'Vorschaubild generieren',
   },
-ARE_YOU_SURE:{
+  ARE_YOU_SURE: {
     en: 'Really?',
     de: 'Sicher?',
   },
