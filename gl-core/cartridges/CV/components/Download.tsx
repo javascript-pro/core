@@ -15,7 +15,9 @@ export default function Download(cv: any) {
       <h2>Chris Dorward</h2>
       <h4>
         <a href="https://goldlabel.pro/cv">goldlabel.pro</a> | 
-        <a href="mailto:goldlabel.apps@gmail.com">goldlabel.apps@gmail.com</a>
+        <a href="mailto:goldlabel.apps@gmail.com">goldlabel.apps@gmail.com</a> | 
+        <a href="https://www.linkedin.com/in/chris-dorward/">LinkedIn</a> | 
+        <a href="https://github.com/javascript-pro">Github</a>
       </h4>
     ${marked.parse(cv.cv || '') as string}`;
     const fullHTML = templatePDF(html);
