@@ -1,3 +1,4 @@
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Fallmanager/components/Upload.tsx
 'use client';
 
 import * as React from 'react';
@@ -10,7 +11,12 @@ import {
   useLingua,
 } from '../../Fallmanager';
 import { useDispatch, MightyButton } from '../../../../gl-core';
-import { LinearProgress } from '@mui/material';
+import {
+  Backdrop,
+  CircularProgress,
+  Typography,
+  Box,
+} from '@mui/material';
 
 export default function Upload() {
   const dispatch = useDispatch();
@@ -140,9 +146,18 @@ export default function Upload() {
         />
       )}
 
-      {uploading && (
-        <LinearProgress sx={{ width: 200, border: '1px solid red', mt: 1 }} />
-      )}
+      <Backdrop
+        open={uploading}
+        sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.modal + 1 }}
+      >
+        <Box display="flex" flexDirection="column" alignItems="center" gap={2}>
+          <CircularProgress color="inherit" />
+          <Typography variant="h6" sx={{ fontWeight: 'bold', textAlign: 'center' }}>
+            {t('UPLOADING')}
+            {file?.name ? ` “${file.name}”...` : '...'}
+          </Typography>
+        </Box>
+      </Backdrop>
     </>
   );
 }

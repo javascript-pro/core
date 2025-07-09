@@ -55,7 +55,6 @@ export default function Files() {
         uploadedAt: uploadedAt ? uploadedAt.toISOString() : null,
         uploadedFromNow: uploadedAt ? moment(uploadedAt).fromNow() : 'Unknown',
         downloadUrl: file.downloadUrl,
-        thumbnail: file.thumbnail || null,
       };
     });
   }, [files]);
@@ -99,41 +98,6 @@ export default function Files() {
         ) : (
           <span>Unknown</span>
         ),
-    },
-    {
-      field: 'thumbnail',
-      headerName: '',
-      width: 100,
-      renderCell: (params) =>
-        params.row.thumbnail ? (
-          <Box
-            onClick={(e) => {
-              e.stopPropagation();
-              window.open(
-                params.row.downloadUrl,
-                '_blank',
-                'noopener,noreferrer',
-              );
-            }}
-            sx={{ cursor: 'pointer' }}
-          >
-            <img
-              src={params.row.thumbnail}
-              alt="Thumbnail"
-              title={t('VIEW_FILE')}
-              style={{
-                width: 60,
-                height: 80,
-                objectFit: 'cover',
-                borderRadius: 2,
-              }}
-            />
-          </Box>
-        ) : (
-          <span />
-        ),
-      sortable: false,
-      filterable: false,
     },
     {
       field: 'actions',
@@ -196,11 +160,12 @@ export default function Files() {
             columns={columns}
             disableRowSelectionOnClick
             onRowClick={handleRowClick}
-            getRowHeight={() => 100}
+            getRowHeight={() => 64}
             sx={{
               '& .MuiDataGrid-row': {
                 cursor: 'pointer',
-                alignItems: 'start',
+                alignItems: 'center',
+                borderBottom: '1px solid rgba(0, 0, 0, 0.06)',
               },
               '& .MuiDataGrid-cell': {
                 py: 1,
@@ -210,7 +175,7 @@ export default function Files() {
                 fontWeight: 500,
               },
               '& .MuiDataGrid-row:hover': {
-                backgroundColor: 'rgba(0, 0, 0, 0.04)',
+                backgroundColor: 'rgba(0, 0, 0, 0.035)',
               },
             }}
           />
