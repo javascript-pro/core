@@ -70,14 +70,20 @@ export async function POST(req: NextRequest) {
     const id = body?.id;
 
     if (!id || typeof id !== 'string') {
-      return NextResponse.json({ error: 'Missing or invalid ID' }, { status: 400 });
+      return NextResponse.json(
+        { error: 'Missing or invalid ID' },
+        { status: 400 },
+      );
     }
 
     const docRef = adminDb.collection('files').doc(id);
     const docSnap = await docRef.get();
 
     if (!docSnap.exists) {
-      return NextResponse.json({ error: 'Document not found' }, { status: 404 });
+      return NextResponse.json(
+        { error: 'Document not found' },
+        { status: 404 },
+      );
     }
 
     const data = docSnap.data();
@@ -92,21 +98,24 @@ export async function POST(req: NextRequest) {
       updatedAt: Date.now(),
     });
 
-    const openaiRes = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${OPENAI_API_KEY}`,
-        'Content-Type': 'application/json',
+    const openaiRes = await fetch(
+      'https://api.openai.com/v1/chat/completions',
+      {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${OPENAI_API_KEY}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          model: 'gpt-4-turbo',
+          messages: [
+            { role: 'system', content: systemPrompt },
+            { role: 'user', content: prompt },
+          ],
+          temperature: 0.2,
+        }),
       },
-      body: JSON.stringify({
-        model: 'gpt-4-turbo',
-        messages: [
-          { role: 'system', content: systemPrompt },
-          { role: 'user', content: prompt },
-        ],
-        temperature: 0.2,
-      }),
-    });
+    );
 
     const result = (await openaiRes.json()) as {
       error?: { message?: string };
@@ -158,10 +167,13 @@ export async function POST(req: NextRequest) {
       const body = await req.json();
       const id = body?.id;
       if (typeof id === 'string') {
-        await adminDb.collection('files').doc(id).update({
-          openai: { error: fallbackError },
-          updatedAt: Date.now(),
-        });
+        await adminDb
+          .collection('files')
+          .doc(id)
+          .update({
+            openai: { error: fallbackError },
+            updatedAt: Date.now(),
+          });
       }
     } catch (e) {
       console.error('🔥 Fallback write failed:', e);

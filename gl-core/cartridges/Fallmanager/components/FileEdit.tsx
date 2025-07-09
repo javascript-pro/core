@@ -92,7 +92,8 @@ export default function FileEdit({ id }: { id: string }) {
               toggleFeedback({
                 severity: 'error',
                 title: 'Error',
-                description: json.error || 'Failed to start thumbnail generation.',
+                description:
+                  json.error || 'Failed to start thumbnail generation.',
               }),
             );
           } else {

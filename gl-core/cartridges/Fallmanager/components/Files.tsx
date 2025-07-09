@@ -39,8 +39,12 @@ export default function Files() {
 
   const [deleting, setDeleting] = React.useState<Record<string, boolean>>({});
   const [deletingOverlay, setDeletingOverlay] = React.useState(false);
-  const [deletingFileName, setDeletingFileName] = React.useState<string | null>(null);
-  const [confirmDeleteId, setConfirmDeleteId] = React.useState<string | null>(null);
+  const [deletingFileName, setDeletingFileName] = React.useState<string | null>(
+    null,
+  );
+  const [confirmDeleteId, setConfirmDeleteId] = React.useState<string | null>(
+    null,
+  );
   const [selectedIds, setSelectedIds] = React.useState<string[]>([]);
   const [confirmBulkDelete, setConfirmBulkDelete] = React.useState(false);
 
@@ -51,7 +55,8 @@ export default function Files() {
         ? new Date(file.createdAt.seconds * 1000)
         : null;
 
-      const summary = file.openai?.summary?.[language] || file.openai?.summary?.en || '';
+      const summary =
+        file.openai?.summary?.[language] || file.openai?.summary?.en || '';
 
       return {
         id: file.id,
@@ -199,8 +204,8 @@ export default function Files() {
             onRowSelectionModelChange={(selection: GridRowSelectionModel) =>
               setSelectedIds(
                 (Array.isArray(selection) ? selection : []).filter(
-                  (id): id is string => typeof id === 'string'
-                )
+                  (id): id is string => typeof id === 'string',
+                ),
               )
             }
             getRowHeight={() => 'auto'}
@@ -235,7 +240,9 @@ export default function Files() {
           </Typography>
         </DialogContent>
         <DialogActions>
-          <Button onClick={() => setConfirmDeleteId(null)}>{t('CANCEL')}</Button>
+          <Button onClick={() => setConfirmDeleteId(null)}>
+            {t('CANCEL')}
+          </Button>
           <Button
             onClick={() => confirmDeleteId && handleDelete(confirmDeleteId)}
             color="error"
@@ -257,7 +264,9 @@ export default function Files() {
           </Typography>
         </DialogContent>
         <DialogActions>
-          <Button onClick={() => setConfirmBulkDelete(false)}>{t('CANCEL')}</Button>
+          <Button onClick={() => setConfirmBulkDelete(false)}>
+            {t('CANCEL')}
+          </Button>
           <Button onClick={handleBulkDelete} color="error" variant="contained">
             {t('DELETE')}
           </Button>
@@ -270,7 +279,10 @@ export default function Files() {
       >
         <Box display="flex" flexDirection="column" alignItems="center" gap={2}>
           <CircularProgress color="inherit" />
-          <Typography variant="h6" sx={{ fontWeight: 'bold', textAlign: 'center' }}>
+          <Typography
+            variant="h6"
+            sx={{ fontWeight: 'bold', textAlign: 'center' }}
+          >
             {t('DELETING')}
             {deletingFileName ? ` “${deletingFileName}”...` : '...'}
           </Typography>

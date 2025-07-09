@@ -38,8 +38,4 @@ export const initialState: TFallmanagerState = {
   //   text: '#414142',
   //   border: '#414142',
   // },
-
-  
-
-
 };
