@@ -5,8 +5,9 @@ description: Match your Job to our Curriculum Vitae with AI
 slug: /work/cv
 icon: openai
 image: /png/og.png
-tags: CV, jobs, work, resume, AI, OpenAI
-github: https://github.com/javascript-pro/core/blob/main/gl-core/cartridges/CV/actions/createPrompt.tsx
+tags: CV, jobs, work, resume, AI, OpenAI, github
+github: https://raw.githubusercontent.com/javascript-pro/core/refs/heads/main/public/markdown/work/cv/index.md
+public: https://goldlabel.pro/markdown/work/cv/index.md
 ---
 
 #### Fullstack JavaScript Developer
