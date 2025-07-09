@@ -73,7 +73,7 @@
             "excerpt": "Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or b"
           },
           {
-            "title": "Fullstack JavaScript Developer",
+            "title": "Fullstack JavaScript",
             "description": "Match your Job to our Curriculum Vitae with AI",
             "slug": "/work/cv",
             "order": 2,
@@ -88,7 +88,7 @@
               "AI",
               "OpenAI"
             ],
-            "excerpt": "Fullstack JavaScript Developer\n\nOver 20 years of experience delivering scalable web applications across startups, enterprises, and remotefirst teams in the UK, Europe, and Australia and beyond. Deep e",
+            "excerpt": "Fullstack JavaScript\n\nOver 20 years of experience delivering scalable web applications across startups, enterprises, and remotefirst teams in the UK, Europe, and Australia and beyond. Deep expertise i",
             "children": [
               {
                 "title": "About C.V.",

@@ -1,15 +1,17 @@
 ---
 order: 2
 title: Fullstack JavaScript Developer
+title: Fullstack JavaScript
 description: Match your Job to our Curriculum Vitae with AI
 slug: /work/cv
 icon: openai
 image: /png/og.png
 tags: CV, jobs, work, resume, AI, OpenAI
-github: https://github.com/javascript-pro/core/blob/main/gl-core/cartridges/CV/actions/createPrompt.tsx
+github: https://raw.githubusercontent.com/javascript-pro/core/refs/heads/main/public/markdown/work/cv/index.md
 ---
 
 ## Fullstack JavaScript Developer
+## Fullstack JavaScript
 
 Over 20 years of experience delivering scalable web applications across startups, enterprises, and remote-first teams in the UK, Europe, and Australia and beyond. Deep expertise in React, TypeScript, current specialising in Next.js.
 
@@ -19,14 +21,14 @@ Proven track record building high-performance UIs, integrating automated testing
 
 ### Skills
 
-- _Languages:_ Vanilla JavaScript (ES6+), TypeScript, HTML5, PHP
-- _Frameworks & Libraries:_ React, React Native, [Next.js (App Router)](https://github.com/javascript-pro/core), [Redux](/free/uberedux), Node.js, Express, jQuery
+- _Specialisms:_ TypeScript Vanilla JavaScript (ES6+), React, Node & Next.js
+- _Frameworks & Libraries:_ React, Vue, React Native, Next.js (App Router), Redux, Express, jQuery
 - _Style:_ Vanilla CSS, Material UI, Tailwind CSS, Styled Components, Figma
 - _Database:_ NoSQL, Firestore, Supabase, MongoDB, DynamoDB, MySQL, PostgreSQL, SQL
-- _APIs:_ [REST](https://github.com/javascript-pro/core/blob/main/app/api/gl-api/flickr/route.ts), GraphQL, [OpenAI](https://github.com/javascript-pro/core/blob/main/app/api/gl-api/openai/route.ts), Whisper/DALL·E
+- _APIs:_ REST, GraphQL, OpenAI
 - _Testing & QA:_ Jest, React Testing Library, Cucumber (BDD), Gherkin
-- _DevOps & Workflow:_ CI/CD (GitHub Actions, Netlify Deploy), Linux (MAMP stack), GitFlow, Agile/SCRUM, Git, GitHub, Vercel, Firebase (Auth, Firestore, Storage), Netlify, Docker, Turborepo, Webpack
-- _CMS:_ WordPress, Headless CMS (Strapi, Contentful), Drupal
+- _DevOps & Workflow:_ CI/CD (GitHub Actions, Netlify Deploy), MERN Stack, Linux (MAMP stack), GitFlow, Agile/SCRUM, Git, GitHub, Vercel, Firebase (Auth, Firestore, Storage), Netlify, Docker, Turborepo, Webpack
+- _CMS:_ Headless CMS (Strapi, Contentful), WordPress, Drupal
 - _Other:_ Progressive Web Apps (PWA), [Static Site Generation (SSG)](https://github.com/javascript-pro/core/blob/main/app/%5B%5B...slug%5D%5D/page.tsx), Server-Side Rendering (SSR), Raspberry Pi & Python
 
 ### Experience
