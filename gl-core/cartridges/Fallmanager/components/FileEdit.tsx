@@ -43,6 +43,9 @@ type FileMeta = {
   rawText?: string;
   rawTextProcessing?: boolean;
   downloadUrl?: string;
+  docData?: {
+    openai?: any;
+  };
   [key: string]: any;
 };
 
@@ -52,12 +55,15 @@ export default function FileEdit({ id }: { id: string }) {
   const dispatch = useDispatch();
   const { files } = useFallmanagerSlice();
 
-  const [liveFile, setLiveFile] = React.useState<FileMeta | null>(files?.[id] || null);
+  const [liveFile, setLiveFile] = React.useState<FileMeta | null>(
+    files?.[id] || null,
+  );
   const [loading, setLoading] = React.useState(!files?.[id]);
   const [processing, setProcessing] = React.useState(false);
   const [thumbnailLoaded, setThumbnailLoaded] = React.useState(false);
   const [showConfirmDelete, setShowConfirmDelete] = React.useState(false);
   const [deleting, setDeleting] = React.useState(false);
+  const [runningAI, setRunningAI] = React.useState(false);
 
   React.useEffect(() => {
     const unsub = onSnapshot(doc(db, 'files', id), async (docSnap) => {
@@ -81,7 +87,8 @@ export default function FileEdit({ id }: { id: string }) {
               toggleFeedback({
                 severity: 'error',
                 title: 'Error',
-                description: json.error || 'Failed to start thumbnail generation.',
+                description:
+                  json.error || 'Failed to start thumbnail generation.',
               }),
             );
           } else {
@@ -158,6 +165,45 @@ export default function FileEdit({ id }: { id: string }) {
     } finally {
       setDeleting(false);
       setShowConfirmDelete(false);
+    }
+  };
+
+  const handleRunAI = async () => {
+    if (!liveFile?.rawText) return;
+    setRunningAI(true);
+    try {
+      const res = await fetch(`/api/gl-api/fallmanager/ki`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id }),
+      });
+      const json = await res.json();
+      if (!res.ok) {
+        dispatch(
+          toggleFeedback({
+            severity: 'error',
+            title: 'AI analysis failed',
+            description: json.error || 'Could not extract structured data.',
+          }),
+        );
+      } else {
+        dispatch(
+          toggleFeedback({
+            severity: 'success',
+            title: 'AI analysis complete',
+          }),
+        );
+      }
+    } catch (err) {
+      console.error('AI analysis error:', err);
+      dispatch(
+        toggleFeedback({
+          severity: 'warning',
+          title: 'Unable to trigger AI analysis.',
+        }),
+      );
+    } finally {
+      setRunningAI(false);
     }
   };
 
@@ -268,6 +314,21 @@ export default function FileEdit({ id }: { id: string }) {
                   </AccordionDetails>
                 </Accordion>
               )}
+
+              {liveFile.rawText && (
+                <Box mt={3}>
+                  <Button
+                    variant="outlined"
+                    startIcon={<Icon icon="oliver" />}
+                    onClick={handleRunAI}
+                    disabled={runningAI}
+                  >
+                    {runningAI ? t('PROCESSING') + '...' : t('RUN_AI_ANALYSIS')}
+                  </Button>
+                </Box>
+              )}
+
+              <pre>openai: {JSON.stringify(liveFile.openai, null, 2)}</pre>
             </Grid>
           </Grid>
         </CardContent>
