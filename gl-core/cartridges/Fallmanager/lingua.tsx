@@ -3,6 +3,18 @@ export const lingua: any = {
     en: 'File name',
     de: 'Dateiname',
   },
+  UPLOADING: {
+    en: 'Uploading',
+    de: '',
+  },
+  DELETE_SELECTED: {
+    en: 'Delete selected',
+    de: 'Ausgewählte löschen',
+  },
+  FILES: {
+    en: 'files',
+    de: 'Dateien',
+  },
 
   FILE_DETAILS: {
     en: 'File details',
@@ -105,11 +117,11 @@ export const lingua: any = {
   },
 
   EXTRACTING_TEXT: {
-    en: 'Extracting text...',
+    en: 'Extracting raw text...',
     de: 'Text wird extrahiert...',
   },
   EXTRACTED_TEXT: {
-    en: 'Extracted text:',
-    de: 'Extrahierter Text:',
+    en: 'Raw, extracted text',
+    de: 'Extrahierter Text',
   },
 };

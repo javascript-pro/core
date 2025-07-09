@@ -1,5 +1,5 @@
 // /Users/goldlabel/GitHub/core/app/api/gl-api/resend/route.ts
- 
+
 import { NextRequest, NextResponse } from 'next/server';
 import { getBase } from '../getBase';
 
@@ -17,7 +17,6 @@ export async function GET() {
 }
 
 export async function POST(req: NextRequest) {
-  
   const secret = process.env.RESEND_API_KEY;
 
   try {
