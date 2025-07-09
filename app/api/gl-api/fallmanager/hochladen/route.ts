@@ -60,6 +60,8 @@ export async function POST(req: NextRequest) {
       storagePath,
       downloadUrl,
       createdAt: admin.firestore.Timestamp.now(),
+      uploadedBy: null, // optionally populated if auth is used
+      parsedText: '', // reserved for later AI processing
     };
 
     const docRef = await adminDb.collection('files').add(fileData);

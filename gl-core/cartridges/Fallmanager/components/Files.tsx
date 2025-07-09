@@ -1,3 +1,4 @@
+// core/gl-core/cartridges/Fallmanager/components/Files.tsx
 'use client';
 
 import * as React from 'react';
@@ -20,8 +21,6 @@ import {
   DialogActions,
   Button,
   Backdrop,
-  Slide,
-  Paper,
 } from '@mui/material';
 import { useRouter } from 'next/navigation';
 import { Icon, useDispatch } from '../../../../gl-core';
@@ -36,7 +35,7 @@ export default function Files() {
   const dispatch = useDispatch();
   const t = useLingua();
   const router = useRouter();
-  const { files } = useFallmanagerSlice();
+  const { files, language } = useFallmanagerSlice();
 
   const [deleting, setDeleting] = React.useState<Record<string, boolean>>({});
   const [deletingOverlay, setDeletingOverlay] = React.useState(false);
@@ -56,6 +55,9 @@ export default function Files() {
         ? new Date(file.createdAt.seconds * 1000)
         : null;
 
+      const summary =
+        file.openai?.summary?.[language] || file.openai?.summary?.en || '';
+
       return {
         id: file.id,
         fileName: file.fileName,
@@ -63,9 +65,10 @@ export default function Files() {
         uploadedAt: uploadedAt ? uploadedAt.toISOString() : null,
         uploadedFromNow: uploadedAt ? moment(uploadedAt).fromNow() : 'Unknown',
         downloadUrl: file.downloadUrl,
+        summary,
       };
     });
-  }, [files]);
+  }, [files, language]);
 
   const handleDelete = async (id: string) => {
     const fileToDelete = rows.find((row) => row.id === id);
@@ -100,6 +103,23 @@ export default function Files() {
       field: 'fileName',
       headerName: t('FILENAME'),
       flex: 2,
+    },
+    {
+      field: 'summary',
+      headerName: t('SUMMARY'),
+      flex: 3,
+      renderCell: (params) => (
+        <Typography
+          variant="body2"
+          sx={{
+            fontSize: '0.75rem',
+            whiteSpace: 'normal',
+            lineHeight: 1.35,
+          }}
+        >
+          {params.row.summary}
+        </Typography>
+      ),
     },
     {
       field: 'size',
@@ -181,18 +201,24 @@ export default function Files() {
             checkboxSelection
             disableRowSelectionOnClick
             onRowClick={handleRowClick}
-            onRowSelectionModelChange={(selection) =>
-              setSelectedIds(selection as unknown as string[])
+            onRowSelectionModelChange={(selection: GridRowSelectionModel) =>
+              setSelectedIds(
+                (Array.isArray(selection) ? selection : []).filter(
+                  (id): id is string => typeof id === 'string',
+                ),
+              )
             }
-            getRowHeight={() => 64}
+            getRowHeight={() => 'auto'}
             sx={{
               '& .MuiDataGrid-row': {
                 cursor: 'pointer',
-                alignItems: 'center',
+                alignItems: 'flex-start',
                 borderBottom: '1px solid rgba(0, 0, 0, 0.06)',
               },
               '& .MuiDataGrid-cell': {
                 py: 1,
+                whiteSpace: 'normal !important',
+                overflowWrap: 'break-word',
               },
               '& .MuiDataGrid-columnHeaderTitle': {
                 color: 'text.secondary',
@@ -203,44 +229,9 @@ export default function Files() {
               },
             }}
           />
-
-          <Slide
-            direction="up"
-            in={selectedIds.length > 0}
-            mountOnEnter
-            unmountOnExit
-          >
-            <Paper
-              elevation={3}
-              sx={{
-                position: 'absolute',
-                bottom: 0,
-                left: 0,
-                right: 0,
-                zIndex: 5,
-                py: 1,
-                px: 2,
-                bgcolor: 'background.paper',
-                borderTop: '1px solid',
-                borderColor: 'divider',
-                display: 'flex',
-                justifyContent: 'flex-end',
-              }}
-            >
-              <Button
-                variant="outlined"
-                color="error"
-                onClick={() => setConfirmBulkDelete(true)}
-                startIcon={<Icon icon="delete" />}
-              >
-                {t('DELETE_SELECTED')} ({selectedIds.length})
-              </Button>
-            </Paper>
-          </Slide>
         </Box>
       )}
 
-      {/* Single delete confirmation */}
       <Dialog open={!!confirmDeleteId} onClose={() => setConfirmDeleteId(null)}>
         <DialogContent>
           <Typography>{t('CONFIRM_DELETE')}</Typography>
@@ -262,7 +253,6 @@ export default function Files() {
         </DialogActions>
       </Dialog>
 
-      {/* Bulk delete confirmation */}
       <Dialog
         open={confirmBulkDelete}
         onClose={() => setConfirmBulkDelete(false)}
@@ -283,7 +273,6 @@ export default function Files() {
         </DialogActions>
       </Dialog>
 
-      {/* Deleting overlay */}
       <Backdrop
         open={deletingOverlay}
         sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.modal + 1 }}
