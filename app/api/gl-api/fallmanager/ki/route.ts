@@ -110,9 +110,12 @@ export async function GET() {
 
 export async function POST(req: NextRequest) {
   try {
-    console.log('✅ POST /api/gl-api/fallmanager/ki called');
+    console.log('✅ fallmanager/ki called');
+
     const body = await req.json();
     const id: string = body?.id;
+
+    console.log('✅ id: ', id);
 
     if (!id || typeof id !== 'string') {
       const error = 'Missing or invalid ID';

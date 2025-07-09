@@ -172,6 +172,8 @@ export default function FileEdit({ id }: { id: string }) {
     if (!liveFile?.rawText) return;
     setRunningAI(true);
     try {
+      console.log('handleRunAI', JSON.stringify({ id }));
+
       const res = await fetch(`/api/gl-api/fallmanager/ki`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
