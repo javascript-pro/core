@@ -110,10 +110,13 @@ export const lingua: any = {
     en: 'Generate thumbnail',
     de: 'Vorschaubild generieren',
   },
-
+ARE_YOU_SURE:{
+    en: 'Really?',
+    de: 'Sicher?',
+  },
   GENERATING_THUMBNAIL: {
-    en: 'Generating...',
-    de: 'Generierung läuft...',
+    en: 'Generating PDF thumbnail',
+    de: 'Generierung läuft',
   },
 
   EXTRACTING_TEXT: {

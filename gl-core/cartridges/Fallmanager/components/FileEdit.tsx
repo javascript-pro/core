@@ -52,7 +52,9 @@ export default function FileEdit({ id }: { id: string }) {
   const dispatch = useDispatch();
   const { files } = useFallmanagerSlice();
 
-  const [liveFile, setLiveFile] = React.useState<FileMeta | null>(files?.[id] || null);
+  const [liveFile, setLiveFile] = React.useState<FileMeta | null>(
+    files?.[id] || null,
+  );
   const [loading, setLoading] = React.useState(!files?.[id]);
   const [processing, setProcessing] = React.useState(false);
   const [thumbnailLoaded, setThumbnailLoaded] = React.useState(false);
@@ -82,14 +84,15 @@ export default function FileEdit({ id }: { id: string }) {
               toggleFeedback({
                 severity: 'error',
                 title: 'Error',
-                description: json.error || 'Failed to start thumbnail generation.',
+                description:
+                  json.error || 'Failed to start thumbnail generation.',
               }),
             );
           } else {
             dispatch(
               toggleFeedback({
                 severity: 'success',
-                title: 'Thumbnail generation started.',
+                title: 'Thumbnail generation started',
               }),
             );
           }
@@ -202,9 +205,7 @@ export default function FileEdit({ id }: { id: string }) {
                     />
                   )}
                   <CardActionArea
-                    onClick={() =>
-                      window.open(liveFile.downloadUrl!, '_blank')
-                    }
+                    onClick={() => window.open(liveFile.downloadUrl!, '_blank')}
                     title={t('VIEW_FILE')}
                   >
                     <CardMedia
@@ -291,9 +292,8 @@ export default function FileEdit({ id }: { id: string }) {
         open={showConfirmDelete}
         onClose={() => setShowConfirmDelete(false)}
       >
-        <DialogTitle>{t('CONFIRM_DELETE')}</DialogTitle>
+        <DialogTitle>{t('ARE_YOU_SURE')}</DialogTitle>
         <DialogContent>
-          <Typography>{t('ARE_YOU_SURE')}</Typography>
           <Typography fontWeight="bold" mt={1}>
             {liveFile?.fileName || '...'}
           </Typography>
