@@ -3,7 +3,7 @@
 
 import * as React from 'react';
 import moment from 'moment';
-import { DataGrid, GridColDef, GridActionsCellItem } from '@mui/x-data-grid';
+import { DataGrid, GridColDef, GridActionsCellItem, GridRowSelectionModel } from '@mui/x-data-grid';
 import {
   Box,
   CardHeader,
@@ -12,11 +12,12 @@ import {
   Typography,
   Tooltip,
   Dialog,
-  DialogTitle,
   DialogContent,
   DialogActions,
   Button,
   Backdrop,
+  Slide,
+  Paper,
 } from '@mui/material';
 import { useRouter } from 'next/navigation';
 import { Icon, useDispatch } from '../../../../gl-core';
@@ -34,13 +35,11 @@ export default function Files() {
   const { files } = useFallmanagerSlice();
 
   const [deleting, setDeleting] = React.useState<Record<string, boolean>>({});
-  const [confirmDeleteId, setConfirmDeleteId] = React.useState<string | null>(
-    null,
-  );
   const [deletingOverlay, setDeletingOverlay] = React.useState(false);
-  const [deletingFileName, setDeletingFileName] = React.useState<string | null>(
-    null,
-  );
+  const [deletingFileName, setDeletingFileName] = React.useState<string | null>(null);
+  const [confirmDeleteId, setConfirmDeleteId] = React.useState<string | null>(null);
+  const [selectedIds, setSelectedIds] = React.useState<string[]>([]);
+  const [confirmBulkDelete, setConfirmBulkDelete] = React.useState(false);
 
   const rows = React.useMemo(() => {
     if (!files || typeof files !== 'object') return [];
@@ -56,7 +55,6 @@ export default function Files() {
         uploadedAt: uploadedAt ? uploadedAt.toISOString() : null,
         uploadedFromNow: uploadedAt ? moment(uploadedAt).fromNow() : 'Unknown',
         downloadUrl: file.downloadUrl,
-        thumbnail: file.thumbnail || null,
       };
     });
   }, [files]);
@@ -73,6 +71,18 @@ export default function Files() {
       delete updated[id];
       return updated;
     });
+    setDeletingOverlay(false);
+    setDeletingFileName(null);
+  };
+
+  const handleBulkDelete = async () => {
+    setConfirmBulkDelete(false);
+    setDeletingOverlay(true);
+    setDeletingFileName(`${selectedIds.length} ${t('FILES')}`);
+    for (const id of selectedIds) {
+      await dispatch(deleteFile(id));
+    }
+    setSelectedIds([]);
     setDeletingOverlay(false);
     setDeletingFileName(null);
   };
@@ -100,41 +110,6 @@ export default function Files() {
         ) : (
           <span>Unknown</span>
         ),
-    },
-    {
-      field: 'thumbnail',
-      headerName: '',
-      width: 100,
-      renderCell: (params) =>
-        params.row.thumbnail ? (
-          <Box
-            onClick={(e) => {
-              e.stopPropagation();
-              window.open(
-                params.row.downloadUrl,
-                '_blank',
-                'noopener,noreferrer',
-              );
-            }}
-            sx={{ cursor: 'pointer' }}
-          >
-            <img
-              src={params.row.thumbnail}
-              alt="Thumbnail"
-              title={t('VIEW_FILE')}
-              style={{
-                width: 60,
-                height: 80,
-                objectFit: 'cover',
-                borderRadius: 2,
-              }}
-            />
-          </Box>
-        ) : (
-          <span />
-        ),
-      sortable: false,
-      filterable: false,
     },
     {
       field: 'actions',
@@ -191,17 +166,22 @@ export default function Files() {
       {rows.length === 0 ? (
         <Typography sx={{ px: 2, py: 1 }}>{t('NO_FILES')}</Typography>
       ) : (
-        <div style={{ height: 700, width: '100%' }}>
+        <Box sx={{ position: 'relative', minHeight: 700 }}>
           <DataGrid
             rows={rows}
             columns={columns}
+            checkboxSelection
             disableRowSelectionOnClick
             onRowClick={handleRowClick}
-            getRowHeight={() => 100}
+            onRowSelectionModelChange={(selection) =>
+              setSelectedIds(selection as unknown as string[])
+            }
+            getRowHeight={() => 64}
             sx={{
               '& .MuiDataGrid-row': {
                 cursor: 'pointer',
-                alignItems: 'start',
+                alignItems: 'center',
+                borderBottom: '1px solid rgba(0, 0, 0, 0.06)',
               },
               '& .MuiDataGrid-cell': {
                 py: 1,
@@ -211,13 +191,48 @@ export default function Files() {
                 fontWeight: 500,
               },
               '& .MuiDataGrid-row:hover': {
-                backgroundColor: 'rgba(0, 0, 0, 0.04)',
+                backgroundColor: 'rgba(0, 0, 0, 0.035)',
               },
             }}
           />
-        </div>
+
+          <Slide
+            direction="up"
+            in={selectedIds.length > 0}
+            mountOnEnter
+            unmountOnExit
+          >
+            <Paper
+              elevation={3}
+              sx={{
+                position: 'absolute',
+                bottom: 0,
+                left: 0,
+                right: 0,
+                zIndex: 5,
+                py: 1,
+                px: 2,
+                bgcolor: 'background.paper',
+                borderTop: '1px solid',
+                borderColor: 'divider',
+                display: 'flex',
+                justifyContent: 'flex-end',
+              }}
+            >
+              <Button
+                variant="outlined"
+                color="error"
+                onClick={() => setConfirmBulkDelete(true)}
+                startIcon={<Icon icon="delete" />}
+              >
+                {t('DELETE_SELECTED')} ({selectedIds.length})
+              </Button>
+            </Paper>
+          </Slide>
+        </Box>
       )}
 
+      {/* Single delete confirmation */}
       <Dialog open={!!confirmDeleteId} onClose={() => setConfirmDeleteId(null)}>
         <DialogContent>
           <Typography>{t('CONFIRM_DELETE')}</Typography>
@@ -239,6 +254,28 @@ export default function Files() {
         </DialogActions>
       </Dialog>
 
+      {/* Bulk delete confirmation */}
+      <Dialog
+        open={confirmBulkDelete}
+        onClose={() => setConfirmBulkDelete(false)}
+      >
+        <DialogContent>
+          <Typography>{t('CONFIRM_DELETE')}</Typography>
+          <Typography fontWeight="bold" mt={1}>
+            {selectedIds.length} {t('FILES')}
+          </Typography>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setConfirmBulkDelete(false)}>
+            {t('CANCEL')}
+          </Button>
+          <Button onClick={handleBulkDelete} color="error" variant="contained">
+            {t('DELETE')}
+          </Button>
+        </DialogActions>
+      </Dialog>
+
+      {/* Deleting overlay */}
       <Backdrop
         open={deletingOverlay}
         sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.modal + 1 }}
