@@ -1,6 +1,6 @@
 ---
 order: 2
-title: Fullstack JavaScript Developer
+title: Fullstack JavaScript
 description: Match your Job to our Curriculum Vitae with AI
 slug: /work/cv
 icon: openai
