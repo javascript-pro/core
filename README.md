@@ -3,8 +3,6 @@
 Entirely working Next.js App. Free to use and modify as ever.  
 Always Free & Open Source.
 
-
-
 ✅ Newest Features
 
 Email alerts with [Resend](https://resend.com)
@@ -18,7 +16,7 @@ resend.emails.send({
   from: 'onboarding@resend.dev',
   to: 'goldlabel.apps@gmail.com',
   subject: 'Hello World',
-  html: '<p>Congrats on sending your <strong>first email</strong>!</p>'
+  html: '<p>Congrats on sending your <strong>first email</strong>!</p>',
 });
 ```
 
