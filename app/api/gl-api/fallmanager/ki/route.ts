@@ -7,64 +7,16 @@ import fetch from 'node-fetch';
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
-type SummaryTranslations = {
-  en: string;
-  de: string;
-  fr: string;
-  pt: string;
-  zh: string;
-};
-
-export interface ParsedDocData {
-  clientName: string;
-  carRegistration: string;
-  dateOfAccident: string;
-  placeOfAccident: string;
-  insuranceCompany: string;
-  policyNumber: string;
-  claimNumber: string;
-  policeReportNumber: string;
-  witnesses: string[];
-  opposingInsurance: string;
-  opposingPolicyNumber: string;
-  opposingDriverName: string;
-  opposingVehicleDetails: string;
-  summary: SummaryTranslations;
-}
-
-interface OpenAIChatResponse {
-  id: string;
-  object: 'chat.completion';
-  created: number;
-  model: string;
-  choices: {
-    index: number;
-    message: {
-      role: 'assistant';
-      content: string;
-    };
-    finish_reason: string;
-  }[];
-  usage?: {
-    prompt_tokens: number;
-    completion_tokens: number;
-    total_tokens: number;
-  };
-  error?: {
-    message: string;
-  };
-}
-
 const systemPrompt = `
 You are an expert legal assistant working in a German law firm that handles car accident claims. 
 You help extract structured case data from legal documents. Your job is to return valid JSON that matches 
-the expected format of the law firm’s software. You must also provide a short, tweet-length summary of the 
-document’s contents in multiple languages.
+the expected format of the law firm’s software. You must also provide short summaries of the case in English and German.
 `;
 
 const userPrompt = `
-The following is the full text of a car accident-related legal document. Read the text and extract all relevant 
-data that might help populate a claim record. Return valid JSON shaped like this:
+The following is the full text of a car accident-related legal document. Read the text carefully and extract any and all relevant structured data that could help populate a legal case record.
+
+Return valid JSON with the following structure:
 
 {
   "clientName": "",
@@ -82,22 +34,26 @@ data that might help populate a claim record. Return valid JSON shaped like this
   "opposingVehicleDetails": "",
   "summary": {
     "en": "",
-    "de": "",
-    "fr": "",
-    "pt": "",
-    "zh": ""
-  }
+    "de": ""
+  },
+  "contacts": [
+    {
+      "name": "",
+      "role": "",
+      "address": "",
+      "phone": "",
+      "email": ""
+    }
+  ]
 }
 
-Leave values as empty strings if not found. \`witnesses\` should always be an array (possibly empty). 
-The \`summary\` field must be a short, tweet-length (max 280 characters) summary of the document content, 
-translated into each of the following languages:
+Guidelines:
 
-- English (\`en\`)
-- German (\`de\`)
-- French (\`fr\`)
-- Portuguese (\`pt\`)
-- Chinese (\`zh\`)
+- Leave values as empty strings if not found.
+- \`witnesses\` should always be an array (possibly empty).
+- The \`summary\` field must be a short, tweet-length (max 280 characters) summary of the document content, written in both English (\`en\`) and German (\`de\`).
+- The \`contacts\` array should include all identifiable people or organisations with any available contact info: names, addresses, phone numbers, and emails. Common examples include clients, lawyers, witnesses, opposing parties, insurers, garages, or police officers.
+- The \`role\` field in each contact should indicate their presumed role in the case (e.g. "client", "lawyer", "witness", etc).
 
 Do not include anything else in the response.
 
@@ -110,120 +66,108 @@ export async function GET() {
 
 export async function POST(req: NextRequest) {
   try {
-    console.log('✅ fallmanager/ki called');
-
     const body = await req.json();
-    const id: string = body?.id;
-
-    console.log('✅ id: ', id);
+    const id = body?.id;
 
     if (!id || typeof id !== 'string') {
-      const error = 'Missing or invalid ID';
-      return NextResponse.json({ error }, { status: 400 });
+      return NextResponse.json({ error: 'Missing or invalid ID' }, { status: 400 });
     }
 
     const docRef = adminDb.collection('files').doc(id);
     const docSnap = await docRef.get();
 
     if (!docSnap.exists) {
-      const error = 'Document not found';
-      await docRef.update({
-        'docData.openai': { error },
-        updatedAt: Date.now(),
-      });
-      return NextResponse.json({ error }, { status: 404 });
+      return NextResponse.json({ error: 'Document not found' }, { status: 404 });
     }
 
-    const docData = docSnap.data() as {
-      docData?: { rawText?: string };
+    const data = docSnap.data();
+    const rawText = data?.rawText || data?.docData?.rawText || '';
+    const prompt = `${userPrompt.trim()}\n\n${rawText.trim()}`;
+
+    // Set processing + prompt
+    await docRef.update({
+      openai: {
+        processing: true,
+      },
+      updatedAt: Date.now(),
+    });
+
+    const openaiRes = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${OPENAI_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: 'gpt-4-turbo',
+        messages: [
+          { role: 'system', content: systemPrompt },
+          { role: 'user', content: prompt },
+        ],
+        temperature: 0.2,
+      }),
+    });
+
+    const result = (await openaiRes.json()) as {
+      error?: { message?: string };
+      choices?: { message?: { content?: string } }[];
     };
 
-    const rawText = docData?.docData?.rawText;
-
-    if (!rawText || typeof rawText !== 'string' || rawText.length < 20) {
-      const error = 'Missing or invalid rawText';
-      await docRef.update({
-        'docData.openai': { error },
-        updatedAt: Date.now(),
-      });
-      return NextResponse.json({ error }, { status: 400 });
-    }
-
-    const openaiRes = await fetch(
-      'https://api.openai.com/v1/chat/completions',
-      {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${OPENAI_API_KEY}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          model: 'gpt-4-turbo',
-          messages: [
-            { role: 'system', content: systemPrompt },
-            { role: 'user', content: `${userPrompt}\n\n${rawText}` },
-          ],
-          temperature: 0.2,
-        }),
-      },
-    );
-
-    const result = (await openaiRes.json()) as OpenAIChatResponse;
-
     if (!openaiRes.ok) {
-      const error = result.error?.message || 'OpenAI error';
+      const error = result?.error?.message || 'OpenAI error';
       await docRef.update({
-        'docData.openai': { error },
+        openai: { error },
         updatedAt: Date.now(),
       });
       return NextResponse.json({ error }, { status: openaiRes.status });
     }
 
-    const content = result.choices?.[0]?.message?.content;
+    const content = result?.choices?.[0]?.message?.content;
     if (!content || typeof content !== 'string') {
       const error = 'Invalid OpenAI response format';
       await docRef.update({
-        'docData.openai': { error },
+        openai: { error },
         updatedAt: Date.now(),
       });
       return NextResponse.json({ error }, { status: 500 });
     }
 
-    let parsed: ParsedDocData;
+    let parsed;
     try {
       parsed = JSON.parse(content);
     } catch {
-      const error = 'Failed to parse OpenAI response';
+      const error = 'Failed to parse OpenAI JSON output';
       await docRef.update({
-        'docData.openai': { error },
+        openai: { error },
         updatedAt: Date.now(),
       });
       return NextResponse.json({ error }, { status: 500 });
     }
 
     await docRef.update({
-      'docData.openai': parsed,
+      openai: parsed,
       updatedAt: Date.now(),
     });
 
     return NextResponse.json({ ok: true, id, docData: parsed });
-  } catch (err: unknown) {
-    const error = err instanceof Error ? err.message : 'Unknown error';
+  } catch (error) {
+    const fallbackError =
+      error instanceof Error ? error.message : 'Unknown error';
 
     try {
       const body = await req.json();
       const id = body?.id;
       if (typeof id === 'string') {
         await adminDb.collection('files').doc(id).update({
-          'docData.openai': { error },
+          openai: { error: fallbackError },
           updatedAt: Date.now(),
         });
       }
     } catch (e) {
-      console.error('🔥 Could not write fallback error to Firestore:', e);
+      console.error('🔥 Fallback write failed:', e);
     }
 
-    console.log('✅ error', error);
-    return NextResponse.json({ error }, { status: 500 });
+    console.error('🔥 Error:', error);
+    return NextResponse.json({ error: fallbackError }, { status: 500 });
   }
 }

@@ -20,7 +20,6 @@ import {
   Files,
 } from '../Fallmanager';
 import { db } from '../../lib/firebase';
-import Upload from './components/Upload';
 
 export default function Fallmanager() {
   const dispatch = useDispatch();

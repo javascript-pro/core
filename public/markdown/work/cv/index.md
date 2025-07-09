@@ -11,6 +11,7 @@ github: https://raw.githubusercontent.com/javascript-pro/core/refs/heads/main/pu
 ---
 
 ## Fullstack JavaScript Developer
+
 ## Fullstack JavaScript
 
 Over 20 years of experience delivering scalable web applications across startups, enterprises, and remote-first teams in the UK, Europe, and Australia and beyond. Deep expertise in React, TypeScript, current specialising in Next.js.

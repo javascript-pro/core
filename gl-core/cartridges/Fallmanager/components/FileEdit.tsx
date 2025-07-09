@@ -44,8 +44,12 @@ type FileMeta = {
   rawText?: string;
   rawTextProcessing?: boolean;
   downloadUrl?: string;
-  docData?: {
-    openai?: any;
+  openai?: {
+    summary?: {
+      en?: string;
+      de?: string;
+    };
+    [key: string]: any;
   };
   [key: string]: any;
 };
@@ -54,7 +58,7 @@ export default function FileEdit({ id }: { id: string }) {
   const t = useLingua();
   const router = useRouter();
   const dispatch = useDispatch();
-  const { files } = useFallmanagerSlice();
+  const { files, language } = useFallmanagerSlice();
 
   const [liveFile, setLiveFile] = React.useState<FileMeta | null>(
     files?.[id] || null,
@@ -172,8 +176,6 @@ export default function FileEdit({ id }: { id: string }) {
     if (!liveFile?.rawText) return;
     setRunningAI(true);
     try {
-      console.log('handleRunAI', JSON.stringify({ id }));
-
       const res = await fetch(`/api/gl-api/fallmanager/ki`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -301,12 +303,9 @@ export default function FileEdit({ id }: { id: string }) {
                       component="pre"
                       sx={{
                         whiteSpace: 'pre-wrap',
-                        backgroundColor: 'background.paper',
                         p: 2,
                         maxHeight: 300,
                         overflowY: 'auto',
-                        border: '1px solid',
-                        borderColor: 'divider',
                         borderRadius: 1,
                         fontSize: '0.875rem',
                       }}
@@ -320,7 +319,7 @@ export default function FileEdit({ id }: { id: string }) {
               {liveFile.rawText && (
                 <Box mt={3}>
                   <Button
-                    variant="outlined"
+                    variant="contained"
                     startIcon={<Icon icon="oliver" />}
                     onClick={handleRunAI}
                     disabled={runningAI}
@@ -330,7 +329,18 @@ export default function FileEdit({ id }: { id: string }) {
                 </Box>
               )}
 
-              <pre>openai: {JSON.stringify(liveFile.openai, null, 2)}</pre>
+              {liveFile.openai?.summary?.en && (
+                <Box mt={3}>
+                  <Typography variant="subtitle2" gutterBottom>
+                    {t('SUMMARY')}
+                  </Typography>
+                  <Typography variant="body2" sx={{ whiteSpace: 'pre-wrap' }}>
+                    {language === 'de'
+                      ? liveFile.openai.summary.de || liveFile.openai.summary.en
+                      : liveFile.openai.summary.en}
+                  </Typography>
+                </Box>
+              )}
             </Grid>
           </Grid>
         </CardContent>
