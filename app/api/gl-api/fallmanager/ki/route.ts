@@ -1,3 +1,4 @@
+// core/app/api/gl-api/fallmanager/ki/route.ts
 export const runtime = 'nodejs';
 
 import { NextRequest, NextResponse } from 'next/server';
@@ -109,25 +110,28 @@ export async function GET() {
 
 export async function POST(req: NextRequest) {
   try {
-    console.log('✅ POST /api/gl-api/fallmanager/ki called');
+    console.log('✅ fallmanager/ki called');
+
     const body = await req.json();
     const id: string = body?.id;
 
+    console.log('✅ id: ', id);
+
     if (!id || typeof id !== 'string') {
-      return NextResponse.json(
-        { error: 'Missing or invalid ID' },
-        { status: 400 },
-      );
+      const error = 'Missing or invalid ID';
+      return NextResponse.json({ error }, { status: 400 });
     }
 
     const docRef = adminDb.collection('files').doc(id);
     const docSnap = await docRef.get();
 
     if (!docSnap.exists) {
-      return NextResponse.json(
-        { error: 'Document not found' },
-        { status: 404 },
-      );
+      const error = 'Document not found';
+      await docRef.update({
+        'docData.openai': { error },
+        updatedAt: Date.now(),
+      });
+      return NextResponse.json({ error }, { status: 404 });
     }
 
     const docData = docSnap.data() as {
@@ -137,10 +141,12 @@ export async function POST(req: NextRequest) {
     const rawText = docData?.docData?.rawText;
 
     if (!rawText || typeof rawText !== 'string' || rawText.length < 20) {
-      return NextResponse.json(
-        { error: 'Missing or invalid rawText' },
-        { status: 400 },
-      );
+      const error = 'Missing or invalid rawText';
+      await docRef.update({
+        'docData.openai': { error },
+        updatedAt: Date.now(),
+      });
+      return NextResponse.json({ error }, { status: 400 });
     }
 
     const openaiRes = await fetch(
@@ -165,28 +171,34 @@ export async function POST(req: NextRequest) {
     const result = (await openaiRes.json()) as OpenAIChatResponse;
 
     if (!openaiRes.ok) {
-      return NextResponse.json(
-        { error: result.error?.message || 'OpenAI error' },
-        { status: openaiRes.status },
-      );
+      const error = result.error?.message || 'OpenAI error';
+      await docRef.update({
+        'docData.openai': { error },
+        updatedAt: Date.now(),
+      });
+      return NextResponse.json({ error }, { status: openaiRes.status });
     }
 
     const content = result.choices?.[0]?.message?.content;
     if (!content || typeof content !== 'string') {
-      return NextResponse.json(
-        { error: 'Invalid OpenAI response format' },
-        { status: 500 },
-      );
+      const error = 'Invalid OpenAI response format';
+      await docRef.update({
+        'docData.openai': { error },
+        updatedAt: Date.now(),
+      });
+      return NextResponse.json({ error }, { status: 500 });
     }
 
     let parsed: ParsedDocData;
     try {
       parsed = JSON.parse(content);
     } catch {
-      return NextResponse.json(
-        { error: 'Failed to parse OpenAI response' },
-        { status: 500 },
-      );
+      const error = 'Failed to parse OpenAI response';
+      await docRef.update({
+        'docData.openai': { error },
+        updatedAt: Date.now(),
+      });
+      return NextResponse.json({ error }, { status: 500 });
     }
 
     await docRef.update({
@@ -197,6 +209,20 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: true, id, docData: parsed });
   } catch (err: unknown) {
     const error = err instanceof Error ? err.message : 'Unknown error';
+
+    try {
+      const body = await req.json();
+      const id = body?.id;
+      if (typeof id === 'string') {
+        await adminDb.collection('files').doc(id).update({
+          'docData.openai': { error },
+          updatedAt: Date.now(),
+        });
+      }
+    } catch (e) {
+      console.error('🔥 Could not write fallback error to Firestore:', e);
+    }
+
     console.log('✅ error', error);
     return NextResponse.json({ error }, { status: 500 });
   }

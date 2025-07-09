@@ -105,15 +105,21 @@ export const lingua: any = {
     en: 'No thumbnail generated yet.',
     de: 'Noch kein Vorschaubild generiert.',
   },
-
+  RUN_AI_ANALYSIS: {
+    en: 'Ask Oliver',
+    de: 'Frag Oliver',
+  },
   GENERATE_THUMBNAIL: {
     en: 'Generate thumbnail',
     de: 'Vorschaubild generieren',
   },
-
+  ARE_YOU_SURE: {
+    en: 'Really?',
+    de: 'Sicher?',
+  },
   GENERATING_THUMBNAIL: {
-    en: 'Generating...',
-    de: 'Generierung läuft...',
+    en: 'Generating PDF thumbnail',
+    de: 'Generierung läuft',
   },
 
   EXTRACTING_TEXT: {
