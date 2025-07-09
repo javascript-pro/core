@@ -7,7 +7,7 @@ import { initialStateBouncer } from './cartridges/Bouncer';
 import { initialStateFallmanager } from './cartridges/Fallmanager';
 
 export const initialState: any = {
-  themeMode: 'dark',
+  themeMode: 'light',
   fallmanager: initialStateFallmanager,
   bouncer: initialStateBouncer,
   cv: initialStateCV,
