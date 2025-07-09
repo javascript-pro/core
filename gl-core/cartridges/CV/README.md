@@ -128,5 +128,4 @@ All branches are auto-deployed to Vercel as **preview deployments**.
 
 ## 🧪 Final Words
 
-You're free to cross the streams here. As long as the last deployment looks right and passes your QA, hit *Promote*. That’s how we ship CVs in style.
-
+You're free to cross the streams here. As long as the last deployment looks right and passes your QA, hit _Promote_. That’s how we ship CVs in style.
