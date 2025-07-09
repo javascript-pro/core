@@ -52,7 +52,6 @@ export default function Files() {
       return {
         id: file.id,
         fileName: file.fileName,
-        fileType: file.mimeType?.split('/')?.[1] || 'PDF',
         size: (file.fileSize / 1024).toFixed(1) + ' KB',
         uploadedAt: uploadedAt ? uploadedAt.toISOString() : null,
         uploadedFromNow: uploadedAt ? moment(uploadedAt).fromNow() : 'Unknown',
@@ -65,8 +64,8 @@ export default function Files() {
   const handleDelete = async (id: string) => {
     const fileToDelete = rows.find((row) => row.id === id);
     setDeletingFileName(fileToDelete?.fileName || '...');
-    setConfirmDeleteId(null); // close dialog
-    setDeletingOverlay(true); // show overlay
+    setConfirmDeleteId(null);
+    setDeletingOverlay(true);
     setDeleting((prev) => ({ ...prev, [id]: true }));
     await dispatch(deleteFile(id));
     setDeleting((prev) => {
@@ -83,6 +82,24 @@ export default function Files() {
       field: 'fileName',
       headerName: t('FILENAME'),
       flex: 2,
+    },
+    {
+      field: 'size',
+      headerName: t('FILESIZE'),
+      width: 100,
+    },
+    {
+      field: 'uploadedFromNow',
+      headerName: t('TIME_CREATED'),
+      flex: 1.5,
+      renderCell: (params) =>
+        params.row.uploadedAt ? (
+          <Tooltip title={moment(params.row.uploadedAt).format('LLL')}>
+            <span>{params.row.uploadedFromNow}</span>
+          </Tooltip>
+        ) : (
+          <span>Unknown</span>
+        ),
     },
     {
       field: 'thumbnail',
@@ -118,29 +135,6 @@ export default function Files() {
         ),
       sortable: false,
       filterable: false,
-    },
-    {
-      field: 'fileType',
-      headerName: 'Type',
-      width: 100,
-    },
-    {
-      field: 'size',
-      headerName: t('FILESIZE'),
-      width: 100,
-    },
-    {
-      field: 'uploadedFromNow',
-      headerName: t('TIME_CREATED'),
-      flex: 1.5,
-      renderCell: (params) =>
-        params.row.uploadedAt ? (
-          <Tooltip title={moment(params.row.uploadedAt).format('LLL')}>
-            <span>{params.row.uploadedFromNow}</span>
-          </Tooltip>
-        ) : (
-          <span>Unknown</span>
-        ),
     },
     {
       field: 'actions',
@@ -224,13 +218,9 @@ export default function Files() {
         </div>
       )}
 
-      {/* Confirmation Dialog */}
       <Dialog open={!!confirmDeleteId} onClose={() => setConfirmDeleteId(null)}>
-        
         <DialogContent>
-          <Typography>
-            {t('CONFIRM_DELETE')}
-          </Typography>
+          <Typography>{t('CONFIRM_DELETE')}</Typography>
           <Typography fontWeight="bold" mt={1}>
             {getConfirmFileName()}
           </Typography>
@@ -249,7 +239,6 @@ export default function Files() {
         </DialogActions>
       </Dialog>
 
-      {/* Fullscreen Deleting Overlay */}
       <Backdrop
         open={deletingOverlay}
         sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.modal + 1 }}
