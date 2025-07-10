@@ -1,13 +1,13 @@
-// core/gl-core/cartridges/Fallmanager/components/Files.tsx
 'use client';
 
 import * as React from 'react';
 import moment from 'moment';
+import 'moment/locale/de';
 import {
   DataGrid,
   GridColDef,
   GridActionsCellItem,
-  GridRowSelectionModel,
+  // GridRowSelectionModel,
 } from '@mui/x-data-grid';
 import {
   Box,
@@ -23,7 +23,7 @@ import {
   Backdrop,
 } from '@mui/material';
 import { useRouter } from 'next/navigation';
-import { Icon, useDispatch } from '../../../../gl-core';
+import { Icon, useDispatch, useIsMobile } from '../../../../gl-core';
 import {
   useLingua,
   useFallmanagerSlice,
@@ -33,23 +33,23 @@ import {
 
 export default function Files() {
   const dispatch = useDispatch();
+  const isMobile = useIsMobile();
   const t = useLingua();
   const router = useRouter();
   const { files, language } = useFallmanagerSlice();
 
   const [deleting, setDeleting] = React.useState<Record<string, boolean>>({});
   const [deletingOverlay, setDeletingOverlay] = React.useState(false);
-  const [deletingFileName, setDeletingFileName] = React.useState<string | null>(
-    null,
-  );
-  const [confirmDeleteId, setConfirmDeleteId] = React.useState<string | null>(
-    null,
-  );
-  const [selectedIds, setSelectedIds] = React.useState<string[]>([]);
-  const [confirmBulkDelete, setConfirmBulkDelete] = React.useState(false);
+  const [deletingFileName, setDeletingFileName] = React.useState<string | null>(null);
+  const [confirmDeleteId, setConfirmDeleteId] = React.useState<string | null>(null);
+  // const [selectedIds, setSelectedIds] = React.useState<string[]>([]);
+  // const [confirmBulkDelete, setConfirmBulkDelete] = React.useState(false);
 
   const rows = React.useMemo(() => {
     if (!files || typeof files !== 'object') return [];
+
+    moment.locale(language === 'de' ? 'de' : 'en');
+
     return Object.values(files).map((file: any) => {
       const uploadedAt = file.createdAt?.seconds
         ? new Date(file.createdAt.seconds * 1000)
@@ -63,6 +63,7 @@ export default function Files() {
         fileName: file.fileName,
         size: (file.fileSize / 1024).toFixed(1) + ' KB',
         uploadedAt: uploadedAt ? uploadedAt.toISOString() : null,
+        createdAt: uploadedAt?.getTime() || 0,
         uploadedFromNow: uploadedAt ? moment(uploadedAt).fromNow() : 'Unknown',
         downloadUrl: file.downloadUrl,
         summary,
@@ -86,6 +87,7 @@ export default function Files() {
     setDeletingFileName(null);
   };
 
+  /*
   const handleBulkDelete = async () => {
     setConfirmBulkDelete(false);
     setDeletingOverlay(true);
@@ -97,8 +99,9 @@ export default function Files() {
     setDeletingOverlay(false);
     setDeletingFileName(null);
   };
+  */
 
-  const columns: GridColDef[] = [
+  const baseColumns: GridColDef[] = [
     {
       field: 'fileName',
       headerName: t('FILENAME'),
@@ -177,6 +180,10 @@ export default function Files() {
     },
   ];
 
+  const columns = isMobile
+    ? baseColumns.filter((col) => col.field === 'fileName')
+    : baseColumns;
+
   const handleRowClick = (params: any) => {
     router.push(`/fallmanager/file/${params.id}`);
   };
@@ -194,13 +201,14 @@ export default function Files() {
       {rows.length === 0 ? (
         <Typography sx={{ px: 2, py: 1 }}>{t('NO_FILES')}</Typography>
       ) : (
-        <Box sx={{ position: 'relative', minHeight: 700 }}>
+        <Box sx={{ position: 'relative', minHeight: 450, mx: 2, mt: 2 }}>
           <DataGrid
             rows={rows}
             columns={columns}
-            checkboxSelection
-            disableRowSelectionOnClick
+            // checkboxSelection
+            // disableRowSelectionOnClick
             onRowClick={handleRowClick}
+            /*
             onRowSelectionModelChange={(selection: GridRowSelectionModel) =>
               setSelectedIds(
                 (Array.isArray(selection) ? selection : []).filter(
@@ -208,7 +216,9 @@ export default function Files() {
                 ),
               )
             }
+            */
             getRowHeight={() => 'auto'}
+            sortModel={[{ field: 'createdAt', sort: 'desc' }]}
             sx={{
               '& .MuiDataGrid-row': {
                 cursor: 'pointer',
@@ -232,7 +242,12 @@ export default function Files() {
         </Box>
       )}
 
-      <Dialog open={!!confirmDeleteId} onClose={() => setConfirmDeleteId(null)}>
+      <Dialog
+        fullWidth
+        maxWidth="sm"
+        open={!!confirmDeleteId}
+        onClose={() => setConfirmDeleteId(null)}
+      >
         <DialogContent>
           <Typography>{t('CONFIRM_DELETE')}</Typography>
           <Typography fontWeight="bold" mt={1}>
@@ -253,7 +268,10 @@ export default function Files() {
         </DialogActions>
       </Dialog>
 
+      {/* 
       <Dialog
+        fullWidth
+        maxWidth="sm"
         open={confirmBulkDelete}
         onClose={() => setConfirmBulkDelete(false)}
       >
@@ -272,6 +290,7 @@ export default function Files() {
           </Button>
         </DialogActions>
       </Dialog>
+      */}
 
       <Backdrop
         open={deletingOverlay}

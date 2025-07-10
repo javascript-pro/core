@@ -1,4 +1,3 @@
-// core/app/api/gl-api/fallmanager/ki/route.ts
 export const runtime = 'nodejs';
 
 import { NextRequest, NextResponse } from 'next/server';
@@ -88,13 +87,19 @@ export async function POST(req: NextRequest) {
 
     const data = docSnap.data();
     const rawText = data?.rawText || data?.docData?.rawText || '';
-    const prompt = `${userPrompt.trim()}\n\n${rawText.trim()}`;
+    if (!rawText.trim()) {
+      const error = 'No rawText available in document';
+      await docRef.update({
+        openai: { error },
+        updatedAt: Date.now(),
+      });
+      return NextResponse.json({ error }, { status: 400 });
+    }
 
-    // Set processing + prompt
+    const prompt = `${userPrompt.trim()}\n\n${rawText.trim().slice(0, 12000)}`;
+
     await docRef.update({
-      openai: {
-        processing: true,
-      },
+      openai: { processing: true },
       updatedAt: Date.now(),
     });
 
@@ -108,22 +113,21 @@ export async function POST(req: NextRequest) {
         },
         body: JSON.stringify({
           model: 'gpt-4-turbo',
+          temperature: 0.2,
+          max_tokens: 1500,
           messages: [
             { role: 'system', content: systemPrompt },
             { role: 'user', content: prompt },
           ],
-          temperature: 0.2,
         }),
       },
     );
 
-    const result = (await openaiRes.json()) as {
-      error?: { message?: string };
-      choices?: { message?: { content?: string } }[];
-    };
+    const result = (await openaiRes.json()) as unknown;
 
     if (!openaiRes.ok) {
-      const error = result?.error?.message || 'OpenAI error';
+      const resultJson = result as { error?: { message?: string } };
+      const error = resultJson?.error?.message || 'OpenAI API error';
       await docRef.update({
         openai: { error },
         updatedAt: Date.now(),
@@ -131,9 +135,13 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error }, { status: openaiRes.status });
     }
 
-    const content = result?.choices?.[0]?.message?.content;
+    const resultJson = result as {
+      choices?: { message?: { content?: string } }[];
+    };
+
+    let content = resultJson?.choices?.[0]?.message?.content;
     if (!content || typeof content !== 'string') {
-      const error = 'Invalid OpenAI response format';
+      const error = 'Missing or invalid OpenAI content';
       await docRef.update({
         openai: { error },
         updatedAt: Date.now(),
@@ -141,13 +149,19 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error }, { status: 500 });
     }
 
+    content = content
+      .trim()
+      .replace(/^```json\s*/i, '')
+      .replace(/```$/, '')
+      .trim();
+
     let parsed;
     try {
       parsed = JSON.parse(content);
-    } catch {
+    } catch (err) {
       const error = 'Failed to parse OpenAI JSON output';
       await docRef.update({
-        openai: { error },
+        openai: { error, rawResponse: content },
         updatedAt: Date.now(),
       });
       return NextResponse.json({ error }, { status: 500 });
@@ -179,7 +193,7 @@ export async function POST(req: NextRequest) {
       console.error('🔥 Fallback write failed:', e);
     }
 
-    console.error('🔥 Error:', error);
+    console.error('🔥 Uncaught handler error:', error);
     return NextResponse.json({ error: fallbackError }, { status: 500 });
   }
 }

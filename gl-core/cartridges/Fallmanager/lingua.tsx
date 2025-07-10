@@ -96,8 +96,8 @@ export const lingua: any = {
     de: 'Vorschaubild generieren',
   },
   ARE_YOU_SURE: {
-    en: 'Really?',
-    de: 'Sicher?',
+    en: 'Are you really, really sure?',
+    de: 'Wirklich ganz sicher?',
   },
   GENERATING_THUMBNAIL: {
     en: 'Generating PDF thumbnail',
@@ -110,5 +110,25 @@ export const lingua: any = {
   EXTRACTED_TEXT: {
     en: 'Raw text',
     de: 'Extrahierter Text',
+  },
+  SUMMARY: {
+    en: 'Summary',
+    de: 'Zusammenfassung',
+  },
+  RESET: {
+    en: 'Reset',
+    de: 'Zurücksetzen',
+  },
+  DARK_MODE: {
+    en: 'Dark mode',
+    de: 'Dunkler Modus',
+  },
+  LIGHT_MODE: {
+    en: 'Light mode',
+    de: 'Heller Modus',
+  },
+  PROCESSING_AI: {
+    en: 'Asking Oliver',
+    de: 'Oliver wird gefragt',
   },
 };

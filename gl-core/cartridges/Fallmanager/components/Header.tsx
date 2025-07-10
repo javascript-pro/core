@@ -12,7 +12,7 @@ import {
   IconButton,
 } from '@mui/material';
 import { Icon, useDispatch, routeTo } from '../../../../gl-core';
-import { useLingua, TopRightMenu, SwitchLang } from '../../Fallmanager';
+import { useLingua, TopRightMenu } from '../../Fallmanager';
 
 export default function Header() {
   const dispatch = useDispatch();
@@ -48,7 +48,6 @@ export default function Header() {
         title={<Typography variant="h6">{title}</Typography>}
         action={
           <Box sx={{ display: 'flex' }}>
-            <SwitchLang />
             <Box sx={{ ml: 2 }}>
               <TopRightMenu />
             </Box>

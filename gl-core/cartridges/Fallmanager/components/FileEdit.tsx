@@ -1,4 +1,3 @@
-// core/gl-core/cartridges/Fallmanager/components/FileEdit.tsx
 'use client';
 
 import * as React from 'react';
@@ -16,7 +15,6 @@ import {
   IconButton,
   Tooltip,
   CardActionArea,
-  CardActions,
   Button,
   Dialog,
   DialogTitle,
@@ -28,11 +26,16 @@ import {
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useRouter } from 'next/navigation';
-import moment from 'moment';
 import { doc, onSnapshot } from 'firebase/firestore';
 import { db } from '../../../lib/firebase';
 import { useFallmanagerSlice, useLingua, deleteFile } from '../../Fallmanager';
-import { useDispatch, toggleFeedback, Icon } from '../../../../gl-core';
+import {
+  useDispatch,
+  toggleFeedback,
+  Icon,
+  MightyButton,
+  useIsMobile,
+} from '../../../../gl-core';
 
 type FileMeta = {
   id: string;
@@ -58,6 +61,7 @@ export default function FileEdit({ id }: { id: string }) {
   const t = useLingua();
   const router = useRouter();
   const dispatch = useDispatch();
+  const isMobile = useIsMobile();
   const { files, language } = useFallmanagerSlice();
 
   const [liveFile, setLiveFile] = React.useState<FileMeta | null>(
@@ -69,6 +73,7 @@ export default function FileEdit({ id }: { id: string }) {
   const [showConfirmDelete, setShowConfirmDelete] = React.useState(false);
   const [deleting, setDeleting] = React.useState(false);
   const [runningAI, setRunningAI] = React.useState(false);
+  const [rawTextFailed, setRawTextFailed] = React.useState(false);
 
   React.useEffect(() => {
     const unsub = onSnapshot(doc(db, 'files', id), async (docSnap) => {
@@ -121,7 +126,8 @@ export default function FileEdit({ id }: { id: string }) {
       if (
         fileData.thumbnail &&
         !fileData.rawText &&
-        !fileData.rawTextProcessing
+        !fileData.rawTextProcessing &&
+        !rawTextFailed
       ) {
         try {
           const res = await fetch(`/api/gl-api/fallmanager/raw`, {
@@ -131,6 +137,7 @@ export default function FileEdit({ id }: { id: string }) {
           });
           const json = await res.json();
           if (!res.ok) {
+            setRawTextFailed(true);
             dispatch(
               toggleFeedback({
                 severity: 'error',
@@ -147,6 +154,7 @@ export default function FileEdit({ id }: { id: string }) {
             );
           }
         } catch (err) {
+          setRawTextFailed(true);
           console.error('Raw text extraction error:', err);
           dispatch(
             toggleFeedback({
@@ -159,7 +167,13 @@ export default function FileEdit({ id }: { id: string }) {
     });
 
     return () => unsub();
-  }, [id, processing, dispatch]);
+  }, [id, processing, dispatch, rawTextFailed]);
+
+  React.useEffect(() => {
+    if (liveFile?.rawText && !liveFile?.openai && !runningAI) {
+      handleRunAI();
+    }
+  }, [liveFile?.rawText, liveFile?.openai, runningAI]);
 
   const handleDelete = async () => {
     if (!liveFile) return;
@@ -174,7 +188,6 @@ export default function FileEdit({ id }: { id: string }) {
   };
 
   const handleRunAI = async () => {
-    if (!liveFile?.rawText) return;
     setRunningAI(true);
     try {
       const res = await fetch(`/api/gl-api/fallmanager/ki`, {
@@ -235,11 +248,115 @@ export default function FileEdit({ id }: { id: string }) {
               </IconButton>
             </Tooltip>
           }
-          title={liveFile.fileName || t('UNKNOWN_FILENAME')}
+          title={
+            <Typography variant="h5">
+              {liveFile.fileName || t('UNKNOWN_FILENAME')}
+            </Typography>
+          }
+          action={
+            <>
+              <MightyButton
+                sx={{
+                  mr: isMobile ? 0 : 2,
+                }}
+                mode={isMobile ? 'icon' : 'button'}
+                variant="outlined"
+                color="primary"
+                icon="delete"
+                label={t('DELETE')}
+                onClick={() => setShowConfirmDelete(true)}
+              />
+
+              <MightyButton
+                mode={isMobile ? 'icon' : 'button'}
+                variant="outlined"
+                color="primary"
+                icon="link"
+                label={t('VIEW_FILE')}
+                onClick={() => {
+                  if (liveFile?.downloadUrl) {
+                    window.open(
+                      liveFile.downloadUrl,
+                      '_blank',
+                      'noopener,noreferrer',
+                    );
+                  }
+                }}
+              />
+            </>
+          }
         />
 
         <CardContent>
           <Grid container spacing={2}>
+            <Grid size={{ xs: 12, md: 8 }}>
+              {liveFile.rawTextProcessing && (
+                <Box sx={{ mt: 3 }}>
+                  <Typography variant="body2" sx={{ mb: 1 }}>
+                    {t('EXTRACTING_TEXT')}
+                  </Typography>
+                  <LinearProgress />
+                </Box>
+              )}
+
+              {rawTextFailed && (
+                <Box sx={{ mt: 3 }}>
+                  <Typography variant="body2" color="error">
+                    {t('TEXT_EXTRACTION_FAILED')}
+                  </Typography>
+                </Box>
+              )}
+
+              {runningAI && (
+                <Box sx={{ mt: 3 }}>
+                  <Typography variant="body2" sx={{ mb: 1 }}>
+                    {t('PROCESSING_AI')}
+                  </Typography>
+                  <LinearProgress />
+                </Box>
+              )}
+
+              {liveFile.openai?.summary?.en && (
+                <Box mt={3}>
+                  <Typography variant="h6" gutterBottom>
+                    {t('SUMMARY')}
+                  </Typography>
+                  <Typography variant="body1" sx={{ whiteSpace: 'pre-wrap' }}>
+                    {language === 'de'
+                      ? liveFile.openai.summary.de || liveFile.openai.summary.en
+                      : liveFile.openai.summary.en}
+                  </Typography>
+                </Box>
+              )}
+
+              <pre>openai: {JSON.stringify(liveFile.openai, null, 2)}</pre>
+
+              {liveFile.rawText && (
+                <Accordion sx={{ mt: 3 }}>
+                  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                    <Typography variant="subtitle2">
+                      {t('EXTRACTED_TEXT')}
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Box
+                      component="pre"
+                      sx={{
+                        whiteSpace: 'pre-wrap',
+                        p: 2,
+                        maxHeight: 300,
+                        overflowY: 'auto',
+                        borderRadius: 1,
+                        fontSize: '0.875rem',
+                      }}
+                    >
+                      {liveFile.rawText.replace(/\s+/g, ' ')}
+                    </Box>
+                  </AccordionDetails>
+                </Accordion>
+              )}
+            </Grid>
+
             <Grid size={{ xs: 12, md: 4 }}>
               {liveFile.thumbnail && liveFile.downloadUrl && (
                 <>
@@ -281,81 +398,8 @@ export default function FileEdit({ id }: { id: string }) {
                 </Box>
               )}
             </Grid>
-
-            <Grid size={{ xs: 12, md: 8 }}>
-              {liveFile.rawTextProcessing && (
-                <Box sx={{ mt: 3 }}>
-                  <Typography variant="body2" sx={{ mb: 1 }}>
-                    {t('EXTRACTING_TEXT')}
-                  </Typography>
-                  <LinearProgress />
-                </Box>
-              )}
-
-              {liveFile.rawText && (
-                <Accordion sx={{ mt: 3 }}>
-                  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography variant="subtitle2">
-                      {t('EXTRACTED_TEXT')}
-                    </Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Box
-                      component="pre"
-                      sx={{
-                        whiteSpace: 'pre-wrap',
-                        p: 2,
-                        maxHeight: 300,
-                        overflowY: 'auto',
-                        borderRadius: 1,
-                        fontSize: '0.875rem',
-                      }}
-                    >
-                      {liveFile.rawText.replace(/\s+/g, ' ')}
-                    </Box>
-                  </AccordionDetails>
-                </Accordion>
-              )}
-
-              {liveFile.rawText && (
-                <Box mt={3}>
-                  <Button
-                    variant="contained"
-                    startIcon={<Icon icon="oliver" />}
-                    onClick={handleRunAI}
-                    disabled={runningAI}
-                  >
-                    {runningAI ? t('PROCESSING') + '...' : t('RUN_AI_ANALYSIS')}
-                  </Button>
-                </Box>
-              )}
-
-              {liveFile.openai?.summary?.en && (
-                <Box mt={3}>
-                  <Typography variant="subtitle2" gutterBottom>
-                    {t('SUMMARY')}
-                  </Typography>
-                  <Typography variant="body2" sx={{ whiteSpace: 'pre-wrap' }}>
-                    {language === 'de'
-                      ? liveFile.openai.summary.de || liveFile.openai.summary.en
-                      : liveFile.openai.summary.en}
-                  </Typography>
-                </Box>
-              )}
-            </Grid>
           </Grid>
         </CardContent>
-
-        <CardActions sx={{ justifyContent: 'flex-end', px: 2, pb: 2 }}>
-          <Button
-            variant="contained"
-            color="primary"
-            startIcon={<Icon icon="delete" />}
-            onClick={() => setShowConfirmDelete(true)}
-          >
-            {t('DELETE')}
-          </Button>
-        </CardActions>
       </Card>
 
       <Dialog
