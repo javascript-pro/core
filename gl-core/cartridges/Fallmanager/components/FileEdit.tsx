@@ -1,4 +1,3 @@
-// core/gl-core/cartridges/Fallmanager/components/FileEdit.tsx
 'use client';
 
 import * as React from 'react';
@@ -69,6 +68,7 @@ export default function FileEdit({ id }: { id: string }) {
   const [showConfirmDelete, setShowConfirmDelete] = React.useState(false);
   const [deleting, setDeleting] = React.useState(false);
   const [runningAI, setRunningAI] = React.useState(false);
+  const [rawTextFailed, setRawTextFailed] = React.useState(false);
 
   React.useEffect(() => {
     const unsub = onSnapshot(doc(db, 'files', id), async (docSnap) => {
@@ -121,7 +121,8 @@ export default function FileEdit({ id }: { id: string }) {
       if (
         fileData.thumbnail &&
         !fileData.rawText &&
-        !fileData.rawTextProcessing
+        !fileData.rawTextProcessing &&
+        !rawTextFailed
       ) {
         try {
           const res = await fetch(`/api/gl-api/fallmanager/raw`, {
@@ -131,6 +132,7 @@ export default function FileEdit({ id }: { id: string }) {
           });
           const json = await res.json();
           if (!res.ok) {
+            setRawTextFailed(true);
             dispatch(
               toggleFeedback({
                 severity: 'error',
@@ -147,6 +149,7 @@ export default function FileEdit({ id }: { id: string }) {
             );
           }
         } catch (err) {
+          setRawTextFailed(true);
           console.error('Raw text extraction error:', err);
           dispatch(
             toggleFeedback({
@@ -159,7 +162,13 @@ export default function FileEdit({ id }: { id: string }) {
     });
 
     return () => unsub();
-  }, [id, processing, dispatch]);
+  }, [id, processing, dispatch, rawTextFailed]);
+
+  React.useEffect(() => {
+    if (liveFile?.rawText && !liveFile?.openai && !runningAI) {
+      handleRunAI();
+    }
+  }, [liveFile?.rawText, liveFile?.openai, runningAI]);
 
   const handleDelete = async () => {
     if (!liveFile) return;
@@ -174,7 +183,6 @@ export default function FileEdit({ id }: { id: string }) {
   };
 
   const handleRunAI = async () => {
-    if (!liveFile?.rawText) return;
     setRunningAI(true);
     try {
       const res = await fetch(`/api/gl-api/fallmanager/ki`, {
@@ -292,6 +300,23 @@ export default function FileEdit({ id }: { id: string }) {
                 </Box>
               )}
 
+              {rawTextFailed && (
+                <Box sx={{ mt: 3 }}>
+                  <Typography variant="body2" color="error">
+                    {t('TEXT_EXTRACTION_FAILED')}
+                  </Typography>
+                </Box>
+              )}
+
+              {runningAI && (
+                <Box sx={{ mt: 3 }}>
+                  <Typography variant="body2" sx={{ mb: 1 }}>
+                    {t('PROCESSING_AI')}
+                  </Typography>
+                  <LinearProgress />
+                </Box>
+              )}
+
               {liveFile.rawText && (
                 <Accordion sx={{ mt: 3 }}>
                   <AccordionSummary expandIcon={<ExpandMoreIcon />}>
@@ -315,19 +340,6 @@ export default function FileEdit({ id }: { id: string }) {
                     </Box>
                   </AccordionDetails>
                 </Accordion>
-              )}
-
-              {liveFile.rawText && (
-                <Box mt={3}>
-                  <Button
-                    variant="contained"
-                    startIcon={<Icon icon="oliver" />}
-                    onClick={handleRunAI}
-                    disabled={runningAI}
-                  >
-                    {runningAI ? t('PROCESSING') + '...' : t('RUN_AI_ANALYSIS')}
-                  </Button>
-                </Box>
               )}
 
               {liveFile.openai?.summary?.en && (
