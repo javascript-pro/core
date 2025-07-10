@@ -15,7 +15,6 @@ import {
   IconButton,
   Tooltip,
   CardActionArea,
-  CardActions,
   Button,
   Dialog,
   DialogTitle,
@@ -27,11 +26,16 @@ import {
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useRouter } from 'next/navigation';
-import moment from 'moment';
 import { doc, onSnapshot } from 'firebase/firestore';
 import { db } from '../../../lib/firebase';
 import { useFallmanagerSlice, useLingua, deleteFile } from '../../Fallmanager';
-import { useDispatch, toggleFeedback, Icon } from '../../../../gl-core';
+import {
+  useDispatch,
+  toggleFeedback,
+  Icon,
+  MightyButton,
+  useIsMobile,
+} from '../../../../gl-core';
 
 type FileMeta = {
   id: string;
@@ -57,6 +61,7 @@ export default function FileEdit({ id }: { id: string }) {
   const t = useLingua();
   const router = useRouter();
   const dispatch = useDispatch();
+  const isMobile = useIsMobile();
   const { files, language } = useFallmanagerSlice();
 
   const [liveFile, setLiveFile] = React.useState<FileMeta | null>(
@@ -243,38 +248,47 @@ export default function FileEdit({ id }: { id: string }) {
               </IconButton>
             </Tooltip>
           }
-          title={liveFile.fileName || t('UNKNOWN_FILENAME')}
-          action={<>
-          
-          <Button
-            variant="contained"
-            color="primary"
-            startIcon={<Icon icon="delete" />}
-            onClick={() => setShowConfirmDelete(true)}
-          >
-            {t('DELETE')}
-          </Button>
+          title={
+            <Typography variant="h5">
+              {liveFile.fileName || t('UNKNOWN_FILENAME')}
+            </Typography>
+          }
+          action={
+            <>
+              <MightyButton
+                sx={{
+                  mr: isMobile ? 0 : 2,
+                }}
+                mode={isMobile ? 'icon' : 'button'}
+                variant="outlined"
+                color="primary"
+                icon="delete"
+                label={t('DELETE')}
+                onClick={() => setShowConfirmDelete(true)}
+              />
 
-          <Button
-            sx={{ ml: 2 }}
-            variant="contained"
-            color="primary"
-            startIcon={<Icon icon="link" />}
-            onClick={() => {
-              if (liveFile?.downloadUrl) {
-                window.open(liveFile.downloadUrl, '_blank', 'noopener,noreferrer');
-              }
-            }}
-          >
-            {t('VIEW_FILE')}
-          </Button>
-          
-          </>}
+              <MightyButton
+                mode={isMobile ? 'icon' : 'button'}
+                variant="outlined"
+                color="primary"
+                icon="link"
+                label={t('VIEW_FILE')}
+                onClick={() => {
+                  if (liveFile?.downloadUrl) {
+                    window.open(
+                      liveFile.downloadUrl,
+                      '_blank',
+                      'noopener,noreferrer',
+                    );
+                  }
+                }}
+              />
+            </>
+          }
         />
 
         <CardContent>
           <Grid container spacing={2}>
-            
             <Grid size={{ xs: 12, md: 8 }}>
               {liveFile.rawTextProcessing && (
                 <Box sx={{ mt: 3 }}>
@@ -304,16 +318,18 @@ export default function FileEdit({ id }: { id: string }) {
 
               {liveFile.openai?.summary?.en && (
                 <Box mt={3}>
-                  <Typography variant="subtitle2" gutterBottom>
+                  <Typography variant="h6" gutterBottom>
                     {t('SUMMARY')}
                   </Typography>
-                  <Typography variant="body2" sx={{ whiteSpace: 'pre-wrap' }}>
+                  <Typography variant="body1" sx={{ whiteSpace: 'pre-wrap' }}>
                     {language === 'de'
                       ? liveFile.openai.summary.de || liveFile.openai.summary.en
                       : liveFile.openai.summary.en}
                   </Typography>
                 </Box>
               )}
+
+              <pre>openai: {JSON.stringify(liveFile.openai, null, 2)}</pre>
 
               {liveFile.rawText && (
                 <Accordion sx={{ mt: 3 }}>
@@ -382,13 +398,8 @@ export default function FileEdit({ id }: { id: string }) {
                 </Box>
               )}
             </Grid>
-
-
-
           </Grid>
         </CardContent>
-
-        
       </Card>
 
       <Dialog

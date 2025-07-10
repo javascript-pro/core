@@ -240,7 +240,12 @@ export default function Files() {
         </Box>
       )}
 
-      <Dialog open={!!confirmDeleteId} onClose={() => setConfirmDeleteId(null)}>
+      <Dialog
+        fullWidth
+        maxWidth="sm"
+        open={!!confirmDeleteId}
+        onClose={() => setConfirmDeleteId(null)}
+      >
         <DialogContent>
           <Typography>{t('CONFIRM_DELETE')}</Typography>
           <Typography fontWeight="bold" mt={1}>
@@ -262,6 +267,8 @@ export default function Files() {
       </Dialog>
 
       <Dialog
+        fullWidth
+        maxWidth="sm"
         open={confirmBulkDelete}
         onClose={() => setConfirmBulkDelete(false)}
       >

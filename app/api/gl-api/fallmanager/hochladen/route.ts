@@ -1,4 +1,3 @@
-// core/app/api/gl-api/fallmanager/hochladen/route.ts
 export const runtime = 'nodejs';
 
 import { v4 as uuidv4 } from 'uuid';
@@ -46,10 +45,19 @@ export async function POST(req: NextRequest) {
       contentType: mimeType,
     });
 
-    const [downloadUrl] = await bucket.file(storagePath).getSignedUrl({
-      action: 'read',
-      expires: Date.now() + 6 * 3600 * 1000, // 6 hours
-    });
+    // 🔁 Construct permanent public download URL
+    const projectId = process.env.FIREBASE_PROJECT_ID;
+    if (!projectId) {
+      return NextResponse.json(
+        {
+          error: 'FIREBASE_PROJECT_ID is not defined in environment variables.',
+        },
+        { status: 500 },
+      );
+    }
+
+    const encodedPath = encodeURIComponent(storagePath);
+    const downloadUrl = `https://firebasestorage.googleapis.com/v0/b/${projectId}.appspot.com/o/${encodedPath}?alt=media`;
 
     const fileData = {
       fileId,
@@ -60,8 +68,8 @@ export async function POST(req: NextRequest) {
       storagePath,
       downloadUrl,
       createdAt: admin.firestore.Timestamp.now(),
-      uploadedBy: null, // optionally populated if auth is used
-      parsedText: '', // reserved for later AI processing
+      uploadedBy: null,
+      parsedText: '',
     };
 
     const docRef = await adminDb.collection('files').add(fileData);
