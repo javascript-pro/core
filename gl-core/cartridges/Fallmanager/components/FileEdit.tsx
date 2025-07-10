@@ -244,52 +244,37 @@ export default function FileEdit({ id }: { id: string }) {
             </Tooltip>
           }
           title={liveFile.fileName || t('UNKNOWN_FILENAME')}
+          action={<>
+          
+          <Button
+            variant="contained"
+            color="primary"
+            startIcon={<Icon icon="delete" />}
+            onClick={() => setShowConfirmDelete(true)}
+          >
+            {t('DELETE')}
+          </Button>
+
+          <Button
+            sx={{ ml: 2 }}
+            variant="contained"
+            color="primary"
+            startIcon={<Icon icon="link" />}
+            onClick={() => {
+              if (liveFile?.downloadUrl) {
+                window.open(liveFile.downloadUrl, '_blank', 'noopener,noreferrer');
+              }
+            }}
+          >
+            {t('VIEW_FILE')}
+          </Button>
+          
+          </>}
         />
 
         <CardContent>
           <Grid container spacing={2}>
-            <Grid size={{ xs: 12, md: 4 }}>
-              {liveFile.thumbnail && liveFile.downloadUrl && (
-                <>
-                  {!thumbnailLoaded && (
-                    <Skeleton
-                      variant="rectangular"
-                      height={450}
-                      width="100%"
-                      animation="wave"
-                    />
-                  )}
-                  <CardActionArea
-                    onClick={() => window.open(liveFile.downloadUrl!, '_blank')}
-                    title={t('VIEW_FILE')}
-                  >
-                    <CardMedia
-                      component="img"
-                      height="450"
-                      image={liveFile.thumbnail}
-                      alt="PDF thumbnail"
-                      onLoad={() => setThumbnailLoaded(true)}
-                      onError={() => setThumbnailLoaded(true)}
-                      sx={{
-                        display: thumbnailLoaded ? 'block' : 'none',
-                        borderRadius: 1,
-                        cursor: 'pointer',
-                      }}
-                    />
-                  </CardActionArea>
-                </>
-              )}
-
-              {liveFile.thumbnailProcessing && (
-                <Box sx={{ mt: 2 }}>
-                  <Typography variant="body2" sx={{ mb: 1 }}>
-                    {t('GENERATING_THUMBNAIL')}
-                  </Typography>
-                  <LinearProgress />
-                </Box>
-              )}
-            </Grid>
-
+            
             <Grid size={{ xs: 12, md: 8 }}>
               {liveFile.rawTextProcessing && (
                 <Box sx={{ mt: 3 }}>
@@ -355,19 +340,55 @@ export default function FileEdit({ id }: { id: string }) {
                 </Accordion>
               )}
             </Grid>
+
+            <Grid size={{ xs: 12, md: 4 }}>
+              {liveFile.thumbnail && liveFile.downloadUrl && (
+                <>
+                  {!thumbnailLoaded && (
+                    <Skeleton
+                      variant="rectangular"
+                      height={450}
+                      width="100%"
+                      animation="wave"
+                    />
+                  )}
+                  <CardActionArea
+                    onClick={() => window.open(liveFile.downloadUrl!, '_blank')}
+                    title={t('VIEW_FILE')}
+                  >
+                    <CardMedia
+                      component="img"
+                      height="450"
+                      image={liveFile.thumbnail}
+                      alt="PDF thumbnail"
+                      onLoad={() => setThumbnailLoaded(true)}
+                      onError={() => setThumbnailLoaded(true)}
+                      sx={{
+                        display: thumbnailLoaded ? 'block' : 'none',
+                        borderRadius: 1,
+                        cursor: 'pointer',
+                      }}
+                    />
+                  </CardActionArea>
+                </>
+              )}
+
+              {liveFile.thumbnailProcessing && (
+                <Box sx={{ mt: 2 }}>
+                  <Typography variant="body2" sx={{ mb: 1 }}>
+                    {t('GENERATING_THUMBNAIL')}
+                  </Typography>
+                  <LinearProgress />
+                </Box>
+              )}
+            </Grid>
+
+
+
           </Grid>
         </CardContent>
 
-        <CardActions sx={{ justifyContent: 'flex-end', px: 2, pb: 2 }}>
-          <Button
-            variant="contained"
-            color="primary"
-            startIcon={<Icon icon="delete" />}
-            onClick={() => setShowConfirmDelete(true)}
-          >
-            {t('DELETE')}
-          </Button>
-        </CardActions>
+        
       </Card>
 
       <Dialog

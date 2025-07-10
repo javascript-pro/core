@@ -19,7 +19,7 @@ export const initialState: TFallmanagerState = {
   },
   lingua,
   language: 'en',
-  themeMode: 'light',
+  themeMode: 'dark',
   themes: {
     dark: {
       mode: 'dark',

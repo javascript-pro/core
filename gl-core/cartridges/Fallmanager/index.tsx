@@ -18,6 +18,7 @@ import {
   incomingFiles,
   updateAssist,
   updateFileMeta,
+  setThemeMode,
 } from './actions';
 import {
   BearbeitbarText,
@@ -38,6 +39,7 @@ import {
 export {
   Fallmanager,
   initialStateFallmanager,
+  setThemeMode,
   useFallmanagerSlice,
   useLingua,
   setzeSprache,

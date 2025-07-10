@@ -115,4 +115,16 @@ export const lingua: any = {
     en: 'Summary',
     de: 'Zusammenfassung',
   },
+  RESET: {
+    en: 'Reset',
+    de: 'Zurücksetzen',
+  },
+  DARK_MODE: {
+  en: 'Dark mode',
+  de: 'Dunkler Modus',
+},
+LIGHT_MODE: {
+  en: 'Light mode',
+  de: 'Heller Modus',
+},
 };

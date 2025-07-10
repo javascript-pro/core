@@ -2,8 +2,7 @@
 
 import * as React from 'react';
 import moment from 'moment';
-import 'moment/locale/de'; // only import German
-
+import 'moment/locale/de';
 import {
   DataGrid,
   GridColDef,
@@ -24,7 +23,7 @@ import {
   Backdrop,
 } from '@mui/material';
 import { useRouter } from 'next/navigation';
-import { Icon, useDispatch } from '../../../../gl-core';
+import { Icon, useDispatch, useIsMobile } from '../../../../gl-core';
 import {
   useLingua,
   useFallmanagerSlice,
@@ -34,6 +33,7 @@ import {
 
 export default function Files() {
   const dispatch = useDispatch();
+  const isMobile = useIsMobile();
   const t = useLingua();
   const router = useRouter();
   const { files, language } = useFallmanagerSlice();
@@ -52,7 +52,6 @@ export default function Files() {
   const rows = React.useMemo(() => {
     if (!files || typeof files !== 'object') return [];
 
-    // Set moment locale each time the language changes
     moment.locale(language === 'de' ? 'de' : 'en');
 
     return Object.values(files).map((file: any) => {
@@ -103,7 +102,7 @@ export default function Files() {
     setDeletingFileName(null);
   };
 
-  const columns: GridColDef[] = [
+  const baseColumns: GridColDef[] = [
     {
       field: 'fileName',
       headerName: t('FILENAME'),
@@ -181,6 +180,10 @@ export default function Files() {
       width: 80,
     },
   ];
+
+  const columns = isMobile
+    ? baseColumns.filter((col) => col.field === 'fileName')
+    : baseColumns;
 
   const handleRowClick = (params: any) => {
     router.push(`/fallmanager/file/${params.id}`);

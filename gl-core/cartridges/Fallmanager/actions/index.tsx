@@ -15,7 +15,7 @@ import { analyse } from './analyse';
 import { incomingCases } from './incomingCases';
 import { incomingFiles } from './incomingFiles';
 import { updateFileMeta } from './updateFileMeta';
-
+import {setThemeMode} from './setThemeMode'; 
 export {
   incomingCases,
   incomingFiles,
@@ -33,4 +33,5 @@ export {
   updateAssist,
   updateFileMeta,
   deleteFile,
+  setThemeMode,
 };
