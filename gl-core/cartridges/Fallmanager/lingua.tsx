@@ -111,4 +111,8 @@ export const lingua: any = {
     en: 'Raw text',
     de: 'Extrahierter Text',
   },
+  SUMMARY: {
+    en: 'Summary',
+    de: 'Zusammenfassung',
+  },
 };

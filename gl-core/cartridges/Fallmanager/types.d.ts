@@ -8,7 +8,11 @@ export type TFallmanagerState = {
   newCase: any;
   aiCase: any;
   language: TLanguageCode;
-  theme: TTheme;
+  themeMode: 'light' | 'dark';
+  themes: {
+    light: TTheme;
+    dark: TTheme;
+  };
   lingua: Record<string, Record<TLanguageCode, string>>;
 };
 

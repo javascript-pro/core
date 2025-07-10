@@ -23,7 +23,7 @@ import { db } from '../../lib/firebase';
 
 export default function Fallmanager() {
   const dispatch = useDispatch();
-  const { theme, files } = useFallmanagerSlice();
+  const { themeMode, themes, files } = useFallmanagerSlice();
 
   const pathname = usePathname();
   const segments = pathname?.split('/') || [];
@@ -66,8 +66,11 @@ export default function Fallmanager() {
     return () => unsub();
   }, [dispatch]);
 
+  // 🎨 Pick the correct theme based on themeMode
+  const currentTheme = themes?.[themeMode] || themes.light;
+
   return (
-    <Theme theme={theme}>
+    <Theme theme={currentTheme}>
       <CssBaseline />
       <Container>
         <Header />

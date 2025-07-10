@@ -19,23 +19,25 @@ export const initialState: TFallmanagerState = {
   },
   lingua,
   language: 'en',
-  theme: {
-    mode: 'dark',
-    primary: '#34d0f7',
-    secondary: '#4bff60',
-    background: '#000',
-    paper: '#000',
-    text: '#fff',
-    border: '#FFF',
+  themeMode: 'light',
+  themes: {
+    dark: {
+      mode: 'dark',
+      primary: '#34d0f7',
+      secondary: '#4bff60',
+      background: '#000',
+      paper: '#000',
+      text: '#fff',
+      border: '#FFF',
+    },
+    light: {
+      mode: 'light',
+      primary: '#305DA5',
+      secondary: '#414142',
+      background: '#eee',
+      paper: '#FFFFFF',
+      text: '#414142',
+      border: '#414142',
+    },
   },
-
-  // theme: {
-  //   mode: 'light',
-  //   primary: '#305DA5',
-  //   secondary: '#414142',
-  //   background: '#eee',
-  //   paper: '#FFFFFF',
-  //   text: '#414142',
-  //   border: '#414142',
-  // },
 };

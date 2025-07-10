@@ -317,6 +317,19 @@ export default function FileEdit({ id }: { id: string }) {
                 </Box>
               )}
 
+              {liveFile.openai?.summary?.en && (
+                <Box mt={3}>
+                  <Typography variant="subtitle2" gutterBottom>
+                    {t('SUMMARY')}
+                  </Typography>
+                  <Typography variant="body2" sx={{ whiteSpace: 'pre-wrap' }}>
+                    {language === 'de'
+                      ? liveFile.openai.summary.de || liveFile.openai.summary.en
+                      : liveFile.openai.summary.en}
+                  </Typography>
+                </Box>
+              )}
+
               {liveFile.rawText && (
                 <Accordion sx={{ mt: 3 }}>
                   <AccordionSummary expandIcon={<ExpandMoreIcon />}>
@@ -340,19 +353,6 @@ export default function FileEdit({ id }: { id: string }) {
                     </Box>
                   </AccordionDetails>
                 </Accordion>
-              )}
-
-              {liveFile.openai?.summary?.en && (
-                <Box mt={3}>
-                  <Typography variant="subtitle2" gutterBottom>
-                    {t('SUMMARY')}
-                  </Typography>
-                  <Typography variant="body2" sx={{ whiteSpace: 'pre-wrap' }}>
-                    {language === 'de'
-                      ? liveFile.openai.summary.de || liveFile.openai.summary.en
-                      : liveFile.openai.summary.en}
-                  </Typography>
-                </Box>
               )}
             </Grid>
           </Grid>

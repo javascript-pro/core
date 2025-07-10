@@ -1,8 +1,9 @@
-// core/gl-core/cartridges/Fallmanager/components/Files.tsx
 'use client';
 
 import * as React from 'react';
 import moment from 'moment';
+import 'moment/locale/de'; // only import German
+
 import {
   DataGrid,
   GridColDef,
@@ -50,6 +51,10 @@ export default function Files() {
 
   const rows = React.useMemo(() => {
     if (!files || typeof files !== 'object') return [];
+
+    // Set moment locale each time the language changes
+    moment.locale(language === 'de' ? 'de' : 'en');
+
     return Object.values(files).map((file: any) => {
       const uploadedAt = file.createdAt?.seconds
         ? new Date(file.createdAt.seconds * 1000)
@@ -194,7 +199,7 @@ export default function Files() {
       {rows.length === 0 ? (
         <Typography sx={{ px: 2, py: 1 }}>{t('NO_FILES')}</Typography>
       ) : (
-        <Box sx={{ position: 'relative', minHeight: 700 }}>
+        <Box sx={{ position: 'relative', minHeight: 450, mx: 2, mt: 2 }}>
           <DataGrid
             rows={rows}
             columns={columns}
