@@ -7,7 +7,7 @@ import {
   DataGrid,
   GridColDef,
   GridActionsCellItem,
-  GridRowSelectionModel,
+  // GridRowSelectionModel,
 } from '@mui/x-data-grid';
 import {
   Box,
@@ -40,14 +40,10 @@ export default function Files() {
 
   const [deleting, setDeleting] = React.useState<Record<string, boolean>>({});
   const [deletingOverlay, setDeletingOverlay] = React.useState(false);
-  const [deletingFileName, setDeletingFileName] = React.useState<string | null>(
-    null,
-  );
-  const [confirmDeleteId, setConfirmDeleteId] = React.useState<string | null>(
-    null,
-  );
-  const [selectedIds, setSelectedIds] = React.useState<string[]>([]);
-  const [confirmBulkDelete, setConfirmBulkDelete] = React.useState(false);
+  const [deletingFileName, setDeletingFileName] = React.useState<string | null>(null);
+  const [confirmDeleteId, setConfirmDeleteId] = React.useState<string | null>(null);
+  // const [selectedIds, setSelectedIds] = React.useState<string[]>([]);
+  // const [confirmBulkDelete, setConfirmBulkDelete] = React.useState(false);
 
   const rows = React.useMemo(() => {
     if (!files || typeof files !== 'object') return [];
@@ -67,6 +63,7 @@ export default function Files() {
         fileName: file.fileName,
         size: (file.fileSize / 1024).toFixed(1) + ' KB',
         uploadedAt: uploadedAt ? uploadedAt.toISOString() : null,
+        createdAt: uploadedAt?.getTime() || 0,
         uploadedFromNow: uploadedAt ? moment(uploadedAt).fromNow() : 'Unknown',
         downloadUrl: file.downloadUrl,
         summary,
@@ -90,6 +87,7 @@ export default function Files() {
     setDeletingFileName(null);
   };
 
+  /*
   const handleBulkDelete = async () => {
     setConfirmBulkDelete(false);
     setDeletingOverlay(true);
@@ -101,6 +99,7 @@ export default function Files() {
     setDeletingOverlay(false);
     setDeletingFileName(null);
   };
+  */
 
   const baseColumns: GridColDef[] = [
     {
@@ -206,9 +205,10 @@ export default function Files() {
           <DataGrid
             rows={rows}
             columns={columns}
-            checkboxSelection
-            disableRowSelectionOnClick
+            // checkboxSelection
+            // disableRowSelectionOnClick
             onRowClick={handleRowClick}
+            /*
             onRowSelectionModelChange={(selection: GridRowSelectionModel) =>
               setSelectedIds(
                 (Array.isArray(selection) ? selection : []).filter(
@@ -216,7 +216,9 @@ export default function Files() {
                 ),
               )
             }
+            */
             getRowHeight={() => 'auto'}
+            sortModel={[{ field: 'createdAt', sort: 'desc' }]}
             sx={{
               '& .MuiDataGrid-row': {
                 cursor: 'pointer',
@@ -266,6 +268,7 @@ export default function Files() {
         </DialogActions>
       </Dialog>
 
+      {/* 
       <Dialog
         fullWidth
         maxWidth="sm"
@@ -287,6 +290,7 @@ export default function Files() {
           </Button>
         </DialogActions>
       </Dialog>
+      */}
 
       <Backdrop
         open={deletingOverlay}
