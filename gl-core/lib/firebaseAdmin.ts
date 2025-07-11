@@ -32,6 +32,11 @@ const app = getApps().length
       storageBucket,
     });
 
-export const adminDb = getFirestore(app);
+const db = getFirestore(app);
+
+// ✅ Set ignoreUndefinedProperties after initialization
+db.settings({ ignoreUndefinedProperties: true });
+
+export const adminDb = db;
 export const adminStorage = getStorage(app);
-export { admin }; // 👈 Export full admin namespace
+export { admin };
