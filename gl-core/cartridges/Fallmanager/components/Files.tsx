@@ -40,8 +40,12 @@ export default function Files() {
 
   const [deleting, setDeleting] = React.useState<Record<string, boolean>>({});
   const [deletingOverlay, setDeletingOverlay] = React.useState(false);
-  const [deletingFileName, setDeletingFileName] = React.useState<string | null>(null);
-  const [confirmDeleteId, setConfirmDeleteId] = React.useState<string | null>(null);
+  const [deletingFileName, setDeletingFileName] = React.useState<string | null>(
+    null,
+  );
+  const [confirmDeleteId, setConfirmDeleteId] = React.useState<string | null>(
+    null,
+  );
   // const [selectedIds, setSelectedIds] = React.useState<string[]>([]);
   // const [confirmBulkDelete, setConfirmBulkDelete] = React.useState(false);
 
