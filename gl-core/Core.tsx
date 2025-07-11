@@ -51,7 +51,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
   }, [dispatch]);
 
   const isCV = pathname === '/work/cv';
-  const isFlickr = pathname === '/work/core/cartridges/flickr';
+  const isFlickr = pathname === '/flickr2';
   const isFallmanager = pathname.startsWith('/fallmanager');
   const isApp = isCV || isFlickr || isFallmanager;
 
