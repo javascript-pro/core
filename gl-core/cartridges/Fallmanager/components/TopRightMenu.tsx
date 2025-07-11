@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import moment from 'moment';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import {
   IconButton,
@@ -23,7 +23,7 @@ export default function TopRightMenu() {
   const dispatch = useDispatch();
   const t = useLingua();
   const { themeMode } = useFallmanagerSlice();
-
+  const router = useRouter();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
@@ -67,6 +67,15 @@ export default function TopRightMenu() {
       >
         <MenuItem>
           <SwitchLang />
+        </MenuItem>
+
+        <MenuItem onClick={() => {
+          router.push('/');
+        }}>
+          <ListItemIcon>
+            <Icon icon="blokey" />
+          </ListItemIcon>
+          <ListItemText>{t('GOLDLABEL_HOME')}</ListItemText>
         </MenuItem>
 
         <MenuItem onClick={toggleThemeMode}>

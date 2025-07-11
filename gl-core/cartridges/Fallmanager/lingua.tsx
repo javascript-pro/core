@@ -11,6 +11,10 @@ export const lingua: any = {
     en: 'Delete selected',
     de: 'Ausgewählte löschen',
   },
+  DELETING: {
+    en: 'Deleting',
+    de: 'Wird gelöscht',
+  },
   FILES: {
     en: 'files',
     de: 'Dateien',
@@ -131,4 +135,11 @@ export const lingua: any = {
     en: 'Asking Oliver',
     de: 'Oliver wird gefragt',
   },
+GOLDLABEL_HOME: {
+  en: 'Goldlabel Home',
+  de: 'Goldlabel Startseite',
+},
+  
+
+
 };
