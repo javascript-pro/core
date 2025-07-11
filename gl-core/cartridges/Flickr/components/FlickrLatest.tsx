@@ -74,9 +74,8 @@ export default function FlickrLatest({}: TAlbumCard) {
   };
 
   const handleReset = () => {
-      dispatch(setLatestIndex(0));
+    dispatch(setLatestIndex(0));
   };
-
 
   const width = currentPhoto?.sizes?.medium?.width;
   const height = currentPhoto?.sizes?.medium?.height;
@@ -84,7 +83,6 @@ export default function FlickrLatest({}: TAlbumCard) {
 
   return (
     <>
-      
       <CardActions>
         <MightyButton
           color="primary"
@@ -111,10 +109,10 @@ export default function FlickrLatest({}: TAlbumCard) {
         />
         <Box sx={{ flexGrow: 1 }} />
       </CardActions>
-<CardHeader
+      <CardHeader
         title={<Typography>{currentPhoto?.title || 'Photo title'}</Typography>}
       />
-  <CardContent>
+      <CardContent>
         <Box sx={{ my: 1 }}>
           {currentPhoto ? (
             <Box sx={{ position: 'relative' }}>
@@ -193,10 +191,12 @@ export default function FlickrLatest({}: TAlbumCard) {
             <Skeleton variant="rectangular" width="100%" height={150} />
           )}
           {currentPhoto?.description?.trim() && (
-        <CardContent>
-          <Typography variant="body2">{currentPhoto.description}</Typography>
-        </CardContent>
-      )}
+            <CardContent>
+              <Typography variant="body2">
+                {currentPhoto.description}
+              </Typography>
+            </CardContent>
+          )}
         </Box>
       </CardContent>
     </>
