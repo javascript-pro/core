@@ -20,7 +20,7 @@ A React component for clean, fast-loading image galleries.
 
 ### Overview
 
-`<Flickr options={{}} />` provides an easy way to display recent photos from a Flickr account. It connects to a server-side API route in your Next.js app that securely fetches Flickr data using your API key.
+Provides an easy way to display recent photos from a Flickr account. It connects to a server-side API route in your Next.js app that securely fetches Flickr data using your API key.
 
 The component is designed to work within the App Router pattern and integrate seamlessly with MUI.
 
@@ -52,7 +52,10 @@ This route is statically typed and ready to use from both client and server cont
 'use client';
 import { Flickr } from 'gl-core';
 
-export default function FlickrPage() {
-  return <Flickr options={{ layout: 'grid' }} />;
+export default function MyComponent() {
+  return <Flickr options={{ 
+            key: 'value',
+            layout: 'grid',
+          }}/>;
 }
 ```

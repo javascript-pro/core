@@ -6,7 +6,7 @@ import { TCore } from './types';
 import * as React from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
-import { CssBaseline, Box, Grid, Skeleton, Typography } from '@mui/material';
+import { CssBaseline, Container, Box, Grid, Skeleton, Typography } from '@mui/material';
 import {
   ArrowMenu,
   Theme,
@@ -81,7 +81,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
     <Theme theme={config.themes[themeMode] as any}>
       <CssBaseline />
       <IncludeAll />
-      <Box id="core">
+      <Container id="core">
         <Box sx={{ minHeight: '100vh' }}>
           <Header frontmatter={frontmatter} />
           <Grid container spacing={1}>
@@ -153,7 +153,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
             )}
           </Grid>
         </Box>
-      </Box>
+      </Container>
     </Theme>
   );
 }
