@@ -22,13 +22,22 @@ export default function SideAds() {
         }}
       />
 
-      {/* <Advert
+      <Advert
         icon="openai"
         title={'C.V.'}
         onClick={() => {
           dispatch(routeTo('/cv', router));
         }}
-      /> */}
+      />
+
+      <Advert
+        icon="flickr"
+        title={'Flickr'}
+        onClick={() => {
+          dispatch(routeTo('/flickr', router));
+        }}
+      />
+
       <Advert
         icon="contact"
         title={'Contact Us'}

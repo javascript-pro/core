@@ -5,7 +5,7 @@
     "slug": "/",
     "order": 1,
     "icon": "home",
-    "image": "/png/og.png",
+    "image": "https://live.staticflickr.com/65535/53670802348_9bb887b680_b.jpg",
     "type": "folder",
     "tags": [
       "JavaScript",
@@ -43,7 +43,7 @@
         "slug": "/work",
         "order": 10,
         "icon": "work",
-        "image": "/png/og.png",
+        "image": "https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg",
         "type": "folder",
         "tags": [
           "JavaScript",
@@ -91,7 +91,7 @@
             "slug": "/work/company",
             "order": 10,
             "icon": "work",
-            "image": "/png/og.png",
+            "image": "https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg",
             "type": "folder",
             "excerpt": "| \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX\n\nGoldlabel Apps is a UKbased software company that designs, builds, and maintains fullstack web applications. We speciali",
             "children": [
@@ -304,6 +304,19 @@
             "excerpt": "Why We Open Source\n\nWe’ve been building JavaScript applications for over 20 years. In that time, we’ve seen tools come and go. Trends rise, crash, and return again under a different name.\n\nWhat’s rema"
           }
         ]
+      },
+      {
+        "title": "Flickr Photo Cartridge",
+        "slug": "/flickr",
+        "order": 20,
+        "icon": "flickr",
+        "image": "https://live.staticflickr.com/65535/53670802348_9bb887b680_b.jpg",
+        "type": "file",
+        "tags": [
+          "free",
+          "cartridge"
+        ],
+        "excerpt": "Provides a React component <Flickr options={{}}/ which uses with Next.js's App Router API to safely connect to the Flickr API and manage all the information the component needs to create excellent UI\n"
       },
       {
         "title": "Life",
