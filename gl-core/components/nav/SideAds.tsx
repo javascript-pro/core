@@ -29,6 +29,15 @@ export default function SideAds() {
           dispatch(routeTo('/cv', router));
         }}
       />
+
+      <Advert
+        icon="flickr"
+        title={'Flickr'}
+        onClick={() => {
+          dispatch(routeTo('/flickr', router));
+        }}
+      />
+
       <Advert
         icon="contact"
         title={'Contact Us'}

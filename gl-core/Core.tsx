@@ -35,7 +35,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const isMobile = useIsMobile();
   const dispatch = useDispatch();
 
-  // Redirects
   React.useEffect(() => {
     if (pathname === '/cv') {
       router.replace('/work/cv');
@@ -45,7 +44,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
     }
   }, [pathname, router]);
 
-  // Reset loading on mount
   React.useEffect(() => {
     dispatch(toggleLoading(false));
   }, [dispatch]);
@@ -84,15 +82,13 @@ export default function Core({ frontmatter, body = null }: TCore) {
         <Box sx={{ minHeight: '100vh' }}>
           <Header frontmatter={frontmatter} />
           <Grid container spacing={1}>
-            {/* LEFT COLUMN — SideAds (desktop only) */}
             {!isMobile && (
               <Grid size={{ md: 2, lg: 2 }}>
                 <SideAds />
               </Grid>
             )}
 
-            {/* MIDDLE COLUMN — Main content */}
-            <Grid size={{ xs: 12, md: 8, lg: 7 }}>
+            <Grid size={{ xs: 12, md: 7, lg: 6 }}>
               <Box sx={{ mt: isMobile ? 2 : 0 }}>
                 {frontmatter?.image && (
                   <Box sx={{ mx: 4, mt: 0 }}>
@@ -103,10 +99,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                         alt={frontmatter.title || 'Featured image'}
                         width={1200}
                         height={630}
-                        style={{
-                          width: '100%',
-                          height: 'auto',
-                        }}
+                        style={{ width: '100%', height: 'auto' }}
                         onError={() => setImageError(true)}
                       />
                     ) : (
@@ -127,7 +120,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
                     )}
                   </Box>
                 )}
-
                 <Box sx={{ px: isMobile ? 0.5 : 2, my: !isMobile ? 3 : 2 }}>
                   {pathname !== '/' && <PageBreadcrumb />}
                 </Box>
@@ -139,9 +131,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
               </Box>
             </Grid>
 
-            {/* RIGHT COLUMN — FlickrLatest (desktop only) */}
             {!isMobile && (
-              <Grid size={{ md: 2, lg: 3 }}>
+              <Grid size={{ md: 3, lg: 4 }}>
                 <FlickrLatest />
               </Grid>
             )}

@@ -7,6 +7,7 @@ export type TFlickrState = {
     title: string;
     message: string;
   };
+  latestIndex: number;
   latest: {
     fetching: boolean;
     fetched: boolean;
@@ -20,5 +21,6 @@ export const initialState: TFlickrState = {
     title: 'All OK',
     message: 'Thanks for asking',
   },
+  latestIndex: 0,
   latest: null,
 };
