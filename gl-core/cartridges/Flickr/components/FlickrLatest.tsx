@@ -17,11 +17,7 @@ import {
   Skeleton,
   Typography,
 } from '@mui/material';
-import {
-  MightyButton,
-  useDispatch,
-  useSlice,
-} from '../../../../gl-core';
+import { MightyButton, useDispatch, useSlice } from '../../../../gl-core';
 import { setLatestIndex } from '../../Flickr';
 
 export default function FlickrLatest({}: TAlbumCard) {
@@ -201,9 +197,15 @@ export default function FlickrLatest({}: TAlbumCard) {
 
           <CardHeader
             title={
-              <Typography variant="body1">{currentPhoto?.title || 'Photo title'}</Typography>
+              <Typography variant="body1">
+                {currentPhoto?.title || 'Photo title'}
+              </Typography>
             }
-            subheader={<Typography variant="body2">{currentPhoto?.description}</Typography>}
+            subheader={
+              <Typography variant="body2">
+                {currentPhoto?.description}
+              </Typography>
+            }
           />
         </Box>
       </CardContent>

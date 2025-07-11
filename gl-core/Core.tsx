@@ -87,54 +87,54 @@ export default function Core({ frontmatter, body = null }: TCore) {
           <Grid container spacing={1}>
             {!isMobile && (
               <Grid size={{ md: 2, lg: 2 }}>
-                <Box sx={{mx:1}}>
-                <SideAds />
+                <Box sx={{ mx: 1 }}>
+                  <SideAds />
                 </Box>
               </Grid>
             )}
 
             <Grid size={{ xs: 12, md: 7, lg: 6 }}>
               <Box sx={{ mt: isMobile ? 2 : 0 }}>
-                
-                {hideImage ? null : <>
-                
-                {frontmatter?.image && (
-                  <Box
-                    sx={{
-                      mx: 4,
-                      mt: 0,
-                    }}
-                  >
-                    {!imageError ? (
-                      <Image
-                        priority
-                        src={frontmatter.image}
-                        alt={frontmatter.title || 'Featured image'}
-                        width={1200}
-                        height={630}
-                        style={{ width: '100%', height: 'auto' }}
-                        onError={() => setImageError(true)}
-                      />
-                    ) : (
-                      <Box>
-                        <Skeleton
-                          variant="rectangular"
-                          width="100%"
-                          height={315}
-                        />
-                        <Typography
-                          variant="body2"
-                          color="text.secondary"
-                          mt={1}
-                        >
-                          "{frontmatter.image}" not found.
-                        </Typography>
+                {hideImage ? null : (
+                  <>
+                    {frontmatter?.image && (
+                      <Box
+                        sx={{
+                          mx: 4,
+                          mt: 0,
+                        }}
+                      >
+                        {!imageError ? (
+                          <Image
+                            priority
+                            src={frontmatter.image}
+                            alt={frontmatter.title || 'Featured image'}
+                            width={1200}
+                            height={630}
+                            style={{ width: '100%', height: 'auto' }}
+                            onError={() => setImageError(true)}
+                          />
+                        ) : (
+                          <Box>
+                            <Skeleton
+                              variant="rectangular"
+                              width="100%"
+                              height={315}
+                            />
+                            <Typography
+                              variant="body2"
+                              color="text.secondary"
+                              mt={1}
+                            >
+                              "{frontmatter.image}" not found.
+                            </Typography>
+                          </Box>
+                        )}
                       </Box>
                     )}
-                  </Box>
+                  </>
                 )}
-                </>}
-                
+
                 <Box sx={{ px: isMobile ? 0.5 : 2, my: !isMobile ? 3 : 2 }}>
                   {pathname !== '/' && <PageBreadcrumb />}
                 </Box>

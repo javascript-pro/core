@@ -37,7 +37,7 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
   const dispatch = useDispatch();
   const router = useRouter();
   const user = useUser();
-  const {hideImage} = useSlice();
+  const { hideImage } = useSlice();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [shareOpen, setShareOpen] = React.useState(false);
   const [clientsOpen, setClientsOpen] = React.useState(false);
@@ -57,7 +57,6 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
   const handleToggleHideImage = () => {
     dispatch(toggleHideImage(!hideImage));
   };
-
 
   const handleSignout = () => {
     dispatch(firebaseAuth('signout'));
@@ -106,11 +105,11 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
         </Collapse>
 
         <MenuItem onClick={handleToggleHideImage} sx={{ my: 2 }}>
-            <ListItemIcon>
-              <Icon icon="photo" />
-            </ListItemIcon>
-            <ListItemText primary={`${hideImage ? 'Show' : 'Hide'} image`} />
-          </MenuItem>
+          <ListItemIcon>
+            <Icon icon="photo" />
+          </ListItemIcon>
+          <ListItemText primary={`${hideImage ? 'Show' : 'Hide'} image`} />
+        </MenuItem>
 
         {/* Theme Switcher */}
         <ModeSwitch />
@@ -126,9 +125,6 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           </ListItemIcon>
           <ListItemText primary={'Case Manager'} />
         </MenuItem>
-
-          
-
 
         {/* Sign out */}
         {user ? (
