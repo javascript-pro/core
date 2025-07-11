@@ -139,4 +139,8 @@ export const lingua: any = {
     en: 'Goldlabel Home',
     de: 'Goldlabel Startseite',
   },
+  TEXT_EXTRACTION_FAILED: {
+    en: 'Raw text extraction failed',
+    de: 'Rohtextextraktion fehlgeschlagen',
+  },
 };

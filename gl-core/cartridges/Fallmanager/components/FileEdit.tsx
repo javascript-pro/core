@@ -74,6 +74,7 @@ export default function FileEdit({ id }: { id: string }) {
   const [deleting, setDeleting] = React.useState(false);
   const [runningAI, setRunningAI] = React.useState(false);
   const [rawTextFailed, setRawTextFailed] = React.useState(false);
+  const [thumbnailFailed, setThumbnailFailed] = React.useState(false);
 
   React.useEffect(() => {
     const unsub = onSnapshot(doc(db, 'files', id), async (docSnap) => {
@@ -83,7 +84,12 @@ export default function FileEdit({ id }: { id: string }) {
       setLiveFile(fileData);
       setLoading(false);
 
-      if (!fileData.thumbnail && !fileData.thumbnailProcessing && !processing) {
+      if (
+        !fileData.thumbnail &&
+        !fileData.thumbnailProcessing &&
+        !processing &&
+        !thumbnailFailed
+      ) {
         setProcessing(true);
         try {
           const res = await fetch(`/api/gl-api/fallmanager/thumbnail`, {
@@ -93,6 +99,7 @@ export default function FileEdit({ id }: { id: string }) {
           });
           const json = await res.json();
           if (!res.ok) {
+            setThumbnailFailed(true);
             dispatch(
               toggleFeedback({
                 severity: 'error',
@@ -111,6 +118,7 @@ export default function FileEdit({ id }: { id: string }) {
           }
         } catch (err) {
           console.error('Thumbnail generation error:', err);
+          setThumbnailFailed(true);
           dispatch(
             toggleFeedback({
               severity: 'warning',
@@ -167,7 +175,7 @@ export default function FileEdit({ id }: { id: string }) {
     });
 
     return () => unsub();
-  }, [id, processing, dispatch, rawTextFailed]);
+  }, [id, processing, dispatch, rawTextFailed, thumbnailFailed]);
 
   React.useEffect(() => {
     if (liveFile?.rawText && !liveFile?.openai && !runningAI) {
@@ -256,9 +264,7 @@ export default function FileEdit({ id }: { id: string }) {
           action={
             <>
               <MightyButton
-                sx={{
-                  mr: isMobile ? 0 : 2,
-                }}
+                sx={{ mr: isMobile ? 0 : 2 }}
                 mode={isMobile ? 'icon' : 'button'}
                 variant="outlined"
                 color="primary"
@@ -266,7 +272,6 @@ export default function FileEdit({ id }: { id: string }) {
                 label={t('DELETE')}
                 onClick={() => setShowConfirmDelete(true)}
               />
-
               <MightyButton
                 mode={isMobile ? 'icon' : 'button'}
                 variant="outlined"
@@ -286,7 +291,6 @@ export default function FileEdit({ id }: { id: string }) {
             </>
           }
         />
-
         <CardContent>
           <Grid container spacing={2}>
             <Grid size={{ xs: 12, md: 8 }}>
