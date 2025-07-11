@@ -1,7 +1,7 @@
 ---
 order: 129
-title: Flickr
-description: Photo Cartridge
+title: Flickr Photo Cartridge
+description: React component which uses Next.js's App Router API to safely connect to the Flickr API and manage all the information needed to create a UI
 tags: free, cartridge
 slug: /work/core/cartridges/flickr
 icon: flickr
@@ -12,7 +12,7 @@ github: https://github.com/javascript-pro/core/blob/main/app/api/gl-api/flickr/r
 
 ## What does the Flickr Cartridge do?
 
-It provides a React component called <Flickr /> which interacts with Next.js's built in API layer. The API safely connects to Flickr and returns all the information the component needs to create user interface to that Flickr content
+It provides a React component called <Flickr /> which interacts with Next.js's App Router API layer. This safely connects to Flickr and returns all the information the component needs to create user interface for those photos
 
 A typical JSON Object might describe a Photo shown from the Flickr service
 

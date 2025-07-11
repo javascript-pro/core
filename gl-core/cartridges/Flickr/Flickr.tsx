@@ -28,7 +28,7 @@ export default function Flickr({ mode = 'default', id = null }: TFlickr) {
 
   React.useEffect(() => {
     if (id) {
-      dispatch(initFlickr(id));
+      // dispatch(initFlickr(id));
     }
   }, [id, dispatch]);
 

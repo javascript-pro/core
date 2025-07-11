@@ -93,32 +93,8 @@ export default function CV({
             <Box sx={{ mr: 2 }}>
               <Download cv={markdown} />
             </Box>
-            <MightyButton
-              mode="icon"
-              label="View our CV"
-              icon="seed"
-              color="primary"
-              variant="contained"
-              onClick={() => {
-                dispatch(setCVKey('appMode', 'cv'));
-                dispatch(setCVKey('showJD', false));
-              }}
-            />
           </>
         )}
-
-        <Box sx={{ ml: 1, mt: 0.25 }}>
-          <MightyButton
-            mode="icon"
-            label="About"
-            icon="about"
-            variant="contained"
-            color="primary"
-            onClick={() => {
-              dispatch(routeTo('/cv/about', router));
-            }}
-          />
-        </Box>
       </Box>
 
       {showJD && (

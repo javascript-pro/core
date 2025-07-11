@@ -1,3 +1,4 @@
+// /Users/goldlabel/GitHub/core/app/api/gl-api/flickr/latest/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 import { getBase } from '../getBase';
 import { TFlickrPhoto, TFlickrPhotoSize } from '../types';

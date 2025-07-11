@@ -7,7 +7,7 @@ slug: /work/cv
 icon: openai
 image: /png/og.png
 tags: CV, jobs, work, resume, AI, OpenAI
-github: https://raw.githubusercontent.com/javascript-pro/core/refs/heads/main/public/markdown/work/cv/index.md
+github: https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg
 ---
 
 ## Fullstack JavaScript Developer

@@ -29,7 +29,7 @@ export default function Header({ frontmatter = null }: THeader) {
           <>
             <Tooltip title="Home">
               <IconButton
-                sx={{ ml: 3 }}
+                sx={{ ml: 0 }}
                 onClick={() => {
                   router.push('/');
                 }}

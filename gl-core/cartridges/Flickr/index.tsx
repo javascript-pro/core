@@ -7,11 +7,20 @@ import { fetchAlbumList } from './actions/fetchAlbumList';
 import { resetFlickr } from './actions/resetFlickr';
 import { resetAlbum } from './actions/resetAlbum';
 import { setFlickrKey } from './actions/setFlickrKey';
-import { AlbumCard, PhotoCard, PhotoPopup, AlbumSelecta } from './components';
-
+import { recacheLatest } from './actions/recacheLatest';
+import { setLatestIndex } from './actions/setLatestIndex';
+import { setLatest } from './actions/setLatest';
+import {
+  FlickrLatest,
+  AlbumCard,
+  PhotoCard,
+  PhotoPopup,
+  AlbumSelecta,
+} from './components';
 export {
   initialStateFlickr,
   Flickr,
+  FlickrLatest,
   PhotoPopup,
   resetFlickr,
   resetAlbum,
@@ -23,4 +32,7 @@ export {
   fetchAlbum,
   fetchAlbumList,
   setFlickrKey,
+  recacheLatest,
+  setLatest,
+  setLatestIndex,
 };
