@@ -7,6 +7,7 @@ import { fetchAlbumList } from './actions/fetchAlbumList';
 import { resetFlickr } from './actions/resetFlickr';
 import { resetAlbum } from './actions/resetAlbum';
 import { setFlickrKey } from './actions/setFlickrKey';
+import {recacheLatest} from './actions/recacheLatest';
 import {
   FlickrLatest,
   AlbumCard,
@@ -30,4 +31,5 @@ export {
   fetchAlbum,
   fetchAlbumList,
   setFlickrKey,
+  recacheLatest,
 };

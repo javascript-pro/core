@@ -11,10 +11,27 @@ import {
   CardContent,
   CardHeader,
 } from '@mui/material';
-import { MightyButton, Icon, useSlice } from '../../../../gl-core';
+import {
+  MightyButton,
+  Icon,
+  useDispatch,
+  toggleFeedback,
+} from '../../../../gl-core';
+import {recacheLatest} from '../../Flickr';
 
 export default function FlickrLatest({}: TAlbumCard) {
-  const { flickr } = useSlice() ?? {};
+  const dispatch = useDispatch();
+
+  const handleReloadClick = () => {
+    dispatch(
+      toggleFeedback({
+        severity: 'info',
+        title: 'Expensive Flickr API call',
+        description: 'Reloading the latest photos from Flickr API',
+      }),
+    );
+    dispatch(recacheLatest());
+  };
 
   return (
     <Box sx={{}}>
@@ -28,6 +45,7 @@ export default function FlickrLatest({}: TAlbumCard) {
             }}
           >
             <MightyButton
+              onClick={handleReloadClick}
               mode="icon"
               color="primary"
               fullWidth
@@ -58,7 +76,12 @@ export default function FlickrLatest({}: TAlbumCard) {
           label="Last photo"
           icon="left"
         />
-        <MightyButton mode="icon" color="primary" label="Next photo" icon="right" />
+        <MightyButton
+          mode="icon"
+          color="primary"
+          label="Next photo"
+          icon="right"
+        />
         <Box sx={{ flexGrow: 1 }} />
       </CardActions>
 
