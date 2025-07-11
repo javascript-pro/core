@@ -18,4 +18,5 @@ export const initialState: any = {
   config,
   loading: null,
   feedback: null,
+  hideImage: true,
 };

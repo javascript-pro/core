@@ -19,6 +19,7 @@ import {
   useThemeMode,
   toggleLoading,
   useDispatch,
+  useSlice,
 } from '../gl-core';
 import { SideAds } from '../gl-core';
 import { FlickrLatest } from './cartridges/Flickr';
@@ -28,10 +29,12 @@ import { Fallmanager } from './cartridges/Fallmanager';
 
 export default function Core({ frontmatter, body = null }: TCore) {
   let fullScreen = false;
+  const { hideImage } = useSlice();
   const pathname = usePathname();
   const router = useRouter();
   const themeMode = useThemeMode();
   useVersionCheck();
+
   const isMobile = useIsMobile();
   const dispatch = useDispatch();
 
@@ -84,14 +87,24 @@ export default function Core({ frontmatter, body = null }: TCore) {
           <Grid container spacing={1}>
             {!isMobile && (
               <Grid size={{ md: 2, lg: 2 }}>
+                <Box sx={{mx:1}}>
                 <SideAds />
+                </Box>
               </Grid>
             )}
 
             <Grid size={{ xs: 12, md: 7, lg: 6 }}>
               <Box sx={{ mt: isMobile ? 2 : 0 }}>
+                
+                {hideImage ? null : <>
+                
                 {frontmatter?.image && (
-                  <Box sx={{ mx: 4, mt: 0 }}>
+                  <Box
+                    sx={{
+                      mx: 4,
+                      mt: 0,
+                    }}
+                  >
                     {!imageError ? (
                       <Image
                         priority
@@ -120,6 +133,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
                     )}
                   </Box>
                 )}
+                </>}
+                
                 <Box sx={{ px: isMobile ? 0.5 : 2, my: !isMobile ? 3 : 2 }}>
                   {pathname !== '/' && <PageBreadcrumb />}
                 </Box>

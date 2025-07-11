@@ -65,11 +65,9 @@ export default function MightyButton({
 
   if (mode === 'icon') {
     return (
-      
-        <IconButton color="inherit" onClick={onClick} disabled={disabled}>
-          <Icon icon={icon as any} />
-        </IconButton>
-        
+      <IconButton color="inherit" onClick={onClick} disabled={disabled}>
+        <Icon icon={icon as any} />
+      </IconButton>
     );
   }
 
