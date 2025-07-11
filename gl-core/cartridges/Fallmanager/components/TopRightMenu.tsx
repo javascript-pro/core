@@ -69,9 +69,11 @@ export default function TopRightMenu() {
           <SwitchLang />
         </MenuItem>
 
-        <MenuItem onClick={() => {
-          router.push('/');
-        }}>
+        <MenuItem
+          onClick={() => {
+            router.push('/');
+          }}
+        >
           <ListItemIcon>
             <Icon icon="blokey" />
           </ListItemIcon>
