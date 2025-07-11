@@ -14,5 +14,4 @@ Provides a React component <Flickr options={{}}/> which uses with Next.js's App 
 
 - An endpoint `/gl-api/flickr/latest` which returns a JSON array of the last 100 photos uploaded to a Flickr account along with all the meta information needed to make a really clean UI
 
-#### Where to use it
-
+#### 

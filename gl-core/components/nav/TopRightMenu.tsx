@@ -97,19 +97,6 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           </Box>
         </Collapse>
 
-        {/* Factory Reset */}
-        <MenuItem
-          sx={{ my: 2 }}
-          onClick={(e) => {
-            handleFactorySettings();
-          }}
-        >
-          <ListItemIcon>
-            <Icon icon="reset" />
-          </ListItemIcon>
-          <ListItemText primary="Reset" />
-        </MenuItem>
-
         {/* Theme Switcher */}
         <ModeSwitch />
 
@@ -120,9 +107,9 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           sx={{ my: 2 }}
         >
           <ListItemIcon>
-            <Icon icon="auth" />
+            <Icon icon="fallmanager" />
           </ListItemIcon>
-          <ListItemText primary={'WIP'} />
+          <ListItemText primary={'Case Manager'} />
         </MenuItem>
 
         {/* Sign out */}

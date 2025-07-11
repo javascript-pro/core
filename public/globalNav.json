@@ -316,7 +316,7 @@
           "free",
           "cartridge"
         ],
-        "excerpt": "Flickr\n\n What does the Flickr Cartridge do?\n\nIt provides a React component called <Flickr / which interacts with Next.js's App Router API layer. This safely connects to Flickr and returns all the info"
+        "excerpt": "Provides a React component <Flickr options={{}}/ which uses with Next.js's App Router API to safely connect to the Flickr API and manage all the information the component needs to create excellent UI\n"
       },
       {
         "title": "Life",

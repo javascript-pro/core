@@ -20,8 +20,8 @@ import {
   toggleLoading,
   useDispatch,
 } from '../gl-core';
-
-import { Flickr } from './cartridges/Flickr';
+import { SideAds } from '../gl-core';
+import { FlickrLatest } from './cartridges/Flickr';
 import { CV } from './cartridges/CV';
 import { Bouncer } from './cartridges/Bouncer';
 import { Fallmanager } from './cartridges/Fallmanager';
@@ -51,9 +51,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
   }, [dispatch]);
 
   const isCV = pathname === '/work/cv';
-  const isFlickr = pathname === '/flickr2';
   const isFallmanager = pathname.startsWith('/fallmanager');
-  const isApp = isCV || isFlickr || isFallmanager;
+  const isApp = isCV || isFallmanager;
 
   const [imageError, setImageError] = React.useState(false);
 
@@ -70,9 +69,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
       break;
     case isCV:
       app = <CV mode="app" markdown={body} />;
-      break;
-    case isFlickr:
-      app = <Flickr mode="app" id="72177720326317140" />;
       break;
     default:
       break;
@@ -136,7 +132,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
               <Box sx={{ mb: '175px', px: isMobile ? 0.5 : 2 }}>
                 {isApp ? app : <RenderMarkdown>{body}</RenderMarkdown>}
-                {isMobile ? <ArrowMenu /> : null}
+                <ArrowMenu />
               </Box>
             </Grid>
             {!isMobile && (
@@ -146,12 +142,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
                   lg: 3,
                 }}
               >
-                {/* <SideAds /> */}
-                {!isMobile ? (
-                  <>
-                    <ArrowMenu />
-                  </>
-                ) : null}
+                <SideAds />
+                <FlickrLatest />
               </Grid>
             )}
           </Grid>

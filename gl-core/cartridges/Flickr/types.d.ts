@@ -1,4 +1,4 @@
-export type TFlickrState = {
+export type TFlickrStateV1 = {
   cartridge?: string;
   status?: TSeverity;
   loaded: boolean;

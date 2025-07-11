@@ -1,17 +1,24 @@
-import { TFlickrState } from './types';
+// import { TFlickrState } from './types';
+
+export type TFlickrState = {
+  cartridge?: string;
+  feedback: {
+    severity: 'error' | 'warning' | 'info' | 'success';
+    title: string;
+    message: string;
+  };
+  latest: {
+    fetching: boolean;
+    fetched: boolean;
+  } | null;
+};
 
 export const initialState: TFlickrState = {
   cartridge: 'flickr',
-  status: 'warning',
-  message: 'Flickr is not ready',
-  album: { photos: [] },
-  photo: null,
-  loading: false,
-  loaded: false,
-  albumList: {
-    lastLoad: Date.now(),
-    loading: false,
-    loaded: false,
-    list: [],
+  feedback: {
+    severity: 'success',
+    title: 'All OK',
+    message: 'Thanks for asking',
   },
+  latest: null,
 };
