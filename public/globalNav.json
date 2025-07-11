@@ -5,7 +5,7 @@
     "slug": "/",
     "order": 1,
     "icon": "home",
-    "image": "/png/og.png",
+    "image": "https://live.staticflickr.com/65535/54430787037_3c27b55d48_b.jpg",
     "type": "folder",
     "tags": [
       "JavaScript",

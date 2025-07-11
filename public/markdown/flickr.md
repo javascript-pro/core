@@ -3,7 +3,7 @@ order: 20
 slug: /flickr
 title: Flickr Photo Cartridge
 description: React component which uses Next.js's App Router API to safely connect to the Flickr API and manage all the information needed to create a UI
-image: /png/n64/flickr.png
+image: https://live.staticflickr.com/65535/53670802348_9bb887b680_b.jpg
 icon: flickr
 tags: free, cartridge
 ---

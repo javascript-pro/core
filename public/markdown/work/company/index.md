@@ -4,7 +4,7 @@ title: Goldlabel Apps Ltd
 description: UK Limited Company (5460545)
 slug: /work/company
 icon: work
-image: /png/og.png
+image: https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg
 ---
 
 [goldlabel.apps@gmail.com](mailto:goldlabel.apps@gmail.com)  

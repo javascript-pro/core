@@ -1,3 +1,4 @@
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Flickr/components/FlickrLatest.tsx
 'use client';
 
 import * as React from 'react';
@@ -18,11 +19,9 @@ export default function FlickrLatest({}: TAlbumCard) {
   return (
     <Box sx={{}}>
       <CardHeader
-        avatar={<Icon icon="flickr" />}
-        title="Flickr Latest"
+        avatar={<Icon icon="flickr" color="primary" />}
         action={
           <Box
-            id="flickr_latest_controls"
             sx={{
               display: 'flex',
               width: '100%',
@@ -30,6 +29,7 @@ export default function FlickrLatest({}: TAlbumCard) {
           >
             <MightyButton
               mode="icon"
+              color="primary"
               fullWidth
               variant="contained"
               label="Reload"
@@ -58,13 +58,13 @@ export default function FlickrLatest({}: TAlbumCard) {
           label="Last photo"
           icon="left"
         />
-        <MightyButton mode="icon" label="Next photo" icon="right" />
+        <MightyButton mode="icon" color="primary" label="Next photo" icon="right" />
         <Box sx={{ flexGrow: 1 }} />
       </CardActions>
 
-      <pre style={{ fontSize: 10 }}>
+      {/* <pre style={{ fontSize: 10 }}>
         flickr: {JSON.stringify(flickr, null, 2)}
-      </pre>
+      </pre> */}
     </Box>
   );
 }

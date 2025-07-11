@@ -45,15 +45,13 @@ export default function Download(cv: any) {
   };
 
   return (
-    <Box>
-      {/* <pre>markdown: {JSON.stringify(markdown, null, 2)}</pre> */}
-      <MightyButton
-        onClick={onDownloadClick}
-        variant="contained"
-        label="CV"
-        icon="download"
-      />
-    </Box>
+    <MightyButton
+      fullWidth
+      onClick={onDownloadClick}
+      variant="contained"
+      label="Downlod CV"
+      icon="download"
+    />
   );
 }
 

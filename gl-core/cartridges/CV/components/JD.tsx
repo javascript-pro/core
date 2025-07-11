@@ -74,6 +74,30 @@ export default function JD() {
 
   return (
     <Box sx={{ py: 0 }}>
+      <Typography sx={{ mt: 2 }} variant="body2">
+        Paste a job description and tap “Analyse.” Our AI will evaluate how well
+        it aligns with the CV—either from your own perspective or on behalf of
+        someone else. Try it with these examples: one’s a{' '}
+        <a
+          href="/txt/goodFit.txt"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: 'none', color: linkCol, fontWeight: 'bold' }}
+        >
+          good fit
+        </a>
+        , the other{' '}
+        <a
+          href="/txt/badFit.txt"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: 'none', color: linkCol, fontWeight: 'bold' }}
+        >
+          isn’t
+        </a>
+        .
+      </Typography>
+
       <RadioGroup
         row
         value={viewpoint}
@@ -127,6 +151,7 @@ export default function JD() {
       {validJd && (
         <>
           <MightyButton
+            fullWidth
             sx={{ mb: 2 }}
             onClick={() => {
               onAnalyse();
@@ -134,34 +159,10 @@ export default function JD() {
             label="Analyse"
             icon="openai"
             color="primary"
-            variant="outlined"
+            variant="contained"
           />
         </>
       )}
-
-      <Typography>
-        Paste a job description and tap “Analyse”. Our AI will assess how well
-        it matches the skills and experience in our CV, from either a 1st or 3rd
-        party perspective. Try it out with one of these example jobs — one’s a{' '}
-        <a
-          href="/txt/goodFit.txt"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ textDecoration: 'none', color: linkCol, fontWeight: 'bold' }}
-        >
-          good fit
-        </a>
-        , the other{' '}
-        <a
-          href="/txt/badFit.txt"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ textDecoration: 'none', color: linkCol, fontWeight: 'bold' }}
-        >
-          isn’t
-        </a>
-        .
-      </Typography>
     </Box>
   );
 }

@@ -4,7 +4,7 @@
 import config from './config.json';
 import { TCore } from './types';
 import * as React from 'react';
-import { usePathname, useRouter } from 'next/navigation'; // updated import here
+import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { CssBaseline, Box, Grid, Skeleton, Typography } from '@mui/material';
 import {
@@ -35,7 +35,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const isMobile = useIsMobile();
   const dispatch = useDispatch();
 
-  // Redirect /cv to /work/cv
+  // Redirects
   React.useEffect(() => {
     if (pathname === '/cv') {
       router.replace('/work/cv');
@@ -84,12 +84,15 @@ export default function Core({ frontmatter, body = null }: TCore) {
         <Box sx={{ minHeight: '100vh' }}>
           <Header frontmatter={frontmatter} />
           <Grid container spacing={1}>
-            <Grid
-              size={{
-                md: 8,
-                lg: 9,
-              }}
-            >
+            {/* LEFT COLUMN — SideAds (desktop only) */}
+            {!isMobile && (
+              <Grid size={{ md: 2, lg: 2 }}>
+                <SideAds />
+              </Grid>
+            )}
+
+            {/* MIDDLE COLUMN — Main content */}
+            <Grid size={{ xs: 12, md: 8, lg: 7 }}>
               <Box sx={{ mt: isMobile ? 2 : 0 }}>
                 {frontmatter?.image && (
                   <Box sx={{ mx: 4, mt: 0 }}>
@@ -135,14 +138,10 @@ export default function Core({ frontmatter, body = null }: TCore) {
                 <ArrowMenu />
               </Box>
             </Grid>
+
+            {/* RIGHT COLUMN — FlickrLatest (desktop only) */}
             {!isMobile && (
-              <Grid
-                size={{
-                  md: 4,
-                  lg: 3,
-                }}
-              >
-                <SideAds />
+              <Grid size={{ md: 2, lg: 3 }}>
                 <FlickrLatest />
               </Grid>
             )}
