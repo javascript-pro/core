@@ -70,6 +70,26 @@ export default function Admin() {
           </CardActions>
         </Card>
       </Layout>
+
+      {/* <Accordion
+          sx={{
+            boxShadow: 'none',
+            border: 'none',
+            '&::before': { display: 'none' },
+          }}
+        >
+          <AccordionSummary expandIcon={null}>
+            <Box sx={{ mr: 1 }}>
+              <Icon icon="api" color="primary" />
+            </Box>
+            <Typography>adminSlice</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <pre style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
+              {JSON.stringify(adminSlice, null, 2)}
+            </pre>
+          </AccordionDetails>
+        </Accordion> */}
     </Theme>
   );
 }
