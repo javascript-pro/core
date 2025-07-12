@@ -52,19 +52,19 @@ export const lingua: any = {
     de: 'Vorschaubild erzeugen',
   },
   NO_FILES: {
-  en: 'No files yet',
-  de: 'Noch keine Dateien',
-},
-PROCESSING: {
-  en: 'Processing',
-  de: 'Wird verarbeitet',
-},
+    en: 'No files yet',
+    de: 'Noch keine Dateien',
+  },
+  PROCESSING: {
+    en: 'Processing',
+    de: 'Wird verarbeitet',
+  },
 
   SUMMARY: {
-  en: 'Summary',
-  de: 'Zusammenfassung',
-},
-    HIDE_COMPLETED: {
+    en: 'Summary',
+    de: 'Zusammenfassung',
+  },
+  HIDE_COMPLETED: {
     en: 'Hide completed',
     de: 'Abgeschlossene ausblenden',
   },

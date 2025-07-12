@@ -41,7 +41,7 @@ export default function Feedback({}: TAuthForm) {
       onClose={handleClose}
     >
       <Alert
-        variant='filled'
+        variant="filled"
         severity={severity}
         sx={{ minWidth: 250 }}
         action={

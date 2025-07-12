@@ -59,16 +59,16 @@ Do not include anything else in the response.
 Below is the document text:
 `;
 
-export async function GET() {
-  return NextResponse.json({ error: 'Use POST method only' }, { status: 405 });
-}
-
 export async function POST(req: NextRequest) {
+  console.log('[POST] Received request');
+
   try {
     const body = await req.json();
     const id = body?.id;
+    console.log('[POST] Request body:', body);
 
     if (!id || typeof id !== 'string') {
+      console.warn('[WARN] Missing or invalid ID');
       return NextResponse.json(
         { error: 'Missing or invalid ID' },
         { status: 400 },
@@ -79,6 +79,7 @@ export async function POST(req: NextRequest) {
     const docSnap = await docRef.get();
 
     if (!docSnap.exists) {
+      console.warn(`[WARN] Document with ID "${id}" not found`);
       return NextResponse.json(
         { error: 'Document not found' },
         { status: 404 },
@@ -86,17 +87,18 @@ export async function POST(req: NextRequest) {
     }
 
     const data = docSnap.data();
+    console.log('[POST] Retrieved Firestore document:', data);
+
     const rawText = data?.rawText || data?.docData?.rawText || '';
     if (!rawText.trim()) {
       const error = 'No rawText available in document';
-      await docRef.update({
-        openai: { error },
-        updatedAt: Date.now(),
-      });
+      console.warn(`[WARN] ${error}`);
+      await docRef.update({ openai: { error }, updatedAt: Date.now() });
       return NextResponse.json({ error }, { status: 400 });
     }
 
     const prompt = `${userPrompt.trim()}\n\n${rawText.trim().slice(0, 12000)}`;
+    console.log('[POST] Composed prompt for OpenAI');
 
     await docRef.update({
       openai: { processing: true },
@@ -124,46 +126,60 @@ export async function POST(req: NextRequest) {
     );
 
     const result = (await openaiRes.json()) as {
-      choices?: { message?: { content?: string } }[];
+      choices?: { message?: { content: string } }[];
       error?: { message?: string };
     };
+    console.log('[POST] OpenAI response:', result);
 
     if (!openaiRes.ok) {
-      const error = result?.error?.message || 'OpenAI API error';
-      await docRef.update({
-        openai: { error },
-        updatedAt: Date.now(),
-      });
+      const error = result.error?.message || 'OpenAI API error';
+      console.error('[ERROR] OpenAI responded with error:', error);
+      await docRef.update({ openai: { error }, updatedAt: Date.now() });
       return NextResponse.json({ error }, { status: openaiRes.status });
     }
 
     let content = result?.choices?.[0]?.message?.content;
+
     if (!content || typeof content !== 'string') {
       const error = 'Missing or invalid OpenAI content';
-      await docRef.update({
-        openai: { error },
-        updatedAt: Date.now(),
-      });
+      console.error('[ERROR] ' + error);
+      await docRef.update({ openai: { error }, updatedAt: Date.now() });
       return NextResponse.json({ error }, { status: 500 });
     }
 
+    // Clean any potential formatting like ```json ... ```
     content = content
       .trim()
       .replace(/^```json\s*/i, '')
       .replace(/```$/, '')
       .trim();
 
-    let parsed;
-    try {
-      parsed = JSON.parse(content);
-    } catch (err) {
-      const error = 'Failed to parse OpenAI JSON output';
+    console.log('[POST] Cleaned content from OpenAI:', content);
+
+    if (!content.startsWith('{')) {
+      const error = 'OpenAI returned non-JSON content';
+      console.error('[ERROR] ' + error, content);
       await docRef.update({
         openai: { error, rawResponse: content },
         updatedAt: Date.now(),
       });
       return NextResponse.json({ error }, { status: 500 });
     }
+
+    let parsed;
+    try {
+      parsed = JSON.parse(content);
+    } catch (err) {
+      const error = 'Failed to parse OpenAI JSON output';
+      console.error('[ERROR] ' + error, err);
+      await docRef.update({
+        openai: { error, rawResponse: content },
+        updatedAt: Date.now(),
+      });
+      return NextResponse.json({ error }, { status: 500 });
+    }
+
+    console.log('[POST] Parsed JSON successfully:', parsed);
 
     await docRef.update({
       openai: parsed,
@@ -174,6 +190,7 @@ export async function POST(req: NextRequest) {
   } catch (error) {
     const fallbackError =
       error instanceof Error ? error.message : 'Unknown error';
+    console.error('[FATAL] Uncaught handler error:', error);
 
     try {
       const body = await req.json();
@@ -188,10 +205,9 @@ export async function POST(req: NextRequest) {
           });
       }
     } catch (e) {
-      console.error('🔥 Fallback write failed:', e);
+      console.error('[FATAL] Fallback write failed:', e);
     }
 
-    console.error('🔥 Uncaught handler error:', error);
     return NextResponse.json({ error: fallbackError }, { status: 500 });
   }
 }

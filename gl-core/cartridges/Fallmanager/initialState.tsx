@@ -23,7 +23,7 @@ export const initialState: TFallmanagerState = {
   themes: {
     dark: {
       mode: 'dark',
-      primary: '#34d0f7',
+      primary: '#37badbff',
       secondary: '#1b7cbcff',
       background: '#000',
       paper: '#000',
@@ -32,8 +32,8 @@ export const initialState: TFallmanagerState = {
     },
     light: {
       mode: 'light',
-      primary: '#305DA5',
-      secondary: '#4bff60',
+      primary: '#c29d21ff',
+      secondary: '#d76320ff',
       background: '#eee',
       paper: '#FFFFFF',
       text: '#414142',

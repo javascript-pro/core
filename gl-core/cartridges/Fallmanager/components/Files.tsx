@@ -18,7 +18,6 @@ import {
   Checkbox,
   FormControlLabel,
   CardHeader,
-
 } from '@mui/material';
 import { useRouter } from 'next/navigation';
 import { Icon, useDispatch, useIsMobile } from '../../../../gl-core';
@@ -34,8 +33,12 @@ export default function Files() {
   const [hideCompleted, setHideCompleted] = React.useState(false);
   const [deleting, setDeleting] = React.useState<Record<string, boolean>>({});
   const [deletingOverlay, setDeletingOverlay] = React.useState(false);
-  const [deletingFileName, setDeletingFileName] = React.useState<string | null>(null);
-  const [confirmDeleteId, setConfirmDeleteId] = React.useState<string | null>(null);
+  const [deletingFileName, setDeletingFileName] = React.useState<string | null>(
+    null,
+  );
+  const [confirmDeleteId, setConfirmDeleteId] = React.useState<string | null>(
+    null,
+  );
 
   moment.locale(language === 'de' ? 'de' : 'en');
 
@@ -47,7 +50,8 @@ export default function Files() {
         ? new Date(file.createdAt.seconds * 1000)
         : null;
 
-      const summary = file.openai?.summary?.[language] || file.openai?.summary?.en || '';
+      const summary =
+        file.openai?.summary?.[language] || file.openai?.summary?.en || '';
 
       let step = 1;
       if (file.rawText) step = 2;
@@ -68,9 +72,7 @@ export default function Files() {
   }, [files, language]);
 
   const rows = React.useMemo(() => {
-    return hideCompleted
-      ? allRows.filter((r) => r.step !== 4)
-      : allRows;
+    return hideCompleted ? allRows.filter((r) => r.step !== 4) : allRows;
   }, [allRows, hideCompleted]);
 
   const handleDelete = async (id: string) => {
@@ -124,7 +126,9 @@ export default function Files() {
         if (!params.row.rawTextProcessing || !isPDF) return null;
 
         return (
-          <Box sx={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+          <Box
+            sx={{ display: 'flex', justifyContent: 'center', width: '100%' }}
+          >
             <CircularProgress size={24} />
           </Box>
         );
@@ -145,9 +149,7 @@ export default function Files() {
           return <Icon icon="tick" color="disabled" />;
         }
 
-        return <Typography variant='caption'>
-          {t("PROCESSING")}
-        </Typography>;
+        return <Typography variant="caption">{t('PROCESSING')}</Typography>;
       },
     },
     {
@@ -282,7 +284,10 @@ export default function Files() {
       >
         <Box display="flex" flexDirection="column" alignItems="center" gap={2}>
           <LinearProgress color="inherit" />
-          <Typography variant="h6" sx={{ fontWeight: 'bold', textAlign: 'center' }}>
+          <Typography
+            variant="h6"
+            sx={{ fontWeight: 'bold', textAlign: 'center' }}
+          >
             {t('DELETING')}
             {deletingFileName ? ` “${deletingFileName}”...` : '...'}
           </Typography>
