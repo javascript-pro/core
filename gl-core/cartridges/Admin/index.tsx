@@ -3,7 +3,8 @@ import { initialState as initialStateAdmin } from './initialState';
 import { useAdminSlice } from './hooks';
 // import {
 // } from './actions';
-// import {
-// } from './components';
+import {
+    Layout,
+} from './components';
 
-export { Admin, initialStateAdmin, useAdminSlice };
+export { Admin, Layout, initialStateAdmin, useAdminSlice };

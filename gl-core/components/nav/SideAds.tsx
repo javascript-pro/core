@@ -23,6 +23,14 @@ export default function SideAds() {
       />
 
       <Advert
+        icon="contact"
+        title={'About'}
+        onClick={() => {
+          dispatch(routeTo('/work/company', router));
+        }}
+      />
+
+      <Advert
         icon="openai"
         title={'C.V.'}
         onClick={() => {
@@ -37,14 +45,15 @@ export default function SideAds() {
           dispatch(routeTo('/flickr', router));
         }}
       />
-
+      
       <Advert
-        icon="contact"
-        title={'Contact Us'}
+        icon="admin"
+        title={'Admin'}
         onClick={() => {
-          dispatch(routeTo('/work/company', router));
+          dispatch(routeTo('/admin', router));
         }}
       />
+      
     </Box>
   );
 }
