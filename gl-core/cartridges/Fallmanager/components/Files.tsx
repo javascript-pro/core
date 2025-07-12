@@ -54,6 +54,7 @@ export default function Files() {
       let step = 1;
       if (file.rawText) step = 2;
       if (file.openai) step = 3;
+      if (file.thumbnail) step = 4;
 
       return {
         id: file.id,
@@ -107,27 +108,24 @@ export default function Files() {
         </Typography>
       ),
     },
-{
-  field: 'status',
-  headerName: '',
-  width: 60,
-  sortable: false,
-  filterable: false,
-  disableColumnMenu: true,
-  renderCell: (params) => {
-    const isPDF = params.row.fileName?.toLowerCase().endsWith('.pdf');
-    if (!params.row.rawTextProcessing || !isPDF) return null;
+    {
+      field: 'status',
+      headerName: '',
+      width: 60,
+      sortable: false,
+      filterable: false,
+      disableColumnMenu: true,
+      renderCell: (params) => {
+        const isPDF = params.row.fileName?.toLowerCase().endsWith('.pdf');
+        if (!params.row.rawTextProcessing || !isPDF) return null;
 
-    return (
-      <Box
-        sx={{ display: 'flex', justifyContent: 'center', width: '100%' }}
-      >
-        <CircularProgress size={24} />
-      </Box>
-    );
-  },
-},
-
+        return (
+          <Box sx={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+            <CircularProgress size={24} />
+          </Box>
+        );
+      },
+    },
     {
       field: 'step',
       headerName: '',
@@ -135,15 +133,20 @@ export default function Files() {
       renderCell: (params) => {
         const step = params.row.step;
         let color: 'default' | 'primary' | 'secondary' = 'default';
-        if (step === 2) color = 'primary';
-        if (step === 3) color = 'default';
+        if (step === 2) color = 'default';
+        if (step === 3) color = 'secondary';
+        if (step === 4) color = 'primary';
 
+        let chipTxt = <>not done</>
+        if (step === 4){
+          return <Icon icon="tick" />
+        }
         return (
           <Chip
-            label={`${step < 3 ? step : "Done"}`}
+            variant="outlined"
+            label={chipTxt}
             color={color}
             size="small"
-            sx={{  }}
           />
         );
       },
@@ -186,12 +189,9 @@ export default function Files() {
     },
   ];
 
-const columns = isMobile
-  ? baseColumns.filter((col) =>
-      ['fileName', 'actions'].includes(col.field as string),
-    )
-  : baseColumns;
-
+  const columns = isMobile
+    ? baseColumns.filter((col) => ['fileName', 'actions'].includes(col.field as string))
+    : baseColumns;
 
   const handleRowClick = (params: any) => {
     router.push(`/fallmanager/file/${params.id}`);
@@ -250,9 +250,7 @@ const columns = isMobile
           </Typography>
         </DialogContent>
         <DialogActions>
-          <Button onClick={() => setConfirmDeleteId(null)}>
-            {t('CANCEL')}
-          </Button>
+          <Button onClick={() => setConfirmDeleteId(null)}>{t('CANCEL')}</Button>
           <Button
             onClick={() => confirmDeleteId && handleDelete(confirmDeleteId)}
             color="error"

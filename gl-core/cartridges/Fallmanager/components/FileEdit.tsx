@@ -1,3 +1,4 @@
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Fallmanager/components/FileEdit.tsx
 'use client';
 
 import * as React from 'react';
@@ -7,18 +8,13 @@ import {
   Card,
   CardContent,
   CardHeader,
+  CardMedia,
   CircularProgress,
-  IconButton,
-  Tooltip,
   Button,
   Dialog,
   DialogTitle,
   DialogContent,
   DialogActions,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-  Alert,
   Grid,
   Skeleton,
 } from '@mui/material';
@@ -46,7 +42,23 @@ type FileMeta = {
   rawTextSeverity?: string;
   rawTextError?: string;
   downloadUrl?: string;
-  openai?: any;
+  thumbnail?: string;
+  thumbnailProcessing?: boolean;
+  openai?: {
+    summary?: {
+      [lang: string]: string;
+    };
+    contacts?: {
+      name?: string;
+      role?: string;
+      address?: string;
+      phone?: string;
+      email?: string;
+    }[];
+    error?: string;
+    processing?: boolean;
+    [key: string]: any;
+  };
   [key: string]: any;
 };
 
@@ -54,7 +66,6 @@ export default function FileEdit({ id }: { id: string }) {
   const t = useLingua();
   const router = useRouter();
   const dispatch = useDispatch();
-  const isMobile = useIsMobile();
   const { files, language } = useFallmanagerSlice();
 
   const [liveFile, setLiveFile] = React.useState<FileMeta | null>(
@@ -67,7 +78,7 @@ export default function FileEdit({ id }: { id: string }) {
   const [rawTextFailed, setRawTextFailed] = React.useState(false);
 
   React.useEffect(() => {
-    const unsub = onSnapshot(doc(db, 'files', id), async (docSnap) => {
+    const unsub = onSnapshot(doc(db, 'files', id), (docSnap) => {
       if (!docSnap.exists()) return;
       const fileData: FileMeta = { id, ...docSnap.data() } as FileMeta;
       setLiveFile(fileData);
@@ -82,7 +93,24 @@ export default function FileEdit({ id }: { id: string }) {
     return moment.unix(liveFile.createdAt.seconds).format('h:mma dddd Do MMMM');
   }, [liveFile?.createdAt?.seconds, language]);
 
-  const currentStep = !liveFile?.rawText ? 2 : !liveFile?.openai ? 3 : 0;
+  if (loading || !liveFile) {
+    return (
+      <Box sx={{ p: 4 }}>
+        <CircularProgress sx={{ mr: 2 }} />
+        <Typography sx={{ mt: 2 }}>{t('LOADING_FILE')}</Typography>
+      </Box>
+    );
+  }
+
+  const summaryText = liveFile.openai?.summary?.[language];
+
+  const currentStep = !liveFile?.rawText
+    ? 2
+    : !liveFile?.openai
+    ? 3
+    : !liveFile?.thumbnail
+    ? 4
+    : 0;
 
   const handleDelete = async () => {
     if (!liveFile) return;
@@ -96,49 +124,10 @@ export default function FileEdit({ id }: { id: string }) {
     }
   };
 
-  const handleTriggerRawText = async () => {
+  const handleTriggerThumbnail = async () => {
     setProcessing(true);
     try {
-      const res = await fetch(`/api/gl-api/fallmanager/raw`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ id }),
-      });
-      const json = await res.json();
-      if (!res.ok) {
-        setRawTextFailed(true);
-        dispatch(
-          toggleFeedback({
-            severity: 'error',
-            title: t('TEXT_EXTRACTION_FAILED'),
-            description: json.error || 'PDF.co error.',
-          }),
-        );
-      } else {
-        dispatch(
-          toggleFeedback({
-            severity: 'success',
-            title: t('TEXT_EXTRACTION_STARTED'),
-          }),
-        );
-      }
-    } catch (err) {
-      setRawTextFailed(true);
-      dispatch(
-        toggleFeedback({
-          severity: 'warning',
-          title: t('TEXT_EXTRACTION_FAILED'),
-        }),
-      );
-    } finally {
-      setProcessing(false);
-    }
-  };
-
-  const handleTriggerAnalysis = async () => {
-    setProcessing(true);
-    try {
-      const res = await fetch(`/api/gl-api/fallmanager/ki`, {
+      const res = await fetch(`/api/gl-api/fallmanager/thumbnail`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id }),
@@ -148,15 +137,15 @@ export default function FileEdit({ id }: { id: string }) {
         dispatch(
           toggleFeedback({
             severity: 'error',
-            title: t('TEXT_ANALYSIS_FAILED'),
-            description: json.error || 'OpenAI error.',
+            title: t('THUMBNAIL_FAILED'),
+            description: json.error || 'Thumbnail generation failed.',
           }),
         );
       } else {
         dispatch(
           toggleFeedback({
             severity: 'success',
-            title: t('TEXT_ANALYSIS_STARTED'),
+            title: t('THUMBNAIL_STARTED'),
           }),
         );
       }
@@ -164,37 +153,18 @@ export default function FileEdit({ id }: { id: string }) {
       dispatch(
         toggleFeedback({
           severity: 'warning',
-          title: t('TEXT_ANALYSIS_FAILED'),
+          title: t('THUMBNAIL_FAILED'),
         }),
       );
     } finally {
       setProcessing(false);
     }
   };
-
-  if (loading || !liveFile) {
-    return (
-      <Box sx={{ p: 4 }}>
-        <CircularProgress sx={{ mr: 2 }} />
-        <Typography sx={{ mt: 2 }}>{t('LOADING_FILE')}</Typography>
-      </Box>
-    );
-  }
 
   return (
     <>
       <Card>
         <CardHeader
-          avatar={
-            <Tooltip title={t('ALL_FILES')}>
-              <IconButton
-                color="primary"
-                onClick={() => router.push('/fallmanager')}
-              >
-                <Icon icon="left" />
-              </IconButton>
-            </Tooltip>
-          }
           title={
             <Typography variant="h5">
               {liveFile.fileName || t('UNKNOWN_FILENAME')}
@@ -213,215 +183,98 @@ export default function FileEdit({ id }: { id: string }) {
         />
         <CardContent>
           <Grid container spacing={2}>
-            {/* LEFT COLUMN */}
             <Grid size={{ xs: 12, md: 8 }}>
-              {/* Step 1 */}
-              <Accordion
-                disableGutters
-                expanded={false}
-                sx={{
-                  mt: 2,
-                  boxShadow: 'none',
-                  border: 'none',
-                  '&::before': { display: 'none' },
-                }}
-              >
-                <AccordionSummary>
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                    <Icon icon="tick" color="success" />
-                    <Typography variant="h6">
-                      {t('STEP_1_UPLOAD_FILE')}
-                    </Typography>
-                  </Box>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography variant="body2">
-                    {liveFile.fileName || '...'} {t('UPLOADED_AT')}{' '}
-                    {formattedDate || '...'}
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
+              {/* STEP 1–4 Placeholder */}
 
-              {/* Step 2 */}
-              <Accordion
-                disableGutters
-                defaultExpanded={currentStep === 2}
-                sx={{
-                  mt: 2,
-                  boxShadow: 'none',
-                  border: 'none',
-                  '&::before': { display: 'none' },
-                }}
-              >
-                <AccordionSummary>
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                    {liveFile.rawText ? (
-                      <Icon icon="tick" color="success" />
-                    ) : liveFile.rawTextProcessing ? (
-                      <CircularProgress sx={{ mr: 2 }} />
-                    ) : (
-                      <Icon icon="work" color="disabled" />
-                    )}
-                    <Typography variant="h6">
-                      {t('STEP_2_EXTRACT_TEXT')}
-                    </Typography>
-                  </Box>
-                </AccordionSummary>
-                <AccordionDetails>
-                  {liveFile.rawText ? (
-                    <>
-                      <Typography variant="body2" gutterBottom>
-                        {t('STEP_2_TEXT_EXTRACTED')}
-                      </Typography>
-                      <Accordion
-                        disableGutters
-                        sx={{
-                          boxShadow: 'none',
-                          border: 'none',
-                          '&::before': { display: 'none' },
-                          mt: 1,
-                        }}
+              {summaryText && (
+                <Typography variant="h6" sx={{ mt: 3, whiteSpace: 'pre-wrap' }}>
+                  {summaryText}
+                </Typography>
+              )}
+
+              {Array.isArray(liveFile.openai?.contacts) &&
+                liveFile.openai.contacts.length > 0 && (
+                  <Card sx={{width: "100%"}}>
+                  <Box sx={{ mb: 1 }}>
+                    
+                    {liveFile.openai.contacts.map((c, i) => (
+                      <CardContent
+                        key={i}
                       >
-                        <AccordionSummary expandIcon={null}>
-                          <Box sx={{ mr: 1 }}>
-                            <Icon icon="api" color="primary" />
-                          </Box>
-                          <Typography>{t('SHOW_EXTRACTED_TEXT')}</Typography>
-                        </AccordionSummary>
-                        <AccordionDetails>
-                          <pre
-                            style={{
-                              whiteSpace: 'pre-wrap',
-                              wordBreak: 'break-word',
-                            }}
-                          >
-                            {JSON.stringify(liveFile.rawText, null, 2)}
-                          </pre>
-                        </AccordionDetails>
-                      </Accordion>
-                    </>
-                  ) : (
-                    <>
-                      <Typography variant="body2" gutterBottom>
-                        {t('STEP_2_DESCRIPTION')}
-                      </Typography>
-                      {liveFile.rawTextSeverity === 'error' && (
-                        <Alert severity="error" sx={{ mt: 2 }}>
-                          {liveFile.rawTextError || t('TEXT_EXTRACTION_FAILED')}
-                        </Alert>
-                      )}
-                      <MightyButton
-                        sx={{ mt: 2 }}
-                        icon="work"
-                        variant="contained"
-                        label={t('EXTRACT_TEXT')}
-                        onClick={handleTriggerRawText}
-                        disabled={processing}
-                      />
-                    </>
-                  )}
-                </AccordionDetails>
-              </Accordion>
-
-              {/* Step 3 */}
-              <Accordion
-                disableGutters
-                defaultExpanded={currentStep === 3}
-                sx={{
-                  mt: 2,
-                  boxShadow: 'none',
-                  border: 'none',
-                  '&::before': { display: 'none' },
-                }}
-              >
-                <AccordionSummary>
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                    {liveFile.openai?.error ? (
-                      <Icon icon="warning" color="error" />
-                    ) : liveFile.openai?.processing ? (
-                      <CircularProgress sx={{ mr: 2 }} />
-                    ) : liveFile.openai ? (
-                      <Icon icon="tick" color="success" />
-                    ) : (
-                      <Icon icon="work" color="disabled" />
-                    )}
-                    <Typography variant="h6">
-                      {t('STEP_3_ANALYZE_TEXT')}
-                    </Typography>
+                        {c.name && (
+                          <Typography>
+                            {c.name}
+                          </Typography>
+                        )}
+                        {c.role && (
+                          <Typography>
+                            {c.role}
+                          </Typography>
+                        )}
+                        {c.phone && (
+                          <Typography>
+                            {c.phone}
+                          </Typography>
+                        )}
+                        {c.email && (
+                          <Typography>
+                            {c.email}
+                          </Typography>
+                        )}
+                        {c.address && (
+                          <Typography>
+                            {c.address}
+                          </Typography>
+                        )}
+                      </CardContent>
+                    ))}
                   </Box>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography variant="body2" gutterBottom>
-                    {t('STEP_3_DESCRIPTION')}
-                  </Typography>
-                  {liveFile.openai?.error && (
-                    <Alert severity="error" sx={{ mt: 2 }}>
-                      {liveFile.openai.error}
-                    </Alert>
-                  )}
-                  {liveFile.openai?.processing ? null : liveFile.openai &&
-                    !liveFile.openai?.error ? (
-                    <Accordion
-                      disableGutters
-                      sx={{
-                        boxShadow: 'none',
-                        border: 'none',
-                        '&::before': { display: 'none' },
-                        mt: 1,
-                      }}
-                    >
-                      <AccordionSummary expandIcon={null}>
-                        <Box sx={{ mr: 1 }}>
-                          <Icon icon="api" color="primary" />
-                        </Box>
-                        <Typography>{t('SHOW_STRUCTURED_DATA')}</Typography>
-                      </AccordionSummary>
-                      <AccordionDetails>
-                        <pre
-                          style={{
-                            whiteSpace: 'pre-wrap',
-                            wordBreak: 'break-word',
-                          }}
-                        >
-                          {JSON.stringify(liveFile.openai, null, 2)}
-                        </pre>
-                      </AccordionDetails>
-                    </Accordion>
-                  ) : (
-                    <MightyButton
-                      sx={{ mt: 2 }}
-                      icon="work"
-                      variant="contained"
-                      label={t('ANALYSE')}
-                      onClick={handleTriggerAnalysis}
-                      disabled={processing}
-                    />
-                  )}
-                </AccordionDetails>
-              </Accordion>
+                  </Card>
+                )}
+
+              {!liveFile.thumbnail && (
+                <Button
+                  variant="contained"
+                  color="primary"
+                  onClick={handleTriggerThumbnail}
+                  disabled={processing}
+                  sx={{ mt: 2 }}
+                >
+                  {t('GENERATE_THUMBNAIL')}
+                </Button>
+              )}
             </Grid>
 
-            {/* RIGHT COLUMN */}
             <Grid size={{ xs: 12, md: 4 }}>
-              <Box
+              <Card
                 sx={{
                   mt: 2,
+                  width: '100%',
+                  maxWidth: 240,
+                  mx: 'auto',
+                  aspectRatio: '3 / 4',
                   display: 'flex',
+                  alignItems: 'center',
                   justifyContent: 'center',
-                  alignItems: 'flex-start',
+                  borderRadius: 2,
+                  overflow: 'hidden',
                 }}
               >
-                <Skeleton
-                  variant="rectangular"
-                  animation="pulse"
-                  sx={{
-                    width: '100%',
-                    maxWidth: 240,
-                    height: 320, // e.g. portrait 240x320 (3:4 ratio)
-                    borderRadius: 2,
-                  }}
-                />
-              </Box>
+                {liveFile.thumbnail ? (
+                  <CardMedia
+                    component="img"
+                    image={liveFile.thumbnail}
+                    alt="Thumbnail"
+                    sx={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  />
+                ) : (
+                  <Skeleton
+                    variant="rectangular"
+                    animation="pulse"
+                    sx={{ width: '100%', height: '100%' }}
+                  />
+                )}
+              </Card>
             </Grid>
           </Grid>
         </CardContent>
@@ -440,15 +293,8 @@ export default function FileEdit({ id }: { id: string }) {
           </Typography>
         </DialogContent>
         <DialogActions>
-          <Button onClick={() => setShowConfirmDelete(false)}>
-            {t('CANCEL')}
-          </Button>
-          <Button
-            onClick={handleDelete}
-            color="primary"
-            variant="contained"
-            disabled={deleting}
-          >
+          <Button onClick={() => setShowConfirmDelete(false)}>{t('CANCEL')}</Button>
+          <Button onClick={handleDelete} color="primary" variant="contained" disabled={deleting}>
             {deleting ? t('DELETING') + '...' : t('DELETE')}
           </Button>
         </DialogActions>
