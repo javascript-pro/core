@@ -207,19 +207,19 @@ export const lingua: any = {
   },
 
   ANALYSE: {
-  en: 'Analyse',
-  de: 'Analysieren',
-},
-TEXT_ANALYSIS_STARTED: {
-  en: 'Started',
-  de: 'Textanalyse gestartet',
-},
-TEXT_ANALYSIS_FAILED: {
-  en: 'Failed',
-  de: 'Textanalyse fehlgeschlagen',
-},
-STEP_3_ANALYSIS_IN_PROGRESS: {
-  en: 'Analysing',
-  de: 'Analyse läuft…',
-},
+    en: 'Analyse',
+    de: 'Analysieren',
+  },
+  TEXT_ANALYSIS_STARTED: {
+    en: 'Started',
+    de: 'Textanalyse gestartet',
+  },
+  TEXT_ANALYSIS_FAILED: {
+    en: 'Failed',
+    de: 'Textanalyse fehlgeschlagen',
+  },
+  STEP_3_ANALYSIS_IN_PROGRESS: {
+    en: 'Analysing',
+    de: 'Analyse läuft…',
+  },
 };

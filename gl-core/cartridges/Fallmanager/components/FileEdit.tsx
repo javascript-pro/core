@@ -216,22 +216,43 @@ export default function FileEdit({ id }: { id: string }) {
             {/* LEFT COLUMN */}
             <Grid size={{ xs: 12, md: 8 }}>
               {/* Step 1 */}
-              <Accordion disableGutters expanded={false} sx={{ mt: 2, boxShadow: 'none', border: 'none', '&::before': { display: 'none' } }}>
+              <Accordion
+                disableGutters
+                expanded={false}
+                sx={{
+                  mt: 2,
+                  boxShadow: 'none',
+                  border: 'none',
+                  '&::before': { display: 'none' },
+                }}
+              >
                 <AccordionSummary>
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                     <Icon icon="tick" color="success" />
-                    <Typography variant="h6">{t('STEP_1_UPLOAD_FILE')}</Typography>
+                    <Typography variant="h6">
+                      {t('STEP_1_UPLOAD_FILE')}
+                    </Typography>
                   </Box>
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography variant="body2">
-                    {liveFile.fileName || '...'} {t('UPLOADED_AT')} {formattedDate || '...'}
+                    {liveFile.fileName || '...'} {t('UPLOADED_AT')}{' '}
+                    {formattedDate || '...'}
                   </Typography>
                 </AccordionDetails>
               </Accordion>
 
               {/* Step 2 */}
-              <Accordion disableGutters defaultExpanded={currentStep === 2} sx={{ mt: 2, boxShadow: 'none', border: 'none', '&::before': { display: 'none' } }}>
+              <Accordion
+                disableGutters
+                defaultExpanded={currentStep === 2}
+                sx={{
+                  mt: 2,
+                  boxShadow: 'none',
+                  border: 'none',
+                  '&::before': { display: 'none' },
+                }}
+              >
                 <AccordionSummary>
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                     {liveFile.rawText ? (
@@ -241,7 +262,9 @@ export default function FileEdit({ id }: { id: string }) {
                     ) : (
                       <Icon icon="work" color="disabled" />
                     )}
-                    <Typography variant="h6">{t('STEP_2_EXTRACT_TEXT')}</Typography>
+                    <Typography variant="h6">
+                      {t('STEP_2_EXTRACT_TEXT')}
+                    </Typography>
                   </Box>
                 </AccordionSummary>
                 <AccordionDetails>
@@ -250,7 +273,15 @@ export default function FileEdit({ id }: { id: string }) {
                       <Typography variant="body2" gutterBottom>
                         {t('STEP_2_TEXT_EXTRACTED')}
                       </Typography>
-                      <Accordion disableGutters sx={{ boxShadow: 'none', border: 'none', '&::before': { display: 'none' }, mt: 1 }}>
+                      <Accordion
+                        disableGutters
+                        sx={{
+                          boxShadow: 'none',
+                          border: 'none',
+                          '&::before': { display: 'none' },
+                          mt: 1,
+                        }}
+                      >
                         <AccordionSummary expandIcon={null}>
                           <Box sx={{ mr: 1 }}>
                             <Icon icon="api" color="primary" />
@@ -258,7 +289,12 @@ export default function FileEdit({ id }: { id: string }) {
                           <Typography>{t('SHOW_EXTRACTED_TEXT')}</Typography>
                         </AccordionSummary>
                         <AccordionDetails>
-                          <pre style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
+                          <pre
+                            style={{
+                              whiteSpace: 'pre-wrap',
+                              wordBreak: 'break-word',
+                            }}
+                          >
                             {JSON.stringify(liveFile.rawText, null, 2)}
                           </pre>
                         </AccordionDetails>
@@ -266,7 +302,9 @@ export default function FileEdit({ id }: { id: string }) {
                     </>
                   ) : (
                     <>
-                      <Typography variant="body2" gutterBottom>{t('STEP_2_DESCRIPTION')}</Typography>
+                      <Typography variant="body2" gutterBottom>
+                        {t('STEP_2_DESCRIPTION')}
+                      </Typography>
                       {liveFile.rawTextSeverity === 'error' && (
                         <Alert severity="error" sx={{ mt: 2 }}>
                           {liveFile.rawTextError || t('TEXT_EXTRACTION_FAILED')}
@@ -286,7 +324,16 @@ export default function FileEdit({ id }: { id: string }) {
               </Accordion>
 
               {/* Step 3 */}
-              <Accordion disableGutters defaultExpanded={currentStep === 3} sx={{ mt: 2, boxShadow: 'none', border: 'none', '&::before': { display: 'none' } }}>
+              <Accordion
+                disableGutters
+                defaultExpanded={currentStep === 3}
+                sx={{
+                  mt: 2,
+                  boxShadow: 'none',
+                  border: 'none',
+                  '&::before': { display: 'none' },
+                }}
+              >
                 <AccordionSummary>
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                     {liveFile.openai?.error ? (
@@ -298,18 +345,31 @@ export default function FileEdit({ id }: { id: string }) {
                     ) : (
                       <Icon icon="work" color="disabled" />
                     )}
-                    <Typography variant="h6">{t('STEP_3_ANALYZE_TEXT')}</Typography>
+                    <Typography variant="h6">
+                      {t('STEP_3_ANALYZE_TEXT')}
+                    </Typography>
                   </Box>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Typography variant="body2" gutterBottom>{t('STEP_3_DESCRIPTION')}</Typography>
+                  <Typography variant="body2" gutterBottom>
+                    {t('STEP_3_DESCRIPTION')}
+                  </Typography>
                   {liveFile.openai?.error && (
                     <Alert severity="error" sx={{ mt: 2 }}>
                       {liveFile.openai.error}
                     </Alert>
                   )}
-                  {liveFile.openai?.processing ? null : liveFile.openai && !liveFile.openai?.error ? (
-                    <Accordion disableGutters sx={{ boxShadow: 'none', border: 'none', '&::before': { display: 'none' }, mt: 1 }}>
+                  {liveFile.openai?.processing ? null : liveFile.openai &&
+                    !liveFile.openai?.error ? (
+                    <Accordion
+                      disableGutters
+                      sx={{
+                        boxShadow: 'none',
+                        border: 'none',
+                        '&::before': { display: 'none' },
+                        mt: 1,
+                      }}
+                    >
                       <AccordionSummary expandIcon={null}>
                         <Box sx={{ mr: 1 }}>
                           <Icon icon="api" color="primary" />
@@ -317,7 +377,12 @@ export default function FileEdit({ id }: { id: string }) {
                         <Typography>{t('SHOW_STRUCTURED_DATA')}</Typography>
                       </AccordionSummary>
                       <AccordionDetails>
-                        <pre style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
+                        <pre
+                          style={{
+                            whiteSpace: 'pre-wrap',
+                            wordBreak: 'break-word',
+                          }}
+                        >
                           {JSON.stringify(liveFile.openai, null, 2)}
                         </pre>
                       </AccordionDetails>
@@ -347,16 +412,15 @@ export default function FileEdit({ id }: { id: string }) {
                 }}
               >
                 <Skeleton
-  variant="rectangular"
-  animation="pulse"
-  sx={{
-    width: '100%',
-    maxWidth: 240,
-    height: 320, // e.g. portrait 240x320 (3:4 ratio)
-    borderRadius: 2,
-  }}
-/>
-
+                  variant="rectangular"
+                  animation="pulse"
+                  sx={{
+                    width: '100%',
+                    maxWidth: 240,
+                    height: 320, // e.g. portrait 240x320 (3:4 ratio)
+                    borderRadius: 2,
+                  }}
+                />
               </Box>
             </Grid>
           </Grid>
