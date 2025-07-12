@@ -1,0 +1,449 @@
+{
+  "themeMode": "dark",
+  "fallmanager": {
+    "assist": {
+      "assisting": false,
+      "step": 0
+    },
+    "files": {
+      "NphgAhRTLKKi8ICG4egj": {
+        "id": "NphgAhRTLKKi8ICG4egj",
+        "parsedText": "",
+        "updatedAt": 1752177815214,
+        "createdAt": {
+          "type": "firestore/timestamp/1.0",
+          "seconds": 1752177764,
+          "nanoseconds": 898000000
+        },
+        "storagePath": "fallmanager/ef229ef9-f5e3-4b60-8523-6785eeb4ae4d.pdf",
+        "extension": "pdf",
+        "downloadUrl": "https://storage.googleapis.com/goldlabelpro.appspot.com/fallmanager/ef229ef9-f5e3-4b60-8523-6785eeb4ae4d.pdf?GoogleAccessId=firebase-adminsdk-fxsk6%40goldlabelpro.iam.gserviceaccount.com&Expires=1752199364&Signature=Yi0c4ANtKsR%2FFHX3TwrgwGeqyCzgd3a9hJdUrZTw%2FRaXdrsaA5YQ7Re22sVk1%2F3pbBsZQxIj6ywYJL%2BkM40sNmaOD6k87leuT0Nvipnxp8Wy9CvGiMmk6A6I%2Ba4MQy8iuXQpPgjo2GmaALVs0tL9o4iiljLvOj8Y8Y%2FEkxFChC9ALBRfVm%2Bj9kXVWiI10sl8RoFo8MB3ZjM2a%2FuurUA%2BD5FVeGqTFhbszg7AjIgNGzMN9Oh43IUbzgmu7ySvoRD6rrMZVwvYwQUGR8cxuM1FiRLT8%2B1nYuDndVGOHhk0ECmSnbYTwwxFuXIfw2XPi0C6NxWxApNV9rVU2L%2BAHog%2F%2FA%3D%3D",
+        "thumbnailProcessing": false,
+        "fileId": "ef229ef9-f5e3-4b60-8523-6785eeb4ae4d",
+        "thumbnail": "https://storage.googleapis.com/goldlabelpro.appspot.com/fallmanager/ef229ef9-f5e3-4b60-8523-6785eeb4ae4d-thumb.jpg",
+        "rawText": "    AND-e\r\n\r\n                Aioi Nissay Dowa Insurance Europe\r\n                Postfach 1448, 85732 Ismaning\r\n\r\n              Hertwig & Auer\r\n              Rechtsanwilte                       :                           ‘Abteilung Schaden\r\n               Bismarkstr. 122                       4GEGANG: -                Sachbearbeiter Frau Gauer\r\n              66121 Saarbricken                                              E-Mail: schadenservice @aioinissaydowa.eu\r\n                                             7g, Jan  2025              Telefon 083 244474 - 261\r\n                                                                                  Telefax 089 244474 - 233\r\n\r\n\r\n                                                                                               Ismaning, 28.01.2025\r\n\r\n              Schadennummer:                1520YCE24-0.019.280 KGa  (Bitte immer angeben)\r\n               Schadentag:                      26.07.2024\r\n              Versicherungsnehmer:             Hannelore Lang\r\n                Amtl. Kennzeichen:                 HOM-SH 143\r\n                lhr Zeichen:                         421/24 CHO4\r\n\r\n\r\n              Sehr geehrte Damen und Herren,\r\n\r\n              wir beziehen uns auf die vorgenannte Schadensache.\r\n\r\n               Auf Grundlage der vorliegenden Unterlagen rechnen wir wie folgt ab:\r\n\r\n                    Reparaturkosten gem. Rechnung                               EUR           6.310,76\r\n                      fiktive Reparaturkosten                                             EUR            -3.984,41\r\n                   Mietwagenkosten                                           EUR            277,56\r\n                    Rechtsanwaltskosten                                           EUR             259,90\r\n              Den Gesamtbetrag in Hohe von EUR 2.863,81 haben wir heute auf Ihr Konto angewiesen.\r\n\r\n               Mit freundlichen GriiBen\r\n\r\n              Aioi Nissay Dowa Europe\r\n              Niederlassung Deutschland\r\n\r\n               i.V. Gauer\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n                Aioi Nissay Dowa Insurance Company of Europe SE, Niederlassung Deutschland, Carl-Zeiss-Ring 25, 85737 Ismaning\r\n                T +49 (0) 89 244 474-196, E schadenservice@aioinissaydowa.eu, W and-e.com\r\n\r\n                                 Aioi Nissay Dowa Insurance Company of Europe SE, Niederlassung Deutschland, Carl-Zeiss-Ring 25, 85737 Ismaning.\r\n                  g               Vertreten durch den Hauptbevollméchtigten Martin Spangenberg. AG Miinchen HRB 155874. USt-IdNr. DE 241484675.\r\n                  §  BP    TRAE5     Niederlassung der Aioi Nissay Dowa Insurance Company of Europe SE, 4 rue Lou Hemmer, L-1748 Senningerberg, Luxemburg;\r\n                      min\r\n                  1505001:2018          Handels- und Firmenregister Nr. B232302 (RCS Luxemburg). A member of MS&AD Insurance Group.\r\n                                 Geschaftsfihrende Direktoren: Christian Alt, Dr. Thomas Jannakos; Vorsitzender des Verwaltungsrats: Michael Kainzbauer.\r\n",
+        "openai": {
+          "opposingPolicyNumber": "",
+          "opposingVehicleDetails": "",
+          "carRegistration": "HOM-SH 143",
+          "placeOfAccident": "",
+          "dateOfAccident": "26.07.2024",
+          "summary": {
+            "de": "Die Reparatur- und damit verbundenen Kosten des Autos von Hannelore Lang vom Unfall am 26.07.2024 wurden von der Aioi Nissay Dowa Insurance Europe beglichen.",
+            "en": "Hannelore Lang's car repair and related costs from the accident on 26.07.2024 were settled by Aioi Nissay Dowa Insurance Europe."
+          },
+          "claimNumber": "1520YCE24-0.019.280 KGa",
+          "opposingInsurance": "",
+          "contacts": [
+            {
+              "name": "Hannelore Lang",
+              "address": "",
+              "phone": "",
+              "email": "",
+              "role": "client"
+            },
+            {
+              "role": "claims handler",
+              "phone": "083 244474 - 261",
+              "address": "Bismarkstr. 122, 66121 Saarbrücken",
+              "email": "schadenservice@aioinissaydowa.eu",
+              "name": "Frau Gauer"
+            },
+            {
+              "role": "authorized representative",
+              "address": "Carl-Zeiss-Ring 25, 85737 Ismaning",
+              "name": "Martin Spangenberg",
+              "email": "schadenservice@aioinissaydowa.eu",
+              "phone": "089 244 474-196"
+            }
+          ],
+          "policyNumber": "",
+          "insuranceCompany": "Aioi Nissay Dowa Insurance Europe",
+          "witnesses": [],
+          "opposingDriverName": "",
+          "policeReportNumber": "",
+          "clientName": "Hannelore Lang"
+        },
+        "uploadedBy": null,
+        "fileName": "Aioi Nissan.pdf",
+        "mimeType": "application/pdf",
+        "rawTextProcessing": false,
+        "fileSize": 159552
+      },
+      "VWO4MntK3QWSg8Iaiz1Z": {
+        "id": "VWO4MntK3QWSg8Iaiz1Z",
+        "mimeType": "application/pdf",
+        "fileSize": 306430,
+        "storagePath": "fallmanager/f3275efe-3f8c-4c99-8ade-7a8187497a1b.pdf",
+        "fileId": "f3275efe-3f8c-4c99-8ade-7a8187497a1b",
+        "uploadedBy": null,
+        "rawText": "             S A C H V E R S T Ä N D I G E N B Ü R O W E B E R \r\n                           Kfz.-Technikermeister u. Motorengutachter - Mitglied des BVSK\r\n                                     Experte für ClassicCars, Young- & Oldtimer\r\n                              66125 Saarbücken  Klosterstraße 10 B  Tel. 0681 - 3 10 73 / 74  Fax 0681 - 39 76 82\r\n                                              Email: info@svb-weber.de - www.svb-weber.de\r\n\r\n               KFZ-Sachverständigenbüro Weber, Am Torhaus 54 A, 66113 Saarbrücken\r\n           Frau\r\n            Alexandra Stöckel\r\n             Schillerstrasse 3\r\n            66299 Friedrichsthal\r\n                                                                        Saarbrücken, den 17.06.2025\r\n        Rechnung - Nr.: 08210\r\n                                              Bei Rückfragen und Zahlung bitte angeben!\r\n           Haftpflicht\r\n          Pkw, SUV, Kleintransporter Audi 3.0 TDI quattro\r\n          Gutachtennummer                        : 08606PW\r\n           Versicherungs-Nr. Unfallgegner                 : xxx\r\n          Schadennummer Unfallgegner                : 25-11-511/524665-U\r\n           Versicherung                                 : HUK-Coburg\r\n                                                          Willi Hussong Straße 2, 96442 Coburg\r\n           Amtl. Kennzeichen Unfallgegner                : NK-GH85\r\n            Anspruchsteller                                 : Alexandra Stöckel\r\n                                                               Schillerstrasse 3, 66299 Friedrichsthal\r\n           Vorsteuerabzugsberechtigt                     :\r\n           Leistungszeitraum                             : 17.06.2025 - 17.06.2025\r\n\r\n          Grundhonorar                         1,00 x 994,00 EUR            EUR       994,00\r\n           Fotokosten pro Bild                         21,00 x 2,00 EUR              EUR         42,00\r\n           Telefon-,Internet-,Versandkosten           1,00 x 15,00 EUR              EUR         15,00\r\n           Fahrtkosten                               24,00 x 1,00 EUR             EUR         24,00\r\n           Schreibkosten je Seite                      11,00 x 2,00 EUR              EUR         22,00\r\n           Restwertermittlungskosten                 1,00 x 30,00 EUR             EUR         30,00\r\n           Cloudermittlung                            1,00 x 7,70 EUR             EUR          7,70\r\n           Mietwagenklasse/Nutzungsausfall\r\n          Gesamtbetrag ohne MwSt.                                           EUR     1.134,70\r\n          Mehrwertsteuer 19,00%                                             EUR       215,59\r\n         Gesamtbetrag mit MwSt.                                      EUR    1.350,29\r\n             -----------------------------------------------------------------------------------------------------------\r\n             Die Ansprüche aus der Honorarrechnung sowie alle in Zusammenhang mit dieser Beauftragung an mich abgetretenen\r\n             Schadenersatzansprüche gegen Dritte sind (weiter) abgetreten an die Deutsche Verrechnungsstelle AG, Schanzenstraße\r\n            30, 51063 Köln, Fax: 0221-99384-333 bzw. Telefon 0221-99384-500, abwicklung@kfzvs.de. Zahlungen mit\r\n            schuldbefreiender Wirkung sind nur möglich auf das Konto bei der Kreissparkasse Köln, Köln, IBAN:DE97\r\n            3705 0299 0000 7290 77, BIC: COKSDE33XXX Bitte geben Sie bei allen Zahlungen die Kundennummer der\r\n            Verrechnungsstelle 3081 an.\r\n",
+        "downloadUrl": "https://storage.googleapis.com/goldlabelpro.appspot.com/fallmanager/f3275efe-3f8c-4c99-8ade-7a8187497a1b.pdf?GoogleAccessId=firebase-adminsdk-fxsk6%40goldlabelpro.iam.gserviceaccount.com&Expires=1752125750&Signature=oBBhMlfVfWs9r%2B7iVoD00U%2FilzEQKyjBaJ%2B1KtOKaGMhofPir7XgQHwucXqzy%2FwKfEhEt0h4LKTOVuHRe%2FVwz5tMPSxoVG8gk%2Fe2I7625vQ3kQNqOkCYbbSUh%2BINfj4ziIvfjj06VqWanoCNJYB9o96nTUGq%2FL3w0m6sPZruqIvBhTRBL6j71tY%2F1cUAQN8N1K3q5OSZnphg5Sxp4aUy4BAV1xCsozJqtQ88qTBGn0fWWoTMvn9IhijeGa2%2BLVvvWz0GBKNHSTRyYngSUs3eCJ6jlY81rtvazRhG36E3HyyEyHyAzPnQN470u%2FXujdqcyv9EFg81l4Ivh5j6Cnyj8A%3D%3D",
+        "openai": {
+          "opposingVehicleDetails": "",
+          "opposingPolicyNumber": "",
+          "witnesses": [],
+          "insuranceCompany": "HUK-Coburg",
+          "claimNumber": "25-11-511/524665-U",
+          "placeOfAccident": "",
+          "clientName": "Alexandra Stöckel",
+          "policyNumber": "xxx",
+          "policeReportNumber": "",
+          "summary": {
+            "en": "Alexandra Stöckel is invoiced for services related to a car accident involving an Audi 3.0 TDI quattro on June 17, 2025, by KFZ-Sachverständigenbüro Weber.",
+            "de": "Alexandra Stöckel wird für Dienstleistungen im Zusammenhang mit einem Autounfall mit einem Audi 3.0 TDI quattro am 17. Juni 2025 von KFZ-Sachverständigenbüro Weber in Rechnung gestellt."
+          },
+          "opposingDriverName": "",
+          "dateOfAccident": "17.06.2025",
+          "carRegistration": "NK-GH85",
+          "contacts": [
+            {
+              "role": "client",
+              "email": "",
+              "name": "Alexandra Stöckel",
+              "phone": "",
+              "address": "Schillerstrasse 3, 66299 Friedrichsthal"
+            },
+            {
+              "address": "Am Torhaus 54 A, 66113 Saarbrücken",
+              "email": "info@svb-weber.de",
+              "phone": "0681 - 3 10 73 / 74",
+              "role": "service provider",
+              "name": "KFZ-Sachverständigenbüro Weber"
+            },
+            {
+              "name": "Deutsche Verrechnungsstelle AG",
+              "phone": "0221-99384-500",
+              "role": "payment processor",
+              "email": "abwicklung@kfzvs.de",
+              "address": "Schanzenstraße 30, 51063 Köln"
+            }
+          ],
+          "opposingInsurance": ""
+        },
+        "thumbnail": "https://storage.googleapis.com/goldlabelpro.appspot.com/fallmanager/f3275efe-3f8c-4c99-8ade-7a8187497a1b-thumb.jpg",
+        "fileName": "Rechnung SV Weber.pdf",
+        "rawTextProcessing": false,
+        "parsedText": "",
+        "thumbnailProcessing": false,
+        "extension": "pdf",
+        "createdAt": {
+          "type": "firestore/timestamp/1.0",
+          "seconds": 1752104150,
+          "nanoseconds": 863000000
+        },
+        "updatedAt": 1752104193033
+      },
+      "tQV9KtRJBTb1wHLy1Odj": {
+        "id": "tQV9KtRJBTb1wHLy1Odj",
+        "rawText": "                                                                                                            Frau Gehl\r\n                                                                                                            Abteilung: 6SRK09\r\n                                                                                                            Telefon:  +49 681 601-975\r\n                                                                                                            schaden@saarland-versicherungen.de\r\n                                                                                                            05.02.2025\r\n             Rechtsanwälte Hertwig & Auer\r\n             Bismarckstr. 122\r\n            66121 Saarbrücken\r\n                                                                                                            Postanschrift:\r\n                                                                                                            66026 Saarbrücken\r\n\r\n\r\n            Bitte geben Sie immer unser Zeichen an: KRH 24 049630\r\n             Kfz-Haftpflichtschaden vom 21.11.2024  NN Logistik / Walpurga Anna Puhl\r\n            Versicherungsnummer: KR-1272-7871, Amtliches Kennzeichen: SLS-EP 345\r\n             Ihr Zeichen: 44/25 CH04\r\n\r\n             Sehr geehrte Damen und Herren,\r\n              den Schadenfall haben wir überprüft und rechnen wie folgt ab:\r\n\r\n              Reparaturkosten gemäß Prüfbericht fiktiv                                                      369,63 Euro\r\n             Gutachterkosten gemäß Prüfbericht                                                        329,38 Euro\r\n          Zwischensumme                                                         699,01 Euro\r\n            Kostenpauschale                                                                      25,00 Euro\r\n          Zwischensumme                                                         724,01 Euro\r\n             Rechtsanwaltsgebühren netto                                                            134,40 Euro\r\n          Zwischensumme                                                         858,41 Euro\r\n\r\n          Gesamtsumme                                                      858,41 Euro\r\n\r\n             Wir haben 858,41 Euro überwiesen. Der Betrag wird in den nächsten Tagen dem Konto IBAN\r\n              DE*****************275 gutgeschrieben.\r\n      Fach-ID: 10271\r\n\r\n\f          Seite 2 von 2 zum Schreiben vom 05.02.2025\r\n          an Rechtsanwälte Hertwig & Auer\r\n\r\n\r\n\r\n        Freundliche Grüße\r\n        SAARLAND Feuerversicherung Aktiengesellschaft\r\n        Ein Unternehmen der Versicherungskammer\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n          SAARLAND Feuerversicherung              Vorstand: Dr. Dirk Hermann (Vorsitzender),           Konto: Landesbank Saar\r\n          Aktiengesellschaft                         Dr. Christian Krams                             IBAN DE56 5905 0000 0031 5206 20\r\n          Postfach 10 26 62 · 66026 Saarbrücken         Vorsitzende des Aufsichtsrats: Barbara Schick         BIC SALADE55XXX\r\n          Peter-Zimmer-Straße 2 · 66123 Saarbrücken      Handelsregister: AG Saarbrücken HRB 9163          Gläubiger-ID DE 02ZZZ00000025347\r\n          Telefon +49 681 601-333                     Sitz: Saarbrücken                               Versicherungsteuer-Nr: 814/V90814093452\r\n          service@saarland-versicherungen.de                                                        Umsatzsteuer-ID-Nr: DE 172 489 027\r\n          www.saarland-versicherungen.de\r\n          Datenschutz ist uns wichtig. Wie Ihre personenbezogenen Daten verarbeitet werden, finden Sie auf unserer Homepage unter\r\n          der Rubrik Datenschutz/Merkblätter zur Datenverarbeitung. Soweit erforderlich, können wir Ihnen die Datenschutzhinweise auf\r\n          Anforderung auch postalisch zur Verfügung stellen. Versicherungsbeiträge sind umsatzsteuerfrei.\r\n\r\n\f",
+        "fileName": "Saarland Versicherungen.pdf",
+        "storagePath": "fallmanager/642b598e-e299-41c5-849a-f5fb6830054b.pdf",
+        "parsedText": "",
+        "fileSize": 93217,
+        "createdAt": {
+          "type": "firestore/timestamp/1.0",
+          "seconds": 1752105937,
+          "nanoseconds": 927000000
+        },
+        "downloadUrl": "https://storage.googleapis.com/goldlabelpro.appspot.com/fallmanager/642b598e-e299-41c5-849a-f5fb6830054b.pdf?GoogleAccessId=firebase-adminsdk-fxsk6%40goldlabelpro.iam.gserviceaccount.com&Expires=1752127537&Signature=c0QmT8aMqgOORas9cQtec93cJsCFUpVT0ASLsYwml8ETB4R9lOA9lw8MdRn73eXNaPxwFq8E3K6GeHDvUo8HNhV%2Fw42UJcq5jZJ5ixri3vmeAaOCb0ykZKkU6rszHekMgJ3Le7axEbNb0GssEGh2F0nN5TKHrqPkQBTMt%2FkwHWFK7BJxBXSZGZKRDmKJ5bJL32L0mDit%2BVKBuGdFkOAm5TUltJlLX%2BXPXSJFVjuwG2S4SZTg8W6wrTFF9YTT8CH2WjAOq1mzR14a208ZHNh2fl%2B%2BIvSB5209bCg0GseIuxJlaucvRS%2Bx8TcKRz9Jc3UJAOV38vNVybV%2B7q6SpUaThg%3D%3D",
+        "fileId": "642b598e-e299-41c5-849a-f5fb6830054b",
+        "updatedAt": 1752105979797,
+        "rawTextProcessing": false,
+        "thumbnailProcessing": false,
+        "mimeType": "application/pdf",
+        "thumbnail": "https://storage.googleapis.com/goldlabelpro.appspot.com/fallmanager/642b598e-e299-41c5-849a-f5fb6830054b-thumb.jpg",
+        "uploadedBy": null,
+        "extension": "pdf",
+        "openai": {
+          "opposingVehicleDetails": "",
+          "opposingInsurance": "",
+          "carRegistration": "SLS-EP 345",
+          "witnesses": [],
+          "policeReportNumber": "",
+          "opposingPolicyNumber": "",
+          "summary": {
+            "en": "Walpurga Anna Puhl's vehicle damage claim from 21.11.2024 processed by SAARLAND Feuerversicherung, total compensation of 858.41 Euro.",
+            "de": "Schadensfall von Walpurga Anna Puhl vom 21.11.2024 durch SAARLAND Feuerversicherung bearbeitet, Gesamtentschädigung von 858,41 Euro."
+          },
+          "placeOfAccident": "",
+          "dateOfAccident": "21.11.2024",
+          "contacts": [
+            {
+              "address": "Peter-Zimmer-Straße 2, 66123 Saarbrücken",
+              "role": "insurance representative",
+              "name": "Frau Gehl",
+              "phone": "+49 681 601-975",
+              "email": "schaden@saarland-versicherungen.de"
+            },
+            {
+              "address": "Bismarckstr. 122, 66121 Saarbrücken",
+              "phone": "",
+              "name": "Rechtsanwälte Hertwig & Auer",
+              "role": "law firm",
+              "email": ""
+            }
+          ],
+          "clientName": "Walpurga Anna Puhl",
+          "insuranceCompany": "SAARLAND Feuerversicherung Aktiengesellschaft",
+          "opposingDriverName": "",
+          "claimNumber": "KRH 24 049630",
+          "policyNumber": "KR-1272-7871"
+        }
+      }
+    },
+    "cases": {},
+    "memory": null,
+    "newCase": {
+      "open": false
+    },
+    "aiCase": {
+      "open": false
+    },
+    "lingua": {
+      "FILENAME": {
+        "en": "File name",
+        "de": "Dateiname"
+      },
+      "UPLOADING": {
+        "en": "Uploading",
+        "de": "Wird hochgeladen"
+      },
+      "DELETE_SELECTED": {
+        "en": "Delete selected",
+        "de": "Ausgewählte löschen"
+      },
+      "DELETING": {
+        "en": "Deleting",
+        "de": "Wird gelöscht"
+      },
+      "FILES": {
+        "en": "files",
+        "de": "Dateien"
+      },
+      "FILE_DETAILS": {
+        "en": "File details",
+        "de": "Dateidetails"
+      },
+      "CONFIRM_DELETE": {
+        "en": "Are you sure?",
+        "de": "Sind Sie sicher?"
+      },
+      "CANCEL": {
+        "en": "Cancel",
+        "de": "Abbrechen"
+      },
+      "TIME_CREATED": {
+        "en": "Time created",
+        "de": "Erstellungsdatum"
+      },
+      "THUMBNAIL_GENERATING": {
+        "en": "Thumbnail is being generated",
+        "de": "Vorschaubild wird erstellt"
+      },
+      "VIEW_FILE": {
+        "en": "View file",
+        "de": "Datei anzeigen"
+      },
+      "PROCESS_FILE": {
+        "en": "Process file",
+        "de": "Datei verarbeiten"
+      },
+      "DELETE": {
+        "en": "Delete",
+        "de": "Löschen"
+      },
+      "FILESIZE": {
+        "en": "File size",
+        "de": "Dateigröße"
+      },
+      "RESULT_NOT_OK": {
+        "en": "That is not OK",
+        "de": "Das ist nicht in Ordnung"
+      },
+      "UPLOAD_FILE": {
+        "en": "Upload file",
+        "de": "Datei hochladen"
+      },
+      "NO_FILES": {
+        "en": "No files to display",
+        "de": "Keine Dateien verfügbar"
+      },
+      "ALL_FILES": {
+        "en": "All files",
+        "de": "Alle Dateien"
+      },
+      "APP_TITLE": {
+        "en": "Case Manager",
+        "de": "Fallmanager"
+      },
+      "LOADING_FILE": {
+        "en": "Loading file...",
+        "de": "Datei wird geladen..."
+      },
+      "UNKNOWN_DATE": {
+        "en": "Unknown date",
+        "de": "Unbekanntes Datum"
+      },
+      "THUMBNAIL_READY": {
+        "en": "Thumbnail ready",
+        "de": "Vorschaubild verfügbar"
+      },
+      "NO_THUMBNAIL": {
+        "en": "No thumbnail generated yet",
+        "de": "Noch kein Vorschaubild generiert"
+      },
+      "RUN_AI_ANALYSIS": {
+        "en": "Ask Oliver",
+        "de": "Frag Oliver"
+      },
+      "GENERATE_THUMBNAIL": {
+        "en": "Generate thumbnail",
+        "de": "Vorschaubild generieren"
+      },
+      "ARE_YOU_SURE": {
+        "en": "Are you really, really sure?",
+        "de": "Wirklich ganz sicher?"
+      },
+      "GENERATING_THUMBNAIL": {
+        "en": "Generating PDF thumbnail",
+        "de": "Generierung läuft"
+      },
+      "EXTRACTING_TEXT": {
+        "en": "Extracting raw text...",
+        "de": "Text wird extrahiert..."
+      },
+      "EXTRACTED_TEXT": {
+        "en": "Raw text",
+        "de": "Extrahierter Text"
+      },
+      "SUMMARY": {
+        "en": "Summary",
+        "de": "Zusammenfassung"
+      },
+      "RESET": {
+        "en": "Reset",
+        "de": "Zurücksetzen"
+      },
+      "DARK_MODE": {
+        "en": "Dark mode",
+        "de": "Dunkler Modus"
+      },
+      "LIGHT_MODE": {
+        "en": "Light mode",
+        "de": "Heller Modus"
+      },
+      "PROCESSING_AI": {
+        "en": "Asking Oliver",
+        "de": "Oliver wird gefragt"
+      },
+      "GOLDLABEL_HOME": {
+        "en": "Goldlabel Home",
+        "de": "Goldlabel Startseite"
+      },
+      "TEXT_EXTRACTION_FAILED": {
+        "en": "Raw text extraction failed",
+        "de": "Rohtextextraktion fehlgeschlagen"
+      }
+    },
+    "language": "de",
+    "themeMode": "dark",
+    "themes": {
+      "dark": {
+        "mode": "dark",
+        "primary": "#34d0f7",
+        "secondary": "#4bff60",
+        "background": "#000",
+        "paper": "#000",
+        "text": "#fff",
+        "border": "#FFF"
+      },
+      "light": {
+        "mode": "light",
+        "primary": "#305DA5",
+        "secondary": "#414142",
+        "background": "#eee",
+        "paper": "#FFFFFF",
+        "text": "#414142",
+        "border": "#414142"
+      }
+    }
+  },
+  "bouncer": {
+    "cartridge": "bouncer",
+    "email": "goldlabel.apps@gmail.com",
+    "authing": true,
+    "user": {
+      "uid": "Wj0opaxLKzcWZwZXoa9X63Yagpw1",
+      "email": "goldlabel.apps@gmail.com"
+    },
+    "feedback": null
+  },
+  "cv": {
+    "appMode": "jd",
+    "viewpoint": "first",
+    "showJD": true,
+    "validJD": false,
+    "cvMarkdown": "---\norder: 2\ntitle: Fullstack JavaScript Developer\ntitle: Fullstack JavaScript\ndescription: Match your Job to our Curriculum Vitae with AI\nslug: /work/cv\nicon: openai\nimage: /png/og.png\ntags: CV, jobs, work, resume, AI, OpenAI\ngithub: https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg\n---\n\n## Fullstack JavaScript Developer\n\n## Fullstack JavaScript\n\nOver 20 years of experience delivering scalable web applications across startups, enterprises, and remote-first teams in the UK, Europe, and Australia and beyond. Deep expertise in React, TypeScript, current specialising in Next.js.\n\nRecently, I’ve focused on using AI as a practical development accelerator — not a shortcut, but a force multiplier. With experience and intent, AI generates production-grade results faster and cleaner. Code now ships 2–3x faster with fewer bugs.\n\nProven track record building high-performance UIs, integrating automated testing and linting, and delivering through streamlined pipelines. Equally comfortable leading projects or collaborating in agile teams. Prefer a clear brief, a clean codebase, and a culture that values delivery. Outside work, I write, travel, surf, dive, and ski.\n\n### Skills\n\n- _Specialisms:_ TypeScript Vanilla JavaScript (ES6+), React, Node & Next.js\n- _Frameworks & Libraries:_ React, Vue, React Native, Next.js (App Router), Redux, Express, jQuery\n- _Style:_ Vanilla CSS, Material UI, Tailwind CSS, Styled Components, Figma\n- _Database:_ NoSQL, Firestore, Supabase, MongoDB, DynamoDB, MySQL, PostgreSQL, SQL\n- _APIs:_ REST, GraphQL, OpenAI\n- _Testing & QA:_ Jest, React Testing Library, Cucumber (BDD), Gherkin\n- _DevOps & Workflow:_ CI/CD (GitHub Actions, Netlify Deploy), MERN Stack, Linux (MAMP stack), GitFlow, Agile/SCRUM, Git, GitHub, Vercel, Firebase (Auth, Firestore, Storage), Netlify, Docker, Turborepo, Webpack\n- _CMS:_ Headless CMS (Strapi, Contentful), WordPress, Drupal\n- _Other:_ Progressive Web Apps (PWA), [Static Site Generation (SSG)](https://github.com/javascript-pro/core/blob/main/app/%5B%5B...slug%5D%5D/page.tsx), Server-Side Rendering (SSR), Raspberry Pi & Python\n\n### Experience\n\n#### Founder — Goldlabel Apps Ltd\n\n_Remote — 2024 to Present_\n\n- Building a suite of real-world Next.js apps and open-source tools designed to help developers go from amateur to professional\n- Publishing instructional eBooks on modern web delivery, covering everything from setup to deployment workflows\n- Created and maintained the Goldlabel Monorepo: a multi-app Next.js project using Turborepo and MUI, deployed to Vercel\n- Released SpeakWrite, an AI-powered voice-to-marketing app using OpenAI Whisper, DALL·E, and Firebase\n- Developing and documenting Playbook, a Markdown-powered e-reader PWA for creative content cartridges\n\n#### Frontend Developer — VU.CITY\n\n_London / Remote — Apr 2023 to May 2025_\n\n- Leading the development of internal tools and the Admin Portal using Next.js (App Router), Firebase Auth, and Firestore\n- Architecting a modular frontend platform to power multiple apps with a shared design system based on MUI\n- Building event-driven interfaces that integrate with external systems, including AWS and internal APIs\n- Championing best practices across accessibility, performance, and developer experience\n- Supporting wider digital twin product strategy with tooling, documentation, and UI infrastructure\n\n#### Full Stack JavaScript Developer — Atrackt!\n\n_Malta — Jun 2021 to Apr 2023_\n\n- Worked closely with the CTO as part of a lean, cross-functional team\n- Delivered high-performance static and PWA sites using Gatsby (Node + React)\n- Integrated Headless CMS platforms like Contentful and Strapi\n- Used Material UI Design System across all frontends for consistent UX\n- Also served as Scrum Master when needed, facilitating agile delivery\n\n#### Product Lead — Wanngi\n\n_Brisbane, Australia — Jun 2020 to Nov 2020_\n\n- Led the redevelopment of a legacy Angular PWA into a new React-based platform with , Supabase\n- Architected and implemented core framework features using custom open-source tooling\n- Oversaw a small engineering team and coordinated cross-functional delivery\n\n#### Senior Frontend Developer — Codeworx\n\n_Brisbane, Australia — Sep 2019 to Feb 2020_\n\n- Migrated a legacy poker app from CoffeeScript/jQuery to a modern React-based PWA and React Native App\n- Refactored critical UI flows to improve maintainability and performance\n- Delivered incremental improvements while maintaining stability for existing users\n\n#### Senior Frontend Developer — Rexlabs\n\n_Brisbane, Australia — Mar 2019 to Aug 2019_\n\n- Supported transition from legacy PHP/Knockout stack to a React/Redux frontend\n- Contributed to modularizing the UI and improving developer experience\n- Mentored junior developers during migration sprints\n\n#### React Developer — Boral\n\n_Sydney, Australia — Aug 2018 to Feb 2019 (Contract)_\n\n- Built foundational test architecture using Cucumber, Gherkin, and BDD principles\n- Developed and tested multiple React PWAs with AWS Amplify and GraphQL\n- Enabled CI/CD workflows to support rapid feature deployment\n\n#### Senior Frontend Developer — Canon Australia\n\n_Sydney, Australia — Mar 2018 to Aug 2018 (Contract)_\n\n- Led frontend development of a full-featured Progressive Web App from scratch\n- Architected state management with Redux and persistent store\n- Integrated multiple SaaS APIs and delivered UX enhancements across devices\n\n#### Frontend Engineer — Aligent Consulting\n\n_Adelaide, Australia — Apr 2017 to Mar 2018_\n\n- Developed and maintained frontend themes for high-traffic Magento e-commerce sites\n- Created custom JavaScript (ES6) modules to enhance user experience, including complex checkout flows\n- Built commercial-grade Progressive Web Apps (PWAs) in React for mobile-first performance\n- Worked closely with design and backend teams to deliver polished, conversion-optimized user interfaces\n\n#### Fullstack Developer — usTwo\n\n_Sydney, Australia — Jan 2017 to Feb 2017 (Contract)_\n\n- Lead developer for the Cancer Council NSW’s [Healthy Lunchbox](http://healthylunchbox.com.au) app\n- Built a React frontend connected to a WordPress CMS via the new REST API\n- Developed custom PHP endpoints and WordPress plugins\n- Used modern tooling including ES6, Webpack, and GitFlow\n\n#### Front End Software Engineer — Alcidion\n\n_Adelaide, Australia — Aug 2016 to Nov 2016 (Contract)_\n\n- Built frontend interfaces for a real-time hospital bed management system using React and Redux\n- Worked in a tight-knit, fast-paced SCRUM team delivering critical medical software\n- Focused on performance, usability, and reliability in a healthcare context\n\n#### Contract JavaScript Developer — Huawei\n\n_Shenzhen, China — Feb 2016 to May 2016_\n\n- Built an isomorphic JavaScript project management app using React and Node.js\n- Worked within a small, agile development team\n- Contributed to localisation efforts for Chinese-language users\n- Gained hands-on experience in a Chinese corporate environment\n\n#### Contract JavaScript Developer — The Changing Workplace\n\n_London — Sep 2015 to Jan 2016_\n\n- Contributed to a large-scale SaaS platform for facilities management\n- Developed frontend JavaScript applications handling complex, high-volume datasets\n- Consumed RESTful APIs and collaborated across backend and QA teams\n- Enterprise clients included Microsoft and General Electric\n\n#### Self-Employed Web Developer — Listingslab\n\n_Remote / Global — Jul 2007 to Jul 2015_\n\n- Ran a solo consultancy delivering full-stack web development\n- Specialized in WordPress Multisite, custom plugins, and responsive theme design\n- Built mobile-first UIs using HTML5, CSS3, and jQuery\n- Worked with distributed teams using GitHub and agile workflows\n\n#### Senior Developer — Velo//\n\n_London — Oct 2010 to Dec 2011_\n\n- Developed WordPress Multisite solutions with custom modules and themes\n- Delivered frontend and backend features using Flash and PHP/MySQL\n- Contributed to multi-client campaign execution\n\n#### Lead Product Developer — FMG\n\n_London — Nov 2005 to Dec 2006_\n\n- Designed and launched _Ceros_, a Flash-based digital publishing platform\n- Developed the product prototype and backend integrations\n- Platform sold commercially since 2006\n\n#### Senior Systems Developer — IG Index\n\n_London — Oct 2003 to Nov 2005_\n\n- Lead Flash developer in the in-house creative team\n- Migrated frontend systems to a third-generation Flash platform\n- Produced digital campaigns, partner sites, and marketing assets\n\n### Early Career\n\n_(1999–2004)_\n\nHeld a series of Flash and web development roles during the peak of the Flash era, contributing to frontend systems across finance, gaming, media, and publishing.\n\n_Highlights include:_\n\n- _Cantor Fitzgerald (2002–2003):_ Systems Developer on trading UIs\n- _Eurobet (2002):_ Senior Flash Developer for online gaming\n- _Pearson Broadband (2002–2003):_ Flash Developer for education delivery\n- _Kyunet, Sydney (2001–2002):_ Senior Web Developer during dotcom boom\n- _KPE London (2000–2001):_ Flash Developer for rich media campaigns\n- _4MAT / Aspinalls (1999):_ Early work in casino and recruitment web apps\n\n### Education\n\n_BSc Psychology_  \n_Newcastle University, UK — 1999_\n\n_A Levels: Maths, Physics, Chemistry_  \n_Woodbridge School, Suffolk — 1994_\n\n_GCSEs: 10 Subjects_  \nIncluding English, Maths, and Science\n\n### Spoken Languages\n\n- _English:_ Native\n- _German:_ Fluent — bilingual upbringing, partial schooling in Germany\n- _French:_ Conversational\n\n### Work Eligibility\n\nUK & German passports, full work eligibility in UK and EU\n"
+  },
+  "flickr": {
+    "cartridge": "flickr",
+    "feedback": {
+      "severity": "success",
+      "title": "All OK",
+      "message": "Thanks for asking"
+    },
+    "latestIndex": 82,
+    "latest": null
+  },
+  "lingua": {
+    "cartridge": "lingua",
+    "lang": "en",
+    "langs": {
+      "en": {
+        "default": "English",
+        "local": "Switch to English"
+      },
+      "de": {
+        "default": "German",
+        "local": "Wechseln Sie zu Deutsch"
+      }
+    }
+  },
+  "version": "51.6.3",
+  "persisted": 1752257461725,
+  "config": {
+    "persist": true,
+    "app": "Goldlabel",
+    "description": "AI software which just works",
+    "url": "https://goldlabel.pro",
+    "repo": "https://github.com/javascript-pro/core",
+    "images": {
+      "favicon": "/png/favicon.png"
+    },
+    "imagesArr": ["/png/apple-touch-icon.png", "/png/og.png"],
+    "themes": {
+      "light": {
+        "mode": "light",
+        "primary": "#5E7978",
+        "secondary": "#5E7978",
+        "background": "#FFF",
+        "paper": "#FFF",
+        "text": "#303030",
+        "border": "#5E7978"
+      },
+      "dark": {
+        "mode": "dark",
+        "primary": "#A6D4D1",
+        "secondary": "#e8c10b",
+        "background": "#5E7978",
+        "paper": "#5E7978",
+        "text": "#FFFFFF",
+        "border": "#C09F52"
+      }
+    }
+  },
+  "loading": false,
+  "feedback": null,
+  "hideImage": true
+}

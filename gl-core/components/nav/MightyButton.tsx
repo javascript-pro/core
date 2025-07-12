@@ -14,6 +14,7 @@ import { Icon } from '../../../gl-core';
 export type TMightyButton = {
   mode?: 'button' | 'icon' | 'listitem' | 'noicon' | null;
   disabled?: boolean;
+  iconPlacement?: 'right' | 'left';
   label?: string | undefined;
   variant?: 'contained' | 'outlined' | 'text' | undefined;
   sx?: any;
@@ -25,6 +26,7 @@ export type TMightyButton = {
 
 export default function MightyButton({
   mode = 'button',
+  iconPlacement = 'left',
   disabled = false,
   color = 'primary',
   sx = null,
@@ -65,11 +67,9 @@ export default function MightyButton({
 
   if (mode === 'icon') {
     return (
-      <Tooltip title={label} enterTouchDelay={0} leaveTouchDelay={3000}>
-        <IconButton color="inherit" onClick={onClick} disabled={disabled}>
-          <Icon icon={icon as any} />
-        </IconButton>
-      </Tooltip>
+      <IconButton color="inherit" onClick={onClick} disabled={disabled}>
+        <Icon icon={icon as any} />
+      </IconButton>
     );
   }
 
@@ -78,15 +78,17 @@ export default function MightyButton({
       disabled={disabled}
       sx={{ ...sx, boxShadow: 0 }}
       fullWidth={fullWidth}
-      size="small"
       variant={variant}
       color={color}
       onClick={onClick}
+      startIcon={
+        iconPlacement === 'left' ? <Icon icon={icon as any} /> : undefined
+      }
+      endIcon={
+        iconPlacement === 'right' ? <Icon icon={icon as any} /> : undefined
+      }
     >
-      <Box sx={{ mx: 1 }}>{label}</Box>
-      <Box sx={{ pt: 0.5, ml: 1 }}>
-        <Icon icon={icon as any} />
-      </Box>
+      {label}
     </Button>
   );
 }

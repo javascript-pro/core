@@ -1,6 +1,7 @@
 'use client';
 
 import * as React from 'react';
+import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { doc, onSnapshot } from 'firebase/firestore';
 import { db } from '../../../lib/firebase';
@@ -16,17 +17,12 @@ import {
   Skeleton,
   Typography,
 } from '@mui/material';
-import {
-  MightyButton,
-  Icon,
-  useDispatch,
-  useSlice,
-  toggleFeedback,
-} from '../../../../gl-core';
+import { MightyButton, useDispatch, useSlice } from '../../../../gl-core';
 import { setLatestIndex } from '../../Flickr';
 
 export default function FlickrLatest({}: TAlbumCard) {
   const dispatch = useDispatch();
+  const router = useRouter();
   const { latestIndex } = useSlice().flickr;
   const [photos, setPhotos] = useState<any[]>([]);
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -38,13 +34,13 @@ export default function FlickrLatest({}: TAlbumCard) {
         const data = docSnap.data();
         if (Array.isArray(data?.photos)) {
           setPhotos(data.photos);
-          dispatch(
-            toggleFeedback({
-              severity: 'info',
-              title: 'Got Updates',
-              description: 'Latest Photos',
-            }),
-          );
+          // dispatch(
+          //   toggleFeedback({
+          //     severity: 'info',
+          //     title: 'Got Updates',
+          //     description: 'Latest Photos',
+          //   }),
+          // );
         }
       }
     });
@@ -74,9 +70,8 @@ export default function FlickrLatest({}: TAlbumCard) {
   };
 
   const handleReset = () => {
-      dispatch(setLatestIndex(0));
+    dispatch(setLatestIndex(0));
   };
-
 
   const width = currentPhoto?.sizes?.medium?.width;
   const height = currentPhoto?.sizes?.medium?.height;
@@ -84,7 +79,6 @@ export default function FlickrLatest({}: TAlbumCard) {
 
   return (
     <>
-      
       <CardActions>
         <MightyButton
           color="primary"
@@ -103,6 +97,16 @@ export default function FlickrLatest({}: TAlbumCard) {
           disabled={latestIndex === 0}
         />
         <MightyButton
+          mode="icon"
+          color="primary"
+          label="Flickr"
+          icon="flickr"
+          onClick={() => {
+            router.push('/flickr');
+          }}
+          disabled={latestIndex >= photos.length - 1}
+        />
+        <MightyButton
           color="primary"
           label="Next"
           icon="right"
@@ -111,10 +115,8 @@ export default function FlickrLatest({}: TAlbumCard) {
         />
         <Box sx={{ flexGrow: 1 }} />
       </CardActions>
-<CardHeader
-        title={<Typography>{currentPhoto?.title || 'Photo title'}</Typography>}
-      />
-  <CardContent>
+
+      <CardContent>
         <Box sx={{ my: 1 }}>
           {currentPhoto ? (
             <Box sx={{ position: 'relative' }}>
@@ -190,13 +192,21 @@ export default function FlickrLatest({}: TAlbumCard) {
               )}
             </Box>
           ) : (
-            <Skeleton variant="rectangular" width="100%" height={150} />
+            <Skeleton variant="rectangular" width="100%" height={200} />
           )}
-          {currentPhoto?.description?.trim() && (
-        <CardContent>
-          <Typography variant="body2">{currentPhoto.description}</Typography>
-        </CardContent>
-      )}
+
+          <CardHeader
+            title={
+              <Typography variant="body1">
+                {currentPhoto?.title || 'Photo title'}
+              </Typography>
+            }
+            subheader={
+              <Typography variant="body2">
+                {currentPhoto?.description}
+              </Typography>
+            }
+          />
         </Box>
       </CardContent>
     </>

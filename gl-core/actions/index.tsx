@@ -5,7 +5,7 @@ import { forwardEmail } from './forwardEmail';
 import { toggleFeedback } from './toggleFeedback';
 import { toggleLoading } from './toggleLoading';
 import { uploadToStorage } from './uploadToStorage';
-
+import { toggleHideImage } from './toggleHideImage';
 export {
   uploadToStorage,
   switchTheme,
@@ -14,4 +14,5 @@ export {
   forwardEmail,
   toggleFeedback,
   toggleLoading,
+  toggleHideImage,
 };

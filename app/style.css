@@ -18,13 +18,13 @@ code {
   background: #e4fbf9;
   color: #222121;
   font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
-  font-size: 1.1em;
+  font-size: 0.85em;
 }
 pre {
-  padding: 16px;
+  padding: 8px;
   overflow-x: auto;
   border-radius: 4px;
-  margin: 16px;
+  margin: 8px;
 }
 code {
   padding: 2px 6px;

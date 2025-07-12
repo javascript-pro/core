@@ -44,6 +44,7 @@ import {
   forwardEmail,
   toggleFeedback,
   toggleLoading,
+  toggleHideImage,
   uploadToStorage,
 } from './actions';
 
@@ -56,6 +57,7 @@ export {
   toggleFeedback,
   toggleLoading,
   uploadToStorage,
+  toggleHideImage,
 };
 export {
   Advert,

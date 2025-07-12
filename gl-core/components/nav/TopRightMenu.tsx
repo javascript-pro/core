@@ -19,6 +19,8 @@ import {
   useVersion,
   ModeSwitch,
   routeTo,
+  toggleHideImage,
+  useSlice,
 } from '../../../gl-core';
 import { firebaseAuth, useUser } from '../../cartridges/Bouncer';
 
@@ -35,6 +37,7 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
   const dispatch = useDispatch();
   const router = useRouter();
   const user = useUser();
+  const { hideImage } = useSlice();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [shareOpen, setShareOpen] = React.useState(false);
   const [clientsOpen, setClientsOpen] = React.useState(false);
@@ -49,6 +52,10 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
     setAnchorEl(null);
     setShareOpen(false);
     setClientsOpen(false);
+  };
+
+  const handleToggleHideImage = () => {
+    dispatch(toggleHideImage(!hideImage));
   };
 
   const handleSignout = () => {
@@ -96,6 +103,13 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
             <ShareMenu frontmatter={frontmatter} />
           </Box>
         </Collapse>
+
+        <MenuItem onClick={handleToggleHideImage} sx={{ my: 2 }}>
+          <ListItemIcon>
+            <Icon icon="photo" />
+          </ListItemIcon>
+          <ListItemText primary={`${hideImage ? 'Show' : 'Hide'} image`} />
+        </MenuItem>
 
         {/* Theme Switcher */}
         <ModeSwitch />

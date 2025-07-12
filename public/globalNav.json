@@ -38,6 +38,22 @@
     "excerpt": "We build and ship modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source",
     "children": [
       {
+        "title": "Flickr Photo Cartridge",
+        "slug": "/flickr",
+        "order": 3,
+        "icon": "flickr",
+        "image": "https://live.staticflickr.com/65535/54538420041_7ae61cc6e0_b.jpg",
+        "type": "file",
+        "tags": [
+          "flickr",
+          "free",
+          "api",
+          "REST",
+          "Next.js"
+        ],
+        "excerpt": "You can customize the layout and image rendering through the options prop.\n\n Support for albums and sets\n Lightbox view\n Lazy loading for infinite scroll\n\n Flickr Photo Cartridge\n\nA React component fo"
+      },
+      {
         "title": "Work",
         "description": "Professional Fullstack JavaScript Development",
         "slug": "/work",
