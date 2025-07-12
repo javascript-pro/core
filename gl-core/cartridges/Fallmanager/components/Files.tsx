@@ -107,40 +107,43 @@ export default function Files() {
         </Typography>
       ),
     },
-    {
-      field: 'status',
-      headerName: '',
-      width: 60,
-      sortable: false,
-      filterable: false,
-      disableColumnMenu: true,
-      renderCell: (params) => {
-        if (!params.row.rawTextProcessing) return null;
-        return (
-          <Box
-            sx={{ display: 'flex', justifyContent: 'center', width: '100%' }}
-          >
-            <CircularProgress size={24} />
-          </Box>
-        );
-      },
-    },
+{
+  field: 'status',
+  headerName: '',
+  width: 60,
+  sortable: false,
+  filterable: false,
+  disableColumnMenu: true,
+  renderCell: (params) => {
+    const isPDF = params.row.fileName?.toLowerCase().endsWith('.pdf');
+    if (!params.row.rawTextProcessing || !isPDF) return null;
+
+    return (
+      <Box
+        sx={{ display: 'flex', justifyContent: 'center', width: '100%' }}
+      >
+        <CircularProgress size={24} />
+      </Box>
+    );
+  },
+},
+
     {
       field: 'step',
-      headerName: t('STEP'),
+      headerName: '',
       width: 100,
       renderCell: (params) => {
         const step = params.row.step;
         let color: 'default' | 'primary' | 'secondary' = 'default';
         if (step === 2) color = 'primary';
-        if (step === 3) color = 'secondary';
+        if (step === 3) color = 'default';
 
         return (
           <Chip
-            label={`${t('STEP')} ${step}`}
+            label={`${step < 3 ? step : "Done"}`}
             color={color}
             size="small"
-            sx={{ fontWeight: 500 }}
+            sx={{  }}
           />
         );
       },
@@ -183,11 +186,12 @@ export default function Files() {
     },
   ];
 
-  const columns = isMobile
-    ? baseColumns.filter((col) =>
-        ['fileName', 'status', 'step', 'actions'].includes(col.field as string),
-      )
-    : baseColumns;
+const columns = isMobile
+  ? baseColumns.filter((col) =>
+      ['fileName', 'actions'].includes(col.field as string),
+    )
+  : baseColumns;
+
 
   const handleRowClick = (params: any) => {
     router.push(`/fallmanager/file/${params.id}`);
