@@ -39,10 +39,8 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <React.Fragment>
       <CssBaseline />
-      
-      <Box sx={{ pb: '50px' }}>
-        {children}
-      </Box>
+
+      <Box sx={{ pb: '50px' }}>{children}</Box>
 
       <AppBar position="fixed" color="primary" sx={{ top: 'auto', bottom: 0 }}>
         <Toolbar>
@@ -61,7 +59,6 @@ export default function Layout({ children }: LayoutProps) {
           </IconButton>
         </Toolbar>
       </AppBar>
-      
     </React.Fragment>
   );
 }

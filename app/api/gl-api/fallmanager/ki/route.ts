@@ -123,11 +123,13 @@ export async function POST(req: NextRequest) {
       },
     );
 
-    const result = (await openaiRes.json()) as unknown;
+    const result = (await openaiRes.json()) as {
+      choices?: { message?: { content?: string } }[];
+      error?: { message?: string };
+    };
 
     if (!openaiRes.ok) {
-      const resultJson = result as { error?: { message?: string } };
-      const error = resultJson?.error?.message || 'OpenAI API error';
+      const error = result?.error?.message || 'OpenAI API error';
       await docRef.update({
         openai: { error },
         updatedAt: Date.now(),
@@ -135,11 +137,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error }, { status: openaiRes.status });
     }
 
-    const resultJson = result as {
-      choices?: { message?: { content?: string } }[];
-    };
-
-    let content = resultJson?.choices?.[0]?.message?.content;
+    let content = result?.choices?.[0]?.message?.content;
     if (!content || typeof content !== 'string') {
       const error = 'Missing or invalid OpenAI content';
       await docRef.update({

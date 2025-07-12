@@ -45,7 +45,7 @@ export default function SideAds() {
           dispatch(routeTo('/flickr', router));
         }}
       />
-      
+
       <Advert
         icon="admin"
         title={'Admin'}
@@ -53,7 +53,6 @@ export default function SideAds() {
           dispatch(routeTo('/admin', router));
         }}
       />
-      
     </Box>
   );
 }

@@ -70,7 +70,6 @@ export async function POST(req: NextRequest) {
       downloadUrl,
       createdAt: admin.firestore.Timestamp.now(),
       uploadedBy: null,
-      parsedText: '',
     };
 
     const docRef = await adminDb.collection('files').add(fileData);
