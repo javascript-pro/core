@@ -24,7 +24,7 @@ export const config: TConfig = {
   lingua,
   language: 'de',
   themeMode: 'dark',
-  themes: {    
+  themes: {
     light: {
       mode: 'light',
       primary: '#12836aff',
@@ -43,6 +43,5 @@ export const config: TConfig = {
       text: '#fff',
       border: '#FFF',
     },
-
   },
 };

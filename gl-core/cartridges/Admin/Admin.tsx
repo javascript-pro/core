@@ -23,17 +23,16 @@ export default function Admin() {
     <Theme theme={currentTheme as any}>
       <CssBaseline />
       <Container>
-
-        <Box sx={{my: 3}}>
-          <MightyButton 
-            sx={{mr:3}}
+        <Box sx={{ my: 3 }}>
+          <MightyButton
+            sx={{ mr: 3 }}
             label="Primary"
             variant="contained"
             icon="design"
-            iconPlacement='right'
+            iconPlacement="right"
           />
 
-          <MightyButton 
+          <MightyButton
             label="Secondary"
             color="secondary"
             variant="contained"

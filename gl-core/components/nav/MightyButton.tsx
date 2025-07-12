@@ -73,19 +73,22 @@ export default function MightyButton({
     );
   }
 
-return (
-  <Button
-    disabled={disabled}
-    sx={{ ...sx, boxShadow: 0 }}
-    fullWidth={fullWidth}
-    variant={variant}
-    color={color}
-    onClick={onClick}
-    startIcon={iconPlacement === 'left' ? <Icon icon={icon as any} /> : undefined}
-    endIcon={iconPlacement === 'right' ? <Icon icon={icon as any} /> : undefined}
-  >
-    {label}
-  </Button>
-);
-
+  return (
+    <Button
+      disabled={disabled}
+      sx={{ ...sx, boxShadow: 0 }}
+      fullWidth={fullWidth}
+      variant={variant}
+      color={color}
+      onClick={onClick}
+      startIcon={
+        iconPlacement === 'left' ? <Icon icon={icon as any} /> : undefined
+      }
+      endIcon={
+        iconPlacement === 'right' ? <Icon icon={icon as any} /> : undefined
+      }
+    >
+      {label}
+    </Button>
+  );
 }
