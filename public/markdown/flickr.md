@@ -53,9 +53,13 @@ This route is statically typed and ready to use from both client and server cont
 import { Flickr } from 'gl-core';
 
 export default function MyComponent() {
-  return <Flickr options={{ 
-            key: 'value',
-            layout: 'grid',
-          }}/>;
+  return (
+    <Flickr
+      options={{
+        key: 'value',
+        layout: 'grid',
+      }}
+    />
+  );
 }
 ```

@@ -6,7 +6,14 @@ import { TCore } from './types';
 import * as React from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
-import { CssBaseline, Container, Box, Grid, Skeleton, Typography } from '@mui/material';
+import {
+  CssBaseline,
+  Container,
+  Box,
+  Grid,
+  Skeleton,
+  Typography,
+} from '@mui/material';
 import {
   ArrowMenu,
   Theme,
@@ -26,6 +33,7 @@ import { FlickrLatest } from './cartridges/Flickr';
 import { CV } from './cartridges/CV';
 import { Bouncer } from './cartridges/Bouncer';
 import { Fallmanager } from './cartridges/Fallmanager';
+import { Admin } from './cartridges/Admin';
 
 export default function Core({ frontmatter, body = null }: TCore) {
   let fullScreen = false;
@@ -53,12 +61,24 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
   const isCV = pathname === '/work/cv';
   const isFallmanager = pathname.startsWith('/fallmanager');
-  const isApp = isCV || isFallmanager;
+  const isAdmin = pathname.startsWith('/admin');
+
+  const isApp = isCV || isFallmanager || isAdmin;
 
   const [imageError, setImageError] = React.useState(false);
 
   let app = <></>;
   switch (true) {
+    case isAdmin:
+      fullScreen = true;
+      app = (
+        <Bouncer>
+          <IncludeAll />
+          <Admin />
+        </Bouncer>
+      );
+      break;
+
     case isFallmanager:
       fullScreen = true;
       app = (
