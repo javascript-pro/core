@@ -11,7 +11,7 @@ import {
   useLingua,
 } from '../../Fallmanager';
 import { useDispatch, MightyButton } from '../../../../gl-core';
-import { Backdrop, CircularProgress, Typography, Box } from '@mui/material';
+import { Backdrop, LinearProgress, Typography, Box } from '@mui/material';
 
 export default function Upload() {
   const dispatch = useDispatch();
@@ -146,14 +146,14 @@ export default function Upload() {
         sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.modal + 1 }}
       >
         <Box display="flex" flexDirection="column" alignItems="center" gap={2}>
-          <CircularProgress color="inherit" />
-          <Typography
-            variant="h6"
-            sx={{ fontWeight: 'bold', textAlign: 'center' }}
-          >
+          <Typography variant="body1" sx={{ textAlign: 'center' }}>
             {t('UPLOADING')}
             {file?.name ? ` “${file.name}”...` : '...'}
           </Typography>
+
+          <Box sx={{ width: 200, mt: 3 }}>
+            <LinearProgress color="inherit" />
+          </Box>
         </Box>
       </Backdrop>
     </>

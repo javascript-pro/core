@@ -34,8 +34,10 @@ const app = getApps().length
 
 const db = getFirestore(app);
 
-// ✅ Set ignoreUndefinedProperties after initialization
-db.settings({ ignoreUndefinedProperties: true });
+// ✅ Prevent "settings() already called" error
+if (!getApps().length) {
+  db.settings({ ignoreUndefinedProperties: true });
+}
 
 export const adminDb = db;
 export const adminStorage = getStorage(app);

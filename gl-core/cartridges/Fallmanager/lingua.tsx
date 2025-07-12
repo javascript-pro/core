@@ -40,8 +40,8 @@ export const lingua: any = {
     de: 'Vorschaubild wird erstellt',
   },
   VIEW_FILE: {
-    en: 'View file',
-    de: 'Datei anzeigen',
+    en: 'View',
+    de: 'Anzeigen',
   },
   PROCESS_FILE: {
     en: 'Process file',
@@ -108,8 +108,12 @@ export const lingua: any = {
     de: 'Generierung läuft',
   },
   EXTRACTING_TEXT: {
-    en: 'Extracting raw text...',
+    en: 'Using PDF.co to extract raw text...',
     de: 'Text wird extrahiert...',
+  },
+  EXTRACT_TEXT: {
+    en: 'Extract Raw text using PDF.co',
+    de: 'Extrahierter Text',
   },
   EXTRACTED_TEXT: {
     en: 'Raw text',
@@ -139,8 +143,83 @@ export const lingua: any = {
     en: 'Goldlabel Home',
     de: 'Goldlabel Startseite',
   },
+  STEP_2_EXTRACT_TEXT: {
+    en: 'Step 2: Extract',
+    de: 'Schritt 2: Text extrahieren',
+  },
+  STEP_2_TEXT_EXTRACTED: {
+    en: 'Done',
+    de: 'Schritt 2: Fertig',
+  },
+
+  STEP_2_DESCRIPTION: {
+    en: 'Extract raw text from this PDF via PDF.co. This may take a few seconds.',
+    de: 'Extrahieren Sie den reinen Text aus dieser PDF-Datei über PDF.co. Dies kann einige Sekunden dauern.',
+  },
+  START_TEXT_EXTRACTION: {
+    en: 'Start',
+    de: 'Textextraktion starten',
+  },
+  TEXT_EXTRACTION_STARTED: {
+    en: 'Started',
+    de: 'Textextraktion gestartet',
+  },
   TEXT_EXTRACTION_FAILED: {
-    en: 'Raw text extraction failed',
-    de: 'Rohtextextraktion fehlgeschlagen',
+    en: 'Failed',
+    de: 'Textextraktion fehlgeschlagen',
+  },
+  STEP_1_UPLOAD_FILE: {
+    en: 'Step 1: Upload',
+    de: 'Schritt 1: Datei hochladen',
+  },
+  STEP_1_DESCRIPTION: {
+    en: 'Upload file and save the details to Firebase.',
+    de: 'Datei hochladen und in Firebase speichern.',
+  },
+  SHOW_EXTRACTED_TEXT: {
+    en: 'Show',
+    de: 'Extrahierten Text anzeigen',
+  },
+  UPLOADED_AT: {
+    en: 'was uploaded at',
+    de: 'wurde hochgeladen am',
+  },
+  STEP: {
+    en: 'Step',
+    de: 'Schritt',
+  },
+
+  STEP_3_ANALYZE_TEXT: {
+    en: 'Step 3: Analysis',
+    de: 'Schritt 3: Text analysieren',
+  },
+  STEP_3_DESCRIPTION: {
+    en: 'This step analyzes the extracted text and generates structured data using OpenAI',
+    de: 'In diesem Schritt wird der extrahierte Text analysiert und strukturierte Daten mit OpenAI generiert.',
+  },
+  STEP_3_NOT_YET_ANALYZED: {
+    en: 'No analysis yet',
+    de: 'Noch keine strukturierten Daten. Verarbeitung ausstehend.',
+  },
+  SHOW_STRUCTURED_DATA: {
+    en: 'Show',
+    de: 'Strukturierte Daten anzeigen',
+  },
+
+  ANALYSE: {
+    en: 'Analyse',
+    de: 'Analysieren',
+  },
+  TEXT_ANALYSIS_STARTED: {
+    en: 'Started',
+    de: 'Textanalyse gestartet',
+  },
+  TEXT_ANALYSIS_FAILED: {
+    en: 'Failed',
+    de: 'Textanalyse fehlgeschlagen',
+  },
+  STEP_3_ANALYSIS_IN_PROGRESS: {
+    en: 'Analysing',
+    de: 'Analyse läuft…',
   },
 };
