@@ -5,7 +5,7 @@ import { initialStateFlickr } from './cartridges/Flickr';
 import { initialStateLingua } from './cartridges/Lingua';
 import { initialStateBouncer } from './cartridges/Bouncer';
 import { initialStateFallmanager } from './cartridges/Fallmanager';
-import { initialStateAdmin2 } from './cartridges/Admin';
+import { initialStateAdmin } from './cartridges/Admin';
 
 export const initialState: any = {
   themeMode: 'light',
@@ -14,7 +14,7 @@ export const initialState: any = {
   cv: initialStateCV,
   flickr: initialStateFlickr,
   lingua: initialStateLingua,
-  admin2: {flfadkf:123},
+  admin: initialStateAdmin,
   version: pJSON.version,
   persisted: Date.now(),
   config,

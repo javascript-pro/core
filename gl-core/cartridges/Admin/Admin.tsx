@@ -8,7 +8,7 @@ import { useAdminSlice } from '../Admin';
 
 export default function Admin() {
   const dispatch = useDispatch();
-  const slice = useSlice();
+  const adminSlice = useAdminSlice();
 
   const theme = {
     mode: 'light',
@@ -20,12 +20,11 @@ export default function Admin() {
     border: '#414142',
   };
 
-  
   return (
     <Theme theme={theme as any}>
       <CssBaseline />
       <Container>
-        <pre>slice: {JSON.stringify(slice, null, 2)}</pre>
+        <pre>adminSlice: {JSON.stringify(adminSlice, null, 2)}</pre>
       </Container>
     </Theme>
   );

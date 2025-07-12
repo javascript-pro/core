@@ -1,7 +1,384 @@
-
 {
   "themeMode": "dark",
-
+  "fallmanager": {
+    "assist": {
+      "assisting": false,
+      "step": 0
+    },
+    "files": {
+      "NphgAhRTLKKi8ICG4egj": {
+        "id": "NphgAhRTLKKi8ICG4egj",
+        "parsedText": "",
+        "updatedAt": 1752177815214,
+        "createdAt": {
+          "type": "firestore/timestamp/1.0",
+          "seconds": 1752177764,
+          "nanoseconds": 898000000
+        },
+        "storagePath": "fallmanager/ef229ef9-f5e3-4b60-8523-6785eeb4ae4d.pdf",
+        "extension": "pdf",
+        "downloadUrl": "https://storage.googleapis.com/goldlabelpro.appspot.com/fallmanager/ef229ef9-f5e3-4b60-8523-6785eeb4ae4d.pdf?GoogleAccessId=firebase-adminsdk-fxsk6%40goldlabelpro.iam.gserviceaccount.com&Expires=1752199364&Signature=Yi0c4ANtKsR%2FFHX3TwrgwGeqyCzgd3a9hJdUrZTw%2FRaXdrsaA5YQ7Re22sVk1%2F3pbBsZQxIj6ywYJL%2BkM40sNmaOD6k87leuT0Nvipnxp8Wy9CvGiMmk6A6I%2Ba4MQy8iuXQpPgjo2GmaALVs0tL9o4iiljLvOj8Y8Y%2FEkxFChC9ALBRfVm%2Bj9kXVWiI10sl8RoFo8MB3ZjM2a%2FuurUA%2BD5FVeGqTFhbszg7AjIgNGzMN9Oh43IUbzgmu7ySvoRD6rrMZVwvYwQUGR8cxuM1FiRLT8%2B1nYuDndVGOHhk0ECmSnbYTwwxFuXIfw2XPi0C6NxWxApNV9rVU2L%2BAHog%2F%2FA%3D%3D",
+        "thumbnailProcessing": false,
+        "fileId": "ef229ef9-f5e3-4b60-8523-6785eeb4ae4d",
+        "thumbnail": "https://storage.googleapis.com/goldlabelpro.appspot.com/fallmanager/ef229ef9-f5e3-4b60-8523-6785eeb4ae4d-thumb.jpg",
+        "rawText": "    AND-e\r\n\r\n                Aioi Nissay Dowa Insurance Europe\r\n                Postfach 1448, 85732 Ismaning\r\n\r\n              Hertwig & Auer\r\n              Rechtsanwilte                       :                           ‘Abteilung Schaden\r\n               Bismarkstr. 122                       4GEGANG: -                Sachbearbeiter Frau Gauer\r\n              66121 Saarbricken                                              E-Mail: schadenservice @aioinissaydowa.eu\r\n                                             7g, Jan  2025              Telefon 083 244474 - 261\r\n                                                                                  Telefax 089 244474 - 233\r\n\r\n\r\n                                                                                               Ismaning, 28.01.2025\r\n\r\n              Schadennummer:                1520YCE24-0.019.280 KGa  (Bitte immer angeben)\r\n               Schadentag:                      26.07.2024\r\n              Versicherungsnehmer:             Hannelore Lang\r\n                Amtl. Kennzeichen:                 HOM-SH 143\r\n                lhr Zeichen:                         421/24 CHO4\r\n\r\n\r\n              Sehr geehrte Damen und Herren,\r\n\r\n              wir beziehen uns auf die vorgenannte Schadensache.\r\n\r\n               Auf Grundlage der vorliegenden Unterlagen rechnen wir wie folgt ab:\r\n\r\n                    Reparaturkosten gem. Rechnung                               EUR           6.310,76\r\n                      fiktive Reparaturkosten                                             EUR            -3.984,41\r\n                   Mietwagenkosten                                           EUR            277,56\r\n                    Rechtsanwaltskosten                                           EUR             259,90\r\n              Den Gesamtbetrag in Hohe von EUR 2.863,81 haben wir heute auf Ihr Konto angewiesen.\r\n\r\n               Mit freundlichen GriiBen\r\n\r\n              Aioi Nissay Dowa Europe\r\n              Niederlassung Deutschland\r\n\r\n               i.V. Gauer\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n                Aioi Nissay Dowa Insurance Company of Europe SE, Niederlassung Deutschland, Carl-Zeiss-Ring 25, 85737 Ismaning\r\n                T +49 (0) 89 244 474-196, E schadenservice@aioinissaydowa.eu, W and-e.com\r\n\r\n                                 Aioi Nissay Dowa Insurance Company of Europe SE, Niederlassung Deutschland, Carl-Zeiss-Ring 25, 85737 Ismaning.\r\n                  g               Vertreten durch den Hauptbevollméchtigten Martin Spangenberg. AG Miinchen HRB 155874. USt-IdNr. DE 241484675.\r\n                  §  BP    TRAE5     Niederlassung der Aioi Nissay Dowa Insurance Company of Europe SE, 4 rue Lou Hemmer, L-1748 Senningerberg, Luxemburg;\r\n                      min\r\n                  1505001:2018          Handels- und Firmenregister Nr. B232302 (RCS Luxemburg). A member of MS&AD Insurance Group.\r\n                                 Geschaftsfihrende Direktoren: Christian Alt, Dr. Thomas Jannakos; Vorsitzender des Verwaltungsrats: Michael Kainzbauer.\r\n",
+        "openai": {
+          "opposingPolicyNumber": "",
+          "opposingVehicleDetails": "",
+          "carRegistration": "HOM-SH 143",
+          "placeOfAccident": "",
+          "dateOfAccident": "26.07.2024",
+          "summary": {
+            "de": "Die Reparatur- und damit verbundenen Kosten des Autos von Hannelore Lang vom Unfall am 26.07.2024 wurden von der Aioi Nissay Dowa Insurance Europe beglichen.",
+            "en": "Hannelore Lang's car repair and related costs from the accident on 26.07.2024 were settled by Aioi Nissay Dowa Insurance Europe."
+          },
+          "claimNumber": "1520YCE24-0.019.280 KGa",
+          "opposingInsurance": "",
+          "contacts": [
+            {
+              "name": "Hannelore Lang",
+              "address": "",
+              "phone": "",
+              "email": "",
+              "role": "client"
+            },
+            {
+              "role": "claims handler",
+              "phone": "083 244474 - 261",
+              "address": "Bismarkstr. 122, 66121 Saarbrücken",
+              "email": "schadenservice@aioinissaydowa.eu",
+              "name": "Frau Gauer"
+            },
+            {
+              "role": "authorized representative",
+              "address": "Carl-Zeiss-Ring 25, 85737 Ismaning",
+              "name": "Martin Spangenberg",
+              "email": "schadenservice@aioinissaydowa.eu",
+              "phone": "089 244 474-196"
+            }
+          ],
+          "policyNumber": "",
+          "insuranceCompany": "Aioi Nissay Dowa Insurance Europe",
+          "witnesses": [],
+          "opposingDriverName": "",
+          "policeReportNumber": "",
+          "clientName": "Hannelore Lang"
+        },
+        "uploadedBy": null,
+        "fileName": "Aioi Nissan.pdf",
+        "mimeType": "application/pdf",
+        "rawTextProcessing": false,
+        "fileSize": 159552
+      },
+      "VWO4MntK3QWSg8Iaiz1Z": {
+        "id": "VWO4MntK3QWSg8Iaiz1Z",
+        "mimeType": "application/pdf",
+        "fileSize": 306430,
+        "storagePath": "fallmanager/f3275efe-3f8c-4c99-8ade-7a8187497a1b.pdf",
+        "fileId": "f3275efe-3f8c-4c99-8ade-7a8187497a1b",
+        "uploadedBy": null,
+        "rawText": "             S A C H V E R S T Ä N D I G E N B Ü R O W E B E R \r\n                           Kfz.-Technikermeister u. Motorengutachter - Mitglied des BVSK\r\n                                     Experte für ClassicCars, Young- & Oldtimer\r\n                              66125 Saarbücken  Klosterstraße 10 B  Tel. 0681 - 3 10 73 / 74  Fax 0681 - 39 76 82\r\n                                              Email: info@svb-weber.de - www.svb-weber.de\r\n\r\n               KFZ-Sachverständigenbüro Weber, Am Torhaus 54 A, 66113 Saarbrücken\r\n           Frau\r\n            Alexandra Stöckel\r\n             Schillerstrasse 3\r\n            66299 Friedrichsthal\r\n                                                                        Saarbrücken, den 17.06.2025\r\n        Rechnung - Nr.: 08210\r\n                                              Bei Rückfragen und Zahlung bitte angeben!\r\n           Haftpflicht\r\n          Pkw, SUV, Kleintransporter Audi 3.0 TDI quattro\r\n          Gutachtennummer                        : 08606PW\r\n           Versicherungs-Nr. Unfallgegner                 : xxx\r\n          Schadennummer Unfallgegner                : 25-11-511/524665-U\r\n           Versicherung                                 : HUK-Coburg\r\n                                                          Willi Hussong Straße 2, 96442 Coburg\r\n           Amtl. Kennzeichen Unfallgegner                : NK-GH85\r\n            Anspruchsteller                                 : Alexandra Stöckel\r\n                                                               Schillerstrasse 3, 66299 Friedrichsthal\r\n           Vorsteuerabzugsberechtigt                     :\r\n           Leistungszeitraum                             : 17.06.2025 - 17.06.2025\r\n\r\n          Grundhonorar                         1,00 x 994,00 EUR            EUR       994,00\r\n           Fotokosten pro Bild                         21,00 x 2,00 EUR              EUR         42,00\r\n           Telefon-,Internet-,Versandkosten           1,00 x 15,00 EUR              EUR         15,00\r\n           Fahrtkosten                               24,00 x 1,00 EUR             EUR         24,00\r\n           Schreibkosten je Seite                      11,00 x 2,00 EUR              EUR         22,00\r\n           Restwertermittlungskosten                 1,00 x 30,00 EUR             EUR         30,00\r\n           Cloudermittlung                            1,00 x 7,70 EUR             EUR          7,70\r\n           Mietwagenklasse/Nutzungsausfall\r\n          Gesamtbetrag ohne MwSt.                                           EUR     1.134,70\r\n          Mehrwertsteuer 19,00%                                             EUR       215,59\r\n         Gesamtbetrag mit MwSt.                                      EUR    1.350,29\r\n             -----------------------------------------------------------------------------------------------------------\r\n             Die Ansprüche aus der Honorarrechnung sowie alle in Zusammenhang mit dieser Beauftragung an mich abgetretenen\r\n             Schadenersatzansprüche gegen Dritte sind (weiter) abgetreten an die Deutsche Verrechnungsstelle AG, Schanzenstraße\r\n            30, 51063 Köln, Fax: 0221-99384-333 bzw. Telefon 0221-99384-500, abwicklung@kfzvs.de. Zahlungen mit\r\n            schuldbefreiender Wirkung sind nur möglich auf das Konto bei der Kreissparkasse Köln, Köln, IBAN:DE97\r\n            3705 0299 0000 7290 77, BIC: COKSDE33XXX Bitte geben Sie bei allen Zahlungen die Kundennummer der\r\n            Verrechnungsstelle 3081 an.\r\n",
+        "downloadUrl": "https://storage.googleapis.com/goldlabelpro.appspot.com/fallmanager/f3275efe-3f8c-4c99-8ade-7a8187497a1b.pdf?GoogleAccessId=firebase-adminsdk-fxsk6%40goldlabelpro.iam.gserviceaccount.com&Expires=1752125750&Signature=oBBhMlfVfWs9r%2B7iVoD00U%2FilzEQKyjBaJ%2B1KtOKaGMhofPir7XgQHwucXqzy%2FwKfEhEt0h4LKTOVuHRe%2FVwz5tMPSxoVG8gk%2Fe2I7625vQ3kQNqOkCYbbSUh%2BINfj4ziIvfjj06VqWanoCNJYB9o96nTUGq%2FL3w0m6sPZruqIvBhTRBL6j71tY%2F1cUAQN8N1K3q5OSZnphg5Sxp4aUy4BAV1xCsozJqtQ88qTBGn0fWWoTMvn9IhijeGa2%2BLVvvWz0GBKNHSTRyYngSUs3eCJ6jlY81rtvazRhG36E3HyyEyHyAzPnQN470u%2FXujdqcyv9EFg81l4Ivh5j6Cnyj8A%3D%3D",
+        "openai": {
+          "opposingVehicleDetails": "",
+          "opposingPolicyNumber": "",
+          "witnesses": [],
+          "insuranceCompany": "HUK-Coburg",
+          "claimNumber": "25-11-511/524665-U",
+          "placeOfAccident": "",
+          "clientName": "Alexandra Stöckel",
+          "policyNumber": "xxx",
+          "policeReportNumber": "",
+          "summary": {
+            "en": "Alexandra Stöckel is invoiced for services related to a car accident involving an Audi 3.0 TDI quattro on June 17, 2025, by KFZ-Sachverständigenbüro Weber.",
+            "de": "Alexandra Stöckel wird für Dienstleistungen im Zusammenhang mit einem Autounfall mit einem Audi 3.0 TDI quattro am 17. Juni 2025 von KFZ-Sachverständigenbüro Weber in Rechnung gestellt."
+          },
+          "opposingDriverName": "",
+          "dateOfAccident": "17.06.2025",
+          "carRegistration": "NK-GH85",
+          "contacts": [
+            {
+              "role": "client",
+              "email": "",
+              "name": "Alexandra Stöckel",
+              "phone": "",
+              "address": "Schillerstrasse 3, 66299 Friedrichsthal"
+            },
+            {
+              "address": "Am Torhaus 54 A, 66113 Saarbrücken",
+              "email": "info@svb-weber.de",
+              "phone": "0681 - 3 10 73 / 74",
+              "role": "service provider",
+              "name": "KFZ-Sachverständigenbüro Weber"
+            },
+            {
+              "name": "Deutsche Verrechnungsstelle AG",
+              "phone": "0221-99384-500",
+              "role": "payment processor",
+              "email": "abwicklung@kfzvs.de",
+              "address": "Schanzenstraße 30, 51063 Köln"
+            }
+          ],
+          "opposingInsurance": ""
+        },
+        "thumbnail": "https://storage.googleapis.com/goldlabelpro.appspot.com/fallmanager/f3275efe-3f8c-4c99-8ade-7a8187497a1b-thumb.jpg",
+        "fileName": "Rechnung SV Weber.pdf",
+        "rawTextProcessing": false,
+        "parsedText": "",
+        "thumbnailProcessing": false,
+        "extension": "pdf",
+        "createdAt": {
+          "type": "firestore/timestamp/1.0",
+          "seconds": 1752104150,
+          "nanoseconds": 863000000
+        },
+        "updatedAt": 1752104193033
+      },
+      "tQV9KtRJBTb1wHLy1Odj": {
+        "id": "tQV9KtRJBTb1wHLy1Odj",
+        "rawText": "                                                                                                            Frau Gehl\r\n                                                                                                            Abteilung: 6SRK09\r\n                                                                                                            Telefon:  +49 681 601-975\r\n                                                                                                            schaden@saarland-versicherungen.de\r\n                                                                                                            05.02.2025\r\n             Rechtsanwälte Hertwig & Auer\r\n             Bismarckstr. 122\r\n            66121 Saarbrücken\r\n                                                                                                            Postanschrift:\r\n                                                                                                            66026 Saarbrücken\r\n\r\n\r\n            Bitte geben Sie immer unser Zeichen an: KRH 24 049630\r\n             Kfz-Haftpflichtschaden vom 21.11.2024  NN Logistik / Walpurga Anna Puhl\r\n            Versicherungsnummer: KR-1272-7871, Amtliches Kennzeichen: SLS-EP 345\r\n             Ihr Zeichen: 44/25 CH04\r\n\r\n             Sehr geehrte Damen und Herren,\r\n              den Schadenfall haben wir überprüft und rechnen wie folgt ab:\r\n\r\n              Reparaturkosten gemäß Prüfbericht fiktiv                                                      369,63 Euro\r\n             Gutachterkosten gemäß Prüfbericht                                                        329,38 Euro\r\n          Zwischensumme                                                         699,01 Euro\r\n            Kostenpauschale                                                                      25,00 Euro\r\n          Zwischensumme                                                         724,01 Euro\r\n             Rechtsanwaltsgebühren netto                                                            134,40 Euro\r\n          Zwischensumme                                                         858,41 Euro\r\n\r\n          Gesamtsumme                                                      858,41 Euro\r\n\r\n             Wir haben 858,41 Euro überwiesen. Der Betrag wird in den nächsten Tagen dem Konto IBAN\r\n              DE*****************275 gutgeschrieben.\r\n      Fach-ID: 10271\r\n\r\n\f          Seite 2 von 2 zum Schreiben vom 05.02.2025\r\n          an Rechtsanwälte Hertwig & Auer\r\n\r\n\r\n\r\n        Freundliche Grüße\r\n        SAARLAND Feuerversicherung Aktiengesellschaft\r\n        Ein Unternehmen der Versicherungskammer\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n          SAARLAND Feuerversicherung              Vorstand: Dr. Dirk Hermann (Vorsitzender),           Konto: Landesbank Saar\r\n          Aktiengesellschaft                         Dr. Christian Krams                             IBAN DE56 5905 0000 0031 5206 20\r\n          Postfach 10 26 62 · 66026 Saarbrücken         Vorsitzende des Aufsichtsrats: Barbara Schick         BIC SALADE55XXX\r\n          Peter-Zimmer-Straße 2 · 66123 Saarbrücken      Handelsregister: AG Saarbrücken HRB 9163          Gläubiger-ID DE 02ZZZ00000025347\r\n          Telefon +49 681 601-333                     Sitz: Saarbrücken                               Versicherungsteuer-Nr: 814/V90814093452\r\n          service@saarland-versicherungen.de                                                        Umsatzsteuer-ID-Nr: DE 172 489 027\r\n          www.saarland-versicherungen.de\r\n          Datenschutz ist uns wichtig. Wie Ihre personenbezogenen Daten verarbeitet werden, finden Sie auf unserer Homepage unter\r\n          der Rubrik Datenschutz/Merkblätter zur Datenverarbeitung. Soweit erforderlich, können wir Ihnen die Datenschutzhinweise auf\r\n          Anforderung auch postalisch zur Verfügung stellen. Versicherungsbeiträge sind umsatzsteuerfrei.\r\n\r\n\f",
+        "fileName": "Saarland Versicherungen.pdf",
+        "storagePath": "fallmanager/642b598e-e299-41c5-849a-f5fb6830054b.pdf",
+        "parsedText": "",
+        "fileSize": 93217,
+        "createdAt": {
+          "type": "firestore/timestamp/1.0",
+          "seconds": 1752105937,
+          "nanoseconds": 927000000
+        },
+        "downloadUrl": "https://storage.googleapis.com/goldlabelpro.appspot.com/fallmanager/642b598e-e299-41c5-849a-f5fb6830054b.pdf?GoogleAccessId=firebase-adminsdk-fxsk6%40goldlabelpro.iam.gserviceaccount.com&Expires=1752127537&Signature=c0QmT8aMqgOORas9cQtec93cJsCFUpVT0ASLsYwml8ETB4R9lOA9lw8MdRn73eXNaPxwFq8E3K6GeHDvUo8HNhV%2Fw42UJcq5jZJ5ixri3vmeAaOCb0ykZKkU6rszHekMgJ3Le7axEbNb0GssEGh2F0nN5TKHrqPkQBTMt%2FkwHWFK7BJxBXSZGZKRDmKJ5bJL32L0mDit%2BVKBuGdFkOAm5TUltJlLX%2BXPXSJFVjuwG2S4SZTg8W6wrTFF9YTT8CH2WjAOq1mzR14a208ZHNh2fl%2B%2BIvSB5209bCg0GseIuxJlaucvRS%2Bx8TcKRz9Jc3UJAOV38vNVybV%2B7q6SpUaThg%3D%3D",
+        "fileId": "642b598e-e299-41c5-849a-f5fb6830054b",
+        "updatedAt": 1752105979797,
+        "rawTextProcessing": false,
+        "thumbnailProcessing": false,
+        "mimeType": "application/pdf",
+        "thumbnail": "https://storage.googleapis.com/goldlabelpro.appspot.com/fallmanager/642b598e-e299-41c5-849a-f5fb6830054b-thumb.jpg",
+        "uploadedBy": null,
+        "extension": "pdf",
+        "openai": {
+          "opposingVehicleDetails": "",
+          "opposingInsurance": "",
+          "carRegistration": "SLS-EP 345",
+          "witnesses": [],
+          "policeReportNumber": "",
+          "opposingPolicyNumber": "",
+          "summary": {
+            "en": "Walpurga Anna Puhl's vehicle damage claim from 21.11.2024 processed by SAARLAND Feuerversicherung, total compensation of 858.41 Euro.",
+            "de": "Schadensfall von Walpurga Anna Puhl vom 21.11.2024 durch SAARLAND Feuerversicherung bearbeitet, Gesamtentschädigung von 858,41 Euro."
+          },
+          "placeOfAccident": "",
+          "dateOfAccident": "21.11.2024",
+          "contacts": [
+            {
+              "address": "Peter-Zimmer-Straße 2, 66123 Saarbrücken",
+              "role": "insurance representative",
+              "name": "Frau Gehl",
+              "phone": "+49 681 601-975",
+              "email": "schaden@saarland-versicherungen.de"
+            },
+            {
+              "address": "Bismarckstr. 122, 66121 Saarbrücken",
+              "phone": "",
+              "name": "Rechtsanwälte Hertwig & Auer",
+              "role": "law firm",
+              "email": ""
+            }
+          ],
+          "clientName": "Walpurga Anna Puhl",
+          "insuranceCompany": "SAARLAND Feuerversicherung Aktiengesellschaft",
+          "opposingDriverName": "",
+          "claimNumber": "KRH 24 049630",
+          "policyNumber": "KR-1272-7871"
+        }
+      }
+    },
+    "cases": {},
+    "memory": null,
+    "newCase": {
+      "open": false
+    },
+    "aiCase": {
+      "open": false
+    },
+    "lingua": {
+      "FILENAME": {
+        "en": "File name",
+        "de": "Dateiname"
+      },
+      "UPLOADING": {
+        "en": "Uploading",
+        "de": "Wird hochgeladen"
+      },
+      "DELETE_SELECTED": {
+        "en": "Delete selected",
+        "de": "Ausgewählte löschen"
+      },
+      "DELETING": {
+        "en": "Deleting",
+        "de": "Wird gelöscht"
+      },
+      "FILES": {
+        "en": "files",
+        "de": "Dateien"
+      },
+      "FILE_DETAILS": {
+        "en": "File details",
+        "de": "Dateidetails"
+      },
+      "CONFIRM_DELETE": {
+        "en": "Are you sure?",
+        "de": "Sind Sie sicher?"
+      },
+      "CANCEL": {
+        "en": "Cancel",
+        "de": "Abbrechen"
+      },
+      "TIME_CREATED": {
+        "en": "Time created",
+        "de": "Erstellungsdatum"
+      },
+      "THUMBNAIL_GENERATING": {
+        "en": "Thumbnail is being generated",
+        "de": "Vorschaubild wird erstellt"
+      },
+      "VIEW_FILE": {
+        "en": "View file",
+        "de": "Datei anzeigen"
+      },
+      "PROCESS_FILE": {
+        "en": "Process file",
+        "de": "Datei verarbeiten"
+      },
+      "DELETE": {
+        "en": "Delete",
+        "de": "Löschen"
+      },
+      "FILESIZE": {
+        "en": "File size",
+        "de": "Dateigröße"
+      },
+      "RESULT_NOT_OK": {
+        "en": "That is not OK",
+        "de": "Das ist nicht in Ordnung"
+      },
+      "UPLOAD_FILE": {
+        "en": "Upload file",
+        "de": "Datei hochladen"
+      },
+      "NO_FILES": {
+        "en": "No files to display",
+        "de": "Keine Dateien verfügbar"
+      },
+      "ALL_FILES": {
+        "en": "All files",
+        "de": "Alle Dateien"
+      },
+      "APP_TITLE": {
+        "en": "Case Manager",
+        "de": "Fallmanager"
+      },
+      "LOADING_FILE": {
+        "en": "Loading file...",
+        "de": "Datei wird geladen..."
+      },
+      "UNKNOWN_DATE": {
+        "en": "Unknown date",
+        "de": "Unbekanntes Datum"
+      },
+      "THUMBNAIL_READY": {
+        "en": "Thumbnail ready",
+        "de": "Vorschaubild verfügbar"
+      },
+      "NO_THUMBNAIL": {
+        "en": "No thumbnail generated yet",
+        "de": "Noch kein Vorschaubild generiert"
+      },
+      "RUN_AI_ANALYSIS": {
+        "en": "Ask Oliver",
+        "de": "Frag Oliver"
+      },
+      "GENERATE_THUMBNAIL": {
+        "en": "Generate thumbnail",
+        "de": "Vorschaubild generieren"
+      },
+      "ARE_YOU_SURE": {
+        "en": "Are you really, really sure?",
+        "de": "Wirklich ganz sicher?"
+      },
+      "GENERATING_THUMBNAIL": {
+        "en": "Generating PDF thumbnail",
+        "de": "Generierung läuft"
+      },
+      "EXTRACTING_TEXT": {
+        "en": "Extracting raw text...",
+        "de": "Text wird extrahiert..."
+      },
+      "EXTRACTED_TEXT": {
+        "en": "Raw text",
+        "de": "Extrahierter Text"
+      },
+      "SUMMARY": {
+        "en": "Summary",
+        "de": "Zusammenfassung"
+      },
+      "RESET": {
+        "en": "Reset",
+        "de": "Zurücksetzen"
+      },
+      "DARK_MODE": {
+        "en": "Dark mode",
+        "de": "Dunkler Modus"
+      },
+      "LIGHT_MODE": {
+        "en": "Light mode",
+        "de": "Heller Modus"
+      },
+      "PROCESSING_AI": {
+        "en": "Asking Oliver",
+        "de": "Oliver wird gefragt"
+      },
+      "GOLDLABEL_HOME": {
+        "en": "Goldlabel Home",
+        "de": "Goldlabel Startseite"
+      },
+      "TEXT_EXTRACTION_FAILED": {
+        "en": "Raw text extraction failed",
+        "de": "Rohtextextraktion fehlgeschlagen"
+      }
+    },
+    "language": "de",
+    "themeMode": "dark",
+    "themes": {
+      "dark": {
+        "mode": "dark",
+        "primary": "#34d0f7",
+        "secondary": "#4bff60",
+        "background": "#000",
+        "paper": "#000",
+        "text": "#fff",
+        "border": "#FFF"
+      },
+      "light": {
+        "mode": "light",
+        "primary": "#305DA5",
+        "secondary": "#414142",
+        "background": "#eee",
+        "paper": "#FFFFFF",
+        "text": "#414142",
+        "border": "#414142"
+      }
+    }
+  },
+  "bouncer": {
+    "cartridge": "bouncer",
+    "email": "goldlabel.apps@gmail.com",
+    "authing": true,
+    "user": {
+      "uid": "Wj0opaxLKzcWZwZXoa9X63Yagpw1",
+      "email": "goldlabel.apps@gmail.com"
+    },
+    "feedback": null
+  },
   "cv": {
     "appMode": "jd",
     "viewpoint": "first",
