@@ -44,12 +44,29 @@ export const lingua: any = {
     de: 'Erstellung des Vorschaubilds fehlgeschlagen',
   },
   THUMBNAIL_STARTED: {
-    en: 'Thumbnail generation started',
+    en: 'Thumbnail generation',
     de: 'Erstellung des Vorschaubilds gestartet',
   },
   GENERATE_THUMBNAIL: {
     en: 'Generate thumbnail',
     de: 'Vorschaubild erzeugen',
+  },
+  NO_FILES: {
+  en: 'No files yet',
+  de: 'Noch keine Dateien',
+},
+PROCESSING: {
+  en: 'Processing',
+  de: 'Wird verarbeitet',
+},
+
+  SUMMARY: {
+  en: 'Summary',
+  de: 'Zusammenfassung',
+},
+    HIDE_COMPLETED: {
+    en: 'Hide completed',
+    de: 'Abgeschlossene ausblenden',
   },
   DELETE: {
     en: 'Delete',
@@ -90,5 +107,26 @@ export const lingua: any = {
   ADDRESS: {
     en: 'Address',
     de: 'Adresse',
+  },
+  APP_TITLE: {
+    en: 'Case manager',
+    de: 'Fallmanager',
+  },
+
+  GOLDLABEL_HOME: {
+    en: 'Goldlabel Home',
+    de: 'Goldlabel Startseite',
+  },
+  LIGHT_MODE: {
+    en: 'Light mode',
+    de: 'Heller Modus',
+  },
+  DARK_MODE: {
+    en: 'Dark mode',
+    de: 'Dunkler Modus',
+  },
+  RESET: {
+    en: 'Reset',
+    de: 'Zurücksetzen',
   },
 };

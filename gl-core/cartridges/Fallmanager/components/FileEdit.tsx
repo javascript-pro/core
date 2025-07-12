@@ -1,35 +1,37 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Fallmanager/components/FileEdit.tsx
 'use client';
 
 import * as React from 'react';
 import {
   Box,
   Typography,
+  Button,
+  ButtonBase,
   Card,
   CardContent,
   CardHeader,
   CardMedia,
   CircularProgress,
-  Button,
   Dialog,
   DialogTitle,
   DialogContent,
   DialogActions,
   Grid,
   Skeleton,
+  Stepper,
+  Step,
+  StepLabel,
+  StepContent,
+  useTheme,
 } from '@mui/material';
 import { useRouter } from 'next/navigation';
 import { doc, onSnapshot } from 'firebase/firestore';
-import moment from 'moment';
 import 'moment/locale/de';
 import { db } from '../../../lib/firebase';
 import { useFallmanagerSlice, useLingua, deleteFile } from '../../Fallmanager';
 import {
   useDispatch,
   toggleFeedback,
-  Icon,
   MightyButton,
-  useIsMobile,
 } from '../../../../gl-core';
 
 type FileMeta = {
@@ -67,15 +69,14 @@ export default function FileEdit({ id }: { id: string }) {
   const router = useRouter();
   const dispatch = useDispatch();
   const { files, language } = useFallmanagerSlice();
-
+  const theme = useTheme();
   const [liveFile, setLiveFile] = React.useState<FileMeta | null>(
     files?.[id] || null,
   );
   const [loading, setLoading] = React.useState(!files?.[id]);
-  const [processing, setProcessing] = React.useState(false);
   const [showConfirmDelete, setShowConfirmDelete] = React.useState(false);
   const [deleting, setDeleting] = React.useState(false);
-  const [rawTextFailed, setRawTextFailed] = React.useState(false);
+  const [processingStep, setProcessingStep] = React.useState<number | null>(null);
 
   React.useEffect(() => {
     const unsub = onSnapshot(doc(db, 'files', id), (docSnap) => {
@@ -87,30 +88,16 @@ export default function FileEdit({ id }: { id: string }) {
     return () => unsub();
   }, [id]);
 
-  const formattedDate = React.useMemo(() => {
-    if (!liveFile?.createdAt?.seconds) return null;
-    moment.locale(language === 'de' ? 'de' : 'en');
-    return moment.unix(liveFile.createdAt.seconds).format('h:mma dddd Do MMMM');
-  }, [liveFile?.createdAt?.seconds, language]);
-
   if (loading || !liveFile) {
     return (
       <Box sx={{ p: 4 }}>
-        <CircularProgress sx={{ mr: 2 }} />
+        <CircularProgress />
         <Typography sx={{ mt: 2 }}>{t('LOADING_FILE')}</Typography>
       </Box>
     );
   }
 
   const summaryText = liveFile.openai?.summary?.[language];
-
-  const currentStep = !liveFile?.rawText
-    ? 2
-    : !liveFile?.openai
-    ? 3
-    : !liveFile?.thumbnail
-    ? 4
-    : 0;
 
   const handleDelete = async () => {
     if (!liveFile) return;
@@ -124,42 +111,104 @@ export default function FileEdit({ id }: { id: string }) {
     }
   };
 
-  const handleTriggerThumbnail = async () => {
-    setProcessing(true);
+  const runStep = async (
+    step: number,
+    url: string,
+    successMsg: string,
+    failMsg: string,
+  ) => {
+    setProcessingStep(step);
     try {
-      const res = await fetch(`/api/gl-api/fallmanager/thumbnail`, {
+      const res = await fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id }),
       });
       const json = await res.json();
-      if (!res.ok) {
+      if (!res.ok || json.error) {
         dispatch(
           toggleFeedback({
             severity: 'error',
-            title: t('THUMBNAIL_FAILED'),
-            description: json.error || 'Thumbnail generation failed.',
+            title: failMsg,
+            description: json.error || failMsg,
           }),
         );
       } else {
         dispatch(
           toggleFeedback({
             severity: 'success',
-            title: t('THUMBNAIL_STARTED'),
+            title: successMsg,
           }),
         );
       }
     } catch (err) {
       dispatch(
         toggleFeedback({
-          severity: 'warning',
-          title: t('THUMBNAIL_FAILED'),
+          severity: 'error',
+          title: failMsg,
         }),
       );
     } finally {
-      setProcessing(false);
+      setProcessingStep(null);
     }
   };
+
+  const steps = [
+    {
+      label: '1. Uploaded',
+      complete: true,
+      description: liveFile.fileName || '',
+      action: null,
+    },
+    {
+      label: '2. Extract Text',
+      complete: !!liveFile.rawText,
+      description: liveFile.rawText
+        ? 'Text extracted'
+        : 'Extract text from PDF',
+      action: !liveFile.rawText
+        ? () =>
+            runStep(
+              2,
+              '/api/gl-api/fallmanager/raw',
+              'Text extraction done',
+              'Text extraction failed',
+            )
+        : null,
+    },
+    {
+      label: '3. AI Summary',
+      complete: !!liveFile.openai?.summary,
+      description: liveFile.openai?.summary
+        ? 'AI summary available'
+        : 'Analyze file using AI',
+      action: !liveFile.openai
+        ? () =>
+            runStep(
+              3,
+              '/api/gl-api/fallmanager/openai',
+              'AI analysis started',
+              'AI analysis failed',
+            )
+        : null,
+    },
+    {
+      label: '4. Thumbnail',
+      complete: !!liveFile.thumbnail,
+      description: liveFile.thumbnail
+        ? 'Thumbnail created'
+        : 'Generate a preview thumbnail',
+      action: !liveFile.thumbnail
+        ? () =>
+            runStep(
+              4,
+              '/api/gl-api/fallmanager/thumbnail',
+              'Thumbnail generation done',
+              'Thumbnail generation failed',
+            )
+        : null,
+    },
+  ];
 
   return (
     <>
@@ -184,7 +233,40 @@ export default function FileEdit({ id }: { id: string }) {
         <CardContent>
           <Grid container spacing={2}>
             <Grid size={{ xs: 12, md: 8 }}>
-              {/* STEP 1–4 Placeholder */}
+              <Stepper orientation="vertical" nonLinear>
+                {steps.map((step, index) => (
+                  <Step
+                    key={index}
+                    active={true}
+                    completed={step.complete}
+                    expanded
+                  >
+                    <StepLabel>
+                      <Typography>{step.label}</Typography>
+                    </StepLabel>
+                    <StepContent>
+                      <Typography variant="body2" sx={{ mb: 1 }}>
+                        {step.description}
+                      </Typography>
+                      {step.action && (
+                        <Button
+                          variant="contained"
+                          size="small"
+                          disabled={processingStep !== null}
+                          onClick={step.action}
+                          startIcon={
+                            processingStep === index + 1 ? (
+                              <CircularProgress size={16} />
+                            ) : null
+                          }
+                        >
+                          Run Step
+                        </Button>
+                      )}
+                    </StepContent>
+                  </Step>
+                ))}
+              </Stepper>
 
               {summaryText && (
                 <Typography variant="h6" sx={{ mt: 3, whiteSpace: 'pre-wrap' }}>
@@ -194,55 +276,29 @@ export default function FileEdit({ id }: { id: string }) {
 
               {Array.isArray(liveFile.openai?.contacts) &&
                 liveFile.openai.contacts.length > 0 && (
-                  <Card sx={{width: "100%"}}>
-                  <Box sx={{ mb: 1 }}>
-                    
+                  <>
                     {liveFile.openai.contacts.map((c, i) => (
-                      <CardContent
-                        key={i}
+                      <ButtonBase
+                        key={`contact_${i}`}
+                        sx={{
+                          my: 1,
+                          display: 'block',
+                          width: '100%',
+                          textAlign: 'left',
+                          borderLeft: '1px solid ' + theme.palette.divider,
+                        }}
                       >
-                        {c.name && (
-                          <Typography>
-                            {c.name}
-                          </Typography>
-                        )}
-                        {c.role && (
-                          <Typography>
-                            {c.role}
-                          </Typography>
-                        )}
-                        {c.phone && (
-                          <Typography>
-                            {c.phone}
-                          </Typography>
-                        )}
-                        {c.email && (
-                          <Typography>
-                            {c.email}
-                          </Typography>
-                        )}
-                        {c.address && (
-                          <Typography>
-                            {c.address}
-                          </Typography>
-                        )}
-                      </CardContent>
+                        <CardContent sx={{ width: '100%' }}>
+                          {c.name && <Typography>{c.name}</Typography>}
+                          {c.role && <Typography>{c.role}</Typography>}
+                          {c.phone && <Typography>{c.phone}</Typography>}
+                          {c.email && <Typography>{c.email}</Typography>}
+                          {c.address && <Typography>{c.address}</Typography>}
+                        </CardContent>
+                      </ButtonBase>
                     ))}
-                  </Box>
-                  </Card>
+                  </>
                 )}
-
-              {!liveFile.thumbnail && (
-                <Button
-                  variant="contained"
-                  color="primary"
-                  onClick={handleTriggerThumbnail}
-                  disabled={processing}
-                  sx={{ mt: 2 }}
-                >
-                  {t('GENERATE_THUMBNAIL')}
-                </Button>
-              )}
             </Grid>
 
             <Grid size={{ xs: 12, md: 4 }}>
@@ -293,8 +349,15 @@ export default function FileEdit({ id }: { id: string }) {
           </Typography>
         </DialogContent>
         <DialogActions>
-          <Button onClick={() => setShowConfirmDelete(false)}>{t('CANCEL')}</Button>
-          <Button onClick={handleDelete} color="primary" variant="contained" disabled={deleting}>
+          <Button onClick={() => setShowConfirmDelete(false)}>
+            {t('CANCEL')}
+          </Button>
+          <Button
+            onClick={handleDelete}
+            color="primary"
+            variant="contained"
+            disabled={deleting}
+          >
             {deleting ? t('DELETING') + '...' : t('DELETE')}
           </Button>
         </DialogActions>

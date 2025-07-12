@@ -9,14 +9,16 @@ import {
   LinearProgress,
   Fade,
   Typography,
-  Tooltip,
   Dialog,
   DialogContent,
   DialogActions,
   Button,
   Backdrop,
-  Chip,
   CircularProgress,
+  Checkbox,
+  FormControlLabel,
+  CardHeader,
+
 } from '@mui/material';
 import { useRouter } from 'next/navigation';
 import { Icon, useDispatch, useIsMobile } from '../../../../gl-core';
@@ -29,27 +31,23 @@ export default function Files() {
   const router = useRouter();
   const { files, language } = useFallmanagerSlice();
 
+  const [hideCompleted, setHideCompleted] = React.useState(false);
   const [deleting, setDeleting] = React.useState<Record<string, boolean>>({});
   const [deletingOverlay, setDeletingOverlay] = React.useState(false);
-  const [deletingFileName, setDeletingFileName] = React.useState<string | null>(
-    null,
-  );
-  const [confirmDeleteId, setConfirmDeleteId] = React.useState<string | null>(
-    null,
-  );
+  const [deletingFileName, setDeletingFileName] = React.useState<string | null>(null);
+  const [confirmDeleteId, setConfirmDeleteId] = React.useState<string | null>(null);
 
-  const rows = React.useMemo(() => {
+  moment.locale(language === 'de' ? 'de' : 'en');
+
+  const allRows = React.useMemo(() => {
     if (!files || typeof files !== 'object') return [];
-
-    moment.locale(language === 'de' ? 'de' : 'en');
 
     return Object.values(files).map((file: any) => {
       const uploadedAt = file.createdAt?.seconds
         ? new Date(file.createdAt.seconds * 1000)
         : null;
 
-      const summary =
-        file.openai?.summary?.[language] || file.openai?.summary?.en || '';
+      const summary = file.openai?.summary?.[language] || file.openai?.summary?.en || '';
 
       let step = 1;
       if (file.rawText) step = 2;
@@ -68,6 +66,12 @@ export default function Files() {
       };
     });
   }, [files, language]);
+
+  const rows = React.useMemo(() => {
+    return hideCompleted
+      ? allRows.filter((r) => r.step !== 4)
+      : allRows;
+  }, [allRows, hideCompleted]);
 
   const handleDelete = async (id: string) => {
     const fileToDelete = rows.find((row) => row.id === id);
@@ -137,18 +141,13 @@ export default function Files() {
         if (step === 3) color = 'secondary';
         if (step === 4) color = 'primary';
 
-        let chipTxt = <>not done</>
-        if (step === 4){
-          return <Icon icon="tick" />
+        if (step === 4) {
+          return <Icon icon="tick" color="disabled" />;
         }
-        return (
-          <Chip
-            variant="outlined"
-            label={chipTxt}
-            color={color}
-            size="small"
-          />
-        );
+
+        return <Typography variant='caption'>
+          {t("PROCESSING")}
+        </Typography>;
       },
     },
     {
@@ -190,7 +189,9 @@ export default function Files() {
   ];
 
   const columns = isMobile
-    ? baseColumns.filter((col) => ['fileName', 'actions'].includes(col.field as string))
+    ? baseColumns.filter((col) =>
+        ['fileName', 'actions'].includes(col.field as string),
+      )
     : baseColumns;
 
   const handleRowClick = (params: any) => {
@@ -205,6 +206,18 @@ export default function Files() {
 
   return (
     <>
+      <Box sx={{ px: 2, pt: 2 }}>
+        <FormControlLabel
+          control={
+            <Checkbox
+              checked={hideCompleted}
+              onChange={(e) => setHideCompleted(e.target.checked)}
+            />
+          }
+          label={t('HIDE_COMPLETED') || 'Hide completed'}
+        />
+      </Box>
+
       {rows.length === 0 ? (
         <Typography sx={{ px: 2, py: 1 }}>{t('NO_FILES')}</Typography>
       ) : (
@@ -250,7 +263,9 @@ export default function Files() {
           </Typography>
         </DialogContent>
         <DialogActions>
-          <Button onClick={() => setConfirmDeleteId(null)}>{t('CANCEL')}</Button>
+          <Button onClick={() => setConfirmDeleteId(null)}>
+            {t('CANCEL')}
+          </Button>
           <Button
             onClick={() => confirmDeleteId && handleDelete(confirmDeleteId)}
             color="error"
@@ -267,10 +282,7 @@ export default function Files() {
       >
         <Box display="flex" flexDirection="column" alignItems="center" gap={2}>
           <LinearProgress color="inherit" />
-          <Typography
-            variant="h6"
-            sx={{ fontWeight: 'bold', textAlign: 'center' }}
-          >
+          <Typography variant="h6" sx={{ fontWeight: 'bold', textAlign: 'center' }}>
             {t('DELETING')}
             {deletingFileName ? ` “${deletingFileName}”...` : '...'}
           </Typography>
