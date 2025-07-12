@@ -24,7 +24,16 @@ export const config: TConfig = {
   lingua,
   language: 'de',
   themeMode: 'dark',
-  themes: {
+  themes: {    
+    light: {
+      mode: 'light',
+      primary: '#12836aff',
+      secondary: '#414142',
+      background: '#eee',
+      paper: '#FFFFFF',
+      text: '#414142',
+      border: '#414142',
+    },
     dark: {
       mode: 'dark',
       primary: '#34d0f7',
@@ -34,14 +43,6 @@ export const config: TConfig = {
       text: '#fff',
       border: '#FFF',
     },
-    light: {
-      mode: 'light',
-      primary: '#305DA5',
-      secondary: '#414142',
-      background: '#eee',
-      paper: '#FFFFFF',
-      text: '#414142',
-      border: '#414142',
-    },
+
   },
 };
