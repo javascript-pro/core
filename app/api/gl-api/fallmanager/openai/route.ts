@@ -147,7 +147,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error }, { status: 500 });
     }
 
-    // Clean any potential formatting like ```json ... ```
+    // Clean up ```json fences
     content = content
       .trim()
       .replace(/^```json\s*/i, '')
@@ -180,6 +180,17 @@ export async function POST(req: NextRequest) {
     }
 
     console.log('[POST] Parsed JSON successfully:', parsed);
+
+    // Filter out Hertwig & Auer contacts
+    const isHertwigAuer = (text: string) =>
+      /hertwig.*auer/i.test(text) || /bismarckstr\.?\s*122/i.test(text) || /info@hertwig-auer\.de/i.test(text);
+
+    if (Array.isArray(parsed.contacts)) {
+      parsed.contacts = parsed.contacts.filter((c) => {
+        const fields = [c.name, c.address, c.email].filter(Boolean).join(' ');
+        return !isHertwigAuer(fields);
+      });
+    }
 
     await docRef.update({
       openai: parsed,

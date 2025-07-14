@@ -1,6 +1,6 @@
 import Fallmanager from './Fallmanager';
 import { initialState as initialStateFallmanager } from './initialState';
-import { useFallmanagerSlice, useLingua } from './hooks';
+import { useFallmanagerSlice, useLingua, useAutoStepRunner } from './hooks';
 import {
   Header,
   TopRightMenu,
@@ -51,6 +51,7 @@ export {
   incomingFiles,
   updateAssist,
   updateFileMeta,
+  useAutoStepRunner,
 };
 
 export { Header, TopRightMenu, Files, FileEdit, Upload, SwitchLang };

@@ -2,12 +2,13 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { adminDb } from '../../../../../../gl-core/lib/firebaseAdmin';
-// import { TFlickrPhoto } from '../../../../../gl-core/types';
+
 export type TFlickrPhotoSize = {
   src: string;
   width: number;
   height: number;
 };
+
 export type TFlickrPhoto = {
   id?: string;
   flickrId: string;
@@ -45,6 +46,12 @@ function getBestSquare(sizesData: any) {
   );
 }
 
+function cleanSizes(sizes: TFlickrPhoto['sizes']) {
+  return Object.fromEntries(
+    Object.entries(sizes || {}).filter(([_, value]) => value !== undefined),
+  );
+}
+
 async function getPhotoWithSizes(photoId: string): Promise<TFlickrPhoto> {
   const infoRes = await fetch(
     `${FLICKR_API}?method=flickr.photos.getInfo&api_key=${flickrApiKey}&photo_id=${photoId}&user_id=${flickrUserId}&format=json&nojsoncallback=1`,
@@ -71,13 +78,13 @@ async function getPhotoWithSizes(photoId: string): Promise<TFlickrPhoto> {
     meta: {
       tags: p.tags?.tag.map((t: any) => t.raw) || [],
     },
-    sizes: {
+    sizes: cleanSizes({
       thumb: getBestSquare(sizesData),
       small: getSizeByLabel(sizesData, 'Small 320'),
       medium: getSizeByLabel(sizesData, 'Medium 800'),
       large: getSizeByLabel(sizesData, 'Large'),
       orig: getSizeByLabel(sizesData, 'Original'),
-    },
+    }),
   };
 }
 

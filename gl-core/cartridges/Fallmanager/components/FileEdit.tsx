@@ -16,7 +16,6 @@ import {
   DialogContent,
   DialogActions,
   Grid,
-  Skeleton,
   Stepper,
   Step,
   StepLabel,
@@ -27,7 +26,7 @@ import { useRouter } from 'next/navigation';
 import { doc, onSnapshot } from 'firebase/firestore';
 import 'moment/locale/de';
 import { db } from '../../../lib/firebase';
-import { useFallmanagerSlice, useLingua, deleteFile } from '../../Fallmanager';
+import { useFallmanagerSlice, useLingua, deleteFile, useAutoStepRunner } from '../../Fallmanager';
 import { useDispatch, toggleFeedback, MightyButton } from '../../../../gl-core';
 
 type FileMeta = {
@@ -188,7 +187,7 @@ export default function FileEdit({ id }: { id: string }) {
         runStep(
           3,
           '/api/gl-api/fallmanager/openai',
-          'AI analysis started',
+          'AI analysis done',
           'AI analysis failed',
         ),
     },
@@ -237,6 +236,109 @@ export default function FileEdit({ id }: { id: string }) {
         />
         <CardContent>
           <Grid container spacing={2}>
+            <Grid size={{ xs: 12, md: 4 }}>
+              {liveFile.thumbnail ? (
+                <Card
+                  sx={{
+                    mt: 2,
+                    width: '100%',
+                    maxWidth: 240,
+                    mx: 'auto',
+                    aspectRatio: '3 / 4',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    borderRadius: 2,
+                    overflow: 'hidden',
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    image={liveFile.thumbnail}
+                    alt="Thumbnail"
+                    sx={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  />
+                </Card>
+              ) : (
+                <Stepper orientation="vertical" nonLinear>
+                  {steps.map((step, index) => (
+                    <Step
+                      key={step.key}
+                      active
+                      completed={step.complete}
+                      expanded
+                    >
+                      <StepLabel
+                        sx={{
+                          '& .MuiStepLabel-label': {
+                            color: step.complete
+                              ? theme.palette.text.disabled
+                              : theme.palette.text.primary,
+                          },
+                          '& .MuiStepIcon-root': {
+                            color: step.complete
+                              ? theme.palette.text.disabled
+                              : theme.palette.primary.main,
+                          },
+                        }}
+                      >
+                        <Typography
+                          sx={{ display: 'flex', alignItems: 'center' }}
+                        >
+                          {step.label}
+                          {!step.complete && step.error && (
+                            <Typography
+                              component="span"
+                              sx={{
+                                ml: 1,
+                                fontSize: '1.2em',
+                                color: theme.palette.error.main,
+                              }}
+                            >
+                              ⟳
+                            </Typography>
+                          )}
+                        </Typography>
+                      </StepLabel>
+                      <StepContent>
+                        {step.description && (
+                          <Typography
+                            variant="body2"
+                            sx={{
+                              mb: 1,
+                              color:
+                                step.error && !step.complete
+                                  ? theme.palette.error.main
+                                  : 'inherit',
+                            }}
+                          >
+                            {step.description}
+                          </Typography>
+                        )}
+                        {step.retryable && step.action && (
+                          <Button
+                            variant="contained"
+                            size="small"
+                            disabled={processingStep !== null}
+                            onClick={step.action}
+                            startIcon={
+                              processingStep === index + 1 ? (
+                                <CircularProgress size={16} />
+                              ) : null
+                            }
+                          >
+                            {processingStep === index + 1
+                              ? t('PROCESSING')
+                              : t('PROCESS')}
+                          </Button>
+                        )}
+                      </StepContent>
+                    </Step>
+                  ))}
+                </Stepper>
+              )}
+            </Grid>
+
             <Grid size={{ xs: 12, md: 8 }}>
               {summaryText && (
                 <Typography variant="h6" sx={{ mb: 3, whiteSpace: 'pre-wrap' }}>
@@ -248,128 +350,17 @@ export default function FileEdit({ id }: { id: string }) {
                 liveFile.openai.contacts.length > 0 && (
                   <>
                     {liveFile.openai.contacts.map((c, i) => (
-                      <ButtonBase
-                        key={`contact_${i}`}
-                        sx={{
-                          my: 1,
-                          display: 'block',
-                          width: '100%',
-                          textAlign: 'left',
-                          borderLeft: '1px solid ' + theme.palette.divider,
-                        }}
-                      >
-                        <CardContent sx={{ width: '100%' }}>
+                      
+                        <Box sx={{ width: '100%' }}>
                           {c.name && <Typography>{c.name}</Typography>}
                           {c.role && <Typography>{c.role}</Typography>}
                           {c.phone && <Typography>{c.phone}</Typography>}
                           {c.email && <Typography>{c.email}</Typography>}
                           {c.address && <Typography>{c.address}</Typography>}
-                        </CardContent>
-                      </ButtonBase>
+                        </Box>
                     ))}
                   </>
                 )}
-
-              <Stepper orientation="vertical" nonLinear>
-                {steps.map((step, index) => (
-                  <Step
-                    key={step.key}
-                    active
-                    completed={step.complete}
-                    expanded
-                  >
-                    <StepLabel>
-                      <Typography sx={{ display: 'flex', alignItems: 'center' }}>
-                        {step.label}
-                        {!step.complete && step.error && (
-                          <Typography
-                            component="span"
-                            sx={{
-                              ml: 1,
-                              fontSize: '1.2em',
-                              color: theme.palette.error.main,
-                            }}
-                          >
-                            ⟳
-                          </Typography>
-                        )}
-                        {!step.complete &&
-                          !step.error &&
-                          processingStep === index + 1 && (
-                            <CircularProgress
-                              size={14}
-                              thickness={5}
-                              sx={{ ml: 1 }}
-                            />
-                          )}
-                      </Typography>
-                    </StepLabel>
-                    <StepContent>
-                      {step.description && (
-                        <Typography
-                          variant="body2"
-                          sx={{
-                            mb: 1,
-                            color:
-                              step.error && !step.complete
-                                ? theme.palette.error.main
-                                : 'inherit',
-                          }}
-                        >
-                          {step.description}
-                        </Typography>
-                      )}
-                      {step.retryable && step.action && (
-                        <Button
-                          variant="contained"
-                          size="small"
-                          disabled={processingStep !== null}
-                          onClick={step.action}
-                          startIcon={
-                            processingStep === index + 1 ? (
-                              <CircularProgress size={16} />
-                            ) : null
-                          }
-                        >
-                          {step.complete ? 'Retry Step' : 'Start Step'}
-                        </Button>
-                      )}
-                    </StepContent>
-                  </Step>
-                ))}
-              </Stepper>
-            </Grid>
-
-            <Grid size={{ xs: 12, md: 4 }}>
-              <Card
-                sx={{
-                  mt: 2,
-                  width: '100%',
-                  maxWidth: 240,
-                  mx: 'auto',
-                  aspectRatio: '3 / 4',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  borderRadius: 2,
-                  overflow: 'hidden',
-                }}
-              >
-                {liveFile.thumbnail ? (
-                  <CardMedia
-                    component="img"
-                    image={liveFile.thumbnail}
-                    alt="Thumbnail"
-                    sx={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                  />
-                ) : (
-                  <Skeleton
-                    variant="rectangular"
-                    animation="pulse"
-                    sx={{ width: '100%', height: '100%' }}
-                  />
-                )}
-              </Card>
             </Grid>
           </Grid>
         </CardContent>

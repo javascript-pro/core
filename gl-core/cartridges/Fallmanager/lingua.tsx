@@ -55,11 +55,6 @@ export const lingua: any = {
     en: 'No files yet',
     de: 'Noch keine Dateien',
   },
-  PROCESSING: {
-    en: 'Processing',
-    de: 'Wird verarbeitet',
-  },
-
   SUMMARY: {
     en: 'Summary',
     de: 'Zusammenfassung',
@@ -71,6 +66,10 @@ export const lingua: any = {
   DELETE: {
     en: 'Delete',
     de: 'Löschen',
+  },
+    DELETED: {
+    en: 'Deleted',
+    de: 'Gelöscht',
   },
   LOADING_FILE: {
     en: 'Loading file...',
@@ -128,5 +127,13 @@ export const lingua: any = {
   RESET: {
     en: 'Reset',
     de: 'Zurücksetzen',
+  },
+  PROCESS: {
+    en: 'Process',
+    de: 'Verarbeiten',
+  },
+  PROCESSING: {
+    en: 'Processing',
+    de: 'Wird verarbeitet',
   },
 };

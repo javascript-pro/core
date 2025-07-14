@@ -32,8 +32,8 @@ export const initialState: TFallmanagerState = {
     },
     light: {
       mode: 'light',
-      primary: '#c29d21ff',
-      secondary: '#d76320ff',
+      primary: '#2e59a5',
+      secondary: '#404041',
       background: '#eee',
       paper: '#FFFFFF',
       text: '#414142',
