@@ -10,13 +10,13 @@ import {
   resetFallmanager,
   useLingua,
 } from '../../Fallmanager';
-import { useDispatch, MightyButton } from '../../../../gl-core';
-import { Backdrop, CircularProgress, Typography, Box } from '@mui/material';
+import { useDispatch, MightyButton, useIsMobile } from '../../../../gl-core';
+import { Backdrop, LinearProgress, Typography, Box } from '@mui/material';
 
 export default function Upload() {
   const dispatch = useDispatch();
+  const isMobile = useIsMobile();
   const router = useRouter();
-  const { assist } = useFallmanagerSlice();
   const t = useLingua();
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [file, setFile] = useState<File | null>(null);
@@ -133,6 +133,7 @@ export default function Upload() {
 
       {!uploading && (
         <MightyButton
+          mode={isMobile ? 'icon' : null}
           label={t('UPLOAD_FILE')}
           variant="contained"
           onClick={handleClick}
@@ -146,14 +147,14 @@ export default function Upload() {
         sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.modal + 1 }}
       >
         <Box display="flex" flexDirection="column" alignItems="center" gap={2}>
-          <CircularProgress color="inherit" />
-          <Typography
-            variant="h6"
-            sx={{ fontWeight: 'bold', textAlign: 'center' }}
-          >
+          <Typography variant="body1" sx={{ textAlign: 'center' }}>
             {t('UPLOADING')}
             {file?.name ? ` “${file.name}”...` : '...'}
           </Typography>
+
+          <Box sx={{ width: 175, mt: 1 }}>
+            <LinearProgress color="inherit" />
+          </Box>
         </Box>
       </Backdrop>
     </>

@@ -1,6 +1,14 @@
 import Fallmanager from './Fallmanager';
 import { initialState as initialStateFallmanager } from './initialState';
-import { useFallmanagerSlice, useLingua } from './hooks';
+import { useFallmanagerSlice, useLingua, useAutoStepRunner } from './hooks';
+import {
+  Header,
+  TopRightMenu,
+  Files,
+  FileEdit,
+  SwitchLang,
+  Upload,
+} from './components';
 import {
   setzeSprache,
   setzeAktuellerFall,
@@ -20,21 +28,6 @@ import {
   updateFileMeta,
   setThemeMode,
 } from './actions';
-import {
-  BearbeitbarText,
-  Datei,
-  Fall,
-  Fallliste,
-  Header,
-  Sprachauswahl,
-  NewCase,
-  AIAssisted,
-  TopRightMenu,
-  Files,
-  FileEdit,
-  SwitchLang,
-  Upload,
-} from './components';
 
 export {
   Fallmanager,
@@ -58,20 +51,7 @@ export {
   incomingFiles,
   updateAssist,
   updateFileMeta,
+  useAutoStepRunner,
 };
 
-export {
-  BearbeitbarText,
-  Datei,
-  Fall,
-  Fallliste,
-  Header,
-  Sprachauswahl,
-  NewCase,
-  AIAssisted,
-  TopRightMenu,
-  Files,
-  FileEdit,
-  Upload,
-  SwitchLang,
-};
+export { Header, TopRightMenu, Files, FileEdit, Upload, SwitchLang };

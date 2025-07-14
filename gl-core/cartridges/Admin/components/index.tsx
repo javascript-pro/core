@@ -1,6 +1,4 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/Admin/components/index.tsx
-// import { setzeSprache } from './setzeSprache';
+import Layout from './Layout';
 
-// export {
-//   incomingCases,
-// };
+export { Layout };

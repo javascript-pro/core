@@ -7,29 +7,36 @@ import {
   DataGrid,
   GridColDef,
   GridActionsCellItem,
-  // GridRowSelectionModel,
+  GridRenderCellParams,
+  GridRowParams,
 } from '@mui/x-data-grid';
 import {
   Box,
-  CardHeader,
-  CircularProgress,
+  LinearProgress,
   Fade,
   Typography,
-  Tooltip,
   Dialog,
   DialogContent,
+  DialogTitle,
   DialogActions,
   Button,
   Backdrop,
+  CircularProgress,
 } from '@mui/material';
 import { useRouter } from 'next/navigation';
 import { Icon, useDispatch, useIsMobile } from '../../../../gl-core';
-import {
-  useLingua,
-  useFallmanagerSlice,
-  deleteFile,
-  Upload,
-} from '../../Fallmanager';
+import { useLingua, useFallmanagerSlice, deleteFile } from '../../Fallmanager';
+
+type Row = {
+  id: string;
+  fileName?: string;
+  uploadedAt: number; // ✅ timestamp in ms
+  downloadUrl?: string;
+  summary: string;
+  rawTextSeverity: string | null;
+  rawTextProcessing: boolean;
+  step: number;
+};
 
 export default function Files() {
   const dispatch = useDispatch();
@@ -38,42 +45,46 @@ export default function Files() {
   const router = useRouter();
   const { files, language } = useFallmanagerSlice();
 
+  const [hideCompleted, setHideCompleted] = React.useState(false);
   const [deleting, setDeleting] = React.useState<Record<string, boolean>>({});
   const [deletingOverlay, setDeletingOverlay] = React.useState(false);
-  const [deletingFileName, setDeletingFileName] = React.useState<string | null>(
-    null,
-  );
-  const [confirmDeleteId, setConfirmDeleteId] = React.useState<string | null>(
-    null,
-  );
-  // const [selectedIds, setSelectedIds] = React.useState<string[]>([]);
-  // const [confirmBulkDelete, setConfirmBulkDelete] = React.useState(false);
+  const [deletingFileName, setDeletingFileName] = React.useState<string | null>(null);
+  const [confirmDeleteId, setConfirmDeleteId] = React.useState<string | null>(null);
 
-  const rows = React.useMemo(() => {
+  moment.locale(language === 'de' ? 'de' : 'en');
+
+  const allRows = React.useMemo<Row[]>(() => {
     if (!files || typeof files !== 'object') return [];
 
-    moment.locale(language === 'de' ? 'de' : 'en');
-
-    return Object.values(files).map((file: any) => {
-      const uploadedAt = file.createdAt?.seconds
+    return Object.values(files).map((file: any): Row => {
+      const uploadedAtDate = file.createdAt?.seconds
         ? new Date(file.createdAt.seconds * 1000)
         : null;
 
       const summary =
         file.openai?.summary?.[language] || file.openai?.summary?.en || '';
 
+      let step = 1;
+      if (file.rawText) step = 2;
+      if (file.openai) step = 3;
+      if (file.thumbnail) step = 4;
+
       return {
         id: file.id,
         fileName: file.fileName,
-        size: (file.fileSize / 1024).toFixed(1) + ' KB',
-        uploadedAt: uploadedAt ? uploadedAt.toISOString() : null,
-        createdAt: uploadedAt?.getTime() || 0,
-        uploadedFromNow: uploadedAt ? moment(uploadedAt).fromNow() : 'Unknown',
+        uploadedAt: uploadedAtDate ? uploadedAtDate.getTime() : 0, // ✅ fallback to 0
         downloadUrl: file.downloadUrl,
         summary,
+        rawTextSeverity: file.rawTextSeverity || null,
+        rawTextProcessing: !!file.rawTextProcessing,
+        step,
       };
     });
   }, [files, language]);
+
+  const rows = React.useMemo(() => {
+    return hideCompleted ? allRows.filter((r) => r.step !== 4) : allRows;
+  }, [allRows, hideCompleted]);
 
   const handleDelete = async (id: string) => {
     const fileToDelete = rows.find((row) => row.id === id);
@@ -91,21 +102,16 @@ export default function Files() {
     setDeletingFileName(null);
   };
 
-  /*
-  const handleBulkDelete = async () => {
-    setConfirmBulkDelete(false);
-    setDeletingOverlay(true);
-    setDeletingFileName(`${selectedIds.length} ${t('FILES')}`);
-    for (const id of selectedIds) {
-      await dispatch(deleteFile(id));
-    }
-    setSelectedIds([]);
-    setDeletingOverlay(false);
-    setDeletingFileName(null);
-  };
-  */
+  const baseColumns: GridColDef<Row>[] = [
+    {
+      field: 'uploadedAt',
+      headerName: 'Uploaded',
+      type: 'date',
+      width: 150,
+      valueGetter: (params: GridRenderCellParams<Row>) =>
+  params.row.uploadedAt ? new Date(params.row.uploadedAt) : undefined,
 
-  const baseColumns: GridColDef[] = [
+    },
     {
       field: 'fileName',
       headerName: t('FILENAME'),
@@ -115,7 +121,7 @@ export default function Files() {
       field: 'summary',
       headerName: t('SUMMARY'),
       flex: 3,
-      renderCell: (params) => (
+      renderCell: (params: GridRenderCellParams<Row>) => (
         <Typography
           variant="body2"
           sx={{
@@ -129,38 +135,54 @@ export default function Files() {
       ),
     },
     {
-      field: 'size',
-      headerName: t('FILESIZE'),
-      width: 100,
+      field: 'status',
+      headerName: '',
+      width: 60,
+      sortable: false,
+      filterable: false,
+      disableColumnMenu: true,
+      renderCell: (params: GridRenderCellParams<Row>) => {
+        const isPDF = params.row.fileName?.toLowerCase().endsWith('.pdf');
+        if (!params.row.rawTextProcessing || !isPDF) return null;
+
+        return (
+          <Box
+            sx={{ display: 'flex', justifyContent: 'center', width: '100%' }}
+          >
+            <CircularProgress size={24} />
+          </Box>
+        );
+      },
     },
     {
-      field: 'uploadedFromNow',
-      headerName: t('TIME_CREATED'),
-      flex: 1.5,
-      renderCell: (params) =>
-        params.row.uploadedAt ? (
-          <Tooltip title={moment(params.row.uploadedAt).format('LLL')}>
-            <span>{params.row.uploadedFromNow}</span>
-          </Tooltip>
-        ) : (
-          <span>Unknown</span>
-        ),
+      field: 'step',
+      headerName: '',
+      width: 100,
+      renderCell: (params: GridRenderCellParams<Row>) => {
+        const step = params.row.step;
+        return (
+          <Typography variant="caption">
+            {step === 4 ? t('DONE') : t(`STEP_${step}`)}
+          </Typography>
+        );
+      },
     },
     {
       field: 'actions',
       type: 'actions',
       headerName: '',
       getActions: (params) => {
+        const row = params.row as Row;
         const id = params.id as string;
-        const url = (params.row as any).downloadUrl;
+        const url = row.downloadUrl;
 
         return [
           <GridActionsCellItem
             showInMenu
             key="download"
             icon={<Icon icon="link" />}
-            label={t('VIEW_FILE')}
-            onClick={() => window.open(url, '_blank', 'noopener,noreferrer')}
+            label={t('VIEW_PDF')}
+            onClick={() => url && window.open(url, '_blank', 'noopener,noreferrer')}
           />,
           <GridActionsCellItem
             showInMenu
@@ -168,7 +190,7 @@ export default function Files() {
             icon={
               deleting[id] ? (
                 <Fade in>
-                  <CircularProgress size={20} sx={{ color: 'error.main' }} />
+                  <LinearProgress sx={{ height: 2, width: '100%' }} />
                 </Fade>
               ) : (
                 <Icon icon="delete" />
@@ -185,10 +207,12 @@ export default function Files() {
   ];
 
   const columns = isMobile
-    ? baseColumns.filter((col) => col.field === 'fileName')
+    ? baseColumns.filter((col) =>
+        ['fileName', 'actions'].includes(col.field as string),
+      )
     : baseColumns;
 
-  const handleRowClick = (params: any) => {
+  const handleRowClick = (params: GridRowParams<Row>) => {
     router.push(`/fallmanager/file/${params.id}`);
   };
 
@@ -200,8 +224,6 @@ export default function Files() {
 
   return (
     <>
-      <CardHeader avatar={<Upload />} />
-
       {rows.length === 0 ? (
         <Typography sx={{ px: 2, py: 1 }}>{t('NO_FILES')}</Typography>
       ) : (
@@ -209,20 +231,10 @@ export default function Files() {
           <DataGrid
             rows={rows}
             columns={columns}
-            // checkboxSelection
-            // disableRowSelectionOnClick
             onRowClick={handleRowClick}
-            /*
-            onRowSelectionModelChange={(selection: GridRowSelectionModel) =>
-              setSelectedIds(
-                (Array.isArray(selection) ? selection : []).filter(
-                  (id): id is string => typeof id === 'string',
-                ),
-              )
-            }
-            */
             getRowHeight={() => 'auto'}
-            sortModel={[{ field: 'createdAt', sort: 'desc' }]}
+            sortModel={[{ field: 'uploadedAt', sort: 'desc' }]}
+            columnVisibilityModel={{ uploadedAt: false }}
             sx={{
               '& .MuiDataGrid-row': {
                 cursor: 'pointer',
@@ -248,14 +260,16 @@ export default function Files() {
 
       <Dialog
         fullWidth
-        maxWidth="sm"
+        maxWidth="xs"
         open={!!confirmDeleteId}
         onClose={() => setConfirmDeleteId(null)}
       >
+        <DialogTitle>
+          {t('DELETE')} {getConfirmFileName()}?
+        </DialogTitle>
         <DialogContent>
-          <Typography>{t('CONFIRM_DELETE')}</Typography>
-          <Typography fontWeight="bold" mt={1}>
-            {getConfirmFileName()}
+          <Typography mt={1}>
+            {t('CONFIRM_DELETE')}
           </Typography>
         </DialogContent>
         <DialogActions>
@@ -272,36 +286,12 @@ export default function Files() {
         </DialogActions>
       </Dialog>
 
-      {/* 
-      <Dialog
-        fullWidth
-        maxWidth="sm"
-        open={confirmBulkDelete}
-        onClose={() => setConfirmBulkDelete(false)}
-      >
-        <DialogContent>
-          <Typography>{t('CONFIRM_DELETE')}</Typography>
-          <Typography fontWeight="bold" mt={1}>
-            {selectedIds.length} {t('FILES')}
-          </Typography>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={() => setConfirmBulkDelete(false)}>
-            {t('CANCEL')}
-          </Button>
-          <Button onClick={handleBulkDelete} color="error" variant="contained">
-            {t('DELETE')}
-          </Button>
-        </DialogActions>
-      </Dialog>
-      */}
-
       <Backdrop
         open={deletingOverlay}
         sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.modal + 1 }}
       >
         <Box display="flex" flexDirection="column" alignItems="center" gap={2}>
-          <CircularProgress color="inherit" />
+          <LinearProgress color="inherit" />
           <Typography
             variant="h6"
             sx={{ fontWeight: 'bold', textAlign: 'center' }}

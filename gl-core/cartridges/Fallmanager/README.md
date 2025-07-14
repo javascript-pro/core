@@ -1,80 +1,48 @@
-# Fallmanager – Proof of Concept
+# Fallmanager – AI-gestützter Dokumenten-Workflow für Verkehrsunfälle
 
-Demonstrates how we could streamline legal case preparation by combining AI-assisted document processing with a structured workflow.
-
-When Kanzlei staff receive documents (e.g. insurance letters, client statements), they typically have to extract key details manually and enter them into a system. This POC shows how uploading those PDFs can trigger automatic extraction of structured data using a Large Language Model (LLM).
-
-The system then pre-fills editable case fields, thus speeding up the process and reducing repetitive work — while still keeping the administrator fully in control.
+**Fallmanager** ist eine moderne Webanwendung zur Unterstützung von Kanzleien bei der digitalen Fallbearbeitung von Verkehrsunfällen. Sie kombiniert **Firebase**, **Next.js** und **LLM-basierte Dokumentenanalyse**, um eingehende Dokumente strukturiert aufzubereiten und den manuellen Aufwand signifikant zu reduzieren – ohne dabei die Kontrolle aus der Hand zu geben.
 
 ---
 
-## 📁 [caseObj.tsx](./caseObj.tsx)
+## 🔧 Zielsetzung
 
-This file defines the **single source of truth** for the structure of a legal case (a `Fall`).
-
-It exports two things:
-
-- `CaseData` — the full TypeScript interface describing all fields of a case
-- `emptyCase` — a blank template that can be used for initializing new cases or form defaults
-
-### Key Groups
-
-The case object is grouped for UI and logic into the following domains:
-
-| Group               | Fields                                                                                        |
-| ------------------- | --------------------------------------------------------------------------------------------- |
-| **Client Info**     | `clientName`, `carRegistration`                                                               |
-| **Case Metadata**   | `caseId`, `status`, `createdAt`, `updatedAt`                                                  |
-| **Accident Info**   | `dateOfAccident`, `placeOfAccident`, `policeReportNumber`, `witnesses`                        |
-| **Insurance Info**  | `insuranceCompany`, `policyNumber`, `claimNumber`, `opposingInsurance`, `opposingClaimNumber` |
-| **Checklist Flags** | `accidentReport`, `damageAssessment`, `repairInvoiceReceived`, `settlementLetterReceived`     |
-| **Documents**       | `documents[]` (type, filename, uploadedAt)                                                    |
-
-### Why This Matters
-
-This object is used throughout the Fallmanager system for:
-
-- LLM-based extraction
-- Case editor UIs
-- Firestore reads/writes
-- Validation and transformation
-- Workflow logic (e.g. flags and status updates)
-
-Keeping it centralized makes the codebase easier to maintain and extend as we move toward a production-ready system.
+- Automatisiertes Auslesen juristisch relevanter Inhalte aus PDFs (z. B. Gutachten, Versicherungsschreiben)
+- Vorschlagsbasierte Vorbefüllung einer digitalen Fallakte
+- Mandantenfreundliche und strukturierte Benutzeroberfläche für Kanzleipersonal
+- Realtime-Synchronisierung und einfache Erweiterbarkeit durch Firebase-Integration
 
 ---
 
-## ✅ Example Case
+## 🧠 Funktionsweise
 
-```json
-[
-  {
-    "clientName": "Alexandra Stöckel",
-    "carRegistration": "SB-AT2008",
-    "caseId": "case-001",
-    "status": "in_review",
-    "createdAt": "2025-06-17T10:00:00Z",
-    "updatedAt": "2025-07-01T09:45:00Z",
-    "dateOfAccident": "2025-06-16",
-    "placeOfAccident": "Friedrichsthal",
-    "policeReportNumber": "Pol-FTH-2025-0616-01",
-    "witnesses": [],
-    "insuranceCompany": "HUK COBURG Allgemeine",
-    "policyNumber": "xxx",
-    "claimNumber": "25-11-511/524665-U",
-    "opposingInsurance": "Allianz",
-    "opposingClaimNumber": "GH-85-2025",
-    "accidentReport": true,
-    "damageAssessment": true,
-    "repairInvoiceReceived": false,
-    "settlementLetterReceived": false,
-    "documents": [
-      {
-        "type": "Gutachten",
-        "filename": "gutachten-sv-weber.pdf",
-        "uploadedAt": "2025-06-18T14:00:00Z"
-      }
-    ]
-  }
-]
-```
+1. **Upload eines Dokuments** (z. B. per Drag & Drop)
+2. **Extraktion strukturierter Daten** über ein Large Language Model (LLM)
+3. **Validierung und Bearbeitung** der Felder durch die Sachbearbeitung
+4. **Speicherung der Fallakte** als strukturiertes Objekt in Firestore
+
+---
+
+## 🧾 Datenstruktur: `caseObj.tsx`
+
+Die zentrale Datei `caseObj.tsx` definiert die Struktur jeder Fallakte (`Fall`) – inkl. UI-Gruppierung und typisierter Validierung.
+
+Sie exportiert:
+
+- `CaseData` — TypeScript-Interface mit allen Feldern
+- `emptyCase` — Vorlage zur Initialisierung neuer Fälle
+
+| Gruppe            | Felder                                                                                        |
+| ----------------- | --------------------------------------------------------------------------------------------- |
+| **Mandant**       | `clientName`, `carRegistration`                                                               |
+| **Metadaten**     | `caseId`, `status`, `createdAt`, `updatedAt`                                                  |
+| **Unfallhergang** | `dateOfAccident`, `placeOfAccident`, `policeReportNumber`, `witnesses`                        |
+| **Versicherung**  | `insuranceCompany`, `policyNumber`, `claimNumber`, `opposingInsurance`, `opposingClaimNumber` |
+| **Checkliste**    | `accidentReport`, `damageAssessment`, `repairInvoiceReceived`, `settlementLetterReceived`     |
+| **Dokumente**     | `documents[]` – inklusive Typ, Dateiname, Upload-Zeitpunkt                                    |
+
+Diese Struktur ist die Grundlage für:
+
+- das LLM-Parsing,
+- Formularfelder im UI,
+- Speicherung und Abruf in Firestore,
+- Status-Logik und Workflows.

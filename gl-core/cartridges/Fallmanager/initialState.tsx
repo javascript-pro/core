@@ -18,13 +18,13 @@ export const initialState: TFallmanagerState = {
     open: false,
   },
   lingua,
-  language: 'de',
-  themeMode: 'dark',
+  language: 'en',
+  themeMode: 'light',
   themes: {
     dark: {
       mode: 'dark',
-      primary: '#34d0f7',
-      secondary: '#4bff60',
+      primary: '#37badbff',
+      secondary: '#1b7cbcff',
       background: '#000',
       paper: '#000',
       text: '#fff',
@@ -32,8 +32,8 @@ export const initialState: TFallmanagerState = {
     },
     light: {
       mode: 'light',
-      primary: '#305DA5',
-      secondary: '#414142',
+      primary: '#2e59a5',
+      secondary: '#404041',
       background: '#eee',
       paper: '#FFFFFF',
       text: '#414142',
