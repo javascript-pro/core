@@ -183,7 +183,9 @@ export async function POST(req: NextRequest) {
 
     // Filter out Hertwig & Auer contacts
     const isHertwigAuer = (text: string) =>
-      /hertwig.*auer/i.test(text) || /bismarckstr\.?\s*122/i.test(text) || /info@hertwig-auer\.de/i.test(text);
+      /hertwig.*auer/i.test(text) ||
+      /bismarckstr\.?\s*122/i.test(text) ||
+      /info@hertwig-auer\.de/i.test(text);
 
     if (Array.isArray(parsed.contacts)) {
       parsed.contacts = parsed.contacts.filter((c) => {

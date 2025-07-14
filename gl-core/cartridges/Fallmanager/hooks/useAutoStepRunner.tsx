@@ -5,7 +5,11 @@ type Step = {
   action?: () => void;
 };
 
-export function useAutoStepRunner(steps: Step[], isProcessing: boolean, delaySeconds = 5) {
+export function useAutoStepRunner(
+  steps: Step[],
+  isProcessing: boolean,
+  delaySeconds = 5,
+) {
   const [nextStepIndex, setNextStepIndex] = useState<number | null>(null);
   const [countdown, setCountdown] = useState<number>(delaySeconds);
   const timer = useRef<NodeJS.Timeout | null>(null);

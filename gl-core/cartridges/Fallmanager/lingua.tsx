@@ -67,7 +67,7 @@ export const lingua: any = {
     en: 'Delete',
     de: 'Löschen',
   },
-    DELETED: {
+  DELETED: {
     en: 'Deleted',
     de: 'Gelöscht',
   },
@@ -136,4 +136,39 @@ export const lingua: any = {
     en: 'Processing',
     de: 'Wird verarbeitet',
   },
+  SAVE_CONTACT: {
+    en: 'Save contact',
+    de: 'Kontakt speichern',
+  },
+  VIEW_PDF: {
+    en: 'View PDF',
+    de: 'PDF anzeigen',
+  },
+
+STEP_1: {
+  en: 'Uploaded',
+  de: 'Hochladen',
+},
+STEP_2: {
+  en: 'Extracted',
+  de: 'Texterkennung',
+},
+STEP_3: {
+  en: 'Analysed',
+  de: 'Analyse',
+},
+STEP_4: {
+  en: 'Thumbnail Done',
+  de: 'Vorschaubild',
+},
+
+DONE: {
+  en: 'Done',
+  de: 'Fertig',
+},
+NEXT_STEP_GOES_HERE: {
+  en: 'Next step goes here',
+  de: 'Nächster Schritt kommt hierhin',
+}
+
 };
