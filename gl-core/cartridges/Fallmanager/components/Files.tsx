@@ -48,8 +48,12 @@ export default function Files() {
   const [hideCompleted, setHideCompleted] = React.useState(false);
   const [deleting, setDeleting] = React.useState<Record<string, boolean>>({});
   const [deletingOverlay, setDeletingOverlay] = React.useState(false);
-  const [deletingFileName, setDeletingFileName] = React.useState<string | null>(null);
-  const [confirmDeleteId, setConfirmDeleteId] = React.useState<string | null>(null);
+  const [deletingFileName, setDeletingFileName] = React.useState<string | null>(
+    null,
+  );
+  const [confirmDeleteId, setConfirmDeleteId] = React.useState<string | null>(
+    null,
+  );
 
   moment.locale(language === 'de' ? 'de' : 'en');
 
@@ -149,7 +153,9 @@ export default function Files() {
         if (!params.row.rawTextProcessing || !isPDF) return null;
 
         return (
-          <Box sx={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+          <Box
+            sx={{ display: 'flex', justifyContent: 'center', width: '100%' }}
+          >
             <CircularProgress size={24} />
           </Box>
         );

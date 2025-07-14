@@ -170,4 +170,8 @@ export const lingua: any = {
     en: 'Next step goes here',
     de: 'Nächster Schritt kommt hierhin',
   },
+  UPLOAD_FILE: {
+    en: 'Upload File',
+    de: 'Datei hochladen',
+  },
 };
