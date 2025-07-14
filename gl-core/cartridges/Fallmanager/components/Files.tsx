@@ -48,8 +48,12 @@ export default function Files() {
   const [hideCompleted, setHideCompleted] = React.useState(false);
   const [deleting, setDeleting] = React.useState<Record<string, boolean>>({});
   const [deletingOverlay, setDeletingOverlay] = React.useState(false);
-  const [deletingFileName, setDeletingFileName] = React.useState<string | null>(null);
-  const [confirmDeleteId, setConfirmDeleteId] = React.useState<string | null>(null);
+  const [deletingFileName, setDeletingFileName] = React.useState<string | null>(
+    null,
+  );
+  const [confirmDeleteId, setConfirmDeleteId] = React.useState<string | null>(
+    null,
+  );
 
   moment.locale(language === 'de' ? 'de' : 'en');
 
@@ -109,8 +113,7 @@ export default function Files() {
       type: 'date',
       width: 150,
       valueGetter: (params: GridRenderCellParams<Row>) =>
-  params.row.uploadedAt ? new Date(params.row.uploadedAt) : undefined,
-
+        params.row.uploadedAt ? new Date(params.row.uploadedAt) : undefined,
     },
     {
       field: 'fileName',
@@ -182,7 +185,9 @@ export default function Files() {
             key="download"
             icon={<Icon icon="link" />}
             label={t('VIEW_PDF')}
-            onClick={() => url && window.open(url, '_blank', 'noopener,noreferrer')}
+            onClick={() =>
+              url && window.open(url, '_blank', 'noopener,noreferrer')
+            }
           />,
           <GridActionsCellItem
             showInMenu
@@ -268,9 +273,7 @@ export default function Files() {
           {t('DELETE')} {getConfirmFileName()}?
         </DialogTitle>
         <DialogContent>
-          <Typography mt={1}>
-            {t('CONFIRM_DELETE')}
-          </Typography>
+          <Typography mt={1}>{t('CONFIRM_DELETE')}</Typography>
         </DialogContent>
         <DialogActions>
           <Button onClick={() => setConfirmDeleteId(null)}>

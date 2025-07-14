@@ -27,11 +27,7 @@ import { useRouter } from 'next/navigation';
 import { doc, onSnapshot } from 'firebase/firestore';
 import 'moment/locale/de';
 import { db } from '../../../lib/firebase';
-import {
-  useFallmanagerSlice,
-  useLingua,
-  deleteFile,
-} from '../../Fallmanager';
+import { useFallmanagerSlice, useLingua, deleteFile } from '../../Fallmanager';
 import { useDispatch, toggleFeedback, MightyButton } from '../../../../gl-core';
 
 type FileMeta = {
@@ -71,13 +67,19 @@ export default function FileEdit({ id }: { id: string }) {
   const dispatch = useDispatch();
   const { files, language } = useFallmanagerSlice();
   const theme = useTheme();
-  const [liveFile, setLiveFile] = React.useState<FileMeta | null>(files?.[id] || null);
+  const [liveFile, setLiveFile] = React.useState<FileMeta | null>(
+    files?.[id] || null,
+  );
   const [loading, setLoading] = React.useState(!files?.[id]);
   const [showConfirmDelete, setShowConfirmDelete] = React.useState(false);
   const [deleting, setDeleting] = React.useState(false);
-  const [processingStep, setProcessingStep] = React.useState<number | null>(null);
+  const [processingStep, setProcessingStep] = React.useState<number | null>(
+    null,
+  );
   const [showSaveDialog, setShowSaveDialog] = React.useState(false);
-  const [selectedContact, setSelectedContact] = React.useState<any | null>(null);
+  const [selectedContact, setSelectedContact] = React.useState<any | null>(
+    null,
+  );
 
   React.useEffect(() => {
     const unsub = onSnapshot(doc(db, 'files', id), (docSnap) => {
@@ -118,11 +120,13 @@ export default function FileEdit({ id }: { id: string }) {
       });
       const json = await res.json();
       if (!res.ok || json.error) {
-        dispatch(toggleFeedback({
-          severity: 'error',
-          title: failMsg,
-          description: json.error || failMsg,
-        }));
+        dispatch(
+          toggleFeedback({
+            severity: 'error',
+            title: failMsg,
+            description: json.error || failMsg,
+          }),
+        );
       } else {
         dispatch(toggleFeedback({ severity: 'success', title: successMsg }));
       }
@@ -138,7 +142,12 @@ export default function FileEdit({ id }: { id: string }) {
     if (!liveFile || processingStep) return;
 
     if (!liveFile.rawText && !liveFile.rawTextProcessing) {
-      runStep(2, '/api/gl-api/fallmanager/raw', 'Text extraction done', 'Text extraction failed');
+      runStep(
+        2,
+        '/api/gl-api/fallmanager/raw',
+        'Text extraction done',
+        'Text extraction failed',
+      );
       return;
     }
 
@@ -147,7 +156,12 @@ export default function FileEdit({ id }: { id: string }) {
       !liveFile.openai?.summary &&
       !liveFile.openai?.processing
     ) {
-      runStep(3, '/api/gl-api/fallmanager/openai', 'AI analysis done', 'AI analysis failed');
+      runStep(
+        3,
+        '/api/gl-api/fallmanager/openai',
+        'AI analysis done',
+        'AI analysis failed',
+      );
       return;
     }
 
@@ -156,7 +170,12 @@ export default function FileEdit({ id }: { id: string }) {
       !liveFile.thumbnail &&
       !liveFile.thumbnailProcessing
     ) {
-      runStep(4, '/api/gl-api/fallmanager/thumbnail', 'Thumbnail generation done', 'Thumbnail generation failed');
+      runStep(
+        4,
+        '/api/gl-api/fallmanager/thumbnail',
+        'Thumbnail generation done',
+        'Thumbnail generation failed',
+      );
       return;
     }
   }, [liveFile, processingStep]);
@@ -183,7 +202,12 @@ export default function FileEdit({ id }: { id: string }) {
       error: liveFile?.rawTextError || null,
       retryable: !!liveFile?.rawTextError || !liveFile?.rawText,
       action: () =>
-        runStep(2, '/api/gl-api/fallmanager/raw', 'Text extraction done', 'Text extraction failed'),
+        runStep(
+          2,
+          '/api/gl-api/fallmanager/raw',
+          'Text extraction done',
+          'Text extraction failed',
+        ),
     },
     {
       key: 'ai',
@@ -201,7 +225,12 @@ export default function FileEdit({ id }: { id: string }) {
         !liveFile?.openai?.processing &&
         (!!liveFile?.openai?.error || !liveFile?.openai?.summary),
       action: () =>
-        runStep(3, '/api/gl-api/fallmanager/openai', 'AI analysis done', 'AI analysis failed'),
+        runStep(
+          3,
+          '/api/gl-api/fallmanager/openai',
+          'AI analysis done',
+          'AI analysis failed',
+        ),
     },
     {
       key: 'thumbnail',
@@ -217,7 +246,12 @@ export default function FileEdit({ id }: { id: string }) {
         !!liveFile?.openai?.summary &&
         (!liveFile?.thumbnail || !!liveFile?.thumbnailError),
       action: () =>
-        runStep(4, '/api/gl-api/fallmanager/thumbnail', 'Thumbnail generation done', 'Thumbnail generation failed'),
+        runStep(
+          4,
+          '/api/gl-api/fallmanager/thumbnail',
+          'Thumbnail generation done',
+          'Thumbnail generation failed',
+        ),
     },
   ];
 
@@ -234,7 +268,11 @@ export default function FileEdit({ id }: { id: string }) {
     <>
       <Card>
         <CardHeader
-          title={<Typography variant="h5">{liveFile.fileName || t('UNKNOWN_FILENAME')}</Typography>}
+          title={
+            <Typography variant="h5">
+              {liveFile.fileName || t('UNKNOWN_FILENAME')}
+            </Typography>
+          }
           action={
             <MightyButton
               mode="icon"
@@ -253,7 +291,11 @@ export default function FileEdit({ id }: { id: string }) {
                 <ButtonBase
                   onClick={() =>
                     liveFile.downloadUrl &&
-                    window.open(liveFile.downloadUrl, '_blank', 'noopener,noreferrer')
+                    window.open(
+                      liveFile.downloadUrl,
+                      '_blank',
+                      'noopener,noreferrer',
+                    )
                   }
                   sx={{ width: '100%', display: 'block', borderRadius: 2 }}
                 >
@@ -284,11 +326,17 @@ export default function FileEdit({ id }: { id: string }) {
                   {steps.map((step, index) => {
                     const isAI = step.key === 'ai';
                     const isProcessing = isAI
-                      ? liveFile?.openai?.processing || processingStep === index + 1
+                      ? liveFile?.openai?.processing ||
+                        processingStep === index + 1
                       : processingStep === index + 1;
 
                     return (
-                      <Step key={step.key} active completed={step.complete} expanded>
+                      <Step
+                        key={step.key}
+                        active
+                        completed={step.complete}
+                        expanded
+                      >
                         <StepLabel
                           sx={{
                             '& .MuiStepLabel-label': {
@@ -303,7 +351,9 @@ export default function FileEdit({ id }: { id: string }) {
                             },
                           }}
                         >
-                          <Typography sx={{ display: 'flex', alignItems: 'center' }}>
+                          <Typography
+                            sx={{ display: 'flex', alignItems: 'center' }}
+                          >
                             {step.label}
                             {!step.complete && step.error && (
                               <Typography
@@ -334,18 +384,26 @@ export default function FileEdit({ id }: { id: string }) {
                               {step.description}
                             </Typography>
                           )}
-                          {(step.action &&
-                            (step.retryable || (step.key === 'ai' && liveFile?.openai?.processing))) && (
-                            <Button
-                              variant="contained"
-                              size="small"
-                              disabled={processingStep !== null || isProcessing}
-                              onClick={step.action}
-                              startIcon={isProcessing ? <CircularProgress size={16} /> : null}
-                            >
-                              {isProcessing ? t('PROCESSING') : t('PROCESS')}
-                            </Button>
-                          )}
+                          {step.action &&
+                            (step.retryable ||
+                              (step.key === 'ai' &&
+                                liveFile?.openai?.processing)) && (
+                              <Button
+                                variant="contained"
+                                size="small"
+                                disabled={
+                                  processingStep !== null || isProcessing
+                                }
+                                onClick={step.action}
+                                startIcon={
+                                  isProcessing ? (
+                                    <CircularProgress size={16} />
+                                  ) : null
+                                }
+                              >
+                                {isProcessing ? t('PROCESSING') : t('PROCESS')}
+                              </Button>
+                            )}
                         </StepContent>
                       </Step>
                     );
@@ -365,11 +423,23 @@ export default function FileEdit({ id }: { id: string }) {
                   <Box sx={{ p: 1 }}>
                     {liveFile.openai.contacts.map((c, i) => (
                       <Box key={i} sx={{ width: '100%', mb: 2 }}>
-                        {c.name && <Typography variant="h6">{c.name}</Typography>}
-                        {c.role && <Typography variant="body1">{c.role}</Typography>}
-                        {c.address && <Typography variant="body1">{c.address}</Typography>}
-                        {c.phone && <Typography variant="body1" sx={{ my: 1 }}>{c.phone}</Typography>}
-                        {c.email && <Typography variant="body1">{c.email}</Typography>}
+                        {c.name && (
+                          <Typography variant="h6">{c.name}</Typography>
+                        )}
+                        {c.role && (
+                          <Typography variant="body1">{c.role}</Typography>
+                        )}
+                        {c.address && (
+                          <Typography variant="body1">{c.address}</Typography>
+                        )}
+                        {c.phone && (
+                          <Typography variant="body1" sx={{ my: 1 }}>
+                            {c.phone}
+                          </Typography>
+                        )}
+                        {c.email && (
+                          <Typography variant="body1">{c.email}</Typography>
+                        )}
 
                         <MightyButton
                           sx={{ mt: 2 }}
@@ -390,27 +460,75 @@ export default function FileEdit({ id }: { id: string }) {
         </CardContent>
       </Card>
 
-      <Dialog open={showConfirmDelete} onClose={() => setShowConfirmDelete(false)} fullWidth maxWidth="xs">
-        <DialogTitle>{t('DELETE')} {liveFile?.fileName || '...'}</DialogTitle>
+      <Dialog
+        open={showConfirmDelete}
+        onClose={() => setShowConfirmDelete(false)}
+        fullWidth
+        maxWidth="xs"
+      >
+        <DialogTitle>
+          {t('DELETE')} {liveFile?.fileName || '...'}
+        </DialogTitle>
         <DialogContent>
-          <Typography fontWeight="bold" mt={1}>{t('ARE_YOU_SURE')}</Typography>
+          <Typography fontWeight="bold" mt={1}>
+            {t('ARE_YOU_SURE')}
+          </Typography>
         </DialogContent>
         <DialogActions>
-          <Button onClick={() => setShowConfirmDelete(false)}>{t('CANCEL')}</Button>
-          <Button onClick={handleDelete} color="primary" variant="contained" disabled={deleting}>
+          <Button onClick={() => setShowConfirmDelete(false)}>
+            {t('CANCEL')}
+          </Button>
+          <Button
+            onClick={handleDelete}
+            color="primary"
+            variant="contained"
+            disabled={deleting}
+          >
             {deleting ? t('DELETING') + '...' : t('DELETE')}
           </Button>
         </DialogActions>
       </Dialog>
 
-      <Dialog open={showSaveDialog} onClose={() => setShowSaveDialog(false)} fullWidth maxWidth="sm">
+      <Dialog
+        open={showSaveDialog}
+        onClose={() => setShowSaveDialog(false)}
+        fullWidth
+        maxWidth="sm"
+      >
         <DialogTitle>{t('SAVE_CONTACT')}</DialogTitle>
-        <DialogContent sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 1 }}>
-          <TextField label="Name" value={selectedContact?.name || ''} fullWidth disabled />
-          <TextField label="Role" value={selectedContact?.role || ''} fullWidth disabled />
-          <TextField label="Address" value={selectedContact?.address || ''} fullWidth disabled />
-          <TextField label="Phone" value={selectedContact?.phone || ''} fullWidth disabled />
-          <TextField label="Email" value={selectedContact?.email || ''} fullWidth disabled />
+        <DialogContent
+          sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 1 }}
+        >
+          <TextField
+            label="Name"
+            value={selectedContact?.name || ''}
+            fullWidth
+            disabled
+          />
+          <TextField
+            label="Role"
+            value={selectedContact?.role || ''}
+            fullWidth
+            disabled
+          />
+          <TextField
+            label="Address"
+            value={selectedContact?.address || ''}
+            fullWidth
+            disabled
+          />
+          <TextField
+            label="Phone"
+            value={selectedContact?.phone || ''}
+            fullWidth
+            disabled
+          />
+          <TextField
+            label="Email"
+            value={selectedContact?.email || ''}
+            fullWidth
+            disabled
+          />
         </DialogContent>
         <DialogActions>
           <Button onClick={() => setShowSaveDialog(false)}>{t('CLOSE')}</Button>
