@@ -107,7 +107,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
             {/* Side ads on desktop only */}
             {!isMobile && (
               <Grid size={{ md: 2, lg: 2 }}>
-                <Box sx={{ mx: 1, mt:1 }}>
+                <Box sx={{ mx: 1, mt: 1 }}>
                   <SideAds />
                 </Box>
               </Grid>
