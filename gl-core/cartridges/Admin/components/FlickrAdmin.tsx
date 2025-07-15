@@ -1,3 +1,4 @@
+// /core/gl-core/cartridges/Admin/components/FlickrAdmin.tsx
 'use client';
 
 import * as React from 'react';
@@ -27,6 +28,7 @@ type TFlickrAlbum = {
   flickrUrl?: string;
   createdAt?: number;
   updatedAt?: number;
+  photos?: { flickrId: string; title?: string }[];
 };
 
 type TFlickrData = {
@@ -116,7 +118,7 @@ export default function FlickrAdmin() {
     setSubmitting(true);
     try {
       await dispatch(
-        // @ts-ignore: depending on thunk typing
+        // @ts-ignore thunk typing
         album({ flickrId: albumId, mode: isExisting ? 'update' : 'create' }),
       );
     } finally {
@@ -158,11 +160,7 @@ export default function FlickrAdmin() {
               options={options}
               value={options.find((o) => o.id === inputAlbumId) || null}
               onChange={(e, newValue) => {
-                if (
-                  newValue &&
-                  typeof newValue !== 'string' &&
-                  'id' in newValue
-                ) {
+                if (newValue && typeof newValue !== 'string' && 'id' in newValue) {
                   setInputAlbumId(newValue.id);
                 } else if (typeof newValue === 'string') {
                   setInputAlbumId(newValue);
@@ -171,9 +169,8 @@ export default function FlickrAdmin() {
                 }
               }}
               onInputChange={(e, newInput) => {
-                // freeSolo typing
-                if (!newInput) {
-                  setInputAlbumId('');
+                if (typeof newInput === 'string') {
+                  setInputAlbumId(newInput);
                 }
               }}
               getOptionLabel={(option) =>
@@ -216,29 +213,45 @@ export default function FlickrAdmin() {
           </Box>
 
           {selectedAlbum ? (
-            <Card variant="outlined">
+            <Card
+              variant="outlined"
+              sx={{
+                mt: 2,
+                p: 1, // tighter padding
+              }}
+            >
               <CardHeader
                 title={selectedAlbum.title || 'Untitled Album'}
                 subheader={`ID: ${selectedAlbum.id}`}
+                sx={{ p: 1 }}
               />
-              <CardContent>
+              <CardContent sx={{ pt: 0.5, pb: 1 }}>
                 <Typography variant="body2" sx={{ mb: 1 }}>
                   {selectedAlbum.description || 'No description'}
                 </Typography>
-                <Typography variant="body2">
+                <Typography variant="body2" sx={{ mb: 1 }}>
                   <strong>Photos:</strong> {selectedAlbum.count || 0}
                 </Typography>
-                {selectedAlbum.flickrUrl && (
-                  <Typography variant="body2">
-                    <a
-                      href={selectedAlbum.flickrUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
+
+                {Array.isArray(selectedAlbum.photos) &&
+                  selectedAlbum.photos.length > 0 && (
+                    <Box
+                      component="ul"
+                      sx={{
+                        pl: 2,
+                        m: 0,
+                        listStyleType: 'disc',
+                      }}
                     >
-                      View on Flickr
-                    </a>
-                  </Typography>
-                )}
+                      {selectedAlbum.photos.map((photo) => (
+                        <li key={photo.flickrId} style={{ marginBottom: '4px' }}>
+                          <Typography variant="body2" noWrap>
+                            {photo.title || '(untitled photo)'}
+                          </Typography>
+                        </li>
+                      ))}
+                    </Box>
+                  )}
               </CardContent>
             </Card>
           ) : null}

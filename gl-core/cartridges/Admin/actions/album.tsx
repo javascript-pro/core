@@ -7,11 +7,15 @@ export const album =
   (payload: { flickrId: string; mode?: 'create' | 'update' }) =>
   async (dispatch: TUbereduxDispatch) => {
     try {
-      // Send request to API
-      const res = await fetch('/api/gl-api/flickr/albums/create', {
+      const body = {
+        flickrId: payload.flickrId,
+        mode: payload.mode ?? 'create',
+      };
+
+      const res = await fetch('/api/gl-api/flickr/albums', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ flickrId: payload.flickrId }),
+        body: JSON.stringify(body),
       });
 
       const data = await res.json();
@@ -21,18 +25,18 @@ export const album =
           toggleFeedback({
             severity: 'error',
             title: 'Album action failed',
-            description: data.message || 'Unknown error',
+            description: data.message || 'Unknown error occurred.',
           }),
         );
         return;
       }
 
-      // Success feedback
+      // Use API-provided message for success feedback
       dispatch(
         toggleFeedback({
           severity: 'success',
-          title: 'Album Created',
-          description: `Album ${payload.flickrId} was added successfully.`,
+          title: 'Album action complete',
+          description: data.message, // direct from API
         }),
       );
     } catch (e: unknown) {
