@@ -108,8 +108,8 @@ export const lingua: any = {
     de: 'Adresse',
   },
   APP_TITLE: {
-    en: 'PDF manager',
-    de: 'PDFmanager',
+    en: 'AI PDF',
+    de: 'KI PDF',
   },
 
   GOLDLABEL_HOME: {

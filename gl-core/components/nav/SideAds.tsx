@@ -23,6 +23,14 @@ export default function SideAds() {
       />
 
       <Advert
+        icon="pdf"
+        title={'AI PDF'}
+        onClick={() => {
+          dispatch(routeTo('/fallmanager', router));
+        }}
+      />
+
+      <Advert
         icon="contact"
         title={'About'}
         onClick={() => {
@@ -34,7 +42,7 @@ export default function SideAds() {
         icon="openai"
         title={'C.V.'}
         onClick={() => {
-          dispatch(routeTo('/cv', router));
+          dispatch(routeTo('/work/cv', router));
         }}
       />
 
@@ -46,13 +54,7 @@ export default function SideAds() {
         }}
       />
 
-      <Advert
-        icon="admin"
-        title={'Admin'}
-        onClick={() => {
-          dispatch(routeTo('/admin', router));
-        }}
-      />
+      
     </Box>
   );
 }

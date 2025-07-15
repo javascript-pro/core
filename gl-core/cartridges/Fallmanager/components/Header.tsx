@@ -42,7 +42,7 @@ export default function Header() {
       <CardHeader
         avatar={
           <IconButton color="primary" onClick={handleAvatarClick}>
-            <Icon icon={'cases'} />
+            <Icon icon={'pdf'} />
           </IconButton>
         }
         title={<Typography variant="h6">{title}</Typography>}

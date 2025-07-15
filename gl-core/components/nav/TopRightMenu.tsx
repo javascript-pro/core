@@ -121,9 +121,9 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           sx={{ my: 2 }}
         >
           <ListItemIcon>
-            <Icon icon="fallmanager" />
+            <Icon icon="pdf" />
           </ListItemIcon>
-          <ListItemText primary={'Case Manager'} />
+          <ListItemText primary={'AI PDF'} />
         </MenuItem>
 
         {/* Sign out */}
