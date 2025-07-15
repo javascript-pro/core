@@ -30,13 +30,13 @@ export default function SideAds() {
         }}
       /> */}
 
-      {/* <Advert
+      <Advert
         icon="openai"
         title={'C.V.'}
         onClick={() => {
           dispatch(routeTo('/work/cv', router));
         }}
-      /> */}
+      />
 
       <Advert
         icon="flickr"
