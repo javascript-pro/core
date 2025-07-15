@@ -9,10 +9,7 @@ export type TUbereduxState = {
 };
 
 export const routeTo =
-  (
-    route: string, 
-    router: any,
-  ) => async (dispatch: TUbereduxDispatch) => {
+  (route: string, router: any) => async (dispatch: TUbereduxDispatch) => {
     try {
       dispatch(toggleLoading(true));
       router.push(route);

@@ -17,37 +17,39 @@ import { useRouter, usePathname } from 'next/navigation';
 
 export default function MenuList() {
   const dispatch = useDispatch();
-    const router = useRouter();
+  const router = useRouter();
 
   const handleClick = (route: string) => {
     dispatch(routeTo(route, router));
   };
 
-  return <Box>
-            <List>
-                <ListItemButton>
-                  <ListItemIcon>
-                    <Icon icon="users" color="primary" />
-                  </ListItemIcon>
-                  <ListItemText primary="Users" />
-                </ListItemButton>
-                <ListItemButton>
-                  <ListItemIcon>
-                    <Icon icon="bouncer" color="primary" />
-                  </ListItemIcon>
-                  <ListItemText primary="Bouncer" />
-                </ListItemButton>
-                <ListItemButton
-                  onClick={() => {
-                    // console.log("Home");
-                    handleClick('/admin/flickr');
-                  }}
-                >
-                  <ListItemIcon>
-                    <Icon icon="flickr" color="primary" />
-                  </ListItemIcon>
-                  <ListItemText primary="Flickr" />
-                </ListItemButton>
-              </List>
-          </Box>
+  return (
+    <Box>
+      <List>
+        <ListItemButton>
+          <ListItemIcon>
+            <Icon icon="users" color="primary" />
+          </ListItemIcon>
+          <ListItemText primary="Users" />
+        </ListItemButton>
+        <ListItemButton>
+          <ListItemIcon>
+            <Icon icon="bouncer" color="primary" />
+          </ListItemIcon>
+          <ListItemText primary="Bouncer" />
+        </ListItemButton>
+        <ListItemButton
+          onClick={() => {
+            // console.log("Home");
+            handleClick('/admin/flickr');
+          }}
+        >
+          <ListItemIcon>
+            <Icon icon="flickr" color="primary" />
+          </ListItemIcon>
+          <ListItemText primary="Flickr" />
+        </ListItemButton>
+      </List>
+    </Box>
+  );
 }

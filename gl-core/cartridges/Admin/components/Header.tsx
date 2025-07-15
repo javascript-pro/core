@@ -9,36 +9,37 @@ import { useRouter, usePathname } from 'next/navigation';
 
 export default function Header() {
   const dispatch = useDispatch();
-    const router = useRouter();
+  const router = useRouter();
 
   const handleClick = (route: string) => {
     dispatch(routeTo(route, router));
   };
 
-  return <CardHeader
-
-          avatar={
-            <>
-              <MightyButton
-                icon="admin"
-                label="Admin"
-                onClick={() => {
-                  handleClick('/admin');
-                }}
-              />
-              
-              
-            </>
-          }
-          action={<>
-            <MightyButton
-              icon="home"
-              label="Home"
-              onClick={() => {
-                handleClick('/');
-              }}
-              iconPlacement='right'
-            />
-          </>}
-        />;
+  return (
+    <CardHeader
+      avatar={
+        <>
+          <MightyButton
+            icon="admin"
+            label="Admin"
+            onClick={() => {
+              handleClick('/admin');
+            }}
+          />
+        </>
+      }
+      action={
+        <>
+          <MightyButton
+            icon="home"
+            label="Home"
+            onClick={() => {
+              handleClick('/');
+            }}
+            iconPlacement="right"
+          />
+        </>
+      }
+    />
+  );
 }

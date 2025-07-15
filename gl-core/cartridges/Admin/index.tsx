@@ -5,4 +5,12 @@ import { useAdminSlice } from './hooks';
 // } from './actions';
 import { Layout, FlickrAdmin, Header, MenuList } from './components';
 
-export { Admin, Header, MenuList, FlickrAdmin, Layout, initialStateAdmin, useAdminSlice };
+export {
+  Admin,
+  Header,
+  MenuList,
+  FlickrAdmin,
+  Layout,
+  initialStateAdmin,
+  useAdminSlice,
+};

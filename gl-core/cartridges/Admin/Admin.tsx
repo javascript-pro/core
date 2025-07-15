@@ -4,16 +4,8 @@
 import * as React from 'react';
 import { config } from './config';
 import { useRouter, usePathname } from 'next/navigation';
-import {
-  CssBaseline,
-  Box,
-  CardContent,
-} from '@mui/material';
-import {
-  Theme,
-  useDispatch,
-  routeTo,
-} from '../../../gl-core';
+import { CssBaseline, Box, CardContent } from '@mui/material';
+import { Theme, useDispatch, routeTo } from '../../../gl-core';
 import { Layout, FlickrAdmin, Header, MenuList } from '../Admin';
 
 export default function Admin() {
@@ -31,7 +23,7 @@ export default function Admin() {
       <CssBaseline />
       <Layout>
         <Header />
-        { pathname === '/admin/flickr' ? <FlickrAdmin /> : <MenuList /> }
+        {pathname === '/admin/flickr' ? <FlickrAdmin /> : <MenuList />}
       </Layout>
     </Theme>
   );

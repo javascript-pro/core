@@ -168,12 +168,14 @@ export default function AuthForm() {
           )}
 
           <MightyButton
+            fullWidth
             sx={{ mx: 1, mb: 1 }}
             onClick={onSignIn}
             variant={isFormValid ? 'contained' : 'text'}
             disabled={!isFormValid || signingIn}
             label="Sign in"
             icon={icon}
+            iconPlacement="right"
           />
         </CardActions>
       </Container>
