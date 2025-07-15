@@ -108,8 +108,8 @@ export const lingua: any = {
     de: 'Adresse',
   },
   APP_TITLE: {
-    en: 'Case manager',
-    de: 'Fallmanager',
+    en: 'AI PDF',
+    de: 'KI PDF',
   },
 
   GOLDLABEL_HOME: {
@@ -145,30 +145,33 @@ export const lingua: any = {
     de: 'PDF anzeigen',
   },
 
-STEP_1: {
-  en: 'Uploaded',
-  de: 'Hochladen',
-},
-STEP_2: {
-  en: 'Extracted',
-  de: 'Texterkennung',
-},
-STEP_3: {
-  en: 'Analysed',
-  de: 'Analyse',
-},
-STEP_4: {
-  en: 'Thumbnail Done',
-  de: 'Vorschaubild',
-},
+  STEP_1: {
+    en: 'Uploaded',
+    de: 'Hochladen',
+  },
+  STEP_2: {
+    en: 'Extracted',
+    de: 'Texterkennung',
+  },
+  STEP_3: {
+    en: 'Analysed',
+    de: 'Analyse',
+  },
+  STEP_4: {
+    en: 'Thumbnail Done',
+    de: 'Vorschaubild',
+  },
 
-DONE: {
-  en: 'Done',
-  de: 'Fertig',
-},
-NEXT_STEP_GOES_HERE: {
-  en: 'Next step goes here',
-  de: 'Nächster Schritt kommt hierhin',
-}
-
+  DONE: {
+    en: 'Done',
+    de: 'Fertig',
+  },
+  NEXT_STEP_GOES_HERE: {
+    en: 'Next step goes here',
+    de: 'Nächster Schritt kommt hierhin',
+  },
+  UPLOAD_FILE: {
+    en: 'Upload File',
+    de: 'Datei hochladen',
+  },
 };

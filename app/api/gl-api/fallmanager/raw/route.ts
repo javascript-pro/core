@@ -138,6 +138,10 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    await docRef.update({
+      jobId: asyncData.jobId,
+    });
+
     const checkJobStatus = async (
       jobId: string,
     ): Promise<PDFCoJobStatusResponse> => {
@@ -157,6 +161,8 @@ export async function POST(req: NextRequest) {
       return json;
     };
 
+    const delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
+
     console.log('[raw] Polling PDF.co job status...');
     let jobStatus = 'working';
     let resultUrl = '';
@@ -165,13 +171,24 @@ export async function POST(req: NextRequest) {
 
     while (jobStatus === 'working' && attempt < maxAttempts) {
       attempt++;
-      const statusData = await checkJobStatus(asyncData.jobId!);
-      jobStatus = statusData.status;
-      resultUrl = statusData.url || '';
 
-      console.log(`[raw] Attempt ${attempt}: status=${jobStatus}`);
-      if (jobStatus === 'working') {
-        await new Promise((resolve) => setTimeout(resolve, 3000));
+      try {
+        const statusData = await checkJobStatus(asyncData.jobId!);
+        jobStatus = statusData.status;
+        resultUrl = statusData.url || '';
+
+        console.log(`[raw] Attempt ${attempt}: status=${jobStatus}`);
+
+        if (jobStatus === 'failed') {
+          throw new Error('PDF.co job failed');
+        }
+
+        if (jobStatus === 'working') {
+          await delay(3000 + attempt * 500); // backoff
+        }
+      } catch (err) {
+        console.warn(`[raw] Poll attempt ${attempt} failed:`, err);
+        await delay(3000);
       }
     }
 

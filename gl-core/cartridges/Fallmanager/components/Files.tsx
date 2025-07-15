@@ -30,7 +30,7 @@ import { useLingua, useFallmanagerSlice, deleteFile } from '../../Fallmanager';
 type Row = {
   id: string;
   fileName?: string;
-  uploadedAt: number; // ✅ timestamp in ms
+  uploadedAt: number; // timestamp in ms
   downloadUrl?: string;
   summary: string;
   rawTextSeverity: string | null;
@@ -48,38 +48,46 @@ export default function Files() {
   const [hideCompleted, setHideCompleted] = React.useState(false);
   const [deleting, setDeleting] = React.useState<Record<string, boolean>>({});
   const [deletingOverlay, setDeletingOverlay] = React.useState(false);
-  const [deletingFileName, setDeletingFileName] = React.useState<string | null>(null);
-  const [confirmDeleteId, setConfirmDeleteId] = React.useState<string | null>(null);
+  const [deletingFileName, setDeletingFileName] = React.useState<string | null>(
+    null,
+  );
+  const [confirmDeleteId, setConfirmDeleteId] = React.useState<string | null>(
+    null,
+  );
 
   moment.locale(language === 'de' ? 'de' : 'en');
 
   const allRows = React.useMemo<Row[]>(() => {
     if (!files || typeof files !== 'object') return [];
 
-    return Object.values(files).map((file: any): Row => {
-      const uploadedAtDate = file.createdAt?.seconds
-        ? new Date(file.createdAt.seconds * 1000)
-        : null;
+    return Object.values(files)
+      .map((file: any): Row | null => {
+        if (!file?.id) return null;
 
-      const summary =
-        file.openai?.summary?.[language] || file.openai?.summary?.en || '';
+        const uploadedAtDate = file.createdAt?.seconds
+          ? new Date(file.createdAt.seconds * 1000)
+          : null;
 
-      let step = 1;
-      if (file.rawText) step = 2;
-      if (file.openai) step = 3;
-      if (file.thumbnail) step = 4;
+        const summary =
+          file.openai?.summary?.[language] || file.openai?.summary?.en || '';
 
-      return {
-        id: file.id,
-        fileName: file.fileName,
-        uploadedAt: uploadedAtDate ? uploadedAtDate.getTime() : 0, // ✅ fallback to 0
-        downloadUrl: file.downloadUrl,
-        summary,
-        rawTextSeverity: file.rawTextSeverity || null,
-        rawTextProcessing: !!file.rawTextProcessing,
-        step,
-      };
-    });
+        let step = 1;
+        if (file.rawText) step = 2;
+        if (file.openai) step = 3;
+        if (file.thumbnail) step = 4;
+
+        return {
+          id: file.id,
+          fileName: file.fileName,
+          uploadedAt: uploadedAtDate ? uploadedAtDate.getTime() : 0,
+          downloadUrl: file.downloadUrl,
+          summary,
+          rawTextSeverity: file.rawTextSeverity || null,
+          rawTextProcessing: !!file.rawTextProcessing,
+          step,
+        };
+      })
+      .filter(Boolean) as Row[];
   }, [files, language]);
 
   const rows = React.useMemo(() => {
@@ -109,8 +117,7 @@ export default function Files() {
       type: 'date',
       width: 150,
       valueGetter: (params: GridRenderCellParams<Row>) =>
-  params.row.uploadedAt ? new Date(params.row.uploadedAt) : undefined,
-
+        params?.row?.uploadedAt ? new Date(params.row.uploadedAt) : undefined,
     },
     {
       field: 'fileName',
@@ -182,7 +189,9 @@ export default function Files() {
             key="download"
             icon={<Icon icon="link" />}
             label={t('VIEW_PDF')}
-            onClick={() => url && window.open(url, '_blank', 'noopener,noreferrer')}
+            onClick={() =>
+              url && window.open(url, '_blank', 'noopener,noreferrer')
+            }
           />,
           <GridActionsCellItem
             showInMenu
@@ -233,8 +242,16 @@ export default function Files() {
             columns={columns}
             onRowClick={handleRowClick}
             getRowHeight={() => 'auto'}
-            sortModel={[{ field: 'uploadedAt', sort: 'desc' }]}
-            columnVisibilityModel={{ uploadedAt: false }}
+            initialState={{
+              sorting: {
+                sortModel: [{ field: 'uploadedAt', sort: 'desc' }],
+              },
+              columns: {
+                columnVisibilityModel: {
+                  uploadedAt: false,
+                },
+              },
+            }}
             sx={{
               '& .MuiDataGrid-row': {
                 cursor: 'pointer',
@@ -268,9 +285,7 @@ export default function Files() {
           {t('DELETE')} {getConfirmFileName()}?
         </DialogTitle>
         <DialogContent>
-          <Typography mt={1}>
-            {t('CONFIRM_DELETE')}
-          </Typography>
+          <Typography mt={1}>{t('CONFIRM_DELETE')}</Typography>
         </DialogContent>
         <DialogActions>
           <Button onClick={() => setConfirmDeleteId(null)}>

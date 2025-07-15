@@ -3,12 +3,10 @@
 'use client';
 
 import * as React from 'react';
-import { config } from '../config';
 import {
   Box,
   CssBaseline,
-  Paper,
-  Typography,
+  Container,
   AppBar,
   Toolbar,
   IconButton,
@@ -19,8 +17,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import AddIcon from '@mui/icons-material/Add';
 import SearchIcon from '@mui/icons-material/Search';
 import MoreIcon from '@mui/icons-material/MoreVert';
-import { Theme, useDispatch, MightyButton, Icon } from '../../../../gl-core';
-import { useAdminSlice } from '../../Admin';
+// import { Theme, useDispatch, MightyButton, Icon } from '../../../../gl-core';
+// import { useAdminSlice } from '../../Admin';
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -39,12 +37,12 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <React.Fragment>
       <CssBaseline />
-
-      <Box sx={{ pb: '50px' }}>{children}</Box>
-
+      <Container maxWidth="md">
+        <Box sx={{ pb: '50px' }}>{children}</Box>
+      </Container>
       <AppBar position="fixed" color="primary" sx={{ top: 'auto', bottom: 0 }}>
         <Toolbar>
-          <IconButton color="inherit" aria-label="open drawer">
+          {/* <IconButton color="inherit" aria-label="open drawer">
             <MenuIcon />
           </IconButton>
           <StyledFab color="secondary" aria-label="add">
@@ -56,7 +54,7 @@ export default function Layout({ children }: LayoutProps) {
           </IconButton>
           <IconButton color="inherit">
             <MoreIcon />
-          </IconButton>
+          </IconButton> */}
         </Toolbar>
       </AppBar>
     </React.Fragment>

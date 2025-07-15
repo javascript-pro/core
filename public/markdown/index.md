@@ -15,3 +15,16 @@ image: https://live.staticflickr.com/65535/53670802348_9bb887b680_b.jpg
 - _Small_ team. _Big_ output
 - Real deployments from Day One
 - Readable, extensible, Open Source
+
+Goldlabel Apps is a UK-based software company that designs, builds, and maintains full-stack web applications. We specialize in Next.js, Firebase, and custom UI development, delivering everything from internal admin tools to polished public-facing websites.
+
+### Benefits of building with us
+
+- Ship early and often.  
+  Each app is live from the outset — not just a mockup or prototyle
+
+- Share the process.  
+  Follow the development on GitHub, view the commit history, clone the code. Get involved with Issues
+
+- Built for reuse.  
+  Every component, pattern, and API is designed to be portable and production-ready

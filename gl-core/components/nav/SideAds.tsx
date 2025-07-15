@@ -22,21 +22,21 @@ export default function SideAds() {
         }}
       />
 
-      <Advert
-        icon="contact"
-        title={'About'}
+      {/* <Advert
+        icon="pdf"
+        title={'AI PDF'}
         onClick={() => {
-          dispatch(routeTo('/work/company', router));
+          dispatch(routeTo('/fallmanager', router));
         }}
-      />
+      /> */}
 
-      <Advert
+      {/* <Advert
         icon="openai"
         title={'C.V.'}
         onClick={() => {
-          dispatch(routeTo('/cv', router));
+          dispatch(routeTo('/work/cv', router));
         }}
-      />
+      /> */}
 
       <Advert
         icon="flickr"
@@ -47,8 +47,8 @@ export default function SideAds() {
       />
 
       <Advert
-        icon="admin"
-        title={'Admin'}
+        icon="contact"
+        title={'Contact'}
         onClick={() => {
           dispatch(routeTo('/admin', router));
         }}

@@ -29,7 +29,7 @@ import {
   useSlice,
 } from '../gl-core';
 import { SideAds } from '../gl-core';
-import { FlickrLatest } from './cartridges/Flickr';
+import { FlickrAlbum } from './cartridges/Flickr';
 import { CV } from './cartridges/CV';
 import { Bouncer } from './cartridges/Bouncer';
 import { Fallmanager } from './cartridges/Fallmanager';
@@ -62,7 +62,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const isCV = pathname === '/work/cv';
   const isFallmanager = pathname.startsWith('/fallmanager');
   const isAdmin = pathname.startsWith('/admin');
-
   const isApp = isCV || isFallmanager || isAdmin;
 
   const [imageError, setImageError] = React.useState(false);
@@ -78,7 +77,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
         </Bouncer>
       );
       break;
-
     case isFallmanager:
       fullScreen = true;
       app = (
@@ -104,7 +102,9 @@ export default function Core({ frontmatter, body = null }: TCore) {
       <Container id="core">
         <Box sx={{ minHeight: '100vh' }}>
           <Header frontmatter={frontmatter} />
-          <Grid container spacing={1}>
+
+          <Grid container spacing={isMobile ? 0 : 1}>
+            {/* Side ads on desktop only */}
             {!isMobile && (
               <Grid size={{ md: 2, lg: 2 }}>
                 <Box sx={{ mx: 1 }}>
@@ -113,17 +113,13 @@ export default function Core({ frontmatter, body = null }: TCore) {
               </Grid>
             )}
 
+            {/* Main content */}
             <Grid size={{ xs: 12, md: 7, lg: 6 }}>
               <Box sx={{ mt: isMobile ? 2 : 0 }}>
                 {hideImage ? null : (
                   <>
                     {frontmatter?.image && (
-                      <Box
-                        sx={{
-                          mx: 4,
-                          mt: 0,
-                        }}
-                      >
+                      <Box sx={{ mx: isMobile ? 0 : 4, mt: 0 }}>
                         {!imageError ? (
                           <Image
                             priority
@@ -159,15 +155,23 @@ export default function Core({ frontmatter, body = null }: TCore) {
                 </Box>
               </Box>
 
-              <Box sx={{ mb: '175px', px: isMobile ? 0.5 : 2 }}>
+              <Box sx={{ mb: isMobile ? 3 : '175px', px: isMobile ? 0.5 : 2 }}>
                 {isApp ? app : <RenderMarkdown>{body}</RenderMarkdown>}
                 <ArrowMenu />
               </Box>
+
+              {/* FlickrAlbum on mobile directly below content */}
+              {isMobile && (
+                <Box sx={{ mt: 2 }}>
+                  <FlickrAlbum />
+                </Box>
+              )}
             </Grid>
 
+            {/* FlickrAlbum on desktop in right column */}
             {!isMobile && (
               <Grid size={{ md: 3, lg: 4 }}>
-                <FlickrLatest />
+                <FlickrAlbum album="72177720327572144" />
               </Grid>
             )}
           </Grid>
