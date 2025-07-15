@@ -11,6 +11,7 @@ import { recacheLatest } from './actions/recacheLatest';
 import { setLatestIndex } from './actions/setLatestIndex';
 import { setLatest } from './actions/setLatest';
 import {
+  FlickrAlbum,
   FlickrLatest,
   AlbumCard,
   PhotoCard,
@@ -21,6 +22,7 @@ export {
   initialStateFlickr,
   Flickr,
   FlickrLatest,
+  FlickrAlbum,
   PhotoPopup,
   resetFlickr,
   resetAlbum,

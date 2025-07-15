@@ -35,7 +35,7 @@
       "NextJS",
       "Headless CMS"
     ],
-    "excerpt": "We build and ship modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source",
+    "excerpt": "We build and ship modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source\n\nGoldlabel Apps is a UKbased softw",
     "children": [
       {
         "title": "Flickr Photo Cartridge",
@@ -102,14 +102,14 @@
             "excerpt": "Goldlabel Public API\n\n glapi/flickr endpoints"
           },
           {
-            "title": "Goldlabel Apps Ltd",
+            "title": "UK Ltd",
             "description": "UK Limited Company (5460545)",
             "slug": "/work/company",
             "order": 10,
             "icon": "work",
             "image": "https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg",
             "type": "folder",
-            "excerpt": "| \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX\n\nGoldlabel Apps is a UKbased software company that designs, builds, and maintains fullstack web applications. We speciali",
+            "excerpt": "| \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX",
             "children": [
               {
                 "title": "Working remotely",
@@ -139,6 +139,30 @@
                   "trust"
                 ],
                 "excerpt": "We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers t"
+              },
+              {
+                "title": "Join Us",
+                "slug": "/work/company/join-us",
+                "order": 666,
+                "icon": "account",
+                "image": "/png/og.png",
+                "type": "file",
+                "tags": [
+                  "team"
+                ],
+                "excerpt": "Whether you're a startup with a short deadline or an enterprise with complex workflows, we can help. Get in touch for it's a truth universally acknowledged that a Software Developer in possession of a"
+              },
+              {
+                "title": "Work With Us",
+                "slug": "/work/company/work-with-us",
+                "order": 777,
+                "icon": "account",
+                "image": "/png/og.png",
+                "type": "file",
+                "tags": [
+                  "team"
+                ],
+                "excerpt": "We take on a limited number of new projects each month. If you need something done we’d love to hear about it. Find out if we're a . We're always looking for collaborators, contributors, and good idea"
               }
             ]
           },
