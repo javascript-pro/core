@@ -83,14 +83,18 @@ export async function POST(req: NextRequest) {
 
       function getSize(label: string) {
         const s = sizesData.sizes.size.find((sz: any) => sz.label === label);
-        return s ? { src: s.source, width: +s.width, height: +s.height } : undefined;
+        return s
+          ? { src: s.source, width: +s.width, height: +s.height }
+          : undefined;
       }
       function getBestSquare() {
         return getSize('Large Square') || getSize('Square');
       }
 
       const cleanSizes = (sizes: any) =>
-        Object.fromEntries(Object.entries(sizes).filter(([_, v]) => v !== undefined));
+        Object.fromEntries(
+          Object.entries(sizes).filter(([_, v]) => v !== undefined),
+        );
 
       return {
         flickrId: p.id,
@@ -139,14 +143,13 @@ export async function POST(req: NextRequest) {
     await albumRef.set({ [flickrId]: albumRecord }, { merge: true });
 
     return NextResponse.json({
-  status: 'success',
-  message:
-    mode === 'update'
-      ? `Album "${albumInfo.title._content}" updated with ${validPhotos.length} photos`
-      : `Album "${albumInfo.title._content}" created with ${validPhotos.length} photos`,
-  album: albumRecord,
-});
-
+      status: 'success',
+      message:
+        mode === 'update'
+          ? `Album "${albumInfo.title._content}" updated with ${validPhotos.length} photos`
+          : `Album "${albumInfo.title._content}" created with ${validPhotos.length} photos`,
+      album: albumRecord,
+    });
   } catch (err: any) {
     console.error('Album handler error:', err);
     return NextResponse.json(

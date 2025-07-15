@@ -1,60 +1,97 @@
 'use client';
 
 import * as React from 'react';
-import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { doc, onSnapshot } from 'firebase/firestore';
 import { db } from '../../../lib/firebase';
-import { TAlbumCard } from '../types';
 import {
   Box,
   ButtonBase,
-  CardMedia,
   CardActions,
   CardContent,
   CardHeader,
-  Skeleton,
+  CardMedia,
   Typography,
+  CircularProgress,
 } from '@mui/material';
-import { MightyButton, useDispatch, useSlice } from '../../../../gl-core';
+import {
+  MightyButton,
+  useDispatch,
+  useSlice,
+  toggleFeedback,
+} from '../../../../gl-core';
 import { setLatestIndex } from '../../Flickr';
 
-export default function FlickrAlbum({}: TAlbumCard) {
+export default function FlickrAlbum({ album }: { album?: string }) {
   const dispatch = useDispatch();
   const router = useRouter();
   const { latestIndex } = useSlice().flickr;
+
   const [photos, setPhotos] = useState<any[]>([]);
   const [imageLoaded, setImageLoaded] = useState(false);
   const [hasImageError, setHasImageError] = useState(false);
 
+  // small artificial delay (ms)
+  const DELAY_MS = 200;
+
   useEffect(() => {
-    const unsub = onSnapshot(doc(db, 'flickr', 'latest'), (docSnap) => {
-      if (docSnap.exists()) {
-        const data = docSnap.data();
-        if (Array.isArray(data?.photos)) {
-          setPhotos(data.photos);
-          // dispatch(
-          //   toggleFeedback({
-          //     severity: 'info',
-          //     title: 'Got Updates',
-          //     description: 'Latest Photos',
-          //   }),
-          // );
-        }
+    if (!album) {
+      dispatch(
+        toggleFeedback({
+          severity: 'warning',
+          title: 'album id not provided',
+          description: 'No album id was passed to FlickrAlbum component.',
+        }),
+      );
+    }
+  }, [album, dispatch]);
+
+  useEffect(() => {
+    if (!album) return;
+
+    const unsub = onSnapshot(doc(db, 'flickr', 'albums'), (docSnap) => {
+      if (!docSnap.exists()) {
+        dispatch(
+          toggleFeedback({
+            severity: 'error',
+            title: 'Albums document not found',
+            description: 'The albums document does not exist in Firestore.',
+          }),
+        );
+        return;
       }
+
+      const data = docSnap.data();
+      const albumData = data[album];
+
+      if (!albumData) {
+        dispatch(
+          toggleFeedback({
+            severity: 'error',
+            title: `Flickr album ${album} not found`,
+            description: 'This album id is not in the albums document.',
+          }),
+        );
+        setPhotos([]);
+        return;
+      }
+
+      const newPhotos = Array.isArray(albumData.photos) ? albumData.photos : [];
+      setPhotos(newPhotos);
     });
 
     return () => unsub();
-  }, [dispatch]);
-
-  const currentPhoto = photos[latestIndex] || null;
+  }, [album, dispatch]);
 
   useEffect(() => {
-    if (currentPhoto) {
+    if (photos.length > 0 && latestIndex < photos.length) {
       setImageLoaded(false);
       setHasImageError(false);
     }
-  }, [currentPhoto]);
+  }, [photos, latestIndex]);
+
+  const currentPhoto = photos[latestIndex] || null;
 
   const handlePrev = () => {
     if (latestIndex > 0) {
@@ -63,8 +100,11 @@ export default function FlickrAlbum({}: TAlbumCard) {
   };
 
   const handleNext = () => {
-    if (latestIndex < photos.length - 1) {
-      dispatch(setLatestIndex(latestIndex + 1));
+    if (photos.length > 0) {
+      const nextIndex = latestIndex + 1;
+      if (nextIndex < photos.length) {
+        dispatch(setLatestIndex(nextIndex));
+      }
     }
   };
 
@@ -72,13 +112,13 @@ export default function FlickrAlbum({}: TAlbumCard) {
     dispatch(setLatestIndex(0));
   };
 
-  const width = currentPhoto?.sizes?.medium?.width;
-  const height = currentPhoto?.sizes?.medium?.height;
-  const aspectRatio = width && height ? height / width : 0.75;
+  const width = currentPhoto?.sizes?.medium?.width || 4;
+  const height = currentPhoto?.sizes?.medium?.height || 3;
 
   return (
     <>
       <CardActions>
+        <Box sx={{ flexGrow: 1 }} />
         <MightyButton
           color="primary"
           mode="icon"
@@ -96,17 +136,8 @@ export default function FlickrAlbum({}: TAlbumCard) {
           disabled={latestIndex === 0}
         />
         <MightyButton
+          color="primary"
           mode="icon"
-          color="primary"
-          label="Flickr"
-          icon="flickr"
-          onClick={() => {
-            router.push('/flickr');
-          }}
-          disabled={latestIndex >= photos.length - 1}
-        />
-        <MightyButton
-          color="primary"
           label="Next"
           icon="right"
           onClick={handleNext}
@@ -116,44 +147,23 @@ export default function FlickrAlbum({}: TAlbumCard) {
       </CardActions>
 
       <CardContent>
-        <Box sx={{ my: 1 }}>
-          {currentPhoto ? (
+        <Box sx={{ my: 1, position: 'relative' }}>
+          {photos.length > 0 && currentPhoto ? (
             <Box sx={{ position: 'relative' }}>
+              {/* Loading spinner overlay */}
               {!imageLoaded && !hasImageError && (
-                <>
-                  <Skeleton
-                    variant="rectangular"
-                    animation="pulse"
-                    sx={{
-                      width: '100%',
-                      aspectRatio: `${width} / ${height}`,
-                      borderRadius: 0,
-                      minHeight: 100,
-                    }}
-                  />
-
-                  <Box
-                    sx={{
-                      position: 'absolute',
-                      top: 0,
-                      left: 0,
-                      width: '100%',
-                      height: '100%',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      pointerEvents: 'none',
-                    }}
-                  >
-                    <Typography
-                      variant="caption"
-                      color="text.secondary"
-                      sx={{ px: 2, py: 2 }}
-                    >
-                      Loading &ldquo;{currentPhoto.title || 'Photo'}&rdquo;...
-                    </Typography>
-                  </Box>
-                </>
+                <Box
+                  sx={{
+                    position: 'relative',
+                    width: '100%',
+                    aspectRatio: `${width} / ${height}`,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <CircularProgress />
+                </Box>
               )}
 
               {!hasImageError && (
@@ -171,12 +181,16 @@ export default function FlickrAlbum({}: TAlbumCard) {
                     alt={currentPhoto.title || 'Photo'}
                     src={currentPhoto.sizes?.medium?.src}
                     component="img"
-                    onLoad={() => setImageLoaded(true)}
+                    onLoad={() => {
+                      // introduce slight delay before showing image
+                      setTimeout(() => setImageLoaded(true), DELAY_MS);
+                    }}
                     onError={() => setHasImageError(true)}
                     sx={{
                       width: '100%',
                       aspectRatio: `${width} / ${height}`,
                       borderRadius: 0,
+                      display: 'block',
                     }}
                   />
                 </ButtonBase>
@@ -191,7 +205,18 @@ export default function FlickrAlbum({}: TAlbumCard) {
               )}
             </Box>
           ) : (
-            <Skeleton variant="rectangular" width="100%" height={200} />
+            // no photos at all
+            <Box
+              sx={{
+                width: '100%',
+                minHeight: 200,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <CircularProgress />
+            </Box>
           )}
 
           <CardHeader

@@ -172,7 +172,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
             {/* FlickrAlbum on desktop in right column */}
             {!isMobile && (
               <Grid size={{ md: 3, lg: 4 }}>
-                <FlickrAlbum />
+                <FlickrAlbum album="72177720327572144" />
               </Grid>
             )}
           </Grid>

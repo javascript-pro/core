@@ -160,7 +160,11 @@ export default function FlickrAdmin() {
               options={options}
               value={options.find((o) => o.id === inputAlbumId) || null}
               onChange={(e, newValue) => {
-                if (newValue && typeof newValue !== 'string' && 'id' in newValue) {
+                if (
+                  newValue &&
+                  typeof newValue !== 'string' &&
+                  'id' in newValue
+                ) {
                   setInputAlbumId(newValue.id);
                 } else if (typeof newValue === 'string') {
                   setInputAlbumId(newValue);
@@ -244,7 +248,10 @@ export default function FlickrAdmin() {
                       }}
                     >
                       {selectedAlbum.photos.map((photo) => (
-                        <li key={photo.flickrId} style={{ marginBottom: '4px' }}>
+                        <li
+                          key={photo.flickrId}
+                          style={{ marginBottom: '4px' }}
+                        >
                           <Typography variant="body2" noWrap>
                             {photo.title || '(untitled photo)'}
                           </Typography>

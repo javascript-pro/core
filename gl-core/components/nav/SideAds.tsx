@@ -22,13 +22,13 @@ export default function SideAds() {
         }}
       />
 
-      <Advert
+      {/* <Advert
         icon="pdf"
         title={'AI PDF'}
         onClick={() => {
           dispatch(routeTo('/fallmanager', router));
         }}
-      />
+      /> */}
 
       {/* <Advert
         icon="openai"
