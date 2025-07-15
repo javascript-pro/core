@@ -138,10 +138,13 @@ import CaseClockIcon from '@mui/icons-material/WorkHistoryOutlined';
 import TickIcon from '@mui/icons-material/DoneOutline';
 import FilesIcon from '@mui/icons-material/Topic';
 import PDFIcon from '@mui/icons-material/PictureAsPdf';
+import UserIcon from '@mui/icons-material/Face';
 
 export type TIcon = {
   icon:
     | 'more'
+    | 'user'
+    | 'users'
     | 'pdf'
     | 'tick'
     | 'case'
@@ -343,6 +346,13 @@ export default function Icon({ icon, color }: TIcon) {
 
     case 'plus':
       iconFragment = <AddIcon color={color} />;
+      break;
+
+          case 'user':
+      iconFragment = <UserIcon color={color} />;
+      break;
+          case 'users':
+      iconFragment = <UserIcon color={color} />;
       break;
 
     case 'add':

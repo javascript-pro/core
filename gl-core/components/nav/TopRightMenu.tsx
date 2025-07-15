@@ -83,6 +83,18 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
         transformOrigin={{ vertical: 'top', horizontal: 'right' }}
       >
+        <MenuItem
+          onClick={() => {
+            dispatch(routeTo('/admin', router));
+          }}
+          sx={{ my: 2 }}
+        >
+          <ListItemIcon>
+            <Icon icon="admin" />
+          </ListItemIcon>
+          <ListItemText primary={'Admin'} />
+        </MenuItem>
+
         {/* Share Menu */}
         <MenuItem
           sx={{ width: 250, my: 2 }}
@@ -113,18 +125,6 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
 
         {/* Theme Switcher */}
         <ModeSwitch />
-
-        <MenuItem
-          onClick={() => {
-            dispatch(routeTo('/fallmanager', router));
-          }}
-          sx={{ my: 2 }}
-        >
-          <ListItemIcon>
-            <Icon icon="pdf" />
-          </ListItemIcon>
-          <ListItemText primary={'AI PDF'} />
-        </MenuItem>
 
         {/* Sign out */}
         {user ? (

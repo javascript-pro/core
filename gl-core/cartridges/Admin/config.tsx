@@ -25,23 +25,23 @@ export const config: TConfig = {
   language: 'de',
   themeMode: 'dark',
   themes: {
-    light: {
-      mode: 'light',
-      primary: '#12836aff',
-      secondary: '#414142',
-      background: '#eee',
-      paper: '#FFFFFF',
-      text: '#414142',
-      border: '#414142',
+    "light": {
+      "mode": "light",
+      "primary": "#5E7978",
+      "secondary": "#5E7978",
+      "background": "#FFF",
+      "paper": "#FFF",
+      "text": "#303030",
+      "border": "#5E7978"
     },
-    dark: {
-      mode: 'dark',
-      primary: '#34d0f7',
-      secondary: '#4bff60',
-      background: '#000',
-      paper: '#000',
-      text: '#fff',
-      border: '#FFF',
-    },
+    "dark": {
+      "mode": "dark",
+      "primary": "#A6D4D1",
+      "secondary": "#e8c10b",
+      "background": "#5E7978",
+      "paper": "#5E7978",
+      "text": "#FFFFFF",
+      "border": "#C09F52"
+    }
   },
 };

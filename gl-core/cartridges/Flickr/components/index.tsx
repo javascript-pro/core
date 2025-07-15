@@ -5,4 +5,11 @@ import PhotoPopup from './PhotoPopup';
 import FlickrLatest from './FlickrLatest';
 import FlickrAlbum from './FlickrAlbum';
 
-export { FlickrAlbum, FlickrLatest, AlbumCard, PhotoCard, PhotoPopup, AlbumSelecta };
+export {
+  FlickrAlbum,
+  FlickrLatest,
+  AlbumCard,
+  PhotoCard,
+  PhotoPopup,
+  AlbumSelecta,
+};
