@@ -7,15 +7,14 @@ import { useRouter, usePathname } from 'next/navigation';
 import {
   CssBaseline,
   Box,
-  List,
-  ListItemButton,
-  ListItemText,
-  ListItemIcon,
-  CardHeader,
   CardContent,
 } from '@mui/material';
-import { Theme, useDispatch, MightyButton, routeTo, Icon } from '../../../gl-core';
-import { Layout, FlickrAdmin } from '../Admin';
+import {
+  Theme,
+  useDispatch,
+  routeTo,
+} from '../../../gl-core';
+import { Layout, FlickrAdmin, Header, MenuList } from '../Admin';
 
 export default function Admin() {
   const dispatch = useDispatch();
@@ -25,63 +24,14 @@ export default function Admin() {
 
   const handleListItemClick = (route: string) => {
     dispatch(routeTo(route, router));
-  }
+  };
 
   return (
     <Theme theme={currentTheme as any}>
       <CssBaseline />
       <Layout>
-        { pathname === '/admin/flickr' ? <FlickrAdmin /> : <Box>
-          <CardHeader 
-            avatar={<>
-              <MightyButton
-                mode="icon"
-                icon="home"
-                label="Home"
-                onClick={() => {
-                  handleListItemClick('/');
-                }}
-              />
-              <Box sx={{mt:1}}>
-                <Icon icon="admin" color="primary" />
-              </Box>
-            </>}
-          />
-          <CardContent>
-            <List>
-              <ListItemButton>
-                <ListItemIcon>
-                  <Icon icon="users" color="primary" />
-                </ListItemIcon>
-                <ListItemText
-                  primary='Users'
-                />
-              </ListItemButton>
-              <ListItemButton>
-                <ListItemIcon>
-                  <Icon icon="bouncer" color="primary" />
-                </ListItemIcon>
-                <ListItemText
-                  primary='Bouncer'
-                />
-              </ListItemButton>
-              <ListItemButton
-                onClick={() => {
-                  // console.log("Home");
-                  handleListItemClick('/admin/flickr');
-                }}
-                >
-                <ListItemIcon>
-                  <Icon icon="flickr" color="primary" />
-                </ListItemIcon>
-                <ListItemText
-                  primary='Flickr'
-                />
-              </ListItemButton>
-            </List>
-          </CardContent>
-        </Box> }
-        
+        <Header />
+        { pathname === '/admin/flickr' ? <FlickrAdmin /> : <MenuList /> }
       </Layout>
     </Theme>
   );

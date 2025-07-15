@@ -348,10 +348,10 @@ export default function Icon({ icon, color }: TIcon) {
       iconFragment = <AddIcon color={color} />;
       break;
 
-          case 'user':
+    case 'user':
       iconFragment = <UserIcon color={color} />;
       break;
-          case 'users':
+    case 'users':
       iconFragment = <UserIcon color={color} />;
       break;
 

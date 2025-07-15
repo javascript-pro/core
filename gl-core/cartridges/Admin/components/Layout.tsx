@@ -37,12 +37,12 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth="sm">
+      <Container maxWidth="md">
         <Box sx={{ pb: '50px' }}>{children}</Box>
       </Container>
       <AppBar position="fixed" color="primary" sx={{ top: 'auto', bottom: 0 }}>
         <Toolbar>
-          <IconButton color="inherit" aria-label="open drawer">
+          {/* <IconButton color="inherit" aria-label="open drawer">
             <MenuIcon />
           </IconButton>
           <StyledFab color="secondary" aria-label="add">
@@ -54,7 +54,7 @@ export default function Layout({ children }: LayoutProps) {
           </IconButton>
           <IconButton color="inherit">
             <MoreIcon />
-          </IconButton>
+          </IconButton> */}
         </Toolbar>
       </AppBar>
     </React.Fragment>

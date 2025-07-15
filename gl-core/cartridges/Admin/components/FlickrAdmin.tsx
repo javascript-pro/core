@@ -3,17 +3,10 @@
 'use client';
 
 import * as React from 'react';
-import {
-  Box,
-} from '@mui/material';
+import { Box } from '@mui/material';
 // import { Theme, useDispatch, MightyButton, Icon } from '../../../../gl-core';
 // import { useAdminSlice } from '../../Admin';
 
-
 export default function FlickrAdmin() {
-  return (
-    <Box>
-      Flickr Admin
-    </Box>
-  );
+  return <Box sx={{m:2}}>Flickr Admin</Box>;
 }
