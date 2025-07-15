@@ -108,8 +108,8 @@ export const lingua: any = {
     de: 'Adresse',
   },
   APP_TITLE: {
-    en: 'Case manager',
-    de: 'Fallmanager',
+    en: 'PDF manager',
+    de: 'PDFmanager',
   },
 
   GOLDLABEL_HOME: {

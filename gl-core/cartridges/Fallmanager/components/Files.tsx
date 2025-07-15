@@ -242,8 +242,16 @@ export default function Files() {
             columns={columns}
             onRowClick={handleRowClick}
             getRowHeight={() => 'auto'}
-            sortModel={[{ field: 'uploadedAt', sort: 'desc' }]}
-            columnVisibilityModel={{ uploadedAt: false }}
+            initialState={{
+              sorting: {
+                sortModel: [{ field: 'uploadedAt', sort: 'desc' }],
+              },
+              columns: {
+                columnVisibilityModel: {
+                  uploadedAt: false,
+                },
+              },
+            }}
             sx={{
               '& .MuiDataGrid-row': {
                 cursor: 'pointer',
