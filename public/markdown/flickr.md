@@ -49,8 +49,6 @@ This route is statically typed and ready to use from both client and server cont
 import { FlickrAlbum } from 'gl-core';
 
 export default function MyComponent() {
-  return (
-    <FlickrAlbum album="72177720327572144" />
-  );
+  return <FlickrAlbum album="72177720327572144" />;
 }
 ```

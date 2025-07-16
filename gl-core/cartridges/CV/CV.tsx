@@ -35,7 +35,7 @@ export default function CV({
   const { appMode, showJD } = cvSlice;
   const router = useRouter();
   const isMobile = useIsMobile();
-  console.log('markdown', markdown);
+  
   React.useEffect(() => {
     if (markdown) {
       dispatch(setCVKey('cvMarkdown', markdown));

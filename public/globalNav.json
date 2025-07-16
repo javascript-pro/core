@@ -51,7 +51,7 @@
           "REST",
           "Next.js"
         ],
-        "excerpt": "You can customize the layout and image rendering through the options prop.\n\n Support for albums and sets\n Lightbox view\n Lazy loading for infinite scroll\n\n Flickr Photo Cartridge\n\nA React component fo"
+        "excerpt": "Flickr Photo Cartridge\n\nA React component for clean, fastloading image galleries. Provides an easy way to display recent photos from a Flickr account. It connects to a serverside API route in your Nex"
       },
       {
         "title": "Work",
@@ -87,6 +87,43 @@
             "image": "/png/og.png",
             "type": "file",
             "excerpt": "Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or b"
+          },
+          {
+            "title": "Fullstack JavaScript Developer",
+            "description": "Match your Job to our Curriculum Vitae with AI",
+            "slug": "/work/cv",
+            "order": 2,
+            "icon": "openai",
+            "image": "https://live.staticflickr.com/65535/53519132411_1fc305c2dc_b.jpg",
+            "type": "folder",
+            "tags": [
+              "CV",
+              "jobs",
+              "work",
+              "resume",
+              "AI",
+              "OpenAI"
+            ],
+            "excerpt": "Fullstack JavaScript\n\nOver 20 years of experience delivering scalable web applications across startups, enterprises, and remotefirst teams in the UK, Europe, and Australia and beyond. Deep expertise i",
+            "children": [
+              {
+                "title": "About C.V.",
+                "slug": "/work/cv/about",
+                "order": 130,
+                "icon": "openai",
+                "image": "/png/og.png",
+                "type": "file",
+                "tags": [
+                  "CV",
+                  "jobs",
+                  "work",
+                  "resume",
+                  "AI",
+                  "OpenAI"
+                ],
+                "excerpt": "Applying for jobs can be time consuming\n\nEach role requires tailoring a cover letter or rewording a CV to match a job description. As developers, we know the real problem isn’t effort — it’s clarity. "
+              }
+            ]
           },
           {
             "title": "Public API",
