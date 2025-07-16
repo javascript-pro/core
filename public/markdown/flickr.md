@@ -5,7 +5,7 @@ description: React component to load and display the latest Flickr photos with c
 order: 3
 icon: flickr
 tags: flickr, free, api, REST, Next.js
-image: https://live.staticflickr.com/65535/54538420041_7ae61cc6e0_b.jpg
+image: /png/n64/flickr.png
 ---
 
 ### Flickr Photo Cartridge

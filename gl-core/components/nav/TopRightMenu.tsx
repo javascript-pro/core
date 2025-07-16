@@ -14,9 +14,7 @@ import {
   DialogTitle,
   DialogContent,
   IconButton,
-  Card,
   CardHeader,
-  CardMedia,
 } from '@mui/material';
 import {
   Icon,
@@ -30,7 +28,7 @@ import {
   useSlice,
   useIsMobile,
 } from '../../../gl-core';
-import { firebaseAuth, useUser } from '../../cartridges/Bouncer';
+import { firebaseAuth } from '../../cartridges/Bouncer';
 
 export type TTopRightMenu = {
   frontmatter?: {
@@ -45,7 +43,6 @@ export type TTopRightMenu = {
 export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
   const dispatch = useDispatch();
   const router = useRouter();
-  const user = useUser();
   const { hideImage } = useSlice();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -186,9 +183,12 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
         <DialogContent>
           {frontmatter && (
             <Box sx={{ mb: 1 }}>
-              
               <CardHeader
-                avatar={frontmatter.icon ? <Icon icon={frontmatter.icon as any} /> : undefined}
+                avatar={
+                  frontmatter.icon ? (
+                    <Icon icon={frontmatter.icon as any} />
+                  ) : undefined
+                }
                 title={frontmatter.title}
                 subheader={frontmatter.description}
               />
@@ -201,7 +201,7 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
                     width={1200}
                     height={630}
                     style={{ width: '100%', height: 'auto' }}
-                  />                 
+                  />
                 </>
                 // <CardMedia
                 //   component="img"
@@ -210,8 +210,6 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
                 //   alt={frontmatter.title || 'Preview image'}
                 // />
               )}
-
-
             </Box>
           )}
           <ShareMenu frontmatter={frontmatter} />
