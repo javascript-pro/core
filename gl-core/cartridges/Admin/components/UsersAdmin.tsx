@@ -23,9 +23,5 @@ export default function UsersAdmin() {
   //   dispatch(routeTo(route, router));
   // };
 
-  return (
-    <Box>
-      UsersAdmin
-    </Box>
-  );
+  return <Box>UsersAdmin</Box>;
 }

@@ -190,7 +190,7 @@ export type TIcon = {
     | 'youtube'
     | 'boot'
     | 'hide'
-        | 'show'
+    | 'show'
     | 'save'
     | 'filters'
     | 'filter'
@@ -425,7 +425,7 @@ export default function Icon({ icon, color }: TIcon) {
     case 'hide':
       iconFragment = <HideIcon color={color} />;
       break;
-          case 'show':
+    case 'show':
       iconFragment = <ShowIcon color={color} />;
       break;
 

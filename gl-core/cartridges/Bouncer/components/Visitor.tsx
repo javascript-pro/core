@@ -66,15 +66,7 @@ export default function Visitor() {
   return (
     <Box sx={{ display: 'flex', justifyContent: 'center', mt: 1 }}>
       {currentUser ? (
-        <>Hello</>
-        // <MightyButton
-        //   mode={isMobile ? 'icon' : 'button'}
-        //   label="Sign out"
-        //   variant="contained"
-        //   color="primary"
-        //   icon="signout"
-        //   onClick={handleSignout}
-        // />
+        <></>
       ) : (
         <>
           <MightyButton

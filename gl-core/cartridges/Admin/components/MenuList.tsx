@@ -26,7 +26,6 @@ export default function MenuList() {
   return (
     <Box>
       <List>
-        
         {/* <ListItemButton>
           <ListItemIcon>
             <Icon icon="bouncer" color="primary" />
@@ -55,7 +54,6 @@ export default function MenuList() {
           </ListItemIcon>
           <ListItemText primary="Users" />
         </ListItemButton>
-
       </List>
     </Box>
   );

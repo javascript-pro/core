@@ -91,7 +91,8 @@ export default function Signin({ onClose }: SignInProps) {
         toggleFeedback({
           severity: 'info',
           title: 'Sign in failed',
-          description: e?.message || 'An unknown error occurred while signing in.',
+          description:
+            e?.message || 'An unknown error occurred while signing in.',
         }),
       );
     } finally {
