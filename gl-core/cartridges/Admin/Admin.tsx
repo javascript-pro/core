@@ -6,7 +6,7 @@ import { config } from './config';
 import { useRouter, usePathname } from 'next/navigation';
 import { CssBaseline, Box, CardContent } from '@mui/material';
 import { Theme, useDispatch, routeTo } from '../../../gl-core';
-import { Layout, FlickrAdmin, Header, MenuList } from '../Admin';
+import { Layout, FlickrAdmin, Header, MenuList, UsersAdmin } from '../Admin';
 
 export default function Admin() {
   const dispatch = useDispatch();
@@ -23,7 +23,9 @@ export default function Admin() {
       <CssBaseline />
       <Layout>
         <Header />
-        {pathname === '/admin/flickr' ? <FlickrAdmin /> : <MenuList />}
+        {pathname === '/admin/users' && <UsersAdmin />}
+        {pathname === '/admin/flickr' && <FlickrAdmin />}
+        {pathname === '/admin' && <MenuList />}
       </Layout>
     </Theme>
   );

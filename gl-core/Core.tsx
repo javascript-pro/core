@@ -164,7 +164,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
               {/* FlickrAlbum on mobile directly below content */}
               {isMobile && (
                 <Box sx={{ mt: 2 }}>
-                  <FlickrAlbum />
+                  <FlickrAlbum album="72177720327572144"/>
                 </Box>
               )}
             </Grid>

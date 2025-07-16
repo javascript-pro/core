@@ -3,7 +3,7 @@ import * as React from 'react';
 import { useRouter } from 'next/navigation';
 import {
   Box,
-  IconButton,
+  Fab,
   Menu,
   MenuItem,
   ListItemIcon,
@@ -39,8 +39,7 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
   const user = useUser();
   const { hideImage } = useSlice();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const [shareOpen, setShareOpen] = React.useState(false);
-  const [clientsOpen, setClientsOpen] = React.useState(false);
+  const [shareOpen, setShareOpen] = React.useState(true);
   const open = Boolean(anchorEl);
   const version = useVersion();
 
@@ -51,7 +50,6 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
   const handleClose = () => {
     setAnchorEl(null);
     setShareOpen(false);
-    setClientsOpen(false);
   };
 
   const handleToggleHideImage = () => {
@@ -71,17 +69,28 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
 
   return (
     <>
-      <IconButton onClick={handleClick}>
-        <Icon icon="more" />
-      </IconButton>
+      {/* Floating Action Button in bottom-right corner */}
+      <Fab
+        color="primary"
+        onClick={handleClick}
+        sx={{
+          position: 'fixed',
+          bottom: 16,
+          right: 16,
+          zIndex: (theme) => theme.zIndex.modal + 2,
+        }}
+      >
+        <Icon icon="menu" />
+      </Fab>
 
       <Menu
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
         onClick={handleClose}
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-        transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+        anchorOrigin={{ vertical: 'top', horizontal: 'left' }}
+        transformOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+        sx={{ mt: -1 }}
       >
         <MenuItem
           onClick={() => {
@@ -94,6 +103,9 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           </ListItemIcon>
           <ListItemText primary={'Admin'} />
         </MenuItem>
+
+        {/* Theme Switcher */}
+        <ModeSwitch />
 
         {/* Share Menu */}
         <MenuItem
@@ -116,25 +128,14 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           </Box>
         </Collapse>
 
-        <MenuItem onClick={handleToggleHideImage} sx={{ my: 2 }}>
+        {/* <MenuItem onClick={handleToggleHideImage} sx={{ my: 2 }}>
           <ListItemIcon>
             <Icon icon="photo" />
           </ListItemIcon>
           <ListItemText primary={`${hideImage ? 'Show' : 'Hide'} image`} />
-        </MenuItem>
+        </MenuItem> */}
 
-        {/* Theme Switcher */}
-        <ModeSwitch />
 
-        {/* Sign out */}
-        {user ? (
-          <MenuItem onClick={handleSignout} sx={{ my: 2 }}>
-            <ListItemIcon>
-              <Icon icon="signout" />
-            </ListItemIcon>
-            <ListItemText primary={'Sign out'} />
-          </MenuItem>
-        ) : null}
 
         {/* App Version */}
         <Box sx={{ pr: 3, py: 1, textAlign: 'right' }}>

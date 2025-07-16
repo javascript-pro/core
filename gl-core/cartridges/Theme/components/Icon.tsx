@@ -102,6 +102,7 @@ import DockerIcon from '@mui/icons-material/StorageOutlined';
 import SignupIcon from '@mui/icons-material/StorageOutlined';
 import FullscreenIcon from '@mui/icons-material/FullscreenOutlined';
 import HideIcon from '@mui/icons-material/VisibilityOffOutlined';
+import ShowIcon from '@mui/icons-material/VisibilityOutlined';
 import BootIcon from '@mui/icons-material/DoNotStepOutlined';
 import YoutubeIcon from '@mui/icons-material/YouTube';
 import ForgetIcon from '@mui/icons-material/PsychologyOutlined';
@@ -189,6 +190,7 @@ export type TIcon = {
     | 'youtube'
     | 'boot'
     | 'hide'
+        | 'show'
     | 'save'
     | 'filters'
     | 'filter'
@@ -423,6 +425,10 @@ export default function Icon({ icon, color }: TIcon) {
     case 'hide':
       iconFragment = <HideIcon color={color} />;
       break;
+          case 'show':
+      iconFragment = <ShowIcon color={color} />;
+      break;
+
     case 'why':
       iconFragment = <SearchIcon color={color} />;
       break;
