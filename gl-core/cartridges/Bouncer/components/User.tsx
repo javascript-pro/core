@@ -2,6 +2,7 @@
 'use client';
 
 import * as React from 'react';
+import { useRouter } from 'next/navigation';
 import {
   Box,
   Avatar,
@@ -9,16 +10,20 @@ import {
   Dialog,
   DialogContent,
   CircularProgress,
-  Card,
   CardHeader,
-  Typography,
   Alert,
   ButtonBase,
   ListItemButton,
   ListItemIcon,
   ListItemText,
 } from '@mui/material';
-import { useDispatch, MightyButton, useIsMobile, Icon } from '../../../../gl-core';
+import {
+  useDispatch,
+  MightyButton,
+  useIsMobile,
+  routeTo,
+  Icon,
+} from '../../../../gl-core';
 import { firebaseAuth } from '../../Bouncer';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { SignIn, setUid, useUid } from '../../Bouncer';
@@ -29,6 +34,7 @@ export default function User() {
   const dispatch = useDispatch();
   const [loading, setLoading] = React.useState(true);
   const uid = useUid();
+  const router = useRouter();
 
   const [userDoc, setUserDoc] = React.useState<any | null>(null);
   const [userDocNotFound, setUserDocNotFound] = React.useState(false);
@@ -84,6 +90,12 @@ export default function User() {
   };
 
   const handleCloseMenu = () => {
+    setAnchorEl(null);
+    setDialogOpen(false);
+  };
+
+  const handleAdminClick = () => {
+    dispatch(routeTo('/admin', router));
     setAnchorEl(null);
     setDialogOpen(false);
   };
@@ -144,7 +156,14 @@ export default function User() {
                 anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
                 transformOrigin={{ vertical: 'top', horizontal: 'center' }}
               >
-                <ListItemButton onClick={handleSignout} sx={{width: 200}}>
+                <ListItemButton onClick={handleAdminClick} sx={{ width: 200 }}>
+                  <ListItemIcon>
+                    <Icon icon="admin" />
+                  </ListItemIcon>
+                  <ListItemText primary="Admin" />
+                </ListItemButton>
+
+                <ListItemButton onClick={handleSignout}>
                   <ListItemIcon>
                     <Icon icon="signout" />
                   </ListItemIcon>

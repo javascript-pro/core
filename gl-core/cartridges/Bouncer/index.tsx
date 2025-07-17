@@ -16,4 +16,11 @@ export { initialStateBouncer };
 export { Bouncer, SignoutButton, Authed, AuthForm, User, SignIn };
 export { useBouncer, useUid, useEmail };
 export { updateUser, firebaseAuth };
-export { setUid, bouncerKey, createBouncer, readBouncer, updateBouncer, deleteBouncer };
+export {
+  setUid,
+  bouncerKey,
+  createBouncer,
+  readBouncer,
+  updateBouncer,
+  deleteBouncer,
+};

@@ -1,3 +1,4 @@
+// /Users/goldlabel/GitHub/core/gl-core/lib/firebaseAdmin.ts
 import * as admin from 'firebase-admin';
 import {
   initializeApp,

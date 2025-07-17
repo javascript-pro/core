@@ -68,6 +68,7 @@
     "remark": "^15.0.1",
     "remark-directive": "^4.0.0",
     "remark-gfm": "^4.0.1",
+    "resend": "^4.6.0",
     "server-only": "0.0.1",
     "styled-components": "6.1.8",
     "unified": "^11.0.5",

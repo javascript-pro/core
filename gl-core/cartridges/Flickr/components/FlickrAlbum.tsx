@@ -117,7 +117,6 @@ export default function FlickrAlbum({ album }: { album?: string }) {
 
   return (
     <>
-      
       <CardContent>
         <Box sx={{ mt: 1, position: 'relative' }}>
           {photos.length > 0 && currentPhoto ? (
