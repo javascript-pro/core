@@ -89,7 +89,7 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
     <>
       {/* Floating Action Button in bottom-right corner */}
       <Fab
-        color="default"
+        color="primary"
         onClick={handleClick}
         sx={{
           position: 'fixed',

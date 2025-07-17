@@ -9,6 +9,8 @@ import {
   CardHeader,
   Typography,
   Avatar,
+  TextField,
+  Autocomplete,
 } from '@mui/material';
 import {
   DataGrid,
@@ -31,6 +33,7 @@ export default function AuthAdmin() {
   const [users, setUsers] = React.useState<TUserDoc[]>([]);
   const [checked, setChecked] = React.useState(false);
   const [errorMsg, setErrorMsg] = React.useState<string | null>(null);
+  const [filterValue, setFilterValue] = React.useState(''); // the search string
 
   React.useEffect(() => {
     const unsubscribe = onSnapshot(
@@ -55,22 +58,25 @@ export default function AuthAdmin() {
         setUsers([]);
         setErrorMsg(`Firebase Error: ${error.message}`);
         setChecked(true);
-      }
+      },
     );
     return () => unsubscribe();
   }, []);
 
+  const emptyHeader = () => <></>;
+
   const columns: GridColDef[] = [
     {
       field: 'avatar',
-      headerName: 'Avatar',
+      headerName: '',
       flex: 0.3,
       minWidth: 80,
       sortable: false,
+      renderHeader: emptyHeader,
       renderCell: (params: GridRenderCellParams<any, string>) => {
         const url = params.value;
         return url ? (
-          <Avatar src={url} alt="avatar" sx={{ width: 32, height: 32, mt:1 }} />
+          <Avatar src={url} alt="avatar" sx={{ width: 32, height: 32, mt: 1 }} />
         ) : (
           <Avatar sx={{ width: 32, height: 32 }} />
         );
@@ -78,22 +84,28 @@ export default function AuthAdmin() {
     },
     {
       field: 'displayName',
-      headerName: 'Display Name',
+      headerName: '',
       flex: 1,
       minWidth: 180,
+      renderHeader: emptyHeader,
+      sortable: true,
     },
     {
       field: 'email',
-      headerName: 'Email',
+      headerName: '',
       flex: 1,
       minWidth: 200,
+      renderHeader: emptyHeader,
+      sortable: true,
     },
     {
       field: 'level',
-      headerName: 'Level',
+      headerName: '',
       type: 'number',
       flex: 0.3,
       minWidth: 100,
+      renderHeader: emptyHeader,
+      sortable: true,
       valueFormatter: (params: any) =>
         params.value !== undefined && params.value !== null
           ? String(params.value)
@@ -101,13 +113,47 @@ export default function AuthAdmin() {
     },
   ];
 
+  // Filtered rows
+  const filteredRows = React.useMemo(() => {
+    if (!filterValue.trim()) return users;
+    const lower = filterValue.toLowerCase();
+    return users.filter(
+      (u) =>
+        u.email.toLowerCase().includes(lower) ||
+        u.displayName.toLowerCase().includes(lower),
+    );
+  }, [filterValue, users]);
+
+  // Options for Autocomplete (just for suggestions)
+  const options = users.map((u) => ({
+    id: u.id,
+    label: u.displayName || u.email,
+  }));
+
   return (
-    <Box sx={{ m: 2 }}>
+    <Box sx={{}}>
       <CardHeader
         avatar={<Icon icon="auth" />}
-        title="Authenticated Users"
-        subheader="List of all auth users"
-        sx={{ p: 0, mb: 2 }}
+        title={<Typography variant='h6'>Auth</Typography>}
+        action={<>
+        {/* Autocomplete to search */}
+          <Autocomplete
+            freeSolo
+            options={options}
+            getOptionLabel={(option) => (typeof option === 'string' ? option : option.label)}
+            onInputChange={(_, newInputValue) => {
+              setFilterValue(newInputValue);
+            }}
+            renderInput={(params) => (
+              <TextField
+                {...params}
+                label="Filter"
+                variant="filled"
+              />
+            )}
+            sx={{ mb: 2, width: 200 }}
+          />
+        </>}
       />
 
       {!checked ? (
@@ -123,23 +169,27 @@ export default function AuthAdmin() {
         </Box>
       ) : errorMsg ? (
         <Alert severity="error">{errorMsg}</Alert>
-      ) : users.length === 0 ? (
-        <Typography>No users found.</Typography>
+      ) : filteredRows.length === 0 ? (
+        <Typography>No users match your search.</Typography>
       ) : (
         <Box sx={{ height: 500, width: '100%' }}>
           <DataGrid
-            rows={users}
+            rows={filteredRows}
             columns={columns}
             getRowId={(row) => row.id}
             pageSizeOptions={[5, 10, 25]}
             initialState={{
               pagination: { paginationModel: { pageSize: 10, page: 0 } },
             }}
-            // make only rows selectable/clickable
             disableColumnMenu
             disableColumnSelector
             disableMultipleRowSelection
-            sx={{ border: 'none' }}
+            sx={{
+              border: 'none',
+              '& .MuiDataGrid-columnHeaders .MuiDataGrid-columnHeaderTitle': {
+                display: 'none',
+              },
+            }}
           />
         </Box>
       )}

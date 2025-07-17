@@ -16,6 +16,7 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  Typography,
 } from '@mui/material';
 import {
   useDispatch,
@@ -34,7 +35,7 @@ export default function Auth() {
   const dispatch = useDispatch();
   const [loading, setLoading] = React.useState(true);
   const uid = useUid();
-  console.log("uid", uid)
+  // console.log('uid', uid);
   const router = useRouter();
 
   const [userDoc, setUserDoc] = React.useState<any | null>(null);
@@ -116,7 +117,7 @@ export default function Auth() {
   // If logged in (uid present), show user card as clickable ButtonBase
   if (uid) {
     return (
-      <Box sx={{ display: 'flex', justifyContent: 'center', mt: 1 }}>
+      <Box sx={{ display: 'flex', justifyContent: 'center' }}>
         <Box>
           {userDocNotFound && (
             <Alert severity="warning" sx={{ mb: 2 }}>
@@ -136,15 +137,14 @@ export default function Auth() {
               >
                 <Box
                   sx={{
-                    minWidth: 280,
+                    width: 220,
                     textAlign: 'left',
-                    width: '100%',
                   }}
                 >
                   <CardHeader
-                    title={userDoc.displayName || 'Unnamed User'}
-                    subheader={userDoc.email || ''}
-                    avatar={<Avatar src={userDoc.avatar} />}
+                    title={<Typography variant="body2">{userDoc.displayName || 'Unnamed User'}</Typography>}
+                    subheader={<Typography variant="caption">{userDoc.email || ''}</Typography>}
+                    action={<Avatar sx={{width:32, height:32, mt: 1}} src={userDoc.avatar} />}
                   />
                 </Box>
               </ButtonBase>
@@ -157,7 +157,7 @@ export default function Auth() {
                 anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
                 transformOrigin={{ vertical: 'top', horizontal: 'center' }}
               >
-                <ListItemButton onClick={handleAdminClick} sx={{ width: 200 }}>
+                <ListItemButton onClick={handleAdminClick} sx={{ width: 225 }}>
                   <ListItemIcon>
                     <Icon icon="admin" />
                   </ListItemIcon>
@@ -183,7 +183,7 @@ export default function Auth() {
     <Box sx={{ display: 'flex', justifyContent: 'center', mt: 1 }}>
       <MightyButton
         label="Sign in"
-        variant="outlined"
+        variant="contained"
         color="primary"
         icon="signin"
         iconPlacement="right"
