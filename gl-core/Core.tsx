@@ -1,4 +1,4 @@
-// core/gl-core/Core.tsx
+// /Users/goldlabel/GitHub/core/gl-core/Core.tsx
 'use client';
 
 import config from './config.json';
@@ -107,7 +107,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
             {/* Side ads on desktop only */}
             {!isMobile && (
               <Grid size={{ md: 2, lg: 2 }}>
-                <Box sx={{ mx: 1 }}>
+                <Box sx={{ mx: 1, mt: 1 }}>
                   <SideAds />
                 </Box>
               </Grid>
@@ -150,7 +150,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
                     )}
                   </>
                 )}
-                <Box sx={{ px: isMobile ? 0.5 : 2, my: !isMobile ? 3 : 2 }}>
+
+                <Box sx={{ px: isMobile ? 0.5 : 2, my: !isMobile ? 2 : 2 }}>
                   {pathname !== '/' && <PageBreadcrumb />}
                 </Box>
               </Box>
@@ -163,7 +164,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
               {/* FlickrAlbum on mobile directly below content */}
               {isMobile && (
                 <Box sx={{ mt: 2 }}>
-                  <FlickrAlbum />
+                  <FlickrAlbum album="72177720327572144" />
                 </Box>
               )}
             </Grid>

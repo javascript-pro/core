@@ -1,16 +1,13 @@
 ---
 order: 2
 title: Fullstack JavaScript Developer
-title: Fullstack JavaScript
 description: Match your Job to our Curriculum Vitae with AI
 slug: /work/cv
 icon: openai
-image: /png/og.png
+image: https://live.staticflickr.com/65535/53519132411_1fc305c2dc_b.jpg
 tags: CV, jobs, work, resume, AI, OpenAI
 github: https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg
 ---
-
-## Fullstack JavaScript Developer
 
 ## Fullstack JavaScript
 

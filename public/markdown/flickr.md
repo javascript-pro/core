@@ -5,22 +5,12 @@ description: React component to load and display the latest Flickr photos with c
 order: 3
 icon: flickr
 tags: flickr, free, api, REST, Next.js
-image: https://live.staticflickr.com/65535/54538420041_7ae61cc6e0_b.jpg
+image: /png/n64/flickr.png
 ---
 
-> You can customize the layout and image rendering through the options prop.
+### Flickr Photo Cartridge
 
-- Support for albums and sets
-- Lightbox view
-- Lazy loading for infinite scroll
-
-## Flickr Photo Cartridge
-
-A React component for clean, fast-loading image galleries.
-
-### Overview
-
-Provides an easy way to display recent photos from a Flickr account. It connects to a server-side API route in your Next.js app that securely fetches Flickr data using your API key.
+A React component for clean, fast-loading image galleries. Provides an easy way to display recent photos from a Flickr account. It connects to a server-side API route in your Next.js app that securely fetches Flickr data using your API key.
 
 The component is designed to work within the App Router pattern and integrate seamlessly with MUI.
 
@@ -46,20 +36,19 @@ Returns a JSON array of the latest 100 photos uploaded to your configured Flickr
 
 This route is statically typed and ready to use from both client and server contexts.
 
+> You can customize the layout and image rendering through the options prop.
+
+- Support for albums and sets
+- Lightbox view
+- Lazy loading for infinite scroll
+
 ### Example Usage
 
 ```tsx
 'use client';
-import { Flickr } from 'gl-core';
+import { FlickrAlbum } from 'gl-core';
 
 export default function MyComponent() {
-  return (
-    <Flickr
-      options={{
-        key: 'value',
-        layout: 'grid',
-      }}
-    />
-  );
+  return <FlickrAlbum album="72177720327572144" />;
 }
 ```
