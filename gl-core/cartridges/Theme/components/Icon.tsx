@@ -356,6 +356,9 @@ export default function Icon({ icon, color }: TIcon) {
     case 'users':
       iconFragment = <UserIcon color={color} />;
       break;
+    case 'auth':
+      iconFragment = <UserIcon color={color} />;
+      break;
 
     case 'add':
       iconFragment = <AddIcon color={color} />;

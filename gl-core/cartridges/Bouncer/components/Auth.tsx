@@ -1,4 +1,4 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/components/User.tsx
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/components/Auth.tsx
 'use client';
 
 import * as React from 'react';
@@ -30,10 +30,11 @@ import { SignIn, setUid, useUid } from '../../Bouncer';
 import { db } from '../../../lib/firebase';
 import { doc, onSnapshot } from 'firebase/firestore';
 
-export default function User() {
+export default function Auth() {
   const dispatch = useDispatch();
   const [loading, setLoading] = React.useState(true);
   const uid = useUid();
+  console.log("uid", uid)
   const router = useRouter();
 
   const [userDoc, setUserDoc] = React.useState<any | null>(null);
@@ -59,7 +60,7 @@ export default function User() {
       setUserDocNotFound(false);
       return;
     }
-    const ref = doc(db, 'users', uid);
+    const ref = doc(db, 'auth', uid);
     const unsubscribe = onSnapshot(ref, (snap) => {
       if (snap.exists()) {
         setUserDoc(snap.data());
@@ -141,7 +142,7 @@ export default function User() {
                   }}
                 >
                   <CardHeader
-                    title={userDoc.name || 'Unnamed User'}
+                    title={userDoc.displayName || 'Unnamed User'}
                     subheader={userDoc.email || ''}
                     avatar={<Avatar src={userDoc.avatar} />}
                   />

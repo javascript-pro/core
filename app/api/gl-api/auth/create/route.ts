@@ -8,7 +8,7 @@ const FieldValue = admin.firestore.FieldValue;
 
 export async function POST(req: NextRequest) {
   try {
-    const { email, displayName, avatar, accessLevel } = await req.json();
+    const { email, displayName, avatar, level } = await req.json();
 
     if (!email) {
       return NextResponse.json(
@@ -41,7 +41,7 @@ export async function POST(req: NextRequest) {
       email,
       displayName: displayName || '',
       avatar: avatar || null,
-      accessLevel: typeof accessLevel === 'string' ? accessLevel : 'member',
+      level: typeof level === 'number' ? level : 1,
       createdAt: FieldValue.serverTimestamp(),
       updatedAt: FieldValue.serverTimestamp(),
     };

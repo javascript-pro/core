@@ -11,7 +11,7 @@ import {
 } from '@mui/material';
 import { Icon, useIsMobile, TopRightMenu } from '../../../gl-core';
 // import { Lingua } from '../../cartridges/Lingua';
-import { User } from '../../cartridges/Bouncer';
+import { Auth } from '../../cartridges/Bouncer';
 
 export type THeader = {
   frontmatter?: any;
@@ -57,7 +57,7 @@ export default function Header({ frontmatter = null }: THeader) {
         }
         action={
           <Box sx={{ display: 'flex' }}>
-            <User />
+            <Auth />
 
             <TopRightMenu frontmatter={frontmatter} />
           </Box>

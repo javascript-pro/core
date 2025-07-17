@@ -4,10 +4,10 @@ import { useAdminSlice } from './hooks';
 import { album } from './actions';
 import {
   Layout,
-  UsersAdmin,
   FlickrAdmin,
   Header,
   MenuList,
+  AuthAdmin,
 } from './components';
 
 export {
@@ -19,5 +19,5 @@ export {
   initialStateAdmin,
   useAdminSlice,
   album,
-  UsersAdmin,
+  AuthAdmin,
 };

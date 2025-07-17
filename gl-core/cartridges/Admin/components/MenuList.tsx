@@ -46,13 +46,13 @@ export default function MenuList() {
 
         <ListItemButton
           onClick={() => {
-            handleClick('/admin/users');
+            handleClick('/admin/auth');
           }}
         >
           <ListItemIcon>
-            <Icon icon="users" color="primary" />
+            <Icon icon="auth" color="primary" />
           </ListItemIcon>
-          <ListItemText primary="Users" />
+          <ListItemText primary="Auth" />
         </ListItemButton>
       </List>
     </Box>

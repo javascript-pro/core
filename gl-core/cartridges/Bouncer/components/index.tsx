@@ -2,7 +2,7 @@
 import Authed from './Authed';
 import AuthForm from './AuthForm';
 import SignoutButton from './SignoutButton';
-import User from './User';
+import Auth from './Auth';
 import SignIn from './SignIn';
 
-export { SignIn, Authed, User, AuthForm, SignoutButton };
+export { SignIn, Authed, Auth, AuthForm, SignoutButton };
