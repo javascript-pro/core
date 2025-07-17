@@ -383,6 +383,19 @@
         ]
       },
       {
+        "title": "Flickr Photo Cartridge",
+        "slug": "/flickr",
+        "order": 20,
+        "icon": "flickr",
+        "image": "https://live.staticflickr.com/65535/53670802348_9bb887b680_b.jpg",
+        "type": "file",
+        "tags": [
+          "free",
+          "cartridge"
+        ],
+        "excerpt": "Provides a React component <Flickr options={{}}/ which uses with Next.js's App Router API to safely connect to the Flickr API and manage all the information the component needs to create excellent UI\n"
+      },
+      {
         "title": "Life",
         "description": "Well, we've all got to have one",
         "slug": "/life",
