@@ -37,7 +37,7 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth="md">
+      <Container maxWidth="lg">
         <Box sx={{ pb: '50px' }}>{children}</Box>
       </Container>
       <AppBar position="fixed" color="primary" sx={{ top: 'auto', bottom: 0 }}>

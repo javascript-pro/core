@@ -33,7 +33,7 @@ export default function ModeSwitch() {
       <ListItemText
         primary={
           <Typography variant="body1">
-            {themeMode === 'dark' ? 'Light Mode' : 'Go Dark'}
+            {themeMode === 'dark' ? 'Light mode' : 'Dark mode'}
           </Typography>
         }
       />

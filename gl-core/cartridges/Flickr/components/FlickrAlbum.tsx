@@ -117,37 +117,8 @@ export default function FlickrAlbum({ album }: { album?: string }) {
 
   return (
     <>
-      <CardActions>
-        <Box sx={{ flexGrow: 1 }} />
-        <MightyButton
-          color="primary"
-          mode="icon"
-          label="Back"
-          icon="left"
-          onClick={handlePrev}
-          disabled={latestIndex === 0}
-        />
-        <MightyButton
-          color="primary"
-          mode="icon"
-          label="Reset"
-          icon="reset"
-          onClick={handleReset}
-          disabled={latestIndex === 0}
-        />
-        <MightyButton
-          color="primary"
-          mode="icon"
-          label="Next"
-          icon="right"
-          onClick={handleNext}
-          disabled={latestIndex >= photos.length - 1}
-        />
-        <Box sx={{ flexGrow: 1 }} />
-      </CardActions>
-
       <CardContent>
-        <Box sx={{ my: 1, position: 'relative' }}>
+        <Box sx={{ mt: 1, position: 'relative' }}>
           {photos.length > 0 && currentPhoto ? (
             <Box sx={{ position: 'relative' }}>
               {/* Loading spinner overlay */}
@@ -233,6 +204,34 @@ export default function FlickrAlbum({ album }: { album?: string }) {
           />
         </Box>
       </CardContent>
+      <CardActions>
+        <Box sx={{ flexGrow: 1 }} />
+        <MightyButton
+          color="primary"
+          mode="icon"
+          label="Back"
+          icon="left"
+          onClick={handlePrev}
+          disabled={latestIndex === 0}
+        />
+        <MightyButton
+          color="primary"
+          mode="icon"
+          label="Reset"
+          icon="reset"
+          onClick={handleReset}
+          disabled={latestIndex === 0}
+        />
+        <MightyButton
+          color="primary"
+          mode="icon"
+          label="Next"
+          icon="right"
+          onClick={handleNext}
+          disabled={latestIndex >= photos.length - 1}
+        />
+        <Box sx={{ flexGrow: 1 }} />
+      </CardActions>
     </>
   );
 }

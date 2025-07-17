@@ -1,78 +1,162 @@
-Prevent public rendering of the page content by checking the `bouncer` flag in the frontmatter and conditionally returning the `<Bouncer />` component instead.
+# Bouncer Cartridge
 
-### ✅ Confirmation
+The **Bouncer** cartridge is responsible for two core features in Goldlabel Core:
 
-> If a markdown file includes `bouncer: true` in its frontmatter, and your Next.js catchall route component only returns the `<Bouncer />` component in that case, none of the content (markdown or metadata) will be publicly rendered in the static output, as long as you do not accidentally pre-render it elsewhere.
-
-### ✅ What to Change in `Page`
-
-Update the return statement in your `Page` component like so:
-
-```tsx
-if (frontmatter.bouncer === true) {
-  return <Bouncer />;
-}
-```
-
-Insert this right before you return the full `Core` component with `<ReactMarkdown>{content}</ReactMarkdown>`.
-
-### ✅ Example Modification
-
-Here's the key modification inside your `Page` function (just before the final `return`):
-
-```tsx
-if (frontmatter.bouncer === true) {
-  return <Bouncer />;
-}
-```
-
-Full excerpt for clarity:
-
-```tsx
-// ...
-for (const filePath of tryPaths) {
-  try {
-    if (fs.existsSync(filePath)) {
-      const fileContent = fs.readFileSync(filePath, 'utf8');
-      const parsed = matter(fileContent);
-      content = parsed.content;
-      frontmatter = parsed.data;
-      break;
-    }
-  } catch (error) {
-    console.error('Failed to load markdown for', slugPath, error);
-  }
-}
-
-// ✨ Restrict access for bouncer-protected pages
-if (frontmatter.bouncer === true) {
-  return <Bouncer />;
-}
-
-const type = 'page';
-const navItem = findNavItem(slugPath, globalNav[0]);
-const title = navItem?.title || 'Goldlabel';
-// ...
-```
-
-### ✅ Security and SSG Note
-
-Since this logic happens at runtime on the client-side, and all pages are statically built ahead of time, it's critical that:
-
-- You're not leaking any sensitive content in the `.md` file itself — the content still exists in the public `markdown` folder and gets bundled into the static output at build time.
-- You don't use `getStaticProps` or expose any metadata or markdown content related to bouncer-protected pages elsewhere (e.g. global nav showing excerpts).
-
-If that's a concern, you could:
-
-- Move protected markdown files out of the `public` folder into a private `/content` folder,
-- Load them via a server-only API or through middleware logic for SSR in the future.
+1. **Authentication** (Firebase Auth + `auth` collection)
+2. **Real‑time Visitor Tracking (Pings)**
 
 ---
 
-### ✅ TL;DR
+## 1. Authentication
 
-- ✅ Yes, this approach will hide markdown content from rendering if `bouncer: true`.
-- ✅ Just return `<Bouncer />` early in the `Page` component.
-- ⚠️ But be aware: since the markdown file still exists in `/public/markdown`, it can technically still be accessed if someone knows the filename unless you prevent that via route rules or move them out of `public`.
+Bouncer manages user authentication using **Firebase Auth**.  
+Every user also has a corresponding document in the Firestore `auth` collection that stores profile information and access level.
 
-Let me know if you’d like to move `markdown` into a private location and still keep SSG.
+### Auth Data Model (`auth` collection)
+
+Each document is keyed by `uid` and typically contains:
+
+```ts
+{
+  uid: string,                // Firebase UID
+  email: string,              // Authenticated email
+  displayName: string,        // Name to show in UI
+  avatar: string | null,      // URL to profile image
+  accessLevel: string,        // e.g. "admin", "member"
+  createdAt: Timestamp,
+  updatedAt: Timestamp
+}
+```
+
+### Auth Flow
+
+- **Sign Up**  
+  Create a new Firebase Auth user, then create a matching doc in `auth` with default metadata.
+
+- **Sign In / Out**  
+  Handled via Firebase Auth. Bouncer listens to `onAuthStateChanged` and updates local state (via Uberedux).
+
+- **Profile Updates**  
+  Update both Firebase Auth (displayName, photoURL) and Firestore `auth`.
+
+- **Deletion**  
+  Delete user from Firebase Auth and Firestore `auth`.
+
+---
+
+## 2. Real‑Time Visitor Tracking (Pings)
+
+The second function is similar to lightweight analytics.  
+Every visitor (authenticated or not) continuously creates or updates a **ping** document in Firestore.
+
+### Ping Data Model (`pings` collection)
+
+Each document is keyed by a **fingerprint** (from `fingerprint.js`):
+
+```ts
+{
+  fingerprint: string,        // Unique device fingerprint
+  lastSeen: Timestamp,        // Updated with each ping
+  route: string,              // Current route (e.g. "/apps/app1")
+  geo: {
+    country: string,
+    city: string,
+    lat: number,
+    lon: number
+  },
+  uid: string | null,         // Populated if user is authed
+  displayName: string | null, // From auth profile
+  avatar: string | null,      // From auth profile
+  message: {
+    text: string,
+    createdAt: Timestamp
+  } | null
+}
+```
+
+### Ping Flow
+
+- **Initialization**
+
+  - On first load, generate a fingerprint (`@fingerprintjs/fingerprintjs`).
+  - Fetch geo info from a server‑side geo lookup (`/api/geo`).
+
+- **When Pings Are Sent**
+
+  - On every route change.
+  - On an interval (e.g. every 10 seconds) while page is open.
+
+- **What Happens**
+  - `setDoc(doc(db, 'pings', fingerprint), { ... }, { merge: true })`
+  - If authenticated, `uid`, `displayName`, and `avatar` are included.
+
+### Real‑Time Admin View
+
+- The Admin cartridge subscribes to the `pings` collection in real time.
+- An admin interface lists all visitors, showing:
+  - Current route
+  - Geo info
+  - Auth info (if available)
+  - Last seen time
+
+### Messaging Visitors
+
+Admins can send a message to a visitor:
+
+- Update the `message` field on that visitor’s ping document.
+- Only the visitor with that fingerprint sees it (via their live subscription).
+
+---
+
+## File Structure
+
+```
+gl-core/
+  cartridges/
+    Bouncer/
+      actions/
+        createUser.ts
+        updateUser.ts
+        deleteUser.ts
+        usePing.ts
+      components/
+        User.tsx
+        AuthGuard.tsx
+      README.md   ← (this file)
+```
+
+---
+
+## Security & Considerations
+
+- **Firestore Rules**
+
+  - `auth` collection: only admins or owner can update their own doc.
+  - `pings` collection: allow anonymous writes for own fingerprint; only admins can send `message`.
+
+- **Rate Limiting**
+
+  - Consider throttling or Cloud Functions if high traffic.
+
+- **Privacy**
+  - No cookies; fingerprints are anonymous unless user is authenticated.
+
+---
+
+## Dependencies
+
+- [Firebase Auth](https://firebase.google.com/docs/auth)
+- [Firestore](https://firebase.google.com/docs/firestore)
+- [`@fingerprintjs/fingerprintjs`](https://github.com/fingerprintjs/fingerprintjs)
+- GeoIP service (e.g. [ipapi.co](https://ipapi.co) or a custom `/api/geo` route)
+
+---
+
+## Next Steps
+
+- Implement the `usePing` hook to manage client‑side ping lifecycle.
+- Scaffold Admin UI (`UsersAdmin` and `PingsAdmin`) to manage users and monitor visitors.
+
+---
+
+**Bouncer** is designed as a drop‑in cartridge — wire it into the app, and you immediately have authentication and real‑time visitor tracking.

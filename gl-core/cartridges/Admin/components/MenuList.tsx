@@ -26,18 +26,12 @@ export default function MenuList() {
   return (
     <Box>
       <List>
-        <ListItemButton>
-          <ListItemIcon>
-            <Icon icon="users" color="primary" />
-          </ListItemIcon>
-          <ListItemText primary="Users" />
-        </ListItemButton>
-        <ListItemButton>
+        {/* <ListItemButton>
           <ListItemIcon>
             <Icon icon="bouncer" color="primary" />
           </ListItemIcon>
           <ListItemText primary="Bouncer" />
-        </ListItemButton>
+        </ListItemButton> */}
         <ListItemButton
           onClick={() => {
             // console.log("Home");
@@ -48,6 +42,17 @@ export default function MenuList() {
             <Icon icon="flickr" color="primary" />
           </ListItemIcon>
           <ListItemText primary="Flickr" />
+        </ListItemButton>
+
+        <ListItemButton
+          onClick={() => {
+            handleClick('/admin/auth');
+          }}
+        >
+          <ListItemIcon>
+            <Icon icon="auth" color="primary" />
+          </ListItemIcon>
+          <ListItemText primary="Auth" />
         </ListItemButton>
       </List>
     </Box>

@@ -3,10 +3,10 @@
 import * as React from 'react';
 import { Paper } from '@mui/material';
 import { TAuthed } from '../../Bouncer/types';
-import { SignoutButton, useUser } from '../../Bouncer';
+import { SignoutButton, useUid } from '../../Bouncer';
 
 export default function Authed({}: TAuthed) {
-  const user = useUser();
+  const user = useUid();
 
   return (
     <Paper>

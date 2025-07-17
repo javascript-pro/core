@@ -1,15 +1,20 @@
 'use client';
 import * as React from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import {
   Box,
-  IconButton,
+  Fab,
   Menu,
   MenuItem,
   ListItemIcon,
   ListItemText,
   Typography,
-  Collapse,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  IconButton,
+  CardHeader,
 } from '@mui/material';
 import {
   Icon,
@@ -21,14 +26,16 @@ import {
   routeTo,
   toggleHideImage,
   useSlice,
+  useIsMobile,
 } from '../../../gl-core';
-import { firebaseAuth, useUser } from '../../cartridges/Bouncer';
+import { firebaseAuth } from '../../cartridges/Bouncer';
 
 export type TTopRightMenu = {
   frontmatter?: {
     title?: string;
     description?: string;
     icon?: string;
+    image?: string;
   } | null;
   [key: string]: any;
 };
@@ -36,22 +43,31 @@ export type TTopRightMenu = {
 export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
   const dispatch = useDispatch();
   const router = useRouter();
-  const user = useUser();
   const { hideImage } = useSlice();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const [shareOpen, setShareOpen] = React.useState(false);
-  const [clientsOpen, setClientsOpen] = React.useState(false);
   const open = Boolean(anchorEl);
   const version = useVersion();
+
+  // Use gl-core’s hook for mobile detection
+  const isMobile = useIsMobile();
+
+  const [shareDialogOpen, setShareDialogOpen] = React.useState(false);
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleClose = () => {
+  const handleCloseMenu = () => {
     setAnchorEl(null);
-    setShareOpen(false);
-    setClientsOpen(false);
+  };
+
+  const handleShareOpen = () => {
+    setShareDialogOpen(true);
+    handleCloseMenu();
+  };
+
+  const handleShareClose = () => {
+    setShareDialogOpen(false);
   };
 
   const handleToggleHideImage = () => {
@@ -71,17 +87,29 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
 
   return (
     <>
-      <IconButton onClick={handleClick}>
-        <Icon icon="more" />
-      </IconButton>
+      {/* Floating Action Button in bottom-right corner */}
+      <Fab
+        color="primary"
+        onClick={handleClick}
+        sx={{
+          position: 'fixed',
+          bottom: 16,
+          right: 16,
+          boxShadow: 0,
+          zIndex: (theme) => theme.zIndex.modal + 2,
+        }}
+      >
+        <Icon icon="menu" />
+      </Fab>
 
       <Menu
         anchorEl={anchorEl}
         open={open}
-        onClose={handleClose}
-        onClick={handleClose}
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-        transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+        onClose={handleCloseMenu}
+        onClick={handleCloseMenu}
+        anchorOrigin={{ vertical: 'top', horizontal: 'left' }}
+        transformOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+        sx={{ mt: -1 }}
       >
         <MenuItem
           onClick={() => {
@@ -95,13 +123,16 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           <ListItemText primary={'Admin'} />
         </MenuItem>
 
-        {/* Share Menu */}
+        {/* Theme Switcher */}
+        <ModeSwitch />
+
+        {/* Share Menu triggers dialog */}
         <MenuItem
           sx={{ width: 250, my: 2 }}
           onClick={(e) => {
             e.stopPropagation();
             e.preventDefault();
-            setShareOpen((prev) => !prev);
+            handleShareOpen();
           }}
         >
           <ListItemIcon>
@@ -109,32 +140,6 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           </ListItemIcon>
           <ListItemText primary="Share" />
         </MenuItem>
-
-        <Collapse in={shareOpen} timeout="auto" unmountOnExit>
-          <Box sx={{ px: 2, pt: 1 }}>
-            <ShareMenu frontmatter={frontmatter} />
-          </Box>
-        </Collapse>
-
-        <MenuItem onClick={handleToggleHideImage} sx={{ my: 2 }}>
-          <ListItemIcon>
-            <Icon icon="photo" />
-          </ListItemIcon>
-          <ListItemText primary={`${hideImage ? 'Show' : 'Hide'} image`} />
-        </MenuItem>
-
-        {/* Theme Switcher */}
-        <ModeSwitch />
-
-        {/* Sign out */}
-        {user ? (
-          <MenuItem onClick={handleSignout} sx={{ my: 2 }}>
-            <ListItemIcon>
-              <Icon icon="signout" />
-            </ListItemIcon>
-            <ListItemText primary={'Sign out'} />
-          </MenuItem>
-        ) : null}
 
         {/* App Version */}
         <Box sx={{ pr: 3, py: 1, textAlign: 'right' }}>
@@ -149,6 +154,67 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           </Typography>
         </Box>
       </Menu>
+
+      {/* Share Dialog */}
+      <Dialog
+        open={shareDialogOpen}
+        onClose={handleShareClose}
+        fullScreen={isMobile}
+        maxWidth="sm"
+        fullWidth
+      >
+        <DialogTitle
+          sx={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            gap: 1,
+          }}
+        >
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+            <Icon icon="share" />
+            <Typography variant="h6">Share</Typography>
+          </Box>
+          <IconButton onClick={handleShareClose}>
+            <Icon icon="close" />
+          </IconButton>
+        </DialogTitle>
+
+        <DialogContent>
+          {frontmatter && (
+            <Box sx={{ mb: 1 }}>
+              <CardHeader
+                avatar={
+                  frontmatter.icon ? (
+                    <Icon icon={frontmatter.icon as any} />
+                  ) : undefined
+                }
+                title={frontmatter.title}
+                subheader={frontmatter.description}
+              />
+
+              {frontmatter.image && (
+                <>
+                  <Image
+                    src={frontmatter.image}
+                    alt={frontmatter.title || 'Featured image'}
+                    width={1200}
+                    height={630}
+                    style={{ width: '100%', height: 'auto' }}
+                  />
+                </>
+                // <CardMedia
+                //   component="img"
+                //   height="140"
+                //   image={}
+                //   alt={frontmatter.title || 'Preview image'}
+                // />
+              )}
+            </Box>
+          )}
+          <ShareMenu frontmatter={frontmatter} />
+        </DialogContent>
+      </Dialog>
     </>
   );
 }
