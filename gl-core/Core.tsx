@@ -117,7 +117,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
             {!isMobile && (
               <Grid size={{ md: 3 }}>
                 <Siblings />
-                <FlickrAlbum album="72177720327572144" />
+                <FlickrAlbum album="72177720327633973" />
               </Grid>
             )}
             {/* Main content */}
@@ -162,7 +162,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                 {isMobile && (
                   <Box sx={{ mt: 2 }}>
                     <Siblings />
-                    <FlickrAlbum album="72177720327572144" />
+                    <FlickrAlbum album="72177720327633973" />
                   </Box>
                 )}
 

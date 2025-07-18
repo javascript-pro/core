@@ -177,7 +177,7 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
         open={shareDialogOpen}
         onClose={handleShareClose}
         fullScreen={isMobile}
-        maxWidth="sm"
+        maxWidth="xs"
         fullWidth
       >
         <DialogTitle

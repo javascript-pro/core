@@ -5,6 +5,7 @@ description: Steps beyond tech to prevent data leaks
 slug: /work/abgeschottet-ki/organisational-measures
 icon: ki
 image: /png/ki/abgeschotten-ki.png
+tags: abgeschottet, KI
 ---
 
 > A ring‑fenced LLM works best as part of a wider culture of confidentiality.

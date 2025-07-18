@@ -177,7 +177,7 @@
                 "icon": "ki",
                 "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
-                "excerpt": "A ring‑fenced LLM gives a law firm all the efficiency of AI while upholding the highest standards of confidentiality.\n\n How Can a Ring‑Fenced LLM Help?\n\n No data leaves the firm’s network\n Built‑in ac"
+                "excerpt": "A ring‑fenced LLM gives a firm all the efficiency of AI while upholding the highest standards of confidentiality.\n\n How Can a Ring‑Fenced LLM Help?\n\n No data leaves the firm’s network\n Built‑in access"
               },
               {
                 "title": "Organisational Measures",
@@ -198,6 +198,31 @@
             "image": "/png/og.png",
             "type": "file",
             "excerpt": "Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or b"
+          },
+          {
+            "title": "PDF Smash",
+            "description": "A ring‑fenced PDF smasher for keeping all that in house",
+            "slug": "/work/pdf-smash",
+            "order": 1,
+            "icon": "pdf",
+            "image": "/png/n64/punk.png",
+            "type": "folder",
+            "tags": [
+              "cartridges",
+              "KI"
+            ],
+            "excerpt": "Cartridge for Abgeschottet KI",
+            "children": [
+              {
+                "title": "PDF Smash",
+                "slug": "/work/pdf-smash/history-of-pdf",
+                "order": 1,
+                "icon": "pdf",
+                "image": "/png/n64/punk.png",
+                "type": "file",
+                "excerpt": "A ring‑fenced PDF smasher for keeping all that in house"
+              }
+            ]
           },
           {
             "title": "Fullstack JavaScript Developer",

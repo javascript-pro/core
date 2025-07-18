@@ -5,6 +5,7 @@ description: Hardware
 slug: /work/abgeschottet-ki/abgeschottet-ki/hardware
 icon: ki
 image: /png/ki/abgeschotten-ki.png
+tags: abgeschottet, KI
 ---
 
 > Keep it simple. Start small. Scale when you need to.

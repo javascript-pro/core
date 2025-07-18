@@ -29,13 +29,13 @@ export default function SideAds() {
           dispatch(routeTo('/work/abgeschottet-ki', router));
         }}
       />
-      <Advert
+      {/* <Advert
         icon="pdf"
         title={'PDF Smash'}
         onClick={() => {
-          dispatch(routeTo('/pdf-smash', router));
+          dispatch(routeTo('/work/pdf-smash', router));
         }}
-      />
+      /> */}
       <Advert
         icon="flickr"
         title={'Flickr'}
