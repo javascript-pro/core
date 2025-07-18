@@ -87,28 +87,7 @@ export default function ArrowMenu() {
   const upLabel = parentItem?.slug === '/' ? 'Home' : parentItem?.title || '↑';
 
   return (
-    <Box
-      id="arrowMenu"
-      sx={(theme) => ({
-        ...(isMobile && {
-          position: 'fixed',
-          bottom: 8,
-          left: 0,
-          right: 0,
-          transform: 'none',
-          zIndex: 1300,
-          width: '100%',
-        }),
-        backgroundColor: theme.palette.background.default,
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        p: 1,
-        boxShadow: 0,
-        minWidth: 'auto',
-      })}
-    >
+    <Box id="arrowMenu">
       <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
         {showLeft && (
           <Typography

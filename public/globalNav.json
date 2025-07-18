@@ -5,7 +5,7 @@
     "slug": "/",
     "order": 1,
     "icon": "home",
-    "image": "https://live.staticflickr.com/65535/53670802348_9bb887b680_b.jpg",
+    "image": "/png/ki/abgeschotten-ki.png",
     "type": "folder",
     "tags": [
       "JavaScript",
@@ -59,7 +59,7 @@
         "slug": "/work",
         "order": 10,
         "icon": "work",
-        "image": "https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg",
+        "image": "/png/ki/abgeschotten-ki.png",
         "type": "folder",
         "tags": [
           "JavaScript",
@@ -87,6 +87,10 @@
             "icon": "ki",
             "image": "/png/ki/abgeschotten-ki.png",
             "type": "folder",
+            "tags": [
+              "abgeschottet",
+              "KI"
+            ],
             "excerpt": "A ring‑fenced LLM is like having the power of AI inside a locked room.\n\nIt can process sensitive documents and assist with legal work, but nothing ever leaves the firm’s secure network. When we say an",
             "children": [
               {
@@ -114,6 +118,10 @@
                 "icon": "ki",
                 "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
+                "tags": [
+                  "abgeschottet",
+                  "KI"
+                ],
                 "excerpt": "UK law firms are bound by some of the strongest confidentiality rules in professional life.\n\n What Confidentiality Obligations Do UK Law Firms Have Toward Their Clients?\n\n Everything you tell your law"
               },
               {
@@ -132,6 +140,10 @@
                 "icon": "ki",
                 "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
+                "tags": [
+                  "abgeschottet",
+                  "KI"
+                ],
                 "excerpt": "GDPR means your personal information is handled lawfully, transparently, and with your privacy in mind.\n\n What Does the GDPR Mean for a UK Law Firm?\n\nThe General Data Protection Regulation (GDPR) – as"
               },
               {
@@ -141,6 +153,10 @@
                 "icon": "ki",
                 "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
+                "tags": [
+                  "abgeschottet",
+                  "KI"
+                ],
                 "excerpt": "Keep it simple. Start small. Scale when you need to.\n\n Hardware for Abgeschottet KI\n\nOne of the advantages of Abgeschottet KI is that it’s a low‑investment, quick‑to‑implement solution.  \nYou don’t ne"
               },
               {
@@ -150,6 +166,10 @@
                 "icon": "ki",
                 "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
+                "tags": [
+                  "abgeschottet",
+                  "KI"
+                ],
                 "excerpt": "Used carefully, large language models can turn legal research into a faster, more focused process.\n\n How Could Large Language Models Help UK Law Firms With Legal Research?\n\n Quickly summarising case l"
               },
               {
@@ -186,6 +206,10 @@
                 "icon": "ki",
                 "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
+                "tags": [
+                  "abgeschottet",
+                  "KI"
+                ],
                 "excerpt": "A ring‑fenced LLM works best as part of a wider culture of confidentiality.\n\n What Organisational Measures Should a Law Firm Take?\n\n Clear internal policies\n Regular staff training\n Access controls ba"
               }
             ]
@@ -209,7 +233,8 @@
             "type": "folder",
             "tags": [
               "cartridges",
-              "KI"
+              "KI",
+              "pdf"
             ],
             "excerpt": "Cartridge for Abgeschottet KI",
             "children": [
@@ -220,6 +245,11 @@
                 "icon": "pdf",
                 "image": "/png/n64/punk.png",
                 "type": "file",
+                "tags": [
+                  "cartridges",
+                  "KI",
+                  "pdf"
+                ],
                 "excerpt": "A ring‑fenced PDF smasher for keeping all that in house"
               }
             ]

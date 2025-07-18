@@ -154,7 +154,7 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           <ListItemText primary="Share" />
         </MenuItem>
 
-        <Box sx={{ my: 1 }}>
+        <Box sx={{ my: 1, mx: 2 }}>
           <ArrowMenu />
         </Box>
 
@@ -220,12 +220,6 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
                     style={{ width: '100%', height: 'auto' }}
                   />
                 </>
-                // <CardMedia
-                //   component="img"
-                //   height="140"
-                //   image={}
-                //   alt={frontmatter.title || 'Preview image'}
-                // />
               )}
             </Box>
           )}
