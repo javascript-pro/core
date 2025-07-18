@@ -475,8 +475,15 @@ export default function FileEdit({ id }: { id: string }) {
           </Typography>
         </DialogContent>
         <DialogActions>
-          <Button onClick={() => setShowConfirmDelete(false)}>{t('CANCEL')}</Button>
-          <Button onClick={handleDelete} color="primary" variant="contained" disabled={deleting}>
+          <Button onClick={() => setShowConfirmDelete(false)}>
+            {t('CANCEL')}
+          </Button>
+          <Button
+            onClick={handleDelete}
+            color="primary"
+            variant="contained"
+            disabled={deleting}
+          >
             {deleting ? t('DELETING') + '...' : t('DELETE')}
           </Button>
         </DialogActions>

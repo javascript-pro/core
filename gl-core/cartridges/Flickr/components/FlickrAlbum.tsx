@@ -153,7 +153,6 @@ export default function FlickrAlbum({ album }: { album?: string }) {
                     src={currentPhoto.sizes?.medium?.src}
                     component="img"
                     onLoad={() => {
-                      // introduce slight delay before showing image
                       setTimeout(() => setImageLoaded(true), DELAY_MS);
                     }}
                     onError={() => setHasImageError(true)}
@@ -162,6 +161,9 @@ export default function FlickrAlbum({ album }: { album?: string }) {
                       aspectRatio: `${width} / ${height}`,
                       borderRadius: 0,
                       display: 'block',
+                      // add this
+                      maxHeight: { xs: 250 }, // limit height on mobile (xs)
+                      objectFit: 'contain', // ensure it scales correctly within that height
                     }}
                   />
                 </ButtonBase>

@@ -142,9 +142,22 @@ export default function Auth() {
                   }}
                 >
                   <CardHeader
-                    title={<Typography variant="body2">{userDoc.displayName || 'Unnamed User'}</Typography>}
-                    subheader={<Typography variant="caption">{userDoc.email || ''}</Typography>}
-                    action={<Avatar sx={{width:32, height:32, mt: 1}} src={userDoc.avatar} />}
+                    title={
+                      <Typography variant="body2">
+                        {userDoc.displayName || 'Unnamed User'}
+                      </Typography>
+                    }
+                    subheader={
+                      <Typography variant="caption">
+                        {userDoc.email || ''}
+                      </Typography>
+                    }
+                    action={
+                      <Avatar
+                        sx={{ width: 32, height: 32, mt: 1 }}
+                        src={userDoc.avatar}
+                      />
+                    }
                   />
                 </Box>
               </ButtonBase>

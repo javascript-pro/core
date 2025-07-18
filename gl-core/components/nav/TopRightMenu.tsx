@@ -27,6 +27,7 @@ import {
   toggleHideImage,
   useSlice,
   useIsMobile,
+  ArrowMenu,
 } from '../../../gl-core';
 import { firebaseAuth } from '../../cartridges/Bouncer';
 
@@ -111,6 +112,19 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
         transformOrigin={{ vertical: 'bottom', horizontal: 'right' }}
         sx={{ mt: -1 }}
       >
+
+        <MenuItem
+          onClick={() => {
+            dispatch(routeTo('/', router));
+          }}
+          sx={{ my: 2 }}
+        >
+          <ListItemIcon>
+            <Icon icon="home" />
+          </ListItemIcon>
+          <ListItemText primary={'Home'} />
+        </MenuItem>
+
         <MenuItem
           onClick={() => {
             dispatch(routeTo('/admin', router));
@@ -140,6 +154,11 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           </ListItemIcon>
           <ListItemText primary="Share" />
         </MenuItem>
+
+        <Box sx={{ my: 1 }}>
+          <ArrowMenu />
+        </Box>
+        
 
         {/* App Version */}
         <Box sx={{ pr: 3, py: 1, textAlign: 'right' }}>

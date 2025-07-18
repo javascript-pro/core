@@ -1,3 +1,4 @@
+// /Users/goldlabel/GitHub/core/gl-core/components/layout/Header.tsx
 'use client';
 
 import * as React from 'react';
@@ -10,7 +11,6 @@ import {
   Tooltip,
 } from '@mui/material';
 import { Icon, useIsMobile, TopRightMenu } from '../../../gl-core';
-// import { Lingua } from '../../cartridges/Lingua';
 import { Auth } from '../../cartridges/Bouncer';
 
 export type THeader = {
@@ -35,7 +35,7 @@ export default function Header({ frontmatter = null }: THeader) {
                   router.push('/');
                 }}
               >
-                <Icon icon={'blokey'} />
+                <Icon icon={icon} />
               </IconButton>
             </Tooltip>
             {/* <Box sx={{ m: 1 }}>
@@ -58,7 +58,6 @@ export default function Header({ frontmatter = null }: THeader) {
         action={
           <Box sx={{ display: 'flex' }}>
             <Auth />
-
             <TopRightMenu frontmatter={frontmatter} />
           </Box>
         }

@@ -12,11 +12,7 @@ import {
   TextField,
   Autocomplete,
 } from '@mui/material';
-import {
-  DataGrid,
-  GridColDef,
-  GridRenderCellParams,
-} from '@mui/x-data-grid';
+import { DataGrid, GridColDef, GridRenderCellParams } from '@mui/x-data-grid';
 import { collection, onSnapshot, DocumentData } from 'firebase/firestore';
 import { db } from '../../../lib/firebase';
 import { Icon } from '../../../../gl-core';
@@ -76,7 +72,11 @@ export default function AuthAdmin() {
       renderCell: (params: GridRenderCellParams<any, string>) => {
         const url = params.value;
         return url ? (
-          <Avatar src={url} alt="avatar" sx={{ width: 32, height: 32, mt: 1 }} />
+          <Avatar
+            src={url}
+            alt="avatar"
+            sx={{ width: 32, height: 32, mt: 1 }}
+          />
         ) : (
           <Avatar sx={{ width: 32, height: 32 }} />
         );
@@ -134,26 +134,26 @@ export default function AuthAdmin() {
     <Box sx={{}}>
       <CardHeader
         avatar={<Icon icon="auth" />}
-        title={<Typography variant='h6'>Auth</Typography>}
-        action={<>
-        {/* Autocomplete to search */}
-          <Autocomplete
-            freeSolo
-            options={options}
-            getOptionLabel={(option) => (typeof option === 'string' ? option : option.label)}
-            onInputChange={(_, newInputValue) => {
-              setFilterValue(newInputValue);
-            }}
-            renderInput={(params) => (
-              <TextField
-                {...params}
-                label="Filter"
-                variant="filled"
-              />
-            )}
-            sx={{ mb: 2, width: 200 }}
-          />
-        </>}
+        title={<Typography variant="h6">Auth</Typography>}
+        action={
+          <>
+            {/* Autocomplete to search */}
+            <Autocomplete
+              freeSolo
+              options={options}
+              getOptionLabel={(option) =>
+                typeof option === 'string' ? option : option.label
+              }
+              onInputChange={(_, newInputValue) => {
+                setFilterValue(newInputValue);
+              }}
+              renderInput={(params) => (
+                <TextField {...params} label="Filter" variant="filled" />
+              )}
+              sx={{ mb: 2, width: 200 }}
+            />
+          </>
+        }
       />
 
       {!checked ? (

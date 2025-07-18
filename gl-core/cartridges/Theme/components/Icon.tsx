@@ -140,11 +140,12 @@ import TickIcon from '@mui/icons-material/DoneOutline';
 import FilesIcon from '@mui/icons-material/Topic';
 import PDFIcon from '@mui/icons-material/PictureAsPdf';
 import UserIcon from '@mui/icons-material/Face';
-
+import KIIcon from '@mui/icons-material/BackHand';
 export type TIcon = {
   icon:
     | 'more'
     | 'user'
+    | 'ki'
     | 'users'
     | 'pdf'
     | 'tick'
@@ -336,6 +337,10 @@ export default function Icon({ icon, color }: TIcon) {
 
     case 'pdf':
       iconFragment = <PDFIcon color={color} />;
+      break;
+
+    case 'ki':
+      iconFragment = <KIIcon color={color} />;
       break;
 
     case 'caseclock':
