@@ -4,7 +4,7 @@ title: Professional Secrecy
 description: What professional secrecy means for UK lawyers
 slug: /work/abgeschottet-ki/professional-secrecy
 icon: ki
-image: /png/n64/law.png
+image: /png/ki/abgeschotten-ki.png
 ---
 
 > What you tell your lawyer stays between you and them.

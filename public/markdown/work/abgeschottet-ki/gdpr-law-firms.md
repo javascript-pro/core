@@ -4,7 +4,7 @@ title: GDPR and Law Firms
 description: What the GDPR means for a UK law firm
 slug: /work/abgeschottet-ki/gdpr-law-firms
 icon: ki
-image: /png/ki/Cyberpunk Office Overlook at Night.png
+image: /png/ki/abgeschotten-ki.png
 ---
 
 > GDPR means your personal information is handled lawfully, transparently, and with your privacy in mind.

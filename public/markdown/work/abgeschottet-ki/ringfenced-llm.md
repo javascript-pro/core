@@ -4,7 +4,7 @@ title: Ring‑Fenced LLM
 description: Keeping data inside a secure environment
 slug: /work/abgeschottet-ki/ringfenced-llm
 icon: ki
-image: /png/n64/lock.png
+image: /png/ki/abgeschotten-ki.png
 ---
 
 > A ring‑fenced LLM is like having the power of AI inside a locked room.

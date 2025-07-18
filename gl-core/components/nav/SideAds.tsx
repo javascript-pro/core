@@ -29,23 +29,13 @@ export default function SideAds() {
           dispatch(routeTo('/work/abgeschottet-ki', router));
         }}
       />
-
-      {/* <Advert
-        icon="pdf"
-        title={'AI PDF'}
-        onClick={() => {
-          dispatch(routeTo('/fallmanager', router));
-        }}
-      /> */}
-
       <Advert
-        icon="openai"
-        title={'C.V.'}
+        icon="pdf"
+        title={'PDF Smash'}
         onClick={() => {
-          dispatch(routeTo('/work/cv', router));
+          dispatch(routeTo('/pdf-smash', router));
         }}
       />
-
       <Advert
         icon="flickr"
         title={'Flickr'}
@@ -53,7 +43,13 @@ export default function SideAds() {
           dispatch(routeTo('/flickr', router));
         }}
       />
-
+      <Advert
+        icon="openai"
+        title={'C.V.'}
+        onClick={() => {
+          dispatch(routeTo('/work/cv', router));
+        }}
+      />
       <Advert
         icon="contact"
         title={'Contact'}

@@ -2,11 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Box, Alert, Typography } from '@mui/material';
-import {
-  MightyButton,
-  useSlice,
-  useDispatch,
-} from '../../../../gl-core';
+import { MightyButton, useSlice, useDispatch } from '../../../../gl-core';
 import { updateCVKey, LoadingDots, resetCV } from '../../CV';
 
 export default function Completion() {
@@ -75,8 +71,6 @@ export default function Completion() {
       }
 
       dispatch(updateCVKey('cv', { completion: finalOutput }));
-
-
     } catch (err: any) {
       console.error('Stream error:', err);
       setError(err.message || 'Unknown error');

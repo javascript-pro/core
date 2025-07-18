@@ -4,7 +4,7 @@ title: Abgeschottet KI
 description: Hardware
 slug: /work/abgeschottet-ki/abgeschottet-ki/hardware
 icon: ki
-image: /png/n64/punk.png
+image: /png/ki/abgeschotten-ki.png
 ---
 
 > Keep it simple. Start small. Scale when you need to.

@@ -4,7 +4,7 @@ title: Abgeschottet KI
 description: What Does It Mean to Ring‑Fence an LLM?
 slug: /work/abgeschottet-ki
 icon: ki
-image: /png/n64/punk.png
+image: /png/ki/abgeschotten-ki.png
 ---
 
 ## A ring‑fenced LLM is like having the power of AI inside a locked room.

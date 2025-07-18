@@ -4,7 +4,7 @@ title: Risks of Public LLMs
 description: Why it’s dangerous to send confidential files to public AI
 slug: /work/abgeschottet-ki/risks-public-llms
 icon: ki
-image: /png/n64/warning.png
+image: /png/ki/abgeschotten-ki.png
 ---
 
 > Public AI services are not designed for legally confidential data.

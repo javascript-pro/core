@@ -4,7 +4,7 @@ title: LLMs and Legal Research
 description: How large language models can assist UK law firms
 slug: /work/abgeschottet-ki/llms-legal-research
 icon: ki
-image: /png/n64/search.png
+image: /png/ki/abgeschotten-ki.png
 ---
 
 > Used carefully, large language models can turn legal research into a faster, more focused process.

@@ -26,6 +26,7 @@ import {
   toggleLoading,
   useDispatch,
   useSlice,
+  Siblings,
 } from '../gl-core';
 import { SideAds } from '../gl-core';
 import { FlickrAlbum } from './cartridges/Flickr';
@@ -115,9 +116,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
             {/* FlickrAlbum on desktop in middle column */}
             {!isMobile && (
               <Grid size={{ md: 3 }}>
-                <Box>Siblings</Box>
+                <Siblings />
                 <FlickrAlbum album="72177720327572144" />
-                
               </Grid>
             )}
             {/* Main content */}
@@ -161,9 +161,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
                 {/* FlickrAlbum on mobile directly below content */}
                 {isMobile && (
                   <Box sx={{ mt: 2 }}>
-                     <Box>Siblings</Box>
+                    <Siblings />
                     <FlickrAlbum album="72177720327572144" />
-                   
                   </Box>
                 )}
 
