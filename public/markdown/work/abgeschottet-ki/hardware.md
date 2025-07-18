@@ -3,7 +3,7 @@ order: 40
 title: Abgeschottet KI
 description: Hardware
 slug: /work/abgeschottet-ki/abgeschottet-ki/hardware
-icon: work
+icon: ki
 image: /png/n64/punk.png
 ---
 

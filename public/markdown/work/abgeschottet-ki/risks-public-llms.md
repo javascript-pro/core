@@ -3,7 +3,7 @@ order: 50
 title: Risks of Public LLMs
 description: Why it’s dangerous to send confidential files to public AI
 slug: /work/abgeschottet-ki/risks-public-llms
-icon: work
+icon: ki
 image: /png/n64/warning.png
 ---
 

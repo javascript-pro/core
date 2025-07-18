@@ -3,7 +3,7 @@ order: 70
 title: Ring‑Fenced LLM & Confidentiality
 description: How a ring‑fenced LLM helps meet legal obligations
 slug: /work/abgeschottet-ki/ringfenced-llm-confidentiality
-icon: work
+icon: ki
 image: /png/n64/trust.png
 ---
 

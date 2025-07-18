@@ -3,7 +3,7 @@ order: 20
 title: Abgeschottet KI
 description: Example prompts
 slug: /work/abgeschottet-ki/prompts
-icon: work
+icon: ki
 image: /png/n64/punk.png
 ---
 

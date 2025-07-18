@@ -3,7 +3,7 @@ order: 80
 title: Organisational Measures
 description: Steps beyond tech to prevent data leaks
 slug: /work/abgeschottet-ki/organisational-measures
-icon: work
+icon: ki
 image: /png/n64/checklist.png
 ---
 

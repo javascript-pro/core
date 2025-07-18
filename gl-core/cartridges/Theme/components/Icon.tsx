@@ -339,7 +339,7 @@ export default function Icon({ icon, color }: TIcon) {
       iconFragment = <PDFIcon color={color} />;
       break;
 
-          case 'ki':
+    case 'ki':
       iconFragment = <KIIcon color={color} />;
       break;
 

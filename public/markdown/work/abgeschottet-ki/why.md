@@ -3,7 +3,7 @@ order: 0
 title: Abgeschottet KI
 description: Where is the need for this?
 slug: /work/abgeschottet-ki/abgeschottet-ki/why
-icon: work
+icon: ki
 image: /png/n64/punk.png
 ---
 

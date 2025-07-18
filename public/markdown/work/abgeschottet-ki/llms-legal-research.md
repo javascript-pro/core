@@ -3,7 +3,7 @@ order: 40
 title: LLMs and Legal Research
 description: How large language models can assist UK law firms
 slug: /work/abgeschottet-ki/llms-legal-research
-icon: work
+icon: ki
 image: /png/n64/search.png
 ---
 

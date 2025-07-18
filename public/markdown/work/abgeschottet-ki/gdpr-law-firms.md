@@ -3,7 +3,7 @@ order: 30
 title: GDPR and Law Firms
 description: What the GDPR means for a UK law firm
 slug: /work/abgeschottet-ki/gdpr-law-firms
-icon: work
+icon: ki
 image: /png/n64/data.png
 ---
 

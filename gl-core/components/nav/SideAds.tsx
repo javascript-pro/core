@@ -58,7 +58,7 @@ export default function SideAds() {
         icon="contact"
         title={'Contact'}
         onClick={() => {
-          dispatch(routeTo('/admin', router));
+          dispatch(routeTo('/work/company', router));
         }}
       />
     </Box>

@@ -15,7 +15,6 @@ import {
   Typography,
 } from '@mui/material';
 import {
-  ArrowMenu,
   Theme,
   RenderMarkdown,
   Header,
@@ -113,6 +112,12 @@ export default function Core({ frontmatter, body = null }: TCore) {
               </Grid>
             )}
 
+            {/* FlickrAlbum on desktop in middle column */}
+            {!isMobile && (
+              <Grid size={{ md: 3, lg: 4 }}>
+                <FlickrAlbum album="72177720327572144" />
+              </Grid>
+            )}
             {/* Main content */}
             <Grid size={{ xs: 12, md: 6, lg: 6 }}>
               <Box sx={{ mt: isMobile ? 2 : 0 }}>
@@ -151,6 +156,13 @@ export default function Core({ frontmatter, body = null }: TCore) {
                   </>
                 )}
 
+                {/* FlickrAlbum on mobile directly below content */}
+                {isMobile && (
+                  <Box sx={{ mt: 2 }}>
+                    <FlickrAlbum album="72177720327572144" />
+                  </Box>
+                )}
+
                 <Box sx={{ px: isMobile ? 0.5 : 2, my: !isMobile ? 2 : 2 }}>
                   {pathname !== '/' && <PageBreadcrumb />}
                 </Box>
@@ -158,23 +170,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
               <Box sx={{ mb: isMobile ? 3 : '175px', px: isMobile ? 0.5 : 2 }}>
                 {isApp ? app : <RenderMarkdown>{body}</RenderMarkdown>}
-                <ArrowMenu />
               </Box>
-
-              {/* FlickrAlbum on mobile directly below content */}
-              {isMobile && (
-                <Box sx={{ mt: 2 }}>
-                  <FlickrAlbum album="72177720327572144" />
-                </Box>
-              )}
             </Grid>
-
-            {/* FlickrAlbum on desktop in right column */}
-            {!isMobile && (
-              <Grid size={{ md: 3, lg: 4 }}>
-                <FlickrAlbum album="72177720327572144" />
-              </Grid>
-            )}
           </Grid>
         </Box>
       </Container>

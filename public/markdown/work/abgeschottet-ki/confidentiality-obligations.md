@@ -3,7 +3,7 @@ order: 20
 title: Confidentiality Obligations
 description: The confidentiality duties UK law firms owe their clients
 slug: /work/abgeschottet-ki/confidentiality-obligations
-icon: work
+icon: ki
 image: /png/n64/shield.png
 ---
 

@@ -3,7 +3,7 @@ order: 60
 title: Ring‑Fenced LLM
 description: Keeping data inside a secure environment
 slug: /work/abgeschottet-ki/ringfenced-llm
-icon: work
+icon: ki
 image: /png/n64/lock.png
 ---
 
