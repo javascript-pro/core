@@ -2,7 +2,7 @@
 import React from 'react';
 import { marked } from 'marked';
 import { Box } from '@mui/material';
-import { MightyButton, useDispatch, forwardEmail } from '../../../../gl-core';
+import { MightyButton, useDispatch } from '../../../../gl-core';
 import { templatePDF } from '../';
 
 export default function Download(cv: any) {
@@ -24,13 +24,6 @@ export default function Download(cv: any) {
 
     const el = document.createElement('div');
     el.innerHTML = fullHTML;
-
-    dispatch(
-      forwardEmail({
-        subject: 'CV Downloaded',
-        text: `Someone downloaded the CV at ${new Date().toISOString()}.`,
-      }),
-    );
 
     html2pdf()
       .from(el)

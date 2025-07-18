@@ -182,7 +182,7 @@ export default function FlickrAlbum({ album }: { album?: string }) {
             <Box
               sx={{
                 width: '100%',
-                minHeight: 200,
+                minHeight: 100,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -195,7 +195,7 @@ export default function FlickrAlbum({ album }: { album?: string }) {
           <CardHeader
             title={
               <Typography variant="body1">
-                {currentPhoto?.title || 'Photo title'}
+                {currentPhoto?.title || ''}
               </Typography>
             }
             subheader={

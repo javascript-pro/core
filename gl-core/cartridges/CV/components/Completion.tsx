@@ -6,7 +6,6 @@ import {
   MightyButton,
   useSlice,
   useDispatch,
-  forwardEmail,
 } from '../../../../gl-core';
 import { updateCVKey, LoadingDots, resetCV } from '../../CV';
 
@@ -77,14 +76,7 @@ export default function Completion() {
 
       dispatch(updateCVKey('cv', { completion: finalOutput }));
 
-      // Send email
-      const plain = markdownToPlainText(finalOutput);
-      dispatch(
-        forwardEmail({
-          subject: 'CV Analysis Complete',
-          text: plain.slice(0, 2000), // limit message size
-        }),
-      );
+
     } catch (err: any) {
       console.error('Stream error:', err);
       setError(err.message || 'Unknown error');

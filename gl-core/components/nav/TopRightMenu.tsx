@@ -112,7 +112,6 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
         transformOrigin={{ vertical: 'bottom', horizontal: 'right' }}
         sx={{ mt: -1 }}
       >
-
         <MenuItem
           onClick={() => {
             dispatch(routeTo('/', router));
@@ -158,7 +157,6 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
         <Box sx={{ my: 1 }}>
           <ArrowMenu />
         </Box>
-        
 
         {/* App Version */}
         <Box sx={{ pr: 3, py: 1, textAlign: 'right' }}>

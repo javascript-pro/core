@@ -4,7 +4,7 @@ title: Confidentiality Obligations
 description: The confidentiality duties UK law firms owe their clients
 slug: /work/abgeschottet-ki/confidentiality-obligations
 icon: ki
-image: /png/n64/shield.png
+image: /png/ki/Retro-Futuristic Urban Glow.png
 ---
 
 > UK law firms are bound by some of the strongest confidentiality rules in professional life.
