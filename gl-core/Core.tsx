@@ -116,7 +116,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
             {/* FlickrAlbum on desktop in middle column */}
             {!isMobile && (
               <Grid size={{ md: 3 }}>
-                <Siblings />
                 <FlickrAlbum album="72177720327633973" />
               </Grid>
             )}
@@ -161,13 +160,14 @@ export default function Core({ frontmatter, body = null }: TCore) {
                 {/* FlickrAlbum on mobile directly below content */}
                 {isMobile && (
                   <Box sx={{ mt: 2 }}>
-                    <Siblings />
+                    
                     <FlickrAlbum album="72177720327633973" />
                   </Box>
                 )}
 
                 <Box sx={{ px: isMobile ? 0.5 : 2, my: !isMobile ? 2 : 2 }}>
                   {pathname !== '/' && <PageBreadcrumb />}
+                  {/* <Siblings /> */}
                 </Box>
               </Box>
 
