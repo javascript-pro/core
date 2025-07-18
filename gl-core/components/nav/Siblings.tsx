@@ -8,7 +8,6 @@ import {
   ListItemIcon,
   ListItemText,
   Box,
-  Divider,
 } from '@mui/material';
 import { Icon } from '../../../gl-core';
 
@@ -43,29 +42,38 @@ export default function Siblings() {
   const router = useRouter();
 
   const siblings = React.useMemo(() => {
-    const arr = findSiblings(globalNav as unknown as NavItem[], pathname);
+    const arr = findSiblings(globalNav as NavItem[], pathname);
     if (!arr) return null;
-    const filtered = arr.filter((item) => item.slug !== pathname);
+
+    // filter out current page AND any index pages
+    const filtered = arr.filter((item) => {
+      const isCurrent = item.slug === pathname;
+      const isIndex =
+        item.slug.endsWith('/index') ||
+        item.slug === pathname.substring(0, pathname.lastIndexOf('/')) || // parent path
+        item.slug === '/'; // root index
+      return !isCurrent && !isIndex;
+    });
+
     if (filtered.length === 0) return null;
-    return [...arr].sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
+    return [...filtered].sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
   }, [pathname]);
 
-  if (!siblings) {
-    return null;
-  }
+  if (!siblings) return null;
 
   return (
-    <Box sx={{}}>
+    <Box>
       <List dense disablePadding>
-        {siblings.map((item, idx) => (
-          <React.Fragment key={item.slug}>
-            <ListItemButton onClick={() => router.push(item.slug)}>
-              <ListItemIcon>
-                <Icon icon={item.icon as any} />
-              </ListItemIcon>
-              <ListItemText primary={item.title} />
-            </ListItemButton>
-          </React.Fragment>
+        {siblings.map((item) => (
+          <ListItemButton key={item.slug} onClick={() => router.push(item.slug)}>
+            <ListItemIcon>
+              <Icon icon={item.icon as any} />
+            </ListItemIcon>
+            <ListItemText
+              primary={item.title}
+              secondary={item.description || undefined}
+            />
+          </ListItemButton>
         ))}
       </List>
     </Box>
