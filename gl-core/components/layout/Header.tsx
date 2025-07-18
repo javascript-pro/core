@@ -44,9 +44,11 @@ export default function Header({ frontmatter = null }: THeader) {
           </>
         }
         title={
-          <Typography sx={{}} variant={'h6'} component={'h1'}>
-            {title}
-          </Typography>
+          !isMobile && (
+            <Typography sx={{}} variant={'h6'} component={'h1'}>
+              {title}
+            </Typography>
+          )
         }
         subheader={
           !isMobile && (

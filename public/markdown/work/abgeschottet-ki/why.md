@@ -4,10 +4,10 @@ title: Abgeschottet KI
 description: Where is the need for this?
 slug: /work/abgeschottet-ki/abgeschottet-ki/why
 icon: ki
-image: /png/n64/punk.png
+image: /png/ki/abgeschotten-ki.png
 ---
 
-> Abgeschottet KI exists because law firms need the power of AI **without risking client confidentiality**.
+> Abgeschottet KI exists because firms need the power of AI **without risking client confidentiality**.
 
 ## Why Is There a Need for This?
 

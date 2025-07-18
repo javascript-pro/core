@@ -4,10 +4,11 @@ title: Abgeschottet KI
 description: What Does It Mean to Ring‑Fence an LLM?
 slug: /work/abgeschottet-ki
 icon: ki
-image: /png/n64/punk.png
+image: /png/ki/abgeschotten-ki.png
+tags: abgeschottet, KI
 ---
 
-## A ring‑fenced LLM is like having the power of AI inside a locked room.
+### A ring‑fenced LLM is like having the power of AI inside a locked room.
 
 It can process sensitive documents and assist with legal work, but nothing ever leaves the firm’s secure network. When we say an AI or Large Language Model (LLM) is ring‑fenced, we mean it is completely contained within a secure environment — with no pathway for data to escape to the public internet.
 

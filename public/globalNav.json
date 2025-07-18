@@ -5,7 +5,7 @@
     "slug": "/",
     "order": 1,
     "icon": "home",
-    "image": "https://live.staticflickr.com/65535/53670802348_9bb887b680_b.jpg",
+    "image": "/png/ki/abgeschotten-ki.png",
     "type": "folder",
     "tags": [
       "JavaScript",
@@ -59,7 +59,7 @@
         "slug": "/work",
         "order": 10,
         "icon": "work",
-        "image": "https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg",
+        "image": "/png/ki/abgeschotten-ki.png",
         "type": "folder",
         "tags": [
           "JavaScript",
@@ -85,8 +85,12 @@
             "slug": "/work/abgeschottet-ki",
             "order": 1,
             "icon": "ki",
-            "image": "/png/n64/punk.png",
+            "image": "/png/ki/abgeschotten-ki.png",
             "type": "folder",
+            "tags": [
+              "abgeschottet",
+              "KI"
+            ],
             "excerpt": "A ring‑fenced LLM is like having the power of AI inside a locked room.\n\nIt can process sensitive documents and assist with legal work, but nothing ever leaves the firm’s secure network. When we say an",
             "children": [
               {
@@ -94,16 +98,16 @@
                 "slug": "/work/abgeschottet-ki/why",
                 "order": 0,
                 "icon": "ki",
-                "image": "/png/n64/punk.png",
+                "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
-                "excerpt": "Abgeschottet KI exists because law firms need the power of AI without risking client confidentiality.\n\n Why Is There a Need for This?\n\nModern law firms handle vast amounts of documents every day.  \nLa"
+                "excerpt": "Abgeschottet KI exists because firms need the power of AI without risking client confidentiality.\n\n Why Is There a Need for This?\n\nModern law firms handle vast amounts of documents every day.  \nLarge "
               },
               {
                 "title": "Professional Secrecy",
                 "slug": "/work/abgeschottet-ki/professional-secrecy",
                 "order": 10,
                 "icon": "ki",
-                "image": "/png/n64/law.png",
+                "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
                 "excerpt": "What you tell your lawyer stays between you and them.\n\n What Does Professional Secrecy Mean for UK Lawyers?\n\nWhen you speak to a lawyer in the UK, everything you tell them in confidence is protected b"
               },
@@ -112,8 +116,12 @@
                 "slug": "/work/abgeschottet-ki/confidentiality-obligations",
                 "order": 20,
                 "icon": "ki",
-                "image": "/png/n64/shield.png",
+                "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
+                "tags": [
+                  "abgeschottet",
+                  "KI"
+                ],
                 "excerpt": "UK law firms are bound by some of the strongest confidentiality rules in professional life.\n\n What Confidentiality Obligations Do UK Law Firms Have Toward Their Clients?\n\n Everything you tell your law"
               },
               {
@@ -121,7 +129,7 @@
                 "slug": "/work/abgeschottet-ki/prompts",
                 "order": 20,
                 "icon": "ki",
-                "image": "/png/n64/punk.png",
+                "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
                 "excerpt": "General legal reasoning\n\nErkläre in einfachen Worten, was das Berufsgeheimnis für deutsche Rechtsanwälte bedeutet.\n\nExplain in simple terms what professional secrecy means for UK lawyers.\n\n\n\nWelche Pf"
               },
@@ -130,8 +138,12 @@
                 "slug": "/work/abgeschottet-ki/gdpr-law-firms",
                 "order": 30,
                 "icon": "ki",
-                "image": "/png/n64/data.png",
+                "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
+                "tags": [
+                  "abgeschottet",
+                  "KI"
+                ],
                 "excerpt": "GDPR means your personal information is handled lawfully, transparently, and with your privacy in mind.\n\n What Does the GDPR Mean for a UK Law Firm?\n\nThe General Data Protection Regulation (GDPR) – as"
               },
               {
@@ -139,8 +151,12 @@
                 "slug": "/work/abgeschottet-ki/hardware",
                 "order": 40,
                 "icon": "ki",
-                "image": "/png/n64/punk.png",
+                "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
+                "tags": [
+                  "abgeschottet",
+                  "KI"
+                ],
                 "excerpt": "Keep it simple. Start small. Scale when you need to.\n\n Hardware for Abgeschottet KI\n\nOne of the advantages of Abgeschottet KI is that it’s a low‑investment, quick‑to‑implement solution.  \nYou don’t ne"
               },
               {
@@ -148,8 +164,12 @@
                 "slug": "/work/abgeschottet-ki/llms-legal-research",
                 "order": 40,
                 "icon": "ki",
-                "image": "/png/n64/search.png",
+                "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
+                "tags": [
+                  "abgeschottet",
+                  "KI"
+                ],
                 "excerpt": "Used carefully, large language models can turn legal research into a faster, more focused process.\n\n How Could Large Language Models Help UK Law Firms With Legal Research?\n\n Quickly summarising case l"
               },
               {
@@ -157,7 +177,7 @@
                 "slug": "/work/abgeschottet-ki/risks-public-llms",
                 "order": 50,
                 "icon": "ki",
-                "image": "/png/n64/warning.png",
+                "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
                 "excerpt": "Public AI services are not designed for legally confidential data.\n\n What Are the Risks if Lawyers Send Confidential Files to a Public AI Service?\n\n Loss of confidentiality\n Data protection breaches\n "
               },
@@ -166,7 +186,7 @@
                 "slug": "/work/abgeschottet-ki/ringfenced-llm",
                 "order": 60,
                 "icon": "ki",
-                "image": "/png/n64/lock.png",
+                "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
                 "excerpt": "A ring‑fenced LLM is like having the power of AI inside a locked room.\n\n What Does It Mean to Ring‑Fence an LLM?\n\n Runs on internal servers or private cloud\n Blocks external connections\n Uses local st"
               },
@@ -175,17 +195,21 @@
                 "slug": "/work/abgeschottet-ki/ringfenced-llm-confidentiality",
                 "order": 70,
                 "icon": "ki",
-                "image": "/png/n64/trust.png",
+                "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
-                "excerpt": "A ring‑fenced LLM gives a law firm all the efficiency of AI while upholding the highest standards of confidentiality.\n\n How Can a Ring‑Fenced LLM Help?\n\n No data leaves the firm’s network\n Built‑in ac"
+                "excerpt": "A ring‑fenced LLM gives a firm all the efficiency of AI while upholding the highest standards of confidentiality.\n\n How Can a Ring‑Fenced LLM Help?\n\n No data leaves the firm’s network\n Built‑in access"
               },
               {
                 "title": "Organisational Measures",
                 "slug": "/work/abgeschottet-ki/organisational-measures",
                 "order": 80,
                 "icon": "ki",
-                "image": "/png/n64/checklist.png",
+                "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
+                "tags": [
+                  "abgeschottet",
+                  "KI"
+                ],
                 "excerpt": "A ring‑fenced LLM works best as part of a wider culture of confidentiality.\n\n What Organisational Measures Should a Law Firm Take?\n\n Clear internal policies\n Regular staff training\n Access controls ba"
               }
             ]
@@ -198,6 +222,37 @@
             "image": "/png/og.png",
             "type": "file",
             "excerpt": "Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or b"
+          },
+          {
+            "title": "PDF Smash",
+            "description": "A ring‑fenced PDF smasher for keeping all that in house",
+            "slug": "/work/pdf-smash",
+            "order": 1,
+            "icon": "pdf",
+            "image": "/png/n64/punk.png",
+            "type": "folder",
+            "tags": [
+              "cartridges",
+              "KI",
+              "pdf"
+            ],
+            "excerpt": "Cartridge for Abgeschottet KI",
+            "children": [
+              {
+                "title": "PDF Smash",
+                "slug": "/work/pdf-smash/history-of-pdf",
+                "order": 1,
+                "icon": "pdf",
+                "image": "/png/n64/punk.png",
+                "type": "file",
+                "tags": [
+                  "cartridges",
+                  "KI",
+                  "pdf"
+                ],
+                "excerpt": "A ring‑fenced PDF smasher for keeping all that in house"
+              }
+            ]
           },
           {
             "title": "Fullstack JavaScript Developer",

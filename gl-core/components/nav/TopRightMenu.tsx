@@ -112,7 +112,6 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
         transformOrigin={{ vertical: 'bottom', horizontal: 'right' }}
         sx={{ mt: -1 }}
       >
-
         <MenuItem
           onClick={() => {
             dispatch(routeTo('/', router));
@@ -155,10 +154,9 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           <ListItemText primary="Share" />
         </MenuItem>
 
-        <Box sx={{ my: 1 }}>
+        <Box sx={{ my: 1, mx: 2 }}>
           <ArrowMenu />
         </Box>
-        
 
         {/* App Version */}
         <Box sx={{ pr: 3, py: 1, textAlign: 'right' }}>
@@ -179,7 +177,7 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
         open={shareDialogOpen}
         onClose={handleShareClose}
         fullScreen={isMobile}
-        maxWidth="sm"
+        maxWidth="xs"
         fullWidth
       >
         <DialogTitle
@@ -222,12 +220,6 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
                     style={{ width: '100%', height: 'auto' }}
                   />
                 </>
-                // <CardMedia
-                //   component="img"
-                //   height="140"
-                //   image={}
-                //   alt={frontmatter.title || 'Preview image'}
-                // />
               )}
             </Box>
           )}

@@ -4,7 +4,7 @@ title: Abgeschottet KI
 description: Example prompts
 slug: /work/abgeschottet-ki/prompts
 icon: ki
-image: /png/n64/punk.png
+image: /png/ki/abgeschotten-ki.png
 ---
 
 ## General legal reasoning

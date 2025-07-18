@@ -16,7 +16,7 @@ export default function LoadingOverlay() {
       // when loading becomes true, start a 5s timeout
       timeout = setTimeout(() => {
         dispatch(toggleLoading(false));
-      }, 5000);
+      }, 2500);
     }
 
     // cleanup timeout when unmounting or when loading changes

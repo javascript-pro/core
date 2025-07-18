@@ -198,7 +198,7 @@ export default function FlickrLatest({}: TAlbumCard) {
           <CardHeader
             title={
               <Typography variant="body1">
-                {currentPhoto?.title || 'Photo title'}
+                {currentPhoto?.title || ''}
               </Typography>
             }
             subheader={

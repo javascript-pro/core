@@ -10,6 +10,7 @@ import {
   ShareMenu,
   IndexNav,
   ArrowMenu,
+  Siblings,
 } from './nav';
 import { FieldUpload } from './forms';
 import { Header, Footer, RenderMarkdown } from './layout';
@@ -18,6 +19,7 @@ export { IncludeAll, Advert, Feedback, LoadingOverlay };
 export { Header, Footer, RenderMarkdown };
 export {
   Nav,
+  Siblings,
   ArrowMenu,
   IndexNav,
   NavItem,

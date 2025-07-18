@@ -117,8 +117,8 @@ export default function FlickrAlbum({ album }: { album?: string }) {
 
   return (
     <>
-      <CardContent>
-        <Box sx={{ mt: 1, position: 'relative' }}>
+      <>
+        <Box sx={{ position: 'relative' }}>
           {photos.length > 0 && currentPhoto ? (
             <Box sx={{ position: 'relative' }}>
               {/* Loading spinner overlay */}
@@ -158,6 +158,7 @@ export default function FlickrAlbum({ album }: { album?: string }) {
                     onError={() => setHasImageError(true)}
                     sx={{
                       width: '100%',
+                      
                       aspectRatio: `${width} / ${height}`,
                       borderRadius: 0,
                       display: 'block',
@@ -182,7 +183,7 @@ export default function FlickrAlbum({ album }: { album?: string }) {
             <Box
               sx={{
                 width: '100%',
-                minHeight: 200,
+                minHeight: 100,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -195,45 +196,45 @@ export default function FlickrAlbum({ album }: { album?: string }) {
           <CardHeader
             title={
               <Typography variant="body1">
-                {currentPhoto?.title || 'Photo title'}
+                {currentPhoto?.title || ''}
               </Typography>
             }
-            subheader={
-              <Typography variant="body2">
-                {currentPhoto?.description}
-              </Typography>
-            }
+            
+            action={<>
+              <MightyButton
+                color="primary"
+                mode="icon"
+                label="Back"
+                icon="left"
+                onClick={handlePrev}
+                disabled={latestIndex === 0}
+              />
+              <MightyButton
+                color="primary"
+                mode="icon"
+                label="Reset"
+                icon="reset"
+                onClick={handleReset}
+                disabled={latestIndex === 0}
+              />
+
+              <MightyButton
+                color="primary"
+                mode="icon"
+                label="Next"
+                icon="right"
+                onClick={handleNext}
+                disabled={latestIndex >= photos.length - 1}
+              />
+            </>}
           />
         </Box>
-      </CardContent>
-      <CardActions>
-        <Box sx={{ flexGrow: 1 }} />
-        <MightyButton
-          color="primary"
-          mode="icon"
-          label="Back"
-          icon="left"
-          onClick={handlePrev}
-          disabled={latestIndex === 0}
-        />
-        <MightyButton
-          color="primary"
-          mode="icon"
-          label="Reset"
-          icon="reset"
-          onClick={handleReset}
-          disabled={latestIndex === 0}
-        />
-        <MightyButton
-          color="primary"
-          mode="icon"
-          label="Next"
-          icon="right"
-          onClick={handleNext}
-          disabled={latestIndex >= photos.length - 1}
-        />
-        <Box sx={{ flexGrow: 1 }} />
-      </CardActions>
+        <Box sx={{mx:2}}>
+          <Typography variant="body2">
+            {currentPhoto?.description}
+          </Typography>
+        </Box>
+      </>
     </>
   );
 }
