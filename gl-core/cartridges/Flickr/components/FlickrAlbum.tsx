@@ -158,7 +158,7 @@ export default function FlickrAlbum({ album }: { album?: string }) {
                     onError={() => setHasImageError(true)}
                     sx={{
                       width: '100%',
-                      
+
                       aspectRatio: `${width} / ${height}`,
                       borderRadius: 0,
                       display: 'block',
@@ -199,40 +199,39 @@ export default function FlickrAlbum({ album }: { album?: string }) {
                 {currentPhoto?.title || ''}
               </Typography>
             }
-            
-            action={<>
-              <MightyButton
-                color="primary"
-                mode="icon"
-                label="Back"
-                icon="left"
-                onClick={handlePrev}
-                disabled={latestIndex === 0}
-              />
-              <MightyButton
-                color="primary"
-                mode="icon"
-                label="Reset"
-                icon="reset"
-                onClick={handleReset}
-                disabled={latestIndex === 0}
-              />
+            action={
+              <>
+                <MightyButton
+                  color="primary"
+                  mode="icon"
+                  label="Back"
+                  icon="left"
+                  onClick={handlePrev}
+                  disabled={latestIndex === 0}
+                />
+                <MightyButton
+                  color="primary"
+                  mode="icon"
+                  label="Reset"
+                  icon="reset"
+                  onClick={handleReset}
+                  disabled={latestIndex === 0}
+                />
 
-              <MightyButton
-                color="primary"
-                mode="icon"
-                label="Next"
-                icon="right"
-                onClick={handleNext}
-                disabled={latestIndex >= photos.length - 1}
-              />
-            </>}
+                <MightyButton
+                  color="primary"
+                  mode="icon"
+                  label="Next"
+                  icon="right"
+                  onClick={handleNext}
+                  disabled={latestIndex >= photos.length - 1}
+                />
+              </>
+            }
           />
         </Box>
-        <Box sx={{mx:2}}>
-          <Typography variant="body2">
-            {currentPhoto?.description}
-          </Typography>
+        <Box sx={{ mx: 2 }}>
+          <Typography variant="body2">{currentPhoto?.description}</Typography>
         </Box>
       </>
     </>

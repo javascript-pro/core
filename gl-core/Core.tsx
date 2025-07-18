@@ -109,13 +109,14 @@ export default function Core({ frontmatter, body = null }: TCore) {
               <Grid size={{ md: 3 }}>
                 <Box sx={{ mx: 1, mt: 1 }}>
                   <SideAds />
+                  <Siblings />
                 </Box>
               </Grid>
             )}
 
             {/* FlickrAlbum on desktop in middle column */}
             {!isMobile && (
-              <Grid size={{ md: 3 }}>
+              <Grid size={{ md: 3 }} sx={{ mx: 3}}>
                 <FlickrAlbum album="72177720327633973" />
               </Grid>
             )}
@@ -159,15 +160,13 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
                 {/* FlickrAlbum on mobile directly below content */}
                 {isMobile && (
-                  <Box sx={{ mt: 2 }}>
-                    
+                  <Box sx={{ mt: 2, mx: 2.5 }}>
                     <FlickrAlbum album="72177720327633973" />
                   </Box>
                 )}
 
                 <Box sx={{ px: isMobile ? 0.5 : 2, my: !isMobile ? 2 : 2 }}>
                   {pathname !== '/' && <PageBreadcrumb />}
-                  {/* <Siblings /> */}
                 </Box>
               </Box>
 
