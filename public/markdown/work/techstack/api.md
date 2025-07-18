@@ -1,7 +1,7 @@
 ---
 order: 10
 title: Public API
-slug: /work/api
+slug: /work/techstack/api
 description: Private keys are available
 icon: api
 image: /png/og.png

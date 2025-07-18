@@ -101,9 +101,6 @@
     <loc>https://goldlabel.pro/work/abgeschottet-ki/why</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/api</loc>
-  </url>
-  <url>
     <loc>https://goldlabel.pro/work/company</loc>
   </url>
   <url>
@@ -146,25 +143,25 @@
     <loc>https://goldlabel.pro/work/core/core</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/work/core/free</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/work/cv/about</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/cv</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/free</loc>
-  </url>
-  <url>
     <loc>https://goldlabel.pro/work</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/open-source</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/pdf-smash/history-of-pdf</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/pdf-smash</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/api</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/techstack/blockchain</loc>
@@ -192,5 +189,8 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work/techstack/javascript/rest-api</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/open-source</loc>
   </url>
 </urlset>
