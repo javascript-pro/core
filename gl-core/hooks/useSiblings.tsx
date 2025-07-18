@@ -16,21 +16,30 @@ export function useSiblings() {
   return useMemo(() => {
     if (!pathname) return null;
 
-    function findSiblings(navArray: any[], parentChildren: any[] | null = null): any[] | null {
+    function findSiblings(
+      navArray: any[],
+      parentChildren: any[] | null = null,
+    ): any[] | null {
       for (const item of navArray) {
-        const fullSlug = item.slug.startsWith('/') ? item.slug : `/${item.slug}`;
+        const fullSlug = item.slug.startsWith('/')
+          ? item.slug
+          : `/${item.slug}`;
 
         if (fullSlug === pathname) {
           if (parentChildren && parentChildren.length > 1) {
             const siblings = parentChildren.filter((child) => {
-              const slug = child.slug.startsWith('/') ? child.slug : `/${child.slug}`;
+              const slug = child.slug.startsWith('/')
+                ? child.slug
+                : `/${child.slug}`;
               return slug !== pathname;
             });
-            return siblings.length > 0 ? siblings.sort((a, b) => {
-              const ao = a.order ?? 0;
-              const bo = b.order ?? 0;
-              return ao - bo;
-            }) : null;
+            return siblings.length > 0
+              ? siblings.sort((a, b) => {
+                  const ao = a.order ?? 0;
+                  const bo = b.order ?? 0;
+                  return ao - bo;
+                })
+              : null;
           }
           return null;
         }

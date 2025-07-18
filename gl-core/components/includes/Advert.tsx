@@ -35,7 +35,7 @@ export default function Advert({
           sx={{ width: '100%', border: 0 }}
           severity="success"
           variant="outlined"
-          icon={<Icon icon={icon as any} />}
+          icon={<Icon icon={icon as any} color={"inherit"} />}
         >
           <Typography variant="body1">{title}</Typography>
           {!isMobile && showTagline && (

@@ -1,7 +1,7 @@
 ---
 order: 20
-title: Abgeschottet KI
-description: Example prompts
+title: Example prompts
+description:
 slug: /work/abgeschottet-ki/prompts
 icon: ki
 image: /png/ki/abgeschotten-ki.png

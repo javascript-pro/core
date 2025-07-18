@@ -78,13 +78,22 @@
             "excerpt": "A ring‑fenced LLM is like having the power of AI inside a locked room.\n\nIt can process sensitive documents and assist with legal work, but nothing ever leaves the firm’s secure network. When we say an",
             "children": [
               {
-                "title": "Abgeschottet KI",
+                "title": "Why Abgeschottet KI",
                 "slug": "/work/abgeschottet-ki/why",
                 "order": 0,
                 "icon": "ki",
                 "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
                 "excerpt": "Abgeschottet KI exists because firms need the power of AI without risking client confidentiality.\n\n Why Is There a Need for This?\n\nModern law firms handle vast amounts of documents every day.  \nLarge "
+              },
+              {
+                "title": "Ring‑Fenced LLM",
+                "slug": "/work/abgeschottet-ki/ringfenced-llm",
+                "order": 6,
+                "icon": "ki",
+                "image": "/png/ki/abgeschotten-ki.png",
+                "type": "file",
+                "excerpt": "A ring‑fenced LLM is like having the power of AI inside a locked room.\n\n What Does It Mean to Ring‑Fence an LLM?\n\n Runs on internal servers or private cloud\n Blocks external connections\n Uses local st"
               },
               {
                 "title": "Professional Secrecy",
@@ -109,7 +118,7 @@
                 "excerpt": "UK law firms are bound by some of the strongest confidentiality rules in professional life.\n\n What Confidentiality Obligations Do UK Law Firms Have Toward Their Clients?\n\n Everything you tell your law"
               },
               {
-                "title": "Abgeschottet KI",
+                "title": "Example prompts",
                 "slug": "/work/abgeschottet-ki/prompts",
                 "order": 20,
                 "icon": "ki",
@@ -131,7 +140,7 @@
                 "excerpt": "GDPR means your personal information is handled lawfully, transparently, and with your privacy in mind.\n\n What Does the GDPR Mean for a UK Law Firm?\n\nThe General Data Protection Regulation (GDPR) – as"
               },
               {
-                "title": "Abgeschottet KI",
+                "title": "Hardware",
                 "slug": "/work/abgeschottet-ki/hardware",
                 "order": 40,
                 "icon": "ki",
@@ -166,15 +175,6 @@
                 "excerpt": "Public AI services are not designed for legally confidential data.\n\n What Are the Risks if Lawyers Send Confidential Files to a Public AI Service?\n\n Loss of confidentiality\n Data protection breaches\n "
               },
               {
-                "title": "Ring‑Fenced LLM",
-                "slug": "/work/abgeschottet-ki/ringfenced-llm",
-                "order": 60,
-                "icon": "ki",
-                "image": "/png/ki/abgeschotten-ki.png",
-                "type": "file",
-                "excerpt": "A ring‑fenced LLM is like having the power of AI inside a locked room.\n\n What Does It Mean to Ring‑Fence an LLM?\n\n Runs on internal servers or private cloud\n Blocks external connections\n Uses local st"
-              },
-              {
                 "title": "Ring‑Fenced LLM & Confidentiality",
                 "slug": "/work/abgeschottet-ki/ringfenced-llm-confidentiality",
                 "order": 70,
@@ -199,38 +199,7 @@
             ]
           },
           {
-            "title": "PDF Smash",
-            "description": "A ring‑fenced PDF smasher for keeping all that in house",
-            "slug": "/work/pdf-smash",
-            "order": 1,
-            "icon": "pdf",
-            "image": "/png/n64/punk.png",
-            "type": "folder",
-            "tags": [
-              "cartridges",
-              "KI",
-              "pdf"
-            ],
-            "excerpt": "Cartridge for Abgeschottet KI",
-            "children": [
-              {
-                "title": "PDF Smash",
-                "slug": "/work/pdf-smash/history-of-pdf",
-                "order": 1,
-                "icon": "pdf",
-                "image": "/png/n64/punk.png",
-                "type": "file",
-                "tags": [
-                  "cartridges",
-                  "KI",
-                  "pdf"
-                ],
-                "excerpt": "A ring‑fenced PDF smasher for keeping all that in house"
-              }
-            ]
-          },
-          {
-            "title": "Fullstack JavaScript Developer",
+            "title": "CV",
             "description": "Match your Job to our Curriculum Vitae with AI",
             "slug": "/work/cv",
             "order": 2,

@@ -204,7 +204,7 @@ export default function FlickrAlbum({ album }: { album?: string }) {
               anchorEl={anchorEl}
               onClose={handlePopoverClose}
               anchorOrigin={{
-                vertical: 'top',
+                vertical: 'bottom',
                 horizontal: 'left',
               }}
               transformOrigin={{
@@ -278,20 +278,23 @@ export default function FlickrAlbum({ album }: { album?: string }) {
         open={dialogOpen}
         onClose={handleDialogClose}
         fullScreen
-        PaperProps={{ sx: { backgroundColor: 'background.default', position: 'relative' } }}
+        PaperProps={{
+          sx: { backgroundColor: 'background.default', position: 'relative' },
+        }}
       >
         <DialogTitle sx={{ p: 0 }}>
           <CardHeader
             title={currentPhoto?.title || 'Untitled'}
             subheader={currentPhoto?.description || 'No description'}
-            avatar={<>
+            avatar={
+              <>
                 <IconButton onClick={handleFlickrClick} title="View on Flickr">
                   <Icon icon="flickr" />
                 </IconButton>
-                </>}
+              </>
+            }
             action={
               <>
-                
                 <IconButton onClick={handleDialogClose} title="Close">
                   <Icon icon="close" />
                 </IconButton>

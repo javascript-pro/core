@@ -26,7 +26,7 @@ export default function SideAds() {
         icon="ki"
         title={'Abgeschottet KI'}
         onClick={() => {
-          dispatch(routeTo('/work/abgeschottet-ki', router));
+          dispatch(routeTo('/work/abgeschottet-ki/why', router));
         }}
       />
       {/* <Advert

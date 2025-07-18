@@ -1,5 +1,5 @@
 ---
-order: 60
+order: 6
 title: Ring‑Fenced LLM
 description: Keeping data inside a secure environment
 slug: /work/abgeschottet-ki/ringfenced-llm

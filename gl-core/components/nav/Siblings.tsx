@@ -74,7 +74,7 @@ export default function Siblings() {
             </ListItemIcon>
             <ListItemText
               primary={item.title}
-              secondary={item.description || undefined}
+              // secondary={item.description || undefined}
             />
           </ListItemButton>
         ))}
