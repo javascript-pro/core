@@ -1,7 +1,7 @@
 ---
 order: 40
-title: Abgeschottet KI
-description: Hardware
+title: Hardware
+description: Start small. Scale when you need to.
 slug: /work/abgeschottet-ki/abgeschottet-ki/hardware
 icon: ki
 image: /png/ki/abgeschotten-ki.png

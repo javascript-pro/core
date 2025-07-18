@@ -12,7 +12,13 @@ import {
   CardMedia,
   Typography,
   CircularProgress,
+  Popover,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  IconButton,
 } from '@mui/material';
+import { Icon } from '../../../../gl-core'; // assuming Icon is exported from gl-core
 import {
   MightyButton,
   useDispatch,
@@ -30,9 +36,11 @@ export default function FlickrAlbum({ album }: { album?: string }) {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [hasImageError, setHasImageError] = useState(false);
 
+  const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
+  const [dialogOpen, setDialogOpen] = useState(false);
+
   const DELAY_MS = 200;
 
-  // warn if no album
   useEffect(() => {
     if (!album) {
       dispatch(
@@ -45,7 +53,6 @@ export default function FlickrAlbum({ album }: { album?: string }) {
     }
   }, [album, dispatch]);
 
-  // subscribe to album photos
   useEffect(() => {
     if (!album) return;
 
@@ -83,7 +90,6 @@ export default function FlickrAlbum({ album }: { album?: string }) {
     return () => unsub();
   }, [album, dispatch]);
 
-  // reset image load states when photo changes
   useEffect(() => {
     if (photos.length > 0 && latestIndex < photos.length) {
       setImageLoaded(false);
@@ -91,18 +97,17 @@ export default function FlickrAlbum({ album }: { album?: string }) {
     }
   }, [photos, latestIndex]);
 
-  // auto-progress to next photo when component mounts / album changes
   useEffect(() => {
     if (photos.length > 0) {
-      // when component mounts or photos update, go to next
       const nextIndex = (latestIndex + 1) % photos.length;
       dispatch(setLatestIndex(nextIndex));
     }
-    // only trigger when album or photos length changes (not on every latestIndex)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [album, photos.length]);
 
   const currentPhoto = photos[latestIndex] || null;
+  const width = currentPhoto?.sizes?.medium?.width || 4;
+  const height = currentPhoto?.sizes?.medium?.height || 3;
 
   const handlePrev = () => {
     if (photos.length > 0) {
@@ -122,15 +127,32 @@ export default function FlickrAlbum({ album }: { album?: string }) {
     dispatch(setLatestIndex(0));
   };
 
-  const width = currentPhoto?.sizes?.medium?.width || 4;
-  const height = currentPhoto?.sizes?.medium?.height || 3;
+  const handlePopoverOpen = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handlePopoverClose = () => {
+    setAnchorEl(null);
+  };
+  const popoverOpen = Boolean(anchorEl);
+
+  const handleImageClick = () => {
+    setDialogOpen(true);
+  };
+  const handleDialogClose = () => {
+    setDialogOpen(false);
+  };
+
+  const handleFlickrClick = () => {
+    if (currentPhoto?.flickrUrl) {
+      window.open(currentPhoto.flickrUrl, '_blank', 'noopener,noreferrer');
+    }
+  };
 
   return (
     <>
       <Box sx={{ position: 'relative' }}>
         {photos.length > 0 && currentPhoto ? (
           <Box sx={{ position: 'relative' }}>
-            {/* Loading spinner overlay */}
             {!imageLoaded && !hasImageError && (
               <Box
                 sx={{
@@ -148,10 +170,9 @@ export default function FlickrAlbum({ album }: { album?: string }) {
 
             {!hasImageError && (
               <ButtonBase
-                onClick={() =>
-                  currentPhoto?.flickrUrl &&
-                  window.open(currentPhoto.flickrUrl, '_blank')
-                }
+                onMouseEnter={handlePopoverOpen}
+                onMouseLeave={handlePopoverClose}
+                onClick={handleImageClick}
                 sx={{
                   width: '100%',
                   display: imageLoaded ? 'block' : 'none',
@@ -177,6 +198,31 @@ export default function FlickrAlbum({ album }: { album?: string }) {
               </ButtonBase>
             )}
 
+            <Popover
+              sx={{ pointerEvents: 'none' }}
+              open={popoverOpen}
+              anchorEl={anchorEl}
+              onClose={handlePopoverClose}
+              anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'left',
+              }}
+              transformOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+              }}
+              disableRestoreFocus
+            >
+              <Box sx={{ p: 2, maxWidth: 300 }}>
+                <Typography variant="subtitle1" fontWeight="bold">
+                  {currentPhoto.title || 'Untitled'}
+                </Typography>
+                <Typography variant="body2">
+                  {currentPhoto.description || 'No description'}
+                </Typography>
+              </Box>
+            </Popover>
+
             {hasImageError && (
               <Box sx={{ px: 2, py: 1 }}>
                 <Typography color="error" fontSize={14}>
@@ -199,43 +245,125 @@ export default function FlickrAlbum({ album }: { album?: string }) {
           </Box>
         )}
 
-        <CardHeader
-          title={
-            <Typography variant="body1">{currentPhoto?.title || ''}</Typography>
-          }
-          action={
-            <>
-              <MightyButton
-                color="primary"
-                mode="icon"
-                label="Back"
-                icon="left"
-                onClick={handlePrev}
-                disabled={photos.length === 0}
-              />
-              <MightyButton
-                color="primary"
-                mode="icon"
-                label="Reset"
-                icon="reset"
-                onClick={handleReset}
-                disabled={photos.length === 0}
-              />
-              <MightyButton
-                color="primary"
-                mode="icon"
-                label="Next"
-                icon="right"
-                onClick={handleNext}
-                disabled={photos.length === 0}
-              />
-            </>
-          }
-        />
+        <Box sx={{ mt: 1 }}>
+          <MightyButton
+            color="primary"
+            mode="icon"
+            label="Back"
+            icon="left"
+            onClick={handlePrev}
+            disabled={photos.length === 0}
+          />
+          <MightyButton
+            color="primary"
+            mode="icon"
+            label="Reset"
+            icon="reset"
+            onClick={handleReset}
+            disabled={photos.length === 0}
+          />
+          <MightyButton
+            color="primary"
+            mode="icon"
+            label="Next"
+            icon="right"
+            onClick={handleNext}
+            disabled={photos.length === 0}
+          />
+        </Box>
       </Box>
-      <Box sx={{ mx: 2 }}>
-        <Typography variant="body2">{currentPhoto?.description}</Typography>
-      </Box>
+
+      {/* Fullscreen Dialog */}
+      <Dialog
+        open={dialogOpen}
+        onClose={handleDialogClose}
+        fullScreen
+        PaperProps={{ sx: { backgroundColor: 'background.default', position: 'relative' } }}
+      >
+        <DialogTitle sx={{ p: 0 }}>
+          <CardHeader
+            title={currentPhoto?.title || 'Untitled'}
+            subheader={currentPhoto?.description || 'No description'}
+            avatar={<>
+                <IconButton onClick={handleFlickrClick} title="View on Flickr">
+                  <Icon icon="flickr" />
+                </IconButton>
+                </>}
+            action={
+              <>
+                
+                <IconButton onClick={handleDialogClose} title="Close">
+                  <Icon icon="close" />
+                </IconButton>
+              </>
+            }
+          />
+        </DialogTitle>
+        <DialogContent
+          sx={{
+            position: 'relative',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            p: 2,
+          }}
+        >
+          {/* Prev Button */}
+          <Box
+            sx={{
+              position: 'absolute',
+              left: 8,
+              top: '50%',
+              transform: 'translateY(-50%)',
+              zIndex: 10,
+            }}
+          >
+            <MightyButton
+              color="primary"
+              mode="icon"
+              icon="left"
+              label="Prev"
+              onClick={handlePrev}
+              disabled={photos.length === 0}
+            />
+          </Box>
+
+          {/* Next Button */}
+          <Box
+            sx={{
+              position: 'absolute',
+              right: 8,
+              top: '50%',
+              transform: 'translateY(-50%)',
+              zIndex: 10,
+            }}
+          >
+            <MightyButton
+              color="primary"
+              mode="icon"
+              icon="right"
+              label="Next"
+              onClick={handleNext}
+              disabled={photos.length === 0}
+            />
+          </Box>
+
+          {currentPhoto?.sizes?.large?.src ? (
+            <CardMedia
+              component="img"
+              src={currentPhoto.sizes.large.src}
+              alt={currentPhoto.title || 'Photo'}
+              sx={{
+                maxWidth: '100%',
+                maxHeight: '80vh',
+                objectFit: 'contain',
+              }}
+            />
+          ) : (
+            <Typography>No large image available</Typography>
+          )}
+        </DialogContent>
+      </Dialog>
     </>
   );
 }

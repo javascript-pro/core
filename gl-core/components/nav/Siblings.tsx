@@ -65,7 +65,10 @@ export default function Siblings() {
     <Box>
       <List dense disablePadding>
         {siblings.map((item) => (
-          <ListItemButton key={item.slug} onClick={() => router.push(item.slug)}>
+          <ListItemButton
+            key={item.slug}
+            onClick={() => router.push(item.slug)}
+          >
             <ListItemIcon>
               <Icon icon={item.icon as any} />
             </ListItemIcon>

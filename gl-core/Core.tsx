@@ -27,6 +27,7 @@ import {
   useDispatch,
   useSlice,
   Siblings,
+  useSiblings,
 } from '../gl-core';
 import { SideAds } from '../gl-core';
 import { FlickrAlbum } from './cartridges/Flickr';
@@ -38,6 +39,7 @@ import { Admin } from './cartridges/Admin';
 export default function Core({ frontmatter, body = null }: TCore) {
   let fullScreen = false;
   const { hideImage } = useSlice();
+  const siblings = useSiblings();
   const pathname = usePathname();
   const router = useRouter();
   const themeMode = useThemeMode();
@@ -107,12 +109,15 @@ export default function Core({ frontmatter, body = null }: TCore) {
           <Header frontmatter={frontmatter} />
 
           <Grid container spacing={isMobile ? 0 : 1}>
-            {/* Side ads on desktop only */}
+            {/* Side content on desktop only */}
             {!isMobile && (
               <Grid size={{ md: 3 }}>
                 <Box sx={{ mt: 1 }}>
-                  <SideAds />
-                  <Siblings />
+                  {Array.isArray(siblings) && siblings.length > 0 ? (
+                    <Siblings />
+                  ) : (
+                    <SideAds />
+                  )}
                 </Box>
               </Grid>
             )}
@@ -123,6 +128,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                 <FlickrAlbum album="72177720327633973" />
               </Grid>
             )}
+
             {/* Main content */}
             <Grid size={{ xs: 12, md: 6 }}>
               <Box sx={{ mt: isMobile ? 2 : 0 }}>
