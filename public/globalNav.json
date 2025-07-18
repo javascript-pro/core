@@ -80,6 +80,117 @@
         "excerpt": "Goldlabel Core is always Free & Open Source as a public repo on . The apps we ship are real, run in production and are developed in public. The Core is Open Source and Free forever — giving you static",
         "children": [
           {
+            "title": "Abgeschottet KI",
+            "description": "What Does It Mean to Ring‑Fence an LLM?",
+            "slug": "/work/abgeschottet-ki",
+            "order": 1,
+            "icon": "work",
+            "image": "/png/n64/punk.png",
+            "type": "folder",
+            "excerpt": "A ring‑fenced LLM is like having the power of AI inside a locked room. It can process sensitive documents and assist with legal work, but nothing ever leaves the firm’s secure network.\n\nWhen we say an",
+            "children": [
+              {
+                "title": "Abgeschottet KI",
+                "slug": "/work/abgeschottet-ki/why",
+                "order": 0,
+                "icon": "work",
+                "image": "/png/n64/punk.png",
+                "type": "file",
+                "excerpt": "Abgeschottet KI exists because law firms need the power of AI without risking client confidentiality.\n\n Why Is There a Need for This?\n\nModern law firms handle vast amounts of documents every day.  \nLa"
+              },
+              {
+                "title": "Professional Secrecy",
+                "slug": "/work/abgeschottet-ki/professional-secrecy",
+                "order": 10,
+                "icon": "work",
+                "image": "/png/n64/law.png",
+                "type": "file",
+                "excerpt": "What you tell your lawyer stays between you and them.\n\n What Does Professional Secrecy Mean for UK Lawyers?\n\nWhen you speak to a lawyer in the UK, everything you tell them in confidence is protected b"
+              },
+              {
+                "title": "Confidentiality Obligations",
+                "slug": "/work/abgeschottet-ki/confidentiality-obligations",
+                "order": 20,
+                "icon": "work",
+                "image": "/png/n64/shield.png",
+                "type": "file",
+                "excerpt": "UK law firms are bound by some of the strongest confidentiality rules in professional life.\n\n What Confidentiality Obligations Do UK Law Firms Have Toward Their Clients?\n\n Everything you tell your law"
+              },
+              {
+                "title": "Abgeschottet KI",
+                "slug": "/work/abgeschottet-ki/prompts",
+                "order": 20,
+                "icon": "work",
+                "image": "/png/n64/punk.png",
+                "type": "file",
+                "excerpt": "General legal reasoning\n\nErkläre in einfachen Worten, was das Berufsgeheimnis für deutsche Rechtsanwälte bedeutet.\n\nExplain in simple terms what professional secrecy means for UK lawyers.\n\n\n\nWelche Pf"
+              },
+              {
+                "title": "GDPR and Law Firms",
+                "slug": "/work/abgeschottet-ki/gdpr-law-firms",
+                "order": 30,
+                "icon": "work",
+                "image": "/png/n64/data.png",
+                "type": "file",
+                "excerpt": "GDPR means your personal information is handled lawfully, transparently, and with your privacy in mind.\n\n What Does the GDPR Mean for a UK Law Firm?\n\nThe General Data Protection Regulation (GDPR) – as"
+              },
+              {
+                "title": "Abgeschottet KI",
+                "slug": "/work/abgeschottet-ki/hardware",
+                "order": 40,
+                "icon": "work",
+                "image": "/png/n64/punk.png",
+                "type": "file",
+                "excerpt": "Keep it simple. Start small. Scale when you need to.\n\n Hardware for Abgeschottet KI\n\nOne of the advantages of Abgeschottet KI is that it’s a low‑investment, quick‑to‑implement solution.  \nYou don’t ne"
+              },
+              {
+                "title": "LLMs and Legal Research",
+                "slug": "/work/abgeschottet-ki/llms-legal-research",
+                "order": 40,
+                "icon": "work",
+                "image": "/png/n64/search.png",
+                "type": "file",
+                "excerpt": "Used carefully, large language models can turn legal research into a faster, more focused process.\n\n How Could Large Language Models Help UK Law Firms With Legal Research?\n\n Quickly summarising case l"
+              },
+              {
+                "title": "Risks of Public LLMs",
+                "slug": "/work/abgeschottet-ki/risks-public-llms",
+                "order": 50,
+                "icon": "work",
+                "image": "/png/n64/warning.png",
+                "type": "file",
+                "excerpt": "Public AI services are not designed for legally confidential data.\n\n What Are the Risks if Lawyers Send Confidential Files to a Public AI Service?\n\n Loss of confidentiality\n Data protection breaches\n "
+              },
+              {
+                "title": "Ring‑Fenced LLM",
+                "slug": "/work/abgeschottet-ki/ringfenced-llm",
+                "order": 60,
+                "icon": "work",
+                "image": "/png/n64/lock.png",
+                "type": "file",
+                "excerpt": "A ring‑fenced LLM is like having the power of AI inside a locked room.\n\n What Does It Mean to Ring‑Fence an LLM?\n\n Runs on internal servers or private cloud\n Blocks external connections\n Uses local st"
+              },
+              {
+                "title": "Ring‑Fenced LLM & Confidentiality",
+                "slug": "/work/abgeschottet-ki/ringfenced-llm-confidentiality",
+                "order": 70,
+                "icon": "work",
+                "image": "/png/n64/trust.png",
+                "type": "file",
+                "excerpt": "A ring‑fenced LLM gives a law firm all the efficiency of AI while upholding the highest standards of confidentiality.\n\n How Can a Ring‑Fenced LLM Help?\n\n No data leaves the firm’s network\n Built‑in ac"
+              },
+              {
+                "title": "Organisational Measures",
+                "slug": "/work/abgeschottet-ki/organisational-measures",
+                "order": 80,
+                "icon": "work",
+                "image": "/png/n64/checklist.png",
+                "type": "file",
+                "excerpt": "A ring‑fenced LLM works best as part of a wider culture of confidentiality.\n\n What Organisational Measures Should a Law Firm Take?\n\n Clear internal policies\n Regular staff training\n Access controls ba"
+              }
+            ]
+          },
+          {
             "title": "Free & Open Source",
             "slug": "/work/free",
             "order": 1,

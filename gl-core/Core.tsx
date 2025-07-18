@@ -106,7 +106,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
           <Grid container spacing={isMobile ? 0 : 1}>
             {/* Side ads on desktop only */}
             {!isMobile && (
-              <Grid size={{ md: 2, lg: 2 }}>
+              <Grid size={{ md: 3, lg: 2 }}>
                 <Box sx={{ mx: 1, mt: 1 }}>
                   <SideAds />
                 </Box>
@@ -114,7 +114,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
             )}
 
             {/* Main content */}
-            <Grid size={{ xs: 12, md: 7, lg: 6 }}>
+            <Grid size={{ xs: 12, md: 6, lg: 6 }}>
               <Box sx={{ mt: isMobile ? 2 : 0 }}>
                 {hideImage ? null : (
                   <>
