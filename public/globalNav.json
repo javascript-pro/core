@@ -38,22 +38,6 @@
     "excerpt": "We build and ship modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source\n\nGoldlabel Apps is a UKbased softw",
     "children": [
       {
-        "title": "Flickr Photo Cartridge",
-        "slug": "/flickr",
-        "order": 3,
-        "icon": "flickr",
-        "image": "/png/n64/flickr.png",
-        "type": "file",
-        "tags": [
-          "flickr",
-          "free",
-          "api",
-          "REST",
-          "Next.js"
-        ],
-        "excerpt": "Flickr Photo Cartridge\n\nA React component for clean, fastloading image galleries. Provides an easy way to display recent photos from a Flickr account. It connects to a serverside API route in your Nex"
-      },
-      {
         "title": "Work",
         "description": "Professional Fullstack JavaScript Development",
         "slug": "/work",

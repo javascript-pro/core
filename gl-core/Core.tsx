@@ -50,6 +50,9 @@ export default function Core({ frontmatter, body = null }: TCore) {
     if (pathname === '/cv') {
       router.replace('/work/cv');
     }
+    if (pathname === '/flickr') {
+      router.replace('/work/core/cartridges/flickr');
+    }
     if (pathname === '/free/flickr') {
       router.replace('/work/core/cartridges/flickr');
     }
@@ -107,7 +110,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
             {/* Side ads on desktop only */}
             {!isMobile && (
               <Grid size={{ md: 3 }}>
-                <Box sx={{ mx: 1, mt: 1 }}>
+                <Box sx={{ mt: 1 }}>
                   <SideAds />
                   <Siblings />
                 </Box>
@@ -116,7 +119,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
             {/* FlickrAlbum on desktop in middle column */}
             {!isMobile && (
-              <Grid size={{ md: 3 }} sx={{ mx: 3}}>
+              <Grid size={{ md: 3 }} sx={{mt:3}}>
                 <FlickrAlbum album="72177720327633973" />
               </Grid>
             )}
@@ -160,7 +163,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
                 {/* FlickrAlbum on mobile directly below content */}
                 {isMobile && (
-                  <Box sx={{ mt: 2, mx: 2.5 }}>
+                  <Box sx={{ mt: 0, mx: 0 }}>
                     <FlickrAlbum album="72177720327633973" />
                   </Box>
                 )}

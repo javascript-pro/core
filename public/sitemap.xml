@@ -32,9 +32,6 @@
     <loc>https://goldlabel.pro/balance/puppy-thing</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/flickr</loc>
-  </url>
-  <url>
     <loc>https://goldlabel.pro/</loc>
   </url>
   <url>
@@ -129,6 +126,9 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work/core/cartridges/flickr</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/core/cartridges/flickr2</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/core/cartridges</loc>

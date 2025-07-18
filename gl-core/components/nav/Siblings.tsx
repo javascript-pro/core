@@ -8,7 +8,7 @@ import {
   ListItemIcon,
   ListItemText,
   Box,
-  Divider
+  Divider,
 } from '@mui/material';
 import { Icon } from '../../../gl-core';
 
@@ -63,9 +63,7 @@ export default function Siblings() {
               <ListItemIcon>
                 <Icon icon={item.icon as any} />
               </ListItemIcon>
-              <ListItemText
-                primary={item.title}
-              />
+              <ListItemText primary={item.title} />
             </ListItemButton>
           </React.Fragment>
         ))}
