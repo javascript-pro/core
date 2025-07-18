@@ -38,22 +38,6 @@
     "excerpt": "We build and ship modern web apps for clients who need real results — fast\n\n Small team. Big output\n Real deployments from Day One\n Readable, extensible, Open Source\n\nGoldlabel Apps is a UKbased softw",
     "children": [
       {
-        "title": "Flickr Photo Cartridge",
-        "slug": "/flickr",
-        "order": 3,
-        "icon": "flickr",
-        "image": "/png/n64/flickr.png",
-        "type": "file",
-        "tags": [
-          "flickr",
-          "free",
-          "api",
-          "REST",
-          "Next.js"
-        ],
-        "excerpt": "Flickr Photo Cartridge\n\nA React component for clean, fastloading image galleries. Provides an easy way to display recent photos from a Flickr account. It connects to a serverside API route in your Nex"
-      },
-      {
         "title": "Work",
         "description": "Professional Fullstack JavaScript Development",
         "slug": "/work",
@@ -215,13 +199,35 @@
             ]
           },
           {
-            "title": "Free & Open Source",
-            "slug": "/work/free",
+            "title": "PDF Smash",
+            "description": "A ring‑fenced PDF smasher for keeping all that in house",
+            "slug": "/work/pdf-smash",
             "order": 1,
-            "icon": "flash",
-            "image": "/png/og.png",
-            "type": "file",
-            "excerpt": "Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or b"
+            "icon": "pdf",
+            "image": "/png/n64/punk.png",
+            "type": "folder",
+            "tags": [
+              "cartridges",
+              "KI",
+              "pdf"
+            ],
+            "excerpt": "Cartridge for Abgeschottet KI",
+            "children": [
+              {
+                "title": "PDF Smash",
+                "slug": "/work/pdf-smash/history-of-pdf",
+                "order": 1,
+                "icon": "pdf",
+                "image": "/png/n64/punk.png",
+                "type": "file",
+                "tags": [
+                  "cartridges",
+                  "KI",
+                  "pdf"
+                ],
+                "excerpt": "A ring‑fenced PDF smasher for keeping all that in house"
+              }
+            ]
           },
           {
             "title": "PDF Smash",
@@ -290,19 +296,6 @@
                 "excerpt": "Applying for jobs can be time consuming\n\nEach role requires tailoring a cover letter or rewording a CV to match a job description. As developers, we know the real problem isn’t effort — it’s clarity. "
               }
             ]
-          },
-          {
-            "title": "Public API",
-            "slug": "/work/api",
-            "order": 10,
-            "icon": "api",
-            "image": "/png/og.png",
-            "type": "file",
-            "tags": [
-              "free",
-              "api"
-            ],
-            "excerpt": "Goldlabel Public API\n\n glapi/flickr endpoints"
           },
           {
             "title": "UK Ltd",
@@ -445,6 +438,19 @@
                 ]
               },
               {
+                "title": "Public API",
+                "slug": "/work/techstack/api",
+                "order": 10,
+                "icon": "api",
+                "image": "/png/og.png",
+                "type": "file",
+                "tags": [
+                  "free",
+                  "api"
+                ],
+                "excerpt": "Goldlabel Public API\n\n glapi/flickr endpoints"
+              },
+              {
                 "title": "Git",
                 "description": "Critical to our process",
                 "slug": "/work/techstack/git",
@@ -529,22 +535,22 @@
                 ],
                 "excerpt": "Blockchain Crypto Casino\n\n In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online ga",
                 "children": []
+              },
+              {
+                "title": "Open Source",
+                "slug": "/work/techstack/open-source",
+                "order": 1000,
+                "icon": "api",
+                "image": "/png/og.png",
+                "type": "file",
+                "tags": [
+                  "free",
+                  "opensource",
+                  "work"
+                ],
+                "excerpt": "Why We Open Source\n\nWe’ve been building JavaScript applications for over 20 years. In that time, we’ve seen tools come and go. Trends rise, crash, and return again under a different name.\n\nWhat’s rema"
               }
             ]
-          },
-          {
-            "title": "Open Source",
-            "slug": "/work/open-source",
-            "order": 1000,
-            "icon": "api",
-            "image": "/png/og.png",
-            "type": "file",
-            "tags": [
-              "free",
-              "opensource",
-              "work"
-            ],
-            "excerpt": "Why We Open Source\n\nWe’ve been building JavaScript applications for over 20 years. In that time, we’ve seen tools come and go. Trends rise, crash, and return again under a different name.\n\nWhat’s rema"
           }
         ]
       },

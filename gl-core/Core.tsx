@@ -27,6 +27,7 @@ import {
   useDispatch,
   useSlice,
   Siblings,
+  useSiblings,
 } from '../gl-core';
 import { SideAds } from '../gl-core';
 import { FlickrAlbum } from './cartridges/Flickr';
@@ -38,6 +39,7 @@ import { Admin } from './cartridges/Admin';
 export default function Core({ frontmatter, body = null }: TCore) {
   let fullScreen = false;
   const { hideImage } = useSlice();
+  const siblings = useSiblings();
   const pathname = usePathname();
   const router = useRouter();
   const themeMode = useThemeMode();
@@ -49,6 +51,9 @@ export default function Core({ frontmatter, body = null }: TCore) {
   React.useEffect(() => {
     if (pathname === '/cv') {
       router.replace('/work/cv');
+    }
+    if (pathname === '/flickr') {
+      router.replace('/work/core/cartridges/flickr');
     }
     if (pathname === '/free/flickr') {
       router.replace('/work/core/cartridges/flickr');
@@ -104,21 +109,26 @@ export default function Core({ frontmatter, body = null }: TCore) {
           <Header frontmatter={frontmatter} />
 
           <Grid container spacing={isMobile ? 0 : 1}>
-            {/* Side ads on desktop only */}
+            {/* Side content on desktop only */}
             {!isMobile && (
               <Grid size={{ md: 3 }}>
-                <Box sx={{ mx: 1, mt: 1 }}>
-                  <SideAds />
+                <Box sx={{ mt: 1 }}>
+                  {Array.isArray(siblings) && siblings.length > 0 ? (
+                    <Siblings />
+                  ) : (
+                    <SideAds />
+                  )}
                 </Box>
               </Grid>
             )}
 
             {/* FlickrAlbum on desktop in middle column */}
             {!isMobile && (
-              <Grid size={{ md: 3 }}>
+              <Grid size={{ md: 3 }} sx={{ mt: 3 }}>
                 <FlickrAlbum album="72177720327633973" />
               </Grid>
             )}
+
             {/* Main content */}
             <Grid size={{ xs: 12, md: 6 }}>
               <Box sx={{ mt: isMobile ? 2 : 0 }}>
@@ -159,8 +169,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
                 {/* FlickrAlbum on mobile directly below content */}
                 {isMobile && (
-                  <Box sx={{ mt: 2 }}>
-                    
+                  <Box sx={{ mt: 0, mx: 0 }}>
                     <FlickrAlbum album="72177720327633973" />
                   </Box>
                 )}

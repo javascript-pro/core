@@ -19,6 +19,8 @@ import {
 import {
   Icon,
   useDispatch,
+  Siblings,
+  SideAds,
   resetUberedux,
   ShareMenu,
   useVersion,
@@ -112,18 +114,8 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
         transformOrigin={{ vertical: 'bottom', horizontal: 'right' }}
         sx={{ mt: -1 }}
       >
-        <MenuItem
-          onClick={() => {
-            dispatch(routeTo('/', router));
-          }}
-          sx={{ my: 2 }}
-        >
-          <ListItemIcon>
-            <Icon icon="home" />
-          </ListItemIcon>
-          <ListItemText primary={'Home'} />
-        </MenuItem>
-
+        <Siblings />
+        <SideAds />
         <MenuItem
           onClick={() => {
             dispatch(routeTo('/admin', router));

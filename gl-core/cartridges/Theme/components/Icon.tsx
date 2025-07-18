@@ -140,7 +140,7 @@ import TickIcon from '@mui/icons-material/DoneOutline';
 import FilesIcon from '@mui/icons-material/Topic';
 import PDFIcon from '@mui/icons-material/PictureAsPdf';
 import UserIcon from '@mui/icons-material/Face';
-import KIIcon from '@mui/icons-material/BackHand';
+import KIIcon from '@mui/icons-material/BackHandOutlined';
 export type TIcon = {
   icon:
     | 'more'

@@ -26,6 +26,7 @@ import {
   useIsMobile,
   useVersion,
   useFeedback,
+  useSiblings,
 } from './hooks';
 import {
   Uberedux,
@@ -93,5 +94,6 @@ export {
   useLoading,
   useVersionCheck,
   useThemeMode,
+  useSiblings,
 };
 export { normalizeError };
