@@ -17,7 +17,7 @@ Deep expertise in React and TypeScript, currently specialising in Next.js.
 
 Recent projects demonstrate ability to design and deliver ring‑fenced AI systems, integrating local models and secure workflows into real‑world applications.
 
-Using AI as a genuine development accelerator — not a shortcut. With the right approach, AI delivers production‑grade results faster and cleaner, cutting shipping time by 2–3×  with fewer bugs.
+Using AI as a genuine development accelerator — not a shortcut. With the right approach, AI delivers production‑grade results faster and cleaner, cutting shipping time by 2–3× with fewer bugs.
 
 Track record of building high‑performance UIs. Equally effective leading projects or collaborating in agile teams. Thrives on clear briefs, clean code, and cultures that value delivery. Outside of work? write, surf, dive, ski.
 
@@ -36,158 +36,158 @@ Track record of building high‑performance UIs. Equally effective leading proje
 
 ### Experience
 
-  #### Freelance Software Developer — AI & Web Projects
+#### Freelance Software Developer — AI & Web Projects
 
-  _Remote — May 2025 to Present_
+_Remote — May 2025 to Present_
 
-  Working independently on several speculative AI and web projects, exploring practical applications of emerging models and tools
+Working independently on several speculative AI and web projects, exploring practical applications of emerging models and tools
 
-  Built and deployed a fully ring‑fenced local LLM environment using Ollama with the phi3 model, integrating it into a Next.js workflow and extending automation with Python scripts for data processing and tooling.
+Built and deployed a fully ring‑fenced local LLM environment using Ollama with the phi3 model, integrating it into a Next.js workflow and extending automation with Python scripts for data processing and tooling.
 
-  Prototyping and documenting experimental apps (including Abgeschottet KI) that combine LLM integration, secure deployment patterns, and scalable frontend architecture.
+Prototyping and documenting experimental apps (including Abgeschottet KI) that combine LLM integration, secure deployment patterns, and scalable frontend architecture.
 
-  Designed and delivered real‑world Next.js apps and Open Source tooling that offer developers professional‑grade workflows.
+Designed and delivered real‑world Next.js apps and Open Source tooling that offer developers professional‑grade workflows.
 
-  #### Frontend Developer — VU.CITY
+#### Frontend Developer — VU.CITY
 
-  _Contract_  
-    _London / Hybrid — Apr 2023 to May 2025_
+_Contract_  
+ _London / Hybrid — Apr 2023 to May 2025_
 
-  - Leading the development of internal tools and the Admin Portal using Next.js (App Router), Firebase Auth, and Firestore
-  - Architecting a modular frontend platform to power multiple apps with a shared design system based on MUI
-  - Building event-driven interfaces that integrate with external systems, including AWS and internal APIs
-  - Championing best practices across accessibility, performance, and developer experience
-  - Supporting wider digital twin product strategy with tooling, documentation, and UI infrastructure
+- Leading the development of internal tools and the Admin Portal using Next.js (App Router), Firebase Auth, and Firestore
+- Architecting a modular frontend platform to power multiple apps with a shared design system based on MUI
+- Building event-driven interfaces that integrate with external systems, including AWS and internal APIs
+- Championing best practices across accessibility, performance, and developer experience
+- Supporting wider digital twin product strategy with tooling, documentation, and UI infrastructure
 
-  #### Full Stack JavaScript Developer — Atrackt!
+#### Full Stack JavaScript Developer — Atrackt!
 
-  _Malta — Jun 2021 to Apr 2023_
+_Malta — Jun 2021 to Apr 2023_
 
-  - Worked closely with the CTO as part of a lean, cross-functional team
-  - Delivered high-performance static and PWA sites using Gatsby (Node + React)
-  - Integrated Headless CMS platforms like Contentful and Strapi
-  - Used Material UI Design System across all frontends for consistent UX
-  - Also served as Scrum Master when needed, facilitating agile delivery
+- Worked closely with the CTO as part of a lean, cross-functional team
+- Delivered high-performance static and PWA sites using Gatsby (Node + React)
+- Integrated Headless CMS platforms like Contentful and Strapi
+- Used Material UI Design System across all frontends for consistent UX
+- Also served as Scrum Master when needed, facilitating agile delivery
 
-  #### Product Lead — Wanngi
+#### Product Lead — Wanngi
 
-  _Brisbane, Australia — Jun 2020 to Nov 2020_
+_Brisbane, Australia — Jun 2020 to Nov 2020_
 
-  - Led the redevelopment of a legacy Angular PWA into a new React-based platform with , Supabase
-  - Architected and implemented core framework features using custom open-source tooling
-  - Oversaw a small engineering team and coordinated cross-functional delivery
+- Led the redevelopment of a legacy Angular PWA into a new React-based platform with , Supabase
+- Architected and implemented core framework features using custom open-source tooling
+- Oversaw a small engineering team and coordinated cross-functional delivery
 
-  #### Senior Frontend Developer — Codeworx
+#### Senior Frontend Developer — Codeworx
 
-  _Brisbane, Australia — Sep 2019 to Feb 2020_
+_Brisbane, Australia — Sep 2019 to Feb 2020_
 
-  - Migrated a legacy poker app from CoffeeScript/jQuery to a modern React-based PWA and React Native App
-  - Refactored critical UI flows to improve maintainability and performance
-  - Delivered incremental improvements while maintaining stability for existing users
+- Migrated a legacy poker app from CoffeeScript/jQuery to a modern React-based PWA and React Native App
+- Refactored critical UI flows to improve maintainability and performance
+- Delivered incremental improvements while maintaining stability for existing users
 
-  #### Senior Frontend Developer — Rexlabs
+#### Senior Frontend Developer — Rexlabs
 
-  _Brisbane, Australia — Mar 2019 to Aug 2019_
+_Brisbane, Australia — Mar 2019 to Aug 2019_
 
-  - Supported transition from legacy PHP/Knockout stack to a React/Redux frontend
-  - Contributed to modularizing the UI and improving developer experience
-  - Mentored junior developers during migration sprints
+- Supported transition from legacy PHP/Knockout stack to a React/Redux frontend
+- Contributed to modularizing the UI and improving developer experience
+- Mentored junior developers during migration sprints
 
-  #### React Developer — Boral
+#### React Developer — Boral
 
-  _Contract_  
-  _Sydney, Australia — Aug 2018 to Feb 2019 (Contract)_
+_Contract_  
+ _Sydney, Australia — Aug 2018 to Feb 2019 (Contract)_
 
-  - Built foundational test architecture using Cucumber, Gherkin, and BDD principles
-  - Developed and tested multiple React PWAs with AWS Amplify and GraphQL
-  - Enabled CI/CD workflows to support rapid feature deployment
+- Built foundational test architecture using Cucumber, Gherkin, and BDD principles
+- Developed and tested multiple React PWAs with AWS Amplify and GraphQL
+- Enabled CI/CD workflows to support rapid feature deployment
 
-  #### Senior Frontend Developer — Canon Australia
+#### Senior Frontend Developer — Canon Australia
 
-  _Contract_  
-  _Sydney, Australia — Mar 2018 to Aug 2018 (Contract)_
+_Contract_  
+ _Sydney, Australia — Mar 2018 to Aug 2018 (Contract)_
 
-  - Led frontend development of a full-featured Progressive Web App from scratch
-  - Architected state management with Redux and persistent store
-  - Integrated multiple SaaS APIs and delivered UX enhancements across devices
+- Led frontend development of a full-featured Progressive Web App from scratch
+- Architected state management with Redux and persistent store
+- Integrated multiple SaaS APIs and delivered UX enhancements across devices
 
-  #### Frontend Engineer — Aligent Consulting
+#### Frontend Engineer — Aligent Consulting
 
-  _Adelaide, Australia — Apr 2017 to Mar 2018_
+_Adelaide, Australia — Apr 2017 to Mar 2018_
 
-  - Developed and maintained frontend themes for high-traffic Magento e-commerce sites
-  - Created custom JavaScript (ES6) modules to enhance user experience, including complex checkout flows
-  - Built commercial-grade Progressive Web Apps (PWAs) in React for mobile-first performance
-  - Worked closely with design and backend teams to deliver polished, conversion-optimized user interfaces
+- Developed and maintained frontend themes for high-traffic Magento e-commerce sites
+- Created custom JavaScript (ES6) modules to enhance user experience, including complex checkout flows
+- Built commercial-grade Progressive Web Apps (PWAs) in React for mobile-first performance
+- Worked closely with design and backend teams to deliver polished, conversion-optimized user interfaces
 
-  #### Fullstack Developer — usTwo
+#### Fullstack Developer — usTwo
 
-  _Contract_  
-  _Sydney, Australia — Jan 2017 to Feb 2017 (Contract)_
+_Contract_  
+ _Sydney, Australia — Jan 2017 to Feb 2017 (Contract)_
 
-  - Lead developer for the Cancer Council NSW’s [Healthy Lunchbox](http://healthylunchbox.com.au) app
-  - Built a React frontend connected to a WordPress CMS via the new REST API
-  - Developed custom PHP endpoints and WordPress plugins
-  - Used modern tooling including ES6, Webpack, and GitFlow
+- Lead developer for the Cancer Council NSW’s [Healthy Lunchbox](http://healthylunchbox.com.au) app
+- Built a React frontend connected to a WordPress CMS via the new REST API
+- Developed custom PHP endpoints and WordPress plugins
+- Used modern tooling including ES6, Webpack, and GitFlow
 
-  #### Front End Software Engineer — Alcidion
+#### Front End Software Engineer — Alcidion
 
-  _Adelaide, Australia — Aug 2016 to Nov 2016 (Contract)_
+_Adelaide, Australia — Aug 2016 to Nov 2016 (Contract)_
 
-  - Built frontend interfaces for a real-time hospital bed management system using React and Redux
-  - Worked in a tight-knit, fast-paced SCRUM team delivering critical medical software
-  - Focused on performance, usability, and reliability in a healthcare context
+- Built frontend interfaces for a real-time hospital bed management system using React and Redux
+- Worked in a tight-knit, fast-paced SCRUM team delivering critical medical software
+- Focused on performance, usability, and reliability in a healthcare context
 
-  #### Contract JavaScript Developer — Huawei
+#### Contract JavaScript Developer — Huawei
 
-  _Shenzhen, China — Feb 2016 to May 2016_
+_Shenzhen, China — Feb 2016 to May 2016_
 
-  - Built an isomorphic JavaScript project management app using React and Node.js
-  - Worked within a small, agile development team
-  - Contributed to localisation efforts for Chinese-language users
-  - Gained hands-on experience in a Chinese corporate environment
+- Built an isomorphic JavaScript project management app using React and Node.js
+- Worked within a small, agile development team
+- Contributed to localisation efforts for Chinese-language users
+- Gained hands-on experience in a Chinese corporate environment
 
-  #### Contract JavaScript Developer — The Changing Workplace
+#### Contract JavaScript Developer — The Changing Workplace
 
-  _London — Sep 2015 to Jan 2016_
+_London — Sep 2015 to Jan 2016_
 
-  - Contributed to a large-scale SaaS platform for facilities management
-  - Developed frontend JavaScript applications handling complex, high-volume datasets
-  - Consumed RESTful APIs and collaborated across backend and QA teams
-  - Enterprise clients included Microsoft and General Electric
+- Contributed to a large-scale SaaS platform for facilities management
+- Developed frontend JavaScript applications handling complex, high-volume datasets
+- Consumed RESTful APIs and collaborated across backend and QA teams
+- Enterprise clients included Microsoft and General Electric
 
-  #### Self-Employed Web Developer — Listingslab
+#### Self-Employed Web Developer — Listingslab
 
-  _Remote / Global — Jul 2007 to Jul 2015_
+_Remote / Global — Jul 2007 to Jul 2015_
 
-  - Ran a solo consultancy delivering full-stack web development
-  - Specialized in WordPress Multisite, custom plugins, and responsive theme design
-  - Built mobile-first UIs using HTML5, CSS3, and jQuery
-  - Worked with distributed teams using GitHub and agile workflows
+- Ran a solo consultancy delivering full-stack web development
+- Specialized in WordPress Multisite, custom plugins, and responsive theme design
+- Built mobile-first UIs using HTML5, CSS3, and jQuery
+- Worked with distributed teams using GitHub and agile workflows
 
-  #### Senior Developer — Velo//
+#### Senior Developer — Velo//
 
-  _London — Oct 2010 to Dec 2011_
+_London — Oct 2010 to Dec 2011_
 
-  - Developed WordPress Multisite solutions with custom modules and themes
-  - Delivered frontend and backend features using Flash and PHP/MySQL
-  - Contributed to multi-client campaign execution
+- Developed WordPress Multisite solutions with custom modules and themes
+- Delivered frontend and backend features using Flash and PHP/MySQL
+- Contributed to multi-client campaign execution
 
-  #### Lead Product Developer — FMG
+#### Lead Product Developer — FMG
 
-  _London — Nov 2005 to Dec 2006_
+_London — Nov 2005 to Dec 2006_
 
-  - Designed and launched _Ceros_, a Flash-based digital publishing platform
-  - Developed the product prototype and backend integrations
-  - Platform sold commercially since 2006
+- Designed and launched _Ceros_, a Flash-based digital publishing platform
+- Developed the product prototype and backend integrations
+- Platform sold commercially since 2006
 
-  #### Senior Systems Developer — IG Index
+#### Senior Systems Developer — IG Index
 
-  _London — Oct 2003 to Nov 2005_
+_London — Oct 2003 to Nov 2005_
 
-  - Lead Flash developer in the in-house creative team
-  - Migrated frontend systems to a third-generation Flash platform
-  - Produced digital campaigns, partner sites, and marketing assets
+- Lead Flash developer in the in-house creative team
+- Migrated frontend systems to a third-generation Flash platform
+- Produced digital campaigns, partner sites, and marketing assets
 
 ### Early Career
 

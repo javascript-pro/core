@@ -245,7 +245,14 @@ export default function FlickrAlbum({ album }: { album?: string }) {
           </Box>
         )}
 
-        <Box sx={{ mt: 1 }}>
+        <Box
+          sx={{
+            mt: 1,
+            display: 'flex',
+            justifyContent: 'center',
+            gap: 1, // adds some spacing between buttons
+          }}
+        >
           <MightyButton
             color="primary"
             mode="icon"
@@ -258,7 +265,7 @@ export default function FlickrAlbum({ album }: { album?: string }) {
             color="primary"
             mode="icon"
             label="Reset"
-            icon="reset"
+            icon="flickr"
             onClick={handleReset}
             disabled={photos.length === 0}
           />

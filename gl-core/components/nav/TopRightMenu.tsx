@@ -114,11 +114,16 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
         transformOrigin={{ vertical: 'bottom', horizontal: 'right' }}
         sx={{ mt: -1 }}
       >
+
+        <Box sx={{ my: 2 }}>
+          <SideAds />
+          <Siblings />  
+        </Box>
+
         <MenuItem
           onClick={() => {
             dispatch(routeTo('/admin', router));
           }}
-          sx={{ my: 2 }}
         >
           <ListItemIcon>
             <Icon icon="admin" />
@@ -131,7 +136,6 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
 
         {/* Share Menu triggers dialog */}
         <MenuItem
-          sx={{ width: 250, my: 2 }}
           onClick={(e) => {
             e.stopPropagation();
             e.preventDefault();
@@ -143,10 +147,7 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           </ListItemIcon>
           <ListItemText primary="Share" />
         </MenuItem>
-        <Box sx={{ my: 2 }}>
-          <Siblings />
-          <SideAds />
-        </Box>
+        
 
         <Box sx={{ my: 1, mx: 2 }}>
           <ArrowMenu />
