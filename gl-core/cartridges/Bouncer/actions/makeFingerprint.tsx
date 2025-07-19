@@ -2,6 +2,7 @@
 import { TUbereduxDispatch } from '../../../../gl-core/types';
 import { setUbereduxKey, toggleFeedback } from '../../../../gl-core';
 import FingerprintJS from '@fingerprintjs/fingerprintjs';
+import { ping } from './ping'; // make sure this path is correct
 
 export const makeFingerprint =
   (): any => async (dispatch: TUbereduxDispatch, getState: () => any) => {
@@ -32,8 +33,17 @@ export const makeFingerprint =
 
       const geoData = await geoRes.json();
 
-      // 3. Merge all info into visitor
+      // 3. Figure out if lastUpdated was < 10 seconds ago
       const now = Date.now();
+      let status: string | undefined;
+      if (visitor.lastUpdated && typeof visitor.lastUpdated === 'number') {
+        const secondsSinceLastUpdate = (now - visitor.lastUpdated) / 1000;
+        if (secondsSinceLastUpdate < 10) {
+          status = 'online';
+        }
+      }
+
+      // 4. Merge all info into visitor
       const updatedVisitor = {
         ...visitor,
         ready: true,
@@ -49,6 +59,7 @@ export const makeFingerprint =
           longitude: geoData.longitude || null,
           timezone: geoData.time_zone?.name || null,
         },
+        ...(status ? { status } : {}), // only add status if online
       };
 
       const updatedBouncer = {
@@ -59,11 +70,16 @@ export const makeFingerprint =
       dispatch(
         toggleFeedback({
           severity: 'success',
-          title: 'Visitor info ready.',
+          title: 'Ping ready',
         }),
       );
 
       dispatch(setUbereduxKey({ key: 'bouncer', value: updatedBouncer }));
+
+      // 5. Once ready is true, dispatch ping
+      if (updatedVisitor.ready) {
+        dispatch(ping());
+      }
     } catch (e: unknown) {
       const msg = e instanceof Error ? e.message : String(e);
       dispatch(setUbereduxKey({ key: 'error', value: msg }));
