@@ -42,7 +42,7 @@ export default function Download(cv: any) {
       fullWidth
       onClick={onDownloadClick}
       variant="contained"
-      label="Downlod CV"
+      label="Download CV"
       icon="download"
     />
   );

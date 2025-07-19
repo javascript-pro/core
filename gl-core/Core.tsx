@@ -65,6 +65,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
   }, [dispatch]);
 
   const isCV = pathname === '/work/cv';
+  // const isCV = false;
   const isFallmanager = pathname.startsWith('/fallmanager');
   const isAdmin = pathname.startsWith('/admin');
   const isApp = isCV || isFallmanager || isAdmin;

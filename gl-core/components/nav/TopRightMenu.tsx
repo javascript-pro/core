@@ -114,7 +114,6 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
         transformOrigin={{ vertical: 'bottom', horizontal: 'right' }}
         sx={{ mt: -1 }}
       >
-        
         <MenuItem
           onClick={() => {
             dispatch(routeTo('/admin', router));
@@ -145,8 +144,8 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           <ListItemText primary="Share" />
         </MenuItem>
         <Box sx={{ my: 2 }}>
-        <Siblings />
-        <SideAds />
+          <Siblings />
+          <SideAds />
         </Box>
 
         <Box sx={{ my: 1, mx: 2 }}>
