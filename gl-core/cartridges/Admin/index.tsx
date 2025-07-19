@@ -2,7 +2,14 @@ import Admin from './Admin';
 import { initialState as initialStateAdmin } from './initialState';
 import { useAdminSlice } from './hooks';
 import { album } from './actions';
-import { Layout, FlickrAdmin, Header, MenuList, AuthAdmin } from './components';
+import {
+  Layout,
+  FlickrAdmin,
+  Header,
+  MenuList,
+  AuthAdmin,
+  VisitorsAdmin,
+} from './components';
 
 export {
   Admin,
@@ -14,4 +21,5 @@ export {
   useAdminSlice,
   album,
   AuthAdmin,
+  VisitorsAdmin,
 };

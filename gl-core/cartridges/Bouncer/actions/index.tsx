@@ -7,6 +7,17 @@ import { createBouncer } from './crud/createBouncer';
 import { readBouncer } from './crud/readBouncer';
 import { updateBouncer } from './crud/updateBouncer';
 import { deleteBouncer } from './crud/deleteBouncer';
+import { setVisitor } from './setVisitor';
+import { ping } from './ping';
+import { makeFingerprint } from './makeFingerprint';
 
-export { bouncerKey, updateUser, firebaseAuth, setUid };
+export {
+  bouncerKey,
+  updateUser,
+  makeFingerprint,
+  firebaseAuth,
+  setUid,
+  setVisitor,
+  ping,
+};
 export { createBouncer, readBouncer, updateBouncer, deleteBouncer };

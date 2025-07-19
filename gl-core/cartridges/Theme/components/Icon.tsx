@@ -141,10 +141,13 @@ import FilesIcon from '@mui/icons-material/Topic';
 import PDFIcon from '@mui/icons-material/PictureAsPdf';
 import UserIcon from '@mui/icons-material/Face';
 import KIIcon from '@mui/icons-material/BackHandOutlined';
+import VisitorsIcon from '@mui/icons-material/PeopleAltOutlined';
+
 export type TIcon = {
   icon:
     | 'more'
     | 'user'
+    | 'visitors'
     | 'ki'
     | 'users'
     | 'pdf'
@@ -361,6 +364,11 @@ export default function Icon({ icon, color }: TIcon) {
     case 'users':
       iconFragment = <UserIcon color={color} />;
       break;
+
+    case 'visitors':
+      iconFragment = <VisitorsIcon color={color} />;
+      break;
+
     case 'auth':
       iconFragment = <UserIcon color={color} />;
       break;

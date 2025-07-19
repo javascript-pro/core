@@ -144,8 +144,7 @@ export default function Signin({ onClose }: SignInProps) {
       <CardContent>
         <TextField
           id="email"
-          variant="filled"
-          color="secondary"
+          variant="outlined"
           label="Email"
           type="email"
           fullWidth
@@ -156,8 +155,7 @@ export default function Signin({ onClose }: SignInProps) {
         />
         <TextField
           id="password"
-          variant="filled"
-          color="secondary"
+          variant="outlined"
           label="Password"
           type={showPassword ? 'text' : 'password'}
           fullWidth

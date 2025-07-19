@@ -12,6 +12,8 @@ image: /png/ki/abgeschotten-ki.png
 
 ## New
 
+Abgeschottet KI delivers secure, ring‑fenced AI to streamline legal compliance workflows, process documents faster, and protect sensitive data.
+
 ### We build and ship modern web apps for clients who need real results — fast
 
 - _Small_ team. _Big_ output

@@ -20,7 +20,7 @@ export default function Feedback({}: TAuthForm) {
       const timer = setTimeout(() => {
         // console.log('toggleFeedback(null)');
         dispatch(toggleFeedback(null));
-      }, 4000);
+      }, 3000);
 
       return () => clearTimeout(timer);
     }
@@ -41,7 +41,6 @@ export default function Feedback({}: TAuthForm) {
       onClose={handleClose}
     >
       <Alert
-        variant="filled"
         severity={severity}
         sx={{ minWidth: 250 }}
         action={
