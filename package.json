@@ -1,7 +1,7 @@
 {
   "version": "51.6.7",
   "name": "core",
-  "description": "Always FREE and Open Source",
+  "description": "Always FREE. Always Open Source",
   "private": true,
   "packageManager": "yarn@4.3.1",
   "scripts": {
