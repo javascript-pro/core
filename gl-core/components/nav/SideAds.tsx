@@ -24,9 +24,7 @@ export default function SideAds() {
 
   const items = [
     { icon: 'home', title: 'Home', path: '/' },
-    { icon: 'ki', title: 'Abgeschottet KI', path: '/work/abgeschottet-ki/why' },
-    // { icon: 'pdf', title: 'PDF Smash', path: '/work/pdf-smash' },
-    // { icon: 'flickr', title: 'Flickr', path: '/flickr' },
+    { icon: 'ki', title: 'Abgeschottet KI', path: '/work/abgeschottet-ki' },
     { icon: 'openai', title: 'C.V.', path: '/work/cv' },
     { icon: 'contact', title: 'Contact', path: '/work/company' },
   ];
