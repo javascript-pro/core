@@ -114,10 +114,9 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
         transformOrigin={{ vertical: 'bottom', horizontal: 'right' }}
         sx={{ mt: -1 }}
       >
-
         <Box sx={{ my: 2 }}>
           <SideAds />
-          <Siblings />  
+          <Siblings />
         </Box>
 
         <MenuItem
@@ -147,7 +146,6 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           </ListItemIcon>
           <ListItemText primary="Share" />
         </MenuItem>
-        
 
         <Box sx={{ my: 1, mx: 2 }}>
           <ArrowMenu />
