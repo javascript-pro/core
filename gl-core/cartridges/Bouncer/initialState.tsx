@@ -1,5 +1,12 @@
 // core/gl-core/cartridges/Bouncer/initialState.tsx
 
-export const initialState: any = {
+export type TBouncerState = {
+
+}
+
+export const initialState: TBouncerState = {
   cartridge: 'bouncer',
+  visitor:{
+    hello: 123
+  },
 };

@@ -10,6 +10,8 @@ api: /api/gl-api/flickr/latest/latest
 image: /png/ki/abgeschotten-ki.png
 ---
 
+## New
+
 ### We build and ship modern web apps for clients who need real results — fast
 
 - _Small_ team. _Big_ output

@@ -56,7 +56,7 @@ export default function Siblings() {
   // Find current node
   const currentNode = React.useMemo(
     () => findNode(globalNav as NavItem[], pathname),
-    [pathname]
+    [pathname],
   );
 
   // Detect if current page is an index (folder) page
@@ -80,7 +80,7 @@ export default function Siblings() {
 
       // Sort by order
       const sorted = [...contents].sort(
-        (a, b) => (a.order ?? 0) - (b.order ?? 0)
+        (a, b) => (a.order ?? 0) - (b.order ?? 0),
       );
 
       // Include current page itself at top (disabled)
@@ -89,12 +89,12 @@ export default function Siblings() {
       // Show siblings in the parent folder
       const parentContents = findParentContents(
         globalNav as NavItem[],
-        pathname
+        pathname,
       );
       if (!parentContents) return null;
 
       const sorted = [...parentContents].sort(
-        (a, b) => (a.order ?? 0) - (b.order ?? 0)
+        (a, b) => (a.order ?? 0) - (b.order ?? 0),
       );
 
       // Include current page itself at top (disabled)
