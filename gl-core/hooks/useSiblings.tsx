@@ -7,7 +7,7 @@ import globalNav from '../../public/globalNav.json';
 /**
  * useSiblings
  * Finds siblings of the current route in globalNav.
- * Filters out the current page from the siblings list.
+ * Returns all items at that level (including current page).
  * Returns null if no siblings.
  */
 export function useSiblings() {
@@ -27,19 +27,13 @@ export function useSiblings() {
 
         if (fullSlug === pathname) {
           if (parentChildren && parentChildren.length > 1) {
-            const siblings = parentChildren.filter((child) => {
-              const slug = child.slug.startsWith('/')
-                ? child.slug
-                : `/${child.slug}`;
-              return slug !== pathname;
+            // no filtering of current page anymore
+            const siblings = [...parentChildren].sort((a, b) => {
+              const ao = a.order ?? 0;
+              const bo = b.order ?? 0;
+              return ao - bo;
             });
-            return siblings.length > 0
-              ? siblings.sort((a, b) => {
-                  const ao = a.order ?? 0;
-                  const bo = b.order ?? 0;
-                  return ao - bo;
-                })
-              : null;
+            return siblings.length > 0 ? siblings : null;
           }
           return null;
         }

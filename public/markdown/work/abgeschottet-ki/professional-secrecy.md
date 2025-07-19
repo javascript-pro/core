@@ -1,15 +1,15 @@
 ---
 order: 10
-title: Professional Secrecy
+title: Secrecy
 description: What professional secrecy means for UK lawyers
 slug: /work/abgeschottet-ki/professional-secrecy
 icon: ki
 image: /png/ki/abgeschotten-ki.png
 ---
 
-> What you tell your lawyer stays between you and them.
+### What Does _Professional Secrecy_ Mean?
 
-## What Does _Professional Secrecy_ Mean for UK Lawyers?
+> What you tell your lawyer stays between you and them.
 
 When you speak to a lawyer in the UK, everything you tell them in confidence is protected by a strict legal duty called **professional secrecy**.
 

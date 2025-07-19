@@ -71,45 +71,51 @@
             "icon": "ki",
             "image": "/png/ki/abgeschotten-ki.png",
             "type": "folder",
-            "tags": ["abgeschottet", "KI"],
+            "tags": [
+              "abgeschottet",
+              "KI"
+            ],
             "excerpt": "A ring‑fenced LLM is like having the power of AI inside a locked room.\n\nIt can process sensitive documents and assist with legal work, but nothing ever leaves the firm’s secure network. When we say an",
             "children": [
               {
-                "title": "Why Abgeschottet KI",
+                "title": "Abgeschottet KI",
                 "slug": "/work/abgeschottet-ki/why",
                 "order": 0,
                 "icon": "ki",
                 "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
-                "excerpt": "Abgeschottet KI exists because firms need the power of AI without risking client confidentiality.\n\n Why Is There a Need for This?\n\nModern law firms handle vast amounts of documents every day.  \nLarge "
+                "excerpt": "Abgeschottet KI exists because firms need the power of AI without risking client confidentiality.\n\nModern firms handle vast amounts of documents every day. Large Language Models (LLMs) can speed up re"
               },
               {
-                "title": "Ring‑Fenced LLM",
+                "title": "Ring‑Fenced",
                 "slug": "/work/abgeschottet-ki/ringfenced-llm",
                 "order": 6,
                 "icon": "ki",
                 "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
-                "excerpt": "A ring‑fenced LLM is like having the power of AI inside a locked room.\n\n What Does It Mean to Ring‑Fence an LLM?\n\n Runs on internal servers or private cloud\n Blocks external connections\n Uses local st"
+                "excerpt": "What Does It Mean to Ring‑Fence an LLM?\n\n A ring‑fenced LLM is like having the power of AI inside a locked room.\n\n Runs on internal servers or private cloud\n Blocks external connections\n Uses local st"
               },
               {
-                "title": "Professional Secrecy",
+                "title": "Secrecy",
                 "slug": "/work/abgeschottet-ki/professional-secrecy",
                 "order": 10,
                 "icon": "ki",
                 "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
-                "excerpt": "What you tell your lawyer stays between you and them.\n\n What Does Professional Secrecy Mean for UK Lawyers?\n\nWhen you speak to a lawyer in the UK, everything you tell them in confidence is protected b"
+                "excerpt": "What Does Professional Secrecy Mean?\n\n What you tell your lawyer stays between you and them.\n\nWhen you speak to a lawyer in the UK, everything you tell them in confidence is protected by a strict lega"
               },
               {
-                "title": "Confidentiality Obligations",
+                "title": "Confidentiality",
                 "slug": "/work/abgeschottet-ki/confidentiality-obligations",
                 "order": 20,
                 "icon": "ki",
                 "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
-                "tags": ["abgeschottet", "KI"],
-                "excerpt": "UK law firms are bound by some of the strongest confidentiality rules in professional life.\n\n What Confidentiality Obligations Do UK Law Firms Have Toward Their Clients?\n\n Everything you tell your law"
+                "tags": [
+                  "abgeschottet",
+                  "KI"
+                ],
+                "excerpt": "What Confidentiality Obligations Do UK Law Firms Have Toward Their Clients?\n\n UK law firms are bound by some of the strongest confidentiality rules in professional life.\n\n Everything you tell your law"
               },
               {
                 "title": "Example prompts",
@@ -118,17 +124,20 @@
                 "icon": "ki",
                 "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
-                "excerpt": "General legal reasoning\n\nErkläre in einfachen Worten, was das Berufsgeheimnis für deutsche Rechtsanwälte bedeutet.\n\nExplain in simple terms what professional secrecy means for UK lawyers.\n\n\n\nWelche Pf"
+                "excerpt": "General legal reasoning\n\nErkläre in einfachen Worten, was das Berufsgeheimnis für deutsche Rechtsanwälte bedeutet.\n\nExplain in simple terms what professional secrecy means for UK lawyers.\n\nWelche Pfli"
               },
               {
-                "title": "GDPR and Law Firms",
+                "title": "GDPR",
                 "slug": "/work/abgeschottet-ki/gdpr-law-firms",
                 "order": 30,
                 "icon": "ki",
                 "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
-                "tags": ["abgeschottet", "KI"],
-                "excerpt": "GDPR means your personal information is handled lawfully, transparently, and with your privacy in mind.\n\n What Does the GDPR Mean for a UK Law Firm?\n\nThe General Data Protection Regulation (GDPR) – as"
+                "tags": [
+                  "abgeschottet",
+                  "KI"
+                ],
+                "excerpt": "What Does the GDPR Mean for a UK Law Firm?\n\n GDPR means your personal information is handled lawfully, transparently, and with your privacy in mind.\n\nThe General Data Protection Regulation (GDPR) – as"
               },
               {
                 "title": "Hardware",
@@ -137,46 +146,55 @@
                 "icon": "ki",
                 "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
-                "tags": ["abgeschottet", "KI"],
+                "tags": [
+                  "abgeschottet",
+                  "KI"
+                ],
                 "excerpt": "Keep it simple. Start small. Scale when you need to.\n\n Hardware for Abgeschottet KI\n\nOne of the advantages of Abgeschottet KI is that it’s a low‑investment, quick‑to‑implement solution.  \nYou don’t ne"
               },
               {
-                "title": "LLMs and Legal Research",
+                "title": "Research",
                 "slug": "/work/abgeschottet-ki/llms-legal-research",
                 "order": 40,
                 "icon": "ki",
                 "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
-                "tags": ["abgeschottet", "KI"],
-                "excerpt": "Used carefully, large language models can turn legal research into a faster, more focused process.\n\n How Could Large Language Models Help UK Law Firms With Legal Research?\n\n Quickly summarising case l"
+                "tags": [
+                  "abgeschottet",
+                  "KI"
+                ],
+                "excerpt": "How Could Large Language Models Help UK Law Firms With Legal Research?\n\n Used carefully, large language models can turn legal research into a faster, more focused process.\n\n Quickly summarising case l"
               },
               {
-                "title": "Risks of Public LLMs",
+                "title": "Risks",
                 "slug": "/work/abgeschottet-ki/risks-public-llms",
                 "order": 50,
                 "icon": "ki",
                 "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
-                "excerpt": "Public AI services are not designed for legally confidential data.\n\n What Are the Risks if Lawyers Send Confidential Files to a Public AI Service?\n\n Loss of confidentiality\n Data protection breaches\n "
+                "excerpt": "What Are the Risks if Lawyers Send Confidential Files to a Public AI Service?\n\n Public AI services are not designed for legally confidential data.\n\n Loss of confidentiality\n Data protection breaches\n "
               },
               {
-                "title": "Ring‑Fenced LLM & Confidentiality",
+                "title": "Confidentiality",
                 "slug": "/work/abgeschottet-ki/ringfenced-llm-confidentiality",
                 "order": 70,
                 "icon": "ki",
                 "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
-                "excerpt": "A ring‑fenced LLM gives a firm all the efficiency of AI while upholding the highest standards of confidentiality.\n\n How Can a Ring‑Fenced LLM Help?\n\n No data leaves the firm’s network\n Built‑in access"
+                "excerpt": "How Can a Ring‑Fenced LLM Help?\n\n A ring‑fenced LLM gives a firm all the efficiency of AI while upholding the highest standards of confidentiality.\n\n No data leaves the firm’s network\n Built‑in access"
               },
               {
-                "title": "Organisational Measures",
+                "title": "Organisational",
                 "slug": "/work/abgeschottet-ki/organisational-measures",
                 "order": 80,
                 "icon": "ki",
                 "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
-                "tags": ["abgeschottet", "KI"],
-                "excerpt": "A ring‑fenced LLM works best as part of a wider culture of confidentiality.\n\n What Organisational Measures Should a Law Firm Take?\n\n Clear internal policies\n Regular staff training\n Access controls ba"
+                "tags": [
+                  "abgeschottet",
+                  "KI"
+                ],
+                "excerpt": "What Organisational Measures Should a Law Firm Take?\n\n A ring‑fenced LLM works best as part of a wider culture of confidentiality.\n\n Clear internal policies\n Regular staff training\n Access controls ba"
               }
             ]
           },
@@ -188,7 +206,14 @@
             "icon": "openai",
             "image": "https://live.staticflickr.com/65535/53519132411_1fc305c2dc_b.jpg",
             "type": "folder",
-            "tags": ["CV", "jobs", "work", "resume", "AI", "OpenAI"],
+            "tags": [
+              "CV",
+              "jobs",
+              "work",
+              "resume",
+              "AI",
+              "OpenAI"
+            ],
             "excerpt": "Fullstack JavaScript Developer\n\nDeep expertise in React and TypeScript, currently specialising in Next.js.\n\n20+ years delivering scalable web applications for startups, enterprises, and remote‑first t",
             "children": [
               {
@@ -198,7 +223,14 @@
                 "icon": "openai",
                 "image": "/png/og.png",
                 "type": "file",
-                "tags": ["CV", "jobs", "work", "resume", "AI", "OpenAI"],
+                "tags": [
+                  "CV",
+                  "jobs",
+                  "work",
+                  "resume",
+                  "AI",
+                  "OpenAI"
+                ],
                 "excerpt": "Applying for jobs can be time consuming\n\nEach role requires tailoring a cover letter or rewording a CV to match a job description. As developers, we know the real problem isn’t effort — it’s clarity. "
               }
             ]
@@ -220,7 +252,10 @@
                 "icon": "work",
                 "image": "/png/og.png",
                 "type": "file",
-                "tags": ["remote", "hybrid"],
+                "tags": [
+                  "remote",
+                  "hybrid"
+                ],
                 "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years.\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communication, "
               },
               {
@@ -230,7 +265,13 @@
                 "icon": "account",
                 "image": "/png/og.png",
                 "type": "file",
-                "tags": ["cookies", "gdpr", "privacy", "terms", "trust"],
+                "tags": [
+                  "cookies",
+                  "gdpr",
+                  "privacy",
+                  "terms",
+                  "trust"
+                ],
                 "excerpt": "We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers t"
               },
               {
@@ -240,7 +281,9 @@
                 "icon": "account",
                 "image": "/png/og.png",
                 "type": "file",
-                "tags": ["team"],
+                "tags": [
+                  "team"
+                ],
                 "excerpt": "Whether you're a startup with a short deadline or an enterprise with complex workflows, we can help. Get in touch for it's a truth universally acknowledged that a Software Developer in possession of a"
               },
               {
@@ -250,7 +293,9 @@
                 "icon": "account",
                 "image": "/png/og.png",
                 "type": "file",
-                "tags": ["team"],
+                "tags": [
+                  "team"
+                ],
                 "excerpt": "We take on a limited number of new projects each month. If you need something done we’d love to hear about it. Find out if we're a . We're always looking for collaborators, contributors, and good idea"
               }
             ]
@@ -263,7 +308,9 @@
             "icon": "techstack",
             "image": "/png/og.png",
             "type": "folder",
-            "tags": ["techstack"],
+            "tags": [
+              "techstack"
+            ],
             "excerpt": "This page may require a higher level of access",
             "children": [
               {
@@ -335,7 +382,10 @@
                 "icon": "api",
                 "image": "/png/og.png",
                 "type": "file",
-                "tags": ["free", "api"],
+                "tags": [
+                  "free",
+                  "api"
+                ],
                 "excerpt": "Goldlabel Public API\n\n glapi/flickr endpoints"
               },
               {
@@ -346,7 +396,11 @@
                 "icon": "github",
                 "image": "/png/3rdParty/gitkraken.png",
                 "type": "folder",
-                "tags": ["github", "process", "javascript"],
+                "tags": [
+                  "github",
+                  "process",
+                  "javascript"
+                ],
                 "excerpt": "We use GitHub for everything. Including . Most of the communication done between us and our clients during development is done through GitHub in the form of comments, pull resuests, reviews and so for",
                 "children": [
                   {
@@ -375,7 +429,11 @@
                 "icon": "design",
                 "image": "/png/clouds/default_whitecloud.png",
                 "type": "folder",
-                "tags": ["github", "process", "design"],
+                "tags": [
+                  "github",
+                  "process",
+                  "design"
+                ],
                 "excerpt": "What is a Design System?\n\nA Design System is a collection of reusable components, standards, and guidelines that define how a product looks and behaves. It includes UI elements like buttons, forms, an",
                 "children": [
                   {
@@ -385,7 +443,11 @@
                     "icon": "design",
                     "image": "/png/og.png",
                     "type": "file",
-                    "tags": ["techstack", "Design", "MUI"],
+                    "tags": [
+                      "techstack",
+                      "Design",
+                      "MUI"
+                    ],
                     "excerpt": "MUI Toolpad is a lowcode builder for internal tools. It runs as part of your Next.js project and gives you a draganddrop environment to create Reactbased dashboards powered by live data. We’re using T"
                   }
                 ]
@@ -419,7 +481,11 @@
                 "icon": "api",
                 "image": "/png/og.png",
                 "type": "file",
-                "tags": ["free", "opensource", "work"],
+                "tags": [
+                  "free",
+                  "opensource",
+                  "work"
+                ],
                 "excerpt": "Why We Open Source\n\nWe’ve been building JavaScript applications for over 20 years. In that time, we’ve seen tools come and go. Trends rise, crash, and return again under a different name.\n\nWhat’s rema"
               }
             ]

@@ -45,14 +45,13 @@ export default function Siblings() {
     const arr = findSiblings(globalNav as NavItem[], pathname);
     if (!arr) return null;
 
-    // filter out current page AND any index pages
+    // filter out only index pages (NOT the current page)
     const filtered = arr.filter((item) => {
-      const isCurrent = item.slug === pathname;
       const isIndex =
         item.slug.endsWith('/index') ||
         item.slug === pathname.substring(0, pathname.lastIndexOf('/')) || // parent path
         item.slug === '/'; // root index
-      return !isCurrent && !isIndex;
+      return !isIndex;
     });
 
     if (filtered.length === 0) return null;
@@ -64,20 +63,26 @@ export default function Siblings() {
   return (
     <Box>
       <List dense disablePadding>
-        {siblings.map((item) => (
-          <ListItemButton
-            key={item.slug}
-            onClick={() => router.push(item.slug)}
-          >
-            <ListItemIcon>
-              <Icon icon={item.icon as any} />
-            </ListItemIcon>
-            <ListItemText
-              primary={item.title}
-              // secondary={item.description || undefined}
-            />
-          </ListItemButton>
-        ))}
+        {siblings.map((item) => {
+          const isCurrent = item.slug === pathname;
+          return (
+            <ListItemButton
+              key={item.slug}
+              disabled={isCurrent}
+              onClick={() => {
+                if (!isCurrent) router.push(item.slug);
+              }}
+            >
+              <ListItemIcon>
+                <Icon icon={item.icon as any} />
+              </ListItemIcon>
+              <ListItemText
+                primary={item.title}
+                // secondary={item.description || undefined}
+              />
+            </ListItemButton>
+          );
+        })}
       </List>
     </Box>
   );
