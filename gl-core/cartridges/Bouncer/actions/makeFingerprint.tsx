@@ -33,7 +33,20 @@ export const makeFingerprint =
 
       const geoData = await geoRes.json();
 
-      // 3. Figure out if lastUpdated was < 10 seconds ago
+      // 3. Gather device/browser info
+      const device = {
+        userAgent: navigator.userAgent || null,
+        platform: navigator.platform || null,
+        language: navigator.language || null,
+        languages: navigator.languages || null,
+        vendor: navigator.vendor || null,
+        hardwareConcurrency: navigator.hardwareConcurrency || null,
+        maxTouchPoints: (navigator as any).maxTouchPoints || 0,
+        cookieEnabled: navigator.cookieEnabled,
+        online: navigator.onLine,
+      };
+
+      // 4. Figure out if lastUpdated was < 10 seconds ago
       const now = Date.now();
       let status: string | undefined;
       if (visitor.lastUpdated && typeof visitor.lastUpdated === 'number') {
@@ -43,7 +56,7 @@ export const makeFingerprint =
         }
       }
 
-      // 4. Merge all info into visitor
+      // 5. Merge all info into visitor
       const updatedVisitor = {
         ...visitor,
         ready: true,
@@ -59,6 +72,7 @@ export const makeFingerprint =
           longitude: geoData.longitude || null,
           timezone: geoData.time_zone?.name || null,
         },
+        device, // NEW device info
         ...(status ? { status } : {}), // only add status if online
       };
 
@@ -76,7 +90,7 @@ export const makeFingerprint =
 
       dispatch(setUbereduxKey({ key: 'bouncer', value: updatedBouncer }));
 
-      // 5. Once ready is true, dispatch ping
+      // 6. Once ready is true, dispatch ping
       if (updatedVisitor.ready) {
         dispatch(ping());
       }
