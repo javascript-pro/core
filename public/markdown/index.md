@@ -10,7 +10,7 @@ api: /api/gl-api/flickr/latest/latest
 image: /png/ki/abgeschotten-ki.png
 ---
 
-## New
+## New in July 2025
 
 Abgeschottet KI delivers secure, ring‑fenced AI to streamline legal compliance workflows, process documents faster, and protect sensitive data.
 

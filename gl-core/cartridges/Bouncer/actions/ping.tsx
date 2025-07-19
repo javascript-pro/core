@@ -57,12 +57,12 @@ export const ping =
           }
 
           // ---- Redux feedback and state update ----
-          dispatch(
-            toggleFeedback({
-              severity: 'success',
-              title: 'Pinged',
-            })
-          );
+          // dispatch(
+          //   toggleFeedback({
+          //     severity: 'success',
+          //     title: 'Pinged',
+          //   }),
+          // );
 
           dispatch(setUbereduxKey({ key: 'bouncer', value: updatedBouncer }));
         }

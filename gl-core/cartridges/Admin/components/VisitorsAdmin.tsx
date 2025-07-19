@@ -43,7 +43,7 @@ export default function VisitorsAdmin() {
         console.error('Error subscribing to visitors collection:', error);
         setMsg('Error connecting to visitors.');
         setLoading(false);
-      }
+      },
     );
 
     return () => unsubscribe();
@@ -103,10 +103,7 @@ export default function VisitorsAdmin() {
                       <Box sx={{ display: 'flex', alignItems: 'center' }}>
                         <Icon icon="fingerprint" color="primary" />
                         {geoSummary && (
-                          <Typography
-                            variant="body1"
-                            sx={{ ml: 2 }}
-                          >
+                          <Typography variant="body1" sx={{ ml: 2 }}>
                             {geoSummary}
                           </Typography>
                         )}
@@ -118,7 +115,6 @@ export default function VisitorsAdmin() {
                         {visitor.id}
                       </Typography>
                     </Box>
-                    
                   </Box>
                 </AccordionSummary>
                 <AccordionDetails>
