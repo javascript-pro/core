@@ -37,3 +37,22 @@ The tool reduces friction in job applications. Recruiters can check fit without 
 ### Reflection
 
 This feature started as a demo and turned into something genuinely useful. It’s now part of our app, not just as a portfolio piece — but as a working tool we use ourselves.
+
+### Cover letter
+
+Hi,
+
+I’m a senior JavaScript developer with deep experience in React and Next.js, currently exploring new opportunities. To streamline my search, I built a tool that compares my CV with job descriptions and highlights relevant matches — it helps recruiters (and me) see the fit faster. I’ve pasted the result below for your convenience.
+
+You’re also welcome to try the tool yourself:
+https://goldlabel.pro/cv
+
+Best regards,
+Chris Dorward
+
+📞 07745 763 122
+🔗 https://goldlabel.pro
+🔗 LinkedIn https://www.linkedin.com/in/chris-dorward
+🔗 GitHub https://github.com/javascript-pro
+
+---

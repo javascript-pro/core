@@ -30,7 +30,7 @@ export default function Download(cv: any) {
       .set({
         margin: 0,
         filename: 'Chris_Dorward_CV.pdf',
-        image: { type: 'jpeg', quality: 0.4 },
+        image: { type: 'jpeg', quality: 0.6 },
         html2canvas: { scale: 1 },
         jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' },
       })
@@ -42,8 +42,8 @@ export default function Download(cv: any) {
       fullWidth
       onClick={onDownloadClick}
       variant="contained"
-      label="Downlod CV"
-      icon="download"
+      label="Download CV"
+      icon="pdf"
     />
   );
 }

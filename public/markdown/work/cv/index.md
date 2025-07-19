@@ -1,6 +1,6 @@
 ---
 order: 2
-title: Fullstack JavaScript Developer
+title: CV
 description: Match your Job to our Curriculum Vitae with AI
 slug: /work/cv
 icon: openai
@@ -9,17 +9,22 @@ tags: CV, jobs, work, resume, AI, OpenAI
 github: https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg
 ---
 
-## Fullstack JavaScript
+## Fullstack JavaScript Developer
 
-Over 20 years of experience delivering scalable web applications across startups, enterprises, and remote-first teams in the UK, Europe, and Australia and beyond. Deep expertise in React, TypeScript, current specialising in Next.js.
+Deep expertise in React and TypeScript, currently specialising in Next.js.
 
-Recently, I’ve focused on using AI as a practical development accelerator — not a shortcut, but a force multiplier. With experience and intent, AI generates production-grade results faster and cleaner. Code now ships 2–3x faster with fewer bugs.
+20+ years delivering scalable web applications for startups, enterprises, and remote‑first teams across the UK, Europe, Australia & beyond.
 
-Proven track record building high-performance UIs, integrating automated testing and linting, and delivering through streamlined pipelines. Equally comfortable leading projects or collaborating in agile teams. Prefer a clear brief, a clean codebase, and a culture that values delivery. Outside work, I write, travel, surf, dive, and ski.
+Recent projects demonstrate ability to design and deliver ring‑fenced AI systems, integrating local models and secure workflows into real‑world applications.
+
+Using AI as a genuine development accelerator — not a shortcut. With the right approach, AI delivers production‑grade results faster and cleaner, cutting shipping time by 2–3× with fewer bugs.
+
+Track record of building high‑performance UIs. Equally effective leading projects or collaborating in agile teams. Thrives on clear briefs, clean code, and cultures that value delivery. Outside of work? write, surf, dive, ski.
 
 ### Skills
 
 - _Specialisms:_ TypeScript Vanilla JavaScript (ES6+), React, Node & Next.js
+- _AI & LLMs:_ Ollama (local LLM deployment), phi3 model integration, Python scripting for data processing and automation
 - _Frameworks & Libraries:_ React, Vue, React Native, Next.js (App Router), Redux, Express, jQuery
 - _Style:_ Vanilla CSS, Material UI, Tailwind CSS, Styled Components, Figma
 - _Database:_ NoSQL, Firestore, Supabase, MongoDB, DynamoDB, MySQL, PostgreSQL, SQL
@@ -31,19 +36,22 @@ Proven track record building high-performance UIs, integrating automated testing
 
 ### Experience
 
-#### Founder — Goldlabel Apps Ltd
+#### Freelance Software Developer — AI & Web Projects
 
-_Remote — 2024 to Present_
+_Remote — May 2025 to Present_
 
-- Building a suite of real-world Next.js apps and open-source tools designed to help developers go from amateur to professional
-- Publishing instructional eBooks on modern web delivery, covering everything from setup to deployment workflows
-- Created and maintained the Goldlabel Monorepo: a multi-app Next.js project using Turborepo and MUI, deployed to Vercel
-- Released SpeakWrite, an AI-powered voice-to-marketing app using OpenAI Whisper, DALL·E, and Firebase
-- Developing and documenting Playbook, a Markdown-powered e-reader PWA for creative content cartridges
+Working independently on several speculative AI and web projects, exploring practical applications of emerging models and tools
+
+Built and deployed a fully ring‑fenced local LLM environment using Ollama with the phi3 model, integrating it into a Next.js workflow and extending automation with Python scripts for data processing and tooling.
+
+Prototyping and documenting experimental apps (including Abgeschottet KI) that combine LLM integration, secure deployment patterns, and scalable frontend architecture.
+
+Designed and delivered real‑world Next.js apps and Open Source tooling that offer developers professional‑grade workflows.
 
 #### Frontend Developer — VU.CITY
 
-_London / Remote — Apr 2023 to May 2025_
+_Contract_  
+ _London / Hybrid — Apr 2023 to May 2025_
 
 - Leading the development of internal tools and the Admin Portal using Next.js (App Router), Firebase Auth, and Firestore
 - Architecting a modular frontend platform to power multiple apps with a shared design system based on MUI
@@ -87,7 +95,8 @@ _Brisbane, Australia — Mar 2019 to Aug 2019_
 
 #### React Developer — Boral
 
-_Sydney, Australia — Aug 2018 to Feb 2019 (Contract)_
+_Contract_  
+ _Sydney, Australia — Aug 2018 to Feb 2019 (Contract)_
 
 - Built foundational test architecture using Cucumber, Gherkin, and BDD principles
 - Developed and tested multiple React PWAs with AWS Amplify and GraphQL
@@ -95,7 +104,8 @@ _Sydney, Australia — Aug 2018 to Feb 2019 (Contract)_
 
 #### Senior Frontend Developer — Canon Australia
 
-_Sydney, Australia — Mar 2018 to Aug 2018 (Contract)_
+_Contract_  
+ _Sydney, Australia — Mar 2018 to Aug 2018 (Contract)_
 
 - Led frontend development of a full-featured Progressive Web App from scratch
 - Architected state management with Redux and persistent store
@@ -112,7 +122,8 @@ _Adelaide, Australia — Apr 2017 to Mar 2018_
 
 #### Fullstack Developer — usTwo
 
-_Sydney, Australia — Jan 2017 to Feb 2017 (Contract)_
+_Contract_  
+ _Sydney, Australia — Jan 2017 to Feb 2017 (Contract)_
 
 - Lead developer for the Cancer Council NSW’s [Healthy Lunchbox](http://healthylunchbox.com.au) app
 - Built a React frontend connected to a WordPress CMS via the new REST API

@@ -4,4 +4,11 @@ import { useVersion } from './useVersion';
 import { useFeedback } from './useFeedback';
 import { useLoading } from './useLoading';
 import { useSiblings } from './useSiblings';
-export { useLoading, useSiblings, useConfig, useIsMobile, useVersion, useFeedback };
+export {
+  useLoading,
+  useSiblings,
+  useConfig,
+  useIsMobile,
+  useVersion,
+  useFeedback,
+};

@@ -204,7 +204,7 @@ export default function FlickrAlbum({ album }: { album?: string }) {
               anchorEl={anchorEl}
               onClose={handlePopoverClose}
               anchorOrigin={{
-                vertical: 'top',
+                vertical: 'bottom',
                 horizontal: 'left',
               }}
               transformOrigin={{
@@ -245,7 +245,14 @@ export default function FlickrAlbum({ album }: { album?: string }) {
           </Box>
         )}
 
-        <Box sx={{ mt: 1 }}>
+        <Box
+          sx={{
+            mt: 1,
+            display: 'flex',
+            justifyContent: 'center',
+            gap: 1, // adds some spacing between buttons
+          }}
+        >
           <MightyButton
             color="primary"
             mode="icon"
@@ -258,7 +265,7 @@ export default function FlickrAlbum({ album }: { album?: string }) {
             color="primary"
             mode="icon"
             label="Reset"
-            icon="reset"
+            icon="flickr"
             onClick={handleReset}
             disabled={photos.length === 0}
           />
@@ -278,20 +285,23 @@ export default function FlickrAlbum({ album }: { album?: string }) {
         open={dialogOpen}
         onClose={handleDialogClose}
         fullScreen
-        PaperProps={{ sx: { backgroundColor: 'background.default', position: 'relative' } }}
+        PaperProps={{
+          sx: { backgroundColor: 'background.default', position: 'relative' },
+        }}
       >
         <DialogTitle sx={{ p: 0 }}>
           <CardHeader
             title={currentPhoto?.title || 'Untitled'}
             subheader={currentPhoto?.description || 'No description'}
-            avatar={<>
+            avatar={
+              <>
                 <IconButton onClick={handleFlickrClick} title="View on Flickr">
                   <Icon icon="flickr" />
                 </IconButton>
-                </>}
+              </>
+            }
             action={
               <>
-                
                 <IconButton onClick={handleDialogClose} title="Close">
                   <Icon icon="close" />
                 </IconButton>

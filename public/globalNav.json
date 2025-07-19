@@ -84,19 +84,41 @@
                 "icon": "ki",
                 "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
-                "excerpt": "Abgeschottet KI exists because firms need the power of AI without risking client confidentiality.\n\n Why Is There a Need for This?\n\nModern law firms handle vast amounts of documents every day.  \nLarge "
+                "excerpt": "Abgeschottet KI exists because firms need the power of AI without risking client confidentiality.\n\nModern firms handle vast amounts of documents every day. Large Language Models (LLMs) can speed up re"
               },
               {
-                "title": "Professional Secrecy",
+                "title": "Learning",
+                "slug": "/work/abgeschottet-ki/learning",
+                "order": 2,
+                "icon": "ki",
+                "image": "/jpg/abgeschotten-ki.jpg",
+                "type": "file",
+                "tags": [
+                  "abgeschottet",
+                  "KI"
+                ],
+                "excerpt": "How does the AI learn from the prompts over time?\n\n Used carefully, large language models can turn legal research into a faster, more focused process.\n\nWhen we talk about learning, it’s important to d"
+              },
+              {
+                "title": "Ring Fencing",
+                "slug": "/work/abgeschottet-ki/ringfenced-llm",
+                "order": 6,
+                "icon": "ki",
+                "image": "/png/ki/abgeschotten-ki.png",
+                "type": "file",
+                "excerpt": "What Does It Mean to Ring‑Fence an LLM?\n\n A ring‑fenced LLM is like having the power of AI inside a locked room.\n\n Runs on internal servers or private cloud\n Blocks external connections\n Uses local st"
+              },
+              {
+                "title": "Secrecy",
                 "slug": "/work/abgeschottet-ki/professional-secrecy",
                 "order": 10,
                 "icon": "ki",
                 "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
-                "excerpt": "What you tell your lawyer stays between you and them.\n\n What Does Professional Secrecy Mean for UK Lawyers?\n\nWhen you speak to a lawyer in the UK, everything you tell them in confidence is protected b"
+                "excerpt": "What Does Professional Secrecy Mean?\n\n What you tell your lawyer stays between you and them.\n\nWhen you speak to a lawyer in the UK, everything you tell them in confidence is protected by a strict lega"
               },
               {
-                "title": "Confidentiality Obligations",
+                "title": "Confidentiality",
                 "slug": "/work/abgeschottet-ki/confidentiality-obligations",
                 "order": 20,
                 "icon": "ki",
@@ -106,19 +128,19 @@
                   "abgeschottet",
                   "KI"
                 ],
-                "excerpt": "UK law firms are bound by some of the strongest confidentiality rules in professional life.\n\n What Confidentiality Obligations Do UK Law Firms Have Toward Their Clients?\n\n Everything you tell your law"
+                "excerpt": "What Confidentiality Obligations Do UK Law Firms Have Toward Their Clients?\n\n UK law firms are bound by some of the strongest confidentiality rules in professional life.\n\n Everything you tell your law"
               },
               {
-                "title": "Abgeschottet KI",
+                "title": "Example prompts",
                 "slug": "/work/abgeschottet-ki/prompts",
                 "order": 20,
                 "icon": "ki",
                 "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
-                "excerpt": "General legal reasoning\n\nErkläre in einfachen Worten, was das Berufsgeheimnis für deutsche Rechtsanwälte bedeutet.\n\nExplain in simple terms what professional secrecy means for UK lawyers.\n\n\n\nWelche Pf"
+                "excerpt": "General legal reasoning\n\nErkläre in einfachen Worten, was das Berufsgeheimnis für deutsche Rechtsanwälte bedeutet.\n\nExplain in simple terms what professional secrecy means for UK lawyers.\n\nWelche Pfli"
               },
               {
-                "title": "GDPR and Law Firms",
+                "title": "GDPR",
                 "slug": "/work/abgeschottet-ki/gdpr-law-firms",
                 "order": 30,
                 "icon": "ki",
@@ -128,10 +150,10 @@
                   "abgeschottet",
                   "KI"
                 ],
-                "excerpt": "GDPR means your personal information is handled lawfully, transparently, and with your privacy in mind.\n\n What Does the GDPR Mean for a UK Law Firm?\n\nThe General Data Protection Regulation (GDPR) – as"
+                "excerpt": "What Does the GDPR Mean for a UK Law Firm?\n\n GDPR means your personal information is handled lawfully, transparently, and with your privacy in mind.\n\nThe General Data Protection Regulation (GDPR) – as"
               },
               {
-                "title": "Abgeschottet KI",
+                "title": "Hardware",
                 "slug": "/work/abgeschottet-ki/hardware",
                 "order": 40,
                 "icon": "ki",
@@ -144,7 +166,7 @@
                 "excerpt": "Keep it simple. Start small. Scale when you need to.\n\n Hardware for Abgeschottet KI\n\nOne of the advantages of Abgeschottet KI is that it’s a low‑investment, quick‑to‑implement solution.  \nYou don’t ne"
               },
               {
-                "title": "LLMs and Legal Research",
+                "title": "Research",
                 "slug": "/work/abgeschottet-ki/llms-legal-research",
                 "order": 40,
                 "icon": "ki",
@@ -154,37 +176,28 @@
                   "abgeschottet",
                   "KI"
                 ],
-                "excerpt": "Used carefully, large language models can turn legal research into a faster, more focused process.\n\n How Could Large Language Models Help UK Law Firms With Legal Research?\n\n Quickly summarising case l"
+                "excerpt": "How Could Large Language Models Help UK Law Firms With Legal Research?\n\n Used carefully, large language models can turn legal research into a faster, more focused process.\n\n Quickly summarising case l"
               },
               {
-                "title": "Risks of Public LLMs",
+                "title": "Risks",
                 "slug": "/work/abgeschottet-ki/risks-public-llms",
                 "order": 50,
                 "icon": "ki",
                 "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
-                "excerpt": "Public AI services are not designed for legally confidential data.\n\n What Are the Risks if Lawyers Send Confidential Files to a Public AI Service?\n\n Loss of confidentiality\n Data protection breaches\n "
+                "excerpt": "What Are the Risks if Lawyers Send Confidential Files to a Public AI Service?\n\n Public AI services are not designed for legally confidential data.\n\n Loss of confidentiality\n Data protection breaches\n "
               },
               {
-                "title": "Ring‑Fenced LLM",
-                "slug": "/work/abgeschottet-ki/ringfenced-llm",
-                "order": 60,
-                "icon": "ki",
-                "image": "/png/ki/abgeschotten-ki.png",
-                "type": "file",
-                "excerpt": "A ring‑fenced LLM is like having the power of AI inside a locked room.\n\n What Does It Mean to Ring‑Fence an LLM?\n\n Runs on internal servers or private cloud\n Blocks external connections\n Uses local st"
-              },
-              {
-                "title": "Ring‑Fenced LLM & Confidentiality",
+                "title": "Confidentiality",
                 "slug": "/work/abgeschottet-ki/ringfenced-llm-confidentiality",
                 "order": 70,
                 "icon": "ki",
                 "image": "/png/ki/abgeschotten-ki.png",
                 "type": "file",
-                "excerpt": "A ring‑fenced LLM gives a firm all the efficiency of AI while upholding the highest standards of confidentiality.\n\n How Can a Ring‑Fenced LLM Help?\n\n No data leaves the firm’s network\n Built‑in access"
+                "excerpt": "How Can a Ring‑Fenced LLM Help?\n\n A ring‑fenced LLM gives a firm all the efficiency of AI while upholding the highest standards of confidentiality.\n\n No data leaves the firm’s network\n Built‑in access"
               },
               {
-                "title": "Organisational Measures",
+                "title": "Organisational",
                 "slug": "/work/abgeschottet-ki/organisational-measures",
                 "order": 80,
                 "icon": "ki",
@@ -194,74 +207,12 @@
                   "abgeschottet",
                   "KI"
                 ],
-                "excerpt": "A ring‑fenced LLM works best as part of a wider culture of confidentiality.\n\n What Organisational Measures Should a Law Firm Take?\n\n Clear internal policies\n Regular staff training\n Access controls ba"
+                "excerpt": "What Organisational Measures Should a Law Firm Take?\n\n A ring‑fenced LLM works best as part of a wider culture of confidentiality.\n\n Clear internal policies\n Regular staff training\n Access controls ba"
               }
             ]
           },
           {
-            "title": "PDF Smash",
-            "description": "A ring‑fenced PDF smasher for keeping all that in house",
-            "slug": "/work/pdf-smash",
-            "order": 1,
-            "icon": "pdf",
-            "image": "/png/n64/punk.png",
-            "type": "folder",
-            "tags": [
-              "cartridges",
-              "KI",
-              "pdf"
-            ],
-            "excerpt": "Cartridge for Abgeschottet KI",
-            "children": [
-              {
-                "title": "PDF Smash",
-                "slug": "/work/pdf-smash/history-of-pdf",
-                "order": 1,
-                "icon": "pdf",
-                "image": "/png/n64/punk.png",
-                "type": "file",
-                "tags": [
-                  "cartridges",
-                  "KI",
-                  "pdf"
-                ],
-                "excerpt": "A ring‑fenced PDF smasher for keeping all that in house"
-              }
-            ]
-          },
-          {
-            "title": "PDF Smash",
-            "description": "A ring‑fenced PDF smasher for keeping all that in house",
-            "slug": "/work/pdf-smash",
-            "order": 1,
-            "icon": "pdf",
-            "image": "/png/n64/punk.png",
-            "type": "folder",
-            "tags": [
-              "cartridges",
-              "KI",
-              "pdf"
-            ],
-            "excerpt": "Cartridge for Abgeschottet KI",
-            "children": [
-              {
-                "title": "PDF Smash",
-                "slug": "/work/pdf-smash/history-of-pdf",
-                "order": 1,
-                "icon": "pdf",
-                "image": "/png/n64/punk.png",
-                "type": "file",
-                "tags": [
-                  "cartridges",
-                  "KI",
-                  "pdf"
-                ],
-                "excerpt": "A ring‑fenced PDF smasher for keeping all that in house"
-              }
-            ]
-          },
-          {
-            "title": "Fullstack JavaScript Developer",
+            "title": "CV",
             "description": "Match your Job to our Curriculum Vitae with AI",
             "slug": "/work/cv",
             "order": 2,
@@ -276,7 +227,7 @@
               "AI",
               "OpenAI"
             ],
-            "excerpt": "Fullstack JavaScript\n\nOver 20 years of experience delivering scalable web applications across startups, enterprises, and remotefirst teams in the UK, Europe, and Australia and beyond. Deep expertise i",
+            "excerpt": "Fullstack JavaScript Developer\n\nDeep expertise in React and TypeScript, currently specialising in Next.js.\n\n20+ years delivering scalable web applications for startups, enterprises, and remote‑first t",
             "children": [
               {
                 "title": "About C.V.",
