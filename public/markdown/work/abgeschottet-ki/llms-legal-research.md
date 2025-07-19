@@ -17,4 +17,4 @@ tags: abgeschottet, KI
 - Suggesting relevant sources
 - Drafting starting points
 
-**Important:** Every output must be checked by a qualified lawyer.
+Important: Every output must be checked by a qualified lawyer.

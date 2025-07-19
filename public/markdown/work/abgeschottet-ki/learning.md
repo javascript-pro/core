@@ -1,10 +1,10 @@
 ---
-order: 25
+order: 2
 title: Learning
 description: How does the AI learn?
 slug: /work/abgeschottet-ki/learning
 icon: ki
-image: /png/ki/abgeschotten-ki.png
+image: /jpg/abgeschotten-ki.jpg
 tags: abgeschottet, KI
 ---
 
@@ -12,18 +12,18 @@ tags: abgeschottet, KI
 
 > Used carefully, large language models can turn legal research into a faster, more focused process.
 
-When we talk about **learning**, it’s important to distinguish between two very different concepts:
+When we talk about learning, it’s important to distinguish between two very different concepts:
 
 #### 1. The model itself is frozen
 
-The underlying neural network weights of the Phi‑3 model do **not change** as you interact with it. Prompting alone does not permanently add knowledge.  
+The underlying neural network weights of the Phi‑3 model do not change as you interact with it. Prompting alone does not permanently add knowledge.  
 To truly alter the model, you would need to perform a separate fine‑tuning process, which involves preparing a large dataset and training new weights or adapters.
 
 #### 2. Building memory outside the model
 
-Instead of changing the model, we store and reuse context. This is often done with a technique called **retrieval‑augmented generation (RAG)**.
+Instead of changing the model, we store and reuse context. This is often done with a technique called retrieval‑augmented generation (RAG).
 
-**How it works in Abgeschottet KI:**
+How it works in Abgeschottet KI:
 
 - Every prompt and its answer can be saved in a database (for example, SQLite).
 - When a new prompt comes in, we search our stored history for relevant past prompts and answers.

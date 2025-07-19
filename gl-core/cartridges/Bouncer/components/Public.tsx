@@ -35,12 +35,16 @@ export default function Public() {
   const dispatch = useDispatch();
   const [loading, setLoading] = React.useState(true);
   const uid = useUid();
-  console.log('uid', uid);
+  //
 
   const router = useRouter();
 
   const [userDoc, setUserDoc] = React.useState<any | null>(null);
   const [userDocNotFound, setUserDocNotFound] = React.useState(false);
+
+  React.useEffect(() => {
+    console.log('Public effect');
+  }, []);
 
   React.useEffect(() => {
     const auth = getAuth();

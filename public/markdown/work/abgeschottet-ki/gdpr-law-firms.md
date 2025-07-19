@@ -12,7 +12,7 @@ tags: abgeschottet, KI
 
 > GDPR means your personal information is handled lawfully, transparently, and with your privacy in mind.
 
-The **General Data Protection Regulation (GDPR)** – as kept in UK law after Brexit – sets strict rules on how law firms handle any information that could identify a person.
+The General Data Protection Regulation (GDPR) – as kept in UK law after Brexit – sets strict rules on how law firms handle any information that could identify a person.
 
 - We must have a clear reason to use your data.
 - We must keep it safe.

@@ -1,6 +1,6 @@
 ---
 order: 6
-title: Ring‑Fenced
+title: Ring Fencing
 description: Keeping data inside a secure environment
 slug: /work/abgeschottet-ki/ringfenced-llm
 icon: ki
