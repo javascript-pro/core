@@ -1,5 +1,5 @@
 import { TUbereduxDispatch } from '../../../../gl-core/types';
-import { setUbereduxKey, toggleFeedback } from '../../../../gl-core';
+import { setUbereduxKey } from '../../../../gl-core';
 import { doc, getDoc, setDoc, updateDoc } from 'firebase/firestore';
 import { db } from '../../../lib/firebase';
 
@@ -14,12 +14,17 @@ export const ping =
         const now = Date.now();
         const diff = now - visitor.lastUpdated;
 
-        if (diff > 10000) {
-          // grab current pathname on the client
-          const currentPathname =
-            typeof window !== 'undefined' ? window.location.pathname : '';
+        // check current pathname
+        const currentPathname =
+          typeof window !== 'undefined' ? window.location.pathname : '';
+        const previousPathname: string = visitor.currentPathname || '';
 
-          // merge into visitor
+        // conditions:
+        const pathnameChanged = currentPathname !== previousPathname;
+        const waitedLongEnough = diff > 5000;
+
+        // if pathname changed OR waited > 10 seconds
+        if (pathnameChanged || waitedLongEnough) {
           const updatedVisitor = {
             ...visitor,
             currentPathname,
@@ -38,14 +43,12 @@ export const ping =
             const snap = await getDoc(visitorRef);
 
             if (snap.exists()) {
-              // update existing doc
               await updateDoc(visitorRef, {
-                fingerprint, // ensure fingerprint stays in sync
+                fingerprint,
                 lastPinged: now,
                 currentPathname,
               });
             } else {
-              // create new doc
               await setDoc(visitorRef, {
                 fingerprint,
                 ip: visitor.ip || null,
@@ -56,14 +59,7 @@ export const ping =
             }
           }
 
-          // ---- Redux feedback and state update ----
-          // dispatch(
-          //   toggleFeedback({
-          //     severity: 'success',
-          //     title: 'Pinged',
-          //   }),
-          // );
-
+          // ---- Redux update ----
           dispatch(setUbereduxKey({ key: 'bouncer', value: updatedBouncer }));
         }
       }

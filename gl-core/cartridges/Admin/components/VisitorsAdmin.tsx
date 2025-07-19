@@ -56,7 +56,7 @@ export default function VisitorsAdmin() {
     if (geo.city) parts.push(geo.city);
     if (geo.region) parts.push(geo.region);
     if (geo.countryCode || geo.country) {
-      parts.push(geo.countryCode || geo.country);
+      parts.push(geo.country);
     }
     return parts.join(', ');
   };
@@ -112,7 +112,7 @@ export default function VisitorsAdmin() {
                         variant="body2"
                         sx={{ color: 'text.secondary', mt: { xs: 1, sm: 0 } }}
                       >
-                        {visitor.id}
+                        {visitor.currentPathname}
                       </Typography>
                     </Box>
                   </Box>
