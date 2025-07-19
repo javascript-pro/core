@@ -1,4 +1,4 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/components/Auth.tsx
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/components/Public.tsx
 'use client';
 
 import * as React from 'react';
@@ -31,11 +31,12 @@ import { SignIn, setUid, useUid } from '../../Bouncer';
 import { db } from '../../../lib/firebase';
 import { doc, onSnapshot } from 'firebase/firestore';
 
-export default function Auth() {
+export default function Public() {
   const dispatch = useDispatch();
   const [loading, setLoading] = React.useState(true);
   const uid = useUid();
-  // console.log('uid', uid);
+  console.log('uid', uid);
+
   const router = useRouter();
 
   const [userDoc, setUserDoc] = React.useState<any | null>(null);

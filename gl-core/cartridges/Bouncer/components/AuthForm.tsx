@@ -132,7 +132,7 @@ export default function AuthForm() {
         <CardContent>
           <TextField
             id="email"
-            variant="filled"
+            variant="outlined"
             color="secondary"
             label="Email"
             type="email"
@@ -144,7 +144,7 @@ export default function AuthForm() {
           />
           <TextField
             id="password"
-            variant="filled"
+            variant="outlined"
             color="secondary"
             label="Password"
             type="password"

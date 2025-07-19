@@ -127,6 +127,19 @@
                 "excerpt": "General legal reasoning\n\nErkläre in einfachen Worten, was das Berufsgeheimnis für deutsche Rechtsanwälte bedeutet.\n\nExplain in simple terms what professional secrecy means for UK lawyers.\n\nWelche Pfli"
               },
               {
+                "title": "Learning",
+                "slug": "/work/abgeschottet-ki/learning",
+                "order": 25,
+                "icon": "ki",
+                "image": "/png/ki/abgeschotten-ki.png",
+                "type": "file",
+                "tags": [
+                  "abgeschottet",
+                  "KI"
+                ],
+                "excerpt": "How does the AI learn from the prompts over time?\n\n Used carefully, large language models can turn legal research into a faster, more focused process.\n\nWhen we talk about learning, it’s important to d"
+              },
+              {
                 "title": "GDPR",
                 "slug": "/work/abgeschottet-ki/gdpr-law-firms",
                 "order": 30,

@@ -1,7 +1,7 @@
 // core/gl-core/cartridges/Bouncer/index.tsx
 import Bouncer from './Bouncer';
 import { initialState as initialStateBouncer } from './initialState';
-import { Authed, AuthForm, SignoutButton, Auth, SignIn } from './components';
+import { Authed, AuthForm, SignoutButton, Public, SignIn } from './components';
 import { useBouncer, useUid, useEmail } from './hooks';
 import { updateUser, firebaseAuth } from './actions';
 import {
@@ -13,7 +13,7 @@ import {
   setUid,
 } from './actions';
 export { initialStateBouncer };
-export { Bouncer, SignoutButton, Authed, AuthForm, Auth, SignIn };
+export { Bouncer, SignoutButton, Authed, AuthForm, Public, SignIn };
 export { useBouncer, useUid, useEmail };
 export { updateUser, firebaseAuth };
 export {

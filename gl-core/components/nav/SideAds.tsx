@@ -10,7 +10,7 @@ import {
   ListItemText,
 } from '@mui/material';
 import { useDispatch, routeTo, Icon } from '../../../gl-core';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 
 export type TSideAds = {
   children?: React.ReactNode;
@@ -20,6 +20,7 @@ export type TSideAds = {
 export default function SideAds() {
   const dispatch = useDispatch();
   const router = useRouter();
+  const pathname = usePathname(); // get current path
 
   const items = [
     { icon: 'home', title: 'Home', path: '/' },
@@ -33,19 +34,25 @@ export default function SideAds() {
   return (
     <Box>
       <List dense>
-        {items.map((item) => (
-          <ListItemButton
-            key={item.title}
-            onClick={() => {
-              dispatch(routeTo(item.path, router));
-            }}
-          >
-            <ListItemIcon>
-              <Icon icon={item.icon as any} />
-            </ListItemIcon>
-            <ListItemText primary={item.title} />
-          </ListItemButton>
-        ))}
+        {items.map((item) => {
+          const isActive = pathname === item.path;
+          return (
+            <ListItemButton
+              key={item.title}
+              disabled={isActive}
+              onClick={() => {
+                if (!isActive) {
+                  dispatch(routeTo(item.path, router));
+                }
+              }}
+            >
+              <ListItemIcon>
+                <Icon icon={item.icon as any} />
+              </ListItemIcon>
+              <ListItemText primary={item.title} />
+            </ListItemButton>
+          );
+        })}
       </List>
     </Box>
   );

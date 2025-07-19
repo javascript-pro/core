@@ -11,7 +11,7 @@ import {
   Tooltip,
 } from '@mui/material';
 import { Icon, useIsMobile, TopRightMenu } from '../../../gl-core';
-import { Auth } from '../../cartridges/Bouncer';
+import { Public } from '../../cartridges/Bouncer';
 
 export type THeader = {
   frontmatter?: any;
@@ -59,7 +59,7 @@ export default function Header({ frontmatter = null }: THeader) {
         }
         action={
           <Box sx={{ display: 'flex' }}>
-            <Auth />
+            <Public />
             <TopRightMenu frontmatter={frontmatter} />
           </Box>
         }
