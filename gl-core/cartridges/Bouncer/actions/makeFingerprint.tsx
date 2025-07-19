@@ -33,19 +33,6 @@ export const makeFingerprint =
 
       const geoData = await geoRes.json();
 
-      // 3. Gather device/browser info
-      const device = {
-        userAgent: navigator.userAgent || null,
-        platform: navigator.platform || null,
-        language: navigator.language || null,
-        languages: navigator.languages || null,
-        vendor: navigator.vendor || null,
-        hardwareConcurrency: navigator.hardwareConcurrency || null,
-        maxTouchPoints: (navigator as any).maxTouchPoints || 0,
-        cookieEnabled: navigator.cookieEnabled,
-        online: navigator.onLine,
-      };
-
       // 4. Figure out if lastUpdated was < 10 seconds ago
       const now = Date.now();
       let status: string | undefined;
@@ -72,7 +59,6 @@ export const makeFingerprint =
           longitude: geoData.longitude || null,
           timezone: geoData.time_zone?.name || null,
         },
-        device, // NEW device info
         ...(status ? { status } : {}), // only add status if online
       };
 
