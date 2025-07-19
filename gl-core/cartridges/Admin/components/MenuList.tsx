@@ -1,19 +1,27 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Admin/components/MenuList.tsx
-
 'use client';
 
 import * as React from 'react';
 import {
-  CssBaseline,
   Box,
   List,
   ListItemButton,
-  ListItemText,
   ListItemIcon,
-  CardContent,
+  ListItemText,
 } from '@mui/material';
-import { MightyButton, Icon, routeTo, useDispatch } from '../../../../gl-core';
-import { useRouter, usePathname } from 'next/navigation';
+import { Icon, routeTo, useDispatch } from '../../../../gl-core';
+import { useRouter } from 'next/navigation';
+
+type MenuItem = {
+  label: string;
+  icon: string;
+  route: string;
+};
+
+const menuItems: MenuItem[] = [
+  { label: 'Flickr', icon: 'flickr', route: '/admin/flickr' },
+  { label: 'Auth', icon: 'auth', route: '/admin/auth' },
+  { label: 'Visitors', icon: 'visitors', route: '/admin/visitors' },
+];
 
 export default function MenuList() {
   const dispatch = useDispatch();
@@ -26,34 +34,17 @@ export default function MenuList() {
   return (
     <Box>
       <List>
-        {/* <ListItemButton>
-          <ListItemIcon>
-            <Icon icon="bouncer" color="primary" />
-          </ListItemIcon>
-          <ListItemText primary="Bouncer" />
-        </ListItemButton> */}
-        <ListItemButton
-          onClick={() => {
-            // console.log("Home");
-            handleClick('/admin/flickr');
-          }}
-        >
-          <ListItemIcon>
-            <Icon icon="flickr" color="primary" />
-          </ListItemIcon>
-          <ListItemText primary="Flickr" />
-        </ListItemButton>
-
-        <ListItemButton
-          onClick={() => {
-            handleClick('/admin/auth');
-          }}
-        >
-          <ListItemIcon>
-            <Icon icon="auth" color="primary" />
-          </ListItemIcon>
-          <ListItemText primary="Auth" />
-        </ListItemButton>
+        {menuItems.map((item) => (
+          <ListItemButton
+            key={item.route}
+            onClick={() => handleClick(item.route)}
+          >
+            <ListItemIcon>
+              <Icon icon={item.icon as any} color="primary" />
+            </ListItemIcon>
+            <ListItemText primary={item.label} />
+          </ListItemButton>
+        ))}
       </List>
     </Box>
   );

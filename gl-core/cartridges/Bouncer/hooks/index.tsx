@@ -2,5 +2,5 @@
 import { useBouncer } from './useBouncer';
 import { useUid } from './useUid';
 import { useEmail } from './useEmail';
-
-export { useBouncer, useUid, useEmail };
+import { useVisitor } from './useVisitor';
+export { useVisitor, useBouncer, useUid, useEmail };

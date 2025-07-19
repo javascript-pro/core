@@ -27,7 +27,15 @@ import {
 } from '../../../../gl-core';
 import { firebaseAuth } from '../../Bouncer';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
-import { SignIn, setUid, useUid } from '../../Bouncer';
+import {
+  SignIn,
+  setUid,
+  useUid,
+  useBouncer,
+  useVisitor,
+  ping,
+  makeFingerprint,
+} from '../../Bouncer';
 import { db } from '../../../lib/firebase';
 import { doc, onSnapshot } from 'firebase/firestore';
 
@@ -35,16 +43,36 @@ export default function Public() {
   const dispatch = useDispatch();
   const [loading, setLoading] = React.useState(true);
   const uid = useUid();
-  //
-
+  const visitor = useVisitor();
+  const slice = useBouncer();
   const router = useRouter();
 
   const [userDoc, setUserDoc] = React.useState<any | null>(null);
   const [userDocNotFound, setUserDocNotFound] = React.useState(false);
 
+  // Run ping whenever slice changes
   React.useEffect(() => {
-    console.log('Public effect');
-  }, []);
+    dispatch(ping());
+  }, [dispatch, slice]);
+
+  // Dispatch ping every 5 seconds
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      dispatch(ping());
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [dispatch]);
+
+  // If fingerprint is missing, dispatch makeFingerprint
+  React.useEffect(() => {
+    if (
+      visitor &&
+      typeof visitor === 'object' &&
+      visitor.fingerprint === undefined
+    ) {
+      dispatch(makeFingerprint());
+    }
+  }, [visitor, dispatch]);
 
   React.useEffect(() => {
     const auth = getAuth();
@@ -59,7 +87,6 @@ export default function Public() {
     return () => unsubscribe();
   }, [dispatch]);
 
-  // Subscribe to Firestore doc when uid is present
   React.useEffect(() => {
     if (!uid) {
       setUserDoc(null);
@@ -119,7 +146,6 @@ export default function Public() {
     );
   }
 
-  // If logged in (uid present), show user card as clickable ButtonBase
   if (uid) {
     return (
       <Box sx={{ display: 'flex', justifyContent: 'center' }}>
@@ -167,7 +193,6 @@ export default function Public() {
                 </Box>
               </ButtonBase>
 
-              {/* Menu triggered by clicking the card */}
               <Menu
                 anchorEl={anchorEl}
                 open={Boolean(anchorEl)}
@@ -192,14 +217,16 @@ export default function Public() {
             </>
           )}
         </Box>
+        {/* <pre>visitor: {JSON.stringify(visitor, null, 2)}</pre> */}
       </Box>
     );
   }
 
-  // Otherwise show login button and dialog/menu
   return (
     <Box sx={{ display: 'flex', justifyContent: 'center', mt: 1 }}>
+      {/* <pre>visitor: {JSON.stringify(visitor, null, 2)}</pre> */}
       <MightyButton
+        mode="icon"
         label="Sign in"
         variant="contained"
         color="primary"
@@ -208,7 +235,6 @@ export default function Public() {
         onClick={handleSigninClick as any}
       />
 
-      {/* Desktop popup menu for Sign In */}
       <Menu
         anchorEl={anchorEl}
         open={Boolean(anchorEl) && !uid}
@@ -219,7 +245,6 @@ export default function Public() {
         <SignIn onClose={handleCloseMenu} />
       </Menu>
 
-      {/* Mobile fullscreen dialog */}
       <Dialog fullScreen open={dialogOpen} onClose={handleCloseMenu}>
         <DialogContent>
           <SignIn onClose={handleCloseMenu} />

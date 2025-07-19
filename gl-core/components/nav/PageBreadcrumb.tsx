@@ -14,7 +14,10 @@ function buildTitleMap(nav: any[], parentPath = ''): Record<string, string> {
   let map: Record<string, string> = {};
   for (const item of nav) {
     // Build this item's full path
-    const fullPath = (parentPath + '/' + (item.slug || '')).replace(/\/+/g, '/');
+    const fullPath = (parentPath + '/' + (item.slug || '')).replace(
+      /\/+/g,
+      '/',
+    );
 
     if (item.title) {
       map[fullPath] = item.title;
@@ -56,7 +59,11 @@ function Params() {
   );
 }
 
-export function PageBreadcrumb({ frontmatterTitle }: { frontmatterTitle?: string }) {
+export function PageBreadcrumb({
+  frontmatterTitle,
+}: {
+  frontmatterTitle?: string;
+}) {
   const pathname = usePathname();
   const segments = pathname.replace(/\/$/, '').split('/').filter(Boolean);
 
