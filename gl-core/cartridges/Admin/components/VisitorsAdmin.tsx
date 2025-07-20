@@ -83,9 +83,9 @@ export default function VisitorsAdmin() {
 
     return (
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-        <Icon icon={getBrowserIcon(browser)} />
-        <Icon icon={getDeviceTypeIcon(deviceType)} />
-        <Icon icon={getOsIcon(os)} />
+        <Icon icon={getBrowserIcon(browser) as any} />
+        <Icon icon={getDeviceTypeIcon(deviceType) as any} />
+        <Icon icon={getOsIcon(os) as any} />
         {countryCode && (
           <Avatar
             src={`/svg/flags/${countryCode.toLowerCase()}.svg`}
