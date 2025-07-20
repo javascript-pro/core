@@ -11,7 +11,11 @@ function parseUserAgent(ua: string) {
   let deviceType = 'Desktop';
 
   // Browser detection
-  if (lower.includes('chrome') && !lower.includes('edge') && !lower.includes('edg/')) {
+  if (
+    lower.includes('chrome') &&
+    !lower.includes('edge') &&
+    !lower.includes('edg/')
+  ) {
     browser = 'Chrome';
   } else if (lower.includes('safari') && !lower.includes('chrome')) {
     browser = 'Safari';
