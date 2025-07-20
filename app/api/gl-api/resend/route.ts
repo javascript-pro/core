@@ -7,7 +7,7 @@ export async function POST(req: NextRequest) {
   if (!secret) {
     return NextResponse.json(
       { error: 'Missing RESEND_API_KEY' },
-      { status: 500 }
+      { status: 500 },
     );
   }
 

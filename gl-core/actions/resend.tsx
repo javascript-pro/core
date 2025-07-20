@@ -32,7 +32,7 @@ export const resend =
             status: 'success',
             title: `Email sent successfully to ${payload.to}`,
           },
-        })
+        }),
       );
     } catch (e: unknown) {
       const errorMessage = e instanceof Error ? e.message : String(e);
@@ -43,7 +43,7 @@ export const resend =
             status: 'error',
             title: `Failed to send email: ${errorMessage}`,
           },
-        })
+        }),
       );
     }
   };
