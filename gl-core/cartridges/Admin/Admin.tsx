@@ -13,6 +13,7 @@ import {
   MenuList,
   AuthAdmin,
   VisitorsAdmin,
+  ResendAdmin,
 } from '../Admin';
 
 export default function Admin() {
@@ -27,6 +28,7 @@ export default function Admin() {
         {pathname === '/admin/auth' && <AuthAdmin />}
         {pathname === '/admin/visitors' && <VisitorsAdmin />}
         {pathname === '/admin/flickr' && <FlickrAdmin />}
+        {pathname === '/admin/resend' && <ResendAdmin />}
         {pathname === '/admin' && <MenuList />}
       </Layout>
     </Theme>

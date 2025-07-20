@@ -21,6 +21,7 @@ const menuItems: MenuItem[] = [
   { label: 'Flickr', icon: 'flickr', route: '/admin/flickr' },
   { label: 'Auth', icon: 'auth', route: '/admin/auth' },
   { label: 'Visitors', icon: 'visitors', route: '/admin/visitors' },
+  { label: 'Resend', icon: 'email', route: '/admin/resend' },
 ];
 
 export default function MenuList() {
