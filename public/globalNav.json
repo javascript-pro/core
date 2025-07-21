@@ -267,11 +267,11 @@
             ]
           },
           {
-            "title": "UK Ltd",
+            "title": "Contact Us",
             "description": "UK Limited Company (5460545)",
             "slug": "/work/company",
             "order": 10,
-            "icon": "work",
+            "icon": "email",
             "image": "https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg",
             "type": "folder",
             "excerpt": "| \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX",
@@ -342,7 +342,7 @@
             "tags": [
               "techstack"
             ],
-            "excerpt": "This page may require a higher level of access",
+            "excerpt": "This page may require a higher level of access\n\nTechstack\nProtected by Bouncer\nTechstack\n\n UK Ltd\n Work\n JavaScript\n Git\n Design System\n\nThis page may require a higher level of access",
             "children": [
               {
                 "title": "JavaScript",
@@ -484,13 +484,12 @@
                 ]
               },
               {
-                "title": "Blockchain Crypto Casino",
-                "description": "Building a Bitcoin-Powered Gambling Platform",
+                "title": "Blockchain",
                 "slug": "/work/techstack/blockchain",
                 "order": 150,
-                "icon": "bitcoin",
+                "icon": "company",
                 "image": "/png/3rdParty/bitcoin.png",
-                "type": "folder",
+                "type": "file",
                 "tags": [
                   "techstack",
                   "crypto",
@@ -502,8 +501,7 @@
                   "bitcoin",
                   "malta"
                 ],
-                "excerpt": "Blockchain Crypto Casino\n\n In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online ga",
-                "children": []
+                "excerpt": "Blockchain Crypto Casino\n\n In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online ga"
               },
               {
                 "title": "Open Source",

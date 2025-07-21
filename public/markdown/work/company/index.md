@@ -1,9 +1,9 @@
 ---
 order: 10
-title: UK Ltd
+title: Contact Us
 description: UK Limited Company (5460545)
 slug: /work/company
-icon: work
+icon: email
 image: https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg
 ---
 

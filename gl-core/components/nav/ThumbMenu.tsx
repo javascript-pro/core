@@ -1,4 +1,3 @@
-// /Users/goldlabel/GitHub/core/gl-core/components/nav/ThumbMenu.tsx
 'use client';
 
 import * as React from 'react';
@@ -95,6 +94,7 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
         onClick={handleClick}
         sx={{
           position: 'fixed',
+          background: themeMode === 'light' ? 'white' : 'primary',
           bottom: 16,
           right: 16,
           boxShadow: 0,
@@ -129,7 +129,7 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
           <ListItemIcon>
             <Icon icon="photo" />
           </ListItemIcon>
-          <ListItemText primary="OG Image" />
+          <ListItemText primary={hideImage ? 'Show OG' : 'Show Flickr'} />
         </MenuItem>
 
         {/* Theme Switcher */}

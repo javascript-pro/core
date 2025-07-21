@@ -144,7 +144,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                 {/* FlickrAlbum block */}
                 {hideImage && (
                   <Box sx={{ mt: 0, mx: isMobile ? 0 : 4, mb: 2 }}>
-                    <FlickrAlbum album="72177720327633973" />
+                    <FlickrAlbum album="72177720327572144" />
                   </Box>
                 )}
 
