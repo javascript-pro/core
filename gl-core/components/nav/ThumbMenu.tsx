@@ -1,4 +1,6 @@
+// /Users/goldlabel/GitHub/core/gl-core/components/nav/ThumbMenu.tsx
 'use client';
+
 import * as React from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
@@ -19,8 +21,6 @@ import {
 import {
   Icon,
   useDispatch,
-  Siblings,
-  SideAds,
   resetUberedux,
   ShareMenu,
   useVersion,
@@ -29,11 +29,11 @@ import {
   toggleHideImage,
   useSlice,
   useIsMobile,
-  ArrowMenu,
+  useThemeMode,
 } from '../../../gl-core';
 import { firebaseAuth } from '../../cartridges/Bouncer';
 
-export type TTopRightMenu = {
+export type TThumbMenu = {
   frontmatter?: {
     title?: string;
     description?: string;
@@ -43,16 +43,15 @@ export type TTopRightMenu = {
   [key: string]: any;
 };
 
-export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
+export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
   const dispatch = useDispatch();
   const router = useRouter();
   const { hideImage } = useSlice();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const version = useVersion();
-
-  // Use gl-core’s hook for mobile detection
   const isMobile = useIsMobile();
+  const themeMode = useThemeMode(); // "light" or "dark"
 
   const [shareDialogOpen, setShareDialogOpen] = React.useState(false);
 
@@ -92,7 +91,7 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
     <>
       {/* Floating Action Button in bottom-right corner */}
       <Fab
-        color="primary"
+        color={themeMode === 'light' ? 'default' : 'primary'}
         onClick={handleClick}
         sx={{
           position: 'fixed',
@@ -114,11 +113,6 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
         transformOrigin={{ vertical: 'bottom', horizontal: 'right' }}
         sx={{ mt: -1 }}
       >
-        <Box sx={{ my: 2 }}>
-          <SideAds />
-          <Siblings />
-        </Box>
-
         <MenuItem
           onClick={() => {
             dispatch(routeTo('/admin', router));
@@ -127,7 +121,15 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           <ListItemIcon>
             <Icon icon="admin" />
           </ListItemIcon>
-          <ListItemText primary={'Admin'} />
+          <ListItemText primary="Admin" />
+        </MenuItem>
+
+        {/* OG Image toggle */}
+        <MenuItem onClick={handleToggleHideImage}>
+          <ListItemIcon>
+            <Icon icon="photo" />
+          </ListItemIcon>
+          <ListItemText primary="OG Image" />
         </MenuItem>
 
         {/* Theme Switcher */}
@@ -146,10 +148,6 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
           </ListItemIcon>
           <ListItemText primary="Share" />
         </MenuItem>
-
-        <Box sx={{ my: 1, mx: 2 }}>
-          <ArrowMenu />
-        </Box>
 
         {/* App Version */}
         <Box sx={{ pr: 3, py: 1, textAlign: 'right' }}>
@@ -204,15 +202,13 @@ export default function TopRightMenu({ frontmatter = null }: TTopRightMenu) {
               />
 
               {frontmatter.image && (
-                <>
-                  <Image
-                    src={frontmatter.image}
-                    alt={frontmatter.title || 'Featured image'}
-                    width={1200}
-                    height={630}
-                    style={{ width: '100%', height: 'auto' }}
-                  />
-                </>
+                <Image
+                  src={frontmatter.image}
+                  alt={frontmatter.title || 'Featured image'}
+                  width={1200}
+                  height={630}
+                  style={{ width: '100%', height: 'auto' }}
+                />
               )}
             </Box>
           )}

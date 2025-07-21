@@ -5,7 +5,9 @@ import { toggleFeedback } from './toggleFeedback';
 import { toggleLoading } from './toggleLoading';
 import { uploadToStorage } from './uploadToStorage';
 import { toggleHideImage } from './toggleHideImage';
+import { resend } from './resend';
 export {
+  resend,
   uploadToStorage,
   switchTheme,
   navigateTo,

@@ -9,6 +9,7 @@ import {
   MenuList,
   AuthAdmin,
   VisitorsAdmin,
+  ResendAdmin,
 } from './components';
 
 export {
@@ -22,4 +23,5 @@ export {
   album,
   AuthAdmin,
   VisitorsAdmin,
+  ResendAdmin,
 };

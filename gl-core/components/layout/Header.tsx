@@ -10,8 +10,8 @@ import {
   Typography,
   Tooltip,
 } from '@mui/material';
-import { Icon, useIsMobile, TopRightMenu } from '../../../gl-core';
-import { Public } from '../../cartridges/Bouncer';
+import { Icon, useIsMobile, ThumbMenu } from '../../../gl-core';
+// import { Public } from '../../cartridges/Bouncer';
 
 export type THeader = {
   frontmatter?: any;
@@ -59,8 +59,8 @@ export default function Header({ frontmatter = null }: THeader) {
         }
         action={
           <Box sx={{ display: 'flex' }}>
-            <Public />
-            <TopRightMenu frontmatter={frontmatter} />
+            {/* <Public /> */}
+            <ThumbMenu frontmatter={frontmatter} />
           </Box>
         }
       />

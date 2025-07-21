@@ -18,18 +18,20 @@ import {
   DialogContent,
   IconButton,
 } from '@mui/material';
-import { Icon } from '../../../../gl-core'; // assuming Icon is exported from gl-core
+import { Icon } from '../../../../gl-core';
 import {
   MightyButton,
   useDispatch,
   useSlice,
   toggleFeedback,
+  useIsMobile,
 } from '../../../../gl-core';
 import { setLatestIndex } from '../../Flickr';
 
 export default function FlickrAlbum({ album }: { album?: string }) {
   const dispatch = useDispatch();
   const router = useRouter();
+  const isMobile = useIsMobile();
   const { latestIndex } = useSlice().flickr;
 
   const [photos, setPhotos] = useState<any[]>([]);
@@ -123,8 +125,10 @@ export default function FlickrAlbum({ album }: { album?: string }) {
     }
   };
 
-  const handleReset = () => {
-    dispatch(setLatestIndex(0));
+  const handleOpenFlickr = () => {
+    if (currentPhoto?.flickrUrl) {
+      window.open(currentPhoto.flickrUrl, '_blank', 'noopener,noreferrer');
+    }
   };
 
   const handlePopoverOpen = (event: React.MouseEvent<HTMLElement>) => {
@@ -179,20 +183,19 @@ export default function FlickrAlbum({ album }: { album?: string }) {
                 }}
               >
                 <CardMedia
+                  component="img"
                   alt={currentPhoto.title || 'Photo'}
                   src={currentPhoto.sizes?.medium?.src}
-                  component="img"
                   onLoad={() => {
                     setTimeout(() => setImageLoaded(true), DELAY_MS);
                   }}
                   onError={() => setHasImageError(true)}
                   sx={{
                     width: '100%',
-                    aspectRatio: `${width} / ${height}`,
-                    borderRadius: 0,
-                    display: 'block',
-                    maxHeight: { xs: 250 },
+                    height: 'auto',
                     objectFit: 'contain',
+                    display: 'block',
+                    borderRadius: 0,
                   }}
                 />
               </ButtonBase>
@@ -250,7 +253,7 @@ export default function FlickrAlbum({ album }: { album?: string }) {
             mt: 1,
             display: 'flex',
             justifyContent: 'center',
-            gap: 1, // adds some spacing between buttons
+            gap: 1,
           }}
         >
           <MightyButton
@@ -264,10 +267,10 @@ export default function FlickrAlbum({ album }: { album?: string }) {
           <MightyButton
             color="primary"
             mode="icon"
-            label="Reset"
+            label="Open Flickr"
             icon="flickr"
-            onClick={handleReset}
-            disabled={photos.length === 0}
+            onClick={handleOpenFlickr}
+            disabled={photos.length === 0 || !currentPhoto?.flickrUrl}
           />
           <MightyButton
             color="primary"
@@ -280,11 +283,11 @@ export default function FlickrAlbum({ album }: { album?: string }) {
         </Box>
       </Box>
 
-      {/* Fullscreen Dialog */}
+      {/* Fullscreen dialog only on mobile */}
       <Dialog
         open={dialogOpen}
         onClose={handleDialogClose}
-        fullScreen
+        fullScreen={isMobile}
         PaperProps={{
           sx: { backgroundColor: 'background.default', position: 'relative' },
         }}
@@ -294,18 +297,14 @@ export default function FlickrAlbum({ album }: { album?: string }) {
             title={currentPhoto?.title || 'Untitled'}
             subheader={currentPhoto?.description || 'No description'}
             avatar={
-              <>
-                <IconButton onClick={handleFlickrClick} title="View on Flickr">
-                  <Icon icon="flickr" />
-                </IconButton>
-              </>
+              <IconButton onClick={handleFlickrClick} title="View on Flickr">
+                <Icon icon="flickr" />
+              </IconButton>
             }
             action={
-              <>
-                <IconButton onClick={handleDialogClose} title="Close">
-                  <Icon icon="close" />
-                </IconButton>
-              </>
+              <IconButton onClick={handleDialogClose} title="Close">
+                <Icon icon="close" />
+              </IconButton>
             }
           />
         </DialogTitle>
@@ -364,7 +363,8 @@ export default function FlickrAlbum({ album }: { album?: string }) {
               src={currentPhoto.sizes.large.src}
               alt={currentPhoto.title || 'Photo'}
               sx={{
-                maxWidth: '100%',
+                width: '100%',
+                height: 'auto',
                 maxHeight: '80vh',
                 objectFit: 'contain',
               }}

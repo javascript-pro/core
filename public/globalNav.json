@@ -35,7 +35,7 @@
       "NextJS",
       "Headless CMS"
     ],
-    "excerpt": "New in July 2025\n\nAbgeschottet KI delivers secure, ring‑fenced AI to streamline legal compliance workflows, process documents faster, and protect sensitive data.\n\n We build and ship modern web apps fo",
+    "excerpt": "New for July 2025\n\nAbgeschottet KI delivers secure, ring‑fenced AI to streamline legal compliance workflows, process documents faster, and protect sensitive data.\n\n We build and ship modern web apps f",
     "children": [
       {
         "title": "Work",
@@ -245,6 +245,24 @@
                   "OpenAI"
                 ],
                 "excerpt": "Applying for jobs can be time consuming\n\nEach role requires tailoring a cover letter or rewording a CV to match a job description. As developers, we know the real problem isn’t effort — it’s clarity. "
+              },
+              {
+                "title": "Catering C.V.",
+                "slug": "/work/cv/saarbrucken",
+                "order": 1300,
+                "icon": "doc",
+                "image": "/png/og.png",
+                "type": "file",
+                "tags": [
+                  "CV",
+                  "jobs",
+                  "work",
+                  "resume",
+                  "AI",
+                  "germany",
+                  "saarbrucken"
+                ],
+                "excerpt": "LINGUADE\nChris Dorward\nSaarbrücken, Deutschland\nWhatsApp: +44 07745763122\nE‑Mail: listingslab@gmail.com\nGeburtsdatum: 15.10.1975\nStaatsangehörigkeit: Britisch & Deutsch (doppelte Staatsbürgerschaft)\n\n"
               }
             ]
           },
