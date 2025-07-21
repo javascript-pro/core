@@ -52,7 +52,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
   React.useEffect(() => {
     if (pathname === '/cv') router.replace('/work/cv');
     if (pathname === '/flickr') router.replace('/work/core/cartridges/flickr');
-    if (pathname === '/free/flickr') router.replace('/work/core/cartridges/flickr');
+    if (pathname === '/free/flickr')
+      router.replace('/work/core/cartridges/flickr');
   }, [pathname, router]);
 
   React.useEffect(() => {
@@ -139,7 +140,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
                     )}
                   </Box>
                 )}
-
 
                 {/* FlickrAlbum block */}
                 {hideImage && (
