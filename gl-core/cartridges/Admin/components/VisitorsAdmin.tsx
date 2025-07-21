@@ -102,14 +102,15 @@ export default function VisitorsAdmin() {
       <CardHeader
         title="Visitors"
         subheader="View and manage visitors in real time"
+        action={
+          msg && (
+            <Alert severity="success" sx={{ mb: 2 }}>
+              {msg}
+            </Alert>
+          )
+        }
         sx={{ p: 0, mb: 2 }}
       />
-
-      {msg && (
-        <Alert severity="success" sx={{ mb: 2 }}>
-          {msg}
-        </Alert>
-      )}
 
       {loading && <LinearProgress color="secondary" sx={{ mb: 2 }} />}
 

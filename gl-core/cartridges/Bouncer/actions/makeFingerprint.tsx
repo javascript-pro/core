@@ -17,7 +17,12 @@ export const makeFingerprint =
     }
 
     // Set makingFingerprint = true
-    dispatch(setUbereduxKey({ key: 'bouncer', value: { ...bouncer, makingFingerprint: true } }));
+    dispatch(
+      setUbereduxKey({
+        key: 'bouncer',
+        value: { ...bouncer, makingFingerprint: true },
+      }),
+    );
 
     try {
       const visitor = bouncer?.visitor || {};

@@ -72,7 +72,7 @@ export default function Fallmanager() {
   return (
     <Theme theme={currentTheme}>
       <CssBaseline />
-      <Container>
+      <Container maxWidth="md">
         <Header />
         {isEditing && fileId ? (
           <FileEdit id={fileId} />

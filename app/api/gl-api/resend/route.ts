@@ -1,5 +1,4 @@
 // /Users/goldlabel/GitHub/core/app/api/gl-api/resend/route.ts
-
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(req: NextRequest) {
@@ -13,60 +12,97 @@ export async function POST(req: NextRequest) {
 
   const { to, subject, body } = await req.json();
 
-  // Build a clean HTML template
+  // Goldlabel Light Theme
+  const primary = '#5E7978';
+  const text = '#303030';
+  const border = '#5E7978';
+  const background = '#eeeeee';
+  const logoUrl = 'https://goldlabel.pro/png/favicon.png';
+  const homepage = 'https://goldlabel.pro';
+
   const html = `
-    <html>
-      <head>
-        <style>
-          body {
-            font-family: Arial, sans-serif;
-            background: #f9f9f9;
-            margin: 0;
-            padding: 0;
-          }
-          .container {
-            background: #ffffff;
-            max-width: 600px;
-            margin: 40px auto;
-            border-radius: 8px;
-            border: 1px solid #e0e0e0;
-            overflow: hidden;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-          }
-          .header {
-            background: #1976d2;
-            color: white;
-            padding: 16px;
-            font-size: 20px;
-            font-weight: bold;
-          }
-          .content {
-            padding: 24px;
-            color: #333;
-            font-size: 16px;
-            line-height: 1.5;
-          }
-          .footer {
-            background: #f0f0f0;
-            color: #777;
-            padding: 12px;
-            font-size: 12px;
-            text-align: center;
-          }
-        </style>
-      </head>
-      <body>
+  <html>
+    <head>
+      <meta charset="UTF-8" />
+      <style>
+        body {
+          margin: 0;
+          padding: 0;
+          background: ${background};
+          font-family: Arial, Helvetica, sans-serif;
+          color: ${text};
+        }
+        .outer {
+          width: 100%;
+          background: ${background};
+          padding: 40px 0;
+        }
+        .container {
+          max-width: 600px;
+          margin: 0 auto;
+          border: 1px solid ${border};
+          border-radius: 8px;
+          overflow: hidden;
+          box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+          background: #fff;
+        }
+        .header {
+          background: ${primary};
+          padding: 24px 16px;
+          text-align: center;
+        }
+        .header a {
+          text-decoration: none;
+          display: inline-block;
+        }
+        .header img {
+          height: 48px;
+          vertical-align: middle;
+          margin-bottom: 12px;
+        }
+        .subject {
+          font-size: 20px;
+          font-weight: bold;
+          color: #fff;
+          margin-top: 8px;
+        }
+        .content {
+          padding: 24px;
+          font-size: 16px;
+          line-height: 1.6;
+          color: ${text};
+        }
+        .content p {
+          margin: 0 0 16px;
+        }
+        .footer {
+          background: #f0f0f0;
+          text-align: center;
+          padding: 12px;
+          font-size: 12px;
+          color: #777;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="outer">
         <div class="container">
-          <div class="header">${subject}</div>
+          <div class="header">
+            <a href="${homepage}">
+              <img src="${logoUrl}" alt="Goldlabel Logo" />
+            </a>
+            <div class="subject">${subject}</div>
+          </div>
           <div class="content">
             <p>${body.replace(/\n/g, '<br/>')}</p>
           </div>
           <div class="footer">
-            Sent from Goldlabel Core
+            Sent from <a href="${homepage}" style="color:${primary}; text-decoration:none;">Goldlabel Core</a>
           </div>
         </div>
-      </body>
-    </html>
+      </div>
+    </body>
+  </html>
   `;
 
   try {
@@ -77,7 +113,7 @@ export async function POST(req: NextRequest) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'noreply@goldlabel.pro', // must be a verified sender in Resend
+        from: 'goldlabel@goldlabel.pro', // must be verified in Resend
         to,
         subject,
         html,

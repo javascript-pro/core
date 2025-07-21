@@ -65,7 +65,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
   }, [dispatch]);
 
   const isCV = pathname === '/work/cv';
-  // const isCV = false;
   const isFallmanager = pathname.startsWith('/fallmanager');
   const isAdmin = pathname.startsWith('/admin');
   const isApp = isCV || isFallmanager || isAdmin;
@@ -105,7 +104,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
     <Theme theme={config.themes[themeMode] as any}>
       <CssBaseline />
       <IncludeAll />
-      <Container id="core">
+      <Container id="core" maxWidth="md">
         <Box sx={{ minHeight: '100vh' }}>
           <Header frontmatter={frontmatter} />
 
@@ -123,51 +122,12 @@ export default function Core({ frontmatter, body = null }: TCore) {
               </Grid>
             )}
 
-            {/* Main content */}
-            <Grid size={{ xs: 12, md: 6 }}>
+            {/* Combined main content (middle + right) */}
+            <Grid size={{ xs: 12, md: 9 }}>
               <Box sx={{ mt: isMobile ? 2 : 0 }}>
-                {/* On mobile, show image first */}
-                {isMobile && !hideImage && frontmatter?.image && (
-                  <Box sx={{ mx: 0, mt: 0 }}>
-                    {!imageError ? (
-                      <Image
-                        priority
-                        src={frontmatter.image}
-                        alt={frontmatter.title || 'Featured image'}
-                        width={1200}
-                        height={630}
-                        style={{ width: '100%', height: 'auto' }}
-                        onError={() => setImageError(true)}
-                      />
-                    ) : (
-                      <Box>
-                        <Skeleton
-                          variant="rectangular"
-                          width="100%"
-                          height={315}
-                        />
-                        <Typography
-                          variant="body2"
-                          color="text.secondary"
-                          mt={1}
-                        >
-                          "{frontmatter.image}" not found.
-                        </Typography>
-                      </Box>
-                    )}
-                  </Box>
-                )}
-
-                {/* On mobile, show FlickrAlbum after image but before markdown */}
-                {isMobile && (
-                  <Box sx={{ mt: 0, mx: 0 }}>
-                    <FlickrAlbum album="72177720327633973" />
-                  </Box>
-                )}
-
-                {/* On desktop, show image before markdown */}
-                {!isMobile && !hideImage && frontmatter?.image && (
-                  <Box sx={{ mx: 4, mt: 0 }}>
+                {/* Image */}
+                {!hideImage && frontmatter?.image && (
+                  <Box sx={{ mx: isMobile ? 0 : 4, mt: 0 }}>
                     {!imageError ? (
                       <Image
                         priority
@@ -200,19 +160,17 @@ export default function Core({ frontmatter, body = null }: TCore) {
                 <Box sx={{ px: isMobile ? 0.5 : 2, my: 2 }}>
                   {pathname !== '/' && <PageBreadcrumb />}
                 </Box>
+
+                {/* FlickrAlbum now above markdown for both mobile and desktop */}
+                <Box sx={{ mt: 0, mx: isMobile ? 0 : 4, mb: 2 }}>
+                  <FlickrAlbum album="72177720327633973" />
+                </Box>
               </Box>
 
               <Box sx={{ mb: isMobile ? 3 : '175px', px: isMobile ? 0.5 : 2 }}>
                 {isApp ? app : <RenderMarkdown>{body}</RenderMarkdown>}
               </Box>
             </Grid>
-
-            {/* Right column (flickr) */}
-            {!isMobile && (
-              <Grid size={{ md: 3 }} sx={{ mt: 3 }}>
-                <FlickrAlbum album="72177720327633973" />
-              </Grid>
-            )}
           </Grid>
         </Box>
       </Container>

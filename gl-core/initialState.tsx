@@ -8,7 +8,7 @@ import { initialStateFallmanager } from './cartridges/Fallmanager';
 import { initialStateAdmin } from './cartridges/Admin';
 
 export const initialState: any = {
-  themeMode: 'dark',
+  themeMode: 'light',
   fallmanager: initialStateFallmanager,
   bouncer: initialStateBouncer,
   cv: initialStateCV,
