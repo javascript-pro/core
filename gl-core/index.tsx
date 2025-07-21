@@ -11,7 +11,7 @@ import {
   MightyButton,
   Search,
   SideAds,
-  TopRightMenu,
+  ThumbMenu,
   ShareMenu,
   IncludeAll,
   LoadingOverlay,
@@ -19,6 +19,7 @@ import {
   IndexNav,
   ArrowMenu,
   Siblings,
+  Children,
 } from './components';
 import {
   useLoading,
@@ -77,12 +78,13 @@ export {
   MightyButton,
   Search,
   SideAds,
-  TopRightMenu,
+  ThumbMenu,
   ShareMenu,
   IncludeAll,
   LoadingOverlay,
   FieldUpload,
   ArrowMenu,
+  Children,
 };
 export { Uberedux, UbereduxProvider, setUbereduxKey, resetUberedux };
 export {

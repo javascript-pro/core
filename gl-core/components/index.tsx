@@ -6,11 +6,12 @@ import {
   MightyButton,
   Search,
   SideAds,
-  TopRightMenu,
+  ThumbMenu,
   ShareMenu,
   IndexNav,
   ArrowMenu,
   Siblings,
+  Children,
 } from './nav';
 import { FieldUpload } from './forms';
 import { Header, Footer, RenderMarkdown } from './layout';
@@ -20,6 +21,7 @@ export { Header, Footer, RenderMarkdown };
 export {
   Nav,
   Siblings,
+  Children,
   ArrowMenu,
   IndexNav,
   NavItem,
@@ -27,7 +29,7 @@ export {
   MightyButton,
   Search,
   SideAds,
-  TopRightMenu,
+  ThumbMenu,
   ShareMenu,
   FieldUpload,
 };

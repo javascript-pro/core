@@ -6,11 +6,13 @@ import { PageBreadcrumb } from './PageBreadcrumb';
 import MightyButton from './MightyButton';
 import SideAds from './SideAds';
 import Search from './Search';
-import TopRightMenu from './TopRightMenu';
+import ThumbMenu from './ThumbMenu';
 import ShareMenu from './ShareMenu';
 import Siblings from './Siblings';
+import Children from './Children';
 export {
   ArrowMenu,
+  Children,
   IndexNav,
   Nav,
   NavItem,
@@ -18,7 +20,7 @@ export {
   MightyButton,
   Search,
   SideAds,
-  TopRightMenu,
+  ThumbMenu,
   ShareMenu,
   Siblings,
 };
