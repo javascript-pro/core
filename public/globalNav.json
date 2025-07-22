@@ -5,7 +5,7 @@
     "slug": "/",
     "order": 1,
     "icon": "home",
-    "image": "/png/ki/abgeschotten-ki.png",
+    "image": "https://live.staticflickr.com/65535/54338019655_94e8e39903_b.jpg",
     "type": "folder",
     "tags": [
       "JavaScript",

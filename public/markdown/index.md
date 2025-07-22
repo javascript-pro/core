@@ -7,7 +7,7 @@ icon: home
 tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 github: https://github.com/javascript-pro/core/blob/main/app/api/gl-api/flickr/latest/update/route.ts
 api: /api/gl-api/flickr/latest/latest
-image: /png/ki/abgeschotten-ki.png
+image: https://live.staticflickr.com/65535/54338019655_94e8e39903_b.jpg
 ---
 
 ## New for July 2025

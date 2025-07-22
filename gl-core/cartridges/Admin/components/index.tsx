@@ -6,11 +6,4 @@ import MenuList from './MenuList';
 import AuthAdmin from './AuthAdmin';
 import ResendAdmin from './ResendAdmin';
 
-export {
-  ResendAdmin,
-  Layout,
-  AuthAdmin,
-  FlickrAdmin,
-  Header,
-  MenuList,
-};
+export { ResendAdmin, Layout, AuthAdmin, FlickrAdmin, Header, MenuList };

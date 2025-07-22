@@ -1,10 +1,17 @@
 'use client';
 
 import * as React from 'react';
-import { Box, Card, CardHeader, CircularProgress, Avatar } from '@mui/material';
+import {
+  Box,
+  CardHeader,
+  CircularProgress,
+  Avatar,
+  Typography,
+  Popover,
+} from '@mui/material';
 import { TSignoutButton } from '../../Bouncer/types';
 import { useDispatch, Icon } from '../../../../gl-core';
-import { useVisitor, initFingerprint } from '../../Bouncer';
+import { useVisitor, initFingerprint, ping } from '../../Bouncer';
 
 const getBrowserIcon = (browser: string): string => {
   const b = browser?.toLowerCase() || '';
@@ -26,8 +33,7 @@ const getOsIcon = (os: string): string => {
 };
 
 const getDeviceTypeIcon = (isMobile?: boolean): string => {
-  if (isMobile === true) return 'mobile';
-  return 'desktop';
+  return isMobile ? 'mobile' : 'desktop';
 };
 
 export default function Visitor({}: TSignoutButton) {
@@ -35,6 +41,20 @@ export default function Visitor({}: TSignoutButton) {
   const visitor = useVisitor();
   const ICON_SIZE = 40;
   const hasInitAttempted = React.useRef(false);
+
+  // countdown state
+  const [secondsLeft, setSecondsLeft] = React.useState(10);
+
+  // popover state
+  const [anchorEl, setAnchorEl] = React.useState<HTMLElement | null>(null);
+  const open = Boolean(anchorEl);
+
+  const handleOpen = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   React.useEffect(() => {
     if (
@@ -44,50 +64,100 @@ export default function Visitor({}: TSignoutButton) {
       visitor.fingerprint === undefined &&
       !visitor.inittingFingerprint
     ) {
-      console.log('initFingerprint');
       hasInitAttempted.current = true;
       dispatch(initFingerprint());
     }
   }, [visitor, dispatch]);
 
+  // ping every 10 seconds
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setSecondsLeft((prev) => {
+        if (prev <= 1) {
+          dispatch(ping());
+          return 10;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [dispatch]);
+
   const fingerprint = visitor?.fingerprint;
   const title = fingerprint?.displayName || 'Loading…';
   const avatarSrc = fingerprint?.avatar;
+  const showSpinner = true;
 
   return (
     <>
-      <CardHeader
-        avatar={
-          visitor?.ready === false || visitor?.inittingFingerprint ? (
-            <Box
-              sx={{
-                width: ICON_SIZE,
-                height: ICON_SIZE,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-            >
-              <CircularProgress size={ICON_SIZE * 0.6} />
-            </Box>
-          ) : avatarSrc ? (
-            <Avatar
-              src={avatarSrc}
-              sx={{ width: ICON_SIZE, height: ICON_SIZE }}
-            />
-          ) : (
-            <Icon icon="visitor" />
-          )
-        }
-        title={title}
-        action={
+      <Box onClick={handleOpen} sx={{ cursor: 'pointer' }}>
+        <CardHeader
+          avatar={
+            showSpinner ? (
+              <Box
+                sx={{
+                  position: 'relative',
+                  width: ICON_SIZE,
+                  height: ICON_SIZE,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
+                <CircularProgress
+                  size={ICON_SIZE * 0.9}
+                  thickness={5}
+                  variant="determinate"
+                  value={(secondsLeft / 10) * 100}
+                />
+                <Typography
+                  variant="caption"
+                  component="span"
+                  sx={{
+                    position: 'absolute',
+                    fontSize: 12,
+                    fontWeight: 600,
+                  }}
+                >
+                  {secondsLeft}
+                </Typography>
+              </Box>
+            ) : avatarSrc ? (
+              <Avatar
+                src={avatarSrc}
+                sx={{ width: ICON_SIZE, height: ICON_SIZE }}
+              />
+            ) : (
+              <Icon icon="visitor" />
+            )
+          }
+          // action is now removed — we don't show icons by default
+        />
+      </Box>
+
+      <Popover
+        open={open}
+        anchorEl={anchorEl}
+        onClose={handleClose}
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'left',
+        }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'left',
+        }}
+      >
+        <Box sx={{ p: 2, minWidth: 200 }}>
+          <Typography variant="h6" gutterBottom>
+            {fingerprint?.displayName || 'No name'}
+          </Typography>
           <Box
             sx={{
               display: 'flex',
               alignItems: 'center',
               gap: 1,
-              mt: 1.5,
-              ml: 2,
+              mb: 1,
             }}
           >
             <Icon icon={getBrowserIcon(fingerprint?.browser || '') as any} />
@@ -101,11 +171,8 @@ export default function Visitor({}: TSignoutButton) {
               />
             )}
           </Box>
-        }
-      />
-      <pre style={{ fontSize: 10 }}>
-        fingerprint: {JSON.stringify(fingerprint, null, 2)}
-      </pre>
+        </Box>
+      </Popover>
     </>
   );
 }
