@@ -26,7 +26,7 @@ export default function Admin() {
       <Layout>
         <Header />
         {pathname === '/admin/auth' && <AuthAdmin />}
-        {pathname === '/admin/visitors' && <BouncerAdmin />}
+        {pathname === '/admin/bouncer' && <BouncerAdmin />}
         {pathname === '/admin/flickr' && <FlickrAdmin />}
         {pathname === '/admin/resend' && <ResendAdmin />}
         {pathname === '/admin' && <MenuList />}

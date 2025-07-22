@@ -26,7 +26,7 @@ import {
 import { db } from '../../lib/firebase';
 
 export default function BouncerAdmin() {
-  const [msg, setMsg] = useState<string | null>('Connecting...');
+  const [msg, setMsg] = useState<string | null>('Connecting…');
   const [loading, setLoading] = useState<boolean>(true);
   const [visitors, setVisitors] = useState<DocumentData[]>([]);
 
@@ -76,19 +76,14 @@ export default function BouncerAdmin() {
   };
 
   const renderSummaryIcons = (visitor: any) => {
-    const browser = visitor.device?.userAgent?.browser || '';
-    const os = visitor.device?.userAgent?.os || '';
-    const deviceType = visitor.device?.userAgent?.deviceType || '';
-    const countryCode = visitor.geo?.countryCode || '';
-
     return (
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-        <Icon icon={getBrowserIcon(browser) as any} />
-        <Icon icon={getDeviceTypeIcon(deviceType) as any} />
-        <Icon icon={getOsIcon(os) as any} />
-        {countryCode && (
+        <Icon icon={getBrowserIcon(visitor.browser || '') as any} />
+        <Icon icon={getDeviceTypeIcon(visitor.deviceType || '') as any} />
+        <Icon icon={getOsIcon(visitor.os || '') as any} />
+        {visitor.country_code && typeof visitor.country_code === 'string' && (
           <Avatar
-            src={`/svg/flags/${countryCode.toLowerCase()}.svg`}
+            src={`/svg/flags/${visitor.country_code.toLowerCase()}.svg`}
             sx={{ width: 20, height: 20 }}
             variant="square"
           />
@@ -101,7 +96,6 @@ export default function BouncerAdmin() {
     <Box sx={{ m: 2 }}>
       <CardHeader
         title="Visitors"
-        subheader="View and manage visitors in real time"
         action={
           msg && (
             <Alert severity="success" sx={{ mb: 2 }}>
@@ -116,93 +110,97 @@ export default function BouncerAdmin() {
 
       {!loading && visitors.length > 0 && (
         <Box>
-          {visitors.map((visitor) => {
-            return (
-              <Accordion key={visitor.id} sx={{ mb: 1 }}>
-                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+          {visitors.map((visitor: any) => (
+            <Accordion key={visitor.id} sx={{ mb: 1 }}>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <Box
+                  sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    width: '100%',
+                  }}
+                >
                   <Box
                     sx={{
                       display: 'flex',
-                      flexDirection: 'column',
-                      width: '100%',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      flexWrap: 'wrap',
+                      gap: 2,
                     }}
                   >
-                    <Box
-                      sx={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'space-between',
-                        flexWrap: 'wrap',
-                        gap: 2,
-                      }}
+                    {renderSummaryIcons(visitor)}
+                    <Typography
+                      variant="caption"
+                      sx={{ flex: 1, wordBreak: 'break-all' }}
                     >
-                      {renderSummaryIcons(visitor)}
-                      <Typography
-                        variant="caption"
-                        sx={{ flex: 1, wordBreak: 'break-all' }}
-                      >
-                        {visitor.fingerprint || visitor.id}
-                      </Typography>
-                      <Typography
-                        variant="body2"
-                        sx={{ color: 'text.secondary', mt: { xs: 1, sm: 0 } }}
-                      >
-                        {visitor.currentPathname}
-                      </Typography>
-                    </Box>
+                      {visitor.id}
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      sx={{ color: 'text.secondary', mt: { xs: 1, sm: 0 } }}
+                    >
+                      {typeof visitor.currentPathname === 'string'
+                        ? visitor.currentPathname
+                        : '—'}
+                    </Typography>
                   </Box>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Stack spacing={1} divider={<Divider flexItem />}>
-                    <Box>
-                      <Typography variant="subtitle2" gutterBottom>
-                        IP Address
-                      </Typography>
-                      <Typography variant="body2">
-                        {visitor.ip || '—'}
-                      </Typography>
-                    </Box>
+                </Box>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Stack spacing={1} divider={<Divider flexItem />}>
+                  <Box>
+                    <Typography variant="subtitle2" gutterBottom>
+                      IP Address
+                    </Typography>
+                    <Typography variant="body2">
+                      {typeof visitor.ip === 'string' ? visitor.ip : '—'}
+                    </Typography>
+                  </Box>
 
-                    <Box>
-                      <Typography variant="subtitle2" gutterBottom>
-                        Geo
-                      </Typography>
-                      <Typography variant="body2">
-                        {visitor.geo?.city}, {visitor.geo?.region},{' '}
-                        {visitor.geo?.country}
-                      </Typography>
-                    </Box>
+                  <Box>
+                    <Typography variant="subtitle2" gutterBottom>
+                      Location
+                    </Typography>
+                    <Typography variant="body2">
+                      {[
+                        visitor.city,
+                        visitor.state_prov,
+                        visitor.country_name,
+                      ]
+                        .filter((v) => typeof v === 'string' && v.length > 0)
+                        .join(', ') || '—'}
+                    </Typography>
+                  </Box>
 
-                    <Box>
-                      <Typography variant="subtitle2" gutterBottom>
-                        Device
-                      </Typography>
-                      {visitor.device?.userAgent && (
-                        <Typography variant="body2">
-                          {visitor.device.userAgent.browser} on{' '}
-                          {visitor.device.userAgent.os} (
-                          {visitor.device.userAgent.deviceType})
-                        </Typography>
-                      )}
-                      <Typography variant="caption" color="text.secondary">
-                        Platform: {visitor.device?.platform || '—'} | Vendor:{' '}
-                        {visitor.device?.vendor || '—'}
-                      </Typography>
-                    </Box>
+                  <Box>
+                    <Typography variant="subtitle2" gutterBottom>
+                      Device
+                    </Typography>
+                    <Typography variant="body2">
+                      {visitor.browser || '—'} on {visitor.os || '—'} (
+                      {visitor.deviceType || '—'})
+                    </Typography>
+                    <Typography variant="caption" color="text.secondary">
+                      Platform: {visitor.platform || '—'} | Vendor:{' '}
+                      {visitor.vendor || '—'}
+                    </Typography>
+                  </Box>
 
-                    <Box>
-                      <Typography variant="subtitle2" gutterBottom>
-                        Current Path
-                      </Typography>
-                      <Typography variant="body2">
-                        {visitor.currentPathname || '—'}
-                      </Typography>
-                    </Box>
-                  </Stack>
-                </AccordionDetails>
-              </Accordion>
-            );
-          })}
+                  <Box>
+                    <Typography variant="subtitle2" gutterBottom>
+                      Current Path
+                    </Typography>
+                    <Typography variant="body2">
+                      {typeof visitor.currentPathname === 'string'
+                        ? visitor.currentPathname
+                        : '—'}
+                    </Typography>
+                  </Box>
+                </Stack>
+              </AccordionDetails>
+            </Accordion>
+          ))}
         </Box>
       )}
 
