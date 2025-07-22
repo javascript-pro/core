@@ -78,6 +78,9 @@ export default function BouncerAdmin() {
   const renderSummaryIcons = (visitor: any) => {
     return (
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+        {visitor.photoURL && typeof visitor.photoURL === 'string' && (
+          <Avatar src={visitor.photoURL} sx={{ width: 24, height: 24 }} />
+        )}
         <Icon icon={getBrowserIcon(visitor.browser || '') as any} />
         <Icon icon={getDeviceTypeIcon(visitor.deviceType || '') as any} />
         <Icon icon={getOsIcon(visitor.os || '') as any} />
@@ -134,7 +137,10 @@ export default function BouncerAdmin() {
                       variant="caption"
                       sx={{ flex: 1, wordBreak: 'break-all' }}
                     >
-                      {visitor.id}
+                      {typeof visitor.displayName === 'string' &&
+                      visitor.displayName.trim() !== ''
+                        ? visitor.displayName
+                        : visitor.id}
                     </Typography>
                     <Typography
                       variant="body2"
@@ -163,11 +169,7 @@ export default function BouncerAdmin() {
                       Location
                     </Typography>
                     <Typography variant="body2">
-                      {[
-                        visitor.city,
-                        visitor.state_prov,
-                        visitor.country_name,
-                      ]
+                      {[visitor.city, visitor.state_prov, visitor.country_name]
                         .filter((v) => typeof v === 'string' && v.length > 0)
                         .join(', ') || '—'}
                     </Typography>

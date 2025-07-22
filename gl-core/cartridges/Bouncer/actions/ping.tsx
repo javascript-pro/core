@@ -15,7 +15,9 @@ export const ping =
       const id = fingerprint?.id;
 
       if (!id || typeof id !== 'string' || id.trim() === '') {
-        console.warn('ping: no visitor.fingerprint.id available, skipping ping');
+        console.warn(
+          'ping: no visitor.fingerprint.id available, skipping ping',
+        );
         return;
       }
 
@@ -23,8 +25,8 @@ export const ping =
 
       // Create a flattened visitor doc (no nested fingerprint key)
       const updatedVisitor = {
-        ...fingerprint,     // spread original fingerprint fields
-        lastUpdated: now,  // add/overwrite timestamp
+        ...fingerprint, // spread original fingerprint fields
+        lastUpdated: now, // add/overwrite timestamp
       };
 
       // Firestore (merge: true will create if missing)
