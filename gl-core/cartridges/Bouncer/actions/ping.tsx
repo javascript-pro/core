@@ -15,7 +15,9 @@ export const ping =
       const id = fingerprint?.id;
 
       if (!id || typeof id !== 'string' || id.trim() === '') {
-        console.warn('ping: no visitor.fingerprint.id available, skipping ping');
+        console.warn(
+          'ping: no visitor.fingerprint.id available, skipping ping',
+        );
         return;
       }
 
@@ -38,7 +40,7 @@ export const ping =
         toggleFeedback({
           severity: 'success',
           title: `Pinged visitor ${id}`,
-        })
+        }),
       );
 
       // Update Redux
@@ -49,7 +51,7 @@ export const ping =
             ...bouncer,
             visitor: updatedVisitor,
           },
-        })
+        }),
       );
 
       // console.log('ping: wrote visitor doc', id, updatedVisitor);

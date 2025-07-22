@@ -131,7 +131,6 @@ export default function Visitor({}: TSignoutButton) {
               <Icon icon="visitor" />
             )
           }
-          // action is now removed — we don't show icons by default
         />
       </Box>
 
