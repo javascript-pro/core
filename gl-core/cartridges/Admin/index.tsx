@@ -8,7 +8,6 @@ import {
   Header,
   MenuList,
   AuthAdmin,
-  VisitorsAdmin,
   ResendAdmin,
 } from './components';
 
@@ -22,6 +21,5 @@ export {
   useAdminSlice,
   album,
   AuthAdmin,
-  VisitorsAdmin,
   ResendAdmin,
 };

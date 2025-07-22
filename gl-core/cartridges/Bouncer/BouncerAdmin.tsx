@@ -16,16 +16,16 @@ import {
   Avatar,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { Icon } from '../../../../gl-core';
+import { Icon } from '../../../gl-core';
 import {
   collection,
   onSnapshot,
   QueryDocumentSnapshot,
   DocumentData,
 } from 'firebase/firestore';
-import { db } from '../../../lib/firebase';
+import { db } from '../../lib/firebase';
 
-export default function VisitorsAdmin() {
+export default function BouncerAdmin() {
   const [msg, setMsg] = useState<string | null>('Connecting...');
   const [loading, setLoading] = useState<boolean>(true);
   const [visitors, setVisitors] = useState<DocumentData[]>([]);

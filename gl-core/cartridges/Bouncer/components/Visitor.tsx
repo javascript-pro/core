@@ -81,7 +81,15 @@ export default function Visitor({}: TSignoutButton) {
         }
         title={title}
         action={
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mt:1.5, ml:2 }}>
+          <Box
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 1,
+              mt: 1.5,
+              ml: 2,
+            }}
+          >
             <Icon icon={getBrowserIcon(fingerprint?.browser || '') as any} />
             <Icon icon={getDeviceTypeIcon(fingerprint?.isMobile) as any} />
             <Icon icon={getOsIcon(fingerprint?.os || '') as any} />
@@ -95,6 +103,9 @@ export default function Visitor({}: TSignoutButton) {
           </Box>
         }
       />
+      <pre style={{ fontSize: 10 }}>
+        fingerprint: {JSON.stringify(fingerprint, null, 2)}
+      </pre>
     </>
   );
 }

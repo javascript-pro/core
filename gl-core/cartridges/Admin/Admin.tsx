@@ -12,9 +12,9 @@ import {
   Header,
   MenuList,
   AuthAdmin,
-  VisitorsAdmin,
   ResendAdmin,
 } from '../Admin';
+import { BouncerAdmin } from '../Bouncer';
 
 export default function Admin() {
   const pathname = usePathname();
@@ -26,7 +26,7 @@ export default function Admin() {
       <Layout>
         <Header />
         {pathname === '/admin/auth' && <AuthAdmin />}
-        {pathname === '/admin/visitors' && <VisitorsAdmin />}
+        {pathname === '/admin/visitors' && <BouncerAdmin />}
         {pathname === '/admin/flickr' && <FlickrAdmin />}
         {pathname === '/admin/resend' && <ResendAdmin />}
         {pathname === '/admin' && <MenuList />}
