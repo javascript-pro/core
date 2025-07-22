@@ -71,10 +71,10 @@ export default function Core({ frontmatter, body = null }: TCore) {
     case isAdmin:
       fullScreen = true;
       app = (
-        <>
+        <Bouncer>
           <IncludeAll />
           <Admin />
-        </>
+        </Bouncer>
       );
       break;
     case isCV:
