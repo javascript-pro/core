@@ -5,7 +5,7 @@
     "slug": "/",
     "order": 1,
     "icon": "home",
-    "image": "https://live.staticflickr.com/65535/54338019655_94e8e39903_b.jpg",
+    "image": "https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg",
     "type": "folder",
     "tags": [
       "JavaScript",
@@ -322,7 +322,7 @@
                 "slug": "/work/company/work-with-us",
                 "order": 777,
                 "icon": "account",
-                "image": "/png/og.png",
+                "image": "https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg",
                 "type": "file",
                 "tags": [
                   "team"

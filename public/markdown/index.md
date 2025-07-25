@@ -7,12 +7,12 @@ icon: home
 tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 github: https://github.com/javascript-pro/core/blob/main/app/api/gl-api/flickr/latest/update/route.ts
 api: /api/gl-api/flickr/latest/latest
-image: https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg
+image: https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg
 ---
 
-## New for July 2025
+## New for July 2025 - PDF Smash
 
-Abgeschottet KI delivers secure, ring‑fenced AI to streamline legal compliance workflows, process documents faster, and protect sensitive data.
+Part of Abgeschottet KI to deliver a secure, ring‑fenced AI to streamline legal compliance workflows, process documents faster, and protect sensitive data.
 
 ### We build and ship modern web apps for clients who need real results — fast
 
