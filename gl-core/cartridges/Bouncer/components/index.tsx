@@ -4,5 +4,6 @@ import AuthForm from './AuthForm';
 import SignoutButton from './SignoutButton';
 import Public from './Public';
 import SignIn from './SignIn';
+import Visitor from './Visitor';
 
-export { SignIn, Authed, Public, AuthForm, SignoutButton };
+export { SignIn, Authed, Public, AuthForm, SignoutButton, Visitor };

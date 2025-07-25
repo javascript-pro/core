@@ -1,12 +1,16 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/initialState.tsx
+export type TFingerprint = {
+  id: boolean; // false to start
+  [key: string]: any; // allow future arbitrary fields as we build it up
+};
 
 export type TVisitor = {
   ready: boolean; // false to start
   pinging: boolean; // true while we’re pushing or fetching
   pinged: boolean; // false if pristine
-  persisted: number; // timestamp of last successful persist to Firebase
-  lastUpdated: number; // timestamp of last local update
-  fingerprint?: string; // optional fingerprint string
+  created: number; // timestamp of last successful persist to Firebase
+  lastUpdated?: number; // timestamp of last local update
+  fingerprint?: TFingerprint; // data
   [key: string]: any; // allow future arbitrary fields as we build it up
 };
 
@@ -21,7 +25,6 @@ export const initialState: TBouncerState = {
     ready: false,
     pinging: false,
     pinged: false,
-    persisted: Date.now(),
-    lastUpdated: Date.now(),
+    created: Date.now(),
   },
 };

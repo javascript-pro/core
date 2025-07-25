@@ -1,7 +1,16 @@
-// core/gl-core/cartridges/Bouncer/index.tsx
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/BouncerAdmin.tsx
 import Bouncer from './Bouncer';
+import BouncerAdmin from './BouncerAdmin';
+
 import { initialState as initialStateBouncer } from './initialState';
-import { Authed, AuthForm, SignoutButton, Public, SignIn } from './components';
+import {
+  Authed,
+  AuthForm,
+  SignoutButton,
+  Public,
+  SignIn,
+  Visitor,
+} from './components';
 import { useBouncer, useUid, useEmail, useVisitor } from './hooks';
 import {
   updateUser,
@@ -15,9 +24,19 @@ import {
   setUid,
   setVisitor,
   ping,
+  initFingerprint,
+  createDisplayName,
 } from './actions';
 export { initialStateBouncer };
-export { Bouncer, SignoutButton, Authed, AuthForm, Public, SignIn };
+export {
+  Bouncer,
+  BouncerAdmin,
+  SignoutButton,
+  Authed,
+  AuthForm,
+  Public,
+  SignIn,
+};
 export { useBouncer, useUid, useEmail, useVisitor };
 export { updateUser, firebaseAuth };
 export {
@@ -25,9 +44,12 @@ export {
   setVisitor,
   bouncerKey,
   createBouncer,
+  createDisplayName,
   readBouncer,
   updateBouncer,
   deleteBouncer,
   ping,
   makeFingerprint,
+  Visitor,
+  initFingerprint,
 };

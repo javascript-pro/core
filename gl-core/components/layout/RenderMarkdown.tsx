@@ -56,9 +56,7 @@ export default function RenderMarkdown({
   return (
     <Box
       sx={{
-        // border: "1px solid red",
         width: width ?? '100%',
-        // height: window.innerHeight - 500,
         maxWidth: maxWidth ?? '100%',
         minHeight: 0,
         display: 'flex',
@@ -106,13 +104,24 @@ export default function RenderMarkdown({
               </Typography>
             ),
             p: ({ children }) => (
-              <Typography variant="body1" sx={{ my: 1, fontWeight: 'normal' }}>
+              <Typography
+                variant="body1"
+                component="span"
+                display="block"
+                sx={{ my: 1, fontWeight: 'normal' }}
+              >
                 {children}
               </Typography>
             ),
             li: ({ children }) => (
               <li>
-                <Typography variant="body1">{children}</Typography>
+                <Typography
+                  variant="body1"
+                  component="span"
+                  sx={{ fontWeight: 'normal' }}
+                >
+                  {children}
+                </Typography>
               </li>
             ),
             strong: ({ children }) => <strong>{children}</strong>,

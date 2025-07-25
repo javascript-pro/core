@@ -11,7 +11,7 @@ import {
   Tooltip,
 } from '@mui/material';
 import { Icon, useIsMobile, ThumbMenu } from '../../../gl-core';
-// import { Public } from '../../cartridges/Bouncer';
+import { Visitor } from '../../cartridges/Bouncer';
 
 export type THeader = {
   frontmatter?: any;
@@ -59,15 +59,11 @@ export default function Header({ frontmatter = null }: THeader) {
         }
         action={
           <Box sx={{ display: 'flex' }}>
-            {/* <Public /> */}
-            <ThumbMenu frontmatter={frontmatter} />
+            <Visitor />
           </Box>
         }
       />
+      <ThumbMenu frontmatter={frontmatter} />
     </>
   );
 }
-
-/*
-<pre style={{fontSize: 10}}>frontmatter: {JSON.stringify(frontmatter, null, 2)}</pre>
-*/

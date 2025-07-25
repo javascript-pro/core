@@ -1,4 +1,3 @@
-// /Users/goldlabel/GitHub/core/gl-core/components/nav/ThumbMenu.tsx
 'use client';
 
 import * as React from 'react';
@@ -21,7 +20,6 @@ import {
 import {
   Icon,
   useDispatch,
-  resetUberedux,
   ShareMenu,
   useVersion,
   ModeSwitch,
@@ -31,7 +29,6 @@ import {
   useIsMobile,
   useThemeMode,
 } from '../../../gl-core';
-import { firebaseAuth } from '../../cartridges/Bouncer';
 
 export type TThumbMenu = {
   frontmatter?: {
@@ -63,6 +60,11 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
     setAnchorEl(null);
   };
 
+  const handleGithub = () => {
+    dispatch(routeTo('https://github.com/javascript-pro/core', router));
+    setAnchorEl(null);
+  };
+
   const handleShareOpen = () => {
     setShareDialogOpen(true);
     handleCloseMenu();
@@ -76,17 +78,6 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
     dispatch(toggleHideImage(!hideImage));
   };
 
-  const handleSignout = () => {
-    dispatch(firebaseAuth('signout'));
-  };
-
-  const handleFactorySettings = () => {
-    dispatch(resetUberedux());
-    setTimeout(() => {
-      window.location.reload();
-    }, 500);
-  };
-
   return (
     <>
       {/* Floating Action Button in bottom-right corner */}
@@ -95,6 +86,7 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
         onClick={handleClick}
         sx={{
           position: 'fixed',
+          background: themeMode === 'light' ? 'white' : 'primary',
           bottom: 16,
           right: 16,
           boxShadow: 0,
@@ -129,7 +121,21 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
           <ListItemIcon>
             <Icon icon="photo" />
           </ListItemIcon>
-          <ListItemText primary="OG Image" />
+          <ListItemText
+            primary={hideImage ? 'Show OG' : 'Show Flickr'}
+            secondary="Which Featured Image to show"
+          />
+        </MenuItem>
+
+        {/* Git Open Sourcce */}
+        <MenuItem onClick={handleGithub}>
+          <ListItemIcon>
+            <Icon icon="github" />
+          </ListItemIcon>
+          <ListItemText
+            primary="GitHub"
+            secondary="Always Free. Always Open Source"
+          />
         </MenuItem>
 
         {/* Theme Switcher */}
