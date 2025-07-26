@@ -5,7 +5,7 @@
     "slug": "/",
     "order": 1,
     "icon": "home",
-    "image": "https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg",
+    "image": "https://live.staticflickr.com/65535/54679640252_f6f34a9668_o.jpg",
     "type": "folder",
     "tags": [
       "JavaScript",
@@ -35,7 +35,7 @@
       "NextJS",
       "Headless CMS"
     ],
-    "excerpt": "New for July 2025\n\nAbgeschottet KI delivers secure, ring‑fenced AI to streamline legal compliance workflows, process documents faster, and protect sensitive data.\n\n We build and ship modern web apps f",
+    "excerpt": "AKI  New for July 2025\n\nAbgeschottet KI delivers a secure, ring‑fenced AI to streamline legal compliance workflows, process documents faster, and protect sensitive data.\n\n Goldlabel builds and ships m",
     "children": [
       {
         "title": "Work",
@@ -69,7 +69,7 @@
             "slug": "/work/abgeschottet-ki",
             "order": 1,
             "icon": "ki",
-            "image": "/png/ki/abgeschotten-ki.png",
+            "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
             "type": "folder",
             "tags": [
               "abgeschottet",
@@ -82,7 +82,7 @@
                 "slug": "/work/abgeschottet-ki/why",
                 "order": 0,
                 "icon": "ki",
-                "image": "/png/ki/abgeschotten-ki.png",
+                "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                 "type": "file",
                 "excerpt": "Abgeschottet KI exists because firms need the power of AI without risking client confidentiality.\n\nModern firms handle vast amounts of documents every day. Large Language Models (LLMs) can speed up re"
               },

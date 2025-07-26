@@ -23,16 +23,16 @@ Track record of building high‑performance UIs. Equally effective leading proje
 
 ### Skills
 
-- _Specialisms:_ TypeScript, Vanilla JavaScript (ES6+), React, Node.js, Next.js (App Router)  
-- _Frameworks & Libraries:_ React, Vue, React Native, Next.js, Redux, Zustand, Express, jQuery, Laminas, Bootstrap  
-- _PHP Experience:_ Longstanding experience with PHP, primarily through WordPress, Drupal, and Magento development, following MVC principles and using Composer for dependency management  
-- _Style:_ Vanilla CSS, Material UI, Tailwind CSS, Styled Components, Figma  
-- _Database:_ NoSQL, Firestore, Supabase, MongoDB, DynamoDB, MySQL, PostgreSQL, SQL  
-- _Cloud & Infrastructure:_ AWS (Lambda, API Gateway, DynamoDB, S3, CloudFormation), Serverless Architectures, CloudWatch, Terraform, Docker, ECS  
-- _APIs:_ REST, GraphQL, TRPC, OpenAI  
-- _Testing & QA:_ Jest, React Testing Library, Cucumber (BDD), Gherkin, Code Reviews, Automated Testing  
-- _DevOps & Workflow:_ CI/CD (GitHub Actions, Netlify Deploy), MERN Stack, Linux (MAMP stack), GitFlow, Agile/SCRUM, Git, GitHub, GitLab, Bitbucket, Vercel, Firebase (Auth, Firestore, Storage), Netlify, Turborepo, Webpack, Jira, Confluence  
-- _CMS:_ Headless CMS (Strapi, Contentful), WordPress, Drupal  
+- _Specialisms:_ TypeScript, Vanilla JavaScript (ES6+), React, Node.js, Next.js (App Router)
+- _Frameworks & Libraries:_ React, Vue, React Native, Next.js, Redux, Zustand, Express, jQuery, Laminas, Bootstrap
+- _PHP Experience:_ Longstanding experience with PHP, primarily through WordPress, Drupal, and Magento development, following MVC principles and using Composer for dependency management
+- _Style:_ Vanilla CSS, Material UI, Tailwind CSS, Styled Components, Figma
+- _Database:_ NoSQL, Firestore, Supabase, MongoDB, DynamoDB, MySQL, PostgreSQL, SQL
+- _Cloud & Infrastructure:_ AWS (Lambda, API Gateway, DynamoDB, S3, CloudFormation), Serverless Architectures, CloudWatch, Terraform, Docker, ECS
+- _APIs:_ REST, GraphQL, TRPC, OpenAI
+- _Testing & QA:_ Jest, React Testing Library, Cucumber (BDD), Gherkin, Code Reviews, Automated Testing
+- _DevOps & Workflow:_ CI/CD (GitHub Actions, Netlify Deploy), MERN Stack, Linux (MAMP stack), GitFlow, Agile/SCRUM, Git, GitHub, GitLab, Bitbucket, Vercel, Firebase (Auth, Firestore, Storage), Netlify, Turborepo, Webpack, Jira, Confluence
+- _CMS:_ Headless CMS (Strapi, Contentful), WordPress, Drupal
 - _Other:_ Progressive Web Apps (PWA), Static Site Generation (SSG), Server-Side Rendering (SSR), Raspberry Pi & Python, Data Visualisation (Chart.js, Recharts, D3.js), Secure Programming (OWASP), Observability Tooling
 
 
