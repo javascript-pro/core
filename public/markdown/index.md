@@ -7,14 +7,14 @@ icon: home
 tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 github: https://github.com/javascript-pro/core/blob/main/app/api/gl-api/flickr/latest/update/route.ts
 api: /api/gl-api/flickr/latest/latest
-image: https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg
+image: https://live.staticflickr.com/65535/54679640252_f6f34a9668_o.jpg
 ---
 
-## New for July 2025 - PDF Smash
+## AKI - New for July 2025
 
-Part of Abgeschottet KI to deliver a secure, ring‑fenced AI to streamline legal compliance workflows, process documents faster, and protect sensitive data.
+Abgeschottet KI delivers a secure, ring‑fenced AI to streamline legal compliance workflows, process documents faster, and protect sensitive data.
 
-### We build and ship modern web apps for clients who need real results — fast
+### Goldlabel builds and ships modern web apps for clients who need real results — fast
 
 - _Small_ team. _Big_ output
 - Real deployments from Day One

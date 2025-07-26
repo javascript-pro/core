@@ -36,7 +36,7 @@ export const ping =
       dispatch(
         toggleFeedback({
           severity: 'success',
-          title: `Pinged visitor ${id}`,
+          title: `Pinged.`,
         }),
       );
 
