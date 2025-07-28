@@ -1,4 +1,4 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Admin/components/FlickrAdmin.tsx
+// core/gl-core/cartridges/Admin/components/FlickrAdmin.tsx
 
 'use client';
 

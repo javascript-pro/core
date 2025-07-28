@@ -1,4 +1,4 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Admin/initialState.tsx
+// core/gl-core/cartridges/Admin/initialState.tsx
 
 export type TAdminState = {
   cartridge: string;

@@ -1,4 +1,4 @@
-// /Users/goldlabel/GitHub/core/gl-core/components/nav/PageBreadcrumb.tsx
+// core/gl-core/components/nav/PageBreadcrumb.tsx
 'use client';
 
 import React, { Suspense } from 'react';

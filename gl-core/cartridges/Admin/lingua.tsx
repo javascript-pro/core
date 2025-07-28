@@ -1,4 +1,4 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Admin/lingua.tsx
+// core/gl-core/cartridges/Admin/lingua.tsx
 
 export const lingua: any = {
   FILENAME: {

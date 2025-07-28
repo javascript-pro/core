@@ -1,4 +1,4 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Flickr/actions/setLatestIndex.tsx
+// core/gl-core/cartridges/Flickr/actions/setLatestIndex.tsx
 import { TUbereduxDispatch } from '../../../../gl-core/types';
 import { setUbereduxKey } from '../../../';
 

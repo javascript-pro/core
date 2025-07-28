@@ -1,4 +1,4 @@
-// /Users/goldlabel/GitHub/core/gl-core/actions/resend.tsx
+// core/gl-core/actions/resend.tsx
 
 import { setUbereduxKey } from '../../gl-core';
 import { TUbereduxDispatch } from '../../gl-core/types';

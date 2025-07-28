@@ -1,4 +1,4 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Admin/actions/index.tsx
+// core/gl-core/cartridges/Admin/actions/index.tsx
 
 import { album } from './album';
 

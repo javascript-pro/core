@@ -1,4 +1,4 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Admin/Admin.tsx
+// core/gl-core/cartridges/Admin/Admin.tsx
 'use client';
 
 import * as React from 'react';

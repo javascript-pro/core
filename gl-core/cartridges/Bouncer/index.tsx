@@ -1,4 +1,4 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/BouncerAdmin.tsx
+// core/gl-core/cartridges/Bouncer/BouncerAdmin.tsx
 import Bouncer from './Bouncer';
 import BouncerAdmin from './BouncerAdmin';
 

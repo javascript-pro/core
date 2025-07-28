@@ -121,9 +121,7 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
           <ListItemIcon>
             <Icon icon="photo" />
           </ListItemIcon>
-          <ListItemText
-            primary={hideImage ? 'Show OG' : 'Show Flickr'}
-          />
+          <ListItemText primary={hideImage ? 'Show OG' : 'Show Flickr'} />
         </MenuItem>
 
         {/* Git Open Sourcce */}
@@ -131,9 +129,7 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
           <ListItemIcon>
             <Icon icon="github" />
           </ListItemIcon>
-          <ListItemText
-            primary="GitHub"
-          />
+          <ListItemText primary="GitHub" />
         </MenuItem>
 
         {/* Theme Switcher */}
