@@ -123,7 +123,6 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
           </ListItemIcon>
           <ListItemText
             primary={hideImage ? 'Show OG' : 'Show Flickr'}
-            secondary="Which Featured Image to show"
           />
         </MenuItem>
 
@@ -134,7 +133,6 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
           </ListItemIcon>
           <ListItemText
             primary="GitHub"
-            secondary="Always Free. Always Open Source"
           />
         </MenuItem>
 
