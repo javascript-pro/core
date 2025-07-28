@@ -1,4 +1,4 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/initialState.tsx
+// core/gl-core/cartridges/Bouncer/initialState.tsx
 export type TFingerprint = {
   id: boolean; // false to start
   [key: string]: any; // allow future arbitrary fields as we build it up

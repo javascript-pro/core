@@ -1,4 +1,4 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Admin/hooks/useAdminSlice.tsx
+// core/gl-core/cartridges/Admin/hooks/useAdminSlice.tsx
 import { useSelector } from 'react-redux';
 import { TRootState } from '../../Uberedux/store';
 

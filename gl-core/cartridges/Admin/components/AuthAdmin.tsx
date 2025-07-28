@@ -1,4 +1,4 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Admin/components/AuthAdmin.tsx
+// core/gl-core/cartridges/Admin/components/AuthAdmin.tsx
 'use client';
 
 import * as React from 'react';

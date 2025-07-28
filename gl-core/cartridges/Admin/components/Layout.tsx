@@ -1,4 +1,4 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Admin/components/Layout.tsx
+// core/gl-core/cartridges/Admin/components/Layout.tsx
 
 'use client';
 

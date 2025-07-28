@@ -1,4 +1,4 @@
-// /Users/goldlabel/GitHub/core/gl-core/components/nav/Siblings.tsx
+// core/gl-core/components/nav/Siblings.tsx
 'use client';
 
 import * as React from 'react';

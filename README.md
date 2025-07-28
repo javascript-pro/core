@@ -3,14 +3,14 @@
 ## Goldlabel Core
 
 > Entirely working Next.js App. Free to use and modify as ever.  
-Always Free & Open Source.
+> Always Free & Open Source.
 
 ✅ Free Cartridges
 
 - Admin
 - Lingua
 - Bouncer
-    - Auth
-    - Analytics
+  - Auth
+  - Analytics
 - CV
 - Flickr

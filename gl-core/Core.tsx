@@ -1,4 +1,4 @@
-// /Users/goldlabel/GitHub/core/gl-core/Core.tsx
+// core/gl-core/Core.tsx
 'use client';
 
 import config from './config.json';

@@ -1,4 +1,4 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/actions/makeFingerprint.tsx
+// core/gl-core/cartridges/Bouncer/actions/makeFingerprint.tsx
 import { TUbereduxDispatch } from '../../../../gl-core/types';
 import { setUbereduxKey, toggleFeedback } from '../../../../gl-core';
 import FingerprintJS from '@fingerprintjs/fingerprintjs';

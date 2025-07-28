@@ -1,4 +1,4 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Admin/types.d.ts
+// core/gl-core/cartridges/Admin/types.d.ts
 
 export type TLanguageCode = 'en' | 'de' | 'pt';
 

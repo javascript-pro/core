@@ -1,4 +1,4 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/components/SignIn.tsx
+// core/gl-core/cartridges/Bouncer/components/SignIn.tsx
 'use client';
 
 import * as React from 'react';

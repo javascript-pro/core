@@ -1,4 +1,4 @@
-// /Users/goldlabel/GitHub/core/gl-core/components/layout/Header.tsx
+// core/gl-core/components/layout/Header.tsx
 'use client';
 
 import * as React from 'react';
