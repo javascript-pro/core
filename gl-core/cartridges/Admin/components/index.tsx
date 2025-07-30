@@ -5,5 +5,7 @@ import Header from './Header';
 import MenuList from './MenuList';
 import AuthAdmin from './AuthAdmin';
 import ResendAdmin from './ResendAdmin';
+import Feedback from './Feedback';
+import {Shell} from './Shell';
 
-export { ResendAdmin, Layout, AuthAdmin, FlickrAdmin, Header, MenuList };
+export { ResendAdmin, Feedback, Shell, Layout, AuthAdmin, FlickrAdmin, Header, MenuList };
