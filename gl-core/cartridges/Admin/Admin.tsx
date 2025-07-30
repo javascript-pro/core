@@ -13,7 +13,7 @@ export default function Admin() {
   const themeMode = useThemeMode();
   const { db, themes } = useSlice();
 
-  console.log('Admin', themeMode, themes);
+  // console.log('Admin', themeMode, themes);
   const dispatch = useDispatch();
   const hasInitRun = useRef(false);
 
@@ -54,6 +54,7 @@ export default function Admin() {
   return (
     <Box sx={{ display: 'flex', minHeight: '100vh' }}>
       <Feedback />
+      <pre style={{ fontSize: 10 }}>user: {JSON.stringify(true, null, 2)}</pre>
       <Shell>{renderContent()}</Shell>
     </Box>
   );

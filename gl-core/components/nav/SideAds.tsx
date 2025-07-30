@@ -24,9 +24,10 @@ export default function SideAds() {
 
   const items = [
     { icon: 'home', title: 'Home', path: '/' },
-    { icon: 'ki', title: 'AKI', path: '/work/abgeschottet-ki' },
-    // { icon: 'openai', title: 'C.V.', path: '/work/cv' },
     { icon: 'contact', title: 'About us', path: '/work/company' },
+    { icon: 'ki', title: 'AKI', path: '/work/abgeschottet-ki' },
+    { icon: 'info', title: 'Expertise', path: '/work/what-we-know-about' },
+    // { icon: 'openai', title: 'C.V.', path: '/work/cv' },
   ];
 
   return (

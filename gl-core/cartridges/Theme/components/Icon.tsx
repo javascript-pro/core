@@ -143,10 +143,12 @@ import UserIcon from '@mui/icons-material/Face';
 import KIIcon from '@mui/icons-material/BackHandOutlined';
 import VisitorsIcon from '@mui/icons-material/PeopleAltOutlined';
 import VisitorIcon from '@mui/icons-material/PermIdentity';
+import BikeIcon from '@mui/icons-material/TwoWheeler';
 
 export type TIcon = {
   icon:
     | 'more'
+    | 'bike'
     | 'user'
     | 'visitors'
     | 'visitor'
@@ -330,6 +332,10 @@ export default function Icon({ icon, color }: TIcon) {
 
     case 'case':
       iconFragment = <CaseIcon color={color} />;
+      break;
+
+    case 'bike':
+      iconFragment = <BikeIcon color={color} />;
       break;
 
     case 'caseclosed':

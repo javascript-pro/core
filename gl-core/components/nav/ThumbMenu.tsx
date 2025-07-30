@@ -121,7 +121,7 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
           <ListItemIcon>
             <Icon icon="photo" />
           </ListItemIcon>
-          <ListItemText primary={hideImage ? 'Show OG' : 'Show Flickr'} />
+          <ListItemText primary={hideImage ? 'OG Images' : 'Flickr Images'} />
         </MenuItem>
 
         {/* Git Open Sourcce */}

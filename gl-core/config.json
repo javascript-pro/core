@@ -30,24 +30,14 @@
   },
   "nav": [
     {
-      "label": "PDFs",
-      "icon": "pdf",
-      "route": "/database/table/pdfs"
-    },
-    {
-      "label": "All Tables",
-      "icon": "database",
-      "route": "/database"
-    },
-    {
-      "label": "AKI",
-      "icon": "ki",
-      "route": "/ki"
+      "label": "Home",
+      "icon": "home",
+      "route": "/admin"
     },
     {
       "label": "Logs",
       "icon": "info",
-      "route": "/database/table/log"
+      "route": "/admin/logs"
     }
   ]
 }

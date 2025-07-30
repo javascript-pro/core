@@ -212,6 +212,54 @@
             ]
           },
           {
+            "title": "What we know about",
+            "description": "We can help understanding in these fields",
+            "slug": "/work/what-we-know-about",
+            "order": 1,
+            "icon": "info",
+            "image": "https://live.staticflickr.com/65535/54422866520_1b9f0b826b_o.jpg",
+            "type": "folder",
+            "tags": [
+              "expertise",
+              "fields",
+              "work"
+            ],
+            "excerpt": "Over 20 years we had built knowledge in all kinds of fields",
+            "children": [
+              {
+                "title": "What we know about AI",
+                "description": "Kunstliche Intelligense",
+                "slug": "/work/what-we-know-about/ai",
+                "order": 1,
+                "icon": "info",
+                "image": "https://live.staticflickr.com/65535/54422866520_1b9f0b826b_o.jpg",
+                "type": "folder",
+                "tags": [
+                  "expertise",
+                  "fields",
+                  "work"
+                ],
+                "excerpt": "KI",
+                "children": []
+              },
+              {
+                "title": "Data Migration",
+                "slug": "/work/what-we-know-about/data-migration",
+                "order": 2,
+                "icon": "info",
+                "image": "https://live.staticflickr.com/65535/54422866520_1b9f0b826b_o.jpg",
+                "type": "file",
+                "tags": [
+                  "expertise",
+                  "data migration",
+                  "SQL",
+                  "work"
+                ],
+                "excerpt": "What is Data Migration ?"
+              }
+            ]
+          },
+          {
             "title": "CV",
             "description": "Match your Job to our Curriculum Vitae with AI",
             "slug": "/work/cv",
@@ -624,7 +672,7 @@
             "description": "A truth universally acknowledged",
             "slug": "/life/motorbikes",
             "order": 200,
-            "icon": "motorbikes",
+            "icon": "bike",
             "image": "/jpg/motorbikes.jpg",
             "type": "folder",
             "excerpt": "“It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a motorbike.”\n\n― Jane Austen, Pride and Prejudice",

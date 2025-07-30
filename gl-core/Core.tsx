@@ -111,7 +111,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
       <Container id="core" maxWidth="md">
         <Box sx={{ minHeight: '100vh' }}>
           <Header frontmatter={frontmatter} />
-          { loading ? <LinearProgress /> : null }
+          {loading ? <LinearProgress /> : null}
           <Grid container spacing={isMobile ? 0 : 1}>
             {!isMobile && (
               <Grid size={{ md: 3 }}>
@@ -177,9 +177,12 @@ export default function Core({ frontmatter, body = null }: TCore) {
               {/* Main content and children combined in same padded box */}
               <Box sx={{ mb: isMobile ? 3 : '175px', px: isMobile ? 0.5 : 2 }}>
                 {isApp ? app : <RenderMarkdown>{body}</RenderMarkdown>}
-                <Box sx={{ mt: 4 }}>
-                  <Children />
-                </Box>
+                {isMobile && (
+                  <Box sx={{ mt: 4 }}>
+                    <Children />
+                  </Box>
+                )}
+
               </Box>
             </Grid>
           </Grid>
