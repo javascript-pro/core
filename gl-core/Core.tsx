@@ -4,10 +4,12 @@
 import config from './config.json';
 import { TCore } from './types';
 import * as React from 'react';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import {
   CssBaseline,
+  LinearProgress,
   Container,
   Box,
   Grid,
@@ -31,14 +33,16 @@ import {
   useSiblings,
   ArrowMenu,
 } from '../gl-core';
+
 import { SideAds } from '../gl-core';
 import { FlickrAlbum } from './cartridges/Flickr';
 import { CV } from './cartridges/CV';
-import { Bouncer } from './cartridges/Bouncer';
+import { Bouncer, setUid } from './cartridges/Bouncer';
 import { Admin } from './cartridges/Admin';
 
 export default function Core({ frontmatter, body = null }: TCore) {
   let fullScreen = false;
+  const [loading, setLoading] = React.useState(true);
   const { hideImage } = useSlice();
   const siblings = useSiblings();
   const pathname = usePathname();
@@ -49,6 +53,19 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const isMobile = useIsMobile();
   const dispatch = useDispatch();
   const [imageError, setImageError] = React.useState(false);
+
+  React.useEffect(() => {
+    const auth = getAuth();
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        dispatch(setUid(user.uid));
+      } else {
+        dispatch(setUid(null));
+      }
+      setLoading(false);
+    });
+    return () => unsubscribe();
+  }, [dispatch]);
 
   React.useEffect(() => {
     if (pathname === '/cv') router.replace('/work/cv');
@@ -94,7 +111,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
       <Container id="core" maxWidth="md">
         <Box sx={{ minHeight: '100vh' }}>
           <Header frontmatter={frontmatter} />
-
+          { loading ? <LinearProgress /> : null }
           <Grid container spacing={isMobile ? 0 : 1}>
             {!isMobile && (
               <Grid size={{ md: 3 }}>
