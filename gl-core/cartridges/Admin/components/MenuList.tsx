@@ -11,13 +11,13 @@ import {
 import { Icon, routeTo, useDispatch } from '../../../../gl-core';
 import { useRouter } from 'next/navigation';
 
-type MenuItem = {
+export type TMenuItem = {
   label: string;
   icon: string;
   route: string;
 };
 
-const menuItems: MenuItem[] = [
+const menuItems: TMenuItem[] = [
   { label: 'Flickr', icon: 'flickr', route: '/admin/flickr' },
   { label: 'Auth', icon: 'auth', route: '/admin/auth' },
   { label: 'Bouncer', icon: 'bouncer', route: '/admin/bouncer' },

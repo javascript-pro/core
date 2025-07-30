@@ -35,7 +35,6 @@ Track record of building high‑performance UIs. Equally effective leading proje
 - _CMS:_ Headless CMS (Strapi, Contentful), WordPress, Drupal
 - _Other:_ Progressive Web Apps (PWA), Static Site Generation (SSG), Server-Side Rendering (SSR), Raspberry Pi & Python, Data Visualisation (Chart.js, Recharts, D3.js), Secure Programming (OWASP), Observability Tooling
 
-
 ### Experience
 
 #### Freelance Software Developer — AI & Web Projects

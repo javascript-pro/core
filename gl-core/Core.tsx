@@ -4,6 +4,7 @@
 import config from './config.json';
 import { TCore } from './types';
 import * as React from 'react';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import {
@@ -31,14 +32,16 @@ import {
   useSiblings,
   ArrowMenu,
 } from '../gl-core';
+
 import { SideAds } from '../gl-core';
 import { FlickrAlbum } from './cartridges/Flickr';
 import { CV } from './cartridges/CV';
-import { Bouncer } from './cartridges/Bouncer';
+import { Bouncer, setUid } from './cartridges/Bouncer';
 import { Admin } from './cartridges/Admin';
 
 export default function Core({ frontmatter, body = null }: TCore) {
   let fullScreen = false;
+  const [loading, setLoading] = React.useState(true);
   const { hideImage } = useSlice();
   const siblings = useSiblings();
   const pathname = usePathname();
@@ -48,6 +51,20 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
   const isMobile = useIsMobile();
   const dispatch = useDispatch();
+  const [imageError, setImageError] = React.useState(false);
+
+  React.useEffect(() => {
+    const auth = getAuth();
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        dispatch(setUid(user.uid));
+      } else {
+        dispatch(setUid(null));
+      }
+      setLoading(false);
+    });
+    return () => unsubscribe();
+  }, [dispatch]);
 
   React.useEffect(() => {
     if (pathname === '/cv') router.replace('/work/cv');
@@ -64,17 +81,17 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const isAdmin = pathname.startsWith('/admin');
   const isApp = isCV || isAdmin;
 
-  const [imageError, setImageError] = React.useState(false);
-
   let app = <></>;
   switch (true) {
     case isAdmin:
       fullScreen = true;
       app = (
-        <Bouncer>
-          <IncludeAll />
-          <Admin />
-        </Bouncer>
+        /* <Bouncer> */
+          <Theme theme={config.themes[themeMode] as any}>
+            <CssBaseline />
+            <Admin />
+          </Theme>
+        /* </Bouncer> */
       );
       break;
     case isCV:
@@ -92,8 +109,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
       <IncludeAll />
       <Container id="core" maxWidth="md">
         <Box sx={{ minHeight: '100vh' }}>
-          <Header frontmatter={frontmatter} />
-
+          <Header frontmatter={frontmatter} loading={loading} />
           <Grid container spacing={isMobile ? 0 : 1}>
             {!isMobile && (
               <Grid size={{ md: 3 }}>
@@ -159,9 +175,11 @@ export default function Core({ frontmatter, body = null }: TCore) {
               {/* Main content and children combined in same padded box */}
               <Box sx={{ mb: isMobile ? 3 : '175px', px: isMobile ? 0.5 : 2 }}>
                 {isApp ? app : <RenderMarkdown>{body}</RenderMarkdown>}
-                <Box sx={{ mt: 4 }}>
-                  <Children />
-                </Box>
+                {isMobile && (
+                  <Box sx={{ mt: 4 }}>
+                    <Children />
+                  </Box>
+                )}
               </Box>
             </Grid>
           </Grid>

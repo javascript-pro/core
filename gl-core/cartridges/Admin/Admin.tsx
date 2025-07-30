@@ -4,31 +4,20 @@
 
 import React, { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
-import { Box, CssBaseline } from '@mui/material';
-import {
-  useThemeMode,
-  useSlice,
-  useDispatch,
-  Theme,
-} from '../../../gl-core';
-import {
-    Shell,
-    Feedback,
-} from '../Admin'
+import { Box } from '@mui/material';
+import { useSlice, useDispatch } from '../../../gl-core';
+import { init, Shell, Feedback, Dashboard } from '../Admin';
 
 export default function Admin() {
-  const pathname = usePathname();
-  const themeMode = useThemeMode();
-  const { db, themes } = useSlice();
-
-  console.log("Admin", themeMode, themes)
   const dispatch = useDispatch();
+  const pathname = usePathname();
+  const { db } = useSlice();
   const hasInitRun = useRef(false);
 
   useEffect(() => {
     if (!hasInitRun.current && (!db || Object.keys(db).length === 0)) {
       hasInitRun.current = true;
-    //   dispatch(initDB());
+      dispatch(init());
     }
   }, [db, dispatch]);
 
@@ -56,15 +45,13 @@ export default function Admin() {
       return <>AI</>;
     }
 
-    return <>Dashboard</>;
+    return <Dashboard />;
   };
 
   return (
     <Box sx={{ display: 'flex', minHeight: '100vh' }}>
       <Feedback />
-      <Shell>
-          {renderContent()}
-      </Shell>
+      <Shell>{renderContent()}</Shell>
     </Box>
   );
 }

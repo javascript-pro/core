@@ -3,7 +3,7 @@ order: 200
 title: Motorbikes
 description: A truth universally acknowledged
 slug: /life/motorbikes
-icon: motorbikes
+icon: bike
 image: /jpg/motorbikes.jpg
 ---
 
