@@ -86,12 +86,12 @@ export default function Core({ frontmatter, body = null }: TCore) {
     case isAdmin:
       fullScreen = true;
       app = (
-        /* <Bouncer> */
-        <Theme theme={config.themes[themeMode] as any}>
-          <CssBaseline />
-          <Admin />
-        </Theme>
-        /* </Bouncer> */
+        <Bouncer>
+          <Theme theme={config.themes[themeMode] as any}>
+            <CssBaseline />
+            <Admin />
+          </Theme>
+        </Bouncer>
       );
       break;
     case isCV:

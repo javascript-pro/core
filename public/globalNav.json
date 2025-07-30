@@ -212,34 +212,34 @@
             ]
           },
           {
-            "title": "What we know about",
+            "title": "expertise",
             "description": "We can help understanding in these fields",
             "slug": "/work/expertise",
             "order": 1,
             "icon": "info",
-            "image": "https://live.staticflickr.com/65535/54422866520_1b9f0b826b_o.jpg",
+            "image": "https://live.staticflickr.com/65535/54688814017_148f57032c_o.jpg",
             "type": "folder",
             "tags": [
               "expertise",
               "fields",
               "work"
             ],
-            "excerpt": "Over 20 years we had built knowledge in all kinds of fields",
+            "excerpt": "What do we know about?",
             "children": [
               {
                 "title": "AI",
-                "description": "What ww know about",
+                "description": "What do we know about about AI",
                 "slug": "/work/expertise/ai",
                 "order": 1,
                 "icon": "info",
-                "image": "https://live.staticflickr.com/65535/54422866520_1b9f0b826b_o.jpg",
+                "image": "https://live.staticflickr.com/65535/54679640252_e024743596_o.jpg",
                 "type": "folder",
                 "tags": [
                   "expertise",
                   "fields",
                   "work"
                 ],
-                "excerpt": "AI",
+                "excerpt": "Is this Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday",
                 "children": []
               },
               {
@@ -247,15 +247,68 @@
                 "slug": "/work/expertise/data-migration",
                 "order": 2,
                 "icon": "info",
-                "image": "https://live.staticflickr.com/65535/54422866520_1b9f0b826b_o.jpg",
+                "image": "https://live.staticflickr.com/65535/54688814017_148f57032c_o.jpg",
                 "type": "file",
                 "tags": [
                   "expertise",
                   "data migration",
                   "SQL",
-                  "work"
+                  "work",
+                  "python",
+                  "next"
                 ],
-                "excerpt": "What is Data Migration ?"
+                "excerpt": "Data Migration via RESTful API using Next, Python and SQL\n\n\n\n This service exposes a RESTful interface for cleaning, transforming, and migrating data from a raw source table to a cleaned, structured t"
+              },
+              {
+                "title": "Next.js",
+                "slug": "/work/expertise/next-js",
+                "order": 15,
+                "icon": "info",
+                "image": "/png/clouds/default_whitecloud.png",
+                "type": "file",
+                "tags": [
+                  "JavaScript",
+                  "Node",
+                  "Next.js",
+                  "API",
+                  "REST API",
+                  "React"
+                ],
+                "excerpt": "Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with seamless backend capabilities, creating a unified developer experience. It simplifies the proce"
+              },
+              {
+                "title": "Git",
+                "slug": "/work/expertise/git",
+                "order": 25,
+                "icon": "github",
+                "image": "/png/3rdParty/gitkraken.png",
+                "type": "file",
+                "tags": [
+                  "github",
+                  "process",
+                  "javascript"
+                ],
+                "excerpt": "We use GitHub for everything.\n\nIncluding project management. Most of the communication done between us and our clients during development is done through GitHub in the form of comments, pull resuests,"
+              },
+              {
+                "title": "Blockchain",
+                "slug": "/work/expertise/blockchain",
+                "order": 150,
+                "icon": "info",
+                "image": "/png/3rdParty/bitcoin.png",
+                "type": "file",
+                "tags": [
+                  "techstack",
+                  "crypto",
+                  "blockchain",
+                  "web3",
+                  "casino",
+                  "igaming",
+                  "experience",
+                  "bitcoin",
+                  "malta"
+                ],
+                "excerpt": "Blockchain Crypto Casino\n\n In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online ga"
               }
             ]
           },
@@ -419,23 +472,6 @@
                 "excerpt": "JavaScript Whatever the Weather\n\nWe’ve been writing JavaScript since it was still called ECMAScript.\n\nBefore the frameworks, before npm, before it ate the world—we were already deep in the language th",
                 "children": [
                   {
-                    "title": "Next.js",
-                    "slug": "/work/techstack/javascript/next-js",
-                    "order": 15,
-                    "icon": "javascript",
-                    "image": "/png/clouds/default_whitecloud.png",
-                    "type": "file",
-                    "tags": [
-                      "JavaScript",
-                      "Node",
-                      "Next.js",
-                      "API",
-                      "REST API",
-                      "React"
-                    ],
-                    "excerpt": "Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with seamless backend capabilities, creating a unified developer experience. It simplifies the proce"
-                  },
-                  {
                     "title": "REST API",
                     "slug": "/work/techstack/javascript/rest-api",
                     "order": 50,
@@ -530,26 +566,6 @@
                     "excerpt": "MUI Toolpad is a lowcode builder for internal tools. It runs as part of your Next.js project and gives you a draganddrop environment to create Reactbased dashboards powered by live data. We’re using T"
                   }
                 ]
-              },
-              {
-                "title": "Blockchain",
-                "slug": "/work/techstack/blockchain",
-                "order": 150,
-                "icon": "company",
-                "image": "/png/3rdParty/bitcoin.png",
-                "type": "file",
-                "tags": [
-                  "techstack",
-                  "crypto",
-                  "blockchain",
-                  "web3",
-                  "casino",
-                  "igaming",
-                  "experience",
-                  "bitcoin",
-                  "malta"
-                ],
-                "excerpt": "Blockchain Crypto Casino\n\n In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online ga"
               },
               {
                 "title": "Open Source",

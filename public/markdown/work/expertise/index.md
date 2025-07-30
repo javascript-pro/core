@@ -1,6 +1,6 @@
 ---
 order: 1
-title: 
+title:
 description: We can help understanding in these fields
 slug: /work/expertise
 icon: info
