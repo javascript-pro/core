@@ -26,7 +26,7 @@ export default function SideAds() {
     { icon: 'home', title: 'Home', path: '/' },
     { icon: 'contact', title: 'About us', path: '/work/company' },
     { icon: 'ki', title: 'AKI', path: '/work/abgeschottet-ki' },
-    { icon: 'info', title: 'Expertise', path: '/work/what-we-know-about' },
+    { icon: 'info', title: 'Expertise', path: '/work/expertise' },
     // { icon: 'openai', title: 'C.V.', path: '/work/cv' },
   ];
 

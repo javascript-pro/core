@@ -30,8 +30,6 @@ import { useNav } from '../../Admin';
 const drawerWidth = 220;
 const defaultIcon = 'settings';
 
-
-
 const openedMixin = (theme: TTheme): CSSObject => ({
   width: drawerWidth,
   transition: theme.transitions.create('width', {
@@ -112,14 +110,16 @@ export function Shell({ children }: { children: React.ReactNode }) {
   const handleDrawerClose = () => setOpen(false);
 
   const handleClick = (item: any) => {
-    console.log("clicked", item);
+    console.log('clicked', item);
   };
 
   const renderNavItems = () =>
     nav.map((item, idx) => {
       const key = item.route || (item as any).url || `${item.label}-${idx}`;
       const isExternal = Boolean((item as any).url);
-      const onClick = () => { handleClick(item) };
+      const onClick = () => {
+        handleClick(item);
+      };
       const href = (item as any).route || (item as any).url || '#';
 
       return (
@@ -170,7 +170,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
           </IconButton>
           <CardHeader
             sx={{ flexGrow: 1 }}
-            title={<Typography variant='h6'>{config.app} Admin</Typography>}
+            title={<Typography variant="h6">{config.app} Admin</Typography>}
             action={
               <Box sx={{ display: 'flex' }}>
                 <Box sx={{ mr: 1 }}>Settings</Box>
