@@ -7,6 +7,7 @@ import AuthAdmin from './AuthAdmin';
 import ResendAdmin from './ResendAdmin';
 import Feedback from './Feedback';
 import { Shell } from './Shell';
+import { Dashboard } from './Dashboard';
 
 export {
   ResendAdmin,
@@ -17,4 +18,5 @@ export {
   FlickrAdmin,
   Header,
   MenuList,
+  Dashboard,
 };

@@ -27,17 +27,5 @@
       "text": "#FFFFFF",
       "border": "#1db2d3"
     }
-  },
-  "nav": [
-    {
-      "label": "Home",
-      "icon": "home",
-      "route": "/admin"
-    },
-    {
-      "label": "Logs",
-      "icon": "info",
-      "route": "/admin/logs"
-    }
-  ]
+  }
 }

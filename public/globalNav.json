@@ -214,7 +214,7 @@
           {
             "title": "What we know about",
             "description": "We can help understanding in these fields",
-            "slug": "/work/what-we-know-about",
+            "slug": "/work/expertise",
             "order": 1,
             "icon": "info",
             "image": "https://live.staticflickr.com/65535/54422866520_1b9f0b826b_o.jpg",
@@ -227,9 +227,9 @@
             "excerpt": "Over 20 years we had built knowledge in all kinds of fields",
             "children": [
               {
-                "title": "What we know about AI",
-                "description": "Kunstliche Intelligense",
-                "slug": "/work/what-we-know-about/ai",
+                "title": "AI",
+                "description": "What ww know about",
+                "slug": "/work/expertise/ai",
                 "order": 1,
                 "icon": "info",
                 "image": "https://live.staticflickr.com/65535/54422866520_1b9f0b826b_o.jpg",
@@ -239,12 +239,12 @@
                   "fields",
                   "work"
                 ],
-                "excerpt": "KI",
+                "excerpt": "AI",
                 "children": []
               },
               {
                 "title": "Data Migration",
-                "slug": "/work/what-we-know-about/data-migration",
+                "slug": "/work/expertise/data-migration",
                 "order": 2,
                 "icon": "info",
                 "image": "https://live.staticflickr.com/65535/54422866520_1b9f0b826b_o.jpg",

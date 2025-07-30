@@ -1,8 +1,8 @@
 // core/gl-core/cartridges/Admin/index.tsx
 import Admin from './Admin';
 import { initialState as initialStateAdmin } from './initialState';
-import { useAdminSlice } from './hooks';
-import { album, showFeedback } from './actions';
+import { useAdminSlice, useNav } from './hooks';
+import { init, album, showFeedback } from './actions';
 import {
   Layout,
   FlickrAdmin,
@@ -12,10 +12,12 @@ import {
   ResendAdmin,
   Feedback,
   Shell,
+  Dashboard,
 } from './components';
 
 export {
   initialStateAdmin,
+  init,
   Admin,
   Feedback,
   Shell,
@@ -24,8 +26,10 @@ export {
   FlickrAdmin,
   Layout,
   useAdminSlice,
+  useNav,
   album,
   AuthAdmin,
   ResendAdmin,
   showFeedback,
+  Dashboard,
 };

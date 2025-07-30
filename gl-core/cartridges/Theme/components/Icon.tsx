@@ -144,10 +144,12 @@ import KIIcon from '@mui/icons-material/BackHandOutlined';
 import VisitorsIcon from '@mui/icons-material/PeopleAltOutlined';
 import VisitorIcon from '@mui/icons-material/PermIdentity';
 import BikeIcon from '@mui/icons-material/TwoWheeler';
+import DashboardIcon from '@mui/icons-material/Dashboard';
 
 export type TIcon = {
   icon:
     | 'more'
+    | 'dashboard'
     | 'bike'
     | 'user'
     | 'visitors'
@@ -848,6 +850,10 @@ export default function Icon({ icon, color }: TIcon) {
       iconFragment = <AboutIcon color={color} />;
       break;
 
+          case 'dashboard':
+      iconFragment = <DashboardIcon color={color} />;
+      break;
+       
     default:
       iconFragment = <ErrorIcon color={'warning'} />;
   }

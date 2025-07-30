@@ -158,6 +158,15 @@
     <loc>https://goldlabel.pro/work/cv/saarbrucken</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/work/expertise/ai</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/data-migration</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/work</loc>
   </url>
   <url>
@@ -192,14 +201,5 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work/techstack/open-source</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/what-we-know-about/ai</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/what-we-know-about/data-migration</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/what-we-know-about</loc>
   </url>
 </urlset>

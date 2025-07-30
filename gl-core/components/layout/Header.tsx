@@ -9,16 +9,21 @@ import {
   CardHeader,
   Typography,
   Tooltip,
+  CircularProgress,
 } from '@mui/material';
 import { Icon, useIsMobile, ThumbMenu } from '../../../gl-core';
 import { Visitor } from '../../cartridges/Bouncer';
 
 export type THeader = {
   frontmatter?: any;
+  loading?: boolean;
   [key: string]: any;
 };
 
-export default function Header({ frontmatter = null }: THeader) {
+export default function Header({
+  loading = false,
+  frontmatter = null,
+}: THeader) {
   const { title, description, icon } = frontmatter;
   const router = useRouter();
   const isMobile = useIsMobile();
@@ -57,11 +62,7 @@ export default function Header({ frontmatter = null }: THeader) {
             </Typography>
           )
         }
-        // action={
-        //   <Box sx={{ display: 'flex' }}>
-        //     <Visitor />
-        //   </Box>
-        // }
+        action={loading ? <CircularProgress /> : null}
       />
       <ThumbMenu frontmatter={frontmatter} />
     </>

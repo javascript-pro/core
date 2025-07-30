@@ -9,7 +9,6 @@ import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import {
   CssBaseline,
-  LinearProgress,
   Container,
   Box,
   Grid,
@@ -87,12 +86,12 @@ export default function Core({ frontmatter, body = null }: TCore) {
     case isAdmin:
       fullScreen = true;
       app = (
-        <Bouncer>
+        /* <Bouncer> */
           <Theme theme={config.themes[themeMode] as any}>
             <CssBaseline />
             <Admin />
           </Theme>
-        </Bouncer>
+        /* </Bouncer> */
       );
       break;
     case isCV:
@@ -110,8 +109,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
       <IncludeAll />
       <Container id="core" maxWidth="md">
         <Box sx={{ minHeight: '100vh' }}>
-          <Header frontmatter={frontmatter} />
-          {loading ? <LinearProgress /> : null}
+          <Header frontmatter={frontmatter} loading={loading} />
           <Grid container spacing={isMobile ? 0 : 1}>
             {!isMobile && (
               <Grid size={{ md: 3 }}>
@@ -182,7 +180,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
                     <Children />
                   </Box>
                 )}
-
               </Box>
             </Grid>
           </Grid>

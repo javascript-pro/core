@@ -22,16 +22,15 @@ import {
 } from '@mui/material';
 import {
   Icon,
-  useDispatch,
-  // reset,
-  // Upload,
-  // Settings,
+  // useDispatch,
 } from '../../../../gl-core';
+
+import { useNav } from '../../Admin';
 
 const drawerWidth = 220;
 const defaultIcon = 'settings';
 
-const nav = config.nav;
+
 
 const openedMixin = (theme: TTheme): CSSObject => ({
   width: drawerWidth,
@@ -105,19 +104,22 @@ const Drawer = styled(MuiDrawer, {
 }));
 
 export function Shell({ children }: { children: React.ReactNode }) {
+  const nav = useNav();
   const [open, setOpen] = React.useState(true);
-  const dispatch = useDispatch();
-
+  // const dispatch = useDispatch();
   // const handleReset = () => dispatch(reset());
   const handleDrawerOpen = () => setOpen(true);
   const handleDrawerClose = () => setOpen(false);
+
+  const handleClick = (item: any) => {
+    console.log("clicked", item);
+  };
 
   const renderNavItems = () =>
     nav.map((item, idx) => {
       const key = item.route || (item as any).url || `${item.label}-${idx}`;
       const isExternal = Boolean((item as any).url);
-      const onClick = () => {};
-      //  (item as any).onClick === 'handleReset' ? handleReset : undefined;
+      const onClick = () => { handleClick(item) };
       const href = (item as any).route || (item as any).url || '#';
 
       return (
@@ -164,11 +166,11 @@ export function Shell({ children }: { children: React.ReactNode }) {
             edge="start"
             sx={{ marginRight: 3, ...(open && { display: 'none' }) }}
           >
-            <Icon icon="ai" />
+            <Icon icon="right" />
           </IconButton>
           <CardHeader
             sx={{ flexGrow: 1 }}
-            title={<Typography color="primary">AKI</Typography>}
+            title={<Typography variant='h6'>{config.app} Admin</Typography>}
             action={
               <Box sx={{ display: 'flex' }}>
                 <Box sx={{ mr: 1 }}>Settings</Box>
@@ -182,7 +184,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
           <IconButton color="primary" onClick={handleDrawerClose}>
-            <Icon icon="ai" />
+            <Icon icon="left" />
           </IconButton>
         </DrawerHeader>
         <Divider />
