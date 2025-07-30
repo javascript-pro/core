@@ -48,6 +48,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
   const isMobile = useIsMobile();
   const dispatch = useDispatch();
+  const [imageError, setImageError] = React.useState(false);
 
   React.useEffect(() => {
     if (pathname === '/cv') router.replace('/work/cv');
@@ -64,16 +65,16 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const isAdmin = pathname.startsWith('/admin');
   const isApp = isCV || isAdmin;
 
-  const [imageError, setImageError] = React.useState(false);
-
   let app = <></>;
   switch (true) {
     case isAdmin:
       fullScreen = true;
       app = (
         <Bouncer>
-          <IncludeAll />
-          <Admin />
+          <Theme theme={config.themes[themeMode] as any}>
+            <CssBaseline />
+            <Admin />
+          </Theme>
         </Bouncer>
       );
       break;

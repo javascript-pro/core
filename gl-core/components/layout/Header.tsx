@@ -57,11 +57,11 @@ export default function Header({ frontmatter = null }: THeader) {
             </Typography>
           )
         }
-        action={
-          <Box sx={{ display: 'flex' }}>
-            <Visitor />
-          </Box>
-        }
+        // action={
+        //   <Box sx={{ display: 'flex' }}>
+        //     <Visitor />
+        //   </Box>
+        // }
       />
       <ThumbMenu frontmatter={frontmatter} />
     </>
