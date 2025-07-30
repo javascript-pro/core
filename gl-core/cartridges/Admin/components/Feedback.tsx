@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { Snackbar, Alert, IconButton } from '@mui/material';
 import { useFeedback, useDispatch, Icon } from '../../../../gl-core';
-import {showFeedback} from '../../Admin'
+import { showFeedback } from '../../Admin';
 
 export default function Feedback({}: any) {
   const feedback = useFeedback();

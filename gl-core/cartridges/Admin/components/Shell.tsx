@@ -20,12 +20,12 @@ import {
   CardHeader,
   Typography,
 } from '@mui/material';
-import { 
-    Icon, 
-    useDispatch, 
-    // reset, 
-    // Upload, 
-    // Settings,
+import {
+  Icon,
+  useDispatch,
+  // reset,
+  // Upload,
+  // Settings,
 } from '../../../../gl-core';
 
 const drawerWidth = 220;
@@ -106,8 +106,7 @@ const Drawer = styled(MuiDrawer, {
 
 export function Shell({ children }: { children: React.ReactNode }) {
   const [open, setOpen] = React.useState(true);
-  const dispatch= useDispatch();
-
+  const dispatch = useDispatch();
 
   // const handleReset = () => dispatch(reset());
   const handleDrawerOpen = () => setOpen(true);
@@ -151,7 +150,13 @@ export function Shell({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      <AppBar color="default" position="fixed" open={open} elevation={1} sx={{ boxShadow: 0 }}>
+      <AppBar
+        color="default"
+        position="fixed"
+        open={open}
+        elevation={1}
+        sx={{ boxShadow: 0 }}
+      >
         <Toolbar>
           <IconButton
             color="primary"
@@ -162,18 +167,14 @@ export function Shell({ children }: { children: React.ReactNode }) {
             <Icon icon="ai" />
           </IconButton>
           <CardHeader
-            sx={{flexGrow:1}}
-            title={<Typography color="primary">
-                    AKI
-                  </Typography>}
-            action={<Box sx={{display: "flex"}}>
-                      <Box sx={{mr:1}}>
-                        Settings
-                        </Box>
-                      <Box>
-                        Upload
-                        </Box>
-                    </Box>}
+            sx={{ flexGrow: 1 }}
+            title={<Typography color="primary">AKI</Typography>}
+            action={
+              <Box sx={{ display: 'flex' }}>
+                <Box sx={{ mr: 1 }}>Settings</Box>
+                <Box>Upload</Box>
+              </Box>
+            }
           />
         </Toolbar>
       </AppBar>
