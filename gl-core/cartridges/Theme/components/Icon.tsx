@@ -850,10 +850,10 @@ export default function Icon({ icon, color }: TIcon) {
       iconFragment = <AboutIcon color={color} />;
       break;
 
-          case 'dashboard':
+    case 'dashboard':
       iconFragment = <DashboardIcon color={color} />;
       break;
-       
+
     default:
       iconFragment = <ErrorIcon color={'warning'} />;
   }
