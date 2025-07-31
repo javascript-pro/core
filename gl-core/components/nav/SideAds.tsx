@@ -24,8 +24,8 @@ export default function SideAds() {
 
   const items = [
     { icon: 'home', title: 'Home', path: '/' },
-    { icon: 'admin', title: 'Admin', path: '/admin' },
     { icon: 'info', title: 'Expertise', path: '/work/expertise' },
+    { icon: 'admin', title: 'Admin', path: '/admin' },
     { icon: 'contact', title: 'Contact us', path: '/work/company' },
   ];
 

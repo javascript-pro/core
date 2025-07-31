@@ -99,7 +99,7 @@ const Drawer = styled(MuiDrawer, {
 
 export function Shell({ children }: { children: React.ReactNode }) {
   const nav = useNav();
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
   const router = useRouter();
   const pathname = usePathname();
   const dispatch = useDispatch();
@@ -162,7 +162,9 @@ export function Shell({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      <AppBar position="fixed" open={open} elevation={1} sx={{ boxShadow: 0 }}>
+      <AppBar 
+        color="default"
+        position="fixed" open={open} elevation={1} sx={{ boxShadow: 0 }}>
         <Toolbar>
           <IconButton
             onClick={handleDrawerOpen}
@@ -173,11 +175,14 @@ export function Shell({ children }: { children: React.ReactNode }) {
           </IconButton>
           <CardHeader
             sx={{ flexGrow: 1 }}
-            title={<Typography variant="h6">{config.app} Admin</Typography>}
+            title={<Typography variant="h6" color='primary'>{config.app} Admin</Typography>}
             action={
               <Box sx={{ display: 'flex' }}>
-                <Box sx={{ mr: 1 }}>Settings</Box>
-                <Box>Upload</Box>
+                <Box sx={{ mr: 1 }}>
+                  <IconButton onClick={() => {router.push('/');}}>
+                    <Icon icon="home" />
+                  </IconButton>
+                </Box>
               </Box>
             }
           />

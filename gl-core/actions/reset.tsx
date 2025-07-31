@@ -1,10 +1,10 @@
 // core/gl-core/cartridges/Admin/actions/reset.tsx
 
-import { TUbereduxDispatch } from '../../../../gl-core/types';
+import { TUbereduxDispatch } from '../../gl-core/types';
 import {
   resetUberedux,
   setUbereduxKey,
-} from '../../../../gl-core/cartridges/Uberedux';
+} from '../../gl-core/cartridges/Uberedux';
 
 /**
  * Resets the entire Uberedux slice back to initialState,
@@ -18,7 +18,7 @@ export const reset = () => async (dispatch: TUbereduxDispatch) => {
     // after 333ms, redirect to "/admin"
     setTimeout(() => {
       if (typeof window !== 'undefined') {
-        window.location.replace('/admin');
+        window.location.replace('/');
       }
     }, 333);
   } catch (e: unknown) {

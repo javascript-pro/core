@@ -2,7 +2,7 @@
 import Admin from './Admin';
 import { initialState as initialStateAdmin } from './initialState';
 import { useAdminSlice, useNav } from './hooks';
-import { init, album, showFeedback, reset } from './actions';
+import { init, album, showFeedback } from './actions';
 import {
   Layout,
   FlickrAdmin,
@@ -34,5 +34,4 @@ export {
   ResendAdmin,
   showFeedback,
   Dashboard,
-  reset,
 };

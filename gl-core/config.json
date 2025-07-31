@@ -16,7 +16,7 @@
       "background": "#FFF",
       "paper": "#FFF",
       "text": "#303030",
-      "border": "#1db2d3"
+      "border": "#FFF"
     },
     "dark": {
       "mode": "dark",

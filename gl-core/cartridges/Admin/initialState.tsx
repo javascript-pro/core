@@ -9,11 +9,6 @@ export const initialState: TAdminState = {
   cartridge: 'admin',
   nav: [
     {
-      label: 'Home',
-      icon: 'home',
-      route: '/',
-    },
-    {
       label: 'Dashboard',
       icon: 'dashboard',
       route: '/admin',
@@ -28,10 +23,6 @@ export const initialState: TAdminState = {
       icon: 'logs',
       route: '/admin/logs',
     },
-    // {
-    //   label: 'Reset',
-    //   icon: 'reset',
-    //   action: 'reset',
-    // },
+
   ],
 };

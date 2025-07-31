@@ -6,8 +6,10 @@ import { toggleLoading } from './toggleLoading';
 import { uploadToStorage } from './uploadToStorage';
 import { toggleHideImage } from './toggleHideImage';
 import { resend } from './resend';
+import { reset } from './reset';
 export {
   resend,
+  reset,
   uploadToStorage,
   switchTheme,
   navigateTo,
