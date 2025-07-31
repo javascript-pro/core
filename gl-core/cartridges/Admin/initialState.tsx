@@ -23,6 +23,5 @@ export const initialState: TAdminState = {
       icon: 'logs',
       route: '/admin/logs',
     },
-
   ],
 };
