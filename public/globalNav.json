@@ -5,7 +5,7 @@
     "slug": "/",
     "order": 1,
     "icon": "ki",
-    "image": "https://live.staticflickr.com/65535/54679640252_e024743596_o.jpg",
+    "image": "https://live.staticflickr.com/65535/54688814017_148f57032c_o.jpg",
     "type": "folder",
     "tags": [
       "JavaScript",
@@ -43,7 +43,7 @@
         "slug": "/work",
         "order": 10,
         "icon": "work",
-        "image": "/png/ki/abgeschotten-ki.png",
+        "image": "https://live.staticflickr.com/65535/54688814017_148f57032c_o.jpg",
         "type": "folder",
         "tags": [
           "JavaScript",
@@ -375,7 +375,7 @@
             "icon": "work",
             "image": "https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg",
             "type": "folder",
-            "excerpt": "| \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX",
+            "excerpt": "WhatsApp   \nTel +49 15510995150  \n | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX",
             "children": [
               {
                 "title": "Working remotely",

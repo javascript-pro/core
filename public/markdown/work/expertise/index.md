@@ -57,7 +57,5 @@ tags: expertise, fields, work
 - Other  
   Raspberry Pi & Python projects, data visualisation (Chart.js, D3.js, Recharts), secure programming practices.
 
-
 We don’t just build products—we build platforms that scale.  
 Let’s work together to design something durable.
-
