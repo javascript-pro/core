@@ -4,7 +4,7 @@
     "description": "AI software which works",
     "slug": "/",
     "order": 1,
-    "icon": "home",
+    "icon": "ki",
     "image": "https://live.staticflickr.com/65535/54679640252_e024743596_o.jpg",
     "type": "folder",
     "tags": [
@@ -212,7 +212,7 @@
             ]
           },
           {
-            "title": "expertise",
+            "title": "Expertise",
             "description": "We can help understanding in these fields",
             "slug": "/work/expertise",
             "order": 1,
@@ -224,7 +224,7 @@
               "fields",
               "work"
             ],
-            "excerpt": "What do we know about?",
+            "excerpt": "We work across the full stack, from interface to infrastructure, with a focus on robust, modern JavaScript tooling and scalable cloudnative delivery. Whether building responsive UIs, designing serverl",
             "children": [
               {
                 "title": "AI",
@@ -243,21 +243,18 @@
                 "children": []
               },
               {
-                "title": "Data Migration",
-                "slug": "/work/expertise/data-migration",
+                "title": "Git",
+                "slug": "/work/expertise/git",
                 "order": 2,
                 "icon": "info",
-                "image": "https://live.staticflickr.com/65535/54688814017_148f57032c_o.jpg",
+                "image": "/png/3rdParty/gitkraken.png",
                 "type": "file",
                 "tags": [
-                  "expertise",
-                  "data migration",
-                  "SQL",
-                  "work",
-                  "python",
-                  "next"
+                  "github",
+                  "process",
+                  "javascript"
                 ],
-                "excerpt": "Data Migration via RESTful API using Next, Python and SQL\n\n\n\n This service exposes a RESTful interface for cleaning, transforming, and migrating data from a raw source table to a cleaned, structured t"
+                "excerpt": "We use GitHub for everything.\n\nMost of the communication done between us and our clients during development is done through GitHub in the form of comments, tracking bugs and issues, pull resuests, rev"
               },
               {
                 "title": "Next.js",
@@ -277,18 +274,21 @@
                 "excerpt": "Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with seamless backend capabilities, creating a unified developer experience. It simplifies the proce"
               },
               {
-                "title": "Git",
-                "slug": "/work/expertise/git",
-                "order": 25,
-                "icon": "github",
-                "image": "/png/3rdParty/gitkraken.png",
+                "title": "Data Migration",
+                "slug": "/work/expertise/data-migration",
+                "order": 20,
+                "icon": "info",
+                "image": "https://live.staticflickr.com/65535/54688814017_148f57032c_o.jpg",
                 "type": "file",
                 "tags": [
-                  "github",
-                  "process",
-                  "javascript"
+                  "expertise",
+                  "data migration",
+                  "SQL",
+                  "work",
+                  "python",
+                  "next"
                 ],
-                "excerpt": "We use GitHub for everything.\n\nIncluding project management. Most of the communication done between us and our clients during development is done through GitHub in the form of comments, pull resuests,"
+                "excerpt": "Data Migration via RESTful API using Next, Python and SQL\n\n\n\n This service exposes a RESTful interface for cleaning, transforming, and migrating data from a raw source table to a cleaned, structured t"
               },
               {
                 "title": "Blockchain",
@@ -368,11 +368,11 @@
             ]
           },
           {
-            "title": "Contact Us",
+            "title": "About Us",
             "description": "UK Limited Company (5460545)",
             "slug": "/work/company",
             "order": 10,
-            "icon": "email",
+            "icon": "work",
             "image": "https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg",
             "type": "folder",
             "excerpt": "| \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX",
@@ -394,7 +394,7 @@
                 "title": "Privacy & Cookies",
                 "slug": "/work/company/privacy-cookies",
                 "order": 555,
-                "icon": "account",
+                "icon": "work",
                 "image": "/png/og.png",
                 "type": "file",
                 "tags": [
@@ -410,7 +410,7 @@
                 "title": "Join Us",
                 "slug": "/work/company/join-us",
                 "order": 666,
-                "icon": "account",
+                "icon": "work",
                 "image": "/png/og.png",
                 "type": "file",
                 "tags": [
@@ -422,7 +422,7 @@
                 "title": "Work With Us",
                 "slug": "/work/company/work-with-us",
                 "order": 777,
-                "icon": "account",
+                "icon": "work",
                 "image": "https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg",
                 "type": "file",
                 "tags": [
