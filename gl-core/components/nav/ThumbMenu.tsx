@@ -106,6 +106,18 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
         sx={{ mt: -1 }}
       >
         <MenuItem
+          sx={{ minWidth: 200 }}
+          onClick={() => {
+            dispatch(routeTo('/', router));
+          }}
+        >
+          <ListItemIcon>
+            <Icon icon="home" />
+          </ListItemIcon>
+          <ListItemText primary="Home" />
+        </MenuItem>
+
+        <MenuItem
           onClick={() => {
             dispatch(routeTo('/admin', router));
           }}

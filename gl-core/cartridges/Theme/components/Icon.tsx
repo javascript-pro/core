@@ -145,10 +145,12 @@ import VisitorsIcon from '@mui/icons-material/PeopleAltOutlined';
 import VisitorIcon from '@mui/icons-material/PermIdentity';
 import BikeIcon from '@mui/icons-material/TwoWheeler';
 import DashboardIcon from '@mui/icons-material/Dashboard';
+import LogsIcon from '@mui/icons-material/List';
 
 export type TIcon = {
   icon:
     | 'more'
+    | 'logs'
     | 'dashboard'
     | 'bike'
     | 'user'
@@ -852,6 +854,10 @@ export default function Icon({ icon, color }: TIcon) {
 
     case 'dashboard':
       iconFragment = <DashboardIcon color={color} />;
+      break;
+
+    case 'logs':
+      iconFragment = <LogsIcon color={color} />;
       break;
 
     default:

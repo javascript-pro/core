@@ -20,7 +20,7 @@ import {
   Typography,
 } from '@mui/material';
 import { Icon, useDispatch } from '../../../../gl-core';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import { useNav } from '../../Admin';
 
 const drawerWidth = 220;
@@ -101,6 +101,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
   const nav = useNav();
   const [open, setOpen] = React.useState(true);
   const router = useRouter();
+  const pathname = usePathname();
   const dispatch = useDispatch();
 
   const handleDrawerOpen = () => setOpen(true);
@@ -128,6 +129,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
       const key = item.route || item.url || `${item.label}-${idx}`;
       const isExternal = Boolean(item.url);
       const href = item.route || item.url || '#';
+      const isActive = pathname === item.route;
 
       return (
         <ListItem key={key} disablePadding sx={{ display: 'block' }}>
@@ -136,6 +138,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
             href={!item.route && isExternal ? href : undefined}
             target={isExternal ? '_blank' : undefined}
             rel={isExternal ? 'noopener noreferrer' : undefined}
+            disabled={isActive}
             sx={{
               minHeight: 48,
               justifyContent: open ? 'initial' : 'center',
@@ -159,16 +162,9 @@ export function Shell({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      <AppBar
-        color="default"
-        position="fixed"
-        open={open}
-        elevation={1}
-        sx={{ boxShadow: 0 }}
-      >
+      <AppBar position="fixed" open={open} elevation={1} sx={{ boxShadow: 0 }}>
         <Toolbar>
           <IconButton
-            color="primary"
             onClick={handleDrawerOpen}
             edge="start"
             sx={{ marginRight: 3, ...(open && { display: 'none' }) }}
@@ -190,7 +186,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
 
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
-          <IconButton color="primary" onClick={handleDrawerClose}>
+          <IconButton onClick={handleDrawerClose}>
             <Icon icon="left" />
           </IconButton>
         </DrawerHeader>

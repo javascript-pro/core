@@ -6,6 +6,7 @@ import { init, album, showFeedback, reset } from './actions';
 import {
   Layout,
   FlickrAdmin,
+  LogsAdmin,
   Header,
   MenuList,
   AuthAdmin,
@@ -24,6 +25,7 @@ export {
   Header,
   MenuList,
   FlickrAdmin,
+  LogsAdmin,
   Layout,
   useAdminSlice,
   useNav,

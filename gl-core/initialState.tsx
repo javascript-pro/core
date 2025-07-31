@@ -7,7 +7,7 @@ import { initialStateBouncer } from './cartridges/Bouncer';
 import { initialStateAdmin } from './cartridges/Admin';
 
 export const initialState: any = {
-  themeMode: 'dark',
+  themeMode: 'light',
   bouncer: initialStateBouncer,
   cv: initialStateCV,
   flickr: initialStateFlickr,

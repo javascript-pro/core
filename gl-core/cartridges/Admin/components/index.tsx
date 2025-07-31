@@ -1,6 +1,7 @@
 // core/gl-core/cartridges/Admin/components/index.tsx
 import Layout from './Layout';
 import FlickrAdmin from './FlickrAdmin';
+import LogsAdmin from './LogsAdmin';
 import Header from './Header';
 import MenuList from './MenuList';
 import AuthAdmin from './AuthAdmin';
@@ -16,6 +17,7 @@ export {
   Layout,
   AuthAdmin,
   FlickrAdmin,
+  LogsAdmin,
   Header,
   MenuList,
   Dashboard,
