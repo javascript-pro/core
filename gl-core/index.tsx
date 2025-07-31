@@ -49,6 +49,7 @@ import {
   toggleHideImage,
   uploadToStorage,
   resend,
+  reset,
 } from './actions';
 
 export { Core };
@@ -61,6 +62,7 @@ export {
   uploadToStorage,
   toggleHideImage,
   resend,
+  reset,
 };
 export {
   Advert,

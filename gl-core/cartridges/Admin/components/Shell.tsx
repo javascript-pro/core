@@ -1,4 +1,3 @@
-// core/gl-core/cartridges/Admin/components/Shell.tsx
 'use client';
 
 import React from 'react';
@@ -20,11 +19,8 @@ import {
   CardHeader,
   Typography,
 } from '@mui/material';
-import {
-  Icon,
-  // useDispatch,
-} from '../../../../gl-core';
-
+import { Icon, useDispatch } from '../../../../gl-core';
+import { useRouter, usePathname } from 'next/navigation';
 import { useNav } from '../../Admin';
 
 const drawerWidth = 220;
@@ -103,32 +99,46 @@ const Drawer = styled(MuiDrawer, {
 
 export function Shell({ children }: { children: React.ReactNode }) {
   const nav = useNav();
-  const [open, setOpen] = React.useState(true);
-  // const dispatch = useDispatch();
-  // const handleReset = () => dispatch(reset());
+  const [open, setOpen] = React.useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
+  const dispatch = useDispatch();
+
   const handleDrawerOpen = () => setOpen(true);
   const handleDrawerClose = () => setOpen(false);
 
   const handleClick = (item: any) => {
-    console.log('clicked', item);
+    if (item.route) {
+      router.push(item.route);
+    } else if (item.action && typeof item.action === 'string') {
+      try {
+        const actionFn = require('../../Admin')[item.action];
+        if (typeof actionFn === 'function') {
+          dispatch(actionFn());
+        } else {
+          console.warn(`Action "${item.action}" is not a valid function`);
+        }
+      } catch (err) {
+        console.error(`Failed to dispatch action "${item.action}"`, err);
+      }
+    }
   };
 
   const renderNavItems = () =>
     nav.map((item, idx) => {
-      const key = item.route || (item as any).url || `${item.label}-${idx}`;
-      const isExternal = Boolean((item as any).url);
-      const onClick = () => {
-        handleClick(item);
-      };
-      const href = (item as any).route || (item as any).url || '#';
+      const key = item.route || item.url || `${item.label}-${idx}`;
+      const isExternal = Boolean(item.url);
+      const href = item.route || item.url || '#';
+      const isActive = pathname === item.route;
 
       return (
         <ListItem key={key} disablePadding sx={{ display: 'block' }}>
           <ListItemButton
-            onClick={onClick}
-            href={!onClick ? href : undefined}
+            onClick={() => handleClick(item)}
+            href={!item.route && isExternal ? href : undefined}
             target={isExternal ? '_blank' : undefined}
             rel={isExternal ? 'noopener noreferrer' : undefined}
+            disabled={isActive}
             sx={{
               minHeight: 48,
               justifyContent: open ? 'initial' : 'center',
@@ -152,16 +162,11 @@ export function Shell({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      <AppBar
+      <AppBar 
         color="default"
-        position="fixed"
-        open={open}
-        elevation={1}
-        sx={{ boxShadow: 0 }}
-      >
+        position="fixed" open={open} elevation={1} sx={{ boxShadow: 0 }}>
         <Toolbar>
           <IconButton
-            color="primary"
             onClick={handleDrawerOpen}
             edge="start"
             sx={{ marginRight: 3, ...(open && { display: 'none' }) }}
@@ -170,11 +175,14 @@ export function Shell({ children }: { children: React.ReactNode }) {
           </IconButton>
           <CardHeader
             sx={{ flexGrow: 1 }}
-            title={<Typography variant="h6">{config.app} Admin</Typography>}
+            title={<Typography variant="h6" color='primary'>{config.app} Admin</Typography>}
             action={
               <Box sx={{ display: 'flex' }}>
-                <Box sx={{ mr: 1 }}>Settings</Box>
-                <Box>Upload</Box>
+                <Box sx={{ mr: 1 }}>
+                  <IconButton onClick={() => {router.push('/');}}>
+                    <Icon icon="home" />
+                  </IconButton>
+                </Box>
               </Box>
             }
           />
@@ -183,7 +191,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
 
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
-          <IconButton color="primary" onClick={handleDrawerClose}>
+          <IconButton onClick={handleDrawerClose}>
             <Icon icon="left" />
           </IconButton>
         </DrawerHeader>

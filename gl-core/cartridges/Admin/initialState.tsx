@@ -14,14 +14,15 @@ export const initialState: TAdminState = {
       route: '/admin',
     },
     {
-      label: 'Logs',
-      icon: 'info',
-      route: '/admin/logs',
+      label: 'Flickr',
+      icon: 'flickr',
+      route: '/admin/flickr',
     },
     {
-      label: 'Reset',
-      icon: 'reset',
-      action: 'reset',
+      label: 'Logs',
+      icon: 'logs',
+      route: '/admin/logs',
     },
+
   ],
 };

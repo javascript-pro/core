@@ -161,19 +161,25 @@
     <loc>https://goldlabel.pro/work/expertise/ai</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/work/expertise/blockchain</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/work/expertise/data-migration</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/work/expertise/git</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/work/expertise</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/next-js</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/techstack/api</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/techstack/blockchain</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/techstack/design-sytem</loc>
@@ -192,9 +198,6 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work/techstack/javascript</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/techstack/javascript/next-js</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/techstack/javascript/rest-api</loc>

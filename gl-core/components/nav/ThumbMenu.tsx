@@ -28,7 +28,9 @@ import {
   useSlice,
   useIsMobile,
   useThemeMode,
+  reset,
 } from '../../../gl-core';
+
 
 export type TThumbMenu = {
   frontmatter?: {
@@ -106,6 +108,18 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
         sx={{ mt: -1 }}
       >
         <MenuItem
+          sx={{ minWidth: 200 }}
+          onClick={() => {
+            dispatch(routeTo('/', router));
+          }}
+        >
+          <ListItemIcon>
+            <Icon icon="home" />
+          </ListItemIcon>
+          <ListItemText primary="Home" />
+        </MenuItem>
+
+        <MenuItem
           onClick={() => {
             dispatch(routeTo('/admin', router));
           }}
@@ -134,7 +148,16 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
 
         {/* Theme Switcher */}
         <ModeSwitch />
-
+        <MenuItem
+          onClick={() => {
+            dispatch(reset());
+          }}
+        >
+          <ListItemIcon>
+            <Icon icon="reset" />
+          </ListItemIcon>
+          <ListItemText primary="Reset" />
+        </MenuItem>
         {/* Share Menu triggers dialog */}
         <MenuItem
           onClick={(e) => {

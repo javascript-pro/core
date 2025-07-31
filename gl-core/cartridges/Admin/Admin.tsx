@@ -5,8 +5,9 @@
 import React, { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import { Box } from '@mui/material';
-import { useSlice, useDispatch } from '../../../gl-core';
+import { useSlice, useDispatch, ThumbMenu } from '../../../gl-core';
 import { init, Shell, Feedback, Dashboard } from '../Admin';
+import { FlickrAdmin, LogsAdmin } from '../Admin';
 
 export default function Admin() {
   const dispatch = useDispatch();
@@ -37,12 +38,12 @@ export default function Admin() {
     //   return row ? <FilePDF data={row} /> : <Box sx={{ m: 4 }}>Not found.</Box>;
     // }
 
-    if (path.startsWith('/database')) {
-      return <>database</>;
+    if (path.startsWith('/admin/flickr')) {
+      return <FlickrAdmin />;
     }
 
-    if (path.startsWith('/ai')) {
-      return <>AI</>;
+    if (path.startsWith('/admin/logs')) {
+      return <LogsAdmin />;
     }
 
     return <Dashboard />;
@@ -51,6 +52,7 @@ export default function Admin() {
   return (
     <Box sx={{ display: 'flex', minHeight: '100vh' }}>
       <Feedback />
+      <ThumbMenu />
       <Shell>{renderContent()}</Shell>
     </Box>
   );

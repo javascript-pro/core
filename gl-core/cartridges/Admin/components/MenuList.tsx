@@ -19,9 +19,7 @@ export type TMenuItem = {
 
 const menuItems: TMenuItem[] = [
   { label: 'Flickr', icon: 'flickr', route: '/admin/flickr' },
-  { label: 'Auth', icon: 'auth', route: '/admin/auth' },
-  { label: 'Bouncer', icon: 'bouncer', route: '/admin/bouncer' },
-  { label: 'Resend', icon: 'email', route: '/admin/resend' },
+  { label: 'Logs', icon: 'logs', route: '/admin/logs' },
 ];
 
 export default function MenuList() {

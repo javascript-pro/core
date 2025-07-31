@@ -3,7 +3,7 @@ order: 555
 title: Privacy & Cookies
 description: Your trust means everything to us
 slug: /work/company/privacy-cookies
-icon: account
+icon: work
 image: /png/og.png
 tags: cookies, gdpr, privacy, terms, trust
 ---
