@@ -29,7 +29,6 @@ export default function SideAds() {
     { icon: 'life', title: 'Life', path: '/life' },
     { icon: 'balance', title: 'Balance', path: '/balance' },
 
-
     // { icon: 'admin', title: 'Admin', path: '/admin' },
     // { icon: 'contact', title: 'Contact us', path: '/work/company' },
   ];

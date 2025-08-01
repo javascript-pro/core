@@ -706,7 +706,7 @@
         "icon": "balance",
         "image": "https://live.staticflickr.com/65535/54691336480_c273fe647c_o.jpg",
         "type": "folder",
-        "excerpt": "Writing\n     \n     \n Writers\n     \n     Are you ? \n     Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland",
+        "excerpt": "Writing\n   \n   \n Writers\n   \n   Are you ?\n     Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland",
         "children": [
           {
             "title": "Writing",
@@ -731,7 +731,7 @@
                 "title": "Weekend Portfolio",
                 "slug": "/balance/writing/weekend-portfolio",
                 "order": 16,
-                "icon": "code",
+                "icon": "balance",
                 "image": "https://live.staticflickr.com/65535/54672545447_eb6a103ff6_o.jpg",
                 "type": "file",
                 "excerpt": "Written for at semiprofessional coders ready to go pr0\n\nIn a weekend project, you’ll build a simple but powerful AI app. The idea is simple but important: you upload an .mp3 file, and the app gives yo"
