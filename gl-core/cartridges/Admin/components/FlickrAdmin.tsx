@@ -225,13 +225,13 @@ export default function FlickrAdmin() {
               }}
             >
               <CardHeader
-                title={selectedAlbum.title || 'Untitled Album'}
+                title={selectedAlbum.title}
                 subheader={`ID: ${selectedAlbum.id}`}
                 sx={{ p: 1 }}
               />
               <CardContent sx={{ pt: 0.5, pb: 1 }}>
                 <Typography variant="body2" sx={{ mb: 1 }}>
-                  {selectedAlbum.description || 'No description'}
+                  {selectedAlbum.description}
                 </Typography>
                 <Typography variant="body2" sx={{ mb: 1 }}>
                   <strong>Photos:</strong> {selectedAlbum.count || 0}

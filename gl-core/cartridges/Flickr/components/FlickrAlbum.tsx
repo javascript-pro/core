@@ -255,7 +255,7 @@ export default function FlickrAlbum({ album }: { album?: string }) {
                   {currentPhoto.title || 'Untitled'}
                 </Typography>
                 <Typography variant="body2">
-                  {currentPhoto.description || 'No description'}
+                  {currentPhoto.description}
                 </Typography>
               </Box>
             </Popover>
@@ -295,7 +295,7 @@ export default function FlickrAlbum({ album }: { album?: string }) {
         <DialogTitle sx={{ p: 0 }}>
           <CardHeader
             title={currentPhoto?.title || 'Untitled'}
-            subheader={currentPhoto?.description || 'No description'}
+            subheader={currentPhoto?.description}
             avatar={
               <IconButton onClick={handleFlickrClick} title="View on Flickr">
                 <Icon icon="flickr" />
