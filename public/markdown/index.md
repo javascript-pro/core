@@ -7,7 +7,7 @@ icon: ki
 tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 github: https://github.com/javascript-pro/core
 api: /api/gl-api/flickr/latest/latest
-image: https://live.staticflickr.com/65535/53670802348_940f40175e_h.jpg
+image: https://live.staticflickr.com/65535/54111384939_d416a6752f_b.jpg
 ---
 
 ## AKI - New for July 2025
