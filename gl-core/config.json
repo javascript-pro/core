@@ -1,7 +1,7 @@
 {
   "persist": true,
   "app": "Goldlabel",
-  "description": "AI software which just works",
+  "description": "AI software which works",
   "url": "https://goldlabel.pro",
   "repo": "https://github.com/javascript-pro/core",
   "images": {

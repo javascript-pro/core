@@ -157,6 +157,40 @@ export default function FlickrAlbum({ album }: { album?: string }) {
       <Box sx={{ position: 'relative' }}>
         {photos.length > 0 && currentPhoto ? (
           <Box sx={{ position: 'relative' }}>
+            <Box
+              sx={{
+                mb: 1,
+                display: 'flex',
+                justifyContent: 'center',
+                gap: 1,
+              }}
+            >
+              <MightyButton
+                color="primary"
+                mode="icon"
+                label="Back"
+                icon="left"
+                onClick={handlePrev}
+                disabled={photos.length === 0}
+              />
+              <MightyButton
+                color="primary"
+                mode="icon"
+                label="Open Flickr"
+                icon="flickr"
+                onClick={handleOpenFlickr}
+                disabled={photos.length === 0 || !currentPhoto?.flickrUrl}
+              />
+              <MightyButton
+                color="primary"
+                mode="icon"
+                label="Next"
+                icon="right"
+                onClick={handleNext}
+                disabled={photos.length === 0}
+              />
+            </Box>
+
             {!imageLoaded && !hasImageError && (
               <Box
                 sx={{
@@ -247,40 +281,6 @@ export default function FlickrAlbum({ album }: { album?: string }) {
             <CircularProgress />
           </Box>
         )}
-
-        <Box
-          sx={{
-            mt: 1,
-            display: 'flex',
-            justifyContent: 'center',
-            gap: 1,
-          }}
-        >
-          <MightyButton
-            color="primary"
-            mode="icon"
-            label="Back"
-            icon="left"
-            onClick={handlePrev}
-            disabled={photos.length === 0}
-          />
-          <MightyButton
-            color="primary"
-            mode="icon"
-            label="Open Flickr"
-            icon="flickr"
-            onClick={handleOpenFlickr}
-            disabled={photos.length === 0 || !currentPhoto?.flickrUrl}
-          />
-          <MightyButton
-            color="primary"
-            mode="icon"
-            label="Next"
-            icon="right"
-            onClick={handleNext}
-            disabled={photos.length === 0}
-          />
-        </Box>
       </Box>
 
       {/* Fullscreen dialog only on mobile */}
