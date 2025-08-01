@@ -23,10 +23,15 @@ export default function SideAds() {
   const pathname = usePathname(); // get current path
 
   const items = [
-    { icon: 'home', title: 'Home', path: '/' },
-    { icon: 'info', title: 'Expertise', path: '/work/expertise' },
-    { icon: 'admin', title: 'Admin', path: '/admin' },
-    { icon: 'contact', title: 'Contact us', path: '/work/company' },
+    // { icon: 'home', title: 'Home', path: '/' },
+
+    { icon: 'work', title: 'Work', path: '/work' },
+    { icon: 'life', title: 'Life', path: '/life' },
+    { icon: 'balance', title: 'Balance', path: '/balance' },
+
+
+    // { icon: 'admin', title: 'Admin', path: '/admin' },
+    // { icon: 'contact', title: 'Contact us', path: '/work/company' },
   ];
 
   return (
