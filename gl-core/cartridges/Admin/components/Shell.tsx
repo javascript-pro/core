@@ -162,9 +162,13 @@ export function Shell({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      <AppBar 
+      <AppBar
         color="default"
-        position="fixed" open={open} elevation={1} sx={{ boxShadow: 0 }}>
+        position="fixed"
+        open={open}
+        elevation={1}
+        sx={{ boxShadow: 0 }}
+      >
         <Toolbar>
           <IconButton
             onClick={handleDrawerOpen}
@@ -175,11 +179,19 @@ export function Shell({ children }: { children: React.ReactNode }) {
           </IconButton>
           <CardHeader
             sx={{ flexGrow: 1 }}
-            title={<Typography variant="h6" color='primary'>{config.app} Admin</Typography>}
+            title={
+              <Typography variant="h6" color="primary">
+                {config.app} Admin
+              </Typography>
+            }
             action={
               <Box sx={{ display: 'flex' }}>
                 <Box sx={{ mr: 1 }}>
-                  <IconButton onClick={() => {router.push('/');}}>
+                  <IconButton
+                    onClick={() => {
+                      router.push('/');
+                    }}
+                  >
                     <Icon icon="home" />
                   </IconButton>
                 </Box>

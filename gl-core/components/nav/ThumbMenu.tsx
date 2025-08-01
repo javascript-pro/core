@@ -31,7 +31,6 @@ import {
   reset,
 } from '../../../gl-core';
 
-
 export type TThumbMenu = {
   frontmatter?: {
     title?: string;

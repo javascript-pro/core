@@ -1,7 +1,7 @@
 ---
 order: 15
 title: Next.js
-description: React on the frontend with seamless backend capabilities
+description: React with seamless backend capabilities
 slug: /work/expertise/next-js
 icon: info
 image: /png/clouds/default_whitecloud.png

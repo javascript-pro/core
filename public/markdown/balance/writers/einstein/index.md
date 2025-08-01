@@ -1,13 +1,11 @@
 ---
-order: 30
+order: 1
 title: Einstein
 description: Albert. The Godfather of modern physics
-slug: /balance/books/einstein
+slug: /balance/writers/einstein
 icon: doc
 image: /jpg/einstein.jpg
 ---
-
-> Let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series.
 
 > Let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series.
 

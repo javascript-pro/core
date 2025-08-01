@@ -1,10 +1,10 @@
 ---
-order: 160
+order: 16
 title: Weekend Portfolio
 description: Build a simple but powerful AI app
-slug: /balance/books/weekend-portfolio
-icon: speak-write
-image: /jpg/cassetes.jpg
+slug: /balance/writing/weekend-portfolio
+icon: code
+image: https://live.staticflickr.com/65535/54672545447_eb6a103ff6_o.jpg
 ---
 
 > Written for at semi-professional coders ready to go pr0

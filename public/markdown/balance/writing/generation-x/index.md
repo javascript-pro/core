@@ -2,7 +2,7 @@
 order: 100
 title: Generation X
 description: by Douglas Coupland
-slug: /balance/books/generation-x
+slug: /balance/writing/generation-x
 icon: doc
 image: /jpg/cassetes.jpg
 ---

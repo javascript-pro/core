@@ -5,7 +5,7 @@
     "slug": "/",
     "order": 1,
     "icon": "ki",
-    "image": "https://live.staticflickr.com/65535/54688814017_148f57032c_o.jpg",
+    "image": "https://live.staticflickr.com/65535/53670802348_940f40175e_h.jpg",
     "type": "folder",
     "tags": [
       "JavaScript",
@@ -228,18 +228,20 @@
             "children": [
               {
                 "title": "AI",
-                "description": "What do we know about about AI",
+                "description": "What do we know about about AI?",
                 "slug": "/work/expertise/ai",
                 "order": 1,
-                "icon": "info",
-                "image": "https://live.staticflickr.com/65535/54679640252_e024743596_o.jpg",
+                "icon": "oliver",
+                "image": "https://live.staticflickr.com/65535/53669705662_d1361d5032_h.jpg",
                 "type": "folder",
                 "tags": [
+                  "ai",
+                  "ki",
                   "expertise",
                   "fields",
                   "work"
                 ],
-                "excerpt": "Is this Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday",
+                "excerpt": "Is this Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday\n\nIt's keeping tinfoil hat wearing folk awake at night. If",
                 "children": []
               },
               {
@@ -702,60 +704,51 @@
         "slug": "/balance",
         "order": 100,
         "icon": "balance",
-        "image": "/jpg/90s-high-school.jpg",
+        "image": "https://live.staticflickr.com/65535/54691336480_c273fe647c_o.jpg",
         "type": "folder",
-        "excerpt": "Are you ?\n\n Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Is this Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a b",
+        "excerpt": "Writing\n     \n     \n Writers\n     \n     Are you ? \n     Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland",
         "children": [
           {
-            "title": "dog",
-            "slug": "/balance/puppy-thing",
-            "order": 30,
-            "icon": "dog",
-            "image": "/jpg/puppy-fing.jpg",
-            "type": "file",
-            "excerpt": "I put an Attenborough series on for the dogs. Later I notice there’s a polar bear and a baby seal on the TV. I look at the doggy. He's got genuine concern in his eyes which also say\n\n\"that puppy fing’"
-          },
-          {
-            "title": "Books",
+            "title": "Writing",
             "description": "It's hard to collate stuff into meaningful e-books, but we've done our best",
-            "slug": "/balance/books",
-            "order": 100,
+            "slug": "/balance/writing",
+            "order": 1,
             "icon": "balance",
-            "image": "/jpg/cassetes.jpg",
+            "image": "https://live.staticflickr.com/65535/53670802348_9bb887b680_b.jpg",
             "type": "folder",
-            "excerpt": "Weekend Portfolio\n\n Written for semiprofessional coders ready to go pr0\n\nA series of standalone apps you can build in a weekend. Each project has modern deployment, realworld app structure\n\nIn a weeke",
+            "excerpt": "Wei Zang's Food\n\n Wei Zang, author of Not here to fuck spiders\n\n Weekend Portfolio\n\n Written for semiprofessional coders ready to go pr0\n\nA series of standalone apps you can build in a weekend. Each p",
             "children": [
               {
-                "title": "Wei Zang’s Food",
-                "slug": "/balance/books/wei-zangs-food",
-                "order": 11,
-                "icon": "food",
-                "image": "/jpg/wei-zangs-food.jpg",
+                "title": "Destructo The Wonderdog",
+                "slug": "/balance/writing/destructo-the-wonderdog",
+                "order": 2,
+                "icon": "dog",
+                "image": "https://live.staticflickr.com/65535/54691336480_c273fe647c_o.jpg",
                 "type": "file",
-                "excerpt": "I never learned to cook. No one taught me. That’s why I can tell you about it.\n\nPeople who are taught spend too long worrying about what’s “right.” I just ate what I liked, cooked it, guessed. Like de"
+                "excerpt": "Once upon a time Destructo the Wonderdog and his best mate Barkin’ Boris were hanging out on the mountain. Just sniffing about, play fighting and barking at stuff when suddenly Boris went still as a m"
               },
               {
-                "title": "Einstein",
-                "slug": "/balance/books/einstein",
-                "order": 30,
-                "icon": "doc",
-                "image": "/jpg/einstein.jpg",
+                "title": "Weekend Portfolio",
+                "slug": "/balance/writing/weekend-portfolio",
+                "order": 16,
+                "icon": "code",
+                "image": "https://live.staticflickr.com/65535/54672545447_eb6a103ff6_o.jpg",
                 "type": "file",
-                "excerpt": "Let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series.\n\n Let's share some of Einstein's contributions which are fundamental t"
+                "excerpt": "Written for at semiprofessional coders ready to go pr0\n\nIn a weekend project, you’ll build a simple but powerful AI app. The idea is simple but important: you upload an .mp3 file, and the app gives yo"
               },
               {
-                "title": "General Relativity",
-                "slug": "/balance/books/relativity",
+                "title": "dog",
+                "slug": "/balance/writing/puppy-thing",
                 "order": 30,
-                "icon": "doc",
-                "image": "/jpg/einstein.jpg",
+                "icon": "dog",
+                "image": "/jpg/puppy-fing.jpg",
                 "type": "file",
-                "excerpt": "Really just the name for Einstein's study of gravitation. And here we're going to introduce my alltime favorite analogy for general relativity, the bowling ball on the trampoline. Let's imagine that f"
+                "excerpt": "I put an Attenborough series on for the dogs. Later I notice there’s a polar bear and a baby seal on the TV. I look at the doggy. He's got genuine concern in his eyes which also say\n\n\"vat puppy fing’s"
               },
               {
                 "title": "Generation X",
                 "description": "by Douglas Coupland",
-                "slug": "/balance/books/generation-x",
+                "slug": "/balance/writing/generation-x",
                 "order": 100,
                 "icon": "doc",
                 "image": "/jpg/cassetes.jpg",
@@ -764,26 +757,59 @@
                 "children": []
               },
               {
+                "title": "Wei Zang’s Food",
+                "slug": "/balance/writing/wei-zangs-food",
+                "order": 110,
+                "icon": "food",
+                "image": "/jpg/wei-zangs-food.jpg",
+                "type": "file",
+                "excerpt": "I never learned to cook. No one taught me. That’s why I can tell you about it.\n\nPeople who are taught spend too long worrying about what’s “right.” I just ate what I liked, cooked it, guessed. Like de"
+              },
+              {
                 "title": "Science Fiction",
-                "slug": "/balance/books/sci-fi",
+                "slug": "/balance/writing/sci-fi",
                 "order": 120,
                 "icon": "folder",
                 "image": "/jpg/einstein.jpg",
                 "type": "file",
                 "excerpt": "Because we can carefully observe constellations when the Sun is not blocking their path, we know what position the stars should be in when the Sun is keeping us from seeing them. However, according to"
-              },
+              }
+            ]
+          },
+          {
+            "title": "Writers",
+            "description": "description",
+            "slug": "/balance/writers",
+            "order": 20,
+            "icon": "balance",
+            "image": "/jpg/cassetes.jpg",
+            "type": "folder",
+            "excerpt": "",
+            "children": [
               {
-                "title": "Weekend Portfolio",
-                "slug": "/balance/books/weekend-portfolio",
-                "order": 160,
-                "icon": "speak-write",
-                "image": "/jpg/cassetes.jpg",
-                "type": "file",
-                "excerpt": "Written for at semiprofessional coders ready to go pr0\n\nIn a weekend project, you’ll build a simple but powerful AI app. The idea is simple but important: you upload an .mp3 file, and the app gives yo"
+                "title": "Einstein",
+                "description": "Albert. The Godfather of modern physics",
+                "slug": "/balance/writers/einstein",
+                "order": 1,
+                "icon": "doc",
+                "image": "/jpg/einstein.jpg",
+                "type": "folder",
+                "excerpt": "Let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series.\n\nI mentioned in the last lecture this idea of Gedanken experiments, th",
+                "children": [
+                  {
+                    "title": "General Relativity",
+                    "slug": "/balance/writers/einstein/relativity",
+                    "order": 30,
+                    "icon": "doc",
+                    "image": "/jpg/einstein.jpg",
+                    "type": "file",
+                    "excerpt": "Really just the name for Einstein's study of gravitation. And here we're going to introduce my alltime favorite analogy for general relativity, the bowling ball on the trampoline. Let's imagine that f"
+                  }
+                ]
               },
               {
                 "title": "Charles Darwin",
-                "slug": "/balance/books/charles-darwin",
+                "slug": "/balance/writers/charles-darwin",
                 "order": 2000,
                 "icon": "doc",
                 "image": "/jpg/darwin.jpg",
