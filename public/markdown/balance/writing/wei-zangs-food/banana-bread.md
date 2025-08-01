@@ -2,7 +2,7 @@
 order: 50
 title: 'Banana Bread'
 description: Proper crowd pleaser
-slug: /life/food/banana-bread
+slug: /balance/writing/wei-zangs-food/banana-bread
 icon: food
 image: /jpg/wei-zangs-food.jpg
 ---
