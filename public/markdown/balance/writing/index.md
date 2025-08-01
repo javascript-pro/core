@@ -1,10 +1,10 @@
 ---
 order: 1
 title: Writing
-description: It's hard to collate stuff into meaningful e-books, but we've done our best
+description: It's hard to collate stuff into meaningful writing, but we've doing our best
 slug: /balance/writing
 icon: balance
-image: https://live.staticflickr.com/65535/53670802348_9bb887b680_b.jpg
+image: https://live.staticflickr.com/65535/54353995935_a904d504aa_b.jpg
 ---
 
 ### Wei Zang's Food
