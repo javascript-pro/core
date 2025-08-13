@@ -11,16 +11,13 @@ import {
   Typography,
   Grid,
 } from '@mui/material';
-import {
-  BouncerAdmin,
-} from '../../../Bouncer';
+import { BouncerAdmin } from '../../../Bouncer';
 
 export default function Dashboard() {
   // const slice = useAdminSlice();
   return (
     <Box>
       <Grid container spacing={2}>
-        
         <Grid size={{ xs: 12, md: 6 }}>
           <BouncerAdmin />
         </Grid>

@@ -31,7 +31,7 @@ type TFlickrAlbum = {
   flickrUrl?: string;
   createdAt?: number;
   updatedAt?: number;
-  photos?: { flickrId: string; title?: string, sizes?: any }[];
+  photos?: { flickrId: string; title?: string; sizes?: any }[];
 };
 
 type TFlickrData = {
@@ -159,7 +159,8 @@ export default function FlickrAdmin() {
       ) : (
         <>
           <Typography variant="body1" sx={{ mb: 2 }}>
-            Enter a Flickr Album ID to create a new album, or select one below to update it.
+            Enter a Flickr Album ID to create a new album, or select one below
+            to update it.
           </Typography>
 
           <Box sx={{ display: 'flex', gap: 2, mb: 3 }}>
@@ -263,9 +264,15 @@ export default function FlickrAdmin() {
                 </Typography>
                 {Array.isArray(selectedAlbum.photos) &&
                   selectedAlbum.photos.length > 0 && (
-                    <Box component="ul" sx={{ pl: 2, m: 0, listStyleType: 'disc' }}>
+                    <Box
+                      component="ul"
+                      sx={{ pl: 2, m: 0, listStyleType: 'disc' }}
+                    >
                       {selectedAlbum.photos.map((photo) => (
-                        <li key={photo.flickrId} style={{ marginBottom: '4px' }}>
+                        <li
+                          key={photo.flickrId}
+                          style={{ marginBottom: '4px' }}
+                        >
                           <Typography variant="body2" noWrap>
                             {photo.title || '(untitled photo)'}
                           </Typography>

@@ -46,7 +46,6 @@ export default function Admin() {
     if (path.startsWith('/admin/bouncer')) {
       return <BouncerAdmin />;
     }
-    
 
     if (path.startsWith('/admin/logs')) {
       return <LogsAdmin />;
