@@ -14,13 +14,13 @@ tags: expertise, js, javascript, next, react, ai, agents
 
 AI agents need more than a good model — they need a front end that users can actually work with. Our focus is on building **React/Next.js interfaces** that make LLMs and multi-agent systems practical in production.  
 
-### Typical flow  
+#### Typical flow  
 
 - **Concept** → quick proof-of-concepts to explore APIs, workflows, and edge cases  
 - **Prototype** → functional UIs with state management, real-time feedback, and secure integration with agent backends  
 - **Production** → hardened apps deployed to cloud platforms (Firebase, GCP, Azure), with compliance features baked in  
 
-### What we deliver  
+#### What we deliver  
 
 - **Chat & Agent Interfaces** → structured prompts, tool invocation, streaming output  
 - **Dashboards & Visualisation** → status tracking, logs, data inspection, feedback loops  
@@ -28,7 +28,7 @@ AI agents need more than a good model — they need a front end that users can a
 - **Reusable Components** → React + MUI or Tailwind, integrated with enterprise design systems  
 - **API Integration** → REST, GraphQL, WebSockets for low-latency interaction  
 
-### Stack we work with  
+#### Stack we work with  
 
 - **Frameworks**: React, Next.js, TypeScript  
 - **UI**: MUI, Tailwind, AG Grid, charting libraries  
@@ -37,7 +37,7 @@ AI agents need more than a good model — they need a front end that users can a
 - **Security**: OAuth2, JWT, XSS/CSRF protection, OWASP best practices  
 - **DevOps**: GitHub Actions, Docker, CI/CD pipelines with security scanning  
 
-### Example: Minimal AI agent front end  
+#### Example: Minimal AI agent front end  
 
 ```tsx
 'use client';
@@ -87,8 +87,3 @@ export default function AgentChat() {
   );
 }
 ```  
-
-This minimal component demonstrates:  
-- Local state for input and chat history  
-- A `/api/agent` endpoint for proxying LLM calls  
-- Basic UI for streaming conversation 

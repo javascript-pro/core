@@ -10,13 +10,15 @@ api: /api/gl-api/flickr/latest/latest
 image: /jpg/balance.jpg
 ---
 
-## AKI - Ring‑fenced AI. New in July 2025
+## [AI Agent User Interfaces](/work/expertise/ai/agents)
 
-> "Ring‑fencing our own AI in‑house allowed us to streamline our workflow without compromising our GDPR obligations or datasecurity."
+> How we help you take your AI product ideas from concept, through prototype to production  
 
-Rahul Sharma, CEO
+#### AKI - Ring‑fenced AI
 
 Abgeschottet KI delivers a secure, ring‑fenced AI to streamline legal compliance workflows, process documents faster, and protect sensitive data.
+
+> "Ring‑fencing our own AI in‑house allowed us to streamline our workflow without compromising our GDPR obligations or datasecurity." **Rahul Sharma, CEO**
 
 > Goldlabel builds and ships modern web apps for clients who need real results — fast
 
@@ -26,7 +28,7 @@ Abgeschottet KI delivers a secure, ring‑fenced AI to streamline legal compli
 
 Goldlabel Apps is a UK-based software company that designs, builds, and maintains full-stack web applications. We specialize in Next.js, Firebase, and custom UI development, delivering everything from internal admin tools to polished public-facing websites.
 
-### Benefits of building with Goldlabel
+#### Working with Goldlabel
 
 - Ship early and often.  
   Each app is live from the outset — not just a mockup or prototyle
