@@ -4,6 +4,7 @@ import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Box, Link as MuiLink, Typography, useTheme } from '@mui/material';
 import { MightyButton } from '../../../gl-core';
+import GoogleMap from '../../../gl-core/components/GoogleMap';
 
 export type TRenderMarkdown = {
   children: React.ReactNode;
@@ -38,7 +39,6 @@ export default function RenderMarkdown({
       observer.observe(scrollRef.current);
       scrollRef.current.addEventListener('scroll', checkScroll);
     }
-
     return () => {
       observer.disconnect();
       scrollRef.current?.removeEventListener('scroll', checkScroll);
@@ -51,6 +51,20 @@ export default function RenderMarkdown({
 
   const handleScrollUp = () => {
     scrollRef.current?.scrollBy({ top: -300, behavior: 'smooth' });
+  };
+
+  // --- Normalize children to array to prevent map errors ---
+  const normalizeChildren = (children: any) =>
+    Array.isArray(children) ? children : [children];
+
+  // --- Shortcode parser ---
+  const renderShortcode = (text: string) => {
+    const googleMapRegex = /\[GoogleMap\s+src="(.+?)"\]/;
+    const match = text.match(googleMapRegex);
+    if (match) {
+      return <GoogleMap src={match[1]} />;
+    }
+    return text;
   };
 
   return (
@@ -73,54 +87,30 @@ export default function RenderMarkdown({
           minHeight: 0,
           scrollbarWidth: 'auto',
           scrollbarColor: `${theme.palette.primary.main} ${theme.palette.background.paper}`,
-          '&::-webkit-scrollbar': {
-            width: '12px',
-          },
-          '&::-webkit-scrollbar-thumb': {
-            backgroundColor: theme.palette.primary.main,
-            borderRadius: 6,
-          },
-          '&::-webkit-scrollbar-track': {
-            backgroundColor: theme.palette.background.paper,
-          },
+          '&::-webkit-scrollbar': { width: '12px' },
+          '&::-webkit-scrollbar-thumb': { backgroundColor: theme.palette.primary.main, borderRadius: 6 },
+          '&::-webkit-scrollbar-track': { backgroundColor: theme.palette.background.paper },
         }}
         tabIndex={0}
       >
         <ReactMarkdown
           components={{
-            h1: ({ children }) => (
-              <Typography variant="h4" sx={{ my: 1, fontWeight: 'normal' }}>
-                {children}
-              </Typography>
-            ),
-            h2: ({ children }) => (
-              <Typography variant="h5" sx={{ my: 1, fontWeight: 'normal' }}>
-                {children}
-              </Typography>
-            ),
-            h3: ({ children }) => (
-              <Typography variant="h6" sx={{ my: 1, fontWeight: 'normal' }}>
-                {children}
-              </Typography>
-            ),
+            h1: ({ children }) => <Typography variant="h4" sx={{ my: 1, fontWeight: 'normal' }}>{children}</Typography>,
+            h2: ({ children }) => <Typography variant="h5" sx={{ my: 1, fontWeight: 'normal' }}>{children}</Typography>,
+            h3: ({ children }) => <Typography variant="h6" sx={{ my: 1, fontWeight: 'normal' }}>{children}</Typography>,
             p: ({ children }) => (
-              <Typography
-                variant="body1"
-                component="span"
-                display="block"
-                sx={{ my: 1, fontWeight: 'normal' }}
-              >
-                {children}
+              <Typography variant="body1" component="span" display="block" sx={{ my: 1, fontWeight: 'normal' }}>
+                {normalizeChildren(children).map((child, i) =>
+                  typeof child === 'string' ? renderShortcode(child) : child
+                )}
               </Typography>
             ),
             li: ({ children }) => (
               <li>
-                <Typography
-                  variant="body1"
-                  component="span"
-                  sx={{ fontWeight: 'normal' }}
-                >
-                  {children}
+                <Typography variant="body1" component="span" sx={{ fontWeight: 'normal' }}>
+                  {normalizeChildren(children).map((child, i) =>
+                    typeof child === 'string' ? renderShortcode(child) : child
+                  )}
                 </Typography>
               </li>
             ),
@@ -145,6 +135,7 @@ export default function RenderMarkdown({
           {children as string}
         </ReactMarkdown>
       </Box>
+
       <Box sx={{ m: 2, display: 'flex', gap: 2, justifyContent: 'left' }}>
         {canScrollDown && (
           <MightyButton

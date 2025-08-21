@@ -15,11 +15,13 @@ import {
 } from './nav';
 import { FieldUpload } from './forms';
 import { Header, Footer, RenderMarkdown } from './layout';
+import GoogleMap from './GoogleMap';
 
 export { IncludeAll, Advert, Feedback, LoadingOverlay };
 export { Header, Footer, RenderMarkdown };
 export {
   Nav,
+  GoogleMap,
   Siblings,
   Children,
   ArrowMenu,

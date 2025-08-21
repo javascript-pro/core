@@ -20,6 +20,7 @@ import {
   ArrowMenu,
   Siblings,
   Children,
+  GoogleMap,
 } from './components';
 import {
   useLoading,
@@ -66,6 +67,7 @@ export {
 };
 export {
   Advert,
+  GoogleMap,
   Header,
   Footer,
   RenderMarkdown,
