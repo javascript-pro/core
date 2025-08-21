@@ -8,8 +8,6 @@ image: https://live.staticflickr.com/65535/54661655887_c5678ff794_b.jpg
 tags: expertise, js, javascript, next, react, ai, agents
 ---
 
-## AI software which works  
-
 > How we help you take your AI product ideas from concept, through prototype to production  
 
 ## From prototype to production  
