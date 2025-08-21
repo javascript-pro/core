@@ -12,7 +12,7 @@ image: /jpg/balance.jpg
 
 ## [AI Agent User Interfaces](/work/expertise/ai/agents)
 
-> How we help you take your AI product ideas from concept, through prototype to production  
+> How we help you take your AI product ideas from concept, through prototype to production
 
 #### AKI - Ring‑fenced AI
 

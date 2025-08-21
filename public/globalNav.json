@@ -35,7 +35,7 @@
       "NextJS",
       "Headless CMS"
     ],
-    "excerpt": "AKI  Ring‑fenced AI. New in July 2025\n\n \"Ring‑fencing our own AI in‑house allowed us to streamline our workflow without compromising our GDPR obligations or datasecurity.\"\n\nRahul Sharma, CEO\n\nAbgescho",
+    "excerpt": "How we help you take your AI product ideas from concept, through prototype to production\n\n AKI  Ring‑fenced AI\n\nAbgeschottet KI delivers a secure, ring‑fenced AI to streamline legal compliance workflo",
     "children": [
       {
         "title": "Work",
@@ -242,7 +242,26 @@
                   "work"
                 ],
                 "excerpt": "Is this Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday\n\nIt's keeping tinfoil hat wearing folk awake at night. If",
-                "children": []
+                "children": [
+                  {
+                    "title": "AI Agent User Interfaces",
+                    "slug": "/work/expertise/ai/agents",
+                    "order": 20,
+                    "icon": "js",
+                    "image": "https://live.staticflickr.com/65535/54661655887_c5678ff794_b.jpg",
+                    "type": "file",
+                    "tags": [
+                      "expertise",
+                      "js",
+                      "javascript",
+                      "next",
+                      "react",
+                      "ai",
+                      "agents"
+                    ],
+                    "excerpt": "How we help you take your AI product ideas from concept, through prototype to production\n\n From prototype to production\n\nAI agents need more than a good model — they need a front end that users can ac"
+                  }
+                ]
               },
               {
                 "title": "Git",
