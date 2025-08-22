@@ -28,7 +28,7 @@ import {
 } from '../../../../gl-core';
 import { setLatestIndex } from '../../Flickr';
 
-export default function FlickrAlbum({ album }: { album?: string }) {
+export default function FlickrAlbum({ album }: { album: string }) {
   const dispatch = useDispatch();
   const router = useRouter();
   const isMobile = useIsMobile();

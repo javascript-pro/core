@@ -4,7 +4,7 @@ import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Box, Link as MuiLink, Typography, useTheme } from '@mui/material';
 import { MightyButton } from '../../../gl-core';
-import GoogleMap from '../../../gl-core/components/GoogleMap';
+import { GoogleMap, FlickrAlbum } from '../../../gl-core';
 
 export type TRenderMarkdown = {
   children: React.ReactNode;
@@ -59,11 +59,20 @@ export default function RenderMarkdown({
 
   // --- Shortcode parser ---
   const renderShortcode = (text: string) => {
+    // GoogleMap
     const googleMapRegex = /\[GoogleMap\s+src="(.+?)"\]/;
-    const match = text.match(googleMapRegex);
-    if (match) {
-      return <GoogleMap src={match[1]} />;
+    const googleMatch = text.match(googleMapRegex);
+    if (googleMatch) {
+      return <GoogleMap src={googleMatch[1]} />;
     }
+
+    // FlickrAlbum
+    const flickrRegex = /\[FlickrAlbum\s+id="(.+?)"\]/;
+    const flickrMatch = text.match(flickrRegex);
+    if (flickrMatch) {
+      return <FlickrAlbum id={flickrMatch[1]} />;
+    }
+
     return text;
   };
 

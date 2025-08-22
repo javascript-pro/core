@@ -15,13 +15,15 @@ import {
 } from './nav';
 import { FieldUpload } from './forms';
 import { Header, Footer, RenderMarkdown } from './layout';
-import GoogleMap from './GoogleMap';
+import GoogleMap from './shortcodes/GoogleMap';
+import FlickrAlbum from './shortcodes/FlickrAlbum';
 
 export { IncludeAll, Advert, Feedback, LoadingOverlay };
 export { Header, Footer, RenderMarkdown };
 export {
   Nav,
   GoogleMap,
+  FlickrAlbum,
   Siblings,
   Children,
   ArrowMenu,

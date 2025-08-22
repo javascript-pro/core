@@ -19,7 +19,7 @@ export default function GoogleMap({ src = null }: TGoogleMap) {
           borderRadius: '6px',
         }}
         width="100%"
-        height="480"
+        height="380"
       />
     </Box>
   );

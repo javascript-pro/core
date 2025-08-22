@@ -11,13 +11,13 @@ image: https://live.staticflickr.com/65535/54357493661_7f7ffbe1c2_h.jpg
 noImage: true
 ---
 
-> Cultural reference; [Generation X](/balance/writers/generation-x) Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland
-
 ## [Travel](/life/travel)
 
 Where I've been in the little Zeppelin since Spring 2025
 
-[GoogleMap src="https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=2E312F"]
+[GoogleMap src="https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=001321"]
+
+> Cultural reference; [Generation X](/balance/writers/generation-x) Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland
 
 ## News
 
