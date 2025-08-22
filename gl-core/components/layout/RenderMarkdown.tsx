@@ -88,28 +88,54 @@ export default function RenderMarkdown({
           scrollbarWidth: 'auto',
           scrollbarColor: `${theme.palette.primary.main} ${theme.palette.background.paper}`,
           '&::-webkit-scrollbar': { width: '12px' },
-          '&::-webkit-scrollbar-thumb': { backgroundColor: theme.palette.primary.main, borderRadius: 6 },
-          '&::-webkit-scrollbar-track': { backgroundColor: theme.palette.background.paper },
+          '&::-webkit-scrollbar-thumb': {
+            backgroundColor: theme.palette.primary.main,
+            borderRadius: 6,
+          },
+          '&::-webkit-scrollbar-track': {
+            backgroundColor: theme.palette.background.paper,
+          },
         }}
         tabIndex={0}
       >
         <ReactMarkdown
           components={{
-            h1: ({ children }) => <Typography variant="h4" sx={{ my: 1, fontWeight: 'normal' }}>{children}</Typography>,
-            h2: ({ children }) => <Typography variant="h5" sx={{ my: 1, fontWeight: 'normal' }}>{children}</Typography>,
-            h3: ({ children }) => <Typography variant="h6" sx={{ my: 1, fontWeight: 'normal' }}>{children}</Typography>,
+            h1: ({ children }) => (
+              <Typography variant="h4" sx={{ my: 1, fontWeight: 'normal' }}>
+                {children}
+              </Typography>
+            ),
+            h2: ({ children }) => (
+              <Typography variant="h5" sx={{ my: 1, fontWeight: 'normal' }}>
+                {children}
+              </Typography>
+            ),
+            h3: ({ children }) => (
+              <Typography variant="h6" sx={{ my: 1, fontWeight: 'normal' }}>
+                {children}
+              </Typography>
+            ),
             p: ({ children }) => (
-              <Typography variant="body1" component="span" display="block" sx={{ my: 1, fontWeight: 'normal' }}>
+              <Typography
+                variant="body1"
+                component="span"
+                display="block"
+                sx={{ my: 1, fontWeight: 'normal' }}
+              >
                 {normalizeChildren(children).map((child, i) =>
-                  typeof child === 'string' ? renderShortcode(child) : child
+                  typeof child === 'string' ? renderShortcode(child) : child,
                 )}
               </Typography>
             ),
             li: ({ children }) => (
               <li>
-                <Typography variant="body1" component="span" sx={{ fontWeight: 'normal' }}>
+                <Typography
+                  variant="body1"
+                  component="span"
+                  sx={{ fontWeight: 'normal' }}
+                >
                   {normalizeChildren(children).map((child, i) =>
-                    typeof child === 'string' ? renderShortcode(child) : child
+                    typeof child === 'string' ? renderShortcode(child) : child,
                   )}
                 </Typography>
               </li>

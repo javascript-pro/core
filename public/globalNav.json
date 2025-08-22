@@ -677,7 +677,7 @@
             "icon": "life",
             "image": "https://live.staticflickr.com/65535/54357493661_7f7ffbe1c2_h.jpg",
             "type": "folder",
-            "excerpt": "Show an embedded Google Map using this shortcode. This is where I've been in 2025. Well, since the Spring anyway\n\n[GoogleMap src=\"https://www.google.com/maps/d/u/0/edit?mid=18Hp21Ko6VrmMNQsvF6zELzwJbf",
+            "excerpt": "This is where I've been in 2025. Well, since the Spring anyway\n\n[GoogleMap src=\"https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=2E312F\"]",
             "children": []
           }
         ]

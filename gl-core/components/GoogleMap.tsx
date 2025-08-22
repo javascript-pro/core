@@ -12,14 +12,15 @@ export default function GoogleMap({ src = null }: TGoogleMap) {
 
   return (
     <Box>
-      <iframe 
+      <iframe
         src={src}
         style={{
           border: 0,
           borderRadius: '6px',
         }}
         width="100%"
-        height="480" />
+        height="480"
+      />
     </Box>
   );
 }
