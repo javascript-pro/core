@@ -146,10 +146,12 @@ import VisitorIcon from '@mui/icons-material/PermIdentity';
 import BikeIcon from '@mui/icons-material/TwoWheeler';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import LogsIcon from '@mui/icons-material/List';
+import RocketIcon from '@mui/icons-material/Rocket';
 
 export type TIcon = {
   icon:
     | 'more'
+    | 'rocket'
     | 'logs'
     | 'dashboard'
     | 'bike'
@@ -344,6 +346,10 @@ export default function Icon({ icon, color }: TIcon) {
 
     case 'caseclosed':
       iconFragment = <CaseClosedIcon color={color} />;
+      break;
+
+    case 'rocket':
+      iconFragment = <RocketIcon color={color} />;
       break;
 
     case 'cases':

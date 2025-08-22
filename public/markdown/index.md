@@ -8,11 +8,14 @@ tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Pr
 github: https://github.com/javascript-pro/core
 api: /api/gl-api/flickr/latest/latest
 image: https://live.staticflickr.com/65535/54357493661_7f7ffbe1c2_h.jpg
+noImage: true
 ---
+
+> Cultural reference; [Generation X](/balance/writers/generation-x) Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland
 
 ## [Travel](/life/travel)
 
-> Where I've visited in 2025. Well, since the Spring anyway
+Where I've been in the little Zeppelin since Spring 2025
 
 [GoogleMap src="https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=2E312F"]
 
@@ -24,8 +27,6 @@ How we help you take your AI product ideas from concept, through prototype to pr
 
 #### AKI - Ring‑fenced AI
 
-Abgeschottet KI delivers a secure, ring‑fenced AI to streamline legal compliance workflows, process documents faster, and protect sensitive data. 
-
+Abgeschottet KI delivers a secure, ring‑fenced AI to streamline legal compliance workflows, process documents faster, and protect sensitive data.
 
 > "Ring‑fencing our own AI in‑house allowed us to streamline our workflow without compromising our GDPR obligations or data security." **Rahul Sharma, CEO**
-

@@ -1,11 +1,11 @@
 [
   {
     "title": "Goldlabel",
-    "description": "AI software which works",
+    "description": "Work, Life, Balance",
     "slug": "/",
     "order": 1,
     "icon": "ki",
-    "image": "/jpg/balance.jpg",
+    "image": "https://live.staticflickr.com/65535/54357493661_7f7ffbe1c2_h.jpg",
     "type": "folder",
     "tags": [
       "JavaScript",
@@ -35,7 +35,7 @@
       "NextJS",
       "Headless CMS"
     ],
-    "excerpt": "How we help you take your AI product ideas from concept, through prototype to production\n\n AKI  Ring‑fenced AI\n\nAbgeschottet KI delivers a secure, ring‑fenced AI to streamline legal compliance workflo",
+    "excerpt": "Cultural reference;  Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n \n\nWhere I've been in the little Zeppelin since Spring 2025\n\n[GoogleMap src=\"https://ww",
     "children": [
       {
         "title": "Work",
@@ -690,7 +690,7 @@
         "icon": "balance",
         "image": "https://live.staticflickr.com/65535/54691336480_c273fe647c_o.jpg",
         "type": "folder",
-        "excerpt": "Writing\n   \n   \n Writers\n   \n   Are you ?\n     Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland",
+        "excerpt": "",
         "children": [
           {
             "title": "Writing",
@@ -700,7 +700,7 @@
             "icon": "balance",
             "image": "https://live.staticflickr.com/65535/54353995935_a904d504aa_b.jpg",
             "type": "folder",
-            "excerpt": "Wei Zang's Food\n\n Wei Zang, author of Not here to fuck spiders\n\n Weekend Portfolio\n\n Written for semiprofessional coders ready to go pr0\n\nA series of standalone apps you can build in a weekend. Each p",
+            "excerpt": "Wei Zang, author of Not here to fuck spiders",
             "children": [
               {
                 "title": "Destructo The Wonderdog",
@@ -728,17 +728,6 @@
                 "image": "/jpg/puppy-fing.jpg",
                 "type": "file",
                 "excerpt": "I put an Attenborough series on for the dogs. Later I notice there’s a polar bear and a baby seal on the TV. I look at the doggy. He's got genuine concern in his eyes which also say\n\n\"'at puppy fing’s"
-              },
-              {
-                "title": "Generation X",
-                "description": "by Douglas Coupland",
-                "slug": "/balance/writing/generation-x",
-                "order": 100,
-                "icon": "doc",
-                "image": "/jpg/cassetes.jpg",
-                "type": "folder",
-                "excerpt": "The term Generation X acquired a modern application after the release of Generation X: Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Glossary\n\nMcJob A lo",
-                "children": []
               },
               {
                 "title": "Wei Zang’s Food",
@@ -790,10 +779,10 @@
                 "title": "Science Fiction",
                 "slug": "/balance/writing/sci-fi",
                 "order": 120,
-                "icon": "folder",
+                "icon": "rocket",
                 "image": "/jpg/einstein.jpg",
                 "type": "file",
-                "excerpt": "Because we can carefully observe constellations when the Sun is not blocking their path, we know what position the stars should be in when the Sun is keeping us from seeing them. However, according to"
+                "excerpt": "That's soience mayte\n\nBecause we can carefully observe constellations when the Sun is not blocking their path, we know what position the stars should be in when the Sun is keeping us from seeing them."
               }
             ]
           },
@@ -808,11 +797,20 @@
             "excerpt": "Curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction. From visionary science fiction to satirical explorations of culture and the human exper",
             "children": [
               {
+                "title": "Generation X",
+                "slug": "/balance/writers/generation-x",
+                "order": 100,
+                "icon": "doc",
+                "image": "/jpg/cassetes.jpg",
+                "type": "file",
+                "excerpt": "The term Generation X acquired a modern application after the release of Generation X: Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Glossary\n\nMcJob A lo"
+              },
+              {
                 "title": "Douglas Coupland",
                 "slug": "/balance/writers/douglas-coupland",
                 "order": 1000,
                 "icon": "doc",
-                "image": "https://live.staticflickr.com/65535/54725152223_f961935776_b.jpg",
+                "image": "https://live.staticflickr.com/65535/54736833001_ef9c5f4b57_c.jpg",
                 "type": "file",
                 "excerpt": "Douglas Coupland is a Canadian novelist and artist, known for capturing contemporary culture, technology, and the malaise of modern life with wit and satirical insight. His writing often blends pop cu"
               },
@@ -821,7 +819,7 @@
                 "slug": "/balance/writers/tom-robbins",
                 "order": 2000,
                 "icon": "doc",
-                "image": "https://live.staticflickr.com/65535/54725152223_f961935776_b.jpg",
+                "image": "https://live.staticflickr.com/65535/54735999657_5ec054b3e2_b.jpg",
                 "type": "file",
                 "excerpt": "Tom Robbins is an American novelist known for playful, whimsical prose, irreverent humor, and philosophical musings. His works blend surrealism, countercultural themes, and sharp social commentary, wi"
               },
