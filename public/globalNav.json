@@ -677,7 +677,7 @@
             "icon": "life",
             "image": "https://live.staticflickr.com/65535/54357493661_7f7ffbe1c2_h.jpg",
             "type": "folder",
-            "excerpt": "This is where I've been in 2025. Well, since the Spring anyway\n\n[GoogleMap src=\"https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=2E312F\"]",
+            "excerpt": "[GoogleMap src=\"https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=2E312F\"]\n\nThis is where I've been in 2025. Well, since the Spring anyway",
             "children": []
           }
         ]
@@ -805,37 +805,43 @@
             "icon": "balance",
             "image": "/jpg/cassetes.jpg",
             "type": "folder",
-            "excerpt": "",
+            "excerpt": "Curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction. From visionary science fiction to satirical explorations of culture and the human exper",
             "children": [
               {
-                "title": "Einstein",
-                "description": "Albert. The Godfather of modern physics",
-                "slug": "/balance/writers/einstein",
-                "order": 1,
+                "title": "Douglas Coupland",
+                "slug": "/balance/writers/douglas-coupland",
+                "order": 1000,
                 "icon": "doc",
-                "image": "/jpg/einstein.jpg",
-                "type": "folder",
-                "excerpt": "Let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series.\n\nI mentioned in the last lecture this idea of Gedanken experiments, th",
-                "children": [
-                  {
-                    "title": "General Relativity",
-                    "slug": "/balance/writers/einstein/relativity",
-                    "order": 30,
-                    "icon": "doc",
-                    "image": "/jpg/einstein.jpg",
-                    "type": "file",
-                    "excerpt": "Really just the name for Einstein's study of gravitation. And here we're going to introduce my alltime favorite analogy for general relativity, the bowling ball on the trampoline. Let's imagine that f"
-                  }
-                ]
+                "image": "https://live.staticflickr.com/65535/54725152223_f961935776_b.jpg",
+                "type": "file",
+                "excerpt": "Douglas Coupland is a Canadian novelist and artist, known for capturing contemporary culture, technology, and the malaise of modern life with wit and satirical insight. His writing often blends pop cu"
+              },
+              {
+                "title": "Tom Robbins",
+                "slug": "/balance/writers/tom-robbins",
+                "order": 2000,
+                "icon": "doc",
+                "image": "https://live.staticflickr.com/65535/54725152223_f961935776_b.jpg",
+                "type": "file",
+                "excerpt": "Tom Robbins is an American novelist known for playful, whimsical prose, irreverent humor, and philosophical musings. His works blend surrealism, countercultural themes, and sharp social commentary, wi"
               },
               {
                 "title": "Charles Darwin",
                 "slug": "/balance/writers/charles-darwin",
-                "order": 2000,
+                "order": 3000,
                 "icon": "doc",
                 "image": "/jpg/darwin.jpg",
                 "type": "file",
                 "excerpt": "Judging from the past, we may safely infer that no one living species will transmit its unaltered likeness to a distant futurity. And of the species now living very few will transmit progeny of any ki"
+              },
+              {
+                "title": "Einstein",
+                "slug": "/balance/writers/einstein",
+                "order": 9999,
+                "icon": "doc",
+                "image": "/jpg/einstein.jpg",
+                "type": "file",
+                "excerpt": "Let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series.\n\nI mentioned in the last lecture this idea of Gedanken experiments, th"
               }
             ]
           }
