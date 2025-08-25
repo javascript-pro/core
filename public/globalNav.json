@@ -35,7 +35,7 @@
       "NextJS",
       "Headless CMS"
     ],
-    "excerpt": "Where I've been in the little Zeppelin since Spring 2025\n\n[GoogleMap src=\"https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=001321\"]\n\n Cultural reference;  Tales for an",
+    "excerpt": "Neuromancer's portrayal of AIs striving for autonomy foreshadowed realworld debates. Neuromancer didn’t predict the future—it just defined how to imagine it\n\n \n\nWhere I've been in the little Zeppelin ",
     "children": [
       {
         "title": "Work",
@@ -765,7 +765,16 @@
                     "excerpt": "| \n\nMoist, flavorful, and easy to make. Perfect for using overripe bananas, this classic loaf is a crowdpleaser for breakfast, snacks, or dessert.\n\n 125g Butter\n 175g Brown sugar\n 1 tsp Vanilla extrac"
                   },
                   {
-                    "title": "Delia Smith's Lemon Meringue Pie",
+                    "title": "Beef Wellie",
+                    "slug": "/balance/writing/wei-zangs-food/beef-wellie",
+                    "order": 55,
+                    "icon": "food",
+                    "image": "https://live.staticflickr.com/65535/54742614047_e44e8af81e_b.jpg",
+                    "type": "file",
+                    "excerpt": ""
+                  },
+                  {
+                    "title": "Lemon Meringue Pie",
                     "slug": "/balance/writing/wei-zangs-food/lemon-meringue-pie",
                     "order": 76,
                     "icon": "food",
@@ -814,7 +823,7 @@
                   "Audiobook",
                   "Novels"
                 ],
-                "excerpt": "AmericanCanadian writer who has been called the father of the cyberpunk subgenre of science fiction, having coined the term cyberspace in 1982 and popularized it in his first novel, Neuromancer (1984)"
+                "excerpt": "Neuromancer (1984)\n\n Neuromancer's portrayal of AIs striving for autonomy foreshadowed realworld debates. Neuromancer didn’t predict the future—it just defined how to imagine it\n\n Why Neuromancer is S"
               },
               {
                 "title": "Generation X",

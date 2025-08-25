@@ -8,8 +8,9 @@ tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Pr
 github: https://github.com/javascript-pro/core
 api: /api/gl-api/flickr/latest/latest
 image: https://live.staticflickr.com/65535/54357493661_7f7ffbe1c2_h.jpg
-noImage: true
+noImage: false
 ---
+
 ## [Neuromancer (1984)](/balance/writers/william-gibson)
 
 > Neuromancer's portrayal of AIs striving for autonomy foreshadowed real-world debates. Neuromancer didn’t predict the future—it just defined how to imagine it
