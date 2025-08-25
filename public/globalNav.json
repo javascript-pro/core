@@ -35,7 +35,7 @@
       "NextJS",
       "Headless CMS"
     ],
-    "excerpt": "Cultural reference;  Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n \n\nWhere I've been in the little Zeppelin since Spring 2025\n\n[GoogleMap src=\"https://ww",
+    "excerpt": "Where I've been in the little Zeppelin since Spring 2025\n\n[GoogleMap src=\"https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=001321\"]\n\n Cultural reference;  Tales for an",
     "children": [
       {
         "title": "Work",
@@ -677,7 +677,7 @@
             "icon": "life",
             "image": "https://live.staticflickr.com/65535/54652210336_8d28a5af11_b.jpg",
             "type": "folder",
-            "excerpt": "This is Zoto. My van. Here's a map of where I've been in 2025. Well, since the Spring anyway\n\n[GoogleMap src=\"https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=2E312F\"]",
+            "excerpt": "This is Zoto. My van. Here's a map of where I've been in 2025. Well, since the Spring anyway\n\n[GoogleMap src=\"https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=001321\"]",
             "children": []
           }
         ]
@@ -796,6 +796,26 @@
             "type": "folder",
             "excerpt": "Curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction. From visionary science fiction to satirical explorations of culture and the human exper",
             "children": [
+              {
+                "title": "William Gibson",
+                "slug": "/balance/writers/william-gibson",
+                "order": 50,
+                "icon": "doc",
+                "image": "https://live.staticflickr.com/65535/54743292173_aed0039452_b.jpg",
+                "type": "file",
+                "tags": [
+                  "Science Fiction",
+                  "Fiction",
+                  "Cyberpunk",
+                  "Classics",
+                  "Dystopia",
+                  "Science Fiction Fantasy",
+                  "Fantasy",
+                  "Audiobook",
+                  "Novels"
+                ],
+                "excerpt": "AmericanCanadian writer who has been called the father of the cyberpunk subgenre of science fiction, having coined the term cyberspace in 1982 and popularized it in his first novel, Neuromancer (1984)"
+              },
               {
                 "title": "Generation X",
                 "slug": "/balance/writers/generation-x",
