@@ -8,6 +8,7 @@ image: https://live.staticflickr.com/65535/54742614047_e44e8af81e_b.jpg
 ---
 
 ## Ingredients
+
 - 2 x 400g beef fillets
 - Olive oil, for frying
 - 500g mixture of wild mushrooms, cleaned

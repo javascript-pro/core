@@ -7,13 +7,17 @@ icon: ki
 tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 github: https://github.com/javascript-pro/core
 api: /api/gl-api/flickr/latest/latest
-image: https://live.staticflickr.com/65535/54357493661_7f7ffbe1c2_h.jpg
+image: https://live.staticflickr.com/65535/54742614047_e44e8af81e_b.jpg
 noImage: false
 ---
 
+## [Beef Wellington](/balance/writing/wei-zangs-food/beef-wellie)
+
+> Death cap mushrooms optional if you don't like your inlaws
+
 ## [Neuromancer (1984)](/balance/writers/william-gibson)
 
-> Neuromancer's portrayal of AIs striving for autonomy foreshadowed real-world debates. Neuromancer didn’t predict the future—it just defined how to imagine it
+Neuromancer's portrayal of AIs striving for autonomy foreshadowed real-world debates. Neuromancer didn’t predict the future—it just defined how to imagine it
 
 ## [Travel](/life/travel)
 
