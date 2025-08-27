@@ -3,7 +3,7 @@ order: 10
 title: About Us
 description: UK Limited Company (5460545)
 slug: /work/company
-icon: work
+icon: company
 image: https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg
 ---
 

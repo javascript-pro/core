@@ -3,7 +3,7 @@ order: 150
 title: Blockchain
 description: Building a Bitcoin-Powered Gambling Platform
 slug: /work/expertise/blockchain
-icon: info
+icon: expertise
 image: /png/3rdParty/bitcoin.png
 git: https://github.com/javascript-pro/bitcoin-hash
 tags: techstack, crypto, blockchain, web3, casino, igaming, experience, bitcoin, malta

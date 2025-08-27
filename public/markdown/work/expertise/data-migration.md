@@ -3,7 +3,7 @@ order: 20
 title: Data Migration
 description: Using Next, Python and SQL
 slug: /work/expertise/data-migration
-icon: info
+icon: expertise
 image: https://live.staticflickr.com/65535/54688814017_148f57032c_o.jpg
 tags: expertise, data migration, SQL, work, python, next
 github: https://github.com/javascript-pro/data-migration

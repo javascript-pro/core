@@ -3,7 +3,7 @@ order: 250
 title: Working remotely
 description: Productivity, communication, and collaboration
 slug: /work/company/remote-working
-icon: work
+icon: company
 image: /png/og.png
 tags: remote, hybrid
 ---

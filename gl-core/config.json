@@ -1,13 +1,13 @@
 {
   "persist": true,
   "app": "Goldlabel",
-  "description": "AI software which works",
+  "description": "JavaScript whatever the weather",
   "url": "https://goldlabel.pro",
   "repo": "https://github.com/javascript-pro/core",
   "images": {
     "favicon": "/png/favicon.png"
   },
-  "imagesArr": ["/png/apple-touch-icon.png", "/png/og.png"],
+  "imagesArr": ["/png/favicon.png", "/png/og.png"],
   "themes": {
     "light": {
       "mode": "light",

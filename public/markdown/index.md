@@ -3,23 +3,27 @@ order: 1
 slug: /
 title: Goldlabel
 description: Work, Life, Balance
-icon: ki
+icon: home
 tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 github: https://github.com/javascript-pro/core
 api: /api/gl-api/flickr/latest/latest
-image: https://live.staticflickr.com/65535/54742614047_e44e8af81e_b.jpg
+image: https://live.staticflickr.com/65535/54747599061_445f0323cd_b.jpg
 noImage: false
 ---
 
-## [Beef Wellington](/balance/writing/wei-zangs-food/beef-wellie)
+#### [3D on the web](/work/expertise/web3d)
 
-> Death cap mushrooms optional if you don't like your inlaws
+> Building for the web for more than twenty years
 
-## [Neuromancer (1984)](/balance/writers/william-gibson)
+#### [Beef Wellington](/balance/writing/wei-zangs-food/beef-wellie)
+
+Death cap mushrooms optional if you don't like your inlaws
+
+#### [Neuromancer (1984)](/balance/writers/william-gibson)
 
 Neuromancer's portrayal of AIs striving for autonomy foreshadowed real-world debates. Neuromancer didn’t predict the future—it just defined how to imagine it
 
-## [Travel](/life/travel)
+#### [Travel](/life/travel)
 
 Where I've been in the little Zeppelin since Spring 2025
 
@@ -27,7 +31,7 @@ Where I've been in the little Zeppelin since Spring 2025
 
 > Cultural reference; [Generation X](/balance/writers/generation-x) Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland
 
-## News
+#### News
 
 #### [AI Agent User Interfaces](/work/expertise/ai/agents)
 

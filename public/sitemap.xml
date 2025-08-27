@@ -5,6 +5,9 @@
     <loc>https://goldlabel.pro/balance</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/balance/video</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/balance/writers/charles-darwin</loc>
   </url>
   <url>
@@ -80,45 +83,6 @@
     <loc>https://goldlabel.pro/life/travel</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/abgeschottet-ki/confidentiality-obligations</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/abgeschottet-ki/gdpr-law-firms</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/abgeschottet-ki/hardware</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/abgeschottet-ki</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/abgeschottet-ki/learning</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/abgeschottet-ki/llms-legal-research</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/abgeschottet-ki/organisational-measures</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/abgeschottet-ki/professional-secrecy</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/abgeschottet-ki/prompts</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/abgeschottet-ki/ringfenced-llm-confidentiality</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/abgeschottet-ki/ringfenced-llm</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/abgeschottet-ki/risks-public-llms</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/abgeschottet-ki/why</loc>
-  </url>
-  <url>
     <loc>https://goldlabel.pro/work/company</loc>
   </url>
   <url>
@@ -173,6 +137,45 @@
     <loc>https://goldlabel.pro/work/cv/saarbrucken</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/work/expertise/ai/abgeschottet-ki/confidentiality-obligations</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/ai/abgeschottet-ki/gdpr-law-firms</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/ai/abgeschottet-ki/hardware</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/ai/abgeschottet-ki</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/ai/abgeschottet-ki/learning</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/ai/abgeschottet-ki/llms-legal-research</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/ai/abgeschottet-ki/organisational-measures</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/ai/abgeschottet-ki/professional-secrecy</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/ai/abgeschottet-ki/prompts</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/ai/abgeschottet-ki/ringfenced-llm-confidentiality</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/ai/abgeschottet-ki/ringfenced-llm</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/ai/abgeschottet-ki/risks-public-llms</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/ai/abgeschottet-ki/why</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/work/expertise/ai/agents</loc>
   </url>
   <url>
@@ -192,6 +195,15 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work/expertise/next-js</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/web3d</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/web3d/next-level</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/web3d/three-js</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work</loc>
