@@ -264,6 +264,84 @@
                 ]
               },
               {
+                "title": "Web 3D",
+                "description": "3D on the web",
+                "slug": "/work/expertise/web3d",
+                "order": 1,
+                "icon": "web3d",
+                "image": "https://live.staticflickr.com/65535/54747599061_445f0323cd_b.jpg",
+                "type": "folder",
+                "tags": [
+                  "expertise",
+                  "web",
+                  "3D",
+                  "WebGL",
+                  "Three.js",
+                  "Babylon.js",
+                  "WebGPU",
+                  "Flash",
+                  "JavaScript",
+                  "web development",
+                  "history",
+                  "VR",
+                  "AR",
+                  "performance"
+                ],
+                "excerpt": "Building for the web for more than twenty years\n\nFirst with Flash, then with JavaScript — and through all that time, 3D in the browser never really worked. Bandwidth and processors simply couldn’t kee",
+                "children": [
+                  {
+                    "title": "Three.js",
+                    "slug": "/work/expertise/web3d/three-js",
+                    "order": 22,
+                    "icon": "web3d",
+                    "image": "https://live.staticflickr.com/65535/54747599061_445f0323cd_b.jpg",
+                    "type": "file",
+                    "tags": [
+                      "expertise",
+                      "web",
+                      "3D",
+                      "WebGL",
+                      "Three.js",
+                      "Babylon.js",
+                      "WebGPU",
+                      "Flash",
+                      "JavaScript",
+                      "web development",
+                      "history",
+                      "VR",
+                      "AR",
+                      "performance"
+                    ],
+                    "excerpt": "Three.js rewards experience. With two decades of JS and deep React/Next.js knowledge, you can transform a blank canvas into a highly optimized, interactive, and visually rich web experience—without co"
+                  },
+                  {
+                    "title": "Next-Level Web 3D",
+                    "slug": "/work/expertise/web3d/next-level",
+                    "order": 25,
+                    "icon": "web3d",
+                    "image": "https://live.staticflickr.com/65535/54747599061_445f0323cd_b.jpg",
+                    "type": "file",
+                    "tags": [
+                      "expertise",
+                      "web",
+                      "3D",
+                      "WebGL",
+                      "Three.js",
+                      "Babylon.js",
+                      "WebGPU",
+                      "Flash",
+                      "JavaScript",
+                      "web development",
+                      "history",
+                      "VR",
+                      "AR",
+                      "performance"
+                    ],
+                    "excerpt": "For control, longevity, and custom UX, pick Three.js. Assemble your own stack (R3F, Zustand/Jotai, glTF toolchain, physics/postprocessing). The early investment pays off in flexibility and scale.\n\nWeb"
+                  }
+                ]
+              },
+              {
                 "title": "Git",
                 "slug": "/work/expertise/git",
                 "order": 2,
@@ -310,32 +388,6 @@
                   "next"
                 ],
                 "excerpt": "Data Migration via RESTful API using Next, Python and SQL\n\n\n\n This service exposes a RESTful interface for cleaning, transforming, and migrating data from a raw source table to a cleaned, structured t"
-              },
-              {
-                "title": "Web 3D",
-                "slug": "/work/expertise/web3d",
-                "order": 20,
-                "icon": "web3d",
-                "image": "https://live.staticflickr.com/65535/54747599061_445f0323cd_b.jpg",
-                "type": "file",
-                "tags": [
-                  "expertise",
-                  "web",
-                  "3D",
-                  "WebGL",
-                  "Three.js",
-                  "Babylon.js",
-                  "WebGPU",
-                  "Flash",
-                  "JavaScript",
-                  "timeline",
-                  "web development",
-                  "history",
-                  "VR",
-                  "AR",
-                  "performance"
-                ],
-                "excerpt": "Building for the web for more than twenty years\n\nFirst with Flash, then with JavaScript — and through all that time, 3D in the browser never really worked. Bandwidth and processors simply couldn’t kee"
               },
               {
                 "title": "Blockchain",
@@ -820,6 +872,17 @@
                 "excerpt": "That's soience mayte\n\nBecause we can carefully observe constellations when the Sun is not blocking their path, we know what position the stars should be in when the Sun is keeping us from seeing them."
               }
             ]
+          },
+          {
+            "title": "Video",
+            "description": "It's hard to collate stuff into meaningful writing, but we've doing our best",
+            "slug": "/balance/video",
+            "order": 9,
+            "icon": "balance",
+            "image": "https://live.staticflickr.com/65535/54353995935_a904d504aa_b.jpg",
+            "type": "folder",
+            "excerpt": "Wei Zang, author of Not here to fuck spiders\n\nyoutube: https://www.youtube.com/watch?v=Qe2ZLYzQToQ",
+            "children": []
           },
           {
             "title": "Writers",

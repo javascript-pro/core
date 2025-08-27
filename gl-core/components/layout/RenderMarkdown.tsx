@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import { Box, Link as MuiLink, Typography, useTheme } from '@mui/material';
 import { MightyButton } from '../../../gl-core';
 import { GoogleMap, FlickrAlbum } from '../../../gl-core';
+import { Web3D } from '../../cartridges/Web3D';
 
 export type TRenderMarkdown = {
   children: React.ReactNode;

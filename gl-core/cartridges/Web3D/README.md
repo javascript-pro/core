@@ -1,1 +1,3 @@
-## web3D
+## Web3D
+
+Not Free. Not Open Source

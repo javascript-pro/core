@@ -5,6 +5,9 @@
     <loc>https://goldlabel.pro/balance</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/balance/video</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/balance/writers/charles-darwin</loc>
   </url>
   <url>
@@ -195,6 +198,12 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work/expertise/web3d</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/web3d/next-level</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/web3d/three-js</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work</loc>
