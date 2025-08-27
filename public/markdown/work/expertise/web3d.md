@@ -5,11 +5,11 @@ description: 3D on the web
 slug: /work/expertise/web3d
 icon: web3d
 image: https://live.staticflickr.com/65535/54747599061_445f0323cd_b.jpg
-tags: expertise, web, 3D, WebGL, Three.js, Babylon.js, WebGPU, Flash, JavaScript, timeline, web development, history, VR, AR, performance
+tags: expertise, web, 3D, WebGL, Three.js, Babylon.js, WebGPU, Flash, JavaScript, web development, history, VR, AR, performance
 youtube: https://www.youtube.com/watch?v=Qe2ZLYzQToQ
 ---
 
-[Flash mode="web3d" title=""]
+[Web3D mode="web3d" title="3D on the web"]
 
 > Building for the web for more than twenty years
 
