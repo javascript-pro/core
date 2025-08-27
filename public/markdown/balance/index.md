@@ -13,6 +13,9 @@ noImage: true
   - [Destructo the Wonderdog](/balance/writing/destructo-the-wonderdog)
   - [Wei Zang’s Food](/balance/writing/wei-zangs-food)
 
+- [Video](/balance/video/)
+  - [Its Not Who You Know](/balance/video)
+
 - [Writers](/balance/writers/)
   - [Tom Robbins](/balance/writers/tom-robbins)
   - [Einstein](/balance/writers/einstein)

@@ -17,6 +17,7 @@ import { FieldUpload } from './forms';
 import { Header, Footer, RenderMarkdown } from './layout';
 import GoogleMap from './shortcodes/GoogleMap';
 import FlickrAlbum from './shortcodes/FlickrAlbum';
+import YouTube from './shortcodes/YouTube';
 
 export { IncludeAll, Advert, Feedback, LoadingOverlay };
 export { Header, Footer, RenderMarkdown };
@@ -36,4 +37,5 @@ export {
   ThumbMenu,
   ShareMenu,
   FieldUpload,
+  YouTube,
 };

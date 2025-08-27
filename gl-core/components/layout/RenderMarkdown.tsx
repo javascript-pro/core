@@ -4,8 +4,7 @@ import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Box, Link as MuiLink, Typography, useTheme } from '@mui/material';
 import { MightyButton } from '../../../gl-core';
-import { GoogleMap, FlickrAlbum } from '../../../gl-core';
-import { Web3D } from '../../cartridges/Web3D';
+import { GoogleMap, FlickrAlbum, YouTube } from '../../../gl-core';
 
 export type TRenderMarkdown = {
   children: React.ReactNode;
@@ -72,6 +71,13 @@ export default function RenderMarkdown({
     const flickrMatch = text.match(flickrRegex);
     if (flickrMatch) {
       return <FlickrAlbum id={flickrMatch[1]} />;
+    }
+
+    // YouTube
+    const youtubeRegex = /\[YouTube\s+src="(.+?)"\]/;
+    const youtubeMatch = text.match(youtubeRegex);
+    if (youtubeMatch) {
+      return <YouTube src={youtubeMatch[1]} />;
     }
 
     return text;

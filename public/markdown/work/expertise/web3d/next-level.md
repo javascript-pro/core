@@ -1,6 +1,6 @@
 ---
 order: 25
-title: Next-Level Web 3D
+title: Next Level
 description: What 3D looks like on the Web in 2025
 slug: /work/expertise/web3d/next-level
 icon: web3d

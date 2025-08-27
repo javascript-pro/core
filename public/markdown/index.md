@@ -11,19 +11,19 @@ image: https://live.staticflickr.com/65535/54747599061_445f0323cd_b.jpg
 noImage: false
 ---
 
-## [3D on the web](/work/expertise/web3d)
+#### [3D on the web](/work/expertise/web3d)
 
 > Building for the web for more than twenty years
 
-## [Beef Wellington](/balance/writing/wei-zangs-food/beef-wellie)
+#### [Beef Wellington](/balance/writing/wei-zangs-food/beef-wellie)
 
 Death cap mushrooms optional if you don't like your inlaws
 
-## [Neuromancer (1984)](/balance/writers/william-gibson)
+#### [Neuromancer (1984)](/balance/writers/william-gibson)
 
 Neuromancer's portrayal of AIs striving for autonomy foreshadowed real-world debates. Neuromancer didn’t predict the future—it just defined how to imagine it
 
-## [Travel](/life/travel)
+#### [Travel](/life/travel)
 
 Where I've been in the little Zeppelin since Spring 2025
 
@@ -31,7 +31,7 @@ Where I've been in the little Zeppelin since Spring 2025
 
 > Cultural reference; [Generation X](/balance/writers/generation-x) Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland
 
-## News
+#### News
 
 #### [AI Agent User Interfaces](/work/expertise/ai/agents)
 

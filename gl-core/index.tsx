@@ -22,6 +22,7 @@ import {
   Children,
   GoogleMap,
   FlickrAlbum,
+  YouTube,
 } from './components';
 import {
   useLoading,
@@ -70,6 +71,7 @@ export {
   Advert,
   GoogleMap,
   FlickrAlbum,
+  YouTube,
   Header,
   Footer,
   RenderMarkdown,
