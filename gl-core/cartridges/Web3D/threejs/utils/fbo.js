@@ -60,7 +60,7 @@ export default class FBO {
         width,
         height,
         RGBAFormat,
-        FloatType
+        FloatType,
       );
     this.texture.needsUpdate = true;
 
@@ -136,8 +136,8 @@ export default class FBO {
           depthTest: false,
           type: HalfFloatType,
         },
-        this.options.rtOptions
-      )
+        this.options.rtOptions,
+      ),
     );
   }
 

@@ -6,7 +6,6 @@ let activeComponents = new Map();
 
 export function updateComponentRegistry(componentName, newModule) {
   activeComponents.forEach((instance, name) => {
-
     if (name === componentName) {
       instance.dispose();
       // Add to the list instead of creating a new instance immediately
@@ -17,7 +16,6 @@ export function updateComponentRegistry(componentName, newModule) {
       }
     }
   });
-
 }
 
 const defaultRaf = {
@@ -25,15 +23,14 @@ const defaultRaf = {
   fps: Infinity,
 };
 const component = (
-  superclass = class T { },
+  superclass = class T {},
   settings = {
     raf: defaultRaf,
-  }
+  },
 ) =>
-  class extends (superclass || class T { }) {
+  class extends (superclass || class T {}) {
     constructor(...args) {
       super(...args);
-
 
       this._args = args;
       this.raf = settings.raf || defaultRaf;
@@ -43,7 +40,6 @@ const component = (
 
       // hmr
       activeComponents.set(this.constructor.name, this);
-
     }
 
     destroy() {
@@ -54,10 +50,8 @@ const component = (
       this.destroy?.();
 
       scene.remove(this);
-      disposeAll(this)
-
+      disposeAll(this);
     }
   };
-
 
 export { component };

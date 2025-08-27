@@ -31,7 +31,7 @@ class Viewport {
         width: this.width,
         height: this.height,
         ratio: this.ratio,
-      }
+      },
     );
   }
 }

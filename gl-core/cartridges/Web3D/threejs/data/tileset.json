@@ -1,679 +1,793 @@
-[{
+[
+  {
     "name": "TQ2570",
     "X Absolute": 25.0,
     "Y Absolute": 70.0,
     "X Relative": -4.0,
     "Y Relative": -5.0
-}, {
+  },
+  {
     "name": "TQ2571",
     "X Absolute": 25.0,
     "Y Absolute": 71.0,
     "X Relative": -4.0,
     "Y Relative": -4.0
-}, {
+  },
+  {
     "name": "TQ2572",
     "X Absolute": 25.0,
     "Y Absolute": 72.0,
     "X Relative": -4.0,
     "Y Relative": -3.0
-}, {
+  },
+  {
     "name": "TQ2573",
     "X Absolute": 25.0,
     "Y Absolute": 73.0,
     "X Relative": -4.0,
     "Y Relative": -2.0
-}, {
+  },
+  {
     "name": "TQ2574",
     "X Absolute": 25.0,
     "Y Absolute": 74.0,
     "X Relative": -4.0,
     "Y Relative": -1.0
-}, {
+  },
+  {
     "name": "TQ2575",
     "X Absolute": 25.0,
     "Y Absolute": 75.0,
     "X Relative": -4.0,
     "Y Relative": 0.0
-}, {
+  },
+  {
     "name": "TQ2576",
     "X Absolute": 25.0,
     "Y Absolute": 76.0,
     "X Relative": -4.0,
     "Y Relative": 1.0
-}, {
+  },
+  {
     "name": "TQ2577",
     "X Absolute": 25.0,
     "Y Absolute": 77.0,
     "X Relative": -4.0,
     "Y Relative": 2.0
-}, {
+  },
+  {
     "name": "TQ2578",
     "X Absolute": 25.0,
     "Y Absolute": 78.0,
     "X Relative": -4.0,
     "Y Relative": 3.0
-}, {
+  },
+  {
     "name": "TQ2579",
     "X Absolute": 25.0,
     "Y Absolute": 79.0,
     "X Relative": -4.0,
     "Y Relative": 4.0
-}, {
+  },
+  {
     "name": "TQ2580",
     "X Absolute": 25.0,
     "Y Absolute": 80.0,
     "X Relative": -4.0,
     "Y Relative": 5.0
-}, {
+  },
+  {
     "name": "TQ2670",
     "X Absolute": 26.0,
     "Y Absolute": 70.0,
     "X Relative": -3.0,
     "Y Relative": -5.0
-}, {
+  },
+  {
     "name": "TQ2671",
     "X Absolute": 26.0,
     "Y Absolute": 71.0,
     "X Relative": -3.0,
     "Y Relative": -4.0
-}, {
+  },
+  {
     "name": "TQ2672",
     "X Absolute": 26.0,
     "Y Absolute": 72.0,
     "X Relative": -3.0,
     "Y Relative": -3.0
-}, {
+  },
+  {
     "name": "TQ2673",
     "X Absolute": 26.0,
     "Y Absolute": 73.0,
     "X Relative": -3.0,
     "Y Relative": -2.0
-}, {
+  },
+  {
     "name": "TQ2674",
     "X Absolute": 26.0,
     "Y Absolute": 74.0,
     "X Relative": -3.0,
     "Y Relative": -1.0
-}, {
+  },
+  {
     "name": "TQ2675",
     "X Absolute": 26.0,
     "Y Absolute": 75.0,
     "X Relative": -3.0,
     "Y Relative": 0.0
-}, {
+  },
+  {
     "name": "TQ2676",
     "X Absolute": 26.0,
     "Y Absolute": 76.0,
     "X Relative": -3.0,
     "Y Relative": 1.0
-}, {
+  },
+  {
     "name": "TQ2677",
     "X Absolute": 26.0,
     "Y Absolute": 77.0,
     "X Relative": -3.0,
     "Y Relative": 2.0
-}, {
+  },
+  {
     "name": "TQ2678",
     "X Absolute": 26.0,
     "Y Absolute": 78.0,
     "X Relative": -3.0,
     "Y Relative": 3.0
-}, {
+  },
+  {
     "name": "TQ2679",
     "X Absolute": 26.0,
     "Y Absolute": 79.0,
     "X Relative": -3.0,
     "Y Relative": 4.0
-}, {
+  },
+  {
     "name": "TQ2680",
     "X Absolute": 26.0,
     "Y Absolute": 80.0,
     "X Relative": -3.0,
     "Y Relative": 5.0
-}, {
+  },
+  {
     "name": "TQ2770",
     "X Absolute": 27.0,
     "Y Absolute": 70.0,
     "X Relative": -2.0,
     "Y Relative": -5.0
-}, {
+  },
+  {
     "name": "TQ2771",
     "X Absolute": 27.0,
     "Y Absolute": 71.0,
     "X Relative": -2.0,
     "Y Relative": -4.0
-}, {
+  },
+  {
     "name": "TQ2772",
     "X Absolute": 27.0,
     "Y Absolute": 72.0,
     "X Relative": -2.0,
     "Y Relative": -3.0
-}, {
+  },
+  {
     "name": "TQ2773",
     "X Absolute": 27.0,
     "Y Absolute": 73.0,
     "X Relative": -2.0,
     "Y Relative": -2.0
-}, {
+  },
+  {
     "name": "TQ2774",
     "X Absolute": 27.0,
     "Y Absolute": 74.0,
     "X Relative": -2.0,
     "Y Relative": -1.0
-}, {
+  },
+  {
     "name": "TQ2775",
     "X Absolute": 27.0,
     "Y Absolute": 75.0,
     "X Relative": -2.0,
     "Y Relative": 0.0
-}, {
+  },
+  {
     "name": "TQ2776",
     "X Absolute": 27.0,
     "Y Absolute": 76.0,
     "X Relative": -2.0,
     "Y Relative": 1.0
-}, {
+  },
+  {
     "name": "TQ2777",
     "X Absolute": 27.0,
     "Y Absolute": 77.0,
     "X Relative": -2.0,
     "Y Relative": 2.0
-}, {
+  },
+  {
     "name": "TQ2778",
     "X Absolute": 27.0,
     "Y Absolute": 78.0,
     "X Relative": -2.0,
     "Y Relative": 3.0
-}, {
+  },
+  {
     "name": "TQ2779",
     "X Absolute": 27.0,
     "Y Absolute": 79.0,
     "X Relative": -2.0,
     "Y Relative": 4.0
-}, {
+  },
+  {
     "name": "TQ2780",
     "X Absolute": 27.0,
     "Y Absolute": 80.0,
     "X Relative": -2.0,
     "Y Relative": 5.0
-}, {
+  },
+  {
     "name": "TQ2870",
     "X Absolute": 28.0,
     "Y Absolute": 70.0,
     "X Relative": -1.0,
     "Y Relative": -5.0
-}, {
+  },
+  {
     "name": "TQ2871",
     "X Absolute": 28.0,
     "Y Absolute": 71.0,
     "X Relative": -1.0,
     "Y Relative": -4.0
-}, {
+  },
+  {
     "name": "TQ2872",
     "X Absolute": 28.0,
     "Y Absolute": 72.0,
     "X Relative": -1.0,
     "Y Relative": -3.0
-}, {
+  },
+  {
     "name": "TQ2873",
     "X Absolute": 28.0,
     "Y Absolute": 73.0,
     "X Relative": -1.0,
     "Y Relative": -2.0
-}, {
+  },
+  {
     "name": "TQ2874",
     "X Absolute": 28.0,
     "Y Absolute": 74.0,
     "X Relative": -1.0,
     "Y Relative": -1.0
-}, {
+  },
+  {
     "name": "TQ2875",
     "X Absolute": 28.0,
     "Y Absolute": 75.0,
     "X Relative": -1.0,
     "Y Relative": 0.0
-}, {
+  },
+  {
     "name": "TQ2876",
     "X Absolute": 28.0,
     "Y Absolute": 76.0,
     "X Relative": -1.0,
     "Y Relative": 1.0
-}, {
+  },
+  {
     "name": "TQ2877",
     "X Absolute": 28.0,
     "Y Absolute": 77.0,
     "X Relative": -1.0,
     "Y Relative": 2.0
-}, {
+  },
+  {
     "name": "TQ2878",
     "X Absolute": 28.0,
     "Y Absolute": 78.0,
     "X Relative": -1.0,
     "Y Relative": 3.0
-}, {
+  },
+  {
     "name": "TQ2879",
     "X Absolute": 28.0,
     "Y Absolute": 79.0,
     "X Relative": -1.0,
     "Y Relative": 4.0
-}, {
+  },
+  {
     "name": "TQ2880",
     "X Absolute": 28.0,
     "Y Absolute": 80.0,
     "X Relative": -1.0,
     "Y Relative": 5.0
-}, {
+  },
+  {
     "name": "TQ2970",
     "X Absolute": 29.0,
     "Y Absolute": 70.0,
     "X Relative": 0.0,
     "Y Relative": -5.0
-}, {
+  },
+  {
     "name": "TQ2971",
     "X Absolute": 29.0,
     "Y Absolute": 71.0,
     "X Relative": 0.0,
     "Y Relative": -4.0
-}, {
+  },
+  {
     "name": "TQ2972",
     "X Absolute": 29.0,
     "Y Absolute": 72.0,
     "X Relative": 0.0,
     "Y Relative": -3.0
-}, {
+  },
+  {
     "name": "TQ2973",
     "X Absolute": 29.0,
     "Y Absolute": 73.0,
     "X Relative": 0.0,
     "Y Relative": -2.0
-}, {
+  },
+  {
     "name": "TQ2974",
     "X Absolute": 29.0,
     "Y Absolute": 74.0,
     "X Relative": 0.0,
     "Y Relative": -1.0
-}, {
+  },
+  {
     "name": "TQ2975",
     "X Absolute": 29.0,
     "Y Absolute": 75.0,
     "X Relative": 0.0,
     "Y Relative": 0.0
-}, {
+  },
+  {
     "name": "TQ2976",
     "X Absolute": 29.0,
     "Y Absolute": 76.0,
     "X Relative": 0.0,
     "Y Relative": 1.0
-}, {
+  },
+  {
     "name": "TQ2977",
     "X Absolute": 29.0,
     "Y Absolute": 77.0,
     "X Relative": 0.0,
     "Y Relative": 2.0
-}, {
+  },
+  {
     "name": "TQ2978",
     "X Absolute": 29.0,
     "Y Absolute": 78.0,
     "X Relative": 0.0,
     "Y Relative": 3.0
-}, {
+  },
+  {
     "name": "TQ2979",
     "X Absolute": 29.0,
     "Y Absolute": 79.0,
     "X Relative": 0.0,
     "Y Relative": 4.0
-}, {
+  },
+  {
     "name": "TQ2980",
     "X Absolute": 29.0,
     "Y Absolute": 80.0,
     "X Relative": 0.0,
     "Y Relative": 5.0
-}, {
+  },
+  {
     "name": "TQ3070",
     "X Absolute": 30.0,
     "Y Absolute": 70.0,
     "X Relative": 1.0,
     "Y Relative": -5.0
-}, {
+  },
+  {
     "name": "TQ3071",
     "X Absolute": 30.0,
     "Y Absolute": 71.0,
     "X Relative": 1.0,
     "Y Relative": -4.0
-}, {
+  },
+  {
     "name": "TQ3072",
     "X Absolute": 30.0,
     "Y Absolute": 72.0,
     "X Relative": 1.0,
     "Y Relative": -3.0
-}, {
+  },
+  {
     "name": "TQ3073",
     "X Absolute": 30.0,
     "Y Absolute": 73.0,
     "X Relative": 1.0,
     "Y Relative": -2.0
-}, {
+  },
+  {
     "name": "TQ3074",
     "X Absolute": 30.0,
     "Y Absolute": 74.0,
     "X Relative": 1.0,
     "Y Relative": -1.0
-}, {
+  },
+  {
     "name": "TQ3075",
     "X Absolute": 30.0,
     "Y Absolute": 75.0,
     "X Relative": 1.0,
     "Y Relative": 0.0
-}, {
+  },
+  {
     "name": "TQ3076",
     "X Absolute": 30.0,
     "Y Absolute": 76.0,
     "X Relative": 1.0,
     "Y Relative": 1.0
-}, {
+  },
+  {
     "name": "TQ3077",
     "X Absolute": 30.0,
     "Y Absolute": 77.0,
     "X Relative": 1.0,
     "Y Relative": 2.0
-}, {
+  },
+  {
     "name": "TQ3078",
     "X Absolute": 30.0,
     "Y Absolute": 78.0,
     "X Relative": 1.0,
     "Y Relative": 3.0
-}, {
+  },
+  {
     "name": "TQ3079",
     "X Absolute": 30.0,
     "Y Absolute": 79.0,
     "X Relative": 1.0,
     "Y Relative": 4.0
-}, {
+  },
+  {
     "name": "TQ3080",
     "X Absolute": 30.0,
     "Y Absolute": 80.0,
     "X Relative": 1.0,
     "Y Relative": 5.0
-}, {
+  },
+  {
     "name": "TQ3170",
     "X Absolute": 31.0,
     "Y Absolute": 70.0,
     "X Relative": 2.0,
     "Y Relative": -5.0
-}, {
+  },
+  {
     "name": "TQ3171",
     "X Absolute": 31.0,
     "Y Absolute": 71.0,
     "X Relative": 2.0,
     "Y Relative": -4.0
-}, {
+  },
+  {
     "name": "TQ3172",
     "X Absolute": 31.0,
     "Y Absolute": 72.0,
     "X Relative": 2.0,
     "Y Relative": -3.0
-}, {
+  },
+  {
     "name": "TQ3173",
     "X Absolute": 31.0,
     "Y Absolute": 73.0,
     "X Relative": 2.0,
     "Y Relative": -2.0
-}, {
+  },
+  {
     "name": "TQ3174",
     "X Absolute": 31.0,
     "Y Absolute": 74.0,
     "X Relative": 2.0,
     "Y Relative": -1.0
-}, {
+  },
+  {
     "name": "TQ3175",
     "X Absolute": 31.0,
     "Y Absolute": 75.0,
     "X Relative": 2.0,
     "Y Relative": 0.0
-}, {
+  },
+  {
     "name": "TQ3176",
     "X Absolute": 31.0,
     "Y Absolute": 76.0,
     "X Relative": 2.0,
     "Y Relative": 1.0
-}, {
+  },
+  {
     "name": "TQ3177",
     "X Absolute": 31.0,
     "Y Absolute": 77.0,
     "X Relative": 2.0,
     "Y Relative": 2.0
-}, {
+  },
+  {
     "name": "TQ3178",
     "X Absolute": 31.0,
     "Y Absolute": 78.0,
     "X Relative": 2.0,
     "Y Relative": 3.0
-}, {
+  },
+  {
     "name": "TQ3179",
     "X Absolute": 31.0,
     "Y Absolute": 79.0,
     "X Relative": 2.0,
     "Y Relative": 4.0
-}, {
+  },
+  {
     "name": "TQ3180",
     "X Absolute": 31.0,
     "Y Absolute": 80.0,
     "X Relative": 2.0,
     "Y Relative": 5.0
-}, {
+  },
+  {
     "name": "TQ3270",
     "X Absolute": 32.0,
     "Y Absolute": 70.0,
     "X Relative": 3.0,
     "Y Relative": -5.0
-}, {
+  },
+  {
     "name": "TQ3271",
     "X Absolute": 32.0,
     "Y Absolute": 71.0,
     "X Relative": 3.0,
     "Y Relative": -4.0
-}, {
+  },
+  {
     "name": "TQ3272",
     "X Absolute": 32.0,
     "Y Absolute": 72.0,
     "X Relative": 3.0,
     "Y Relative": -3.0
-}, {
+  },
+  {
     "name": "TQ3273",
     "X Absolute": 32.0,
     "Y Absolute": 73.0,
     "X Relative": 3.0,
     "Y Relative": -2.0
-}, {
+  },
+  {
     "name": "TQ3274",
     "X Absolute": 32.0,
     "Y Absolute": 74.0,
     "X Relative": 3.0,
     "Y Relative": -1.0
-}, {
+  },
+  {
     "name": "TQ3275",
     "X Absolute": 32.0,
     "Y Absolute": 75.0,
     "X Relative": 3.0,
     "Y Relative": 0.0
-}, {
+  },
+  {
     "name": "TQ3276",
     "X Absolute": 32.0,
     "Y Absolute": 76.0,
     "X Relative": 3.0,
     "Y Relative": 1.0
-}, {
+  },
+  {
     "name": "TQ3277",
     "X Absolute": 32.0,
     "Y Absolute": 77.0,
     "X Relative": 3.0,
     "Y Relative": 2.0
-}, {
+  },
+  {
     "name": "TQ3278",
     "X Absolute": 32.0,
     "Y Absolute": 78.0,
     "X Relative": 3.0,
     "Y Relative": 3.0
-}, {
+  },
+  {
     "name": "TQ3279",
     "X Absolute": 32.0,
     "Y Absolute": 79.0,
     "X Relative": 3.0,
     "Y Relative": 4.0
-}, {
+  },
+  {
     "name": "TQ3280",
     "X Absolute": 32.0,
     "Y Absolute": 80.0,
     "X Relative": 3.0,
     "Y Relative": 5.0
-}, {
+  },
+  {
     "name": "TQ3370",
     "X Absolute": 33.0,
     "Y Absolute": 70.0,
     "X Relative": 4.0,
     "Y Relative": -5.0
-}, {
+  },
+  {
     "name": "TQ3371",
     "X Absolute": 33.0,
     "Y Absolute": 71.0,
     "X Relative": 4.0,
     "Y Relative": -4.0
-}, {
+  },
+  {
     "name": "TQ3372",
     "X Absolute": 33.0,
     "Y Absolute": 72.0,
     "X Relative": 4.0,
     "Y Relative": -3.0
-}, {
+  },
+  {
     "name": "TQ3373",
     "X Absolute": 33.0,
     "Y Absolute": 73.0,
     "X Relative": 4.0,
     "Y Relative": -2.0
-}, {
+  },
+  {
     "name": "TQ3374",
     "X Absolute": 33.0,
     "Y Absolute": 74.0,
     "X Relative": 4.0,
     "Y Relative": -1.0
-}, {
+  },
+  {
     "name": "TQ3375",
     "X Absolute": 33.0,
     "Y Absolute": 75.0,
     "X Relative": 4.0,
     "Y Relative": 0.0
-}, {
+  },
+  {
     "name": "TQ3376",
     "X Absolute": 33.0,
     "Y Absolute": 76.0,
     "X Relative": 4.0,
     "Y Relative": 1.0
-}, {
+  },
+  {
     "name": "TQ3377",
     "X Absolute": 33.0,
     "Y Absolute": 77.0,
     "X Relative": 4.0,
     "Y Relative": 2.0
-}, {
+  },
+  {
     "name": "TQ3378",
     "X Absolute": 33.0,
     "Y Absolute": 78.0,
     "X Relative": 4.0,
     "Y Relative": 3.0
-}, {
+  },
+  {
     "name": "TQ3379",
     "X Absolute": 33.0,
     "Y Absolute": 79.0,
     "X Relative": 4.0,
     "Y Relative": 4.0
-}, {
+  },
+  {
     "name": "TQ3380",
     "X Absolute": 33.0,
     "Y Absolute": 80.0,
     "X Relative": 4.0,
     "Y Relative": 5.0
-}, {
+  },
+  {
     "name": "TQ3470",
     "X Absolute": 34.0,
     "Y Absolute": 70.0,
     "X Relative": 5.0,
     "Y Relative": -5.0
-}, {
+  },
+  {
     "name": "TQ3471",
     "X Absolute": 34.0,
     "Y Absolute": 71.0,
     "X Relative": 5.0,
     "Y Relative": -4.0
-}, {
+  },
+  {
     "name": "TQ3472",
     "X Absolute": 34.0,
     "Y Absolute": 72.0,
     "X Relative": 5.0,
     "Y Relative": -3.0
-}, {
+  },
+  {
     "name": "TQ3473",
     "X Absolute": 34.0,
     "Y Absolute": 73.0,
     "X Relative": 5.0,
     "Y Relative": -2.0
-}, {
+  },
+  {
     "name": "TQ3474",
     "X Absolute": 34.0,
     "Y Absolute": 74.0,
     "X Relative": 5.0,
     "Y Relative": -1.0
-}, {
+  },
+  {
     "name": "TQ3475",
     "X Absolute": 34.0,
     "Y Absolute": 75.0,
     "X Relative": 5.0,
     "Y Relative": 0.0
-}, {
+  },
+  {
     "name": "TQ3476",
     "X Absolute": 34.0,
     "Y Absolute": 76.0,
     "X Relative": 5.0,
     "Y Relative": 1.0
-}, {
+  },
+  {
     "name": "TQ3477",
     "X Absolute": 34.0,
     "Y Absolute": 77.0,
     "X Relative": 5.0,
     "Y Relative": 2.0
-}, {
+  },
+  {
     "name": "TQ3478",
     "X Absolute": 34.0,
     "Y Absolute": 78.0,
     "X Relative": 5.0,
     "Y Relative": 3.0
-}, {
+  },
+  {
     "name": "TQ3479",
     "X Absolute": 34.0,
     "Y Absolute": 79.0,
     "X Relative": 5.0,
     "Y Relative": 4.0
-}, {
+  },
+  {
     "name": "TQ3480",
     "X Absolute": 34.0,
     "Y Absolute": 80.0,
     "X Relative": 5.0,
     "Y Relative": 5.0
-}, {
+  },
+  {
     "name": null,
     "X Absolute": null,
     "Y Absolute": null,
     "X Relative": null,
     "Y Relative": null
-}, {
+  },
+  {
     "name": "Max",
     "X Absolute": 34.0,
     "Y Absolute": 80.0,
     "X Relative": null,
     "Y Relative": null
-}, {
+  },
+  {
     "name": "Min",
     "X Absolute": 25.0,
     "Y Absolute": 70.0,
     "X Relative": null,
     "Y Relative": null
-}]
+  }
+]

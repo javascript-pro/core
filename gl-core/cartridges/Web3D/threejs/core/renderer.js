@@ -14,22 +14,18 @@ class Renderer extends component(WebGLRenderer) {
     this.setPixelRatio(settings.dpr);
   }
 
-  onDebug({gui}) {
+  onDebug({ gui }) {
     this.gui = gui.addFolder('Renderer');
 
-    this.gui._calls = this.gui.add(this.info.render, 'calls')
-      .disable()
-   this.gui._triangles = this.gui.add(this.info.render, 'triangles')
-      .disable()
-      console.log('this.gui._calls: ', this.gui._calls);
-
+    this.gui._calls = this.gui.add(this.info.render, 'calls').disable();
+    this.gui._triangles = this.gui.add(this.info.render, 'triangles').disable();
+    console.log('this.gui._calls: ', this.gui._calls);
   }
 
   onRaf({ delta, elapsedTime }) {
     if (this.gui) {
       this.gui._calls.updateDisplay();
       this.gui._triangles.updateDisplay();
-
     }
   }
 

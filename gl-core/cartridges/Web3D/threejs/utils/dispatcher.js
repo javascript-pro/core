@@ -1,4 +1,3 @@
-
 class Dispatcher {
   constructor() {
     this.data = {};
@@ -94,13 +93,11 @@ class Dispatcher {
     let maxDelta = 0.033; // Maximum delta time for 30 FPS
     const globalDelta = Math.min(
       (now - this.globalLastUpdateTime) / 1000,
-      maxDelta
+      maxDelta,
     );
     this.globalLastUpdateTime = now;
 
-   
     for (let instance of sortedInstances) {
-
       const hasRaf = typeof instance.onRaf === 'function';
       const hasThrottle = typeof instance.onThrottle === 'function';
 
@@ -110,7 +107,7 @@ class Dispatcher {
         }
         const timeSinceLastUpdate = Math.min(
           now - (instance.lastUpdateTime || now),
-          maxDelta * 1000
+          maxDelta * 1000,
         );
         const fpsInterval = 1000 / instance.raf.fps; // Interval based on instance's FPS
 

@@ -102,7 +102,7 @@ class Pointer {
       },
       {
         pointer: this,
-      }
+      },
     );
   }
 
@@ -142,7 +142,7 @@ class Pointer {
       },
       {
         pointer: this,
-      }
+      },
     );
 
     if (this.isTouching) {
@@ -152,7 +152,7 @@ class Pointer {
         },
         {
           pointer: this,
-        }
+        },
       );
     }
   }
@@ -167,7 +167,7 @@ class Pointer {
       },
       {
         pointer: this,
-      }
+      },
     );
   }
 }

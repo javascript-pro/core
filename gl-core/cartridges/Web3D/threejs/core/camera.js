@@ -45,7 +45,7 @@ class Camera extends component(PerspectiveCamera) {
     this.updateProjectionMatrix();
   }
 
-  onRaf() {        
+  onRaf() {
     this.controls.update();
   }
 }

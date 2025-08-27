@@ -1,7 +1,10 @@
-import { Mesh, BoxGeometry,
-    MeshBasicMaterial, 
-    SphereGeometry,
-    MeshMatcapMaterial} from 'three';
+import {
+  Mesh,
+  BoxGeometry,
+  MeshBasicMaterial,
+  SphereGeometry,
+  MeshMatcapMaterial,
+} from 'three';
 import dispatcher from './utils/dispatcher.js';
 
 import camera from './core/camera.js';
@@ -25,31 +28,42 @@ class Viewer extends component(null, {
 }) {
   init() {
     console.log('INIT');
-    
+
     loader.preload();
     this.renderer = renderer;
     setTimeout(() => {
-        renderer.domElement.style.position = 'absolute';
-        renderer.domElement.style.top = 0;
-        renderer.domElement.style.left = 0;
-        renderer.domElement.style.zIndex = -1;
-        document.body.appendChild(renderer.domElement);
+      renderer.domElement.style.position = 'absolute';
+      renderer.domElement.style.top = 0;
+      renderer.domElement.style.left = 0;
+      renderer.domElement.style.zIndex = -1;
+      document.body.appendChild(renderer.domElement);
     }, 1000);
-    new Grid()
-    
+    new Grid();
+
     this.tileManager = new TileManager(camera);
     scene.add(this.tileManager);
     camera.controls.addEventListener('change', () => {
-      this.tileManager.update?.();      
+      this.tileManager.update?.();
     });
     this.tileManager.update?.();
-    this.cube = new Mesh(new BoxGeometry(1, 1, 1), new MeshMatcapMaterial({ matcap: loader.resources.matcap.asset, color: 0xff0000 }));
-    this.sphere = new Mesh(new SphereGeometry(1, 50, 50), new MeshMatcapMaterial({ matcap: loader.resources.matcap.asset, color: 0x0000ff }));
+    this.cube = new Mesh(
+      new BoxGeometry(1, 1, 1),
+      new MeshMatcapMaterial({
+        matcap: loader.resources.matcap.asset,
+        color: 0xff0000,
+      }),
+    );
+    this.sphere = new Mesh(
+      new SphereGeometry(1, 50, 50),
+      new MeshMatcapMaterial({
+        matcap: loader.resources.matcap.asset,
+        color: 0x0000ff,
+      }),
+    );
     this.cube.position.set(2, 5, 0);
     this.sphere.position.set(-2, 5, 0);
     scene.add(this.cube);
     scene.add(this.sphere);
-
   }
 
   setCubeVisibility(visible) {
@@ -69,13 +83,12 @@ class Viewer extends component(null, {
   }
 
   onRaf() {
-    
     renderer.render(scene, camera);
     // postprocess
     // postfx.render(scene, camera);
   }
   onAfterRaf() {
-    if (!stats) return
+    if (!stats) return;
     stats.update();
   }
   onDebug() {
@@ -84,8 +97,7 @@ class Viewer extends component(null, {
       stats.init(renderer);
     }
   }
-  onLoadEnd() {
-  }
+  onLoadEnd() {}
 }
 
 function init({ debug = false } = {}) {
@@ -104,7 +116,7 @@ function init({ debug = false } = {}) {
           { name: 'debug', fireAtStart: true },
           {
             gui,
-          }
+          },
         );
       });
     });

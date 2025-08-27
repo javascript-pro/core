@@ -1,20 +1,15 @@
-import {
-  MathUtils,
-  Plane,
-  Vector3,
-  Object3D,
-  Raycaster,
-  Color
-} from "three";
-import {
-  component,
-} from '../dispatcher';
-import tileset from "../data/tileset.json";
-import loader from "../utils/loader";
+import { MathUtils, Plane, Vector3, Object3D, Raycaster, Color } from 'three';
+import { component } from '../dispatcher';
+import tileset from '../data/tileset.json';
+import loader from '../utils/loader';
 import Tile from './Tile';
 
 let vec3 = new Vector3();
-const LOD_COLORS = [new Color(0xff0000), new Color(0xffa500), new Color(0x00ff00)]; // Colors for 3 LOD levels
+const LOD_COLORS = [
+  new Color(0xff0000),
+  new Color(0xffa500),
+  new Color(0x00ff00),
+]; // Colors for 3 LOD levels
 
 export default class TileManager extends component(Object3D, {
   raf: {
@@ -23,7 +18,7 @@ export default class TileManager extends component(Object3D, {
   },
 }) {
   constructor(camera, tileSize = 10, gridSize = 1500) {
-    super()
+    super();
     this.camera = camera;
     this.tileSize = tileSize;
     this.gridSize = gridSize;
@@ -40,12 +35,11 @@ export default class TileManager extends component(Object3D, {
     this.previousCameraPosition = new Vector3();
     this.raycaster = new Raycaster();
     this.groundPlane = new Plane(new Vector3(0, 1, 0), 0);
-
   }
 
   formatTileset(tileset) {
     return tileset.reduce((acc, tile) => {
-      acc[`${tile["X Relative"]},${tile["Y Relative"]}`] = tile;
+      acc[`${tile['X Relative']},${tile['Y Relative']}`] = tile;
       return acc;
     }, {});
   }
@@ -126,7 +120,9 @@ export default class TileManager extends component(Object3D, {
     rangeMultiplier = MathUtils.clamp(rangeMultiplier, 1, 5); // Clamp to avoid extreme ranges
 
     // Adjust range based on altitude and orientation
-    const dynamicRange = Math.floor(rangeMultiplier * altitude / this.tileSize);
+    const dynamicRange = Math.floor(
+      (rangeMultiplier * altitude) / this.tileSize,
+    );
 
     // Ensure we have at least 3 tiles in view even at low altitudes
     return Math.max(dynamicRange, 3);
@@ -153,7 +149,7 @@ export default class TileManager extends component(Object3D, {
     // Get the point on the ground where the camera is looking
     const lookAtPoint = this.getLookAtGroundPoint();
 
-    // Get altitude of the camera  
+    // Get altitude of the camera
     const tileX = Math.floor(lookAtPoint.x / this.tileSize);
     const tileZ = Math.floor(lookAtPoint.z / this.tileSize);
 
@@ -166,7 +162,11 @@ export default class TileManager extends component(Object3D, {
         const currentTileX = tileX + i;
         const currentTileZ = tileZ + j;
 
-        vec3.set(currentTileX * this.tileSize, 0, -currentTileZ * this.tileSize);
+        vec3.set(
+          currentTileX * this.tileSize,
+          0,
+          -currentTileZ * this.tileSize,
+        );
         const distance = vec3.distanceTo(this.camera.position);
         const lodLevel = this.getLODLevel(distance);
 
@@ -184,7 +184,9 @@ export default class TileManager extends component(Object3D, {
     const currentCameraPosition = this.camera.position;
     const threshold = 10; // Set a threshold to avoid tiny movements triggering updates
 
-    const distanceMoved = this.previousCameraPosition.distanceTo(currentCameraPosition);
+    const distanceMoved = this.previousCameraPosition.distanceTo(
+      currentCameraPosition,
+    );
     if (distanceMoved > threshold) {
       this.previousCameraPosition.copy(currentCameraPosition); // Update previous position
       return true;
@@ -192,24 +194,26 @@ export default class TileManager extends component(Object3D, {
     return false;
   }
 
-  onDebug({
-    gui
-  }) {
+  onDebug({ gui }) {
     this.gui = gui.addFolder('Tile Manager');
     // add lod distances to the gui
-    this.gui.add(this, 'debugLOD').name('Debug LOD')
-    .onChange((v) => {
-      this.debugLOD = v;
-      Object.values(this.tiles).forEach(tile => tile.updateDebug(this.debugLOD));
-    });
+    this.gui
+      .add(this, 'debugLOD')
+      .name('Debug LOD')
+      .onChange((v) => {
+        this.debugLOD = v;
+        Object.values(this.tiles).forEach((tile) =>
+          tile.updateDebug(this.debugLOD),
+        );
+      });
     for (let i = 0; i < this.LODDistances.length; i++) {
-      this.gui.add(this.LODDistances, i, 0, 100)
+      this.gui
+        .add(this.LODDistances, i, 0, 100)
         .name(`LOD ${i} Distance`)
         .onChange((v) => {
           this.LODDistances[i] = v;
           this.update();
         });
     }
-
   }
 }

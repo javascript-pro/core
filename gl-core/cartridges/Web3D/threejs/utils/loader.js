@@ -26,7 +26,6 @@ const RESOURCES = [
     name: 'matcap',
     // url: '/img/matcap.webp',
     url: '/img/matcap-white.png',
-
   },
 ];
 
@@ -70,7 +69,7 @@ class Loader {
           (error) => {
             console.error('Error loading asset:', error);
             reject(error); // Reject the promise here
-          }
+          },
         );
       });
     });
@@ -80,17 +79,16 @@ class Loader {
     });
   }
 
-  loadAsync (url) {
+  loadAsync(url) {
     return new Promise((resolve, reject) => {
       const extension = url.substring(url.lastIndexOf('.'));
       const loader = loadersMap[extension] || new FileLoader();
 
       resolve(loader.loadAsync(url));
-
     });
   }
 
-  load (url, onComplete, onError) {
+  load(url, onComplete, onError) {
     const loader = loadersMap[extension] || new FileLoader();
     loader.load(url, onComplete, null, onError);
   }
@@ -107,11 +105,11 @@ class Loader {
   updateOverallProgress() {
     const totalBytes = Object.values(this.resources).reduce(
       (acc, res) => acc + res.total,
-      0
+      0,
     );
     const loadedBytes = Object.values(this.resources).reduce(
       (acc, res) => acc + res.loaded,
-      0
+      0,
     );
 
     const progress = totalBytes > 0 ? (loadedBytes / totalBytes) * 100 : 0;
@@ -125,7 +123,7 @@ class Loader {
   finish(loadResults) {
     dispatcher.trigger(
       { name: 'loadEnd' },
-      { resources: this.resources, results: loadResults }
+      { resources: this.resources, results: loadResults },
     );
   }
 }

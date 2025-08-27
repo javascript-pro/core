@@ -1,5 +1,3 @@
-
-
 const shaderCode = `
 precision highp float;
 
