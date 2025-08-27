@@ -3,7 +3,7 @@ order: 1
 title: Expertise
 description: We can help understanding in these fields
 slug: /work/expertise
-icon: info
+icon: expertise
 image: https://live.staticflickr.com/65535/54688814017_148f57032c_o.jpg
 tags: expertise, fields, work
 ---

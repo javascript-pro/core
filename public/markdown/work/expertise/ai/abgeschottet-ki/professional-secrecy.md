@@ -2,7 +2,7 @@
 order: 10
 title: Secrecy
 description: What professional secrecy means for UK lawyers
-slug: /work/abgeschottet-ki/professional-secrecy
+slug: /work/expertise/ai/abgeschottet-ki/professional-secrecy
 icon: ki
 image: /png/ki/abgeschotten-ki.png
 ---

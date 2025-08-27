@@ -2,7 +2,7 @@
 order: 20
 title: Example prompts
 description:
-slug: /work/abgeschottet-ki/prompts
+slug: /work/expertise/ai/abgeschottet-ki/prompts
 icon: ki
 image: /png/ki/abgeschotten-ki.png
 ---

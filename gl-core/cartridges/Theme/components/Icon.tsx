@@ -147,6 +147,7 @@ import BikeIcon from '@mui/icons-material/TwoWheeler';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import LogsIcon from '@mui/icons-material/List';
 import RocketIcon from '@mui/icons-material/Rocket';
+import ExpertiseIcon from '@mui/icons-material/Rocket';
 
 export type TIcon = {
   icon:
@@ -316,6 +317,7 @@ export type TIcon = {
     | 'firefox'
     | 'plugins'
     | 'files'
+    | 'expertise'
     | 'bouncer';
   color?: any;
 };
@@ -326,6 +328,10 @@ export default function Icon({ icon, color }: TIcon) {
   switch (icon) {
     case 'core':
       iconFragment = <CoreIcon color={color} />;
+      break;
+
+    case 'expertise':
+      iconFragment = <ExpertiseIcon color={color} />;
       break;
 
     case 'tick':

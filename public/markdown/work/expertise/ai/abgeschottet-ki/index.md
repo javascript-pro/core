@@ -2,7 +2,7 @@
 order: 1
 title: Abgeschottet KI
 description: What Does It Mean to Ring‑Fence an LLM?
-slug: /work/abgeschottet-ki
+slug: /work/expertise/ai/abgeschottet-ki
 icon: ki
 image: https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg
 tags: abgeschottet, KI

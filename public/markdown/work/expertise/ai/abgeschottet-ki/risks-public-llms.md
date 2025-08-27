@@ -2,7 +2,7 @@
 order: 50
 title: Risks
 description: Why it’s dangerous to send confidential files to public AI
-slug: /work/abgeschottet-ki/risks-public-llms
+slug: /work/expertise/ai/abgeschottet-ki/risks-public-llms
 icon: ki
 image: /png/ki/abgeschotten-ki.png
 ---

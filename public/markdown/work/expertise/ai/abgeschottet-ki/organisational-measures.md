@@ -2,7 +2,7 @@
 order: 80
 title: Organisational
 description: Steps beyond tech to prevent data leaks
-slug: /work/abgeschottet-ki/organisational-measures
+slug: /work/expertise/ai/abgeschottet-ki/organisational-measures
 icon: ki
 image: /png/ki/abgeschotten-ki.png
 tags: abgeschottet, KI
