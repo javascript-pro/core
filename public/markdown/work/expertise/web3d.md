@@ -4,8 +4,9 @@ title: Web 3D
 description: Two Decades of 3D in the browser
 slug: /work/expertise/web3d
 icon: web3d
-image: https://live.staticflickr.com/65535/54688814017_148f57032c_o.jpg
+image: https://live.staticflickr.com/65535/54747599061_445f0323cd_b.jpg
 tags: expertise, web, 3D, WebGL, Three.js, Babylon.js, WebGPU, Flash, JavaScript, timeline, web development, history, VR, AR, performance
+youtube: https://www.youtube.com/watch?v=Qe2ZLYzQToQ
 ---
 
 > Building for the web for more than twenty years
@@ -14,7 +15,7 @@ First with Flash, then with JavaScript — and through all that time, 3D in the 
 
 After two decades, the web has finally reached the point I imagined back in the 90s. Delivering real-time, interactive 3D experiences to any browser is no longer an experiment — it’s a practical, deployable reality.
 
-## Timeline of 3D on the Web
+#### Timeline of 3D on the Web
 
 - **Mid-90s (56k era)** – VRML promised a “metaverse,” but on dial-up it was little more than wireframes crawling down the screen. At that point, the only way to experiment with 3D was offline. I remember getting a copy of **Poser** bundled with some software I bought. I used it to put together a short animated film — rough by today’s standards, but my first hands-on 3D work. Streaming that kind of content through a browser wasn’t even conceivable.
 

@@ -332,12 +332,11 @@ export default function Icon({ icon, color }: TIcon) {
       iconFragment = <CoreIcon color={color} />;
       break;
 
-
     case 'web3d':
       iconFragment = <Web3DIcon color={color} />;
       break;
 
-      case 'expertise':
+    case 'expertise':
       iconFragment = <ExpertiseIcon color={color} />;
       break;
 

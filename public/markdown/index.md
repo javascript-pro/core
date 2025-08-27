@@ -3,17 +3,21 @@ order: 1
 slug: /
 title: Goldlabel
 description: Work, Life, Balance
-icon: ki
+icon: home
 tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 github: https://github.com/javascript-pro/core
 api: /api/gl-api/flickr/latest/latest
-image: https://live.staticflickr.com/65535/54742614047_e44e8af81e_b.jpg
+image: https://live.staticflickr.com/65535/54747599061_445f0323cd_b.jpg
 noImage: false
 ---
 
+## [3D on the web](/work/expertise/web3d)
+
+> Building for the web for more than twenty years
+
 ## [Beef Wellington](/balance/writing/wei-zangs-food/beef-wellie)
 
-> Death cap mushrooms optional if you don't like your inlaws
+Death cap mushrooms optional if you don't like your inlaws
 
 ## [Neuromancer (1984)](/balance/writers/william-gibson)
 

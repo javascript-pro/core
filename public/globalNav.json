@@ -312,6 +312,31 @@
                 "excerpt": "Data Migration via RESTful API using Next, Python and SQL\n\n\n\n This service exposes a RESTful interface for cleaning, transforming, and migrating data from a raw source table to a cleaned, structured t"
               },
               {
+                "title": "Web 3D",
+                "slug": "/work/expertise/web3d",
+                "order": 20,
+                "icon": "web3d",
+                "image": "https://live.staticflickr.com/65535/54688814017_148f57032c_o.jpg",
+                "type": "file",
+                "tags": [
+                  "expertise",
+                  "web",
+                  "3D",
+                  "WebGL",
+                  "Three.js",
+                  "Babylon.js",
+                  "WebGPU",
+                  "Flash",
+                  "JavaScript",
+                  "web development",
+                  "history",
+                  "VR",
+                  "AR",
+                  "performance"
+                ],
+                "excerpt": "Building for the web for more than twenty years\n\nFirst with Flash, then with JavaScript — and through all that time, 3D in the browser never really worked. Bandwidth and processors simply couldn’t kee"
+              },
+              {
                 "title": "Blockchain",
                 "slug": "/work/expertise/blockchain",
                 "order": 150,
