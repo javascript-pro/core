@@ -148,10 +148,12 @@ import DashboardIcon from '@mui/icons-material/Dashboard';
 import LogsIcon from '@mui/icons-material/List';
 import RocketIcon from '@mui/icons-material/Rocket';
 import ExpertiseIcon from '@mui/icons-material/Rocket';
+import Web3DIcon from '@mui/icons-material/ThreeDRotation';
 
 export type TIcon = {
   icon:
     | 'more'
+    | 'web3d'
     | 'rocket'
     | 'logs'
     | 'dashboard'
@@ -330,7 +332,12 @@ export default function Icon({ icon, color }: TIcon) {
       iconFragment = <CoreIcon color={color} />;
       break;
 
-    case 'expertise':
+
+    case 'web3d':
+      iconFragment = <Web3DIcon color={color} />;
+      break;
+
+      case 'expertise':
       iconFragment = <ExpertiseIcon color={color} />;
       break;
 
