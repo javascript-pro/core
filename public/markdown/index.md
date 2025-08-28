@@ -7,9 +7,13 @@ icon: home
 tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 github: https://github.com/javascript-pro/core
 api: /api/gl-api/flickr/latest/latest
-image: https://live.staticflickr.com/65535/54747599061_445f0323cd_b.jpg
-noImage: false
+image: https://live.staticflickr.com/65535/54679640252_6b97e17eda_b.jpg
 ---
+#### [AKI - Ring‑fenced AI](/work/expertise/ai/abgeschottet-ki)
+
+Abgeschottet KI delivers a secure, ring‑fenced AI to streamline legal compliance workflows, process documents faster, and protect sensitive data.
+
+> "Ring‑fencing our own AI in‑house allowed us to streamline our workflow without compromising our GDPR obligations or data security." **Rahul Sharma, CEO**
 
 #### [3D on the web](/work/expertise/web3d)
 
@@ -36,9 +40,3 @@ Where I've been in the little Zeppelin since Spring 2025
 #### [AI Agent User Interfaces](/work/expertise/ai/agents)
 
 How we help you take your AI product ideas from concept, through prototype to production
-
-#### AKI - Ring‑fenced AI
-
-Abgeschottet KI delivers a secure, ring‑fenced AI to streamline legal compliance workflows, process documents faster, and protect sensitive data.
-
-> "Ring‑fencing our own AI in‑house allowed us to streamline our workflow without compromising our GDPR obligations or data security." **Rahul Sharma, CEO**

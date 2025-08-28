@@ -14,6 +14,7 @@ noImage: true
   - [Wei Zang’s Food](/balance/writing/wei-zangs-food)
 
 - [Video](/balance/video/)
+
   - [Its Not Who You Know](/balance/video)
 
 - [Writers](/balance/writers/)
