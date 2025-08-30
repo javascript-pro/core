@@ -3,12 +3,13 @@ order: 1
 slug: /
 title: Goldlabel
 description: Work, Life, Balance
-icon: home
+icon: goldlabel
 tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 github: https://github.com/javascript-pro/core
 api: /api/gl-api/flickr/latest/latest
 image: https://live.staticflickr.com/65535/54679640252_6b97e17eda_b.jpg
 ---
+
 #### [AKI - Ring‑fenced AI](/work/expertise/ai/abgeschottet-ki)
 
 Abgeschottet KI delivers a secure, ring‑fenced AI to streamline legal compliance workflows, process documents faster, and protect sensitive data.
