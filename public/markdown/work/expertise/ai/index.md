@@ -3,7 +3,11 @@ order: 1
 title: AI
 description: What do we know about about AI?
 slug: /work/expertise/ai
+<<<<<<< HEAD
 icon: expertise
+=======
+icon: oliver
+>>>>>>> origin/main
 image: https://live.staticflickr.com/65535/53669705662_d1361d5032_h.jpg
 tags: ai, ki, expertise, fields, work
 ---

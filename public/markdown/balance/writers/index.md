@@ -1,12 +1,17 @@
 ---
 order: 20
 title: Writers
+<<<<<<< HEAD
 description:
+=======
+description: 
+>>>>>>> origin/main
 slug: /balance/writers
 icon: balance
 image: /jpg/cassetes.jpg
 ---
 
+<<<<<<< HEAD
 Curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction. From visionary science fiction to satirical explorations of culture and the human experience, our writers challenge, amuse, and inspire.
 
 #### Sci-Fi Legends
@@ -22,3 +27,5 @@ Canadian novelist and artist, Coupland captures modern life with wit, dark humor
 - Tom Robbins
 
 Known for whimsical prose and irreverent humor, Robbins blends surrealism, countercultural themes, and philosophical musings. His novels celebrate language, imagination, and the unexpected in everyday life.
+=======
+>>>>>>> origin/main
