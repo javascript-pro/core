@@ -2,7 +2,7 @@
 order: 20
 title: Confidentiality
 description: The confidentiality duties UK law firms owe their clients
-slug: /work/abgeschottet-ki/confidentiality-obligations
+slug: /work/expertise/ai/abgeschottet-ki/confidentiality-obligations
 icon: ki
 image: /png/ki/abgeschotten-ki.png
 tags: abgeschottet, KI

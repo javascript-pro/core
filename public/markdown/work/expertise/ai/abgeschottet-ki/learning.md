@@ -2,7 +2,7 @@
 order: 2
 title: Learning
 description: How does the AI learn?
-slug: /work/abgeschottet-ki/learning
+slug: /work/expertise/ai/abgeschottet-ki/learning
 icon: ki
 image: /jpg/abgeschotten-ki.jpg
 tags: abgeschottet, KI

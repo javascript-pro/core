@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 import { Box } from '@mui/material';
 import { useSlice, useDispatch, ThumbMenu } from '../../../gl-core';
 import { init, Shell, Feedback, Dashboard } from '../Admin';
+import { BouncerAdmin } from '../Bouncer';
 import { FlickrAdmin, LogsAdmin } from '../Admin';
 
 export default function Admin() {
@@ -40,6 +41,10 @@ export default function Admin() {
 
     if (path.startsWith('/admin/flickr')) {
       return <FlickrAdmin />;
+    }
+
+    if (path.startsWith('/admin/bouncer')) {
+      return <BouncerAdmin />;
     }
 
     if (path.startsWith('/admin/logs')) {

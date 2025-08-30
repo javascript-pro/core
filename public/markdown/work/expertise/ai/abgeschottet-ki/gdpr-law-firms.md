@@ -2,7 +2,7 @@
 order: 30
 title: GDPR
 description: What the GDPR means for a UK law firm
-slug: /work/abgeschottet-ki/gdpr-law-firms
+slug: /work/expertise/ai/abgeschottet-ki/gdpr-law-firms
 icon: ki
 image: /png/ki/abgeschotten-ki.png
 tags: abgeschottet, KI

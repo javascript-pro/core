@@ -1,4 +1,5 @@
 // core/gl-core/firebase.tsx
+
 import { initializeApp, getApps, getApp } from 'firebase/app';
 import { getFirestore, collection, query, where } from 'firebase/firestore';
 import { getStorage, ref } from 'firebase/storage';

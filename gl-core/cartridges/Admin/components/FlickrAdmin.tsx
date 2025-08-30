@@ -1,4 +1,3 @@
-// /core/gl-core/cartridges/Admin/components/FlickrAdmin.tsx
 'use client';
 
 import * as React from 'react';
@@ -8,11 +7,15 @@ import {
   Alert,
   CircularProgress,
   CardHeader,
-  Autocomplete,
-  TextField,
   Typography,
   Card,
   CardContent,
+  List,
+  ListItemButton,
+  ListItemText,
+  ListItemAvatar,
+  Avatar,
+  TextField,
 } from '@mui/material';
 import { collection, onSnapshot } from 'firebase/firestore';
 import { db } from '../../../lib/firebase';
@@ -28,7 +31,7 @@ type TFlickrAlbum = {
   flickrUrl?: string;
   createdAt?: number;
   updatedAt?: number;
-  photos?: { flickrId: string; title?: string }[];
+  photos?: { flickrId: string; title?: string; sizes?: any }[];
 };
 
 type TFlickrData = {
@@ -46,7 +49,8 @@ export default function FlickrAdmin() {
   });
   const [checked, setChecked] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
-  const [inputAlbumId, setInputAlbumId] = useState('');
+  const [selectedAlbumId, setSelectedAlbumId] = useState('');
+  const [newFlickrId, setNewFlickrId] = useState('');
   const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
@@ -59,7 +63,6 @@ export default function FlickrAdmin() {
         });
 
         const latestDoc = docs['latest'];
-
         const photosDoc = docs['photos'];
         const photosArray = photosDoc
           ? Object.entries(photosDoc).map(([id, data]: [string, any]) => ({
@@ -94,7 +97,6 @@ export default function FlickrAdmin() {
     return () => unsubscribe();
   }, []);
 
-  // Map albumId -> album record
   const albumMap = useMemo(() => {
     const map: Record<string, TFlickrAlbum> = {};
     flickrData.albums.forEach((a) => {
@@ -103,23 +105,30 @@ export default function FlickrAdmin() {
     return map;
   }, [flickrData.albums]);
 
-  // For the autocomplete, build a list of options with label/title
-  const options = flickrData.albums.map((a) => ({
-    label: a.title || a.id,
-    id: a.id,
-  }));
+  const selectedAlbum = selectedAlbumId ? albumMap[selectedAlbumId] : undefined;
 
-  const isExisting = inputAlbumId && !!albumMap[inputAlbumId];
-  const selectedAlbum = inputAlbumId ? albumMap[inputAlbumId] : undefined;
-
-  const handleAddOrUpdateAlbum = async () => {
-    const albumId = inputAlbumId.trim();
-    if (!albumId) return;
+  const handleCreateAlbum = async () => {
+    const trimmedId = newFlickrId.trim();
+    if (!trimmedId) return;
     setSubmitting(true);
     try {
       await dispatch(
-        // @ts-ignore thunk typing
-        album({ flickrId: albumId, mode: isExisting ? 'update' : 'create' }),
+        // @ts-ignore
+        album({ flickrId: trimmedId, mode: 'create' }),
+      );
+      setNewFlickrId('');
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  const handleUpdateAlbum = async () => {
+    if (!selectedAlbumId) return;
+    setSubmitting(true);
+    try {
+      await dispatch(
+        // @ts-ignore
+        album({ flickrId: selectedAlbumId, mode: 'update' }),
       );
     } finally {
       setSubmitting(false);
@@ -149,57 +158,28 @@ export default function FlickrAdmin() {
         <Alert severity="error">{errorMsg}</Alert>
       ) : (
         <>
-          <Typography variant="body1" sx={{ mb: 3 }}>
-            Paste or select a Flickr Album below. If it already exists in the
-            albums list, clicking the button will update it; otherwise, a new
-            album entry will be created.
+          <Typography variant="body1" sx={{ mb: 2 }}>
+            Enter a Flickr Album ID to create a new album, or select one below
+            to update it.
           </Typography>
 
           <Box sx={{ display: 'flex', gap: 2, mb: 3 }}>
-            <Autocomplete
-              options={options}
-              value={options.find((o) => o.id === inputAlbumId) || null}
-              onChange={(e, newValue) => {
-                if (
-                  newValue &&
-                  typeof newValue !== 'string' &&
-                  'id' in newValue
-                ) {
-                  setInputAlbumId(newValue.id);
-                } else if (typeof newValue === 'string') {
-                  setInputAlbumId(newValue);
-                } else {
-                  setInputAlbumId('');
-                }
-              }}
-              onInputChange={(e, newInput) => {
-                if (typeof newInput === 'string') {
-                  setInputAlbumId(newInput);
-                }
-              }}
-              getOptionLabel={(option) =>
-                typeof option === 'string' ? option : option.label
-              }
-              renderInput={(params) => (
-                <TextField
-                  {...params}
-                  label="Flickr Album"
-                  variant="outlined"
-                  size="small"
-                />
-              )}
-              freeSolo
-              sx={{ flexGrow: 1 }}
+            <TextField
+              label="Flickr Album ID"
+              size="small"
+              variant="outlined"
+              value={newFlickrId}
+              onChange={(e) => setNewFlickrId(e.target.value)}
+              fullWidth
               disabled={submitting}
             />
             <Box sx={{ position: 'relative' }}>
               <MightyButton
-                label={isExisting ? 'Update' : 'Create'}
-                icon={isExisting ? 'edit' : 'add'}
+                label="New from Flickr ID"
+                icon="add"
                 variant="contained"
-                onClick={handleAddOrUpdateAlbum}
-                iconPlacement="right"
-                disabled={submitting || !inputAlbumId}
+                onClick={handleCreateAlbum}
+                disabled={submitting || !newFlickrId.trim()}
               />
               {submitting && (
                 <CircularProgress
@@ -216,36 +196,77 @@ export default function FlickrAdmin() {
             </Box>
           </Box>
 
-          {selectedAlbum ? (
-            <Card
-              variant="outlined"
-              sx={{
-                mt: 2,
-                p: 1, // tighter padding
-              }}
-            >
+          <List sx={{ mb: 3 }}>
+            {flickrData.albums.map((a) => {
+              const firstPhoto = a.photos?.[0];
+              const thumbUrl = firstPhoto?.sizes?.thumb?.src;
+
+              return (
+                <ListItemButton
+                  key={a.id}
+                  selected={selectedAlbumId === a.id}
+                  onClick={() => setSelectedAlbumId(a.id)}
+                  disabled={submitting}
+                >
+                  <ListItemAvatar>
+                    <Avatar
+                      variant="rounded"
+                      src={thumbUrl}
+                      alt={firstPhoto?.title || ''}
+                    />
+                  </ListItemAvatar>
+                  <ListItemText
+                    primary={a.title || a.id}
+                    secondary={`Photos: ${a.count || 0}`}
+                  />
+                </ListItemButton>
+              );
+            })}
+          </List>
+
+          {selectedAlbumId && (
+            <Box sx={{ position: 'relative', mb: 3 }}>
+              <MightyButton
+                label="Update Selected Album"
+                icon="edit"
+                variant="outlined"
+                onClick={handleUpdateAlbum}
+                disabled={submitting}
+              />
+              {submitting && (
+                <CircularProgress
+                  size={24}
+                  sx={{
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    marginTop: '-12px',
+                    marginLeft: '-12px',
+                  }}
+                />
+              )}
+            </Box>
+          )}
+
+          {selectedAlbum && (
+            <Card variant="outlined" sx={{ mt: 2, p: 1 }}>
               <CardHeader
-                title={selectedAlbum.title || 'Untitled Album'}
+                title={selectedAlbum.title}
                 subheader={`ID: ${selectedAlbum.id}`}
                 sx={{ p: 1 }}
               />
               <CardContent sx={{ pt: 0.5, pb: 1 }}>
                 <Typography variant="body2" sx={{ mb: 1 }}>
-                  {selectedAlbum.description || 'No description'}
+                  {selectedAlbum.description}
                 </Typography>
                 <Typography variant="body2" sx={{ mb: 1 }}>
                   <strong>Photos:</strong> {selectedAlbum.count || 0}
                 </Typography>
-
                 {Array.isArray(selectedAlbum.photos) &&
                   selectedAlbum.photos.length > 0 && (
                     <Box
                       component="ul"
-                      sx={{
-                        pl: 2,
-                        m: 0,
-                        listStyleType: 'disc',
-                      }}
+                      sx={{ pl: 2, m: 0, listStyleType: 'disc' }}
                     >
                       {selectedAlbum.photos.map((photo) => (
                         <li
@@ -261,7 +282,16 @@ export default function FlickrAdmin() {
                   )}
               </CardContent>
             </Card>
-          ) : null}
+          )}
+
+          {/* <Box sx={{ mt: 4 }}>
+            <Typography variant="caption" component="div" sx={{ mb: 1 }}>
+              Albums JSON:
+            </Typography>
+            <Box component="pre" sx={{ fontSize: 12, overflow: 'auto', maxHeight: 300 }}>
+              {JSON.stringify(flickrData.albums, null, 2)}
+            </Box>
+          </Box> */}
         </>
       )}
     </Box>

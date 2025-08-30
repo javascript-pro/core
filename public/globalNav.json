@@ -1,11 +1,11 @@
 [
   {
     "title": "Goldlabel",
-    "description": "AI software which works",
+    "description": "Work, Life, Balance",
     "slug": "/",
     "order": 1,
-    "icon": "ki",
-    "image": "https://live.staticflickr.com/65535/53670802348_940f40175e_h.jpg",
+    "icon": "home",
+    "image": "https://live.staticflickr.com/65535/54679640252_6b97e17eda_b.jpg",
     "type": "folder",
     "tags": [
       "JavaScript",
@@ -35,7 +35,7 @@
       "NextJS",
       "Headless CMS"
     ],
-    "excerpt": "AKI  New for July 2025\n\nAbgeschottet KI delivers a secure, ring‑fenced AI to streamline legal compliance workflows, process documents faster, and protect sensitive data.\n\n Goldlabel builds and ships m",
+    "excerpt": "Abgeschottet KI delivers a secure, ring‑fenced AI to streamline legal compliance workflows, process documents faster, and protect sensitive data.\n\n \"Ring‑fencing our own AI in‑house allowed us to stre",
     "children": [
       {
         "title": "Work",
@@ -61,162 +61,14 @@
           "NextJS",
           "Headless CMS"
         ],
-        "excerpt": "Goldlabel Core is always Free & Open Source as a public repo on . The apps we ship are real, run in production and are developed in public. The Core is Open Source and Free forever — giving you static",
+        "excerpt": "The apps we ship are real. They run in production and are developed accessibly. The Core is Open Source and Free forever — giving you statically generated sites with Firestorepowered updates and a rea",
         "children": [
-          {
-            "title": "Abgeschottet KI",
-            "description": "What Does It Mean to Ring‑Fence an LLM?",
-            "slug": "/work/abgeschottet-ki",
-            "order": 1,
-            "icon": "ki",
-            "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
-            "type": "folder",
-            "tags": [
-              "abgeschottet",
-              "KI"
-            ],
-            "excerpt": "A ring‑fenced LLM is like having the power of AI inside a locked room.\n\nIt can process sensitive documents and assist with legal work, but nothing ever leaves the firm’s secure network. When we say an",
-            "children": [
-              {
-                "title": "Abgeschottet KI",
-                "slug": "/work/abgeschottet-ki/why",
-                "order": 0,
-                "icon": "ki",
-                "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
-                "type": "file",
-                "excerpt": "Abgeschottet KI exists because firms need the power of AI without risking client confidentiality.\n\nModern firms handle vast amounts of documents every day. Large Language Models (LLMs) can speed up re"
-              },
-              {
-                "title": "Learning",
-                "slug": "/work/abgeschottet-ki/learning",
-                "order": 2,
-                "icon": "ki",
-                "image": "/jpg/abgeschotten-ki.jpg",
-                "type": "file",
-                "tags": [
-                  "abgeschottet",
-                  "KI"
-                ],
-                "excerpt": "How does the AI learn from the prompts over time?\n\n Used carefully, large language models can turn legal research into a faster, more focused process.\n\nWhen we talk about learning, it’s important to d"
-              },
-              {
-                "title": "Ring Fencing",
-                "slug": "/work/abgeschottet-ki/ringfenced-llm",
-                "order": 6,
-                "icon": "ki",
-                "image": "/png/ki/abgeschotten-ki.png",
-                "type": "file",
-                "excerpt": "What Does It Mean to Ring‑Fence an LLM?\n\n A ring‑fenced LLM is like having the power of AI inside a locked room.\n\n Runs on internal servers or private cloud\n Blocks external connections\n Uses local st"
-              },
-              {
-                "title": "Secrecy",
-                "slug": "/work/abgeschottet-ki/professional-secrecy",
-                "order": 10,
-                "icon": "ki",
-                "image": "/png/ki/abgeschotten-ki.png",
-                "type": "file",
-                "excerpt": "What Does Professional Secrecy Mean?\n\n What you tell your lawyer stays between you and them.\n\nWhen you speak to a lawyer in the UK, everything you tell them in confidence is protected by a strict lega"
-              },
-              {
-                "title": "Confidentiality",
-                "slug": "/work/abgeschottet-ki/confidentiality-obligations",
-                "order": 20,
-                "icon": "ki",
-                "image": "/png/ki/abgeschotten-ki.png",
-                "type": "file",
-                "tags": [
-                  "abgeschottet",
-                  "KI"
-                ],
-                "excerpt": "What Confidentiality Obligations Do UK Law Firms Have Toward Their Clients?\n\n UK law firms are bound by some of the strongest confidentiality rules in professional life.\n\n Everything you tell your law"
-              },
-              {
-                "title": "Example prompts",
-                "slug": "/work/abgeschottet-ki/prompts",
-                "order": 20,
-                "icon": "ki",
-                "image": "/png/ki/abgeschotten-ki.png",
-                "type": "file",
-                "excerpt": "General legal reasoning\n\nErkläre in einfachen Worten, was das Berufsgeheimnis für deutsche Rechtsanwälte bedeutet.\n\nExplain in simple terms what professional secrecy means for UK lawyers.\n\nWelche Pfli"
-              },
-              {
-                "title": "GDPR",
-                "slug": "/work/abgeschottet-ki/gdpr-law-firms",
-                "order": 30,
-                "icon": "ki",
-                "image": "/png/ki/abgeschotten-ki.png",
-                "type": "file",
-                "tags": [
-                  "abgeschottet",
-                  "KI"
-                ],
-                "excerpt": "What Does the GDPR Mean for a UK Law Firm?\n\n GDPR means your personal information is handled lawfully, transparently, and with your privacy in mind.\n\nThe General Data Protection Regulation (GDPR) – as"
-              },
-              {
-                "title": "Hardware",
-                "slug": "/work/abgeschottet-ki/hardware",
-                "order": 40,
-                "icon": "ki",
-                "image": "/png/ki/abgeschotten-ki.png",
-                "type": "file",
-                "tags": [
-                  "abgeschottet",
-                  "KI"
-                ],
-                "excerpt": "Keep it simple. Start small. Scale when you need to.\n\n Hardware for Abgeschottet KI\n\nOne of the advantages of Abgeschottet KI is that it’s a low‑investment, quick‑to‑implement solution.  \nYou don’t ne"
-              },
-              {
-                "title": "Research",
-                "slug": "/work/abgeschottet-ki/llms-legal-research",
-                "order": 40,
-                "icon": "ki",
-                "image": "/png/ki/abgeschotten-ki.png",
-                "type": "file",
-                "tags": [
-                  "abgeschottet",
-                  "KI"
-                ],
-                "excerpt": "How Could Large Language Models Help UK Law Firms With Legal Research?\n\n Used carefully, large language models can turn legal research into a faster, more focused process.\n\n Quickly summarising case l"
-              },
-              {
-                "title": "Risks",
-                "slug": "/work/abgeschottet-ki/risks-public-llms",
-                "order": 50,
-                "icon": "ki",
-                "image": "/png/ki/abgeschotten-ki.png",
-                "type": "file",
-                "excerpt": "What Are the Risks if Lawyers Send Confidential Files to a Public AI Service?\n\n Public AI services are not designed for legally confidential data.\n\n Loss of confidentiality\n Data protection breaches\n "
-              },
-              {
-                "title": "Confidentiality",
-                "slug": "/work/abgeschottet-ki/ringfenced-llm-confidentiality",
-                "order": 70,
-                "icon": "ki",
-                "image": "/png/ki/abgeschotten-ki.png",
-                "type": "file",
-                "excerpt": "How Can a Ring‑Fenced LLM Help?\n\n A ring‑fenced LLM gives a firm all the efficiency of AI while upholding the highest standards of confidentiality.\n\n No data leaves the firm’s network\n Built‑in access"
-              },
-              {
-                "title": "Organisational",
-                "slug": "/work/abgeschottet-ki/organisational-measures",
-                "order": 80,
-                "icon": "ki",
-                "image": "/png/ki/abgeschotten-ki.png",
-                "type": "file",
-                "tags": [
-                  "abgeschottet",
-                  "KI"
-                ],
-                "excerpt": "What Organisational Measures Should a Law Firm Take?\n\n A ring‑fenced LLM works best as part of a wider culture of confidentiality.\n\n Clear internal policies\n Regular staff training\n Access controls ba"
-              }
-            ]
-          },
           {
             "title": "Expertise",
             "description": "We can help understanding in these fields",
             "slug": "/work/expertise",
             "order": 1,
-            "icon": "info",
+            "icon": "expertise",
             "image": "https://live.staticflickr.com/65535/54688814017_148f57032c_o.jpg",
             "type": "folder",
             "tags": [
@@ -231,7 +83,7 @@
                 "description": "What do we know about about AI?",
                 "slug": "/work/expertise/ai",
                 "order": 1,
-                "icon": "oliver",
+                "icon": "expertise",
                 "image": "https://live.staticflickr.com/65535/53669705662_d1361d5032_h.jpg",
                 "type": "folder",
                 "tags": [
@@ -242,13 +94,258 @@
                   "work"
                 ],
                 "excerpt": "Is this Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday\n\nIt's keeping tinfoil hat wearing folk awake at night. If",
-                "children": []
+                "children": [
+                  {
+                    "title": "Abgeschottet KI",
+                    "description": "What Does It Mean to Ring‑Fence an LLM?",
+                    "slug": "/work/expertise/ai/abgeschottet-ki",
+                    "order": 1,
+                    "icon": "ki",
+                    "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
+                    "type": "folder",
+                    "tags": [
+                      "abgeschottet",
+                      "KI"
+                    ],
+                    "excerpt": "A ring‑fenced LLM is like having the power of AI inside a locked room.\n\nIt can process sensitive documents and assist with legal work, but nothing ever leaves the firm’s secure network. When we say an",
+                    "children": [
+                      {
+                        "title": "Abgeschottet KI",
+                        "slug": "/work/expertise/ai/abgeschottet-ki/why",
+                        "order": 0,
+                        "icon": "ki",
+                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
+                        "type": "file",
+                        "excerpt": "Abgeschottet KI exists because firms need the power of AI without risking client confidentiality.\n\nModern firms handle vast amounts of documents every day. Large Language Models (LLMs) can speed up re"
+                      },
+                      {
+                        "title": "Learning",
+                        "slug": "/work/expertise/ai/abgeschottet-ki/learning",
+                        "order": 2,
+                        "icon": "ki",
+                        "image": "/jpg/abgeschotten-ki.jpg",
+                        "type": "file",
+                        "tags": [
+                          "abgeschottet",
+                          "KI"
+                        ],
+                        "excerpt": "How does the AI learn from the prompts over time?\n\n Used carefully, large language models can turn legal research into a faster, more focused process.\n\nWhen we talk about learning, it’s important to d"
+                      },
+                      {
+                        "title": "Ring Fencing",
+                        "slug": "/work/expertise/ai/abgeschottet-ki/ringfenced-llm",
+                        "order": 6,
+                        "icon": "ki",
+                        "image": "/png/ki/abgeschotten-ki.png",
+                        "type": "file",
+                        "excerpt": "What Does It Mean to Ring‑Fence an LLM?\n\n A ring‑fenced LLM is like having the power of AI inside a locked room.\n\n Runs on internal servers or private cloud\n Blocks external connections\n Uses local st"
+                      },
+                      {
+                        "title": "Secrecy",
+                        "slug": "/work/expertise/ai/abgeschottet-ki/professional-secrecy",
+                        "order": 10,
+                        "icon": "ki",
+                        "image": "/png/ki/abgeschotten-ki.png",
+                        "type": "file",
+                        "excerpt": "What Does Professional Secrecy Mean?\n\n What you tell your lawyer stays between you and them.\n\nWhen you speak to a lawyer in the UK, everything you tell them in confidence is protected by a strict lega"
+                      },
+                      {
+                        "title": "Confidentiality",
+                        "slug": "/work/expertise/ai/abgeschottet-ki/confidentiality-obligations",
+                        "order": 20,
+                        "icon": "ki",
+                        "image": "/png/ki/abgeschotten-ki.png",
+                        "type": "file",
+                        "tags": [
+                          "abgeschottet",
+                          "KI"
+                        ],
+                        "excerpt": "What Confidentiality Obligations Do UK Law Firms Have Toward Their Clients?\n\n UK law firms are bound by some of the strongest confidentiality rules in professional life.\n\n Everything you tell your law"
+                      },
+                      {
+                        "title": "Example prompts",
+                        "slug": "/work/expertise/ai/abgeschottet-ki/prompts",
+                        "order": 20,
+                        "icon": "ki",
+                        "image": "/png/ki/abgeschotten-ki.png",
+                        "type": "file",
+                        "excerpt": "General legal reasoning\n\nErkläre in einfachen Worten, was das Berufsgeheimnis für deutsche Rechtsanwälte bedeutet.\n\nExplain in simple terms what professional secrecy means for UK lawyers.\n\nWelche Pfli"
+                      },
+                      {
+                        "title": "GDPR",
+                        "slug": "/work/expertise/ai/abgeschottet-ki/gdpr-law-firms",
+                        "order": 30,
+                        "icon": "ki",
+                        "image": "/png/ki/abgeschotten-ki.png",
+                        "type": "file",
+                        "tags": [
+                          "abgeschottet",
+                          "KI"
+                        ],
+                        "excerpt": "What Does the GDPR Mean for a UK Law Firm?\n\n GDPR means your personal information is handled lawfully, transparently, and with your privacy in mind.\n\nThe General Data Protection Regulation (GDPR) – as"
+                      },
+                      {
+                        "title": "Hardware",
+                        "slug": "/work/expertise/ai/abgeschottet-ki/hardware",
+                        "order": 40,
+                        "icon": "ki",
+                        "image": "/png/ki/abgeschotten-ki.png",
+                        "type": "file",
+                        "tags": [
+                          "abgeschottet",
+                          "KI"
+                        ],
+                        "excerpt": "Keep it simple. Start small. Scale when you need to.\n\n Hardware for Abgeschottet KI\n\nOne of the advantages of Abgeschottet KI is that it’s a low‑investment, quick‑to‑implement solution.  \nYou don’t ne"
+                      },
+                      {
+                        "title": "Research",
+                        "slug": "/work/expertise/ai/abgeschottet-ki/llms-legal-research",
+                        "order": 40,
+                        "icon": "ki",
+                        "image": "/png/ki/abgeschotten-ki.png",
+                        "type": "file",
+                        "tags": [
+                          "abgeschottet",
+                          "KI"
+                        ],
+                        "excerpt": "How Could Large Language Models Help UK Law Firms With Legal Research?\n\n Used carefully, large language models can turn legal research into a faster, more focused process.\n\n Quickly summarising case l"
+                      },
+                      {
+                        "title": "Risks",
+                        "slug": "/work/expertise/ai/abgeschottet-ki/risks-public-llms",
+                        "order": 50,
+                        "icon": "ki",
+                        "image": "/png/ki/abgeschotten-ki.png",
+                        "type": "file",
+                        "excerpt": "What Are the Risks if Lawyers Send Confidential Files to a Public AI Service?\n\n Public AI services are not designed for legally confidential data.\n\n Loss of confidentiality\n Data protection breaches\n "
+                      },
+                      {
+                        "title": "Confidentiality",
+                        "slug": "/work/expertise/ai/abgeschottet-ki/ringfenced-llm-confidentiality",
+                        "order": 70,
+                        "icon": "ki",
+                        "image": "/png/ki/abgeschotten-ki.png",
+                        "type": "file",
+                        "excerpt": "How Can a Ring‑Fenced LLM Help?\n\n A ring‑fenced LLM gives a firm all the efficiency of AI while upholding the highest standards of confidentiality.\n\n No data leaves the firm’s network\n Built‑in access"
+                      },
+                      {
+                        "title": "Organisational",
+                        "slug": "/work/expertise/ai/abgeschottet-ki/organisational-measures",
+                        "order": 80,
+                        "icon": "ki",
+                        "image": "/png/ki/abgeschotten-ki.png",
+                        "type": "file",
+                        "tags": [
+                          "abgeschottet",
+                          "KI"
+                        ],
+                        "excerpt": "What Organisational Measures Should a Law Firm Take?\n\n A ring‑fenced LLM works best as part of a wider culture of confidentiality.\n\n Clear internal policies\n Regular staff training\n Access controls ba"
+                      }
+                    ]
+                  },
+                  {
+                    "title": "AI Agent User Interfaces",
+                    "slug": "/work/expertise/ai/agents",
+                    "order": 20,
+                    "icon": "js",
+                    "image": "https://live.staticflickr.com/65535/54661655887_c5678ff794_b.jpg",
+                    "type": "file",
+                    "tags": [
+                      "expertise",
+                      "js",
+                      "javascript",
+                      "next",
+                      "react",
+                      "ai",
+                      "agents"
+                    ],
+                    "excerpt": "How we help you take your AI product ideas from concept, through prototype to production\n\n From prototype to production\n\nAI agents need more than a good model — they need a front end that users can ac"
+                  }
+                ]
+              },
+              {
+                "title": "3D on the web",
+                "description": "description",
+                "slug": "/work/expertise/web3d",
+                "order": 1,
+                "icon": "web3d",
+                "image": "https://live.staticflickr.com/65535/54747599061_445f0323cd_b.jpg",
+                "type": "folder",
+                "tags": [
+                  "expertise",
+                  "web",
+                  "3D",
+                  "WebGL",
+                  "Three.js",
+                  "Babylon.js",
+                  "WebGPU",
+                  "Flash",
+                  "JavaScript",
+                  "web development",
+                  "history",
+                  "VR",
+                  "AR",
+                  "performance"
+                ],
+                "excerpt": "[YouTube src=\"https://www.youtube.com/watch?v=Qe2ZLYzQToQ\"]\n\n Building for the web for more than twenty years\n\nFirst with Flash, then with JavaScript — and through all that time, 3D in the browser nev",
+                "children": [
+                  {
+                    "title": "Three.js",
+                    "slug": "/work/expertise/web3d/three-js",
+                    "order": 22,
+                    "icon": "web3d",
+                    "image": "https://live.staticflickr.com/65535/54747599061_445f0323cd_b.jpg",
+                    "type": "file",
+                    "tags": [
+                      "expertise",
+                      "web",
+                      "3D",
+                      "WebGL",
+                      "Three.js",
+                      "Babylon.js",
+                      "WebGPU",
+                      "Flash",
+                      "JavaScript",
+                      "web development",
+                      "history",
+                      "VR",
+                      "AR",
+                      "performance"
+                    ],
+                    "excerpt": "Three.js rewards experience. With two decades of JS and deep React/Next.js knowledge, you can transform a blank canvas into a highly optimized, interactive, and visually rich web experience—without co"
+                  },
+                  {
+                    "title": "Next Level",
+                    "slug": "/work/expertise/web3d/next-level",
+                    "order": 25,
+                    "icon": "web3d",
+                    "image": "https://live.staticflickr.com/65535/54747599061_445f0323cd_b.jpg",
+                    "type": "file",
+                    "tags": [
+                      "expertise",
+                      "web",
+                      "3D",
+                      "WebGL",
+                      "Three.js",
+                      "Babylon.js",
+                      "WebGPU",
+                      "Flash",
+                      "JavaScript",
+                      "web development",
+                      "history",
+                      "VR",
+                      "AR",
+                      "performance"
+                    ],
+                    "excerpt": "For control, longevity, and custom UX, pick Three.js. Assemble your own stack (R3F, Zustand/Jotai, glTF toolchain, physics/postprocessing). The early investment pays off in flexibility and scale.\n\nWeb"
+                  }
+                ]
               },
               {
                 "title": "Git",
                 "slug": "/work/expertise/git",
                 "order": 2,
-                "icon": "info",
+                "icon": "expertise",
                 "image": "/png/3rdParty/gitkraken.png",
                 "type": "file",
                 "tags": [
@@ -262,7 +359,7 @@
                 "title": "Next.js",
                 "slug": "/work/expertise/next-js",
                 "order": 15,
-                "icon": "info",
+                "icon": "expertise",
                 "image": "/png/clouds/default_whitecloud.png",
                 "type": "file",
                 "tags": [
@@ -279,7 +376,7 @@
                 "title": "Data Migration",
                 "slug": "/work/expertise/data-migration",
                 "order": 20,
-                "icon": "info",
+                "icon": "expertise",
                 "image": "https://live.staticflickr.com/65535/54688814017_148f57032c_o.jpg",
                 "type": "file",
                 "tags": [
@@ -296,7 +393,7 @@
                 "title": "Blockchain",
                 "slug": "/work/expertise/blockchain",
                 "order": 150,
-                "icon": "info",
+                "icon": "expertise",
                 "image": "/png/3rdParty/bitcoin.png",
                 "type": "file",
                 "tags": [
@@ -374,7 +471,7 @@
             "description": "UK Limited Company (5460545)",
             "slug": "/work/company",
             "order": 10,
-            "icon": "work",
+            "icon": "company",
             "image": "https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg",
             "type": "folder",
             "excerpt": "WhatsApp   \nTel +49 15510995150  \n | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX",
@@ -383,7 +480,7 @@
                 "title": "Working remotely",
                 "slug": "/work/company/remote-working",
                 "order": 250,
-                "icon": "work",
+                "icon": "company",
                 "image": "/png/og.png",
                 "type": "file",
                 "tags": [
@@ -396,7 +493,7 @@
                 "title": "Privacy & Cookies",
                 "slug": "/work/company/privacy-cookies",
                 "order": 555,
-                "icon": "work",
+                "icon": "company",
                 "image": "/png/og.png",
                 "type": "file",
                 "tags": [
@@ -412,7 +509,7 @@
                 "title": "Join Us",
                 "slug": "/work/company/join-us",
                 "order": 666,
-                "icon": "work",
+                "icon": "company",
                 "image": "/png/og.png",
                 "type": "file",
                 "tags": [
@@ -424,7 +521,7 @@
                 "title": "Work With Us",
                 "slug": "/work/company/work-with-us",
                 "order": 777,
-                "icon": "work",
+                "icon": "company",
                 "image": "https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg",
                 "type": "file",
                 "tags": [
@@ -445,7 +542,7 @@
             "tags": [
               "techstack"
             ],
-            "excerpt": "This page may require a higher level of access\n\nTechstack\nProtected by Bouncer\nTechstack\n\n UK Ltd\n Work\n JavaScript\n Git\n Design System\n\nThis page may require a higher level of access",
+            "excerpt": "",
             "children": [
               {
                 "title": "JavaScript",
@@ -598,52 +695,6 @@
         "excerpt": "I work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age I'm never going to ski like I used to. Ma",
         "children": [
           {
-            "title": "Food",
-            "description": "Right sleep. Right food.",
-            "slug": "/life/food",
-            "order": 10,
-            "icon": "food",
-            "image": "/jpg/wei-zangs-food.jpg",
-            "type": "folder",
-            "excerpt": "When I want a recipe I go the internet of course. I get annoyed by the amount of adverts on the pages where I want to follow simple instructions.\n\nFor some recipes that I've tried & tested I've stripp",
-            "children": [
-              {
-                "title": "Air Fried Stuffed Peppers",
-                "slug": "/life/food/air-fried-peppers",
-                "order": 35,
-                "icon": "food",
-                "image": "/jpg/wei-zangs-food.jpg",
-                "type": "file",
-                "tags": [
-                  "food",
-                  "punching dolphins",
-                  "recipes",
-                  "air fryer",
-                  "peppers"
-                ],
-                "excerpt": "2 Large peppers (capsicums)\n 1 125g pack of mozzarella\n Enough of your best, most delicious bolognaise to fill the peppers\n\n STEP 1\n\nPrepare Air Fryer pan. Line it with tinfoil if you want to keep it "
-              },
-              {
-                "title": "Banana Bread",
-                "slug": "/life/food/banana-bread",
-                "order": 50,
-                "icon": "food",
-                "image": "/jpg/wei-zangs-food.jpg",
-                "type": "file",
-                "excerpt": "| \n\nMoist, flavorful, and easy to make. Perfect for using overripe bananas, this classic loaf is a crowdpleaser for breakfast, snacks, or dessert.\n\n 125g Butter\n 175g Brown sugar\n 1 tsp Vanilla extrac"
-              },
-              {
-                "title": "Delia Smith's Lemon Meringue Pie",
-                "slug": "/life/food/lemon-meringue-pie",
-                "order": 76,
-                "icon": "food",
-                "image": "/jpg/lemon-meringue-pie.jpg",
-                "type": "file",
-                "excerpt": "\"Lemonading\" is an actual word that even people on Radio 4 use. So when life gives you lemons...\n\n Ingredients\n\n For the pastry\n\n 4 oz (110 g) plain flour, plus a little extra for rolling out\n a pinch"
-              }
-            ]
-          },
-          {
             "title": "Diving",
             "description": "Fish are friends. Not food.",
             "slug": "/life/diving",
@@ -695,6 +746,17 @@
             "type": "folder",
             "excerpt": "“It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a motorbike.”\n\n― Jane Austen, Pride and Prejudice",
             "children": []
+          },
+          {
+            "title": "Travel",
+            "description": "Zoto - The Little Zeppelin",
+            "slug": "/life/travel",
+            "order": 200,
+            "icon": "life",
+            "image": "https://live.staticflickr.com/65535/54652210336_8d28a5af11_b.jpg",
+            "type": "folder",
+            "excerpt": "This is Zoto. My van. Here's a map of where I've been in 2025. Well, since the Spring anyway\n\n[GoogleMap src=\"https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=001321\"]",
+            "children": []
           }
         ]
       },
@@ -706,17 +768,17 @@
         "icon": "balance",
         "image": "https://live.staticflickr.com/65535/54691336480_c273fe647c_o.jpg",
         "type": "folder",
-        "excerpt": "Writing\n     \n     \n Writers\n     \n     Are you ? \n     Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland",
+        "excerpt": "",
         "children": [
           {
             "title": "Writing",
-            "description": "It's hard to collate stuff into meaningful e-books, but we've done our best",
+            "description": "It's hard to collate stuff into meaningful writing, but we've doing our best",
             "slug": "/balance/writing",
             "order": 1,
             "icon": "balance",
-            "image": "https://live.staticflickr.com/65535/53670802348_9bb887b680_b.jpg",
+            "image": "https://live.staticflickr.com/65535/54353995935_a904d504aa_b.jpg",
             "type": "folder",
-            "excerpt": "Wei Zang's Food\n\n Wei Zang, author of Not here to fuck spiders\n\n Weekend Portfolio\n\n Written for semiprofessional coders ready to go pr0\n\nA series of standalone apps you can build in a weekend. Each p",
+            "excerpt": "Wei Zang, author of Not here to fuck spiders",
             "children": [
               {
                 "title": "Destructo The Wonderdog",
@@ -731,7 +793,7 @@
                 "title": "Weekend Portfolio",
                 "slug": "/balance/writing/weekend-portfolio",
                 "order": 16,
-                "icon": "code",
+                "icon": "balance",
                 "image": "https://live.staticflickr.com/65535/54672545447_eb6a103ff6_o.jpg",
                 "type": "file",
                 "excerpt": "Written for at semiprofessional coders ready to go pr0\n\nIn a weekend project, you’ll build a simple but powerful AI app. The idea is simple but important: you upload an .mp3 file, and the app gives yo"
@@ -743,38 +805,84 @@
                 "icon": "dog",
                 "image": "/jpg/puppy-fing.jpg",
                 "type": "file",
-                "excerpt": "I put an Attenborough series on for the dogs. Later I notice there’s a polar bear and a baby seal on the TV. I look at the doggy. He's got genuine concern in his eyes which also say\n\n\"vat puppy fing’s"
-              },
-              {
-                "title": "Generation X",
-                "description": "by Douglas Coupland",
-                "slug": "/balance/writing/generation-x",
-                "order": 100,
-                "icon": "doc",
-                "image": "/jpg/cassetes.jpg",
-                "type": "folder",
-                "excerpt": "The term Generation X acquired a modern application after the release of Generation X: Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Glossary\n\nMcJob A lo",
-                "children": []
+                "excerpt": "I put an Attenborough series on for the dogs. Later I notice there’s a polar bear and a baby seal on the TV. I look at the doggy. He's got genuine concern in his eyes which also say\n\n\"'at puppy fing’s"
               },
               {
                 "title": "Wei Zang’s Food",
+                "description": "魏藏美食",
                 "slug": "/balance/writing/wei-zangs-food",
                 "order": 110,
                 "icon": "food",
                 "image": "/jpg/wei-zangs-food.jpg",
-                "type": "file",
-                "excerpt": "I never learned to cook. No one taught me. That’s why I can tell you about it.\n\nPeople who are taught spend too long worrying about what’s “right.” I just ate what I liked, cooked it, guessed. Like de"
+                "type": "folder",
+                "excerpt": "I never learned to cook. No one taught me. That’s why I can tell you about it.\n\nPeople who are taught spend too long worrying about what’s “right.” I just ate what I liked, cooked it, guessed. Like de",
+                "children": [
+                  {
+                    "title": "Air Fried Stuffed Peppers",
+                    "slug": "/balance/writing/wei-zangs-food/air-fried-peppers",
+                    "order": 35,
+                    "icon": "food",
+                    "image": "/jpg/wei-zangs-food.jpg",
+                    "type": "file",
+                    "tags": [
+                      "food",
+                      "punching dolphins",
+                      "recipes",
+                      "air fryer",
+                      "peppers"
+                    ],
+                    "excerpt": "2 Large peppers (capsicums)\n 1 125g pack of mozzarella\n Enough of your best, most delicious bolognaise to fill the peppers\n\n STEP 1\n\nPrepare Air Fryer pan. Line it with tinfoil if you want to keep it "
+                  },
+                  {
+                    "title": "Banana Bread",
+                    "slug": "/balance/writing/wei-zangs-food/banana-bread",
+                    "order": 50,
+                    "icon": "food",
+                    "image": "/jpg/wei-zangs-food.jpg",
+                    "type": "file",
+                    "excerpt": "| \n\nMoist, flavorful, and easy to make. Perfect for using overripe bananas, this classic loaf is a crowdpleaser for breakfast, snacks, or dessert.\n\n 125g Butter\n 175g Brown sugar\n 1 tsp Vanilla extrac"
+                  },
+                  {
+                    "title": "Beef Wellie",
+                    "slug": "/balance/writing/wei-zangs-food/beef-wellie",
+                    "order": 55,
+                    "icon": "food",
+                    "image": "https://live.staticflickr.com/65535/54742614047_e44e8af81e_b.jpg",
+                    "type": "file",
+                    "excerpt": "Ingredients\n\n 2 x 400g beef fillets\n Olive oil, for frying\n 500g mixture of wild mushrooms, cleaned\n 1 thyme sprig, leaves only\n 500g puff pastry\n 8 slices of Parma ham\n 2 egg yolks, beaten with 1 tbs"
+                  },
+                  {
+                    "title": "Lemon Meringue Pie",
+                    "slug": "/balance/writing/wei-zangs-food/lemon-meringue-pie",
+                    "order": 76,
+                    "icon": "food",
+                    "image": "/jpg/lemon-meringue-pie.jpg",
+                    "type": "file",
+                    "excerpt": "\"Lemonading\" is an actual word that even people on Radio 4 use. So when life gives you lemons...\n\n Ingredients\n\n For the pastry\n\n 4 oz (110 g) plain flour, plus a little extra for rolling out\n a pinch"
+                  }
+                ]
               },
               {
                 "title": "Science Fiction",
                 "slug": "/balance/writing/sci-fi",
                 "order": 120,
-                "icon": "folder",
+                "icon": "rocket",
                 "image": "/jpg/einstein.jpg",
                 "type": "file",
-                "excerpt": "Because we can carefully observe constellations when the Sun is not blocking their path, we know what position the stars should be in when the Sun is keeping us from seeing them. However, according to"
+                "excerpt": "That's soience mayte\n\nBecause we can carefully observe constellations when the Sun is not blocking their path, we know what position the stars should be in when the Sun is keeping us from seeing them."
               }
             ]
+          },
+          {
+            "title": "Video",
+            "description": "It's hard to collate stuff into meaningful writing, but we've doing our best",
+            "slug": "/balance/video",
+            "order": 9,
+            "icon": "balance",
+            "image": "https://live.staticflickr.com/65535/54353995935_a904d504aa_b.jpg",
+            "type": "folder",
+            "excerpt": "[YouTube src=\"https://www.youtube.com/watch?v=Qe2ZLYzQToQ\"]\n\nScript (written October 2000)\n\nKnowing the future is easy\nYou just have to understand the past\nThe situation we have now is one where it's ",
+            "children": []
           },
           {
             "title": "Writers",
@@ -784,37 +892,72 @@
             "icon": "balance",
             "image": "/jpg/cassetes.jpg",
             "type": "folder",
-            "excerpt": "",
+            "excerpt": "Curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction. From visionary science fiction to satirical explorations of culture and the human exper",
             "children": [
               {
-                "title": "Einstein",
-                "description": "Albert. The Godfather of modern physics",
-                "slug": "/balance/writers/einstein",
-                "order": 1,
+                "title": "William Gibson",
+                "slug": "/balance/writers/william-gibson",
+                "order": 50,
                 "icon": "doc",
-                "image": "/jpg/einstein.jpg",
-                "type": "folder",
-                "excerpt": "Let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series.\n\nI mentioned in the last lecture this idea of Gedanken experiments, th",
-                "children": [
-                  {
-                    "title": "General Relativity",
-                    "slug": "/balance/writers/einstein/relativity",
-                    "order": 30,
-                    "icon": "doc",
-                    "image": "/jpg/einstein.jpg",
-                    "type": "file",
-                    "excerpt": "Really just the name for Einstein's study of gravitation. And here we're going to introduce my alltime favorite analogy for general relativity, the bowling ball on the trampoline. Let's imagine that f"
-                  }
-                ]
+                "image": "https://live.staticflickr.com/65535/54743292173_aed0039452_b.jpg",
+                "type": "file",
+                "tags": [
+                  "Science Fiction",
+                  "Fiction",
+                  "Cyberpunk",
+                  "Classics",
+                  "Dystopia",
+                  "Science Fiction Fantasy",
+                  "Fantasy",
+                  "Audiobook",
+                  "Novels"
+                ],
+                "excerpt": "Neuromancer (1984)\n\n Neuromancer's portrayal of AIs striving for autonomy foreshadowed realworld debates. Neuromancer didn’t predict the future—it just defined how to imagine it\n\n Why Neuromancer is S"
+              },
+              {
+                "title": "Generation X",
+                "slug": "/balance/writers/generation-x",
+                "order": 100,
+                "icon": "doc",
+                "image": "/jpg/cassetes.jpg",
+                "type": "file",
+                "excerpt": "The term Generation X acquired a modern application after the release of Generation X: Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Glossary\n\nMcJob A lo"
+              },
+              {
+                "title": "Douglas Coupland",
+                "slug": "/balance/writers/douglas-coupland",
+                "order": 1000,
+                "icon": "doc",
+                "image": "https://live.staticflickr.com/65535/54736833001_ef9c5f4b57_c.jpg",
+                "type": "file",
+                "excerpt": "Douglas Coupland is a Canadian novelist and artist, known for capturing contemporary culture, technology, and the malaise of modern life with wit and satirical insight. His writing often blends pop cu"
+              },
+              {
+                "title": "Tom Robbins",
+                "slug": "/balance/writers/tom-robbins",
+                "order": 2000,
+                "icon": "doc",
+                "image": "https://live.staticflickr.com/65535/54735999657_5ec054b3e2_b.jpg",
+                "type": "file",
+                "excerpt": "Tom Robbins is an American novelist known for playful, whimsical prose, irreverent humor, and philosophical musings. His works blend surrealism, countercultural themes, and sharp social commentary, wi"
               },
               {
                 "title": "Charles Darwin",
                 "slug": "/balance/writers/charles-darwin",
-                "order": 2000,
+                "order": 3000,
                 "icon": "doc",
                 "image": "/jpg/darwin.jpg",
                 "type": "file",
                 "excerpt": "Judging from the past, we may safely infer that no one living species will transmit its unaltered likeness to a distant futurity. And of the species now living very few will transmit progeny of any ki"
+              },
+              {
+                "title": "Einstein",
+                "slug": "/balance/writers/einstein",
+                "order": 9999,
+                "icon": "doc",
+                "image": "/jpg/einstein.jpg",
+                "type": "file",
+                "excerpt": "Let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series.\n\nI mentioned in the last lecture this idea of Gedanken experiments, th"
               }
             ]
           }

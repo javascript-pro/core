@@ -2,7 +2,7 @@
 order: 40
 title: Research
 description: How large language models can assist UK law firms
-slug: /work/abgeschottet-ki/llms-legal-research
+slug: /work/expertise/ai/abgeschottet-ki/llms-legal-research
 icon: ki
 image: /png/ki/abgeschotten-ki.png
 tags: abgeschottet, KI

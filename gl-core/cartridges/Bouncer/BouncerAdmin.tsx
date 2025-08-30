@@ -1,3 +1,4 @@
+// core/gl-core/cartridges/Bouncer/BouncerAdmin.tsx
 'use client';
 
 import * as React from 'react';
@@ -57,7 +58,7 @@ export default function BouncerAdmin() {
     if (b.includes('safari')) return 'safari';
     if (b.includes('firefox')) return 'firefox';
     if (b.includes('edge')) return 'edge';
-    return 'browser';
+    return 'info';
   };
 
   const getOsIcon = (os: string): string => {
@@ -81,7 +82,7 @@ export default function BouncerAdmin() {
         {visitor.photoURL && typeof visitor.photoURL === 'string' && (
           <Avatar src={visitor.photoURL} sx={{ width: 24, height: 24 }} />
         )}
-        <Icon icon={getBrowserIcon(visitor.browser || '') as any} />
+        <Icon icon={getBrowserIcon(visitor.browser || 'work') as any} />
         <Icon icon={getDeviceTypeIcon(visitor.deviceType || '') as any} />
         <Icon icon={getOsIcon(visitor.os || '') as any} />
         {visitor.country_code && typeof visitor.country_code === 'string' && (

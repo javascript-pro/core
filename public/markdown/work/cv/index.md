@@ -54,11 +54,19 @@ Designed and delivered real‑world Next.js apps and Open Source tooling that of
 _Contract_  
  _London / Hybrid — Apr 2023 to May 2025_
 
-- Leading the development of internal tools and the Admin Portal using Next.js (App Router), Firebase Auth, and Firestore
-- Architecting a modular frontend platform to power multiple apps with a shared design system based on MUI
-- Building event-driven interfaces that integrate with external systems, including AWS and internal APIs
-- Championing best practices across accessibility, performance, and developer experience
-- Supporting wider digital twin product strategy with tooling, documentation, and UI infrastructure
+- Led development of internal tools and the Admin Portal using Next.js (App Router), Firebase Auth, and Firestore
+
+- Architected a modular frontend platform powering multiple apps with a shared design system based on MUI
+
+- Built event-driven interfaces integrating with AWS services and internal APIs
+
+- Championed best practices across accessibility, performance, and developer experience
+
+- Contributed to wider digital twin product strategy with tooling, documentation, and UI infrastructure
+
+- Designed and prototyped a collaborative 3D web application using Three.js, enabling two users to inhabit and interact within the same virtual city space in real time
+
+- Gained hands-on experience with Cesium and other WebGL frameworks during discovery, evaluating rendering performance, geospatial accuracy, and integration approaches for large-scale urban datasets
 
 #### Full Stack JavaScript Developer — Atrackt!
 

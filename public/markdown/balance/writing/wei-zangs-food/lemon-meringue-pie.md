@@ -1,8 +1,8 @@
 ---
 order: 76
-title: Delia Smith's Lemon Meringue Pie
+title: Lemon Meringue Pie
 description: Apparently lemonading is a real word
-slug: /life/food/lemon-meringue-pie
+slug: /balance/writing/wei-zangs-food/lemon-meringue-pie
 icon: food
 image: /jpg/lemon-meringue-pie.jpg
 ---

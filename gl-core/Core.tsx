@@ -40,6 +40,7 @@ import { Bouncer, setUid } from './cartridges/Bouncer';
 import { Admin } from './cartridges/Admin';
 
 export default function Core({ frontmatter, body = null }: TCore) {
+  const { noImage } = frontmatter;
   let fullScreen = false;
   const [loading, setLoading] = React.useState(true);
   const { hideImage } = useSlice();
@@ -48,7 +49,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const router = useRouter();
   const themeMode = useThemeMode();
   useVersionCheck();
-
   const isMobile = useIsMobile();
   const dispatch = useDispatch();
   const [imageError, setImageError] = React.useState(false);
@@ -126,7 +126,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
             <Grid size={{ xs: 12, md: 9 }}>
               <Box sx={{ mt: isMobile ? 2 : 0 }}>
                 {/* Image block */}
-                {!hideImage && frontmatter?.image && (
+                {!noImage && frontmatter?.image && (
                   <Box sx={{ mx: isMobile ? 0 : 4, mt: 0 }}>
                     {!imageError ? (
                       <Image

@@ -6,18 +6,5 @@ slug: /work/techstack
 icon: techstack
 image: /png/og.png
 tags: techstack
+noImage: true
 ---
-
-This page may require a higher level of access
-
-Techstack
-Protected by Bouncer
-Techstack
-
-- UK Ltd
-- Work
-- JavaScript
-- Git
-- Design System
-
-This page may require a higher level of access

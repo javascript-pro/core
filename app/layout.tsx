@@ -20,14 +20,7 @@ export default async function RootLayout({
   }
 
   let shortcutIcon = '/svg/favicon.svg';
-  let appleTouchIcon = '/png/apple-touch-icon.png';
-
-  /*
-    if ( pathname contains 'fallmanager' ){
-      shortcutIcon = "/_clients_/fallmanager/icon.svg";
-      appleTouchIcon = "/_clients_/fallmanager/apple-touch-icon.svg";
-    }
-  */
+  let appleTouchIcon = '/png/favicon.png';
 
   return (
     <html lang="en">

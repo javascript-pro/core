@@ -11,10 +11,7 @@ import {
   Typography,
   Grid,
 } from '@mui/material';
-// import {
-//   // useAdminSlice,
-//   MenuList,
-// } from '../../../Admin';
+import { BouncerAdmin } from '../../../Bouncer';
 
 export default function Dashboard() {
   // const slice = useAdminSlice();
@@ -22,24 +19,8 @@ export default function Dashboard() {
     <Box>
       <Grid container spacing={2}>
         <Grid size={{ xs: 12, md: 6 }}>
-          <Card>
-            <CardHeader title="Live Visitors" />
-            <CardContent>
-              Connect to Firebase and subscribe to the collection
-            </CardContent>
-          </Card>
+          <BouncerAdmin />
         </Grid>
-        {/* <Grid size={{ xs: 12, md: 6 }}>
-          <Typography
-            variant="button"
-            sx={{
-              mb: 3,
-            }}
-          >
-            Dashboard
-          </Typography>
-          <MenuList />
-        </Grid> */}
       </Grid>
 
       {/* <pre style={{ fontSize: 10 }}>

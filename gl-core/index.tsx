@@ -20,6 +20,9 @@ import {
   ArrowMenu,
   Siblings,
   Children,
+  GoogleMap,
+  FlickrAlbum,
+  YouTube,
 } from './components';
 import {
   useLoading,
@@ -66,6 +69,9 @@ export {
 };
 export {
   Advert,
+  GoogleMap,
+  FlickrAlbum,
+  YouTube,
   Header,
   Footer,
   RenderMarkdown,

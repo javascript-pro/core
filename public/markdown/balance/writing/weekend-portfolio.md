@@ -3,7 +3,11 @@ order: 16
 title: Weekend Portfolio
 description: Build a simple but powerful AI app
 slug: /balance/writing/weekend-portfolio
+<<<<<<< HEAD
+icon: balance
+=======
 icon: code
+>>>>>>> origin/main
 image: https://live.staticflickr.com/65535/54672545447_eb6a103ff6_o.jpg
 ---
 

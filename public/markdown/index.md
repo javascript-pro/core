@@ -2,33 +2,46 @@
 order: 1
 slug: /
 title: Goldlabel
-description: AI software which works
-icon: ki
+description: Work, Life, Balance
+icon: goldlabel
 tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 github: https://github.com/javascript-pro/core
 api: /api/gl-api/flickr/latest/latest
+<<<<<<< HEAD
+image: https://live.staticflickr.com/65535/54679640252_6b97e17eda_b.jpg
+=======
 image: https://live.staticflickr.com/65535/53670802348_940f40175e_h.jpg
+>>>>>>> origin/main
 ---
 
-## AKI - New for July 2025
+#### [AKI - Ring‑fenced AI](/work/expertise/ai/abgeschottet-ki)
 
 Abgeschottet KI delivers a secure, ring‑fenced AI to streamline legal compliance workflows, process documents faster, and protect sensitive data.
 
-### Goldlabel builds and ships modern web apps for clients who need real results — fast
+> "Ring‑fencing our own AI in‑house allowed us to streamline our workflow without compromising our GDPR obligations or data security." **Rahul Sharma, CEO**
 
-- _Small_ team. _Big_ output
-- Real deployments from Day One
-- Readable, extensible, Open Source
+#### [3D on the web](/work/expertise/web3d)
 
-Goldlabel Apps is a UK-based software company that designs, builds, and maintains full-stack web applications. We specialize in Next.js, Firebase, and custom UI development, delivering everything from internal admin tools to polished public-facing websites.
+> Building for the web for more than twenty years
 
-### Benefits of building with us
+#### [Beef Wellington](/balance/writing/wei-zangs-food/beef-wellie)
 
-- Ship early and often.  
-  Each app is live from the outset — not just a mockup or prototyle
+Death cap mushrooms optional if you don't like your inlaws
 
-- Share the process.  
-  Follow the development on GitHub, view the commit history, clone the code. Get involved with Issues
+#### [Neuromancer (1984)](/balance/writers/william-gibson)
 
-- Built for reuse.  
-  Every component, pattern, and API is designed to be portable and production-ready
+Neuromancer's portrayal of AIs striving for autonomy foreshadowed real-world debates. Neuromancer didn’t predict the future—it just defined how to imagine it
+
+#### [Travel](/life/travel)
+
+Where I've been in the little Zeppelin since Spring 2025
+
+[GoogleMap src="https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=001321"]
+
+> Cultural reference; [Generation X](/balance/writers/generation-x) Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland
+
+#### News
+
+#### [AI Agent User Interfaces](/work/expertise/ai/agents)
+
+How we help you take your AI product ideas from concept, through prototype to production

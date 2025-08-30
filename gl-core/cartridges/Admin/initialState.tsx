@@ -14,6 +14,11 @@ export const initialState: TAdminState = {
       route: '/admin',
     },
     {
+      label: 'Bouncer',
+      icon: 'bouncer',
+      route: '/admin/bouncer',
+    },
+    {
       label: 'Flickr',
       icon: 'flickr',
       route: '/admin/flickr',

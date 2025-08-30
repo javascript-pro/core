@@ -2,7 +2,7 @@
 order: 6
 title: Ring Fencing
 description: Keeping data inside a secure environment
-slug: /work/abgeschottet-ki/ringfenced-llm
+slug: /work/expertise/ai/abgeschottet-ki/ringfenced-llm
 icon: ki
 image: /png/ki/abgeschotten-ki.png
 ---
