@@ -2,11 +2,7 @@
 order: 100
 title: Generation X
 description: by Douglas Coupland
-<<<<<<<< HEAD:public/markdown/balance/writers/generation-x.md
-slug: /balance/writers/generation-x
-========
 slug: /balance/writing/generation-x
->>>>>>>> origin/main:public/markdown/balance/writing/generation-x/index.md
 icon: doc
 image: /jpg/cassetes.jpg
 ---

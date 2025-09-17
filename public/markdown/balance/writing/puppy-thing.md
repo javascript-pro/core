@@ -1,11 +1,7 @@
 ---
 order: 30
 title: dog
-<<<<<<< HEAD
-description: That puppy fing
-=======
 description: vat puppy fing’s gunna get fucked
->>>>>>> origin/main
 icon: dog
 slug: /balance/writing/puppy-thing
 image: /jpg/puppy-fing.jpg

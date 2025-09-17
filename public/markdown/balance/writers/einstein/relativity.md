@@ -1,15 +1,8 @@
 ---
-<<<<<<<< HEAD:public/markdown/balance/writers/einstein.md
 order: 9999
-title: Einstein
-description: Albert. The Godfather of modern physics
-slug: /balance/writers/einstein
-========
-order: 30
 title: General Relativity
 description: Einstein's study of gravitation
 slug: /balance/writers/einstein/relativity
->>>>>>>> origin/main:public/markdown/balance/writers/einstein/relativity.md
 icon: doc
 image: /jpg/einstein.jpg
 ---

@@ -3,7 +3,6 @@ order: 120
 title: Science Fiction
 description: and Speculative Fiction
 slug: /balance/writing/sci-fi
-<<<<<<< HEAD
 icon: rocket
 image: /jpg/einstein.jpg
 ---
