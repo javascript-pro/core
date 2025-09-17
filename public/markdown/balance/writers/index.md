@@ -26,6 +26,6 @@ Canadian novelist and artist, Coupland captures modern life with wit, dark humor
 
 - Tom Robbins
 
-Known for whimsical prose and irreverent humor, Robbins blends surrealism, countercultural themes, and philosophical musings. His novels celebrate language, imagination, and the unexpected in everyday life.
-=======
->>>>>>> origin/main
+# Known for whimsical prose and irreverent humor, Robbins blends surrealism, countercultural themes, and philosophical musings. His novels celebrate language, imagination, and the unexpected in everyday life.
+
+> > > > > > > origin/main

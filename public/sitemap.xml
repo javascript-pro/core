@@ -5,7 +5,6 @@
     <loc>https://goldlabel.pro/balance</loc>
   </url>
   <url>
-<<<<<<< HEAD
     <loc>https://goldlabel.pro/balance/video</loc>
   </url>
   <url>
@@ -15,25 +14,18 @@
     <loc>https://goldlabel.pro/balance/writers/douglas-coupland</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/balance/writers/einstein/relativity</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/balance/writers/einstein</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/balance/writers/generation-x</loc>
-=======
-    <loc>https://goldlabel.pro/balance/writers/charles-darwin</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/writers/einstein</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/writers/einstein/relativity</loc>
->>>>>>> origin/main
   </url>
   <url>
     <loc>https://goldlabel.pro/balance/writers</loc>
   </url>
   <url>
-<<<<<<< HEAD
     <loc>https://goldlabel.pro/balance/writers/tom-robbins</loc>
   </url>
   <url>
@@ -43,14 +35,9 @@
     <loc>https://goldlabel.pro/balance/writing/destructo-the-wonderdog</loc>
   </url>
   <url>
-=======
-    <loc>https://goldlabel.pro/balance/writing/destructo-the-wonderdog</loc>
-  </url>
-  <url>
     <loc>https://goldlabel.pro/balance/writing/generation-x</loc>
   </url>
   <url>
->>>>>>> origin/main
     <loc>https://goldlabel.pro/balance/writing</loc>
   </url>
   <url>
@@ -63,7 +50,6 @@
     <loc>https://goldlabel.pro/balance/writing/weekend-portfolio</loc>
   </url>
   <url>
-<<<<<<< HEAD
     <loc>https://goldlabel.pro/balance/writing/wei-zangs-food/air-fried-peppers</loc>
   </url>
   <url>
@@ -77,9 +63,9 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/balance/writing/wei-zangs-food/lemon-meringue-pie</loc>
-=======
+  </url>
+  <url>
     <loc>https://goldlabel.pro/balance/writing/wei-zangs-food</loc>
->>>>>>> origin/main
   </url>
   <url>
     <loc>https://goldlabel.pro/</loc>

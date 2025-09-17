@@ -4,12 +4,12 @@ Goldlabel Core is a **Next.js application** that serves as a public-facing conte
 
 ## Features
 
-- **Next.js with App Router**: Modern routing and optimized builds.  
-- **Markdown-based content**: Pages and apps are generated from the `public/markdown` folder.  
-- **Static site generation (SSG)**: Fast, SEO-friendly pages with minimal runtime dependencies.  
-- **Admin section (optional)**: Role-based authentication and content management.  
-- **Responsive UI**: Built with **MUI (Material UI)** for clean, consistent design.  
-- **Open design**: Components and utilities are fully accessible for customization.  
+- **Next.js with App Router**: Modern routing and optimized builds.
+- **Markdown-based content**: Pages and apps are generated from the `public/markdown` folder.
+- **Static site generation (SSG)**: Fast, SEO-friendly pages with minimal runtime dependencies.
+- **Admin section (optional)**: Role-based authentication and content management.
+- **Responsive UI**: Built with **MUI (Material UI)** for clean, consistent design.
+- **Open design**: Components and utilities are fully accessible for customization.
 
 ## Installation
 
@@ -33,12 +33,12 @@ NEXT_PUBLIC_APP_URL=http://localhost:3000
 yarn dev
 ```
 
-- Runs the app at [http://localhost:3000](http://localhost:3000).  
+- Runs the app at [http://localhost:3000](http://localhost:3000).
 - Firebase credentials and other API keys are loaded from `.env.local`.
 
 ## Deployment
 
-Goldlabel Core is optimized for **Vercel**, but can be deployed to any static-friendly hosting platform.  
+Goldlabel Core is optimized for **Vercel**, but can be deployed to any static-friendly hosting platform.
 
 ```bash
 yarn build
