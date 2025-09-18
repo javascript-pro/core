@@ -82,20 +82,18 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
   return (
     <>
       {/* Floating Action Button in bottom-right corner */}
-      <Fab
-        color={themeMode === 'light' ? 'default' : 'primary'}
+      <IconButton
+        color="primary"
         onClick={handleClick}
         sx={{
+          zIndex: (theme) => theme.zIndex.modal + 2,
           position: 'fixed',
-          background: themeMode === 'light' ? 'white' : 'primary',
           bottom: 16,
           right: 16,
-          boxShadow: 0,
-          zIndex: (theme) => theme.zIndex.modal + 2,
         }}
       >
-        <Icon icon="menu" />
-      </Fab>
+        <Icon icon="fingerprint" />
+      </IconButton>
 
       <Menu
         anchorEl={anchorEl}
@@ -118,7 +116,7 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
           <ListItemText primary="Home" />
         </MenuItem>
 
-        <MenuItem
+        {/* <MenuItem
           onClick={() => {
             dispatch(routeTo('/admin', router));
           }}
@@ -127,15 +125,15 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
             <Icon icon="admin" />
           </ListItemIcon>
           <ListItemText primary="Admin" />
-        </MenuItem>
+        </MenuItem> */}
 
         {/* OG Image toggle */}
-        <MenuItem onClick={handleToggleHideImage}>
+        {/* <MenuItem onClick={handleToggleHideImage}>
           <ListItemIcon>
             <Icon icon="photo" />
           </ListItemIcon>
           <ListItemText primary={hideImage ? 'OG Images' : 'Flickr Images'} />
-        </MenuItem>
+        </MenuItem> */}
 
         {/* Git Open Sourcce */}
         <MenuItem onClick={handleGithub}>

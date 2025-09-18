@@ -90,6 +90,15 @@
                 "excerpt": "What problem are we talking about? Using tech to improve workflow efficiency\n\n Any sensible business should be interested in that?\n\n Where is the original Ella? Saarland, Germany. A Windows PC securel"
               },
               {
+                "title": "Agile approach",
+                "slug": "/work/ella/milestones",
+                "order": 60,
+                "icon": "case",
+                "image": "https://live.staticflickr.com/65535/54672545447_5e16aaf822_b.jpg",
+                "type": "file",
+                "excerpt": "Milestone 1\n\n Setup Hardware & Environment\n\nFrom within the H&A Network, using VPN we can access Ella and CRUD a list of placeholder test data from the database\n\n Milestone 5\n\n Ella live & being used "
+              },
+              {
                 "title": "Testing Ella",
                 "slug": "/work/ella/testing-ella",
                 "order": 70,
@@ -830,7 +839,7 @@
                 "title": "Weekend Portfolio",
                 "slug": "/balance/writing/weekend-portfolio",
                 "order": 16,
-                "icon": "code",
+                "icon": "fingerprint",
                 "image": "https://live.staticflickr.com/65535/54672545447_eb6a103ff6_o.jpg",
                 "type": "file",
                 "excerpt": "Written for at semiprofessional coders ready to go pr0\n\nIn a weekend project, you’ll build a simple but powerful AI app. The idea is simple but important: you upload an .mp3 file, and the app gives yo"
