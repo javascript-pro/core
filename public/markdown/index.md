@@ -4,11 +4,18 @@ slug: /
 title: Goldlabel
 description: Work, Life, Balance
 icon: goldlabel
-tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
+tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS, secure
 github: https://github.com/javascript-pro/core
-api: /api/gl-api/flickr/latest/latest
-image: https://live.staticflickr.com/65535/53670802348_940f40175e_h.jpg
+image: https://live.staticflickr.com/65535/54761243163_f3aa190f77_h.jpg
 ---
+
+#### [Ella. Easy Legal Letter Assistant](/work/ella)
+
+> A lightweight Windows app using NextJS & React for generating precise legal letters, designed for law firms to centralize case data in a 🔑 secure onsite Access database.
+
+#### 👀 German
+
+Ella was created for a German client, which is why you will often see German. If you're a non german speaker, it might as well be in Chinese.
 
 #### [AKI - Ring‑fenced AI](/work/expertise/ai/abgeschottet-ki)
 
@@ -20,7 +27,7 @@ Abgeschottet KI delivers a secure, ring‑fenced AI to streamline legal compli
 
 > Building for the web for more than twenty years
 
-#### [Beef Wellington](/balance/writing/wei-zangs-food/beef-wellie)
+#### [Beef Welly](/balance/writing/wei-zangs-food/beef-wellie)
 
 Death cap mushrooms optional if you don't like your inlaws
 
@@ -31,8 +38,6 @@ Neuromancer's portrayal of AIs striving for autonomy foreshadowed real-world deb
 #### [Travel](/life/travel)
 
 Where I've been in the little Zeppelin since Spring 2025
-
-[GoogleMap src="https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=001321"]
 
 > Cultural reference; [Generation X](/balance/writers/generation-x) Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland
 

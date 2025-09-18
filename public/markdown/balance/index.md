@@ -8,6 +8,13 @@ image: https://live.staticflickr.com/65535/54691336480_c273fe647c_o.jpg
 noImage: true
 ---
 
+👀
+👉👇👍👌🙏
+💾🗑️⚠️
+✅❌
+➡️🔄
+🔑🎉
+
 - [Writing](/balance/writing/)
 
   - [Destructo the Wonderdog](/balance/writing/destructo-the-wonderdog)

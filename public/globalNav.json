@@ -5,7 +5,7 @@
     "slug": "/",
     "order": 1,
     "icon": "goldlabel",
-    "image": "https://live.staticflickr.com/65535/53670802348_940f40175e_h.jpg",
+    "image": "https://live.staticflickr.com/65535/54761243163_f3aa190f77_h.jpg",
     "type": "folder",
     "tags": [
       "JavaScript",
@@ -33,9 +33,10 @@
       "Node",
       "Gatsby",
       "NextJS",
-      "Headless CMS"
+      "Headless CMS",
+      "secure"
     ],
-    "excerpt": "Abgeschottet KI delivers a secure, ring‑fenced AI to streamline legal compliance workflows, process documents faster, and protect sensitive data.\n\n \"Ring‑fencing our own AI in‑house allowed us to stre",
+    "excerpt": "A lightweight Windows app using NextJS & React for generating precise legal letters, designed for law firms to centralize case data in a 🔑 secure onsite Access database.\n\n 👀 German\n\nElla was created",
     "children": [
       {
         "title": "Work",
@@ -63,6 +64,42 @@
         ],
         "excerpt": "The apps we ship are real. They run in production and are developed accessibly. The Core is Open Source and Free forever — giving you statically generated sites with Firestorepowered updates and a rea",
         "children": [
+          {
+            "title": "Ella",
+            "description": "Easy Legal Letter Assistant",
+            "slug": "/work/ella",
+            "order": 1,
+            "icon": "case",
+            "image": "https://live.staticflickr.com/65535/54672545447_5e16aaf822_b.jpg",
+            "type": "folder",
+            "tags": [
+              "expertise",
+              "ella",
+              "experience",
+              "work"
+            ],
+            "excerpt": "[YouTube src=\"https://www.youtube.com/watch?v=B01QAsm6jU8\"]\n\n Easy Legal Letter Assistant\n\n Ella is a lightweight, Windows app for generating precise Legal letters. The tool assists staff at a legal f",
+            "children": [
+              {
+                "title": "Overview",
+                "slug": "/work/ella/overview",
+                "order": 50,
+                "icon": "case",
+                "image": "https://live.staticflickr.com/65535/54672545447_5e16aaf822_b.jpg",
+                "type": "file",
+                "excerpt": "What problem are we talking about? Using tech to improve workflow efficiency\n\n Any sensible business should be interested in that?\n\n Where is the original Ella? Saarland, Germany. A Windows PC securel"
+              },
+              {
+                "title": "Testing Ella",
+                "slug": "/work/ella/testing-ella",
+                "order": 70,
+                "icon": "case",
+                "image": "https://live.staticflickr.com/65535/54672545447_5e16aaf822_b.jpg",
+                "type": "file",
+                "excerpt": "[YouTube src=\"https://www.youtube.com/watch?v=ULmJI1Z8L3E\"]\n\nIn this video, we put Ella through a realworld timed task, checking the software against key requirements to see just how useful it really "
+              }
+            ]
+          },
           {
             "title": "Expertise",
             "description": "We can help understanding in these fields",
@@ -768,7 +805,7 @@
         "icon": "balance",
         "image": "https://live.staticflickr.com/65535/54691336480_c273fe647c_o.jpg",
         "type": "folder",
-        "excerpt": "",
+        "excerpt": "👀\n👉👇👍👌🙏\n💾🗑️⚠️\n✅❌\n➡️🔄\n🔑🎉",
         "children": [
           {
             "title": "Writing",

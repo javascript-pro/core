@@ -14,12 +14,15 @@ export default function YouTube({ src }: { src: string }) {
         width="100%"
         height="auto"
         style={{ aspectRatio: '16/9' }}
-        config={{
-          youtube: {
-            start: 60,
-          },
-        }}
       />
     </Box>
   );
 }
+
+/*
+config={{
+          youtube: {
+            start: 60,
+          },
+        }}
+*/
