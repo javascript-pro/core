@@ -1,9 +1,9 @@
 ---
 order: 50
 title: Overview
-description: Ella's What, Who Where, When & Why
-slug: /work/ella/overview
-icon: case
+description: What, Who Where, When & Why
+slug: /work/windoze/overview
+icon: windows
 image: https://live.staticflickr.com/65535/54796412087_a686c9b1ce_b.jpg
 ---
 

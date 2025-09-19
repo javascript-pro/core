@@ -2,8 +2,8 @@
 order: 60
 title: Agile approach
 description: Milestones
-slug: /work/ella/agile
-icon: case
+slug: /work/windoze/agile
+icon: windows
 image: https://live.staticflickr.com/65535/54797258146_83701652c9_b.jpg
 ---
 

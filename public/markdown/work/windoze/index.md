@@ -1,11 +1,11 @@
 ---
 order: 1
-title: Ella
-description: Easy Legal Letter Assistant
-slug: /work/ella
-icon: case
+title: Windoze
+description: Ella the Easy Legal Letter Assistant
+slug: /work/windoze
+icon: windows
 image: https://live.staticflickr.com/65535/54796416487_4983d34a04_b.jpg
-tags: expertise, ella, experience, work
+tags: expertise, windoze, experience, work
 ---
 
 #### Easy Legal Letter Assistant

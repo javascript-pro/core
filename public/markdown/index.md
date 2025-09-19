@@ -6,10 +6,10 @@ description: Work, Life, Balance
 icon: goldlabel
 github: https://github.com/javascript-pro/core
 tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS, secure
-image: https://live.staticflickr.com/65535/54796406877_8af66ae1d2_b.jpg
+image: https://live.staticflickr.com/65535/54797819765_9a8fff2b89_b.jpg
 ---
 
-#### [Ella. Easy Legal Letter Assistant](/work/ella)
+#### [Windoze](/work/windoze)
 
 > A lightweight Windows app using NextJS & React for generating precise legal letters, designed for law firms to centralize case data in a 🔑 secure onsite Access database.
 

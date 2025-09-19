@@ -146,18 +146,6 @@
     <loc>https://goldlabel.pro/work/cv/saarbrucken</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/ella</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/ella/milestones</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/ella/overview</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/ella/testing-ella</loc>
-  </url>
-  <url>
     <loc>https://goldlabel.pro/work/expertise/ai/abgeschottet-ki/confidentiality-obligations</loc>
   </url>
   <url>
@@ -255,5 +243,17 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work/techstack/open-source</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/windoze</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/windoze/milestones</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/windoze/overview</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/windoze/testing</loc>
   </url>
 </urlset>

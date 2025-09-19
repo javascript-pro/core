@@ -5,7 +5,7 @@
     "slug": "/",
     "order": 1,
     "icon": "goldlabel",
-    "image": "https://live.staticflickr.com/65535/54796406877_8af66ae1d2_b.jpg",
+    "image": "https://live.staticflickr.com/65535/54797819765_9a8fff2b89_b.jpg",
     "type": "folder",
     "tags": [
       "JavaScript",
@@ -44,7 +44,7 @@
         "slug": "/work",
         "order": 10,
         "icon": "work",
-        "image": "https://live.staticflickr.com/65535/54796416487_4983d34a04_b.jpg",
+        "image": "https://live.staticflickr.com/65535/54797629454_00b4a0e588_b.jpg",
         "type": "folder",
         "tags": [
           "JavaScript",
@@ -61,51 +61,6 @@
         ],
         "excerpt": "The apps we ship are real. They run in production and are developed accessibly. The Core is Open Source and Free forever — giving you statically generated sites with Firestorepowered updates and a rea",
         "children": [
-          {
-            "title": "Ella",
-            "description": "Easy Legal Letter Assistant",
-            "slug": "/work/ella",
-            "order": 1,
-            "icon": "case",
-            "image": "https://live.staticflickr.com/65535/54796416487_4983d34a04_b.jpg",
-            "type": "folder",
-            "tags": [
-              "expertise",
-              "ella",
-              "experience",
-              "work"
-            ],
-            "excerpt": "Easy Legal Letter Assistant\n\n Ella is a lightweight, Windows app for generating precise Legal letters. The tool assists staff at a legal firm by making it easy to store all the data around a case to a",
-            "children": [
-              {
-                "title": "Overview",
-                "slug": "/work/ella/overview",
-                "order": 50,
-                "icon": "case",
-                "image": "https://live.staticflickr.com/65535/54796412087_a686c9b1ce_b.jpg",
-                "type": "file",
-                "excerpt": "What problem are we talking about? Using tech to improve workflow efficiency\n\n Any sensible business should be interested in that?\n\n Where is the original Ella? Saarland, Germany. A Windows PC securel"
-              },
-              {
-                "title": "Agile approach",
-                "slug": "/work/ella/milestones",
-                "order": 60,
-                "icon": "case",
-                "image": "https://live.staticflickr.com/65535/54797258146_83701652c9_b.jpg",
-                "type": "file",
-                "excerpt": "Even small projects with just one or two people benefit from an agile approach. The early ideas scribbled on the back of an envelope or sketched out on a kitchen table are often the most creative — bu"
-              },
-              {
-                "title": "Testing Ella",
-                "slug": "/work/ella/testing-ella",
-                "order": 70,
-                "icon": "case",
-                "image": "https://live.staticflickr.com/65535/54672545447_5e16aaf822_b.jpg",
-                "type": "file",
-                "excerpt": "[YouTube src=\"https://www.youtube.com/watch?v=ULmJI1Z8L3E\"]\n\nIn this video, we put Ella through a realworld timed task, checking the software against key requirements to see just how useful it really "
-              }
-            ]
-          },
           {
             "title": "Expertise",
             "description": "We can help understanding in these fields",
@@ -451,6 +406,51 @@
                   "malta"
                 ],
                 "excerpt": "Blockchain Crypto Casino\n\n In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online ga"
+              }
+            ]
+          },
+          {
+            "title": "Windoze",
+            "description": "Ella the Easy Legal Letter Assistant",
+            "slug": "/work/windoze",
+            "order": 1,
+            "icon": "windows",
+            "image": "https://live.staticflickr.com/65535/54796416487_4983d34a04_b.jpg",
+            "type": "folder",
+            "tags": [
+              "expertise",
+              "windoze",
+              "experience",
+              "work"
+            ],
+            "excerpt": "Easy Legal Letter Assistant\n\n Ella is a lightweight, Windows app for generating precise Legal letters. The tool assists staff at a legal firm by making it easy to store all the data around a case to a",
+            "children": [
+              {
+                "title": "Overview",
+                "slug": "/work/windoze/overview",
+                "order": 50,
+                "icon": "windows",
+                "image": "https://live.staticflickr.com/65535/54796412087_a686c9b1ce_b.jpg",
+                "type": "file",
+                "excerpt": "What problem are we talking about? Using tech to improve workflow efficiency\n\n Any sensible business should be interested in that?\n\n Where is the original Ella? Saarland, Germany. A Windows PC securel"
+              },
+              {
+                "title": "Agile approach",
+                "slug": "/work/windoze/milestones",
+                "order": 60,
+                "icon": "windows",
+                "image": "https://live.staticflickr.com/65535/54797258146_83701652c9_b.jpg",
+                "type": "file",
+                "excerpt": "Even small projects with just one or two people benefit from an agile approach. The early ideas scribbled on the back of an envelope or sketched out on a kitchen table are often the most creative — bu"
+              },
+              {
+                "title": "Testing",
+                "slug": "/work/windoze/testing",
+                "order": 70,
+                "icon": "windows",
+                "image": "https://live.staticflickr.com/65535/54672545447_5e16aaf822_b.jpg",
+                "type": "file",
+                "excerpt": "[YouTube src=\"https://www.youtube.com/watch?v=ULmJI1Z8L3E\"]\n\nIn this video, we put Windoze through a realworld timed task, checking the software against key requirements to see just how useful it real"
               }
             ]
           },
