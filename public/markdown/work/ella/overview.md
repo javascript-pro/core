@@ -4,7 +4,7 @@ title: Overview
 description: Ella's What, Who Where, When & Why
 slug: /work/ella/overview
 icon: case
-image: https://live.staticflickr.com/65535/54672545447_5e16aaf822_b.jpg
+image: https://live.staticflickr.com/65535/54796412087_a686c9b1ce_b.jpg
 ---
 
 - What problem are we talking about? Using tech to improve workflow efficiency

@@ -14,9 +14,9 @@
       "primary": "#1db2d3",
       "secondary": "#05c5f0",
       "background": "#FFF",
+      "border": "#FFF",
       "paper": "#FFF",
-      "text": "#303030",
-      "border": "#FFF"
+      "text": "#303030"
     },
     "dark": {
       "mode": "dark",

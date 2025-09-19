@@ -4,9 +4,9 @@ slug: /
 title: Goldlabel
 description: Work, Life, Balance
 icon: goldlabel
-tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS, secure
 github: https://github.com/javascript-pro/core
-image: https://live.staticflickr.com/65535/54761243163_f3aa190f77_h.jpg
+tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS, secure
+image: https://live.staticflickr.com/65535/54796406877_8af66ae1d2_b.jpg
 ---
 
 #### [Ella. Easy Legal Letter Assistant](/work/ella)
