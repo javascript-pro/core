@@ -5,7 +5,7 @@
     "slug": "/",
     "order": 1,
     "icon": "goldlabel",
-    "image": "https://live.staticflickr.com/65535/54761243163_f3aa190f77_h.jpg",
+    "image": "https://live.staticflickr.com/65535/54796406877_8af66ae1d2_b.jpg",
     "type": "folder",
     "tags": [
       "JavaScript",
@@ -44,16 +44,13 @@
         "slug": "/work",
         "order": 10,
         "icon": "work",
-        "image": "https://live.staticflickr.com/65535/54688814017_148f57032c_o.jpg",
+        "image": "https://live.staticflickr.com/65535/54796416487_4983d34a04_b.jpg",
         "type": "folder",
         "tags": [
           "JavaScript",
           "Vanilla JavaScript",
           "TypeScript",
           "React",
-          "Angular",
-          "Vue",
-          "etc",
           "Material UI",
           "Flash",
           "Server Side JavaScript",
@@ -70,7 +67,7 @@
             "slug": "/work/ella",
             "order": 1,
             "icon": "case",
-            "image": "https://live.staticflickr.com/65535/54672545447_5e16aaf822_b.jpg",
+            "image": "https://live.staticflickr.com/65535/54796416487_4983d34a04_b.jpg",
             "type": "folder",
             "tags": [
               "expertise",
@@ -78,14 +75,14 @@
               "experience",
               "work"
             ],
-            "excerpt": "[YouTube src=\"https://www.youtube.com/watch?v=B01QAsm6jU8\"]\n\n Easy Legal Letter Assistant\n\n Ella is a lightweight, Windows app for generating precise Legal letters. The tool assists staff at a legal f",
+            "excerpt": "Easy Legal Letter Assistant\n\n Ella is a lightweight, Windows app for generating precise Legal letters. The tool assists staff at a legal firm by making it easy to store all the data around a case to a",
             "children": [
               {
                 "title": "Overview",
                 "slug": "/work/ella/overview",
                 "order": 50,
                 "icon": "case",
-                "image": "https://live.staticflickr.com/65535/54672545447_5e16aaf822_b.jpg",
+                "image": "https://live.staticflickr.com/65535/54796412087_a686c9b1ce_b.jpg",
                 "type": "file",
                 "excerpt": "What problem are we talking about? Using tech to improve workflow efficiency\n\n Any sensible business should be interested in that?\n\n Where is the original Ella? Saarland, Germany. A Windows PC securel"
               },
@@ -94,9 +91,9 @@
                 "slug": "/work/ella/milestones",
                 "order": 60,
                 "icon": "case",
-                "image": "https://live.staticflickr.com/65535/54672545447_5e16aaf822_b.jpg",
+                "image": "https://live.staticflickr.com/65535/54797258146_83701652c9_b.jpg",
                 "type": "file",
-                "excerpt": "Milestone 1\n\n Setup Hardware & Environment\n\nFrom within the H&A Network, using VPN we can access Ella and CRUD a list of placeholder test data from the database\n\n Milestone 5\n\n Ella live & being used "
+                "excerpt": "Even small projects with just one or two people benefit from an agile approach. The early ideas scribbled on the back of an envelope or sketched out on a kitchen table are often the most creative — bu"
               },
               {
                 "title": "Testing Ella",

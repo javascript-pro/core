@@ -12,7 +12,7 @@ tags: expertise, ella, experience, work
 
 > Ella is a lightweight, Windows app for generating precise Legal letters. The tool assists staff at a legal firm by making it easy to store all the data around a case to a single place in an onsite 🔑 Access Database
 
-#### 👀 German
+#### 🇩🇪 German
 
 Ella was created for a German client, which is why you will often see German. If you're a non german speaker, it might as well be in Chinese.
 
