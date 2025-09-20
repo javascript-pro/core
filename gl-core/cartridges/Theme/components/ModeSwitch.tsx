@@ -28,7 +28,7 @@ export default function ModeSwitch() {
   return (
     <MenuItem onClick={handleToggle}>
       <ListItemIcon>
-        <Icon icon={themeMode === 'dark' ? 'lightmode' : ('darkmode' as any)} />
+        <Icon color="primary" icon={themeMode === 'dark' ? 'lightmode' : ('darkmode' as any)} />
       </ListItemIcon>
       <ListItemText
         primary={

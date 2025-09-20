@@ -4,7 +4,7 @@ title: Windoze
 description: Ella the Easy Legal Letter Assistant
 slug: /work/windoze
 icon: windows
-image: https://live.staticflickr.com/65535/54796416487_4983d34a04_b.jpg
+image: https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg
 tags: expertise, windoze, experience, work
 ---
 

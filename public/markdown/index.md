@@ -6,14 +6,14 @@ description: Work, Life, Balance
 icon: goldlabel
 github: https://github.com/javascript-pro/core
 tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS, secure
-image: https://live.staticflickr.com/65535/54797819765_9a8fff2b89_b.jpg
+image: https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg
 ---
 
 #### [Windoze](/work/windoze)
 
-> A lightweight Windows app using NextJS & React for generating precise legal letters, designed for law firms to centralize case data in a 🔑 secure onsite Access database.
+> A lightweight 🪟 Windows app using NextJS & React for generating precise legal letters, designed for law firms to centralize case data in a 🔑 secure onsite Access database.
 
-#### 👀 German
+#### 🇩🇪  German
 
 Ella was created for a German client, which is why you will often see German. If you're a non german speaker, it might as well be in Chinese.
 
@@ -22,14 +22,6 @@ Ella was created for a German client, which is why you will often see German. If
 Abgeschottet KI delivers a secure, ring‑fenced AI to streamline legal compliance workflows, process documents faster, and protect sensitive data.
 
 > "Ring‑fencing our own AI in‑house allowed us to streamline our workflow without compromising our GDPR obligations or data security." **Rahul Sharma, CEO**
-
-#### [3D on the web](/work/expertise/web3d)
-
-> Building for the web for more than twenty years
-
-#### [Beef Welly](/balance/writing/wei-zangs-food/beef-wellie)
-
-Death cap mushrooms optional if you don't like your inlaws
 
 #### [Neuromancer (1984)](/balance/writers/william-gibson)
 
@@ -41,7 +33,7 @@ Where I've been in the little Zeppelin since Spring 2025
 
 > Cultural reference; [Generation X](/balance/writers/generation-x) Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland
 
-#### News
+### Blog
 
 #### [AI Agent User Interfaces](/work/expertise/ai/agents)
 

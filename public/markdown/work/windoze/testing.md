@@ -5,7 +5,7 @@ description: Checking the software against requirements
 slug: /work/windoze
 icon: windows
 noImage: true
-image: https://live.staticflickr.com/65535/54672545447_5e16aaf822_b.jpg
+image: https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg
 ---
 
 [YouTube src="https://www.youtube.com/watch?v=ULmJI1Z8L3E"]

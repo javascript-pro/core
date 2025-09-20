@@ -124,7 +124,7 @@ export default function AuthForm() {
         <CardHeader
           avatar={
             <IconButton onClick={handleBack}>
-              <Icon icon="blokey" />
+              <Icon icon="blokey" color="primary" />
             </IconButton>
           }
           title={<Typography variant="h6">{title}</Typography>}

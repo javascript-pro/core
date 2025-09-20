@@ -118,7 +118,7 @@ export default function Siblings() {
               }}
             >
               <ListItemIcon>
-                <Icon icon={item.icon as any} />
+                <Icon icon={item.icon as any} color="primary" />
               </ListItemIcon>
               <ListItemText
                 primary={item.title}

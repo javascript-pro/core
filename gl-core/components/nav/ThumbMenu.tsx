@@ -111,7 +111,7 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
           }}
         >
           <ListItemIcon>
-            <Icon icon="home" />
+            <Icon icon="home"color="primary"/>
           </ListItemIcon>
           <ListItemText primary="Home" />
         </MenuItem>
@@ -138,7 +138,7 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
         {/* Git Open Sourcce */}
         <MenuItem onClick={handleGithub}>
           <ListItemIcon>
-            <Icon icon="github" />
+            <Icon icon="github" color="primary"/>
           </ListItemIcon>
           <ListItemText primary="GitHub" />
         </MenuItem>
@@ -151,7 +151,7 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
           }}
         >
           <ListItemIcon>
-            <Icon icon="reset" />
+            <Icon icon="reset" color="primary"/>
           </ListItemIcon>
           <ListItemText primary="Reset" />
         </MenuItem>
@@ -164,7 +164,7 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
           }}
         >
           <ListItemIcon>
-            <Icon icon="share" />
+            <Icon icon="share" color="primary"/>
           </ListItemIcon>
           <ListItemText primary="Share" />
         </MenuItem>
@@ -200,11 +200,11 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
           }}
         >
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-            <Icon icon="share" />
+            <Icon icon="share" color="primary"/>
             <Typography variant="h6">Share</Typography>
           </Box>
           <IconButton onClick={handleShareClose}>
-            <Icon icon="close" />
+            <Icon icon="close" color="primary"/>
           </IconButton>
         </DialogTitle>
 

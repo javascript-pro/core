@@ -4,7 +4,7 @@ title: Overview
 description: What, Who Where, When & Why
 slug: /work/windoze/overview
 icon: windows
-image: https://live.staticflickr.com/65535/54796412087_a686c9b1ce_b.jpg
+image: https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg
 ---
 
 - What problem are we talking about? Using tech to improve workflow efficiency

@@ -69,7 +69,7 @@ export default function Children() {
               }}
             >
               <ListItemIcon>
-                <Icon icon={child.icon as any} />
+                <Icon icon={child.icon as any} color="primary" />
               </ListItemIcon>
               <ListItemText
                 primary={child.title}

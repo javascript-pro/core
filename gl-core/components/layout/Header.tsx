@@ -40,7 +40,7 @@ export default function Header({
                   router.push('/');
                 }}
               >
-                <Icon icon={icon} />
+                <Icon icon={icon} color="primary" />
               </IconButton>
             </Tooltip>
             {/* <Box sx={{ m: 1 }}>

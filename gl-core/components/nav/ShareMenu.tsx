@@ -40,7 +40,7 @@ export default function ShareMenu({ frontmatter = null }: TShareMenu) {
         }}
       >
         <ListItemIcon>
-          <Icon icon="copy" />
+          <Icon icon="copy" color="primary" />
         </ListItemIcon>
         <ListItemText primary={copied ? 'Copied!' : 'Copy Link'} />
       </MenuItem>
@@ -49,7 +49,7 @@ export default function ShareMenu({ frontmatter = null }: TShareMenu) {
         <FacebookShareButton url={url} style={fullWidth}>
           <Box display="flex" alignItems="center" px={2} py={1}>
             <ListItemIcon>
-              <Icon icon="facebook" />
+              <Icon icon="facebook" color="primary" />
             </ListItemIcon>
             <ListItemText primary="Facebook" />
           </Box>
@@ -60,7 +60,7 @@ export default function ShareMenu({ frontmatter = null }: TShareMenu) {
         <TwitterShareButton title={title} url={url}>
           <Box display="flex" alignItems="center" px={2} py={1}>
             <ListItemIcon>
-              <Icon icon="twitter" />
+              <Icon icon="twitter" color="primary" />
             </ListItemIcon>
             <ListItemText primary="Twitter (X)" />
           </Box>
@@ -77,7 +77,7 @@ export default function ShareMenu({ frontmatter = null }: TShareMenu) {
         >
           <Box display="flex" alignItems="center" px={2} py={1}>
             <ListItemIcon>
-              <Icon icon="linkedin" />
+              <Icon icon="linkedin" color="primary" />
             </ListItemIcon>
             <ListItemText primary="LinkedIn" />
           </Box>
@@ -93,7 +93,7 @@ export default function ShareMenu({ frontmatter = null }: TShareMenu) {
         >
           <Box display="flex" alignItems="center" px={2} py={1}>
             <ListItemIcon>
-              <Icon icon="whatsapp" />
+              <Icon icon="whatsapp" color="primary" />
             </ListItemIcon>
             <ListItemText primary="WhatsApp" />
           </Box>
