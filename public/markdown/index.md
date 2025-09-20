@@ -9,25 +9,19 @@ tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Pr
 image: https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg
 ---
 
-#### [Windoze](/work/windoze)
+### Products
+
+##### [Windoze](/work/expertise/windoze)
 
 > A lightweight 🪟 Windows app using NextJS & React for generating precise legal letters, designed for law firms to centralize case data in a 🔑 secure onsite Access database.
 
-#### 🇩🇪  German
-
-Ella was created for a German client, which is why you will often see German. If you're a non german speaker, it might as well be in Chinese.
-
-#### [AKI - Ring‑fenced AI](/work/expertise/ai/abgeschottet-ki)
+##### [AKI - Ring‑fenced AI](/work/expertise/ai/abgeschottet-ki)
 
 Abgeschottet KI delivers a secure, ring‑fenced AI to streamline legal compliance workflows, process documents faster, and protect sensitive data.
 
 > "Ring‑fencing our own AI in‑house allowed us to streamline our workflow without compromising our GDPR obligations or data security." **Rahul Sharma, CEO**
 
-#### [Neuromancer (1984)](/balance/writers/william-gibson)
-
-Neuromancer's portrayal of AIs striving for autonomy foreshadowed real-world debates. Neuromancer didn’t predict the future—it just defined how to imagine it
-
-#### [Travel](/life/travel)
+##### [Travel](/life/travel)
 
 Where I've been in the little Zeppelin since Spring 2025
 
@@ -35,6 +29,10 @@ Where I've been in the little Zeppelin since Spring 2025
 
 ### Blog
 
-#### [AI Agent User Interfaces](/work/expertise/ai/agents)
+##### [AI Agent User Interfaces](/work/expertise/ai/agents)
 
 How we help you take your AI product ideas from concept, through prototype to production
+
+##### [Neuromancer (1984)](/balance/writers/william-gibson)
+
+Neuromancer's portrayal of AIs striving for autonomy foreshadowed real-world debates. Neuromancer didn’t predict the future—it just defined how to imagine it

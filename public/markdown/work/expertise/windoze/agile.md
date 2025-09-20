@@ -2,7 +2,7 @@
 order: 60
 title: Agile approach
 description: Milestones
-slug: /work/windoze/agile
+slug: /work/expertise/windoze/agile
 icon: windows
 image: https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg
 ---

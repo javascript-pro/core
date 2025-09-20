@@ -2,7 +2,7 @@
 order: 70
 title: Testing
 description: Checking the software against requirements
-slug: /work/windoze
+slug: /work/expertise/windoze/testing
 icon: windows
 noImage: true
 image: https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg

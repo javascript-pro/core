@@ -5,7 +5,7 @@
     "slug": "/",
     "order": 1,
     "icon": "goldlabel",
-    "image": "https://live.staticflickr.com/65535/54799031221_9a92a8c48b_b.jpg",
+    "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
     "type": "folder",
     "tags": [
       "JavaScript",
@@ -36,7 +36,7 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "A lightweight Windows app using NextJS & React for generating precise legal letters, designed for law firms to centralize case data in a 🔑 secure onsite Access database.\n\n 👀 German\n\nElla was created",
+    "excerpt": "Products\n\n \n\n A lightweight 🪟 Windows app using NextJS & React for generating precise legal letters, designed for law firms to centralize case data in a 🔑 secure onsite Access database.\n\n \n\nAbgescho",
     "children": [
       {
         "title": "Work",
@@ -44,7 +44,7 @@
         "slug": "/work",
         "order": 10,
         "icon": "work",
-        "image": "https://live.staticflickr.com/65535/54797629454_00b4a0e588_b.jpg",
+        "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
         "type": "folder",
         "tags": [
           "JavaScript",
@@ -340,18 +340,107 @@
                 ]
               },
               {
-                "title": "Git",
-                "slug": "/work/expertise/git",
-                "order": 2,
-                "icon": "expertise",
-                "image": "/png/3rdParty/gitkraken.png",
+                "title": "Windoze",
+                "description": "Easy Legal Letter Assistant",
+                "slug": "/work/expertise/windoze",
+                "order": 1,
+                "icon": "windows",
+                "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
+                "type": "folder",
+                "tags": [
+                  "expertise",
+                  "windoze",
+                  "experience",
+                  "work"
+                ],
+                "excerpt": "Easy Legal Letter Assistant\n\n A lightweight, Windows app for generating precise Legal letters. The tool assists staff at a legal firm by making it easy to store all the data around a case to a single ",
+                "children": [
+                  {
+                    "title": "Overview",
+                    "slug": "/work/expertise/windoze/overview",
+                    "order": 50,
+                    "icon": "windows",
+                    "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
+                    "type": "file",
+                    "excerpt": "What problem are we talking about? Using tech to improve workflow efficiency\n\n Any sensible business should be interested in that?\n\n Where is the original Ella? Saarland, Germany. A Windows PC securel"
+                  },
+                  {
+                    "title": "Agile approach",
+                    "slug": "/work/expertise/windoze/agile",
+                    "order": 60,
+                    "icon": "windows",
+                    "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
+                    "type": "file",
+                    "excerpt": "Even small projects with just one or two people benefit from an agile approach. The early ideas scribbled on the back of an envelope or sketched out on a kitchen table are often the most creative — bu"
+                  },
+                  {
+                    "title": "Testing",
+                    "slug": "/work/expertise/windoze/testing",
+                    "order": 70,
+                    "icon": "windows",
+                    "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
+                    "type": "file",
+                    "excerpt": "[YouTube src=\"https://www.youtube.com/watch?v=ULmJI1Z8L3E\"]\n\nIn this video, we put Windoze through a realworld timed task, checking the software against key requirements to see just how useful it real"
+                  }
+                ]
+              },
+              {
+                "title": "JavaScript",
+                "description": "JavaScript Whatever the Weather",
+                "slug": "/work/expertise/javascript",
+                "order": 5,
+                "icon": "javascript",
+                "image": "/png/clouds/default_whitecloud.png",
+                "type": "folder",
+                "tags": [
+                  "JavaScript",
+                  "Vanilla JavaScript",
+                  "TypeScript",
+                  "React",
+                  "Angular",
+                  "Vue",
+                  "Material UI",
+                  "Flash",
+                  "Server Side JavaScript",
+                  "Node",
+                  "Gatsby",
+                  "NextJS",
+                  "Headless CMS",
+                  "JSON"
+                ],
+                "excerpt": "JavaScript Whatever the Weather\n\nWe’ve been writing JavaScript since it was still called ECMAScript.\n\nBefore the frameworks, before npm, before it ate the world—we were already deep in the language th",
+                "children": [
+                  {
+                    "title": "REST API",
+                    "slug": "/work/expertise/javascript/rest-api",
+                    "order": 50,
+                    "icon": "javascript",
+                    "image": "/png/clouds/default_whitecloud.png",
+                    "type": "file",
+                    "tags": [
+                      "JavaScript",
+                      "Node",
+                      "Next.js",
+                      "API",
+                      "REST API",
+                      "Flickr"
+                    ],
+                    "excerpt": "Cartridge: \n\nA realworld REST API powered by Next.js, integrating with the Flickr platform to serve media assets as structured JSON.\n\nThis is a realworld backend endpoint. It powers real UI components"
+                  }
+                ]
+              },
+              {
+                "title": "Public REST API",
+                "slug": "/work/expertise/rest-api",
+                "order": 10,
+                "icon": "api",
+                "image": "/png/og.png",
                 "type": "file",
                 "tags": [
-                  "github",
-                  "process",
-                  "javascript"
+                  "free",
+                  "api"
                 ],
-                "excerpt": "We use GitHub for everything.\n\nMost of the communication done between us and our clients during development is done through GitHub in the form of comments, tracking bugs and issues, pull resuests, rev"
+                "excerpt": "Goldlabel Public API\n\n glapi/flickr endpoints"
               },
               {
                 "title": "Next.js",
@@ -388,6 +477,53 @@
                 "excerpt": "Data Migration via RESTful API using Next, Python and SQL\n\n\n\n This service exposes a RESTful interface for cleaning, transforming, and migrating data from a raw source table to a cleaned, structured t"
               },
               {
+                "title": "Git",
+                "description": "Critical to our process",
+                "slug": "/work/expertise/git",
+                "order": 25,
+                "icon": "github",
+                "image": "/png/3rdParty/gitkraken.png",
+                "type": "folder",
+                "tags": [
+                  "github",
+                  "process",
+                  "javascript"
+                ],
+                "excerpt": "We use GitHub for everything.\n\nMost of the communication done between us and our clients during development is done through GitHub in the form of comments, tracking bugs and issues, pull resuests, rev",
+                "children": [
+                  {
+                    "title": "GitKraken",
+                    "slug": "/work/expertise/git/gitkraken",
+                    "order": 30,
+                    "icon": "github",
+                    "image": "/png/3rdParty/gitkraken.png",
+                    "type": "file",
+                    "tags": [
+                      "github",
+                      "process",
+                      "javascript",
+                      "tools",
+                      "gitkraken"
+                    ],
+                    "excerpt": "Now with AI Commit and PR Messaging\n\nGitKraken isn’t just another Git GUI. It’s become an essential tool in our daily workflow—one of those rare bits of software that’s genuinely a joy to use. Fast, c"
+                  }
+                ]
+              },
+              {
+                "title": "Material UI",
+                "slug": "/work/expertise/mui",
+                "order": 101,
+                "icon": "design",
+                "image": "/png/clouds/default_whitecloud.png",
+                "type": "file",
+                "tags": [
+                  "github",
+                  "process",
+                  "design"
+                ],
+                "excerpt": "What is a Design System?\n\nA Design System is a collection of reusable components, standards, and guidelines that define how a product looks and behaves. It includes UI elements like buttons, forms, an"
+              },
+              {
                 "title": "Blockchain",
                 "slug": "/work/expertise/blockchain",
                 "order": 150,
@@ -406,51 +542,20 @@
                   "malta"
                 ],
                 "excerpt": "Blockchain Crypto Casino\n\n In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online ga"
-              }
-            ]
-          },
-          {
-            "title": "Windoze",
-            "description": "Ella the Easy Legal Letter Assistant",
-            "slug": "/work/windoze",
-            "order": 1,
-            "icon": "windows",
-            "image": "https://live.staticflickr.com/65535/54796416487_4983d34a04_b.jpg",
-            "type": "folder",
-            "tags": [
-              "expertise",
-              "windoze",
-              "experience",
-              "work"
-            ],
-            "excerpt": "Easy Legal Letter Assistant\n\n Ella is a lightweight, Windows app for generating precise Legal letters. The tool assists staff at a legal firm by making it easy to store all the data around a case to a",
-            "children": [
-              {
-                "title": "Overview",
-                "slug": "/work/windoze/overview",
-                "order": 50,
-                "icon": "windows",
-                "image": "https://live.staticflickr.com/65535/54796412087_a686c9b1ce_b.jpg",
-                "type": "file",
-                "excerpt": "What problem are we talking about? Using tech to improve workflow efficiency\n\n Any sensible business should be interested in that?\n\n Where is the original Ella? Saarland, Germany. A Windows PC securel"
               },
               {
-                "title": "Agile approach",
-                "slug": "/work/windoze/milestones",
-                "order": 60,
-                "icon": "windows",
-                "image": "https://live.staticflickr.com/65535/54797258146_83701652c9_b.jpg",
+                "title": "Open Source",
+                "slug": "/work/expertise/open-source",
+                "order": 1000,
+                "icon": "api",
+                "image": "/png/og.png",
                 "type": "file",
-                "excerpt": "Even small projects with just one or two people benefit from an agile approach. The early ideas scribbled on the back of an envelope or sketched out on a kitchen table are often the most creative — bu"
-              },
-              {
-                "title": "Testing",
-                "slug": "/work/windoze/testing",
-                "order": 70,
-                "icon": "windows",
-                "image": "https://live.staticflickr.com/65535/54672545447_5e16aaf822_b.jpg",
-                "type": "file",
-                "excerpt": "[YouTube src=\"https://www.youtube.com/watch?v=ULmJI1Z8L3E\"]\n\nIn this video, we put Windoze through a realworld timed task, checking the software against key requirements to see just how useful it real"
+                "tags": [
+                  "free",
+                  "opensource",
+                  "work"
+                ],
+                "excerpt": "Why We Open Source\n\nWe’ve been building JavaScript applications for over 20 years. In that time, we’ve seen tools come and go. Trends rise, crash, and return again under a different name.\n\nWhat’s rema"
               }
             ]
           },
@@ -571,157 +676,6 @@
                   "team"
                 ],
                 "excerpt": "We take on a limited number of new projects each month. If you need something done we’d love to hear about it. Find out if we're a . We're always looking for collaborators, contributors, and good idea"
-              }
-            ]
-          },
-          {
-            "title": "Techstack",
-            "description": "Protected by Bouncer",
-            "slug": "/work/techstack",
-            "order": 10,
-            "icon": "techstack",
-            "image": "/png/og.png",
-            "type": "folder",
-            "tags": [
-              "techstack"
-            ],
-            "excerpt": "",
-            "children": [
-              {
-                "title": "JavaScript",
-                "description": "JavaScript Whatever the Weather",
-                "slug": "/work/techstack/javascript",
-                "order": 5,
-                "icon": "javascript",
-                "image": "/png/clouds/default_whitecloud.png",
-                "type": "folder",
-                "tags": [
-                  "JavaScript",
-                  "Vanilla JavaScript",
-                  "TypeScript",
-                  "React",
-                  "Angular",
-                  "Vue",
-                  "Material UI",
-                  "Flash",
-                  "Server Side JavaScript",
-                  "Node",
-                  "Gatsby",
-                  "NextJS",
-                  "Headless CMS",
-                  "JSON"
-                ],
-                "excerpt": "JavaScript Whatever the Weather\n\nWe’ve been writing JavaScript since it was still called ECMAScript.\n\nBefore the frameworks, before npm, before it ate the world—we were already deep in the language th",
-                "children": [
-                  {
-                    "title": "REST API",
-                    "slug": "/work/techstack/javascript/rest-api",
-                    "order": 50,
-                    "icon": "javascript",
-                    "image": "/png/clouds/default_whitecloud.png",
-                    "type": "file",
-                    "tags": [
-                      "JavaScript",
-                      "Node",
-                      "Next.js",
-                      "API",
-                      "REST API",
-                      "Flickr"
-                    ],
-                    "excerpt": "Cartridge: \n\nA realworld REST API powered by Next.js, integrating with the Flickr platform to serve media assets as structured JSON.\n\nThis is a realworld backend endpoint. It powers real UI components"
-                  }
-                ]
-              },
-              {
-                "title": "Public API",
-                "slug": "/work/techstack/api",
-                "order": 10,
-                "icon": "api",
-                "image": "/png/og.png",
-                "type": "file",
-                "tags": [
-                  "free",
-                  "api"
-                ],
-                "excerpt": "Goldlabel Public API\n\n glapi/flickr endpoints"
-              },
-              {
-                "title": "Git",
-                "description": "Critical to our process",
-                "slug": "/work/techstack/git",
-                "order": 25,
-                "icon": "github",
-                "image": "/png/3rdParty/gitkraken.png",
-                "type": "folder",
-                "tags": [
-                  "github",
-                  "process",
-                  "javascript"
-                ],
-                "excerpt": "We use GitHub for everything. Including . Most of the communication done between us and our clients during development is done through GitHub in the form of comments, pull resuests, reviews and so for",
-                "children": [
-                  {
-                    "title": "GitKraken",
-                    "slug": "/work/techstack/git/gitkraken",
-                    "order": 30,
-                    "icon": "github",
-                    "image": "/png/3rdParty/gitkraken.png",
-                    "type": "file",
-                    "tags": [
-                      "github",
-                      "process",
-                      "javascript",
-                      "tools",
-                      "gitkraken"
-                    ],
-                    "excerpt": "Now with AI Commit and PR Messaging\n\nGitKraken isn’t just another Git GUI. It’s become an essential tool in our daily workflow—one of those rare bits of software that’s genuinely a joy to use. Fast, c"
-                  }
-                ]
-              },
-              {
-                "title": "Design System",
-                "description": "Based on Material",
-                "slug": "/work/techstack/design-sytem",
-                "order": 101,
-                "icon": "design",
-                "image": "/png/clouds/default_whitecloud.png",
-                "type": "folder",
-                "tags": [
-                  "github",
-                  "process",
-                  "design"
-                ],
-                "excerpt": "What is a Design System?\n\nA Design System is a collection of reusable components, standards, and guidelines that define how a product looks and behaves. It includes UI elements like buttons, forms, an",
-                "children": [
-                  {
-                    "title": "MUI Toolpad",
-                    "slug": "/work/techstack/design-sytem/toolpad",
-                    "order": 20,
-                    "icon": "design",
-                    "image": "/png/og.png",
-                    "type": "file",
-                    "tags": [
-                      "techstack",
-                      "Design",
-                      "MUI"
-                    ],
-                    "excerpt": "MUI Toolpad is a lowcode builder for internal tools. It runs as part of your Next.js project and gives you a draganddrop environment to create Reactbased dashboards powered by live data. We’re using T"
-                  }
-                ]
-              },
-              {
-                "title": "Open Source",
-                "slug": "/work/techstack/open-source",
-                "order": 1000,
-                "icon": "api",
-                "image": "/png/og.png",
-                "type": "file",
-                "tags": [
-                  "free",
-                  "opensource",
-                  "work"
-                ],
-                "excerpt": "Why We Open Source\n\nWe’ve been building JavaScript applications for over 20 years. In that time, we’ve seen tools come and go. Trends rise, crash, and return again under a different name.\n\nWhat’s rema"
               }
             ]
           }

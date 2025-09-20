@@ -2,7 +2,7 @@
 order: 50
 title: Overview
 description: What, Who Where, When & Why
-slug: /work/windoze/overview
+slug: /work/expertise/windoze/overview
 icon: windows
 image: https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg
 ---

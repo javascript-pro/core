@@ -1,7 +1,7 @@
 ---
 order: 1000
 title: Open Source
-slug: /work/techstack/open-source
+slug: /work/expertise/open-source
 description: We build in the open because it makes us better. Here’s why Open Source is a cornerstone of our work.
 icon: api
 image: /png/og.png

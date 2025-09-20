@@ -197,13 +197,31 @@
     <loc>https://goldlabel.pro/work/expertise/data-migration</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/work/expertise/git/gitkraken</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/work/expertise/git</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/expertise</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/work/expertise/javascript</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/javascript/rest-api</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/mui</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/work/expertise/next-js</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/open-source</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/rest-api</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/expertise/web3d</loc>
@@ -215,45 +233,18 @@
     <loc>https://goldlabel.pro/work/expertise/web3d/three-js</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/work/expertise/windoze/agile</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/windoze</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/windoze/overview</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/windoze/testing</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/work</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/techstack/api</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/techstack/design-sytem</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/techstack/design-sytem/toolpad</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/techstack/git/gitkraken</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/techstack/git</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/techstack</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/techstack/javascript</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/techstack/javascript/rest-api</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/techstack/open-source</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/windoze</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/windoze/milestones</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/windoze/overview</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/windoze/testing</loc>
   </url>
 </urlset>

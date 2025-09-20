@@ -8,7 +8,7 @@ import OpenAIIcon from './SVGIcons/OpenAIIcon';
 import MacromediaIconIcon from './SVGIcons/MacromediaIcon';
 import BlokeyIcon from './SVGIcons/BlokeyIcon';
 import WordpressIcon from './SVGIcons/WordpressIcon';
-import GoldlabelIcon from './SVGIcons/GoldlabelOutlined';
+import GoldlabelIcon from '@mui/icons-material/LabelOutlined';
 import ChromeIcon from './SVGIcons/ChromeIcon';
 import SafariIcon from './SVGIcons/SafariIcon';
 import EdgeIcon from './SVGIcons/EdgeIcon';

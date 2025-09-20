@@ -2,7 +2,7 @@
 order: 50
 title: REST API
 description: Real World NextJS
-slug: /work/techstack/javascript/rest-api
+slug: /work/expertise/javascript/rest-api
 icon: javascript
 image: /png/clouds/default_whitecloud.png
 tags: JavaScript, Node, Next.js, API, REST API, Flickr

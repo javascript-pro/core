@@ -1,9 +1,9 @@
 ---
-order: 2
+order: 25
 title: Git
 description: Critical to our process
 slug: /work/expertise/git
-icon: expertise
+icon: github
 image: /png/3rdParty/gitkraken.png
 tags: github, process, javascript
 github: https://github.com/javascript-pro/core

@@ -1,8 +1,8 @@
 ---
 order: 101
-title: Design System
-description: Based on Material
-slug: /work/techstack/design-system
+title: Material UI
+description: Design System
+slug: /work/expertise/design-system
 icon: design
 image: /png/clouds/default_whitecloud.png
 tags: github, process, design
