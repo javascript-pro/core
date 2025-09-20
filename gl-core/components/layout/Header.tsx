@@ -31,23 +31,7 @@ export default function Header({
   return (
     <>
       <CardHeader
-        avatar={
-          <>
-            <Tooltip title="Home">
-              <IconButton
-                sx={{ ml: -1 }}
-                onClick={() => {
-                  router.push('/');
-                }}
-              >
-                <Icon icon={icon} color="primary" />
-              </IconButton>
-            </Tooltip>
-            {/* <Box sx={{ m: 1 }}>
-              <Icon icon={icon as any} />
-            </Box> */}
-          </>
-        }
+        avatar={<Icon icon={icon} color="primary" />}
         title={
           !isMobile && (
             <Typography sx={{}} variant={'h6'} component={'h1'}>
