@@ -3,7 +3,7 @@ order: 15
 title: Next.js
 description: React with seamless backend capabilities
 slug: /work/expertise/next-js
-icon: expertise
+icon: js
 image: /png/clouds/default_whitecloud.png
 tags: JavaScript, Node, Next.js, API, REST API, React
 ---

@@ -1,5 +1,5 @@
 ---
-order: 1
+order: 280
 title: AI
 description: What do we know about about AI?
 slug: /work/expertise/ai

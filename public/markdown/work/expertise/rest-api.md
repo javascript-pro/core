@@ -1,6 +1,6 @@
 ---
 order: 10
-title: Public REST API
+title: REST API
 slug: /work/expertise/rest-api
 description: Private keys are available
 icon: api

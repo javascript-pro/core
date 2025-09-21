@@ -4,7 +4,7 @@ title: Working remotely
 description: Productivity, communication, and collaboration
 slug: /work/company/remote-working
 icon: company
-image: /png/og.png
+image: https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg
 tags: remote, hybrid
 ---
 

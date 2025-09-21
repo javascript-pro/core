@@ -1,6 +1,6 @@
 ---
-order: 1
-title: 3D on the web
+order: 112
+title: Web 3D
 description:
 slug: /work/expertise/web3d
 icon: web3d
