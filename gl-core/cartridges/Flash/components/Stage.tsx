@@ -2,8 +2,7 @@
 
 import * as React from 'react';
 import { Box, useTheme } from '@mui/material';
-import { Pingpongball } from '../../Flash';
-// import defaultMovie from '../actionscript/default_movie';
+import { MacromediaMC } from '../../Flash';
 import { pingpongball } from '../../Flash';
 
 export type TStageProps = {
@@ -63,7 +62,7 @@ export default function Stage({
       }}
       {...rest}
     >
-      <Pingpongball ref={shapeRef} />
+      <MacromediaMC ref={shapeRef} />
     </Box>
   );
 }

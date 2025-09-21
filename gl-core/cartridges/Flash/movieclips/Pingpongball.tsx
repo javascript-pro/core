@@ -8,7 +8,6 @@ export type TPingpongball = {
 };
 
 export default function Pingpongball({ color, ...props }: TPingpongball) {
-  
   const theme = useTheme();
   const smile = theme.palette.text.primary;
   const mainColor = color || theme.palette.primary.main;

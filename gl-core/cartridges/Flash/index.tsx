@@ -6,8 +6,10 @@ import { useFlash } from './hooks';
 import { init } from './actions';
 import { pingpongball } from './actionscript';
 import Pingpongball from './movieclips/Pingpongball';
+import MacromediaMC from './movieclips/MacromediaMC';
 
 export { initialStateFlash, Flash, Stage };
 export { useFlash };
 export { init };
 export { pingpongball, Pingpongball };
+export { MacromediaMC };

@@ -2,11 +2,8 @@
 'use client';
 import * as React from 'react';
 import { Toolbar } from '@mui/material';
-import { 
-  Stage, 
-  useFlash,
-} from '../Flash';
-import { MightyButton} from '../../../gl-core';
+import { Stage, useFlash } from '../Flash';
+import { MightyButton } from '../../../gl-core';
 
 export type TFlashProps = {
   movie?: string;
@@ -25,7 +22,6 @@ export default function Flash({
   loop = false,
   ...rest
 }: TFlashProps) {
-
   const flashStore = useFlash();
   const loopNormalized =
     typeof loop === 'string' ? loop.toLowerCase() === 'true' : loop;
@@ -45,11 +41,7 @@ export default function Flash({
 
       {/* Toolbar */}
       <Toolbar>
-        <MightyButton 
-          label="Replay"
-          icon="flash"
-          onClick={handleReplay}
-        />
+        <MightyButton label="Replay" icon="flash" onClick={handleReplay} />
       </Toolbar>
 
       <pre>flashStore: {JSON.stringify(flashStore, null, 2)}</pre>
