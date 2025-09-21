@@ -9,7 +9,7 @@ tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Pr
 image: https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg
 ---
 
-### Products
+### Projects
 
 ##### [Windoze](/work/expertise/windoze)
 

@@ -5,7 +5,6 @@ description: A collection of Writing
 slug: /balance
 icon: balance
 image: https://live.staticflickr.com/65535/54691336480_c273fe647c_o.jpg
-noImage: true
 ---
 
 👀

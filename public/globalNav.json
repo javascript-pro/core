@@ -36,7 +36,7 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "Products\n\n \n\n A lightweight 🪟 Windows app using NextJS & React for generating precise legal letters, designed for law firms to centralize case data in a 🔑 secure onsite Access database.\n\n \n\nAbgescho",
+    "excerpt": "Projects\n\n \n\n A lightweight 🪟 Windows app using NextJS & React for generating precise legal letters, designed for law firms to centralize case data in a 🔑 secure onsite Access database.\n\n \n\nAbgescho",
     "children": [
       {
         "title": "Work",
@@ -81,7 +81,7 @@
                 "description": "What do we know about about AI?",
                 "slug": "/work/expertise/ai",
                 "order": 1,
-                "icon": "oliver",
+                "icon": "ai",
                 "image": "https://live.staticflickr.com/65535/53669705662_d1361d5032_h.jpg",
                 "type": "folder",
                 "tags": [
@@ -802,7 +802,7 @@
                 "icon": "dog",
                 "image": "/jpg/puppy-fing.jpg",
                 "type": "file",
-                "excerpt": "I put an Attenborough series on for the dogs. Later I notice there’s a polar bear and a baby seal on the TV. I look at the doggy. He's got genuine concern in his eyes which also say\n\n<<<<<<< HEAD\n\"'at"
+                "excerpt": "I put an Attenborough series on for the dogs. Later I notice there’s a polar bear and a baby seal on the TV. I look at the doggy. He's got genuine concern in his eyes which also say \"'at puppy fing’s "
               },
               {
                 "title": "Generation X",
