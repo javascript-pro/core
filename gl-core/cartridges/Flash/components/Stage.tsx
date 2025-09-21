@@ -1,8 +1,10 @@
 'use client';
 
 import * as React from 'react';
-import { Box, Typography } from '@mui/material';
-import { gsap } from 'gsap';
+import { Box, useTheme } from '@mui/material';
+import { Pingpongball } from '../../Flash';
+// import defaultMovie from '../actionscript/default_movie';
+import { pingpongball } from '../../Flash';
 
 export type TStageProps = {
   movie?: string;
@@ -10,7 +12,7 @@ export type TStageProps = {
   height?: number | string;
   color?: string;
   loop?: boolean;
-  [key: string]: any; // for future extensions
+  [key: string]: any;
 };
 
 export default function Stage({
@@ -21,46 +23,47 @@ export default function Stage({
   loop = false,
   ...rest
 }: TStageProps) {
-  const shapeRef = React.useRef<SVGCircleElement | null>(null);
+  // console.log('height', height)
 
+  const shapeRef = React.useRef<SVGCircleElement | null>(null);
+  const theme = useTheme();
   React.useEffect(() => {
     if (!shapeRef.current) return;
 
-    // A simple GSAP animation for demo
-    const tl = gsap.timeline({
-      repeat: loop ? -1 : 0,
-      defaults: { duration: 1, ease: 'power1.inOut' },
-    });
+    let tl: gsap.core.Timeline | undefined;
 
-    tl.to(shapeRef.current, { attr: { r: 50 }, fill: color })
-      .to(shapeRef.current, { x: 100 })
-      .to(shapeRef.current, { x: 0, attr: { r: 30 } });
+    switch (movie) {
+      case 'pingpongball':
+      default:
+        tl = pingpongball({
+          target: shapeRef.current,
+          color,
+          loop,
+        });
+        break;
+    }
 
     return () => {
-      tl.kill();
+      tl?.kill();
     };
   }, [movie, color, loop]);
 
   return (
     <Box
       sx={{
-        border: '1px solid gold',
-        p: 2,
+        my: 2,
+        height: 300,
+        bgcolor: theme.palette.background.paper,
+        border: '1px solid ' + theme.palette.divider,
+        borderRadius: 1,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        bgcolor: 'background.paper',
       }}
       {...rest}
     >
-      <Typography variant="subtitle1" gutterBottom>
-        Flash Stage — {movie}
-      </Typography>
-
-      <svg width={width} height={height} viewBox="0 0 200 100">
-        <circle ref={shapeRef} cx="50" cy="50" r="30" fill={color} />
-      </svg>
+      <Pingpongball ref={shapeRef} />
     </Box>
   );
 }

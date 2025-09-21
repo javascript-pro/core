@@ -1,8 +1,13 @@
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Flash/Flash.tsx
 'use client';
 import * as React from 'react';
-import { Stage } from '../Flash';
+import { Toolbar } from '@mui/material';
+import { 
+  Stage, 
+  useFlash,
+} from '../Flash';
+import { MightyButton} from '../../../gl-core';
 
-// Define the props the shortcode parser may pass
 export type TFlashProps = {
   movie?: string;
   width?: number | string;
@@ -20,30 +25,34 @@ export default function Flash({
   loop = false,
   ...rest
 }: TFlashProps) {
-  // Normalise string booleans like "true"/"false"
+
+  const flashStore = useFlash();
   const loopNormalized =
     typeof loop === 'string' ? loop.toLowerCase() === 'true' : loop;
 
-  React.useEffect(() => {
-    console.log('Flash component mounted', {
-      movie,
-      width,
-      height,
-      color,
-      loop: loopNormalized,
-      rest,
-    });
-    // here you could load a movie, trigger animation, etc.
-  }, [movie, width, height, color, loopNormalized, rest]);
+  const handleReplay = () => console.log('Replay pressed');
 
   return (
-    <Stage
-      movie={movie}
-      width={width}
-      height={height}
-      color={color}
-      loop={loopNormalized}
-      {...rest}
-    />
+    <>
+      <Stage
+        movie={movie}
+        width={width}
+        height={height}
+        color={color}
+        loop={loopNormalized}
+        {...rest}
+      />
+
+      {/* Toolbar */}
+      <Toolbar>
+        <MightyButton 
+          label="Replay"
+          icon="flash"
+          onClick={handleReplay}
+        />
+      </Toolbar>
+
+      <pre>flashStore: {JSON.stringify(flashStore, null, 2)}</pre>
+    </>
   );
 }

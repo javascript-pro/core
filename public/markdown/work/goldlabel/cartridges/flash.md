@@ -9,7 +9,7 @@ keywords: 'Catridges, Flash, SVG'
 noImage: true
 ---
 
-[Flash movie="my_first_movie" width="400" height="300"]
+[Flash movie="pingpongball" width="400" height="350"]
 
 ## A Pointless reinvention of MacroMedia Flash?
 

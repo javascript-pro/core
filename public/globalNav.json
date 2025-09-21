@@ -5,7 +5,7 @@
     "slug": "/",
     "order": 1,
     "icon": "goldlabel",
-    "image": "https://live.staticflickr.com/44/115242272_3eca5b48bc_b.jpg",
+    "image": "/png/wei-zang.png",
     "type": "folder",
     "tags": [
       "JavaScript",
@@ -36,7 +36,7 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "Projects\n\n \n\n A lightweight 🪟 Windows app using NextJS & React for generating precise legal letters, designed for law firms to centralize case data in a 🔑 secure onsite Access database.\n\n \n\nAbgescho",
+    "excerpt": "We ridiculously and pointlessly reinvented Macromedia Flash with React and TypeScript\n\n SVG Graphics\n Animation using Greensock\n State management with redux/toolkit\n Material UI\n TypeScript\n\n \n\n A lig",
     "children": [
       {
         "title": "Work",
@@ -101,7 +101,7 @@
                     "icon": "flash",
                     "image": "/png/n64/chix.png",
                     "type": "file",
-                    "excerpt": "A Pointless reinvention of MacroMedia Flash?\n\nMaybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You're welcome\n\n SVG Graphics\n Animation usin"
+                    "excerpt": "[Flash movie=\"pingpongball\" width=\"400\" height=\"350\"]\n\n A Pointless reinvention of MacroMedia Flash?\n\nMaybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll neve"
                   },
                   {
                     "title": "Uberedux",
@@ -710,24 +710,6 @@
                   "OpenAI"
                 ],
                 "excerpt": "Applying for jobs can be time consuming\n\nEach role requires tailoring a cover letter or rewording a CV to match a job description. As developers, we know the real problem isn’t effort — it’s clarity. "
-              },
-              {
-                "title": "Catering C.V.",
-                "slug": "/work/cv/saarbrucken",
-                "order": 1300,
-                "icon": "doc",
-                "image": "/png/og.png",
-                "type": "file",
-                "tags": [
-                  "CV",
-                  "jobs",
-                  "work",
-                  "resume",
-                  "AI",
-                  "germany",
-                  "saarbrucken"
-                ],
-                "excerpt": "LINGUADE\nChris Dorward\nSaarbrücken, Deutschland\nWhatsApp: +44 07745763122\nE‑Mail: listingslab@gmail.com\nGeburtsdatum: 15.10.1975\nStaatsangehörigkeit: Britisch & Deutsch (doppelte Staatsbürgerschaft)\n\n"
               }
             ]
           },

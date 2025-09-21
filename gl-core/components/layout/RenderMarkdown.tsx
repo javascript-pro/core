@@ -63,7 +63,7 @@ export default function RenderMarkdown({
     // Utility: parse [Tag key="value" key2="value2"]
     const parseShortcode = (
       regex: RegExp,
-      Component: React.ElementType
+      Component: React.ElementType,
     ): React.ReactNode | null => {
       const match = text.match(regex);
       if (!match) return null;
