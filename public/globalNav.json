@@ -5,7 +5,7 @@
     "slug": "/",
     "order": 1,
     "icon": "goldlabel",
-    "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
+    "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
     "type": "folder",
     "tags": [
       "JavaScript",
@@ -127,7 +127,7 @@
                 "slug": "/work/expertise/javascript",
                 "order": 5,
                 "icon": "javascript",
-                "image": "/png/clouds/default_whitecloud.png",
+                "image": "https://live.staticflickr.com/65535/54801612483_31ce454c4e_b.jpg",
                 "type": "folder",
                 "tags": [
                   "JavaScript",
@@ -146,25 +146,7 @@
                   "JSON"
                 ],
                 "excerpt": "JavaScript Whatever the Weather\n\nWe’ve been writing JavaScript since it was still called ECMAScript.\n\nBefore the frameworks, before npm, before it ate the world—we were already deep in the language th",
-                "children": [
-                  {
-                    "title": "REST API",
-                    "slug": "/work/expertise/javascript/rest-api",
-                    "order": 50,
-                    "icon": "javascript",
-                    "image": "/png/clouds/default_whitecloud.png",
-                    "type": "file",
-                    "tags": [
-                      "JavaScript",
-                      "Node",
-                      "Next.js",
-                      "API",
-                      "REST API",
-                      "Flickr"
-                    ],
-                    "excerpt": "Cartridge: \n\nA realworld REST API powered by Next.js, integrating with the Flickr platform to serve media assets as structured JSON.\n\nThis is a realworld backend endpoint. It powers real UI components"
-                  }
-                ]
+                "children": []
               },
               {
                 "title": "Open Source",
@@ -185,7 +167,7 @@
                 "slug": "/work/expertise/rest-api",
                 "order": 10,
                 "icon": "api",
-                "image": "/png/og.png",
+                "image": "https://live.staticflickr.com/65535/54801612483_31ce454c4e_b.jpg",
                 "type": "file",
                 "tags": [
                   "free",
@@ -198,7 +180,7 @@
                 "slug": "/work/expertise/next-js",
                 "order": 15,
                 "icon": "js",
-                "image": "/png/clouds/default_whitecloud.png",
+                "image": "https://live.staticflickr.com/65535/54801612483_31ce454c4e_b.jpg",
                 "type": "file",
                 "tags": [
                   "JavaScript",
@@ -265,7 +247,7 @@
                 "slug": "/work/expertise/mui",
                 "order": 101,
                 "icon": "design",
-                "image": "/png/clouds/default_whitecloud.png",
+                "image": "https://live.staticflickr.com/65535/54801612483_31ce454c4e_b.jpg",
                 "type": "file",
                 "tags": [
                   "github",
@@ -629,7 +611,7 @@
                 "slug": "/work/company/remote-working",
                 "order": 250,
                 "icon": "company",
-                "image": "/png/og.png",
+                "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
                 "type": "file",
                 "tags": [
                   "remote",
