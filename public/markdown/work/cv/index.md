@@ -1,5 +1,5 @@
 ---
-order: 2
+order: 50
 title: CV
 description: Match your Job to our Curriculum Vitae with AI
 slug: /work/cv

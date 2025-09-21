@@ -11,8 +11,8 @@
   "themes": {
     "light": {
       "mode": "light",
-      "primary": "#1db2d3",
-      "secondary": "#05c5f0",
+      "primary": "#3d73cd",
+      "secondary": "#408ef7",
       "background": "#FFF",
       "border": "#FFF",
       "paper": "#FFF",
@@ -21,7 +21,7 @@
     "dark": {
       "mode": "dark",
       "primary": "#1db2d3",
-      "secondary": "#05c5f0",
+      "secondary": "#3e8df7",
       "background": "#001321",
       "paper": "#001321",
       "text": "#FFFFFF",

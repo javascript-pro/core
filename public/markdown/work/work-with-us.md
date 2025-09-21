@@ -1,12 +1,14 @@
 ---
-order: 10
-title: Work
-description: Professional Fullstack JavaScript Development
-slug: /work
-icon: work
-image: https://live.staticflickr.com/65535/54801864105_554c8c9f16_b.jpg
-tags: JavaScript, Vanilla JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
+order: 777
+title: Work With Us
+description: We take on a limited number of new projects each month
+slug: /work/work-with-us
+icon: team
+image: https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg
+tags: team
 ---
+
+We take on a limited number of new projects each month. If you need something done we’d love to hear about it. Find out if we're a [good fit](/work/cv). We're always looking for collaborators, contributors, and good ideas.
 
 The apps we ship are real. They run in production and are developed accessibly. The Core is Open Source and Free forever — giving you statically generated sites with Firestore-powered updates and a real admin panel. Built with Next.js App Router and Material UI
 

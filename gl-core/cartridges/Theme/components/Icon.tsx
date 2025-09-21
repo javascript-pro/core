@@ -108,7 +108,7 @@ import YoutubeIcon from '@mui/icons-material/YouTube';
 import ForgetIcon from '@mui/icons-material/PsychologyOutlined';
 import AIIcon from '@mui/icons-material/ModelTrainingOutlined';
 import FolderIcon from '@mui/icons-material/FolderOutlined';
-import CompanyIcon from '@mui/icons-material/Shop2Outlined';
+import CompanyIcon from '@mui/icons-material/Apartment';
 import DesignIcon from '@mui/icons-material/PaletteOutlined';
 import FeatureIcon from '@mui/icons-material/RocketLaunchOutlined';
 import SitemapIcon from '@mui/icons-material/AccountTree';
@@ -149,6 +149,7 @@ import LogsIcon from '@mui/icons-material/List';
 import RocketIcon from '@mui/icons-material/Rocket';
 import ExpertiseIcon from '@mui/icons-material/Rocket';
 import Web3DIcon from '@mui/icons-material/ThreeDRotation';
+import TeamIcon from '@mui/icons-material/People';
 
 export type TIcon = {
   icon:
@@ -272,6 +273,7 @@ export type TIcon = {
     | 'facebook'
     | 'ting'
     | 'settings'
+    | 'team'
     | 'email'
     | 'contact'
     | 'share'
@@ -617,6 +619,9 @@ export default function Icon({ icon, color }: TIcon) {
       break;
     case 'examples':
       iconFragment = <ExampleIcon color={color} />;
+      break;
+    case 'team':
+      iconFragment = <TeamIcon color={color} />;
       break;
     case 'goldlabel':
       iconFragment = <GoldlabelIcon color={color} />;

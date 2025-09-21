@@ -95,48 +95,6 @@
     <loc>https://goldlabel.pro/work/company</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/company/join-us</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/company/privacy-cookies</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/company/remote-working</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/company/work-with-us</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/core/cartridges/bouncer</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/core/cartridges/flash</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/core/cartridges/flickr</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/core/cartridges/flickr2</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/core/cartridges</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/core/cartridges/lingua</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/core/cartridges/new-cartridge</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/core/cartridges/uberedux</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/core/core</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/core/free</loc>
-  </url>
-  <url>
     <loc>https://goldlabel.pro/work/cv/about</loc>
   </url>
   <url>
@@ -242,6 +200,48 @@
     <loc>https://goldlabel.pro/work/expertise/windoze/testing</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/work/goldlabel/cartridges/bouncer</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/goldlabel/cartridges/flash</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/goldlabel/cartridges/flickr</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/goldlabel/cartridges</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/goldlabel/cartridges/lingua</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/goldlabel/cartridges/new-cartridge</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/goldlabel/cartridges/uberedux</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/goldlabel/core</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/goldlabel/free</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/goldlabel</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/work</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/join-us</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/privacy-cookies</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/remote-working</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/work-with-us</loc>
   </url>
 </urlset>

@@ -1,10 +1,10 @@
 ---
 order: 15
-slug: /work/core/cartridges/flash
-title: 'Flash'
+slug: /work/goldlabel/cartridges/flash
+title: Flash
 description: 'A Pointless reinvention of MacroMedia Flash?'
-icon: 'flash'
-image: /png/clouds/default_whitecloud.png
+icon: flash
+image: /png/n64/chix.png
 keywords: 'Catridges, Flash, SVG'
 ---
 

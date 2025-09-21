@@ -1,10 +1,10 @@
 ---
 order: 1
-title: Free & Open Source
-description: Some things in life ARE free
-slug: /work/core/free
-icon: flash
-image: /png/og.png
+title: Free
+description: Open Source. Some things in life ARE free
+slug: /work/goldlabel/free
+icon: news
+image: /png/n64/chix.png
 ---
 
 ## Some things in life _are_ free — Goldlabel [Core](/free/core) is one of them.

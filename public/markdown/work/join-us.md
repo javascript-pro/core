@@ -2,9 +2,9 @@
 order: 666
 title: Join Us
 description: A Software Developer in possession of a good product, must be in want of a good business partner
-slug: /work/company/join-us
-icon: company
-image: /png/og.png
+slug: /work/join-us
+icon: team
+image: https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg
 tags: team
 ---
 

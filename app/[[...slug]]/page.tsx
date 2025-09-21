@@ -93,9 +93,13 @@ export async function generateMetadata({ params }: { params: any }) {
   const app = 'Goldlabel';
 
   const is404 = !frontmatter?.title;
+  const pageTitle =
+    frontmatter.title === 'Home' ? 'Goldlabel' : frontmatter.title;
+
   const title = is404
     ? 'Goldlabel'
-    : `${frontmatter.title}${frontmatter.description ? `. ${frontmatter.description}` : ''}`;
+    : `${pageTitle}${frontmatter.description ? `. ${frontmatter.description}` : ''}`;
+
   const description = is404 ? '' : frontmatter.description || '';
   const img = frontmatter.image || '/png/og.png';
   const url = `https://goldlabel.pro/${slugPath}`;

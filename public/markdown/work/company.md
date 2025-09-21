@@ -1,6 +1,6 @@
 ---
 order: 10
-title: About Us
+title: Company
 description: UK Limited Company (5460545)
 slug: /work/company
 icon: company
@@ -16,3 +16,5 @@ Tel +49 15510-995150
 > 321-323 High Road  
 > Chadwell Heath  
 > Essex RM6 6AX
+
+> [UK Limited Company 5460545](https://find-and-update.company-information.service.gov.uk/company/15460545)

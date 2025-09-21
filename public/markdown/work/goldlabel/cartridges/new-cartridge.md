@@ -1,11 +1,10 @@
 ---
 order: 2200
-slug: /work/core/cartridges/new-cartridge
+slug: /work/goldlabel/cartridges/new-cartridge
 title: New Cartridge
 description: Template for bootstrapping a new cartridge
-icon: cartridge
-image: /png/cartridges/test.png
-github: https://github.com/javascript-pro/core/tree/main/gl-core/cartridges/NewCartridge
+icon: add
+image: /png/n64/chix.png
 ---
 
 ## Purpose
@@ -14,27 +13,6 @@ github: https://github.com/javascript-pro/core/tree/main/gl-core/cartridges/NewC
 
 This template provides a standardized structure, boilerplate code, and default configuration to reduce setup time and ensure consistency across cartridges.
 
----
-
-## Folder Structure
-
-```
-NewCartridge/
-├── actions/
-│   └── updateKey.tsx          # Sample action for Redux-style state updates
-├── components/
-│   └── NewComponent.tsx       # Example component ready to render
-├── hooks/
-│   └── useNewCartridge.tsx    # Custom React hook for encapsulating logic
-├── index.tsx                  # Entry point, exports Cartridge component
-├── initialState.tsx          # Default state for the cartridge slice
-├── NewCartridge.tsx          # Main UI wrapper or container
-├── types.d.ts                # TypeScript declarations
-├── config.json               # Metadata and theming config
-└── README.md                 # Basic documentation
-```
-
----
 
 ## Key Files
 
@@ -61,18 +39,6 @@ NewCartridge/
 
 Defines the cartridge metadata, including title, description, UI theming, and route slug.
 
-### `README.md`
-
-```md
-## ✅ NewCartridge
-
-This is a template from which you can init a new cartridge
-```
-
-Brief instructions and intended use of the template.
-
----
-
 ## Getting Started
 
 To use this cartridge template:
@@ -83,8 +49,6 @@ To use this cartridge template:
 4. Begin extending components, hooks, and actions as needed.
 
 This structure ensures your cartridge is consistent with the larger application architecture and easily pluggable.
-
----
 
 ## Notes
 

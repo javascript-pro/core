@@ -1,10 +1,10 @@
 ---
 order: 10
 title: Core
-slug: /work/core
+slug: /work/goldlabel/core
 description: Open Source and Free Forever
 icon: github
-image: /png/og.png
+image: /png/n64/chix.png
 tags: free, core
 ---
 
