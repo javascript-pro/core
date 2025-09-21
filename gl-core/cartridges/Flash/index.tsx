@@ -1,15 +1,17 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/Flash/index.tsx
 import Flash from './Flash';
-import { initialState as initialStateFlash } from './initialState';
+import { initialReduxFlash } from './initialReduxFlash';
+
 import { Stage } from './components';
 import { useFlash } from './hooks';
-import { init } from './actions';
-import { pingpongball } from './actionscript';
+import { init, setFlashKey } from './actions';
+import { intro } from './actionscript';
 import Pingpongball from './movieclips/Pingpongball';
 import MacromediaMC from './movieclips/MacromediaMC';
+import Presenter from './movieclips/Presenter';
 
-export { initialStateFlash, Flash, Stage };
+export { initialReduxFlash, Flash, Stage };
 export { useFlash };
-export { init };
-export { pingpongball, Pingpongball };
-export { MacromediaMC };
+export { init, setFlashKey };
+export { Pingpongball };
+export { intro, MacromediaMC, Presenter };

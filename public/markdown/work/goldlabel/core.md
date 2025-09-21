@@ -4,7 +4,7 @@ title: Core
 slug: /work/goldlabel/core
 description: Open Source and Free Forever
 icon: github
-image: /png/n64/chix.png
+image: /png/n64/goldlabel.png
 tags: free, core
 ---
 

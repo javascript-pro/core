@@ -1,10 +1,10 @@
 ---
 order: 1
-title: FREE
+title: Goldlabel
 description: Open Source Platform
 slug: /work/goldlabel
 icon: goldlabel
-image: /png/n64/chix.png
+image: /png/n64/goldlabel.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 ---
 

@@ -4,7 +4,7 @@ slug: /work/goldlabel/cartridges/new-cartridge
 title: New Cartridge
 description: Template for bootstrapping a new cartridge
 icon: add
-image: /png/n64/chix.png
+image: /png/n64/goldlabel.png
 ---
 
 ## Purpose

@@ -5,20 +5,20 @@ import { initialStateFlickr } from './cartridges/Flickr';
 import { initialStateLingua } from './cartridges/Lingua';
 import { initialStateBouncer } from './cartridges/Bouncer';
 import { initialStateAdmin } from './cartridges/Admin';
-import { initialStateFlash } from './cartridges/Flash';
+import { initialReduxFlash } from './cartridges/Flash/initialReduxFlash';
 
 export const initialState: any = {
-  themeMode: 'light',
-  bouncer: initialStateBouncer,
-  cv: initialStateCV,
-  flash: initialStateFlash,
-  flickr: initialStateFlickr,
-  lingua: initialStateLingua,
-  admin: initialStateAdmin,
+  config,
   version: pJSON.version,
   persisted: Date.now(),
-  config,
+  themeMode: 'light',
   loading: null,
   feedback: null,
   hideImage: false,
+  bouncer: initialStateBouncer,
+  cv: initialStateCV,
+  flash: initialReduxFlash,
+  flickr: initialStateFlickr,
+  lingua: initialStateLingua,
+  admin: initialStateAdmin,
 };

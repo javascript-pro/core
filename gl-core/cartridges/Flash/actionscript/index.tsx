@@ -1,4 +1,4 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/Flash/actionscript/index.tsx
-import pingpongball from './pingpongball';
+import intro from './intro';
 
-export { pingpongball };
+export { intro };

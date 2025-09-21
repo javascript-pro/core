@@ -1,9 +1,10 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/Flash/Flash.tsx
 'use client';
 import * as React from 'react';
-import { Toolbar } from '@mui/material';
-import { Stage, useFlash } from '../Flash';
+import { Box, Toolbar } from '@mui/material';
+import { Stage, useFlash, setFlashKey } from '../Flash';
 import { MightyButton } from '../../../gl-core';
+import { useDispatch } from '../Uberedux';
 
 export type TFlashProps = {
   movie?: string;
@@ -17,23 +18,27 @@ export type TFlashProps = {
 export default function Flash({
   movie = 'default_movie',
   width = 300,
-  height = 200,
-  color = 'dodgerblue',
+  height = 250,
+  color = 'black',
   loop = false,
   ...rest
 }: TFlashProps) {
   const flashStore = useFlash();
+  const dispatch = useDispatch();
   const loopNormalized =
     typeof loop === 'string' ? loop.toLowerCase() === 'true' : loop;
 
-  const handleReplay = () => console.log('Replay pressed');
+  const handleReplay = () => {
+    // console.log('Replay pressed');
+    dispatch(setFlashKey('introDone', false));
+  };
 
   return (
     <>
       <Stage
         movie={movie}
         width={width}
-        height={height}
+        height={300}
         color={color}
         loop={loopNormalized}
         {...rest}
@@ -41,10 +46,18 @@ export default function Flash({
 
       {/* Toolbar */}
       <Toolbar>
-        <MightyButton label="Replay" icon="flash" onClick={handleReplay} />
+        <Box sx={{ flexGrow: 1 }} />
+        <MightyButton
+          fullWidth
+          color="primary"
+          label="Replay"
+          icon="reset"
+          iconPlacement="right"
+          onClick={handleReplay}
+        />
       </Toolbar>
 
-      <pre>flashStore: {JSON.stringify(flashStore, null, 2)}</pre>
+      {/* <pre>flashStore: {JSON.stringify(flashStore, null, 2)}</pre> */}
     </>
   );
 }

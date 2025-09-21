@@ -4,7 +4,7 @@ slug: /work/goldlabel/cartridges/flash
 title: Flash
 description: 'A Pointless reinvention of MacroMedia Flash?'
 icon: flash
-image: /png/n64/chix.png
+image: https://live.staticflickr.com/65535/54802570139_8f4f2ac814_b.jpg
 keywords: 'Catridges, Flash, SVG'
 noImage: true
 ---

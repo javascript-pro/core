@@ -2,8 +2,10 @@
 
 import * as React from 'react';
 import { Box, useTheme } from '@mui/material';
-import { MacromediaMC } from '../../Flash';
-import { pingpongball } from '../../Flash';
+import { MacromediaMC, Presenter } from '../../Flash';
+import { intro } from '../../Flash';
+import { useDispatch } from '../../Uberedux';
+import { setFlashKey, useFlash } from '../../Flash';
 
 export type TStageProps = {
   movie?: string;
@@ -15,29 +17,35 @@ export type TStageProps = {
 };
 
 export default function Stage({
-  movie = 'default_movie',
+  movie = 'intro',
   width = 300,
-  height = 200,
-  color = 'dodgerblue',
+  height = 250,
+  color = 'black',
   loop = false,
   ...rest
 }: TStageProps) {
-  // console.log('height', height)
-
   const shapeRef = React.useRef<SVGCircleElement | null>(null);
   const theme = useTheme();
+  const dispatch = useDispatch();
+  const flash = useFlash();
+  const { introDone } = flash;
+
   React.useEffect(() => {
     if (!shapeRef.current) return;
 
     let tl: gsap.core.Timeline | undefined;
 
     switch (movie) {
-      case 'pingpongball':
+      case 'intro':
       default:
-        tl = pingpongball({
+        tl = intro({
           target: shapeRef.current,
           color,
           loop,
+          alreadyDone: introDone,
+          onComplete: () => {
+            dispatch(setFlashKey('introDone', true));
+          },
         });
         break;
     }
@@ -45,16 +53,14 @@ export default function Stage({
     return () => {
       tl?.kill();
     };
-  }, [movie, color, loop]);
+  }, [movie, color, loop, introDone, dispatch]);
 
   return (
     <Box
       sx={{
         my: 2,
-        height: 300,
-        bgcolor: theme.palette.background.paper,
-        border: '1px solid ' + theme.palette.divider,
-        borderRadius: 1,
+        height,
+        width,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -62,7 +68,21 @@ export default function Stage({
       }}
       {...rest}
     >
-      <MacromediaMC ref={shapeRef} />
+      <Box sx={{ position: 'relative', width: '100%', height: '100%' }}>
+        {/* background first */}
+        <Presenter />
+        {/* overlay animation centered */}
+        <Box
+          sx={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+          }}
+        >
+          <MacromediaMC ref={shapeRef} />
+        </Box>
+      </Box>
     </Box>
   );
 }

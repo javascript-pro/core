@@ -4,7 +4,7 @@ slug: /work/goldlabel/cartridges/lingua
 title: Lingua
 description: Localisation
 icon: lingua
-image: /png/n64/chix.png
+image: /png/n64/goldlabel.png
 github: https://github.com/javascript-pro/core/tree/main/gl-core/cartridges/Lingua
 ---
 

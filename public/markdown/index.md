@@ -6,8 +6,11 @@ description: Work, Life, Balance
 icon: goldlabel
 github: https://github.com/javascript-pro/core
 tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS, secure
-image: /png/wei-zang.png
+image: https://live.staticflickr.com/65535/54802570139_8f4f2ac814_b.jpg
+noImage: true
 ---
+
+[Flash movie="pingpongball" width="100%" height="350"]
 
 #### [Flash](/work/goldlabel/cartridges/flash)
 

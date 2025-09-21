@@ -4,7 +4,7 @@ title: Bouncer
 description: Authentication and Access Control System
 slug: /work/goldlabel/cartridges/bouncer
 icon: admin
-image: /png/n64/chix.png
+image: /png/n64/goldlabel.png
 tags: cartridges, cartridge, free, bouncer
 featured: true
 ---

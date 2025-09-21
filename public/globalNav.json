@@ -5,7 +5,7 @@
     "slug": "/",
     "order": 1,
     "icon": "goldlabel",
-    "image": "/png/wei-zang.png",
+    "image": "https://live.staticflickr.com/65535/54802570139_8f4f2ac814_b.jpg",
     "type": "folder",
     "tags": [
       "JavaScript",
@@ -36,7 +36,7 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "We ridiculously and pointlessly reinvented Macromedia Flash with React and TypeScript\n\n SVG Graphics\n Animation using Greensock\n State management with redux/toolkit\n Material UI\n TypeScript\n\n \n\n A lig",
+    "excerpt": "[Flash movie=\"pingpongball\" width=\"100%\" height=\"350\"]\n\n \n\nWe ridiculously and pointlessly reinvented Macromedia Flash with React and TypeScript\n\n SVG Graphics\n Animation using Greensock\n State manage",
     "children": [
       {
         "title": "Work",
@@ -62,12 +62,12 @@
         "excerpt": "The apps we ship are real. They run in production and are developed accessibly. The Core is Open Source and Free forever — giving you statically generated sites with Firestorepowered updates and a rea",
         "children": [
           {
-            "title": "FREE",
+            "title": "Goldlabel",
             "description": "Open Source Platform",
             "slug": "/work/goldlabel",
             "order": 1,
             "icon": "goldlabel",
-            "image": "/png/n64/chix.png",
+            "image": "/png/n64/goldlabel.png",
             "type": "folder",
             "tags": [
               "JavaScript",
@@ -90,7 +90,7 @@
                 "slug": "/work/goldlabel/cartridges",
                 "order": 1,
                 "icon": "cartridge",
-                "image": "/png/n64/chix.png",
+                "image": "/png/n64/goldlabel.png",
                 "type": "folder",
                 "excerpt": "Goldlabel is built on cartridges.\n\nA cartridge is a selfcontained piece of application logic: React components, state, styles, and utilities bundled together in a portable unit.\n\nBecause each cartridg",
                 "children": [
@@ -99,7 +99,7 @@
                     "slug": "/work/goldlabel/cartridges/flash",
                     "order": 15,
                     "icon": "flash",
-                    "image": "/png/n64/chix.png",
+                    "image": "https://live.staticflickr.com/65535/54802570139_8f4f2ac814_b.jpg",
                     "type": "file",
                     "excerpt": "[Flash movie=\"pingpongball\" width=\"400\" height=\"350\"]\n\n A Pointless reinvention of MacroMedia Flash?\n\nMaybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll neve"
                   },
@@ -108,7 +108,7 @@
                     "slug": "/work/goldlabel/cartridges/uberedux",
                     "order": 20,
                     "icon": "uberedux",
-                    "image": "/png/n64/chix.png",
+                    "image": "/png/n64/goldlabel.png",
                     "type": "file",
                     "excerpt": "Because all Apps need State Management\n\nOtherwise you'd be back in jQuery callback hell. Nobody wants that. Uberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app alr"
                   },
@@ -117,7 +117,7 @@
                     "slug": "/work/goldlabel/cartridges/flickr",
                     "order": 30,
                     "icon": "flickr",
-                    "image": "/png/n64/chix.png",
+                    "image": "/png/n64/goldlabel.png",
                     "type": "file",
                     "tags": [
                       "flickr",
@@ -133,7 +133,7 @@
                     "slug": "/work/goldlabel/cartridges/lingua",
                     "order": 100,
                     "icon": "lingua",
-                    "image": "/png/n64/chix.png",
+                    "image": "/png/n64/goldlabel.png",
                     "type": "file",
                     "excerpt": "The Lingua cartridge brings localisation to Goldlabel. It enables your site to serve content in multiple languages, making it accessible to a wider audience without complicating your codebase.\n\n What "
                   },
@@ -142,7 +142,7 @@
                     "slug": "/work/goldlabel/cartridges/bouncer",
                     "order": 130,
                     "icon": "admin",
-                    "image": "/png/n64/chix.png",
+                    "image": "/png/n64/goldlabel.png",
                     "type": "file",
                     "tags": [
                       "cartridges",
@@ -157,7 +157,7 @@
                     "slug": "/work/goldlabel/cartridges/new-cartridge",
                     "order": 2200,
                     "icon": "add",
-                    "image": "/png/n64/chix.png",
+                    "image": "/png/n64/goldlabel.png",
                     "type": "file",
                     "excerpt": "Purpose\n\n is a template designed to help developers quickly bootstrap a new Cartridge in a modular application framework such as Goldlabel. Cartridges are featurespecific, plugandplay components that "
                   }
@@ -167,8 +167,8 @@
                 "title": "Free",
                 "slug": "/work/goldlabel/free",
                 "order": 1,
-                "icon": "news",
-                "image": "/png/n64/chix.png",
+                "icon": "ai",
+                "image": "/png/n64/goldlabel.png",
                 "type": "file",
                 "excerpt": "Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or b"
               },
@@ -177,7 +177,7 @@
                 "slug": "/work/goldlabel/core",
                 "order": 10,
                 "icon": "github",
-                "image": "/png/n64/chix.png",
+                "image": "/png/n64/goldlabel.png",
                 "type": "file",
                 "tags": [
                   "free",

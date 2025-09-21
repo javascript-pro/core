@@ -4,7 +4,7 @@ slug: /work/goldlabel/cartridges
 title: Cartridges
 description: Self-contained pieces of application logic
 icon: cartridge
-image: /png/n64/chix.png
+image: /png/n64/goldlabel.png
 ---
 
 ## Goldlabel is built on cartridges.

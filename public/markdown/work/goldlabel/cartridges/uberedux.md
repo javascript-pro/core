@@ -4,7 +4,7 @@ slug: /work/goldlabel/cartridges/uberedux
 title: 'Uberedux'
 description: 'Because all Apps need State Management'
 icon: 'uberedux'
-image: /png/n64/chix.png
+image: /png/n64/goldlabel.png
 github: 'https://github.com/javascript-pro/core/tree/main/gl-core/cartridges/Uberedux'
 keywords: 'Catridges, Uberedux, State Management, Redux'
 ---
