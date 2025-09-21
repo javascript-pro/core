@@ -5,7 +5,7 @@
     "slug": "/",
     "order": 1,
     "icon": "goldlabel",
-    "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
+    "image": "https://live.staticflickr.com/44/115242272_3eca5b48bc_b.jpg",
     "type": "folder",
     "tags": [
       "JavaScript",
@@ -44,7 +44,7 @@
         "slug": "/work",
         "order": 10,
         "icon": "work",
-        "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
+        "image": "https://live.staticflickr.com/65535/54801864105_554c8c9f16_b.jpg",
         "type": "folder",
         "tags": [
           "JavaScript",
@@ -67,7 +67,7 @@
             "slug": "/work/goldlabel",
             "order": 1,
             "icon": "goldlabel",
-            "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
+            "image": "/png/n64/chix.png",
             "type": "folder",
             "tags": [
               "JavaScript",
@@ -90,7 +90,7 @@
                 "slug": "/work/goldlabel/cartridges",
                 "order": 1,
                 "icon": "cartridge",
-                "image": "/png/n64/test.png",
+                "image": "/png/n64/chix.png",
                 "type": "folder",
                 "excerpt": "Goldlabel is built on cartridges.\n\nA cartridge is a selfcontained piece of application logic: React components, state, styles, and utilities bundled together in a portable unit.\n\nBecause each cartridg",
                 "children": [
@@ -99,7 +99,7 @@
                     "slug": "/work/goldlabel/cartridges/flash",
                     "order": 15,
                     "icon": "flash",
-                    "image": "https://live.staticflickr.com/65535/54800517077_55d79f6a0a_b.jpg",
+                    "image": "/png/n64/chix.png",
                     "type": "file",
                     "excerpt": "A Pointless reinvention of MacroMedia Flash?\n\nMaybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You're welcome\n\n SVG Graphics\n Animation usin"
                   },
@@ -108,7 +108,7 @@
                     "slug": "/work/goldlabel/cartridges/uberedux",
                     "order": 20,
                     "icon": "uberedux",
-                    "image": "/png/clouds/default_whitecloud.png",
+                    "image": "/png/n64/chix.png",
                     "type": "file",
                     "excerpt": "Because all Apps need State Management\n\nOtherwise you'd be back in jQuery callback hell. Nobody wants that. Uberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app alr"
                   },
@@ -117,7 +117,7 @@
                     "slug": "/work/goldlabel/cartridges/flickr",
                     "order": 30,
                     "icon": "flickr",
-                    "image": "/png/n64/flickr.png",
+                    "image": "/png/n64/chix.png",
                     "type": "file",
                     "tags": [
                       "flickr",
@@ -133,16 +133,16 @@
                     "slug": "/work/goldlabel/cartridges/lingua",
                     "order": 100,
                     "icon": "lingua",
-                    "image": "/png/lingua.png",
+                    "image": "/png/n64/chix.png",
                     "type": "file",
-                    "excerpt": "Lingua"
+                    "excerpt": "The Lingua cartridge brings localisation to Goldlabel. It enables your site to serve content in multiple languages, making it accessible to a wider audience without complicating your codebase.\n\n What "
                   },
                   {
                     "title": "Bouncer",
                     "slug": "/work/goldlabel/cartridges/bouncer",
                     "order": 130,
                     "icon": "admin",
-                    "image": "/png/clouds/default_whitecloud.png",
+                    "image": "/png/n64/chix.png",
                     "type": "file",
                     "tags": [
                       "cartridges",
@@ -150,14 +150,14 @@
                       "free",
                       "bouncer"
                     ],
-                    "excerpt": "Bouncer Cartridge\n\nThe Bouncer cartridge is responsible for two core features in Goldlabel Core:\n\n1. Authentication (Firebase Auth +  collection)\n2. Real‑time Visitor Tracking (Pings)\n\n\n\n 1. Authentic"
+                    "excerpt": "Bouncer Cartridge\n\nThe Bouncer cartridge is responsible for two core features in Goldlabel Core:\n\n1. Authentication (Firebase Auth +  collection)\n2. Real‑time Visitor Tracking (Pings)\n\n 1. Authenticat"
                   },
                   {
                     "title": "New Cartridge",
                     "slug": "/work/goldlabel/cartridges/new-cartridge",
                     "order": 2200,
-                    "icon": "cartridge",
-                    "image": "/png/cartridges/test.png",
+                    "icon": "add",
+                    "image": "/png/n64/chix.png",
                     "type": "file",
                     "excerpt": "Purpose\n\n is a template designed to help developers quickly bootstrap a new Cartridge in a modular application framework such as Goldlabel. Cartridges are featurespecific, plugandplay components that "
                   }
@@ -168,7 +168,7 @@
                 "slug": "/work/goldlabel/free",
                 "order": 1,
                 "icon": "news",
-                "image": "https://live.staticflickr.com/65535/54800517077_55d79f6a0a_b.jpg",
+                "image": "/png/n64/chix.png",
                 "type": "file",
                 "excerpt": "Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or b"
               },
@@ -177,7 +177,7 @@
                 "slug": "/work/goldlabel/core",
                 "order": 10,
                 "icon": "github",
-                "image": "/png/og.png",
+                "image": "/png/n64/chix.png",
                 "type": "file",
                 "tags": [
                   "free",
@@ -202,7 +202,7 @@
             "slug": "/work/expertise",
             "order": 20,
             "icon": "expertise",
-            "image": "https://live.staticflickr.com/65535/54798568317_b71dfe3e13_b.jpg",
+            "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
             "type": "folder",
             "tags": [
               "expertise",
@@ -855,7 +855,7 @@
             "slug": "/life/travel",
             "order": 200,
             "icon": "life",
-            "image": "https://live.staticflickr.com/65535/54652210336_8d28a5af11_b.jpg",
+            "image": "https://live.staticflickr.com/65535/54357493661_c102e19402_b.jpg",
             "type": "folder",
             "excerpt": "This is Zoto. My van. Here's a map of where I've been in 2025. Well, since the Spring anyway\n\n[GoogleMap src=\"https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=001321\"]",
             "children": []

@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import { Box, Link as MuiLink, Typography, useTheme } from '@mui/material';
 import { MightyButton } from '../../../gl-core';
 import { GoogleMap, FlickrAlbum, YouTube } from '../../../gl-core';
+import { Flash } from '../../cartridges/Flash';
 
 export type TRenderMarkdown = {
   children: React.ReactNode;
@@ -59,27 +60,44 @@ export default function RenderMarkdown({
 
   // --- Shortcode parser ---
   const renderShortcode = (text: string) => {
+    // Utility: parse [Tag key="value" key2="value2"]
+    const parseShortcode = (
+      regex: RegExp,
+      Component: React.ElementType
+    ): React.ReactNode | null => {
+      const match = text.match(regex);
+      if (!match) return null;
+
+      const attrs = match[1];
+      const props: Record<string, string> = {};
+
+      // capture all key="value" pairs
+      const attrRegex = /(\w+)="(.*?)"/g;
+      let attrMatch;
+      while ((attrMatch = attrRegex.exec(attrs)) !== null) {
+        props[attrMatch[1]] = attrMatch[2];
+      }
+
+      return <Component {...props} />;
+    };
+
     // GoogleMap
-    const googleMapRegex = /\[GoogleMap\s+src="(.+?)"\]/;
-    const googleMatch = text.match(googleMapRegex);
-    if (googleMatch) {
-      return <GoogleMap src={googleMatch[1]} />;
-    }
+    const google = parseShortcode(/\[GoogleMap\s+(.*?)\]/, GoogleMap);
+    if (google) return google;
 
     // FlickrAlbum
-    const flickrRegex = /\[FlickrAlbum\s+id="(.+?)"\]/;
-    const flickrMatch = text.match(flickrRegex);
-    if (flickrMatch) {
-      return <FlickrAlbum id={flickrMatch[1]} />;
-    }
+    const flickr = parseShortcode(/\[FlickrAlbum\s+(.*?)\]/, FlickrAlbum);
+    if (flickr) return flickr;
 
     // YouTube
-    const youtubeRegex = /\[YouTube\s+src="(.+?)"\]/;
-    const youtubeMatch = text.match(youtubeRegex);
-    if (youtubeMatch) {
-      return <YouTube src={youtubeMatch[1]} />;
-    }
+    const youtube = parseShortcode(/\[YouTube\s+(.*?)\]/, YouTube);
+    if (youtube) return youtube;
 
+    // Flash
+    const flash = parseShortcode(/\[Flash\s+(.*?)\]/, Flash);
+    if (flash) return flash;
+
+    // fallback: just return text
     return text;
   };
 

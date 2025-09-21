@@ -114,11 +114,9 @@ export default function Siblings() {
   return (
     <Box>
       {parentNode && (
-        <ListItemButton
-          onClick={() => router.push(parentNode.slug)}
-        >
+        <ListItemButton onClick={() => router.push(parentNode.slug)}>
           <ListItemIcon>
-            <Icon icon={"up"} color="primary" />
+            <Icon icon={'up'} color="primary" />
           </ListItemIcon>
           <ListItemText primary={parentNode.title} />
         </ListItemButton>

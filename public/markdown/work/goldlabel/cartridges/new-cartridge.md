@@ -13,7 +13,6 @@ image: /png/n64/chix.png
 
 This template provides a standardized structure, boilerplate code, and default configuration to reduce setup time and ensure consistency across cartridges.
 
-
 ## Key Files
 
 ### `config.json`

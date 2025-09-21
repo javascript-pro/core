@@ -6,7 +6,10 @@ description: 'A Pointless reinvention of MacroMedia Flash?'
 icon: flash
 image: /png/n64/chix.png
 keywords: 'Catridges, Flash, SVG'
+noImage: true
 ---
+
+[Flash movie="my_first_movie" width="400" height="300"]
 
 ## A Pointless reinvention of MacroMedia Flash?
 
