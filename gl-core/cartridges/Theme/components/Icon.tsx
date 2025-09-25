@@ -150,10 +150,12 @@ import RocketIcon from '@mui/icons-material/Rocket';
 import ExpertiseIcon from '@mui/icons-material/Rocket';
 import Web3DIcon from '@mui/icons-material/ThreeDRotation';
 import TeamIcon from '@mui/icons-material/People';
+import VanIcon from '@mui/icons-material/AirportShuttle';
 
 export type TIcon = {
   icon:
     | 'more'
+    | 'van'
     | 'web3d'
     | 'rocket'
     | 'logs'
@@ -735,7 +737,7 @@ export default function Icon({ icon, color }: TIcon) {
       iconFragment = <WorkIcon color={color} />;
       break;
     case 'life':
-      iconFragment = <LifeIcon color={color} />;
+      iconFragment = <VanIcon color={color} />;
       break;
     case 'legal':
       iconFragment = <BalanceIcon color={color} />;
@@ -881,6 +883,10 @@ export default function Icon({ icon, color }: TIcon) {
 
     case 'logs':
       iconFragment = <LogsIcon color={color} />;
+      break;
+
+    case 'van':
+      iconFragment = <VanIcon color={color} />;
       break;
 
     default:

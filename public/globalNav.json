@@ -677,43 +677,6 @@
             ]
           },
           {
-            "title": "CV",
-            "description": "Match your Job to our Curriculum Vitae with AI",
-            "slug": "/work/cv",
-            "order": 50,
-            "icon": "openai",
-            "image": "https://live.staticflickr.com/65535/53519132411_1fc305c2dc_b.jpg",
-            "type": "folder",
-            "tags": [
-              "CV",
-              "jobs",
-              "work",
-              "resume",
-              "AI",
-              "OpenAI"
-            ],
-            "excerpt": "Fullstack JavaScript Developer\n\nDeep expertise in React and TypeScript, currently specialising in Next.js.\n\n20+ years delivering scalable web applications for startups, enterprises, and remote‑first t",
-            "children": [
-              {
-                "title": "About C.V.",
-                "slug": "/work/cv/about",
-                "order": 130,
-                "icon": "openai",
-                "image": "/png/og.png",
-                "type": "file",
-                "tags": [
-                  "CV",
-                  "jobs",
-                  "work",
-                  "resume",
-                  "AI",
-                  "OpenAI"
-                ],
-                "excerpt": "Applying for jobs can be time consuming\n\nEach role requires tailoring a cover letter or rewording a CV to match a job description. As developers, we know the real problem isn’t effort — it’s clarity. "
-              }
-            ]
-          },
-          {
             "title": "Working remotely",
             "slug": "/work/remote-working",
             "order": 250,
@@ -779,6 +742,33 @@
         "excerpt": "I work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age I'm never going to ski like I used to. Ma",
         "children": [
           {
+            "title": "Vanlife",
+            "description": "definition of",
+            "slug": "/life/vanlife",
+            "order": 10,
+            "icon": "van",
+            "type": "folder",
+            "excerpt": "Vanlife (noun)\n\n A lifestyle built around living or traveling in a converted van, often equipped with a bed, kitchen, and storage, sometimes a bathroom.\n\n The practice of turning a vehicle into both h",
+            "children": [
+              {
+                "title": "The best price",
+                "slug": "/life/vanlife/best-price",
+                "order": 10,
+                "icon": "van",
+                "type": "file",
+                "excerpt": "Best price (noun)\n\nThe universal truth: if it costs nothing, it’s already worth more than you were planning to spend.\n\n Usage\n\n \"How much was that? — Free. — Best price.\"\n \"I wasn’t even looking, but "
+              },
+              {
+                "title": "2025 Map",
+                "slug": "/life/vanlife/map",
+                "order": 10,
+                "icon": "van",
+                "type": "file",
+                "excerpt": "2025 Map\n\n[GoogleMap src=\"https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=001321\"]"
+              }
+            ]
+          },
+          {
             "title": "Diving",
             "description": "Fish are friends. Not food.",
             "slug": "/life/diving",
@@ -829,17 +819,6 @@
             "image": "/jpg/motorbikes.jpg",
             "type": "folder",
             "excerpt": "“It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a motorbike.”\n\n― Jane Austen, Pride and Prejudice",
-            "children": []
-          },
-          {
-            "title": "Travel",
-            "description": "Zoto - The Little Zeppelin",
-            "slug": "/life/travel",
-            "order": 200,
-            "icon": "life",
-            "image": "https://live.staticflickr.com/65535/54357493661_c102e19402_b.jpg",
-            "type": "folder",
-            "excerpt": "This is Zoto. My van. Here's a map of where I've been in 2025. Well, since the Spring anyway\n\n[GoogleMap src=\"https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=001321\"]",
             "children": []
           }
         ]

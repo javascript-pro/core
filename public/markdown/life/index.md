@@ -5,10 +5,11 @@ description: Well, we've all got to have one
 slug: /life
 icon: life
 image: /jpg/wei-zangs-food.jpg
+noImage: true
 ---
 
-I work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age I'm never going to ski like I used to. Maybe it's time to take up sailing?
+I work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age I'm never going to ski like I used to. Maybe it's time to take up sailing? I am [Generation X](/balance/writers/generation-x)
 
-- I am [Generation X](/balance/writers/generation-x)
+> ⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a 1991 novel written by Canadian author Douglas Coupland
 
-> Cultural reference; Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland
+## [Vanlife](/life/vanlife)
