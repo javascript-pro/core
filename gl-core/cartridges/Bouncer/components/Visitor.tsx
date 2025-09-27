@@ -33,7 +33,8 @@ export default function Visitor() {
     const interval = setInterval(() => {
       setSecondsLeft((prev) => {
         if (prev <= 1) {
-          dispatch(ping());
+          console.log("ping", visitor)
+          // dispatch(ping());
           return 10;
         }
         return prev - 1;
@@ -57,7 +58,7 @@ export default function Visitor() {
       }}
     >
       {/* Avatar or fallback icon */}
-      {fingerprintAvatar ? (
+      {/* {fingerprintAvatar ? (
         <Avatar
           src={fingerprintAvatar}
           sx={{
@@ -77,7 +78,7 @@ export default function Visitor() {
         >
           <Icon icon="visitor" />
         </Avatar>
-      )}
+      )} */}
 
       {/* Spinner ring, perfectly centered */}
       <Box

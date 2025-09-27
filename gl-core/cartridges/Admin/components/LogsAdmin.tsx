@@ -21,12 +21,7 @@ import {
 } from '@mui/material';
 import { Icon } from '../../Theme';
 import { db } from '../../../lib/firebase';
-import {
-  collection,
-  onSnapshot,
-  query,
-  orderBy,
-} from 'firebase/firestore';
+import { collection, onSnapshot, query, orderBy } from 'firebase/firestore';
 import moment from 'moment';
 
 type LogEntry = {
@@ -45,14 +40,19 @@ export default function LogsAdmin() {
 
   // menu state
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const [menuData, setMenuData] = React.useState<Record<string, any> | null>(null);
+  const [menuData, setMenuData] = React.useState<Record<string, any> | null>(
+    null,
+  );
 
   // delete confirm state
   const [deleteDialogOpen, setDeleteDialogOpen] = React.useState(false);
   const [logToDelete, setLogToDelete] = React.useState<LogEntry | null>(null);
   const [deleting, setDeleting] = React.useState(false);
 
-  const handleMenuOpen = (event: React.MouseEvent<HTMLElement>, data: Record<string, any>) => {
+  const handleMenuOpen = (
+    event: React.MouseEvent<HTMLElement>,
+    data: Record<string, any>,
+  ) => {
     setAnchorEl(event.currentTarget);
     setMenuData(data);
   };
@@ -148,8 +148,8 @@ export default function LogsAdmin() {
                   {log.updated
                     ? moment(log.updated).fromNow()
                     : log.created
-                    ? moment(log.created).fromNow()
-                    : ''}
+                      ? moment(log.created).fromNow()
+                      : ''}
                 </Typography>
               </Alert>
             </Grid>
@@ -158,7 +158,11 @@ export default function LogsAdmin() {
       )}
 
       {/* Data menu */}
-      <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
+      <Menu
+        anchorEl={anchorEl}
+        open={Boolean(anchorEl)}
+        onClose={handleMenuClose}
+      >
         {menuData &&
           Object.entries(menuData).map(([key, value]) => (
             <ListItem key={key} sx={{ minWidth: 200 }}>

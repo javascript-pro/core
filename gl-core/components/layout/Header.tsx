@@ -4,6 +4,7 @@ import * as React from 'react';
 import { useRouter } from 'next/navigation';
 import { Box, CardHeader, Typography, CircularProgress } from '@mui/material';
 import { Icon, useIsMobile, ThumbMenu, SharePopup } from '../../../gl-core';
+// import { Visitor } from '../../cartridges/Bouncer';
 
 export type THeader = {
   frontmatter?: any;
@@ -42,6 +43,7 @@ export default function Header({
             <CircularProgress />
           ) : (
             <Box sx={{ mt: 1, mr: isMobile ? 0 : 2 }}>
+              {/* <Visitor /> */}
               <SharePopup frontmatter={frontmatter} />
             </Box>
           )

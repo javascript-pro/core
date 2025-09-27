@@ -1,8 +1,8 @@
 // core/gl-core/Core.tsx
 'use client';
 
-import config from './config.json';
-import { TCore } from './types';
+import configRaw from './config.json';
+import { TCore, TConfig } from './types';
 import * as React from 'react';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { usePathname, useRouter } from 'next/navigation';
@@ -36,18 +36,24 @@ import { SideAds } from '../gl-core';
 import { Bouncer, setUid } from './cartridges/Bouncer';
 import { Admin } from './cartridges/Admin';
 
+// cast config.json to the strong type we defined in types.d.ts
+const config = configRaw as TConfig;
+
 export default function Core({ frontmatter, body = null }: TCore) {
-  const { noImage } = frontmatter;
+  const { noImage, image, title } = frontmatter ?? {};
   let fullScreen = false;
+
   const [loading, setLoading] = React.useState(true);
+  const [imageError, setImageError] = React.useState(false);
+
   const siblings = useSiblings();
   const pathname = usePathname();
   const router = useRouter();
   const themeMode = useThemeMode();
-  useVersionCheck();
   const isMobile = useIsMobile();
   const dispatch = useDispatch();
-  const [imageError, setImageError] = React.useState(false);
+
+  useVersionCheck();
 
   React.useEffect(() => {
     const auth = getAuth();
@@ -75,7 +81,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
       fullScreen = true;
       app = (
         <Bouncer>
-          <Theme theme={config.themes[themeMode] as any}>
+          <Theme theme={config.themes[themeMode]}>
             <CssBaseline />
             <Admin />
           </Theme>
@@ -90,7 +96,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
   if (fullScreen) return <>{app}</>;
 
   return (
-    <Theme theme={config.themes[themeMode] as any}>
+    <Theme theme={config.themes[themeMode]}>
       <CssBaseline />
       <IncludeAll />
       <Container id="core" maxWidth="md">
@@ -112,13 +118,13 @@ export default function Core({ frontmatter, body = null }: TCore) {
             <Grid size={{ xs: 12, md: 9 }}>
               <Box sx={{ mt: isMobile ? 2 : 0 }}>
                 {/* Image block */}
-                {!noImage && frontmatter?.image && (
+                {!noImage && image && (
                   <Box sx={{ mx: isMobile ? 0 : 4, mt: 0 }}>
                     {!imageError ? (
                       <Image
                         priority
-                        src={frontmatter.image}
-                        alt={frontmatter.title || 'Featured image'}
+                        src={image}
+                        alt={title || 'Featured image'}
                         width={1200}
                         height={630}
                         style={{ width: '100%', height: 'auto' }}
@@ -136,7 +142,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                           color="text.secondary"
                           mt={1}
                         >
-                          "{frontmatter.image}" not found.
+                          "{image}" not found.
                         </Typography>
                       </Box>
                     )}

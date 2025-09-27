@@ -1,4 +1,19 @@
 import { TUbereduxDispatch, TRootState } from './cartridges/Uberedux/store';
+
+export type TThemeConfig = {
+  mode: 'light' | 'dark';
+  primary: string;
+  secondary: string;
+  background: string;
+  paper: string;
+  text: string;
+  border: string;
+};
+
+export type TConfig = {
+  themes: Record<string, TThemeConfig>;
+};
+
 export type TUbereduxState = {
   currentRoute: string;
   status: {
