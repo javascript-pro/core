@@ -113,7 +113,7 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
           </ListItemIcon>
           <ListItemText primary="Reset" />
         </MenuItem>
-        
+
         {/* App Version */}
         <Box sx={{ pr: 3, py: 1, textAlign: 'right' }}>
           <Typography

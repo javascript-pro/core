@@ -112,7 +112,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
             <Grid size={{ xs: 12, md: 9 }}>
               <Box sx={{ mt: isMobile ? 2 : 0 }}>
-                
                 {/* Image block */}
                 {!noImage && frontmatter?.image && (
                   <Box sx={{ mx: isMobile ? 0 : 4, mt: 0 }}>
@@ -145,7 +144,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
                   </Box>
                 )}
 
-
                 <Box sx={{ px: isMobile ? 0.5 : 2, my: 2 }}>
                   <Box sx={{ mx: 0 }}>
                     {pathname !== '/' && <PageBreadcrumb />}
@@ -154,7 +152,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
                     <ArrowMenu />
                   </Box>
                 </Box>
-                
               </Box>
 
               {/* Main content and children combined in same padded box */}
@@ -166,7 +163,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
                   </Box>
                 )}
               </Box>
-              
             </Grid>
           </Grid>
         </Box>

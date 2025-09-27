@@ -2,12 +2,7 @@
 'use client';
 import * as React from 'react';
 import { useRouter } from 'next/navigation';
-import {
-  Box,
-  CardHeader,
-  Typography,
-  CircularProgress,
-} from '@mui/material';
+import { Box, CardHeader, Typography, CircularProgress } from '@mui/material';
 import { Icon, useIsMobile, ThumbMenu, SharePopup } from '../../../gl-core';
 
 export type THeader = {
@@ -42,10 +37,14 @@ export default function Header({
             </Typography>
           )
         }
-        action={loading ? <CircularProgress /> 
-          : <Box sx={{mt:1, mr: isMobile ? 0 : 2}}>
+        action={
+          loading ? (
+            <CircularProgress />
+          ) : (
+            <Box sx={{ mt: 1, mr: isMobile ? 0 : 2 }}>
               <SharePopup frontmatter={frontmatter} />
             </Box>
+          )
         }
       />
       <ThumbMenu frontmatter={frontmatter} />

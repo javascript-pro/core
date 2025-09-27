@@ -1,11 +1,11 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/Flash/movieclips/logo/A.tsx
 import React from 'react';
 import { TMovieClip } from '../../types';
-// import { useTheme } from '@mui/material';
+import { useTheme } from '@mui/material';
 
 export default function A({ ...props }: TMovieClip) {
-  // const theme = useTheme();
-  // const frontColor = theme.palette.primary.main;
+  const theme = useTheme();
+  const frontColor = theme.palette.primary.main;
 
   return (
     <svg width="350px" height="400px" viewBox="0 0 350 400">
@@ -33,7 +33,7 @@ export default function A({ ...props }: TMovieClip) {
               id="white"
               stroke="#052841"
               strokeWidth="10"
-              fill="#FFFFFF"
+              fill={frontColor}
             ></path>
           </g>
         </g>
