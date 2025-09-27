@@ -101,6 +101,18 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
           <ListItemText primary="Home" />
         </MenuItem>
 
+        <MenuItem
+          sx={{}}
+          onClick={() => {
+            dispatch(routeTo('/admin/logs', router));
+          }}
+        >
+          <ListItemIcon>
+            <Icon icon="logs" color="primary" />
+          </ListItemIcon>
+          <ListItemText primary="Logs" />
+        </MenuItem>
+
         {/* Theme Switcher */}
         <ModeSwitch />
         <MenuItem

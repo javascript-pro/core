@@ -33,7 +33,7 @@ export async function GET() {
 
 export async function POST(request: Request) {
   try {
-    const { title, type, description, severity } = await request.json();
+    const { title, type, description, severity, data } = await request.json();
 
     if (!title || !type) {
       return NextResponse.json(
@@ -44,7 +44,7 @@ export async function POST(request: Request) {
 
     const now = Date.now();
 
-    const newLog = {
+    const newLog: Record<string, any> = {
       title,
       type,
       severity: severity ?? 'success',
@@ -52,6 +52,10 @@ export async function POST(request: Request) {
       created: now,
       updated: now,
     };
+
+    if (data && typeof data === 'object' && Object.keys(data).length > 0) {
+      newLog.data = data;
+    }
 
     const logRef = await adminDb.collection('logs').add(newLog);
 
@@ -64,6 +68,32 @@ export async function POST(request: Request) {
     console.error('Error creating log:', error);
     return NextResponse.json(
       { error: 'Failed to create log', details: error.message },
+      { status: 500 },
+    );
+  }
+}
+
+export async function DELETE(request: Request) {
+  try {
+    const { id } = await request.json();
+
+    if (!id) {
+      return NextResponse.json(
+        { error: 'Missing required field: id' },
+        { status: 400 },
+      );
+    }
+
+    await adminDb.collection('logs').doc(id).delete();
+
+    return NextResponse.json({
+      message: 'Log deleted successfully',
+      id,
+    });
+  } catch (error: any) {
+    console.error('Error deleting log:', error);
+    return NextResponse.json(
+      { error: 'Failed to delete log', details: error.message },
       { status: 500 },
     );
   }

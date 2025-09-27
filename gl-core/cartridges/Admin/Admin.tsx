@@ -7,7 +7,6 @@ import { usePathname } from 'next/navigation';
 import { Box } from '@mui/material';
 import { useSlice, useDispatch, ThumbMenu } from '../../../gl-core';
 import { init, Shell, Feedback, Dashboard } from '../Admin';
-import { BouncerAdmin } from '../Bouncer';
 import { FlickrAdmin, LogsAdmin } from '../Admin';
 
 export default function Admin() {
@@ -32,19 +31,8 @@ export default function Admin() {
       return <>Table</>;
     }
 
-    // if (path.startsWith('/pdfs/')) {
-    //   const parts = path.split('/');
-    //   const id = parseInt(parts[2], 10);
-    //   const row = db?.tables?.pdfs?.rows?.find((r: any) => r.id === id);
-    //   return row ? <FilePDF data={row} /> : <Box sx={{ m: 4 }}>Not found.</Box>;
-    // }
-
     if (path.startsWith('/admin/flickr')) {
       return <FlickrAdmin />;
-    }
-
-    if (path.startsWith('/admin/bouncer')) {
-      return <BouncerAdmin />;
     }
 
     if (path.startsWith('/admin/logs')) {
