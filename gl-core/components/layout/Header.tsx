@@ -1,18 +1,14 @@
 // core/gl-core/components/layout/Header.tsx
 'use client';
-
 import * as React from 'react';
 import { useRouter } from 'next/navigation';
 import {
   Box,
-  IconButton,
   CardHeader,
   Typography,
-  Tooltip,
   CircularProgress,
 } from '@mui/material';
-import { Icon, useIsMobile, ThumbMenu } from '../../../gl-core';
-import { Visitor } from '../../cartridges/Bouncer';
+import { Icon, useIsMobile, ThumbMenu, SharePopup } from '../../../gl-core';
 
 export type THeader = {
   frontmatter?: any;
@@ -46,7 +42,11 @@ export default function Header({
             </Typography>
           )
         }
-        action={loading ? <CircularProgress /> : null}
+        action={loading ? <CircularProgress /> 
+          : <Box sx={{mt:1, mr: isMobile ? 0 : 2}}>
+              <SharePopup frontmatter={frontmatter} />
+            </Box>
+        }
       />
       <ThumbMenu frontmatter={frontmatter} />
     </>

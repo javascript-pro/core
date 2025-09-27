@@ -13,6 +13,7 @@ noImage: true
 [Flash movie="logo" height="200"]
 
 #### [Coding with AI](/work/expertise/ai/coding-with-ai)
+
 AI changes everything in Software Development. It raises the bar
 
 #### [Flash](/work/goldlabel/cartridges/flash)
@@ -24,7 +25,6 @@ We ridiculously and pointlessly reinvented Macromedia Flash with React and TypeS
 - State management with redux/toolkit
 - Material UI
 - TypeScript
-
 
 #### [Windoze](/work/expertise/windoze)
 

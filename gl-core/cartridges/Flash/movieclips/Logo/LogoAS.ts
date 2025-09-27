@@ -58,34 +58,33 @@ export default class LogoAS {
     );
   }
 
-private calculateCenter(el: HTMLElement) {
-  gsap.set(el, { clearProps: 'transform' });
+  private calculateCenter(el: HTMLElement) {
+    gsap.set(el, { clearProps: 'transform' });
 
-  // Get the stage container (parent of logo)
-  const stage = el.parentElement as HTMLElement;
-  if (!stage) {
-    return { offsetX: 0, offsetY: 0, scale: 1 };
+    // Get the stage container (parent of logo)
+    const stage = el.parentElement as HTMLElement;
+    if (!stage) {
+      return { offsetX: 0, offsetY: 0, scale: 1 };
+    }
+
+    const stageRect = stage.getBoundingClientRect();
+    const rect = el.getBoundingClientRect();
+
+    const scaleX = (stageRect.width * 0.9) / rect.width;
+    const scaleY = (stageRect.height * 0.9) / rect.height;
+    const scale = Math.min(scaleX, scaleY, 1);
+
+    const centerX = stageRect.left + stageRect.width / 2;
+    const centerY = stageRect.top + stageRect.height / 2;
+
+    const logoCenterX = rect.left + rect.width / 2;
+    const logoCenterY = rect.top + rect.height / 2;
+
+    const offsetX = centerX - logoCenterX;
+    const offsetY = centerY - logoCenterY;
+
+    return { offsetX, offsetY, scale };
   }
-
-  const stageRect = stage.getBoundingClientRect();
-  const rect = el.getBoundingClientRect();
-
-  const scaleX = (stageRect.width * 0.9) / rect.width;
-  const scaleY = (stageRect.height * 0.9) / rect.height;
-  const scale = Math.min(scaleX, scaleY, 1);
-
-  const centerX = stageRect.left + stageRect.width / 2;
-  const centerY = stageRect.top + stageRect.height / 2;
-
-  const logoCenterX = rect.left + rect.width / 2;
-  const logoCenterY = rect.top + rect.height / 2;
-
-  const offsetX = centerX - logoCenterX;
-  const offsetY = centerY - logoCenterY;
-
-  return { offsetX, offsetY, scale };
-}
-
 
   private centerLogo() {
     const logoEl = document.getElementById(this.id);

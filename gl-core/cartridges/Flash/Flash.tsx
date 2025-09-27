@@ -1,12 +1,8 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/Flash/Flash.tsx
 import React from 'react';
 import { Box } from '@mui/material';
-import {
-  Stage,
-} from '../Flash';
-import {
-  Logo,
-} from './movieclips/Logo'
+import { Stage } from '../Flash';
+import { Logo } from './movieclips/Logo';
 
 export type TFlashProps = {
   movie?: string;
@@ -32,7 +28,7 @@ export default function Flash({
       {/* <pre>movie: {JSON.stringify(movie, null, 2)}</pre>
       <pre>width: {JSON.stringify(width, null, 2)}</pre>
       <pre>height: {JSON.stringify(height, null, 2)}</pre> */}
-      <Stage id="stage" width={width} height={height} >      
+      <Stage id="stage" width={width} height={height}>
         <Logo id="flash_logo" />
       </Stage>
     </Box>

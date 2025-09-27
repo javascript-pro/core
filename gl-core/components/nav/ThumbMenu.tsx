@@ -1,6 +1,5 @@
 // /Users/goldlabel/GitHub/core/gl-core/components/nav/ThumbMenu.tsx
 'use client';
-
 import * as React from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
@@ -65,7 +64,6 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
     setShareDialogOpen(false);
   };
 
-
   return (
     <>
       {/* Floating Action Button in bottom-right corner */}
@@ -92,7 +90,7 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
         sx={{ mt: -1 }}
       >
         <MenuItem
-          sx={{ minWidth: 200 }}
+          sx={{ mt: 2, minWidth: 200 }}
           onClick={() => {
             dispatch(routeTo('/', router));
           }}
@@ -115,20 +113,7 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
           </ListItemIcon>
           <ListItemText primary="Reset" />
         </MenuItem>
-        {/* Share Menu triggers dialog */}
-        <MenuItem
-          onClick={(e) => {
-            e.stopPropagation();
-            e.preventDefault();
-            handleShareOpen();
-          }}
-        >
-          <ListItemIcon>
-            <Icon icon="share" color="primary" />
-          </ListItemIcon>
-          <ListItemText primary="Share" />
-        </MenuItem>
-
+        
         {/* App Version */}
         <Box sx={{ pr: 3, py: 1, textAlign: 'right' }}>
           <Typography

@@ -8,6 +8,7 @@ import {
   SideAds,
   ThumbMenu,
   ShareMenu,
+  SharePopup,
   IndexNav,
   ArrowMenu,
   Siblings,
@@ -36,6 +37,7 @@ export {
   SideAds,
   ThumbMenu,
   ShareMenu,
+  SharePopup,
   FieldUpload,
   YouTube,
 };

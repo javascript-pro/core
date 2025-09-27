@@ -11,6 +11,8 @@ import {
   MightyButton,
   Search,
   SideAds,
+
+  SharePopup,
   ThumbMenu,
   ShareMenu,
   IncludeAll,
@@ -88,6 +90,7 @@ export {
   SideAds,
   ThumbMenu,
   ShareMenu,
+  SharePopup,
   IncludeAll,
   LoadingOverlay,
   FieldUpload,
