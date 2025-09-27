@@ -5,9 +5,9 @@ import { useTheme } from '@mui/material';
 
 export default function H({ ...props }: TMovieClip) {
   const theme = useTheme();
-  const {mode} = theme.palette;
+  const { mode } = theme.palette;
   let frontColor = theme.palette.background.default;
-  if(mode === "dark"){
+  if (mode === 'dark') {
     frontColor = theme.palette.primary.main;
   }
   const midColor = theme.palette.primary.main;
