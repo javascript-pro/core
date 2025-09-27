@@ -10,7 +10,7 @@ image: https://live.staticflickr.com/65535/54802570139_8f4f2ac814_b.jpg
 noImage: true
 ---
 
-[Flash movie="pingpongball" width="100%" height="350"]
+[Flash movie="intro" height="350"]
 
 #### [Flash](/work/goldlabel/cartridges/flash)
 
@@ -26,15 +26,17 @@ We ridiculously and pointlessly reinvented Macromedia Flash with React and TypeS
 
 > A lightweight 🪟 Windows app using NextJS & React for generating precise legal letters, designed for law firms to centralize case data in a 🔑 secure onsite Access database.
 
+[YouTube src="https://www.youtube.com/watch?v=B01QAsm6jU8"]
+
 #### [Abgeschottet KI](/work/expertise/ai/abgeschottet-ki)
 
 Abgeschottet KI delivers a secure, ring‑fenced AI to streamline legal compliance workflows, process documents faster, and protect sensitive data.
 
 > "Ring‑fencing our own AI in‑house allowed us to streamline our workflow without compromising our GDPR obligations or data security." **Rahul Sharma, CEO**
 
-##### [Travel](/life/travel)
+#### [Vanlife](/life/vanlife)
 
-Where I've been in the little Zeppelin since Spring 2025
+Where I've been in the little Zeppelin in 2025
 
 ##### [AI Agent User Interfaces](/work/expertise/ai/agents)
 

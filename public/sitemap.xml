@@ -143,19 +143,40 @@
     <loc>https://goldlabel.pro/work/expertise/ai/agents</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/work/expertise/ai/coding-with-ai</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/work/expertise/ai</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/expertise/blockchain</loc>
+    <loc>https://goldlabel.pro/work/expertise/fullstack/blockchain</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/expertise/data-migration</loc>
+    <loc>https://goldlabel.pro/work/expertise/fullstack/data-migration</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/expertise/git/gitkraken</loc>
+    <loc>https://goldlabel.pro/work/expertise/fullstack/git</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/expertise/git</loc>
+    <loc>https://goldlabel.pro/work/expertise/fullstack/gitkraken</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/fullstack</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/fullstack/mui</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/fullstack/open-source</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/fullstack/rest-api</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/fullstack/three-js</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/fullstack/web3d</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/expertise</loc>
@@ -164,25 +185,7 @@
     <loc>https://goldlabel.pro/work/expertise/javascript</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/expertise/mui</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/next-js</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/open-source</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/rest-api</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/web3d</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/web3d/next-level</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/web3d/three-js</loc>
+    <loc>https://goldlabel.pro/work/expertise/javascript/next-js</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/expertise/windoze/agile</loc>

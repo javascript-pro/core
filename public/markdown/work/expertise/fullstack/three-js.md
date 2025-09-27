@@ -2,7 +2,7 @@
 order: 22
 title: Three.js
 description:
-slug: /work/expertise/web3d/three-js
+slug: /work/expertise/fullstack/three-js
 icon: web3d
 image: https://live.staticflickr.com/65535/54747599061_445f0323cd_b.jpg
 tags: expertise, web, 3D, WebGL, Three.js, Babylon.js, WebGPU, Flash, JavaScript, web development, history, VR, AR, performance

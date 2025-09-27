@@ -106,7 +106,7 @@ import ShowIcon from '@mui/icons-material/VisibilityOutlined';
 import BootIcon from '@mui/icons-material/DoNotStepOutlined';
 import YoutubeIcon from '@mui/icons-material/YouTube';
 import ForgetIcon from '@mui/icons-material/PsychologyOutlined';
-import AIIcon from '@mui/icons-material/ModelTrainingOutlined';
+import AIIcon from '@mui/icons-material/Psychology';
 import FolderIcon from '@mui/icons-material/FolderOutlined';
 import CompanyIcon from '@mui/icons-material/Apartment';
 import DesignIcon from '@mui/icons-material/PaletteOutlined';
@@ -151,11 +151,13 @@ import ExpertiseIcon from '@mui/icons-material/Rocket';
 import Web3DIcon from '@mui/icons-material/ThreeDRotation';
 import TeamIcon from '@mui/icons-material/People';
 import VanIcon from '@mui/icons-material/AirportShuttle';
+import FullstackIcon from '@mui/icons-material/HorizontalSplit';
 
 export type TIcon = {
   icon:
     | 'more'
     | 'van'
+    | 'fullstack'
     | 'web3d'
     | 'rocket'
     | 'logs'
@@ -338,6 +340,10 @@ export default function Icon({ icon, color }: TIcon) {
 
     case 'web3d':
       iconFragment = <Web3DIcon color={color} />;
+      break;
+
+    case 'fullstack':
+      iconFragment = <FullstackIcon color={color} />;
       break;
 
     case 'expertise':

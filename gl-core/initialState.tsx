@@ -5,7 +5,7 @@ import { initialStateFlickr } from './cartridges/Flickr';
 import { initialStateLingua } from './cartridges/Lingua';
 import { initialStateBouncer } from './cartridges/Bouncer';
 import { initialStateAdmin } from './cartridges/Admin';
-import { initialReduxFlash } from './cartridges/Flash/initialReduxFlash';
+// import { initialReduxFlash } from './cartridges/Flash/initialReduxFlash';
 
 export const initialState: any = {
   config,
@@ -17,7 +17,7 @@ export const initialState: any = {
   hideImage: false,
   bouncer: initialStateBouncer,
   cv: initialStateCV,
-  flash: initialReduxFlash,
+  // flash: initialReduxFlash,
   flickr: initialStateFlickr,
   lingua: initialStateLingua,
   admin: initialStateAdmin,

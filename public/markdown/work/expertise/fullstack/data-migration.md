@@ -2,7 +2,7 @@
 order: 20
 title: Data Migration
 description: Using Next, Python and SQL
-slug: /work/expertise/data-migration
+slug: /work/expertise/fullstack/data-migration
 icon: expertise
 image: https://live.staticflickr.com/65535/54688814017_148f57032c_o.jpg
 tags: expertise, data migration, SQL, work, python, next

@@ -2,7 +2,7 @@
 order: 101
 title: Material UI
 description: Design System
-slug: /work/expertise/design-system
+slug: /work/expertise/fullstack/design-system
 icon: design
 image: https://live.staticflickr.com/65535/54801612483_31ce454c4e_b.jpg
 tags: github, process, design

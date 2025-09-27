@@ -2,7 +2,7 @@
 order: 25
 title: Git
 description: Critical to our process
-slug: /work/expertise/git
+slug: /work/expertise/fullstack/git
 icon: github
 image: /png/3rdParty/gitkraken.png
 tags: github, process, javascript

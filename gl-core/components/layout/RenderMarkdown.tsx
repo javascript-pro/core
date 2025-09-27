@@ -5,7 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import { Box, Link as MuiLink, Typography, useTheme } from '@mui/material';
 import { MightyButton } from '../../../gl-core';
 import { GoogleMap, FlickrAlbum, YouTube } from '../../../gl-core';
-import { Flash } from '../../cartridges/Flash';
+// import { Flash } from '../../cartridges/Flash';
 
 export type TRenderMarkdown = {
   children: React.ReactNode;
@@ -94,8 +94,8 @@ export default function RenderMarkdown({
     if (youtube) return youtube;
 
     // Flash
-    const flash = parseShortcode(/\[Flash\s+(.*?)\]/, Flash);
-    if (flash) return flash;
+    // const flash = parseShortcode(/\[Flash\s+(.*?)\]/, Flash);
+    // if (flash) return flash;
 
     // fallback: just return text
     return text;
