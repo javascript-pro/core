@@ -1,3 +1,4 @@
+// /Users/goldlabel/GitHub/core/gl-core/components/nav/ThumbMenu.tsx
 'use client';
 
 import * as React from 'react';
@@ -5,7 +6,6 @@ import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import {
   Box,
-  Fab,
   Menu,
   MenuItem,
   ListItemIcon,
@@ -24,10 +24,7 @@ import {
   useVersion,
   ModeSwitch,
   routeTo,
-  toggleHideImage,
-  useSlice,
   useIsMobile,
-  useThemeMode,
   reset,
 } from '../../../gl-core';
 
@@ -44,12 +41,10 @@ export type TThumbMenu = {
 export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
   const dispatch = useDispatch();
   const router = useRouter();
-  const { hideImage } = useSlice();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const version = useVersion();
   const isMobile = useIsMobile();
-  const themeMode = useThemeMode(); // "light" or "dark"
 
   const [shareDialogOpen, setShareDialogOpen] = React.useState(false);
 
@@ -58,11 +53,6 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
   };
 
   const handleCloseMenu = () => {
-    setAnchorEl(null);
-  };
-
-  const handleGithub = () => {
-    dispatch(routeTo('https://github.com/javascript-pro/core', router));
     setAnchorEl(null);
   };
 
@@ -75,9 +65,6 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
     setShareDialogOpen(false);
   };
 
-  const handleToggleHideImage = () => {
-    dispatch(toggleHideImage(!hideImage));
-  };
 
   return (
     <>
@@ -114,33 +101,6 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
             <Icon icon="home" color="primary" />
           </ListItemIcon>
           <ListItemText primary="Home" />
-        </MenuItem>
-
-        {/* <MenuItem
-          onClick={() => {
-            dispatch(routeTo('/admin', router));
-          }}
-        >
-          <ListItemIcon>
-            <Icon icon="admin" />
-          </ListItemIcon>
-          <ListItemText primary="Admin" />
-        </MenuItem> */}
-
-        {/* OG Image toggle */}
-        {/* <MenuItem onClick={handleToggleHideImage}>
-          <ListItemIcon>
-            <Icon icon="photo" />
-          </ListItemIcon>
-          <ListItemText primary={hideImage ? 'OG Images' : 'Flickr Images'} />
-        </MenuItem> */}
-
-        {/* Git Open Sourcce */}
-        <MenuItem onClick={handleGithub}>
-          <ListItemIcon>
-            <Icon icon="github" color="primary" />
-          </ListItemIcon>
-          <ListItemText primary="GitHub" />
         </MenuItem>
 
         {/* Theme Switcher */}

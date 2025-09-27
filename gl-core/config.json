@@ -11,21 +11,21 @@
   "themes": {
     "light": {
       "mode": "light",
-      "primary": "#1db2d3",
-      "secondary": "#05c5f0",
+      "primary": "#3d73cd",
+      "secondary": "#408ef7",
       "background": "#FFF",
-      "border": "#FFF",
-      "paper": "#FFF",
+      "border": "#9FBCD1",
+      "paper": "#C4D4E1",
       "text": "#303030"
     },
     "dark": {
       "mode": "dark",
       "primary": "#1db2d3",
-      "secondary": "#05c5f0",
+      "secondary": "#3e8df7",
       "background": "#001321",
-      "paper": "#001321",
+      "paper": "#0A2D47",
       "text": "#FFFFFF",
-      "border": "#1db2d3"
+      "border": "#021929"
     }
   },
   "nav": [

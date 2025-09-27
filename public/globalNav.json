@@ -1,11 +1,11 @@
 [
   {
-    "title": "Goldlabel",
+    "title": "Home",
     "description": "Work, Life, Balance",
     "slug": "/",
     "order": 1,
     "icon": "goldlabel",
-    "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
+    "image": "https://live.staticflickr.com/65535/54802570139_8f4f2ac814_b.jpg",
     "type": "folder",
     "tags": [
       "JavaScript",
@@ -36,7 +36,7 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "Projects\n\n \n\n A lightweight 🪟 Windows app using NextJS & React for generating precise legal letters, designed for law firms to centralize case data in a 🔑 secure onsite Access database.\n\n \n\nAbgescho",
+    "excerpt": "[Flash movie=\"intro\" height=\"350\"]\n\n \n\nWe ridiculously and pointlessly reinvented Macromedia Flash with React and TypeScript\n\n SVG Graphics\n Animation using Greensock\n State management with redux/tool",
     "children": [
       {
         "title": "Work",
@@ -44,7 +44,7 @@
         "slug": "/work",
         "order": 10,
         "icon": "work",
-        "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
+        "image": "https://live.staticflickr.com/65535/54801864105_554c8c9f16_b.jpg",
         "type": "folder",
         "tags": [
           "JavaScript",
@@ -62,12 +62,147 @@
         "excerpt": "The apps we ship are real. They run in production and are developed accessibly. The Core is Open Source and Free forever — giving you statically generated sites with Firestorepowered updates and a rea",
         "children": [
           {
+            "title": "Goldlabel",
+            "description": "Open Source Platform",
+            "slug": "/work/goldlabel",
+            "order": 1,
+            "icon": "goldlabel",
+            "image": "/png/n64/goldlabel.png",
+            "type": "folder",
+            "tags": [
+              "JavaScript",
+              "Vanilla JavaScript",
+              "TypeScript",
+              "React",
+              "Material UI",
+              "Flash",
+              "Server Side JavaScript",
+              "Node",
+              "Gatsby",
+              "NextJS",
+              "Headless CMS"
+            ],
+            "excerpt": "Open Source Platform\n\nIt’s the public GitHub repository that powers goldlabel.pro — and it’s free for anyone to fork, copy, hack, and reuse.\n\n What is it?\n\nGoldlabel is a JavaScript platform built wit",
+            "children": [
+              {
+                "title": "Cartridges",
+                "description": "Self-contained pieces of application logic",
+                "slug": "/work/goldlabel/cartridges",
+                "order": 1,
+                "icon": "cartridge",
+                "image": "/png/n64/goldlabel.png",
+                "type": "folder",
+                "excerpt": "Goldlabel is built on cartridges.\n\nA cartridge is a selfcontained piece of application logic: React components, state, styles, and utilities bundled together in a portable unit.\n\nBecause each cartridg",
+                "children": [
+                  {
+                    "title": "Flash",
+                    "slug": "/work/goldlabel/cartridges/flash",
+                    "order": 15,
+                    "icon": "flash",
+                    "image": "https://live.staticflickr.com/65535/54802570139_8f4f2ac814_b.jpg",
+                    "type": "file",
+                    "excerpt": "[Flash movie=\"intro\" height=\"350\"]\n\n A Pointless reinvention of MacroMedia Flash?\n\nMaybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You're w"
+                  },
+                  {
+                    "title": "Uberedux",
+                    "slug": "/work/goldlabel/cartridges/uberedux",
+                    "order": 20,
+                    "icon": "uberedux",
+                    "image": "/png/n64/goldlabel.png",
+                    "type": "file",
+                    "excerpt": "Because all Apps need State Management\n\nOtherwise you'd be back in jQuery callback hell. Nobody wants that. Uberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app alr"
+                  },
+                  {
+                    "title": "Flickr",
+                    "slug": "/work/goldlabel/cartridges/flickr",
+                    "order": 30,
+                    "icon": "flickr",
+                    "image": "/png/n64/goldlabel.png",
+                    "type": "file",
+                    "tags": [
+                      "flickr",
+                      "free",
+                      "api",
+                      "REST",
+                      "Next.js"
+                    ],
+                    "excerpt": "Flickr Photo Cartridge\n\nA React component for clean, fastloading image galleries. Provides an easy way to display recent photos from a Flickr account. It connects to a serverside API route in your Nex"
+                  },
+                  {
+                    "title": "Lingua",
+                    "slug": "/work/goldlabel/cartridges/lingua",
+                    "order": 100,
+                    "icon": "lingua",
+                    "image": "/png/n64/goldlabel.png",
+                    "type": "file",
+                    "excerpt": "The Lingua cartridge brings localisation to Goldlabel. It enables your site to serve content in multiple languages, making it accessible to a wider audience without complicating your codebase.\n\n What "
+                  },
+                  {
+                    "title": "Bouncer",
+                    "slug": "/work/goldlabel/cartridges/bouncer",
+                    "order": 130,
+                    "icon": "admin",
+                    "image": "/png/n64/goldlabel.png",
+                    "type": "file",
+                    "tags": [
+                      "cartridges",
+                      "cartridge",
+                      "free",
+                      "bouncer"
+                    ],
+                    "excerpt": "Bouncer Cartridge\n\nThe Bouncer cartridge is responsible for two core features in Goldlabel Core:\n\n1. Authentication (Firebase Auth +  collection)\n2. Real‑time Visitor Tracking (Pings)\n\n 1. Authenticat"
+                  },
+                  {
+                    "title": "New Cartridge",
+                    "slug": "/work/goldlabel/cartridges/new-cartridge",
+                    "order": 2200,
+                    "icon": "add",
+                    "image": "/png/n64/goldlabel.png",
+                    "type": "file",
+                    "excerpt": "Purpose\n\n is a template designed to help developers quickly bootstrap a new Cartridge in a modular application framework such as Goldlabel. Cartridges are featurespecific, plugandplay components that "
+                  }
+                ]
+              },
+              {
+                "title": "Free",
+                "slug": "/work/goldlabel/free",
+                "order": 1,
+                "icon": "ai",
+                "image": "/png/n64/goldlabel.png",
+                "type": "file",
+                "excerpt": "Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or b"
+              },
+              {
+                "title": "Core",
+                "slug": "/work/goldlabel/core",
+                "order": 10,
+                "icon": "github",
+                "image": "/png/n64/goldlabel.png",
+                "type": "file",
+                "tags": [
+                  "free",
+                  "core"
+                ],
+                "excerpt": "Open Source and Free Forever\n\nGoldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo archit"
+              }
+            ]
+          },
+          {
+            "title": "Company",
+            "slug": "/work/company",
+            "order": 10,
+            "icon": "company",
+            "image": "https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg",
+            "type": "file",
+            "excerpt": "WhatsApp   \nTel +49 15510995150  \n | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX"
+          },
+          {
             "title": "Expertise",
             "description": "We can help understanding in these fields",
             "slug": "/work/expertise",
-            "order": 1,
+            "order": 20,
             "icon": "expertise",
-            "image": "https://live.staticflickr.com/65535/54798568317_b71dfe3e13_b.jpg",
+            "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
             "type": "folder",
             "tags": [
               "expertise",
@@ -77,57 +212,12 @@
             "excerpt": "We work across the full stack, from interface to infrastructure, with a focus on robust, modern JavaScript tooling and scalable cloudnative delivery. Whether building responsive UIs, designing serverl",
             "children": [
               {
-                "title": "Windoze",
-                "description": "Easy Legal Letter Assistant",
-                "slug": "/work/expertise/windoze",
-                "order": 1,
-                "icon": "windows",
-                "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
-                "type": "folder",
-                "tags": [
-                  "expertise",
-                  "windoze",
-                  "experience",
-                  "work"
-                ],
-                "excerpt": "Easy Legal Letter Assistant\n\n A lightweight, Windows app for generating precise Legal letters. The tool assists staff at a legal firm by making it easy to store all the data around a case to a single ",
-                "children": [
-                  {
-                    "title": "Overview",
-                    "slug": "/work/expertise/windoze/overview",
-                    "order": 50,
-                    "icon": "windows",
-                    "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
-                    "type": "file",
-                    "excerpt": "What problem are we talking about? Using tech to improve workflow efficiency\n\n Any sensible business should be interested in that?\n\n Where is the original Ella? Saarland, Germany. A Windows PC securel"
-                  },
-                  {
-                    "title": "Agile approach",
-                    "slug": "/work/expertise/windoze/agile",
-                    "order": 60,
-                    "icon": "windows",
-                    "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
-                    "type": "file",
-                    "excerpt": "Even small projects with just one or two people benefit from an agile approach. The early ideas scribbled on the back of an envelope or sketched out on a kitchen table are often the most creative — bu"
-                  },
-                  {
-                    "title": "Testing",
-                    "slug": "/work/expertise/windoze/testing",
-                    "order": 70,
-                    "icon": "windows",
-                    "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
-                    "type": "file",
-                    "excerpt": "[YouTube src=\"https://www.youtube.com/watch?v=ULmJI1Z8L3E\"]\n\nIn this video, we put Windoze through a realworld timed task, checking the software against key requirements to see just how useful it real"
-                  }
-                ]
-              },
-              {
                 "title": "JavaScript",
                 "description": "JavaScript Whatever the Weather",
                 "slug": "/work/expertise/javascript",
                 "order": 5,
                 "icon": "javascript",
-                "image": "/png/clouds/default_whitecloud.png",
+                "image": "https://live.staticflickr.com/65535/54801612483_31ce454c4e_b.jpg",
                 "type": "folder",
                 "tags": [
                   "JavaScript",
@@ -148,11 +238,11 @@
                 "excerpt": "JavaScript Whatever the Weather\n\nWe’ve been writing JavaScript since it was still called ECMAScript.\n\nBefore the frameworks, before npm, before it ate the world—we were already deep in the language th",
                 "children": [
                   {
-                    "title": "REST API",
-                    "slug": "/work/expertise/javascript/rest-api",
-                    "order": 50,
-                    "icon": "javascript",
-                    "image": "/png/clouds/default_whitecloud.png",
+                    "title": "Next.js",
+                    "slug": "/work/expertise/javascript/next-js",
+                    "order": 15,
+                    "icon": "js",
+                    "image": "https://live.staticflickr.com/65535/54801612483_31ce454c4e_b.jpg",
                     "type": "file",
                     "tags": [
                       "JavaScript",
@@ -160,149 +250,72 @@
                       "Next.js",
                       "API",
                       "REST API",
-                      "Flickr"
+                      "React"
                     ],
-                    "excerpt": "Cartridge: \n\nA realworld REST API powered by Next.js, integrating with the Flickr platform to serve media assets as structured JSON.\n\nThis is a realworld backend endpoint. It powers real UI components"
+                    "excerpt": "Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with seamless backend capabilities, creating a unified developer experience. It simplifies the proce"
                   }
                 ]
               },
               {
-                "title": "Open Source",
-                "slug": "/work/expertise/open-source",
-                "order": 10,
-                "icon": "api",
-                "image": "/png/og.png",
-                "type": "file",
-                "tags": [
-                  "free",
-                  "opensource",
-                  "work"
-                ],
-                "excerpt": "Why We Open Source\n\nWe’ve been building JavaScript applications for over 20 years. In that time, we’ve seen tools come and go. Trends rise, crash, and return again under a different name.\n\nWhat’s rema"
-              },
-              {
-                "title": "REST API",
-                "slug": "/work/expertise/rest-api",
-                "order": 10,
-                "icon": "api",
-                "image": "/png/og.png",
-                "type": "file",
-                "tags": [
-                  "free",
-                  "api"
-                ],
-                "excerpt": "Goldlabel Public API\n\n glapi/flickr endpoints"
-              },
-              {
-                "title": "Next.js",
-                "slug": "/work/expertise/next-js",
-                "order": 15,
-                "icon": "js",
-                "image": "/png/clouds/default_whitecloud.png",
-                "type": "file",
-                "tags": [
-                  "JavaScript",
-                  "Node",
-                  "Next.js",
-                  "API",
-                  "REST API",
-                  "React"
-                ],
-                "excerpt": "Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with seamless backend capabilities, creating a unified developer experience. It simplifies the proce"
-              },
-              {
-                "title": "Data Migration",
-                "slug": "/work/expertise/data-migration",
-                "order": 20,
-                "icon": "expertise",
-                "image": "https://live.staticflickr.com/65535/54688814017_148f57032c_o.jpg",
-                "type": "file",
-                "tags": [
-                  "expertise",
-                  "data migration",
-                  "SQL",
-                  "work",
-                  "python",
-                  "next"
-                ],
-                "excerpt": "Data Migration via RESTful API using Next, Python and SQL\n\n\n\n This service exposes a RESTful interface for cleaning, transforming, and migrating data from a raw source table to a cleaned, structured t"
-              },
-              {
-                "title": "Git",
-                "description": "Critical to our process",
-                "slug": "/work/expertise/git",
+                "title": "Fullstack",
+                "description": "Other skills accross the full stack",
+                "slug": "/work/expertise/fullstack",
                 "order": 25,
-                "icon": "github",
-                "image": "/png/3rdParty/gitkraken.png",
+                "icon": "fullstack",
+                "image": "https://live.staticflickr.com/65535/54688814017_148f57032c_o.jpg",
                 "type": "folder",
                 "tags": [
-                  "github",
-                  "process",
-                  "javascript"
+                  "fullstack"
                 ],
-                "excerpt": "We use GitHub for everything.\n\nMost of the communication done between us and our clients during development is done through GitHub in the form of comments, tracking bugs and issues, pull resuests, rev",
+                "excerpt": "A much over used term\n\nSo much so, it's become a bit meaningless. It was such ha useful term, too. Basically it meant that if you were a frontend dev",
                 "children": [
                   {
-                    "title": "GitKraken",
-                    "slug": "/work/expertise/git/gitkraken",
-                    "order": 30,
-                    "icon": "github",
-                    "image": "/png/3rdParty/gitkraken.png",
+                    "title": "Open Source",
+                    "slug": "/work/expertise/fullstack/open-source",
+                    "order": 10,
+                    "icon": "api",
+                    "image": "/png/og.png",
                     "type": "file",
                     "tags": [
-                      "github",
-                      "process",
-                      "javascript",
-                      "tools",
-                      "gitkraken"
+                      "free",
+                      "opensource",
+                      "work"
                     ],
-                    "excerpt": "Now with AI Commit and PR Messaging\n\nGitKraken isn’t just another Git GUI. It’s become an essential tool in our daily workflow—one of those rare bits of software that’s genuinely a joy to use. Fast, c"
-                  }
-                ]
-              },
-              {
-                "title": "Material UI",
-                "slug": "/work/expertise/mui",
-                "order": 101,
-                "icon": "design",
-                "image": "/png/clouds/default_whitecloud.png",
-                "type": "file",
-                "tags": [
-                  "github",
-                  "process",
-                  "design"
-                ],
-                "excerpt": "What is a Design System?\n\nA Design System is a collection of reusable components, standards, and guidelines that define how a product looks and behaves. It includes UI elements like buttons, forms, an"
-              },
-              {
-                "title": "Web 3D",
-                "description": "description",
-                "slug": "/work/expertise/web3d",
-                "order": 112,
-                "icon": "web3d",
-                "image": "https://live.staticflickr.com/65535/54747599061_445f0323cd_b.jpg",
-                "type": "folder",
-                "tags": [
-                  "expertise",
-                  "web",
-                  "3D",
-                  "WebGL",
-                  "Three.js",
-                  "Babylon.js",
-                  "WebGPU",
-                  "Flash",
-                  "JavaScript",
-                  "web development",
-                  "history",
-                  "VR",
-                  "AR",
-                  "performance"
-                ],
-                "excerpt": "[YouTube src=\"https://www.youtube.com/watch?v=Qe2ZLYzQToQ\"]\n\n Building for the web for more than twenty years\n\nFirst with Flash, then with JavaScript — and through all that time, 3D in the browser nev",
-                "children": [
+                    "excerpt": "Why We Open Source\n\nWe’ve been building JavaScript applications for over 20 years. In that time, we’ve seen tools come and go. Trends rise, crash, and return again under a different name.\n\nWhat’s rema"
+                  },
+                  {
+                    "title": "REST API",
+                    "slug": "/work/expertise/fullstack/rest-api",
+                    "order": 10,
+                    "icon": "api",
+                    "image": "https://live.staticflickr.com/65535/54801612483_31ce454c4e_b.jpg",
+                    "type": "file",
+                    "tags": [
+                      "free",
+                      "api"
+                    ],
+                    "excerpt": "Goldlabel Public API\n\n glapi/flickr endpoints"
+                  },
+                  {
+                    "title": "Data Migration",
+                    "slug": "/work/expertise/fullstack/data-migration",
+                    "order": 20,
+                    "icon": "expertise",
+                    "image": "https://live.staticflickr.com/65535/54688814017_148f57032c_o.jpg",
+                    "type": "file",
+                    "tags": [
+                      "expertise",
+                      "data migration",
+                      "SQL",
+                      "work",
+                      "python",
+                      "next"
+                    ],
+                    "excerpt": "Data Migration via RESTful API using Next, Python and SQL\n\n\n\n This service exposes a RESTful interface for cleaning, transforming, and migrating data from a raw source table to a cleaned, structured t"
+                  },
                   {
                     "title": "Three.js",
-                    "slug": "/work/expertise/web3d/three-js",
+                    "slug": "/work/expertise/fullstack/three-js",
                     "order": 22,
                     "icon": "web3d",
                     "image": "https://live.staticflickr.com/65535/54747599061_445f0323cd_b.jpg",
@@ -326,9 +339,53 @@
                     "excerpt": "Three.js rewards experience. With two decades of JS and deep React/Next.js knowledge, you can transform a blank canvas into a highly optimized, interactive, and visually rich web experience—without co"
                   },
                   {
-                    "title": "Next Level",
-                    "slug": "/work/expertise/web3d/next-level",
+                    "title": "Git",
+                    "slug": "/work/expertise/fullstack/git",
                     "order": 25,
+                    "icon": "github",
+                    "image": "/png/3rdParty/gitkraken.png",
+                    "type": "file",
+                    "tags": [
+                      "github",
+                      "process",
+                      "javascript"
+                    ],
+                    "excerpt": "We use GitHub for everything.\n\nMost of the communication done between us and our clients during development is done through GitHub in the form of comments, tracking bugs and issues, pull resuests, rev"
+                  },
+                  {
+                    "title": "GitKraken",
+                    "slug": "/work/expertise/fullstack/gitkraken",
+                    "order": 30,
+                    "icon": "github",
+                    "image": "/png/3rdParty/gitkraken.png",
+                    "type": "file",
+                    "tags": [
+                      "github",
+                      "process",
+                      "javascript",
+                      "tools",
+                      "gitkraken"
+                    ],
+                    "excerpt": "Now with AI Commit and PR Messaging\n\nGitKraken isn’t just another Git GUI. It’s become an essential tool in our daily workflow—one of those rare bits of software that’s genuinely a joy to use. Fast, c"
+                  },
+                  {
+                    "title": "Material UI",
+                    "slug": "/work/expertise/fullstack/mui",
+                    "order": 101,
+                    "icon": "design",
+                    "image": "https://live.staticflickr.com/65535/54801612483_31ce454c4e_b.jpg",
+                    "type": "file",
+                    "tags": [
+                      "github",
+                      "process",
+                      "design"
+                    ],
+                    "excerpt": "What is a Design System?\n\nA Design System is a collection of reusable components, standards, and guidelines that define how a product looks and behaves. It includes UI elements like buttons, forms, an"
+                  },
+                  {
+                    "title": "Web 3D",
+                    "slug": "/work/expertise/fullstack/web3d",
+                    "order": 112,
                     "icon": "web3d",
                     "image": "https://live.staticflickr.com/65535/54747599061_445f0323cd_b.jpg",
                     "type": "file",
@@ -348,29 +405,29 @@
                       "AR",
                       "performance"
                     ],
-                    "excerpt": "For control, longevity, and custom UX, pick Three.js. Assemble your own stack (R3F, Zustand/Jotai, glTF toolchain, physics/postprocessing). The early investment pays off in flexibility and scale.\n\nWeb"
+                    "excerpt": "[YouTube src=\"https://www.youtube.com/watch?v=Qe2ZLYzQToQ\"]\n\n Building for the web for more than twenty years\n\nFirst with Flash, then with JavaScript — and through all that time, 3D in the browser nev"
+                  },
+                  {
+                    "title": "Blockchain",
+                    "slug": "/work/expertise/fullstack/blockchain",
+                    "order": 150,
+                    "icon": "api",
+                    "image": "/png/3rdParty/bitcoin.png",
+                    "type": "file",
+                    "tags": [
+                      "techstack",
+                      "crypto",
+                      "blockchain",
+                      "web3",
+                      "casino",
+                      "igaming",
+                      "experience",
+                      "bitcoin",
+                      "malta"
+                    ],
+                    "excerpt": "Blockchain Crypto Casino\n\n In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online ga"
                   }
                 ]
-              },
-              {
-                "title": "Blockchain",
-                "slug": "/work/expertise/blockchain",
-                "order": 150,
-                "icon": "expertise",
-                "image": "/png/3rdParty/bitcoin.png",
-                "type": "file",
-                "tags": [
-                  "techstack",
-                  "crypto",
-                  "blockchain",
-                  "web3",
-                  "casino",
-                  "igaming",
-                  "experience",
-                  "bitcoin",
-                  "malta"
-                ],
-                "excerpt": "Blockchain Crypto Casino\n\n In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online ga"
               },
               {
                 "title": "AI",
@@ -538,6 +595,18 @@
                     ]
                   },
                   {
+                    "title": "Coding with AI",
+                    "slug": "/work/expertise/ai/coding-with-ai",
+                    "order": 10,
+                    "icon": "ai",
+                    "image": "/png/3rdParty/bitcoin.png",
+                    "type": "file",
+                    "tags": [
+                      "ai"
+                    ],
+                    "excerpt": "AI changes everything for coders\n\n It raises the bar"
+                  },
+                  {
                     "title": "AI Agent User Interfaces",
                     "slug": "/work/expertise/ai/agents",
                     "order": 20,
@@ -556,128 +625,106 @@
                     "excerpt": "How we help you take your AI product ideas from concept, through prototype to production\n\n From prototype to production\n\nAI agents need more than a good model — they need a front end that users can ac"
                   }
                 ]
-              }
-            ]
-          },
-          {
-            "title": "CV",
-            "description": "Match your Job to our Curriculum Vitae with AI",
-            "slug": "/work/cv",
-            "order": 2,
-            "icon": "openai",
-            "image": "https://live.staticflickr.com/65535/53519132411_1fc305c2dc_b.jpg",
-            "type": "folder",
-            "tags": [
-              "CV",
-              "jobs",
-              "work",
-              "resume",
-              "AI",
-              "OpenAI"
-            ],
-            "excerpt": "Fullstack JavaScript Developer\n\nDeep expertise in React and TypeScript, currently specialising in Next.js.\n\n20+ years delivering scalable web applications for startups, enterprises, and remote‑first t",
-            "children": [
-              {
-                "title": "About C.V.",
-                "slug": "/work/cv/about",
-                "order": 130,
-                "icon": "openai",
-                "image": "/png/og.png",
-                "type": "file",
-                "tags": [
-                  "CV",
-                  "jobs",
-                  "work",
-                  "resume",
-                  "AI",
-                  "OpenAI"
-                ],
-                "excerpt": "Applying for jobs can be time consuming\n\nEach role requires tailoring a cover letter or rewording a CV to match a job description. As developers, we know the real problem isn’t effort — it’s clarity. "
               },
               {
-                "title": "Catering C.V.",
-                "slug": "/work/cv/saarbrucken",
+                "title": "Windoze",
+                "description": "Easy Legal Letter Assistant",
+                "slug": "/work/expertise/windoze",
                 "order": 1300,
-                "icon": "doc",
-                "image": "/png/og.png",
-                "type": "file",
+                "icon": "windows",
+                "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
+                "type": "folder",
                 "tags": [
-                  "CV",
-                  "jobs",
-                  "work",
-                  "resume",
-                  "AI",
-                  "germany",
-                  "saarbrucken"
+                  "expertise",
+                  "windoze",
+                  "experience",
+                  "work"
                 ],
-                "excerpt": "LINGUADE\nChris Dorward\nSaarbrücken, Deutschland\nWhatsApp: +44 07745763122\nE‑Mail: listingslab@gmail.com\nGeburtsdatum: 15.10.1975\nStaatsangehörigkeit: Britisch & Deutsch (doppelte Staatsbürgerschaft)\n\n"
+                "excerpt": "Easy Legal Letter Assistant\n\n A lightweight, Windows app for generating precise Legal letters. The tool assists staff at a legal firm by making it easy to store all the data around a case to a single ",
+                "children": [
+                  {
+                    "title": "Overview",
+                    "slug": "/work/expertise/windoze/overview",
+                    "order": 50,
+                    "icon": "windows",
+                    "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
+                    "type": "file",
+                    "excerpt": "What problem are we talking about? Using tech to improve workflow efficiency\n\n Any sensible business should be interested in that?\n\n Where is the original Ella? Saarland, Germany. A Windows PC securel"
+                  },
+                  {
+                    "title": "Agile approach",
+                    "slug": "/work/expertise/windoze/agile",
+                    "order": 60,
+                    "icon": "windows",
+                    "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
+                    "type": "file",
+                    "excerpt": "Even small projects with just one or two people benefit from an agile approach. The early ideas scribbled on the back of an envelope or sketched out on a kitchen table are often the most creative — bu"
+                  },
+                  {
+                    "title": "Testing",
+                    "slug": "/work/expertise/windoze/testing",
+                    "order": 70,
+                    "icon": "windows",
+                    "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
+                    "type": "file",
+                    "excerpt": "[YouTube src=\"https://www.youtube.com/watch?v=ULmJI1Z8L3E\"]\n\nIn this video, we put Windoze through a realworld timed task, checking the software against key requirements to see just how useful it real"
+                  }
+                ]
               }
             ]
           },
           {
-            "title": "About Us",
-            "description": "UK Limited Company (5460545)",
-            "slug": "/work/company",
-            "order": 10,
+            "title": "Working remotely",
+            "slug": "/work/remote-working",
+            "order": 250,
             "icon": "company",
-            "image": "https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg",
-            "type": "folder",
-            "excerpt": "WhatsApp   \nTel +49 15510995150  \n | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX",
-            "children": [
-              {
-                "title": "Working remotely",
-                "slug": "/work/company/remote-working",
-                "order": 250,
-                "icon": "company",
-                "image": "/png/og.png",
-                "type": "file",
-                "tags": [
-                  "remote",
-                  "hybrid"
-                ],
-                "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years.\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communication, "
-              },
-              {
-                "title": "Privacy & Cookies",
-                "slug": "/work/company/privacy-cookies",
-                "order": 555,
-                "icon": "company",
-                "image": "/png/og.png",
-                "type": "file",
-                "tags": [
-                  "cookies",
-                  "gdpr",
-                  "privacy",
-                  "terms",
-                  "trust"
-                ],
-                "excerpt": "We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers t"
-              },
-              {
-                "title": "Join Us",
-                "slug": "/work/company/join-us",
-                "order": 666,
-                "icon": "company",
-                "image": "/png/og.png",
-                "type": "file",
-                "tags": [
-                  "team"
-                ],
-                "excerpt": "Whether you're a startup with a short deadline or an enterprise with complex workflows, we can help. Get in touch for it's a truth universally acknowledged that a Software Developer in possession of a"
-              },
-              {
-                "title": "Work With Us",
-                "slug": "/work/company/work-with-us",
-                "order": 777,
-                "icon": "company",
-                "image": "https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg",
-                "type": "file",
-                "tags": [
-                  "team"
-                ],
-                "excerpt": "We take on a limited number of new projects each month. If you need something done we’d love to hear about it. Find out if we're a . We're always looking for collaborators, contributors, and good idea"
-              }
-            ]
+            "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
+            "type": "file",
+            "tags": [
+              "remote",
+              "hybrid"
+            ],
+            "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years.\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communication, "
+          },
+          {
+            "title": "Join Us",
+            "slug": "/work/join-us",
+            "order": 666,
+            "icon": "team",
+            "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
+            "type": "file",
+            "tags": [
+              "team"
+            ],
+            "excerpt": "Whether you're a startup with a short deadline or an enterprise with complex workflows, we can help. Get in touch for it's a truth universally acknowledged that a Software Developer in possession of a"
+          },
+          {
+            "title": "Work With Us",
+            "slug": "/work/work-with-us",
+            "order": 777,
+            "icon": "team",
+            "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
+            "type": "file",
+            "tags": [
+              "team"
+            ],
+            "excerpt": "We take on a limited number of new projects each month. If you need something done we’d love to hear about it. Find out if we're a . We're always looking for collaborators, contributors, and good idea"
+          },
+          {
+            "title": "Privacy & Cookies",
+            "slug": "/work/privacy-cookies",
+            "order": 5555,
+            "icon": "admin",
+            "image": "https://live.staticflickr.com/65535/54800517077_55d79f6a0a_b.jpg",
+            "type": "file",
+            "tags": [
+              "cookies",
+              "gdpr",
+              "privacy",
+              "terms",
+              "trust"
+            ],
+            "excerpt": "We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers t"
           }
         ]
       },
@@ -691,6 +738,33 @@
         "type": "folder",
         "excerpt": "I work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age I'm never going to ski like I used to. Ma",
         "children": [
+          {
+            "title": "Vanlife",
+            "description": "definition of",
+            "slug": "/life/vanlife",
+            "order": 10,
+            "icon": "van",
+            "type": "folder",
+            "excerpt": "Vanlife (noun)\n\n A lifestyle built around living or traveling in a converted van, often equipped with a bed, kitchen, and storage, sometimes a bathroom.\n\n The practice of turning a vehicle into both h",
+            "children": [
+              {
+                "title": "The best price",
+                "slug": "/life/vanlife/best-price",
+                "order": 10,
+                "icon": "van",
+                "type": "file",
+                "excerpt": "Best price (noun)\n\nThe universal truth: if it costs nothing, it’s already worth more than you were planning to spend.\n\n Usage\n\n \"How much was that? — Free. — Best price.\"\n \"I wasn’t even looking, but "
+              },
+              {
+                "title": "2025 Map",
+                "slug": "/life/vanlife/map",
+                "order": 10,
+                "icon": "van",
+                "type": "file",
+                "excerpt": "2025 Map\n\n[GoogleMap src=\"https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=001321\"]"
+              }
+            ]
+          },
           {
             "title": "Diving",
             "description": "Fish are friends. Not food.",
@@ -742,17 +816,6 @@
             "image": "/jpg/motorbikes.jpg",
             "type": "folder",
             "excerpt": "“It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a motorbike.”\n\n― Jane Austen, Pride and Prejudice",
-            "children": []
-          },
-          {
-            "title": "Travel",
-            "description": "Zoto - The Little Zeppelin",
-            "slug": "/life/travel",
-            "order": 200,
-            "icon": "life",
-            "image": "https://live.staticflickr.com/65535/54652210336_8d28a5af11_b.jpg",
-            "type": "folder",
-            "excerpt": "This is Zoto. My van. Here's a map of where I've been in 2025. Well, since the Spring anyway\n\n[GoogleMap src=\"https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=001321\"]",
             "children": []
           }
         ]

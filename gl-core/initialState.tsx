@@ -1,22 +1,22 @@
 import pJSON from '../package.json';
 import config from './config.json';
-import { initialStateCV } from './cartridges/CV';
 import { initialStateFlickr } from './cartridges/Flickr';
 import { initialStateLingua } from './cartridges/Lingua';
 import { initialStateBouncer } from './cartridges/Bouncer';
 import { initialStateAdmin } from './cartridges/Admin';
+// import { initialReduxFlash } from './cartridges/Flash/initialReduxFlash';
 
 export const initialState: any = {
-  themeMode: 'light',
-  bouncer: initialStateBouncer,
-  cv: initialStateCV,
-  flickr: initialStateFlickr,
-  lingua: initialStateLingua,
-  admin: initialStateAdmin,
+  config,
   version: pJSON.version,
   persisted: Date.now(),
-  config,
+  themeMode: 'dark',
   loading: null,
   feedback: null,
   hideImage: false,
+  bouncer: initialStateBouncer,
+  // flash: initialReduxFlash,
+  flickr: initialStateFlickr,
+  lingua: initialStateLingua,
+  admin: initialStateAdmin,
 };

@@ -93,8 +93,8 @@ import DocIcon from '@mui/icons-material/Description';
 import PluginIcon from '@mui/icons-material/ExtensionOutlined';
 import LinguaIcon from '@mui/icons-material/TranslateOutlined';
 import GoogleIcon from '@mui/icons-material/Google';
-import WorkIcon from '@mui/icons-material/BuildOutlined';
-import LifeIcon from '@mui/icons-material/CakeOutlined';
+import WorkIcon from '@mui/icons-material/InterpreterMode';
+// import LifeIcon from '@mui/icons-material/CakeOutlined';
 import BalanceIcon from '@mui/icons-material/Balance';
 import JavascriptIcon from '@mui/icons-material/JavascriptOutlined';
 import ScubaIcon from '@mui/icons-material/ScubaDivingOutlined';
@@ -106,9 +106,9 @@ import ShowIcon from '@mui/icons-material/VisibilityOutlined';
 import BootIcon from '@mui/icons-material/DoNotStepOutlined';
 import YoutubeIcon from '@mui/icons-material/YouTube';
 import ForgetIcon from '@mui/icons-material/PsychologyOutlined';
-import AIIcon from '@mui/icons-material/ModelTrainingOutlined';
+import AIIcon from '@mui/icons-material/Psychology';
 import FolderIcon from '@mui/icons-material/FolderOutlined';
-import CompanyIcon from '@mui/icons-material/Shop2Outlined';
+import CompanyIcon from '@mui/icons-material/Apartment';
 import DesignIcon from '@mui/icons-material/PaletteOutlined';
 import FeatureIcon from '@mui/icons-material/RocketLaunchOutlined';
 import SitemapIcon from '@mui/icons-material/AccountTree';
@@ -149,10 +149,15 @@ import LogsIcon from '@mui/icons-material/List';
 import RocketIcon from '@mui/icons-material/Rocket';
 import ExpertiseIcon from '@mui/icons-material/Rocket';
 import Web3DIcon from '@mui/icons-material/ThreeDRotation';
+import TeamIcon from '@mui/icons-material/People';
+import VanIcon from '@mui/icons-material/AirportShuttle';
+import FullstackIcon from '@mui/icons-material/HorizontalSplit';
 
 export type TIcon = {
   icon:
     | 'more'
+    | 'van'
+    | 'fullstack'
     | 'web3d'
     | 'rocket'
     | 'logs'
@@ -272,6 +277,7 @@ export type TIcon = {
     | 'facebook'
     | 'ting'
     | 'settings'
+    | 'team'
     | 'email'
     | 'contact'
     | 'share'
@@ -334,6 +340,10 @@ export default function Icon({ icon, color }: TIcon) {
 
     case 'web3d':
       iconFragment = <Web3DIcon color={color} />;
+      break;
+
+    case 'fullstack':
+      iconFragment = <FullstackIcon color={color} />;
       break;
 
     case 'expertise':
@@ -618,6 +628,9 @@ export default function Icon({ icon, color }: TIcon) {
     case 'examples':
       iconFragment = <ExampleIcon color={color} />;
       break;
+    case 'team':
+      iconFragment = <TeamIcon color={color} />;
+      break;
     case 'goldlabel':
       iconFragment = <GoldlabelIcon color={color} />;
       break;
@@ -730,7 +743,7 @@ export default function Icon({ icon, color }: TIcon) {
       iconFragment = <WorkIcon color={color} />;
       break;
     case 'life':
-      iconFragment = <LifeIcon color={color} />;
+      iconFragment = <VanIcon color={color} />;
       break;
     case 'legal':
       iconFragment = <BalanceIcon color={color} />;
@@ -876,6 +889,10 @@ export default function Icon({ icon, color }: TIcon) {
 
     case 'logs':
       iconFragment = <LogsIcon color={color} />;
+      break;
+
+    case 'van':
+      iconFragment = <VanIcon color={color} />;
       break;
 
     default:
