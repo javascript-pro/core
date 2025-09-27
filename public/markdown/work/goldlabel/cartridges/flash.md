@@ -9,7 +9,7 @@ keywords: 'Catridges, Flash, SVG'
 noImage: true
 ---
 
-[Flash movie="intro" height="350"]
+[Flash movie="logo" height="200"]
 
 ## A Pointless reinvention of MacroMedia Flash?
 

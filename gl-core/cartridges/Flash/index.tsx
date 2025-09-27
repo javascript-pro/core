@@ -1,4 +1,4 @@
-// /Users/goldlabel/GitHub/flash/app/src/Flash/index.tsx
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Flash/index.tsx
 import Flash from './Flash';
 import System from './lib/System';
 import Trace from './lib/Trace';

@@ -5,7 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import { Box, Link as MuiLink, Typography, useTheme } from '@mui/material';
 import { MightyButton } from '../../../gl-core';
 import { GoogleMap, FlickrAlbum, YouTube } from '../../../gl-core';
-// import { Flash } from '../../cartridges/Flash';
+import { Flash } from '../../cartridges/Flash';
 
 export type TRenderMarkdown = {
   children: React.ReactNode;
@@ -16,7 +16,7 @@ export type TRenderMarkdown = {
 
 export default function RenderMarkdown({
   children = '',
-  height,
+  // height,
   width,
   maxWidth,
 }: TRenderMarkdown) {
@@ -60,7 +60,6 @@ export default function RenderMarkdown({
 
   // --- Shortcode parser ---
   const renderShortcode = (text: string) => {
-    // Utility: parse [Tag key="value" key2="value2"]
     const parseShortcode = (
       regex: RegExp,
       Component: React.ElementType,
@@ -69,13 +68,19 @@ export default function RenderMarkdown({
       if (!match) return null;
 
       const attrs = match[1];
-      const props: Record<string, string> = {};
+      const props: Record<string, any> = {};
 
       // capture all key="value" pairs
       const attrRegex = /(\w+)="(.*?)"/g;
       let attrMatch;
       while ((attrMatch = attrRegex.exec(attrs)) !== null) {
-        props[attrMatch[1]] = attrMatch[2];
+        let val: any = attrMatch[2];
+        if (!isNaN(Number(val))) {
+          val = Number(val); // turn "350" into 350
+        } else if (val === 'true' || val === 'false') {
+          val = val === 'true'; // handle booleans
+        }
+        props[attrMatch[1]] = val;
       }
 
       return <Component {...props} />;
@@ -94,8 +99,8 @@ export default function RenderMarkdown({
     if (youtube) return youtube;
 
     // Flash
-    // const flash = parseShortcode(/\[Flash\s+(.*?)\]/, Flash);
-    // if (flash) return flash;
+    const flash = parseShortcode(/\[Flash\s+(.*?)\]/, Flash);
+    if (flash) return flash;
 
     // fallback: just return text
     return text;

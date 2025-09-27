@@ -35,7 +35,6 @@ import {
 
 import { SideAds } from '../gl-core';
 import { FlickrAlbum } from './cartridges/Flickr';
-import { CV } from './cartridges/CV';
 import { Bouncer, setUid } from './cartridges/Bouncer';
 import { Admin } from './cartridges/Admin';
 
@@ -67,7 +66,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
   }, [dispatch]);
 
   React.useEffect(() => {
-    if (pathname === '/cv') router.replace('/work/cv');
     if (pathname === '/flickr') router.replace('/work/core/cartridges/flickr');
     if (pathname === '/free/flickr')
       router.replace('/work/core/cartridges/flickr');
@@ -77,9 +75,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
     dispatch(toggleLoading(false));
   }, [dispatch]);
 
-  const isCV = pathname === '/work/cv';
   const isAdmin = pathname.startsWith('/admin');
-  const isApp = isCV || isAdmin;
+  const isApp = isAdmin;
 
   let app = <></>;
   switch (true) {
@@ -94,9 +91,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
         </Bouncer>
       );
       break;
-    case isCV:
-      app = <CV mode="app" markdown={body} />;
-      break;
+
     default:
       break;
   }

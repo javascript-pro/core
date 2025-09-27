@@ -18,6 +18,7 @@ export type TMovieClip = {
 };
 
 export type TFlashConfig = {
+  movie?: string;
   width?: number | string;
   height?: number | string;
   [key: string]: any;
