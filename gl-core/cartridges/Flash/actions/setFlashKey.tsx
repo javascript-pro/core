@@ -1,4 +1,4 @@
-// /Users/goldlabel/GitHub/flash/app/src/Flash/actions/setFlashKey.tsx 
+// /Users/goldlabel/GitHub/flash/app/src/Flash/actions/setFlashKey.tsx
 import { TUbereduxDispatch } from '../types';
 import { setUbereduxKey } from '../';
 
@@ -16,7 +16,7 @@ export const setFlashKey =
         setUbereduxKey({
           key: 'flash',
           value: updated,
-        })
+        }),
       );
     } catch (e: unknown) {
       const msg = e instanceof Error ? e.message : String(e);
@@ -24,7 +24,7 @@ export const setFlashKey =
         setUbereduxKey({
           key: 'error',
           value: msg,
-        })
+        }),
       );
     }
   };

@@ -2,13 +2,10 @@
 import React from 'react';
 import { Box } from '@mui/material';
 import { TTrace } from '../types';
-import { 
-  IconButton,
-} from '@mui/material';
+import { IconButton } from '@mui/material';
 import { Icon, useRedux } from '../../Flash';
 
 export default function Trace({ children }: TTrace) {
-
   const s = useRedux();
   const show = false;
   return (

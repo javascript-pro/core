@@ -25,7 +25,6 @@ export default class ActionScript {
   setup(id: string, options: any) {
     setTimeout(() => {
       dropIn(id, options);
-    }, 0)
-    
+    }, 0);
   }
 }

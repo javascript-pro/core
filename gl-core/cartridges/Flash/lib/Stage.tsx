@@ -5,13 +5,8 @@ import { TStage } from '../types';
 // import { useSystem} from '../';
 
 export default React.forwardRef<HTMLDivElement, TStage>(function Stage(
-  { 
-    id, 
-    width, 
-    height, 
-    children,
-  },
-  ref
+  { id, width, height, children },
+  ref,
 ) {
   //const s = useSystem();
   return (

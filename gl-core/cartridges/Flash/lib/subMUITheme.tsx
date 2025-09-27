@@ -1,14 +1,14 @@
 // /Users/goldlabel/GitHub/ella/next/src/gl-core/cartridges/System/subMUITheme.tsx
-import { createTheme } from '@mui/material'
+import { createTheme } from '@mui/material';
 
 export type TTheme = {
-  primary: string
-  secondary: string
-  background: string
-  paper: string
-  text: string
-  border: string
-}
+  primary: string;
+  secondary: string;
+  background: string;
+  paper: string;
+  text: string;
+  border: string;
+};
 
 const fallback: TTheme = {
   primary: '#1976d2',
@@ -17,10 +17,10 @@ const fallback: TTheme = {
   paper: '#f5f5f5',
   text: '#000000',
   border: '#e0e0e0',
-}
+};
 
 export function subMUITheme(t: Partial<TTheme> | undefined) {
-  const theme = { ...fallback, ...(t ?? {}) }
+  const theme = { ...fallback, ...(t ?? {}) };
 
   return createTheme({
     palette: {
@@ -92,5 +92,5 @@ export function subMUITheme(t: Partial<TTheme> | undefined) {
         },
       },
     },
-  })
+  });
 }

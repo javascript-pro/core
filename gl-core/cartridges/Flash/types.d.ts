@@ -4,7 +4,7 @@ import { TUbereduxDispatch, TRootState } from './lib/store';
 
 export type TState = {
   [key: string]: any;
-}
+};
 
 export { TUbereduxDispatch, TRootState };
 

@@ -1,8 +1,7 @@
 import * as React from 'react';
-import {  SvgIcon } from '@mui/material';
+import { SvgIcon } from '@mui/material';
 
 export default function OliverIcon(props: any) {
-
   return (
     <SvgIcon {...props}>
       <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">

@@ -6,9 +6,9 @@ import { useDispatch } from '../hooks/useDispatch';
 import { useRedux } from '../hooks/useRedux';
 import { setUbereduxKey } from '../lib/store';
 
-export default function MovieClip({ 
-  id, 
-  children, 
+export default function MovieClip({
+  id,
+  children,
   border,
   width = '100%',
   height = '100%',
@@ -28,7 +28,7 @@ export default function MovieClip({
         setUbereduxKey({
           key: 'clips',
           value: [...clips, id],
-        })
+        }),
       );
     }
 
@@ -39,16 +39,16 @@ export default function MovieClip({
         setUbereduxKey({
           key: 'clips',
           value: next,
-        })
+        }),
       );
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]); // intentionally only on mount/unmount
 
   return (
-    <Box 
-      id={id} 
-      sx={{ 
+    <Box
+      id={id}
+      sx={{
         ...style,
         position: 'absolute',
         top: 0,
@@ -56,7 +56,7 @@ export default function MovieClip({
         width,
         height,
         zIndex,
-        ...(border && { border: '1px solid gold' }) 
+        ...(border && { border: '1px solid gold' }),
       }}
     >
       {children}

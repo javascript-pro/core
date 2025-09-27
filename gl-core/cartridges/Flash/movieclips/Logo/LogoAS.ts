@@ -1,5 +1,5 @@
 // /app/src/Flash/movieclips/Logo/LogoAS.ts
-import { gsap } from "gsap";
+import { gsap } from 'gsap';
 
 type ClickRec = { el: Element; fn: EventListener };
 
@@ -16,7 +16,7 @@ export default class LogoAS {
   init() {
     this.setup();
     this.resizeHandler = () => this.centerLogo();
-    window.addEventListener("resize", this.resizeHandler);
+    window.addEventListener('resize', this.resizeHandler);
   }
 
   setup() {
@@ -24,7 +24,7 @@ export default class LogoAS {
     if (!logoEl) return;
 
     // Reset transforms on the container only
-    gsap.set(logoEl, { clearProps: "transform,opacity,filter" });
+    gsap.set(logoEl, { clearProps: 'transform,opacity,filter' });
 
     const { offsetX, offsetY, scale } = this.calculateCenter(logoEl);
 
@@ -44,22 +44,22 @@ export default class LogoAS {
         x: offsetX,
         y: offsetY,
         scale,
-        transformOrigin: "center center",
+        transformOrigin: 'center center',
       },
       {
         autoAlpha: 1,
         x: offsetX,
         y: offsetY,
         scale,
-        transformOrigin: "center center",
+        transformOrigin: 'center center',
         duration: 1,
-        ease: "power3.out",
-      }
+        ease: 'power3.out',
+      },
     );
   }
 
   private calculateCenter(el: HTMLElement) {
-    gsap.set(el, { clearProps: "transform" });
+    gsap.set(el, { clearProps: 'transform' });
     const rect = el.getBoundingClientRect();
     const vw = window.innerWidth;
     const vh = window.innerHeight;
@@ -90,9 +90,9 @@ export default class LogoAS {
       x: offsetX,
       y: offsetY,
       scale,
-      transformOrigin: "center center",
+      transformOrigin: 'center center',
       duration: 0.5,
-      ease: "power2.out",
+      ease: 'power2.out',
     });
   }
 
@@ -102,20 +102,20 @@ export default class LogoAS {
     this.wrappers.clear();
 
     const selector =
-      "[id]:not(svg):not(defs):not(clipPath):not(mask):not(pattern):not(linearGradient):not(radialGradient):not(marker):not(title):not(desc):not(metadata)";
-    const nodes = Array.from(container.querySelectorAll<Element>(selector)).filter(
-      (el) => (el as HTMLElement).id !== this.id
-    );
+      '[id]:not(svg):not(defs):not(clipPath):not(mask):not(pattern):not(linearGradient):not(radialGradient):not(marker):not(title):not(desc):not(metadata)';
+    const nodes = Array.from(
+      container.querySelectorAll<Element>(selector),
+    ).filter((el) => (el as HTMLElement).id !== this.id);
 
     nodes.forEach((el) => {
       if (this.wrappers.has(el)) return;
 
       // If it's already a <g>, use it directly
-      if (el.tagName.toLowerCase() === "g") {
-        (el as SVGElement).style.transformBox = "fill-box";
-        (el as SVGElement).style.transformOrigin = "50% 50%";
-        (el as SVGElement).style.cursor = "pointer";
-        gsap.set(el, { transformOrigin: "50% 50%" });
+      if (el.tagName.toLowerCase() === 'g') {
+        (el as SVGElement).style.transformBox = 'fill-box';
+        (el as SVGElement).style.transformOrigin = '50% 50%';
+        (el as SVGElement).style.cursor = 'pointer';
+        gsap.set(el, { transformOrigin: '50% 50%' });
         this.wrappers.set(el, el as SVGGElement);
         return;
       }
@@ -123,29 +123,31 @@ export default class LogoAS {
       const parent = el.parentNode;
       if (!parent) return;
 
-      const ns = "http://www.w3.org/2000/svg";
-      const wrap = document.createElementNS(ns, "g");
+      const ns = 'http://www.w3.org/2000/svg';
+      const wrap = document.createElementNS(ns, 'g');
 
-      (wrap as SVGElement).style.transformBox = "fill-box";
-      (wrap as SVGElement).style.transformOrigin = "50% 50%";
-      (wrap as SVGElement).style.cursor = "pointer";
+      (wrap as SVGElement).style.transformBox = 'fill-box';
+      (wrap as SVGElement).style.transformOrigin = '50% 50%';
+      (wrap as SVGElement).style.cursor = 'pointer';
 
-      const existingSVGTransform = (el as SVGGraphicsElement).getAttribute("transform");
+      const existingSVGTransform = (el as SVGGraphicsElement).getAttribute(
+        'transform',
+      );
       if (existingSVGTransform) {
-        wrap.setAttribute("transform", existingSVGTransform);
-        (el as SVGGraphicsElement).removeAttribute("transform");
+        wrap.setAttribute('transform', existingSVGTransform);
+        (el as SVGGraphicsElement).removeAttribute('transform');
       }
 
       const cssTx = (el as SVGElement).style.transform;
-      if (cssTx && cssTx !== "none") {
+      if (cssTx && cssTx !== 'none') {
         (wrap as SVGElement).style.transform = cssTx;
-        (el as SVGElement).style.transform = "";
+        (el as SVGElement).style.transform = '';
       }
 
       parent.insertBefore(wrap, el);
       wrap.appendChild(el);
 
-      gsap.set(wrap, { transformOrigin: "50% 50%" });
+      gsap.set(wrap, { transformOrigin: '50% 50%' });
 
       this.wrappers.set(el, wrap);
     });
@@ -156,13 +158,15 @@ export default class LogoAS {
 
     this.wrappers.forEach((wrap, el) => {
       const clickFn = () => this.shake(wrap);
-      el.addEventListener("click", clickFn);
+      el.addEventListener('click', clickFn);
       this.clickHandlers.push({ el, fn: clickFn });
     });
   }
 
   private detachClickHandlers() {
-    this.clickHandlers.forEach(({ el, fn }) => el.removeEventListener("click", fn));
+    this.clickHandlers.forEach(({ el, fn }) =>
+      el.removeEventListener('click', fn),
+    );
     this.clickHandlers = [];
   }
 
@@ -170,18 +174,18 @@ export default class LogoAS {
     gsap.killTweensOf(target);
     gsap.fromTo(
       target,
-      { x: -2, rotation: -1, transformOrigin: "50% 50%" },
+      { x: -2, rotation: -1, transformOrigin: '50% 50%' },
       {
         x: 2,
         rotation: 1,
         duration: 0.1,
-        ease: "power1.inOut",
+        ease: 'power1.inOut',
         yoyo: true,
         repeat: 5,
         onComplete: () => {
           gsap.set(target, { x: 0, rotation: 0 });
         },
-      }
+      },
     );
   }
 
@@ -204,7 +208,7 @@ export default class LogoAS {
 
   destroy() {
     if (this.resizeHandler) {
-      window.removeEventListener("resize", this.resizeHandler);
+      window.removeEventListener('resize', this.resizeHandler);
       this.resizeHandler = null;
     }
     this.detachClickHandlers();

@@ -8,12 +8,7 @@ export default function FallmanagerIcon(props: any) {
 
   return (
     <SvgIcon {...props}>
-      <g
-        stroke="none"
-        strokeWidth="1"
-        fill="none"
-        fillRule="evenodd"
-      >
+      <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g id="SVGIcon">
           <rect fill="none" x="0" y="0" width="24" height="24"></rect>
           <path

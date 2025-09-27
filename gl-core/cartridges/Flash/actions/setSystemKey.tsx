@@ -1,4 +1,4 @@
-// /Users/goldlabel/GitHub/flash/app/src/Flash/actions/setSystemKey.tsx 
+// /Users/goldlabel/GitHub/flash/app/src/Flash/actions/setSystemKey.tsx
 import { TUbereduxDispatch } from '../types';
 import { setUbereduxKey } from '../';
 
@@ -27,7 +27,7 @@ export const setSystemKey =
         setUbereduxKey({
           key: 'system',
           value: updatedSettings,
-        })
+        }),
       );
     } catch (e: unknown) {
       const msg = e instanceof Error ? e.message : String(e);
@@ -35,7 +35,7 @@ export const setSystemKey =
         setUbereduxKey({
           key: 'error',
           value: msg,
-        })
+        }),
       );
     }
   };

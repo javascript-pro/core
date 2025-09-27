@@ -2,9 +2,9 @@
 'use client';
 import * as React from 'react';
 import { ThemeProvider, CssBaseline } from '@mui/material';
-import { 
-  subMUITheme, 
-  useSystem, 
+import {
+  subMUITheme,
+  useSystem,
   setSystemKey,
   useConfig,
   useDispatch,

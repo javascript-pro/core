@@ -7,13 +7,4 @@ import A from './A';
 import S from './S';
 import H from './H';
 
-export {
-    LogoAS,
-    Logo,
-    Bolt,
-    F,
-    L,
-    A,
-    S,
-    H,
-};
+export { LogoAS, Logo, Bolt, F, L, A, S, H };

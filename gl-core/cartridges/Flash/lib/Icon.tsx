@@ -173,10 +173,8 @@ export type TIcon = {
     | 'schadentyp'
     | 'etiketten'
     | 'test'
-
     | 'showrequired'
     | 'hiderequired'
-
     | 'staatsanwaltschaften'
     | 'beteiligte'
     | 'schadenpositionen'
@@ -363,7 +361,7 @@ export type TIcon = {
     | 'aufbau'
     | 'required'
     | 'bouncer';
-    
+
   color?: any;
 };
 
@@ -378,18 +376,16 @@ export default function Icon({ icon, color }: TIcon) {
       iconFragment = <ZeilenIcon color={color} />;
       break;
 
-          case 'showrequired':
+    case 'showrequired':
       iconFragment = <ShowRequiredIcon color={color} />;
       break;
-          case 'hiderequired':
+    case 'hiderequired':
       iconFragment = <HideRequiredIcon color={color} />;
       break;
-      
-
 
     case 'aufbau':
       iconFragment = <AufbauIcon color={color} />;
-      break;    
+      break;
     case 'schadenpositionen':
       iconFragment = <SchadenpositionenIcon color={color} />;
       break;
@@ -415,12 +411,11 @@ export default function Icon({ icon, color }: TIcon) {
       break;
     case 'required':
       iconFragment = <RequiredIcon color={color} />;
-      break;      
+      break;
 
     case 'zahlungen':
       iconFragment = <ZahlungenIcon color={color} />;
       break;
-      
 
     case 'sachverstaendige':
       iconFragment = <SachverstaendigeIcon color={color} />;
@@ -429,7 +424,6 @@ export default function Icon({ icon, color }: TIcon) {
     case 'vorlagen':
       iconFragment = <VorlagenIcon color={color} />;
       break;
-      
 
     case 'abschnitte':
       iconFragment = <AbschnitteIcon color={color} />;
@@ -447,7 +441,6 @@ export default function Icon({ icon, color }: TIcon) {
       iconFragment = <ShowIcon color={color} />;
       break;
 
-
     case 'tick':
       iconFragment = <TickIcon color={color} />;
       break;
@@ -459,7 +452,7 @@ export default function Icon({ icon, color }: TIcon) {
     case 'versicherer':
       iconFragment = <VersichererIcon color={color} />;
       break;
-      
+
     case 'tables':
       iconFragment = <TablesIcon color={color} />;
       break;
@@ -490,7 +483,7 @@ export default function Icon({ icon, color }: TIcon) {
     case 'mandanten':
       iconFragment = <UserIcon color={color} />;
       break;
-      case 'case':
+    case 'case':
       iconFragment = <CaseIcon color={color} />;
       break;
 
@@ -581,7 +574,7 @@ export default function Icon({ icon, color }: TIcon) {
     case 'link':
       iconFragment = <LinkIcon color={color} />;
       break;
-    
+
     case 'feature':
       iconFragment = <FeatureIcon color={color} />;
       break;

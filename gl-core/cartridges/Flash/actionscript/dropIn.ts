@@ -30,7 +30,7 @@ export default function dropIn(id: string, options: TDropInOptions = {}) {
   const targetRect = target.getBoundingClientRect();
 
   // center horizontally
-  const centerX = (stageRect.width - targetRect.width);
+  const centerX = stageRect.width - targetRect.width;
 
   const tl = gsap.timeline({ defaults: { ease: 'power2.out' } });
 

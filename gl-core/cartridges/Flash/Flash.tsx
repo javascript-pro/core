@@ -3,7 +3,7 @@ import React from 'react';
 import { Box } from '@mui/material';
 import { TFlashConfig } from './types';
 import {
-  Stage, 
+  Stage,
   MovieClip,
   Controls,
   useFlash,
@@ -11,7 +11,7 @@ import {
   useDispatch,
 } from '../Flash';
 import ActionScript from './actionscript';
-import {Logo} from './movieclips/Logo'
+import { Logo } from './movieclips/Logo';
 
 export default function Flash({ config = {} }: { config?: TFlashConfig }) {
   const { width = 300, height = 200 } = config;
@@ -22,15 +22,15 @@ export default function Flash({ config = {} }: { config?: TFlashConfig }) {
   // run once on mount
   React.useEffect(() => {
     const flash = new ActionScript(stageRef.current);
-    flash.setup("mc_bolt", { speed: 3 });
+    flash.setup('mc_bolt', { speed: 3 });
   }, []);
 
   // listen for reset requests
   React.useEffect(() => {
     if (resetRequested) {
       const flash = new ActionScript(stageRef.current);
-      flash.setup("mc_bolt", { speed: 3 });
-      dispatch(setFlashKey("resetRequested", false)); // clear flag
+      flash.setup('mc_bolt', { speed: 3 });
+      dispatch(setFlashKey('resetRequested', false)); // clear flag
     }
   }, [resetRequested, dispatch]);
 
@@ -45,13 +45,11 @@ export default function Flash({ config = {} }: { config?: TFlashConfig }) {
       }}
     >
       <Stage id="intro" width={width} height={height} ref={stageRef}>
-
         <MovieClip id="mc_controls" height={50} zIndex={15}>
           <Controls />
         </MovieClip>
 
         <Logo id="flash_logo" />
-
       </Stage>
     </Box>
   );
