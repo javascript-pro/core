@@ -5,7 +5,13 @@ import { useTheme } from '@mui/material';
 
 export default function L({ ...props }: TMovieClip) {
   const theme = useTheme();
-  const frontColor = theme.palette.primary.main;
+  const { mode } = theme.palette;
+  let frontColor = theme.palette.background.default;
+  if (mode === 'dark') {
+    frontColor = theme.palette.primary.main;
+  }
+  const midColor = theme.palette.primary.main;
+  const darkColor = theme.palette.text.primary;
 
   return (
     <svg width="177.560976px" height="400px" viewBox="0 0 177.560976 400">
@@ -14,12 +20,12 @@ export default function L({ ...props }: TMovieClip) {
           <g transform="translate(815.266, 124.0688)">
             <polygon
               id="black"
-              fill="#000000"
+              fill={darkColor}
               points="7.80487805 9.7804878 7.80487805 401 177.560976 401 177.560976 342.317073 92.6829268 342.317073 92.6829268 9.7804878"
             ></polygon>
             <polygon
               id="blue"
-              fill="#60A5FA"
+              fill={midColor}
               points="-19.195122 -11.2195122 -19.195122 380 150.560976 380 150.560976 321.317073 65.6829268 321.317073 65.6829268 -11.2195122"
             ></polygon>
             <polygon
