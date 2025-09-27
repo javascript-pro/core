@@ -34,7 +34,6 @@ import {
 } from '../gl-core';
 
 import { SideAds } from '../gl-core';
-import { FlickrAlbum } from './cartridges/Flickr';
 import { Bouncer, setUid } from './cartridges/Bouncer';
 import { Admin } from './cartridges/Admin';
 
@@ -42,7 +41,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const { noImage } = frontmatter;
   let fullScreen = false;
   const [loading, setLoading] = React.useState(true);
-  const { hideImage } = useSlice();
   const siblings = useSiblings();
   const pathname = usePathname();
   const router = useRouter();
@@ -64,12 +62,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
     });
     return () => unsubscribe();
   }, [dispatch]);
-
-  React.useEffect(() => {
-    if (pathname === '/flickr') router.replace('/work/core/cartridges/flickr');
-    if (pathname === '/free/flickr')
-      router.replace('/work/core/cartridges/flickr');
-  }, [pathname, router]);
 
   React.useEffect(() => {
     dispatch(toggleLoading(false));
@@ -120,6 +112,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
             <Grid size={{ xs: 12, md: 9 }}>
               <Box sx={{ mt: isMobile ? 2 : 0 }}>
+                
                 {/* Image block */}
                 {!noImage && frontmatter?.image && (
                   <Box sx={{ mx: isMobile ? 0 : 4, mt: 0 }}>
@@ -152,19 +145,16 @@ export default function Core({ frontmatter, body = null }: TCore) {
                   </Box>
                 )}
 
-                {/* FlickrAlbum block */}
-                {hideImage && (
-                  <Box sx={{ mt: 0, mx: isMobile ? 0 : 4, mb: 2 }}>
-                    <FlickrAlbum album="72177720327572144" />
-                  </Box>
-                )}
 
                 <Box sx={{ px: isMobile ? 0.5 : 2, my: 2 }}>
-                  {pathname !== '/' && <PageBreadcrumb />}
+                  <Box sx={{ mx: 0 }}>
+                    {pathname !== '/' && <PageBreadcrumb />}
+                  </Box>
                   <Box sx={{ mx: 3 }}>
                     <ArrowMenu />
                   </Box>
                 </Box>
+                
               </Box>
 
               {/* Main content and children combined in same padded box */}
@@ -176,6 +166,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                   </Box>
                 )}
               </Box>
+              
             </Grid>
           </Grid>
         </Box>

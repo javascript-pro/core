@@ -8,8 +8,10 @@ import SideAds from './SideAds';
 import Search from './Search';
 import ThumbMenu from './ThumbMenu';
 import ShareMenu from './ShareMenu';
+import SharePopup from './SharePopup';
 import Siblings from './Siblings';
 import Children from './Children';
+
 export {
   ArrowMenu,
   Children,
@@ -22,5 +24,6 @@ export {
   SideAds,
   ThumbMenu,
   ShareMenu,
+  SharePopup,
   Siblings,
 };
