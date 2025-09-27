@@ -7,8 +7,11 @@ import { uploadToStorage } from './uploadToStorage';
 import { toggleHideImage } from './toggleHideImage';
 import { resend } from './resend';
 import { reset } from './reset';
+import { log } from './log';
+
 export {
   resend,
+  log,
   reset,
   uploadToStorage,
   switchTheme,

@@ -26,7 +26,7 @@ export async function GET() {
     console.error('Error fetching logs:', error);
     return NextResponse.json(
       { error: 'Failed to fetch logs', details: error.message },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
@@ -38,7 +38,7 @@ export async function POST(request: Request) {
     if (!title || !type) {
       return NextResponse.json(
         { error: 'Missing required fields: title, type' },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -64,7 +64,7 @@ export async function POST(request: Request) {
     console.error('Error creating log:', error);
     return NextResponse.json(
       { error: 'Failed to create log', details: error.message },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
