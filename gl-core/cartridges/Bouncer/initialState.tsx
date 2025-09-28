@@ -2,6 +2,7 @@
 import { TBouncerState } from './types';
 
 export const initialState: TBouncerState = {
-  cartridge: 'Bouncer',
-  authed: false,
+  cartridge: 'bouncer',
+  dialogOpen: true,
+  ping: null,
 };

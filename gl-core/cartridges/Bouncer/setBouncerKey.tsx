@@ -8,23 +8,23 @@ export const setBouncerKey =
     try {
       const state = getState();
       const current = state?.redux.bouncer;
-      const updated = {
-        ...current,
-        [key]: value,
-      };
+      const prevVal = current?.[key];
+
+      const mergedValue =
+        typeof prevVal === 'object' &&
+        prevVal !== null &&
+        typeof value === 'object'
+          ? { ...prevVal, ...(value as Record<string, unknown>) }
+          : value;
+
       dispatch(
         setUbereduxKey({
           key: 'bouncer',
-          value: updated,
+          value: { ...current, [key]: mergedValue },
         }),
       );
     } catch (e: unknown) {
       const msg = e instanceof Error ? e.message : String(e);
-      dispatch(
-        setUbereduxKey({
-          key: 'error',
-          value: msg,
-        }),
-      );
+      dispatch(setUbereduxKey({ key: 'error', value: msg }));
     }
   };

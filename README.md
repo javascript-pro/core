@@ -14,6 +14,7 @@ yarn install
 
 ## 💾 [Cartridges](https://github.com/javascript-pro/core/tree/staging/gl-core/cartridges)
 
+- ⚡️ [Flash](https://github.com/javascript-pro/core/tree/staging/gl-core/cartridges/Flash)
 - [Theme](https://github.com/javascript-pro/core/tree/staging/gl-core/cartridges/Theme)
 - [Uberedux](https://github.com/javascript-pro/core/tree/staging/gl-core/cartridges/Uberedux)
 

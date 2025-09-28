@@ -103,16 +103,6 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
 
         {/* Theme Switcher */}
         <ModeSwitch />
-        <MenuItem
-          onClick={() => {
-            dispatch(reset());
-          }}
-        >
-          <ListItemIcon>
-            <Icon icon="reset" color="primary" />
-          </ListItemIcon>
-          <ListItemText primary="Reset" />
-        </MenuItem>
 
         <MenuItem
           onClick={() => {
@@ -123,6 +113,17 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
             <Icon icon="bug" color="primary" />
           </ListItemIcon>
           <ListItemText primary="Bad panda" />
+        </MenuItem>
+
+        <MenuItem
+          onClick={() => {
+            dispatch(reset());
+          }}
+        >
+          <ListItemIcon>
+            <Icon icon="reset" color="primary" />
+          </ListItemIcon>
+          <ListItemText primary="Reset" />
         </MenuItem>
 
         <MenuItem

@@ -1,51 +1,51 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/Bouncer.tsx
 'use client';
 import React from 'react';
-import {
-  Box,
-} from '@mui/material';
-import { 
-    MightyButton,
-} from '../../../gl-core';
-import {
-  useBouncer,
-  setBouncerKey,
-} from '../Bouncer';
+import FingerprintJS from '@fingerprintjs/fingerprintjs';
+import { Box, Dialog, CardHeader } from '@mui/material';
+import { MightyButton, useDispatch, Icon } from '../../../gl-core';
+import { useBouncer, setBouncerKey } from '../Bouncer';
 
-export type TBouncer = {
-};
+export default function Bouncer() {
+  const b = useBouncer();
+  const dispatch = useDispatch();
+  const startedRef = React.useRef(false);
 
-export type TPing = {
-  fingerprint: string;
-  time: number;
-};
+  React.useEffect(() => {
+    if (startedRef.current) return; // prevent double-run in StrictMode
+    startedRef.current = true;
+    console.log('// run only once on mount');
+  }, [dispatch]);
 
-export default function Bouncer({}: TBouncer) {
-
-  const bouncer = useBouncer();
-
-  const handleBtnClick = () => {
-    console.log('Bouncer button clicked');
-  };
-
-  const ping: TPing = {
-    fingerprint: '97e1wkhfsakhfhkas',
-    time: Date.now(),
-  }
+  const handleClose = () => dispatch(setBouncerKey('dialogOpen', false));
+  const handleBtnClick = () => dispatch(setBouncerKey('dialogOpen', true));
 
   return (
     <>
-      <MightyButton 
-        label="Bouncer" 
+      <MightyButton
+        mode="icon"
+        label="Bouncer"
         icon="bouncer"
         onClick={handleBtnClick}
       />
-      <Box>
-        <pre>ping: {JSON.stringify(ping, null, 2)}</pre>
-        <pre>bouncer: {JSON.stringify(bouncer, null, 2)}</pre>
-      </Box>
-
-      
+      <Dialog open={b.dialogOpen} onClose={handleClose}>
+        <CardHeader
+          avatar={<Icon icon="bouncer" />}
+          title="Bouncer"
+          subheader="Your name's not down, mate."
+          action={
+            <MightyButton
+              mode="icon"
+              label="Close"
+              icon="cancel"
+              onClick={handleClose}
+            />
+          }
+        />
+        <Box>
+          <pre>b.ping: {JSON.stringify(b.ping, null, 2)}</pre>
+        </Box>
+      </Dialog>
     </>
   );
 }

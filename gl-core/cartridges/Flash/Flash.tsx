@@ -15,9 +15,7 @@ export default function Flash({
   width = '100%',
   height = 300,
 }: TFlashProps) {
-
   const f = useFlash();
-
 
   return (
     <Box

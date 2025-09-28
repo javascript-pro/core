@@ -4,9 +4,4 @@ import { initialState as initialStateBouncer } from './initialState';
 import { useBouncer } from './useBouncer';
 import { setBouncerKey } from './setBouncerKey';
 
-export { 
-    Bouncer,
-    initialStateBouncer,
-    useBouncer,
-    setBouncerKey,
-};
+export { Bouncer, initialStateBouncer, useBouncer, setBouncerKey };
