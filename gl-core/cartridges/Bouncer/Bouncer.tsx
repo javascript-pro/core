@@ -14,7 +14,6 @@ export default function Bouncer() {
   React.useEffect(() => {
     if (startedRef.current) return; // prevent double-run in StrictMode
     startedRef.current = true;
-    console.log('// run only once on mount');
     dispatch(createPing());
   }, [dispatch]);
 

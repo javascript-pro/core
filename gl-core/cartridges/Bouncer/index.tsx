@@ -2,7 +2,7 @@
 import Bouncer from './Bouncer';
 import { initialState as initialStateBouncer } from './initialState';
 import { useBouncer } from './useBouncer';
-import { setBouncerKey } from './setBouncerKey';
-import { createPing } from './createPing';
+import { setBouncerKey } from './actions/setBouncerKey';
+import { createPing } from './actions/createPing';
 
 export { Bouncer, initialStateBouncer, useBouncer, setBouncerKey, createPing };

@@ -1,6 +1,6 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/setBouncerKey.tsx
-import { TUbereduxDispatch } from '../Uberedux';
-import { setUbereduxKey } from '../Uberedux';
+import { TUbereduxDispatch } from '../../Uberedux';
+import { setUbereduxKey } from '../../Uberedux';
 
 export const setBouncerKey =
   (key: string, value: unknown) =>
