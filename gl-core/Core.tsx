@@ -4,8 +4,7 @@
 import configRaw from './config.json';
 import { TCore, TConfig } from './types';
 import * as React from 'react';
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import {
   CssBaseline,
@@ -31,24 +30,17 @@ import {
   useSiblings,
   ArrowMenu,
 } from '../gl-core';
-
 import { SideAds } from '../gl-core';
-import { Bouncer, setUid } from './cartridges/Bouncer';
-import { Admin } from './cartridges/Admin';
 
-// cast config.json to the strong type we defined in types.d.ts
 const config = configRaw as TConfig;
 
 export default function Core({ frontmatter, body = null }: TCore) {
   const { noImage, image, title } = frontmatter ?? {};
   let fullScreen = false;
-
-  const [loading, setLoading] = React.useState(true);
   const [imageError, setImageError] = React.useState(false);
 
   const siblings = useSiblings();
   const pathname = usePathname();
-  const router = useRouter();
   const themeMode = useThemeMode();
   const isMobile = useIsMobile();
   const dispatch = useDispatch();
@@ -56,44 +48,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
   useVersionCheck();
 
   React.useEffect(() => {
-    const auth = getAuth();
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        dispatch(setUid(user.uid));
-      } else {
-        dispatch(setUid(null));
-      }
-      setLoading(false);
-    });
-    return () => unsubscribe();
-  }, [dispatch]);
-
-  React.useEffect(() => {
     dispatch(toggleLoading(false));
   }, [dispatch]);
-
-  const isAdmin = pathname.startsWith('/admin');
-  const isApp = isAdmin;
-
-  let app = <></>;
-  switch (true) {
-    case isAdmin:
-      fullScreen = true;
-      app = (
-        <Bouncer>
-          <Theme theme={config.themes[themeMode]}>
-            <CssBaseline />
-            <Admin />
-          </Theme>
-        </Bouncer>
-      );
-      break;
-
-    default:
-      break;
-  }
-
-  if (fullScreen) return <>{app}</>;
 
   return (
     <Theme theme={config.themes[themeMode]}>
@@ -101,7 +57,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
       <IncludeAll />
       <Container id="core" maxWidth="md">
         <Box sx={{ minHeight: '100vh' }}>
-          <Header frontmatter={frontmatter} loading={loading} />
+          <Header frontmatter={frontmatter} />
           <Grid container spacing={isMobile ? 0 : 1}>
             {!isMobile && (
               <Grid size={{ md: 3 }}>
@@ -161,7 +117,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
               {/* Main content and children combined in same padded box */}
               <Box sx={{ mb: isMobile ? 3 : '175px', px: isMobile ? 0.5 : 2 }}>
-                {isApp ? app : <RenderMarkdown>{body}</RenderMarkdown>}
+                <RenderMarkdown>{body}</RenderMarkdown>
                 {isMobile && (
                   <Box sx={{ mt: 4 }}>
                     <Children />

@@ -1,10 +1,11 @@
+// /Users/goldlabel/GitHub/core/gl-core/initialState.tsx
+// import { CoreState } from './types';
 import pJSON from '../package.json';
 import config from './config.json';
 import { initialStateFlickr } from './cartridges/Flickr';
 import { initialStateLingua } from './cartridges/Lingua';
-import { initialStateBouncer } from './cartridges/Bouncer';
-import { initialStateAdmin } from './cartridges/Admin';
-// import { initialReduxFlash } from './cartridges/Flash/initialReduxFlash';
+// import { initialStateAdmin } from './cartridges/Admin';
+import { initialStateFlash } from './cartridges/Flash';
 
 export const initialState: any = {
   config,
@@ -13,10 +14,8 @@ export const initialState: any = {
   themeMode: 'dark',
   loading: null,
   feedback: null,
-  hideImage: false,
-  bouncer: initialStateBouncer,
-  // flash: initialReduxFlash,
+  flash: initialStateFlash,
   flickr: initialStateFlickr,
   lingua: initialStateLingua,
-  admin: initialStateAdmin,
+  // admin: initialStateAdmin,
 };

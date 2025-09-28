@@ -1,4 +1,5 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/Flash/index.tsx
+import { initialState as initialStateFlash } from './initialState';
 import Flash from './Flash';
 import System from './lib/System';
 import Trace from './lib/Trace';
@@ -27,6 +28,7 @@ import { useIsMobile } from './hooks/useIsMobile';
 import { usePrefersColorScheme } from './hooks/usePrefersColorScheme';
 
 export {
+  initialStateFlash,
   Flash,
   System,
   Trace,

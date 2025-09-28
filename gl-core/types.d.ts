@@ -1,4 +1,20 @@
 import { TUbereduxDispatch, TRootState } from './cartridges/Uberedux/store';
+import config from './config.json';
+import { initialStateFlickr } from './cartridges/Flickr';
+import { initialStateLingua } from './cartridges/Lingua';
+import { initialStateFlash } from './cartridges/Flash';
+
+export type CoreState = {
+  config: typeof config;
+  version: string;
+  persisted: number;
+  themeMode: 'dark' | 'light';
+  loading: boolean | null;
+  feedback: string | null;
+  flash: typeof initialStateFlash;
+  flickr: typeof initialStateFlickr;
+  lingua: typeof initialStateLingua;
+};
 
 export type TThemeConfig = {
   mode: 'light' | 'dark';
