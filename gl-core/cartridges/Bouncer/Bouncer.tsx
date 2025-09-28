@@ -4,7 +4,7 @@ import React from 'react';
 import FingerprintJS from '@fingerprintjs/fingerprintjs';
 import { Box, Dialog, CardHeader } from '@mui/material';
 import { MightyButton, useDispatch, Icon } from '../../../gl-core';
-import { useBouncer, setBouncerKey } from '../Bouncer';
+import { useBouncer, setBouncerKey, createPing } from '../Bouncer';
 
 export default function Bouncer() {
   const b = useBouncer();
@@ -15,6 +15,7 @@ export default function Bouncer() {
     if (startedRef.current) return; // prevent double-run in StrictMode
     startedRef.current = true;
     console.log('// run only once on mount');
+    dispatch(createPing());
   }, [dispatch]);
 
   const handleClose = () => dispatch(setBouncerKey('dialogOpen', false));
