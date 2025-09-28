@@ -183,8 +183,8 @@ export default async function Page({ params }: { params: any }) {
       isIndex: true,
     },
   ];
-  // 
-// 👉 Go back to the homepage or pick from the pages below.
+  //
+  // 👉 Go back to the homepage or pick from the pages below.
   let content = `> Sorry, we couldn't find the page you were looking for.,  
   👉 [Home](/?reboot)`;
   let frontmatter: any = {

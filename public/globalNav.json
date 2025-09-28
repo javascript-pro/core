@@ -119,13 +119,7 @@
                     "icon": "flickr",
                     "image": "/png/n64/goldlabel.png",
                     "type": "file",
-                    "tags": [
-                      "flickr",
-                      "free",
-                      "api",
-                      "REST",
-                      "Next.js"
-                    ],
+                    "tags": ["flickr", "free", "api", "REST", "Next.js"],
                     "excerpt": "Flickr Photo Cartridge\n\nA React component for clean, fastloading image galleries. Provides an easy way to display recent photos from a Flickr account. It connects to a serverside API route in your Nex"
                   },
                   {
@@ -144,12 +138,7 @@
                     "icon": "admin",
                     "image": "/png/n64/goldlabel.png",
                     "type": "file",
-                    "tags": [
-                      "cartridges",
-                      "cartridge",
-                      "free",
-                      "bouncer"
-                    ],
+                    "tags": ["cartridges", "cartridge", "free", "bouncer"],
                     "excerpt": "Bouncer Cartridge\n\nThe Bouncer cartridge is responsible for two core features in Goldlabel Core:\n\n1. Authentication (Firebase Auth +  collection)\n2. Real‑time Visitor Tracking (Pings)\n\n 1. Authenticat"
                   },
                   {
@@ -179,10 +168,7 @@
                 "icon": "github",
                 "image": "/png/n64/goldlabel.png",
                 "type": "file",
-                "tags": [
-                  "free",
-                  "core"
-                ],
+                "tags": ["free", "core"],
                 "excerpt": "Open Source and Free Forever\n\nGoldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo archit"
               }
             ]
@@ -204,11 +190,7 @@
             "icon": "expertise",
             "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
             "type": "folder",
-            "tags": [
-              "expertise",
-              "fields",
-              "work"
-            ],
+            "tags": ["expertise", "fields", "work"],
             "excerpt": "We work across the full stack, from interface to infrastructure, with a focus on robust, modern JavaScript tooling and scalable cloudnative delivery. Whether building responsive UIs, designing serverl",
             "children": [
               {
@@ -264,9 +246,7 @@
                 "icon": "fullstack",
                 "image": "https://live.staticflickr.com/65535/54688814017_148f57032c_o.jpg",
                 "type": "folder",
-                "tags": [
-                  "fullstack"
-                ],
+                "tags": ["fullstack"],
                 "excerpt": "A much over used term\n\nSo much so, it's become a bit meaningless. It was such ha useful term, too. Basically it meant that if you were a frontend dev",
                 "children": [
                   {
@@ -276,11 +256,7 @@
                     "icon": "api",
                     "image": "/png/og.png",
                     "type": "file",
-                    "tags": [
-                      "free",
-                      "opensource",
-                      "work"
-                    ],
+                    "tags": ["free", "opensource", "work"],
                     "excerpt": "Why We Open Source\n\nWe’ve been building JavaScript applications for over 20 years. In that time, we’ve seen tools come and go. Trends rise, crash, and return again under a different name.\n\nWhat’s rema"
                   },
                   {
@@ -290,10 +266,7 @@
                     "icon": "api",
                     "image": "https://live.staticflickr.com/65535/54801612483_31ce454c4e_b.jpg",
                     "type": "file",
-                    "tags": [
-                      "free",
-                      "api"
-                    ],
+                    "tags": ["free", "api"],
                     "excerpt": "Goldlabel Public API\n\n glapi/flickr endpoints"
                   },
                   {
@@ -345,11 +318,7 @@
                     "icon": "github",
                     "image": "/png/3rdParty/gitkraken.png",
                     "type": "file",
-                    "tags": [
-                      "github",
-                      "process",
-                      "javascript"
-                    ],
+                    "tags": ["github", "process", "javascript"],
                     "excerpt": "We use GitHub for everything.\n\nMost of the communication done between us and our clients during development is done through GitHub in the form of comments, tracking bugs and issues, pull resuests, rev"
                   },
                   {
@@ -375,11 +344,7 @@
                     "icon": "design",
                     "image": "https://live.staticflickr.com/65535/54801612483_31ce454c4e_b.jpg",
                     "type": "file",
-                    "tags": [
-                      "github",
-                      "process",
-                      "design"
-                    ],
+                    "tags": ["github", "process", "design"],
                     "excerpt": "What is a Design System?\n\nA Design System is a collection of reusable components, standards, and guidelines that define how a product looks and behaves. It includes UI elements like buttons, forms, an"
                   },
                   {
@@ -437,13 +402,7 @@
                 "icon": "ai",
                 "image": "https://live.staticflickr.com/65535/53669705662_d1361d5032_h.jpg",
                 "type": "folder",
-                "tags": [
-                  "ai",
-                  "ki",
-                  "expertise",
-                  "fields",
-                  "work"
-                ],
+                "tags": ["ai", "ki", "expertise", "fields", "work"],
                 "excerpt": "Is this Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday\n\nIt's keeping tinfoil hat wearing folk awake at night. If",
                 "children": [
                   {
@@ -454,10 +413,7 @@
                     "icon": "ki",
                     "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                     "type": "folder",
-                    "tags": [
-                      "abgeschottet",
-                      "KI"
-                    ],
+                    "tags": ["abgeschottet", "KI"],
                     "excerpt": "A ring‑fenced LLM is like having the power of AI inside a locked room.\n\nIt can process sensitive documents and assist with legal work, but nothing ever leaves the firm’s secure network. When we say an",
                     "children": [
                       {
@@ -476,10 +432,7 @@
                         "icon": "ki",
                         "image": "/jpg/abgeschotten-ki.jpg",
                         "type": "file",
-                        "tags": [
-                          "abgeschottet",
-                          "KI"
-                        ],
+                        "tags": ["abgeschottet", "KI"],
                         "excerpt": "How does the AI learn from the prompts over time?\n\n Used carefully, large language models can turn legal research into a faster, more focused process.\n\nWhen we talk about learning, it’s important to d"
                       },
                       {
@@ -507,10 +460,7 @@
                         "icon": "ki",
                         "image": "/png/ki/abgeschotten-ki.png",
                         "type": "file",
-                        "tags": [
-                          "abgeschottet",
-                          "KI"
-                        ],
+                        "tags": ["abgeschottet", "KI"],
                         "excerpt": "What Confidentiality Obligations Do UK Law Firms Have Toward Their Clients?\n\n UK law firms are bound by some of the strongest confidentiality rules in professional life.\n\n Everything you tell your law"
                       },
                       {
@@ -529,10 +479,7 @@
                         "icon": "ki",
                         "image": "/png/ki/abgeschotten-ki.png",
                         "type": "file",
-                        "tags": [
-                          "abgeschottet",
-                          "KI"
-                        ],
+                        "tags": ["abgeschottet", "KI"],
                         "excerpt": "What Does the GDPR Mean for a UK Law Firm?\n\n GDPR means your personal information is handled lawfully, transparently, and with your privacy in mind.\n\nThe General Data Protection Regulation (GDPR) – as"
                       },
                       {
@@ -542,10 +489,7 @@
                         "icon": "ki",
                         "image": "/png/ki/abgeschotten-ki.png",
                         "type": "file",
-                        "tags": [
-                          "abgeschottet",
-                          "KI"
-                        ],
+                        "tags": ["abgeschottet", "KI"],
                         "excerpt": "Keep it simple. Start small. Scale when you need to.\n\n Hardware for Abgeschottet KI\n\nOne of the advantages of Abgeschottet KI is that it’s a low‑investment, quick‑to‑implement solution.  \nYou don’t ne"
                       },
                       {
@@ -555,10 +499,7 @@
                         "icon": "ki",
                         "image": "/png/ki/abgeschotten-ki.png",
                         "type": "file",
-                        "tags": [
-                          "abgeschottet",
-                          "KI"
-                        ],
+                        "tags": ["abgeschottet", "KI"],
                         "excerpt": "How Could Large Language Models Help UK Law Firms With Legal Research?\n\n Used carefully, large language models can turn legal research into a faster, more focused process.\n\n Quickly summarising case l"
                       },
                       {
@@ -586,10 +527,7 @@
                         "icon": "ki",
                         "image": "/png/ki/abgeschotten-ki.png",
                         "type": "file",
-                        "tags": [
-                          "abgeschottet",
-                          "KI"
-                        ],
+                        "tags": ["abgeschottet", "KI"],
                         "excerpt": "What Organisational Measures Should a Law Firm Take?\n\n A ring‑fenced LLM works best as part of a wider culture of confidentiality.\n\n Clear internal policies\n Regular staff training\n Access controls ba"
                       }
                     ]
@@ -601,9 +539,7 @@
                     "icon": "ai",
                     "image": "https://live.staticflickr.com/65535/54802570139_8f4f2ac814_b.jpg",
                     "type": "file",
-                    "tags": [
-                      "ai"
-                    ],
+                    "tags": ["ai"],
                     "excerpt": "[YouTube src=\"https://www.youtube.com/watch?v=pkLazYu8JMw\"]\n\n AI changes everything in Software Development\n\n What took 6 months, a team of 10 developers and full time project management can now be do"
                   },
                   {
@@ -634,12 +570,7 @@
                 "icon": "windows",
                 "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
                 "type": "folder",
-                "tags": [
-                  "expertise",
-                  "windoze",
-                  "experience",
-                  "work"
-                ],
+                "tags": ["expertise", "windoze", "experience", "work"],
                 "excerpt": "Easy Legal Letter Assistant\n\n A lightweight, Windows app for generating precise Legal letters. The tool assists staff at a legal firm by making it easy to store all the data around a case to a single ",
                 "children": [
                   {
@@ -680,10 +611,7 @@
             "icon": "company",
             "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
             "type": "file",
-            "tags": [
-              "remote",
-              "hybrid"
-            ],
+            "tags": ["remote", "hybrid"],
             "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years.\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communication, "
           },
           {
@@ -693,9 +621,7 @@
             "icon": "team",
             "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
             "type": "file",
-            "tags": [
-              "team"
-            ],
+            "tags": ["team"],
             "excerpt": "Whether you're a startup with a short deadline or an enterprise with complex workflows, we can help. Get in touch for it's a truth universally acknowledged that a Software Developer in possession of a"
           },
           {
@@ -705,9 +631,7 @@
             "icon": "team",
             "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
             "type": "file",
-            "tags": [
-              "team"
-            ],
+            "tags": ["team"],
             "excerpt": "We take on a limited number of new projects each month. If you need something done we’d love to hear about it. Find out if we're a . We're always looking for collaborators, contributors, and good idea"
           },
           {
@@ -717,13 +641,7 @@
             "icon": "admin",
             "image": "https://live.staticflickr.com/65535/54800517077_55d79f6a0a_b.jpg",
             "type": "file",
-            "tags": [
-              "cookies",
-              "gdpr",
-              "privacy",
-              "terms",
-              "trust"
-            ],
+            "tags": ["cookies", "gdpr", "privacy", "terms", "trust"],
             "excerpt": "We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers t"
           }
         ]
