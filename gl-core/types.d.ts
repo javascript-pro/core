@@ -1,16 +1,17 @@
 import { TUbereduxDispatch, TRootState } from './cartridges/Uberedux/store';
 import config from './config.json';
+import { initialStateBouncer } from './cartridges/Bouncer';
+import { initialStateFlash } from './cartridges/Flash';
 import { initialStateFlickr } from './cartridges/Flickr';
 import { initialStateLingua } from './cartridges/Lingua';
-import { initialStateFlash } from './cartridges/Flash';
 
-export type CoreState = {
+export type TCoreState = {
   config: typeof config;
   version: string;
   persisted: number;
   themeMode: 'dark' | 'light';
-  loading: boolean | null;
-  feedback: string | null;
+  feedback: TFeedback | null;
+  bouncer: typeof initialStateBouncer;
   flash: typeof initialStateFlash;
   flickr: typeof initialStateFlickr;
   lingua: typeof initialStateLingua;

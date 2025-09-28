@@ -2,5 +2,5 @@
 import { TState } from './types';
 
 export const initialState: TState = {
-  resetRequested: false,
+  cartridge: 'flash',
 };

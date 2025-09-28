@@ -1,8 +1,10 @@
 // core/gl-core/components/layout/Header.tsx
 'use client';
 import * as React from 'react';
-import { Box, CardHeader, Typography, CircularProgress } from '@mui/material';
+import { Box, CardHeader, Typography } from '@mui/material';
 import { Icon, useIsMobile, ThumbMenu, SharePopup } from '../../../gl-core';
+
+import { Bouncer } from '../../cartridges/Bouncer';
 
 export type THeader = {
   frontmatter?: any;
@@ -33,7 +35,7 @@ export default function Header({ frontmatter = null }: THeader) {
         }
         action={
           <Box sx={{ mt: 1, mr: isMobile ? 0 : 2 }}>
-            {/* <Visitor /> */}
+            <Bouncer />
             <SharePopup frontmatter={frontmatter} />
           </Box>
         }

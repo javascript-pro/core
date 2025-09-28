@@ -1,10 +1,10 @@
 // /Users/goldlabel/GitHub/core/gl-core/initialState.tsx
-// import { CoreState } from './types';
+import { TCoreState } from './types';
 import pJSON from '../package.json';
 import config from './config.json';
 import { initialStateFlickr } from './cartridges/Flickr';
 import { initialStateLingua } from './cartridges/Lingua';
-// import { initialStateAdmin } from './cartridges/Admin';
+import { initialStateBouncer } from './cartridges/Bouncer';
 import { initialStateFlash } from './cartridges/Flash';
 
 export const initialState: any = {
@@ -12,10 +12,9 @@ export const initialState: any = {
   version: pJSON.version,
   persisted: Date.now(),
   themeMode: 'dark',
-  loading: null,
   feedback: null,
+  bouncer: initialStateBouncer,
   flash: initialStateFlash,
   flickr: initialStateFlickr,
   lingua: initialStateLingua,
-  // admin: initialStateAdmin,
 };

@@ -439,7 +439,7 @@ export default function Icon({ icon, color }: TIcon) {
       iconFragment = <DogIcon color={color} />;
       break;
     case 'bouncer':
-      iconFragment = <SigninIcon color={color} />;
+      iconFragment = <AdminIcon color={color} />;
       break;
 
     case 'uberedux':
