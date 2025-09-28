@@ -114,6 +114,28 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
           <ListItemText primary="Reset" />
         </MenuItem>
 
+        <MenuItem
+          onClick={() => {
+            dispatch(routeTo('/bad-panda', router));
+          }}
+        >
+          <ListItemIcon>
+            <Icon icon="bug" color="primary" />
+          </ListItemIcon>
+          <ListItemText primary="Bad panda" />
+        </MenuItem>
+
+        <MenuItem
+          onClick={() => {
+            dispatch(routeTo('/work/goldlabel/cartridges/flash', router));
+          }}
+        >
+          <ListItemIcon>
+            <Icon icon="flash" color="primary" />
+          </ListItemIcon>
+          <ListItemText primary="Flash" />
+        </MenuItem>
+
         {/* App Version */}
         <Box sx={{ pr: 3, py: 1, textAlign: 'right' }}>
           <Typography

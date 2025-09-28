@@ -51,7 +51,7 @@ export default function SharePopup({ frontmatter }: TSharePopup) {
 
       <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
         <MenuItem
-          sx={{minWidth: 200}}
+          sx={{ minWidth: 200 }}
           onClick={() => {
             if (navigator?.clipboard?.writeText) {
               navigator.clipboard.writeText(url);

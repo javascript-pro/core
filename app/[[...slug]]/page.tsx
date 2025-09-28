@@ -183,9 +183,10 @@ export default async function Page({ params }: { params: any }) {
       isIndex: true,
     },
   ];
-
-  let content =
-    '> This route is not handled by Next.js App Router,  [RESTART](/?reboot)';
+  // 
+// 👉 Go back to the homepage or pick from the pages below.
+  let content = `> Sorry, we couldn't find the page you were looking for.,  
+  👉 [Home](/?reboot)`;
   let frontmatter: any = {
     icon: 'goldlabel',
     title: 'Goldlabel',
@@ -218,7 +219,7 @@ export default async function Page({ params }: { params: any }) {
   // If page not found → build a markdown list of all pages
   if (is404) {
     const listMarkdown = navToMarkdown(globalNav[0] as NavNode);
-    content += `\n\n### Available pages\n\n${listMarkdown}\n`;
+    content += `\n\n${listMarkdown}\n`;
   }
 
   return (
