@@ -21,9 +21,7 @@ export const fingerprint =
       if (snap.exists()) {
         // console.log('Fingerprint already exists in Firestore', ping.id);
         // Example: mark as checked and existing
-        dispatch(
-          setBouncerKey('checked', true),
-        );
+        dispatch(setBouncerKey('checked', true));
         // You might also want to merge/update the doc here instead of nothing
       } else {
         console.log('Creating new ping in Firestore', ping.id);
@@ -32,9 +30,7 @@ export const fingerprint =
           created: Date.now(),
           updated: Date.now(),
         });
-        dispatch(
-          setBouncerKey('checked', true),
-        );
+        dispatch(setBouncerKey('checked', true));
       }
     } catch (e: unknown) {
       const msg = e instanceof Error ? e.message : String(e);

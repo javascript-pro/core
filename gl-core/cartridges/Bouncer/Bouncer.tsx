@@ -11,17 +11,15 @@ export default function Bouncer() {
   const startedRef = React.useRef(false);
   const isMobile = useIsMobile();
 
-  
-
   // 1. Create ping on first mount
   React.useEffect(() => {
-  if (startedRef.current) return; // prevent double-run in StrictMode
-  startedRef.current = true;
+    if (startedRef.current) return; // prevent double-run in StrictMode
+    startedRef.current = true;
 
-  if (!b?.ping) {
-    dispatch(createPing());
-  }
-}, [dispatch, b?.ping]);
+    if (!b?.ping) {
+      dispatch(createPing());
+    }
+  }, [dispatch, b?.ping]);
 
   // 2. Once we have a ping but haven't checked yet → fingerprint
   React.useEffect(() => {
@@ -41,7 +39,12 @@ export default function Bouncer() {
         icon="bouncer"
         onClick={handleBtnClick}
       />
-      <Dialog fullWidth fullScreen={isMobile} open={b.dialogOpen} onClose={handleClose}>
+      <Dialog
+        fullWidth
+        fullScreen={isMobile}
+        open={b.dialogOpen}
+        onClose={handleClose}
+      >
         <CardHeader
           avatar={<Icon icon="bouncer" />}
           title="Bouncer"
@@ -56,7 +59,9 @@ export default function Bouncer() {
           }
         />
         <Box>
-          <pre style={{fontSize:11}}>ping: {JSON.stringify(b.ping, null, 2)}</pre>
+          <pre style={{ fontSize: 11 }}>
+            ping: {JSON.stringify(b.ping, null, 2)}
+          </pre>
         </Box>
       </Dialog>
     </>

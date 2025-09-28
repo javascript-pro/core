@@ -6,4 +6,11 @@ import { setBouncerKey } from './actions/setBouncerKey';
 import { createPing } from './actions/createPing';
 import { fingerprint } from './actions/fingerprint';
 
-export { Bouncer, initialStateBouncer, useBouncer, setBouncerKey, fingerprint, createPing };
+export {
+  Bouncer,
+  initialStateBouncer,
+  useBouncer,
+  setBouncerKey,
+  fingerprint,
+  createPing,
+};
