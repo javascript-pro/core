@@ -72,7 +72,6 @@ function findNavItem(slugPath: string, node: any): any | null {
   return null;
 }
 
-
 function navToMarkdown(node: NavNode, depth = 0): string {
   const lines: string[] = [];
   const isRoot = !node.slug || node.slug === '' || node.slug === '/';
@@ -93,7 +92,6 @@ function navToMarkdown(node: NavNode, depth = 0): string {
 
   return lines.join('\n');
 }
-
 
 async function loadFrontmatter(slugPath: string) {
   const tryPaths = [
@@ -218,10 +216,10 @@ export default async function Page({ params }: { params: any }) {
   const ogImage = frontmatter.image || '/png/og.png';
 
   // If page not found → build a markdown list of all pages
-if (is404) {
-  const listMarkdown = navToMarkdown(globalNav[0] as NavNode);
-  content += `\n\n### Available pages\n\n${listMarkdown}\n`;
-}
+  if (is404) {
+    const listMarkdown = navToMarkdown(globalNav[0] as NavNode);
+    content += `\n\n### Available pages\n\n${listMarkdown}\n`;
+  }
 
   return (
     <Core frontmatter={{ ...frontmatter, isIndex }} body={content}>
