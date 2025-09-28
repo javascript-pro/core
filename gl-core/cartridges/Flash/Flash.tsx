@@ -28,7 +28,7 @@ export default function Flash({
       }}
     >
       <Stage id={movie} width={width} height={height}>
-        <pre>f: {JSON.stringify(f, null, 2)}</pre>
+        {/* <pre>f: {JSON.stringify(f, null, 2)}</pre> */}
         <Logo id="flash_logo" />
       </Stage>
     </Box>

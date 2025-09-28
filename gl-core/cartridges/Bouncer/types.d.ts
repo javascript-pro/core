@@ -37,5 +37,6 @@ export type TPing = {
 export type TBouncerState = {
   cartridge: string;
   ping: TPing | null;
+  checked: boolean;
   [key: string]: any;
 };

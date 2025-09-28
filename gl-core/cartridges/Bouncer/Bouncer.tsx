@@ -1,21 +1,34 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/Bouncer.tsx
 'use client';
 import React from 'react';
-import FingerprintJS from '@fingerprintjs/fingerprintjs';
 import { Box, Dialog, CardHeader } from '@mui/material';
-import { MightyButton, useDispatch, Icon } from '../../../gl-core';
-import { useBouncer, setBouncerKey, createPing } from '../Bouncer';
+import { MightyButton, useDispatch, Icon, useIsMobile } from '../../../gl-core';
+import { useBouncer, setBouncerKey, createPing, fingerprint } from '../Bouncer';
 
 export default function Bouncer() {
   const b = useBouncer();
   const dispatch = useDispatch();
   const startedRef = React.useRef(false);
+  const isMobile = useIsMobile();
 
+  
+
+  // 1. Create ping on first mount
   React.useEffect(() => {
-    if (startedRef.current) return; // prevent double-run in StrictMode
-    startedRef.current = true;
+  if (startedRef.current) return; // prevent double-run in StrictMode
+  startedRef.current = true;
+
+  if (!b?.ping) {
     dispatch(createPing());
-  }, [dispatch]);
+  }
+}, [dispatch, b?.ping]);
+
+  // 2. Once we have a ping but haven't checked yet → fingerprint
+  React.useEffect(() => {
+    if (b?.ping && !b?.checked) {
+      dispatch(fingerprint());
+    }
+  }, [b?.ping, b?.checked, dispatch]);
 
   const handleClose = () => dispatch(setBouncerKey('dialogOpen', false));
   const handleBtnClick = () => dispatch(setBouncerKey('dialogOpen', true));
@@ -28,7 +41,7 @@ export default function Bouncer() {
         icon="bouncer"
         onClick={handleBtnClick}
       />
-      <Dialog open={b.dialogOpen} onClose={handleClose}>
+      <Dialog fullWidth fullScreen={isMobile} open={b.dialogOpen} onClose={handleClose}>
         <CardHeader
           avatar={<Icon icon="bouncer" />}
           title="Bouncer"
@@ -43,7 +56,7 @@ export default function Bouncer() {
           }
         />
         <Box>
-          <pre>b.ping: {JSON.stringify(b.ping, null, 2)}</pre>
+          <pre style={{fontSize:11}}>ping: {JSON.stringify(b.ping, null, 2)}</pre>
         </Box>
       </Dialog>
     </>
