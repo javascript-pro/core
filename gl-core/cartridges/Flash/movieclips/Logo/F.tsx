@@ -1,11 +1,17 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/Flash/movieclips/logo/F.tsx
 import React from 'react';
 import { TMovieClip } from '../../types';
-// import { useTheme } from '@mui/material';
+import { useTheme } from '@mui/material';
 
 export default function F({ ...props }: TMovieClip) {
-  // const theme = useTheme();
-  // const frontColor = theme.palette.primary.main;
+  const theme = useTheme();
+  const { mode } = theme.palette;
+  let frontColor = theme.palette.background.default;
+  if (mode === 'dark') {
+    frontColor = theme.palette.primary.main;
+  }
+  const midColor = theme.palette.primary.main;
+  const darkColor = theme.palette.text.primary;
 
   return (
     <svg width="210.612245px" height="400px" viewBox="0 0 210.612245 400">
@@ -14,12 +20,12 @@ export default function F({ ...props }: TMovieClip) {
           <g transform="translate(555.266, 124.0688)">
             <polygon
               id="black"
-              fill="#000000"
+              fill={darkColor}
               points="4.59183673 390 4.59183673 6.32653061 195.612245 6.32653061 195.612245 91.5873016 110.714286 91.5873016 110.714286 176.848073 174.387755 176.848073 174.387755 262.108844 110.714286 262.108844 110.714286 390"
             ></polygon>
             <polygon
               id="blue"
-              fill="#60A5FA"
+              fill={midColor}
               points="-18.8367347 368.306122 -18.8367347 -15.3673469 172.183673 -15.3673469 172.183673 69.893424 87.2857143 69.893424 87.2857143 155.154195 150.959184 155.154195 150.959184 240.414966 87.2857143 240.414966 87.2857143 368.306122"
             ></polygon>
             <path
@@ -27,7 +33,7 @@ export default function F({ ...props }: TMovieClip) {
               id="white"
               stroke="#052841"
               strokeWidth="10"
-              fill="#FFFFFF"
+              fill={frontColor}
             ></path>
           </g>
         </g>

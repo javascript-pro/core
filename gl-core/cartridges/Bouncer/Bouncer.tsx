@@ -1,12 +1,69 @@
-// core/gl-core/cartridges/Bouncer/Bouncer.tsx
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/Bouncer.tsx
 'use client';
+import React from 'react';
+import { Box, Dialog, CardHeader } from '@mui/material';
+import { MightyButton, useDispatch, Icon, useIsMobile } from '../../../gl-core';
+import { useBouncer, setBouncerKey, createPing, fingerprint } from '../Bouncer';
 
-import * as React from 'react';
-import { AuthForm, useUid } from '../Bouncer';
+export default function Bouncer() {
+  const b = useBouncer();
+  const dispatch = useDispatch();
+  const startedRef = React.useRef(false);
+  const isMobile = useIsMobile();
 
-export default function Bouncer({ children = null }: any) {
-  const user = useUid();
+  // 1. Create ping on first mount
+  React.useEffect(() => {
+    if (startedRef.current) return; // prevent double-run in StrictMode
+    startedRef.current = true;
 
-  if (user) return children;
-  return <AuthForm />;
+    if (!b?.ping) {
+      dispatch(createPing());
+    }
+  }, [dispatch, b?.ping]);
+
+  // 2. Once we have a ping but haven't checked yet → fingerprint
+  React.useEffect(() => {
+    if (b?.ping && !b?.checked) {
+      dispatch(fingerprint());
+    }
+  }, [b?.ping, b?.checked, dispatch]);
+
+  const handleClose = () => dispatch(setBouncerKey('dialogOpen', false));
+  const handleBtnClick = () => dispatch(setBouncerKey('dialogOpen', true));
+
+  return (
+    <>
+      <MightyButton
+        mode="icon"
+        label="Bouncer"
+        icon="bouncer"
+        onClick={handleBtnClick}
+      />
+      <Dialog
+        fullWidth
+        fullScreen={isMobile}
+        open={b.dialogOpen}
+        onClose={handleClose}
+      >
+        <CardHeader
+          avatar={<Icon icon="bouncer" />}
+          title="Bouncer"
+          subheader="Your name's not down, mate."
+          action={
+            <MightyButton
+              mode="icon"
+              label="Close"
+              icon="cancel"
+              onClick={handleClose}
+            />
+          }
+        />
+        <Box>
+          <pre style={{ fontSize: 11 }}>
+            ping: {JSON.stringify(b.ping, null, 2)}
+          </pre>
+        </Box>
+      </Dialog>
+    </>
+  );
 }

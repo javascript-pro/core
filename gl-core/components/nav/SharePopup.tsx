@@ -8,13 +8,7 @@ import {
   WhatsappShareButton,
   TwitterShareButton,
 } from 'react-share';
-import {
-  Box,
-  Menu,
-  MenuItem,
-  ListItemIcon,
-  ListItemText,
-} from '@mui/material';
+import { Box, Menu, MenuItem, ListItemIcon, ListItemText } from '@mui/material';
 import { Icon, MightyButton } from '../../../gl-core';
 
 export type TFrontmatter = {
@@ -32,8 +26,7 @@ export default function SharePopup({ frontmatter }: TSharePopup) {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
   const { title, description } = frontmatter ?? {};
-  const url =
-    typeof window !== 'undefined' ? window.location.href : '';
+  const url = typeof window !== 'undefined' ? window.location.href : '';
 
   const handleShareClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
@@ -58,6 +51,7 @@ export default function SharePopup({ frontmatter }: TSharePopup) {
 
       <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
         <MenuItem
+          sx={{ minWidth: 200 }}
           onClick={() => {
             if (navigator?.clipboard?.writeText) {
               navigator.clipboard.writeText(url);

@@ -13,6 +13,12 @@ export type TPage = {
   slug?: string[];
 };
 
+export type NavNode = {
+  title?: string;
+  slug?: string;
+  children?: NavNode[];
+};
+
 function flattenNav(node: any, allSlugs: string[] = []): string[] {
   if (node.slug) {
     const cleaned = node.slug.replace(/^\/+/, '').replace(/\/+$/, '');
@@ -64,6 +70,27 @@ function findNavItem(slugPath: string, node: any): any | null {
     }
   }
   return null;
+}
+
+function navToMarkdown(node: NavNode, depth = 0): string {
+  const lines: string[] = [];
+  const isRoot = !node.slug || node.slug === '' || node.slug === '/';
+  const pad = '  '.repeat(depth); // 2 spaces per level for Markdown nesting
+
+  if (!isRoot && node.slug) {
+    const clean = node.slug.replace(/^\/+|\/+$/g, '');
+    const label = node.title ?? clean;
+    lines.push(`${pad}- [${label}](/${clean})`);
+  }
+
+  if (node.children?.length) {
+    const nextDepth = isRoot ? depth : depth + 1;
+    for (const child of node.children) {
+      lines.push(navToMarkdown(child, nextDepth));
+    }
+  }
+
+  return lines.join('\n');
 }
 
 async function loadFrontmatter(slugPath: string) {
@@ -156,16 +183,18 @@ export default async function Page({ params }: { params: any }) {
       isIndex: true,
     },
   ];
-
-  let content =
-    '> This route is not handled by Next.js App Router,  [RESTART](/?reboot)';
+  //
+  // 👉 Go back to the homepage or pick from the pages below.
+  let content = `> Sorry, we couldn't find the page you were looking for.,  
+  👉 [Home](/?reboot)`;
   let frontmatter: any = {
-    icon: 'blokey',
+    icon: 'goldlabel',
     title: 'Goldlabel',
-    description: '',
+    description: 'Bad panda',
     image: '/png/og.png',
   };
   let isIndex = false;
+  let is404 = true;
 
   for (const { filePath, isIndex: indexFlag } of tryPaths) {
     try {
@@ -175,6 +204,7 @@ export default async function Page({ params }: { params: any }) {
         content = parsed.content;
         frontmatter = parsed.data;
         isIndex = indexFlag;
+        is404 = false;
         break;
       }
     } catch (error) {
@@ -185,6 +215,12 @@ export default async function Page({ params }: { params: any }) {
   const navItem = findNavItem(slugPath, globalNav[0]);
   const title = navItem?.title || 'Goldlabel';
   const ogImage = frontmatter.image || '/png/og.png';
+
+  // If page not found → build a markdown list of all pages
+  if (is404) {
+    const listMarkdown = navToMarkdown(globalNav[0] as NavNode);
+    content += `\n\n${listMarkdown}\n`;
+  }
 
   return (
     <Core frontmatter={{ ...frontmatter, isIndex }} body={content}>

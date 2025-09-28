@@ -1,38 +1,42 @@
-// core/gl-core/cartridges/Bouncer/types.d.ts
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/types.d.ts
 
-export type TUser = {
-  [key: string]: any;
-} | null;
-
-export type TBouncer = {
-  frontmatter?: any;
-  content?: any;
-  slug: string;
-  children?: React.ReactNode;
-  [key: string]: any;
+export type TFingerprint = {
+  id: string;
+  displayName?: string;
+  avatar?: string; // new field for avatar path
+  ip?: string;
+  country_code?: string;
+  country_name?: string;
+  state_prov?: string;
+  city?: string;
+  latitude?: string;
+  longitude?: string;
+  isp?: string;
+  organization?: string;
+  timezone_name?: string;
+  timezone_offset?: number;
+  current_time?: string;
+  currency_code?: string;
+  currency_symbol?: string;
+  browser?: string;
+  os?: string;
+  isMobile?: boolean;
+  platform?: string;
+  vendor?: string;
+  hardwareConcurrency?: number | null;
+  deviceMemory?: number | null;
+  languages?: string; // comma‑joined list
 };
 
-export type TAuthed = {
-  [key: string]: any;
-};
-
-export type TSignoutButton = {
-  [key: string]: any;
+export type TPing = {
+  created: number;
+  fingerprint: string | null;
+  displayName: string | null;
 };
 
 export type TBouncerState = {
   cartridge: string;
-  feedback: TFeedback | null;
-  authing: boolean;
-  user: {
-    email: string | null;
-    fingerprint: string | null;
-  } | null;
-};
-
-export type TSeverity = 'success' | 'info' | 'warning' | 'error';
-
-export type TFrontmatter = {
-  title?: string;
+  ping: TPing | null;
+  checked: boolean;
   [key: string]: any;
 };

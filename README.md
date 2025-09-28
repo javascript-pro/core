@@ -12,12 +12,13 @@ cd core
 yarn install
 ```
 
-## [Cartridges](https://github.com/javascript-pro/core/tree/staging/gl-core/cartridges)
+## 💾 [Cartridges](https://github.com/javascript-pro/core/tree/staging/gl-core/cartridges)
 
+- ⚡️ [Flash](https://github.com/javascript-pro/core/tree/staging/gl-core/cartridges/Flash)
 - [Theme](https://github.com/javascript-pro/core/tree/staging/gl-core/cartridges/Theme)
 - [Uberedux](https://github.com/javascript-pro/core/tree/staging/gl-core/cartridges/Uberedux)
 
-## Features
+## 👍 Features
 
 - **Next.js with App Router**: Modern routing and optimized builds.
 - **Markdown-based content**: Pages and apps are generated from the `public/markdown` folder.
@@ -43,14 +44,9 @@ yarn dev
 - Runs the app at [http://localhost:3000](http://localhost:3000).
 - Firebase credentials and other API keys are loaded from `.env.local`.
 
-## Deployment
+## 🔑 Deployment
 
 Goldlabel Core is optimized for **Vercel**, but can be deployed to any static-friendly hosting platform.
-
-```bash
-yarn build
-yarn start
-```
 
 ## License
 
