@@ -1,16 +1,19 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/index.tsx
 import Bouncer from './Bouncer';
+import PingViewer from './components/PingViewer';
+
 import { initialState as initialStateBouncer } from './initialState';
 import { useBouncer } from './useBouncer';
 import { setBouncerKey } from './actions/setBouncerKey';
 import { createPing } from './actions/createPing';
-import { fingerprint } from './actions/fingerprint';
+import { ping } from './actions/ping';
 
 export {
   Bouncer,
+  PingViewer,
   initialStateBouncer,
   useBouncer,
   setBouncerKey,
-  fingerprint,
+  ping,
   createPing,
 };

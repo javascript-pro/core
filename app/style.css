@@ -6,19 +6,19 @@ body,
   padding: 0;
 }
 body {
-  background: #001321;
+  /* background: #001321; */
 }
 blockquote {
-  border-left: 2px solid #a6d4d1;
+  border-left: 2px solid #1db2d3;
   padding-left: 20px;
   margin: 0;
 }
 pre,
 code {
-  background: #e4fbf9;
-  color: #222121;
+  background: #000000;
+  color: #ffffff;
   font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
-  font-size: 0.85em;
+  font-size: 0.75em;
 }
 pre {
   padding: 8px;

@@ -1,11 +1,11 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/fingerprint.tsx
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/ping.tsx
 import { TUbereduxDispatch } from '../../Uberedux';
 import { setUbereduxKey } from '../../Uberedux';
 import { setBouncerKey } from '../';
 import { db } from '../../../lib/firebase';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 
-export const fingerprint =
+export const ping =
   () => async (dispatch: TUbereduxDispatch, getState: any) => {
     try {
       const state = getState();
@@ -15,14 +15,18 @@ export const fingerprint =
         throw new Error('No ping id available');
       }
 
+      // Exit early if hostname is localhost
+      if (ping.id.startsWith('localhost')) {
+        console.log('localhost does not ping');
+        return;
+      }
+
       const ref = doc(db, 'pings', ping.id);
       const snap = await getDoc(ref);
 
       if (snap.exists()) {
-        // console.log('Fingerprint already exists in Firestore', ping.id);
-        // Example: mark as checked and existing
-        dispatch(setBouncerKey('checked', true));
-        // You might also want to merge/update the doc here instead of nothing
+        console.log('Fingerprint already exists in Firestore', ping.id);
+        dispatch(setBouncerKey('pinged', true));
       } else {
         console.log('Creating new ping in Firestore', ping.id);
         await setDoc(ref, {
@@ -30,7 +34,7 @@ export const fingerprint =
           created: Date.now(),
           updated: Date.now(),
         });
-        dispatch(setBouncerKey('checked', true));
+        dispatch(setBouncerKey('pinged', true));
       }
     } catch (e: unknown) {
       const msg = e instanceof Error ? e.message : String(e);

@@ -46,10 +46,10 @@ export const createPing =
   () => async (dispatch: TUbereduxDispatch, getState: any) => {
     try {
       const state = getState();
-      const current = state?.redux.bouncer.ping;
+      const current = state?.redux.bouncer;
 
       // avoid re-creating if already ready
-      if (current?.ready) return;
+      if (current?.pingReady) return;
 
       // 1. Generate fingerprint id
       const id = await loadFingerprint();
@@ -80,7 +80,7 @@ export const createPing =
       // 3. Device info
       const device = getDeviceInfo();
 
-      // 4. Flatten all into ping object
+      // 4. Build ping object
       const ping = {
         id,
         hostname: window.location.hostname,
@@ -109,13 +109,12 @@ export const createPing =
         languages: Array.isArray(device.languages)
           ? device.languages.join(',')
           : '',
-        ready: true,
         created: Date.now(),
-        lastPinged: null,
       };
 
-      // 5. Dispatch result into bouncer.ping
+      // 5. Dispatch into bouncer slice
       dispatch(setBouncerKey('ping', ping));
+      dispatch(setBouncerKey('pingReady', true));
     } catch (e: unknown) {
       const msg = e instanceof Error ? e.message : String(e);
       dispatch(setUbereduxKey({ key: 'error', value: msg }));

@@ -3,7 +3,13 @@
 import React from 'react';
 import { Box, Dialog, CardHeader } from '@mui/material';
 import { MightyButton, useDispatch, Icon, useIsMobile } from '../../../gl-core';
-import { useBouncer, setBouncerKey, createPing, fingerprint } from '../Bouncer';
+import {
+  PingViewer,
+  useBouncer,
+  setBouncerKey,
+  createPing,
+  ping,
+} from '../Bouncer';
 
 export default function Bouncer() {
   const b = useBouncer();
@@ -21,12 +27,12 @@ export default function Bouncer() {
     }
   }, [dispatch, b?.ping]);
 
-  // 2. Once we have a ping but haven't checked yet → fingerprint
+  // 2. Once we have a ping but haven't pinged yet → ping
   React.useEffect(() => {
-    if (b?.ping && !b?.checked) {
-      dispatch(fingerprint());
+    if (b?.ping && !b?.pinged) {
+      dispatch(ping());
     }
-  }, [b?.ping, b?.checked, dispatch]);
+  }, [b?.ping, b?.pinged, dispatch]);
 
   const handleClose = () => dispatch(setBouncerKey('dialogOpen', false));
   const handleBtnClick = () => dispatch(setBouncerKey('dialogOpen', true));
@@ -41,6 +47,7 @@ export default function Bouncer() {
       />
       <Dialog
         fullWidth
+        maxWidth="xs"
         fullScreen={isMobile}
         open={b.dialogOpen}
         onClose={handleClose}
@@ -59,9 +66,7 @@ export default function Bouncer() {
           }
         />
         <Box>
-          <pre style={{ fontSize: 11 }}>
-            ping: {JSON.stringify(b.ping, null, 2)}
-          </pre>
+          <PingViewer />
         </Box>
       </Dialog>
     </>
