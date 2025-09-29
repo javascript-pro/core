@@ -36,7 +36,7 @@ Goldlabel Core is optimized for [Vercel](https://vercel.com), but can be deploye
 ## 💾 [Cartridges](https://github.com/javascript-pro/core/tree/staging/gl-core/cartridges)
 
 - [Bouncer](https://github.com/javascript-pro/core/tree/staging/gl-core/cartridges/Bouncer)  
-    Auth, Admin and Analytics
+   Auth, Admin and Analytics
 - ⚡️ [Flash](https://github.com/javascript-pro/core/tree/staging/gl-core/cartridges/Flash)
 - [Theme](https://github.com/javascript-pro/core/tree/staging/gl-core/cartridges/Theme)
 - [Uberedux](https://github.com/javascript-pro/core/tree/staging/gl-core/cartridges/Uberedux)

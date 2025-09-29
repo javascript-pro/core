@@ -150,7 +150,7 @@
                       "free",
                       "bouncer"
                     ],
-                    "excerpt": "Bouncer Cartridge\n\nThe Bouncer cartridge is responsible for two core features in Goldlabel Core:\n\n1. Authentication (Firebase Auth +  collection)\n2. Real‑time Visitor Tracking (Pings)\n\n 1. Authenticat"
+                    "excerpt": "Auth, Admin and Analytics\n\nThe Bouncer cartridge is responsible for two core features in Goldlabel Core: Authentication and Access Control System\n\n1. Authentication (Firebase Auth +  collection)\n2. Re"
                   },
                   {
                     "title": "New Cartridge",
@@ -762,6 +762,14 @@
                 "icon": "van",
                 "type": "file",
                 "excerpt": "2025 Map\n\n[GoogleMap src=\"https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=001321\"]"
+              },
+              {
+                "title": "newpage",
+                "slug": "/life/vanlife/newpage",
+                "order": 10,
+                "icon": "van",
+                "type": "file",
+                "excerpt": "Best price (noun)\n\nThe universal truth: if it costs nothing, it’s already worth more than you were planning to spend.\n\n Usage\n\n \"How much was that? — Free. — Best price.\"\n \"I wasn’t even looking, but "
               }
             ]
           },

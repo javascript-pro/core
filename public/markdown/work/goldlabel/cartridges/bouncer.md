@@ -1,7 +1,7 @@
 ---
 order: 130
 title: Bouncer
-description: Authentication and Access Control System
+description: Auth, Admin & Analytics
 slug: /work/goldlabel/cartridges/bouncer
 icon: admin
 image: /png/n64/test.png
@@ -9,16 +9,16 @@ tags: cartridges, cartridge, free, bouncer
 featured: true
 ---
 
-# Bouncer Cartridge
+# Auth, Admin and Analytics
 
-The **Bouncer** cartridge is responsible for two core features in Goldlabel Core:
+The Bouncer cartridge is responsible for two core features in Goldlabel Core: Authentication and Access Control System
 
-1. **Authentication** (Firebase Auth + `auth` collection)
-2. **Real‑time Visitor Tracking (Pings)**
+1. Authentication (Firebase Auth + `auth` collection)
+2. Real‑time Visitor Tracking (Pings)
 
 ## 1. Authentication
 
-Bouncer manages user authentication using **Firebase Auth**.  
+Bouncer manages user authentication using Firebase Auth.  
 Every user also has a corresponding document in the Firestore `auth` collection that stores profile information and access level.
 
 ### Auth Data Model (`auth` collection)
@@ -39,26 +39,26 @@ Each document is keyed by `uid` and typically contains:
 
 ### Auth Flow
 
-- **Sign Up**  
+- Sign Up  
   Create a new Firebase Auth user, then create a matching doc in `auth` with default metadata.
 
-- **Sign In / Out**  
+- Sign In / Out  
   Handled via Firebase Auth. Bouncer listens to `onAuthStateChanged` and updates local state (via Uberedux).
 
-- **Profile Updates**  
+- Profile Updates  
   Update both Firebase Auth (displayName, photoURL) and Firestore `auth`.
 
-- **Deletion**  
+- Deletion  
   Delete user from Firebase Auth and Firestore `auth`.
 
 ## 2. Real‑Time Visitor Tracking (Pings)
 
 The second function is similar to lightweight analytics.  
-Every visitor (authenticated or not) continuously creates or updates a **ping** document in Firestore.
+Every visitor (authenticated or not) continuously creates or updates a ping document in Firestore.
 
 ### Ping Data Model (`pings` collection)
 
-Each document is keyed by a **fingerprint** (from `fingerprint.js`):
+Each document is keyed by a fingerprint (from `fingerprint.js`):
 
 ```ts
 {
@@ -83,17 +83,17 @@ Each document is keyed by a **fingerprint** (from `fingerprint.js`):
 
 ### Ping Flow
 
-- **Initialization**
+- Initialization
 
   - On first load, generate a fingerprint (`@fingerprintjs/fingerprintjs`).
   - Fetch geo info from a server‑side geo lookup (`/api/geo`).
 
-- **When Pings Are Sent**
+- When Pings Are Sent
 
   - On every route change.
   - On an interval (e.g. every 10 seconds) while page is open.
 
-- **What Happens**
+- What Happens
   - `setDoc(doc(db, 'pings', fingerprint), { ... }, { merge: true })`
   - If authenticated, `uid`, `displayName`, and `avatar` are included.
 
@@ -132,16 +132,16 @@ gl-core/
 
 ## Security & Considerations
 
-- **Firestore Rules**
+- Firestore Rules
 
   - `auth` collection: only admins or owner can update their own doc.
   - `pings` collection: allow anonymous writes for own fingerprint; only admins can send `message`.
 
-- **Rate Limiting**
+- Rate Limiting
 
   - Consider throttling or Cloud Functions if high traffic.
 
-- **Privacy**
+- Privacy
   - No cookies; fingerprints are anonymous unless user is authenticated.
 
 ## Dependencies
@@ -156,4 +156,4 @@ gl-core/
 - Implement the `usePing` hook to manage client‑side ping lifecycle.
 - Scaffold Admin UI (`UsersAdmin` and `PingsAdmin`) to manage users and monitor visitors.
 
-**Bouncer** is designed as a drop‑in cartridge — wire it into the app, and you immediately have authentication and real‑time visitor tracking.
+Bouncer is designed as a drop‑in cartridge — wire it into the app, and you immediately have authentication and real‑time visitor tracking.

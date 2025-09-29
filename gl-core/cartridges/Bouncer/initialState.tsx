@@ -6,5 +6,4 @@ export const initialState: TBouncerState = {
   dialogOpen: false,
   pinged: false,
   ping: null,
-  
 };
