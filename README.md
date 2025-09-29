@@ -12,7 +12,7 @@ cd core
 yarn install
 ```
 
-## Environment Setup
+## → Environment Setup
 
 Create a `.env.local` file in the root directory with this variable. When you enable various parts of the apps which require other vars, the app will let you know
 
@@ -35,6 +35,8 @@ Goldlabel Core is optimized for [Vercel](https://vercel.com), but can be deploye
 
 ## 💾 [Cartridges](https://github.com/javascript-pro/core/tree/staging/gl-core/cartridges)
 
+- [Bouncer](https://github.com/javascript-pro/core/tree/staging/gl-core/cartridges/Bouncer)  
+    Auth, Admin and Analytics
 - ⚡️ [Flash](https://github.com/javascript-pro/core/tree/staging/gl-core/cartridges/Flash)
 - [Theme](https://github.com/javascript-pro/core/tree/staging/gl-core/cartridges/Theme)
 - [Uberedux](https://github.com/javascript-pro/core/tree/staging/gl-core/cartridges/Uberedux)

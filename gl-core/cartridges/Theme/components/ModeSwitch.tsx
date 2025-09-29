@@ -7,6 +7,7 @@ import {
   MenuItem,
   ListItemIcon,
   ListItemText,
+  useMediaQuery,
 } from '@mui/material';
 import {
   Icon,
@@ -20,8 +21,12 @@ export default function ModeSwitch() {
   const slice = useSlice();
   const { themeMode } = slice;
 
+  // resolve system preference if null
+  const prefersDark = useMediaQuery('(prefers-color-scheme: dark)');
+  const effectiveMode = themeMode ?? (prefersDark ? 'dark' : 'light');
+
   const handleToggle = () => {
-    const newMode = themeMode === 'dark' ? 'light' : 'dark';
+    const newMode = effectiveMode === 'dark' ? 'light' : 'dark';
     dispatch(setUbereduxKey({ key: 'themeMode', value: newMode }));
   };
 
@@ -30,13 +35,13 @@ export default function ModeSwitch() {
       <ListItemIcon>
         <Icon
           color="primary"
-          icon={themeMode === 'dark' ? 'lightmode' : ('darkmode' as any)}
+          icon={effectiveMode === 'dark' ? 'lightmode' : ('darkmode' as any)}
         />
       </ListItemIcon>
       <ListItemText
         primary={
           <Typography variant="body1">
-            {themeMode === 'dark' ? 'Light mode' : 'Dark mode'}
+            {effectiveMode === 'dark' ? 'Light mode' : 'Dark mode'}
           </Typography>
         }
       />

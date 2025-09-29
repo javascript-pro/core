@@ -28,7 +28,7 @@ export default function PingViewer() {
     <>
       {/* Device & Browser */}
       <CardContent>
-        <Box sx={{ display: 'flex'}}>
+        <Box sx={{ display: 'flex' }}>
           {deviceFields.map(({ key, label }, i) => {
             const value = ping[key];
             if (value == null) return null;
@@ -55,9 +55,10 @@ export default function PingViewer() {
       </CardContent>
 
       {/* Geo Info */}
-      <CardHeader 
+      <CardHeader
         avatar={<Icon icon={'geolocator'} />}
-        title="Geo Information" />
+        title="Geo Information"
+      />
       <CardContent>
         <Grid container spacing={2}>
           {geoFields.map(({ key, label }, i) => {
@@ -70,7 +71,6 @@ export default function PingViewer() {
                 key={`geo_${i}`}
                 sx={{ display: 'flex', alignItems: 'center' }}
               >
-                
                 <Typography sx={{ ml: 1 }} variant="body2">
                   <strong>{label}:</strong> {String(value)}
                 </Typography>

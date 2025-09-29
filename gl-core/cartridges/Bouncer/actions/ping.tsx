@@ -26,7 +26,7 @@ export const ping =
 
       if (snap.exists()) {
         console.log('Fingerprint already exists in Firestore', ping.id);
-        dispatch(setBouncerKey('checked', true));
+        dispatch(setBouncerKey('pinged', true));
       } else {
         console.log('Creating new ping in Firestore', ping.id);
         await setDoc(ref, {
@@ -34,7 +34,7 @@ export const ping =
           created: Date.now(),
           updated: Date.now(),
         });
-        dispatch(setBouncerKey('checked', true));
+        dispatch(setBouncerKey('pinged', true));
       }
     } catch (e: unknown) {
       const msg = e instanceof Error ? e.message : String(e);
