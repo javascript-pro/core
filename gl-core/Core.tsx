@@ -36,7 +36,6 @@ import { SideAds } from '../gl-core';
 const config = configRaw as TConfig;
 
 export default function Core({ frontmatter, body = null }: TCore) {
-  
   const { noImage, image, title } = frontmatter ?? {};
   const [imageError, setImageError] = React.useState(false);
   const prefersDark = useMediaQuery('(prefers-color-scheme: dark)');

@@ -1,7 +1,7 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/components/PingViewer.tsx
 'use client';
 import * as React from 'react';
-import { CardHeader, CardContent, Grid, Typography } from '@mui/material';
+import { Box, CardHeader, CardContent, Grid, Typography } from '@mui/material';
 import { Icon } from '../../../../gl-core';
 import { useBouncer } from '../../Bouncer';
 
@@ -12,7 +12,7 @@ export default function PingViewer() {
   const deviceFields: { key: keyof typeof ping; label: string }[] = [
     { key: 'browser', label: 'Browser' },
     { key: 'os', label: 'OS' },
-    { key: 'isMobile', label: 'Mobile' },
+    // { key: 'isMobile', label: 'Mobile' },
   ];
 
   const geoFields: { key: keyof typeof ping; label: string }[] = [
@@ -27,9 +27,8 @@ export default function PingViewer() {
   return (
     <>
       {/* Device & Browser */}
-      <CardHeader title="Device & Browser" />
       <CardContent>
-        <Grid container spacing={2}>
+        <Box sx={{ display: 'flex'}}>
           {deviceFields.map(({ key, label }, i) => {
             const value = ping[key];
             if (value == null) return null;
@@ -37,28 +36,28 @@ export default function PingViewer() {
             const icon = String(value).toLowerCase();
 
             return (
-              <Grid
-                size={12}
+              <Box
                 key={`deviceinfo_${i}`}
                 sx={{ display: 'flex', alignItems: 'center' }}
               >
                 <Icon icon={icon as any} />
-                <Typography sx={{ ml: 1 }} variant="body2">
-                  <strong>{label}:</strong>{' '}
+                <Typography sx={{ mx: 2 }} variant="body2">
                   {key === 'isMobile'
                     ? value
                       ? 'mobile'
                       : 'desktop'
-                    : String(value).toLowerCase()}
+                    : String(value)}
                 </Typography>
-              </Grid>
+              </Box>
             );
           })}
-        </Grid>
+        </Box>
       </CardContent>
 
       {/* Geo Info */}
-      <CardHeader title="Geo Information" />
+      <CardHeader 
+        avatar={<Icon icon={'geolocator'} />}
+        title="Geo Information" />
       <CardContent>
         <Grid container spacing={2}>
           {geoFields.map(({ key, label }, i) => {
@@ -71,7 +70,7 @@ export default function PingViewer() {
                 key={`geo_${i}`}
                 sx={{ display: 'flex', alignItems: 'center' }}
               >
-                <Icon icon={'geolocator'} />
+                
                 <Typography sx={{ ml: 1 }} variant="body2">
                   <strong>{label}:</strong> {String(value)}
                 </Typography>

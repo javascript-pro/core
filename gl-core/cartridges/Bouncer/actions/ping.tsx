@@ -15,14 +15,18 @@ export const ping =
         throw new Error('No ping id available');
       }
 
+      // Exit early if hostname is localhost
+      if (ping.id.startsWith('localhost')) {
+        console.log('No pinging from localhost');
+        return;
+      }
+
       const ref = doc(db, 'pings', ping.id);
       const snap = await getDoc(ref);
 
       if (snap.exists()) {
         console.log('Fingerprint already exists in Firestore', ping.id);
-        // Example: mark as checked and existing
         dispatch(setBouncerKey('checked', true));
-        // You might also want to merge/update the doc here instead of nothing
       } else {
         console.log('Creating new ping in Firestore', ping.id);
         await setDoc(ref, {
