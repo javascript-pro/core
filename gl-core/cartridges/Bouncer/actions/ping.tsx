@@ -16,10 +16,10 @@ export const ping =
       }
 
       // Exit early if hostname is localhost
-      // if (ping.id.startsWith('localhost')) {
-      //   console.log('localhost does not ping');
-      //   return;
-      // }
+      if (ping.id.startsWith('localhost')) {
+        console.log('localhost does not ping');
+        return;
+      }
 
       const ref = doc(db, 'pings', ping.id);
       const snap = await getDoc(ref);
