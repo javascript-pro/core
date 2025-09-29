@@ -20,8 +20,8 @@ export default function PingViewer() {
     { key: 'country_name', label: 'Country' },
     { key: 'state_prov', label: 'State/Province' },
     { key: 'city', label: 'City' },
-    { key: 'timezone_name', label: 'Timezone' },
-    { key: 'current_time', label: 'Local Time' },
+    // { key: 'timezone_name', label: 'Timezone' },
+    // { key: 'current_time', label: 'Local Time' },
   ];
 
   return (

@@ -47,6 +47,7 @@ export default function Bouncer() {
       />
       <Dialog
         fullWidth
+        maxWidth="xs"
         fullScreen={isMobile}
         open={b.dialogOpen}
         onClose={handleClose}
