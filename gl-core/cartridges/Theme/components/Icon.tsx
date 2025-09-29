@@ -307,6 +307,7 @@ export type TIcon = {
     | 'signout'
     | 'api'
     | 'work'
+    | 'macos'
     | 'signin'
     | 'blokey'
     | 'android'
@@ -787,6 +788,10 @@ export default function Icon({ icon, color }: TIcon) {
     case 'mac':
       iconFragment = <MacIcon color={color} />;
       break;
+    case 'macos':
+      iconFragment = <MacIcon color={color} />;
+      break;
+      
     case 'xbox':
       iconFragment = <XboxIcon color={color} />;
       break;

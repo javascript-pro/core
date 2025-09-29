@@ -1,11 +1,11 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/fingerprint.tsx
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/ping.tsx
 import { TUbereduxDispatch } from '../../Uberedux';
 import { setUbereduxKey } from '../../Uberedux';
 import { setBouncerKey } from '../';
 import { db } from '../../../lib/firebase';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 
-export const fingerprint =
+export const ping =
   () => async (dispatch: TUbereduxDispatch, getState: any) => {
     try {
       const state = getState();
@@ -19,7 +19,7 @@ export const fingerprint =
       const snap = await getDoc(ref);
 
       if (snap.exists()) {
-        // console.log('Fingerprint already exists in Firestore', ping.id);
+        console.log('Fingerprint already exists in Firestore', ping.id);
         // Example: mark as checked and existing
         dispatch(setBouncerKey('checked', true));
         // You might also want to merge/update the doc here instead of nothing

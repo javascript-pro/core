@@ -3,7 +3,7 @@
 import React from 'react';
 import { Box, Dialog, CardHeader } from '@mui/material';
 import { MightyButton, useDispatch, Icon, useIsMobile } from '../../../gl-core';
-import { useBouncer, setBouncerKey, createPing, fingerprint } from '../Bouncer';
+import { PingViewer, useBouncer, setBouncerKey, createPing, ping } from '../Bouncer';
 
 export default function Bouncer() {
   const b = useBouncer();
@@ -24,7 +24,7 @@ export default function Bouncer() {
   // 2. Once we have a ping but haven't checked yet → fingerprint
   React.useEffect(() => {
     if (b?.ping && !b?.checked) {
-      dispatch(fingerprint());
+      dispatch(ping());
     }
   }, [b?.ping, b?.checked, dispatch]);
 
@@ -59,9 +59,8 @@ export default function Bouncer() {
           }
         />
         <Box>
-          <pre style={{ fontSize: 11 }}>
-            ping: {JSON.stringify(b.ping, null, 2)}
-          </pre>
+          <PingViewer />
+          
         </Box>
       </Dialog>
     </>
