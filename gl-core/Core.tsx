@@ -7,6 +7,7 @@ import * as React from 'react';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import {
+  useMediaQuery,
   CssBaseline,
   Container,
   Box,
@@ -35,10 +36,10 @@ import { SideAds } from '../gl-core';
 const config = configRaw as TConfig;
 
 export default function Core({ frontmatter, body = null }: TCore) {
+  
   const { noImage, image, title } = frontmatter ?? {};
-  let fullScreen = false;
   const [imageError, setImageError] = React.useState(false);
-
+  const prefersDark = useMediaQuery('(prefers-color-scheme: dark)');
   const siblings = useSiblings();
   const pathname = usePathname();
   const themeMode = useThemeMode();
@@ -51,8 +52,11 @@ export default function Core({ frontmatter, body = null }: TCore) {
     dispatch(toggleLoading(false));
   }, [dispatch]);
 
+  const effectiveThemeMode =
+    themeMode === null ? (prefersDark ? 'dark' : 'light') : themeMode;
+
   return (
-    <Theme theme={config.themes[themeMode]}>
+    <Theme theme={config.themes[effectiveThemeMode]}>
       <CssBaseline />
       <IncludeAll />
       <Container id="core" maxWidth="md">

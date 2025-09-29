@@ -11,7 +11,7 @@ export const initialState: any = {
   config,
   version: pJSON.version,
   persisted: Date.now(),
-  themeMode: 'dark',
+  themeMode: null,
   feedback: null,
   bouncer: initialStateBouncer,
   flash: initialStateFlash,

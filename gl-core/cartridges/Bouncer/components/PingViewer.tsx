@@ -1,12 +1,7 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/components/PingViewer.tsx
 'use client';
 import * as React from 'react';
-import {
-  CardHeader,
-  CardContent,
-  Grid,
-  Typography,
-} from '@mui/material';
+import { CardHeader, CardContent, Grid, Typography } from '@mui/material';
 import { Icon } from '../../../../gl-core';
 import { useBouncer } from '../../Bouncer';
 
@@ -76,7 +71,7 @@ export default function PingViewer() {
                 key={`geo_${i}`}
                 sx={{ display: 'flex', alignItems: 'center' }}
               >
-                <Icon icon={"geolocator"} />
+                <Icon icon={'geolocator'} />
                 <Typography sx={{ ml: 1 }} variant="body2">
                   <strong>{label}:</strong> {String(value)}
                 </Typography>

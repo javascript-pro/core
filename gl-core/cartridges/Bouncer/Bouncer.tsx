@@ -3,7 +3,13 @@
 import React from 'react';
 import { Box, Dialog, CardHeader } from '@mui/material';
 import { MightyButton, useDispatch, Icon, useIsMobile } from '../../../gl-core';
-import { PingViewer, useBouncer, setBouncerKey, createPing, ping } from '../Bouncer';
+import {
+  PingViewer,
+  useBouncer,
+  setBouncerKey,
+  createPing,
+  ping,
+} from '../Bouncer';
 
 export default function Bouncer() {
   const b = useBouncer();
@@ -60,7 +66,6 @@ export default function Bouncer() {
         />
         <Box>
           <PingViewer />
-          
         </Box>
       </Dialog>
     </>
