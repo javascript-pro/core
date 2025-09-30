@@ -3,12 +3,14 @@ import { initialState as initialStateFlash } from './initialState';
 import Flash from './Flash';
 import System from './lib/System';
 import Trace from './lib/Trace';
-import Stage from './lib/Stage';
+
 import MovieClip from './lib/MovieClip';
-import Macromedia from './movieclips/Macromedia';
-import Pingpongball from './movieclips/Pingpongball';
-import Controls from './movieclips/Controls';
-import Text from './movieclips/Text';
+import Stage from './components/Stage';
+import Controls from './components/Controls';
+
+// Movies
+import { Logo } from './movies/Logo';
+import { Pingpong } from './movies/Pingpong';
 
 // State
 import { useFlash } from './hooks/useFlash';
@@ -27,18 +29,9 @@ import { useDispatch } from './hooks/useDispatch';
 import { useIsMobile } from './hooks/useIsMobile';
 import { usePrefersColorScheme } from './hooks/usePrefersColorScheme';
 
-export {
-  initialStateFlash,
-  Flash,
-  System,
-  Trace,
-  Stage,
-  MovieClip,
-  Macromedia,
-  Pingpongball,
-  Controls,
-  Text,
-};
+export { Logo, Pingpong };
+
+export { initialStateFlash, Flash, System, Trace, Stage, MovieClip, Controls };
 // optional
 export {
   setUbereduxKey,

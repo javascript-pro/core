@@ -1,21 +1,31 @@
 // /app/src/Flash/components/Stage.tsx
 import React from 'react';
 import { Box } from '@mui/material';
+import { Logo, Pingpong } from '../../Flash';
 import { TStage } from '../types';
-// import { useSystem} from '../';
 
 export default React.forwardRef<HTMLDivElement, TStage>(function Stage(
-  { id, width, height, children },
+  { id, movie, width, height },
   ref,
 ) {
-  //const s = useSystem();
+  let m: React.ReactNode = null;
+
+  switch (movie) {
+    case 'Logo':
+      m = <Logo id="movie_logo" />;
+      break;
+    case 'Pingpong':
+      m = <Pingpong id="movie_pingpong" />;
+      break;
+    default:
+      m = null;
+  }
+
   return (
     <Box
       id={id}
       ref={ref}
       sx={{
-        // border: '1px solid #e2e3e4ff',
-        // background: 'white',
         position: 'relative',
         overflow: 'hidden',
         maxWidth: width,
@@ -24,8 +34,9 @@ export default React.forwardRef<HTMLDivElement, TStage>(function Stage(
         height: '100%',
       }}
     >
-      {/* <pre>{JSON.stringify(s, null, 2)}</pre> */}
-      {children}
+      {m}
+      {/* For debugging: */}
+      {/* <pre>movie: {JSON.stringify(movie, null, 2)}</pre> */}
     </Box>
   );
 });

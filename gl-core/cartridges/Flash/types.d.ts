@@ -10,6 +10,7 @@ export { TUbereduxDispatch, TRootState };
 
 export type TMovieClip = {
   id?: string;
+  opacity?: number;
   children?: React.ReactNode;
   style?: any;
   border?: boolean;
@@ -26,9 +27,9 @@ export type TFlashConfig = {
 
 export type TStage = {
   id?: string;
+  movie?: string;
   width?: number | string;
   height?: number | string;
-  children?: React.ReactNode;
 };
 
 export type TTrace = {

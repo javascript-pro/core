@@ -17,7 +17,7 @@ export const ping =
 
       // Exit early if hostname is localhost
       if (ping.id.startsWith('localhost')) {
-        console.log('localhost does not ping');
+        // console.log('localhost does not ping');
         return;
       }
 

@@ -1,5 +1,5 @@
-'use client';
 // core/gl-core/cartridges/Uberedux/store.ts
+'use client';
 import { configureStore, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import config from '../../config.json';
 import { persistStore, persistReducer } from 'redux-persist';

@@ -16,6 +16,8 @@ import {
   Typography,
 } from '@mui/material';
 import {
+  useGlobalNav,
+  fetchGlobalNav,
   Theme,
   RenderMarkdown,
   Header,
@@ -36,6 +38,7 @@ import { SideAds } from '../gl-core';
 const config = configRaw as TConfig;
 
 export default function Core({ frontmatter, body = null }: TCore) {
+  const dispatch = useDispatch();
   const { noImage, image, title } = frontmatter ?? {};
   const [imageError, setImageError] = React.useState(false);
   const prefersDark = useMediaQuery('(prefers-color-scheme: dark)');
@@ -43,7 +46,22 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const pathname = usePathname();
   const themeMode = useThemeMode();
   const isMobile = useIsMobile();
-  const dispatch = useDispatch();
+  const globalNav = useGlobalNav();
+
+  // Always attempt to fetch nav once per page load
+  const fetchedNavRef = React.useRef(false);
+  React.useEffect(() => {
+    if (fetchedNavRef.current) return;
+    fetchedNavRef.current = true;
+    dispatch(fetchGlobalNav());
+  }, [dispatch]);
+
+  // Log out current nav in store
+  React.useEffect(() => {
+    if (globalNav) {
+      // console.log('Core: globalNav available', globalNav);
+    }
+  }, [globalNav]);
 
   useVersionCheck();
 

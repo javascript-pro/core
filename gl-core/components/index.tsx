@@ -19,6 +19,7 @@ import { Header, Footer, RenderMarkdown } from './layout';
 import GoogleMap from './shortcodes/GoogleMap';
 import FlickrAlbum from './shortcodes/FlickrAlbum';
 import YouTube from './shortcodes/YouTube';
+import PageAd from './shortcodes/PageAd';
 
 export { IncludeAll, Advert, Feedback, LoadingOverlay };
 export { Header, Footer, RenderMarkdown };
@@ -40,4 +41,5 @@ export {
   SharePopup,
   FieldUpload,
   YouTube,
+  PageAd,
 };

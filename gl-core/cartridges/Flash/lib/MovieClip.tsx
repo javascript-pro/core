@@ -6,6 +6,7 @@ import { TMovieClip } from '../types';
 export default function MovieClip({
   id,
   children,
+  opacity = 1,
   border,
   width = '100%',
   height = '100%',
@@ -17,6 +18,7 @@ export default function MovieClip({
       id={id}
       sx={{
         ...style,
+        opacity,
         position: 'absolute',
         top: 0,
         left: 0,

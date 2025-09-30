@@ -1,6 +1,6 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Flash/movieclips/Macromedia.tsx
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Flash/movies/Macromedia/movieclips/Macromedia.tsx
 import React from 'react';
-import { TMovieClip } from '../types';
+import { TMovieClip } from '../../../types';
 import { useTheme, SvgIcon } from '@mui/material';
 
 export default function Macromedia(props: TMovieClip) {

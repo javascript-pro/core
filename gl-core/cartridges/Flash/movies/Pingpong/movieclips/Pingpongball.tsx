@@ -1,6 +1,6 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Flash/movieclips/Pingpongball.tsx
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Flash/movies/Pingpong/movieclips/Pingpongball.tsx
 import React from 'react';
-import { TMovieClip } from '../types';
+import { TMovieClip } from '../../../types';
 import { SvgIcon, useTheme } from '@mui/material';
 
 export default function Pingpongball({ ...props }: TMovieClip) {

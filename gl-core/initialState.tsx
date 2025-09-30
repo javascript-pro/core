@@ -1,5 +1,5 @@
 // /Users/goldlabel/GitHub/core/gl-core/initialState.tsx
-import { TCoreState } from './types';
+// import { TCoreState } from './types';
 import pJSON from '../package.json';
 import config from './config.json';
 import { initialStateFlickr } from './cartridges/Flickr';
@@ -11,6 +11,7 @@ export const initialState: any = {
   config,
   version: pJSON.version,
   persisted: Date.now(),
+  globalNav: null,
   themeMode: null,
   feedback: null,
   bouncer: initialStateBouncer,

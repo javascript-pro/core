@@ -1,7 +1,6 @@
 'use client';
 import * as React from 'react';
 import { ReactNode } from 'react';
-import Image from 'next/image';
 import { Provider } from 'react-redux';
 import { store, persistor } from './store';
 import { PersistGate } from 'redux-persist/integration/react';
