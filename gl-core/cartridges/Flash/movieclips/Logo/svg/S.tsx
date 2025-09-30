@@ -1,12 +1,12 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Flash/movieclips/logo/S.tsx
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Flash/movieclips/logo/svg/S.tsx
 import React from 'react';
-import { TMovieClip } from '../../types';
+import { TMovieClip } from '../../../types';
 import { useTheme } from '@mui/material';
 
 export default function S({ ...props }: TMovieClip) {
   const theme = useTheme();
   const { mode } = theme.palette;
-  let frontColor = theme.palette.background.default;
+  let frontColor = theme.palette.background.paper;
   if (mode === 'dark') {
     frontColor = theme.palette.primary.main;
   }

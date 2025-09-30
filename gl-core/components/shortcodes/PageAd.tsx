@@ -72,14 +72,18 @@ export default function PageAd({ slug = '/' }: { slug: string }) {
           sx={{
             alignItems: 'flex-start',
           }}
-          avatar={<Box sx={{mt:0.5}}><Icon icon={item.icon as any} /></Box>}
+          avatar={
+            <Box sx={{ mt: 0.5 }}>
+              <Icon icon={item.icon as any} color="primary" />
+            </Box>
+          }
           title={
-            <Typography variant="h6" color="text.primary">
+            <Typography variant="h6">
               {item.title}
             </Typography>
           }
           subheader={
-            <Typography variant="body2" color="text.secondary">
+            <Typography variant="body2">
               {`${subheader} ...`}
             </Typography>
           }

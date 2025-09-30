@@ -3,8 +3,8 @@ order: 20
 title: Agent User Interfaces
 description: With React & Next JS
 slug: /work/expertise/ai/agents
-icon: js
-image: https://live.staticflickr.com/65535/54661655887_c5678ff794_b.jpg
+icon: ai
+image: https://live.staticflickr.com/65535/54743292173_aed0039452_b.jpg
 tags: expertise, js, javascript, next, react, ai, agents
 ---
 

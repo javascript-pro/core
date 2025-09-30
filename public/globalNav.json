@@ -36,7 +36,7 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[Flash movie=\"logo\" height=\"200\"]\n\n[PageAd slug=\"/work/expertise/ai/codingwithai\"]\n\n \n\nWe ridiculously and pointlessly reinvented Macromedia Flash with React and TypeScript\n\n SVG Graphics\n Animation u",
+    "excerpt": "[Flash movie=\"logo\" height=\"200\"]\n\n[PageAd slug=\"/work/goldlabel/cartridges/flash\"]\n\n[PageAd slug=\"/work/expertise/ai/codingwithai\"]\n\n[PageAd slug=\"/balance/writers/generationx\"]\n\n[PageAd slug=\"/work/",
     "children": [
       {
         "title": "Work",
@@ -610,8 +610,8 @@
                     "title": "Agent User Interfaces",
                     "slug": "/work/expertise/ai/agents",
                     "order": 20,
-                    "icon": "js",
-                    "image": "https://live.staticflickr.com/65535/54661655887_c5678ff794_b.jpg",
+                    "icon": "ai",
+                    "image": "https://live.staticflickr.com/65535/54743292173_aed0039452_b.jpg",
                     "type": "file",
                     "tags": [
                       "expertise",
@@ -1006,7 +1006,7 @@
                 "title": "Generation X",
                 "slug": "/balance/writers/generation-x",
                 "order": 100,
-                "icon": "doc",
+                "icon": "blokey",
                 "image": "/jpg/cassetes.jpg",
                 "type": "file",
                 "excerpt": "The term Generation X acquired a modern application after the release of Generation X: Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Glossary\n\nMcJob A lo"
