@@ -4,7 +4,7 @@ import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Box, Link as MuiLink, Typography, useTheme } from '@mui/material';
 import { MightyButton } from '../../../gl-core';
-import { GoogleMap, FlickrAlbum, YouTube } from '../../../gl-core';
+import { GoogleMap, FlickrAlbum, YouTube, PageAd } from '../../../gl-core';
 import { Flash } from '../../cartridges/Flash';
 
 export type TRenderMarkdown = {
@@ -101,6 +101,10 @@ export default function RenderMarkdown({
     // Flash
     const flash = parseShortcode(/\[Flash\s+(.*?)\]/, Flash);
     if (flash) return flash;
+
+    // PageAd
+    const pageAd = parseShortcode(/\[PageAd\s+(.*?)\]/, PageAd);
+    if (pageAd) return pageAd;
 
     // fallback: just return text
     return text;

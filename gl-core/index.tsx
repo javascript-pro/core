@@ -24,6 +24,7 @@ import {
   GoogleMap,
   FlickrAlbum,
   YouTube,
+  PageAd,
 } from './components';
 import {
   useLoading,
@@ -97,6 +98,7 @@ export {
   FieldUpload,
   ArrowMenu,
   Children,
+  PageAd,
 };
 export { Uberedux, UbereduxProvider, setUbereduxKey, resetUberedux };
 export {
