@@ -5,13 +5,9 @@ import { Logo, Pingpong } from '../../Flash';
 import { TStage } from '../types';
 
 export default React.forwardRef<HTMLDivElement, TStage>(function Stage(
-  { movie, width, height },
+  { id, movie, width, height },
   ref,
 ) {
-  /*
-    Conditionally show the correct movie according
-    to the movie prop
-  */
   let m: React.ReactNode = null;
 
   switch (movie) {
@@ -27,6 +23,7 @@ export default React.forwardRef<HTMLDivElement, TStage>(function Stage(
 
   return (
     <Box
+      id={id}
       ref={ref}
       sx={{
         position: 'relative',

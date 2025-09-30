@@ -8,9 +8,6 @@ export type TLogo = {
 };
 
 export default function Logo({ id = 'mc_logo' }: TLogo) {
-
-  console.log("Logo", id)
-
   React.useEffect(() => {
     const logoAS = new LogoAS(id);
     logoAS.init();
