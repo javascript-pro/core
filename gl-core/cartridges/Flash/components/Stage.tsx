@@ -1,13 +1,30 @@
 // /app/src/Flash/components/Stage.tsx
 import React from 'react';
 import { Box } from '@mui/material';
-import { Logo } from '../../Flash'
+import { Logo, Pingpong } from '../../Flash';
 import { TStage } from '../types';
 
 export default React.forwardRef<HTMLDivElement, TStage>(function Stage(
-  { movie, width, height, children },
+  { movie, width, height },
   ref,
 ) {
+  /*
+    Conditionally show the correct movie according
+    to the movie prop
+  */
+  let m: React.ReactNode = null;
+
+  switch (movie) {
+    case 'Logo':
+      m = <Logo id="movie_logo" />;
+      break;
+    case 'Pingpong':
+      m = <Pingpong id="movie_pingpong" />;
+      break;
+    default:
+      m = null;
+  }
+
   return (
     <Box
       ref={ref}
@@ -20,9 +37,9 @@ export default React.forwardRef<HTMLDivElement, TStage>(function Stage(
         height: '100%',
       }}
     >
-      <Logo id="flash_logo" />
-      <pre>movie: {JSON.stringify(movie, null, 2)}</pre>
-      {children}
+      {m}
+      {/* For debugging: */}
+      {/* <pre>movie: {JSON.stringify(movie, null, 2)}</pre> */}
     </Box>
   );
 });

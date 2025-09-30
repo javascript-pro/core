@@ -10,7 +10,7 @@ image: https://live.staticflickr.com/65535/54802570139_8f4f2ac814_b.jpg
 noImage: true
 ---
 
-[Flash movie="logo" height="200"]
+[Flash movie="Logo" height="200"]
 
 [PageAd slug="/work/goldlabel/cartridges/flash"]
 

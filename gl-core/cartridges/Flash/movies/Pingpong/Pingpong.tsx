@@ -7,21 +7,14 @@ export type TPingpong = {
   id?: string;
 };
 
-export default function Pingpong({ 
-  id = 'mc_pingpong',
-}: TPingpong) {
-  
+export default function Pingpong({ id = 'mc_pingpong' }: TPingpong) {
   React.useEffect(() => {
     const pingpongAS = new PingpongAS(id);
     pingpongAS.init();
   }, [id]);
 
   return (
-    <MovieClip
-      id={id}
-      height="auto"
-      width="auto"
-    >
+    <MovieClip id={id} height="auto" width="auto">
       <Pingpongball id="mc_pingpongball" />
     </MovieClip>
   );

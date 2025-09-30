@@ -29,7 +29,6 @@ export type TStage = {
   movie?: string;
   width?: number | string;
   height?: number | string;
-  children?: React.ReactNode;
 };
 
 export type TTrace = {

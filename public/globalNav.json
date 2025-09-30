@@ -36,7 +36,7 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[Flash movie=\"logo\" height=\"200\"]\n\n[PageAd slug=\"/work/goldlabel/cartridges/flash\"]\n\n[PageAd slug=\"/work/expertise/ai/codingwithai\"]\n\n[PageAd slug=\"/balance/writers/generationx\"]\n\n[PageAd slug=\"/work/",
+    "excerpt": "[Flash movie=\"Logo\" height=\"200\"]\n\n[PageAd slug=\"/work/goldlabel/cartridges/flash\"]\n\n[PageAd slug=\"/work/expertise/ai/codingwithai\"]\n\n[PageAd slug=\"/balance/writers/generationx\"]\n\n[PageAd slug=\"/work/",
     "children": [
       {
         "title": "Work",
@@ -101,7 +101,7 @@
                     "icon": "flash",
                     "image": "/png/n64/test.png",
                     "type": "file",
-                    "excerpt": "[Flash movie=\"pingpong\" height=\"500\"]\n\n A Pointless reinvention of MacroMedia Flash?\n\nMaybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You'r"
+                    "excerpt": "[Flash movie=\"Pingpong\" height=\"500\"]\n\n A Pointless reinvention of MacroMedia Flash?\n\nMaybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You'r"
                   },
                   {
                     "title": "Uberedux",
