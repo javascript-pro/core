@@ -26,6 +26,7 @@ export type TFlashConfig = {
 
 export type TStage = {
   id?: string;
+  movie?: string;
   width?: number | string;
   height?: number | string;
   children?: React.ReactNode;

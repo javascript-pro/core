@@ -2,7 +2,6 @@
 import React from 'react';
 import { Box } from '@mui/material';
 import { Stage, useFlash } from '../Flash';
-import { Logo } from './movieclips/Logo';
 
 export type TFlashProps = {
   movie?: string;
@@ -27,10 +26,7 @@ export default function Flash({
         height,
       }}
     >
-      <Stage id={movie} width={width} height={height}>
-        {/* <pre>f: {JSON.stringify(f, null, 2)}</pre> */}
-        <Logo id="flash_logo" />
-      </Stage>
+      <Stage movie={movie} width={width} height={height} />
     </Box>
   );
 }
