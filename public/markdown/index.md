@@ -14,8 +14,6 @@ noImage: true
 
 [PageAd slug="/work/expertise/ai/coding-with-ai"]
 
-
-
 #### [Coding with AI](/work/expertise/ai/coding-with-ai)
 
 AI changes everything in Software Development. It raises the bar

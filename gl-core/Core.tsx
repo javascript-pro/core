@@ -16,6 +16,8 @@ import {
   Typography,
 } from '@mui/material';
 import {
+  useGlobalNav,
+  fetchGlobalNav,
   Theme,
   RenderMarkdown,
   Header,
@@ -36,6 +38,8 @@ import { SideAds } from '../gl-core';
 const config = configRaw as TConfig;
 
 export default function Core({ frontmatter, body = null }: TCore) {
+
+  const dispatch = useDispatch();
   const { noImage, image, title } = frontmatter ?? {};
   const [imageError, setImageError] = React.useState(false);
   const prefersDark = useMediaQuery('(prefers-color-scheme: dark)');
@@ -43,7 +47,9 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const pathname = usePathname();
   const themeMode = useThemeMode();
   const isMobile = useIsMobile();
-  const dispatch = useDispatch();
+  const globalNav = useGlobalNav();
+
+  console.log('globalNav', globalNav);
 
   useVersionCheck();
 

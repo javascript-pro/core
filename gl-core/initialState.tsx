@@ -11,11 +11,11 @@ export const initialState: any = {
   config,
   version: pJSON.version,
   persisted: Date.now(),
+  globalNav: null,
   themeMode: null,
   feedback: null,
   bouncer: initialStateBouncer,
   flash: initialStateFlash,
   flickr: initialStateFlickr,
   lingua: initialStateLingua,
-  globalNav: null,
 };

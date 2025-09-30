@@ -4,7 +4,10 @@ import { useVersion } from './useVersion';
 import { useFeedback } from './useFeedback';
 import { useLoading } from './useLoading';
 import { useSiblings } from './useSiblings';
+import { useGlobalNav } from './useGlobalNav';
+
 export {
+  useGlobalNav,
   useLoading,
   useSiblings,
   useConfig,
