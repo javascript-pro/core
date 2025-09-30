@@ -38,7 +38,6 @@ import { SideAds } from '../gl-core';
 const config = configRaw as TConfig;
 
 export default function Core({ frontmatter, body = null }: TCore) {
-
   const dispatch = useDispatch();
   const { noImage, image, title } = frontmatter ?? {};
   const [imageError, setImageError] = React.useState(false);
@@ -49,7 +48,17 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const isMobile = useIsMobile();
   const globalNav = useGlobalNav();
 
-  console.log('globalNav', globalNav);
+  // Always attempt to fetch nav; fetchGlobalNav itself handles cache timing
+  React.useEffect(() => {
+    dispatch(fetchGlobalNav());
+  }, [dispatch]);
+
+  // Log out current nav in store
+  React.useEffect(() => {
+    if (globalNav) {
+      console.log('Core: globalNav available', globalNav);
+    }
+  }, [globalNav]);
 
   useVersionCheck();
 
