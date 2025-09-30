@@ -1,7 +1,7 @@
 ---
 order: 10
 title: Coding with AI
-description: AI changes everything for coders
+description: AI changes everything for software development
 slug: /work/expertise/ai/coding-with-ai
 icon: ai
 image: https://live.staticflickr.com/65535/54802570139_8f4f2ac814_b.jpg
@@ -13,4 +13,4 @@ noImage: true
 
 ## AI changes everything in Software Development
 
-> What took 6 months, a team of 10 developers and full time project management can now be done by a single developer in two months. It raises the bar.
+> It raises the bar. What took 6 months, a team of 10 developers and full time project management can now be done by a single developer in two months. It raises the bar.

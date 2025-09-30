@@ -1,6 +1,6 @@
 ---
 order: 20
-title: AI Agent User Interfaces
+title: Agent User Interfaces
 description: With React & Next JS
 slug: /work/expertise/ai/agents
 icon: js
