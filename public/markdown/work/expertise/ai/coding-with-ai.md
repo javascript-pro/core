@@ -1,6 +1,6 @@
 ---
 order: 10
-title: Coding with AI
+title: Coding with Generative AI
 description: AI changes everything for software development
 slug: /work/expertise/ai/coding-with-ai
 icon: ai

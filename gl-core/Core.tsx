@@ -56,7 +56,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
   // Log out current nav in store
   React.useEffect(() => {
     if (globalNav) {
-      console.log('Core: globalNav available', globalNav);
+      // console.log('Core: globalNav available', globalNav);
     }
   }, [globalNav]);
 
