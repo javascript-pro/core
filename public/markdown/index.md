@@ -10,9 +10,11 @@ image: https://live.staticflickr.com/65535/54802570139_8f4f2ac814_b.jpg
 noImage: true
 ---
 
+[Flash movie="logo" height="200"]
+
 [PageAd slug="/work/expertise/ai/coding-with-ai"]
 
-[Flash movie="logo" height="200"]
+
 
 #### [Coding with AI](/work/expertise/ai/coding-with-ai)
 
