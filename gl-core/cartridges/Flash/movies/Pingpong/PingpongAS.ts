@@ -20,7 +20,9 @@ export default class PingpongAS {
 
   private setup() {
     const stage = document.getElementById(this.id) as HTMLElement | null;
-    const ball = document.getElementById('mc_pingpongball') as HTMLElement | null;
+    const ball = document.getElementById(
+      'mc_pingpongball',
+    ) as HTMLElement | null;
 
     if (!stage || !ball) {
       console.warn('[PingpongAS] Missing stage or ball element');
@@ -42,7 +44,7 @@ export default class PingpongAS {
       const spinDir = Math.random() < 0.5 ? -1 : 1;
       const randomX = gsap.utils.random(
         50,
-        stageRect.width - ballRect.width - 50
+        stageRect.width - ballRect.width - 50,
       );
 
       // Kill old tl if any
@@ -79,7 +81,7 @@ export default class PingpongAS {
           duration: 1.2,
           ease: 'bounce.out',
         },
-        '<'
+        '<',
       );
 
       // Bounce

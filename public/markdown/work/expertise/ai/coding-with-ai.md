@@ -1,7 +1,7 @@
 ---
 order: 10
-title: Coding with Generative AI
-description: AI changes everything for software development
+title: Coding with AI
+description: Generative AI changes everything
 slug: /work/expertise/ai/coding-with-ai
 icon: ai
 image: https://live.staticflickr.com/65535/54802570139_8f4f2ac814_b.jpg
