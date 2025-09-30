@@ -48,8 +48,11 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const isMobile = useIsMobile();
   const globalNav = useGlobalNav();
 
-  // Always attempt to fetch nav; fetchGlobalNav itself handles cache timing
+  // Always attempt to fetch nav once per page load
+  const fetchedNavRef = React.useRef(false);
   React.useEffect(() => {
+    if (fetchedNavRef.current) return;
+    fetchedNavRef.current = true;
     dispatch(fetchGlobalNav());
   }, [dispatch]);
 

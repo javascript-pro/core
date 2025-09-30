@@ -25,4 +25,3 @@ noImage: true
 [PageAd slug="/life/vanlife"]
 
 [PageAd slug="/work/expertise/ai/agents"]
-

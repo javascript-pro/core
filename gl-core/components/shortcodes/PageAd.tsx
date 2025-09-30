@@ -77,15 +77,9 @@ export default function PageAd({ slug = '/' }: { slug: string }) {
               <Icon icon={item.icon as any} color="primary" />
             </Box>
           }
-          title={
-            <Typography variant="h6">
-              {item.title}
-            </Typography>
-          }
+          title={<Typography variant="h6">{item.title}</Typography>}
           subheader={
-            <Typography variant="body2">
-              {`${subheader} ...`}
-            </Typography>
+            <Typography variant="body2">{`${subheader} ...`}</Typography>
           }
         />
       </CardActionArea>
