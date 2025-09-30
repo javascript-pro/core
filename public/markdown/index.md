@@ -12,8 +12,6 @@ noImage: true
 
 [Flash movie="Logo" height="200"]
 
-
-
 [PageAd slug="/work/expertise/ai/coding-with-ai"]
 
 [PageAd slug="/balance/writers/generation-x"]
