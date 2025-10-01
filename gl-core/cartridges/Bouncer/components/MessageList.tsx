@@ -1,12 +1,6 @@
 // /Users/goldlabel/GitHub/pro/src/Pr0/components/MessageList.tsx
 import * as React from 'react';
-import {
-  Box,
-  Typography,
-  List,
-  ListItem,
-  Paper,
-} from '@mui/material';
+import { Box, Typography, List, ListItem, Paper } from '@mui/material';
 import moment from 'moment';
 import { TPing } from '../types';
 import { db } from '../../../lib/firebase';
@@ -20,18 +14,19 @@ export default function MessageList({ ping }: { ping: TPing | null }) {
 
   // Mark unseen messages as seen once we render them
   React.useEffect(() => {
-    if (!ping || !Array.isArray(ping.messages) || ping.messages.length === 0) return;
+    if (!ping || !Array.isArray(ping.messages) || ping.messages.length === 0)
+      return;
 
     const unseen = ping.messages.filter((m) => !m.seen);
     if (unseen.length > 0) {
       const ref = doc(db, 'pings', ping.id);
 
       const updatedMessages = ping.messages.map((m) =>
-        m.seen ? m : { ...m, seen: true }
+        m.seen ? m : { ...m, seen: true },
       );
 
       updateDoc(ref, { messages: updatedMessages }).catch((err) =>
-        console.error('Error marking messages seen:', err)
+        console.error('Error marking messages seen:', err),
       );
     }
   }, [ping]);
@@ -78,7 +73,11 @@ export default function MessageList({ ping }: { ping: TPing | null }) {
                   <Typography
                     variant="caption"
                     color="text.secondary"
-                    sx={{ display: 'block', mt: 0.5, textAlign: isMe ? 'right' : 'left' }}
+                    sx={{
+                      display: 'block',
+                      mt: 0.5,
+                      textAlign: isMe ? 'right' : 'left',
+                    }}
                   >
                     {msg.from ?? 'You'} • {moment(msg.created).fromNow()}
                   </Typography>
