@@ -1,5 +1,3 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/Bouncer.tsx
-'use client';
 import React from 'react';
 import { Box, Dialog, CardHeader, Badge } from '@mui/material';
 import { MightyButton, useDispatch, Icon, useIsMobile } from '../../../gl-core';
@@ -12,6 +10,7 @@ import {
 } from '../Bouncer';
 import { doc, onSnapshot } from 'firebase/firestore';
 import { db } from '../../lib/firebase';
+import { useSounds } from '../Theme';
 
 export default function Bouncer() {
   const b = useBouncer();
@@ -19,10 +18,12 @@ export default function Bouncer() {
   const startedRef = React.useRef(false);
   const isMobile = useIsMobile();
   const [unseenCount, setUnseenCount] = React.useState(0);
+  const prevCount = React.useRef(0);
+  const { play } = useSounds();
 
   // 1. Create ping on first mount
   React.useEffect(() => {
-    if (startedRef.current) return; // prevent double-run in StrictMode
+    if (startedRef.current) return;
     startedRef.current = true;
 
     if (!b?.ping) {
@@ -49,21 +50,29 @@ export default function Bouncer() {
         const count = Array.isArray(data.messages)
           ? data.messages.filter((m: any) => !m.seen).length
           : 0;
+
         setUnseenCount(count);
+
+        // ✅ Play sound when going from 0 → >0
+        if (prevCount.current === 0 && count > 0) {
+          play('success');
+        }
+        prevCount.current = count;
       } else {
         setUnseenCount(0);
+        prevCount.current = 0;
       }
     });
 
     return () => unsub();
-  }, [b?.id]);
+  }, [b?.id, play]);
 
   const handleClose = () => dispatch(setBouncerKey('dialogOpen', false));
   const handleBtnClick = () => dispatch(setBouncerKey('dialogOpen', true));
 
   return (
     <>
-      <Badge badgeContent={unseenCount > 0 ? unseenCount : null}>
+      <Badge color="primary" badgeContent={unseenCount > 0 ? unseenCount : null}>
         <MightyButton
           mode="icon"
           label="Bouncer"

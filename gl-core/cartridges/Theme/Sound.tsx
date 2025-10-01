@@ -1,4 +1,4 @@
-// /Users/goldlabel/GitHub/pro/src/Pr0/lib/Sound.tsx
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Theme/Sound.tsx
 'use client';
 
 import React, { createContext, useContext, useRef } from 'react';
@@ -46,9 +46,7 @@ export function SoundProvider({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <SoundContext.Provider value={{ play }}>
-      {children}
-    </SoundContext.Provider>
+    <SoundContext.Provider value={{ play }}>{children}</SoundContext.Provider>
   );
 }
 
