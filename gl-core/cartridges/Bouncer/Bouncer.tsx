@@ -29,10 +29,8 @@ export default function Bouncer() {
 
   // 2. Once we have a ping but haven't pinged yet → ping
   React.useEffect(() => {
-    if (b?.ping && !b?.pinged) {
-      dispatch(ping());
-    }
-  }, [b?.ping, b?.pinged, dispatch]);
+    dispatch(ping());
+  }, [dispatch]);
 
   const handleClose = () => dispatch(setBouncerKey('dialogOpen', false));
   const handleBtnClick = () => dispatch(setBouncerKey('dialogOpen', true));

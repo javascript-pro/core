@@ -36,7 +36,7 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[Flash movie=\"Logo\" height=\"200\"]\n\n[PageAd slug=\"/work/goldlabel/cartridges/flash\"]\n\n[PageAd slug=\"/work/expertise/ai/codingwithai\"]\n\n[PageAd slug=\"/balance/writers/generationx\"]\n\n[PageAd slug=\"/work/",
+    "excerpt": "[Flash movie=\"Logo\" height=\"200\"]\n\n[PageAd slug=\"/work/expertise/ai/codingwithai\"]\n\n[PageAd slug=\"/balance/writers/generationx\"]\n\n[PageAd slug=\"/work/expertise/windoze\"]\n\n[PageAd slug=\"/work/expertise",
     "children": [
       {
         "title": "Work",
@@ -595,7 +595,7 @@
                     ]
                   },
                   {
-                    "title": "Coding with Generative AI",
+                    "title": "Coding with AI",
                     "slug": "/work/expertise/ai/coding-with-ai",
                     "order": 10,
                     "icon": "ai",
