@@ -47,6 +47,7 @@
     "gray-matter": "^4.0.3",
     "gsap": "^3.13.0",
     "hastscript": "^9.0.1",
+    "howler": "^2.2.4",
     "html2pdf.js": "^0.10.3",
     "mammoth": "^1.9.1",
     "marked": "^15.0.7",
@@ -74,12 +75,14 @@
     "styled-components": "6.1.8",
     "unified": "^11.0.5",
     "use-count-up": "3.0.1",
+    "use-sound": "^5.0.0",
     "vercel": "34.0.0",
     "zod": "^3.25.57"
   },
   "devDependencies": {
     "@hookform/devtools": "^4.4.0",
     "@next/eslint-plugin-next": "^15.2.4",
+    "@types/howler": "^2",
     "@types/minimatch": "^6.0.0",
     "@types/ms": "0.7.34",
     "@types/next-pwa": "^5",

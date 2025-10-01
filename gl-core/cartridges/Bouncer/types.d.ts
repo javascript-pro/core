@@ -29,13 +29,21 @@ export type TFingerprint = {
 };
 
 export type TPing = {
-  created: number;
-  fingerprint: string | null;
-  displayName: string | null;
+  id: string;
+  browser?: string;
+  os?: string;
+  isMobile?: boolean;
+  ip?: string;
+  country_name?: string;
+  state_prov?: string;
+  city?: string;
+  updated?: number;
+  [key: string]: any;
 };
 
 export type TBouncerState = {
   cartridge: string;
+  id: string | null;
   ping: TPing | null;
   pinged: boolean;
   [key: string]: any;
