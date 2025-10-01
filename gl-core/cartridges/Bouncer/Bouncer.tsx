@@ -53,7 +53,7 @@ export default function Bouncer() {
         <CardHeader
           avatar={<Icon icon="bouncer" />}
           title="Bouncer"
-          subheader="Your name's not down, mate."
+          // subheader="Your name's not down, mate."
           action={
             <MightyButton
               mode="icon"

@@ -22,10 +22,10 @@ export default function PingViewer() {
 
     const unsub = onSnapshot(ref, (snap) => {
       if (snap.exists()) {
-        console.log("🔄 Document updated:", snap.data());
+        // console.log('🔄 Document updated:', snap.data());
         setDocData(snap.data());
       } else {
-        console.log("⚠️ Document does not exist");
+        // console.log('⚠️ Document does not exist');
         setDocData(null);
       }
     });
@@ -35,9 +35,15 @@ export default function PingViewer() {
 
   return (
     <Box>
-      <Typography variant="subtitle2">Subscribed Ping Document</Typography>
-      <pre style={{ fontSize: 10, background: '#111', color: '#0f0', padding: '8px' }}>
-        {docData ? JSON.stringify(docData, null, 2) : 'No document loaded'}
+      <pre
+        style={{
+          fontSize: 10,
+          background: '#111',
+          color: '#0f0',
+          padding: '8px',
+        }}
+      >
+       messages: {docData ? JSON.stringify(docData.messages, null, 2) : 'No document loaded'}
       </pre>
     </Box>
   );
