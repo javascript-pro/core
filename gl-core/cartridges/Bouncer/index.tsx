@@ -1,6 +1,7 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/index.tsx
 import Bouncer from './Bouncer';
 import PingViewer from './components/PingViewer';
+import MessageForm from './components/MessageForm';
 
 import { initialState as initialStateBouncer } from './initialState';
 import { useBouncer } from './useBouncer';
@@ -16,4 +17,5 @@ export {
   setBouncerKey,
   ping,
   createPing,
+  MessageForm,
 };

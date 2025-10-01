@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { Box, Typography } from '@mui/material';
 import { Icon } from '../../../../gl-core';
-import { useBouncer } from '../../Bouncer';
+import { useBouncer, MessageForm } from '../../Bouncer';
 import { doc, onSnapshot } from 'firebase/firestore';
 import { db } from '../../../lib/firebase';
 
@@ -35,6 +35,7 @@ export default function PingViewer() {
 
   return (
     <Box>
+      <MessageForm ping={docData} />
       <pre
         style={{
           fontSize: 10,
@@ -43,7 +44,10 @@ export default function PingViewer() {
           padding: '8px',
         }}
       >
-       messages: {docData ? JSON.stringify(docData.messages, null, 2) : 'No document loaded'}
+        messages:{' '}
+        {docData
+          ? JSON.stringify(docData.messages, null, 2)
+          : 'No document loaded'}
       </pre>
     </Box>
   );
