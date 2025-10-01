@@ -15,12 +15,14 @@ export const ping =
         throw new Error('No ping id available');
       }
 
+      /*
       // Exit early if hostname is localhost
       if (ping.id.startsWith('localhost')) {
         // console.log('localhost does not ping');
         return;
       }
-
+      */
+     
       const ref = doc(db, 'pings', ping.id);
       const snap = await getDoc(ref);
 
