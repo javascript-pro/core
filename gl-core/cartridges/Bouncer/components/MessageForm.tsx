@@ -44,7 +44,7 @@ export default function MessageForm({ ping }: { ping: TPing }) {
 
   return (
     <Box sx={{ p: 1, display: 'flex', flexDirection: 'column' }}>
-      <Box display="flex" flexDirection="column" sx={{ mx: 2 }}>
+      <Box display="flex" flexDirection="column" sx={{ mx: 1   }}>
         <TextField
           autoFocus
           variant="standard"

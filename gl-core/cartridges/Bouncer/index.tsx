@@ -2,6 +2,7 @@
 import Bouncer from './Bouncer';
 import PingViewer from './components/PingViewer';
 import MessageForm from './components/MessageForm';
+import MessageList from './components/MessageList';
 
 import { initialState as initialStateBouncer } from './initialState';
 import { useBouncer } from './useBouncer';
@@ -18,4 +19,5 @@ export {
   ping,
   createPing,
   MessageForm,
+  MessageList,
 };
