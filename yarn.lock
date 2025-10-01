@@ -3798,6 +3798,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/howler@npm:^2":
+  version: 2.2.12
+  resolution: "@types/howler@npm:2.2.12"
+  checksum: 10c0/fb30e8c137ec03aa6a1e739be11b9d5b973f5f19d9f8a92eb11cff466170c9b5a314d73b8b34bb9a435e309ae880ba4847dee1029ec37d08c3f64b2219add462
+  languageName: node
+  linkType: hard
+
 "@types/http-errors@npm:*":
   version: 2.0.5
   resolution: "@types/http-errors@npm:2.0.5"
@@ -5888,6 +5895,7 @@ __metadata:
     "@next/eslint-plugin-next": "npm:^15.2.4"
     "@reduxjs/toolkit": "npm:^2.6.1"
     "@toolpad/core": "npm:^0.14.0"
+    "@types/howler": "npm:^2"
     "@types/minimatch": "npm:^6.0.0"
     "@types/ms": "npm:0.7.34"
     "@types/next-pwa": "npm:^5"
@@ -5908,6 +5916,7 @@ __metadata:
     gray-matter: "npm:^4.0.3"
     gsap: "npm:^3.13.0"
     hastscript: "npm:^9.0.1"
+    howler: "npm:^2.2.4"
     html2pdf.js: "npm:^0.10.3"
     husky: "npm:^9.1.7"
     lint-staged: "npm:15.2.2"
@@ -5941,6 +5950,7 @@ __metadata:
     typescript: "npm:5.4.5"
     unified: "npm:^11.0.5"
     use-count-up: "npm:3.0.1"
+    use-sound: "npm:^5.0.0"
     vercel: "npm:34.0.0"
     zod: "npm:^3.25.57"
   languageName: unknown
@@ -8549,6 +8559,13 @@ __metadata:
   dependencies:
     react-is: "npm:^16.7.0"
   checksum: 10c0/fe0889169e845d738b59b64badf5e55fa3cf20454f9203d1eb088df322d49d4318df774828e789898dcb280e8a5521bb59b3203385662ca5e9218a6ca5820e74
+  languageName: node
+  linkType: hard
+
+"howler@npm:^2.2.4":
+  version: 2.2.4
+  resolution: "howler@npm:2.2.4"
+  checksum: 10c0/74a295f56fd9b2abce122b27ed12c33fa195fb8a76832803e92d8e462a1eca803b55f44c14db052211d0cfab85c7c5249664c68d95bbbc16c775fac73866c6ef
   languageName: node
   linkType: hard
 
@@ -14764,6 +14781,17 @@ __metadata:
   peerDependencies:
     react: ">=16.8.0"
   checksum: 10c0/c4a81c968819c89b2d22c0862f3ee375b951ae34598ee1077523e144d1da50b82882b1b12d1df116a645494689b0ea073a69cd3b34279d91824b4ee0219ae428
+  languageName: node
+  linkType: hard
+
+"use-sound@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "use-sound@npm:5.0.0"
+  dependencies:
+    howler: "npm:^2.2.4"
+  peerDependencies:
+    react: ">=16.8"
+  checksum: 10c0/128287009affb3e83abf88c117bb4ebbc1accf6cc4931bb90ea22dc550c9005472bf303d182f7883eb2191cb255664e6bcb20e5e5795427c185f47bf09784531
   languageName: node
   linkType: hard
 
