@@ -35,8 +35,11 @@ export default function PingViewer() {
 
   return (
     <Box>
-      <MessageForm ping={docData} />
       <MessageList ping={docData} />
+      <MessageForm ping={docData} />
+      <pre style={{ fontSize: 10 }}>
+              docData: {JSON.stringify(docData, null, 2)}
+            </pre>
     </Box>
   );
 }

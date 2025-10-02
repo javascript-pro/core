@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Dialog, CardHeader, Badge } from '@mui/material';
+import { Box, Dialog, CardHeader, Badge, Typography } from '@mui/material';
 import { MightyButton, useDispatch, Icon, useIsMobile } from '../../../gl-core';
 import {
   PingViewer,
@@ -70,19 +70,27 @@ export default function Bouncer() {
   const handleClose = () => dispatch(setBouncerKey('dialogOpen', false));
   const handleBtnClick = () => dispatch(setBouncerKey('dialogOpen', true));
 
+  const displayName = `Display Name`;
   return (
     <>
-      <Badge
-        color="primary"
-        badgeContent={unseenCount > 0 ? unseenCount : null}
-      >
-        <MightyButton
-          mode="icon"
-          label="Bouncer"
-          icon="bouncer"
-          onClick={handleBtnClick}
-        />
-      </Badge>
+      <Box sx={{ display: 'flex' }}>
+        {b?.ping?.displayName && (
+          <Typography sx={{ mt: 0.5, mr: 2 }} variant="h6">
+            {b.ping.displayName}
+          </Typography>
+        )}
+        <Badge
+          color="primary"
+          badgeContent={unseenCount > 0 ? unseenCount : null}
+        >
+          <MightyButton
+            mode="icon"
+            label="Bouncer"
+            icon="bouncer"
+            onClick={handleBtnClick}
+          />
+        </Badge>
+      </Box>
 
       <Dialog
         fullWidth

@@ -4,7 +4,7 @@ import * as React from 'react';
 import { Box, CardHeader, Typography } from '@mui/material';
 import { Icon, useIsMobile, ThumbMenu, SharePopup } from '../../../gl-core';
 
-import { Bouncer } from '../../cartridges/Bouncer';
+import { Bouncer, useBouncer } from '../../cartridges/Bouncer';
 
 export type THeader = {
   frontmatter?: any;
@@ -14,6 +14,8 @@ export type THeader = {
 export default function Header({ frontmatter = null }: THeader) {
   const { title, description, icon } = frontmatter;
   const isMobile = useIsMobile();
+  const b = useBouncer();
+  const displayName = b?.ping?.displayName ?? 'no name';
 
   return (
     <>
@@ -34,12 +36,13 @@ export default function Header({ frontmatter = null }: THeader) {
           )
         }
         action={
-          <Box sx={{ mt: 1, mr: isMobile ? 0 : 2 }}>
+          <Box sx={{ display: 'flex', mt: 1, mr: isMobile ? 0 : 2 }}>
             <Bouncer />
             <SharePopup frontmatter={frontmatter} />
           </Box>
         }
       />
+      
       <ThumbMenu frontmatter={frontmatter} />
     </>
   );
