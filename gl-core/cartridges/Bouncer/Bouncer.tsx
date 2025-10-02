@@ -1,3 +1,4 @@
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/Bouncer.tsx
 import React from 'react';
 import { Box, Dialog, CardHeader, Badge, Typography } from '@mui/material';
 import { MightyButton, useDispatch, Icon, useIsMobile } from '../../../gl-core';
@@ -36,10 +37,11 @@ export default function Bouncer() {
     dispatch(ping());
   }, [dispatch]);
 
-  // 3. Subscribe to ping document for unseen message count
+  // 3. Subscribe to ping document (livePing + unseenCount)
   React.useEffect(() => {
     if (!b?.id) {
       setUnseenCount(0);
+      dispatch(setBouncerKey('livePing', null));
       return;
     }
 
@@ -47,13 +49,17 @@ export default function Bouncer() {
     const unsub = onSnapshot(ref, (snap) => {
       if (snap.exists()) {
         const data = snap.data();
+
+        // ✅ save entire doc into Redux
+        dispatch(setBouncerKey('livePing', data));
+
+        // ✅ count unseen messages
         const count = Array.isArray(data.messages)
           ? data.messages.filter((m: any) => !m.seen).length
           : 0;
-
         setUnseenCount(count);
 
-        // ✅ Play sound when going from 0 → >0
+        // ✅ play sound on transition 0 → >0
         if (prevCount.current === 0 && count > 0) {
           play('success');
         }
@@ -61,16 +67,16 @@ export default function Bouncer() {
       } else {
         setUnseenCount(0);
         prevCount.current = 0;
+        dispatch(setBouncerKey('livePing', null));
       }
     });
 
     return () => unsub();
-  }, [b?.id, play]);
+  }, [b?.id, dispatch, play]);
 
   const handleClose = () => dispatch(setBouncerKey('dialogOpen', false));
   const handleBtnClick = () => dispatch(setBouncerKey('dialogOpen', true));
 
-  const displayName = `Display Name`;
   return (
     <>
       <Box sx={{ display: 'flex' }}>
@@ -112,6 +118,7 @@ export default function Bouncer() {
           }
         />
         <Box>
+          {/* PingViewer is now dumb: just reads b.livePing from Redux */}
           <PingViewer />
         </Box>
       </Dialog>

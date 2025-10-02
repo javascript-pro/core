@@ -1,45 +1,22 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/components/PingViewer.tsx
 'use client';
 import * as React from 'react';
-import { Box, Typography } from '@mui/material';
-import { Icon } from '../../../../gl-core';
+import { Box } from '@mui/material';
 import { useBouncer, MessageForm, MessageList } from '../../Bouncer';
-import { doc, onSnapshot } from 'firebase/firestore';
-import { db } from '../../../lib/firebase';
+// import { Mapbox } from '../../../../gl-core';
 
 export default function PingViewer() {
   const b = useBouncer();
-  const id = b?.id ?? '';
-  const [docData, setDocData] = React.useState<any | null>(null);
-
-  React.useEffect(() => {
-    if (!id) {
-      setDocData(null);
-      return;
-    }
-
-    const ref = doc(db, 'pings', id);
-
-    const unsub = onSnapshot(ref, (snap) => {
-      if (snap.exists()) {
-        // console.log('🔄 Document updated:', snap.data());
-        setDocData(snap.data());
-      } else {
-        // console.log('⚠️ Document does not exist');
-        setDocData(null);
-      }
-    });
-
-    return () => unsub();
-  }, [id]);
 
   return (
     <Box>
-      <MessageList ping={docData} />
-      <MessageForm ping={docData} />
+      {/* <Mapbox ping={b.livePing} /> */}
+      <MessageList ping={b.livePing} />
+      <MessageForm ping={b.livePing} />
+      {/* Debug view: 
       <pre style={{ fontSize: 10 }}>
-              docData: {JSON.stringify(docData, null, 2)}
-            </pre>
+        livePing: {JSON.stringify(b.livePing, null, 2)}
+      </pre> */}
     </Box>
   );
 }

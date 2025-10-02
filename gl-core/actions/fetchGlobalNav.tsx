@@ -32,10 +32,10 @@ export const fetchGlobalNav =
         setUbereduxKey({ key: 'lastGlobalNavFetch', value: Date.now() }),
       );
 
-      console.log(
-        'fetchGlobalNav loaded fresh globalNav at',
-        new Date().toISOString(),
-      );
+      // console.log(
+      //   'fetchGlobalNav loaded fresh globalNav at',
+      //   new Date().toISOString(),
+      // );
     } catch (e: unknown) {
       const msg = e instanceof Error ? e.message : String(e);
       dispatch(setUbereduxKey({ key: 'error', value: msg }));

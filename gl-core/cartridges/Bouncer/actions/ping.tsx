@@ -28,7 +28,7 @@ export const ping =
       };
 
       if (snap.exists()) {
-        console.log('Updating ping/', ping.id);
+        // console.log('Updating ping/', ping.id);
 
         // ✅ Add to history (arrayUnion will append new entry without overwriting)
         await updateDoc(ref, {
@@ -39,7 +39,7 @@ export const ping =
         dispatch(setBouncerKey('id', ping.id));
         dispatch(setBouncerKey('pinged', true));
       } else {
-        console.log('Creating new ping in Firestore', ping.id);
+        // console.log('Creating new ping in Firestore', ping.id);
 
         await setDoc(ref, {
           ...ping,
