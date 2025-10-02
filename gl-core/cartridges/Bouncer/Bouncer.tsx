@@ -72,7 +72,10 @@ export default function Bouncer() {
 
   return (
     <>
-      <Badge color="primary" badgeContent={unseenCount > 0 ? unseenCount : null}>
+      <Badge
+        color="primary"
+        badgeContent={unseenCount > 0 ? unseenCount : null}
+      >
         <MightyButton
           mode="icon"
           label="Bouncer"
