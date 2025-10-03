@@ -15,7 +15,7 @@ export default function Header({ frontmatter = null }: THeader) {
   const { title, description, icon } = frontmatter;
   const isMobile = useIsMobile();
   const b = useBouncer();
-  const displayName = b?.livePing?.displayName ?? 'no name';
+  const displayName = b?.livePing?.displayName ?? '';
 
   return (
     <>

@@ -189,8 +189,8 @@ export default async function Page({ params }: { params: any }) {
   👉 [Home](/?reboot)`;
   let frontmatter: any = {
     icon: 'goldlabel',
-    title: 'Goldlabel',
-    description: 'Bad panda',
+    title: 'Bad panda',
+    description: 'Page not found',
     image: '/png/og.png',
   };
   let isIndex = false;
@@ -213,7 +213,7 @@ export default async function Page({ params }: { params: any }) {
   }
 
   const navItem = findNavItem(slugPath, globalNav[0]);
-  const title = navItem?.title || 'Goldlabel';
+  const title = navItem?.title || 'Bad panda';
   const ogImage = frontmatter.image || '/png/og.png';
 
   // If page not found → build a markdown list of all pages

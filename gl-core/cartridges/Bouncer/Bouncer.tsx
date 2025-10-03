@@ -92,7 +92,7 @@ export default function Bouncer() {
           <MightyButton
             mode="icon"
             label="Bouncer"
-            icon="bouncer"
+            icon="email"
             onClick={handleBtnClick}
           />
         </Badge>
@@ -106,8 +106,7 @@ export default function Bouncer() {
         onClose={handleClose}
       >
         <CardHeader
-          avatar={<Icon icon="bouncer" />}
-          title="Bouncer"
+          avatar={<Icon icon="email" color="primary" />}
           action={
             <MightyButton
               mode="icon"
