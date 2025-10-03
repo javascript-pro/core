@@ -5,7 +5,7 @@ description: With React & Next JS
 slug: /work/expertise/ai/agents
 icon: ai
 image: https://live.staticflickr.com/65535/54743292173_aed0039452_b.jpg
-tags: expertise, js, javascript, next, react, ai, agents
+tags: expertise, js, javascript, next, react, AI, agents
 ---
 
 > How we help you take your AI product ideas from concept, through prototype to production

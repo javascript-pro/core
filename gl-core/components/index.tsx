@@ -20,11 +20,12 @@ import GoogleMap from './shortcodes/GoogleMap';
 import FlickrAlbum from './shortcodes/FlickrAlbum';
 import YouTube from './shortcodes/YouTube';
 import PageAd from './shortcodes/PageAd';
-
+import Mapbox from './shortcodes/Mapbox';
 export { IncludeAll, Advert, Feedback, LoadingOverlay };
 export { Header, Footer, RenderMarkdown };
 export {
   Nav,
+  Mapbox,
   GoogleMap,
   FlickrAlbum,
   Siblings,

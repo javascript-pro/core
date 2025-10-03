@@ -3,7 +3,7 @@ import { TUbereduxDispatch } from '../../Uberedux';
 import { setUbereduxKey } from '../../Uberedux';
 import { setBouncerKey } from '../';
 import { db } from '../../../lib/firebase';
-import { doc, getDoc, setDoc, updateDoc, arrayUnion } from 'firebase/firestore';
+import { doc, getDoc, setDoc, updateDoc } from 'firebase/firestore';
 
 export const ping =
   () => async (dispatch: TUbereduxDispatch, getState: any) => {
@@ -18,7 +18,6 @@ export const ping =
       const ref = doc(db, 'pings', ping.id);
       const snap = await getDoc(ref);
 
-      // Grab current title + url
       const title = document?.title ?? '';
       const url = typeof window !== 'undefined' ? window.location.href : '';
       const historyEntry = {
@@ -28,24 +27,36 @@ export const ping =
       };
 
       if (snap.exists()) {
-        console.log('Updating ping/', ping.id);
+        const data = snap.data();
+        const history = Array.isArray(data.history) ? data.history : [];
+        const last = history[history.length - 1];
 
-        // ✅ Add to history (arrayUnion will append new entry without overwriting)
-        await updateDoc(ref, {
-          updated: Date.now(),
-          history: arrayUnion(historyEntry),
-        });
+        const isDifferent =
+          !last ||
+          last.title !== historyEntry.title ||
+          last.url !== historyEntry.url;
+
+        if (isDifferent) {
+          // 🔑 push manually instead of arrayUnion
+          const newHistory = [...history, historyEntry];
+          await updateDoc(ref, {
+            updated: Date.now(),
+            history: newHistory,
+          });
+        } else {
+          await updateDoc(ref, {
+            updated: Date.now(),
+          });
+        }
 
         dispatch(setBouncerKey('id', ping.id));
         dispatch(setBouncerKey('pinged', true));
       } else {
-        console.log('Creating new ping in Firestore', ping.id);
-
         await setDoc(ref, {
           ...ping,
           created: Date.now(),
           updated: Date.now(),
-          history: [historyEntry], // start with first record
+          history: [historyEntry],
         });
 
         dispatch(setBouncerKey('id', ping.id));

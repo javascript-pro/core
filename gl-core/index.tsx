@@ -25,6 +25,7 @@ import {
   FlickrAlbum,
   YouTube,
   PageAd,
+  Mapbox,
 } from './components';
 import {
   useLoading,
@@ -102,6 +103,7 @@ export {
   ArrowMenu,
   Children,
   PageAd,
+  Mapbox,
 };
 export { Uberedux, UbereduxProvider, setUbereduxKey, resetUberedux };
 export {

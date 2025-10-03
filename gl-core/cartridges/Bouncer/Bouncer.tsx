@@ -1,5 +1,6 @@
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/Bouncer.tsx
 import React from 'react';
-import { Box, Dialog, CardHeader, Badge } from '@mui/material';
+import { Box, Dialog, CardHeader, Badge, Typography } from '@mui/material';
 import { MightyButton, useDispatch, Icon, useIsMobile } from '../../../gl-core';
 import {
   PingViewer,
@@ -36,10 +37,11 @@ export default function Bouncer() {
     dispatch(ping());
   }, [dispatch]);
 
-  // 3. Subscribe to ping document for unseen message count
+  // 3. Subscribe to ping document (livePing + unseenCount)
   React.useEffect(() => {
     if (!b?.id) {
       setUnseenCount(0);
+      dispatch(setBouncerKey('livePing', null));
       return;
     }
 
@@ -47,13 +49,17 @@ export default function Bouncer() {
     const unsub = onSnapshot(ref, (snap) => {
       if (snap.exists()) {
         const data = snap.data();
+
+        // ✅ save entire doc into Redux
+        dispatch(setBouncerKey('livePing', data));
+
+        // ✅ count unseen messages
         const count = Array.isArray(data.messages)
           ? data.messages.filter((m: any) => !m.seen).length
           : 0;
-
         setUnseenCount(count);
 
-        // ✅ Play sound when going from 0 → >0
+        // ✅ play sound on transition 0 → >0
         if (prevCount.current === 0 && count > 0) {
           play('success');
         }
@@ -61,25 +67,36 @@ export default function Bouncer() {
       } else {
         setUnseenCount(0);
         prevCount.current = 0;
+        dispatch(setBouncerKey('livePing', null));
       }
     });
 
     return () => unsub();
-  }, [b?.id, play]);
+  }, [b?.id, dispatch, play]);
 
   const handleClose = () => dispatch(setBouncerKey('dialogOpen', false));
   const handleBtnClick = () => dispatch(setBouncerKey('dialogOpen', true));
 
   return (
     <>
-      <Badge color="primary" badgeContent={unseenCount > 0 ? unseenCount : null}>
-        <MightyButton
-          mode="icon"
-          label="Bouncer"
-          icon="bouncer"
-          onClick={handleBtnClick}
-        />
-      </Badge>
+      <Box sx={{ display: 'flex' }}>
+        {b?.ping?.displayName && (
+          <Typography sx={{ mt: 0.5, mr: 2 }} variant="h6">
+            {b.ping.displayName}
+          </Typography>
+        )}
+        <Badge
+          color="primary"
+          badgeContent={unseenCount > 0 ? unseenCount : null}
+        >
+          <MightyButton
+            mode="icon"
+            label="Bouncer"
+            icon="email"
+            onClick={handleBtnClick}
+          />
+        </Badge>
+      </Box>
 
       <Dialog
         fullWidth
@@ -89,8 +106,7 @@ export default function Bouncer() {
         onClose={handleClose}
       >
         <CardHeader
-          avatar={<Icon icon="bouncer" />}
-          title="Bouncer"
+          avatar={<Icon icon="email" color="primary" />}
           action={
             <MightyButton
               mode="icon"
@@ -101,6 +117,7 @@ export default function Bouncer() {
           }
         />
         <Box>
+          {/* PingViewer is now dumb: just reads b.livePing from Redux */}
           <PingViewer />
         </Box>
       </Dialog>

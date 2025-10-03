@@ -595,6 +595,21 @@
                     ]
                   },
                   {
+                    "title": "Maximizing AI Visibility",
+                    "slug": "/work/expertise/ai/ai-visibility",
+                    "order": 8,
+                    "icon": "ai",
+                    "image": "https://live.staticflickr.com/65535/54802570139_8f4f2ac814_b.jpg",
+                    "type": "file",
+                    "tags": [
+                      "expertise",
+                      "AI Visibility",
+                      "AI",
+                      "agents"
+                    ],
+                    "excerpt": "As search evolves into AIdriven answers, visibility is no longer about ranking on page one — it’s about being the source that answer engines trust and cite. To win mentions and citations, your content"
+                  },
+                  {
                     "title": "Coding with AI",
                     "slug": "/work/expertise/ai/coding-with-ai",
                     "order": 10,
@@ -619,7 +634,7 @@
                       "javascript",
                       "next",
                       "react",
-                      "ai",
+                      "AI",
                       "agents"
                     ],
                     "excerpt": "How we help you take your AI product ideas from concept, through prototype to production\n\n From prototype to production\n\nAI agents need more than a good model — they need a front end that users can ac"
