@@ -105,8 +105,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
                     </Box>
                   </Box>
 
-                  
-
                   {/* Image block */}
                   {!noImage && image && (
                     <Box sx={{ mx: isMobile ? 0 : 4, mt: 0 }}>

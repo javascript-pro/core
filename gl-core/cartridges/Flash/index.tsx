@@ -31,15 +31,7 @@ import { usePrefersColorScheme } from './hooks/usePrefersColorScheme';
 
 export { Logo, Pingpong };
 
-export {
-  initialStateFlash,
-  Flash,
-  System,
-  Trace,
-  Stage,
-  MovieClip,
-  Controls,
-};
+export { initialStateFlash, Flash, System, Trace, Stage, MovieClip, Controls };
 // optional
 export {
   setUbereduxKey,

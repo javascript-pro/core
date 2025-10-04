@@ -20,7 +20,6 @@ export default function MapView({
   height = 400,
   zoom = 3,
 }: TMapView) {
-
   const b = useBouncer();
   const themeMode = useTheme().palette.mode;
   const mapStyle =
@@ -50,16 +49,15 @@ export default function MapView({
           zoom,
         }}
         style={{ width: '100%', height: '100%' }}
-        mapStyle={ mapStyle }
+        mapStyle={mapStyle}
       >
         {marker && (
-          <Marker 
-            longitude={b.livePing.longitude} 
-            latitude={b.livePing.latitude} 
-            anchor="center">
-            <Button variant="contained">
-              {b.livePing.city}
-            </Button>
+          <Marker
+            longitude={b.livePing.longitude}
+            latitude={b.livePing.latitude}
+            anchor="center"
+          >
+            <Button variant="contained">{b.livePing.city}</Button>
           </Marker>
         )}
       </Map>

@@ -123,12 +123,7 @@ export default function Bouncer() {
         </Box>
 
         <Box sx={{ m: 2 }}>
-          <MapView 
-            id="livePingMap" 
-            marker
-            height={250} 
-            zoom={3.5} 
-          />
+          <MapView id="livePingMap" marker height={250} zoom={3.5} />
         </Box>
       </Dialog>
     </>

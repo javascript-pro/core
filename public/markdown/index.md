@@ -12,6 +12,8 @@ noImage: true
 
 [Flash movie="Logo" height="200"]
 
+[PageAd slug="/work/goldlabel/cartridges/flash"]
+
 [PageAd slug="/work/expertise/ai/coding-with-ai"]
 
 [PageAd slug="/balance/writers/generation-x"]
@@ -19,8 +21,6 @@ noImage: true
 [PageAd slug="/work/expertise/windoze"]
 
 [PageAd slug="/work/expertise/ai/abgeschottet-ki"]
-
-[PageAd slug="/work/goldlabel/cartridges/flash"]
 
 [PageAd slug="/life/vanlife"]
 
