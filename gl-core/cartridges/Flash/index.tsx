@@ -7,6 +7,7 @@ import Trace from './lib/Trace';
 import MovieClip from './lib/MovieClip';
 import Stage from './components/Stage';
 import Controls from './components/Controls';
+import MapView from './components/MapView';
 
 // Movies
 import { Logo } from './movies/Logo';
@@ -31,7 +32,16 @@ import { usePrefersColorScheme } from './hooks/usePrefersColorScheme';
 
 export { Logo, Pingpong };
 
-export { initialStateFlash, Flash, System, Trace, Stage, MovieClip, Controls };
+export {
+  initialStateFlash,
+  Flash,
+  System,
+  Trace,
+  Stage,
+  MovieClip,
+  Controls,
+  MapView,
+};
 // optional
 export {
   setUbereduxKey,

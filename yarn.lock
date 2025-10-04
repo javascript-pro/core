@@ -3718,6 +3718,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@turf/bbox@npm:4.7.3":
+  version: 4.7.3
+  resolution: "@turf/bbox@npm:4.7.3"
+  dependencies:
+    "@turf/meta": "npm:^4.7.3"
+  checksum: 10c0/533947fd5629c0c248dbee7b8c63bed7223c089aaea0b18ad493922332580c6e70ab84836fff87f43024041fda3ffd6c4bf2b28165d89b31d9cf5c170a77716e
+  languageName: node
+  linkType: hard
+
+"@turf/helpers@npm:4.7.3":
+  version: 4.7.3
+  resolution: "@turf/helpers@npm:4.7.3"
+  checksum: 10c0/370c05473e9f5c106f11b8d8c3d02f86c69ad4a5a00f0545ee7397350b4741c1e2de538c58289c4fa6577436ea99b6ec771535f7252439e0d0d3ddfa60a67866
+  languageName: node
+  linkType: hard
+
+"@turf/meta@npm:^4.7.3":
+  version: 4.7.4
+  resolution: "@turf/meta@npm:4.7.4"
+  checksum: 10c0/6caac8ffb09823deeeeeae852429adc3bbebff4fc6c1096098777ee52115f3c74d4f6aa7d60d8dbda15e6e9541216cdd6b9b829c9129c5949b007b226ef2c52a
+  languageName: node
+  linkType: hard
+
 "@tybys/wasm-util@npm:^0.9.0":
   version: 0.9.0
   resolution: "@tybys/wasm-util@npm:0.9.0"
@@ -3934,6 +3957,15 @@ __metadata:
   version: 4.0.2
   resolution: "@types/long@npm:4.0.2"
   checksum: 10c0/42ec66ade1f72ff9d143c5a519a65efc7c1c77be7b1ac5455c530ae9acd87baba065542f8847522af2e3ace2cc999f3ad464ef86e6b7352eece34daf88f8c924
+  languageName: node
+  linkType: hard
+
+"@types/mapbox-gl@npm:^3.4.1":
+  version: 3.4.1
+  resolution: "@types/mapbox-gl@npm:3.4.1"
+  dependencies:
+    "@types/geojson": "npm:*"
+  checksum: 10c0/475f48063a39cc791a0efa099f4a62b84df56a52e1d111e32d11930fcee8e281f20b157f4069ff0ff4d5e13889ce9b452ca4a57e5c27c6d70a32fb3f5a184e72
   languageName: node
   linkType: hard
 
@@ -4180,6 +4212,15 @@ __metadata:
   version: 4.2.0
   resolution: "@types/stylis@npm:4.2.0"
   checksum: 10c0/c76c13e76ca485f598a13984cfb5e07bb88a851da5bee213587424a5f101f182c74f4f92d633cebf9abcec40ccebb645d600d184b7e4b42793e3eeca8729b110
+  languageName: node
+  linkType: hard
+
+"@types/supercluster@npm:^5.0.1":
+  version: 5.0.3
+  resolution: "@types/supercluster@npm:5.0.3"
+  dependencies:
+    "@types/geojson": "npm:*"
+  checksum: 10c0/5ee2e49aa399690dfce9a4ccdee9fa012d955e8064d83169baed7d82d79be68f527c93939f913ed59ffd3fefe4757f07c8c193ea9c0c3243f7bbc6fc2354e3ef
   languageName: node
   linkType: hard
 
@@ -6076,6 +6117,7 @@ __metadata:
     "@reduxjs/toolkit": "npm:^2.6.1"
     "@toolpad/core": "npm:^0.14.0"
     "@types/howler": "npm:^2"
+    "@types/mapbox-gl": "npm:^3.4.1"
     "@types/minimatch": "npm:^6.0.0"
     "@types/ms": "npm:0.7.34"
     "@types/next-pwa": "npm:^5"
@@ -6117,6 +6159,7 @@ __metadata:
     react-dom: "npm:19.0.0"
     react-hook-form: "npm:^7.57.0"
     react-map-gl: "npm:^8.0.4"
+    react-mapbox-gl: "npm:^5.1.1"
     react-markdown: "npm:^10.1.0"
     react-player: "npm:^3.3.2"
     react-redux: "npm:^9.2.0"
@@ -6393,6 +6436,13 @@ __metadata:
   dependencies:
     mimic-response: "npm:^3.1.0"
   checksum: 10c0/bd89d23141b96d80577e70c54fb226b2f40e74a6817652b80a116d7befb8758261ad073a8895648a29cc0a5947021ab66705cb542fa9c143c82022b27c5b175e
+  languageName: node
+  linkType: hard
+
+"deep-equal@npm:1.0.1":
+  version: 1.0.1
+  resolution: "deep-equal@npm:1.0.1"
+  checksum: 10c0/bef838ef9824e124d10335deb9c7540bfc9f2f0eab17ad1bb870d0eee83ee4e7e6f6f892e5eebc2bd82759a76676926ad5246180097e28e57752176ff7dae888
   languageName: node
   linkType: hard
 
@@ -10014,6 +10064,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"kdbush@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "kdbush@npm:3.0.0"
+  checksum: 10c0/3fc8795870bd04f60627e7345b26fd0644beb91bc4164912c9d9378b39c674ba01c31db68ecaf6266d51c9ad81bf5b770b7effa51eeee37553d38293a094a686
+  languageName: node
+  linkType: hard
+
 "kdbush@npm:^4.0.2":
   version: 4.0.2
   resolution: "kdbush@npm:4.0.2"
@@ -12766,6 +12823,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-mapbox-gl@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "react-mapbox-gl@npm:5.1.1"
+  dependencies:
+    "@turf/bbox": "npm:4.7.3"
+    "@turf/helpers": "npm:4.7.3"
+    "@types/supercluster": "npm:^5.0.1"
+    deep-equal: "npm:1.0.1"
+    supercluster: "npm:^7.0.0"
+  peerDependencies:
+    mapbox-gl: ^1.12.0
+    prop-types: ^15.6.2
+    react: ^16.11.0
+    react-dom: ^16.11.0
+  checksum: 10c0/29da61fbfd3feaaa420b6af6e8ef63d24c8d310cfb05dfb4e1f51b2b915a9b33e6e189e9d9804f09ce1096cdf5c688cbd136911a83c48d9a1baef15cb701a62f
+  languageName: node
+  linkType: hard
+
 "react-markdown@npm:^10.1.0":
   version: 10.1.0
   resolution: "react-markdown@npm:10.1.0"
@@ -14388,6 +14463,15 @@ __metadata:
   version: 1.4.2
   resolution: "super-media-element@npm:1.4.2"
   checksum: 10c0/cdb49318e163fe52305cc6a46629e210297faf6653a3135e8d0118e6a54bd170c065337f835cdf750f3f4ad8cf68e66dc2b5ceda0895c3fdfe1b31975d30a1f8
+  languageName: node
+  linkType: hard
+
+"supercluster@npm:^7.0.0":
+  version: 7.1.5
+  resolution: "supercluster@npm:7.1.5"
+  dependencies:
+    kdbush: "npm:^3.0.0"
+  checksum: 10c0/bbebf45927d0019831731c94b78d1c9a1f3e2da0be9875d7ea75c6f261487e0f15d3f1822a9a49256e3c1672bdfb9138f9a5e44e2de99edb06cd1e758083e12d
   languageName: node
   linkType: hard
 

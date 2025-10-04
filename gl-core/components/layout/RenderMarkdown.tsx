@@ -4,7 +4,13 @@ import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Box, Link as MuiLink, Typography, useTheme } from '@mui/material';
 import { MightyButton } from '../../../gl-core';
-import { GoogleMap, FlickrAlbum, YouTube, PageAd } from '../../../gl-core';
+import {
+  GoogleMap,
+  FlickrAlbum,
+  YouTube,
+  PageAd,
+  Mapbox,
+} from '../../../gl-core';
 import { Flash } from '../../cartridges/Flash';
 
 export type TRenderMarkdown = {
@@ -16,7 +22,6 @@ export type TRenderMarkdown = {
 
 export default function RenderMarkdown({
   children = '',
-  // height,
   width,
   maxWidth,
 }: TRenderMarkdown) {
@@ -105,6 +110,10 @@ export default function RenderMarkdown({
     // PageAd
     const pageAd = parseShortcode(/\[PageAd\s+(.*?)\]/, PageAd);
     if (pageAd) return pageAd;
+
+    // Mapbox shortcode
+    const mapbox = parseShortcode(/\[Mapbox\s+(.*?)\]/, Mapbox);
+    if (mapbox) return mapbox;
 
     // fallback: just return text
     return text;
