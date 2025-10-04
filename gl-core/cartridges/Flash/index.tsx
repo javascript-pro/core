@@ -7,7 +7,6 @@ import Trace from './lib/Trace';
 import MovieClip from './lib/MovieClip';
 import Stage from './components/Stage';
 import Controls from './components/Controls';
-import MapView from './components/MapView';
 
 // Movies
 import { Logo } from './movies/Logo';
@@ -40,7 +39,6 @@ export {
   Stage,
   MovieClip,
   Controls,
-  MapView,
 };
 // optional
 export {

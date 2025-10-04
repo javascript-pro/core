@@ -35,7 +35,6 @@ import {
   SideAds,
 } from '../gl-core';
 import { SoundProvider } from './cartridges/Theme';
-import { MapView } from './cartridges/Flash';
 
 const config = configRaw as TConfig;
 
@@ -106,15 +105,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                     </Box>
                   </Box>
 
-                  <Box sx={{ mx: 3 }}>
-                    <MapView
-                      id="livePingMap"
-                      marker
-                      height={500}
-                      center={[0, 0]}
-                      zoom={3}
-                    />
-                  </Box>
+                  
 
                   {/* Image block */}
                   {!noImage && image && (
