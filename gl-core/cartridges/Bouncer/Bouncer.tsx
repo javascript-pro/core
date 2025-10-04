@@ -122,7 +122,7 @@ export default function Bouncer() {
           <PingViewer />
         </Box>
 
-        <Box sx={{ m: 3 }}>
+        <Box sx={{ m: 2 }}>
           <MapView 
             id="livePingMap" 
             marker
