@@ -21,12 +21,14 @@ import {
   ArrowMenu,
   Siblings,
   Children,
+} from './components';
+import {
   GoogleMap,
   FlickrAlbum,
   YouTube,
   PageAd,
   Mapbox,
-} from './components';
+} from './cartridges/Shortcodes';
 import {
   useLoading,
   useConfig,

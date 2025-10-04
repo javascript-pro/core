@@ -1,3 +1,4 @@
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Shortcodes/components/Mapbox.tsx
 'use client';
 import * as React from 'react';
 import { Box } from '@mui/material';

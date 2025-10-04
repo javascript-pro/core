@@ -1,4 +1,4 @@
-// /Users/goldlabel/GitHub/core/gl-core/components/shortcodes/PageAd.tsx
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Shortcodes/components/PageAd.tsx
 'use client';
 import React from 'react';
 import { useRouter } from 'next/navigation';
@@ -10,7 +10,7 @@ import {
   Alert,
   Typography,
 } from '@mui/material';
-import { useGlobalNav, Icon, navigateTo, useDispatch } from '../../../gl-core';
+import { useGlobalNav, Icon } from '../../../../gl-core';
 
 type NavItem = {
   title?: string;

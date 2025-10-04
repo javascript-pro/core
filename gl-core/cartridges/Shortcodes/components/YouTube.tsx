@@ -1,4 +1,4 @@
-// core/gl-core/components/shortcodes/YouTube.tsx
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Shortcodes/components/YouTube.tsx
 import React from 'react';
 import ReactPlayer from 'react-player';
 import { Box } from '@mui/material';

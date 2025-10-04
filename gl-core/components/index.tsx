@@ -16,18 +16,10 @@ import {
 } from './nav';
 import { FieldUpload } from './forms';
 import { Header, Footer, RenderMarkdown } from './layout';
-import GoogleMap from './shortcodes/GoogleMap';
-import FlickrAlbum from './shortcodes/FlickrAlbum';
-import YouTube from './shortcodes/YouTube';
-import PageAd from './shortcodes/PageAd';
-import Mapbox from './shortcodes/Mapbox';
 export { IncludeAll, Advert, Feedback, LoadingOverlay };
 export { Header, Footer, RenderMarkdown };
 export {
   Nav,
-  Mapbox,
-  GoogleMap,
-  FlickrAlbum,
   Siblings,
   Children,
   ArrowMenu,
@@ -41,6 +33,4 @@ export {
   ShareMenu,
   SharePopup,
   FieldUpload,
-  YouTube,
-  PageAd,
 };
