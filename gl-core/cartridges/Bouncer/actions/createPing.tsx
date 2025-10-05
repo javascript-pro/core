@@ -1,7 +1,7 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/createPing.tsx
 import { TUbereduxDispatch } from '../../Uberedux';
 import { setUbereduxKey } from '../../Uberedux';
-import { setBouncerKey } from '../';
+import { setBouncerKey, ping } from '../';
 
 // bring in FingerprintJS dynamically (client-side only)
 const loadFingerprint = async () => {
@@ -81,7 +81,7 @@ export const createPing =
       const device = getDeviceInfo();
 
       // 4. Build ping object
-      const ping = {
+      const pingObj = {
         id,
         hostname: window.location.hostname,
         pathname: window.location.pathname,
@@ -113,8 +113,9 @@ export const createPing =
       };
 
       // 5. Dispatch into bouncer slice
-      dispatch(setBouncerKey('ping', ping));
+      dispatch(setBouncerKey('ping', pingObj));
       dispatch(setBouncerKey('pingReady', true));
+      dispatch(ping());
     } catch (e: unknown) {
       const msg = e instanceof Error ? e.message : String(e);
       dispatch(setUbereduxKey({ key: 'error', value: msg }));
