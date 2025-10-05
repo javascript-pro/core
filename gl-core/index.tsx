@@ -21,12 +21,15 @@ import {
   ArrowMenu,
   Siblings,
   Children,
+} from './components';
+import {
   GoogleMap,
   FlickrAlbum,
   YouTube,
   PageAd,
   Mapbox,
-} from './components';
+  PrevNext,
+} from './cartridges/Shortcodes';
 import {
   useLoading,
   useConfig,
@@ -78,6 +81,7 @@ export {
 export {
   Advert,
   GoogleMap,
+  PrevNext,
   FlickrAlbum,
   YouTube,
   Header,

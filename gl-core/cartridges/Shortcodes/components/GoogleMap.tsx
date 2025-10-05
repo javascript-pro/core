@@ -1,3 +1,4 @@
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Shortcodes/components/GoogleMap.tsx
 'use client';
 
 import * as React from 'react';

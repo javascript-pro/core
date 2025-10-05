@@ -1,4 +1,3 @@
-// core/gl-core/components/nav/PageBreadcrumb.tsx
 'use client';
 
 import React, { Suspense } from 'react';
@@ -13,7 +12,6 @@ import globalNav from '../../../public/globalNav.json';
 function buildTitleMap(nav: any[], parentPath = ''): Record<string, string> {
   let map: Record<string, string> = {};
   for (const item of nav) {
-    // Build this item's full path
     const fullPath = (parentPath + '/' + (item.slug || '')).replace(
       /\/+/g,
       '/',
@@ -33,6 +31,45 @@ function buildTitleMap(nav: any[], parentPath = ''): Record<string, string> {
 
 // Build a lookup table once
 const titleMap = buildTitleMap(globalNav);
+
+/**
+ * Smart capitalisation helper:
+ * - Preserves known acronyms (AI, API, SEO, UI, UX, HTTP, JSON, etc.)
+ * - Title-cases normal words
+ * - Leaves existing proper-case words like "Next.js" untouched
+ */
+function smartCapitalize(label: string): string {
+  const knownAcronyms = [
+    'AI',
+    'API',
+    'SEO',
+    'UI',
+    'UX',
+    'HTTP',
+    'HTTPS',
+    'JSON',
+    'SQL',
+    'CSS',
+    'HTML',
+    'JS',
+    'TS',
+    'NLP',
+    'ML',
+    'API',
+    'GPU',
+  ];
+  if (!label) return label;
+
+  // Split into words (including hyphens and dots)
+  return label
+    .split(/[\s\-_]+/)
+    .map((word) => {
+      if (knownAcronyms.includes(word.toUpperCase())) return word.toUpperCase();
+      if (/[A-Z][a-z]/.test(word)) return word; // Already has internal capitalization
+      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    })
+    .join(' ');
+}
 
 function Params() {
   const searchParams = useSearchParams();
@@ -81,7 +118,7 @@ export function PageBreadcrumb({
       {/* Home link */}
       <NextLink href="/" passHref legacyBehavior>
         <MUILink underline="hover" color="inherit" variant="body2">
-          {titleMap['/'] || 'Home'}
+          {smartCapitalize(titleMap['/'] || 'Home')}
         </MUILink>
       </NextLink>
 
@@ -89,18 +126,17 @@ export function PageBreadcrumb({
         const href = '/' + segments.slice(0, index + 1).join('/');
         const isLast = index === segments.length - 1;
 
-        // Always try to use the title from globalNav
         let label = titleMap[href];
 
-        // Fallback: if no title in globalNav, use frontmatterTitle for last segment
         if (!label && isLast && frontmatterTitle) {
           label = frontmatterTitle;
         }
 
-        // Final fallback: use raw segment (no casing changes)
         if (!label) {
           label = segment;
         }
+
+        const displayLabel = smartCapitalize(label);
 
         return (
           <React.Fragment key={href}>
@@ -110,12 +146,12 @@ export function PageBreadcrumb({
                 variant="body2"
                 sx={{ fontWeight: 500, color: 'text.secondary' }}
               >
-                {label}
+                {displayLabel}
               </Typography>
             ) : (
               <NextLink href={href} passHref legacyBehavior>
                 <MUILink underline="hover" color="inherit" variant="body2">
-                  {label}
+                  {displayLabel}
                 </MUILink>
               </NextLink>
             )}

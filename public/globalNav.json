@@ -4,95 +4,28 @@
     "description": "Work, Life, Balance",
     "slug": "/",
     "order": 1,
-    "icon": "goldlabel",
-    "image": "https://live.staticflickr.com/65535/54802570139_8f4f2ac814_b.jpg",
     "type": "folder",
-    "tags": [
-      "JavaScript",
-      "Next Gen",
-      "Next.js",
-      "core",
-      "Gen X",
-      "goldlabel",
-      "pr0",
-      "bouncer",
-      "AI Prompt Engineering",
-      "ChatGPT",
-      "OpenAI",
-      "Singularity",
-      "Frontend",
-      "Vanilla JS",
-      "TypeScript",
-      "React",
-      "Angular",
-      "Vue",
-      "Material UI",
-      "MUI",
-      "Flash",
-      "Server Side JavaScript",
-      "Node",
-      "Gatsby",
-      "NextJS",
-      "Headless CMS",
-      "secure"
-    ],
-    "excerpt": "[Flash movie=\"Logo\" height=\"200\"]\n\n[PageAd slug=\"/work/expertise/ai/codingwithai\"]\n\n[PageAd slug=\"/balance/writers/generationx\"]\n\n[PageAd slug=\"/work/expertise/windoze\"]\n\n[PageAd slug=\"/work/expertise",
     "children": [
       {
         "title": "Work",
         "description": "Professional Fullstack JavaScript Development",
         "slug": "/work",
         "order": 10,
-        "icon": "work",
-        "image": "https://live.staticflickr.com/65535/54801864105_554c8c9f16_b.jpg",
         "type": "folder",
-        "tags": [
-          "JavaScript",
-          "Vanilla JavaScript",
-          "TypeScript",
-          "React",
-          "Material UI",
-          "Flash",
-          "Server Side JavaScript",
-          "Node",
-          "Gatsby",
-          "NextJS",
-          "Headless CMS"
-        ],
-        "excerpt": "The apps we ship are real. They run in production and are developed accessibly. The Core is Open Source and Free forever — giving you statically generated sites with Firestorepowered updates and a rea",
         "children": [
           {
             "title": "Goldlabel",
             "description": "Open Source Platform",
             "slug": "/work/goldlabel",
             "order": 1,
-            "icon": "goldlabel",
-            "image": "/png/n64/goldlabel.png",
             "type": "folder",
-            "tags": [
-              "JavaScript",
-              "Vanilla JavaScript",
-              "TypeScript",
-              "React",
-              "Material UI",
-              "Flash",
-              "Server Side JavaScript",
-              "Node",
-              "Gatsby",
-              "NextJS",
-              "Headless CMS"
-            ],
-            "excerpt": "Open Source Platform\n\nIt’s the public GitHub repository that powers goldlabel.pro — and it’s free for anyone to fork, copy, hack, and reuse.\n\n What is it?\n\nGoldlabel is a JavaScript platform built wit",
             "children": [
               {
                 "title": "Cartridges",
                 "description": "Self-contained pieces of application logic",
                 "slug": "/work/goldlabel/cartridges",
                 "order": 1,
-                "icon": "cartridge",
-                "image": "/png/n64/test.png",
                 "type": "folder",
-                "excerpt": "Goldlabel is built on cartridges.\n\nA cartridge is a selfcontained piece of application logic: React components, state, styles, and utilities bundled together in a portable unit.\n\nBecause each cartridg",
                 "children": [
                   {
                     "title": "Flash",
@@ -161,7 +94,10 @@
                     "type": "file",
                     "excerpt": "Purpose\n\n is a template designed to help developers quickly bootstrap a new Cartridge in a modular application framework such as Goldlabel. Cartridges are featurespecific, plugandplay components that "
                   }
-                ]
+                ],
+                "icon": "cartridge",
+                "image": "/png/n64/test.png",
+                "excerpt": "Goldlabel is built on cartridges.\n\nA cartridge is a selfcontained piece of application logic: React components, state, styles, and utilities bundled together in a portable unit.\n\nBecause each cartridg"
               },
               {
                 "title": "Free",
@@ -185,7 +121,23 @@
                 ],
                 "excerpt": "Open Source and Free Forever\n\nGoldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo archit"
               }
-            ]
+            ],
+            "icon": "goldlabel",
+            "image": "/png/n64/goldlabel.png",
+            "tags": [
+              "JavaScript",
+              "Vanilla JavaScript",
+              "TypeScript",
+              "React",
+              "Material UI",
+              "Flash",
+              "Server Side JavaScript",
+              "Node",
+              "Gatsby",
+              "NextJS",
+              "Headless CMS"
+            ],
+            "excerpt": "Open Source Platform\n\nIt’s the public GitHub repository that powers goldlabel.pro — and it’s free for anyone to fork, copy, hack, and reuse.\n\n What is it?\n\nGoldlabel is a JavaScript platform built wit"
           },
           {
             "title": "Company",
@@ -201,24 +153,143 @@
             "description": "We can help understanding in these fields",
             "slug": "/work/expertise",
             "order": 20,
-            "icon": "expertise",
-            "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
             "type": "folder",
-            "tags": [
-              "expertise",
-              "fields",
-              "work"
-            ],
-            "excerpt": "We work across the full stack, from interface to infrastructure, with a focus on robust, modern JavaScript tooling and scalable cloudnative delivery. Whether building responsive UIs, designing serverl",
             "children": [
               {
                 "title": "JavaScript",
                 "description": "JavaScript Whatever the Weather",
                 "slug": "/work/expertise/javascript",
                 "order": 5,
-                "icon": "javascript",
-                "image": "https://live.staticflickr.com/65535/54801612483_31ce454c4e_b.jpg",
                 "type": "folder",
+                "children": [
+                  {
+                    "title": "Next.js",
+                    "slug": "/work/expertise/javascript/next-js",
+                    "order": 15,
+                    "icon": "js",
+                    "image": "/png/3rdParty/next_og.png",
+                    "type": "file",
+                    "tags": [
+                      "JavaScript",
+                      "Node",
+                      "Next.js",
+                      "API",
+                      "REST API",
+                      "React"
+                    ],
+                    "excerpt": "[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescript\"]\n\n Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with sea"
+                  },
+                  {
+                    "title": "TypeScript",
+                    "description": "JavaScript with Seatbelts",
+                    "slug": "/work/expertise/javascript/typescript",
+                    "order": 30,
+                    "type": "folder",
+                    "children": [
+                      {
+                        "title": "Get Started",
+                        "slug": "/work/expertise/javascript/typescript/get-started",
+                        "order": 5,
+                        "icon": "js",
+                        "image": "/png/3rdParty/typescript_og.png",
+                        "type": "file",
+                        "tags": [
+                          "JavaScript",
+                          "Vanilla JavaScript",
+                          "TypeScript",
+                          "React"
+                        ],
+                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescript/advanced\"]\n\n TypeScript for the Reluctant Developer\n\nYou don’t have to love types, you just have to understand w"
+                      },
+                      {
+                        "title": "Advanced TypeScript",
+                        "slug": "/work/expertise/javascript/typescript/advanced",
+                        "order": 10,
+                        "icon": "js",
+                        "image": "/png/3rdParty/typescript_og.png",
+                        "type": "file",
+                        "tags": [
+                          "JavaScript",
+                          "Vanilla JavaScript",
+                          "TypeScript",
+                          "React"
+                        ],
+                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/getstarted\" next=\"/work/expertise/javascript/typescript/structuraltyping\"]\n\n[PageAd slug=\"/work/expertise/javascript/typescript/structuraltyping\"]"
+                      },
+                      {
+                        "title": "Why TypeScript?",
+                        "slug": "/work/expertise/javascript/typescript/why",
+                        "order": 25,
+                        "icon": "js",
+                        "image": "/png/3rdParty/typescript_og.png",
+                        "type": "file",
+                        "tags": [
+                          "JavaScript",
+                          "Vanilla JavaScript",
+                          "TypeScript",
+                          "React"
+                        ],
+                        "excerpt": "[PrevNext next=\"/work/expertise/javascript/typescript/advanced\"]\n\n Why TypeScript?\n\nThere was a time when using TypeScript felt optional — an extra layer for developers who liked type systems or came "
+                      },
+                      {
+                        "title": "Structural Typing",
+                        "slug": "/work/expertise/javascript/typescript/structural-typing",
+                        "order": 55,
+                        "icon": "js",
+                        "image": "/png/3rdParty/typescript_og.png",
+                        "type": "file",
+                        "tags": [
+                          "JavaScript",
+                          "Vanilla JavaScript",
+                          "TypeScript",
+                          "React"
+                        ],
+                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/advanced\" next=\"/work/expertise/javascript/typescript/aliases\"]\n\n TypeScript’s type system is based on shape compatibility, not nominal typing. Th"
+                      },
+                      {
+                        "title": "Interface vs Types",
+                        "slug": "/work/expertise/javascript/typescript/aliases",
+                        "order": 65,
+                        "icon": "js",
+                        "image": "/png/3rdParty/typescript_og.png",
+                        "type": "file",
+                        "tags": [
+                          "JavaScript",
+                          "Vanilla JavaScript",
+                          "TypeScript",
+                          "React"
+                        ],
+                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/structuraltyping\"]\n\n At first glance, they look identical\n\n\n\nBoth define a “shape” with an id and name. You can use either for variables, paramete"
+                      },
+                      {
+                        "title": "Union Types",
+                        "slug": "/work/expertise/javascript/typescript/union-types",
+                        "order": 75,
+                        "icon": "js",
+                        "image": "/png/3rdParty/typescript_og.png",
+                        "type": "file",
+                        "tags": [
+                          "JavaScript",
+                          "Vanilla JavaScript",
+                          "TypeScript",
+                          "React"
+                        ],
+                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/aliases\"]\n\n Union Types are one of TypeScript’s most powerful and flexible features.\n They let you describe a value that can be one of several typ"
+                      }
+                    ],
+                    "icon": "js",
+                    "image": "/png/3rdParty/typescript_og.png",
+                    "tags": [
+                      "JavaScript",
+                      "Vanilla JavaScript",
+                      "TypeScript",
+                      "React"
+                    ],
+                    "excerpt": "[PrevNext next=\"/work/expertise/javascript/typescript/getstarted\"]\n\n JavaScript with Seatbelts\n\nJavaScript was never meant for this. It started life scripting image rollovers in the ‘90s — and somehow"
+                  }
+                ],
+                "icon": "js",
+                "image": "/png/3rdParty/javascript_og.png",
                 "tags": [
                   "JavaScript",
                   "Vanilla JavaScript",
@@ -235,39 +306,14 @@
                   "Headless CMS",
                   "JSON"
                 ],
-                "excerpt": "JavaScript Whatever the Weather\n\nWe’ve been writing JavaScript since it was still called ECMAScript.\n\nBefore the frameworks, before npm, before it ate the world—we were already deep in the language th",
-                "children": [
-                  {
-                    "title": "Next.js",
-                    "slug": "/work/expertise/javascript/next-js",
-                    "order": 15,
-                    "icon": "js",
-                    "image": "https://live.staticflickr.com/65535/54801612483_31ce454c4e_b.jpg",
-                    "type": "file",
-                    "tags": [
-                      "JavaScript",
-                      "Node",
-                      "Next.js",
-                      "API",
-                      "REST API",
-                      "React"
-                    ],
-                    "excerpt": "Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with seamless backend capabilities, creating a unified developer experience. It simplifies the proce"
-                  }
-                ]
+                "excerpt": "[PrevNext prev=\"/work/expertise\" next=\"/work/expertise/javascript/nextjs\"]\n\n JavaScript Whatever the Weather\n\nWe’ve been writing JavaScript since it was still called ECMAScript.\n\nBefore the frameworks"
               },
               {
                 "title": "Fullstack",
                 "description": "Other skills accross the full stack",
                 "slug": "/work/expertise/fullstack",
                 "order": 25,
-                "icon": "fullstack",
-                "image": "https://live.staticflickr.com/65535/54688814017_148f57032c_o.jpg",
                 "type": "folder",
-                "tags": [
-                  "fullstack"
-                ],
-                "excerpt": "A much over used term\n\nSo much so, it's become a bit meaningless. It was such ha useful term, too. Basically it meant that if you were a frontend dev",
                 "children": [
                   {
                     "title": "Open Source",
@@ -427,38 +473,27 @@
                     ],
                     "excerpt": "Blockchain Crypto Casino\n\n In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online ga"
                   }
-                ]
+                ],
+                "icon": "fullstack",
+                "image": "https://live.staticflickr.com/65535/54688814017_148f57032c_o.jpg",
+                "tags": [
+                  "fullstack"
+                ],
+                "excerpt": "A much over used term\n\nSo much so, it's become a bit meaningless. It was such ha useful term, too. Basically it meant that if you were a frontend dev"
               },
               {
                 "title": "AI",
                 "description": "What do we know about about AI?",
                 "slug": "/work/expertise/ai",
                 "order": 280,
-                "icon": "ai",
-                "image": "https://live.staticflickr.com/65535/53669705662_d1361d5032_h.jpg",
                 "type": "folder",
-                "tags": [
-                  "ai",
-                  "ki",
-                  "expertise",
-                  "fields",
-                  "work"
-                ],
-                "excerpt": "Is this Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday\n\nIt's keeping tinfoil hat wearing folk awake at night. If",
                 "children": [
                   {
                     "title": "Abgeschottet KI",
                     "description": "What Does It Mean to Ring‑Fence an LLM?",
                     "slug": "/work/expertise/ai/abgeschottet-ki",
                     "order": 1,
-                    "icon": "ki",
-                    "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                     "type": "folder",
-                    "tags": [
-                      "abgeschottet",
-                      "KI"
-                    ],
-                    "excerpt": "A ring‑fenced LLM is like having the power of AI inside a locked room.\n\nIt can process sensitive documents and assist with legal work, but nothing ever leaves the firm’s secure network. When we say an",
                     "children": [
                       {
                         "title": "Abgeschottet KI",
@@ -592,7 +627,14 @@
                         ],
                         "excerpt": "What Organisational Measures Should a Law Firm Take?\n\n A ring‑fenced LLM works best as part of a wider culture of confidentiality.\n\n Clear internal policies\n Regular staff training\n Access controls ba"
                       }
-                    ]
+                    ],
+                    "icon": "ki",
+                    "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
+                    "tags": [
+                      "abgeschottet",
+                      "KI"
+                    ],
+                    "excerpt": "A ring‑fenced LLM is like having the power of AI inside a locked room.\n\nIt can process sensitive documents and assist with legal work, but nothing ever leaves the firm’s secure network. When we say an"
                   },
                   {
                     "title": "Maximizing AI Visibility",
@@ -639,23 +681,24 @@
                     ],
                     "excerpt": "How we help you take your AI product ideas from concept, through prototype to production\n\n From prototype to production\n\nAI agents need more than a good model — they need a front end that users can ac"
                   }
-                ]
+                ],
+                "icon": "ai",
+                "image": "https://live.staticflickr.com/65535/53669705662_d1361d5032_h.jpg",
+                "tags": [
+                  "ai",
+                  "ki",
+                  "expertise",
+                  "fields",
+                  "work"
+                ],
+                "excerpt": "Is this Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday\n\nIt's keeping tinfoil hat wearing folk awake at night. If"
               },
               {
                 "title": "Windoze",
                 "description": "Easy Legal Letter Assistant",
                 "slug": "/work/expertise/windoze",
                 "order": 1300,
-                "icon": "windows",
-                "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
                 "type": "folder",
-                "tags": [
-                  "expertise",
-                  "windoze",
-                  "experience",
-                  "work"
-                ],
-                "excerpt": "Easy Legal Letter Assistant\n\n A lightweight, Windows app for generating precise Legal letters. The tool assists staff at a legal firm by making it easy to store all the data around a case to a single ",
                 "children": [
                   {
                     "title": "Overview",
@@ -684,9 +727,26 @@
                     "type": "file",
                     "excerpt": "[YouTube src=\"https://www.youtube.com/watch?v=ULmJI1Z8L3E\"]\n\nIn this video, we put Windoze through a realworld timed task, checking the software against key requirements to see just how useful it real"
                   }
-                ]
+                ],
+                "icon": "windows",
+                "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
+                "tags": [
+                  "expertise",
+                  "windoze",
+                  "experience",
+                  "work"
+                ],
+                "excerpt": "Easy Legal Letter Assistant\n\n A lightweight, Windows app for generating precise Legal letters. The tool assists staff at a legal firm by making it easy to store all the data around a case to a single "
               }
-            ]
+            ],
+            "icon": "expertise",
+            "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
+            "tags": [
+              "expertise",
+              "fields",
+              "work"
+            ],
+            "excerpt": "[PrevNext next=\"/work/expertise/javascript\"]\n\n We work across the full stack, from interface to infrastructure, with a focus on robust, modern JavaScript tooling and scalable cloudnative delivery. Whe"
           },
           {
             "title": "Working remotely",
@@ -741,26 +801,37 @@
             ],
             "excerpt": "We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers t"
           }
-        ]
+        ],
+        "icon": "work",
+        "image": "https://live.staticflickr.com/65535/54801864105_554c8c9f16_b.jpg",
+        "tags": [
+          "JavaScript",
+          "Vanilla JavaScript",
+          "TypeScript",
+          "React",
+          "Material UI",
+          "Flash",
+          "Server Side JavaScript",
+          "Node",
+          "Gatsby",
+          "NextJS",
+          "Headless CMS"
+        ],
+        "excerpt": "[PrevNext next=\"/work/expertise\"]\n\nThe apps we ship are real. They run in production and are developed accessibly. The Core is Open Source and Free forever — giving you statically generated sites with"
       },
       {
         "title": "Life",
         "description": "Well, we've all got to have one",
         "slug": "/life",
         "order": 50,
-        "icon": "life",
-        "image": "/jpg/wei-zangs-food.jpg",
         "type": "folder",
-        "excerpt": "I work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age I'm never going to ski like I used to. Ma",
         "children": [
           {
             "title": "Vanlife",
             "description": "definition of",
             "slug": "/life/vanlife",
             "order": 10,
-            "icon": "van",
             "type": "folder",
-            "excerpt": "Vanlife (noun)\n\n A lifestyle built around living or traveling in a converted van, often equipped with a bed, kitchen, and storage, sometimes a bathroom.\n\n The practice of turning a vehicle into both h",
             "children": [
               {
                 "title": "The best price",
@@ -786,17 +857,16 @@
                 "type": "file",
                 "excerpt": "Best price (noun)\n\nThe universal truth: if it costs nothing, it’s already worth more than you were planning to spend.\n\n Usage\n\n \"How much was that? — Free. — Best price.\"\n \"I wasn’t even looking, but "
               }
-            ]
+            ],
+            "icon": "van",
+            "excerpt": "Vanlife (noun)\n\n A lifestyle built around living or traveling in a converted van, often equipped with a bed, kitchen, and storage, sometimes a bathroom.\n\n The practice of turning a vehicle into both h"
           },
           {
             "title": "Diving",
             "description": "Fish are friends. Not food.",
             "slug": "/life/diving",
             "order": 100,
-            "icon": "diving",
-            "image": "/png/n64/diving.png",
             "type": "folder",
-            "excerpt": "This section of the site is a quiet space for sharing some of the places I’ve been, the gear I’ve trusted, and the small moments I remember best — that sound when you first descend, the feeling of hov",
             "children": [
               {
                 "title": "Why dive?",
@@ -807,17 +877,17 @@
                 "type": "file",
                 "excerpt": "I’ve been diving for over 25 years. I’m not an instructor, and I don’t dive every weekend — but it’s something that’s been part of my life for a long time. I trained as a PADI Divemaster (though my ce"
               }
-            ]
+            ],
+            "icon": "diving",
+            "image": "/png/n64/diving.png",
+            "excerpt": "This section of the site is a quiet space for sharing some of the places I’ve been, the gear I’ve trusted, and the small moments I remember best — that sound when you first descend, the feeling of hov"
           },
           {
             "title": "Aquaponics",
             "description": "Fish are food. Not friends.",
             "slug": "/life/aquaponics",
             "order": 200,
-            "icon": "fish",
-            "image": "/png/n64/hippy.png",
             "type": "folder",
-            "excerpt": "Aquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closedloop system.",
             "children": [
               {
                 "title": "Aquaponics 5 Ws",
@@ -828,40 +898,40 @@
                 "type": "file",
                 "excerpt": "What: Aquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closedloop system.\n\nWho: Ideal for urban growers, hobbyists"
               }
-            ]
+            ],
+            "icon": "fish",
+            "image": "/png/n64/hippy.png",
+            "excerpt": "Aquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closedloop system."
           },
           {
             "title": "Motorbikes",
             "description": "A truth universally acknowledged",
             "slug": "/life/motorbikes",
             "order": 200,
+            "type": "folder",
+            "children": [],
             "icon": "bike",
             "image": "/jpg/motorbikes.jpg",
-            "type": "folder",
-            "excerpt": "“It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a motorbike.”\n\n― Jane Austen, Pride and Prejudice",
-            "children": []
+            "excerpt": "“It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a motorbike.”\n\n― Jane Austen, Pride and Prejudice"
           }
-        ]
+        ],
+        "icon": "life",
+        "image": "/jpg/wei-zangs-food.jpg",
+        "excerpt": "I work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age I'm never going to ski like I used to. Ma"
       },
       {
         "title": "Balance",
         "description": "A collection of Writing",
         "slug": "/balance",
         "order": 100,
-        "icon": "balance",
-        "image": "https://live.staticflickr.com/65535/54691336480_c273fe647c_o.jpg",
         "type": "folder",
-        "excerpt": "👀\n👉👇👍👌🙏\n💾🗑️⚠️\n✅❌\n➡️🔄\n🔑🎉",
         "children": [
           {
             "title": "Writing",
             "description": "It's hard to collate stuff into meaningful writing, but we've doing our best",
             "slug": "/balance/writing",
             "order": 1,
-            "icon": "balance",
-            "image": "https://live.staticflickr.com/65535/54353995935_a904d504aa_b.jpg",
             "type": "folder",
-            "excerpt": "Wei Zang, author of Not here to fuck spiders\n\n description: It's hard to collate stuff into meaningful ebooks, but we've done our best\n\n image: https://live.staticflickr.com/65535/536708023489bb887b68",
             "children": [
               {
                 "title": "Destructo The Wonderdog",
@@ -895,21 +965,18 @@
                 "description": "by Douglas Coupland",
                 "slug": "/balance/writing/generation-x",
                 "order": 100,
+                "type": "folder",
+                "children": [],
                 "icon": "doc",
                 "image": "/jpg/cassetes.jpg",
-                "type": "folder",
-                "excerpt": "The term Generation X acquired a modern application after the release of Generation X: Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Glossary\n\nMcJob A lo",
-                "children": []
+                "excerpt": "The term Generation X acquired a modern application after the release of Generation X: Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Glossary\n\nMcJob A lo"
               },
               {
                 "title": "Wei Zang’s Food",
                 "description": "魏藏美食",
                 "slug": "/balance/writing/wei-zangs-food",
                 "order": 110,
-                "icon": "food",
-                "image": "/jpg/wei-zangs-food.jpg",
                 "type": "folder",
-                "excerpt": "I never learned to cook. No one taught me. That’s why I can tell you about it.\n\nPeople who are taught spend too long worrying about what’s “right.” I just ate what I liked, cooked it, guessed. Like de",
                 "children": [
                   {
                     "title": "Air Fried Stuffed Peppers",
@@ -954,7 +1021,10 @@
                     "type": "file",
                     "excerpt": "\"Lemonading\" is an actual word that even people on Radio 4 use. So when life gives you lemons...\n\n Ingredients\n\n For the pastry\n\n 4 oz (110 g) plain flour, plus a little extra for rolling out\n a pinch"
                   }
-                ]
+                ],
+                "icon": "food",
+                "image": "/jpg/wei-zangs-food.jpg",
+                "excerpt": "I never learned to cook. No one taught me. That’s why I can tell you about it.\n\nPeople who are taught spend too long worrying about what’s “right.” I just ate what I liked, cooked it, guessed. Like de"
               },
               {
                 "title": "Wei Zang’s Food",
@@ -974,29 +1044,47 @@
                 "type": "file",
                 "excerpt": "That's soience mayte\n\nBecause we can carefully observe constellations when the Sun is not blocking their path, we know what position the stars should be in when the Sun is keeping us from seeing them."
               }
-            ]
+            ],
+            "icon": "balance",
+            "image": "https://live.staticflickr.com/65535/54353995935_a904d504aa_b.jpg",
+            "excerpt": "Wei Zang, author of Not here to fuck spiders\n\n description: It's hard to collate stuff into meaningful ebooks, but we've done our best\n\n image: https://live.staticflickr.com/65535/536708023489bb887b68"
           },
           {
             "title": "Video",
             "description": "It's hard to collate stuff into meaningful writing, but we've doing our best",
             "slug": "/balance/video",
             "order": 9,
+            "type": "folder",
+            "children": [],
             "icon": "balance",
             "image": "https://live.staticflickr.com/65535/54353995935_a904d504aa_b.jpg",
-            "type": "folder",
-            "excerpt": "[YouTube src=\"https://www.youtube.com/watch?v=Qe2ZLYzQToQ\"]\n\nScript (written October 2000)\n\nKnowing the future is easy\nYou just have to understand the past\nThe situation we have now is one where it's ",
-            "children": []
+            "excerpt": "[YouTube src=\"https://www.youtube.com/watch?v=Qe2ZLYzQToQ\"]\n\nScript (written October 2000)\n\nKnowing the future is easy\nYou just have to understand the past\nThe situation we have now is one where it's "
           },
           {
             "title": "Writers",
-            "description": "description",
+            "description": "",
             "slug": "/balance/writers",
             "order": 20,
-            "icon": "balance",
-            "image": "/jpg/cassetes.jpg",
             "type": "folder",
-            "excerpt": "Curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction. From visionary science fiction to satirical explorations of culture and the human exper",
             "children": [
+              {
+                "title": "einstein",
+                "description": "",
+                "slug": "/balance/writers/einstein",
+                "order": 0,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "General Relativity",
+                    "slug": "/balance/writers/einstein/relativity",
+                    "order": 9999,
+                    "icon": "doc",
+                    "image": "/jpg/einstein.jpg",
+                    "type": "file",
+                    "excerpt": "Let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series.\n\nI mentioned in the last lecture this idea of Gedanken experiments, th"
+                  }
+                ]
+              },
               {
                 "title": "William Gibson",
                 "slug": "/balance/writers/william-gibson",
@@ -1062,10 +1150,48 @@
                 "type": "file",
                 "excerpt": "Let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series.\n\nI mentioned in the last lecture this idea of Gedanken experiments, th"
               }
-            ]
+            ],
+            "icon": "balance",
+            "image": "/jpg/cassetes.jpg",
+            "excerpt": "Curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction. From visionary science fiction to satirical explorations of culture and the human exper"
           }
-        ]
+        ],
+        "icon": "balance",
+        "image": "https://live.staticflickr.com/65535/54691336480_c273fe647c_o.jpg",
+        "excerpt": "👀\n👉👇👍👌🙏\n💾🗑️⚠️\n✅❌\n➡️🔄\n🔑🎉"
       }
-    ]
+    ],
+    "icon": "goldlabel",
+    "image": "https://live.staticflickr.com/65535/54802570139_8f4f2ac814_b.jpg",
+    "tags": [
+      "JavaScript",
+      "Next Gen",
+      "Next.js",
+      "core",
+      "Gen X",
+      "goldlabel",
+      "pr0",
+      "bouncer",
+      "AI Prompt Engineering",
+      "ChatGPT",
+      "OpenAI",
+      "Singularity",
+      "Frontend",
+      "Vanilla JS",
+      "TypeScript",
+      "React",
+      "Angular",
+      "Vue",
+      "Material UI",
+      "MUI",
+      "Flash",
+      "Server Side JavaScript",
+      "Node",
+      "Gatsby",
+      "NextJS",
+      "Headless CMS",
+      "secure"
+    ],
+    "excerpt": "[Flash movie=\"Logo\" height=\"200\"]\n\n[PageAd slug=\"/work/expertise/javascript\"]\n\n[PageAd slug=\"/work/expertise/javascript/typescript\"]\n\n[PageAd slug=\"/work/goldlabel/cartridges/flash\"]\n\n[PageAd slug=\"/w"
   }
 ]

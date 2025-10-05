@@ -8,6 +8,7 @@ const withPWA = require('next-pwa')({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   devIndicators: false,
+  transpilePackages: ['react-map-gl', 'mapbox-gl'],
   images: {
     remotePatterns: [
       {

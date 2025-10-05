@@ -3,10 +3,12 @@ order: 5
 title: JavaScript
 description: JavaScript Whatever the Weather
 slug: /work/expertise/javascript
-icon: javascript
-image: https://live.staticflickr.com/65535/54801612483_31ce454c4e_b.jpg
+icon: js
+image: /png/3rdParty/javascript_og.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React, Angular, Vue, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS, JSON
 ---
+
+[PrevNext prev="/work/expertise" next="/work/expertise/javascript/next-js"]
 
 ## JavaScript Whatever the Weather
 

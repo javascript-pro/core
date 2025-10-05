@@ -1,8 +1,9 @@
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Shortcodes/components/FlickrAlbum.tsx
 'use client';
 
 import * as React from 'react';
 import { Box } from '@mui/material';
-import { FlickrAlbum as Flickr } from '../../cartridges/Flickr';
+import { FlickrAlbum as Flickr } from '../../../cartridges/Flickr';
 
 export type TFlickrAlbum = {
   id?: string | null;

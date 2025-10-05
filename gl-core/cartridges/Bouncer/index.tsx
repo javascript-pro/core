@@ -3,6 +3,7 @@ import Bouncer from './Bouncer';
 import PingViewer from './components/PingViewer';
 import MessageForm from './components/MessageForm';
 import MessageList from './components/MessageList';
+import MapView from './components/MapView';
 
 import { initialState as initialStateBouncer } from './initialState';
 import { useBouncer } from './useBouncer';
@@ -20,4 +21,5 @@ export {
   createPing,
   MessageForm,
   MessageList,
+  MapView,
 };

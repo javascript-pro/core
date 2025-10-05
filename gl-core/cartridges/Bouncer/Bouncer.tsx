@@ -3,6 +3,7 @@ import React from 'react';
 import { Box, Dialog, CardHeader, Badge, Typography } from '@mui/material';
 import { MightyButton, useDispatch, Icon, useIsMobile } from '../../../gl-core';
 import {
+  MapView,
   PingViewer,
   useBouncer,
   setBouncerKey,
@@ -92,7 +93,7 @@ export default function Bouncer() {
           <MightyButton
             mode="icon"
             label="Bouncer"
-            icon="email"
+            icon="bouncer"
             onClick={handleBtnClick}
           />
         </Badge>
@@ -100,13 +101,13 @@ export default function Bouncer() {
 
       <Dialog
         fullWidth
-        maxWidth="xs"
+        maxWidth="sm"
         fullScreen={isMobile}
         open={b.dialogOpen}
         onClose={handleClose}
       >
         <CardHeader
-          avatar={<Icon icon="email" color="primary" />}
+          avatar={<Icon icon="bouncer" color="primary" />}
           action={
             <MightyButton
               mode="icon"
@@ -116,6 +117,9 @@ export default function Bouncer() {
             />
           }
         />
+        <Box sx={{ m: 2 }}>
+          <MapView id="livePingMap" marker height={250} zoom={3.5} />
+        </Box>
         <Box>
           {/* PingViewer is now dumb: just reads b.livePing from Redux */}
           <PingViewer />
