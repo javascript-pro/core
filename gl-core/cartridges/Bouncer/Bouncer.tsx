@@ -101,7 +101,7 @@ export default function Bouncer() {
 
       <Dialog
         fullWidth
-        maxWidth="xs"
+        maxWidth="sm"
         fullScreen={isMobile}
         open={b.dialogOpen}
         onClose={handleClose}
@@ -117,13 +117,12 @@ export default function Bouncer() {
             />
           }
         />
+        <Box sx={{ m: 2 }}>
+          <MapView id="livePingMap" marker height={250} zoom={3.5} />
+        </Box>
         <Box>
           {/* PingViewer is now dumb: just reads b.livePing from Redux */}
           <PingViewer />
-        </Box>
-
-        <Box sx={{ m: 2 }}>
-          <MapView id="livePingMap" marker height={250} zoom={3.5} />
         </Box>
       </Dialog>
     </>
