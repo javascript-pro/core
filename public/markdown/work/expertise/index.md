@@ -8,6 +8,8 @@ image: https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg
 tags: expertise, fields, work
 ---
 
+[PrevNext next="/work/expertise/javascript"]
+
 > We work across the full stack, from interface to infrastructure, with a focus on robust, modern JavaScript tooling and scalable cloud-native delivery. Whether building responsive UIs, designing serverless APIs, or optimising DevOps pipelines, we bring production experience and architectural clarity to every layer of the process.
 
 #### Core Specialisms

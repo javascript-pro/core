@@ -4,9 +4,11 @@ title: Next.js
 description: React with seamless backend capabilities
 slug: /work/expertise/javascript/next-js
 icon: js
-image: https://live.staticflickr.com/65535/54801612483_31ce454c4e_b.jpg
+image: /png/3rdParty/javascript_og.png
 tags: JavaScript, Node, Next.js, API, REST API, React
 ---
+
+[PrevNext prev="/work/expertise/javascript" next="/work/expertise/javascript/typescript"]
 
 > Next.js is a full-stack JavaScript framework that brings together the power of React on the frontend with seamless backend capabilities, creating a unified developer experience. It simplifies the process of building modern web applications by offering a complete toolkit out of the box.
 

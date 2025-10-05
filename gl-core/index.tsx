@@ -28,6 +28,7 @@ import {
   YouTube,
   PageAd,
   Mapbox,
+  PrevNext,
 } from './cartridges/Shortcodes';
 import {
   useLoading,
@@ -80,6 +81,7 @@ export {
 export {
   Advert,
   GoogleMap,
+  PrevNext,
   FlickrAlbum,
   YouTube,
   Header,

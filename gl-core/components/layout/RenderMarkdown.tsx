@@ -10,6 +10,7 @@ import {
   YouTube,
   PageAd,
   Mapbox,
+  PrevNext,
 } from '../../../gl-core';
 import { Flash } from '../../cartridges/Flash';
 
@@ -114,6 +115,10 @@ export default function RenderMarkdown({
     // Mapbox shortcode
     const mapbox = parseShortcode(/\[Mapbox\s+(.*?)\]/, Mapbox);
     if (mapbox) return mapbox;
+
+    // PrevNext
+    const prevNext = parseShortcode(/\[PrevNext\s+(.*?)\]/, PrevNext);
+    if (prevNext) return prevNext;
 
     // fallback: just return text
     return text;

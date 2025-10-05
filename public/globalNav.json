@@ -167,7 +167,7 @@
                     "slug": "/work/expertise/javascript/next-js",
                     "order": 15,
                     "icon": "js",
-                    "image": "https://live.staticflickr.com/65535/54801612483_31ce454c4e_b.jpg",
+                    "image": "/png/3rdParty/javascript_og.png",
                     "type": "file",
                     "tags": [
                       "JavaScript",
@@ -177,7 +177,7 @@
                       "REST API",
                       "React"
                     ],
-                    "excerpt": "Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with seamless backend capabilities, creating a unified developer experience. It simplifies the proce"
+                    "excerpt": "[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescript\"]\n\n Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with sea"
                   },
                   {
                     "title": "TypeScript",
@@ -199,7 +199,7 @@
                           "TypeScript",
                           "React"
                         ],
-                        "excerpt": "TypeScript for the Reluctant Developer\n\nYou don’t have to love types, you just have to understand what they are and why they matter. If you come from design, UX, writing, or any other creative field, "
+                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript\"]\n\n TypeScript for the Reluctant Developer\n\nYou don’t have to love types, you just have to understand what they are and why they matter. If you come from des"
                       },
                       {
                         "title": "Why TypeScript?",
@@ -225,11 +225,11 @@
                       "TypeScript",
                       "React"
                     ],
-                    "excerpt": "JavaScript with Seatbelts\n\nJavaScript was never meant for this. It started life scripting image rollovers in the ‘90s — and somehow ended up running banks and billiondollar web apps.\n\nBy the early 201"
+                    "excerpt": "[PrevNext next=\"/work/expertise/javascript/typescript/getstarted\"]\n\n JavaScript with Seatbelts\n\nJavaScript was never meant for this. It started life scripting image rollovers in the ‘90s — and somehow"
                   }
                 ],
                 "icon": "js",
-                "image": "https://live.staticflickr.com/65535/54801612483_31ce454c4e_b.jpg",
+                "image": "/png/3rdParty/javascript_og.png",
                 "tags": [
                   "JavaScript",
                   "Vanilla JavaScript",
@@ -246,7 +246,7 @@
                   "Headless CMS",
                   "JSON"
                 ],
-                "excerpt": "JavaScript Whatever the Weather\n\nWe’ve been writing JavaScript since it was still called ECMAScript.\n\nBefore the frameworks, before npm, before it ate the world—we were already deep in the language th"
+                "excerpt": "[PrevNext prev=\"/work/expertise\" next=\"/work/expertise/javascript/nextjs\"]\n\n JavaScript Whatever the Weather\n\nWe’ve been writing JavaScript since it was still called ECMAScript.\n\nBefore the frameworks"
               },
               {
                 "title": "Fullstack",
@@ -686,7 +686,7 @@
               "fields",
               "work"
             ],
-            "excerpt": "We work across the full stack, from interface to infrastructure, with a focus on robust, modern JavaScript tooling and scalable cloudnative delivery. Whether building responsive UIs, designing serverl"
+            "excerpt": "[PrevNext next=\"/work/expertise/javascript\"]\n\n We work across the full stack, from interface to infrastructure, with a focus on robust, modern JavaScript tooling and scalable cloudnative delivery. Whe"
           },
           {
             "title": "Working remotely",
@@ -757,7 +757,7 @@
           "NextJS",
           "Headless CMS"
         ],
-        "excerpt": "The apps we ship are real. They run in production and are developed accessibly. The Core is Open Source and Free forever — giving you statically generated sites with Firestorepowered updates and a rea"
+        "excerpt": "[PrevNext next=\"/work/expertise\"]\n\nThe apps we ship are real. They run in production and are developed accessibly. The Core is Open Source and Free forever — giving you statically generated sites with"
       },
       {
         "title": "Life",
@@ -1132,6 +1132,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[Flash movie=\"Logo\" height=\"200\"]\n\n[PageAd slug=\"/work/goldlabel/cartridges/flash\"]\n\n[PageAd slug=\"/work/expertise/ai/codingwithai\"]\n\n[PageAd slug=\"/work/expertise/javascript/typescript\"]\n\n[PageAd slu"
+    "excerpt": "[Flash movie=\"Logo\" height=\"200\"]\n\n[PageAd slug=\"/work/expertise/javascript/typescript\"]\n\n[PageAd slug=\"/work/goldlabel/cartridges/flash\"]\n\n[PageAd slug=\"/work/expertise/ai/codingwithai\"]\n\n[PageAd slu"
   }
 ]
