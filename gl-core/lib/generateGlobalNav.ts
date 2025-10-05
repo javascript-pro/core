@@ -18,17 +18,23 @@ type NavNode = {
   children?: NavNode[];
 };
 
+/**
+ * Extracts a short text summary from markdown content.
+ */
 function extractExcerpt(content: string): string {
   return content
-    .replace(/<!--.*?-->/gs, '')
-    .replace(/!\[.*?\]\(.*?\)/g, '')
-    .replace(/\[.*?\]\(.*?\)/g, '')
-    .replace(/`{1,3}.*?`{1,3}/gs, '')
-    .replace(/[#>*_`-]/g, '')
+    .replace(/<!--.*?-->/gs, '') // comments
+    .replace(/!\[.*?\]\(.*?\)/g, '') // images
+    .replace(/\[.*?\]\(.*?\)/g, '') // links
+    .replace(/`{1,3}.*?`{1,3}/gs, '') // inline code
+    .replace(/[#>*_`-]/g, '') // markdown punctuation
     .trim()
     .slice(0, 200);
 }
 
+/**
+ * Parses comma-separated tags from frontmatter.
+ */
 function parseTags(rawTags?: string): string[] | undefined {
   if (!rawTags) return undefined;
   return rawTags
@@ -37,39 +43,50 @@ function parseTags(rawTags?: string): string[] | undefined {
     .filter(Boolean);
 }
 
-// Build slugs from path segments
+/**
+ * Builds a normalized slug from an array of path segments.
+ */
 function createSlugFromSegments(segments: string[]): string {
   return '/' + segments.filter(Boolean).join('/').replace(/\/+/g, '/');
 }
 
+/**
+ * Recursively walk the markdown directory tree and build navigation nodes.
+ * Folders are included even if they lack index.md — the folder name is used as fallback.
+ */
 export async function getMarkdownPagesRecursively(
   dir: string,
   pathSegments: string[] = [],
 ): Promise<NavNode[]> {
   const entries = await fs.readdir(dir, { withFileTypes: true });
-
   const fullIndexPath = path.join(dir, 'index.md');
-  let folderNode: NavNode | null = null;
 
+  // Default folder node (fallback if no index.md)
+  let folderNode: NavNode = {
+    title: path.basename(dir),
+    description: '',
+    slug: createSlugFromSegments(pathSegments),
+    order: 0,
+    type: 'folder',
+    children: [],
+  };
+
+  // Try to load metadata from index.md if present
   try {
     const rawIndex = await fs.readFile(fullIndexPath, 'utf-8');
-    const { data: indexData, content: indexContent } = matter(rawIndex);
-
+    const { data, content } = matter(rawIndex);
     folderNode = {
-      title: indexData.title || path.basename(dir),
-      description: indexData.description || 'description',
-      slug: createSlugFromSegments(pathSegments),
-      order: indexData.order ?? 0,
-      icon: indexData.icon,
-      image: indexData.image,
-      type: 'folder',
-      tags: parseTags(indexData.tags),
-      excerpt: extractExcerpt(indexContent),
-      children: [],
+      ...folderNode,
+      title: data.title || folderNode.title,
+      description: data.description || folderNode.description,
+      order: data.order ?? folderNode.order,
+      icon: data.icon,
+      image: data.image,
+      tags: parseTags(data.tags),
+      excerpt: extractExcerpt(content),
     };
   } catch {
-    // No index.md found — skip this folder
-    return [];
+    // no index.md — fall back to folder defaults (don’t return [])
   }
 
   for (const entry of entries) {
@@ -107,15 +124,34 @@ export async function getMarkdownPagesRecursively(
     }
   }
 
+  // Sort by order if present
   if (folderNode.children && folderNode.children.length > 0) {
     folderNode.children.sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
+  }
+
+  // Skip truly empty folders (no index.md, no child files)
+  try {
+    await fs.access(fullIndexPath);
+  } catch {
+    if (!folderNode.children?.length) return [];
   }
 
   return [folderNode];
 }
 
+/**
+ * Generate the global navigation JSON file from markdown.
+ */
 export async function generateGlobalNav() {
   const tree = await getMarkdownPagesRecursively(MARKDOWN_ROOT, []);
   await fs.writeFile(OUTPUT_PATH, JSON.stringify(tree, null, 2));
-  console.log(`✅ Generated /globalNav.json`);
+  console.log(`✅ Generated /public/globalNav.json`);
+}
+
+// Run directly (if executed with `node scripts/generateGlobalNav.js`)
+if (process.argv[1] === __filename) {
+  generateGlobalNav().catch((err) => {
+    console.error('❌ Failed to generate globalNav.json', err);
+    process.exit(1);
+  });
 }

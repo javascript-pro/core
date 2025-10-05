@@ -16,6 +16,8 @@ noImage: true
 
 [PageAd slug="/work/expertise/ai/coding-with-ai"]
 
+[PageAd slug="/work/expertise/javascript/typescript"]
+
 [PageAd slug="/balance/writers/generation-x"]
 
 [PageAd slug="/work/expertise/windoze"]

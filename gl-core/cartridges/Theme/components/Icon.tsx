@@ -152,10 +152,12 @@ import Web3DIcon from '@mui/icons-material/ThreeDRotation';
 import TeamIcon from '@mui/icons-material/People';
 import VanIcon from '@mui/icons-material/AirportShuttle';
 import FullstackIcon from '@mui/icons-material/HorizontalSplit';
+import TypescriptIcon from '@mui/icons-material/DataObject';
 
 export type TIcon = {
   icon:
     | 'more'
+    | 'typescript'
     | 'van'
     | 'fullstack'
     | 'web3d'
@@ -341,6 +343,10 @@ export default function Icon({ icon, color }: TIcon) {
 
     case 'web3d':
       iconFragment = <Web3DIcon color={color} />;
+      break;
+
+    case 'typescript':
+      iconFragment = <TypescriptIcon color={color} />;
       break;
 
     case 'fullstack':

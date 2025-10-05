@@ -51,7 +51,7 @@ export default function MapView({
         {marker && (
           <Marker
             longitude={b.livePing?.longitude || 0}
-            latitude={b.livePing?.latitude || 0 }
+            latitude={b.livePing?.latitude || 0}
             anchor="center"
           >
             <Button variant="contained">{b.livePing?.city || ''}</Button>
