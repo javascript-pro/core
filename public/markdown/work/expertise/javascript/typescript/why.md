@@ -8,6 +8,8 @@ image: /png/3rdParty/typescript_og.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React
 ---
 
+[PrevNext next="/work/expertise/javascript/typescript/advanced"]
+
 ## Why TypeScript?
 
 There was a time when using TypeScript felt optional — an extra layer for developers who liked type systems or came from Java or C#, but that time is over.

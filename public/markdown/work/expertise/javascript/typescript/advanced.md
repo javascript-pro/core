@@ -8,10 +8,11 @@ image: /png/3rdParty/typescript_og.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React
 ---
 
-[PrevNext prev="/work/expertise/javascript/typescript/get-started"]
+[PrevNext prev="/work/expertise/javascript/typescript/get-started" next="/work/expertise/javascript/typescript/structural-typing"]
 
-- Structural typing (TypeScript’s type system is based on shape compatibility, not nominal typing).
-- interface vs type aliases
+[PageAd slug="/work/expertise/javascript/typescript/structural-typing"]
+
+- Interface vs type aliases
 - Union (|) and intersection (&) types
 - Type narrowing (if ('foo' in x), typeof, instanceof, discriminated unions)
 - Enums, tuples, optional and readonly properties

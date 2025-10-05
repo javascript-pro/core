@@ -167,7 +167,7 @@
                     "slug": "/work/expertise/javascript/next-js",
                     "order": 15,
                     "icon": "js",
-                    "image": "/png/3rdParty/javascript_og.png",
+                    "image": "/png/3rdParty/next_og.png",
                     "type": "file",
                     "tags": [
                       "JavaScript",
@@ -199,7 +199,7 @@
                           "TypeScript",
                           "React"
                         ],
-                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript\"]\n\n TypeScript for the Reluctant Developer\n\nYou don’t have to love types, you just have to understand what they are and why they matter. If you come from des"
+                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescript/advanced\"]\n\n TypeScript for the Reluctant Developer\n\nYou don’t have to love types, you just have to understand w"
                       },
                       {
                         "title": "Advanced TypeScript",
@@ -214,7 +214,7 @@
                           "TypeScript",
                           "React"
                         ],
-                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/getstarted\"]\n\n Structural typing (TypeScript’s type system is based on shape compatibility, not nominal typing).\n interface vs type aliases\n Union"
+                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/getstarted\" next=\"/work/expertise/javascript/typescript/structuraltyping\"]\n\n[PageAd slug=\"/work/expertise/javascript/typescript/structuraltyping\"]"
                       },
                       {
                         "title": "Why TypeScript?",
@@ -229,7 +229,52 @@
                           "TypeScript",
                           "React"
                         ],
-                        "excerpt": "Why TypeScript?\n\nThere was a time when using TypeScript felt optional — an extra layer for developers who liked type systems or came from Java or C, but that time is over.\n\nToday, the question isn’t \""
+                        "excerpt": "[PrevNext next=\"/work/expertise/javascript/typescript/advanced\"]\n\n Why TypeScript?\n\nThere was a time when using TypeScript felt optional — an extra layer for developers who liked type systems or came "
+                      },
+                      {
+                        "title": "Structural Typing",
+                        "slug": "/work/expertise/javascript/typescript/structural-typing",
+                        "order": 55,
+                        "icon": "js",
+                        "image": "/png/3rdParty/typescript_og.png",
+                        "type": "file",
+                        "tags": [
+                          "JavaScript",
+                          "Vanilla JavaScript",
+                          "TypeScript",
+                          "React"
+                        ],
+                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/advanced\" next=\"/work/expertise/javascript/typescript/aliases\"]\n\n TypeScript’s type system is based on shape compatibility, not nominal typing. Th"
+                      },
+                      {
+                        "title": "Interface vs Types",
+                        "slug": "/work/expertise/javascript/typescript/aliases",
+                        "order": 65,
+                        "icon": "js",
+                        "image": "/png/3rdParty/typescript_og.png",
+                        "type": "file",
+                        "tags": [
+                          "JavaScript",
+                          "Vanilla JavaScript",
+                          "TypeScript",
+                          "React"
+                        ],
+                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/structuraltyping\"]\n\n At first glance, they look identical\n\n\n\nBoth define a “shape” with an id and name. You can use either for variables, paramete"
+                      },
+                      {
+                        "title": "Union Types",
+                        "slug": "/work/expertise/javascript/typescript/union-types",
+                        "order": 75,
+                        "icon": "js",
+                        "image": "/png/3rdParty/typescript_og.png",
+                        "type": "file",
+                        "tags": [
+                          "JavaScript",
+                          "Vanilla JavaScript",
+                          "TypeScript",
+                          "React"
+                        ],
+                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/aliases\"]\n\n Union Types are one of TypeScript’s most powerful and flexible features.\n They let you describe a value that can be one of several typ"
                       }
                     ],
                     "icon": "js",

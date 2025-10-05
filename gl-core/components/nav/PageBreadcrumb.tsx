@@ -12,7 +12,10 @@ import globalNav from '../../../public/globalNav.json';
 function buildTitleMap(nav: any[], parentPath = ''): Record<string, string> {
   let map: Record<string, string> = {};
   for (const item of nav) {
-    const fullPath = (parentPath + '/' + (item.slug || '')).replace(/\/+/g, '/');
+    const fullPath = (parentPath + '/' + (item.slug || '')).replace(
+      /\/+/g,
+      '/',
+    );
 
     if (item.title) {
       map[fullPath] = item.title;
@@ -36,13 +39,31 @@ const titleMap = buildTitleMap(globalNav);
  * - Leaves existing proper-case words like "Next.js" untouched
  */
 function smartCapitalize(label: string): string {
-  const knownAcronyms = ['AI', 'API', 'SEO', 'UI', 'UX', 'HTTP', 'HTTPS', 'JSON', 'SQL', 'CSS', 'HTML', 'JS', 'TS', 'NLP', 'ML', 'API', 'GPU'];
+  const knownAcronyms = [
+    'AI',
+    'API',
+    'SEO',
+    'UI',
+    'UX',
+    'HTTP',
+    'HTTPS',
+    'JSON',
+    'SQL',
+    'CSS',
+    'HTML',
+    'JS',
+    'TS',
+    'NLP',
+    'ML',
+    'API',
+    'GPU',
+  ];
   if (!label) return label;
 
   // Split into words (including hyphens and dots)
   return label
     .split(/[\s\-_]+/)
-    .map(word => {
+    .map((word) => {
       if (knownAcronyms.includes(word.toUpperCase())) return word.toUpperCase();
       if (/[A-Z][a-z]/.test(word)) return word; // Already has internal capitalization
       return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
@@ -65,7 +86,9 @@ function Params() {
           {index !== 0 && <span>&</span>}
           <span className="px-1">
             <span className="animate-[highlight_1s_ease-in-out_1]">{key}</span>=
-            <span className="animate-[highlight_1s_ease-in-out_1]">{value}</span>
+            <span className="animate-[highlight_1s_ease-in-out_1]">
+              {value}
+            </span>
           </span>
         </React.Fragment>
       ))}

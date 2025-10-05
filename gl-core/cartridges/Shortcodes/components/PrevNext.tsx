@@ -63,7 +63,7 @@ export default function PrevNext({
   const handleNext = () => next && dispatch(routeTo(next, router));
 
   return (
-    <Box sx={{ }}>
+    <Box sx={{}}>
       <List
         disablePadding
         sx={{
@@ -73,10 +73,8 @@ export default function PrevNext({
         }}
       >
         {prev && (
-          <ListItemButton
-            onClick={handlePrev}
-          >
-            <ListItemIcon sx={{  }}>
+          <ListItemButton onClick={handlePrev}>
+            <ListItemIcon sx={{}}>
               <Icon icon="left" />
             </ListItemIcon>
             <ListItemText
@@ -85,21 +83,22 @@ export default function PrevNext({
                   {prevItem?.title || 'Previous'}
                 </Typography>
               }
-              
             />
           </ListItemButton>
         )}
 
         {next && (
-          <ListItemButton
-            onClick={handleNext}>
+          <ListItemButton onClick={handleNext}>
             <ListItemText
               primary={
-                <Typography variant="subtitle1" fontWeight={600} textAlign="right">
+                <Typography
+                  variant="subtitle1"
+                  fontWeight={600}
+                  textAlign="right"
+                >
                   {nextItem?.title || 'Next'}
                 </Typography>
               }
-              
             />
             <ListItemIcon sx={{ ml: 2 }}>
               <Icon icon="right" />

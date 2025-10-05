@@ -92,20 +92,11 @@ export default function Siblings() {
     if (isIndexPage) {
       const contents = currentNode.children || [];
       if (contents.length === 0) return null;
-      const sorted = [...contents].sort(
-        (a, b) => (a.order ?? 0) - (b.order ?? 0),
-      );
-      return [currentNode, ...sorted];
+      return [...contents].sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
     } else {
-      const parentContents = findParentContents(
-        globalNav as NavItem[],
-        pathname,
-      );
+      const parentContents = findParentContents(globalNav as NavItem[], pathname);
       if (!parentContents) return null;
-      const sorted = [...parentContents].sort(
-        (a, b) => (a.order ?? 0) - (b.order ?? 0),
-      );
-      return [currentNode, ...sorted.filter((item) => item.slug !== pathname)];
+      return [...parentContents].sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
     }
   }, [currentNode, pathname, isIndexPage]);
 
