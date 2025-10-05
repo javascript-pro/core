@@ -100,9 +100,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                     <Box sx={{ mx: 0 }}>
                       {pathname !== '/' && <PageBreadcrumb />}
                     </Box>
-                    <Box sx={{ mx: 3 }}>
-                      <ArrowMenu />
-                    </Box>
+                    
                   </Box>
 
                   {/* Image block */}
@@ -148,7 +146,12 @@ export default function Core({ frontmatter, body = null }: TCore) {
                       <Children />
                     </Box>
                   )}
+                  <Box sx={{ mx: 3 }}>
+                      <ArrowMenu />
+                    </Box>
                 </Box>
+
+                
               </Grid>
             </Grid>
           </Box>

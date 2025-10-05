@@ -202,6 +202,21 @@
                         "excerpt": "[PrevNext prev=\"/work/expertise/javascript\"]\n\n TypeScript for the Reluctant Developer\n\nYou don’t have to love types, you just have to understand what they are and why they matter. If you come from des"
                       },
                       {
+                        "title": "Advanced TypeScript",
+                        "slug": "/work/expertise/javascript/typescript/advanced",
+                        "order": 10,
+                        "icon": "js",
+                        "image": "/png/3rdParty/typescript_og.png",
+                        "type": "file",
+                        "tags": [
+                          "JavaScript",
+                          "Vanilla JavaScript",
+                          "TypeScript",
+                          "React"
+                        ],
+                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/getstarted\"]\n\n Structural typing (TypeScript’s type system is based on shape compatibility, not nominal typing).\n interface vs type aliases\n Union"
+                      },
+                      {
                         "title": "Why TypeScript?",
                         "slug": "/work/expertise/javascript/typescript/why",
                         "order": 25,

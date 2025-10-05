@@ -8,7 +8,7 @@ image: /png/3rdParty/typescript_og.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React
 ---
 
-[PrevNext prev="/work/expertise/javascript"]
+[PrevNext prev="/work/expertise/javascript" next="/work/expertise/javascript/typescript/advanced"]
 
 ## TypeScript for the Reluctant Developer
 
