@@ -8,6 +8,8 @@ image: /png/3rdParty/typescript_og.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React
 ---
 
+[PrevNext prev="/work/expertise/javascript" next="/work/expertise/javascript/typescript/why"]
+
 ## JavaScript with Seatbelts
 
 JavaScript was never meant for this. It started life scripting image rollovers in the ‘90s — and somehow ended up running banks and billion-dollar web apps.

@@ -10,7 +10,6 @@ tags: JavaScript, Vanilla JavaScript, TypeScript, React
 
 ## TypeScript for the Reluctant Developer
 
-
 You don’t have to love types, you just have to understand what they are and why they matter. If you come from design, UX, writing, or any other creative field, JavaScript probably already feels like too much code. Then someone says “TypeScript” — and it sounds even worse.
 
 But here’s the thing, TypeScript isn’t a new language you have to learn.

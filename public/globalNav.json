@@ -183,7 +183,7 @@
                     "title": "TypeScript",
                     "description": "JavaScript with Seatbelts",
                     "slug": "/work/expertise/javascript/typescript",
-                    "order": 25,
+                    "order": 30,
                     "type": "folder",
                     "children": [
                       {
@@ -199,12 +199,12 @@
                           "TypeScript",
                           "React"
                         ],
-                        "excerpt": "Start here"
+                        "excerpt": "TypeScript for the Reluctant Developer\n\nYou don’t have to love types, you just have to understand what they are and why they matter. If you come from design, UX, writing, or any other creative field, "
                       },
                       {
                         "title": "Why TypeScript?",
                         "slug": "/work/expertise/javascript/typescript/why",
-                        "order": 250,
+                        "order": 25,
                         "icon": "js",
                         "image": "/png/3rdParty/typescript_og.png",
                         "type": "file",
