@@ -27,9 +27,6 @@ export default function MapView({
       ? 'mapbox://styles/listingslab/cm64vcspm00ai01s70639614u' // dark
       : 'mapbox://styles/listingslab/cm64umn9t001i01sa2ym45wfp'; // light
 
-  // console.log("longitude", b.livePing.longitude);
-  // console.log("latitude", b.livePing.latitude);
-
   return (
     <Box
       id={id}
@@ -44,8 +41,8 @@ export default function MapView({
       <Map
         mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}
         initialViewState={{
-          longitude: b.livePing.longitude,
-          latitude: b.livePing.latitude,
+          longitude: b.livePing?.longitude || 0,
+          latitude: b.livePing?.latitude || 0,
           zoom,
         }}
         style={{ width: '100%', height: '100%' }}
@@ -53,11 +50,11 @@ export default function MapView({
       >
         {marker && (
           <Marker
-            longitude={b.livePing.longitude}
-            latitude={b.livePing.latitude}
+            longitude={b.livePing?.longitude || 0}
+            latitude={b.livePing?.latitude || 0 }
             anchor="center"
           >
-            <Button variant="contained">{b.livePing.city}</Button>
+            <Button variant="contained">{b.livePing?.city || ''}</Button>
           </Marker>
         )}
       </Map>
