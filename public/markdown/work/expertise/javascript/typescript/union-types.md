@@ -30,8 +30,7 @@ input = true;    // ❌ Error
 
 So TypeScript is saying: "I accept any of these types, but no others."
 
-
-Unions let you model *real-world flexibility* without losing type safety.
+Unions let you model _real-world flexibility_ without losing type safety.
 
 ```ts
 function formatId(id: string | number) {
@@ -43,11 +42,11 @@ You can pass either a string or a number, and TypeScript ensures you handle both
 
 #### Type Narrowing
 
-When you use a union, TypeScript forces you to *narrow* the type before using it in a specific way.
+When you use a union, TypeScript forces you to _narrow_ the type before using it in a specific way.
 
 ```ts
 function printLength(value: string | string[]) {
-  if (typeof value === "string") {
+  if (typeof value === 'string') {
     console.log(value.length); // value is string here
   } else {
     console.log(value.length); // value is string[] here
@@ -55,11 +54,11 @@ function printLength(value: string | string[]) {
 }
 ```
 
-The compiler automatically **tracks type branches** — this is called *control flow analysis*.
+The compiler automatically **tracks type branches** — this is called _control flow analysis_.
 
 #### Example with Literal Unions
 
-You can use unions not just for *types*, but for *specific values* too.
+You can use unions not just for _types_, but for _specific values_ too.
 
 ```ts
 type Direction = "up" | "down" | "left" | "right";
@@ -73,6 +72,7 @@ move("forward"); // ❌ Error — not allowed
 ```
 
 This pattern is great for:
+
 - config values
 - API response states
 - React component variants  

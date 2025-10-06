@@ -259,7 +259,7 @@
                           "TypeScript",
                           "React"
                         ],
-                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/structuraltyping\"]\n\n At first glance, they look identical\n\n\n\nBoth define a “shape” with an id and name. You can use either for variables, paramete"
+                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/structuraltyping\" next=\"/work/expertise/javascript/typescript/uniontypes\"]\n\n At first glance, they look identical\n\n\n\nBoth define a “shape” with an"
                       },
                       {
                         "title": "Union Types",
@@ -274,7 +274,7 @@
                           "TypeScript",
                           "React"
                         ],
-                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/aliases\"]\n\n Union Types are one of TypeScript’s most powerful and flexible features.\n They let you describe a value that can be one of several typ"
+                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/aliases\"]\n\n Union Types are one of TypeScript’s most powerful and flexible features. They let you describe a value that can be one of several type"
                       }
                     ],
                     "icon": "js",
