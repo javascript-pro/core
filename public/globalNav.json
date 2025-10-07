@@ -163,23 +163,6 @@
                 "type": "folder",
                 "children": [
                   {
-                    "title": "Next.js",
-                    "slug": "/work/expertise/javascript/next-js",
-                    "order": 15,
-                    "icon": "js",
-                    "image": "/png/3rdParty/next_og.png",
-                    "type": "file",
-                    "tags": [
-                      "JavaScript",
-                      "Node",
-                      "Next.js",
-                      "API",
-                      "REST API",
-                      "React"
-                    ],
-                    "excerpt": "[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescript\"]\n\n Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with sea"
-                  },
-                  {
                     "title": "TypeScript",
                     "description": "JavaScript with Seatbelts",
                     "slug": "/work/expertise/javascript/typescript",
@@ -199,7 +182,7 @@
                           "TypeScript",
                           "React"
                         ],
-                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript\" next=\"/work/expertise/javascript/typescript/realworld\"]\n\n TypeScript for the Reluctant Developer\n\nYou don’t have to love types, you just have to "
+                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript\" next=\"/work/expertise/javascript/typescript/realworld\"]\n\n TypeScript for the reluctant coder\n\nYou don’t have to love types, you just have to unde"
                       },
                       {
                         "title": "Advanced TypeScript",
@@ -287,6 +270,23 @@
                       "frameworks"
                     ],
                     "excerpt": "[PrevNext prev=\"/work/expertise/javascript/\" next=\"/work/expertise/javascript/typescript/getstarted\"]\n\n JavaScript with Seatbelts\n\nJavaScript was never meant for this. It started life scripting image "
+                  },
+                  {
+                    "title": "Next.js",
+                    "slug": "/work/expertise/javascript/next-js",
+                    "order": 35,
+                    "icon": "js",
+                    "image": "/png/3rdParty/next_og.png",
+                    "type": "file",
+                    "tags": [
+                      "JavaScript",
+                      "Node",
+                      "Next.js",
+                      "API",
+                      "REST API",
+                      "React"
+                    ],
+                    "excerpt": "[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescript\"]\n\n Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with sea"
                   },
                   {
                     "title": "Node",
