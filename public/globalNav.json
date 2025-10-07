@@ -229,7 +229,7 @@
                           "TypeScript",
                           "React"
                         ],
-                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/getstarted\" next=\"/work/expertise/javascript/typescript/advanced\"]"
+                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/getstarted\" next=\"/work/expertise/javascript/typescript/advanced\"]\n\n Sometimes there's a project where the existing codebase has become brittle, e"
                       },
                       {
                         "title": "Structural Typing",
@@ -262,7 +262,7 @@
                         "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/structuraltyping\" next=\"/work/expertise/javascript/typescript/uniontypes\"]\n\n At first glance, they look identical\n\n\n\nBoth define a “shape” with an"
                       },
                       {
-                        "title": "Union (|) and intersection (&) types",
+                        "title": "Unions and intersections",
                         "slug": "/work/expertise/javascript/typescript/union-types",
                         "order": 75,
                         "icon": "js",
@@ -283,9 +283,48 @@
                       "JavaScript",
                       "Vanilla JavaScript",
                       "TypeScript",
-                      "React"
+                      "React",
+                      "frameworks"
                     ],
-                    "excerpt": "[PrevNext next=\"/work/expertise/javascript/typescript/getstarted\"]\n\n JavaScript with Seatbelts\n\nJavaScript was never meant for this. It started life scripting image rollovers in the ‘90s — and somehow"
+                    "excerpt": "[PrevNext prev=\"/work/expertise/javascript/\" next=\"/work/expertise/javascript/typescript/getstarted\"]\n\n JavaScript with Seatbelts\n\nJavaScript was never meant for this. It started life scripting image "
+                  },
+                  {
+                    "title": "Node",
+                    "description": "JavaScript backend",
+                    "slug": "/work/expertise/javascript/node",
+                    "order": 40,
+                    "type": "folder",
+                    "children": [],
+                    "icon": "js",
+                    "image": "/png/3rdParty/node_og.png",
+                    "tags": [
+                      "JavaScript",
+                      "Vanilla JavaScript",
+                      "TypeScript",
+                      "React",
+                      "frameworks"
+                    ],
+                    "excerpt": "[PrevNext prev=\"/work/expertise/javascript/\"]\n\n And then there was Node"
+                  },
+                  {
+                    "title": "Testing",
+                    "description": "Left looking approach",
+                    "slug": "/work/expertise/javascript/testing",
+                    "order": 40,
+                    "type": "folder",
+                    "children": [],
+                    "icon": "js",
+                    "image": "/png/3rdParty/node_og.png",
+                    "tags": [
+                      "JavaScript",
+                      "Vanilla JavaScript",
+                      "TypeScript",
+                      "React",
+                      "frameworks",
+                      "Jest",
+                      "Playwright"
+                    ],
+                    "excerpt": "[PrevNext prev=\"/work/expertise/javascript/\"]\n\n Left looking\n\nA leftlooking approach in JavaScript testing means testing earlier in the development process — before code reaches production. Using tool"
                   }
                 ],
                 "icon": "js",
@@ -306,7 +345,7 @@
                   "Headless CMS",
                   "JSON"
                 ],
-                "excerpt": "[PrevNext prev=\"/work/expertise\" next=\"/work/expertise/javascript/nextjs\"]\n\n JavaScript Whatever the Weather\n\nWe’ve been writing JavaScript since it was still called ECMAScript.\n\nBefore the frameworks"
+                "excerpt": "[PrevNext prev=\"/work/expertise\" next=\"/work/expertise/javascript/typescript\"]\n\n JavaScript Whatever the Weather\n\nWe’ve been writing JavaScript since it was still called ECMAScript.\n\nBefore the framew"
               },
               {
                 "title": "Fullstack",

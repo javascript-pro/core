@@ -10,13 +10,13 @@ tags: JavaScript, Vanilla JavaScript, TypeScript, React
 
 [PrevNext prev="/work/expertise/javascript/typescript/get-started" next="/work/expertise/javascript/typescript/advanced"]
 
-> Sometimes you join a project where the existing codebase has become brittle, error-prone and crash-heavy. Developers are regularly firefighting bugs that TypeScript could have prevented at compile time. The lack of typing and weak structure made changes risky and slowed delivery.
+> Sometimes there's a project where the existing codebase has become brittle, error-prone and crash-heavy. Developers are regularly firefighting bugs that TypeScript could have prevented at compile time. The lack of typing and weak structure make changes risky and slow delivery.
 
-## Goal
+## What we need to do
 
 My goal was to stabilise the software and restore developer confidence without halting active development. I needed a strategy that could introduce TypeScript incrementally, improve type safety, and reduce runtime errors — all while keeping the team productive.
 
-## Action
+## What we did
 
 - Auditing the codebase to find the most fragile areas — places where null values, incorrect props, and API data mismatches caused crashes.
 
@@ -30,7 +30,7 @@ My goal was to stabilise the software and restore developer confidence without h
 
 It wasn’t always easy — the early weeks involved tedious refactoring and resolving thousands of small type issues — but each fix improved our understanding of the code and revealed hidden bugs.
 
-## Result
+## What happened?
 
 - Crashes and runtime errors dropped dramatically.
 

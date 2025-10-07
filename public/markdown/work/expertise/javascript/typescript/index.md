@@ -5,10 +5,10 @@ description: JavaScript with Seatbelts
 slug: /work/expertise/javascript/typescript
 icon: js
 image: /png/3rdParty/typescript_og.png
-tags: JavaScript, Vanilla JavaScript, TypeScript, React
+tags: JavaScript, Vanilla JavaScript, TypeScript, React, frameworks
 ---
 
-[PrevNext next="/work/expertise/javascript/typescript/get-started"]
+[PrevNext prev="/work/expertise/javascript/" next="/work/expertise/javascript/typescript/get-started"]
 
 ## JavaScript with Seatbelts
 

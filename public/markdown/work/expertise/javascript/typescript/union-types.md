@@ -1,7 +1,7 @@
 ---
 order: 75
-title: Union (|) and intersection (&) types
-description: One of TypeScript’s most powerful and flexible features
+title: Unions and intersections
+description: Union (|) and intersection (&) types
 slug: /work/expertise/javascript/typescript/union-types
 icon: js
 image: /png/3rdParty/typescript_og.png
