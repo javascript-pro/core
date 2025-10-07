@@ -199,7 +199,7 @@
                           "TypeScript",
                           "React"
                         ],
-                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescript/advanced\"]\n\n TypeScript for the Reluctant Developer\n\nYou don’t have to love types, you just have to understand w"
+                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript\" next=\"/work/expertise/javascript/typescript/realworld\"]\n\n TypeScript for the Reluctant Developer\n\nYou don’t have to love types, you just have to "
                       },
                       {
                         "title": "Advanced TypeScript",
@@ -217,9 +217,9 @@
                         "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/getstarted\" next=\"/work/expertise/javascript/typescript/structuraltyping\"]\n\n[PageAd slug=\"/work/expertise/javascript/typescript/structuraltyping\"]"
                       },
                       {
-                        "title": "Why TypeScript?",
-                        "slug": "/work/expertise/javascript/typescript/why",
-                        "order": 25,
+                        "title": "Real World TypeScript",
+                        "slug": "/work/expertise/javascript/typescript/real-world",
+                        "order": 10,
                         "icon": "js",
                         "image": "/png/3rdParty/typescript_og.png",
                         "type": "file",
@@ -229,7 +229,7 @@
                           "TypeScript",
                           "React"
                         ],
-                        "excerpt": "[PrevNext next=\"/work/expertise/javascript/typescript/advanced\"]\n\n Why TypeScript?\n\nThere was a time when using TypeScript felt optional — an extra layer for developers who liked type systems or came "
+                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/getstarted\" next=\"/work/expertise/javascript/typescript/advanced\"]"
                       },
                       {
                         "title": "Structural Typing",
@@ -262,7 +262,7 @@
                         "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/structuraltyping\" next=\"/work/expertise/javascript/typescript/uniontypes\"]\n\n At first glance, they look identical\n\n\n\nBoth define a “shape” with an"
                       },
                       {
-                        "title": "Union Types",
+                        "title": "Union (|) and intersection (&) types",
                         "slug": "/work/expertise/javascript/typescript/union-types",
                         "order": 75,
                         "icon": "js",
