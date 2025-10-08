@@ -1,5 +1,5 @@
 ---
-order: 1000
+order: 34
 title: Douglas Coupland
 description: Canadian novelist and artist
 slug: /balance/books/douglas-coupland

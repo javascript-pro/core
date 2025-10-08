@@ -3,16 +3,14 @@ order: 20
 title: Books
 slug: /balance/books
 icon: balance
-image: /jpg/cassetes.jpg
+image: /png/3rdParty/unicorn.png
 ---
+
+[PrevNext prev="/balance/books/r-f-kuang" next="/balance/books/douglas-coupland"]
 
 Curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction. From visionary science fiction to satirical explorations of culture and the human experience, our writers challenge, amuse, and inspire.
 
-#### Sci-Fi Legends
-
-Discover the best in science fiction, where imagination meets innovation. These authors transport readers to other worlds, futuristic landscapes, and thought-provoking possibilities.
-
-#### Cultural & Philosophical Voices
+Sci-Fi Legends, Cultural & Philosophical Voices
 
 - Douglas Coupland
 

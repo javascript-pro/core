@@ -1109,6 +1109,70 @@
             "type": "folder",
             "children": [
               {
+                "title": "R. F. Kuang",
+                "description": "MPhil in Chinese Studies from Cambridge and an MSc in Contemporary Chinese Studies from Oxford",
+                "slug": "/balance/books/r-f-kuang",
+                "order": 10,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "Babel",
+                    "slug": "/balance/books/r-f-kuang/babel",
+                    "order": 25,
+                    "icon": "books",
+                    "image": "/png/balance/books/babel.png",
+                    "type": "file",
+                    "tags": [
+                      "Speculative fiction",
+                      "alternative history"
+                    ],
+                    "excerpt": "[PrevNext prev=\"/balance/books/rfkuang\" next=\"/balance/books/rfkuang/katabasis\"]\n\n or... the Necessity of Violence\n\nIt is an alternative history novel, set in a fantastical version of Oxford in 1830s "
+                  },
+                  {
+                    "title": "Katabasis",
+                    "slug": "/balance/books/r-f-kuang/katabasis",
+                    "order": 40,
+                    "icon": "books",
+                    "image": "/png/balance/books/katabasis.png",
+                    "type": "file",
+                    "tags": [
+                      "Speculative fiction",
+                      "alternative history",
+                      "fantasy"
+                    ],
+                    "excerpt": "[PrevNext prev=\"/balance/books/rfkuang\" next=\"/balance/books/rfkuang/babel\"]\n\nKatabasis is a 2025 fantasy novel by American writer R. F. Kuang. It was released on August 26, 2025. The novel follows tw"
+                  }
+                ],
+                "icon": "books",
+                "image": "/png/balance/writers/r-f-kuang.png",
+                "tags": [
+                  "Speculative fiction",
+                  "alternative history"
+                ],
+                "excerpt": "[PrevNext prev=\"/balance/books/rfkuang/babel\" next=\"/balance/books/rfkuang/katabasis\"]\n\nR. F. Kuang was born on May 29th, 1996, in Guangzhou, China. She immigrated to the United States with her family"
+              },
+              {
+                "title": "Douglas Coupland",
+                "description": "Canadian novelist and artist",
+                "slug": "/balance/books/douglas-coupland",
+                "order": 34,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "Generation X",
+                    "slug": "/balance/books/douglas-coupland/generation-x",
+                    "order": 100,
+                    "icon": "books",
+                    "image": "/jpg/cassetes.jpg",
+                    "type": "file",
+                    "excerpt": "The term Generation X acquired a modern application after the release of Generation X: Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Glossary\n\nMcJob A lo"
+                  }
+                ],
+                "icon": "books",
+                "image": "https://live.staticflickr.com/65535/54736833001_ef9c5f4b57_c.jpg",
+                "excerpt": "Douglas Coupland is a Canadian novelist and artist, known for capturing contemporary culture, technology, and the malaise of modern life with wit and satirical insight. His writing often blends pop cu"
+              },
+              {
                 "title": "William Gibson",
                 "slug": "/balance/books/william-gibson",
                 "order": 50,
@@ -1127,70 +1191,6 @@
                   "Novels"
                 ],
                 "excerpt": "Neuromancer (1984)\n\n Neuromancer's portrayal of AIs striving for autonomy foreshadowed realworld debates. Neuromancer didn’t predict the future—it just defined how to imagine it\n\n Why Neuromancer is S"
-              },
-              {
-                "title": "R. F. Kuang",
-                "description": "",
-                "slug": "/balance/books/r-f-kuang",
-                "order": 440,
-                "type": "folder",
-                "children": [
-                  {
-                    "title": "Katabasis",
-                    "slug": "/balance/books/r-f-kuang/katabasis",
-                    "order": 40,
-                    "icon": "books",
-                    "image": "/png/balance/books/katabasis.png",
-                    "type": "file",
-                    "tags": [
-                      "Speculative fiction",
-                      "alternative history",
-                      "fantasy"
-                    ],
-                    "excerpt": "[PrevNext prev=\"/balance/books/rfkuang\" next=\"/balance/books/rfkuang/babel\"]\n\nKatabasis is a 2025 fantasy novel by American writer R. F. Kuang. It was released on August 26, 2025. The novel follows tw"
-                  },
-                  {
-                    "title": "Babel",
-                    "slug": "/balance/books/r-f-kuang/babel",
-                    "order": 65,
-                    "icon": "books",
-                    "image": "/png/balance/books/babel.png",
-                    "type": "file",
-                    "tags": [
-                      "Speculative fiction",
-                      "alternative history"
-                    ],
-                    "excerpt": "[PrevNext prev=\"/balance/books/rfkuang\" next=\"/balance/books/rfkuang/katabasis\"]\n\n or... the Necessity of Violence\n\nIt is an alternative history novel, set in a fantastical version of Oxford in 1830s "
-                  }
-                ],
-                "icon": "books",
-                "image": "/png/balance/writers/r-f-kuang.png",
-                "tags": [
-                  "Speculative fiction",
-                  "alternative history"
-                ],
-                "excerpt": "[PrevNext prev=\"/balance/books/rfkuang/babel\" next=\"/balance/books/rfkuang/katabasis\"]\n\nR. F. Kuang was born on May 29th, 1996, in Guangzhou, China. She immigrated to the United States with her family"
-              },
-              {
-                "title": "Douglas Coupland",
-                "description": "Canadian novelist and artist",
-                "slug": "/balance/books/douglas-coupland",
-                "order": 1000,
-                "type": "folder",
-                "children": [
-                  {
-                    "title": "Generation X",
-                    "slug": "/balance/books/douglas-coupland/generation-x",
-                    "order": 100,
-                    "icon": "books",
-                    "image": "/jpg/cassetes.jpg",
-                    "type": "file",
-                    "excerpt": "The term Generation X acquired a modern application after the release of Generation X: Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Glossary\n\nMcJob A lo"
-                  }
-                ],
-                "icon": "books",
-                "image": "https://live.staticflickr.com/65535/54736833001_ef9c5f4b57_c.jpg",
-                "excerpt": "Douglas Coupland is a Canadian novelist and artist, known for capturing contemporary culture, technology, and the malaise of modern life with wit and satirical insight. His writing often blends pop cu"
               },
               {
                 "title": "Tom Robbins",
@@ -1212,8 +1212,8 @@
               }
             ],
             "icon": "balance",
-            "image": "/jpg/cassetes.jpg",
-            "excerpt": "Curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction. From visionary science fiction to satirical explorations of culture and the human exper"
+            "image": "/png/3rdParty/unicorn.png",
+            "excerpt": "[PrevNext prev=\"/balance/books/rfkuang\" next=\"/balance/books/douglascoupland\"]\n\nCurated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction. From vi"
           }
         ],
         "icon": "balance",
@@ -1222,7 +1222,7 @@
       }
     ],
     "icon": "goldlabel",
-    "image": "/png/wei-zang.png",
+    "image": "/png/wei-zang/wei-zang.png",
     "tags": [
       "JavaScript",
       "Next Gen",

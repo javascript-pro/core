@@ -1,5 +1,5 @@
 ---
-order: 65
+order: 25
 title: Babel
 description: by R. F. Kuang
 slug: /balance/books/r-f-kuang/babel
