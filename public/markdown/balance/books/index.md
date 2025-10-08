@@ -1,7 +1,7 @@
 ---
 order: 20
 title: Writers
-slug: /balance/writers
+slug: /balance/books
 icon: balance
 image: /jpg/cassetes.jpg
 ---

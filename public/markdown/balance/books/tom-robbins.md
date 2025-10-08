@@ -2,7 +2,7 @@
 order: 2000
 title: Tom Robbins
 description: Playful, whimsical prose, irreverent humor, and philosophical musings.
-slug: /balance/writers/tom-robbins
+slug: /balance/books/tom-robbins
 icon: doc
 image: https://live.staticflickr.com/65535/54735999657_5ec054b3e2_b.jpg
 ---

@@ -2,13 +2,13 @@
 order: 40
 title: Katabasis
 description: by R. F. Kuang
-slug: /balance/writers/r-f-kuang/katabasis
+slug: /balance/books/r-f-kuang/katabasis
 icon: doc
 image: /png/balance/books/katabasis.png
 tags: Speculative fiction, alternative history, fantasy
 ---
 
-[PrevNext prev="/balance/writers/r-f-kuang" next="/balance/writers/r-f-kuang/babel"]
+[PrevNext prev="/balance/books/r-f-kuang" next="/balance/books/r-f-kuang/babel"]
 
 Katabasis is a 2025 fantasy novel by American writer R. F. Kuang. It was released on August 26, 2025. The novel follows two magicians, doctoral candidates, who must venture into hell to save their thesis advisor in order to get letters of recommendation.
 

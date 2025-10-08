@@ -2,7 +2,7 @@
 order: 50
 title: William Gibson
 description: The father of cyberpunk
-slug: /balance/writers/william-gibson
+slug: /balance/books/william-gibson
 icon: doc
 image: https://live.staticflickr.com/65535/54743292173_aed0039452_b.jpg
 tags: Science Fiction, Fiction, Cyberpunk, Classics, Dystopia, Science Fiction Fantasy, Fantasy, Audiobook, Novels

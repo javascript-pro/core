@@ -2,7 +2,7 @@
 order: 3000
 title: Charles Darwin
 description: From On the Origin of Species By Means of Natural Selection
-slug: /balance/writers/charles-darwin
+slug: /balance/books/charles-darwin
 icon: doc
 image: /jpg/darwin.jpg
 ---

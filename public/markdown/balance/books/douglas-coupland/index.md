@@ -2,7 +2,7 @@
 order: 1000
 title: Douglas Coupland
 description: Canadian novelist and artist
-slug: /balance/writers/douglas-coupland
+slug: /balance/books/douglas-coupland
 icon: doc
 image: https://live.staticflickr.com/65535/54736833001_ef9c5f4b57_c.jpg
 ---
