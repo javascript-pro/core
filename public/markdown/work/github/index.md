@@ -28,4 +28,3 @@ GitHub launched in April 2008, founded by Tom Preston-Werner, Chris Wanstrath, P
 - Social features: stars, followers, and activity feeds
 
 GitHub rapidly became the go-to platform for open-source projects, startups, and enterprises alike.
-

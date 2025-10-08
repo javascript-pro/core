@@ -105,9 +105,9 @@ export default class LogoAS {
 
     const selector =
       '[id]:not(svg):not(defs):not(clipPath):not(mask):not(pattern):not(linearGradient):not(radialGradient):not(marker):not(title):not(desc):not(metadata)';
-    const nodes = Array.from(container.querySelectorAll<Element>(selector)).filter(
-      (el) => (el as HTMLElement).id !== this.id,
-    );
+    const nodes = Array.from(
+      container.querySelectorAll<Element>(selector),
+    ).filter((el) => (el as HTMLElement).id !== this.id);
 
     nodes.forEach((el) => {
       if (this.wrappers.has(el)) return;
@@ -130,7 +130,9 @@ export default class LogoAS {
       (wrap as SVGElement).style.transformOrigin = '50% 50%';
       (wrap as SVGElement).style.cursor = 'pointer';
 
-      const existingSVGTransform = (el as SVGGraphicsElement).getAttribute('transform');
+      const existingSVGTransform = (el as SVGGraphicsElement).getAttribute(
+        'transform',
+      );
       if (existingSVGTransform) {
         wrap.setAttribute('transform', existingSVGTransform);
         (el as SVGGraphicsElement).removeAttribute('transform');
@@ -168,7 +170,9 @@ export default class LogoAS {
   }
 
   private detachClickHandlers() {
-    this.clickHandlers.forEach(({ el, fn }) => el.removeEventListener('click', fn));
+    this.clickHandlers.forEach(({ el, fn }) =>
+      el.removeEventListener('click', fn),
+    );
     this.clickHandlers = [];
   }
 
@@ -193,7 +197,9 @@ export default class LogoAS {
     const items = Array.from(this.wrappers.values());
     if (items.length === 0) return;
 
-    const sorted = items.sort((a, b) => a.getBoundingClientRect().left - b.getBoundingClientRect().left);
+    const sorted = items.sort(
+      (a, b) => a.getBoundingClientRect().left - b.getBoundingClientRect().left,
+    );
     const tl = gsap.timeline();
     sorted.forEach((wrap, i) => tl.add(() => this.shake(wrap), i * stagger));
   }

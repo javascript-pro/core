@@ -844,7 +844,7 @@
               "github",
               "bitbucket"
             ],
-            "excerpt": "Other Source Control solutions are available\n\nbut they all use git"
+            "excerpt": "Other Source Control solutions are available\n\nBut they all use git. Git was created in 2005 by Linus Torvalds, the same person who built the Linux kernel. Before Git, the Linux project used a propriet"
           },
           {
             "title": "Privacy & Cookies",
@@ -1129,24 +1129,6 @@
             "type": "folder",
             "children": [
               {
-                "title": "einstein",
-                "description": "",
-                "slug": "/balance/writers/einstein",
-                "order": 0,
-                "type": "folder",
-                "children": [
-                  {
-                    "title": "General Relativity",
-                    "slug": "/balance/writers/einstein/relativity",
-                    "order": 9999,
-                    "icon": "doc",
-                    "image": "/jpg/einstein.jpg",
-                    "type": "file",
-                    "excerpt": "Let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series.\n\nI mentioned in the last lecture this idea of Gedanken experiments, th"
-                  }
-                ]
-              },
-              {
                 "title": "William Gibson",
                 "slug": "/balance/writers/william-gibson",
                 "order": 50,
@@ -1176,6 +1158,49 @@
                 "excerpt": "The term Generation X acquired a modern application after the release of Generation X: Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Glossary\n\nMcJob A lo"
               },
               {
+                "title": "R. F. Kuang",
+                "description": "",
+                "slug": "/balance/writers/r-f-kuang",
+                "order": 440,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "Katabasis",
+                    "slug": "/balance/writers/r-f-kuang/katabasis",
+                    "order": 40,
+                    "icon": "doc",
+                    "image": "/png/balance/books/katabasis.png",
+                    "type": "file",
+                    "tags": [
+                      "Speculative fiction",
+                      "alternative history",
+                      "fantasy"
+                    ],
+                    "excerpt": "[PrevNext prev=\"/balance/writers/rfkuang\" next=\"/balance/writers/rfkuang/babel\"]\n\nKatabasis is a 2025 fantasy novel by American writer R. F. Kuang. It was released on August 26, 2025. The novel follow"
+                  },
+                  {
+                    "title": "Babel, or the Necessity of Violence",
+                    "slug": "/balance/writers/r-f-kuang/babel",
+                    "order": 65,
+                    "icon": "doc",
+                    "image": "/png/balance/books/babel.png",
+                    "type": "file",
+                    "tags": [
+                      "Speculative fiction",
+                      "alternative history"
+                    ],
+                    "excerpt": "[PrevNext prev=\"/balance/writers/rfkuang\" next=\"/balance/writers/rfkuang/katabasis\"]\n\nIt is an alternative history novel, set in a fantastical version of Oxford in 1830s England. In the second week of"
+                  }
+                ],
+                "icon": "doc",
+                "image": "/png/balance/writers/r-f-kuang.png",
+                "tags": [
+                  "Speculative fiction",
+                  "alternative history"
+                ],
+                "excerpt": "[PrevNext prev=\"/balance/writers/rfkuang/babel\" next=\"/balance/writers/rfkuang/katabasis\"]\n\nR. F. Kuang was born on May 29th, 1996, in Guangzhou, China. She immigrated to the United States with her fa"
+              },
+              {
                 "title": "Douglas Coupland",
                 "slug": "/balance/writers/douglas-coupland",
                 "order": 1000,
@@ -1201,15 +1226,6 @@
                 "image": "/jpg/darwin.jpg",
                 "type": "file",
                 "excerpt": "Judging from the past, we may safely infer that no one living species will transmit its unaltered likeness to a distant futurity. And of the species now living very few will transmit progeny of any ki"
-              },
-              {
-                "title": "Einstein",
-                "slug": "/balance/writers/einstein",
-                "order": 9999,
-                "icon": "doc",
-                "image": "/jpg/einstein.jpg",
-                "type": "file",
-                "excerpt": "Let's share some of Einstein's contributions which are fundamental to understanding many concepts we'll encounter in this series.\n\nI mentioned in the last lecture this idea of Gedanken experiments, th"
               }
             ],
             "icon": "balance",
@@ -1253,6 +1269,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[PageAd slug=\"/work/expertise/javascript\"]\n\n[PageAd slug=\"/work/expertise/javascript/typescript\"]\n\n[PageAd slug=\"/work/goldlabel/cartridges/flash\"]\n\n[Flash movie=\"Logo\" height=\"200\"]\n\n[PageAd slug=\"/w"
+    "excerpt": "[PageAd slug=\"/work/github\"]\n\n[PageAd slug=\"/work/expertise/javascript\"]\n\n[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescript\"]\n\n[PageAd slug=\"/work/goldlabel/cartr"
   }
 ]
