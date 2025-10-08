@@ -2,43 +2,40 @@
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
+    <loc>https://goldlabel.pro/balance/books/charles-darwin</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/balance/books/douglas-coupland/generation-x</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/balance/books/douglas-coupland</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/balance/books</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/balance/books/r-f-kuang/babel</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/balance/books/r-f-kuang</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/balance/books/r-f-kuang/katabasis</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/balance/books/tom-robbins</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/balance/books/william-gibson</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/balance</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/balance/video</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/writers/charles-darwin</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/writers/douglas-coupland</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/writers/generation-x</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/writers</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/writers/r-f-kuang/babel</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/writers/r-f-kuang</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/writers/r-f-kuang/katabasis</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/writers/tom-robbins</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/writers/william-gibson</loc>
-  </url>
-  <url>
     <loc>https://goldlabel.pro/balance/writing/destructo-the-wonderdog</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/writing/generation-x</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/balance/writing</loc>
@@ -48,9 +45,6 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/balance/writing/sci-fi</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/writing/weekend-portfolio</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/balance/writing/wei-zangs-food/air-fried-peppers</loc>

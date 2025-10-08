@@ -1,9 +1,9 @@
 ---
 order: 440
 title: R. F. Kuang
-description:
+description: MPhil in Chinese Studies from Cambridge and an MSc in Contemporary Chinese Studies from Oxford
 slug: /balance/books/r-f-kuang
-icon: doc
+icon: books
 image: /png/balance/writers/r-f-kuang.png
 tags: Speculative fiction, alternative history
 ---

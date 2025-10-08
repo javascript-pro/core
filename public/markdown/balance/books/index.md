@@ -1,6 +1,6 @@
 ---
 order: 20
-title: Writers
+title: Books
 slug: /balance/books
 icon: balance
 image: /jpg/cassetes.jpg
