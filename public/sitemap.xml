@@ -104,6 +104,15 @@
     <loc>https://goldlabel.pro/work/company</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/work/company/join-us</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/company/remote-working</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/company/work-with-us</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/work/expertise/ai/abgeschottet-ki/confidentiality-obligations</loc>
   </url>
   <url>
@@ -191,13 +200,13 @@
     <loc>https://goldlabel.pro/work/expertise/javascript</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/expertise/javascript/next-js</loc>
+    <loc>https://goldlabel.pro/work/expertise/javascript/js-testing</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/javascript/nextjs</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/expertise/javascript/node</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/javascript/testing</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/expertise/javascript/typescript/advanced</loc>
@@ -233,6 +242,9 @@
     <loc>https://goldlabel.pro/work/expertise/windoze/testing</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/work/github</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/work/goldlabel/cartridges/bouncer</loc>
   </url>
   <url>
@@ -266,15 +278,6 @@
     <loc>https://goldlabel.pro/work</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/join-us</loc>
-  </url>
-  <url>
     <loc>https://goldlabel.pro/work/privacy-cookies</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/remote-working</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/work-with-us</loc>
   </url>
 </urlset>

@@ -1,14 +1,14 @@
 ---
-order: 40
-title: Testing
+order: 95
+title: JS Testing
 description: Left looking approach
-slug: /work/expertise/javascript/testing
+slug: /work/expertise/javascript/js-testing
 icon: js
 image: /png/3rdParty/node_og.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React, frameworks, Jest, Playwright
 ---
 
-[PrevNext prev="/work/expertise/javascript/"]
+[PrevNext prev="/work/expertise/javascript/" next="/work/expertise/javascript/typescript"]
 
 ## Left looking
 
@@ -24,7 +24,6 @@ Testing: Almost all testing was manual — clicking through browsers, logging to
 
 No formal frameworks; developers used ad hoc scripts or shell tools.
 
-
 ## 2001 – JUnit & the xUnit Influence
 
 Creator: Kent Beck (Java, 1997–2001 evolution).
@@ -34,7 +33,6 @@ Why it matters: The xUnit model (Arrange–Act–Assert) became the template for
 Focus: Unit testing and TDD mindset.
 
 Impact: Inspired early JS frameworks like JsUnit and QUnit.
-
 
 ## 2005 – JsUnit
 

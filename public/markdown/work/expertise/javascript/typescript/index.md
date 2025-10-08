@@ -1,5 +1,5 @@
 ---
-order: 30
+order: 28
 title: TypeScript
 description: JavaScript with Seatbelts
 slug: /work/expertise/javascript/typescript

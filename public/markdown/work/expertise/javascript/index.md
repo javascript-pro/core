@@ -1,5 +1,5 @@
 ---
-order: 5
+order: 3
 title: JavaScript
 description: JavaScript Whatever the Weather
 slug: /work/expertise/javascript

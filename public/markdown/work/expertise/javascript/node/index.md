@@ -1,5 +1,5 @@
 ---
-order: 40
+order: 20
 title: Node
 description: JavaScript backend
 slug: /work/expertise/javascript/node

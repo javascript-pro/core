@@ -2,7 +2,7 @@
 order: 777
 title: Work With Us
 description: We take on a limited number of new projects each month
-slug: /work/work-with-us
+slug: /work/company/work-with-us
 icon: team
 image: https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg
 tags: team

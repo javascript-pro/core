@@ -14,7 +14,7 @@
         "type": "folder",
         "children": [
           {
-            "title": "Goldlabel",
+            "title": "Goldlabel Core",
             "description": "Open Source Platform",
             "slug": "/work/goldlabel",
             "order": 1,
@@ -141,11 +141,51 @@
           },
           {
             "title": "Company",
+            "description": "UK Limited Company (5460545)",
             "slug": "/work/company",
             "order": 10,
+            "type": "folder",
+            "children": [
+              {
+                "title": "Working remotely",
+                "slug": "/work/company/remote-working",
+                "order": 250,
+                "icon": "company",
+                "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
+                "type": "file",
+                "tags": [
+                  "remote",
+                  "hybrid"
+                ],
+                "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years.\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communication, "
+              },
+              {
+                "title": "Join Us",
+                "slug": "/work/company/join-us",
+                "order": 666,
+                "icon": "team",
+                "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
+                "type": "file",
+                "tags": [
+                  "team"
+                ],
+                "excerpt": "Whether you're a startup with a short deadline or an enterprise with complex workflows, we can help. Get in touch for it's a truth universally acknowledged that a Software Developer in possession of a"
+              },
+              {
+                "title": "Work With Us",
+                "slug": "/work/company/work-with-us",
+                "order": 777,
+                "icon": "team",
+                "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
+                "type": "file",
+                "tags": [
+                  "team"
+                ],
+                "excerpt": "We take on a limited number of new projects each month. If you need something done we’d love to hear about it. Find out if we're a . We're always looking for collaborators, contributors, and good idea"
+              }
+            ],
             "icon": "company",
             "image": "https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg",
-            "type": "file",
             "excerpt": "WhatsApp   \nTel +49 15510995150  \n | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX"
           },
           {
@@ -159,14 +199,32 @@
                 "title": "JavaScript",
                 "description": "JavaScript Whatever the Weather",
                 "slug": "/work/expertise/javascript",
-                "order": 5,
+                "order": 3,
                 "type": "folder",
                 "children": [
+                  {
+                    "title": "Node",
+                    "description": "JavaScript backend",
+                    "slug": "/work/expertise/javascript/node",
+                    "order": 20,
+                    "type": "folder",
+                    "children": [],
+                    "icon": "js",
+                    "image": "/png/3rdParty/node_og.png",
+                    "tags": [
+                      "JavaScript",
+                      "Vanilla JavaScript",
+                      "TypeScript",
+                      "React",
+                      "frameworks"
+                    ],
+                    "excerpt": "[PrevNext prev=\"/work/expertise/javascript/\" next=\"/work/expertise/javascript/nextjs\"]\n\n And then there was Node\n\nBack in the mid2000s, most of the web ran on PHP — powering WordPress, Drupal, Joomla "
+                  },
                   {
                     "title": "TypeScript",
                     "description": "JavaScript with Seatbelts",
                     "slug": "/work/expertise/javascript/typescript",
-                    "order": 30,
+                    "order": 28,
                     "type": "folder",
                     "children": [
                       {
@@ -273,11 +331,13 @@
                   },
                   {
                     "title": "Next.js",
-                    "slug": "/work/expertise/javascript/next-js",
-                    "order": 35,
+                    "description": "React with seamless backend capabilities",
+                    "slug": "/work/expertise/javascript/nextjs",
+                    "order": 55,
+                    "type": "folder",
+                    "children": [],
                     "icon": "js",
                     "image": "/png/3rdParty/next_og.png",
-                    "type": "file",
                     "tags": [
                       "JavaScript",
                       "Node",
@@ -286,31 +346,13 @@
                       "REST API",
                       "React"
                     ],
-                    "excerpt": "[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescript\"]\n\n Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with sea"
+                    "excerpt": "[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/node\"]\n\n Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with seamless "
                   },
                   {
-                    "title": "Node",
-                    "description": "JavaScript backend",
-                    "slug": "/work/expertise/javascript/node",
-                    "order": 40,
-                    "type": "folder",
-                    "children": [],
-                    "icon": "js",
-                    "image": "/png/3rdParty/node_og.png",
-                    "tags": [
-                      "JavaScript",
-                      "Vanilla JavaScript",
-                      "TypeScript",
-                      "React",
-                      "frameworks"
-                    ],
-                    "excerpt": "[PrevNext prev=\"/work/expertise/javascript/\"]\n\n And then there was Node"
-                  },
-                  {
-                    "title": "Testing",
+                    "title": "JS Testing",
                     "description": "Left looking approach",
-                    "slug": "/work/expertise/javascript/testing",
-                    "order": 40,
+                    "slug": "/work/expertise/javascript/js-testing",
+                    "order": 95,
                     "type": "folder",
                     "children": [],
                     "icon": "js",
@@ -324,7 +366,7 @@
                       "Jest",
                       "Playwright"
                     ],
-                    "excerpt": "[PrevNext prev=\"/work/expertise/javascript/\"]\n\n Left looking\n\nA leftlooking approach in JavaScript testing means testing earlier in the development process — before code reaches production. Using tool"
+                    "excerpt": "[PrevNext prev=\"/work/expertise/javascript/\" next=\"/work/expertise/javascript/typescript\"]\n\n Left looking\n\nA leftlooking approach in JavaScript testing means testing earlier in the development process"
                   }
                 ],
                 "icon": "js",
@@ -779,7 +821,7 @@
               }
             ],
             "icon": "expertise",
-            "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
+            "image": "/png/3rdParty/unicorn.png",
             "tags": [
               "expertise",
               "fields",
@@ -788,41 +830,21 @@
             "excerpt": "[PrevNext next=\"/work/expertise/javascript\"]\n\n We work across the full stack, from interface to infrastructure, with a focus on robust, modern JavaScript tooling and scalable cloudnative delivery. Whe"
           },
           {
-            "title": "Working remotely",
-            "slug": "/work/remote-working",
-            "order": 250,
-            "icon": "company",
-            "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
-            "type": "file",
+            "title": "GitHub",
+            "description": "Where Code Lives",
+            "slug": "/work/github",
+            "order": 123,
+            "type": "folder",
+            "children": [],
+            "icon": "github",
+            "image": "/png/3rdParty/git_og.png",
             "tags": [
-              "remote",
-              "hybrid"
+              "source control",
+              "project management",
+              "github",
+              "bitbucket"
             ],
-            "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years.\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communication, "
-          },
-          {
-            "title": "Join Us",
-            "slug": "/work/join-us",
-            "order": 666,
-            "icon": "team",
-            "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
-            "type": "file",
-            "tags": [
-              "team"
-            ],
-            "excerpt": "Whether you're a startup with a short deadline or an enterprise with complex workflows, we can help. Get in touch for it's a truth universally acknowledged that a Software Developer in possession of a"
-          },
-          {
-            "title": "Work With Us",
-            "slug": "/work/work-with-us",
-            "order": 777,
-            "icon": "team",
-            "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
-            "type": "file",
-            "tags": [
-              "team"
-            ],
-            "excerpt": "We take on a limited number of new projects each month. If you need something done we’d love to hear about it. Find out if we're a . We're always looking for collaborators, contributors, and good idea"
+            "excerpt": "Other Source Control solutions are available\n\nbut they all use git"
           },
           {
             "title": "Privacy & Cookies",
@@ -842,7 +864,7 @@
           }
         ],
         "icon": "work",
-        "image": "https://live.staticflickr.com/65535/54801864105_554c8c9f16_b.jpg",
+        "image": "/png/3rdParty/git_og.png",
         "tags": [
           "JavaScript",
           "Vanilla JavaScript",
@@ -856,7 +878,7 @@
           "NextJS",
           "Headless CMS"
         ],
-        "excerpt": "[PrevNext next=\"/work/expertise\"]\n\nThe apps we ship are real. They run in production and are developed accessibly. The Core is Open Source and Free forever — giving you statically generated sites with"
+        "excerpt": "[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise\"]\n\nThe apps we ship are real. They run in production and are developed accessibly. The Core is Open Source and Free forever — giving y"
       },
       {
         "title": "Life",
@@ -1201,7 +1223,7 @@
       }
     ],
     "icon": "goldlabel",
-    "image": "https://live.staticflickr.com/65535/54802570139_8f4f2ac814_b.jpg",
+    "image": "/png/3rdParty/unicorn.png",
     "tags": [
       "JavaScript",
       "Next Gen",
@@ -1231,6 +1253,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[Flash movie=\"Logo\" height=\"200\"]\n\n[PageAd slug=\"/work/expertise/javascript\"]\n\n[PageAd slug=\"/work/expertise/javascript/typescript\"]\n\n[PageAd slug=\"/work/goldlabel/cartridges/flash\"]\n\n[PageAd slug=\"/w"
+    "excerpt": "[PageAd slug=\"/work/expertise/javascript\"]\n\n[PageAd slug=\"/work/expertise/javascript/typescript\"]\n\n[PageAd slug=\"/work/goldlabel/cartridges/flash\"]\n\n[Flash movie=\"Logo\" height=\"200\"]\n\n[PageAd slug=\"/w"
   }
 ]

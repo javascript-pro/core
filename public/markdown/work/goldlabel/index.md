@@ -1,6 +1,6 @@
 ---
 order: 1
-title: Goldlabel
+title: Goldlabel Core
 description: Open Source Platform
 slug: /work/goldlabel
 icon: goldlabel

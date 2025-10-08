@@ -4,7 +4,7 @@ title: Expertise
 description: We can help understanding in these fields
 slug: /work/expertise
 icon: expertise
-image: https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg
+image: /png/3rdParty/unicorn.png
 tags: expertise, fields, work
 ---
 

@@ -1,5 +1,5 @@
 ---
-order: 35
+order: 55
 title: Next.js
 description: React with seamless backend capabilities
 slug: /work/expertise/javascript/next-js
@@ -8,7 +8,7 @@ image: /png/3rdParty/next_og.png
 tags: JavaScript, Node, Next.js, API, REST API, React
 ---
 
-[PrevNext prev="/work/expertise/javascript" next="/work/expertise/javascript/typescript"]
+[PrevNext prev="/work/expertise/javascript" next="/work/expertise/javascript/node"]
 
 > Next.js is a full-stack JavaScript framework that brings together the power of React on the frontend with seamless backend capabilities, creating a unified developer experience. It simplifies the process of building modern web applications by offering a complete toolkit out of the box.
 
@@ -52,3 +52,19 @@ Next.js + Vercel is one of the most productive and scalable stacks available tod
 #### Conclusion
 
 Next.js is not just a React framework — it's a complete platform for building modern web applications. Paired with Vercel, it offers an unparalleled development and deployment experience. It helps you skip the boring bits, focus on your product, and get it into users' hands faster.
+
+Situation
+
+The company had a successful WordPress site that ranked well but had reached a ceiling. Its biggest issue was performance — page speed, particularly First Contentful Paint (FCP), was holding back further SEO growth.
+
+Task
+
+The goal was to improve site performance to outpace competitors in search visibility by delivering significantly faster page loads.
+
+Action
+
+After analysing the existing setup, it became clear that server-rendered WordPress pages were the bottleneck. The solution was to rebuild the front-end using Next.js, leveraging its Static Site Generation (SSG) capability to pre-render pages as ultra-light static HTML. This gave users instant first paint while keeping dynamic data where needed through incremental builds and APIs.
+
+Result
+
+The migration delivered dramatically faster load times, especially on mobile. Google’s Core Web Vitals improved across the board, and within weeks the site’s search rankings and visibility increased. The project became a clear demonstration of how technical SEO and modern JavaScript frameworks like Next.js can work together to drive measurable business results.
