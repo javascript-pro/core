@@ -1,16 +1,18 @@
 ---
 order: 123
-title: GitHub
+title: Git
 description: Where Code Lives
-slug: /work/github
+slug: /work/git
 icon: github
 image: /png/3rdParty/git_og.png
 tags: source control, project management, github, bitbucket
 ---
 
+[PrevNext prev="/work/git/gitkraken" next="/work/git/github"]
+
 #### Other Source Control solutions are available
 
-But they all use git. Git was created in 2005 by Linus Torvalds, the same person who built the Linux kernel. Before Git, the Linux project used a proprietary system called BitKeeper, which revoked its free license after a dispute. Torvalds, needing a fast, distributed alternative, designed Git with a few key principles:
+But everyone uses git. It was created in 2005 by Linus Torvalds, the same person who built the Linux kernel. Before Git, the Linux project used a proprietary system called BitKeeper, which revoked its free license after a dispute. Torvalds, needing a fast, distributed alternative, designed Git with a few key principles:
 
 - Speed — handle large codebases like Linux efficiently
 - Distributed architecture — every clone is a full repository

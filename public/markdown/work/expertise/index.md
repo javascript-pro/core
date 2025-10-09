@@ -8,7 +8,7 @@ image: /png/3rdParty/unicorn.png
 tags: expertise, fields, work
 ---
 
-[PrevNext next="/work/expertise/javascript"]
+[PrevNext prev="/work/goldlabel" next="/work/expertise/javascript"]
 
 > We work across the full stack, from interface to infrastructure, with a focus on robust, modern JavaScript tooling and scalable cloud-native delivery. Whether building responsive UIs, designing serverless APIs, or optimising DevOps pipelines, we bring production experience and architectural clarity to every layer of the process.
 

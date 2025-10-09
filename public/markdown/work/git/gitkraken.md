@@ -2,12 +2,14 @@
 order: 30
 title: GitKraken
 description: Best thing since sliced bread and chocolate spread
-slug: /work/expertise/fullstack/gitkraken
+slug: /work/git/gitkraken
 icon: github
 image: /png/3rdParty/gitkraken.png
 tags: github, process, javascript, tools, gitkraken,
 github: https://github.com/javascript-pro/core
 ---
+
+[PrevNext prev="/work/git" next="/work/git/github"]
 
 > Now with AI Commit and PR Messaging
 

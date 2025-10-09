@@ -2,7 +2,7 @@
 order: 5555
 title: Privacy & Cookies
 description: Your trust means everything to us
-slug: /work/privacy-cookies
+slug: /work/company/privacy-cookies
 icon: admin
 image: https://live.staticflickr.com/65535/54800517077_55d79f6a0a_b.jpg
 tags: cookies, gdpr, privacy, terms, trust

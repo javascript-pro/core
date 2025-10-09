@@ -4,7 +4,7 @@ title: Goldlabel Core
 description: Open Source Platform
 slug: /work/goldlabel
 icon: goldlabel
-image: /png/n64/goldlabel.png
+image: /png/3rdParty/github_og.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 ---
 

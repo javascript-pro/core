@@ -104,6 +104,9 @@
     <loc>https://goldlabel.pro/work/company/join-us</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/work/company/privacy-cookies</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/work/company/remote-working</loc>
   </url>
   <url>
@@ -167,12 +170,6 @@
     <loc>https://goldlabel.pro/work/expertise/fullstack/data-migration</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/expertise/fullstack/git</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/fullstack/gitkraken</loc>
-  </url>
-  <url>
     <loc>https://goldlabel.pro/work/expertise/fullstack</loc>
   </url>
   <url>
@@ -227,6 +224,9 @@
     <loc>https://goldlabel.pro/work/expertise/javascript/typescript/union-types</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/work/expertise/javascript/vanilla-js</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/work/expertise/windoze/agile</loc>
   </url>
   <url>
@@ -239,7 +239,13 @@
     <loc>https://goldlabel.pro/work/expertise/windoze/testing</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/github</loc>
+    <loc>https://goldlabel.pro/work/git/github</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/git/gitkraken</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/git</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/goldlabel/cartridges/bouncer</loc>
@@ -273,8 +279,5 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/privacy-cookies</loc>
   </url>
 </urlset>

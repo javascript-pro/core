@@ -154,10 +154,12 @@ import VanIcon from '@mui/icons-material/AirportShuttle';
 import FullstackIcon from '@mui/icons-material/HorizontalSplit';
 import TypescriptIcon from '@mui/icons-material/DataObject';
 import BooksIcon from '@mui/icons-material/MenuBook';
+import FreeIcon from '@mui/icons-material/CurrencyExchange';
 
 export type TIcon = {
   icon:
     | 'more'
+    | 'free'
     | 'books'
     | 'typescript'
     | 'van'
@@ -341,6 +343,10 @@ export default function Icon({ icon, color }: TIcon) {
   switch (icon) {
     case 'core':
       iconFragment = <CoreIcon color={color} />;
+      break;
+
+    case 'free':
+      iconFragment = <FreeIcon color={color} />;
       break;
 
     case 'web3d':

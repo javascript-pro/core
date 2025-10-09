@@ -103,16 +103,16 @@
                 "title": "Free",
                 "slug": "/work/goldlabel/free",
                 "order": 1,
-                "icon": "ai",
+                "icon": "free",
                 "image": "/png/n64/goldlabel.png",
                 "type": "file",
                 "excerpt": "Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or b"
               },
               {
-                "title": "Core",
+                "title": "Open Source",
                 "slug": "/work/goldlabel/core",
                 "order": 10,
-                "icon": "github",
+                "icon": "free",
                 "image": "/png/n64/goldlabel.png",
                 "type": "file",
                 "tags": [
@@ -182,6 +182,22 @@
                   "team"
                 ],
                 "excerpt": "We take on a limited number of new projects each month. If you need something done we’d love to hear about it. Find out if we're a . We're always looking for collaborators, contributors, and good idea"
+              },
+              {
+                "title": "Privacy & Cookies",
+                "slug": "/work/company/privacy-cookies",
+                "order": 5555,
+                "icon": "admin",
+                "image": "https://live.staticflickr.com/65535/54800517077_55d79f6a0a_b.jpg",
+                "type": "file",
+                "tags": [
+                  "cookies",
+                  "gdpr",
+                  "privacy",
+                  "terms",
+                  "trust"
+                ],
+                "excerpt": "We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers t"
               }
             ],
             "icon": "company",
@@ -202,6 +218,31 @@
                 "order": 3,
                 "type": "folder",
                 "children": [
+                  {
+                    "title": "Vanilla JS",
+                    "slug": "/work/expertise/javascript/vanilla-js",
+                    "order": 13,
+                    "icon": "js",
+                    "image": "/png/3rdParty/javascript_og.png",
+                    "type": "file",
+                    "tags": [
+                      "JavaScript",
+                      "Vanilla JavaScript",
+                      "TypeScript",
+                      "React",
+                      "Angular",
+                      "Vue",
+                      "Material UI",
+                      "Flash",
+                      "Server Side JavaScript",
+                      "Node",
+                      "Gatsby",
+                      "NextJS",
+                      "Headless CMS",
+                      "JSON"
+                    ],
+                    "excerpt": "When JavaScript needs to be everywhere instantly\n\nIn the world of modern web engineering, vanilla JavaScript sometimes gets dismissed as oldschool or underpowered. But at scale, especially across mult"
+                  },
                   {
                     "title": "Node",
                     "description": "JavaScript backend",
@@ -464,36 +505,6 @@
                       "performance"
                     ],
                     "excerpt": "Three.js rewards experience. With two decades of JS and deep React/Next.js knowledge, you can transform a blank canvas into a highly optimized, interactive, and visually rich web experience—without co"
-                  },
-                  {
-                    "title": "Git",
-                    "slug": "/work/expertise/fullstack/git",
-                    "order": 25,
-                    "icon": "github",
-                    "image": "/png/3rdParty/gitkraken.png",
-                    "type": "file",
-                    "tags": [
-                      "github",
-                      "process",
-                      "javascript"
-                    ],
-                    "excerpt": "We use GitHub for everything.\n\nMost of the communication done between us and our clients during development is done through GitHub in the form of comments, tracking bugs and issues, pull resuests, rev"
-                  },
-                  {
-                    "title": "GitKraken",
-                    "slug": "/work/expertise/fullstack/gitkraken",
-                    "order": 30,
-                    "icon": "github",
-                    "image": "/png/3rdParty/gitkraken.png",
-                    "type": "file",
-                    "tags": [
-                      "github",
-                      "process",
-                      "javascript",
-                      "tools",
-                      "gitkraken"
-                    ],
-                    "excerpt": "Now with AI Commit and PR Messaging\n\nGitKraken isn’t just another Git GUI. It’s become an essential tool in our daily workflow—one of those rare bits of software that’s genuinely a joy to use. Fast, c"
                   },
                   {
                     "title": "Material UI",
@@ -830,12 +841,43 @@
             "excerpt": "[PrevNext next=\"/work/expertise/javascript\"]\n\n We work across the full stack, from interface to infrastructure, with a focus on robust, modern JavaScript tooling and scalable cloudnative delivery. Whe"
           },
           {
-            "title": "GitHub",
+            "title": "Git",
             "description": "Where Code Lives",
-            "slug": "/work/github",
+            "slug": "/work/git",
             "order": 123,
             "type": "folder",
-            "children": [],
+            "children": [
+              {
+                "title": "GitHub",
+                "slug": "/work/git/github",
+                "order": 25,
+                "icon": "github",
+                "image": "/png/3rdParty/github_og.png",
+                "type": "file",
+                "tags": [
+                  "github",
+                  "process",
+                  "javascript"
+                ],
+                "excerpt": "[PrevNext prev=\"/work/git\" next=\"/work/git/gitkraken\"]\n\n We use GitHub for everything.\n\nMost of the communication done between us and our clients during development is done through GitHub in the form "
+              },
+              {
+                "title": "GitKraken",
+                "slug": "/work/git/gitkraken",
+                "order": 30,
+                "icon": "github",
+                "image": "/png/3rdParty/gitkraken.png",
+                "type": "file",
+                "tags": [
+                  "github",
+                  "process",
+                  "javascript",
+                  "tools",
+                  "gitkraken"
+                ],
+                "excerpt": "[PrevNext prev=\"/work/git\" next=\"/work/git/github\"]\n\n Now with AI Commit and PR Messaging\n\nGitKraken isn’t just another Git GUI. It’s become an essential tool in our daily workflow—one of those rare b"
+              }
+            ],
             "icon": "github",
             "image": "/png/3rdParty/git_og.png",
             "tags": [
@@ -844,23 +886,7 @@
               "github",
               "bitbucket"
             ],
-            "excerpt": "Other Source Control solutions are available\n\nBut they all use git. Git was created in 2005 by Linus Torvalds, the same person who built the Linux kernel. Before Git, the Linux project used a propriet"
-          },
-          {
-            "title": "Privacy & Cookies",
-            "slug": "/work/privacy-cookies",
-            "order": 5555,
-            "icon": "admin",
-            "image": "https://live.staticflickr.com/65535/54800517077_55d79f6a0a_b.jpg",
-            "type": "file",
-            "tags": [
-              "cookies",
-              "gdpr",
-              "privacy",
-              "terms",
-              "trust"
-            ],
-            "excerpt": "We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers t"
+            "excerpt": "[PrevNext prev=\"/work/git/gitkraken\" next=\"/work/git/github\"]\n\n Other Source Control solutions are available\n\nBut everyone uses git. It was created in 2005 by Linus Torvalds, the same person who built"
           }
         ],
         "icon": "work",
@@ -1252,6 +1278,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[PageAd slug=\"/balance/books/rfkuang\"]\n\n[PageAd slug=\"/work/github\"]\n\n[PageAd slug=\"/work/expertise/javascript\"]\n\n[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescrip"
+    "excerpt": "[PageAd slug=\"/work/expertise/javascript/vanillajs\"]\n\n[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescript\"]\n\n[PageAd slug=\"/balance/books/rfkuang\"]\n\n[PrevNext prev="
   }
 ]

@@ -17,6 +17,9 @@ export default function Header({ frontmatter = null }: THeader) {
   const b = useBouncer();
   const displayName = b?.livePing?.displayName ?? '';
 
+  let adjustedTitle = title;
+  if (adjustedTitle === 'Home') adjustedTitle = 'Goldlabel';
+
   return (
     <>
       <CardHeader
@@ -24,7 +27,7 @@ export default function Header({ frontmatter = null }: THeader) {
         title={
           !isMobile && (
             <Typography sx={{}} variant={'h6'} component={'h1'}>
-              {title}
+              {adjustedTitle}
             </Typography>
           )
         }
