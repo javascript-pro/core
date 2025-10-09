@@ -8,7 +8,7 @@ image: /png/3rdParty/node_og.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React, frameworks
 ---
 
-[PrevNext prev="/work/expertise/javascript/"]
+[PrevNext prev="/work/expertise/javascript/" next="/work/expertise/javascript/nextjs"]
 
 ## And then there was Node
 

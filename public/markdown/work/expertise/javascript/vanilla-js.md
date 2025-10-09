@@ -7,6 +7,7 @@ icon: js
 image: /png/3rdParty/javascript_og.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React, Angular, Vue, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS, JSON
 ---
+
 [PrevNext prev="/work/expertise/javascript" next="/work/expertise/javascript/node"]
 
 ## When JavaScript needs to be everywhere instantly

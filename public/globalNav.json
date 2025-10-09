@@ -104,7 +104,7 @@
                 "slug": "/work/goldlabel/free",
                 "order": 1,
                 "icon": "free",
-                "image": "/png/n64/goldlabel.png",
+                "image": "/png/3rdParty/github_og.png",
                 "type": "file",
                 "excerpt": "Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or b"
               },
@@ -113,7 +113,7 @@
                 "slug": "/work/goldlabel/core",
                 "order": 10,
                 "icon": "free",
-                "image": "/png/n64/goldlabel.png",
+                "image": "/png/3rdParty/github_og.png",
                 "type": "file",
                 "tags": [
                   "free",
@@ -123,7 +123,7 @@
               }
             ],
             "icon": "goldlabel",
-            "image": "/png/n64/goldlabel.png",
+            "image": "/png/3rdParty/github_og.png",
             "tags": [
               "JavaScript",
               "Vanilla JavaScript",
@@ -241,7 +241,7 @@
                       "Headless CMS",
                       "JSON"
                     ],
-                    "excerpt": "When JavaScript needs to be everywhere instantly\n\nIn the world of modern web engineering, vanilla JavaScript sometimes gets dismissed as oldschool or underpowered. But at scale, especially across mult"
+                    "excerpt": "[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/node\"]\n\n When JavaScript needs to be everywhere instantly\n\nIn the world of modern web engineering, vanilla JavaScript somet"
                   },
                   {
                     "title": "Node",
@@ -263,7 +263,7 @@
                   },
                   {
                     "title": "TypeScript",
-                    "description": "JavaScript with Seatbelts",
+                    "description": "Better JavaScript",
                     "slug": "/work/expertise/javascript/typescript",
                     "order": 28,
                     "type": "folder",
@@ -368,7 +368,7 @@
                       "React",
                       "frameworks"
                     ],
-                    "excerpt": "[PrevNext prev=\"/work/expertise/javascript/\" next=\"/work/expertise/javascript/typescript/getstarted\"]\n\n JavaScript with Seatbelts\n\nJavaScript was never meant for this. It started life scripting image "
+                    "excerpt": "[PrevNext prev=\"/work/expertise/javascript/\" next=\"/work/expertise/javascript/typescript/getstarted\"]\n\n Better JavaScript\n\nJavaScript was never meant for what became asked of it. It started life scrip"
                   },
                   {
                     "title": "Next.js",
@@ -387,7 +387,7 @@
                       "REST API",
                       "React"
                     ],
-                    "excerpt": "[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/node\"]\n\n Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with seamless "
+                    "excerpt": "[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/jstesting\"]\n\n Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with seam"
                   },
                   {
                     "title": "JS Testing",
@@ -838,7 +838,7 @@
               "fields",
               "work"
             ],
-            "excerpt": "[PrevNext next=\"/work/expertise/javascript\"]\n\n We work across the full stack, from interface to infrastructure, with a focus on robust, modern JavaScript tooling and scalable cloudnative delivery. Whe"
+            "excerpt": "[PrevNext prev=\"/work/goldlabel\" next=\"/work/expertise/javascript\"]\n\n We work across the full stack, from interface to infrastructure, with a focus on robust, modern JavaScript tooling and scalable cl"
           },
           {
             "title": "Git",

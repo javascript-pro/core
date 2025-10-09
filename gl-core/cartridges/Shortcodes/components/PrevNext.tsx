@@ -3,7 +3,7 @@ import React from 'react';
 import { useRouter } from 'next/navigation';
 import {
   Box,
-  Grid,
+  Paper,
   List,
   ListItemButton,
   ListItemIcon,
@@ -63,7 +63,7 @@ export default function PrevNext({
   const handleNext = () => next && dispatch(routeTo(next, router));
 
   return (
-    <Box sx={{}}>
+    <Paper variant='outlined' sx={{}}>
       <List
         disablePadding
         sx={{
@@ -106,6 +106,6 @@ export default function PrevNext({
           </ListItemButton>
         )}
       </List>
-    </Box>
+    </Paper>
   );
 }
