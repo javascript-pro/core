@@ -9,9 +9,11 @@ tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Pr
 image: /png/wei-zang/wei-zang.png
 ---
 
-[PageAd slug="/work/expertise/javascript/vanilla-js"]
+
 
 [PrevNext prev="/work/expertise/javascript" next="/work/expertise/javascript/typescript"]
+
+[PageAd slug="/work/expertise/javascript/vanilla-js"]
 
 [PageAd slug="/balance/books/r-f-kuang"]
 

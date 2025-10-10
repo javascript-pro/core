@@ -63,7 +63,7 @@ export default function PrevNext({
   const handleNext = () => next && dispatch(routeTo(next, router));
 
   return (
-    <Paper variant='outlined' sx={{}}>
+    <Paper variant="outlined" sx={{}}>
       <List
         disablePadding
         sx={{

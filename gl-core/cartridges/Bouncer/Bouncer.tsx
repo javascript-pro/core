@@ -1,14 +1,15 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/Bouncer.tsx
+'use client';
 import React from 'react';
-import { Box, Dialog, CardHeader, Badge, Typography } from '@mui/material';
+import { Box, Dialog, CardHeader } from '@mui/material';
 import { MightyButton, useDispatch, Icon, useIsMobile } from '../../../gl-core';
 import {
-  MapView,
   PingViewer,
   useBouncer,
   setBouncerKey,
   createPing,
   ping,
+  PingChip,
 } from '../Bouncer';
 import { doc, onSnapshot } from 'firebase/firestore';
 import { db } from '../../lib/firebase';
@@ -50,20 +51,14 @@ export default function Bouncer() {
     const unsub = onSnapshot(ref, (snap) => {
       if (snap.exists()) {
         const data = snap.data();
-
-        // ✅ save entire doc into Redux
         dispatch(setBouncerKey('livePing', data));
 
-        // ✅ count unseen messages
         const count = Array.isArray(data.messages)
           ? data.messages.filter((m: any) => !m.seen).length
           : 0;
         setUnseenCount(count);
 
-        // ✅ play sound on transition 0 → >0
-        if (prevCount.current === 0 && count > 0) {
-          play('success');
-        }
+        if (prevCount.current === 0 && count > 0) play('success');
         prevCount.current = count;
       } else {
         setUnseenCount(0);
@@ -80,23 +75,8 @@ export default function Bouncer() {
 
   return (
     <>
-      <Box sx={{ display: 'flex' }}>
-        {b?.ping?.displayName && (
-          <Typography sx={{ mt: 0.5, mr: 2 }} variant="h6">
-            {b.ping.displayName}
-          </Typography>
-        )}
-        <Badge
-          color="primary"
-          badgeContent={unseenCount > 0 ? unseenCount : null}
-        >
-          <MightyButton
-            mode="icon"
-            label="Bouncer"
-            icon="bouncer"
-            onClick={handleBtnClick}
-          />
-        </Badge>
+      <Box sx={{ display: 'flex', alignItems: 'center' }}>
+        <PingChip unseenCount={unseenCount} onClick={handleBtnClick} />
       </Box>
 
       <Dialog
@@ -117,11 +97,7 @@ export default function Bouncer() {
             />
           }
         />
-        <Box sx={{ m: 2 }}>
-          <MapView id="livePingMap" marker height={250} zoom={3.5} />
-        </Box>
         <Box>
-          {/* PingViewer is now dumb: just reads b.livePing from Redux */}
           <PingViewer />
         </Box>
       </Dialog>

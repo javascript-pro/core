@@ -66,7 +66,7 @@ export default function PageAd({ slug = '/' }: { slug: string }) {
   };
 
   return (
-    <Card variant='outlined'>
+    <Card variant="outlined">
       <CardActionArea onClick={handleClick}>
         <CardHeader
           sx={{
