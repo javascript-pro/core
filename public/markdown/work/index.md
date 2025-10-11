@@ -20,7 +20,7 @@ Goldlabel builds and ships modern web apps for clients who need real results —
 
 Goldlabel Apps is a UK-based software company that designs, builds, and maintains full-stack web applications. We specialize in Next.js, Firebase, and custom UI development, delivering everything from internal admin tools to polished public-facing websites.
 
-#### Working with Goldlabel
+## Working with Goldlabel
 
 - Ship early and often.  
   Each app is live from the outset — not just a mockup or prototyle

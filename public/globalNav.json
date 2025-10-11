@@ -140,6 +140,28 @@
             "excerpt": "Open Source Platform\n\nIt’s the public GitHub repository that powers goldlabel.pro — and it’s free for anyone to fork, copy, hack, and reuse.\n\n What is it?\n\nGoldlabel is a JavaScript platform built wit"
           },
           {
+            "title": "Colz",
+            "slug": "/work/colz",
+            "order": 10,
+            "icon": "van",
+            "image": "https://live.staticflickr.com/65535/54340497432_b8c92a3215_b.jpg",
+            "type": "file",
+            "tags": [
+              "JavaScript",
+              "Vanilla JavaScript",
+              "TypeScript",
+              "React",
+              "Material UI",
+              "Flash",
+              "Server Side JavaScript",
+              "Node",
+              "Gatsby",
+              "NextJS",
+              "Headless CMS"
+            ],
+            "excerpt": "lorem imspum"
+          },
+          {
             "title": "Company",
             "description": "UK Limited Company (5460545)",
             "slug": "/work/company",
