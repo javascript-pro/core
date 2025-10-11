@@ -14,9 +14,7 @@ export default function PingChip({ unseenCount = 0, onClick }: TPingChip) {
 
   // Defensive fallbacks
   const displayName =
-    livePing?.displayName?.trim() ||
-    livePing?.username?.trim() ||
-    'Guest';
+    livePing?.displayName?.trim() || livePing?.username?.trim() || 'Guest';
 
   const avatarSrc =
     livePing?.avatar && livePing.avatar.trim() !== ''
