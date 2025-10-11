@@ -140,28 +140,6 @@
             "excerpt": "Open Source Platform\n\nIt’s the public GitHub repository that powers goldlabel.pro — and it’s free for anyone to fork, copy, hack, and reuse.\n\n What is it?\n\nGoldlabel is a JavaScript platform built wit"
           },
           {
-            "title": "Colz",
-            "slug": "/work/colz",
-            "order": 10,
-            "icon": "van",
-            "image": "https://live.staticflickr.com/65535/54340497432_b8c92a3215_b.jpg",
-            "type": "file",
-            "tags": [
-              "JavaScript",
-              "Vanilla JavaScript",
-              "TypeScript",
-              "React",
-              "Material UI",
-              "Flash",
-              "Server Side JavaScript",
-              "Node",
-              "Gatsby",
-              "NextJS",
-              "Headless CMS"
-            ],
-            "excerpt": "lorem imspum"
-          },
-          {
             "title": "Company",
             "description": "UK Limited Company (5460545)",
             "slug": "/work/company",
@@ -1050,6 +1028,19 @@
                 "image": "https://live.staticflickr.com/65535/54691336480_c273fe647c_o.jpg",
                 "type": "file",
                 "excerpt": "Once upon a time Destructo the Wonderdog and his best mate Barkin’ Boris were hanging out on the mountain. Just sniffing about, play fighting and barking at stuff when suddenly Boris went still as a m"
+              },
+              {
+                "title": "Bez",
+                "slug": "/balance/writing/bez",
+                "order": 11,
+                "icon": "flash",
+                "image": "https://live.staticflickr.com/65535/54340497432_b8c92a3215_b.jpg",
+                "type": "file",
+                "tags": [
+                  "punk",
+                  "bez"
+                ],
+                "excerpt": "Over time, her real name eroded like an old raster image losing resolution, smoothed away by repetition until even she couldn’t recall what it had been. HR still had it on file, but it felt like a rel"
               },
               {
                 "title": "dog",
