@@ -17,7 +17,6 @@ export default function PingViewer() {
       <pre style={{ fontSize: 10 }}>
         livePing: {JSON.stringify(b.livePing, null, 2)}
       </pre> */}
-      
     </Box>
   );
 }

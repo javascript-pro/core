@@ -10,9 +10,9 @@ export type TPingChip = {
   onClick?: () => void;
 };
 
-export default function PingChip({ 
-  disabled = false, 
-  unseenCount = 0, 
+export default function PingChip({
+  disabled = false,
+  unseenCount = 0,
   onClick,
 }: TPingChip) {
   const { livePing } = useBouncer() || {};
@@ -34,8 +34,7 @@ export default function PingChip({
     >
       <Chip
         disabled={disabled}
-        color="primary"
-        variant="outlined"
+        variant="filled"
         onClick={onClick}
         avatar={<Avatar alt={displayName} src={avatarSrc} />}
         label={displayName}

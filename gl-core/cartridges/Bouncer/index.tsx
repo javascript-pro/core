@@ -5,6 +5,7 @@ import PingChip from './components/PingChip';
 import MessageForm from './components/MessageForm';
 import MessageList from './components/MessageList';
 import MapView from './components/MapView';
+import PersonHeader from './components/PersonHeader';
 import { initialState as initialStateBouncer } from './initialState';
 import { useBouncer } from './useBouncer';
 import { setBouncerKey } from './actions/setBouncerKey';
@@ -14,6 +15,7 @@ import { ping } from './actions/ping';
 export {
   Bouncer,
   PingViewer,
+  PersonHeader,
   initialStateBouncer,
   useBouncer,
   setBouncerKey,
