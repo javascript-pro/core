@@ -3,8 +3,8 @@ order: 1
 title: Free
 description: Open Source. Some things in life ARE free
 slug: /work/goldlabel/free
-icon: ai
-image: /png/n64/goldlabel.png
+icon: free
+image: /png/3rdParty/github_og.png
 ---
 
 ## Some things in life _are_ free — Goldlabel [Core](/free/core) is one of them.

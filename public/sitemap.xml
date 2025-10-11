@@ -2,40 +2,43 @@
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
+    <loc>https://goldlabel.pro/balance/books/charles-darwin</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/balance/books/douglas-coupland/generation-x</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/balance/books/douglas-coupland</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/balance/books</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/balance/books/r-f-kuang/babel</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/balance/books/r-f-kuang</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/balance/books/r-f-kuang/katabasis</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/balance/books/tom-robbins</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/balance/books/william-gibson</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/balance</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/balance/video</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/writers/charles-darwin</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/writers/douglas-coupland</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/writers/einstein/relativity</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/writers/einstein</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/writers/generation-x</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/writers</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/writers/tom-robbins</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/writers/william-gibson</loc>
+    <loc>https://goldlabel.pro/balance/writing/bez</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/balance/writing/destructo-the-wonderdog</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/writing/generation-x</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/balance/writing</loc>
@@ -45,9 +48,6 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/balance/writing/sci-fi</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/writing/weekend-portfolio</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/balance/writing/wei-zangs-food/air-fried-peppers</loc>
@@ -102,6 +102,18 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work/company</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/company/join-us</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/company/privacy-cookies</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/company/remote-working</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/company/work-with-us</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/expertise/ai/abgeschottet-ki/confidentiality-obligations</loc>
@@ -161,12 +173,6 @@
     <loc>https://goldlabel.pro/work/expertise/fullstack/data-migration</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/expertise/fullstack/git</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/fullstack/gitkraken</loc>
-  </url>
-  <url>
     <loc>https://goldlabel.pro/work/expertise/fullstack</loc>
   </url>
   <url>
@@ -191,7 +197,13 @@
     <loc>https://goldlabel.pro/work/expertise/javascript</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/expertise/javascript/next-js</loc>
+    <loc>https://goldlabel.pro/work/expertise/javascript/js-testing</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/javascript/nextjs</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/javascript/node</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/expertise/javascript/typescript/advanced</loc>
@@ -206,13 +218,16 @@
     <loc>https://goldlabel.pro/work/expertise/javascript/typescript</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/work/expertise/javascript/typescript/real-world</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/work/expertise/javascript/typescript/structural-typing</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/expertise/javascript/typescript/union-types</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/expertise/javascript/typescript/why</loc>
+    <loc>https://goldlabel.pro/work/expertise/javascript/vanilla-js</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/expertise/windoze/agile</loc>
@@ -225,6 +240,15 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work/expertise/windoze/testing</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/git/github</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/git/gitkraken</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/git</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/goldlabel/cartridges/bouncer</loc>
@@ -258,17 +282,5 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/join-us</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/privacy-cookies</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/remote-working</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/work-with-us</loc>
   </url>
 </urlset>

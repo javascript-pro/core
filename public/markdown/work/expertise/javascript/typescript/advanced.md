@@ -12,8 +12,10 @@ tags: JavaScript, Vanilla JavaScript, TypeScript, React
 
 [PageAd slug="/work/expertise/javascript/typescript/structural-typing"]
 
-- Interface vs type aliases
-- Union (|) and intersection (&) types
+[PageAd slug="/work/expertise/javascript/typescript/aliases"]
+
+[PageAd slug="/work/expertise/javascript/typescript/union-types"]
+
 - Type narrowing (if ('foo' in x), typeof, instanceof, discriminated unions)
 - Enums, tuples, optional and readonly properties
 - When to annotate explicitly vs. let TS infer.

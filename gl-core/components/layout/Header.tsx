@@ -17,6 +17,9 @@ export default function Header({ frontmatter = null }: THeader) {
   const b = useBouncer();
   const displayName = b?.livePing?.displayName ?? '';
 
+  let adjustedTitle = title;
+  if (adjustedTitle === 'Home') adjustedTitle = 'Goldlabel';
+
   return (
     <>
       <CardHeader
@@ -24,7 +27,7 @@ export default function Header({ frontmatter = null }: THeader) {
         title={
           !isMobile && (
             <Typography sx={{}} variant={'h6'} component={'h1'}>
-              {title}
+              {adjustedTitle}
             </Typography>
           )
         }
@@ -37,10 +40,6 @@ export default function Header({ frontmatter = null }: THeader) {
         }
         action={
           <Box sx={{ display: 'flex', mt: 1, mr: isMobile ? 0 : 2 }}>
-            <Typography sx={{ mt: 0.5, mr: 2 }} variant={'h6'}>
-              {displayName}
-            </Typography>
-
             <Bouncer />
             <SharePopup frontmatter={frontmatter} />
           </Box>

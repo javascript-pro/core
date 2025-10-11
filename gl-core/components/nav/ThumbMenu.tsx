@@ -101,9 +101,6 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
           <ListItemText primary="Home" />
         </MenuItem>
 
-        {/* Theme Switcher */}
-        <ModeSwitch />
-
         <MenuItem
           onClick={() => {
             dispatch(routeTo('/bad-panda', router));
@@ -112,8 +109,11 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
           <ListItemIcon>
             <Icon icon="bug" color="primary" />
           </ListItemIcon>
-          <ListItemText primary="Bad panda" />
+          <ListItemText primary="Bad Panda" />
         </MenuItem>
+
+        {/* Theme Switcher */}
+        <ModeSwitch />
 
         <MenuItem
           onClick={() => {
@@ -124,17 +124,6 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
             <Icon icon="reset" color="primary" />
           </ListItemIcon>
           <ListItemText primary="Reset" />
-        </MenuItem>
-
-        <MenuItem
-          onClick={() => {
-            dispatch(routeTo('/work/goldlabel/cartridges/flash', router));
-          }}
-        >
-          <ListItemIcon>
-            <Icon icon="flash" color="primary" />
-          </ListItemIcon>
-          <ListItemText primary="Flash" />
         </MenuItem>
 
         {/* App Version */}

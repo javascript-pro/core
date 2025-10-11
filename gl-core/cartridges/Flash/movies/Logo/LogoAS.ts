@@ -1,16 +1,20 @@
-// /app/src/Flash/movieclips/Logo/LogoAS.ts
 import { gsap } from 'gsap';
 
 type ClickRec = { el: Element; fn: EventListener };
+type LogoASOptions = {
+  onNavigate?: () => void;
+};
 
 export default class LogoAS {
   private id: string;
   private resizeHandler: (() => void) | null = null;
   private clickHandlers: ClickRec[] = [];
-  private wrappers = new Map<Element, SVGGElement>(); // original element -> wrapper <g>
+  private wrappers = new Map<Element, SVGGElement>();
+  private onNavigate?: () => void;
 
-  constructor(id: string) {
+  constructor(id: string, options: LogoASOptions = {}) {
     this.id = id;
+    this.onNavigate = options.onNavigate;
   }
 
   init() {
@@ -23,14 +27,12 @@ export default class LogoAS {
     const logoEl = document.getElementById(this.id);
     if (!logoEl) return;
 
-    // Reset transforms on the container only
     gsap.set(logoEl, { clearProps: 'transform,opacity,filter' });
 
     const { offsetX, offsetY, scale } = this.calculateCenter(logoEl);
 
     const tl = gsap.timeline({
       onComplete: () => {
-        // Prepare targets, handlers, and run wave after intro animation
         this.prepareTargets(logoEl);
         this.attachClickHandlers();
         this.wave(0.1);
@@ -60,12 +62,8 @@ export default class LogoAS {
 
   private calculateCenter(el: HTMLElement) {
     gsap.set(el, { clearProps: 'transform' });
-
-    // Get the stage container (parent of logo)
     const stage = el.parentElement as HTMLElement;
-    if (!stage) {
-      return { offsetX: 0, offsetY: 0, scale: 1 };
-    }
+    if (!stage) return { offsetX: 0, offsetY: 0, scale: 1 };
 
     const stageRect = stage.getBoundingClientRect();
     const rect = el.getBoundingClientRect();
@@ -76,14 +74,14 @@ export default class LogoAS {
 
     const centerX = stageRect.left + stageRect.width / 2;
     const centerY = stageRect.top + stageRect.height / 2;
-
     const logoCenterX = rect.left + rect.width / 2;
     const logoCenterY = rect.top + rect.height / 2;
 
-    const offsetX = centerX - logoCenterX;
-    const offsetY = centerY - logoCenterY;
-
-    return { offsetX, offsetY, scale };
+    return {
+      offsetX: centerX - logoCenterX,
+      offsetY: centerY - logoCenterY,
+      scale,
+    };
   }
 
   private centerLogo() {
@@ -91,7 +89,6 @@ export default class LogoAS {
     if (!logoEl) return;
 
     const { offsetX, offsetY, scale } = this.calculateCenter(logoEl);
-
     gsap.to(logoEl, {
       x: offsetX,
       y: offsetY,
@@ -102,7 +99,6 @@ export default class LogoAS {
     });
   }
 
-  // Wrap each clickable element in its own <g> so shakes don't disturb layout.
   private prepareTargets(container: HTMLElement) {
     this.detachClickHandlers();
     this.wrappers.clear();
@@ -116,7 +112,6 @@ export default class LogoAS {
     nodes.forEach((el) => {
       if (this.wrappers.has(el)) return;
 
-      // If it's already a <g>, use it directly
       if (el.tagName.toLowerCase() === 'g') {
         (el as SVGElement).style.transformBox = 'fill-box';
         (el as SVGElement).style.transformOrigin = '50% 50%';
@@ -131,7 +126,6 @@ export default class LogoAS {
 
       const ns = 'http://www.w3.org/2000/svg';
       const wrap = document.createElementNS(ns, 'g');
-
       (wrap as SVGElement).style.transformBox = 'fill-box';
       (wrap as SVGElement).style.transformOrigin = '50% 50%';
       (wrap as SVGElement).style.cursor = 'pointer';
@@ -152,9 +146,7 @@ export default class LogoAS {
 
       parent.insertBefore(wrap, el);
       wrap.appendChild(el);
-
       gsap.set(wrap, { transformOrigin: '50% 50%' });
-
       this.wrappers.set(el, wrap);
     });
   }
@@ -163,7 +155,15 @@ export default class LogoAS {
     this.detachClickHandlers();
 
     this.wrappers.forEach((wrap, el) => {
-      const clickFn = () => this.shake(wrap);
+      const clickFn = () => {
+        this.shake(wrap);
+
+        // Optional: delay navigation slightly after the shake
+        if (this.onNavigate) {
+          setTimeout(() => this.onNavigate?.(), 300);
+        }
+      };
+
       el.addEventListener('click', clickFn);
       this.clickHandlers.push({ el, fn: clickFn });
     });
@@ -188,28 +188,20 @@ export default class LogoAS {
         ease: 'power1.inOut',
         yoyo: true,
         repeat: 5,
-        onComplete: () => {
-          gsap.set(target, { x: 0, rotation: 0 });
-        },
+        onComplete: () => gsap.set(target, { x: 0, rotation: 0 }),
       },
     );
   }
 
-  // 🔥 New: run shake across all wrappers in left-to-right order
   wave(stagger: number = 0.1) {
     const items = Array.from(this.wrappers.values());
     if (items.length === 0) return;
 
-    const sorted = items.sort((a, b) => {
-      const ra = a.getBoundingClientRect();
-      const rb = b.getBoundingClientRect();
-      return ra.left - rb.left;
-    });
-
+    const sorted = items.sort(
+      (a, b) => a.getBoundingClientRect().left - b.getBoundingClientRect().left,
+    );
     const tl = gsap.timeline();
-    sorted.forEach((wrap, i) => {
-      tl.add(() => this.shake(wrap), i * stagger);
-    });
+    sorted.forEach((wrap, i) => tl.add(() => this.shake(wrap), i * stagger));
   }
 
   destroy() {

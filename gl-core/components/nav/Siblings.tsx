@@ -94,9 +94,14 @@ export default function Siblings() {
       if (contents.length === 0) return null;
       return [...contents].sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
     } else {
-      const parentContents = findParentContents(globalNav as NavItem[], pathname);
+      const parentContents = findParentContents(
+        globalNav as NavItem[],
+        pathname,
+      );
       if (!parentContents) return null;
-      return [...parentContents].sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
+      return [...parentContents].sort(
+        (a, b) => (a.order ?? 0) - (b.order ?? 0),
+      );
     }
   }, [currentNode, pathname, isIndexPage]);
 

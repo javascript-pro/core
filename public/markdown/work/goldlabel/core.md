@@ -1,10 +1,10 @@
 ---
 order: 10
-title: Core
+title: Open Source
 slug: /work/goldlabel/core
 description: Open Source and Free Forever
-icon: github
-image: /png/n64/goldlabel.png
+icon: free
+image: /png/3rdParty/github_og.png
 tags: free, core
 ---
 

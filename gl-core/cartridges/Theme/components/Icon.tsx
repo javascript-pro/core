@@ -153,10 +153,14 @@ import TeamIcon from '@mui/icons-material/People';
 import VanIcon from '@mui/icons-material/AirportShuttle';
 import FullstackIcon from '@mui/icons-material/HorizontalSplit';
 import TypescriptIcon from '@mui/icons-material/DataObject';
+import BooksIcon from '@mui/icons-material/MenuBook';
+import FreeIcon from '@mui/icons-material/CurrencyExchange';
 
 export type TIcon = {
   icon:
     | 'more'
+    | 'free'
+    | 'books'
     | 'typescript'
     | 'van'
     | 'fullstack'
@@ -341,6 +345,10 @@ export default function Icon({ icon, color }: TIcon) {
       iconFragment = <CoreIcon color={color} />;
       break;
 
+    case 'free':
+      iconFragment = <FreeIcon color={color} />;
+      break;
+
     case 'web3d':
       iconFragment = <Web3DIcon color={color} />;
       break;
@@ -363,6 +371,10 @@ export default function Icon({ icon, color }: TIcon) {
 
     case 'files':
       iconFragment = <FilesIcon color={color} />;
+      break;
+
+    case 'books':
+      iconFragment = <BooksIcon color={color} />;
       break;
 
     case 'case':
