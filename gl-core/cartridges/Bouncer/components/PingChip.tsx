@@ -5,11 +5,16 @@ import { Chip, Avatar, Badge } from '@mui/material';
 import { useBouncer } from '../../Bouncer';
 
 export type TPingChip = {
+  disabled?: boolean;
   unseenCount?: number;
   onClick?: () => void;
 };
 
-export default function PingChip({ unseenCount = 0, onClick }: TPingChip) {
+export default function PingChip({ 
+  disabled = false, 
+  unseenCount = 0, 
+  onClick,
+}: TPingChip) {
   const { livePing } = useBouncer() || {};
 
   // Defensive fallbacks
@@ -28,6 +33,7 @@ export default function PingChip({ unseenCount = 0, onClick }: TPingChip) {
       badgeContent={unseenCount > 0 ? unseenCount : null}
     >
       <Chip
+        disabled={disabled}
         color="primary"
         variant="outlined"
         onClick={onClick}
