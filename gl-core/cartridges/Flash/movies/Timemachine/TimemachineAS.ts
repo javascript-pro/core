@@ -1,15 +1,16 @@
-// /cartridges/Flash/movies/Timemachine/TimemachineAS.ts
 import { gsap } from 'gsap';
 
 export default class TimemachineAS {
-  private id: string;
+  private stageId: string;
+  private movieId: string;
   private tl: gsap.core.Timeline | null = null;
   private raf1: number | null = null;
   private raf2: number | null = null;
-  private scaleFactor: number = 5; // 5x bigger
+  private scaleFactor = 3;
 
-  constructor(id: string) {
-    this.id = id;
+  constructor(stageId: string, movieId: string) {
+    this.stageId = stageId;
+    this.movieId = movieId;
   }
 
   init() {
@@ -19,108 +20,46 @@ export default class TimemachineAS {
   }
 
   private setup() {
-    const stage = document.getElementById(this.id) as HTMLElement | null;
-    const ball = document.getElementById('mc_machine') as HTMLElement | null;
+    const stage = document.getElementById(this.stageId);
+    const machine = document.getElementById('mc_machine');
 
-    if (!stage || !ball) {
-      console.warn('[PingpongAS] Missing stage or ball element');
+    if (!stage || !machine) {
+      console.warn(`[TimemachineAS] Missing stage (${this.stageId}) or machine element`);
       return;
     }
 
-    const svgBall = ball as unknown as SVGGraphicsElement;
-    svgBall.style.transformBox = 'fill-box';
-    svgBall.style.transformOrigin = '50% 50%';
-
-    // Apply scale once
-    gsap.set(ball, { scale: this.scaleFactor, transformOrigin: '50% 50%' });
+    const svgMachine = machine as unknown as SVGGraphicsElement;
+    svgMachine.style.transformBox = 'fill-box';
+    svgMachine.style.transformOrigin = '50% 50%';
 
     const stageRect = stage.getBoundingClientRect();
-    const ballRect = ball.getBoundingClientRect();
-    const groundY = stageRect.height - ballRect.height;
+    const machineRect = machine.getBoundingClientRect();
 
-    const playCycle = () => {
-      const spinDir = Math.random() < 0.5 ? -1 : 1;
-      const randomX = gsap.utils.random(
-        50,
-        stageRect.width - ballRect.width - 50,
-      );
+    const startX = stageRect.width / 2 - machineRect.width / 2;
+    const startY = -machineRect.height * 1.2;
+    const groundY = stageRect.height - machineRect.height;
 
-      // Kill old tl if any
-      if (this.tl) {
-        this.tl.kill();
-      }
+    gsap.set(machine, {
+      x: startX,
+      y: startY,
+      scale: this.scaleFactor,
+      opacity: 1,
+      transformOrigin: '50% 50%',
+    });
 
-      this.tl = gsap.timeline({
-        onComplete: () => {
-          // Start a new cycle when this finishes
-          playCycle();
-        },
-      });
+    if (this.tl) this.tl.kill();
 
-      // Reset off-screen
-      this.tl.set(ball, {
-        x: randomX,
-        y: -ballRect.height * 2,
-        rotation: 0,
-        opacity: 0,
-      });
+    this.tl = gsap.timeline();
 
-      // Fade + drop
-      this.tl.to(ball, {
-        opacity: 1,
-        duration: 0.2,
-        ease: 'power1.out',
-      });
-      this.tl.to(
-        ball,
-        {
-          y: groundY,
-          rotation: 180 * spinDir,
-          duration: 1.2,
-          ease: 'bounce.out',
-        },
-        '<',
-      );
-
-      // Bounce
-      this.tl.to(ball, {
-        y: groundY - 30,
-        rotation: 360 * spinDir,
-        duration: 0.5,
-        ease: 'power2.out',
-      });
-      this.tl.to(ball, {
-        y: groundY,
-        rotation: 540 * spinDir,
-        duration: 0.4,
-        ease: 'bounce.out',
-      });
-
-      // Roll off
-      this.tl.to(ball, {
-        x: spinDir > 0 ? stageRect.width + 200 : -200,
-        rotation: 1080 * spinDir,
-        duration: 3,
-        ease: 'power1.in',
-      });
-    };
-
-    // Kick off first cycle
-    playCycle();
+    this.tl.to(machine, { y: groundY, duration: 1.4, ease: 'bounce.out' });
+    this.tl.to(machine, { y: groundY - 10, duration: 0.25, ease: 'power1.out' });
+    this.tl.to(machine, { y: groundY, duration: 0.3, ease: 'bounce.out' });
   }
 
   destroy() {
-    if (this.tl) {
-      this.tl.kill();
-      this.tl = null;
-    }
-    if (this.raf1 != null) {
-      cancelAnimationFrame(this.raf1);
-      this.raf1 = null;
-    }
-    if (this.raf2 != null) {
-      cancelAnimationFrame(this.raf2);
-      this.raf2 = null;
-    }
+    this.tl?.kill();
+    if (this.raf1) cancelAnimationFrame(this.raf1);
+    if (this.raf2) cancelAnimationFrame(this.raf2);
+    this.tl = this.raf1 = this.raf2 = null;
   }
 }

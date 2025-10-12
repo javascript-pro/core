@@ -6,10 +6,7 @@ description: 'A Pointless reinvention of MacroMedia Flash?'
 icon: flash
 image: /png/n64/test.png
 keywords: 'Catridges, Flash, SVG, Macromedia'
-noImage: true
 ---
-
-[Flash movie="Timemachine" height="400"]
 
 ## A Pointless reinvention of MacroMedia Flash?
 

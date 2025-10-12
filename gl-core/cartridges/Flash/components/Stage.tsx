@@ -18,7 +18,7 @@ export default React.forwardRef<HTMLDivElement, TStage>(function Stage(
       m = <Pingpong id="movie_pingpong" />;
       break;
     case 'Timemachine':
-      m = <Timemachine id="movie_timemachine" />;
+      m = <Timemachine id="movie_timemachine" stageId={id} />;
       break;
     default:
       m = null;
