@@ -1,7 +1,7 @@
 // /app/src/Flash/components/Stage.tsx
 import React from 'react';
 import { Box } from '@mui/material';
-import { Logo, Pingpong } from '../../Flash';
+import { Logo, Pingpong, Timemachine } from '../../Flash';
 import { TStage } from '../types';
 
 export default React.forwardRef<HTMLDivElement, TStage>(function Stage(
@@ -16,6 +16,9 @@ export default React.forwardRef<HTMLDivElement, TStage>(function Stage(
       break;
     case 'Pingpong':
       m = <Pingpong id="movie_pingpong" />;
+      break;
+    case 'Timemachine':
+      m = <Timemachine id="movie_timemachine" />;
       break;
     default:
       m = null;

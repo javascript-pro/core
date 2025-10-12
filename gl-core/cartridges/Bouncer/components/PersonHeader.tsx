@@ -4,7 +4,6 @@ import * as React from 'react';
 import { CardHeader, Avatar } from '@mui/material';
 import { useBouncer } from '../../Bouncer';
 
-
 export default function PersonHeader() {
   const { livePing } = useBouncer() || {};
 
@@ -17,8 +16,8 @@ export default function PersonHeader() {
       : '/svg/guest.svg';
 
   return (
-    <CardHeader 
-      avatar={<Avatar src={avatarSrc} alt={displayName}/>}
+    <CardHeader
+      avatar={<Avatar src={avatarSrc} alt={displayName} />}
       title={displayName}
     />
   );

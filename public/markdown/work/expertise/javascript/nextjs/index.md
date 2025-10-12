@@ -8,11 +8,13 @@ image: /png/3rdParty/next_og.png
 tags: JavaScript, Node, Next.js, API, REST API, React
 ---
 
-[PrevNext prev="/work/expertise/javascript" next="/work/expertise/javascript/js-testing"]
-
 > Next.js is a full-stack JavaScript framework that brings together the power of React on the frontend with seamless backend capabilities, creating a unified developer experience. It simplifies the process of building modern web applications by offering a complete toolkit out of the box.
 
-#### Why We Use It
+[PrevNext prev="/work/expertise/javascript/vanilla-js" next="/work/expertise/javascript/js-testing"]
+
+## Why use it?
+
+Next.js is not just a React framework — it's a complete platform for building modern web applications. Paired with Vercel, it offers an unparalleled development and deployment experience. It helps you skip the boring bits, focus on your product, and get it into users' hands faster.
 
 Traditional frontend frameworks like React are powerful, but they leave a lot of heavy lifting to the developer when it comes to routing, server-side rendering, static site generation, and deployment. This is where Next.js shines:
 
@@ -37,7 +39,7 @@ Every real-world project ends up needing some combination of:
 
 Instead of cobbling together 10 different libraries and configurations, Next.js gives you a coherent way to manage all of these within a single, maintainable framework. It saves enormous time on boilerplate setup and bug hunting.
 
-#### Why Vercel is Amazing
+#### Why Vercel is good
 
 Vercel is the platform behind Next.js, offering frictionless deployment and hosting for your Next.js projects. What makes it special:
 
@@ -49,9 +51,7 @@ Vercel is the platform behind Next.js, offering frictionless deployment and host
 
 Next.js + Vercel is one of the most productive and scalable stacks available today, whether you're building a personal portfolio or a full-scale SaaS product.
 
-#### Conclusion
-
-Next.js is not just a React framework — it's a complete platform for building modern web applications. Paired with Vercel, it offers an unparalleled development and deployment experience. It helps you skip the boring bits, focus on your product, and get it into users' hands faster.
+## Case Study
 
 Situation
 

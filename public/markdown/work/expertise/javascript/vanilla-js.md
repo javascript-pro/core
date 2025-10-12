@@ -1,20 +1,16 @@
 ---
-order: 13
+order: 14
 title: Vanilla JS
-description: Dependency-free JavaScript delivery layers
+description: Dependency free JavaScript delivery layer
 slug: /work/expertise/javascript/vanilla-js
 icon: js
 image: /png/3rdParty/javascript_og.png
-tags: JavaScript, Vanilla JavaScript, TypeScript, React, Angular, Vue, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS, JSON
+tags: JavaScript, Vanilla JavaScript, TypeScript
 ---
-
-[PrevNext prev="/work/expertise/javascript" next="/work/expertise/javascript/node"]
 
 ## When JavaScript needs to be everywhere instantly
 
-In the world of modern web engineering, vanilla JavaScript sometimes gets dismissed as old-school or under-powered. But at scale, especially across multiple domains or brands, it can be the smartest, fastest, and most maintainable choice.
-
-Imagine needing to deploy a single piece of client-side logic across dozens of independent websites — each with different:
+In modern web engineering, Vanilla JavaScript is often dismissed as old-school or under-powered. But at scale, especially across multiple domains or brands, it can be the smartest, fastest, and most maintainable choice. Imagine needing to deploy a single piece of client-side logic across dozens of independent websites — each with different:
 
 - Content management systems
 - CSS frameworks and design languages
@@ -27,6 +23,8 @@ It lets teams roll out shared functionality (recommendations, analytics, persona
 Vanilla JavaScript isn’t a step backward — it’s a strategic choice for products that need to operate everywhere, instantly, and invisibly.
 
 When performance, portability, and integration outweigh the need for complex UI frameworks, a handcrafted, dependency-free JavaScript delivery layer remains one of the most powerful tools in the modern engineer’s kit.
+
+[PrevNext prev="/work/expertise/javascript" next="/work/expertise/javascript/node"]
 
 #### Key Idea: The Client-Side Delivery Layer
 

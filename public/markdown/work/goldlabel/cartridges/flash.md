@@ -9,7 +9,7 @@ keywords: 'Catridges, Flash, SVG, Macromedia'
 noImage: true
 ---
 
-[Flash movie="Pingpong" height="400"]
+[Flash movie="Timemachine" height="400"]
 
 ## A Pointless reinvention of MacroMedia Flash?
 

@@ -34,7 +34,7 @@
                     "icon": "flash",
                     "image": "/png/n64/test.png",
                     "type": "file",
-                    "excerpt": "[Flash movie=\"Pingpong\" height=\"400\"]\n\n A Pointless reinvention of MacroMedia Flash?\n\nMaybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You'r"
+                    "excerpt": "[Flash movie=\"Timemachine\" height=\"400\"]\n\n A Pointless reinvention of MacroMedia Flash?\n\nMaybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. Yo"
                   },
                   {
                     "title": "Uberedux",
@@ -123,7 +123,7 @@
               }
             ],
             "icon": "goldlabel",
-            "image": "/png/3rdParty/github_og.png",
+            "image": "https://live.staticflickr.com/65535/54353995935_a904d504aa_b.jpg",
             "tags": [
               "JavaScript",
               "Vanilla JavaScript",
@@ -137,7 +137,7 @@
               "NextJS",
               "Headless CMS"
             ],
-            "excerpt": "Open Source Platform\n\nIt’s the public GitHub repository that powers goldlabel.pro — and it’s free for anyone to fork, copy, hack, and reuse.\n\n What is it?\n\nGoldlabel is a JavaScript platform built wit"
+            "excerpt": "When someone lands on a Goldlabel url, the site becomes aware of them; their device, their location and through their actions their intent.\n\nThey appear in the Pr0 console instantly as a ping. Within "
           },
           {
             "title": "Company",
@@ -221,27 +221,16 @@
                   {
                     "title": "Vanilla JS",
                     "slug": "/work/expertise/javascript/vanilla-js",
-                    "order": 13,
+                    "order": 14,
                     "icon": "js",
                     "image": "/png/3rdParty/javascript_og.png",
                     "type": "file",
                     "tags": [
                       "JavaScript",
                       "Vanilla JavaScript",
-                      "TypeScript",
-                      "React",
-                      "Angular",
-                      "Vue",
-                      "Material UI",
-                      "Flash",
-                      "Server Side JavaScript",
-                      "Node",
-                      "Gatsby",
-                      "NextJS",
-                      "Headless CMS",
-                      "JSON"
+                      "TypeScript"
                     ],
-                    "excerpt": "[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/node\"]\n\n When JavaScript needs to be everywhere instantly\n\nIn the world of modern web engineering, vanilla JavaScript somet"
+                    "excerpt": "When JavaScript needs to be everywhere instantly\n\nIn modern web engineering, Vanilla JavaScript is often dismissed as oldschool or underpowered. But at scale, especially across multiple domains or bra"
                   },
                   {
                     "title": "Node",
@@ -387,7 +376,7 @@
                       "REST API",
                       "React"
                     ],
-                    "excerpt": "[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/jstesting\"]\n\n Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with seam"
+                    "excerpt": "Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with seamless backend capabilities, creating a unified developer experience. It simplifies the proce"
                   },
                   {
                     "title": "JS Testing",
@@ -407,7 +396,7 @@
                       "Jest",
                       "Playwright"
                     ],
-                    "excerpt": "[PrevNext prev=\"/work/expertise/javascript/\" next=\"/work/expertise/javascript/typescript\"]\n\n Left looking\n\nA leftlooking approach in JavaScript testing means testing earlier in the development process"
+                    "excerpt": "Left looking approach\n\nA leftlooking approach in JavaScript testing means testing earlier in the development process — before code reaches production. Using tools like Jest for unit and integration te"
                   }
                 ],
                 "icon": "js",
@@ -1252,7 +1241,7 @@
             ],
             "icon": "balance",
             "image": "/png/3rdParty/unicorn.png",
-            "excerpt": "[PrevNext prev=\"/balance/books/rfkuang\" next=\"/balance/books/douglascoupland\"]\n\nCurated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction. From vi"
+            "excerpt": "Curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction. From visionary science fiction to satirical explorations of culture and the human exper"
           }
         ],
         "icon": "balance",
