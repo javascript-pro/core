@@ -248,7 +248,7 @@
                       "React",
                       "frameworks"
                     ],
-                    "excerpt": "[PrevNext prev=\"/work/expertise/javascript/\" next=\"/work/expertise/javascript/nextjs\"]\n\n And then there was Node\n\nBack in the mid2000s, most of the web ran on PHP — powering WordPress, Drupal, Joomla "
+                    "excerpt": "And then there was Node\n\nBack in the mid2000s, most of the web ran on PHP — powering WordPress, Drupal, Joomla — and developers often had to juggle PHP on the backend and JavaScript on the frontend. D"
                   },
                   {
                     "title": "TypeScript",
@@ -270,22 +270,7 @@
                           "TypeScript",
                           "React"
                         ],
-                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript\" next=\"/work/expertise/javascript/typescript/realworld\"]\n\n TypeScript for the reluctant coder\n\nYou don’t have to love types, you just have to unde"
-                      },
-                      {
-                        "title": "Advanced TypeScript",
-                        "slug": "/work/expertise/javascript/typescript/advanced",
-                        "order": 10,
-                        "icon": "js",
-                        "image": "/png/3rdParty/typescript_og.png",
-                        "type": "file",
-                        "tags": [
-                          "JavaScript",
-                          "Vanilla JavaScript",
-                          "TypeScript",
-                          "React"
-                        ],
-                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/getstarted\" next=\"/work/expertise/javascript/typescript/structuraltyping\"]\n\n[PageAd slug=\"/work/expertise/javascript/typescript/structuraltyping\"]"
+                        "excerpt": "TypeScript for the reluctant coder\n\nYou don’t have to love types, you just have to understand what they are and why they matter. If you come from design, UX, writing, or any other creative field, Java"
                       },
                       {
                         "title": "Real World TypeScript",
@@ -300,7 +285,22 @@
                           "TypeScript",
                           "React"
                         ],
-                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/getstarted\" next=\"/work/expertise/javascript/typescript/advanced\"]\n\n Sometimes there's a project where the existing codebase has become brittle, e"
+                        "excerpt": "Sometimes there's a project where the existing codebase has become brittle, errorprone and crashheavy. Developers are regularly firefighting bugs that TypeScript could have prevented at compile time. "
+                      },
+                      {
+                        "title": "Advanced TypeScript",
+                        "slug": "/work/expertise/javascript/typescript/advanced",
+                        "order": 30,
+                        "icon": "js",
+                        "image": "/png/3rdParty/typescript_og.png",
+                        "type": "file",
+                        "tags": [
+                          "JavaScript",
+                          "Vanilla JavaScript",
+                          "TypeScript",
+                          "React"
+                        ],
+                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/getstarted\" next=\"/work/expertise/javascript/typescript/structuraltyping\"]\n\n[PageAd slug=\"/work/expertise/javascript/typescript/structuraltyping\"]"
                       },
                       {
                         "title": "Structural Typing",
@@ -827,7 +827,7 @@
               "fields",
               "work"
             ],
-            "excerpt": "[PrevNext prev=\"/work/goldlabel\" next=\"/work/expertise/javascript\"]\n\n We work across the full stack, from interface to infrastructure, with a focus on robust, modern JavaScript tooling and scalable cl"
+            "excerpt": "We work across the full stack, from interface to infrastructure, with a focus on robust, modern JavaScript tooling and scalable cloudnative delivery. Whether building responsive UIs, designing serverl"
           },
           {
             "title": "Git",
@@ -893,7 +893,7 @@
           "NextJS",
           "Headless CMS"
         ],
-        "excerpt": "[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise\"]\n\nThe apps we ship are real. They run in production and are developed accessibly. The Core is Open Source and Free forever — giving y"
+        "excerpt": "The apps we ship are real. They run in production and are developed accessibly. The Core is Open Source and Free forever — giving you statically generated sites with Firestorepowered updates and a rea"
       },
       {
         "title": "Life",
