@@ -13,6 +13,8 @@ image: /png/wei-zang/wei-zang.png
 
 [PageAd slug="/work/expertise/javascript/vanilla-js"]
 
+[PageAd slug="/work/expertise/wordpress"]
+
 [PageAd slug="/balance/books/r-f-kuang"]
 
 [PrevNext prev="/balance/books/r-f-kuang/katabasis" next="/balance/books/r-f-kuang/babel"]

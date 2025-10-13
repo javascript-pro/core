@@ -258,7 +258,7 @@
                     "type": "folder",
                     "children": [
                       {
-                        "title": "Get Started",
+                        "title": "Getting Started",
                         "slug": "/work/expertise/javascript/typescript/get-started",
                         "order": 5,
                         "icon": "js",
@@ -357,7 +357,7 @@
                       "React",
                       "frameworks"
                     ],
-                    "excerpt": "[PrevNext prev=\"/work/expertise/javascript/\" next=\"/work/expertise/javascript/typescript/getstarted\"]\n\n Better JavaScript\n\nJavaScript was never meant for what became asked of it. It started life scrip"
+                    "excerpt": "JavaScript was never meant for what became asked of it. It started life scripting image rollovers in the ‘90s — and somehow ended up running banks and billiondollar web apps.\n\nBy the early 2010s, the "
                   },
                   {
                     "title": "Next.js",
@@ -386,7 +386,7 @@
                     "type": "folder",
                     "children": [],
                     "icon": "js",
-                    "image": "/png/3rdParty/node_og.png",
+                    "image": "/png/3rdParty/playwright_og.png",
                     "tags": [
                       "JavaScript",
                       "Vanilla JavaScript",
@@ -396,7 +396,7 @@
                       "Jest",
                       "Playwright"
                     ],
-                    "excerpt": "Left looking approach\n\nA leftlooking approach in JavaScript testing means testing earlier in the development process — before code reaches production. Using tools like Jest for unit and integration te"
+                    "excerpt": "A Left looking approach\n\n[PrevNext prev=\"/work/expertise/javascript/vanillajs\" next=\"/work/expertise/javascript/typescript\"]\n\nA leftlooking approach in JavaScript testing should mean testing earlier i"
                   }
                 ],
                 "icon": "js",
@@ -773,6 +773,69 @@
                   "work"
                 ],
                 "excerpt": "Is this Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday\n\nIt's keeping tinfoil hat wearing folk awake at night. If"
+              },
+              {
+                "title": "WordPress",
+                "description": "Powers 50% of all websites",
+                "slug": "/work/expertise/wordpress",
+                "order": 999,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "Modernisation",
+                    "slug": "/work/expertise/wordpress/modernising",
+                    "order": 400,
+                    "icon": "wordpress",
+                    "image": "https://live.staticflickr.com/8504/8434232637_2a7e8b697f_o.jpg",
+                    "type": "file",
+                    "tags": [
+                      "expertise",
+                      "wordpress"
+                    ],
+                    "excerpt": "[PrevNext prev=\"/work/expertise/wordpress/architecture\" next=\"/work/expertise/wordpress/casestudy\"]\n\n WordPress Modernisation\n\n Keep your WordPress database, admin, and SEO intact — and layer a modern"
+                  },
+                  {
+                    "title": "Architecture",
+                    "slug": "/work/expertise/wordpress/architecture",
+                    "order": 700,
+                    "icon": "wordpress",
+                    "image": "https://live.staticflickr.com/8504/8434232637_2a7e8b697f_o.jpg",
+                    "type": "file",
+                    "tags": [
+                      "expertise",
+                      "wordpress",
+                      "source of truth"
+                    ],
+                    "excerpt": "WordPress builds everything on a single stack — PHP renders pages on the server, pulling directly from a MySQL database. Themes and plugins share the same environment, which makes it flexible but also"
+                  },
+                  {
+                    "title": "Case Study",
+                    "slug": "/work/expertise/wordpress/case-study",
+                    "order": 700,
+                    "icon": "wordpress",
+                    "image": "https://live.staticflickr.com/8504/8434232637_2a7e8b697f_o.jpg",
+                    "type": "file",
+                    "tags": [
+                      "expertise",
+                      "wordpress",
+                      "source of truth",
+                      "\"WordPress\"",
+                      "\"Goldlabel\"",
+                      "\"case study\"",
+                      "\"SSR\"",
+                      "\"Next.js\"",
+                      "\"performance\""
+                    ],
+                    "excerpt": "How a Shenzhenbased studio used Goldlabel to bring performance, scalability, and modern UX to its WordPress portfolio — without rebuilding from scratch\n\n Case Study: Rahul Sharma Studios\n\nClient: Rahu"
+                  }
+                ],
+                "icon": "wordpress",
+                "image": "https://live.staticflickr.com/8504/8434232637_2a7e8b697f_o.jpg",
+                "tags": [
+                  "expertise",
+                  "wordpress"
+                ],
+                "excerpt": "There's a time and a place for WordPress\n\n The time is in the past and the place is in the bin\n\n[PrevNext prev=\"/work/expertise/wordpress/architecture\" next=\"/work/expertise/wordpress/modernising\"]\n\nW"
               },
               {
                 "title": "Windoze",
@@ -1280,6 +1343,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescript\"]\n\n[PageAd slug=\"/work/expertise/javascript/vanillajs\"]\n\n[PageAd slug=\"/balance/books/rfkuang\"]\n\n[PrevNext prev="
+    "excerpt": "[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescript\"]\n\n[PageAd slug=\"/work/expertise/javascript/vanillajs\"]\n\n[PageAd slug=\"/work/expertise/wordpress\"]\n\n[PageAd slug"
   }
 ]
