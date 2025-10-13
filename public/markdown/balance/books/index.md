@@ -10,9 +10,8 @@ image: /png/3rdParty/unicorn.png
 
 [PrevNext prev="/balance/books/r-f-kuang" next="/balance/books/douglas-coupland"]
 
-## Next up 
+## Next up
 
 - Cixin Liu
 - Orwell
 - Pullman
-

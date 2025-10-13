@@ -8,7 +8,10 @@ export type TTimemachine = {
   stageId?: string;
 };
 
-export default function Timemachine({ id = 'movie_timemachine', stageId = 'stage' }: TTimemachine) {
+export default function Timemachine({
+  id = 'movie_timemachine',
+  stageId = 'stage',
+}: TTimemachine) {
   React.useEffect(() => {
     const timemachineAS = new TimemachineAS(stageId, id);
     timemachineAS.init();

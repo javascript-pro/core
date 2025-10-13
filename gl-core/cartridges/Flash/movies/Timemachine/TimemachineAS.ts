@@ -24,7 +24,9 @@ export default class TimemachineAS {
     const machine = document.getElementById('mc_machine');
 
     if (!stage || !machine) {
-      console.warn(`[TimemachineAS] Missing stage (${this.stageId}) or machine element`);
+      console.warn(
+        `[TimemachineAS] Missing stage (${this.stageId}) or machine element`,
+      );
       return;
     }
 
@@ -52,7 +54,11 @@ export default class TimemachineAS {
     this.tl = gsap.timeline();
 
     this.tl.to(machine, { y: groundY, duration: 1.4, ease: 'bounce.out' });
-    this.tl.to(machine, { y: groundY - 10, duration: 0.25, ease: 'power1.out' });
+    this.tl.to(machine, {
+      y: groundY - 10,
+      duration: 0.25,
+      ease: 'power1.out',
+    });
     this.tl.to(machine, { y: groundY, duration: 0.3, ease: 'bounce.out' });
   }
 
