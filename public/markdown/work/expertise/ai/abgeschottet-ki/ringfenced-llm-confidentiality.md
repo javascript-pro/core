@@ -4,7 +4,7 @@ title: Confidentiality
 description: How a ring‑fenced LLM helps meet legal obligations
 slug: /work/expertise/ai/abgeschottet-ki/ringfenced-llm-confidentiality
 icon: ki
-image: /png/ki/abgeschotten-ki.png
+image: https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg
 ---
 
 ### How Can a Ring‑Fenced LLM Help?

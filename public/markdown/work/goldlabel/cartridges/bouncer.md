@@ -154,4 +154,3 @@ gl-core/
 #### Next Steps
 
 Bouncer is designed as a drop‑in cartridge — wire it into the app, and you immediately have authentication and real‑time visitor tracking.
-

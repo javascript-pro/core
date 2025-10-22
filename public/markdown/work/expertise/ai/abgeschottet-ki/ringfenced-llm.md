@@ -4,7 +4,7 @@ title: Ring Fencing
 description: Keeping data inside a secure environment
 slug: /work/expertise/ai/abgeschottet-ki/ringfenced-llm
 icon: ki
-image: /png/ki/abgeschotten-ki.png
+image: https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg
 ---
 
 ### What Does It Mean to Ring‑Fence an LLM?

@@ -577,7 +577,7 @@
                     "type": "folder",
                     "children": [
                       {
-                        "title": "Abgeschottet KI",
+                        "title": "Why?",
                         "slug": "/work/expertise/ai/abgeschottet-ki/why",
                         "order": 0,
                         "icon": "ki",
@@ -603,7 +603,7 @@
                         "slug": "/work/expertise/ai/abgeschottet-ki/ringfenced-llm",
                         "order": 6,
                         "icon": "ki",
-                        "image": "/png/ki/abgeschotten-ki.png",
+                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                         "type": "file",
                         "excerpt": "What Does It Mean to Ring‑Fence an LLM?\n\n A ring‑fenced LLM is like having the power of AI inside a locked room.\n\n Runs on internal servers or private cloud\n Blocks external connections\n Uses local st"
                       },
@@ -612,7 +612,7 @@
                         "slug": "/work/expertise/ai/abgeschottet-ki/professional-secrecy",
                         "order": 10,
                         "icon": "ki",
-                        "image": "/png/ki/abgeschotten-ki.png",
+                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                         "type": "file",
                         "excerpt": "What Does Professional Secrecy Mean?\n\n What you tell your lawyer stays between you and them.\n\nWhen you speak to a lawyer in the UK, everything you tell them in confidence is protected by a strict lega"
                       },
@@ -621,7 +621,7 @@
                         "slug": "/work/expertise/ai/abgeschottet-ki/confidentiality-obligations",
                         "order": 20,
                         "icon": "ki",
-                        "image": "/png/ki/abgeschotten-ki.png",
+                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                         "type": "file",
                         "tags": [
                           "abgeschottet",
@@ -634,7 +634,7 @@
                         "slug": "/work/expertise/ai/abgeschottet-ki/prompts",
                         "order": 20,
                         "icon": "ki",
-                        "image": "/png/ki/abgeschotten-ki.png",
+                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                         "type": "file",
                         "excerpt": "General legal reasoning\n\nErkläre in einfachen Worten, was das Berufsgeheimnis für deutsche Rechtsanwälte bedeutet.\n\nExplain in simple terms what professional secrecy means for UK lawyers.\n\nWelche Pfli"
                       },
@@ -643,7 +643,7 @@
                         "slug": "/work/expertise/ai/abgeschottet-ki/gdpr-law-firms",
                         "order": 30,
                         "icon": "ki",
-                        "image": "/png/ki/abgeschotten-ki.png",
+                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                         "type": "file",
                         "tags": [
                           "abgeschottet",
@@ -656,7 +656,7 @@
                         "slug": "/work/expertise/ai/abgeschottet-ki/hardware",
                         "order": 40,
                         "icon": "ki",
-                        "image": "/png/ki/abgeschotten-ki.png",
+                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                         "type": "file",
                         "tags": [
                           "abgeschottet",
@@ -669,7 +669,7 @@
                         "slug": "/work/expertise/ai/abgeschottet-ki/llms-legal-research",
                         "order": 40,
                         "icon": "ki",
-                        "image": "/png/ki/abgeschotten-ki.png",
+                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                         "type": "file",
                         "tags": [
                           "abgeschottet",
@@ -682,7 +682,7 @@
                         "slug": "/work/expertise/ai/abgeschottet-ki/risks-public-llms",
                         "order": 50,
                         "icon": "ki",
-                        "image": "/png/ki/abgeschotten-ki.png",
+                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                         "type": "file",
                         "excerpt": "What Are the Risks if Lawyers Send Confidential Files to a Public AI Service?\n\n Public AI services are not designed for legally confidential data.\n\n Loss of confidentiality\n Data protection breaches\n "
                       },
@@ -691,7 +691,7 @@
                         "slug": "/work/expertise/ai/abgeschottet-ki/ringfenced-llm-confidentiality",
                         "order": 70,
                         "icon": "ki",
-                        "image": "/png/ki/abgeschotten-ki.png",
+                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                         "type": "file",
                         "excerpt": "How Can a Ring‑Fenced LLM Help?\n\n A ring‑fenced LLM gives a firm all the efficiency of AI while upholding the highest standards of confidentiality.\n\n No data leaves the firm’s network\n Built‑in access"
                       },
@@ -700,7 +700,7 @@
                         "slug": "/work/expertise/ai/abgeschottet-ki/organisational-measures",
                         "order": 80,
                         "icon": "ki",
-                        "image": "/png/ki/abgeschotten-ki.png",
+                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                         "type": "file",
                         "tags": [
                           "abgeschottet",
@@ -715,7 +715,7 @@
                       "abgeschottet",
                       "KI"
                     ],
-                    "excerpt": "A ring‑fenced LLM is like having the power of AI inside a locked room.\n\nIt can process sensitive documents and assist with legal work, but nothing ever leaves the firm’s secure network. When we say an"
+                    "excerpt": "A ring‑fenced LLM is like having the power of AI inside a locked room\n\nIt can process sensitive documents and assist with legal work, but nothing ever leaves the firm’s secure network. When we say an "
                   },
                   {
                     "title": "Maximizing AI Visibility",
@@ -1343,6 +1343,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescript\"]\n\n[PageAd slug=\"/work/expertise/javascript/vanillajs\"]\n\n[PageAd slug=\"/work/expertise/wordpress\"]\n\n[PageAd slug"
+    "excerpt": "[PrevNext next=\"/work/expertise/ai\"]\n\n[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescript\"]\n\n[PageAd slug=\"/work/expertise/javascript/vanillajs\"]\n\n[PageAd slug=\"/wo"
   }
 ]
