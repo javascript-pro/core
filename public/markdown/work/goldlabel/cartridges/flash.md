@@ -7,6 +7,7 @@ icon: flash
 image: /png/n64/test.png
 keywords: 'Catridges, Flash, SVG, Macromedia'
 ---
+[GitHub url="https://github.com/javascript-pro/core" label="github.com/javascript-pro/core"]
 
 ## A Pointless reinvention of MacroMedia Flash?
 

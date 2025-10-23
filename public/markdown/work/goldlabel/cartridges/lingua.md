@@ -7,6 +7,7 @@ icon: lingua
 image: /png/n64/test.png
 github: https://github.com/javascript-pro/core/tree/main/gl-core/cartridges/Lingua
 ---
+[GitHub url="https://github.com/javascript-pro/core" label="github.com/javascript-pro/core"]
 
 The Lingua cartridge brings localisation to Goldlabel. It enables your site to serve content in multiple languages, making it accessible to a wider audience without complicating your codebase.
 

@@ -8,6 +8,7 @@ image: /png/n64/test.png
 tags: cartridges, cartridge, free, bouncer
 featured: true
 ---
+[GitHub url="https://github.com/javascript-pro/core" label="github.com/javascript-pro/core"]
 
 #### 2. Real‑Time Visitor Tracking (Pings)
 

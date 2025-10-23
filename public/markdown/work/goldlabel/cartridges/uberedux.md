@@ -8,6 +8,7 @@ image: /png/n64/test.png
 github: 'https://github.com/javascript-pro/core/tree/main/gl-core/cartridges/Uberedux'
 keywords: 'Catridges, Uberedux, State Management, Redux'
 ---
+[GitHub url="https://github.com/javascript-pro/core" label="github.com/javascript-pro/core"]
 
 ## Because all Apps need State Management
 

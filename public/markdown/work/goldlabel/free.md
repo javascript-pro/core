@@ -6,6 +6,7 @@ slug: /work/goldlabel/free
 icon: free
 image: /png/3rdParty/github_og.png
 ---
+[GitHub url="https://github.com/javascript-pro/core" label="github.com/javascript-pro/core"]
 
 ## Some things in life _are_ free — Goldlabel [Core](/free/core) is one of them.
 

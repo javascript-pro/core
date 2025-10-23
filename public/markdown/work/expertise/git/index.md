@@ -7,6 +7,7 @@ icon: github
 image: /png/3rdParty/git_og.png
 tags: source control, project management, github, bitbucket
 ---
+[GitHub url="https://github.com/javascript-pro/core" label="github.com/javascript-pro/core"]
 
 [PrevNext prev="/work/git/gitkraken" next="/work/git/github"]
 

@@ -3,10 +3,11 @@ order: 10
 title: Open Source
 slug: /work/goldlabel/core
 description: Open Source and Free Forever
-icon: free
+icon: github
 image: /png/3rdParty/github_og.png
 tags: free, core
 ---
+[GitHub url="https://github.com/javascript-pro/core" label="github.com/javascript-pro/core"]
 
 ## Open Source and Free Forever
 

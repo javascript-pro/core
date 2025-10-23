@@ -14,8 +14,8 @@
         "type": "folder",
         "children": [
           {
-            "title": "Goldlabel Core",
-            "description": "Open Source Platform",
+            "title": "Goldlabel Software",
+            "description": "Open Source Fullstack JavaScript Platform",
             "slug": "/work/goldlabel",
             "order": 1,
             "type": "folder",
@@ -152,7 +152,7 @@
               "NextJS",
               "Headless CMS"
             ],
-            "excerpt": "When someone lands on a Goldlabel url, the site becomes aware of them; their device, their location and through their actions their intent.\n\nThey appear in the Pr0 console instantly as a ping. Within "
+            "excerpt": "Open Source Platform\n\nIt’s the public GitHub repository that powers goldlabel.pro — and it’s free for anyone to fork, copy, hack, and reuse.\n\n What is it?\n\nGoldlabel is a JavaScript platform built wit"
           },
           {
             "title": "Company",

@@ -1,12 +1,14 @@
 ---
 order: 1
-title: Goldlabel Software
+title: Free Software
 description: Open Source Fullstack JavaScript Platform
 slug: /work/goldlabel
 icon: goldlabel
 image: https://live.staticflickr.com/65535/53670802348_9bb887b680_b.jpg
 tags: JavaScript, Vanilla JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 ---
+
+[GitHub url="https://github.com/javascript-pro/core" label="github.com/javascript-pro/core"]
 
 #### Open Source Platform
 
