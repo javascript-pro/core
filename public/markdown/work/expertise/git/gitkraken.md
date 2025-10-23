@@ -2,7 +2,7 @@
 order: 30
 title: GitKraken
 description: Best thing since sliced bread and chocolate spread
-slug: /work/git/gitkraken
+slug: /work/expertise/git/gitkraken
 icon: github
 image: /png/3rdParty/gitkraken.png
 tags: github, process, javascript, tools, gitkraken,

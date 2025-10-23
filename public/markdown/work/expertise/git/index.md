@@ -2,7 +2,7 @@
 order: 123
 title: Git
 description: Where Code Lives
-slug: /work/git
+slug: /work/expertise/git
 icon: github
 image: /png/3rdParty/git_og.png
 tags: source control, project management, github, bitbucket

@@ -75,7 +75,7 @@
                     "slug": "/work/goldlabel/cartridges/paywall",
                     "order": 130,
                     "icon": "admin",
-                    "image": "/png/n64/test.png",
+                    "image": "https://live.staticflickr.com/65535/53670802348_9bb887b680_b.jpg",
                     "type": "file",
                     "tags": [
                       "cartridges",
@@ -83,7 +83,7 @@
                       "free",
                       "paywall"
                     ],
-                    "excerpt": "Auth, Admin and Analytics\n\nThe Bouncer cartridge is responsible for two core features in Goldlabel Core: Authentication and Access Control System\n\n1. Authentication (Firebase Auth +  collection)\n2. Re"
+                    "excerpt": "The Paywall cartridge is responsible for two key features in Goldlabel Core: Authentication and Access Control System\n\n1. Authentication (Firebase Auth +  collection)\n2. Real‑time Visitor Tracking (Pi"
                   },
                   {
                     "title": "Pings",
@@ -138,7 +138,7 @@
               }
             ],
             "icon": "goldlabel",
-            "image": "https://live.staticflickr.com/65535/54353995935_a904d504aa_b.jpg",
+            "image": "https://live.staticflickr.com/65535/53670802348_9bb887b680_b.jpg",
             "tags": [
               "JavaScript",
               "Vanilla JavaScript",
@@ -578,6 +578,54 @@
                 "excerpt": "A much over used term\n\nSo much so, it's become a bit meaningless. It was such ha useful term, too. Basically it meant that if you were a frontend dev"
               },
               {
+                "title": "Git",
+                "description": "Where Code Lives",
+                "slug": "/work/expertise/git",
+                "order": 123,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "GitHub",
+                    "slug": "/work/expertise/git/github",
+                    "order": 25,
+                    "icon": "github",
+                    "image": "/png/3rdParty/github_og.png",
+                    "type": "file",
+                    "tags": [
+                      "github",
+                      "process",
+                      "javascript"
+                    ],
+                    "excerpt": "[PrevNext prev=\"/work/git\" next=\"/work/git/gitkraken\"]\n\n We use GitHub for everything.\n\nMost of the communication done between us and our clients during development is done through GitHub in the form "
+                  },
+                  {
+                    "title": "GitKraken",
+                    "slug": "/work/expertise/git/gitkraken",
+                    "order": 30,
+                    "icon": "github",
+                    "image": "/png/3rdParty/gitkraken.png",
+                    "type": "file",
+                    "tags": [
+                      "github",
+                      "process",
+                      "javascript",
+                      "tools",
+                      "gitkraken"
+                    ],
+                    "excerpt": "[PrevNext prev=\"/work/git\" next=\"/work/git/github\"]\n\n Now with AI Commit and PR Messaging\n\nGitKraken isn’t just another Git GUI. It’s become an essential tool in our daily workflow—one of those rare b"
+                  }
+                ],
+                "icon": "github",
+                "image": "/png/3rdParty/git_og.png",
+                "tags": [
+                  "source control",
+                  "project management",
+                  "github",
+                  "bitbucket"
+                ],
+                "excerpt": "[PrevNext prev=\"/work/git/gitkraken\" next=\"/work/git/github\"]\n\n Other Source Control solutions are available\n\nBut everyone uses git. It was created in 2005 by Linus Torvalds, the same person who built"
+              },
+              {
                 "title": "AI",
                 "description": "What do we know about about AI?",
                 "slug": "/work/expertise/ai",
@@ -906,54 +954,6 @@
               "work"
             ],
             "excerpt": "We work across the full stack, from interface to infrastructure, with a focus on robust, modern JavaScript tooling and scalable cloudnative delivery. Whether building responsive UIs, designing serverl"
-          },
-          {
-            "title": "Git",
-            "description": "Where Code Lives",
-            "slug": "/work/git",
-            "order": 123,
-            "type": "folder",
-            "children": [
-              {
-                "title": "GitHub",
-                "slug": "/work/git/github",
-                "order": 25,
-                "icon": "github",
-                "image": "/png/3rdParty/github_og.png",
-                "type": "file",
-                "tags": [
-                  "github",
-                  "process",
-                  "javascript"
-                ],
-                "excerpt": "[PrevNext prev=\"/work/git\" next=\"/work/git/gitkraken\"]\n\n We use GitHub for everything.\n\nMost of the communication done between us and our clients during development is done through GitHub in the form "
-              },
-              {
-                "title": "GitKraken",
-                "slug": "/work/git/gitkraken",
-                "order": 30,
-                "icon": "github",
-                "image": "/png/3rdParty/gitkraken.png",
-                "type": "file",
-                "tags": [
-                  "github",
-                  "process",
-                  "javascript",
-                  "tools",
-                  "gitkraken"
-                ],
-                "excerpt": "[PrevNext prev=\"/work/git\" next=\"/work/git/github\"]\n\n Now with AI Commit and PR Messaging\n\nGitKraken isn’t just another Git GUI. It’s become an essential tool in our daily workflow—one of those rare b"
-              }
-            ],
-            "icon": "github",
-            "image": "/png/3rdParty/git_og.png",
-            "tags": [
-              "source control",
-              "project management",
-              "github",
-              "bitbucket"
-            ],
-            "excerpt": "[PrevNext prev=\"/work/git/gitkraken\" next=\"/work/git/github\"]\n\n Other Source Control solutions are available\n\nBut everyone uses git. It was created in 2005 by Linus Torvalds, the same person who built"
           }
         ],
         "icon": "work",
@@ -1415,6 +1415,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[PageAd slug=\"/work/expertise/javascript/vanillajs\"]\n\n[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescript\"]\n\n[PageAd slug=\"/work/expertise/wordpress\"]\n\n[PageAd slug"
+    "excerpt": "[PageAd slug=\"/work/goldlabel\"]\n\n[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescript\"]\n\n[PageAd slug=\"/work/expertise/javascript/vanillajs\"]\n\n[PageAd slug=\"/work/ex"
   }
 ]

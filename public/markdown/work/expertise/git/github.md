@@ -2,7 +2,7 @@
 order: 25
 title: GitHub
 description: Critical to our process
-slug: /work/git/github
+slug: /work/expertise/git/github
 icon: github
 image: /png/3rdParty/github_og.png
 tags: github, process, javascript
