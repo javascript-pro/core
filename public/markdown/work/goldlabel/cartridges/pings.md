@@ -1,55 +1,13 @@
 ---
 order: 130
-title: Bouncer
-description: Auth, Admin & Analytics
-slug: /work/goldlabel/cartridges/bouncer
+title: Pings
+description: Real Time Analytics
+slug: /work/goldlabel/cartridges/pings
 icon: admin
 image: /png/n64/test.png
 tags: cartridges, cartridge, free, bouncer
 featured: true
 ---
-
-## Auth, Admin and Analytics
-
-The Bouncer cartridge is responsible for two core features in Goldlabel Core: Authentication and Access Control System
-
-1. Authentication (Firebase Auth + `auth` collection)
-2. Real‑time Visitor Tracking (Pings)
-
-#### 1. Authentication
-
-Bouncer manages user authentication using Firebase Auth.  
-Every user also has a corresponding document in the Firestore `auth` collection that stores profile information and access level.
-
-#### Auth Data Model (`auth` collection)
-
-Each document is keyed by `uid` and typically contains:
-
-```ts
-{
-  uid: string,                // Firebase UID
-  email: string,              // Authenticated email
-  displayName: string,        // Name to show in UI
-  avatar: string | null,      // URL to profile image
-  accessLevel: string,        // e.g. "admin", "member"
-  createdAt: Timestamp,
-  updatedAt: Timestamp
-}
-```
-
-#### Auth Flow
-
-- Sign Up  
-  Create a new Firebase Auth user, then create a matching doc in `auth` with default metadata.
-
-- Sign In / Out  
-  Handled via Firebase Auth. Bouncer listens to `onAuthStateChanged` and updates local state (via Uberedux).
-
-- Profile Updates  
-  Update both Firebase Auth (displayName, photoURL) and Firestore `auth`.
-
-- Deletion  
-  Delete user from Firebase Auth and Firestore `auth`.
 
 #### 2. Real‑Time Visitor Tracking (Pings)
 
@@ -113,22 +71,6 @@ Admins can send a message to a visitor:
 - Update the `message` field on that visitor’s ping document.
 - Only the visitor with that fingerprint sees it (via their live subscription).
 
-### File Structure
-
-```
-gl-core/
-  cartridges/
-    Bouncer/
-      actions/
-        createUser.ts
-        updateUser.ts
-        deleteUser.ts
-        usePing.ts
-      components/
-        User.tsx
-        AuthGuard.tsx
-      README.md   ← (this file)
-```
 
 #### Security & Considerations
 
@@ -150,7 +92,3 @@ gl-core/
 - [Firestore](https://firebase.google.com/docs/firestore)
 - [`@fingerprintjs/fingerprintjs`](https://github.com/fingerprintjs/fingerprintjs)
 - GeoIP service (e.g. [ipapi.co](https://ipapi.co) or a custom `/api/geo` route)
-
-#### Next Steps
-
-Bouncer is designed as a drop‑in cartridge — wire it into the app, and you immediately have authentication and real‑time visitor tracking.
