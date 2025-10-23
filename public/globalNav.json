@@ -1067,19 +1067,76 @@
         "children": [
           {
             "title": "Writing",
-            "description": "It's hard to collate stuff into meaningful writing, but we've doing our best",
+            "description": "It's hard to collate stuff into readable writing, but we're doing our best",
             "slug": "/balance/writing",
             "order": 1,
             "type": "folder",
             "children": [
               {
-                "title": "Destructo The Wonderdog",
-                "slug": "/balance/writing/destructo-the-wonderdog",
-                "order": 2,
-                "icon": "dog",
-                "image": "https://live.staticflickr.com/65535/54691336480_c273fe647c_o.jpg",
-                "type": "file",
-                "excerpt": "Once upon a time Destructo the Wonderdog and his best mate Barkin’ Boris were hanging out on the mountain. Just sniffing about, play fighting and barking at stuff when suddenly Boris went still as a m"
+                "title": "Kleiner Zeppelin",
+                "description": "Once upon a time",
+                "slug": "/balance/writing/kleiner-zeppelin",
+                "order": 10,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "Britain",
+                    "slug": "/balance/writing/kleiner-zeppelin/britain",
+                    "order": 99,
+                    "icon": "van",
+                    "image": "https://live.staticflickr.com/65535/54366493026_0e05b778ea_b.jpg",
+                    "type": "file",
+                    "excerpt": ""
+                  },
+                  {
+                    "title": "France",
+                    "slug": "/balance/writing/kleiner-zeppelin/france",
+                    "order": 110,
+                    "icon": "van",
+                    "image": "https://live.staticflickr.com/65535/54458539144_1d61fc9025_b.jpg",
+                    "type": "file",
+                    "excerpt": ""
+                  },
+                  {
+                    "title": "Belgium",
+                    "slug": "/balance/writing/kleiner-zeppelin/belgium",
+                    "order": 125,
+                    "icon": "van",
+                    "image": "https://live.staticflickr.com/65535/54369337224_3278c64992_b.jpg",
+                    "type": "file",
+                    "excerpt": ""
+                  },
+                  {
+                    "title": "Germany",
+                    "slug": "/balance/writing/kleiner-zeppelin/germany",
+                    "order": 170,
+                    "icon": "van",
+                    "image": "https://live.staticflickr.com/65535/54873111678_2633c4ba43_b.jpg",
+                    "type": "file",
+                    "excerpt": ""
+                  },
+                  {
+                    "title": "Spain",
+                    "slug": "/balance/writing/kleiner-zeppelin/spain",
+                    "order": 179,
+                    "icon": "van",
+                    "image": "https://live.staticflickr.com/65535/54548563778_406a5e74b2_b.jpg",
+                    "type": "file",
+                    "excerpt": ""
+                  },
+                  {
+                    "title": "Portugal",
+                    "slug": "/balance/writing/kleiner-zeppelin/portugal",
+                    "order": 190,
+                    "icon": "van",
+                    "image": "https://live.staticflickr.com/65535/54639869696_b8a3cdb0de_b.jpg",
+                    "type": "file",
+                    "excerpt": ""
+                  }
+                ],
+                "icon": "van",
+                "image": "https://live.staticflickr.com/65535/54238226670_faf5a0a2fa_b.jpg",
+                "excerpt": ""
               },
               {
                 "title": "Bez",
@@ -1156,16 +1213,7 @@
                 ],
                 "icon": "food",
                 "image": "/jpg/wei-zangs-food.jpg",
-                "excerpt": "I never learned to cook. No one taught me. That’s why I can tell you about it.\n\nPeople who are taught spend too long worrying about what’s “right.” I just ate what I liked, cooked it, guessed. Like de"
-              },
-              {
-                "title": "Wei Zang’s Food",
-                "slug": "/balance/writing/wei-zangs-food",
-                "order": 110,
-                "icon": "food",
-                "image": "/jpg/wei-zangs-food.jpg",
-                "type": "file",
-                "excerpt": "I never learned to cook. No one taught me. That’s why I can tell you about it.\n\nPeople who are taught spend too long worrying about what’s “right.” I just ate what I liked, cooked it, guessed. Like de"
+                "excerpt": "You want a recipe? The interweb's full of them. This is how I cook. This is why I cook.\n\nIf you find something, good. If not — well, maybe you were hungry for something else.\n\nWhen I want a recipe I g"
               },
               {
                 "title": "Science Fiction",
@@ -1175,11 +1223,20 @@
                 "image": "/jpg/einstein.jpg",
                 "type": "file",
                 "excerpt": "That's soience mayte\n\nBecause we can carefully observe constellations when the Sun is not blocking their path, we know what position the stars should be in when the Sun is keeping us from seeing them."
+              },
+              {
+                "title": "Destructo",
+                "slug": "/balance/writing/destructo-the-wonderdog",
+                "order": 460,
+                "icon": "dog",
+                "image": "https://live.staticflickr.com/65535/54691336480_c273fe647c_o.jpg",
+                "type": "file",
+                "excerpt": "Once upon a time Destructo the Wonderdog and his best mate Barkin’ Boris were hanging out on the mountain. Just sniffing about, play fighting and barking at stuff when suddenly Boris went still as a m"
               }
             ],
             "icon": "balance",
             "image": "https://live.staticflickr.com/65535/54353995935_a904d504aa_b.jpg",
-            "excerpt": "Wei Zang, author of Not here to fuck spiders\n\n description: It's hard to collate stuff into meaningful ebooks, but we've done our best\n\n image: https://live.staticflickr.com/65535/536708023489bb887b68"
+            "excerpt": "[PrevNext next=\"/balance/writing/kleinerzeppelin\"]\n\n Wei Zang, author of Not here to fuck spiders"
           },
           {
             "title": "Video",
@@ -1343,6 +1400,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[PrevNext next=\"/work/expertise/ai\"]\n\n[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescript\"]\n\n[PageAd slug=\"/work/expertise/javascript/vanillajs\"]\n\n[PageAd slug=\"/wo"
+    "excerpt": "[PageAd slug=\"/work/expertise/javascript/vanillajs\"]\n\n[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescript\"]\n\n[PageAd slug=\"/work/expertise/wordpress\"]\n\n[PageAd slug"
   }
 ]

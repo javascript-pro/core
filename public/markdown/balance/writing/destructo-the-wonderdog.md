@@ -1,7 +1,7 @@
 ---
-order: 2
-title: Destructo The Wonderdog
-description: Once upon a time...
+order: 460
+title: Destructo
+description: The Wonderdog
 slug: /balance/writing/destructo-the-wonderdog
 icon: dog
 image: https://live.staticflickr.com/65535/54691336480_c273fe647c_o.jpg
