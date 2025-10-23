@@ -281,9 +281,6 @@
     <loc>https://goldlabel.pro/work/git</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/goldlabel/cartridges/bouncer</loc>
-  </url>
-  <url>
     <loc>https://goldlabel.pro/work/goldlabel/cartridges/flash</loc>
   </url>
   <url>
@@ -297,6 +294,12 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work/goldlabel/cartridges/new-cartridge</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/goldlabel/cartridges/paywall</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/goldlabel/cartridges/pings</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/goldlabel/cartridges/uberedux</loc>

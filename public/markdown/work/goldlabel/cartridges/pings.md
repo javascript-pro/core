@@ -3,7 +3,7 @@ order: 130
 title: Pings
 description: Real Time Analytics
 slug: /work/goldlabel/cartridges/pings
-icon: admin
+icon: blokey
 image: /png/n64/test.png
 tags: cartridges, cartridge, free, bouncer
 featured: true
@@ -16,26 +16,40 @@ Every visitor (authenticated or not) continuously creates or updates a ping docu
 
 #### Ping Data Model (`pings` collection)
 
-Each document is keyed by a fingerprint (from `fingerprint.js`):
-
 ```ts
-{
-  fingerprint: string,        // Unique device fingerprint
-  lastSeen: Timestamp,        // Updated with each ping
-  route: string,              // Current route (e.g. "/apps/app1")
-  geo: {
-    country: string,
-    city: string,
-    lat: number,
-    lon: number
-  },
-  uid: string | null,         // Populated if user is authed
-  displayName: string | null, // From auth profile
-  avatar: string | null,      // From auth profile
-  message: {
-    text: string,
-    createdAt: Timestamp
-  } | null
+export interface TPing {
+  id: string;
+  hostname?: string;
+  pathname?: string;
+  browser?: string;
+  os?: string;
+  platform?: string;
+  model?: string;
+  modelCode?: string;
+  ip?: string;
+  organization?: string;
+  isp?: string;
+  country_name?: string;
+  country_code?: string;
+  city?: string;
+  state_prov?: string;
+  timezone_name?: string;
+  timezone_offset?: number;
+  latitude?: string;
+  longitude?: string;
+  vendor?: string;
+  isMobile?: boolean;
+  hardwareConcurrency?: number;
+  deviceMemory?: number;
+  created?: number;
+  updated?: number;
+  current_time?: string;
+  currency_symbol?: string;
+  currency_code?: string;
+  languages?: string;
+  history?: THistory[];
+  messages: TMessage[];
+  [key: string]: any;
 }
 ```
 
@@ -71,20 +85,15 @@ Admins can send a message to a visitor:
 - Update the `message` field on that visitor’s ping document.
 - Only the visitor with that fingerprint sees it (via their live subscription).
 
-
 #### Security & Considerations
 
 - Firestore Rules
 
   - `auth` collection: only admins or owner can update their own doc.
-  - `pings` collection: allow anonymous writes for own fingerprint; only admins can send `message`.
-
-- Rate Limiting
-
-  - Consider throttling or Cloud Functions if high traffic.
+  - `pings` collection: allow anonymous writes for own fingerprint; only admins can send `message`
 
 - Privacy
-  - No cookies; fingerprints are anonymous unless user is authenticated.
+  - No cookies; fingerprints are anonymous unless user is authenticated
 
 #### Dependencies
 

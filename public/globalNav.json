@@ -71,8 +71,8 @@
                     "excerpt": "The Lingua cartridge brings localisation to Goldlabel. It enables your site to serve content in multiple languages, making it accessible to a wider audience without complicating your codebase.\n\n What "
                   },
                   {
-                    "title": "Bouncer",
-                    "slug": "/work/goldlabel/cartridges/bouncer",
+                    "title": "Paywall",
+                    "slug": "/work/goldlabel/cartridges/paywall",
                     "order": 130,
                     "icon": "admin",
                     "image": "/png/n64/test.png",
@@ -81,9 +81,24 @@
                       "cartridges",
                       "cartridge",
                       "free",
-                      "bouncer"
+                      "paywall"
                     ],
                     "excerpt": "Auth, Admin and Analytics\n\nThe Bouncer cartridge is responsible for two core features in Goldlabel Core: Authentication and Access Control System\n\n1. Authentication (Firebase Auth +  collection)\n2. Re"
+                  },
+                  {
+                    "title": "Pings",
+                    "slug": "/work/goldlabel/cartridges/pings",
+                    "order": 130,
+                    "icon": "blokey",
+                    "image": "/png/n64/test.png",
+                    "type": "file",
+                    "tags": [
+                      "cartridges",
+                      "cartridge",
+                      "free",
+                      "bouncer"
+                    ],
+                    "excerpt": "2. Real‑Time Visitor Tracking (Pings)\n\nThe second function is similar to lightweight analytics.  \nEvery visitor (authenticated or not) continuously creates or updates a ping document in Firestore.\n\n P"
                   },
                   {
                     "title": "New Cartridge",

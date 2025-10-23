@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { Box, CardHeader, Typography } from '@mui/material';
 import { Icon, useIsMobile, ThumbMenu, SharePopup } from '../../../gl-core';
-
+import { Paywall } from '../../cartridges/Paywall';
 import { Bouncer, useBouncer } from '../../cartridges/Bouncer';
 
 export type THeader = {
@@ -41,6 +41,7 @@ export default function Header({ frontmatter = null }: THeader) {
         action={
           <Box sx={{ display: 'flex', mt: 1, mr: isMobile ? 0 : 2 }}>
             <Bouncer />
+            <Paywall />
             <SharePopup frontmatter={frontmatter} />
           </Box>
         }
