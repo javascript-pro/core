@@ -14,7 +14,7 @@
         "type": "folder",
         "children": [
           {
-            "title": "Goldlabel Software",
+            "title": "Free Software",
             "description": "Open Source Fullstack JavaScript Platform",
             "slug": "/work/goldlabel",
             "order": 1,
@@ -34,7 +34,7 @@
                     "icon": "flash",
                     "image": "/png/n64/test.png",
                     "type": "file",
-                    "excerpt": "A Pointless reinvention of MacroMedia Flash?\n\nMaybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You're welcome\n\n SVG Graphics\n Animation usin"
+                    "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\n A Pointless reinvention of MacroMedia Flash?\n\nMaybe we did ridiculously and pointlessly reinvented MacroMed"
                   },
                   {
                     "title": "Uberedux",
@@ -43,7 +43,7 @@
                     "icon": "uberedux",
                     "image": "/png/n64/test.png",
                     "type": "file",
-                    "excerpt": "Because all Apps need State Management\n\nOtherwise you'd be back in jQuery callback hell. Nobody wants that. Uberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app alr"
+                    "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\n Because all Apps need State Management\n\nOtherwise you'd be back in jQuery callback hell. Nobody wants that."
                   },
                   {
                     "title": "Flickr",
@@ -59,7 +59,7 @@
                       "REST",
                       "Next.js"
                     ],
-                    "excerpt": "Flickr Photo Cartridge\n\nA React component for clean, fastloading image galleries. Provides an easy way to display recent photos from a Flickr account. It connects to a serverside API route in your Nex"
+                    "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\n Flickr Photo Cartridge\n\nA React component for clean, fastloading image galleries. Provides an easy way to d"
                   },
                   {
                     "title": "Lingua",
@@ -68,7 +68,7 @@
                     "icon": "lingua",
                     "image": "/png/n64/test.png",
                     "type": "file",
-                    "excerpt": "The Lingua cartridge brings localisation to Goldlabel. It enables your site to serve content in multiple languages, making it accessible to a wider audience without complicating your codebase.\n\n What "
+                    "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\nThe Lingua cartridge brings localisation to Goldlabel. It enables your site to serve content in multiple lan"
                   },
                   {
                     "title": "Paywall",
@@ -83,7 +83,7 @@
                       "free",
                       "paywall"
                     ],
-                    "excerpt": "The Paywall cartridge is responsible for two key features in Goldlabel Core: Authentication and Access Control System\n\n1. Authentication (Firebase Auth +  collection)\n2. Real‑time Visitor Tracking (Pi"
+                    "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\nThe Paywall cartridge is responsible for two key features in Goldlabel Core: Authentication and Access Contr"
                   },
                   {
                     "title": "Pings",
@@ -98,7 +98,7 @@
                       "free",
                       "bouncer"
                     ],
-                    "excerpt": "2. Real‑Time Visitor Tracking (Pings)\n\nThe second function is similar to lightweight analytics.  \nEvery visitor (authenticated or not) continuously creates or updates a ping document in Firestore.\n\n P"
+                    "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\n 2. Real‑Time Visitor Tracking (Pings)\n\nThe second function is similar to lightweight analytics.  \nEvery vis"
                   },
                   {
                     "title": "New Cartridge",
@@ -107,12 +107,12 @@
                     "icon": "add",
                     "image": "/png/n64/test.png",
                     "type": "file",
-                    "excerpt": "Purpose\n\n is a template designed to help developers quickly bootstrap a new Cartridge in a modular application framework such as Goldlabel. Cartridges are featurespecific, plugandplay components that "
+                    "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\n Purpose\n\n is a template designed to help developers quickly bootstrap a new Cartridge in a modular applicat"
                   }
                 ],
                 "icon": "cartridge",
                 "image": "/png/n64/test.png",
-                "excerpt": "Goldlabel is built on cartridges.\n\nA cartridge is a selfcontained piece of application logic: React components, state, styles, and utilities bundled together in a portable unit.\n\nBecause each cartridg"
+                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\n Goldlabel is built on cartridges.\n\nA cartridge is a selfcontained piece of application logic: React compone"
               },
               {
                 "title": "Free",
@@ -121,20 +121,20 @@
                 "icon": "free",
                 "image": "/png/3rdParty/github_og.png",
                 "type": "file",
-                "excerpt": "Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or b"
+                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\n Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’"
               },
               {
                 "title": "Open Source",
                 "slug": "/work/goldlabel/core",
                 "order": 10,
-                "icon": "free",
+                "icon": "github",
                 "image": "/png/3rdParty/github_og.png",
                 "type": "file",
                 "tags": [
                   "free",
                   "core"
                 ],
-                "excerpt": "Open Source and Free Forever\n\nGoldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo archit"
+                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\n Open Source and Free Forever\n\nGoldlabel Core is a project designed to deliver powerful, userfriendly web ap"
               }
             ],
             "icon": "goldlabel",
@@ -152,72 +152,7 @@
               "NextJS",
               "Headless CMS"
             ],
-            "excerpt": "Open Source Platform\n\nIt’s the public GitHub repository that powers goldlabel.pro — and it’s free for anyone to fork, copy, hack, and reuse.\n\n What is it?\n\nGoldlabel is a JavaScript platform built wit"
-          },
-          {
-            "title": "Company",
-            "description": "UK Limited Company (5460545)",
-            "slug": "/work/company",
-            "order": 10,
-            "type": "folder",
-            "children": [
-              {
-                "title": "Working remotely",
-                "slug": "/work/company/remote-working",
-                "order": 250,
-                "icon": "company",
-                "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
-                "type": "file",
-                "tags": [
-                  "remote",
-                  "hybrid"
-                ],
-                "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years.\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communication, "
-              },
-              {
-                "title": "Join Us",
-                "slug": "/work/company/join-us",
-                "order": 666,
-                "icon": "team",
-                "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
-                "type": "file",
-                "tags": [
-                  "team"
-                ],
-                "excerpt": "Whether you're a startup with a short deadline or an enterprise with complex workflows, we can help. Get in touch for it's a truth universally acknowledged that a Software Developer in possession of a"
-              },
-              {
-                "title": "Work With Us",
-                "slug": "/work/company/work-with-us",
-                "order": 777,
-                "icon": "team",
-                "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
-                "type": "file",
-                "tags": [
-                  "team"
-                ],
-                "excerpt": "We take on a limited number of new projects each month. If you need something done we’d love to hear about it. Find out if we're a . We're always looking for collaborators, contributors, and good idea"
-              },
-              {
-                "title": "Privacy & Cookies",
-                "slug": "/work/company/privacy-cookies",
-                "order": 5555,
-                "icon": "admin",
-                "image": "https://live.staticflickr.com/65535/54800517077_55d79f6a0a_b.jpg",
-                "type": "file",
-                "tags": [
-                  "cookies",
-                  "gdpr",
-                  "privacy",
-                  "terms",
-                  "trust"
-                ],
-                "excerpt": "We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers t"
-              }
-            ],
-            "icon": "company",
-            "image": "https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg",
-            "excerpt": "WhatsApp   \nTel +49 15510995150  \n | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX"
+            "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\n Open Source Platform\n\nIt’s the public GitHub repository that powers goldlabel.pro — and it’s free for anyon"
           },
           {
             "title": "Expertise",
@@ -623,7 +558,7 @@
                   "github",
                   "bitbucket"
                 ],
-                "excerpt": "[PrevNext prev=\"/work/git/gitkraken\" next=\"/work/git/github\"]\n\n Other Source Control solutions are available\n\nBut everyone uses git. It was created in 2005 by Linus Torvalds, the same person who built"
+                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\n[PrevNext prev=\"/work/git/gitkraken\" next=\"/work/git/github\"]\n\n Other Source Control solutions are available"
               },
               {
                 "title": "AI",
@@ -954,6 +889,71 @@
               "work"
             ],
             "excerpt": "We work across the full stack, from interface to infrastructure, with a focus on robust, modern JavaScript tooling and scalable cloudnative delivery. Whether building responsive UIs, designing serverl"
+          },
+          {
+            "title": "Company",
+            "description": "UK Limited Company (5460545)",
+            "slug": "/work/company",
+            "order": 1020,
+            "type": "folder",
+            "children": [
+              {
+                "title": "Working remotely",
+                "slug": "/work/company/remote-working",
+                "order": 250,
+                "icon": "company",
+                "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
+                "type": "file",
+                "tags": [
+                  "remote",
+                  "hybrid"
+                ],
+                "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years.\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communication, "
+              },
+              {
+                "title": "Join Us",
+                "slug": "/work/company/join-us",
+                "order": 666,
+                "icon": "team",
+                "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
+                "type": "file",
+                "tags": [
+                  "team"
+                ],
+                "excerpt": "Whether you're a startup with a short deadline or an enterprise with complex workflows, we can help. Get in touch for it's a truth universally acknowledged that a Software Developer in possession of a"
+              },
+              {
+                "title": "Work With Us",
+                "slug": "/work/company/work-with-us",
+                "order": 777,
+                "icon": "team",
+                "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
+                "type": "file",
+                "tags": [
+                  "team"
+                ],
+                "excerpt": "We take on a limited number of new projects each month. If you need something done we’d love to hear about it. Find out if we're a . We're always looking for collaborators, contributors, and good idea"
+              },
+              {
+                "title": "Privacy & Cookies",
+                "slug": "/work/company/privacy-cookies",
+                "order": 5555,
+                "icon": "admin",
+                "image": "https://live.staticflickr.com/65535/54800517077_55d79f6a0a_b.jpg",
+                "type": "file",
+                "tags": [
+                  "cookies",
+                  "gdpr",
+                  "privacy",
+                  "terms",
+                  "trust"
+                ],
+                "excerpt": "We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers t"
+              }
+            ],
+            "icon": "company",
+            "image": "https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg",
+            "excerpt": "WhatsApp   \nTel +49 15510995150  \n | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX"
           }
         ],
         "icon": "work",

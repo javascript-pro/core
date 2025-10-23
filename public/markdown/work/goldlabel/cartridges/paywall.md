@@ -8,6 +8,7 @@ image: https://live.staticflickr.com/65535/53670802348_9bb887b680_b.jpg
 tags: cartridges, cartridge, free, paywall
 featured: true
 ---
+
 [GitHub url="https://github.com/javascript-pro/core" label="github.com/javascript-pro/core"]
 
 The Paywall cartridge is responsible for two key features in Goldlabel Core: Authentication and Access Control System

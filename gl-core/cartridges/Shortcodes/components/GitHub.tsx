@@ -12,18 +12,13 @@ import {
 } from '@mui/material';
 import { useGlobalNav, Icon } from '../../../../gl-core';
 
-
-export default function GitHub({ 
-  url = 'https://',
-  label = ''
-}) {
-  
+export default function GitHub({ url = 'https://', label = '' }) {
   const handleClick = () => {
-    window.open(url, "_blank");
+    window.open(url, '_blank');
   };
 
   // console.log("url", url)
-  
+
   return (
     <Card variant="outlined">
       <CardActionArea onClick={handleClick}>
@@ -33,7 +28,7 @@ export default function GitHub({
           }}
           avatar={
             <Box sx={{ mt: 0.5 }}>
-              <Icon icon={"github"} color="primary" />
+              <Icon icon={'github'} color="primary" />
             </Box>
           }
           title={<Typography variant="h6">{label}</Typography>}

@@ -11,6 +11,8 @@ image: /png/wei-zang/wei-zang.png
 
 [PageAd slug="/work/goldlabel"]
 
+[GitHub url="https://github.com/javascript-pro/core" label="github.com/javascript-pro/core"]
+
 [PrevNext prev="/work/expertise/javascript" next="/work/expertise/javascript/typescript"]
 
 [PageAd slug="/work/expertise/javascript/vanilla-js"]

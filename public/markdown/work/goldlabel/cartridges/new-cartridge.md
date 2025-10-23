@@ -6,6 +6,7 @@ description: Template for bootstrapping a new cartridge
 icon: add
 image: /png/n64/test.png
 ---
+
 [GitHub url="https://github.com/javascript-pro/core" label="github.com/javascript-pro/core"]
 
 ## Purpose
