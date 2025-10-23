@@ -11,6 +11,7 @@ import {
   PageAd,
   Mapbox,
   PrevNext,
+  GitHub,
 } from '../../../gl-core';
 import { Flash } from '../../cartridges/Flash';
 
@@ -119,6 +120,10 @@ export default function RenderMarkdown({
     // PrevNext
     const prevNext = parseShortcode(/\[PrevNext\s+(.*?)\]/, PrevNext);
     if (prevNext) return prevNext;
+
+    // PrevNext
+    const github = parseShortcode(/\[GitHub\s+(.*?)\]/, GitHub);
+    if (github) return github;
 
     // fallback: just return text
     return text;

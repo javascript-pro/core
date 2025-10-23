@@ -14,8 +14,8 @@
         "type": "folder",
         "children": [
           {
-            "title": "Goldlabel Core",
-            "description": "Open Source Platform",
+            "title": "Free Software",
+            "description": "Open Source Fullstack JavaScript Platform",
             "slug": "/work/goldlabel",
             "order": 1,
             "type": "folder",
@@ -34,7 +34,7 @@
                     "icon": "flash",
                     "image": "/png/n64/test.png",
                     "type": "file",
-                    "excerpt": "[Flash movie=\"Pingpong\" height=\"400\"]\n\n A Pointless reinvention of MacroMedia Flash?\n\nMaybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You'r"
+                    "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\n A Pointless reinvention of MacroMedia Flash?\n\nMaybe we did ridiculously and pointlessly reinvented MacroMed"
                   },
                   {
                     "title": "Uberedux",
@@ -43,7 +43,7 @@
                     "icon": "uberedux",
                     "image": "/png/n64/test.png",
                     "type": "file",
-                    "excerpt": "Because all Apps need State Management\n\nOtherwise you'd be back in jQuery callback hell. Nobody wants that. Uberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app alr"
+                    "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\n Because all Apps need State Management\n\nOtherwise you'd be back in jQuery callback hell. Nobody wants that."
                   },
                   {
                     "title": "Flickr",
@@ -59,7 +59,7 @@
                       "REST",
                       "Next.js"
                     ],
-                    "excerpt": "Flickr Photo Cartridge\n\nA React component for clean, fastloading image galleries. Provides an easy way to display recent photos from a Flickr account. It connects to a serverside API route in your Nex"
+                    "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\n Flickr Photo Cartridge\n\nA React component for clean, fastloading image galleries. Provides an easy way to d"
                   },
                   {
                     "title": "Lingua",
@@ -68,13 +68,28 @@
                     "icon": "lingua",
                     "image": "/png/n64/test.png",
                     "type": "file",
-                    "excerpt": "The Lingua cartridge brings localisation to Goldlabel. It enables your site to serve content in multiple languages, making it accessible to a wider audience without complicating your codebase.\n\n What "
+                    "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\nThe Lingua cartridge brings localisation to Goldlabel. It enables your site to serve content in multiple lan"
                   },
                   {
-                    "title": "Bouncer",
-                    "slug": "/work/goldlabel/cartridges/bouncer",
+                    "title": "Paywall",
+                    "slug": "/work/goldlabel/cartridges/paywall",
                     "order": 130,
                     "icon": "admin",
+                    "image": "https://live.staticflickr.com/65535/53670802348_9bb887b680_b.jpg",
+                    "type": "file",
+                    "tags": [
+                      "cartridges",
+                      "cartridge",
+                      "free",
+                      "paywall"
+                    ],
+                    "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\nThe Paywall cartridge is responsible for two key features in Goldlabel Core: Authentication and Access Contr"
+                  },
+                  {
+                    "title": "Pings",
+                    "slug": "/work/goldlabel/cartridges/pings",
+                    "order": 130,
+                    "icon": "blokey",
                     "image": "/png/n64/test.png",
                     "type": "file",
                     "tags": [
@@ -83,7 +98,7 @@
                       "free",
                       "bouncer"
                     ],
-                    "excerpt": "Auth, Admin and Analytics\n\nThe Bouncer cartridge is responsible for two core features in Goldlabel Core: Authentication and Access Control System\n\n1. Authentication (Firebase Auth +  collection)\n2. Re"
+                    "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\n 2. Real‑Time Visitor Tracking (Pings)\n\nThe second function is similar to lightweight analytics.  \nEvery vis"
                   },
                   {
                     "title": "New Cartridge",
@@ -92,12 +107,12 @@
                     "icon": "add",
                     "image": "/png/n64/test.png",
                     "type": "file",
-                    "excerpt": "Purpose\n\n is a template designed to help developers quickly bootstrap a new Cartridge in a modular application framework such as Goldlabel. Cartridges are featurespecific, plugandplay components that "
+                    "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\n Purpose\n\n is a template designed to help developers quickly bootstrap a new Cartridge in a modular applicat"
                   }
                 ],
                 "icon": "cartridge",
                 "image": "/png/n64/test.png",
-                "excerpt": "Goldlabel is built on cartridges.\n\nA cartridge is a selfcontained piece of application logic: React components, state, styles, and utilities bundled together in a portable unit.\n\nBecause each cartridg"
+                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\n Goldlabel is built on cartridges.\n\nA cartridge is a selfcontained piece of application logic: React compone"
               },
               {
                 "title": "Free",
@@ -106,24 +121,24 @@
                 "icon": "free",
                 "image": "/png/3rdParty/github_og.png",
                 "type": "file",
-                "excerpt": "Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or b"
+                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\n Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’"
               },
               {
                 "title": "Open Source",
                 "slug": "/work/goldlabel/core",
                 "order": 10,
-                "icon": "free",
+                "icon": "github",
                 "image": "/png/3rdParty/github_og.png",
                 "type": "file",
                 "tags": [
                   "free",
                   "core"
                 ],
-                "excerpt": "Open Source and Free Forever\n\nGoldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo archit"
+                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\n Open Source and Free Forever\n\nGoldlabel Core is a project designed to deliver powerful, userfriendly web ap"
               }
             ],
             "icon": "goldlabel",
-            "image": "/png/3rdParty/github_og.png",
+            "image": "https://live.staticflickr.com/65535/53670802348_9bb887b680_b.jpg",
             "tags": [
               "JavaScript",
               "Vanilla JavaScript",
@@ -137,72 +152,7 @@
               "NextJS",
               "Headless CMS"
             ],
-            "excerpt": "Open Source Platform\n\nIt’s the public GitHub repository that powers goldlabel.pro — and it’s free for anyone to fork, copy, hack, and reuse.\n\n What is it?\n\nGoldlabel is a JavaScript platform built wit"
-          },
-          {
-            "title": "Company",
-            "description": "UK Limited Company (5460545)",
-            "slug": "/work/company",
-            "order": 10,
-            "type": "folder",
-            "children": [
-              {
-                "title": "Working remotely",
-                "slug": "/work/company/remote-working",
-                "order": 250,
-                "icon": "company",
-                "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
-                "type": "file",
-                "tags": [
-                  "remote",
-                  "hybrid"
-                ],
-                "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years.\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communication, "
-              },
-              {
-                "title": "Join Us",
-                "slug": "/work/company/join-us",
-                "order": 666,
-                "icon": "team",
-                "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
-                "type": "file",
-                "tags": [
-                  "team"
-                ],
-                "excerpt": "Whether you're a startup with a short deadline or an enterprise with complex workflows, we can help. Get in touch for it's a truth universally acknowledged that a Software Developer in possession of a"
-              },
-              {
-                "title": "Work With Us",
-                "slug": "/work/company/work-with-us",
-                "order": 777,
-                "icon": "team",
-                "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
-                "type": "file",
-                "tags": [
-                  "team"
-                ],
-                "excerpt": "We take on a limited number of new projects each month. If you need something done we’d love to hear about it. Find out if we're a . We're always looking for collaborators, contributors, and good idea"
-              },
-              {
-                "title": "Privacy & Cookies",
-                "slug": "/work/company/privacy-cookies",
-                "order": 5555,
-                "icon": "admin",
-                "image": "https://live.staticflickr.com/65535/54800517077_55d79f6a0a_b.jpg",
-                "type": "file",
-                "tags": [
-                  "cookies",
-                  "gdpr",
-                  "privacy",
-                  "terms",
-                  "trust"
-                ],
-                "excerpt": "We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers t"
-              }
-            ],
-            "icon": "company",
-            "image": "https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg",
-            "excerpt": "WhatsApp   \nTel +49 15510995150  \n | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX"
+            "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\n Open Source Platform\n\nIt’s the public GitHub repository that powers goldlabel.pro — and it’s free for anyon"
           },
           {
             "title": "Expertise",
@@ -221,27 +171,16 @@
                   {
                     "title": "Vanilla JS",
                     "slug": "/work/expertise/javascript/vanilla-js",
-                    "order": 13,
+                    "order": 14,
                     "icon": "js",
                     "image": "/png/3rdParty/javascript_og.png",
                     "type": "file",
                     "tags": [
                       "JavaScript",
                       "Vanilla JavaScript",
-                      "TypeScript",
-                      "React",
-                      "Angular",
-                      "Vue",
-                      "Material UI",
-                      "Flash",
-                      "Server Side JavaScript",
-                      "Node",
-                      "Gatsby",
-                      "NextJS",
-                      "Headless CMS",
-                      "JSON"
+                      "TypeScript"
                     ],
-                    "excerpt": "[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/node\"]\n\n When JavaScript needs to be everywhere instantly\n\nIn the world of modern web engineering, vanilla JavaScript somet"
+                    "excerpt": "When JavaScript needs to be everywhere instantly\n\nIn modern web engineering, Vanilla JavaScript is often dismissed as oldschool or underpowered. But at scale, especially across multiple domains or bra"
                   },
                   {
                     "title": "Node",
@@ -259,7 +198,7 @@
                       "React",
                       "frameworks"
                     ],
-                    "excerpt": "[PrevNext prev=\"/work/expertise/javascript/\" next=\"/work/expertise/javascript/nextjs\"]\n\n And then there was Node\n\nBack in the mid2000s, most of the web ran on PHP — powering WordPress, Drupal, Joomla "
+                    "excerpt": "And then there was Node\n\nBack in the mid2000s, most of the web ran on PHP — powering WordPress, Drupal, Joomla — and developers often had to juggle PHP on the backend and JavaScript on the frontend. D"
                   },
                   {
                     "title": "TypeScript",
@@ -269,7 +208,7 @@
                     "type": "folder",
                     "children": [
                       {
-                        "title": "Get Started",
+                        "title": "Getting Started",
                         "slug": "/work/expertise/javascript/typescript/get-started",
                         "order": 5,
                         "icon": "js",
@@ -281,22 +220,7 @@
                           "TypeScript",
                           "React"
                         ],
-                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript\" next=\"/work/expertise/javascript/typescript/realworld\"]\n\n TypeScript for the reluctant coder\n\nYou don’t have to love types, you just have to unde"
-                      },
-                      {
-                        "title": "Advanced TypeScript",
-                        "slug": "/work/expertise/javascript/typescript/advanced",
-                        "order": 10,
-                        "icon": "js",
-                        "image": "/png/3rdParty/typescript_og.png",
-                        "type": "file",
-                        "tags": [
-                          "JavaScript",
-                          "Vanilla JavaScript",
-                          "TypeScript",
-                          "React"
-                        ],
-                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/getstarted\" next=\"/work/expertise/javascript/typescript/structuraltyping\"]\n\n[PageAd slug=\"/work/expertise/javascript/typescript/structuraltyping\"]"
+                        "excerpt": "TypeScript for the reluctant coder\n\nYou don’t have to love types, you just have to understand what they are and why they matter. If you come from design, UX, writing, or any other creative field, Java"
                       },
                       {
                         "title": "Real World TypeScript",
@@ -311,7 +235,22 @@
                           "TypeScript",
                           "React"
                         ],
-                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/getstarted\" next=\"/work/expertise/javascript/typescript/advanced\"]\n\n Sometimes there's a project where the existing codebase has become brittle, e"
+                        "excerpt": "Sometimes there's a project where the existing codebase has become brittle, errorprone and crashheavy. Developers are regularly firefighting bugs that TypeScript could have prevented at compile time. "
+                      },
+                      {
+                        "title": "Advanced TypeScript",
+                        "slug": "/work/expertise/javascript/typescript/advanced",
+                        "order": 30,
+                        "icon": "js",
+                        "image": "/png/3rdParty/typescript_og.png",
+                        "type": "file",
+                        "tags": [
+                          "JavaScript",
+                          "Vanilla JavaScript",
+                          "TypeScript",
+                          "React"
+                        ],
+                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/getstarted\" next=\"/work/expertise/javascript/typescript/structuraltyping\"]\n\n[PageAd slug=\"/work/expertise/javascript/typescript/structuraltyping\"]"
                       },
                       {
                         "title": "Structural Typing",
@@ -368,7 +307,7 @@
                       "React",
                       "frameworks"
                     ],
-                    "excerpt": "[PrevNext prev=\"/work/expertise/javascript/\" next=\"/work/expertise/javascript/typescript/getstarted\"]\n\n Better JavaScript\n\nJavaScript was never meant for what became asked of it. It started life scrip"
+                    "excerpt": "JavaScript was never meant for what became asked of it. It started life scripting image rollovers in the ‘90s — and somehow ended up running banks and billiondollar web apps.\n\nBy the early 2010s, the "
                   },
                   {
                     "title": "Next.js",
@@ -387,7 +326,7 @@
                       "REST API",
                       "React"
                     ],
-                    "excerpt": "[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/jstesting\"]\n\n Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with seam"
+                    "excerpt": "Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with seamless backend capabilities, creating a unified developer experience. It simplifies the proce"
                   },
                   {
                     "title": "JS Testing",
@@ -397,7 +336,7 @@
                     "type": "folder",
                     "children": [],
                     "icon": "js",
-                    "image": "/png/3rdParty/node_og.png",
+                    "image": "/png/3rdParty/playwright_og.png",
                     "tags": [
                       "JavaScript",
                       "Vanilla JavaScript",
@@ -407,7 +346,7 @@
                       "Jest",
                       "Playwright"
                     ],
-                    "excerpt": "[PrevNext prev=\"/work/expertise/javascript/\" next=\"/work/expertise/javascript/typescript\"]\n\n Left looking\n\nA leftlooking approach in JavaScript testing means testing earlier in the development process"
+                    "excerpt": "A Left looking approach\n\n[PrevNext prev=\"/work/expertise/javascript/vanillajs\" next=\"/work/expertise/javascript/typescript\"]\n\nA leftlooking approach in JavaScript testing should mean testing earlier i"
                   }
                 ],
                 "icon": "js",
@@ -574,6 +513,54 @@
                 "excerpt": "A much over used term\n\nSo much so, it's become a bit meaningless. It was such ha useful term, too. Basically it meant that if you were a frontend dev"
               },
               {
+                "title": "Git",
+                "description": "Where Code Lives",
+                "slug": "/work/expertise/git",
+                "order": 123,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "GitHub",
+                    "slug": "/work/expertise/git/github",
+                    "order": 25,
+                    "icon": "github",
+                    "image": "/png/3rdParty/github_og.png",
+                    "type": "file",
+                    "tags": [
+                      "github",
+                      "process",
+                      "javascript"
+                    ],
+                    "excerpt": "[PrevNext prev=\"/work/git\" next=\"/work/git/gitkraken\"]\n\n We use GitHub for everything.\n\nMost of the communication done between us and our clients during development is done through GitHub in the form "
+                  },
+                  {
+                    "title": "GitKraken",
+                    "slug": "/work/expertise/git/gitkraken",
+                    "order": 30,
+                    "icon": "github",
+                    "image": "/png/3rdParty/gitkraken.png",
+                    "type": "file",
+                    "tags": [
+                      "github",
+                      "process",
+                      "javascript",
+                      "tools",
+                      "gitkraken"
+                    ],
+                    "excerpt": "[PrevNext prev=\"/work/git\" next=\"/work/git/github\"]\n\n Now with AI Commit and PR Messaging\n\nGitKraken isn’t just another Git GUI. It’s become an essential tool in our daily workflow—one of those rare b"
+                  }
+                ],
+                "icon": "github",
+                "image": "/png/3rdParty/git_og.png",
+                "tags": [
+                  "source control",
+                  "project management",
+                  "github",
+                  "bitbucket"
+                ],
+                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\n[PrevNext prev=\"/work/git/gitkraken\" next=\"/work/git/github\"]\n\n Other Source Control solutions are available"
+              },
+              {
                 "title": "AI",
                 "description": "What do we know about about AI?",
                 "slug": "/work/expertise/ai",
@@ -588,7 +575,7 @@
                     "type": "folder",
                     "children": [
                       {
-                        "title": "Abgeschottet KI",
+                        "title": "Why?",
                         "slug": "/work/expertise/ai/abgeschottet-ki/why",
                         "order": 0,
                         "icon": "ki",
@@ -601,7 +588,7 @@
                         "slug": "/work/expertise/ai/abgeschottet-ki/learning",
                         "order": 2,
                         "icon": "ki",
-                        "image": "/jpg/abgeschotten-ki.jpg",
+                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                         "type": "file",
                         "tags": [
                           "abgeschottet",
@@ -614,7 +601,7 @@
                         "slug": "/work/expertise/ai/abgeschottet-ki/ringfenced-llm",
                         "order": 6,
                         "icon": "ki",
-                        "image": "/png/ki/abgeschotten-ki.png",
+                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                         "type": "file",
                         "excerpt": "What Does It Mean to Ring‑Fence an LLM?\n\n A ring‑fenced LLM is like having the power of AI inside a locked room.\n\n Runs on internal servers or private cloud\n Blocks external connections\n Uses local st"
                       },
@@ -623,7 +610,7 @@
                         "slug": "/work/expertise/ai/abgeschottet-ki/professional-secrecy",
                         "order": 10,
                         "icon": "ki",
-                        "image": "/png/ki/abgeschotten-ki.png",
+                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                         "type": "file",
                         "excerpt": "What Does Professional Secrecy Mean?\n\n What you tell your lawyer stays between you and them.\n\nWhen you speak to a lawyer in the UK, everything you tell them in confidence is protected by a strict lega"
                       },
@@ -632,7 +619,7 @@
                         "slug": "/work/expertise/ai/abgeschottet-ki/confidentiality-obligations",
                         "order": 20,
                         "icon": "ki",
-                        "image": "/png/ki/abgeschotten-ki.png",
+                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                         "type": "file",
                         "tags": [
                           "abgeschottet",
@@ -645,7 +632,7 @@
                         "slug": "/work/expertise/ai/abgeschottet-ki/prompts",
                         "order": 20,
                         "icon": "ki",
-                        "image": "/png/ki/abgeschotten-ki.png",
+                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                         "type": "file",
                         "excerpt": "General legal reasoning\n\nErkläre in einfachen Worten, was das Berufsgeheimnis für deutsche Rechtsanwälte bedeutet.\n\nExplain in simple terms what professional secrecy means for UK lawyers.\n\nWelche Pfli"
                       },
@@ -654,7 +641,7 @@
                         "slug": "/work/expertise/ai/abgeschottet-ki/gdpr-law-firms",
                         "order": 30,
                         "icon": "ki",
-                        "image": "/png/ki/abgeschotten-ki.png",
+                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                         "type": "file",
                         "tags": [
                           "abgeschottet",
@@ -667,7 +654,7 @@
                         "slug": "/work/expertise/ai/abgeschottet-ki/hardware",
                         "order": 40,
                         "icon": "ki",
-                        "image": "/png/ki/abgeschotten-ki.png",
+                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                         "type": "file",
                         "tags": [
                           "abgeschottet",
@@ -680,7 +667,7 @@
                         "slug": "/work/expertise/ai/abgeschottet-ki/llms-legal-research",
                         "order": 40,
                         "icon": "ki",
-                        "image": "/png/ki/abgeschotten-ki.png",
+                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                         "type": "file",
                         "tags": [
                           "abgeschottet",
@@ -693,7 +680,7 @@
                         "slug": "/work/expertise/ai/abgeschottet-ki/risks-public-llms",
                         "order": 50,
                         "icon": "ki",
-                        "image": "/png/ki/abgeschotten-ki.png",
+                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                         "type": "file",
                         "excerpt": "What Are the Risks if Lawyers Send Confidential Files to a Public AI Service?\n\n Public AI services are not designed for legally confidential data.\n\n Loss of confidentiality\n Data protection breaches\n "
                       },
@@ -702,7 +689,7 @@
                         "slug": "/work/expertise/ai/abgeschottet-ki/ringfenced-llm-confidentiality",
                         "order": 70,
                         "icon": "ki",
-                        "image": "/png/ki/abgeschotten-ki.png",
+                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                         "type": "file",
                         "excerpt": "How Can a Ring‑Fenced LLM Help?\n\n A ring‑fenced LLM gives a firm all the efficiency of AI while upholding the highest standards of confidentiality.\n\n No data leaves the firm’s network\n Built‑in access"
                       },
@@ -711,7 +698,7 @@
                         "slug": "/work/expertise/ai/abgeschottet-ki/organisational-measures",
                         "order": 80,
                         "icon": "ki",
-                        "image": "/png/ki/abgeschotten-ki.png",
+                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                         "type": "file",
                         "tags": [
                           "abgeschottet",
@@ -726,7 +713,7 @@
                       "abgeschottet",
                       "KI"
                     ],
-                    "excerpt": "A ring‑fenced LLM is like having the power of AI inside a locked room.\n\nIt can process sensitive documents and assist with legal work, but nothing ever leaves the firm’s secure network. When we say an"
+                    "excerpt": "A ring‑fenced LLM is like having the power of AI inside a locked room\n\nIt can process sensitive documents and assist with legal work, but nothing ever leaves the firm’s secure network. When we say an "
                   },
                   {
                     "title": "Maximizing AI Visibility",
@@ -786,6 +773,69 @@
                 "excerpt": "Is this Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday\n\nIt's keeping tinfoil hat wearing folk awake at night. If"
               },
               {
+                "title": "WordPress",
+                "description": "Powers 50% of all websites",
+                "slug": "/work/expertise/wordpress",
+                "order": 999,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "Modernisation",
+                    "slug": "/work/expertise/wordpress/modernising",
+                    "order": 400,
+                    "icon": "wordpress",
+                    "image": "https://live.staticflickr.com/8504/8434232637_2a7e8b697f_o.jpg",
+                    "type": "file",
+                    "tags": [
+                      "expertise",
+                      "wordpress"
+                    ],
+                    "excerpt": "[PrevNext prev=\"/work/expertise/wordpress/architecture\" next=\"/work/expertise/wordpress/casestudy\"]\n\n WordPress Modernisation\n\n Keep your WordPress database, admin, and SEO intact — and layer a modern"
+                  },
+                  {
+                    "title": "Architecture",
+                    "slug": "/work/expertise/wordpress/architecture",
+                    "order": 700,
+                    "icon": "wordpress",
+                    "image": "https://live.staticflickr.com/8504/8434232637_2a7e8b697f_o.jpg",
+                    "type": "file",
+                    "tags": [
+                      "expertise",
+                      "wordpress",
+                      "source of truth"
+                    ],
+                    "excerpt": "WordPress builds everything on a single stack — PHP renders pages on the server, pulling directly from a MySQL database. Themes and plugins share the same environment, which makes it flexible but also"
+                  },
+                  {
+                    "title": "Case Study",
+                    "slug": "/work/expertise/wordpress/case-study",
+                    "order": 700,
+                    "icon": "wordpress",
+                    "image": "https://live.staticflickr.com/8504/8434232637_2a7e8b697f_o.jpg",
+                    "type": "file",
+                    "tags": [
+                      "expertise",
+                      "wordpress",
+                      "source of truth",
+                      "\"WordPress\"",
+                      "\"Goldlabel\"",
+                      "\"case study\"",
+                      "\"SSR\"",
+                      "\"Next.js\"",
+                      "\"performance\""
+                    ],
+                    "excerpt": "How a Shenzhenbased studio used Goldlabel to bring performance, scalability, and modern UX to its WordPress portfolio — without rebuilding from scratch\n\n Case Study: Rahul Sharma Studios\n\nClient: Rahu"
+                  }
+                ],
+                "icon": "wordpress",
+                "image": "https://live.staticflickr.com/8504/8434232637_2a7e8b697f_o.jpg",
+                "tags": [
+                  "expertise",
+                  "wordpress"
+                ],
+                "excerpt": "There's a time and a place for WordPress\n\n The time is in the past and the place is in the bin\n\n[PrevNext prev=\"/work/expertise/wordpress/casestudy\" next=\"/work/expertise/wordpress/modernising\"]\n\nWe t"
+              },
+              {
                 "title": "Windoze",
                 "description": "Easy Legal Letter Assistant",
                 "slug": "/work/expertise/windoze",
@@ -838,55 +888,72 @@
               "fields",
               "work"
             ],
-            "excerpt": "[PrevNext prev=\"/work/goldlabel\" next=\"/work/expertise/javascript\"]\n\n We work across the full stack, from interface to infrastructure, with a focus on robust, modern JavaScript tooling and scalable cl"
+            "excerpt": "We work across the full stack, from interface to infrastructure, with a focus on robust, modern JavaScript tooling and scalable cloudnative delivery. Whether building responsive UIs, designing serverl"
           },
           {
-            "title": "Git",
-            "description": "Where Code Lives",
-            "slug": "/work/git",
-            "order": 123,
+            "title": "Company",
+            "description": "UK Limited Company (5460545)",
+            "slug": "/work/company",
+            "order": 1020,
             "type": "folder",
             "children": [
               {
-                "title": "GitHub",
-                "slug": "/work/git/github",
-                "order": 25,
-                "icon": "github",
-                "image": "/png/3rdParty/github_og.png",
+                "title": "Working remotely",
+                "slug": "/work/company/remote-working",
+                "order": 250,
+                "icon": "company",
+                "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
                 "type": "file",
                 "tags": [
-                  "github",
-                  "process",
-                  "javascript"
+                  "remote",
+                  "hybrid"
                 ],
-                "excerpt": "[PrevNext prev=\"/work/git\" next=\"/work/git/gitkraken\"]\n\n We use GitHub for everything.\n\nMost of the communication done between us and our clients during development is done through GitHub in the form "
+                "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years.\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communication, "
               },
               {
-                "title": "GitKraken",
-                "slug": "/work/git/gitkraken",
-                "order": 30,
-                "icon": "github",
-                "image": "/png/3rdParty/gitkraken.png",
+                "title": "Join Us",
+                "slug": "/work/company/join-us",
+                "order": 666,
+                "icon": "team",
+                "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
                 "type": "file",
                 "tags": [
-                  "github",
-                  "process",
-                  "javascript",
-                  "tools",
-                  "gitkraken"
+                  "team"
                 ],
-                "excerpt": "[PrevNext prev=\"/work/git\" next=\"/work/git/github\"]\n\n Now with AI Commit and PR Messaging\n\nGitKraken isn’t just another Git GUI. It’s become an essential tool in our daily workflow—one of those rare b"
+                "excerpt": "Whether you're a startup with a short deadline or an enterprise with complex workflows, we can help. Get in touch for it's a truth universally acknowledged that a Software Developer in possession of a"
+              },
+              {
+                "title": "Work With Us",
+                "slug": "/work/company/work-with-us",
+                "order": 777,
+                "icon": "team",
+                "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
+                "type": "file",
+                "tags": [
+                  "team"
+                ],
+                "excerpt": "We take on a limited number of new projects each month. If you need something done we’d love to hear about it. Find out if we're a . We're always looking for collaborators, contributors, and good idea"
+              },
+              {
+                "title": "Privacy & Cookies",
+                "slug": "/work/company/privacy-cookies",
+                "order": 5555,
+                "icon": "admin",
+                "image": "https://live.staticflickr.com/65535/54800517077_55d79f6a0a_b.jpg",
+                "type": "file",
+                "tags": [
+                  "cookies",
+                  "gdpr",
+                  "privacy",
+                  "terms",
+                  "trust"
+                ],
+                "excerpt": "We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers t"
               }
             ],
-            "icon": "github",
-            "image": "/png/3rdParty/git_og.png",
-            "tags": [
-              "source control",
-              "project management",
-              "github",
-              "bitbucket"
-            ],
-            "excerpt": "[PrevNext prev=\"/work/git/gitkraken\" next=\"/work/git/github\"]\n\n Other Source Control solutions are available\n\nBut everyone uses git. It was created in 2005 by Linus Torvalds, the same person who built"
+            "icon": "company",
+            "image": "https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg",
+            "excerpt": "WhatsApp   \nTel +49 15510995150  \n | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX"
           }
         ],
         "icon": "work",
@@ -904,7 +971,7 @@
           "NextJS",
           "Headless CMS"
         ],
-        "excerpt": "[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise\"]\n\nThe apps we ship are real. They run in production and are developed accessibly. The Core is Open Source and Free forever — giving y"
+        "excerpt": "The apps we ship are real. They run in production and are developed accessibly. The Core is Open Source and Free forever — giving you statically generated sites with Firestorepowered updates and a rea"
       },
       {
         "title": "Life",
@@ -1015,19 +1082,76 @@
         "children": [
           {
             "title": "Writing",
-            "description": "It's hard to collate stuff into meaningful writing, but we've doing our best",
+            "description": "It's hard to collate stuff into readable writing, but we're doing our best",
             "slug": "/balance/writing",
             "order": 1,
             "type": "folder",
             "children": [
               {
-                "title": "Destructo The Wonderdog",
-                "slug": "/balance/writing/destructo-the-wonderdog",
-                "order": 2,
-                "icon": "dog",
-                "image": "https://live.staticflickr.com/65535/54691336480_c273fe647c_o.jpg",
-                "type": "file",
-                "excerpt": "Once upon a time Destructo the Wonderdog and his best mate Barkin’ Boris were hanging out on the mountain. Just sniffing about, play fighting and barking at stuff when suddenly Boris went still as a m"
+                "title": "Kleiner Zeppelin",
+                "description": "Once upon a time",
+                "slug": "/balance/writing/kleiner-zeppelin",
+                "order": 10,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "Britain",
+                    "slug": "/balance/writing/kleiner-zeppelin/britain",
+                    "order": 99,
+                    "icon": "van",
+                    "image": "https://live.staticflickr.com/65535/53998963131_bf0cb94288_b.jpg",
+                    "type": "file",
+                    "excerpt": ""
+                  },
+                  {
+                    "title": "France",
+                    "slug": "/balance/writing/kleiner-zeppelin/france",
+                    "order": 110,
+                    "icon": "van",
+                    "image": "https://live.staticflickr.com/65535/54458539144_1d61fc9025_b.jpg",
+                    "type": "file",
+                    "excerpt": ""
+                  },
+                  {
+                    "title": "Belgium",
+                    "slug": "/balance/writing/kleiner-zeppelin/belgium",
+                    "order": 125,
+                    "icon": "van",
+                    "image": "https://live.staticflickr.com/65535/54369337224_3278c64992_b.jpg",
+                    "type": "file",
+                    "excerpt": ""
+                  },
+                  {
+                    "title": "Germany",
+                    "slug": "/balance/writing/kleiner-zeppelin/germany",
+                    "order": 170,
+                    "icon": "van",
+                    "image": "https://live.staticflickr.com/65535/54873111678_2633c4ba43_b.jpg",
+                    "type": "file",
+                    "excerpt": ""
+                  },
+                  {
+                    "title": "Spain",
+                    "slug": "/balance/writing/kleiner-zeppelin/spain",
+                    "order": 179,
+                    "icon": "van",
+                    "image": "https://live.staticflickr.com/65535/54548563778_406a5e74b2_b.jpg",
+                    "type": "file",
+                    "excerpt": ""
+                  },
+                  {
+                    "title": "Portugal",
+                    "slug": "/balance/writing/kleiner-zeppelin/portugal",
+                    "order": 190,
+                    "icon": "van",
+                    "image": "https://live.staticflickr.com/65535/54639869696_b8a3cdb0de_b.jpg",
+                    "type": "file",
+                    "excerpt": ""
+                  }
+                ],
+                "icon": "van",
+                "image": "https://live.staticflickr.com/65535/54250367683_32802224fb_b.jpg",
+                "excerpt": ""
               },
               {
                 "title": "Bez",
@@ -1104,16 +1228,7 @@
                 ],
                 "icon": "food",
                 "image": "/jpg/wei-zangs-food.jpg",
-                "excerpt": "I never learned to cook. No one taught me. That’s why I can tell you about it.\n\nPeople who are taught spend too long worrying about what’s “right.” I just ate what I liked, cooked it, guessed. Like de"
-              },
-              {
-                "title": "Wei Zang’s Food",
-                "slug": "/balance/writing/wei-zangs-food",
-                "order": 110,
-                "icon": "food",
-                "image": "/jpg/wei-zangs-food.jpg",
-                "type": "file",
-                "excerpt": "I never learned to cook. No one taught me. That’s why I can tell you about it.\n\nPeople who are taught spend too long worrying about what’s “right.” I just ate what I liked, cooked it, guessed. Like de"
+                "excerpt": "You want a recipe? The interweb's full of them. This is how I cook. This is why I cook.\n\nIf you find something, good. If not — well, maybe you were hungry for something else.\n\nWhen I want a recipe I g"
               },
               {
                 "title": "Science Fiction",
@@ -1123,11 +1238,20 @@
                 "image": "/jpg/einstein.jpg",
                 "type": "file",
                 "excerpt": "That's soience mayte\n\nBecause we can carefully observe constellations when the Sun is not blocking their path, we know what position the stars should be in when the Sun is keeping us from seeing them."
+              },
+              {
+                "title": "Destructo",
+                "slug": "/balance/writing/destructo-the-wonderdog",
+                "order": 460,
+                "icon": "dog",
+                "image": "https://live.staticflickr.com/65535/54691336480_c273fe647c_o.jpg",
+                "type": "file",
+                "excerpt": "Once upon a time Destructo the Wonderdog and his best mate Barkin’ Boris were hanging out on the mountain. Just sniffing about, play fighting and barking at stuff when suddenly Boris went still as a m"
               }
             ],
             "icon": "balance",
             "image": "https://live.staticflickr.com/65535/54353995935_a904d504aa_b.jpg",
-            "excerpt": "Wei Zang, author of Not here to fuck spiders\n\n description: It's hard to collate stuff into meaningful ebooks, but we've done our best\n\n image: https://live.staticflickr.com/65535/536708023489bb887b68"
+            "excerpt": "[PrevNext next=\"/balance/writing/kleinerzeppelin\"]\n\n Wei Zang, author of Not here to fuck spiders"
           },
           {
             "title": "Video",
@@ -1252,7 +1376,7 @@
             ],
             "icon": "balance",
             "image": "/png/3rdParty/unicorn.png",
-            "excerpt": "[PrevNext prev=\"/balance/books/rfkuang\" next=\"/balance/books/douglascoupland\"]\n\nCurated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction. From vi"
+            "excerpt": "Curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction. From visionary science fiction to satirical explorations of culture and the human exper"
           }
         ],
         "icon": "balance",
@@ -1291,6 +1415,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescript\"]\n\n[PageAd slug=\"/work/expertise/javascript/vanillajs\"]\n\n[PageAd slug=\"/balance/books/rfkuang\"]\n\n[PrevNext prev="
+    "excerpt": "[PageAd slug=\"/work/goldlabel\"]\n\n[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescript\"]\n\n[PageAd slug=\"/work/expertise/javascript/vanillajs\"]\n\n[PageAd slug=\"/work/ex"
   }
 ]

@@ -6,5 +6,6 @@ import Mapbox from './components/Mapbox';
 import PageAd from './components/PageAd';
 import YouTube from './components/YouTube';
 import PrevNext from './components/PrevNext';
+import GitHub from './components/GitHub';
 
-export { FlickrAlbum, PrevNext, GoogleMap, Mapbox, PageAd, YouTube };
+export { GitHub, FlickrAlbum, PrevNext, GoogleMap, Mapbox, PageAd, YouTube };

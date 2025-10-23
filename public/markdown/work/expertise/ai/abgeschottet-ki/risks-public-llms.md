@@ -4,7 +4,7 @@ title: Risks
 description: Why it’s dangerous to send confidential files to public AI
 slug: /work/expertise/ai/abgeschottet-ki/risks-public-llms
 icon: ki
-image: /png/ki/abgeschotten-ki.png
+image: https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg
 ---
 
 ### What Are the Risks if Lawyers Send Confidential Files to a Public AI Service?

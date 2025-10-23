@@ -1,5 +1,5 @@
 ---
-order: 10
+order: 1020
 title: Company
 description: UK Limited Company (5460545)
 slug: /work/company

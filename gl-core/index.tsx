@@ -29,6 +29,7 @@ import {
   PageAd,
   Mapbox,
   PrevNext,
+  GitHub,
 } from './cartridges/Shortcodes';
 import {
   useLoading,
@@ -108,6 +109,7 @@ export {
   Children,
   PageAd,
   Mapbox,
+  GitHub,
 };
 export { Uberedux, UbereduxProvider, setUbereduxKey, resetUberedux };
 export {

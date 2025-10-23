@@ -4,7 +4,7 @@ title: Example prompts
 description:
 slug: /work/expertise/ai/abgeschottet-ki/prompts
 icon: ki
-image: /png/ki/abgeschotten-ki.png
+image: https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg
 ---
 
 ## General legal reasoning

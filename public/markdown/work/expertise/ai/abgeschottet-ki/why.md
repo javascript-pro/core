@@ -1,6 +1,6 @@
 ---
 order: 0
-title: Abgeschottet KI
+title: Why?
 description: Sending sensitive files to external platforms can breach professional secrecy, violate GDPR, and damage client trust
 slug: /work/expertise/ai/abgeschottet-ki/abgeschottet-ki/why
 icon: ki

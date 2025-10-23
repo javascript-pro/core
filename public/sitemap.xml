@@ -44,6 +44,27 @@
     <loc>https://goldlabel.pro/balance/writing</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/balance/writing/kleiner-zeppelin/belgium</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/balance/writing/kleiner-zeppelin/britain</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/balance/writing/kleiner-zeppelin/france</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/balance/writing/kleiner-zeppelin/germany</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/balance/writing/kleiner-zeppelin</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/balance/writing/kleiner-zeppelin/portugal</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/balance/writing/kleiner-zeppelin/spain</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/balance/writing/puppy-thing</loc>
   </url>
   <url>
@@ -63,9 +84,6 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/balance/writing/wei-zangs-food/lemon-meringue-pie</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/writing/wei-zangs-food</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/</loc>
@@ -191,6 +209,15 @@
     <loc>https://goldlabel.pro/work/expertise/fullstack/web3d</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/work/expertise/git/github</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/git/gitkraken</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/git</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/work/expertise</loc>
   </url>
   <url>
@@ -242,16 +269,16 @@
     <loc>https://goldlabel.pro/work/expertise/windoze/testing</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/git/github</loc>
+    <loc>https://goldlabel.pro/work/expertise/wordpress/architecture</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/git/gitkraken</loc>
+    <loc>https://goldlabel.pro/work/expertise/wordpress/case-study</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/git</loc>
+    <loc>https://goldlabel.pro/work/expertise/wordpress</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/goldlabel/cartridges/bouncer</loc>
+    <loc>https://goldlabel.pro/work/expertise/wordpress/modernising</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/goldlabel/cartridges/flash</loc>
@@ -267,6 +294,12 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work/goldlabel/cartridges/new-cartridge</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/goldlabel/cartridges/paywall</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/goldlabel/cartridges/pings</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/goldlabel/cartridges/uberedux</loc>

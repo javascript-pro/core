@@ -4,7 +4,7 @@ title: Learning
 description: How does the AI learn?
 slug: /work/expertise/ai/abgeschottet-ki/learning
 icon: ki
-image: /jpg/abgeschotten-ki.jpg
+image: https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg
 tags: abgeschottet, KI
 ---
 

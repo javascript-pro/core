@@ -10,6 +10,7 @@ import {
   createPing,
   ping,
   PingChip,
+  PersonHeader,
 } from '../Bouncer';
 import { doc, onSnapshot } from 'firebase/firestore';
 import { db } from '../../lib/firebase';
@@ -87,7 +88,7 @@ export default function Bouncer() {
         onClose={handleClose}
       >
         <CardHeader
-          avatar={<Icon icon="bouncer" color="primary" />}
+          avatar={<PersonHeader />}
           action={
             <MightyButton
               mode="icon"

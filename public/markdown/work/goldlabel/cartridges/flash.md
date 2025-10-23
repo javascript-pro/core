@@ -6,10 +6,9 @@ description: 'A Pointless reinvention of MacroMedia Flash?'
 icon: flash
 image: /png/n64/test.png
 keywords: 'Catridges, Flash, SVG, Macromedia'
-noImage: true
 ---
 
-[Flash movie="Pingpong" height="400"]
+[GitHub url="https://github.com/javascript-pro/core" label="github.com/javascript-pro/core"]
 
 ## A Pointless reinvention of MacroMedia Flash?
 

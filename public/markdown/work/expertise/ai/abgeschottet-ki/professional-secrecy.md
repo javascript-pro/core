@@ -4,7 +4,7 @@ title: Secrecy
 description: What professional secrecy means for UK lawyers
 slug: /work/expertise/ai/abgeschottet-ki/professional-secrecy
 icon: ki
-image: /png/ki/abgeschotten-ki.png
+image: https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg
 ---
 
 ### What Does _Professional Secrecy_ Mean?

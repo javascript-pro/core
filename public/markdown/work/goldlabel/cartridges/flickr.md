@@ -8,6 +8,8 @@ tags: flickr, free, api, REST, Next.js
 image: /png/n64/test.png
 ---
 
+[GitHub url="https://github.com/javascript-pro/core" label="github.com/javascript-pro/core"]
+
 ### Flickr Photo Cartridge
 
 A React component for clean, fast-loading image galleries. Provides an easy way to display recent photos from a Flickr account. It connects to a server-side API route in your Next.js app that securely fetches Flickr data using your API key.

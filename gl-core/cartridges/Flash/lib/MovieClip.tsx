@@ -11,21 +11,26 @@ export default function MovieClip({
   width = '100%',
   height = '100%',
   zIndex,
-  style,
-}: TMovieClip & { zIndex?: number }) {
+  background,
+  style = {},
+}: TMovieClip & {
+  zIndex?: number;
+  background?: string;
+}) {
   return (
     <Box
       id={id}
       sx={{
-        ...style,
-        opacity,
         position: 'absolute',
         top: 0,
         left: 0,
         width,
         height,
+        opacity,
         zIndex,
+        background,
         ...(border && { border: '1px solid gold' }),
+        ...style,
       }}
     >
       {children}

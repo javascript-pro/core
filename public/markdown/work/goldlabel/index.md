@@ -1,12 +1,14 @@
 ---
 order: 1
-title: Goldlabel Core
-description: Open Source Platform
+title: Free Software
+description: Open Source Fullstack JavaScript Platform
 slug: /work/goldlabel
 icon: goldlabel
-image: /png/3rdParty/github_og.png
+image: https://live.staticflickr.com/65535/53670802348_9bb887b680_b.jpg
 tags: JavaScript, Vanilla JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 ---
+
+[GitHub url="https://github.com/javascript-pro/core" label="github.com/javascript-pro/core"]
 
 #### Open Source Platform
 
@@ -36,3 +38,21 @@ Everything you see on this production site is built from Goldlabel. It’s the f
 3. Explore the cartridges and start customizing
 
 Goldlabel isn’t just a showcase — it’s a working platform you can build on. Whether you want to learn from it, launch a project quickly, or contribute improvements, everything is open.
+
+When someone lands on a Goldlabel url, the site becomes aware of them; their device, their location and through their actions their intent.
+
+They appear in the Pr0 console instantly as a ping. Within seconds, a display name and avatar are assigned, and a quiet notification appears on their screen.
+
+| "This is not AI."
+
+What just happened is a complete, real-time interaction. No installs, no login, no tracking scripts beyond the minimum. Just modern web tech doing what it was meant to do.
+
+Goldlabel uses this demo to explain what's going on: the moment a prospect opens the link, we’re already connected. They see the quality of the sites clean design, fast load, relevant content while behind the scenes the system proves its capability in real time:
+
+- Instant presence detection (the ping)
+- Live two-way messaging
+- Dynamic avatars and display names
+- Real-time Firestore updates
+- Sound cues and UI feedback
+
+It’s a conversation disguised as a website — a handshake between technology and attention.

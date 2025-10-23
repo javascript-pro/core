@@ -8,13 +8,11 @@ image: /png/3rdParty/typescript_og.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React, frameworks
 ---
 
-[PrevNext prev="/work/expertise/javascript/" next="/work/expertise/javascript/typescript/get-started"]
-
-## Better JavaScript
-
-JavaScript was never meant for what became asked of it. It started life scripting image rollovers in the ‘90s — and somehow ended up running banks and billion-dollar web apps.
+> JavaScript was never meant for what became asked of it. It started life scripting image rollovers in the ‘90s — and somehow ended up running banks and billion-dollar web apps.
 
 By the early 2010s, the cracks were showing. Huge front-ends written in Vanilla JavaScript were turning into fragile spaghetti — a single mistyped property could break production. There was no safety net. No way to refactor confidently. No way to know what an object really looked like until runtime.
+
+[PrevNext next="/work/expertise/javascript/typescript/get-started"]
 
 Created at Microsoft by Anders Hejlsberg (the same mind behind C#), TypeScript was released in 2012 as a bold idea: add a type system to JavaScript, but keep it completely compatible.
 

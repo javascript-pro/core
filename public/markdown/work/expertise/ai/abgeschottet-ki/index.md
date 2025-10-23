@@ -8,7 +8,7 @@ image: https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg
 tags: abgeschottet, KI
 ---
 
-### A ring‑fenced LLM is like having the power of AI inside a locked room.
+### A ring‑fenced LLM is like having the power of AI inside a locked room
 
 It can process sensitive documents and assist with legal work, but nothing ever leaves the firm’s secure network. When we say an AI or Large Language Model (LLM) is ring‑fenced, we mean it is completely contained within a secure environment — with no pathway for data to escape to the public internet.
 

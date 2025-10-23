@@ -1,5 +1,5 @@
 ---
-order: 10
+order: 30
 title: Advanced TypeScript
 description: TypeScript for the Reluctant Developer
 slug: /work/expertise/javascript/typescript/advanced

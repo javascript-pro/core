@@ -11,6 +11,7 @@ import Controls from './components/Controls';
 // Movies
 import { Logo } from './movies/Logo';
 import { Pingpong } from './movies/Pingpong';
+import { Timemachine } from './movies/Timemachine';
 
 // State
 import { useFlash } from './hooks/useFlash';
@@ -29,7 +30,7 @@ import { useDispatch } from './hooks/useDispatch';
 import { useIsMobile } from './hooks/useIsMobile';
 import { usePrefersColorScheme } from './hooks/usePrefersColorScheme';
 
-export { Logo, Pingpong };
+export { Logo, Pingpong, Timemachine };
 
 export { initialStateFlash, Flash, System, Trace, Stage, MovieClip, Controls };
 // optional

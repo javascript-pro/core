@@ -8,11 +8,11 @@ image: /png/3rdParty/node_og.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React, frameworks
 ---
 
-[PrevNext prev="/work/expertise/javascript/" next="/work/expertise/javascript/nextjs"]
-
 ## And then there was Node
 
 Back in the mid-2000s, most of the web ran on PHP — powering WordPress, Drupal, Joomla — and developers often had to juggle PHP on the backend and JavaScript on the frontend. Data formats varied — XML, serialized PHP, or proprietary APIs. Integration between systems was clunky.
+
+[PrevNext prev="/work/expertise/javascript/" next="/work/expertise/javascript/nextjs"]
 
 In 2009, Ryan Dahl released Node.js, introducing JavaScript on the server. Suddenly, developers could use a single language across the full stack — a big productivity shift.
 

@@ -9,6 +9,8 @@ github: 'https://github.com/javascript-pro/core/tree/main/gl-core/cartridges/Ube
 keywords: 'Catridges, Uberedux, State Management, Redux'
 ---
 
+[GitHub url="https://github.com/javascript-pro/core" label="github.com/javascript-pro/core"]
+
 ## Because all Apps need State Management
 
 Otherwise you'd be back in jQuery callback hell. Nobody wants that. Uberedux is a simple, zero-config wrapper around Redux. It plugs cleanly into how the app already works and gives you the global state access you need without boilerplate or fuss. There’s nothing clever here — and that’s the point. Uberedux is fast, familiar, and already done for you.
