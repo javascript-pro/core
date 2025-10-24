@@ -1,4 +1,4 @@
-// /Users/goldlabel/GitHub/pro/src/Pr0/components/MessageList.tsx
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Pings/components/MessageList.tsx
 'use client';
 
 import * as React from 'react';

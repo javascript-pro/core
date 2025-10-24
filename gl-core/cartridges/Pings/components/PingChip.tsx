@@ -2,7 +2,7 @@
 'use client';
 import * as React from 'react';
 import { Chip, Avatar, Badge } from '@mui/material';
-import { useBouncer } from '../../Bouncer';
+import { usePings } from '../../Pings';
 
 export type TPingChip = {
   disabled?: boolean;
@@ -15,7 +15,7 @@ export default function PingChip({
   unseenCount = 0,
   onClick,
 }: TPingChip) {
-  const { livePing } = useBouncer() || {};
+  const { livePing } = usePings() || {};
 
   // Defensive fallbacks
   const displayName =

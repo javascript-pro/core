@@ -1,24 +1,24 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/index.tsx
-import Bouncer from './Bouncer';
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Pings/index.tsx
+import Pings from './Pings';
 import PingViewer from './components/PingViewer';
 import PingChip from './components/PingChip';
 import MessageForm from './components/MessageForm';
 import MessageList from './components/MessageList';
 import MapView from './components/MapView';
 import PersonHeader from './components/PersonHeader';
-import { initialState as initialStateBouncer } from './initialState';
-import { useBouncer } from './useBouncer';
-import { setBouncerKey } from './actions/setBouncerKey';
+import { initialState as initialStatePings } from './initialState';
+import { usePings } from './usePings';
+import { setPingsKey } from './actions/setPingsKey';
 import { createPing } from './actions/createPing';
 import { ping } from './actions/ping';
 
 export {
-  Bouncer,
+  Pings,
   PingViewer,
   PersonHeader,
-  initialStateBouncer,
-  useBouncer,
-  setBouncerKey,
+  initialStatePings,
+  usePings,
+  setPingsKey,
   ping,
   createPing,
   MessageForm,

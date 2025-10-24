@@ -2,22 +2,22 @@
 'use client';
 import React from 'react';
 import { Box, Dialog, CardHeader } from '@mui/material';
-import { MightyButton, useDispatch, Icon, useIsMobile } from '../../../gl-core';
+import { MightyButton, useDispatch, useIsMobile } from '../../../gl-core';
 import {
   PingViewer,
-  useBouncer,
-  setBouncerKey,
+  usePings,
+  setPingsKey,
   createPing,
   ping,
   PingChip,
   PersonHeader,
-} from '../Bouncer';
+} from '../Pings';
 import { doc, onSnapshot } from 'firebase/firestore';
 import { db } from '../../lib/firebase';
 import { useSounds } from '../Theme';
 
-export default function Bouncer() {
-  const b = useBouncer();
+export default function Pings() {
+  const b = usePings();
   const dispatch = useDispatch();
   const startedRef = React.useRef(false);
   const isMobile = useIsMobile();
@@ -44,7 +44,7 @@ export default function Bouncer() {
   React.useEffect(() => {
     if (!b?.id) {
       setUnseenCount(0);
-      dispatch(setBouncerKey('livePing', null));
+      dispatch(setPingsKey('livePing', null));
       return;
     }
 
@@ -52,7 +52,7 @@ export default function Bouncer() {
     const unsub = onSnapshot(ref, (snap) => {
       if (snap.exists()) {
         const data = snap.data();
-        dispatch(setBouncerKey('livePing', data));
+        dispatch(setPingsKey('livePing', data));
 
         const count = Array.isArray(data.messages)
           ? data.messages.filter((m: any) => !m.seen).length
@@ -64,15 +64,15 @@ export default function Bouncer() {
       } else {
         setUnseenCount(0);
         prevCount.current = 0;
-        dispatch(setBouncerKey('livePing', null));
+        dispatch(setPingsKey('livePing', null));
       }
     });
 
     return () => unsub();
   }, [b?.id, dispatch, play]);
 
-  const handleClose = () => dispatch(setBouncerKey('dialogOpen', false));
-  const handleBtnClick = () => dispatch(setBouncerKey('dialogOpen', true));
+  const handleClose = () => dispatch(setPingsKey('dialogOpen', false));
+  const handleBtnClick = () => dispatch(setPingsKey('dialogOpen', true));
 
   return (
     <>

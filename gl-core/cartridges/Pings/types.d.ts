@@ -41,7 +41,7 @@ export type TPing = {
   [key: string]: any;
 };
 
-export type TBouncerState = {
+export type TPingsState = {
   cartridge: string;
   id: string | null;
   ping: TPing | null;

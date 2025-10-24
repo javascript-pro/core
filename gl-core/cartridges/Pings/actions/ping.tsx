@@ -1,7 +1,7 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/ping.tsx
 import { TUbereduxDispatch } from '../../Uberedux';
 import { setUbereduxKey } from '../../Uberedux';
-import { setBouncerKey } from '../';
+import { setPingsKey } from '../';
 import { db } from '../../../lib/firebase';
 import { doc, getDoc, setDoc, updateDoc } from 'firebase/firestore';
 
@@ -49,8 +49,8 @@ export const ping =
           });
         }
 
-        dispatch(setBouncerKey('id', ping.id));
-        dispatch(setBouncerKey('pinged', true));
+        dispatch(setPingsKey('id', ping.id));
+        dispatch(setPingsKey('pinged', true));
       } else {
         await setDoc(ref, {
           ...ping,
@@ -59,8 +59,8 @@ export const ping =
           history: [historyEntry],
         });
 
-        dispatch(setBouncerKey('id', ping.id));
-        dispatch(setBouncerKey('pinged', true));
+        dispatch(setPingsKey('id', ping.id));
+        dispatch(setPingsKey('pinged', true));
       }
     } catch (e: unknown) {
       const msg = e instanceof Error ? e.message : String(e);

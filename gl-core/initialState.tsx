@@ -4,7 +4,7 @@ import pJSON from '../package.json';
 import config from './config.json';
 import { initialStateFlickr } from './cartridges/Flickr';
 import { initialStateLingua } from './cartridges/Lingua';
-import { initialStateBouncer } from './cartridges/Bouncer';
+import { initialStatePings } from './cartridges/Pings';
 import { initialStateFlash } from './cartridges/Flash';
 import { initialStatePaywall } from './cartridges/Paywall';
 
@@ -15,7 +15,7 @@ export const initialState: any = {
   globalNav: null,
   themeMode: 'light',
   feedback: null,
-  bouncer: initialStateBouncer,
+  pings: initialStatePings,
   flash: initialStateFlash,
   flickr: initialStateFlickr,
   lingua: initialStateLingua,

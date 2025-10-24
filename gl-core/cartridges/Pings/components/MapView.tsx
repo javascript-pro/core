@@ -3,7 +3,7 @@ import * as React from 'react';
 import Map, { Marker } from 'react-map-gl/mapbox';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { Box, Button, useTheme } from '@mui/material';
-import { useBouncer } from '../../Bouncer';
+import { usePings } from '../../Pings';
 // import {} from
 
 export type TMapView = {
@@ -20,7 +20,7 @@ export default function MapView({
   height = 400,
   zoom = 3,
 }: TMapView) {
-  const b = useBouncer();
+  const b = usePings();
   const themeMode = useTheme().palette.mode;
   const mapStyle =
     themeMode === 'dark'

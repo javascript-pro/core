@@ -83,7 +83,7 @@
                       "free",
                       "paywall"
                     ],
-                    "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\nThe Paywall cartridge is responsible for two key features in Goldlabel Core: Authentication and Access Contr"
+                    "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core/tree/staging/glcore/cartridges/Paywall\" label=\"/glcore/cartridges/Paywall\"]\n\n✅ Each signedin user can read and write only their own paywall document."
                   },
                   {
                     "title": "Pings",
@@ -1415,6 +1415,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[PageAd slug=\"/work/goldlabel\"]\n\n[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescript\"]\n\n[PageAd slug=\"/work/expertise/javascript/vanillajs\"]\n\n[PageAd slug=\"/work/ex"
+    "excerpt": "[PageAd slug=\"/work/goldlabel\"]\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\n[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascrip"
   }
 ]
