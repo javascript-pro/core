@@ -24,27 +24,25 @@ function flattenNav(node: any, allSlugs: string[] = []): string[] {
     const cleaned = node.slug.replace(/^\/+/, '').replace(/\/+$/, '');
     allSlugs.push(cleaned);
   }
-  if (node.children && node.children.length > 0) {
+  if (node.children?.length) {
     node.children.forEach((child: any) => flattenNav(child, allSlugs));
   }
   return allSlugs;
 }
 
-function renderNav(node: any, depth: number = 0): React.ReactNode {
+function renderNav(node: any, depth = 0): React.ReactNode {
   if (node.slug === '' || node.slug === '/') {
     return (
-      <React.Fragment key={`${node.slug}_depth`}>
-        {node.children && node.children.length > 0 && (
-          <React.Fragment key={`${node.slug}_depth_2`}>
-            {node.children.map((child: any) => renderNav(child, depth))}
-          </React.Fragment>
-        )}
+      <React.Fragment key={`${node.slug}_${depth}`}>
+        {node.children?.length ? (
+          <>{node.children.map((child: any) => renderNav(child, depth))}</>
+        ) : null}
       </React.Fragment>
     );
   }
 
   return (
-    <>
+    <React.Fragment key={`nav_${node.slug}_${depth}`}>
       {node.slug && (
         <div key={`slug_${node.slug}`}>
           <Link className="gl-link" href={`/${node.slug}`}>
@@ -52,18 +50,18 @@ function renderNav(node: any, depth: number = 0): React.ReactNode {
           </Link>
         </div>
       )}
-      {node.children && node.children.length > 0 && (
-        <div key={`or_slug_${node.slug}`}>
+      {node.children?.length ? (
+        <div key={`child_${node.slug}_${depth}`}>
           {node.children.map((child: any) => renderNav(child, depth + 1))}
         </div>
-      )}
-    </>
+      ) : null}
+    </React.Fragment>
   );
 }
 
 function findNavItem(slugPath: string, node: any): any | null {
   if (node.slug === slugPath) return node;
-  if (node.children && node.children.length > 0) {
+  if (node.children?.length) {
     for (const child of node.children) {
       const found = findNavItem(slugPath, child);
       if (found) return found;
@@ -75,7 +73,7 @@ function findNavItem(slugPath: string, node: any): any | null {
 function navToMarkdown(node: NavNode, depth = 0): string {
   const lines: string[] = [];
   const isRoot = !node.slug || node.slug === '' || node.slug === '/';
-  const pad = '  '.repeat(depth); // 2 spaces per level for Markdown nesting
+  const pad = '  '.repeat(depth);
 
   if (!isRoot && node.slug) {
     const clean = node.slug.replace(/^\/+|\/+$/g, '');
@@ -113,10 +111,16 @@ async function loadFrontmatter(slugPath: string) {
   return {};
 }
 
-export async function generateMetadata({ params }: { params: any }) {
-  const slugPath = params.slug ? params.slug.join('/') : '';
-  const frontmatter = await loadFrontmatter(slugPath);
+// --- ✅ FIXED: Await params in metadata as well ---
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug?: string[] }>;
+}) {
+  const { slug } = await params;
+  const slugPath = Array.isArray(slug) ? slug.join('/') : '';
 
+  const frontmatter = await loadFrontmatter(slugPath);
   const app = 'Goldlabel';
 
   const is404 = !frontmatter?.title;
@@ -125,7 +129,9 @@ export async function generateMetadata({ params }: { params: any }) {
 
   const title = is404
     ? 'Goldlabel'
-    : `${pageTitle}${frontmatter.description ? `. ${frontmatter.description}` : ''}`;
+    : `${pageTitle}${
+        frontmatter.description ? `. ${frontmatter.description}` : ''
+      }`;
 
   const description = is404 ? '' : frontmatter.description || '';
   const img = frontmatter.image || '/png/og.png';
@@ -153,14 +159,17 @@ export async function generateMetadata({ params }: { params: any }) {
 
 export async function generateStaticParams(): Promise<TPage[]> {
   const slugs = flattenNav(globalNav[0]);
-
-  return slugs.map((slug) => ({
-    slug: slug.split('/'),
-  }));
+  return slugs.map((slug) => ({ slug: slug.split('/') }));
 }
 
-export default async function Page({ params }: { params: any }) {
-  const slugPath = params.slug ? params.slug.join('/') : '';
+// --- ✅ FIXED: Await params before using .slug ---
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug?: string[] }>;
+}) {
+  const { slug } = await params;
+  const slugPath = Array.isArray(slug) ? slug.join('/') : '';
 
   const tryPaths = [
     {
@@ -183,9 +192,9 @@ export default async function Page({ params }: { params: any }) {
       isIndex: true,
     },
   ];
-  //
-  // 👉 Go back to the homepage or pick from the pages below.
-  let content = `> Sorry, we couldn't find the page you were looking for.,  
+
+  // 👉 Default 404 markdown
+  let content = `> Sorry, we couldn't find the page you were looking for.  
   👉 [Home](/?reboot)`;
   let frontmatter: any = {
     icon: 'goldlabel',
@@ -216,7 +225,6 @@ export default async function Page({ params }: { params: any }) {
   const title = navItem?.title || 'Bad panda';
   const ogImage = frontmatter.image || '/png/og.png';
 
-  // If page not found → build a markdown list of all pages
   if (is404) {
     const listMarkdown = navToMarkdown(globalNav[0] as NavNode);
     content += `\n\n${listMarkdown}\n`;
@@ -225,19 +233,18 @@ export default async function Page({ params }: { params: any }) {
   return (
     <Core frontmatter={{ ...frontmatter, isIndex }} body={content}>
       <div id="core-ssg" className="gl">
-        {/* This is SSG content */}
         <div className="gl-wrap">
           <header id="gl-header">
-            <Link href={`/`} style={{ textDecoration: 'none' }}>
+            <Link href="/" style={{ textDecoration: 'none' }}>
               <Image
-                src={'/svg/favicon.svg'}
+                src="/svg/favicon.svg"
                 alt={title}
                 width={50}
                 height={50}
               />
             </Link>
 
-            <Link href={`/`} style={{ textDecoration: 'none' }}>
+            <Link href="/" style={{ textDecoration: 'none' }}>
               <h1>{title}</h1>
             </Link>
             <h2>{frontmatter.description}</h2>
@@ -266,6 +273,7 @@ export default async function Page({ params }: { params: any }) {
               <ReactMarkdown>{content}</ReactMarkdown>
             </article>
           </main>
+
           <footer id="gl-footer">{renderNav(globalNav[0])}</footer>
         </div>
       </div>

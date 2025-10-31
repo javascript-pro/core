@@ -84,7 +84,7 @@ export default function Pings() {
         fullWidth
         maxWidth="sm"
         fullScreen={isMobile}
-        open={b.dialogOpen}
+        open={b?.dialogOpen}
         onClose={handleClose}
       >
         <CardHeader
