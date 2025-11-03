@@ -7,8 +7,6 @@ icon: free
 image: /png/3rdParty/github_og.png
 ---
 
-[GitHub url="https://github.com/javascript-pro/core" label="github.com/javascript-pro/core"]
-
 ## Some things in life _are_ free — Goldlabel [Core](/free/core) is one of them.
 
 This is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or build on. If you’re the kind of developer who likes digging under the hood, this [GitHub repository](https://github.com/javascript-pro/core) is where the engine lives.

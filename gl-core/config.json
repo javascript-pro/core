@@ -1,5 +1,5 @@
 {
-  "persist": true,
+  "persist": false,
   "app": "Goldlabel",
   "description": "JavaScript whatever the weather",
   "url": "https://goldlabel.pro",
@@ -27,27 +27,5 @@
       "text": "#FFFFFF",
       "border": "#021929"
     }
-  },
-  "nav": [
-    {
-      "label": "PDFs",
-      "icon": "pdf",
-      "route": "/database/table/pdfs"
-    },
-    {
-      "label": "All Tables",
-      "icon": "database",
-      "route": "/database"
-    },
-    {
-      "label": "AKI",
-      "icon": "ki",
-      "route": "/ki"
-    },
-    {
-      "label": "Logs",
-      "icon": "info",
-      "route": "/database/table/log"
-    }
-  ]
+  }
 }

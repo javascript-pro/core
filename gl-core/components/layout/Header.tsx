@@ -2,9 +2,9 @@
 'use client';
 import * as React from 'react';
 import { Box, CardHeader, Typography } from '@mui/material';
-import { Icon, useIsMobile, ThumbMenu, SharePopup } from '../../../gl-core';
-import { Paywall } from '../../cartridges/Paywall';
-import { Pings, usePings } from '../../cartridges/Pings';
+import { Icon, useIsMobile, ThumbMenu, SharePopup, OpenSource } from '../../../gl-core';
+// import { Paywall } from '../../cartridges/Paywall';
+// import { Pings, usePings } from '../../cartridges/Pings';
 
 export type THeader = {
   frontmatter?: any;
@@ -14,8 +14,8 @@ export type THeader = {
 export default function Header({ frontmatter = null }: THeader) {
   const { title, description, icon } = frontmatter;
   const isMobile = useIsMobile();
-  const b = usePings();
-  const displayName = b?.livePing?.displayName ?? '';
+  // const b = usePings();
+  // const displayName = b?.livePing?.displayName ?? '';
 
   let adjustedTitle = title;
   if (adjustedTitle === 'Home') adjustedTitle = 'Goldlabel';
@@ -41,8 +41,8 @@ export default function Header({ frontmatter = null }: THeader) {
         action={
           <Box sx={{ display: 'flex', mt: 1, mr: isMobile ? 0 : 2 }}>
             {/* <Paywall /> */}
-            <Pings />
-
+            {/* <Pings /> */}
+            <OpenSource />
             <SharePopup frontmatter={frontmatter} />
           </Box>
         }

@@ -13,6 +13,7 @@ import {
   ArrowMenu,
   Siblings,
   Children,
+  OpenSource,
 } from './nav';
 import { FieldUpload } from './forms';
 import { Header, Footer, RenderMarkdown } from './layout';
@@ -22,6 +23,7 @@ export {
   Nav,
   Siblings,
   Children,
+  OpenSource,
   ArrowMenu,
   IndexNav,
   NavItem,
