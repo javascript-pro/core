@@ -21,21 +21,20 @@ export default function OpenSource() {
   const handleClose = () => setOpen(false);
 
   const handleVisitRepo = () => {
-    window.open('https://github.com/javascript-pro/core', '_blank', 'noopener,noreferrer');
+    window.open(
+      'https://github.com/javascript-pro/core',
+      '_blank',
+      'noopener,noreferrer',
+    );
   };
 
   return (
     <Box>
-      <IconButton color='primary' onClick={handleOpen} aria-label="Open Source">
+      <IconButton color="primary" onClick={handleOpen} aria-label="Open Source">
         <Icon icon="github" />
       </IconButton>
 
-      <Dialog
-        open={open}
-        onClose={handleClose}
-        fullWidth
-        maxWidth="xs"
-      >
+      <Dialog open={open} onClose={handleClose} fullWidth maxWidth="xs">
         <DialogTitle sx={{ m: 0, p: 2 }}>
           Free & Open Source
           <IconButton
@@ -54,8 +53,8 @@ export default function OpenSource() {
 
         <DialogContent sx={{}}>
           <Typography variant="body1" sx={{ mb: 2 }}>
-            This App is built with Goldlabel Core, an open-source repository
-            you can explore, clone, or contribute to the codebase on GitHub.
+            This App is built with Goldlabel Core, an open-source repository you
+            can explore, clone, or contribute to the codebase on GitHub.
           </Typography>
 
           <Button

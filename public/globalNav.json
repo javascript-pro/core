@@ -152,7 +152,7 @@
               "NextJS",
               "Headless CMS"
             ],
-            "excerpt": "Open Source Platform\n\nIt’s the public GitHub repository that powers goldlabel.pro — and it’s free for anyone to fork, copy, hack, and reuse.\n\n What is it?\n\nGoldlabel is a JavaScript platform built wit"
+            "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Open Source on GitHub\"]\n\nThe public repository that powers goldlabel.pro is free for anyone to fork, copy, hack, and reuse.\n\n What is it?\n\nGo"
           },
           {
             "title": "Expertise",
@@ -833,7 +833,7 @@
                   "expertise",
                   "wordpress"
                 ],
-                "excerpt": "There's a time and a place for WordPress\n\n The time is in the past and the place is in the bin\n\n[PrevNext prev=\"/work/expertise/wordpress/casestudy\" next=\"/work/expertise/wordpress/modernising\"]\n\nWe t"
+                "excerpt": "WordPress powers 50% of all websites\n\n We treat an existing WordPress installation as a data source, not a problem to fix.\n\n[PrevNext prev=\"/work/expertise/wordpress/casestudy\" next=\"/work/expertise/w"
               },
               {
                 "title": "Windoze",

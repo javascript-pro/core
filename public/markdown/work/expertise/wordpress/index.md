@@ -8,13 +8,11 @@ image: https://live.staticflickr.com/8504/8434232637_2a7e8b697f_o.jpg
 tags: expertise, wordpress
 ---
 
-## There's a time and a place for WordPress
+## WordPress powers 50% of all websites
 
-> The time is in the past and the place is in the bin
+> We treat an existing WordPress installation as a data source, not a problem to fix.
 
 [PrevNext prev="/work/expertise/wordpress/case-study" next="/work/expertise/wordpress/modernising"]
-
-We treat an existing WordPress installation as a data source, not a problem to fix.
 
 - Your **database** stays where it is — MySQL, posts, pages, taxonomies — untouched.
 - Your **wp-admin** stays the same — clients keep using the editor they already know.

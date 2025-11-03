@@ -2,7 +2,13 @@
 'use client';
 import * as React from 'react';
 import { Box, CardHeader, Typography } from '@mui/material';
-import { Icon, useIsMobile, ThumbMenu, SharePopup, OpenSource } from '../../../gl-core';
+import {
+  Icon,
+  useIsMobile,
+  ThumbMenu,
+  SharePopup,
+  OpenSource,
+} from '../../../gl-core';
 // import { Paywall } from '../../cartridges/Paywall';
 // import { Pings, usePings } from '../../cartridges/Pings';
 

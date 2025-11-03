@@ -80,7 +80,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
         <IncludeAll />
         <Container id="core" maxWidth="md">
           <Box sx={{ minHeight: '100vh' }}>
-            
             {/* Sticky Header */}
             <Box
               sx={{
