@@ -1,11 +1,11 @@
-// /Users/goldlabel/GitHub/pro/src/Pr0/components/PingChip.tsx
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Pings/components/PersonHeader.tsx
 'use client';
 import * as React from 'react';
 import { CardHeader, Avatar } from '@mui/material';
-import { useBouncer } from '../../Bouncer';
+import { usePings } from '../../Pings';
 
 export default function PersonHeader() {
-  const { livePing } = useBouncer() || {};
+  const { livePing } = usePings() || {};
 
   const displayName =
     livePing?.displayName?.trim() || livePing?.username?.trim() || 'Guest';

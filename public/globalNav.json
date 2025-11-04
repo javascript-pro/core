@@ -34,7 +34,7 @@
                     "icon": "flash",
                     "image": "/png/n64/test.png",
                     "type": "file",
-                    "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\n A Pointless reinvention of MacroMedia Flash?\n\nMaybe we did ridiculously and pointlessly reinvented MacroMed"
+                    "excerpt": "A Pointless reinvention of MacroMedia Flash?\n\nMaybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You're welcome\n\n SVG Graphics\n Animation usin"
                   },
                   {
                     "title": "Uberedux",
@@ -43,7 +43,7 @@
                     "icon": "uberedux",
                     "image": "/png/n64/test.png",
                     "type": "file",
-                    "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\n Because all Apps need State Management\n\nOtherwise you'd be back in jQuery callback hell. Nobody wants that."
+                    "excerpt": "Because all Apps need State Management\n\nOtherwise you'd be back in jQuery callback hell. Nobody wants that. Uberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app alr"
                   },
                   {
                     "title": "Flickr",
@@ -59,7 +59,7 @@
                       "REST",
                       "Next.js"
                     ],
-                    "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\n Flickr Photo Cartridge\n\nA React component for clean, fastloading image galleries. Provides an easy way to d"
+                    "excerpt": "Flickr Photo Cartridge\n\nA React component for clean, fastloading image galleries. Provides an easy way to display recent photos from a Flickr account. It connects to a serverside API route in your Nex"
                   },
                   {
                     "title": "Lingua",
@@ -68,7 +68,7 @@
                     "icon": "lingua",
                     "image": "/png/n64/test.png",
                     "type": "file",
-                    "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\nThe Lingua cartridge brings localisation to Goldlabel. It enables your site to serve content in multiple lan"
+                    "excerpt": "The Lingua cartridge brings localisation to Goldlabel. It enables your site to serve content in multiple languages, making it accessible to a wider audience without complicating your codebase.\n\n What "
                   },
                   {
                     "title": "Paywall",
@@ -83,7 +83,7 @@
                       "free",
                       "paywall"
                     ],
-                    "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\nThe Paywall cartridge is responsible for two key features in Goldlabel Core: Authentication and Access Contr"
+                    "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core/tree/staging/glcore/cartridges/Paywall\" label=\"/glcore/cartridges/Paywall\"]\n\n✅ Each signedin user can read and write only their own paywall document."
                   },
                   {
                     "title": "Pings",
@@ -98,7 +98,7 @@
                       "free",
                       "bouncer"
                     ],
-                    "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\n 2. Real‑Time Visitor Tracking (Pings)\n\nThe second function is similar to lightweight analytics.  \nEvery vis"
+                    "excerpt": "2. Real‑Time Visitor Tracking (Pings)\n\nThe second function is similar to lightweight analytics.  \nEvery visitor (authenticated or not) continuously creates or updates a ping document in Firestore.\n\n P"
                   },
                   {
                     "title": "New Cartridge",
@@ -107,12 +107,12 @@
                     "icon": "add",
                     "image": "/png/n64/test.png",
                     "type": "file",
-                    "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\n Purpose\n\n is a template designed to help developers quickly bootstrap a new Cartridge in a modular applicat"
+                    "excerpt": "Purpose\n\n is a template designed to help developers quickly bootstrap a new Cartridge in a modular application framework such as Goldlabel. Cartridges are featurespecific, plugandplay components that "
                   }
                 ],
                 "icon": "cartridge",
                 "image": "/png/n64/test.png",
-                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\n Goldlabel is built on cartridges.\n\nA cartridge is a selfcontained piece of application logic: React compone"
+                "excerpt": "Goldlabel is built on cartridges.\n\nA cartridge is a selfcontained piece of application logic: React components, state, styles, and utilities bundled together in a portable unit.\n\nBecause each cartridg"
               },
               {
                 "title": "Free",
@@ -121,7 +121,7 @@
                 "icon": "free",
                 "image": "/png/3rdParty/github_og.png",
                 "type": "file",
-                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\n Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’"
+                "excerpt": "Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or b"
               },
               {
                 "title": "Open Source",
@@ -134,7 +134,7 @@
                   "free",
                   "core"
                 ],
-                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\n Open Source and Free Forever\n\nGoldlabel Core is a project designed to deliver powerful, userfriendly web ap"
+                "excerpt": "Open Source and Free Forever\n\nGoldlabel Core is a project designed to deliver powerful, userfriendly web applications that enhance productivity and streamline tasks. The project uses a monorepo archit"
               }
             ],
             "icon": "goldlabel",
@@ -152,7 +152,7 @@
               "NextJS",
               "Headless CMS"
             ],
-            "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\n Open Source Platform\n\nIt’s the public GitHub repository that powers goldlabel.pro — and it’s free for anyon"
+            "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Open Source on GitHub\"]\n\nThe public repository that powers goldlabel.pro is free for anyone to fork, copy, hack, and reuse.\n\n What is it?\n\nGo"
           },
           {
             "title": "Expertise",
@@ -558,7 +558,7 @@
                   "github",
                   "bitbucket"
                 ],
-                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"github.com/javascriptpro/core\"]\n\n[PrevNext prev=\"/work/git/gitkraken\" next=\"/work/git/github\"]\n\n Other Source Control solutions are available"
+                "excerpt": "[PrevNext prev=\"/work/git/gitkraken\" next=\"/work/git/github\"]\n\n Other Source Control solutions are available\n\nBut everyone uses git. It was created in 2005 by Linus Torvalds, the same person who built"
               },
               {
                 "title": "AI",
@@ -833,7 +833,7 @@
                   "expertise",
                   "wordpress"
                 ],
-                "excerpt": "There's a time and a place for WordPress\n\n The time is in the past and the place is in the bin\n\n[PrevNext prev=\"/work/expertise/wordpress/casestudy\" next=\"/work/expertise/wordpress/modernising\"]\n\nWe t"
+                "excerpt": "WordPress powers 50% of all websites\n\n We treat an existing WordPress installation as a data source, not a problem to fix.\n\n[PrevNext prev=\"/work/expertise/wordpress/casestudy\" next=\"/work/expertise/w"
               },
               {
                 "title": "Windoze",
@@ -953,7 +953,7 @@
             ],
             "icon": "company",
             "image": "https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg",
-            "excerpt": "WhatsApp   \nTel +49 15510995150  \n | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX"
+            "excerpt": "Tel/WhatsApp   \n | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX"
           }
         ],
         "icon": "work",

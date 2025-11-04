@@ -1,13 +1,13 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/setBouncerKey.tsx
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Pings/actions/setPingsKey.tsx
 import { TUbereduxDispatch } from '../../Uberedux';
 import { setUbereduxKey } from '../../Uberedux';
 
-export const setBouncerKey =
+export const setPingsKey =
   (key: string, value: unknown) =>
   async (dispatch: TUbereduxDispatch, getState: any) => {
     try {
       const state = getState();
-      const current = state?.redux.bouncer;
+      const current = state?.redux.pings;
       const prevVal = current?.[key];
 
       const mergedValue =
@@ -19,7 +19,7 @@ export const setBouncerKey =
 
       dispatch(
         setUbereduxKey({
-          key: 'bouncer',
+          key: 'pings',
           value: { ...current, [key]: mergedValue },
         }),
       );

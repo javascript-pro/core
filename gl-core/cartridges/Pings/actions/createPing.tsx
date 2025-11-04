@@ -1,7 +1,7 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/Bouncer/createPing.tsx
 import { TUbereduxDispatch } from '../../Uberedux';
 import { setUbereduxKey } from '../../Uberedux';
-import { setBouncerKey, ping } from '../';
+import { setPingsKey, ping } from '../';
 
 // ─────────────────────────────────────────────────────────────
 // 1️⃣ FingerprintJS: client-side unique ID
@@ -175,8 +175,8 @@ export const createPing =
       };
 
       // 5. Dispatch into bouncer slice
-      dispatch(setBouncerKey('ping', pingObj));
-      dispatch(setBouncerKey('pingReady', true));
+      dispatch(setPingsKey('ping', pingObj));
+      dispatch(setPingsKey('pingReady', true));
       dispatch(ping());
     } catch (e: unknown) {
       const msg = e instanceof Error ? e.message : String(e);

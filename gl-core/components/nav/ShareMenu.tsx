@@ -7,14 +7,7 @@ import {
   WhatsappShareButton,
   TwitterShareButton,
 } from 'react-share';
-import {
-  Box,
-  Typography,
-  CardHeader,
-  MenuItem,
-  ListItemIcon,
-  ListItemText,
-} from '@mui/material';
+import { Box, MenuItem, ListItemIcon, ListItemText } from '@mui/material';
 import { Icon } from '../../../gl-core';
 
 export type TShareMenu = {

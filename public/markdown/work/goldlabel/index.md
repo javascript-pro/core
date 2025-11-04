@@ -8,11 +8,9 @@ image: https://live.staticflickr.com/65535/53670802348_9bb887b680_b.jpg
 tags: JavaScript, Vanilla JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 ---
 
-[GitHub url="https://github.com/javascript-pro/core" label="github.com/javascript-pro/core"]
+[GitHub url="https://github.com/javascript-pro/core" label="Open Source on GitHub"]
 
-#### Open Source Platform
-
-It’s the public GitHub repository that powers goldlabel.pro — and it’s free for anyone to fork, copy, hack, and reuse.
+The public repository that powers goldlabel.pro is free for anyone to fork, copy, hack, and reuse.
 
 #### What is it?
 

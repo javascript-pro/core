@@ -7,8 +7,6 @@ icon: add
 image: /png/n64/test.png
 ---
 
-[GitHub url="https://github.com/javascript-pro/core" label="github.com/javascript-pro/core"]
-
 ## Purpose
 
 `NewCartridge` is a template designed to help developers quickly bootstrap a new **Cartridge** in a modular application framework such as Goldlabel. Cartridges are feature-specific, plug-and-play components that can be developed, tested, and deployed independently.

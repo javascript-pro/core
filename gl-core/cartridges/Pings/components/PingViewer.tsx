@@ -2,11 +2,11 @@
 'use client';
 import * as React from 'react';
 import { Box } from '@mui/material';
-import { useBouncer, MessageForm, MessageList } from '../../Bouncer';
+import { usePings, MessageForm, MessageList } from '../../Pings';
 // import { Mapbox } from '../../../../gl-core';
 
 export default function PingViewer() {
-  const b = useBouncer();
+  const b = usePings();
 
   return (
     <Box>

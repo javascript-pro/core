@@ -4,7 +4,7 @@ import * as React from 'react';
 import { Box, Typography } from '@mui/material';
 import { usePathname, useRouter } from 'next/navigation';
 
-import { Advert, useDispatch, routeTo } from '../../../gl-core';
+import { useDispatch, routeTo } from '../../../gl-core';
 import { useIsMobile } from '../../../gl-core';
 import globalNav from '../../../public/globalNav.json';
 
@@ -118,7 +118,7 @@ export default function ArrowMenu() {
         )}
       </Box>
 
-      {currentItem?.children?.filter((child) => child.type === 'folder')
+      {currentItem?.children?.filter((child: any) => child.type === 'folder')
         .length > 0 && (
         <Box sx={{ display: 'flex', gap: 2, mt: 1 }}>
           {currentItem.children

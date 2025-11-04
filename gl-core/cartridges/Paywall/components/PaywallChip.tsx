@@ -1,36 +1,66 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Paywall/components/PaywallChip.tsx
 'use client';
 import * as React from 'react';
-import { Chip, Avatar, IconButton } from '@mui/material';
-import { usePaywall } from '../../Paywall';
-import {Icon} from '../../../../gl-core';
+import {
+  Box,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  IconButton,
+} from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from '../../../lib/firebase';
+import { PaywallChip, Signin, Signout, setAuth, usePaywall } from '../';
+import { useDispatch } from '../../Uberedux';
 
-export default function PaywallChip() {
-  const paywall = usePaywall();
+export default function Paywall() {
+  const [open, setOpen] = React.useState(false);
+  const dispatch = useDispatch();
+  const { authed } = usePaywall();
 
-  const onClick = () => {
-    console.log('paywall', paywall);
-  };
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
-  const { authed } = paywall;
+  React.useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      const authed = !!user;
+      dispatch<any>(setAuth(authed));
+      if (authed) setOpen(false); // auto-close on login
+    });
+    return () => unsubscribe();
+  }, [dispatch]);
 
-  if (!authed) {
-    return <IconButton color="primary">
-              <Icon icon="admin" /> 
-            </IconButton>
-  }
-  
   return (
-    <Chip
-      variant="filled"
-      onClick={onClick}
-      avatar={<Avatar alt={'displayName'} src={'avatarSrc'} />}
-      label={'displayName'}
-      sx={{
-        cursor: 'pointer',
-        fontWeight: 500,
-        '&:hover': { backgroundColor: 'action.hover' },
-      }}
-    />
+    <Box>
+      <PaywallChip />
+
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        fullWidth
+        maxWidth="xs"
+        PaperProps={{
+          sx: { borderRadius: 3, p: 2 },
+        }}
+      >
+        <DialogTitle sx={{ m: 0, p: 2 }}>
+          {authed ? 'Sign out' : 'Sign in'}
+          <IconButton
+            aria-label="close"
+            onClick={handleClose}
+            sx={{
+              position: 'absolute',
+              right: 8,
+              top: 8,
+              color: (theme) => theme.palette.grey[500],
+            }}
+          >
+            <CloseIcon />
+          </IconButton>
+        </DialogTitle>
+
+        <DialogContent>{authed ? <Signout /> : <Signin />}</DialogContent>
+      </Dialog>
+    </Box>
   );
 }

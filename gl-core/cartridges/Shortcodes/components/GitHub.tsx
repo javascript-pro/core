@@ -27,11 +27,11 @@ export default function GitHub({ url = 'https://', label = '' }) {
             alignItems: 'flex-start',
           }}
           avatar={
-            <Box sx={{ mt: 0.5 }}>
+            <Box sx={{}}>
               <Icon icon={'github'} color="primary" />
             </Box>
           }
-          title={<Typography variant="h6">{label}</Typography>}
+          title={<Typography variant="body1">{label}</Typography>}
         />
       </CardActionArea>
     </Card>

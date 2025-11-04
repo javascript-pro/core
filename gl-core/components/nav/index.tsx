@@ -11,6 +11,7 @@ import ShareMenu from './ShareMenu';
 import SharePopup from './SharePopup';
 import Siblings from './Siblings';
 import Children from './Children';
+import OpenSource from './OpenSource';
 
 export {
   ArrowMenu,
@@ -26,4 +27,5 @@ export {
   ShareMenu,
   SharePopup,
   Siblings,
+  OpenSource,
 };

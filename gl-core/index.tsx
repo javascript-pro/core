@@ -21,6 +21,7 @@ import {
   ArrowMenu,
   Siblings,
   Children,
+  OpenSource,
 } from './components';
 import {
   GoogleMap,
@@ -110,6 +111,7 @@ export {
   PageAd,
   Mapbox,
   GitHub,
+  OpenSource,
 };
 export { Uberedux, UbereduxProvider, setUbereduxKey, resetUberedux };
 export {

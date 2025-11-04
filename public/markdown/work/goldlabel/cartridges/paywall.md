@@ -9,7 +9,13 @@ tags: cartridges, cartridge, free, paywall
 featured: true
 ---
 
-[GitHub url="https://github.com/javascript-pro/core" label="github.com/javascript-pro/core"]
+[GitHub url="https://github.com/javascript-pro/core/tree/staging/gl-core/cartridges/Paywall" label="/gl-core/cartridges/Paywall"]
+
+✅ Each signed-in user can read and write only their own paywall document.
+
+🔒 Nobody (not even other authenticated users) can read or modify anyone else’s paywall data.
+
+🧑‍💻 Optionally, admins can access all (for billing dashboards, etc.).
 
 The Paywall cartridge is responsible for two key features in Goldlabel Core: Authentication and Access Control System
 

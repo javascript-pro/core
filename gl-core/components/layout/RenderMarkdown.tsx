@@ -121,7 +121,7 @@ export default function RenderMarkdown({
     const prevNext = parseShortcode(/\[PrevNext\s+(.*?)\]/, PrevNext);
     if (prevNext) return prevNext;
 
-    // PrevNext
+    // GitHub
     const github = parseShortcode(/\[GitHub\s+(.*?)\]/, GitHub);
     if (github) return github;
 
@@ -184,9 +184,11 @@ export default function RenderMarkdown({
                 display="block"
                 sx={{ my: 1, fontWeight: 'normal' }}
               >
-                {normalizeChildren(children).map((child, i) =>
-                  typeof child === 'string' ? renderShortcode(child) : child,
-                )}
+                {normalizeChildren(children).map((child, i) => (
+                  <React.Fragment key={i}>
+                    {typeof child === 'string' ? renderShortcode(child) : child}
+                  </React.Fragment>
+                ))}
               </Typography>
             ),
             li: ({ children }) => (
@@ -196,9 +198,13 @@ export default function RenderMarkdown({
                   component="span"
                   sx={{ fontWeight: 'normal' }}
                 >
-                  {normalizeChildren(children).map((child, i) =>
-                    typeof child === 'string' ? renderShortcode(child) : child,
-                  )}
+                  {normalizeChildren(children).map((child, i) => (
+                    <React.Fragment key={i}>
+                      {typeof child === 'string'
+                        ? renderShortcode(child)
+                        : child}
+                    </React.Fragment>
+                  ))}
                 </Typography>
               </li>
             ),

@@ -80,7 +80,18 @@ export default function Core({ frontmatter, body = null }: TCore) {
         <IncludeAll />
         <Container id="core" maxWidth="md">
           <Box sx={{ minHeight: '100vh' }}>
-            <Header frontmatter={frontmatter} />
+            {/* Sticky Header */}
+            <Box
+              sx={{
+                position: 'sticky',
+                top: 0,
+                zIndex: (theme) => theme.zIndex.appBar,
+                backgroundColor: (theme) => theme.palette.background.default,
+              }}
+            >
+              <Header frontmatter={frontmatter} />
+            </Box>
+
             <Grid container spacing={isMobile ? 0 : 1}>
               {!isMobile && (
                 <Grid size={{ md: 3 }}>
