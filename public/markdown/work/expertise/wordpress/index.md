@@ -12,12 +12,12 @@ tags: expertise, wordpress
 
 > We treat an existing WordPress installation as a data source, not a problem to fix.
 
-[PrevNext prev="/work/expertise/wordpress/case-study" next="/work/expertise/wordpress/modernising"]
-
 - Your **database** stays where it is — MySQL, posts, pages, taxonomies — untouched.
 - Your **wp-admin** stays the same — clients keep using the editor they already know.
 - Your **SEO** stays safe — same URLs, same permalinks, same meta tags.
 - Your **content** becomes available via the REST API (or GraphQL if you prefer).
+
+[PrevNext prev="/work/expertise/wordpress/case-study" next="/work/expertise/wordpress/modernising"]
 
 Goldlabel simply **plugs in** to that source, fetches content, and renders it in a modern JavaScript app — powered by React, Next.js, and Firestore.
 

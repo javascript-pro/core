@@ -9,7 +9,7 @@ tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Pr
 image: /png/wei-zang/wei-zang.png
 ---
 
-[PageAd slug="/work/goldlabel"]
+[PageAd slug="/work/expertise"]
 
 [PrevNext prev="/work/expertise/javascript" next="/work/expertise/javascript/typescript"]
 
@@ -17,14 +17,8 @@ image: /png/wei-zang/wei-zang.png
 
 [PageAd slug="/work/expertise/wordpress"]
 
-[PageAd slug="/balance/books/r-f-kuang"]
-
-[PrevNext prev="/balance/books/r-f-kuang/katabasis" next="/balance/books/r-f-kuang/babel"]
-
 [PageAd slug="/work/expertise/ai/coding-with-ai"]
-
-[Flash movie="Logo" height="250"]
 
 [PageAd slug="/work/goldlabel/cartridges/flash"]
 
-[PrevNext next="/work/goldlabel"]
+[Flash movie="Logo" height="250"]

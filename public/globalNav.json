@@ -833,7 +833,7 @@
                   "expertise",
                   "wordpress"
                 ],
-                "excerpt": "WordPress powers 50% of all websites\n\n We treat an existing WordPress installation as a data source, not a problem to fix.\n\n[PrevNext prev=\"/work/expertise/wordpress/casestudy\" next=\"/work/expertise/w"
+                "excerpt": "WordPress powers 50% of all websites\n\n We treat an existing WordPress installation as a data source, not a problem to fix.\n\n Your database stays where it is — MySQL, posts, pages, taxonomies — untouch"
               },
               {
                 "title": "Windoze",
@@ -1415,6 +1415,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[PageAd slug=\"/work/goldlabel\"]\n\n[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescript\"]\n\n[PageAd slug=\"/work/expertise/javascript/vanillajs\"]\n\n[PageAd slug=\"/work/ex"
+    "excerpt": "[PageAd slug=\"/work/expertise\"]\n\n[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescript\"]\n\n[PageAd slug=\"/work/expertise/javascript/vanillajs\"]\n\n[PageAd slug=\"/work/ex"
   }
 ]
