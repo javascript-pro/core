@@ -12,7 +12,7 @@ const storage = {
   ...baseStorage,
   getItem: async (key: string) => {
     if (!persist) {
-      console.log(`[Uberedux] Skipping persist`);
+      // console.log(`[Uberedux] Skipping persist`);
       return null;
     } else {
       console.log(`[Uberedux] ryhydrating`);

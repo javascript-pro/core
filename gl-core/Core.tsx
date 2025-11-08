@@ -14,13 +14,19 @@ import {
   Grid,
   Skeleton,
   Typography,
+  IconButton,
+  Dialog,
+  DialogContent,
+  DialogTitle,
 } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 import {
   useGlobalNav,
   fetchGlobalNav,
   Theme,
   RenderMarkdown,
-  Header,
+  ThumbMenu,
   PageBreadcrumb,
   useIsMobile,
   useVersionCheck,
@@ -29,10 +35,11 @@ import {
   toggleLoading,
   useDispatch,
   Siblings,
-  Children,
+  Search,
   useSiblings,
   ArrowMenu,
   SideAds,
+  NavItem,
 } from '../gl-core';
 import { SoundProvider } from './cartridges/Theme';
 
@@ -42,6 +49,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const dispatch = useDispatch();
   const { noImage, image, title } = frontmatter ?? {};
   const [imageError, setImageError] = React.useState(false);
+  const [menuOpen, setMenuOpen] = React.useState(false);
+
   const prefersDark = useMediaQuery('(prefers-color-scheme: dark)');
   const siblings = useSiblings();
   const pathname = usePathname();
@@ -49,7 +58,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const isMobile = useIsMobile();
   const globalNav = useGlobalNav();
 
-  // Always attempt to fetch nav once per page load
   const fetchedNavRef = React.useRef(false);
   React.useEffect(() => {
     if (fetchedNavRef.current) return;
@@ -57,18 +65,11 @@ export default function Core({ frontmatter, body = null }: TCore) {
     dispatch(fetchGlobalNav());
   }, [dispatch]);
 
-  // Log out current nav in store
-  React.useEffect(() => {
-    if (globalNav) {
-      // console.log('Core: globalNav available', globalNav);
-    }
-  }, [globalNav]);
-
-  useVersionCheck();
-
   React.useEffect(() => {
     dispatch(toggleLoading(false));
   }, [dispatch]);
+
+  useVersionCheck();
 
   const effectiveThemeMode =
     themeMode === null ? (prefersDark ? 'dark' : 'light') : themeMode;
@@ -78,20 +79,72 @@ export default function Core({ frontmatter, body = null }: TCore) {
       <Theme theme={config.themes[effectiveThemeMode]}>
         <CssBaseline />
         <IncludeAll />
+
+        {/* Sticky Header */}
+        <Box
+          sx={{
+            position: 'sticky',
+            top: 0,
+            zIndex: (theme) => theme.zIndex.appBar,
+            backgroundColor: (theme) => theme.palette.background.default,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            px: 1,
+            py: 0.5,
+          }}
+        >
+
+          
+          <IconButton
+            color="primary"
+            onClick={() => setMenuOpen(true)}
+            aria-label="Open menu"
+          >
+            <MenuIcon />
+          </IconButton>
+
+          <Search />
+        </Box>
+
+        
+
+        {/* Menu Dialog */}
+        <Dialog
+          open={menuOpen}
+          onClose={() => setMenuOpen(false)}
+          fullScreen={isMobile}
+          maxWidth="sm"
+          fullWidth
+        >
+          <DialogTitle
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              pb: 0,
+            }}
+          >
+            <Search />
+            <IconButton
+              aria-label="Close menu"
+              onClick={() => setMenuOpen(false)}
+              size="small"
+            >
+              <CloseIcon />
+            </IconButton>
+          </DialogTitle>
+
+          <DialogContent>
+            
+            <Box sx={{ mt: 1 }}>
+              <Siblings />
+            </Box>
+          </DialogContent>
+        </Dialog>
+
         <Container id="core" maxWidth="md">
           <Box sx={{ minHeight: '100vh' }}>
-            {/* Sticky Header */}
-            <Box
-              sx={{
-                position: 'sticky',
-                top: 0,
-                zIndex: (theme) => theme.zIndex.appBar,
-                backgroundColor: (theme) => theme.palette.background.default,
-              }}
-            >
-              <Header frontmatter={frontmatter} />
-            </Box>
-
             <Grid container spacing={isMobile ? 0 : 1}>
               {!isMobile && (
                 <Grid size={{ md: 3 }}>
@@ -106,14 +159,16 @@ export default function Core({ frontmatter, body = null }: TCore) {
               )}
 
               <Grid size={{ xs: 12, md: 9 }}>
-                <Box sx={{ mt: isMobile ? 2 : 0 }}>
-                  <Box sx={{ px: isMobile ? 0.5 : 2, my: 2 }}>
-                    <Box sx={{ mx: 0 }}>
-                      {pathname !== '/' && <PageBreadcrumb />}
-                    </Box>
-                  </Box>
+                <Box sx={{ mt: isMobile ? 2 : 0, mx: 3 }}>
+                  <Typography variant="h1" color="primary">
+                    {frontmatter?.title}
+                  </Typography>
+                  <Typography variant="h2" color="text.secondary" gutterBottom>
+                    {frontmatter?.description}
+                  </Typography>
+                </Box>
 
-                  {/* Image block */}
+                <Box sx={{ mt: isMobile ? 2 : 0 }}>
                   {!noImage && image && (
                     <Box sx={{ mx: isMobile ? 0 : 4, mt: 0 }}>
                       {!imageError ? (
@@ -144,21 +199,23 @@ export default function Core({ frontmatter, body = null }: TCore) {
                       )}
                     </Box>
                   )}
+
+                  <Box sx={{ px: isMobile ? 0.5 : 2, my: 2 }}>
+                    <Box sx={{ mx: 0 }}>
+                      {pathname !== '/' && <PageBreadcrumb />}
+                    </Box>
+                  </Box>
                 </Box>
 
-                {/* Main content and children combined in same padded box */}
                 <Box
                   sx={{ mb: isMobile ? 3 : '175px', px: isMobile ? 0.5 : 2 }}
                 >
                   <RenderMarkdown>{body}</RenderMarkdown>
-                  {isMobile && (
-                    <Box sx={{ mt: 4 }}>
-                      <Children />
-                    </Box>
-                  )}
+
                   <Box sx={{ mx: 3 }}>
                     <ArrowMenu />
                   </Box>
+                  <ThumbMenu />
                 </Box>
               </Grid>
             </Grid>

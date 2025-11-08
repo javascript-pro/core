@@ -8,8 +8,6 @@ image: /png/3rdParty/javascript_og.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React, Angular, Vue, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS, JSON
 ---
 
-[PrevNext prev="/work/expertise" next="/work/expertise/javascript/typescript"]
-
 ## JavaScript Whatever the Weather
 
 We’ve been writing JavaScript since it was still called ECMAScript.
@@ -64,3 +62,5 @@ It’s the language we reach for first.
 Not because it’s trendy—but because we know it inside out. We’ve seen the patterns, the pitfalls, and the possibilities. We know where the bodies are buried.
 
 If you need a JavaScript team that’s battle-tested, precise, and fast—we’re here.
+
+[PrevNext prev="/work/expertise" next="/work/expertise/javascript/typescript"]

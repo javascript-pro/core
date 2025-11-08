@@ -114,7 +114,7 @@ export default function Siblings() {
           <ListItemIcon>
             <Icon icon={'up'} color="primary" />
           </ListItemIcon>
-          <ListItemText primary={parentNode.title} />
+          <ListItemText secondary={parentNode.title} />
         </ListItemButton>
       )}
 

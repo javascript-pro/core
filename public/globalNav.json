@@ -367,7 +367,7 @@
                   "Headless CMS",
                   "JSON"
                 ],
-                "excerpt": "[PrevNext prev=\"/work/expertise\" next=\"/work/expertise/javascript/typescript\"]\n\n JavaScript Whatever the Weather\n\nWe’ve been writing JavaScript since it was still called ECMAScript.\n\nBefore the framew"
+                "excerpt": "JavaScript Whatever the Weather\n\nWe’ve been writing JavaScript since it was still called ECMAScript.\n\nBefore the frameworks, before npm, before it ate the world—we were already deep in the language th"
               },
               {
                 "title": "Fullstack",
@@ -833,7 +833,7 @@
                   "expertise",
                   "wordpress"
                 ],
-                "excerpt": "WordPress powers 50% of all websites\n\n We treat an existing WordPress installation as a data source, not a problem to fix.\n\n[PrevNext prev=\"/work/expertise/wordpress/casestudy\" next=\"/work/expertise/w"
+                "excerpt": "WordPress powers 50% of all websites\n\n We treat an existing WordPress installation as a data source, not a problem to fix.\n\n Your database stays where it is — MySQL, posts, pages, taxonomies — untouch"
               },
               {
                 "title": "Windoze",
@@ -1266,7 +1266,7 @@
           },
           {
             "title": "Books",
-            "description": "",
+            "description": "What are you reading?",
             "slug": "/balance/books",
             "order": 20,
             "type": "folder",
@@ -1385,7 +1385,7 @@
       }
     ],
     "icon": "goldlabel",
-    "image": "/png/wei-zang/wei-zang.png",
+    "image": "https://live.staticflickr.com/65535/54691336480_36c60e4633_b.jpg",
     "tags": [
       "JavaScript",
       "Next Gen",
@@ -1415,6 +1415,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[PageAd slug=\"/work/goldlabel\"]\n\n[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescript\"]\n\n[PageAd slug=\"/work/expertise/javascript/vanillajs\"]\n\n[PageAd slug=\"/work/ex"
+    "excerpt": "[PageAd slug=\"/work/expertise\"]\n\n[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescript\"]\n\n[PageAd slug=\"/work/expertise/javascript/vanillajs\"]\n\n[PageAd slug=\"/work/ex"
   }
 ]
