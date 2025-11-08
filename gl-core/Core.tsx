@@ -20,7 +20,7 @@ import {
   fetchGlobalNav,
   Theme,
   RenderMarkdown,
-  Header,
+  ThumbMenu,
   PageBreadcrumb,
   useIsMobile,
   useVersionCheck,
@@ -89,7 +89,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                 backgroundColor: (theme) => theme.palette.background.default,
               }}
             >
-              <Header frontmatter={frontmatter} />
+              {/* <Header frontmatter={frontmatter} /> */}
             </Box>
 
             <Grid container spacing={isMobile ? 0 : 1}>
@@ -106,13 +106,16 @@ export default function Core({ frontmatter, body = null }: TCore) {
               )}
 
               <Grid size={{ xs: 12, md: 9 }}>
-                <Box sx={{ mt: isMobile ? 2 : 0 }}>
-                  <Box sx={{ px: isMobile ? 0.5 : 2, my: 2 }}>
-                    <Box sx={{ mx: 0 }}>
-                      {pathname !== '/' && <PageBreadcrumb />}
-                    </Box>
-                  </Box>
+                <Box sx={{ mt: isMobile ? 2 : 0, mx: 3 }}>
+                  <Typography variant="h1" color="primary">
+                    {frontmatter?.title}
+                  </Typography>
+                  <Typography variant="h2" color="text." gutterBottom>
+                    {frontmatter?.description}
+                  </Typography>
+                </Box>
 
+                <Box sx={{ mt: isMobile ? 2 : 0 }}>
                   {/* Image block */}
                   {!noImage && image && (
                     <Box sx={{ mx: isMobile ? 0 : 4, mt: 0 }}>
@@ -144,6 +147,12 @@ export default function Core({ frontmatter, body = null }: TCore) {
                       )}
                     </Box>
                   )}
+
+                  <Box sx={{ px: isMobile ? 0.5 : 2, my: 2 }}>
+                    <Box sx={{ mx: 0 }}>
+                      {pathname !== '/' && <PageBreadcrumb />}
+                    </Box>
+                  </Box>
                 </Box>
 
                 {/* Main content and children combined in same padded box */}
@@ -151,6 +160,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                   sx={{ mb: isMobile ? 3 : '175px', px: isMobile ? 0.5 : 2 }}
                 >
                   <RenderMarkdown>{body}</RenderMarkdown>
+
                   {isMobile && (
                     <Box sx={{ mt: 4 }}>
                       <Children />
@@ -159,6 +169,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                   <Box sx={{ mx: 3 }}>
                     <ArrowMenu />
                   </Box>
+                  <ThumbMenu />
                 </Box>
               </Grid>
             </Grid>

@@ -11,8 +11,14 @@ import { initialState } from '../../initialState';
 const storage = {
   ...baseStorage,
   getItem: async (key: string) => {
+    // console.log(
+    //   '[Uberedux] config.persist =',
+    //   config.persist,
+    //   typeof config.persist,
+    // );
+    if (typeof window === 'undefined') return null; // skip SSR
     if (!config.persist) {
-      console.log(`[Uberedux] Skipping persist`);
+      // console.log(`[Uberedux] Skipping persist`);
       return null;
     }
     return baseStorage.getItem(key);
