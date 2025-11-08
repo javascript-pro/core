@@ -8,7 +8,9 @@ image: /png/3rdParty/unicorn.png
 tags: expertise, fields, work
 ---
 
-> We work across the full stack, from interface to infrastructure, with a focus on robust, modern JavaScript tooling and scalable cloud-native delivery. Whether building responsive UIs, designing serverless APIs, or optimising DevOps pipelines, we bring production experience and architectural clarity to every layer of the process.
+> We work across the full stack, from interface to infrastructure, with a focus on robust, modern JavaScript tooling and scalable cloud-native delivery. 
+
+Whether building responsive UIs, designing serverless APIs, or optimising DevOps pipelines, we bring production experience and architectural clarity to every layer of the process.
 
 #### Core Specialisms
 
@@ -23,8 +25,6 @@ tags: expertise, fields, work
 
 - API Development  
   REST, GraphQL, and TRPC. Experience building and consuming APIs with robust auth, validation, and observability.
-
-  [PrevNext prev="/work/goldlabel" next="/work/expertise/javascript"]
 
 ### Backend & DevOps
 
@@ -61,3 +61,5 @@ tags: expertise, fields, work
 
 We don’t just build products—we build platforms that scale.  
 Let’s work together to design something durable.
+
+[PrevNext prev="/work/goldlabel" next="/work/expertise/javascript"]

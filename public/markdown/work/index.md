@@ -8,15 +8,15 @@ image: /png/3rdParty/git_og.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 ---
 
-> The apps we ship are real. They run in production and are developed accessibly. The Core is Open Source and Free forever — giving you statically generated sites with Firestore-powered updates and a real admin panel. Built with Next.js App Router and Material UI
+> The apps we ship are real. They run in production and are developed accessibly. 
+
+The Core is Open Source and Free forever — giving you statically generated sites with Firestore-powered updates and a real admin panel. Built with Next.js App Router and Material UI
 
 Goldlabel builds and ships modern web apps for clients who need real results — fast
 
 - _Small_ team. _Big_ output
 - Real deployments from Day One
 - Readable, extensible, Open Source
-
-[PrevNext prev="/work/expertise/javascript" next="/work/expertise"]
 
 Goldlabel Apps is a UK-based software company that designs, builds, and maintains full-stack web applications. We specialize in Next.js, Firebase, and custom UI development, delivering everything from internal admin tools to polished public-facing websites.
 
@@ -30,3 +30,5 @@ Goldlabel Apps is a UK-based software company that designs, builds, and maintain
 
 - Built for reuse.  
   Every component, pattern, and API is designed to be portable and production-ready
+
+[PrevNext prev="/work/expertise/javascript" next="/work/expertise"]

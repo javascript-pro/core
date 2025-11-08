@@ -109,7 +109,6 @@ export function PageBreadcrumb({
   return (
     <Box
       sx={{
-        mx: 4,
         display: 'flex',
         alignItems: 'center',
         flexWrap: 'wrap',

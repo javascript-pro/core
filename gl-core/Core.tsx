@@ -39,7 +39,8 @@ import {
   useSiblings,
   ArrowMenu,
   SideAds,
-  NavItem,
+  SharePopup,
+  // NavItem,
 } from '../gl-core';
 import { SoundProvider } from './cartridges/Theme';
 
@@ -90,12 +91,10 @@ export default function Core({ frontmatter, body = null }: TCore) {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            px: 1,
-            py: 0.5,
+            // px: 1,
+            // py: 0.5,
           }}
         >
-
-          
           <IconButton
             color="primary"
             onClick={() => setMenuOpen(true)}
@@ -103,11 +102,11 @@ export default function Core({ frontmatter, body = null }: TCore) {
           >
             <MenuIcon />
           </IconButton>
-
-          <Search />
+          <Box sx={{mt:1}}>
+            <Search defaultValue={frontmatter?.title} />
+            <SharePopup frontmatter={frontmatter}/>
+          </Box>  
         </Box>
-
-        
 
         {/* Menu Dialog */}
         <Dialog
@@ -125,7 +124,12 @@ export default function Core({ frontmatter, body = null }: TCore) {
               pb: 0,
             }}
           >
-            <Search />
+
+            <Box>
+              <Search defaultValue={frontmatter?.title} />
+              <SharePopup frontmatter={frontmatter}/>
+            </Box> 
+
             <IconButton
               aria-label="Close menu"
               onClick={() => setMenuOpen(false)}
@@ -136,8 +140,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
           </DialogTitle>
 
           <DialogContent>
-            
             <Box sx={{ mt: 1 }}>
+              <ArrowMenu />
               <Siblings />
             </Box>
           </DialogContent>
@@ -159,18 +163,34 @@ export default function Core({ frontmatter, body = null }: TCore) {
               )}
 
               <Grid size={{ xs: 12, md: 9 }}>
-                <Box sx={{ mt: isMobile ? 2 : 0, mx: 3 }}>
-                  <Typography variant="h1" color="primary">
+
+                <Box sx={{ mt: 2, mb: 2}}>
+                  <Typography
+                    variant="h1"
+                    gutterBottom
+                    color="primary"
+                    sx={{
+                      fontSize: { xs: '1.75rem', md: '2.25rem' },
+                    }}
+                  >
                     {frontmatter?.title}
                   </Typography>
-                  <Typography variant="h2" color="text.secondary" gutterBottom>
+
+                  <Typography
+                    variant="h2"
+                    gutterBottom
+                    sx={{
+                      fontSize: { xs: '1.2rem', md: '1.25rem' },
+                    }}
+                  >
                     {frontmatter?.description}
                   </Typography>
                 </Box>
 
-                <Box sx={{ mt: isMobile ? 2 : 0 }}>
+
+                <Box sx={{ mt: isMobile ? 2 : 4 }}>
                   {!noImage && image && (
-                    <Box sx={{ mx: isMobile ? 0 : 4, mt: 0 }}>
+                    <Box>
                       {!imageError ? (
                         <Image
                           priority
@@ -200,21 +220,15 @@ export default function Core({ frontmatter, body = null }: TCore) {
                     </Box>
                   )}
 
-                  <Box sx={{ px: isMobile ? 0.5 : 2, my: 2 }}>
-                    <Box sx={{ mx: 0 }}>
+                  <Box>
                       {pathname !== '/' && <PageBreadcrumb />}
-                    </Box>
                   </Box>
                 </Box>
 
                 <Box
-                  sx={{ mb: isMobile ? 3 : '175px', px: isMobile ? 0.5 : 2 }}
+                  sx={{ mb: isMobile ? 3 : '175px'}}
                 >
                   <RenderMarkdown>{body}</RenderMarkdown>
-
-                  <Box sx={{ mx: 3 }}>
-                    <ArrowMenu />
-                  </Box>
                   <ThumbMenu />
                 </Box>
               </Grid>
