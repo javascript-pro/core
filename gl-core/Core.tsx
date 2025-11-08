@@ -35,10 +35,11 @@ import {
   toggleLoading,
   useDispatch,
   Siblings,
-  Children,
+  Search,
   useSiblings,
   ArrowMenu,
   SideAds,
+  NavItem,
 } from '../gl-core';
 import { SoundProvider } from './cartridges/Theme';
 
@@ -93,6 +94,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
             py: 0.5,
           }}
         >
+
+          
           <IconButton
             color="primary"
             onClick={() => setMenuOpen(true)}
@@ -101,8 +104,10 @@ export default function Core({ frontmatter, body = null }: TCore) {
             <MenuIcon />
           </IconButton>
 
-
+          <Search />
         </Box>
+
+        
 
         {/* Menu Dialog */}
         <Dialog
@@ -113,28 +118,25 @@ export default function Core({ frontmatter, body = null }: TCore) {
           fullWidth
         >
           <DialogTitle
-              sx={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                pb: 0,
-              }}
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              pb: 0,
+            }}
+          >
+            <Search />
+            <IconButton
+              aria-label="Close menu"
+              onClick={() => setMenuOpen(false)}
+              size="small"
             >
-              <Typography component="span" variant="h6" color="text.primary">
-                Menu
-              </Typography>
-
-              <IconButton
-                aria-label="Close menu"
-                onClick={() => setMenuOpen(false)}
-                size="small"
-              >
-                <CloseIcon />
-              </IconButton>
-            </DialogTitle>
-
+              <CloseIcon />
+            </IconButton>
+          </DialogTitle>
 
           <DialogContent>
+            
             <Box sx={{ mt: 1 }}>
               <Siblings />
             </Box>
@@ -161,11 +163,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                   <Typography variant="h1" color="primary">
                     {frontmatter?.title}
                   </Typography>
-                  <Typography
-                    variant="h2"
-                    color="text.secondary"
-                    gutterBottom
-                  >
+                  <Typography variant="h2" color="text.secondary" gutterBottom>
                     {frontmatter?.description}
                   </Typography>
                 </Box>
@@ -213,8 +211,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
                   sx={{ mb: isMobile ? 3 : '175px', px: isMobile ? 0.5 : 2 }}
                 >
                   <RenderMarkdown>{body}</RenderMarkdown>
-
-
 
                   <Box sx={{ mx: 3 }}>
                     <ArrowMenu />

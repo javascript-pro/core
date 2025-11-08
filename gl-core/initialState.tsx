@@ -13,7 +13,7 @@ export const initialState: any = {
   version: pJSON.version,
   persisted: Date.now(),
   globalNav: null,
-  themeMode: 'light',
+  themeMode: null,
   feedback: null,
   pings: initialStatePings,
   flash: initialStateFlash,

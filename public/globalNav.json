@@ -1266,7 +1266,7 @@
           },
           {
             "title": "Books",
-            "description": "",
+            "description": "What are you reading?",
             "slug": "/balance/books",
             "order": 20,
             "type": "folder",

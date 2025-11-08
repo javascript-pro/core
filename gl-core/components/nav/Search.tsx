@@ -1,36 +1,44 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
-import Link from 'next/link';
+import React, { useState, useMemo, useRef } from 'react';
 import {
   styled,
   alpha,
   InputBase,
   Box,
   List,
-  ListItem,
+  ListItemButton,
   ListItemText,
+  Paper,
+  ClickAwayListener,
 } from '@mui/material';
-import { Icon } from '../../../gl-core';
+import { useDispatch, routeTo, Icon } from '../../../gl-core';
 import globalNav from '../../../public/globalNav.json';
+import { useRouter } from 'next/navigation';
 
 export type TSearch = {
   onTrigger?: (value: any) => void;
 };
 
+const SearchWrapper = styled(Box)(({ theme }) => ({
+  position: 'relative',
+  display: 'inline-block',
+}));
+
 const SearchField = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  backgroundColor:
+    theme.palette.mode === 'dark'
+      ? alpha(theme.palette.common.white, 0.1)
+      : alpha(theme.palette.common.black, 0.05),
   '&:hover': {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
+    backgroundColor:
+      theme.palette.mode === 'dark'
+        ? alpha(theme.palette.common.white, 0.15)
+        : alpha(theme.palette.common.black, 0.08),
   },
-  marginLeft: 0,
   width: '100%',
-  [theme.breakpoints.up('sm')]: {
-    marginLeft: theme.spacing(1),
-    width: 'auto',
-  },
 }));
 
 const SearchIconWrapper = styled('div')(({ theme }) => ({
@@ -50,11 +58,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     padding: theme.spacing(1, 1, 1, 0),
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
-    [theme.breakpoints.up('sm')]: {
-      width: '12ch',
-      '&:focus': {
-        width: '20ch',
-      },
+    width: '16ch',
+    '&:focus': {
+      width: '24ch',
     },
   },
 }));
@@ -79,11 +85,16 @@ function flattenNav(nav: any[], acc: FlatItem[] = []): FlatItem[] {
 
 export default function Search({ onTrigger = () => {} }: TSearch) {
   const [query, setQuery] = useState('');
+  const [open, setOpen] = useState(false);
+  const dispatch = useDispatch();
+  const router = useRouter();
+  const wrapperRef = useRef<HTMLDivElement>(null);
 
   const flatItems = useMemo(() => flattenNav(globalNav), []);
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
-    if (!q) return [];
+    // When query is empty → return all pages
+    if (!q) return flatItems;
     return flatItems.filter(
       ({ title, description }) =>
         title.toLowerCase().includes(q) ||
@@ -91,42 +102,69 @@ export default function Search({ onTrigger = () => {} }: TSearch) {
     );
   }, [query, flatItems]);
 
-  return (
-    <Box>
-      <SearchField>
-        <SearchIconWrapper>
-          <Icon icon="search" />
-        </SearchIconWrapper>
-        <StyledInputBase
-          autoFocus
-          onChange={(e) => {
-            setQuery(e.target.value);
-            onTrigger(e);
-          }}
-          value={query}
-          placeholder="Search for…"
-          inputProps={{ 'aria-label': 'search' }}
-        />
-      </SearchField>
+  const handleFocus = () => setOpen(true);
+  const handleClickAway = (e: MouseEvent | TouchEvent) => {
+    if (
+      wrapperRef.current &&
+      !wrapperRef.current.contains(e.target as Node)
+    ) {
+      setOpen(false);
+    }
+  };
 
-      {results.length > 0 && (
-        <List dense>
-          {results.map((item) => (
-            <ListItem key={item.slug} disablePadding>
-              <Link
-                href={item.slug}
-                style={{ textDecoration: 'none', width: '100%' }}
-              >
-                <ListItemText
-                  primary={item.title}
-                  secondary={item.description}
-                  sx={{ px: 2, py: 1 }}
-                />
-              </Link>
-            </ListItem>
-          ))}
-        </List>
-      )}
-    </Box>
+  return (
+    <ClickAwayListener onClickAway={handleClickAway}>
+      <SearchWrapper ref={wrapperRef}>
+        <SearchField>
+          <SearchIconWrapper>
+            <Icon icon="search" color="primary" />
+          </SearchIconWrapper>
+          <StyledInputBase
+            onFocus={handleFocus}
+            onChange={(e) => {
+              setQuery(e.target.value);
+              onTrigger(e);
+            }}
+            value={query}
+            placeholder="Search for…"
+            inputProps={{ 'aria-label': 'search' }}
+          />
+        </SearchField>
+
+        {open && results.length > 0 && (
+          <Paper
+            elevation={6}
+            sx={{
+              position: 'absolute',
+              top: '100%',
+              left: 0,
+              mt: 0.5,
+              zIndex: 1300,
+              width: '100%',
+              maxHeight: 300,
+              overflowY: 'auto',
+            }}
+          >
+            <List dense disablePadding>
+              {results.map((item, i) => (
+                <ListItemButton
+                  key={`search_result_${i}`}
+                  onClick={() => {
+                    dispatch(routeTo(item.slug, router));
+                    setOpen(false);
+                    setQuery('');
+                  }}
+                >
+                  <ListItemText
+                    primary={item.title}
+                    secondary={item.description}
+                  />
+                </ListItemButton>
+              ))}
+            </List>
+          </Paper>
+        )}
+      </SearchWrapper>
+    </ClickAwayListener>
   );
 }
