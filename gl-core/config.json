@@ -1,13 +1,9 @@
 {
-  "persist": false,
+  "persist": true,
   "app": "Goldlabel",
   "description": "JavaScript whatever the weather",
   "url": "https://goldlabel.pro",
   "repo": "https://github.com/javascript-pro/core",
-  "images": {
-    "favicon": "/png/favicon.png"
-  },
-  "imagesArr": ["/png/favicon.png", "/png/og.png"],
   "themes": {
     "light": {
       "mode": "light",

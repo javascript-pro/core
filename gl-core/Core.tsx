@@ -39,7 +39,6 @@ import {
   SharePopup,
 } from '../gl-core';
 import { SoundProvider } from './cartridges/Theme';
-import { SigninGate } from './cartridges/Paywall';
 
 const config = configRaw as TConfig;
 
@@ -70,7 +69,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const effectiveThemeMode =
     themeMode === null ? (prefersDark ? 'dark' : 'light') : themeMode;
 
-  console.log('paywall', paywall);
+  // console.log('paywall', paywall);
 
   return (
     <SoundProvider>
@@ -187,7 +186,9 @@ export default function Core({ frontmatter, body = null }: TCore) {
                 {/* 🔒 Content area */}
                 <Box sx={{ mt: isMobile ? 2 : 4, mb: isMobile ? 3 : '175px' }}>
                   {paywall === true ? (
-                    <SigninGate />
+                    <>
+                    SigninGate
+                    </>
                   ) : (
                     <>
                       {!noImage && image && (
