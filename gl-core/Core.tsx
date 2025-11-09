@@ -186,9 +186,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                 {/* 🔒 Content area */}
                 <Box sx={{ mt: isMobile ? 2 : 4, mb: isMobile ? 3 : '175px' }}>
                   {paywall === true ? (
-                    <>
-                    SigninGate
-                    </>
+                    <>SigninGate</>
                   ) : (
                     <>
                       {!noImage && image && (
