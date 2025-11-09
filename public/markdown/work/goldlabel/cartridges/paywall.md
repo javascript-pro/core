@@ -4,7 +4,7 @@ title: Paywall
 description: Auth & Payments Cartridge
 slug: /work/goldlabel/cartridges/paywall
 icon: admin
-image: /png/n64/test.png
+image: https://live.staticflickr.com/65535/54725152223_f961935776_b.jpg
 tags: cartridges, cartridge, free, paywall
 ---
 
@@ -16,6 +16,7 @@ tags: cartridges, cartridge, free, paywall
   - Geo
   - Browsing History
 - Payment
+
   - Membership
 
 - 🔒 Each signed-in user can read and write only their own Paywall document.

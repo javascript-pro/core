@@ -3,7 +3,7 @@ order: 20
 title: Books
 description: What are you reading?
 slug: /balance/books
-icon: balance
+icon: books
 image: /png/3rdParty/unicorn.png
 ---
 

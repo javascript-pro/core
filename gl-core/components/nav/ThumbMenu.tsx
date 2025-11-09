@@ -89,7 +89,6 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
         transformOrigin={{ vertical: 'bottom', horizontal: 'right' }}
         sx={{ mt: -1 }}
       >
-
         <MenuItem
           onClick={() => {
             dispatch(routeTo('/bad-panda', router));

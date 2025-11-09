@@ -94,19 +94,19 @@ export default function Core({ frontmatter, body = null }: TCore) {
           }}
         >
           <Box>
-          <IconButton
-            color="primary"
-            onClick={() => setMenuOpen(true)}
-            aria-label="Open menu"
-          >
-            <Icon icon="menu" />
-          </IconButton>
+            <IconButton
+              color="primary"
+              onClick={() => setMenuOpen(true)}
+              aria-label="Open menu"
+            >
+              <Icon icon="menu" />
+            </IconButton>
           </Box>
           <Box sx={{ flexGrow: 1, mx: 1 }}>
             {pathname !== '/' && <PageBreadcrumb />}
           </Box>
           <Box sx={{ mt: 1 }}>
-            <Search defaultValue={frontmatter?.title} />
+            {/* <Search defaultValue={frontmatter?.title} /> */}
             <SharePopup frontmatter={frontmatter} />
           </Box>
         </Box>
@@ -116,7 +116,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
           open={menuOpen}
           onClose={() => setMenuOpen(false)}
           fullScreen={isMobile}
-          maxWidth="sm"
+          maxWidth="xs"
           fullWidth
         >
           <DialogTitle
@@ -127,7 +127,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
               pb: 0,
             }}
           >
-            <Box>
+            <Box sx={{flexGrow: 1}}>
               <Search defaultValue={frontmatter?.title} />
             </Box>
 
@@ -144,9 +144,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
             <Box sx={{ mt: 1 }}>
               {/* <ArrowMenu /> */}
               <Siblings />
-            </Box>
-            <Box sx={{ mt: 1, mx: 1 }}>
-              <SharePopup frontmatter={frontmatter} />
             </Box>
           </DialogContent>
         </Dialog>
@@ -221,8 +218,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
                       )}
                     </Box>
                   )}
-
-                  
                 </Box>
 
                 <Box sx={{ mb: isMobile ? 3 : '175px' }}>

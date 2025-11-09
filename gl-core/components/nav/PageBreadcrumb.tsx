@@ -76,10 +76,7 @@ function Params() {
   if (!searchParams || searchParams.toString().length === 0) return null;
 
   return (
-    <Box
-      component="span"
-      sx={{ px: 1, }}
-    >
+    <Box component="span" sx={{ px: 1 }}>
       ?
       {Array.from(searchParams.entries()).map(([key, value], index) => (
         <React.Fragment key={key}>
@@ -141,10 +138,7 @@ export function PageBreadcrumb({
           <React.Fragment key={href}>
             <Box sx={{ mx: 1 }}>/</Box>
             {isLast ? (
-              <Typography
-                variant="caption"
-                sx={{ml: 0.5}}
-              >
+              <Typography variant="caption" sx={{ ml: 0.5 }}>
                 {displayLabel}
               </Typography>
             ) : (

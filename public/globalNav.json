@@ -34,7 +34,7 @@
                     "icon": "flash",
                     "image": "/png/n64/test.png",
                     "type": "file",
-                    "excerpt": "A Pointless reinvention of MacroMedia Flash?\n\nMaybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You're welcome\n\n SVG Graphics\n Animation usin"
+                    "excerpt": "[Flash movie=\"Logo\" height=\"250\"]\n\n Maybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You're welcome\n\n SVG Graphics\n Animation using Greensoc"
                   },
                   {
                     "title": "Uberedux",
@@ -83,7 +83,7 @@
                       "free",
                       "paywall"
                     ],
-                    "excerpt": "Auth\n\n   User Management\n   Community\n   Passwords\n   Avatars\n   Geo\n   Browsing History\n\n Payment\n   Membership\n\n🔒 Each signedin user can read and write only their own Paywall document.\n\n🔒 Nobody ("
+                    "excerpt": "Authentication (Firebase Auth +  collection)\n   User Management\n   Community\n   Passwords\n   Avatars\n   Geo\n   Browsing History\n Payment\n\n   Membership\n\n 🔒 Each signedin user can read and write only "
                   },
                   {
                     "title": "Pings",
