@@ -19,8 +19,6 @@ import {
   DialogContent,
   DialogTitle,
 } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
 import {
   useGlobalNav,
   fetchGlobalNav,
@@ -37,7 +35,7 @@ import {
   Siblings,
   Search,
   useSiblings,
-  ArrowMenu,
+  Icon,
   SideAds,
   SharePopup,
   // NavItem,
@@ -91,8 +89,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            // px: 1,
-            // py: 0.5,
+            px: 1,
+            py: 0.5,
           }}
         >
           <IconButton
@@ -100,12 +98,12 @@ export default function Core({ frontmatter, body = null }: TCore) {
             onClick={() => setMenuOpen(true)}
             aria-label="Open menu"
           >
-            <MenuIcon />
+            <Icon icon="menu" />
           </IconButton>
-          <Box sx={{mt:1}}>
+          <Box sx={{ mt: 1 }}>
             <Search defaultValue={frontmatter?.title} />
-            <SharePopup frontmatter={frontmatter}/>
-          </Box>  
+            <SharePopup frontmatter={frontmatter} />
+          </Box>
         </Box>
 
         {/* Menu Dialog */}
@@ -124,25 +122,27 @@ export default function Core({ frontmatter, body = null }: TCore) {
               pb: 0,
             }}
           >
-
             <Box>
               <Search defaultValue={frontmatter?.title} />
-              <SharePopup frontmatter={frontmatter}/>
-            </Box> 
+              
+            </Box>
 
             <IconButton
               aria-label="Close menu"
               onClick={() => setMenuOpen(false)}
               size="small"
             >
-              <CloseIcon />
+              <Icon icon="close" />
             </IconButton>
           </DialogTitle>
 
           <DialogContent>
             <Box sx={{ mt: 1 }}>
-              <ArrowMenu />
+              {/* <ArrowMenu /> */}
               <Siblings />
+            </Box>
+            <Box sx={{ mt: 1, mx: 1, }}>
+              <SharePopup frontmatter={frontmatter} />
             </Box>
           </DialogContent>
         </Dialog>
@@ -163,8 +163,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
               )}
 
               <Grid size={{ xs: 12, md: 9 }}>
-
-                <Box sx={{ mt: 2, mb: 2}}>
+                <Box sx={{ mt: 2, mb: 2 }}>
                   <Typography
                     variant="h1"
                     gutterBottom
@@ -186,7 +185,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
                     {frontmatter?.description}
                   </Typography>
                 </Box>
-
 
                 <Box sx={{ mt: isMobile ? 2 : 4 }}>
                   {!noImage && image && (
@@ -220,14 +218,10 @@ export default function Core({ frontmatter, body = null }: TCore) {
                     </Box>
                   )}
 
-                  <Box>
-                      {pathname !== '/' && <PageBreadcrumb />}
-                  </Box>
+                  <Box>{pathname !== '/' && <PageBreadcrumb />}</Box>
                 </Box>
 
-                <Box
-                  sx={{ mb: isMobile ? 3 : '175px'}}
-                >
+                <Box sx={{ mb: isMobile ? 3 : '175px' }}>
                   <RenderMarkdown>{body}</RenderMarkdown>
                   <ThumbMenu />
                 </Box>

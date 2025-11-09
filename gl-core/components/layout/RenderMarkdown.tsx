@@ -2,7 +2,13 @@
 
 import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
-import { Box, Link as MuiLink, Typography, useTheme, alpha } from '@mui/material';
+import {
+  Box,
+  Link as MuiLink,
+  Typography,
+  useTheme,
+  alpha,
+} from '@mui/material';
 import { MightyButton } from '../../../gl-core';
 import {
   GoogleMap,
@@ -197,7 +203,6 @@ export default function RenderMarkdown({
                 {children}
               </Box>
             ),
-
 
             p: ({ children }) => (
               <Typography

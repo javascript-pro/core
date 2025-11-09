@@ -1,6 +1,12 @@
 'use client';
 
-import React, { useState, useMemo, useRef, useCallback, useEffect } from 'react';
+import React, {
+  useState,
+  useMemo,
+  useRef,
+  useCallback,
+  useEffect,
+} from 'react';
 import {
   styled,
   alpha,
@@ -193,8 +199,7 @@ export default function Search({ onTrigger = () => {} }: TSearch) {
                   sx={{
                     bgcolor:
                       i === highlightIndex
-                        ? (theme) =>
-                            alpha(theme.palette.primary.main, 0.15)
+                        ? (theme) => alpha(theme.palette.primary.main, 0.15)
                         : 'transparent',
                     '&:hover': {
                       bgcolor: (theme) =>

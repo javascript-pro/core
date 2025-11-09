@@ -43,7 +43,7 @@
                     "icon": "uberedux",
                     "image": "/png/n64/test.png",
                     "type": "file",
-                    "excerpt": "Because all Apps need State Management\n\nOtherwise you'd be back in jQuery callback hell. Nobody wants that. Uberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app alr"
+                    "excerpt": "Otherwise you'd be back in jQuery callback hell. Nobody wants that.\n\nUberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app already works and gives you the global sta"
                   },
                   {
                     "title": "Flickr",
@@ -367,7 +367,7 @@
                   "Headless CMS",
                   "JSON"
                 ],
-                "excerpt": "JavaScript Whatever the Weather\n\nWe’ve been writing JavaScript since it was still called ECMAScript.\n\nBefore the frameworks, before npm, before it ate the world—we were already deep in the language th"
+                "excerpt": "We’ve been writing JavaScript since it was called ECMAScript.\n\nBefore the frameworks, before npm, before it ate the world—we were already deep in the language that powers the modern web.\n\nWe’ve built "
               },
               {
                 "title": "Fullstack",
@@ -740,7 +740,7 @@
                     "tags": [
                       "ai"
                     ],
-                    "excerpt": "[YouTube src=\"https://www.youtube.com/watch?v=pkLazYu8JMw\"]\n\n AI changes everything in Software Development\n\n It raises the bar. What took 6 months, a team of 10 developers and full time project manag"
+                    "excerpt": "[YouTube src=\"https://www.youtube.com/watch?v=pkLazYu8JMw\"]\n\n It raises the bar. What took 6 months, a team of 10 developers and full time project management can now be done by a single developer in t"
                   },
                   {
                     "title": "Agent User Interfaces",
@@ -888,7 +888,7 @@
               "fields",
               "work"
             ],
-            "excerpt": "We work across the full stack, from interface to infrastructure, with a focus on robust, modern JavaScript tooling and scalable cloudnative delivery. Whether building responsive UIs, designing serverl"
+            "excerpt": "We work across the full stack, from interface to infrastructure, with a focus on robust, modern JavaScript tooling and scalable cloudnative delivery.\n\nWhether building responsive UIs, designing server"
           },
           {
             "title": "Company",
@@ -971,7 +971,7 @@
           "NextJS",
           "Headless CMS"
         ],
-        "excerpt": "The apps we ship are real. They run in production and are developed accessibly. The Core is Open Source and Free forever — giving you statically generated sites with Firestorepowered updates and a rea"
+        "excerpt": "The apps we ship are real. They run in production and are developed accessibly.\n\nThe Core is Open Source and Free forever — giving you statically generated sites with Firestorepowered updates and a re"
       },
       {
         "title": "Life",
@@ -1255,7 +1255,7 @@
           },
           {
             "title": "Video",
-            "description": "It's hard to collate stuff into meaningful writing, but we've doing our best",
+            "description": "Knowing the future is easy",
             "slug": "/balance/video",
             "order": 9,
             "type": "folder",
@@ -1385,7 +1385,7 @@
       }
     ],
     "icon": "goldlabel",
-    "image": "https://live.staticflickr.com/65535/54691336480_36c60e4633_b.jpg",
+    "image": "/png/3rdParty/git_og.png",
     "tags": [
       "JavaScript",
       "Next Gen",

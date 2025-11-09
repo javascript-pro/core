@@ -7,6 +7,7 @@ icon: js
 image: /png/3rdParty/javascript_og.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React, Angular, Vue, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS, JSON
 ---
+
 > We’ve been writing JavaScript since it was called ECMAScript.
 
 Before the frameworks, before npm, before it ate the world—we were already deep in the language that powers the modern web.

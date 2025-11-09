@@ -1,4 +1,3 @@
-// core/gl-core/components/nav/Siblings.tsx
 'use client';
 
 import * as React from 'react';
@@ -22,7 +21,7 @@ type NavItem = {
   children?: NavItem[];
 };
 
-// Find node by slug
+// --- helper functions ---
 function findNode(items: NavItem[], slug: string): NavItem | null {
   for (const item of items) {
     if (item.slug === slug) return item;
@@ -34,12 +33,9 @@ function findNode(items: NavItem[], slug: string): NavItem | null {
   return null;
 }
 
-// Find parent node
 function findParent(items: NavItem[], slug: string): NavItem | null {
   for (const item of items) {
-    if (item.children && item.children.some((c) => c.slug === slug)) {
-      return item;
-    }
+    if (item.children?.some((c) => c.slug === slug)) return item;
     if (item.children) {
       const deeper = findParent(item.children, slug);
       if (deeper) return deeper;
@@ -48,14 +44,11 @@ function findParent(items: NavItem[], slug: string): NavItem | null {
   return null;
 }
 
-// Find parent folder contents (same-level items)
 function findParentContents(items: NavItem[], slug: string): NavItem[] | null {
   for (const item of items) {
-    if (item.children && item.children.length > 0) {
+    if (item.children?.length) {
       const matchIndex = item.children.findIndex((c) => c.slug === slug);
-      if (matchIndex !== -1) {
-        return item.children;
-      }
+      if (matchIndex !== -1) return item.children;
       const deeper = findParentContents(item.children, slug);
       if (deeper) return deeper;
     }
@@ -63,6 +56,7 @@ function findParentContents(items: NavItem[], slug: string): NavItem[] | null {
   return null;
 }
 
+// --- main component ---
 export default function Siblings() {
   const pathname = usePathname();
   const router = useRouter();
@@ -72,9 +66,22 @@ export default function Siblings() {
     [pathname],
   );
 
-  const parentNode = React.useMemo(
-    () => (currentNode ? findParent(globalNav as NavItem[], pathname) : null),
-    [currentNode, pathname],
+  const getAncestors = React.useCallback(
+    (slug: string): NavItem[] => {
+      const chain: NavItem[] = [];
+      let parent = findParent(globalNav as NavItem[], slug);
+      while (parent) {
+        chain.unshift(parent); // insert at start
+        parent = findParent(globalNav as NavItem[], parent.slug);
+      }
+      return chain;
+    },
+    [],
+  );
+
+  const ancestors = React.useMemo(
+    () => (currentNode ? getAncestors(currentNode.slug) : []),
+    [currentNode, getAncestors],
   );
 
   const isIndexPage = React.useMemo(() => {
@@ -91,17 +98,14 @@ export default function Siblings() {
 
     if (isIndexPage) {
       const contents = currentNode.children || [];
-      if (contents.length === 0) return null;
-      return [...contents].sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
+      return contents.length
+        ? [...contents].sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
+        : null;
     } else {
-      const parentContents = findParentContents(
-        globalNav as NavItem[],
-        pathname,
-      );
-      if (!parentContents) return null;
-      return [...parentContents].sort(
-        (a, b) => (a.order ?? 0) - (b.order ?? 0),
-      );
+      const parentContents = findParentContents(globalNav as NavItem[], pathname);
+      return parentContents
+        ? [...parentContents].sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
+        : null;
     }
   }, [currentNode, pathname, isIndexPage]);
 
@@ -109,15 +113,17 @@ export default function Siblings() {
 
   return (
     <Box>
-      {parentNode && (
-        <ListItemButton onClick={() => router.push(parentNode.slug)}>
+      {/* Ancestor chain */}
+      {ancestors.map((node) => (
+        <ListItemButton key={node.slug} onClick={() => router.push(node.slug)}>
           <ListItemIcon>
-            <Icon icon={'up'} color="primary" />
+            <Icon icon="up" color="primary" />
           </ListItemIcon>
-          <ListItemText secondary={parentNode.title} />
+          <ListItemText primary={node.title} />
         </ListItemButton>
-      )}
+      ))}
 
+      {/* Current level siblings */}
       <List dense disablePadding>
         {siblings.map((item) => {
           const isCurrent = item.slug === pathname;
@@ -125,9 +131,7 @@ export default function Siblings() {
             <ListItemButton
               key={item.slug}
               disabled={isCurrent}
-              onClick={() => {
-                if (!isCurrent) router.push(item.slug);
-              }}
+              onClick={() => !isCurrent && router.push(item.slug)}
             >
               <ListItemIcon>
                 <Icon icon={item.icon as any} color="primary" />
