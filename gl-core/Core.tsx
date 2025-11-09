@@ -124,7 +124,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
           >
             <Box>
               <Search defaultValue={frontmatter?.title} />
-              
             </Box>
 
             <IconButton
@@ -141,7 +140,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
               {/* <ArrowMenu /> */}
               <Siblings />
             </Box>
-            <Box sx={{ mt: 1, mx: 1, }}>
+            <Box sx={{ mt: 1, mx: 1 }}>
               <SharePopup frontmatter={frontmatter} />
             </Box>
           </DialogContent>

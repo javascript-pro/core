@@ -66,18 +66,15 @@ export default function Siblings() {
     [pathname],
   );
 
-  const getAncestors = React.useCallback(
-    (slug: string): NavItem[] => {
-      const chain: NavItem[] = [];
-      let parent = findParent(globalNav as NavItem[], slug);
-      while (parent) {
-        chain.unshift(parent); // insert at start
-        parent = findParent(globalNav as NavItem[], parent.slug);
-      }
-      return chain;
-    },
-    [],
-  );
+  const getAncestors = React.useCallback((slug: string): NavItem[] => {
+    const chain: NavItem[] = [];
+    let parent = findParent(globalNav as NavItem[], slug);
+    while (parent) {
+      chain.unshift(parent); // insert at start
+      parent = findParent(globalNav as NavItem[], parent.slug);
+    }
+    return chain;
+  }, []);
 
   const ancestors = React.useMemo(
     () => (currentNode ? getAncestors(currentNode.slug) : []),
@@ -102,7 +99,10 @@ export default function Siblings() {
         ? [...contents].sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
         : null;
     } else {
-      const parentContents = findParentContents(globalNav as NavItem[], pathname);
+      const parentContents = findParentContents(
+        globalNav as NavItem[],
+        pathname,
+      );
       return parentContents
         ? [...parentContents].sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
         : null;
