@@ -86,21 +86,6 @@
                     "excerpt": "Authentication (Firebase Auth +  collection)\n   User Management\n   Community\n   Passwords\n   Avatars\n   Geo\n   Browsing History\n Payment\n\n   Membership\n\n 🔒 Each signedin user can read and write only "
                   },
                   {
-                    "title": "Pings",
-                    "slug": "/work/goldlabel/cartridges/pings",
-                    "order": 130,
-                    "icon": "blokey",
-                    "image": "/png/n64/test.png",
-                    "type": "file",
-                    "tags": [
-                      "cartridges",
-                      "cartridge",
-                      "free",
-                      "bouncer"
-                    ],
-                    "excerpt": "2. Real‑Time Visitor Tracking (Pings)\n\nThe second function is similar to lightweight analytics.  \nEvery visitor (authenticated or not) continuously creates or updates a ping document in Firestore.\n\n P"
-                  },
-                  {
                     "title": "New Cartridge",
                     "slug": "/work/goldlabel/cartridges/new-cartridge",
                     "order": 2200,

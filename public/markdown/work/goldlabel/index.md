@@ -10,7 +10,7 @@ tags: JavaScript, Vanilla JavaScript, TypeScript, React, Material UI, Flash, Ser
 
 > The public repository that powers goldlabel.pro is free for anyone to fork, copy, hack, and reuse.
 
-[GitHub url="https://github.com/javascript-pro/core" label="Open Source on GitHub"]
+[GitHub url="https://github.com/javascript-pro/core" label="Public GitHub"]
 
 #### What is it?
 

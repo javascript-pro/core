@@ -1,6 +1,5 @@
 // core/gl-core/Core.tsx
 'use client';
-
 import configRaw from './config.json';
 import { TCore, TConfig } from './types';
 import * as React from 'react';
@@ -39,6 +38,7 @@ import {
   SharePopup,
 } from '../gl-core';
 import { SoundProvider } from './cartridges/Theme';
+import { Paywall } from './cartridges/Paywall';
 
 const config = configRaw as TConfig;
 
@@ -103,8 +103,13 @@ export default function Core({ frontmatter, body = null }: TCore) {
           <Box sx={{ flexGrow: 1, mx: 1 }}>
             {pathname !== '/' && <PageBreadcrumb />}
           </Box>
-          <Box sx={{ mt: 1 }}>
+          
+          <Box sx={{ mt: 1, display: 'flex' }}>
+            
             <SharePopup frontmatter={frontmatter} />
+            <Box sx={{ml: 1,}}>
+              <Paywall />
+            </Box>
           </Box>
         </Box>
 
@@ -186,7 +191,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                 {/* 🔒 Content area */}
                 <Box sx={{ mt: isMobile ? 2 : 4, mb: isMobile ? 3 : '175px' }}>
                   {paywall === true ? (
-                    <>SigninGate</>
+                    <>Signin Gate</>
                   ) : (
                     <>
                       {!noImage && image && (

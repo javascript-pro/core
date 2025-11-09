@@ -5,6 +5,7 @@ import config from './config.json';
 import { initialStateFlickr } from './cartridges/Flickr';
 import { initialStateLingua } from './cartridges/Lingua';
 import { initialStateFlash } from './cartridges/Flash';
+import { initialStatePaywall } from './cartridges/Paywall';
 
 export const initialState: any = {
   config,
@@ -16,4 +17,5 @@ export const initialState: any = {
   flash: initialStateFlash,
   flickr: initialStateFlickr,
   lingua: initialStateLingua,
+  paywall: initialStatePaywall,
 };
