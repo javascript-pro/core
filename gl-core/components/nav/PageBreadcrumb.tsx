@@ -78,7 +78,7 @@ function Params() {
   return (
     <Box
       component="span"
-      sx={{ px: 1, color: 'text.secondary', fontSize: '0.75rem' }}
+      sx={{ px: 1, }}
     >
       ?
       {Array.from(searchParams.entries()).map(([key, value], index) => (
@@ -116,7 +116,7 @@ export function PageBreadcrumb({
     >
       {/* Home link */}
       <NextLink href="/" passHref legacyBehavior>
-        <MUILink underline="hover" color="inherit" variant="body2">
+        <MUILink underline="hover" color="primary" variant="caption">
           {smartCapitalize(titleMap['/'] || 'Home')}
         </MUILink>
       </NextLink>
@@ -139,17 +139,17 @@ export function PageBreadcrumb({
 
         return (
           <React.Fragment key={href}>
-            <span style={{ margin: '0 4px' }}>/</span>
+            <Box sx={{ mx: 1 }}>/</Box>
             {isLast ? (
               <Typography
-                variant="body2"
-                sx={{ fontWeight: 500, color: 'text.secondary' }}
+                variant="caption"
+                sx={{ml: 0.5}}
               >
                 {displayLabel}
               </Typography>
             ) : (
               <NextLink href={href} passHref legacyBehavior>
-                <MUILink underline="hover" color="inherit" variant="body2">
+                <MUILink underline="hover" color="primary" variant="caption">
                   {displayLabel}
                 </MUILink>
               </NextLink>

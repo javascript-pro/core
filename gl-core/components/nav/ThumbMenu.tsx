@@ -89,17 +89,6 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
         transformOrigin={{ vertical: 'bottom', horizontal: 'right' }}
         sx={{ mt: -1 }}
       >
-        <MenuItem
-          sx={{ mt: 2, minWidth: 200 }}
-          onClick={() => {
-            dispatch(routeTo('/', router));
-          }}
-        >
-          <ListItemIcon>
-            <Icon icon="home" color="primary" />
-          </ListItemIcon>
-          <ListItemText primary="Home" />
-        </MenuItem>
 
         <MenuItem
           onClick={() => {

@@ -5,12 +5,13 @@ title: Flash
 description: 'A Pointless reinvention of MacroMedia Flash?'
 icon: flash
 image: /png/n64/test.png
+noImage: true
 keywords: 'Catridges, Flash, SVG, Macromedia'
 ---
 
-## A Pointless reinvention of MacroMedia Flash?
+[Flash movie="Logo" height="250"]
 
-Maybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You're welcome
+> Maybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You're welcome
 
 - SVG Graphics
 - Animation using Greensock

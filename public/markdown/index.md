@@ -12,6 +12,6 @@ noImage: true
 
 [Flash movie="Logo" height="250"]
 
-[PageAd slug="/work/goldlabel/cartridges"]
+[PageAd slug="/work/goldlabel/cartridges/paywall"]
 
 [PrevNext prev="/work/expertise/javascript" next="/work/expertise/javascript/typescript"]

@@ -93,6 +93,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
             py: 0.5,
           }}
         >
+          <Box>
           <IconButton
             color="primary"
             onClick={() => setMenuOpen(true)}
@@ -100,6 +101,10 @@ export default function Core({ frontmatter, body = null }: TCore) {
           >
             <Icon icon="menu" />
           </IconButton>
+          </Box>
+          <Box sx={{ flexGrow: 1, mx: 1 }}>
+            {pathname !== '/' && <PageBreadcrumb />}
+          </Box>
           <Box sx={{ mt: 1 }}>
             <Search defaultValue={frontmatter?.title} />
             <SharePopup frontmatter={frontmatter} />
@@ -217,7 +222,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                     </Box>
                   )}
 
-                  <Box>{pathname !== '/' && <PageBreadcrumb />}</Box>
+                  
                 </Box>
 
                 <Box sx={{ mb: isMobile ? 3 : '175px' }}>

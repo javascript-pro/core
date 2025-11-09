@@ -75,7 +75,7 @@
                     "slug": "/work/goldlabel/cartridges/paywall",
                     "order": 130,
                     "icon": "admin",
-                    "image": "https://live.staticflickr.com/65535/53670802348_9bb887b680_b.jpg",
+                    "image": "/png/n64/test.png",
                     "type": "file",
                     "tags": [
                       "cartridges",
@@ -83,7 +83,7 @@
                       "free",
                       "paywall"
                     ],
-                    "excerpt": "🚀 Paywall Cartridge\n\n Auth\n\n   User Management\n   Community\n   Passwords\n   Avatars\n   Geo\n   Browsing History\n\n Payment\n   Membership\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/staging"
+                    "excerpt": "Auth\n\n   User Management\n   Community\n   Passwords\n   Avatars\n   Geo\n   Browsing History\n\n Payment\n   Membership\n\n🔒 Each signedin user can read and write only their own Paywall document.\n\n🔒 Nobody ("
                   },
                   {
                     "title": "Pings",
@@ -1406,6 +1406,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[Flash movie=\"Logo\" height=\"250\"]\n\n[PageAd slug=\"/work/goldlabel/cartridges\"]\n\n[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescript\"]"
+    "excerpt": "[Flash movie=\"Logo\" height=\"250\"]\n\n[PageAd slug=\"/work/goldlabel/cartridges/paywall\"]\n\n[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescript\"]"
   }
 ]

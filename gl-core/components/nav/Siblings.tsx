@@ -117,7 +117,7 @@ export default function Siblings() {
       {ancestors.map((node) => (
         <ListItemButton key={node.slug} onClick={() => router.push(node.slug)}>
           <ListItemIcon>
-            <Icon icon={node.icon as any || 'up'} color="primary" />
+            <Icon icon={(node.icon as any) || 'up'} color="primary" />
           </ListItemIcon>
           <ListItemText primary={node.title} />
         </ListItemButton>
