@@ -6,6 +6,7 @@ slug: /work/goldlabel/cartridges/paywall
 icon: admin
 image: https://live.staticflickr.com/65535/54725152223_f961935776_b.jpg
 tags: cartridges, cartridge, free, paywall
+paywall: true
 ---
 
 - Authentication (Firebase Auth + `paywall` collection)

@@ -1,11 +1,11 @@
-// core/gl-core/cartridges/Lingua/initialState.tsx
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Paywall/initialState.tsx
 
-export type TPaywall = {
+export type TPaywallState = {
   cartridge: string;
-  authed: boolean;
+  authed?: boolean;
 };
 
-export const initialState: TPaywall = {
+export const initialState: TPaywallState = {
   cartridge: 'paywall',
   authed: false,
 };

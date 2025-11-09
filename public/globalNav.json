@@ -1066,7 +1066,7 @@
       },
       {
         "title": "Balance",
-        "description": "A collection of Writing",
+        "description": "A collection of writing",
         "slug": "/balance",
         "order": 100,
         "type": "folder",
@@ -1406,6 +1406,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[Flash movie=\"Logo\" height=\"250\"]\n\n[PageAd slug=\"/work/goldlabel/cartridges/paywall\"]\n\n[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescript\"]"
+    "excerpt": "[PrevNext next=\"/work/goldlabel/cartridges/paywall\"]"
   }
 ]

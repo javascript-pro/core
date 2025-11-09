@@ -20,7 +20,6 @@ import {
   DialogTitle,
 } from '@mui/material';
 import {
-  useGlobalNav,
   fetchGlobalNav,
   Theme,
   RenderMarkdown,
@@ -38,26 +37,24 @@ import {
   Icon,
   SideAds,
   SharePopup,
-  // NavItem,
 } from '../gl-core';
 import { SoundProvider } from './cartridges/Theme';
+import { SigninGate } from './cartridges/Paywall';
 
 const config = configRaw as TConfig;
 
 export default function Core({ frontmatter, body = null }: TCore) {
   const dispatch = useDispatch();
-  const { noImage, image, title } = frontmatter ?? {};
+  const { noImage, image, title, description, paywall } = frontmatter ?? {};
   const [imageError, setImageError] = React.useState(false);
   const [menuOpen, setMenuOpen] = React.useState(false);
-
   const prefersDark = useMediaQuery('(prefers-color-scheme: dark)');
   const siblings = useSiblings();
   const pathname = usePathname();
   const themeMode = useThemeMode();
   const isMobile = useIsMobile();
-  const globalNav = useGlobalNav();
-
   const fetchedNavRef = React.useRef(false);
+
   React.useEffect(() => {
     if (fetchedNavRef.current) return;
     fetchedNavRef.current = true;
@@ -72,6 +69,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
   const effectiveThemeMode =
     themeMode === null ? (prefersDark ? 'dark' : 'light') : themeMode;
+
+  console.log('paywall', paywall);
 
   return (
     <SoundProvider>
@@ -106,7 +105,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
             {pathname !== '/' && <PageBreadcrumb />}
           </Box>
           <Box sx={{ mt: 1 }}>
-            {/* <Search defaultValue={frontmatter?.title} /> */}
             <SharePopup frontmatter={frontmatter} />
           </Box>
         </Box>
@@ -142,7 +140,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
           <DialogContent>
             <Box sx={{ mt: 1 }}>
-              {/* <ArrowMenu /> */}
               <Siblings />
             </Box>
           </DialogContent>
@@ -173,7 +170,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                       fontSize: { xs: '1.75rem', md: '2.25rem' },
                     }}
                   >
-                    {frontmatter?.title}
+                    {title}
                   </Typography>
 
                   <Typography
@@ -183,47 +180,51 @@ export default function Core({ frontmatter, body = null }: TCore) {
                       fontSize: { xs: '1.2rem', md: '1.25rem' },
                     }}
                   >
-                    {frontmatter?.description}
+                    {description}
                   </Typography>
                 </Box>
 
-                <Box sx={{ mt: isMobile ? 2 : 4 }}>
-                  {!noImage && image && (
-                    <Box>
-                      {!imageError ? (
-                        <Image
-                          priority
-                          src={image}
-                          alt={title || 'Featured image'}
-                          width={1200}
-                          height={630}
-                          style={{ width: '100%', height: 'auto' }}
-                          onError={() => setImageError(true)}
-                        />
-                      ) : (
+                {/* 🔒 Content area */}
+                <Box sx={{ mt: isMobile ? 2 : 4, mb: isMobile ? 3 : '175px' }}>
+                  {paywall === true ? (
+                    <SigninGate />
+                  ) : (
+                    <>
+                      {!noImage && image && (
                         <Box>
-                          <Skeleton
-                            variant="rectangular"
-                            width="100%"
-                            height={315}
-                          />
-                          <Typography
-                            variant="body2"
-                            color="text.secondary"
-                            mt={1}
-                          >
-                            "{image}" not found.
-                          </Typography>
+                          {!imageError ? (
+                            <Image
+                              priority
+                              src={image}
+                              alt={title || 'Featured image'}
+                              width={1200}
+                              height={630}
+                              style={{ width: '100%', height: 'auto' }}
+                              onError={() => setImageError(true)}
+                            />
+                          ) : (
+                            <Box>
+                              <Skeleton
+                                variant="rectangular"
+                                width="100%"
+                                height={315}
+                              />
+                              <Typography
+                                variant="body2"
+                                color="text.secondary"
+                                mt={1}
+                              >
+                                "{image}" not found.
+                              </Typography>
+                            </Box>
+                          )}
                         </Box>
                       )}
-                    </Box>
+                      <RenderMarkdown>{body}</RenderMarkdown>
+                    </>
                   )}
                 </Box>
-
-                <Box sx={{ mb: isMobile ? 3 : '175px' }}>
-                  <RenderMarkdown>{body}</RenderMarkdown>
-                  <ThumbMenu />
-                </Box>
+                <ThumbMenu />
               </Grid>
             </Grid>
           </Box>

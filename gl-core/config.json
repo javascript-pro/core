@@ -1,5 +1,5 @@
 {
-  "persist": true,
+  "persist": false,
   "app": "Goldlabel",
   "description": "JavaScript whatever the weather",
   "url": "https://goldlabel.pro",
