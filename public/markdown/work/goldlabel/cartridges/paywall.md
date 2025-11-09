@@ -9,9 +9,23 @@ tags: cartridges, cartridge, free, paywall
 featured: true
 ---
 
+## 🚀 Paywall Cartridge
+
+- Auth
+
+  - User Management
+  - Community
+  - Passwords
+  - Avatars
+  - Geo
+  - Browsing History
+
+- Payment
+  - Membership
+
 [GitHub url="https://github.com/javascript-pro/core/tree/staging/gl-core/cartridges/Paywall" label="/gl-core/cartridges/Paywall"]
 
-✅ Each signed-in user can read and write only their own paywall document.
+🔒 Each signed-in user can read and write only their own Paywall document.
 
 🔒 Nobody (not even other authenticated users) can read or modify anyone else’s paywall data.
 

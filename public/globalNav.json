@@ -14,7 +14,7 @@
         "type": "folder",
         "children": [
           {
-            "title": "Free Software",
+            "title": "Goldlabel Core",
             "description": "Open Source Fullstack JavaScript Platform",
             "slug": "/work/goldlabel",
             "order": 1,
@@ -83,7 +83,7 @@
                       "free",
                       "paywall"
                     ],
-                    "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core/tree/staging/glcore/cartridges/Paywall\" label=\"/glcore/cartridges/Paywall\"]\n\n✅ Each signedin user can read and write only their own paywall document."
+                    "excerpt": "🚀 Paywall Cartridge\n\n Auth\n\n   User Management\n   Community\n   Passwords\n   Avatars\n   Geo\n   Browsing History\n\n Payment\n   Membership\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/staging"
                   },
                   {
                     "title": "Pings",
@@ -115,15 +115,6 @@
                 "excerpt": "Goldlabel is built on cartridges.\n\nA cartridge is a selfcontained piece of application logic: React components, state, styles, and utilities bundled together in a portable unit.\n\nBecause each cartridg"
               },
               {
-                "title": "Free",
-                "slug": "/work/goldlabel/free",
-                "order": 1,
-                "icon": "free",
-                "image": "/png/3rdParty/github_og.png",
-                "type": "file",
-                "excerpt": "Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or b"
-              },
-              {
                 "title": "Open Source",
                 "slug": "/work/goldlabel/core",
                 "order": 10,
@@ -138,7 +129,7 @@
               }
             ],
             "icon": "goldlabel",
-            "image": "https://live.staticflickr.com/65535/53670802348_9bb887b680_b.jpg",
+            "image": "/png/3rdParty/github_og.png",
             "tags": [
               "JavaScript",
               "Vanilla JavaScript",
@@ -1415,6 +1406,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[PageAd slug=\"/work/expertise\"]\n\n[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescript\"]\n\n[PageAd slug=\"/work/expertise/javascript/vanillajs\"]\n\n[PageAd slug=\"/work/ex"
+    "excerpt": "[Flash movie=\"Logo\" height=\"250\"]\n\n[PageAd slug=\"/work/goldlabel/cartridges\"]\n\n[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescript\"]"
   }
 ]

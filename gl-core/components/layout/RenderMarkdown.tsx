@@ -183,12 +183,11 @@ export default function RenderMarkdown({
               </Typography>
             ),
 
-            // ✅ New blockquote style
             blockquote: ({ children }) => (
               <Box
                 component="blockquote"
                 sx={{
-                  borderLeft: `4px solid ${theme.palette.primary.main}`,
+                  borderLeft: `2px solid ${theme.palette.primary.main}`,
                   pl: 2,
                   ml: 0,
                   my: 2,
