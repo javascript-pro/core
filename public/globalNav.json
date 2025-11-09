@@ -75,7 +75,7 @@
                     "slug": "/work/goldlabel/cartridges/paywall",
                     "order": 130,
                     "icon": "admin",
-                    "image": "/png/n64/test.png",
+                    "image": "https://live.staticflickr.com/65535/54725152223_f961935776_b.jpg",
                     "type": "file",
                     "tags": [
                       "cartridges",
@@ -1365,7 +1365,7 @@
                 "excerpt": "Judging from the past, we may safely infer that no one living species will transmit its unaltered likeness to a distant futurity. And of the species now living very few will transmit progeny of any ki"
               }
             ],
-            "icon": "balance",
+            "icon": "books",
             "image": "/png/3rdParty/unicorn.png",
             "excerpt": "Curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction. From visionary science fiction to satirical explorations of culture and the human exper"
           }

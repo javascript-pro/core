@@ -68,8 +68,6 @@ export default function PrevNext({
         disablePadding
         sx={{
           display: 'flex',
-          flexDirection: { xs: 'column', sm: 'row' },
-          gap: 1,
         }}
       >
         {prev && (

@@ -127,7 +127,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
               pb: 0,
             }}
           >
-            <Box sx={{flexGrow: 1}}>
+            <Box sx={{ flexGrow: 1 }}>
               <Search defaultValue={frontmatter?.title} />
             </Box>
 
