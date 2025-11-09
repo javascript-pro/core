@@ -328,7 +328,7 @@ export type TIcon = {
     | 'mac'
     | 'why'
     | 'iphone'
-        | 'paywall'
+    | 'paywall'
     | 'safari'
     | 'firefox'
     | 'plugins'
@@ -847,7 +847,7 @@ export default function Icon({ icon, color }: TIcon) {
       iconFragment = <AdminIcon color={color} />;
       break;
 
-          case 'paywall':
+    case 'paywall':
       iconFragment = <AdminIcon color={color} />;
       break;
 

@@ -75,7 +75,7 @@
                     "slug": "/work/goldlabel/cartridges/paywall",
                     "order": 130,
                     "icon": "admin",
-                    "image": "https://live.staticflickr.com/65535/54725152223_f961935776_b.jpg",
+                    "image": "/jpg/SWAT-Baby.jpg",
                     "type": "file",
                     "tags": [
                       "cartridges",
@@ -83,7 +83,7 @@
                       "free",
                       "paywall"
                     ],
-                    "excerpt": "Authentication (Firebase Auth +  collection)\n   User Management\n   Community\n   Passwords\n   Avatars\n   Geo\n   Browsing History\n Payment\n\n   Membership\n\n 🔒 Each signedin user can read and write only "
+                    "excerpt": "The Paywall cartridge is responsible for two key features: Authentication/Access Control and Pings\n\n Authentication (Firebase Auth +  collection)\n   User Management\n   Community\n   Passwords\n   Avatar"
                   },
                   {
                     "title": "New Cartridge",
@@ -128,7 +128,7 @@
               "NextJS",
               "Headless CMS"
             ],
-            "excerpt": "The public repository that powers goldlabel.pro is free for anyone to fork, copy, hack, and reuse.\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Open Source on GitHub\"]\n\n What is it?\n\nGo"
+            "excerpt": "The public repository that powers goldlabel.pro is free for anyone to fork, copy, hack, and reuse.\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Public GitHub\"]\n\n What is it?\n\nGoldlabel "
           },
           {
             "title": "Expertise",

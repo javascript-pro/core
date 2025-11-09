@@ -10,17 +10,16 @@ import {
   Typography,
 } from '@mui/material';
 import { useDispatch, Icon, useIsMobile } from '../../../../gl-core';
-import { usePaywall, setPaywallKey } from '../../Paywall';
+import { usePaywall, setPaywallKey, Signin } from '../../Paywall';
 
 export default function DialogPaywall() {
-  
   const dispatch = useDispatch();
   const isMobile = useIsMobile();
   const pw = usePaywall();
   const { dialogOpen, user } = pw ?? {};
 
   const handleClose = () => {
-    dispatch(setPaywallKey('dialogOpen', false ));
+    dispatch(setPaywallKey('dialogOpen', false));
   };
 
   return (
@@ -39,27 +38,41 @@ export default function DialogPaywall() {
           pb: 0,
         }}
       >
-        <Typography>Paywall</Typography>
-
-        <IconButton
-          aria-label="Close paywall"
-          onClick={handleClose}
-          color="primary"
-        >
-          <Icon icon="close" />
-        </IconButton>
+        <Box sx={{flexGrow:1}}>
+          <Icon icon="paywall" />
+        </Box>
+        
+        <Box>
+          <IconButton
+            aria-label="Close paywall"
+            onClick={handleClose}
+            color="primary"
+          >
+            <Icon icon="close" />
+          </IconButton>
+        </Box>
       </DialogTitle>
 
       <DialogContent>
         <Box sx={{ mt: 1 }}>
+
+          <pre>user: {JSON.stringify(user, null, 2)}</pre>
+
+          
           {!user ? (
-            <Typography variant="body2" color="text.secondary">
-              Please sign in to continue.
+            <>
+            <Typography variant="body1" color="text.secondary">
+              Please sign in to access.
             </Typography>
+            <Signin />
+            </>
           ) : (
-            <Typography variant="body2">
-              Welcome back, {user.displayName || 'user'}.
-            </Typography>
+            <>
+              <Typography variant="body1">
+                Welcome back, {user.displayName || 'user'}.
+              </Typography>
+              
+            </>
           )}
         </Box>
       </DialogContent>

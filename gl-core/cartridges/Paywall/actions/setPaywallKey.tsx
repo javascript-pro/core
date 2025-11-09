@@ -7,7 +7,7 @@ export const setPaywallKey =
   (key: string, value: any): any =>
   async (dispatch: TUbereduxDispatch, getState: () => any) => {
     try {
-      console.log('setPaywallKey', key, value);
+      // console.log('setPaywallKey', key, value);
       const current = getState().redux.paywall;
       const updated = {
         ...current,

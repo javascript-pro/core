@@ -8,7 +8,6 @@ export type TPaywallState = {
   // [key: string]: any;
 };
 
-export type TExample= {
+export type TExample = {
   [key: string]: any;
 };
-

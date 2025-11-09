@@ -103,11 +103,10 @@ export default function Core({ frontmatter, body = null }: TCore) {
           <Box sx={{ flexGrow: 1, mx: 1 }}>
             {pathname !== '/' && <PageBreadcrumb />}
           </Box>
-          
+
           <Box sx={{ mt: 1, display: 'flex' }}>
-            
             <SharePopup frontmatter={frontmatter} />
-            <Box sx={{ml: 1,}}>
+            <Box sx={{ ml: 1 }}>
               <Paywall />
             </Box>
           </Box>

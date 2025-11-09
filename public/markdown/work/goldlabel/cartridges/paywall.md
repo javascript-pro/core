@@ -8,6 +8,7 @@ image: /jpg/SWAT-Baby.jpg
 tags: cartridges, cartridge, free, paywall
 paywall: false
 ---
+
 > The Paywall cartridge is responsible for two key features: Authentication/Access Control and Pings
 
 - Authentication (Firebase Auth + `paywall` collection)
@@ -18,8 +19,8 @@ paywall: false
   - Geo
   - Browsing History
 - Payment
-  - Membership
 
+  - Membership
 
 - 🔒 Each signed-in user can read and write only their own Paywall document.
 - 🔒 Nobody (not even other authenticated users) can read or modify anyone else’s paywall data.

@@ -2,30 +2,35 @@
 'use client';
 
 import * as React from 'react';
-import { Box, IconButton } from '@mui/material';
+import { IconButton } from '@mui/material';
 import { Icon, useDispatch } from '../../../gl-core';
-import {
-  usePaywall,
-  DialogPaywall,
-  setPaywallKey,
-} from '../Paywall';
+import { auth } from '../../lib/firebase';
+import { onAuthStateChanged, User } from 'firebase/auth';
+import { usePaywall, DialogPaywall, setPaywallKey } from '../Paywall';
 
 export default function Paywall() {
-
-  const pw = usePaywall();
   const dispatch = useDispatch();
+  const pw = usePaywall();
+
+  // Subscribe to Firebase auth state changes
+  React.useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user: User | null) => {
+      dispatch(setPaywallKey('user', user));
+      dispatch(setPaywallKey('authed', !!user));
+    });
+    return () => unsubscribe();
+  }, [dispatch]);
 
   const handleClick = () => {
-    // console.log("pw", pw);
-    dispatch(setPaywallKey('dialogOpen', true ));
-  }
+    dispatch(setPaywallKey('dialogOpen', true));
+  };
 
   return (
-    <Box>
+    <>
       <DialogPaywall />
       <IconButton onClick={handleClick} color="primary">
-        <Icon icon="paywall"/>
+        <Icon icon="paywall" />
       </IconButton>
-    </Box>
+    </>
   );
 }
