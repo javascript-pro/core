@@ -9,7 +9,7 @@ import {
   SharePopup,
   OpenSource,
 } from '../../../gl-core';
-// import { Paywall } from '../../cartridges/Paywall';
+import { Paywall } from '../../cartridges/Paywall';
 // import { Pings, usePings } from '../../cartridges/Pings';
 
 export type THeader = {
@@ -46,7 +46,7 @@ export default function Header({ frontmatter = null }: THeader) {
         }
         action={
           <Box sx={{ display: 'flex', mt: 1, mr: isMobile ? 0 : 2 }}>
-            {/* <Paywall /> */}
+            <Paywall />
             {/* <Pings /> */}
             <OpenSource />
             <SharePopup frontmatter={frontmatter} />

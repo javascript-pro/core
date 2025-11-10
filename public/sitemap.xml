@@ -101,6 +101,9 @@
     <loc>https://goldlabel.pro/life/diving/why-dive</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/life/diving/why-not-dive</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/life</loc>
   </url>
   <url>
@@ -114,9 +117,6 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/life/vanlife/map</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/life/vanlife/newpage</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/company</loc>
@@ -233,6 +233,15 @@
     <loc>https://goldlabel.pro/work/expertise/javascript/node</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/work/expertise/javascript/react/experience</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/javascript/react/history</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/javascript/react</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/work/expertise/javascript/typescript/advanced</loc>
   </url>
   <url>
@@ -299,16 +308,10 @@
     <loc>https://goldlabel.pro/work/goldlabel/cartridges/paywall</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/goldlabel/cartridges/pings</loc>
-  </url>
-  <url>
     <loc>https://goldlabel.pro/work/goldlabel/cartridges/uberedux</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/goldlabel/core</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/goldlabel/free</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/goldlabel</loc>

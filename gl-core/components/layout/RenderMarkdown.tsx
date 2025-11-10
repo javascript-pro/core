@@ -2,7 +2,13 @@
 
 import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
-import { Box, Link as MuiLink, Typography, useTheme } from '@mui/material';
+import {
+  Box,
+  Link as MuiLink,
+  Typography,
+  useTheme,
+  alpha,
+} from '@mui/material';
 import { MightyButton } from '../../../gl-core';
 import {
   GoogleMap,
@@ -143,7 +149,6 @@ export default function RenderMarkdown({
       <Box
         ref={scrollRef}
         sx={{
-          px: 4,
           flexGrow: 1,
           overflowY: 'auto',
           minHeight: 0,
@@ -177,6 +182,27 @@ export default function RenderMarkdown({
                 {children}
               </Typography>
             ),
+
+            blockquote: ({ children }) => (
+              <Box
+                component="blockquote"
+                sx={{
+                  borderLeft: `2px solid ${theme.palette.primary.main}`,
+                  pl: 2,
+                  ml: 0,
+                  my: 2,
+                  color: theme.palette.text.secondary,
+                  fontStyle: 'italic',
+                  backgroundColor:
+                    theme.palette.mode === 'dark'
+                      ? alpha(theme.palette.primary.main, 0.05)
+                      : alpha(theme.palette.primary.main, 0.08),
+                }}
+              >
+                {children}
+              </Box>
+            ),
+
             p: ({ children }) => (
               <Typography
                 variant="body1"

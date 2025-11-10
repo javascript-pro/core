@@ -14,7 +14,7 @@
         "type": "folder",
         "children": [
           {
-            "title": "Free Software",
+            "title": "Goldlabel Core",
             "description": "Open Source Fullstack JavaScript Platform",
             "slug": "/work/goldlabel",
             "order": 1,
@@ -34,7 +34,7 @@
                     "icon": "flash",
                     "image": "/png/n64/test.png",
                     "type": "file",
-                    "excerpt": "A Pointless reinvention of MacroMedia Flash?\n\nMaybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You're welcome\n\n SVG Graphics\n Animation usin"
+                    "excerpt": "[Flash movie=\"Logo\" height=\"250\"]\n\n Maybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You're welcome\n\n SVG Graphics\n Animation using Greensoc"
                   },
                   {
                     "title": "Uberedux",
@@ -43,7 +43,7 @@
                     "icon": "uberedux",
                     "image": "/png/n64/test.png",
                     "type": "file",
-                    "excerpt": "Because all Apps need State Management\n\nOtherwise you'd be back in jQuery callback hell. Nobody wants that. Uberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app alr"
+                    "excerpt": "Otherwise you'd be back in jQuery callback hell. Nobody wants that.\n\nUberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app already works and gives you the global sta"
                   },
                   {
                     "title": "Flickr",
@@ -75,7 +75,7 @@
                     "slug": "/work/goldlabel/cartridges/paywall",
                     "order": 130,
                     "icon": "admin",
-                    "image": "https://live.staticflickr.com/65535/53670802348_9bb887b680_b.jpg",
+                    "image": "/jpg/SWAT-Baby.jpg",
                     "type": "file",
                     "tags": [
                       "cartridges",
@@ -83,22 +83,7 @@
                       "free",
                       "paywall"
                     ],
-                    "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core/tree/staging/glcore/cartridges/Paywall\" label=\"/glcore/cartridges/Paywall\"]\n\n✅ Each signedin user can read and write only their own paywall document."
-                  },
-                  {
-                    "title": "Pings",
-                    "slug": "/work/goldlabel/cartridges/pings",
-                    "order": 130,
-                    "icon": "blokey",
-                    "image": "/png/n64/test.png",
-                    "type": "file",
-                    "tags": [
-                      "cartridges",
-                      "cartridge",
-                      "free",
-                      "bouncer"
-                    ],
-                    "excerpt": "2. Real‑Time Visitor Tracking (Pings)\n\nThe second function is similar to lightweight analytics.  \nEvery visitor (authenticated or not) continuously creates or updates a ping document in Firestore.\n\n P"
+                    "excerpt": "The Paywall cartridge is responsible for two key features: Authentication/Access Control and Pings\n\n Authentication (Firebase Auth +  collection)\n   User Management\n   Community\n   Passwords\n   Avatar"
                   },
                   {
                     "title": "New Cartridge",
@@ -115,15 +100,6 @@
                 "excerpt": "Goldlabel is built on cartridges.\n\nA cartridge is a selfcontained piece of application logic: React components, state, styles, and utilities bundled together in a portable unit.\n\nBecause each cartridg"
               },
               {
-                "title": "Free",
-                "slug": "/work/goldlabel/free",
-                "order": 1,
-                "icon": "free",
-                "image": "/png/3rdParty/github_og.png",
-                "type": "file",
-                "excerpt": "Some things in life are free — Goldlabel  is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or b"
-              },
-              {
                 "title": "Open Source",
                 "slug": "/work/goldlabel/core",
                 "order": 10,
@@ -138,7 +114,7 @@
               }
             ],
             "icon": "goldlabel",
-            "image": "https://live.staticflickr.com/65535/53670802348_9bb887b680_b.jpg",
+            "image": "/png/3rdParty/github_og.png",
             "tags": [
               "JavaScript",
               "Vanilla JavaScript",
@@ -152,7 +128,7 @@
               "NextJS",
               "Headless CMS"
             ],
-            "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Open Source on GitHub\"]\n\nThe public repository that powers goldlabel.pro is free for anyone to fork, copy, hack, and reuse.\n\n What is it?\n\nGo"
+            "excerpt": "The public repository that powers goldlabel.pro is free for anyone to fork, copy, hack, and reuse.\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Public GitHub\"]\n\n What is it?\n\nGoldlabel "
           },
           {
             "title": "Expertise",
@@ -169,24 +145,78 @@
                 "type": "folder",
                 "children": [
                   {
-                    "title": "Vanilla JS",
-                    "slug": "/work/expertise/javascript/vanilla-js",
-                    "order": 14,
+                    "title": "React",
+                    "description": "Frontend JavaScript",
+                    "slug": "/work/expertise/javascript/react",
+                    "order": 1,
+                    "type": "folder",
+                    "children": [
+                      {
+                        "title": "History",
+                        "slug": "/work/expertise/javascript/react/history",
+                        "order": 10,
+                        "icon": "js",
+                        "image": "/png/3rdParty/wikipedia.png",
+                        "type": "file",
+                        "tags": [
+                          "JavaScript",
+                          "TypeScript",
+                          "React",
+                          "frameworks"
+                        ],
+                        "excerpt": "When React appeared, the landscape was dominated by AngularJS, Backbone, and Knockout, all of which relied on twoway data binding and manual DOM updates.\n\nReact’s performance and simplicity stood out "
+                      },
+                      {
+                        "title": "Our Experience",
+                        "slug": "/work/expertise/javascript/react/experience",
+                        "order": 20,
+                        "icon": "js",
+                        "image": "/png/3rdParty/wikipedia.png",
+                        "type": "file",
+                        "tags": [
+                          "JavaScript",
+                          "TypeScript",
+                          "React",
+                          "frameworks",
+                          "china"
+                        ],
+                        "excerpt": "Contract JavaScript Developer — Huawei Shenzhen, China — Feb 2016 to May 2016\n\nBy 2015–2016, React had evolved beyond an experiment — Facebook, Instagram, and Airbnb were using it at scale, and the op"
+                      }
+                    ],
                     "icon": "js",
-                    "image": "/png/3rdParty/javascript_og.png",
-                    "type": "file",
+                    "image": "/png/3rdParty/wikipedia.png",
                     "tags": [
                       "JavaScript",
-                      "Vanilla JavaScript",
-                      "TypeScript"
+                      "TypeScript",
+                      "React",
+                      "frameworks"
                     ],
-                    "excerpt": "When JavaScript needs to be everywhere instantly\n\nIn modern web engineering, Vanilla JavaScript is often dismissed as oldschool or underpowered. But at scale, especially across multiple domains or bra"
+                    "excerpt": "React is a JavaScript library for building user interfaces, originally developed by Jordan Walke at Facebook and opensourced in 2013. It introduced a fundamentally new way of thinking about frontend d"
+                  },
+                  {
+                    "title": "Next.js",
+                    "description": "React with seamless backend capabilities",
+                    "slug": "/work/expertise/javascript/nextjs",
+                    "order": 2,
+                    "type": "folder",
+                    "children": [],
+                    "icon": "js",
+                    "image": "/png/3rdParty/next_og.png",
+                    "tags": [
+                      "JavaScript",
+                      "Node",
+                      "Next.js",
+                      "API",
+                      "REST API",
+                      "React"
+                    ],
+                    "excerpt": "Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with seamless backend capabilities, creating a unified developer experience. It simplifies the proce"
                   },
                   {
                     "title": "Node",
                     "description": "JavaScript backend",
                     "slug": "/work/expertise/javascript/node",
-                    "order": 20,
+                    "order": 3,
                     "type": "folder",
                     "children": [],
                     "icon": "js",
@@ -310,25 +340,6 @@
                     "excerpt": "JavaScript was never meant for what became asked of it. It started life scripting image rollovers in the ‘90s — and somehow ended up running banks and billiondollar web apps.\n\nBy the early 2010s, the "
                   },
                   {
-                    "title": "Next.js",
-                    "description": "React with seamless backend capabilities",
-                    "slug": "/work/expertise/javascript/nextjs",
-                    "order": 55,
-                    "type": "folder",
-                    "children": [],
-                    "icon": "js",
-                    "image": "/png/3rdParty/next_og.png",
-                    "tags": [
-                      "JavaScript",
-                      "Node",
-                      "Next.js",
-                      "API",
-                      "REST API",
-                      "React"
-                    ],
-                    "excerpt": "Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with seamless backend capabilities, creating a unified developer experience. It simplifies the proce"
-                  },
-                  {
                     "title": "JS Testing",
                     "description": "Left looking approach",
                     "slug": "/work/expertise/javascript/js-testing",
@@ -347,6 +358,20 @@
                       "Playwright"
                     ],
                     "excerpt": "A Left looking approach\n\n[PrevNext prev=\"/work/expertise/javascript/vanillajs\" next=\"/work/expertise/javascript/typescript\"]\n\nA leftlooking approach in JavaScript testing should mean testing earlier i"
+                  },
+                  {
+                    "title": "Vanilla JS",
+                    "slug": "/work/expertise/javascript/vanilla-js",
+                    "order": 100,
+                    "icon": "js",
+                    "image": "/png/3rdParty/javascript_og.png",
+                    "type": "file",
+                    "tags": [
+                      "JavaScript",
+                      "Vanilla JavaScript",
+                      "TypeScript"
+                    ],
+                    "excerpt": "When JavaScript needs to be everywhere instantly\n\nIn modern web engineering, Vanilla JavaScript is often dismissed as oldschool or underpowered. But at scale, especially across multiple domains or bra"
                   }
                 ],
                 "icon": "js",
@@ -367,7 +392,7 @@
                   "Headless CMS",
                   "JSON"
                 ],
-                "excerpt": "JavaScript Whatever the Weather\n\nWe’ve been writing JavaScript since it was still called ECMAScript.\n\nBefore the frameworks, before npm, before it ate the world—we were already deep in the language th"
+                "excerpt": "We’ve been writing JavaScript since it was called ECMAScript.\n\nBefore the frameworks, before npm, before it ate the world—we were already deep in the language that powers the modern web.\n\nWe’ve built "
               },
               {
                 "title": "Fullstack",
@@ -740,7 +765,7 @@
                     "tags": [
                       "ai"
                     ],
-                    "excerpt": "[YouTube src=\"https://www.youtube.com/watch?v=pkLazYu8JMw\"]\n\n AI changes everything in Software Development\n\n It raises the bar. What took 6 months, a team of 10 developers and full time project manag"
+                    "excerpt": "[YouTube src=\"https://www.youtube.com/watch?v=pkLazYu8JMw\"]\n\n It raises the bar. What took 6 months, a team of 10 developers and full time project management can now be done by a single developer in t"
                   },
                   {
                     "title": "Agent User Interfaces",
@@ -888,7 +913,7 @@
               "fields",
               "work"
             ],
-            "excerpt": "We work across the full stack, from interface to infrastructure, with a focus on robust, modern JavaScript tooling and scalable cloudnative delivery. Whether building responsive UIs, designing serverl"
+            "excerpt": "We work across the full stack, from interface to infrastructure, with a focus on robust, modern JavaScript tooling and scalable cloudnative delivery.\n\nWhether building responsive UIs, designing server"
           },
           {
             "title": "Company",
@@ -971,7 +996,7 @@
           "NextJS",
           "Headless CMS"
         ],
-        "excerpt": "The apps we ship are real. They run in production and are developed accessibly. The Core is Open Source and Free forever — giving you statically generated sites with Firestorepowered updates and a rea"
+        "excerpt": "The apps we ship are real. They run in production and are developed accessibly.\n\nThe Core is Open Source and Free forever — giving you statically generated sites with Firestorepowered updates and a re"
       },
       {
         "title": "Life",
@@ -1002,14 +1027,6 @@
                 "icon": "van",
                 "type": "file",
                 "excerpt": "2025 Map\n\n[GoogleMap src=\"https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=001321\"]"
-              },
-              {
-                "title": "newpage",
-                "slug": "/life/vanlife/newpage",
-                "order": 10,
-                "icon": "van",
-                "type": "file",
-                "excerpt": "Best price (noun)\n\nThe universal truth: if it costs nothing, it’s already worth more than you were planning to spend.\n\n Usage\n\n \"How much was that? — Free. — Best price.\"\n \"I wasn’t even looking, but "
               }
             ],
             "icon": "van",
@@ -1030,11 +1047,20 @@
                 "image": "/png/n64/diving.png",
                 "type": "file",
                 "excerpt": "I’ve been diving for over 25 years. I’m not an instructor, and I don’t dive every weekend — but it’s something that’s been part of my life for a long time. I trained as a PADI Divemaster (though my ce"
+              },
+              {
+                "title": "Why not dive?",
+                "slug": "/life/diving/why-not-dive",
+                "order": 55,
+                "icon": "diving",
+                "image": "/png/n64/diving.png",
+                "type": "file",
+                "excerpt": "You have to mitigate that posiibility, yeh."
               }
             ],
             "icon": "diving",
             "image": "/png/n64/diving.png",
-            "excerpt": "This section of the site is a quiet space for sharing some of the places I’ve been, the gear I’ve trusted, and the small moments I remember best — that sound when you first descend, the feeling of hov"
+            "excerpt": ""
           },
           {
             "title": "Aquaponics",
@@ -1075,7 +1101,7 @@
       },
       {
         "title": "Balance",
-        "description": "A collection of Writing",
+        "description": "A collection of writing",
         "slug": "/balance",
         "order": 100,
         "type": "folder",
@@ -1255,7 +1281,7 @@
           },
           {
             "title": "Video",
-            "description": "It's hard to collate stuff into meaningful writing, but we've doing our best",
+            "description": "Knowing the future is easy",
             "slug": "/balance/video",
             "order": 9,
             "type": "folder",
@@ -1374,7 +1400,7 @@
                 "excerpt": "Judging from the past, we may safely infer that no one living species will transmit its unaltered likeness to a distant futurity. And of the species now living very few will transmit progeny of any ki"
               }
             ],
-            "icon": "balance",
+            "icon": "books",
             "image": "/png/3rdParty/unicorn.png",
             "excerpt": "Curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction. From visionary science fiction to satirical explorations of culture and the human exper"
           }
@@ -1384,8 +1410,8 @@
         "excerpt": "[PrevNext prev=\"/balance/books/rfkuang\" next=\"/balance/books/rfkuang/katabasis\"]"
       }
     ],
-    "icon": "goldlabel",
-    "image": "https://live.staticflickr.com/65535/54691336480_36c60e4633_b.jpg",
+    "icon": "home",
+    "image": "/png/clouds/javascript.png",
     "tags": [
       "JavaScript",
       "Next Gen",
@@ -1415,6 +1441,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[PageAd slug=\"/work/expertise\"]\n\n[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise/javascript/typescript\"]\n\n[PageAd slug=\"/work/expertise/javascript/vanillajs\"]\n\n[PageAd slug=\"/work/ex"
+    "excerpt": "[Flash movie=\"Logo\" height=\"200\"]\n\n[PageAd slug=\"/work/expertise/javascript/react\"]"
   }
 ]

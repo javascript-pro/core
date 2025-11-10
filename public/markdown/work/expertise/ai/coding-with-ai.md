@@ -11,8 +11,6 @@ noImage: true
 
 [YouTube src="https://www.youtube.com/watch?v=pkLazYu8JMw"]
 
-## AI changes everything in Software Development
-
 > It raises the bar. What took 6 months, a team of 10 developers and full time project management can now be done by a single developer in two months. It raises the bar.
 
 _Here comes the science bit..._

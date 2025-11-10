@@ -1,4 +1,4 @@
-// core/gl-core/cartridges/Paywall/hooks/useLingua.tsx
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Paywall/hooks/usePaywall.tsx
 import { useSelector } from 'react-redux';
 import { TRootState } from '../../Uberedux/store';
 

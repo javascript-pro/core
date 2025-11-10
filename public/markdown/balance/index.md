@@ -1,7 +1,7 @@
 ---
 order: 100
 title: Balance
-description: A collection of Writing
+description: A collection of writing
 slug: /balance
 icon: balance
 image: /png/3rdParty/unicorn.png

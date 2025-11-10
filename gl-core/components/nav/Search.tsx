@@ -1,6 +1,12 @@
 'use client';
 
-import React, { useState, useMemo, useRef } from 'react';
+import React, {
+  useState,
+  useMemo,
+  useRef,
+  useCallback,
+  useEffect,
+} from 'react';
 import {
   styled,
   alpha,
@@ -18,9 +24,10 @@ import { useRouter } from 'next/navigation';
 
 export type TSearch = {
   onTrigger?: (value: any) => void;
+  defaultValue?: string;
 };
 
-const SearchWrapper = styled(Box)(({ theme }) => ({
+const SearchWrapper = styled(Box)(() => ({
   position: 'relative',
   display: 'inline-block',
 }));
@@ -86,15 +93,17 @@ function flattenNav(nav: any[], acc: FlatItem[] = []): FlatItem[] {
 export default function Search({ onTrigger = () => {} }: TSearch) {
   const [query, setQuery] = useState('');
   const [open, setOpen] = useState(false);
+  const [highlightIndex, setHighlightIndex] = useState(-1);
+
   const dispatch = useDispatch();
   const router = useRouter();
   const wrapperRef = useRef<HTMLDivElement>(null);
 
   const flatItems = useMemo(() => flattenNav(globalNav), []);
+
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
-    // When query is empty → return all pages
-    if (!q) return flatItems;
+    if (!q) return [];
     return flatItems.filter(
       ({ title, description }) =>
         title.toLowerCase().includes(q) ||
@@ -102,15 +111,45 @@ export default function Search({ onTrigger = () => {} }: TSearch) {
     );
   }, [query, flatItems]);
 
-  const handleFocus = () => setOpen(true);
+  // Open results only when there are matches
+  useEffect(() => {
+    setOpen(results.length > 0);
+    setHighlightIndex(results.length > 0 ? 0 : -1);
+  }, [results]);
+
   const handleClickAway = (e: MouseEvent | TouchEvent) => {
-    if (
-      wrapperRef.current &&
-      !wrapperRef.current.contains(e.target as Node)
-    ) {
+    if (wrapperRef.current && !wrapperRef.current.contains(e.target as Node)) {
       setOpen(false);
+      setHighlightIndex(-1);
     }
   };
+
+  const handleKeyDown = useCallback(
+    (e: React.KeyboardEvent<HTMLInputElement>) => {
+      if (!open || results.length === 0) return;
+
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        setHighlightIndex((prev) => (prev + 1) % results.length);
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        setHighlightIndex((prev) =>
+          prev <= 0 ? results.length - 1 : prev - 1,
+        );
+      } else if (e.key === 'Enter' && highlightIndex >= 0) {
+        e.preventDefault();
+        dispatch(routeTo(results[highlightIndex].slug, router));
+        setQuery('');
+        setOpen(false);
+        setHighlightIndex(-1);
+      } else if (e.key === 'Escape') {
+        e.preventDefault();
+        setOpen(false);
+        setHighlightIndex(-1);
+      }
+    },
+    [results, highlightIndex, open, dispatch, router],
+  );
 
   return (
     <ClickAwayListener onClickAway={handleClickAway}>
@@ -120,18 +159,18 @@ export default function Search({ onTrigger = () => {} }: TSearch) {
             <Icon icon="search" color="primary" />
           </SearchIconWrapper>
           <StyledInputBase
-            onFocus={handleFocus}
+            value={query}
             onChange={(e) => {
               setQuery(e.target.value);
               onTrigger(e);
             }}
-            value={query}
-            placeholder="Search for…"
+            placeholder="Search…"
             inputProps={{ 'aria-label': 'search' }}
+            onKeyDown={handleKeyDown}
           />
         </SearchField>
 
-        {open && results.length > 0 && (
+        {open && (
           <Paper
             elevation={6}
             sx={{
@@ -149,10 +188,23 @@ export default function Search({ onTrigger = () => {} }: TSearch) {
               {results.map((item, i) => (
                 <ListItemButton
                   key={`search_result_${i}`}
+                  selected={i === highlightIndex}
+                  onMouseEnter={() => setHighlightIndex(i)}
                   onClick={() => {
                     dispatch(routeTo(item.slug, router));
-                    setOpen(false);
                     setQuery('');
+                    setOpen(false);
+                    setHighlightIndex(-1);
+                  }}
+                  sx={{
+                    bgcolor:
+                      i === highlightIndex
+                        ? (theme) => alpha(theme.palette.primary.main, 0.15)
+                        : 'transparent',
+                    '&:hover': {
+                      bgcolor: (theme) =>
+                        alpha(theme.palette.primary.main, 0.1),
+                    },
                   }}
                 >
                   <ListItemText

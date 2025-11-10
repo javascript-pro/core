@@ -1,17 +1,16 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Paywall/actions/setAuth.tsx
-import { TUbereduxDispatch } from '../../../../gl-core/types';
-import { setUbereduxKey } from '../../../';
-import type { User } from 'firebase/auth';
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Paywall/actions/setUser.tsx
 
-export const setAuth =
-  (authed: boolean, user?: User | null): any =>
+import { TUbereduxDispatch } from '../../../../gl-core/types';
+import { setUbereduxKey } from '../../../cartridges/Uberedux';
+
+export const setUser =
+  (user: any): any =>
   async (dispatch: TUbereduxDispatch, getState: () => any) => {
     try {
       const current = getState().redux.paywall;
       const updated = {
         ...current,
-        authed,
-        user: authed ? user : null,
+        user,
       };
       dispatch(setUbereduxKey({ key: 'paywall', value: updated }));
     } catch (e: unknown) {
