@@ -1360,8 +1360,8 @@
         "excerpt": "[PrevNext prev=\"/balance/books/rfkuang\" next=\"/balance/books/rfkuang/katabasis\"]"
       }
     ],
-    "icon": "goldlabel",
-    "image": "/png/3rdParty/git_og.png",
+    "icon": "home",
+    "image": "/png/clouds/javascript.png",
     "tags": [
       "JavaScript",
       "Next Gen",
@@ -1391,6 +1391,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[PrevNext next=\"/work/goldlabel/cartridges/paywall\"]"
+    "excerpt": "[Flash movie=\"Logo\" height=\"200\"]"
   }
 ]

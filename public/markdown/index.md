@@ -9,4 +9,5 @@ tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Pr
 image: /png/clouds/javascript.png
 noImage: true
 ---
+
 [Flash movie="Logo" height="200"]
