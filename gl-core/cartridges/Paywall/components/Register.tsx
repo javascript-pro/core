@@ -1,4 +1,4 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Paywall/components/Signin.tsx
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Paywall/components/Register.tsx
 import * as React from 'react';
 import { Box, Button, TextField } from '@mui/material';
 import {
@@ -9,7 +9,7 @@ import {
 import { auth } from '../../../lib/firebase';
 import LoginIcon from '@mui/icons-material/Login';
 
-export default function Signin() {
+export default function Register() {
   const [user, setUser] = React.useState<User | null>(null);
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
@@ -30,7 +30,7 @@ export default function Signin() {
   };
 
   return (
-    <Box sx={{maxWidth: 300}}>
+    <Box>
       <TextField
         autoFocus
         sx={{ my: 1 }}

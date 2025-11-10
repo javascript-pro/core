@@ -37,8 +37,8 @@ import {
   SideAds,
   SharePopup,
 } from '../gl-core';
-import { SoundProvider } from './cartridges/Theme';
-import { Paywall } from './cartridges/Paywall';
+// import { SoundProvider } from './cartridges/Theme';
+import { Paywall, SigninGate, useUser } from './cartridges/Paywall';
 
 const config = configRaw as TConfig;
 
@@ -52,6 +52,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const pathname = usePathname();
   const themeMode = useThemeMode();
   const isMobile = useIsMobile();
+  const user = useUser(); // 🔐 check user state
   const fetchedNavRef = React.useRef(false);
 
   React.useEffect(() => {
@@ -69,7 +70,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const effectiveThemeMode =
     themeMode === null ? (prefersDark ? 'dark' : 'light') : themeMode;
 
-  // console.log('paywall', paywall);
+  const isAuthed = !!(user && user.uid); // ✅ logged-in flag
 
   return (
     <>
@@ -131,7 +132,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
             <Box sx={{ flexGrow: 1 }}>
               <Search defaultValue={frontmatter?.title} />
             </Box>
-
             <IconButton
               aria-label="Close menu"
               onClick={() => setMenuOpen(false)}
@@ -192,8 +192,9 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
                 {/* 🔒 Content area */}
                 <Box sx={{ mt: isMobile ? 2 : 4, mb: isMobile ? 3 : '175px' }}>
-                  {paywall === true ? (
-                    <>Signin Gate</>
+                  {/* ✅ Authenticated users always bypass paywall */}
+                  {paywall === true && !isAuthed ? (
+                    <SigninGate />
                   ) : (
                     <>
                       {!noImage && image && (
@@ -230,6 +231,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                     </>
                   )}
                 </Box>
+
                 <ThumbMenu />
               </Grid>
             </Grid>
