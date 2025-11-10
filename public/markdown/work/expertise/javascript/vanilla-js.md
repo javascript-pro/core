@@ -1,5 +1,5 @@
 ---
-order: 14
+order: 100
 title: Vanilla JS
 description: Dependency free JavaScript delivery layer
 slug: /work/expertise/javascript/vanilla-js

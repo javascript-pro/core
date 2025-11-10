@@ -145,24 +145,47 @@
                 "type": "folder",
                 "children": [
                   {
-                    "title": "Vanilla JS",
-                    "slug": "/work/expertise/javascript/vanilla-js",
-                    "order": 14,
+                    "title": "React",
+                    "description": "JavaScript Frontend",
+                    "slug": "/work/expertise/javascript/react",
+                    "order": 1,
+                    "type": "folder",
+                    "children": [],
                     "icon": "js",
-                    "image": "/png/3rdParty/javascript_og.png",
-                    "type": "file",
+                    "image": "/png/clouds/default_whitecloud.png",
                     "tags": [
                       "JavaScript",
                       "Vanilla JavaScript",
-                      "TypeScript"
+                      "TypeScript",
+                      "React",
+                      "frameworks"
                     ],
-                    "excerpt": "When JavaScript needs to be everywhere instantly\n\nIn modern web engineering, Vanilla JavaScript is often dismissed as oldschool or underpowered. But at scale, especially across multiple domains or bra"
+                    "excerpt": ""
+                  },
+                  {
+                    "title": "Next.js",
+                    "description": "React with seamless backend capabilities",
+                    "slug": "/work/expertise/javascript/nextjs",
+                    "order": 2,
+                    "type": "folder",
+                    "children": [],
+                    "icon": "js",
+                    "image": "/png/3rdParty/next_og.png",
+                    "tags": [
+                      "JavaScript",
+                      "Node",
+                      "Next.js",
+                      "API",
+                      "REST API",
+                      "React"
+                    ],
+                    "excerpt": "Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with seamless backend capabilities, creating a unified developer experience. It simplifies the proce"
                   },
                   {
                     "title": "Node",
                     "description": "JavaScript backend",
                     "slug": "/work/expertise/javascript/node",
-                    "order": 20,
+                    "order": 3,
                     "type": "folder",
                     "children": [],
                     "icon": "js",
@@ -286,25 +309,6 @@
                     "excerpt": "JavaScript was never meant for what became asked of it. It started life scripting image rollovers in the ‘90s — and somehow ended up running banks and billiondollar web apps.\n\nBy the early 2010s, the "
                   },
                   {
-                    "title": "Next.js",
-                    "description": "React with seamless backend capabilities",
-                    "slug": "/work/expertise/javascript/nextjs",
-                    "order": 55,
-                    "type": "folder",
-                    "children": [],
-                    "icon": "js",
-                    "image": "/png/3rdParty/next_og.png",
-                    "tags": [
-                      "JavaScript",
-                      "Node",
-                      "Next.js",
-                      "API",
-                      "REST API",
-                      "React"
-                    ],
-                    "excerpt": "Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with seamless backend capabilities, creating a unified developer experience. It simplifies the proce"
-                  },
-                  {
                     "title": "JS Testing",
                     "description": "Left looking approach",
                     "slug": "/work/expertise/javascript/js-testing",
@@ -323,6 +327,20 @@
                       "Playwright"
                     ],
                     "excerpt": "A Left looking approach\n\n[PrevNext prev=\"/work/expertise/javascript/vanillajs\" next=\"/work/expertise/javascript/typescript\"]\n\nA leftlooking approach in JavaScript testing should mean testing earlier i"
+                  },
+                  {
+                    "title": "Vanilla JS",
+                    "slug": "/work/expertise/javascript/vanilla-js",
+                    "order": 100,
+                    "icon": "js",
+                    "image": "/png/3rdParty/javascript_og.png",
+                    "type": "file",
+                    "tags": [
+                      "JavaScript",
+                      "Vanilla JavaScript",
+                      "TypeScript"
+                    ],
+                    "excerpt": "When JavaScript needs to be everywhere instantly\n\nIn modern web engineering, Vanilla JavaScript is often dismissed as oldschool or underpowered. But at scale, especially across multiple domains or bra"
                   }
                 ],
                 "icon": "js",

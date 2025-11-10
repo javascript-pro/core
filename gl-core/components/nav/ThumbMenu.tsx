@@ -20,7 +20,6 @@ import {
   Icon,
   useDispatch,
   ShareMenu,
-  useVersion,
   ModeSwitch,
   routeTo,
   useIsMobile,
@@ -42,7 +41,6 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
   const router = useRouter();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
-  const version = useVersion();
   const isMobile = useIsMobile();
 
   const [shareDialogOpen, setShareDialogOpen] = React.useState(false);
@@ -53,11 +51,6 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
 
   const handleCloseMenu = () => {
     setAnchorEl(null);
-  };
-
-  const handleShareOpen = () => {
-    setShareDialogOpen(true);
-    handleCloseMenu();
   };
 
   const handleShareClose = () => {
@@ -113,19 +106,6 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
           </ListItemIcon>
           <ListItemText primary="Reset" />
         </MenuItem>
-
-        {/* App Version */}
-        <Box sx={{ pr: 3, py: 1, textAlign: 'right' }}>
-          <Typography
-            sx={{
-              width: '100%',
-              flexGrow: 1,
-            }}
-            variant="caption"
-          >
-            vs {version}
-          </Typography>
-        </Box>
       </Menu>
 
       {/* Share Dialog */}

@@ -1,5 +1,5 @@
 ---
-order: 55
+order: 2
 title: Next.js
 description: React with seamless backend capabilities
 slug: /work/expertise/javascript/nextjs

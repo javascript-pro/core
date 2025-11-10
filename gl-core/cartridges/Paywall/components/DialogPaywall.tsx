@@ -93,8 +93,7 @@ export default function DialogPaywall() {
               sx={{ my: 3 }}
               onClick={handleSignout}
               startIcon={<Icon icon="signout" />}
-              variant="contained"
-              fullWidth
+              variant="outlined"
             >
               Sign Out
             </Button>
