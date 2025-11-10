@@ -165,26 +165,29 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
               <Grid size={{ xs: 12, md: 9 }}>
                 <Box sx={{ mt: 2, mb: 2 }}>
-                  <Typography
-                    variant="h1"
-                    gutterBottom
-                    color="primary"
-                    sx={{
-                      fontSize: { xs: '1.75rem', md: '2.25rem' },
-                    }}
-                  >
-                    {title}
-                  </Typography>
+                  {title !== 'Home' && <>
+                    <Typography
+                      variant="h1"
+                      gutterBottom
+                      color="primary"
+                      sx={{
+                        fontSize: { xs: '1.75rem', md: '2.25rem' },
+                      }}
+                    >
+                      {title}
+                    </Typography>
+                    <Typography
+                      variant="h2"
+                      gutterBottom
+                      sx={{
+                        fontSize: { xs: '1.2rem', md: '1.25rem' },
+                      }}
+                    >
+                      {description}
+                    </Typography>
+                  
+                  </>}
 
-                  <Typography
-                    variant="h2"
-                    gutterBottom
-                    sx={{
-                      fontSize: { xs: '1.2rem', md: '1.25rem' },
-                    }}
-                  >
-                    {description}
-                  </Typography>
                 </Box>
 
                 {/* 🔒 Content area */}

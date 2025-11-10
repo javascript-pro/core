@@ -71,7 +71,7 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
         color="primary"
         onClick={handleClick}
         sx={{
-          zIndex: (theme) => theme.zIndex.modal + 2,
+          zIndex: (theme) => theme.zIndex.modal - 2,
           position: 'fixed',
           bottom: 16,
           right: 16,

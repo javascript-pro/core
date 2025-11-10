@@ -1,5 +1,3 @@
-
-
 /Users/goldlabel/GitHub/core/gl-core/cartridges/Paywall/README.md
 
 ## 🚀 Paywall Cartridge

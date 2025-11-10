@@ -5,11 +5,15 @@ import {
   Dialog,
   DialogTitle,
   DialogContent,
+  DialogActions,
   IconButton,
   Box,
   Typography,
+  Button,
 } from '@mui/material';
 import { useDispatch, Icon, useIsMobile } from '../../../../gl-core';
+import { auth } from '../../../lib/firebase';
+import { signOut } from 'firebase/auth';
 import { usePaywall, setPaywallKey, Signin } from '../../Paywall';
 
 export default function DialogPaywall() {
@@ -20,6 +24,17 @@ export default function DialogPaywall() {
 
   const handleClose = () => {
     dispatch(setPaywallKey('dialogOpen', false));
+  };
+
+  const handleSignout = async () => {
+    try {
+      await signOut(auth);
+      dispatch(setPaywallKey('user', null));
+      dispatch(setPaywallKey('authed', false));
+      dispatch(setPaywallKey('dialogOpen', false));
+    } catch (err) {
+      console.error('[Paywall] Sign-out failed:', err);
+    }
   };
 
   return (
@@ -38,10 +53,10 @@ export default function DialogPaywall() {
           pb: 0,
         }}
       >
-        <Box sx={{flexGrow:1}}>
+        <Box sx={{ flexGrow: 1 }}>
           <Icon icon="paywall" />
         </Box>
-        
+
         <Box>
           <IconButton
             aria-label="Close paywall"
@@ -55,27 +70,38 @@ export default function DialogPaywall() {
 
       <DialogContent>
         <Box sx={{ mt: 1 }}>
-
-          <pre>user: {JSON.stringify(user, null, 2)}</pre>
-
-          
           {!user ? (
             <>
-            <Typography variant="body1" color="text.secondary">
-              Please sign in to access.
-            </Typography>
-            <Signin />
+              <Typography variant="body1" color="text.secondary">
+                Sign in please
+              </Typography>
+              <Signin />
             </>
           ) : (
             <>
-              <Typography variant="body1">
-                Welcome back, {user.displayName || 'user'}.
-              </Typography>
+              <Typography variant="h6">Account</Typography>
+              <Typography variant="body1">{user.email}</Typography>
+
               
             </>
           )}
         </Box>
       </DialogContent>
+      <DialogActions>
+        {user && <>
+          <Button
+            size="large"
+            sx={{ my: 3 }}
+            onClick={handleSignout}
+            startIcon={<Icon icon="signout" />}
+            variant="contained"
+            fullWidth
+          >
+            Sign Out
+          </Button>
+        </>}
+        
+      </DialogActions>
     </Dialog>
   );
 }

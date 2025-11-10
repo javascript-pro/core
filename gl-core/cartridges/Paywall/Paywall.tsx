@@ -28,7 +28,16 @@ export default function Paywall() {
   return (
     <>
       <DialogPaywall />
-      <IconButton onClick={handleClick} color="primary">
+      <IconButton
+        color="primary"
+        onClick={handleClick}
+        sx={{
+          zIndex: (theme) => theme.zIndex.modal - 3,
+          position: 'fixed',
+          bottom: 16,
+          left: 16,
+        }}
+      >
         <Icon icon="paywall" />
       </IconButton>
     </>
