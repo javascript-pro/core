@@ -1,5 +1,4 @@
 // /Users/goldlabel/GitHub/core/gl-core/initialState.tsx
-
 import pJSON from '../package.json';
 import config from './config.json';
 import { initialStateFlickr } from './cartridges/Flickr';

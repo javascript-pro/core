@@ -19,17 +19,17 @@ export default function SigninGate() {
     <Box sx={{ mt: 3 }}>
       {!user ? (
         <>
-        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 2 }}>
+          <Alert icon={<Icon icon="paywall" />} severity="success" sx={{ mb: 2 }}>
+            Please sign in
+          </Alert>
+          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, my: 2 }}>
             <Signin />
           </Box>
-          <Alert severity="info" sx={{ mb: 2 }}>
-            <AlertTitle>You must be signed in to view this content.</AlertTitle>
-          </Alert>
         </>
       ) : (
         <Alert severity="success">
-          <AlertTitle>Signed in as {user.email}</AlertTitle>
-          UID: <code>{user.uid}</code>
+          <AlertTitle>Signed in as {user.email} UID: <code>{user.uid}</code></AlertTitle>
+          
         </Alert>
       )}
 

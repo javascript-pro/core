@@ -30,7 +30,7 @@ export default function Signin() {
   };
 
   return (
-    <Box sx={{maxWidth: 300}}>
+    <Box sx={{ maxWidth: 300 }}>
       <TextField
         autoFocus
         sx={{ my: 1 }}
@@ -57,7 +57,6 @@ export default function Signin() {
         startIcon={<LoginIcon />}
         type="submit"
         variant="contained"
-        fullWidth
       >
         Sign in
       </Button>

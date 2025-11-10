@@ -5,6 +5,7 @@ description: Proper crowd pleaser
 slug: /balance/writing/wei-zangs-food/banana-bread
 icon: food
 image: /jpg/wei-zangs-food.jpg
+paywall: true
 ---
 
 [Air Fried Stuffed Peppers](/life/food/air-fried-peppers) | [Banana Bread](/life/food/banana-bread)
