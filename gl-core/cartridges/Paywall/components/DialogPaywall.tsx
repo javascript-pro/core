@@ -81,26 +81,25 @@ export default function DialogPaywall() {
             <>
               <Typography variant="h6">Account</Typography>
               <Typography variant="body1">{user.email}</Typography>
-
-              
             </>
           )}
         </Box>
       </DialogContent>
       <DialogActions>
-        {user && <>
-          <Button
-            size="large"
-            sx={{ my: 3 }}
-            onClick={handleSignout}
-            startIcon={<Icon icon="signout" />}
-            variant="contained"
-            fullWidth
-          >
-            Sign Out
-          </Button>
-        </>}
-        
+        {user && (
+          <>
+            <Button
+              size="large"
+              sx={{ my: 3 }}
+              onClick={handleSignout}
+              startIcon={<Icon icon="signout" />}
+              variant="contained"
+              fullWidth
+            >
+              Sign Out
+            </Button>
+          </>
+        )}
       </DialogActions>
     </Dialog>
   );
