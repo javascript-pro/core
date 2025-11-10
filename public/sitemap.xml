@@ -233,10 +233,13 @@
     <loc>https://goldlabel.pro/work/expertise/javascript/node</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/expertise/javascript/react</loc>
+    <loc>https://goldlabel.pro/work/expertise/javascript/react/experience</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/expertise/javascript/react/react-history</loc>
+    <loc>https://goldlabel.pro/work/expertise/javascript/react/history</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/expertise/javascript/react</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/expertise/javascript/typescript/advanced</loc>

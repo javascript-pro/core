@@ -152,8 +152,8 @@
                     "type": "folder",
                     "children": [
                       {
-                        "title": "React History",
-                        "slug": "/work/expertise/javascript/react/react-history",
+                        "title": "History",
+                        "slug": "/work/expertise/javascript/react/history",
                         "order": 10,
                         "icon": "js",
                         "image": "/png/3rdParty/wikipedia.png",
@@ -164,7 +164,23 @@
                           "React",
                           "frameworks"
                         ],
-                        "excerpt": "When React appeared, the landscape was dominated by AngularJS, Backbone, and Knockout, all of which relied on twoway data binding and manual DOM updates. React’s performance and simplicity stood out i"
+                        "excerpt": "When React appeared, the landscape was dominated by AngularJS, Backbone, and Knockout, all of which relied on twoway data binding and manual DOM updates.\n\nReact’s performance and simplicity stood out "
+                      },
+                      {
+                        "title": "Our Experience",
+                        "slug": "/work/expertise/javascript/react/experience",
+                        "order": 20,
+                        "icon": "js",
+                        "image": "/png/3rdParty/wikipedia.png",
+                        "type": "file",
+                        "tags": [
+                          "JavaScript",
+                          "TypeScript",
+                          "React",
+                          "frameworks",
+                          "china"
+                        ],
+                        "excerpt": "Contract JavaScript Developer — Huawei Shenzhen, China — Feb 2016 to May 2016\n\nBy 2015–2016, React had evolved beyond an experiment — Facebook, Instagram, and Airbnb were using it at scale, and the op"
                       }
                     ],
                     "icon": "js",
@@ -1424,6 +1440,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[Flash movie=\"Logo\" height=\"200\"]"
+    "excerpt": "[Flash movie=\"Logo\" height=\"200\"]\n\n[PageAd slug=\"/work/expertise/javascript/react\"]"
   }
 ]

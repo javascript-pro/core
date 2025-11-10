@@ -72,7 +72,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
   // console.log('paywall', paywall);
 
   return (
-    <SoundProvider>
+    <>
       <Theme theme={config.themes[effectiveThemeMode]}>
         <CssBaseline />
         <IncludeAll />
@@ -236,6 +236,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
           </Box>
         </Container>
       </Theme>
-    </SoundProvider>
+    </>
   );
 }
