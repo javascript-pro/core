@@ -146,21 +146,36 @@
                 "children": [
                   {
                     "title": "React",
-                    "description": "JavaScript Frontend",
+                    "description": "Frontend JavaScript",
                     "slug": "/work/expertise/javascript/react",
                     "order": 1,
                     "type": "folder",
-                    "children": [],
+                    "children": [
+                      {
+                        "title": "React History",
+                        "slug": "/work/expertise/javascript/react/react-history",
+                        "order": 10,
+                        "icon": "js",
+                        "image": "/png/3rdParty/wikipedia.png",
+                        "type": "file",
+                        "tags": [
+                          "JavaScript",
+                          "TypeScript",
+                          "React",
+                          "frameworks"
+                        ],
+                        "excerpt": "When React appeared, the landscape was dominated by AngularJS, Backbone, and Knockout, all of which relied on twoway data binding and manual DOM updates. React’s performance and simplicity stood out i"
+                      }
+                    ],
                     "icon": "js",
-                    "image": "/png/clouds/default_whitecloud.png",
+                    "image": "/png/3rdParty/wikipedia.png",
                     "tags": [
                       "JavaScript",
-                      "Vanilla JavaScript",
                       "TypeScript",
                       "React",
                       "frameworks"
                     ],
-                    "excerpt": ""
+                    "excerpt": "React is a JavaScript library for building user interfaces, originally developed by Jordan Walke at Facebook and opensourced in 2013. It introduced a fundamentally new way of thinking about frontend d"
                   },
                   {
                     "title": "Next.js",
