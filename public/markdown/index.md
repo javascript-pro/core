@@ -15,3 +15,5 @@ noImage: true
 [PageAd slug="/work/expertise/javascript/react"]
 
 [PageAd slug="/work/expertise/javascript/nextjs"]
+
+[PageAd slug="/work/expertise/javascript/node"]

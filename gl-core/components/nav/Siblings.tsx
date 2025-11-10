@@ -10,7 +10,7 @@ import {
   ListItemText,
   Box,
 } from '@mui/material';
-import { Icon } from '../../../gl-core';
+import { Icon, Search } from '../../../gl-core';
 
 type NavItem = {
   title: string;
@@ -113,6 +113,8 @@ export default function Siblings() {
 
   return (
     <Box>
+      
+      
       {/* Ancestor chain */}
       {ancestors.map((node) => (
         <ListItemButton key={node.slug} onClick={() => router.push(node.slug)}>

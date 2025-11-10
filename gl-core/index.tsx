@@ -3,7 +3,6 @@ import { Theme, Icon, useThemeMode, ModeSwitch } from './cartridges/Theme';
 import {
   Advert,
   RenderMarkdown,
-  Header,
   Footer,
   Nav,
   NavItem,
@@ -86,7 +85,6 @@ export {
   PrevNext,
   FlickrAlbum,
   YouTube,
-  Header,
   Footer,
   RenderMarkdown,
   Theme,

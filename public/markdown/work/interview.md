@@ -49,4 +49,3 @@ He’ll be looking for three key traits:
 
 cameron.d@avantirec.com
 travis.reynolds@harmonyfire.com
-
