@@ -3,6 +3,7 @@ import Paywall from './Paywall';
 import { initialState as initialStatePaywall } from './initialState';
 import ChipPaywall from './components/ChipPaywall';
 import Signin from './components/Signin';
+import Tings from './components/Tings';
 import Register from './components/Register';
 import SigninGate from './components/SigninGate';
 import DialogPaywall from './components/DialogPaywall';
@@ -23,4 +24,5 @@ export {
   DialogPaywall,
   SigninGate,
   Register,
+  Tings,
 };

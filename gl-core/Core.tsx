@@ -38,7 +38,7 @@ import {
   SharePopup,
 } from '../gl-core';
 // import { SoundProvider } from './cartridges/Theme';
-import { Paywall, SigninGate, useUser } from './cartridges/Paywall';
+import { Paywall, SigninGate, useUser, Tings } from './cartridges/Paywall';
 
 const config = configRaw as TConfig;
 
@@ -154,10 +154,15 @@ export default function Core({ frontmatter, body = null }: TCore) {
               {!isMobile && (
                 <Grid size={{ md: 3 }}>
                   <Box sx={{ mt: 1 }}>
+                    <Tings />
                     {Array.isArray(siblings) && siblings.length > 0 ? (
-                      <Siblings />
+                      <>
+                        <Siblings />
+                      </>
                     ) : (
-                      <SideAds />
+                      <>
+                        <SideAds />
+                      </>
                     )}
                   </Box>
                 </Grid>

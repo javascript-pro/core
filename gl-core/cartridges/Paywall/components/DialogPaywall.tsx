@@ -14,7 +14,7 @@ import {
 import { useDispatch, Icon, useIsMobile } from '../../../../gl-core';
 import { auth } from '../../../lib/firebase';
 import { signOut } from 'firebase/auth';
-import { usePaywall, setPaywallKey, Signin } from '../../Paywall';
+import { usePaywall, setPaywallKey, Signin, Tings } from '../../Paywall';
 
 export default function DialogPaywall() {
   const dispatch = useDispatch();
@@ -79,6 +79,7 @@ export default function DialogPaywall() {
             </>
           ) : (
             <>
+              <Tings />
               <Typography variant="h6">Account</Typography>
               <Typography variant="body1">{user.email}</Typography>
             </>
