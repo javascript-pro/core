@@ -210,7 +210,7 @@
                       "REST API",
                       "React"
                     ],
-                    "excerpt": "Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with seamless backend capabilities, creating a unified developer experience. It simplifies the proce"
+                    "excerpt": "Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with seamless backend capabilities, creating a unified developer experience.\n\n Why we use it\n\nIt sim"
                   },
                   {
                     "title": "Node",
@@ -858,7 +858,7 @@
                   "expertise",
                   "wordpress"
                 ],
-                "excerpt": "WordPress powers 50% of all websites\n\n We treat an existing WordPress installation as a data source, not a problem to fix.\n\n Your database stays where it is — MySQL, posts, pages, taxonomies — untouch"
+                "excerpt": "[GitHub url=\"https://github.com/goldlabelapps/wordpress\" label=\"goldlabelapps/wordpress\"]\n\n WordPress powers 50% of all websites\n\n We treat an existing WordPress installation as a data source, not a p"
               },
               {
                 "title": "Windoze",
@@ -945,7 +945,7 @@
                 "tags": [
                   "team"
                 ],
-                "excerpt": "Whether you're a startup with a short deadline or an enterprise with complex workflows, we can help. Get in touch for it's a truth universally acknowledged that a Software Developer in possession of a"
+                "excerpt": "[GitHub url=\"https://github.com/goldlabelapps\" label=\"@goldlabelapps\"]\n\nWhether you're a startup with a short deadline or an enterprise with complex workflows, we can help. Get in touch for it's a tru"
               },
               {
                 "title": "Work With Us",
@@ -1441,6 +1441,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[Flash movie=\"Logo\" height=\"200\"]\n\n[PageAd slug=\"/work/expertise/javascript/react\"]"
+    "excerpt": "[Flash movie=\"Logo\" height=\"200\"]\n\n[PageAd slug=\"/work/expertise/javascript/react\"]\n\n[PageAd slug=\"/work/expertise/javascript/nextjs\"]"
   }
 ]

@@ -8,15 +8,13 @@ image: /png/3rdParty/next_og.png
 tags: JavaScript, Node, Next.js, API, REST API, React
 ---
 
-> Next.js is a full-stack JavaScript framework that brings together the power of React on the frontend with seamless backend capabilities, creating a unified developer experience. It simplifies the process of building modern web applications by offering a complete toolkit out of the box.
+> Next.js is a full-stack JavaScript framework that brings together the power of React on the frontend with seamless backend capabilities, creating a unified developer experience.
 
-[PrevNext prev="/work/expertise/javascript/vanilla-js" next="/work/expertise/javascript/js-testing"]
+## Why we use it
 
-## Why use it?
+It simplifies the process of building modern web applications by offering a complete toolkit. Its a complete platform for building modern web applications. Paired with Vercel, it offers an unparalleled development and deployment experience. It helps you skip the boring bits, focus on your product, and get it into users' phones faster.
 
-Next.js is not just a React framework — it's a complete platform for building modern web applications. Paired with Vercel, it offers an unparalleled development and deployment experience. It helps you skip the boring bits, focus on your product, and get it into users' hands faster.
-
-Traditional frontend frameworks like React are powerful, but they leave a lot of heavy lifting to the developer when it comes to routing, server-side rendering, static site generation, and deployment. This is where Next.js shines:
+Traditional frontend frameworks like React are powerful, but they leave a lot of heavy lifting to the developer when it comes to routing, server-side rendering, static site generation, and deployment. This is where Next.js is better
 
 - Hybrid Rendering: Choose between static generation, server-side rendering, or client-side rendering on a per-page basis.
 - Built-in Routing: File-based routing makes navigation and structure intuitive.
@@ -50,6 +48,8 @@ Vercel is the platform behind Next.js, offering frictionless deployment and host
 - Zero-config hosting that just works
 
 Next.js + Vercel is one of the most productive and scalable stacks available today, whether you're building a personal portfolio or a full-scale SaaS product.
+
+[PrevNext prev="/work/expertise/javascript/vanilla-js" next="/work/expertise/javascript/js-testing"]
 
 ## Case Study
 
