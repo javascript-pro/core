@@ -9,6 +9,14 @@ tags: expertise, interview
 paywall: true
 ---
 
+React Developer — Boral
+Contract
+Sydney, Australia — Aug 2018 to Feb 2019 (Contract)
+
+- Built foundational test architecture using Cucumber, Gherkin, and BDD principles
+- Developed and tested multiple React PWAs with AWS Amplify and GraphQL
+- Enabled CI/CD workflows to support rapid feature deployment
+
 ## 16hrs 11/11/2025
 
 ### React Developer
