@@ -13,7 +13,13 @@ import {
 import { useDispatch, Icon, useIsMobile } from '../../../../gl-core';
 import { auth } from '../../../lib/firebase';
 import { signOut } from 'firebase/auth';
-import { usePaywall, useUser, setPaywallKey, Signin, User } from '../../Paywall';
+import {
+  usePaywall,
+  useUser,
+  setPaywallKey,
+  Signin,
+  User,
+} from '../../Paywall';
 
 export default function DialogPaywall() {
   const dispatch = useDispatch();
@@ -81,7 +87,7 @@ export default function DialogPaywall() {
           ) : (
             <>
               <User />
-               {/* <pre>user: {JSON.stringify(user, null, 2)}</pre> */}
+              {/* <pre>user: {JSON.stringify(user, null, 2)}</pre> */}
             </>
           )}
         </Box>
@@ -89,10 +95,7 @@ export default function DialogPaywall() {
 
       <DialogActions>
         {user && (
-          <Button
-            onClick={handleSignout}
-            endIcon={<Icon icon="signout" />}
-          >
+          <Button onClick={handleSignout} endIcon={<Icon icon="signout" />}>
             Sign Out
           </Button>
         )}

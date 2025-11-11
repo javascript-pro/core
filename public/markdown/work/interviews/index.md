@@ -1,25 +1,17 @@
 ---
-order: 2026
-title: Interview 11/11/2025
-description: aurosafe.com
-slug: /work/interview
+order: 2018
+title: Aurosafe
+description: 16hrs 11/11/2025
+slug: /work/interviews
 icon: paywall
 image: https://live.staticflickr.com/65535/54914102727_6875cb7c9a_b.jpg
-tags: expertise, interview
+tags: expertise, interview, aurosafe
 paywall: true
 ---
 
-React Developer — Boral
-Contract
-Sydney, Australia — Aug 2018 to Feb 2019 (Contract)
-
-- Built foundational test architecture using Cucumber, Gherkin, and BDD principles
-- Developed and tested multiple React PWAs with AWS Amplify and GraphQL
-- Enabled CI/CD workflows to support rapid feature deployment
-
 ## 16hrs 11/11/2025
 
-### React Developer
+#### React Developer
 
 [aurosafe.com](https://aurosafe.com)
 
@@ -28,6 +20,8 @@ The client is a London-based tech company building smart compliance and monitori
 They’re looking for a mid–senior React Developer who can take ownership of clean, scalable frontend code and work closely with backend and design teams. The stack includes React, a meta framework (like Next.js), Chakra UI, and GraphQL.
 
 #### Key Points
+
+[PrevNext prev="/work/interviews/flash" next="/work/interviews/boral"]
 
 Be ready to discuss how you’ve built and structured React apps in production.
 

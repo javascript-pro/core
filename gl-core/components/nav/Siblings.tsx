@@ -113,8 +113,6 @@ export default function Siblings() {
 
   return (
     <Box>
-      
-      
       {/* Ancestor chain */}
       {ancestors.map((node) => (
         <ListItemButton key={node.slug} onClick={() => router.push(node.slug)}>

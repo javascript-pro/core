@@ -320,6 +320,12 @@
     <loc>https://goldlabel.pro/work</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/interview</loc>
+    <loc>https://goldlabel.pro/work/interviews/boral</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/interviews/flash</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/interviews</loc>
   </url>
 </urlset>

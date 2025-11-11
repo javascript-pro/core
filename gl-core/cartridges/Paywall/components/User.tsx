@@ -108,7 +108,9 @@ export default function User() {
                   {moment(Number(user.lastLoginAt)).fromNow()}
                 </Typography>
                 <Typography variant="caption" color="text.secondary">
-                  {moment(Number(user.lastLoginAt)).format('MMM D, YYYY, HH:mm')}
+                  {moment(Number(user.lastLoginAt)).format(
+                    'MMM D, YYYY, HH:mm',
+                  )}
                 </Typography>
               </>
             ) : (

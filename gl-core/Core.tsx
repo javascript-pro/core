@@ -150,16 +150,13 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
         <Container id="core" maxWidth="md">
           <Box sx={{ minHeight: '100vh' }}>
-            
             <Grid container spacing={isMobile ? 0 : 1}>
-              
               {!isMobile && (
                 <Grid size={{ md: 3 }}>
                   <Box sx={{ mt: 1 }}>
                     <Search />
                     {Array.isArray(siblings) && siblings.length > 0 ? (
                       <>
-                      
                         <Siblings />
                       </>
                     ) : (

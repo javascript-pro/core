@@ -583,7 +583,7 @@
                   "github",
                   "bitbucket"
                 ],
-                "excerpt": "[PrevNext prev=\"/work/git/gitkraken\" next=\"/work/git/github\"]\n\n Other Source Control solutions are available\n\nBut everyone uses git. It was created in 2005 by Linus Torvalds, the same person who built"
+                "excerpt": "Other Source Control solutions are available\n\nBut everyone uses git. It was created in 2005 by Linus Torvalds, the same person who built the Linux kernel. Before Git, the Linux project used a propriet"
               },
               {
                 "title": "AI",
@@ -981,17 +981,50 @@
             "excerpt": "Tel/WhatsApp   \n | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX"
           },
           {
-            "title": "Interview 11/11/2025",
-            "slug": "/work/interview",
-            "order": 2026,
+            "title": "Aurosafe",
+            "description": "16hrs 11/11/2025",
+            "slug": "/work/interviews",
+            "order": 2018,
+            "type": "folder",
+            "children": [
+              {
+                "title": "Flash",
+                "slug": "/work/interviews/flash",
+                "order": 1998,
+                "icon": "paywall",
+                "image": "https://live.staticflickr.com/65535/54802570139_8f4f2ac814_b.jpg",
+                "type": "file",
+                "tags": [
+                  "expertise",
+                  "interview",
+                  "flash",
+                  "default"
+                ],
+                "excerpt": "Flash Developer, Aug 1998  Present\n \n\n Resources"
+              },
+              {
+                "title": "Boral",
+                "slug": "/work/interviews/boral",
+                "order": 2019,
+                "icon": "paywall",
+                "image": "https://live.staticflickr.com/65535/54915903856_0a086bd3ec_b.jpg",
+                "type": "file",
+                "tags": [
+                  "expertise",
+                  "interview",
+                  "boral"
+                ],
+                "excerpt": "React Developer, Aug 2018  Feb 2019\n , Sydney, Australia\n\n Other outcomes\n\n Built foundational test architecture using Cucumber, Gherkin, and BDD principles\n Developed and tested multiple React PWAs w"
+              }
+            ],
             "icon": "paywall",
             "image": "https://live.staticflickr.com/65535/54914102727_6875cb7c9a_b.jpg",
-            "type": "file",
             "tags": [
               "expertise",
-              "interview"
+              "interview",
+              "aurosafe"
             ],
-            "excerpt": "React Developer — Boral\nContract\nSydney, Australia — Aug 2018 to Feb 2019 (Contract)\n\n Built foundational test architecture using Cucumber, Gherkin, and BDD principles\n Developed and tested multiple R"
+            "excerpt": "16hrs 11/11/2025\n\n React Developer\n\n\n\nThe client is a Londonbased tech company building smart compliance and monitoring software that connects IoT devices into one platform. You’ll be joining a small,"
           }
         ],
         "icon": "work",
@@ -1454,6 +1487,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[Flash movie=\"Logo\" height=\"200\"]\n\n[PageAd slug=\"/work/expertise/javascript/react\"]\n\n[PageAd slug=\"/work/expertise/javascript/nextjs\"]"
+    "excerpt": "[Flash movie=\"Logo\" height=\"200\"]\n\n[PageAd slug=\"/work/expertise/javascript/react\"]\n\n[PageAd slug=\"/work/expertise/javascript/nextjs\"]\n\n[PageAd slug=\"/work/expertise/javascript/node\"]"
   }
 ]
