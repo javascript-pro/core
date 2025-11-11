@@ -999,6 +999,20 @@
                   "interview",
                   "boral"
                 ],
+                "excerpt": ""
+              },
+              {
+                "title": "Boral",
+                "slug": "/work/experience/boral2",
+                "order": 2019,
+                "icon": "paywall",
+                "image": "https://live.staticflickr.com/65535/54915903856_0a086bd3ec_b.jpg",
+                "type": "file",
+                "tags": [
+                  "expertise",
+                  "interview",
+                  "boral"
+                ],
                 "excerpt": "STAR\n\n Other outcomes\n\n Built foundational test architecture using Cucumber, Gherkin, and BDD principles\n Developed and tested multiple React PWAs with AWS Amplify and GraphQL\n Enabled CI/CD workflows"
               }
             ],

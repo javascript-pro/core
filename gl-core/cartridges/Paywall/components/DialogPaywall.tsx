@@ -38,21 +38,21 @@ export default function DialogPaywall() {
       fullWidth
     >
       <DialogTitle>
-        <CardHeader 
-          action={<>
-            <IconButton
-              color="primary"
-              onClick={handleClose}
-            >
-              <Icon icon="close" />
-            </IconButton></>}
+        <CardHeader
+          action={
+            <>
+              <IconButton color="primary" onClick={handleClose}>
+                <Icon icon="close" />
+              </IconButton>
+            </>
+          }
         />
       </DialogTitle>
 
       {!user ? (
         <>
           <DialogContent>
-             {user ? <User /> : null} 
+            {user ? <User /> : null}
             <Box sx={{}}>
               <Signin />
             </Box>

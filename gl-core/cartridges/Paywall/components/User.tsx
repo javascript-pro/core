@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { Chip, List, ListItem } from '@mui/material';
 import { useUser, userSignout, setPaywallKey } from '../../Paywall';
-import { Icon, useDispatch,  } from '../../../../gl-core';
+import { Icon, useDispatch } from '../../../../gl-core';
 
 export default function User() {
   const user = useUser();
