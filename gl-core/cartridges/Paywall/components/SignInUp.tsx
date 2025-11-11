@@ -24,7 +24,10 @@ export default function SignInUp() {
   const [user, setUser] = React.useState<User | null>(null);
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
-  const [errors, setErrors] = React.useState<{ email?: string; password?: string }>({});
+  const [errors, setErrors] = React.useState<{
+    email?: string;
+    password?: string;
+  }>({});
   const dispatch = useDispatch();
 
   const paywall = usePaywall();
@@ -66,11 +69,9 @@ export default function SignInUp() {
   if (user) return null;
 
   return (
-    <Container maxWidth="xs">
+    <>
       <Card>
-        <CardHeader
-          title={mode === 'signin' ? 'Sign in' : 'Sign up'}
-        />
+        <CardHeader title={mode === 'signin' ? 'Sign in' : 'Sign up'} />
         <form onSubmit={handleSubmit} noValidate>
           <CardContent>
             <TextField
@@ -100,13 +101,13 @@ export default function SignInUp() {
           <CardActions>
             {mode === 'signin' ? (
               <>
-              <Button
-                onClick={() => toggleMode('signup')}
-                startIcon={<Icon icon="tick" />}
-                variant="outlined"
-              >
-                Sign up
-              </Button>
+                <Button
+                  onClick={() => toggleMode('signup')}
+                  startIcon={<Icon icon="tick" />}
+                  variant="outlined"
+                >
+                  Sign up
+                </Button>
               </>
             ) : (
               <Button
@@ -127,6 +128,6 @@ export default function SignInUp() {
           </CardActions>
         </form>
       </Card>
-    </Container>
+    </>
   );
 }

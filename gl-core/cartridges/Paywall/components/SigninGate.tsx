@@ -18,9 +18,11 @@ export default function SigninGate() {
 
   return (
     <Box sx={{ mt: 3 }}>
-      {!user ? <>
-        <SignInUp />
-      </> : null}
+      {!user ? (
+        <>
+          <SignInUp />
+        </>
+      ) : null}
 
       {/* Debug info (optional, remove in production) */}
       {/* <pre style={{ fontSize: '10px' }}>

@@ -52,13 +52,13 @@
               }
             ],
             "icon": "experience",
-            "image": "/png/3rdParty/git_og.png",
+            "image": "/png/3rdParty/react.png",
             "tags": [
               "expertise",
               "interview",
               "experience"
             ],
-            "excerpt": "[Children label=\"Experience\"]"
+            "excerpt": ""
           },
           {
             "title": "Goldlabel Core",
@@ -1519,6 +1519,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[ChildPages ]\n\n[Flash movie=\"Logo\" height=\"200\"]\n\n[PrevNext prev=\"/work/expertise/javascript/react\" next=\"/work/expertise/javascript/react/hooks\"]\n\n[PageAd slug=\"/work/expertise/javascript/nextjs\"]\n\n["
+    "excerpt": "[Flash movie=\"Logo\" height=\"190\"]\n\n[PageAd slug=\"/work/expertise/javascript/nextjs\"]\n\n[PrevNext prev=\"/work/expertise/javascript/react\" next=\"/work/expertise/javascript/react/hooks\"]\n\n[PageAd slug=\"/w"
   }
 ]

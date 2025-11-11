@@ -35,7 +35,10 @@ function findChildren(items: NavItem[], slug: string): NavItem[] {
 
 function cleanExcerpt(excerpt?: string): string {
   if (!excerpt) return '';
-  return excerpt.replace(/\[[^\]]+\]/g, '').replace(/\s+/g, ' ').trim();
+  return excerpt
+    .replace(/\[[^\]]+\]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
 }
 
 // --- component ---
@@ -56,8 +59,7 @@ export default function ChildPages({
       : [];
 
   // root-level: show top-level pages
-  const children =
-    slug === '/' ? items : findChildren(items, slug);
+  const children = slug === '/' ? items : findChildren(items, slug);
 
   if (!children || children.length === 0) return null;
 

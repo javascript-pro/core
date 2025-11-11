@@ -188,10 +188,16 @@ export default function Core({ frontmatter, body = null }: TCore) {
                     </>
                   )}
                 </Box>
-                <Box sx={{ flexGrow: 1 }}>
-                  {pathname !== '/' && <PageBreadcrumb />}
-                </Box>
 
+                <Box sx={{display: 'flex'}}>
+                  <Box sx={{ml:-1}}>
+                    <SharePopup />
+                  </Box>
+                  <Box sx={{ flexGrow: 1, mt: 1 }}>
+                    {pathname !== '/' && <PageBreadcrumb />}
+                  </Box>
+                </Box>
+                
                 {/* 🔒 Content area */}
                 <Box sx={{ mt: isMobile ? 2 : 4, mb: isMobile ? 3 : '175px' }}>
                   {/* ✅ Authenticated users always bypass paywall */}
