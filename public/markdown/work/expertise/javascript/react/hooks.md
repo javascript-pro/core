@@ -4,13 +4,13 @@ title: Hooks
 description: React Hooks were introduced in React 16.8 (February 2019)
 slug: /work/expertise/javascript/react/hooks
 icon: js
-image: /png/3rdParty/wikipedia.png
+image: /png/3rdParty/react.png
 tags: React, hooks
 ---
 
 > In short, Hooks let React functions become stateful and reactive without classes
 
-At a fundamental level, Hooks hook into React’s internal lifecycle and state system from within functional components. 
+At a fundamental level, Hooks hook into React’s internal lifecycle and state system from within functional components.
 
 They give functions access to capabilities that previously only class components had. State, context, lifecycle events, and refs, but in a simpler, composable way. Think of them as bridges between your component logic and React’s engine. Best used for:
 

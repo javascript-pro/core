@@ -203,7 +203,7 @@
                         "slug": "/work/expertise/javascript/react/history",
                         "order": 10,
                         "icon": "js",
-                        "image": "/png/3rdParty/wikipedia.png",
+                        "image": "/png/3rdParty/react.png",
                         "type": "file",
                         "tags": [
                           "JavaScript",
@@ -218,20 +218,20 @@
                         "slug": "/work/expertise/javascript/react/hooks",
                         "order": 10,
                         "icon": "js",
-                        "image": "/png/3rdParty/wikipedia.png",
+                        "image": "/png/3rdParty/react.png",
                         "type": "file",
                         "tags": [
                           "React",
                           "hooks"
                         ],
-                        "excerpt": "React Hooks were introduced in React 16.8 (February 2019).\n\nThey solved two main problems:\n\n State and lifecycle reuse — before Hooks, only class components could use state and lifecycle methods, maki"
+                        "excerpt": "In short, Hooks let React functions become stateful and reactive without classes\n\nAt a fundamental level, Hooks hook into React’s internal lifecycle and state system from within functional components."
                       },
                       {
                         "title": "Our Experience",
                         "slug": "/work/expertise/javascript/react/experience",
                         "order": 20,
                         "icon": "js",
-                        "image": "/png/3rdParty/wikipedia.png",
+                        "image": "/png/3rdParty/react.png",
                         "type": "file",
                         "tags": [
                           "JavaScript",
@@ -244,14 +244,14 @@
                       }
                     ],
                     "icon": "js",
-                    "image": "/png/3rdParty/wikipedia.png",
+                    "image": "/png/3rdParty/react.png",
                     "tags": [
                       "JavaScript",
                       "TypeScript",
                       "React",
                       "frameworks"
                     ],
-                    "excerpt": "[Children label=\"React\"]\n\nReact is a JavaScript library for building user interfaces, originally developed by Jordan Walke at Facebook and opensourced in 2013. It introduced a fundamentally new way of"
+                    "excerpt": "[ChildPages title=\"React\"]\n\nReact is a JavaScript library for building user interfaces, originally developed by Jordan Walke at Facebook and opensourced in 2013. It introduced a fundamentally new way "
                   },
                   {
                     "title": "Next.js",
@@ -1519,6 +1519,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[Flash movie=\"Logo\" height=\"200\"]\n\n[PrevNext prev=\"/work/experience\" next=\"/work/experience/boral\"]\n\n[PageAd slug=\"/work/expertise/javascript/react\"]\n\n[PageAd slug=\"/work/expertise/javascript/nextjs\"]"
+    "excerpt": "[ChildPages ]\n\n[Flash movie=\"Logo\" height=\"200\"]\n\n[PrevNext prev=\"/work/expertise/javascript/react\" next=\"/work/expertise/javascript/react/hooks\"]\n\n[PageAd slug=\"/work/expertise/javascript/nextjs\"]\n\n["
   }
 ]

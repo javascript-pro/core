@@ -15,7 +15,7 @@ import {
   usePaywall,
   useUser,
   setPaywallKey,
-  Signin,
+  SignInUp,
   User,
 } from '../../Paywall';
 
@@ -55,7 +55,7 @@ export default function DialogPaywall() {
           <DialogContent>
             {user ? <User /> : null}
             <Box sx={{}}>
-              <Signin />
+              <SignInUp />
             </Box>
           </DialogContent>
         </>

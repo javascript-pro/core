@@ -4,7 +4,7 @@ title: History
 description: 2013 - 2016
 slug: /work/expertise/javascript/react/history
 icon: js
-image: /png/3rdParty/wikipedia.png
+image: /png/3rdParty/react.png
 tags: JavaScript, TypeScript, React, frameworks
 ---
 

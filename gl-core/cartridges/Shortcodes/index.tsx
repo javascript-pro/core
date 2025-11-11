@@ -8,4 +8,13 @@ import YouTube from './components/YouTube';
 import PrevNext from './components/PrevNext';
 import GitHub from './components/GitHub';
 import ChildPages from './components/ChildPages';
-export { ChildPages, GitHub, FlickrAlbum, PrevNext, GoogleMap, Mapbox, PageAd, YouTube };
+export {
+  ChildPages,
+  GitHub,
+  FlickrAlbum,
+  PrevNext,
+  GoogleMap,
+  Mapbox,
+  PageAd,
+  YouTube,
+};

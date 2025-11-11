@@ -1,10 +1,9 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/Paywall/index.tsx
 import Paywall from './Paywall';
 import { initialState as initialStatePaywall } from './initialState';
-import Signin from './components/Signin';
+import SignInUp from './components/SignInUp';
 import Tings from './components/Tings';
 import User from './components/User';
-import Register from './components/Register';
 import SigninGate from './components/SigninGate';
 import DialogPaywall from './components/DialogPaywall';
 import { usePaywall } from './hooks/usePaywall';
@@ -20,10 +19,9 @@ export {
   useUser,
   setPaywallKey,
   setUser,
-  Signin,
+  SignInUp,
   DialogPaywall,
   SigninGate,
-  Register,
   Tings,
   User,
   userSignout,

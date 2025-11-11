@@ -4,7 +4,7 @@ title: Our Experience
 description: Using React since 2016
 slug: /work/expertise/javascript/react/experience
 icon: js
-image: /png/3rdParty/wikipedia.png
+image: /png/3rdParty/react.png
 tags: JavaScript, TypeScript, React, frameworks, china
 ---
 

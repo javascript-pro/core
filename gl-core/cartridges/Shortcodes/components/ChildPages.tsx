@@ -21,15 +21,16 @@ type NavItem = {
   children?: NavItem[];
 };
 
-function findBySlug(items: NavItem[], slug: string): NavItem | null {
+// --- helpers ---
+function findChildren(items: NavItem[], slug: string): NavItem[] {
   for (const item of items) {
-    if (item.slug === slug) return item;
+    if (item.slug === slug) return item.children || [];
     if (item.children) {
-      const found = findBySlug(item.children, slug);
-      if (found) return found;
+      const found = findChildren(item.children, slug);
+      if (found.length > 0) return found;
     }
   }
-  return null;
+  return [];
 }
 
 function cleanExcerpt(excerpt?: string): string {
@@ -37,6 +38,7 @@ function cleanExcerpt(excerpt?: string): string {
   return excerpt.replace(/\[[^\]]+\]/g, '').replace(/\s+/g, ' ').trim();
 }
 
+// --- component ---
 export default function ChildPages({
   slug = '/',
   title,
@@ -53,45 +55,11 @@ export default function ChildPages({
       ? [globalNav]
       : [];
 
-  const currentItem = findBySlug(items, slug);
-  const children = currentItem?.children || [];
+  // root-level: show top-level pages
+  const children =
+    slug === '/' ? items : findChildren(items, slug);
 
-  if (children.length === 0) return null;
+  if (!children || children.length === 0) return null;
 
-  return (
-    <Box sx={{ maxWidth: 500, mx: 'auto' }}>
-      {title && (
-        <Typography variant="h6" sx={{ mb: 1 }}>
-          {title}
-        </Typography>
-      )}
-      <List disablePadding>
-        {children.map((child) => (
-          <ListItemButton
-            key={child.slug}
-            onClick={() => router.push(child.slug as string)}
-          >
-            {child.icon && (
-              <ListItemIcon>
-                <Icon icon={child.icon as any} color="primary" />
-              </ListItemIcon>
-            )}
-            <ListItemText
-              primary={child.title}
-              secondary={
-                <Typography
-                  variant="body2"
-                  color="text.secondary"
-                  noWrap
-                  sx={{ pr: 2 }}
-                >
-                  {cleanExcerpt(child.excerpt)}
-                </Typography>
-              }
-            />
-          </ListItemButton>
-        ))}
-      </List>
-    </Box>
-  );
+  return null;
 }
