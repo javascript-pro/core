@@ -101,15 +101,9 @@ export default function Core({ frontmatter, body = null }: TCore) {
               <Icon icon="menu" />
             </IconButton>
           </Box>
-          <Box sx={{ flexGrow: 1, mx: 1 }}>
-            {pathname !== '/' && <PageBreadcrumb />}
-          </Box>
 
-          <Box sx={{ mt: 1, display: 'flex' }}>
-            <SharePopup frontmatter={frontmatter} />
-            <Box sx={{ ml: 1 }}>
-              <Paywall />
-            </Box>
+          <Box sx={{}}>
+            <Paywall />
           </Box>
         </Box>
 
@@ -197,6 +191,10 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
                 {/* 🔒 Content area */}
                 <Box sx={{ mt: isMobile ? 2 : 4, mb: isMobile ? 3 : '175px' }}>
+                  <Box sx={{ flexGrow: 1 }}>
+                    {pathname !== '/' && <PageBreadcrumb />}
+                  </Box>
+
                   {/* ✅ Authenticated users always bypass paywall */}
                   {paywall === true && !isAuthed ? (
                     <SigninGate />

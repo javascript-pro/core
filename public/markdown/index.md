@@ -12,6 +12,8 @@ noImage: true
 
 [Flash movie="Logo" height="200"]
 
+[PageAd slug="/work/interviews/boral"]
+
 [PageAd slug="/work/expertise/javascript/react"]
 
 [PageAd slug="/work/expertise/javascript/nextjs"]

@@ -12,6 +12,8 @@ paywall: true
 - React Developer, Aug 2018 - Feb 2019
 - [Boral Pty Ltd](https://www.boral.com.au/locations), Sydney, Australia
 
+STAR
+
 ### Other outcomes
 
 - Built foundational test architecture using Cucumber, Gherkin, and BDD principles

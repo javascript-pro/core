@@ -5,7 +5,6 @@ import {
   DialogTitle,
   DialogContent,
   DialogActions,
-  IconButton,
   Box,
   Typography,
   Button,
@@ -50,14 +49,7 @@ export default function DialogPaywall() {
       maxWidth="xs"
       fullWidth
     >
-      <DialogTitle
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          pb: 0,
-        }}
-      >
+      <DialogTitle>
         {user ? (
           <User />
         ) : (
@@ -73,27 +65,32 @@ export default function DialogPaywall() {
             </Box>
           </>
         )}
-
-        <IconButton
-          aria-label="Close paywall"
-          onClick={handleClose}
-          color="primary"
-        >
-          <Icon icon="close" />
-        </IconButton>
       </DialogTitle>
 
-      <DialogContent>
-        <Box sx={{ mt: 1 }}>{!user ? <Signin /> : null}</Box>
-      </DialogContent>
+      {!user ? (
+        <>
+          <DialogContent>
+            <Box sx={{ mt: 1 }}>
+              <Signin />
+            </Box>
+          </DialogContent>
+        </>
+      ) : (
+        <DialogContent />
+      )}
 
       <DialogActions>
         {user && (
-          <Button onClick={handleClose} endIcon={<Icon icon="close" />}>
-            Close
+          <Button
+            fullWidth
+            variant="contained"
+            onClick={handleClose}
+            endIcon={<Icon icon="tick" />}
+          >
+            OK
           </Button>
         )}
-        {/* <Box sx={{ flexGrow: 1 }} /> */}
+        <Box sx={{ flexGrow: 1 }} />
       </DialogActions>
     </Dialog>
   );

@@ -1,9 +1,11 @@
 import * as React from 'react';
-import { SvgIcon } from '@mui/material';
+import { SvgIcon, useTheme } from '@mui/material';
 
 export default function PingpongballIcon(props: any) {
-  const mainColor = '#C09F52';
-  const smile = '#FFF';
+  const theme = useTheme();
+
+  const smile = theme.palette.primary.main;
+  const mainColor = theme.palette.background.default;
 
   return (
     <SvgIcon {...props}>
