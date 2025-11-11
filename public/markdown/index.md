@@ -12,7 +12,7 @@ noImage: true
 
 [Flash movie="Logo" height="200"]
 
-[PageAd slug="/work/interviews/boral"]
+[PageAd slug="/work/experience/boral"]
 
 [PageAd slug="/work/expertise/javascript/react"]
 

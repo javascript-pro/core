@@ -983,13 +983,13 @@
           {
             "title": "Aurosafe",
             "description": "16hrs 11/11/2025",
-            "slug": "/work/interviews",
+            "slug": "/work/experience",
             "order": 2018,
             "type": "folder",
             "children": [
               {
                 "title": "Boral",
-                "slug": "/work/interviews/boral",
+                "slug": "/work/experience/boral",
                 "order": 2019,
                 "icon": "paywall",
                 "image": "https://live.staticflickr.com/65535/54915903856_0a086bd3ec_b.jpg",
@@ -999,10 +999,10 @@
                   "interview",
                   "boral"
                 ],
-                "excerpt": "React Developer, Aug 2018  Feb 2019\n , Sydney, Australia\n\nSTAR\n\n Other outcomes\n\n Built foundational test architecture using Cucumber, Gherkin, and BDD principles\n Developed and tested multiple React "
+                "excerpt": "STAR\n\n Other outcomes\n\n Built foundational test architecture using Cucumber, Gherkin, and BDD principles\n Developed and tested multiple React PWAs with AWS Amplify and GraphQL\n Enabled CI/CD workflows"
               }
             ],
-            "icon": "paywall",
+            "icon": "settings",
             "image": "https://live.staticflickr.com/65535/54914102727_6875cb7c9a_b.jpg",
             "tags": [
               "expertise",
@@ -1489,6 +1489,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[Flash movie=\"Logo\" height=\"200\"]\n\n[PageAd slug=\"/work/interviews/boral\"]\n\n[PageAd slug=\"/work/expertise/javascript/react\"]\n\n[PageAd slug=\"/work/expertise/javascript/nextjs\"]\n\n[PageAd slug=\"/work/expe"
+    "excerpt": "[Flash movie=\"Logo\" height=\"200\"]\n\n[PageAd slug=\"/work/experience/boral\"]\n\n[PageAd slug=\"/work/expertise/javascript/react\"]\n\n[PageAd slug=\"/work/expertise/javascript/nextjs\"]\n\n[PageAd slug=\"/work/expe"
   }
 ]

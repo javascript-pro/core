@@ -849,7 +849,7 @@ export default function Icon({ icon, color }: TIcon) {
       break;
 
     case 'paywall':
-      iconFragment = <PingpongballIcon color={color} />;
+      iconFragment = <UserIcon color={color} />;
       break;
 
     case 'private':

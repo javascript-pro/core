@@ -1,19 +1,25 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/Paywall/components/Signin.tsx
 import * as React from 'react';
-import { Box, Button, TextField } from '@mui/material';
+import { CardHeader,Card, CardContent, Button, TextField, CardActions } from '@mui/material';
 import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
   User,
 } from 'firebase/auth';
 import { auth } from '../../../lib/firebase';
-import LoginIcon from '@mui/icons-material/Login';
+import { useDispatch, Icon } from '../../../../gl-core';
+import {
+  usePaywall,
+  useUser,
+  setPaywallKey,
+} from '../../Paywall';
 
 export default function Signin() {
   const [user, setUser] = React.useState<User | null>(null);
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
-
+  const dispatch = useDispatch();
+  
   React.useEffect(() => {
     return onAuthStateChanged(auth, (u) => {
       setUser(u);
@@ -29,11 +35,22 @@ export default function Signin() {
     }
   };
 
+  const handleClose = () => {
+    dispatch(setPaywallKey('dialogOpen', false));
+  };
+
+  const handleRegister = () => {
+    dispatch(setPaywallKey('registering', true));
+  };
+
+  if (user) return null;
+  
   return (
-    <Box sx={{ maxWidth: 300 }}>
+    <Card sx={{  }}>
+      <CardContent>
       <TextField
         autoFocus
-        sx={{ my: 1 }}
+        sx={{ my: 2 }}
         fullWidth
         variant="filled"
         label="Email"
@@ -43,23 +60,34 @@ export default function Signin() {
       />
       <TextField
         fullWidth
-        sx={{ my: 1 }}
+        sx={{ my: 2 }}
         variant="filled"
         label="Password"
         type="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <Button
-        size="large"
-        sx={{ my: 1 }}
-        onClick={handleLogin}
-        startIcon={<LoginIcon />}
-        type="submit"
-        variant="contained"
-      >
-        Sign in
-      </Button>
-    </Box>
+      
+      </CardContent>
+      <CardActions>
+        <Button
+          onClick={handleRegister}
+          startIcon={<Icon icon="paywall" />}
+          type="submit"
+          variant="outlined"
+        >
+          Sign up
+        </Button>
+        <Button
+          onClick={handleLogin}
+          endIcon={<Icon icon="signin" />}
+          type="submit"
+          variant="contained"
+        >
+          Sign in
+        </Button>
+
+      </CardActions>
+    </Card>
   );
 }

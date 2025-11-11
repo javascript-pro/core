@@ -137,6 +137,12 @@
     <loc>https://goldlabel.pro/work/company/work-with-us</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/work/experience/boral</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/experience</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/work/expertise/ai/abgeschottet-ki/confidentiality-obligations</loc>
   </url>
   <url>
@@ -321,11 +327,5 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/interviews/boral</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/interviews</loc>
   </url>
 </urlset>

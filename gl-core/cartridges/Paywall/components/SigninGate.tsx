@@ -17,26 +17,7 @@ export default function SigninGate() {
 
   return (
     <Box sx={{ mt: 3 }}>
-      {!user ? (
-        <>
-          <Alert
-            icon={<Icon icon="paywall" />}
-            severity="success"
-            sx={{ mb: 2 }}
-          >
-            Please sign in
-          </Alert>
-          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, my: 2 }}>
-            <Signin />
-          </Box>
-        </>
-      ) : (
-        <Alert severity="success">
-          <AlertTitle>
-            Signed in as {user.email} UID: <code>{user.uid}</code>
-          </AlertTitle>
-        </Alert>
-      )}
+      {!user ? <Signin /> : null}
 
       {/* Debug info (optional, remove in production) */}
       {/* <pre style={{ fontSize: '10px' }}>

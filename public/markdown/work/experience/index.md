@@ -2,8 +2,8 @@
 order: 2018
 title: Aurosafe
 description: 16hrs 11/11/2025
-slug: /work/interviews
-icon: paywall
+slug: /work/experience
+icon: settings
 image: https://live.staticflickr.com/65535/54914102727_6875cb7c9a_b.jpg
 tags: expertise, interview, aurosafe
 paywall: true

@@ -29,8 +29,8 @@ export default function Paywall() {
     <>
       <DialogPaywall />
       <Button
-        variant="contained"
-        startIcon={<Icon icon="paywall" />}
+        variant="text"
+        endIcon={<Icon icon="paywall" />}
         onClick={handleClick}
         sx={{
           zIndex: (theme) => theme.zIndex.modal - 3,
