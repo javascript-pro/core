@@ -74,6 +74,9 @@
     <loc>https://goldlabel.pro/balance/writing/wei-zangs-food/air-fried-peppers</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/balance/writing/wei-zangs-food/all-day-brekkie-goreng</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/balance/writing/wei-zangs-food/banana-bread</loc>
   </url>
   <url>
@@ -318,5 +321,11 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/interviews/boral</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/interviews</loc>
   </url>
 </urlset>

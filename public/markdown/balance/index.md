@@ -7,4 +7,4 @@ icon: balance
 image: /png/3rdParty/unicorn.png
 ---
 
-[PrevNext prev="/balance/books/r-f-kuang" next="/balance/books/r-f-kuang/katabasis"]
+[PrevNext prev="/balance/books/r-f-kuang" next="/balance/writing/wei-zangs-food/all-day-brekkie-goreng"]

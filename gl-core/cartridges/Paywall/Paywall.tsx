@@ -2,7 +2,7 @@
 'use client';
 
 import * as React from 'react';
-import { IconButton } from '@mui/material';
+import { IconButton, Button } from '@mui/material';
 import { Icon, useDispatch } from '../../../gl-core';
 import { auth } from '../../lib/firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
@@ -28,18 +28,19 @@ export default function Paywall() {
   return (
     <>
       <DialogPaywall />
-      <IconButton
-        color="primary"
+      <Button
+        variant="contained"
+        startIcon={<Icon icon="paywall" />}
         onClick={handleClick}
         sx={{
           zIndex: (theme) => theme.zIndex.modal - 3,
           position: 'fixed',
-          bottom: 16,
-          left: 16,
+          top: 8,
+          right: 8,
         }}
       >
-        <Icon icon="paywall" />
-      </IconButton>
+        Account
+      </Button>
     </>
   );
 }

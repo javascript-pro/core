@@ -24,7 +24,8 @@ import WhenIcon from '@mui/icons-material/CalendarMonthOutlined';
 import WhatIcon from '@mui/icons-material/HardwareOutlined';
 import FilterIcon from '@mui/icons-material/SortOutlined';
 import AccountIcon from '@mui/icons-material/SupervisedUserCircle';
-import AdminIcon from '@mui/icons-material/Security';
+//
+import AdminIcon from '@mui/icons-material/SupervisedUserCircle';
 import AndroidIcon from '@mui/icons-material/Android';
 import HowIcon from '@mui/icons-material/ElectricBoltOutlined';
 import WhoIcon from '@mui/icons-material/EscalatorWarningOutlined';
@@ -848,7 +849,7 @@ export default function Icon({ icon, color }: TIcon) {
       break;
 
     case 'paywall':
-      iconFragment = <AdminIcon color={color} />;
+      iconFragment = <PingpongballIcon color={color} />;
       break;
 
     case 'private':

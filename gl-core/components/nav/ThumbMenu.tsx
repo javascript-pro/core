@@ -19,7 +19,6 @@ import {
 import {
   Icon,
   useDispatch,
-  ShareMenu,
   ModeSwitch,
   routeTo,
   useIsMobile,
@@ -66,8 +65,8 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
         sx={{
           zIndex: (theme) => theme.zIndex.modal - 2,
           position: 'fixed',
-          bottom: 16,
-          right: 16,
+          bottom: 8,
+          right: 8,
         }}
       >
         <Icon icon="fingerprint" />
@@ -157,7 +156,6 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
               )}
             </Box>
           )}
-          <ShareMenu frontmatter={frontmatter} />
         </DialogContent>
       </Dialog>
     </>

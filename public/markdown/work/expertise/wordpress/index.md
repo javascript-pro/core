@@ -8,6 +8,8 @@ image: https://live.staticflickr.com/8504/8434232637_2a7e8b697f_o.jpg
 tags: expertise, wordpress
 ---
 
+[GitHub url="https://github.com/goldlabel-apps/wordpress" label="goldlabel-apps/wordpress"]
+
 ## WordPress powers 50% of all websites
 
 > We treat an existing WordPress installation as a data source, not a problem to fix.

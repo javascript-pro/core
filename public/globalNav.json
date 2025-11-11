@@ -210,7 +210,7 @@
                       "REST API",
                       "React"
                     ],
-                    "excerpt": "Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with seamless backend capabilities, creating a unified developer experience. It simplifies the proce"
+                    "excerpt": "Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with seamless backend capabilities, creating a unified developer experience.\n\n Why we use it\n\nIt sim"
                   },
                   {
                     "title": "Node",
@@ -583,7 +583,7 @@
                   "github",
                   "bitbucket"
                 ],
-                "excerpt": "[PrevNext prev=\"/work/git/gitkraken\" next=\"/work/git/github\"]\n\n Other Source Control solutions are available\n\nBut everyone uses git. It was created in 2005 by Linus Torvalds, the same person who built"
+                "excerpt": "Other Source Control solutions are available\n\nBut everyone uses git. It was created in 2005 by Linus Torvalds, the same person who built the Linux kernel. Before Git, the Linux project used a propriet"
               },
               {
                 "title": "AI",
@@ -858,7 +858,7 @@
                   "expertise",
                   "wordpress"
                 ],
-                "excerpt": "WordPress powers 50% of all websites\n\n We treat an existing WordPress installation as a data source, not a problem to fix.\n\n Your database stays where it is — MySQL, posts, pages, taxonomies — untouch"
+                "excerpt": "[GitHub url=\"https://github.com/goldlabelapps/wordpress\" label=\"goldlabelapps/wordpress\"]\n\n WordPress powers 50% of all websites\n\n We treat an existing WordPress installation as a data source, not a p"
               },
               {
                 "title": "Windoze",
@@ -945,7 +945,7 @@
                 "tags": [
                   "team"
                 ],
-                "excerpt": "Whether you're a startup with a short deadline or an enterprise with complex workflows, we can help. Get in touch for it's a truth universally acknowledged that a Software Developer in possession of a"
+                "excerpt": "[GitHub url=\"https://github.com/goldlabelapps\" label=\"@goldlabelapps\"]\n\nWhether you're a startup with a short deadline or an enterprise with complex workflows, we can help. Get in touch for it's a tru"
               },
               {
                 "title": "Work With Us",
@@ -979,6 +979,37 @@
             "icon": "company",
             "image": "https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg",
             "excerpt": "Tel/WhatsApp   \n | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX"
+          },
+          {
+            "title": "Aurosafe",
+            "description": "16hrs 11/11/2025",
+            "slug": "/work/interviews",
+            "order": 2018,
+            "type": "folder",
+            "children": [
+              {
+                "title": "Boral",
+                "slug": "/work/interviews/boral",
+                "order": 2019,
+                "icon": "paywall",
+                "image": "https://live.staticflickr.com/65535/54915903856_0a086bd3ec_b.jpg",
+                "type": "file",
+                "tags": [
+                  "expertise",
+                  "interview",
+                  "boral"
+                ],
+                "excerpt": "React Developer, Aug 2018  Feb 2019\n , Sydney, Australia\n\nSTAR\n\n Other outcomes\n\n Built foundational test architecture using Cucumber, Gherkin, and BDD principles\n Developed and tested multiple React "
+              }
+            ],
+            "icon": "paywall",
+            "image": "https://live.staticflickr.com/65535/54914102727_6875cb7c9a_b.jpg",
+            "tags": [
+              "expertise",
+              "interview",
+              "aurosafe"
+            ],
+            "excerpt": "16hrs 11/11/2025\n\n React Developer\n\n\n\nThe client is a Londonbased tech company building smart compliance and monitoring software that connects IoT devices into one platform. You’ll be joining a small,"
           }
         ],
         "icon": "work",
@@ -1225,6 +1256,23 @@
                     "excerpt": "2 Large peppers (capsicums)\n 1 125g pack of mozzarella\n Enough of your best, most delicious bolognaise to fill the peppers\n\n STEP 1\n\nPrepare Air Fryer pan. Line it with tinfoil if you want to keep it "
                   },
                   {
+                    "title": "Breakfast Nasi Goreng",
+                    "slug": "/balance/writing/wei-zangs-food/all-day-brekkie-goreng",
+                    "order": 50,
+                    "icon": "food",
+                    "image": "/jpg/wei-zangs-food.jpg",
+                    "type": "file",
+                    "tags": [
+                      "food",
+                      "recipes",
+                      "indonesian",
+                      "goreng",
+                      "nasi",
+                      "rice"
+                    ],
+                    "excerpt": "Nasi Goreng is an Indonesian meal made from leftover rice stirfried with garlic, shallots, chilli, and sweet soy sauce (kecap manis). Often enriched with prawns, chicken, or beef, it’s finished with a"
+                  },
+                  {
                     "title": "Banana Bread",
                     "slug": "/balance/writing/wei-zangs-food/banana-bread",
                     "order": 50,
@@ -1407,7 +1455,7 @@
         ],
         "icon": "balance",
         "image": "/png/3rdParty/unicorn.png",
-        "excerpt": "[PrevNext prev=\"/balance/books/rfkuang\" next=\"/balance/books/rfkuang/katabasis\"]"
+        "excerpt": "[PrevNext prev=\"/balance/books/rfkuang\" next=\"/balance/writing/weizangsfood/alldaybrekkiegoreng\"]"
       }
     ],
     "icon": "home",
@@ -1441,6 +1489,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[Flash movie=\"Logo\" height=\"200\"]\n\n[PageAd slug=\"/work/expertise/javascript/react\"]"
+    "excerpt": "[Flash movie=\"Logo\" height=\"200\"]\n\n[PageAd slug=\"/work/interviews/boral\"]\n\n[PageAd slug=\"/work/expertise/javascript/react\"]\n\n[PageAd slug=\"/work/expertise/javascript/nextjs\"]\n\n[PageAd slug=\"/work/expe"
   }
 ]

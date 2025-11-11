@@ -16,9 +16,9 @@ import {
   OpenSource,
 } from './nav';
 import { FieldUpload } from './forms';
-import { Header, Footer, RenderMarkdown } from './layout';
+import { Footer, RenderMarkdown } from './layout';
 export { IncludeAll, Advert, Feedback, LoadingOverlay };
-export { Header, Footer, RenderMarkdown };
+export { Footer, RenderMarkdown };
 export {
   Nav,
   Siblings,

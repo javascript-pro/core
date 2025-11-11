@@ -1,4 +1,3 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Paywall/components/DialogPaywall.tsx
 'use client';
 import * as React from 'react';
 import {
@@ -6,21 +5,26 @@ import {
   DialogTitle,
   DialogContent,
   DialogActions,
-  IconButton,
   Box,
   Typography,
   Button,
 } from '@mui/material';
-import { useDispatch, Icon, useIsMobile } from '../../../../gl-core';
+import { useDispatch, Icon } from '../../../../gl-core';
 import { auth } from '../../../lib/firebase';
 import { signOut } from 'firebase/auth';
-import { usePaywall, setPaywallKey, Signin } from '../../Paywall';
+import {
+  usePaywall,
+  useUser,
+  setPaywallKey,
+  Signin,
+  User,
+} from '../../Paywall';
 
 export default function DialogPaywall() {
   const dispatch = useDispatch();
-  const isMobile = useIsMobile();
   const pw = usePaywall();
-  const { dialogOpen, user } = pw ?? {};
+  const { dialogOpen } = pw ?? {};
+  const user = useUser();
 
   const handleClose = () => {
     dispatch(setPaywallKey('dialogOpen', false));
@@ -31,7 +35,7 @@ export default function DialogPaywall() {
       await signOut(auth);
       dispatch(setPaywallKey('user', null));
       dispatch(setPaywallKey('authed', false));
-      dispatch(setPaywallKey('dialogOpen', false));
+      handleClose();
     } catch (err) {
       console.error('[Paywall] Sign-out failed:', err);
     }
@@ -41,64 +45,52 @@ export default function DialogPaywall() {
     <Dialog
       open={Boolean(dialogOpen)}
       onClose={handleClose}
-      fullScreen={isMobile}
+      fullScreen
       maxWidth="xs"
       fullWidth
     >
-      <DialogTitle
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          pb: 0,
-        }}
-      >
-        <Box sx={{ flexGrow: 1 }}>
-          <Icon icon="paywall" />
-        </Box>
-
-        <Box>
-          <IconButton
-            aria-label="Close paywall"
-            onClick={handleClose}
-            color="primary"
-          >
-            <Icon icon="close" />
-          </IconButton>
-        </Box>
-      </DialogTitle>
-
-      <DialogContent>
-        <Box sx={{ mt: 1 }}>
-          {!user ? (
-            <>
-              <Typography variant="body1" color="text.secondary">
-                Sign in please
-              </Typography>
-              <Signin />
-            </>
-          ) : (
-            <>
-              <Typography variant="h6">Account</Typography>
-              <Typography variant="body1">{user.email}</Typography>
-            </>
-          )}
-        </Box>
-      </DialogContent>
-      <DialogActions>
-        {user && (
+      <DialogTitle>
+        {user ? (
+          <User />
+        ) : (
           <>
-            <Button
-              size="large"
-              sx={{ my: 3 }}
-              onClick={handleSignout}
-              startIcon={<Icon icon="signout" />}
-              variant="outlined"
-            >
-              Sign Out
-            </Button>
+            <Box sx={{ mr: 2, mt: 1 }}>
+              <Icon icon="paywall" />
+            </Box>
+
+            <Box sx={{ flexGrow: 1 }}>
+              <Typography variant="h6">
+                {user ? user.email : 'Sign in please'}
+              </Typography>
+            </Box>
           </>
         )}
+      </DialogTitle>
+
+      {!user ? (
+        <>
+          <DialogContent>
+            <Box sx={{ mt: 1 }}>
+              <Signin />
+            </Box>
+          </DialogContent>
+        </>
+      ) : (
+        <DialogContent />
+      )}
+
+      <DialogActions>
+        {user && (
+          <Button
+            fullWidth
+            variant="contained"
+            onClick={handleClose}
+            endIcon={<Icon icon="tick" />}
+          >
+            OK
+          </Button>
+        )}
+        <Box sx={{ flexGrow: 1 }} />
       </DialogActions>
     </Dialog>
   );
