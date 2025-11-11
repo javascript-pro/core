@@ -10,7 +10,7 @@ import {
   Typography,
   Button,
 } from '@mui/material';
-import { useDispatch, Icon, useIsMobile } from '../../../../gl-core';
+import { useDispatch, Icon } from '../../../../gl-core';
 import { auth } from '../../../lib/firebase';
 import { signOut } from 'firebase/auth';
 import {
@@ -23,7 +23,6 @@ import {
 
 export default function DialogPaywall() {
   const dispatch = useDispatch();
-  const isMobile = useIsMobile();
   const pw = usePaywall();
   const { dialogOpen } = pw ?? {};
   const user = useUser();
@@ -59,15 +58,21 @@ export default function DialogPaywall() {
           pb: 0,
         }}
       >
-        <Box sx={{ mr: 2, mt: 1 }}>
-          <Icon icon="paywall" />
-        </Box>
+        {user ? (
+          <User />
+        ) : (
+          <>
+            <Box sx={{ mr: 2, mt: 1 }}>
+              <Icon icon="paywall" />
+            </Box>
 
-        <Box sx={{ flexGrow: 1 }}>
-          <Typography variant="h6">
-            {user ? user.email : 'Sign in please'}
-          </Typography>
-        </Box>
+            <Box sx={{ flexGrow: 1 }}>
+              <Typography variant="h6">
+                {user ? user.email : 'Sign in please'}
+              </Typography>
+            </Box>
+          </>
+        )}
 
         <IconButton
           aria-label="Close paywall"
@@ -79,24 +84,13 @@ export default function DialogPaywall() {
       </DialogTitle>
 
       <DialogContent>
-        <Box sx={{ mt: 1 }}>
-          {!user ? (
-            <>
-              <Signin />
-            </>
-          ) : (
-            <>
-              <User />
-              {/* <pre>user: {JSON.stringify(user, null, 2)}</pre> */}
-            </>
-          )}
-        </Box>
+        <Box sx={{ mt: 1 }}>{!user ? <Signin /> : null}</Box>
       </DialogContent>
 
       <DialogActions>
         {user && (
-          <Button onClick={handleSignout} endIcon={<Icon icon="signout" />}>
-            Sign Out
+          <Button onClick={handleClose} endIcon={<Icon icon="close" />}>
+            Close
           </Button>
         )}
         {/* <Box sx={{ flexGrow: 1 }} /> */}

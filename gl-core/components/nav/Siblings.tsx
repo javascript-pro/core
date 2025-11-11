@@ -70,16 +70,25 @@ export default function Siblings() {
     const chain: NavItem[] = [];
     let parent = findParent(globalNav as NavItem[], slug);
     while (parent) {
-      chain.unshift(parent); // insert at start
+      chain.unshift(parent);
       parent = findParent(globalNav as NavItem[], parent.slug);
     }
     return chain;
   }, []);
 
-  const ancestors = React.useMemo(
-    () => (currentNode ? getAncestors(currentNode.slug) : []),
-    [currentNode, getAncestors],
-  );
+  const ancestors = React.useMemo(() => {
+    if (!currentNode) return [];
+    const chain = getAncestors(currentNode.slug);
+    // include current node if it’s an index-like page
+    if (
+      currentNode.slug === '/' ||
+      currentNode.slug.endsWith('/index') ||
+      (currentNode.children && currentNode.children.length > 0)
+    ) {
+      chain.push(currentNode);
+    }
+    return chain;
+  }, [currentNode, getAncestors]);
 
   const isIndexPage = React.useMemo(() => {
     if (!currentNode) return false;

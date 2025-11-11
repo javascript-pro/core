@@ -988,21 +988,6 @@
             "type": "folder",
             "children": [
               {
-                "title": "Flash",
-                "slug": "/work/interviews/flash",
-                "order": 1998,
-                "icon": "paywall",
-                "image": "https://live.staticflickr.com/65535/54802570139_8f4f2ac814_b.jpg",
-                "type": "file",
-                "tags": [
-                  "expertise",
-                  "interview",
-                  "flash",
-                  "default"
-                ],
-                "excerpt": "Flash Developer, Aug 1998  Present\n \n\n Resources"
-              },
-              {
                 "title": "Boral",
                 "slug": "/work/interviews/boral",
                 "order": 2019,
@@ -1271,6 +1256,23 @@
                     "excerpt": "2 Large peppers (capsicums)\n 1 125g pack of mozzarella\n Enough of your best, most delicious bolognaise to fill the peppers\n\n STEP 1\n\nPrepare Air Fryer pan. Line it with tinfoil if you want to keep it "
                   },
                   {
+                    "title": "Breakfast Nasi Goreng",
+                    "slug": "/balance/writing/wei-zangs-food/all-day-brekkie-goreng",
+                    "order": 50,
+                    "icon": "food",
+                    "image": "/jpg/wei-zangs-food.jpg",
+                    "type": "file",
+                    "tags": [
+                      "food",
+                      "recipes",
+                      "indonesian",
+                      "goreng",
+                      "nasi",
+                      "rice"
+                    ],
+                    "excerpt": "Nasi Goreng is an Indonesian meal made from leftover rice stirfried with garlic, shallots, chilli, and sweet soy sauce (kecap manis). Often enriched with prawns, chicken, or beef, it’s finished with a"
+                  },
+                  {
                     "title": "Banana Bread",
                     "slug": "/balance/writing/wei-zangs-food/banana-bread",
                     "order": 50,
@@ -1453,7 +1455,7 @@
         ],
         "icon": "balance",
         "image": "/png/3rdParty/unicorn.png",
-        "excerpt": "[PrevNext prev=\"/balance/books/rfkuang\" next=\"/balance/books/rfkuang/katabasis\"]"
+        "excerpt": "[PrevNext prev=\"/balance/books/rfkuang\" next=\"/balance/writing/weizangsfood/alldaybrekkiegoreng\"]"
       }
     ],
     "icon": "home",
