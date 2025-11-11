@@ -1,11 +1,11 @@
 ---
 order: 10
 title: Work
-description: Professional Fullstack JavaScript Development
+description: Fullstack JavaScript Development
 slug: /work
 icon: work
 image: /png/3rdParty/git_og.png
-tags: JavaScript, Vanilla JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
+tags: Professional, JavaScript, Vanilla JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 ---
 
 > The apps we ship are real. They run in production and are developed accessibly.

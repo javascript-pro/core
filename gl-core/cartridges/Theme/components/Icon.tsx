@@ -24,6 +24,7 @@ import WhenIcon from '@mui/icons-material/CalendarMonthOutlined';
 import WhatIcon from '@mui/icons-material/HardwareOutlined';
 import FilterIcon from '@mui/icons-material/SortOutlined';
 import AccountIcon from '@mui/icons-material/SupervisedUserCircle';
+import ExperienceIcon from '@mui/icons-material/AllInclusive';
 //
 import AdminIcon from '@mui/icons-material/SupervisedUserCircle';
 import AndroidIcon from '@mui/icons-material/Android';
@@ -185,6 +186,7 @@ export type TIcon = {
     | 'plus'
     | 'dog'
     | 'about'
+    | 'experience'
     | 'clients'
     | 'link'
     | 'album'
@@ -918,6 +920,9 @@ export default function Icon({ icon, color }: TIcon) {
 
     case 'logs':
       iconFragment = <LogsIcon color={color} />;
+      break;
+    case 'experience':
+      iconFragment = <ExperienceIcon color={color} />;
       break;
 
     case 'van':

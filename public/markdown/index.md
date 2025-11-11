@@ -12,10 +12,11 @@ noImage: true
 
 [Flash movie="Logo" height="200"]
 
-[PageAd slug="/work/experience/boral"]
+[PrevNext prev="/work/expertise/javascript/react" next="/work/expertise/javascript/react/hooks"]
 
-[PageAd slug="/work/expertise/javascript/react"]
 
 [PageAd slug="/work/expertise/javascript/nextjs"]
 
 [PageAd slug="/work/expertise/javascript/node"]
+
+[PrevNext prev="/work/experience" next="/work/expertise"]

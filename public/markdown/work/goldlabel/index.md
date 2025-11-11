@@ -1,5 +1,5 @@
 ---
-order: 1
+order: 10
 title: Goldlabel Core
 description: Open Source Fullstack JavaScript Platform
 slug: /work/goldlabel

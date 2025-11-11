@@ -8,16 +8,63 @@
     "children": [
       {
         "title": "Work",
-        "description": "Professional Fullstack JavaScript Development",
+        "description": "Fullstack JavaScript Development",
         "slug": "/work",
         "order": 10,
         "type": "folder",
         "children": [
           {
+            "title": "Experience",
+            "description": "",
+            "slug": "/work/experience",
+            "order": 10,
+            "type": "folder",
+            "children": [
+              {
+                "title": "Aligent",
+                "slug": "/work/experience/aligent",
+                "order": 30,
+                "icon": "experience",
+                "image": "https://live.staticflickr.com/65535/54915903856_0a086bd3ec_b.jpg",
+                "type": "file",
+                "tags": [
+                  "expertise",
+                  "interview",
+                  "php",
+                  "magento",
+                  "e-commerce"
+                ],
+                "excerpt": "Magento PHP & Material Design System\n\n JavaScript Developer, Aug 20XX  Feb 20XX, Adelaide"
+              },
+              {
+                "title": "Boral",
+                "slug": "/work/experience/boral",
+                "order": 30,
+                "icon": "experience",
+                "image": "https://live.staticflickr.com/65535/54915903856_0a086bd3ec_b.jpg",
+                "type": "file",
+                "tags": [
+                  "expertise",
+                  "interview",
+                  "boral"
+                ],
+                "excerpt": "GeoSpatial Fleet App\n\n React Developer, Aug 2018  Feb 2019, Sydney\n\nIt’s only been a few years since all of Boral’s business was still done on paper. When I joined the Sydney tech team in 2018, the co"
+              }
+            ],
+            "icon": "experience",
+            "image": "/png/3rdParty/git_og.png",
+            "tags": [
+              "expertise",
+              "interview",
+              "experience"
+            ],
+            "excerpt": "[Children label=\"Experience\"]"
+          },
+          {
             "title": "Goldlabel Core",
             "description": "Open Source Fullstack JavaScript Platform",
             "slug": "/work/goldlabel",
-            "order": 1,
+            "order": 10,
             "type": "folder",
             "children": [
               {
@@ -134,7 +181,7 @@
             "title": "Expertise",
             "description": "We can help understanding in these fields",
             "slug": "/work/expertise",
-            "order": 20,
+            "order": 25,
             "type": "folder",
             "children": [
               {
@@ -167,6 +214,19 @@
                         "excerpt": "When React appeared, the landscape was dominated by AngularJS, Backbone, and Knockout, all of which relied on twoway data binding and manual DOM updates.\n\nReact’s performance and simplicity stood out "
                       },
                       {
+                        "title": "Hooks",
+                        "slug": "/work/expertise/javascript/react/hooks",
+                        "order": 10,
+                        "icon": "js",
+                        "image": "/png/3rdParty/wikipedia.png",
+                        "type": "file",
+                        "tags": [
+                          "React",
+                          "hooks"
+                        ],
+                        "excerpt": "React Hooks were introduced in React 16.8 (February 2019).\n\nThey solved two main problems:\n\n State and lifecycle reuse — before Hooks, only class components could use state and lifecycle methods, maki"
+                      },
+                      {
                         "title": "Our Experience",
                         "slug": "/work/expertise/javascript/react/experience",
                         "order": 20,
@@ -191,7 +251,7 @@
                       "React",
                       "frameworks"
                     ],
-                    "excerpt": "React is a JavaScript library for building user interfaces, originally developed by Jordan Walke at Facebook and opensourced in 2013. It introduced a fundamentally new way of thinking about frontend d"
+                    "excerpt": "[Children label=\"React\"]\n\nReact is a JavaScript library for building user interfaces, originally developed by Jordan Walke at Facebook and opensourced in 2013. It introduced a fundamentally new way of"
                   },
                   {
                     "title": "Next.js",
@@ -964,7 +1024,7 @@
                 "slug": "/work/company/privacy-cookies",
                 "order": 5555,
                 "icon": "admin",
-                "image": "https://live.staticflickr.com/65535/54800517077_55d79f6a0a_b.jpg",
+                "image": "/png/3rdParty/git_og.png",
                 "type": "file",
                 "tags": [
                   "cookies",
@@ -979,42 +1039,12 @@
             "icon": "company",
             "image": "https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg",
             "excerpt": "Tel/WhatsApp   \n | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX"
-          },
-          {
-            "title": "Experience",
-            "description": "",
-            "slug": "/work/experience",
-            "order": 2018,
-            "type": "folder",
-            "children": [
-              {
-                "title": "Boral",
-                "slug": "/work/experience/boral",
-                "order": 2019,
-                "icon": "paywall",
-                "image": "https://live.staticflickr.com/65535/54915903856_0a086bd3ec_b.jpg",
-                "type": "file",
-                "tags": [
-                  "expertise",
-                  "interview",
-                  "boral"
-                ],
-                "excerpt": "Building Boral’s GeoSpatial Fleet App\n\n React Developer, Aug 2018  Feb 2019, Sydney\n\nIt’s only been a few years since all of Boral’s business was still done on paper. When I joined the Sydney tech tea"
-              }
-            ],
-            "icon": "work",
-            "image": "https://live.staticflickr.com/65535/54914102727_6875cb7c9a_b.jpg",
-            "tags": [
-              "expertise",
-              "interview",
-              "experience"
-            ],
-            "excerpt": ""
           }
         ],
         "icon": "work",
         "image": "/png/3rdParty/git_og.png",
         "tags": [
+          "Professional",
           "JavaScript",
           "Vanilla JavaScript",
           "TypeScript",
@@ -1489,6 +1519,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[Flash movie=\"Logo\" height=\"200\"]\n\n[PageAd slug=\"/work/experience/boral\"]\n\n[PageAd slug=\"/work/expertise/javascript/react\"]\n\n[PageAd slug=\"/work/expertise/javascript/nextjs\"]\n\n[PageAd slug=\"/work/expe"
+    "excerpt": "[Flash movie=\"Logo\" height=\"200\"]\n\n[PrevNext prev=\"/work/experience\" next=\"/work/experience/boral\"]\n\n[PageAd slug=\"/work/expertise/javascript/react\"]\n\n[PageAd slug=\"/work/expertise/javascript/nextjs\"]"
   }
 ]

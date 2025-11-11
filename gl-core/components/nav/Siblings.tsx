@@ -118,7 +118,13 @@ export default function Siblings() {
     }
   }, [currentNode, pathname, isIndexPage]);
 
-  if (!siblings || siblings.length === 0) return null;
+  const parent = React.useMemo(() => {
+    if (!currentNode) return null;
+    return findParent(globalNav as NavItem[], currentNode.slug);
+  }, [currentNode]);
+
+  // --- render ---
+  if (!currentNode) return null;
 
   return (
     <Box>
@@ -132,24 +138,36 @@ export default function Siblings() {
         </ListItemButton>
       ))}
 
-      {/* Current level siblings */}
-      <List dense disablePadding>
-        {siblings.map((item) => {
-          const isCurrent = item.slug === pathname;
-          return (
-            <ListItemButton
-              key={item.slug}
-              disabled={isCurrent}
-              onClick={() => !isCurrent && router.push(item.slug)}
-            >
-              <ListItemIcon>
-                <Icon icon={item.icon as any} color="primary" />
-              </ListItemIcon>
-              <ListItemText primary={item.title} />
-            </ListItemButton>
-          );
-        })}
-      </List>
+      {/* Parent fallback if no siblings */}
+      {(!siblings || siblings.length === 0) && parent && (
+        <ListItemButton onClick={() => router.push(parent.slug)}>
+          <ListItemIcon>
+            <Icon icon={(parent.icon as any) || 'up'} color="primary" />
+          </ListItemIcon>
+          <ListItemText primary={parent.title} />
+        </ListItemButton>
+      )}
+
+      {/* Siblings list */}
+      {siblings && siblings.length > 0 && (
+        <List dense disablePadding>
+          {siblings.map((item) => {
+            const isCurrent = item.slug === pathname;
+            return (
+              <ListItemButton
+                key={item.slug}
+                disabled={isCurrent}
+                onClick={() => !isCurrent && router.push(item.slug)}
+              >
+                <ListItemIcon>
+                  <Icon icon={item.icon as any} color="primary" />
+                </ListItemIcon>
+                <ListItemText primary={item.title} />
+              </ListItemButton>
+            );
+          })}
+        </List>
+      )}
     </Box>
   );
 }

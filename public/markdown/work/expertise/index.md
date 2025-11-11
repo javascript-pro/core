@@ -1,5 +1,5 @@
 ---
-order: 20
+order: 25
 title: Expertise
 description: We can help understanding in these fields
 slug: /work/expertise

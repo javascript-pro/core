@@ -1,9 +1,10 @@
 ---
-order: 2018
+order: 10
 title: Experience
 slug: /work/experience
-icon: work
-image: https://live.staticflickr.com/65535/54914102727_6875cb7c9a_b.jpg
+icon: experience
+image: /png/3rdParty/git_og.png
 tags: expertise, interview, experience
-paywall: true
 ---
+
+[Children label="Experience"]

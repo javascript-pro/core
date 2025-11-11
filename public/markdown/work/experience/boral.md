@@ -1,16 +1,16 @@
 ---
-order: 2019
+order: 30
 title: Boral
 description: Dots on a Map
 slug: /work/experience/boral
-icon: paywall
+icon: experience
 image: https://live.staticflickr.com/65535/54915903856_0a086bd3ec_b.jpg
 tags: expertise, interview, boral
 noImage: true
 paywall: false
 ---
 
-## Building Boral’s Geo-Spatial Fleet App
+## Geo-Spatial Fleet App
 
 > React Developer, Aug 2018 - Feb 2019, Sydney
 

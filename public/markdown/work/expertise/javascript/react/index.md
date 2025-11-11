@@ -8,6 +8,8 @@ image: /png/3rdParty/wikipedia.png
 tags: JavaScript, TypeScript, React, frameworks
 ---
 
+[ChildPages title="React Child Pages"]
+
 React is a JavaScript library for building user interfaces, originally developed by Jordan Walke at Facebook and open-sourced in 2013. It introduced a fundamentally new way of thinking about front-end development: treating the UI as a pure function of state, rendered through a virtual DOM that efficiently updates the real DOM when data changes. At its core, React popularised three key ideas:
 
 - Declarative UI — describing what the UI should look like, not how to manually manipulate the DOM.
