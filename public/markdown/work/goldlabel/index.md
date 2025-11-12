@@ -1,12 +1,14 @@
 ---
 order: 10
-title: Goldlabel Core
-description: Open Source Fullstack JavaScript Platform
+title: Goldlabel
+description: Fullstack Open Source JavaScript
 slug: /work/goldlabel
 icon: goldlabel
 image: /png/3rdParty/github_og.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 ---
+
+[PageAd slug="/work/goldlabel/cartridges"]
 
 > The public repository that powers goldlabel.pro is free for anyone to fork, copy, hack, and reuse.
 
@@ -60,3 +62,14 @@ It’s a conversation disguised as a website — a handshake between technology 
 This is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or build on. If you’re the kind of developer who likes digging under the hood, this [GitHub repository](https://github.com/javascript-pro/core) is where the engine lives.
 
 We’re not trying to hide anything behind paywalls or pitch decks. If you want to see how we build things, just open the repo. If you want to get involved, even better — we’re always looking for the right kind of collaborator.
+
+## Working with Goldlabel
+
+- Ship early and often.  
+  Each app is live from the outset — not just a mockup or prototyle
+
+- Share the process.  
+  Follow the development on GitHub, view the commit history, clone the code. Get involved with Issues
+
+- Built for reuse.  
+  Every component, pattern, and API is designed to be portable and production-ready

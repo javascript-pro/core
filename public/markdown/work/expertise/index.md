@@ -4,7 +4,7 @@ title: Expertise
 description: We can help understanding in these fields
 slug: /work/expertise
 icon: expertise
-image: /png/3rdParty/react.png
+image: /png/3rdParty/javascript_og.png
 tags: expertise, fields, work
 ---
 
@@ -61,5 +61,3 @@ Whether building responsive UIs, designing serverless APIs, or optimising DevOps
 
 We don’t just build products—we build platforms that scale.  
 Let’s work together to design something durable.
-
-[PrevNext prev="/work/goldlabel" next="/work/expertise/javascript"]

@@ -1,7 +1,7 @@
 ---
 order: 10
 title: Open Source
-slug: /work/goldlabel/core
+slug: /work/goldlabel/about
 description: Open Source and Free Forever
 icon: github
 image: /png/3rdParty/github_og.png

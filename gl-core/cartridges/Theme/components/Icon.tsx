@@ -766,13 +766,13 @@ export default function Icon({ icon, color }: TIcon) {
       iconFragment = <WorkIcon color={color} />;
       break;
     case 'life':
-      iconFragment = <VanIcon color={color} />;
+      iconFragment = <FallmanagerIcon color={color} />;
       break;
     case 'legal':
       iconFragment = <BalanceIcon color={color} />;
       break;
     case 'balance':
-      iconFragment = <BalanceIcon color={color} />;
+      iconFragment = <DocIcon color={color} />;
       break;
     case 'signin':
       iconFragment = <SigninIcon color={color} />;

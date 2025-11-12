@@ -144,7 +144,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
             <Grid container spacing={isMobile ? 0 : 1}>
               {!isMobile && (
                 <Grid size={{ md: 3 }}>
-                  <Box sx={{ mt: 1 }}>
+                  <Box sx={{}}>
                     {Array.isArray(siblings) && siblings.length > 0 ? (
                       <>
                         <Siblings />

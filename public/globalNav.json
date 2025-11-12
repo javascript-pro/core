@@ -123,11 +123,11 @@
               "interview",
               "experience"
             ],
-            "excerpt": ""
+            "excerpt": "Goldlabel Apps is a UKbased software company that designs, builds, and maintains fullstack web applications. We specialize in Next.js, Firebase, and custom UI development, delivering everything from i"
           },
           {
-            "title": "Goldlabel Core",
-            "description": "Open Source Fullstack JavaScript Platform",
+            "title": "Goldlabel",
+            "description": "Fullstack Open Source JavaScript",
             "slug": "/work/goldlabel",
             "order": 10,
             "type": "folder",
@@ -226,7 +226,7 @@
               },
               {
                 "title": "Open Source",
-                "slug": "/work/goldlabel/core",
+                "slug": "/work/goldlabel/about",
                 "order": 10,
                 "icon": "github",
                 "image": "/png/3rdParty/github_og.png",
@@ -253,7 +253,7 @@
               "NextJS",
               "Headless CMS"
             ],
-            "excerpt": "The public repository that powers goldlabel.pro is free for anyone to fork, copy, hack, and reuse.\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Public GitHub\"]\n\n What is it?\n\nGoldlabel "
+            "excerpt": "[PageAd slug=\"/work/goldlabel/cartridges\"]\n\n The public repository that powers goldlabel.pro is free for anyone to fork, copy, hack, and reuse.\n\n[GitHub url=\"https://github.com/javascriptpro/core\" lab"
           },
           {
             "title": "Expertise",
@@ -1045,7 +1045,7 @@
               }
             ],
             "icon": "expertise",
-            "image": "/png/3rdParty/react.png",
+            "image": "/png/3rdParty/javascript_og.png",
             "tags": [
               "expertise",
               "fields",
@@ -1070,7 +1070,7 @@
           "NextJS",
           "Headless CMS"
         ],
-        "excerpt": "The apps we ship are real. They run in production and are developed accessibly.\n\nThe Core is Open Source and Free forever — giving you statically generated sites with Firestorepowered updates and a re"
+        "excerpt": "[PageAd slug=\"/work/experience\"]\n\n The apps we ship are real. They run in production and are developed accessibly.\n\nThe Core is Open Source and Free forever — giving you statically generated sites wit"
       },
       {
         "title": "Life",

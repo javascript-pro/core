@@ -5,7 +5,6 @@ description: 魏藏美食
 slug: /life/food
 icon: food
 image: /jpg/wei-zangs-food.jpg
-paywall: true
 ---
 
 You want a recipe? The interweb's full of them. This is how I cook. This is why I cook.
