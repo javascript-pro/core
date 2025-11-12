@@ -1067,33 +1067,6 @@
         "type": "folder",
         "children": [
           {
-            "title": "Vanlife",
-            "description": "definition of",
-            "slug": "/life/vanlife",
-            "order": 10,
-            "type": "folder",
-            "children": [
-              {
-                "title": "The best price",
-                "slug": "/life/vanlife/best-price",
-                "order": 10,
-                "icon": "van",
-                "type": "file",
-                "excerpt": "Best price (noun)\n\nThe universal truth: if it costs nothing, it’s already worth more than you were planning to spend.\n\n Usage\n\n \"How much was that? — Free. — Best price.\"\n \"I wasn’t even looking, but "
-              },
-              {
-                "title": "2025 Map",
-                "slug": "/life/vanlife/map",
-                "order": 10,
-                "icon": "van",
-                "type": "file",
-                "excerpt": "2025 Map\n\n[GoogleMap src=\"https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=001321\"]"
-              }
-            ],
-            "icon": "van",
-            "excerpt": "Vanlife (noun)\n\n A lifestyle built around living or traveling in a converted van, often equipped with a bed, kitchen, and storage, sometimes a bathroom.\n\n The practice of turning a vehicle into both h"
-          },
-          {
             "title": "Diving",
             "description": "Fish are friends. Not food.",
             "slug": "/life/diving",
@@ -1182,6 +1155,33 @@
                 "type": "folder",
                 "children": [
                   {
+                    "title": "Google it",
+                    "slug": "/balance/writing/der-kleine-zeppelin/google-it",
+                    "order": 10,
+                    "icon": "van",
+                    "type": "file",
+                    "excerpt": "2025 Map\n\n[GoogleMap src=\"https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=001321\"]"
+                  },
+                  {
+                    "title": "Vanlife",
+                    "description": "definition of",
+                    "slug": "/balance/writing/der-kleine-zeppelin/vanlife",
+                    "order": 10,
+                    "type": "folder",
+                    "children": [
+                      {
+                        "title": "The best price",
+                        "slug": "/balance/writing/der-kleine-zeppelin/vanlife/best-price",
+                        "order": 10,
+                        "icon": "van",
+                        "type": "file",
+                        "excerpt": "Best price (noun)\n\nThe universal truth: if it costs nothing, it’s already worth more than you were planning to spend.\n\n Usage\n\n \"How much was that? — Free. — Best price.\"\n \"I wasn’t even looking, but "
+                      }
+                    ],
+                    "icon": "van",
+                    "excerpt": "Vanlife (noun)\n\n A lifestyle built around living or traveling in a converted van, often equipped with a bed, kitchen, and storage, sometimes a bathroom.\n\n The practice of turning a vehicle into both h"
+                  },
+                  {
                     "title": "Britain",
                     "slug": "/balance/writing/der-kleine-zeppelin/britain",
                     "order": 99,
@@ -1238,7 +1238,7 @@
                 ],
                 "icon": "van",
                 "image": "https://live.staticflickr.com/65535/54250367683_32802224fb_b.jpg",
-                "excerpt": "Once upon a time"
+                "excerpt": "Once upon a time\n\n[FickrAlbum id=\"72177720329145789\"]"
               },
               {
                 "title": "Bez",
@@ -1519,6 +1519,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[PageAd slug=\"/balance/writing/derkleinezeppelin\"]\n\n[Flash movie=\"Logo\" height=\"190\"]\n\n[PageAd slug=\"/work/expertise/javascript/nextjs\"]\n\n[PrevNext prev=\"/work/expertise/javascript/react\" next=\"/work/"
+    "excerpt": "[PageAd slug=\"/balance/writing/derkleinezeppelin\"]"
   }
 ]

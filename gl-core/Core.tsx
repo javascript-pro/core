@@ -159,7 +159,11 @@ export default function Core({ frontmatter, body = null }: TCore) {
               )}
 
               <Grid size={{ xs: 12, md: 9 }}>
-                <Box sx={{ mt: 2, mb: 2 }}>
+                <Box sx={{ display: 'flex', mt: 2, mb: 2 }}>
+                  <Box sx={{ ml: -1 }}>
+                    <SharePopup />
+                  </Box>
+
                   {title !== 'Home' && (
                     <>
                       <Typography
@@ -172,23 +176,23 @@ export default function Core({ frontmatter, body = null }: TCore) {
                       >
                         {title}
                       </Typography>
-                      <Typography
-                        variant="h2"
-                        gutterBottom
-                        sx={{
-                          fontSize: { xs: '1.2rem', md: '1.25rem' },
-                        }}
-                      >
-                        {description}
-                      </Typography>
                     </>
                   )}
                 </Box>
 
+                <Box>
+                  <Typography
+                    variant="h2"
+                    gutterBottom
+                    sx={{
+                      fontSize: { xs: '1.2rem', md: '1.25rem' },
+                    }}
+                  >
+                    {description}
+                  </Typography>
+                </Box>
+
                 <Box sx={{ display: 'flex' }}>
-                  <Box sx={{ ml: -1 }}>
-                    <SharePopup />
-                  </Box>
                   <Box sx={{ flexGrow: 1, mt: 1 }}>
                     {pathname !== '/' && <PageBreadcrumb />}
                   </Box>

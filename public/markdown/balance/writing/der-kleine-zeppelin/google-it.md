@@ -1,8 +1,8 @@
 ---
 order: 10
-title: 2025 Map
-description: well... since the spring anyway
-slug: /life/vanlife/map
+title: Google it
+description: Google it your own self
+slug: /balance/writing/der-kleine-zeppelin/google-it
 icon: van
 noImage: true
 ---

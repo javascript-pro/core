@@ -84,6 +84,76 @@
     "content": "\nOver time, her real name eroded like an old raster image losing resolution, smoothed away by repetition until even she couldn’t recall what it had been. HR still had it on file, but it felt like a relic, an identifier from a previous version of herself. People asked, \"Wait, but what's your actual name?\" She'd just shrug.\n"
   },
   {
+    "slug": "balance/writing/der-kleine-zeppelin/belgium",
+    "title": "Belgium",
+    "description": "België",
+    "tags": [],
+    "content": "\nWhere wars were\n"
+  },
+  {
+    "slug": "balance/writing/der-kleine-zeppelin/britain",
+    "title": "Britain",
+    "description": "United Kingdom",
+    "tags": [],
+    "content": "\nWhere I can understand the advertising\n"
+  },
+  {
+    "slug": "balance/writing/der-kleine-zeppelin/france",
+    "title": "France",
+    "description": "Where nothing works",
+    "tags": [],
+    "content": "\nWhere nothing works\n"
+  },
+  {
+    "slug": "balance/writing/der-kleine-zeppelin/germany",
+    "title": "Germany",
+    "description": "Deutschland",
+    "tags": [],
+    "content": "\nWhere everything works\n"
+  },
+  {
+    "slug": "balance/writing/der-kleine-zeppelin/google-it",
+    "title": "Google it",
+    "description": "Google it your own self",
+    "tags": [],
+    "content": "\n## 2025 Map\n\n[GoogleMap src=\"https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=001321\"]\n"
+  },
+  {
+    "slug": "balance/writing/der-kleine-zeppelin/index",
+    "title": "Der Kleine Zeppelin",
+    "description": "Once upon a time",
+    "tags": [],
+    "content": "\nOnce upon a time\n\n[FickrAlbum id=\"72177720329145789\"]\n"
+  },
+  {
+    "slug": "balance/writing/der-kleine-zeppelin/portugal",
+    "title": "Portugal",
+    "description": "Where they talk funny",
+    "tags": [],
+    "content": "\nWhere they talk funny\n"
+  },
+  {
+    "slug": "balance/writing/der-kleine-zeppelin/spain",
+    "title": "Spain",
+    "description": "España",
+    "tags": [],
+    "content": "\nWhere they don't do much\n"
+  },
+  {
+    "slug": "balance/writing/der-kleine-zeppelin/vanlife/best-price",
+    "title": "The best price",
+    "description": "FREE",
+    "tags": [],
+    "content": "\n## Best price (noun)\n\nThe universal truth: if it costs nothing, it’s already worth more than you were planning to spend.\n\n#### Usage\n\n- \"How much was that? — Free. — Best price.\"\n- \"I wasn’t even looking, but if it’s free, I’ll take three.\"\n\nConnotations:\n✨ Feels like winning a game you didn’t know you were playing\n✨ Better than half-price, better than 90% off\n✨ The one number that makes everyone suddenly interested\n"
+  },
+  {
+    "slug": "balance/writing/der-kleine-zeppelin/vanlife/index",
+    "title": "Vanlife",
+    "description": "definition of",
+    "tags": [],
+    "content": "\n## Vanlife (noun)\n\n- A lifestyle built around living or traveling in a converted van, often equipped with a bed, kitchen, and storage, sometimes a bathroom.\n\n- The practice of turning a vehicle into both home and transport, usually for minimalism, freedom, or adventure.\n\n- A cultural movement popularized through social media, showcasing sunsets, mountain roads, and cozy interiors lit by fairy lights.\n\n- The art of quitting your lease, shoving your worldly possessions into a van, and convincing yourself that showering in rivers builds character.\n\n#### Usage\n\n- \"I sold my apartment and went full vanlife in Europe.\"\n- \"Bro, I can’t pay rent anymore — I’m going vanlife.\"\n- \"She said she was into minimalism, but then brought five suitcases into my vanlife.\"\n\n#### Connotations\n\n1. ✨ Freedom of the open road\n2. ✨ Minimalist living\n3. ✨ A community of travelers and nomads\n\n💡 Occasional lack of WiFi, questionable parking spots, and a lot of service station coffee\n"
+  },
+  {
     "slug": "balance/writing/destructo-the-wonderdog",
     "title": "Destructo",
     "description": "The Wonderdog",
@@ -95,56 +165,7 @@
     "title": "Writing",
     "description": "It's hard to collate stuff into readable writing, but we're doing our best",
     "tags": [],
-    "content": "\n[PrevNext next=\"/balance/writing/kleiner-zeppelin\"]\n\n> by Wei Zang, author of _Not here to fuck spiders_\n"
-  },
-  {
-    "slug": "balance/writing/kleiner-zeppelin/belgium",
-    "title": "Belgium",
-    "description": "België",
-    "tags": [],
-    "content": ""
-  },
-  {
-    "slug": "balance/writing/kleiner-zeppelin/britain",
-    "title": "Britain",
-    "description": "United Kingdom",
-    "tags": [],
-    "content": ""
-  },
-  {
-    "slug": "balance/writing/kleiner-zeppelin/france",
-    "title": "France",
-    "description": "Where nothing works",
-    "tags": [],
-    "content": ""
-  },
-  {
-    "slug": "balance/writing/kleiner-zeppelin/germany",
-    "title": "Germany",
-    "description": "Deutschland",
-    "tags": [],
-    "content": ""
-  },
-  {
-    "slug": "balance/writing/kleiner-zeppelin/index",
-    "title": "Kleiner Zeppelin",
-    "description": "Once upon a time",
-    "tags": [],
-    "content": ""
-  },
-  {
-    "slug": "balance/writing/kleiner-zeppelin/portugal",
-    "title": "Portugal",
-    "description": "Where they talk funny",
-    "tags": [],
-    "content": ""
-  },
-  {
-    "slug": "balance/writing/kleiner-zeppelin/spain",
-    "title": "Spain",
-    "description": "España",
-    "tags": [],
-    "content": ""
+    "content": "\n[PrevNext next=\"/balance/writing/der-kleine-zeppelin\"]\n\n> by Wei Zang, author of _Not here to fuck spiders_\n"
   },
   {
     "slug": "balance/writing/puppy-thing",
@@ -207,7 +228,7 @@
     "title": "Home",
     "description": "Work, Life, Balance",
     "tags": "JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS, secure",
-    "content": "\n[Flash movie=\"Logo\" height=\"190\"]\n\n[PageAd slug=\"/work/expertise/javascript/nextjs\"]\n\n[PrevNext prev=\"/work/expertise/javascript/react\" next=\"/work/expertise/javascript/react/hooks\"]\n\n[PageAd slug=\"/work/expertise/javascript/node\"]\n\n[PrevNext prev=\"/work/experience\" next=\"/work/expertise\"]\n\n[ChildPages ]\n"
+    "content": "\n[PageAd slug=\"/balance/writing/der-kleine-zeppelin\"]\n"
   },
   {
     "slug": "life/aquaponics/index",
@@ -257,27 +278,6 @@
     "description": "A truth universally acknowledged",
     "tags": [],
     "content": "\n> “It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a motorbike.”\n\n― Jane Austen, Pride and Prejudice\n"
-  },
-  {
-    "slug": "life/vanlife/best-price",
-    "title": "The best price",
-    "description": "FREE",
-    "tags": [],
-    "content": "\n## Best price (noun)\n\nThe universal truth: if it costs nothing, it’s already worth more than you were planning to spend.\n\n#### Usage\n\n- \"How much was that? — Free. — Best price.\"\n- \"I wasn’t even looking, but if it’s free, I’ll take three.\"\n\nConnotations:\n✨ Feels like winning a game you didn’t know you were playing\n✨ Better than half-price, better than 90% off\n✨ The one number that makes everyone suddenly interested\n"
-  },
-  {
-    "slug": "life/vanlife/index",
-    "title": "Vanlife",
-    "description": "definition of",
-    "tags": [],
-    "content": "\n## Vanlife (noun)\n\n- A lifestyle built around living or traveling in a converted van, often equipped with a bed, kitchen, and storage, sometimes a bathroom.\n\n- The practice of turning a vehicle into both home and transport, usually for minimalism, freedom, or adventure.\n\n- A cultural movement popularized through social media, showcasing sunsets, mountain roads, and cozy interiors lit by fairy lights.\n\n- The art of quitting your lease, shoving your worldly possessions into a van, and convincing yourself that showering in rivers builds character.\n\n#### Usage\n\n- \"I sold my apartment and went full vanlife in Europe.\"\n- \"Bro, I can’t pay rent anymore — I’m going vanlife.\"\n- \"She said she was into minimalism, but then brought five suitcases into my vanlife.\"\n\n#### Connotations\n\n1. ✨ Freedom of the open road\n2. ✨ Minimalist living\n3. ✨ A community of travelers and nomads\n\n💡 Occasional lack of WiFi, questionable parking spots, and a lot of service station coffee\n"
-  },
-  {
-    "slug": "life/vanlife/map",
-    "title": "2025 Map",
-    "description": "well... since the spring anyway",
-    "tags": [],
-    "content": "\n## 2025 Map\n\n[GoogleMap src=\"https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=001321\"]\n"
   },
   {
     "slug": "work/company/index",
@@ -774,6 +774,6 @@
     "title": "Work",
     "description": "Fullstack JavaScript Development",
     "tags": "Professional, JavaScript, Vanilla JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS",
-    "content": "\n> The apps we ship are real. They run in production and are developed accessibly.\n\nThe Core is Open Source and Free forever — giving you statically generated sites with Firestore-powered updates and a real admin panel. Built with Next.js App Router and Material UI\n\nGoldlabel builds and ships modern web apps for clients who need real results — fast\n\n- _Small_ team. _Big_ output\n- Real deployments from Day One\n- Readable, extensible, Open Source\n\nGoldlabel Apps is a UK-based software company that designs, builds, and maintains full-stack web applications. We specialize in Next.js, Firebase, and custom UI development, delivering everything from internal admin tools to polished public-facing websites.\n\n## Working with Goldlabel\n\n- Ship early and often.  \n  Each app is live from the outset — not just a mockup or prototyle\n\n- Share the process.  \n  Follow the development on GitHub, view the commit history, clone the code. Get involved with Issues\n\n- Built for reuse.  \n  Every component, pattern, and API is designed to be portable and production-ready\n\n[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise\"]\n"
+    "content": "\n> The apps we ship are real. They run in production and are developed accessibly.\n\nThe Core is Open Source and Free forever — giving you statically generated sites with Firestore-powered updates and a real admin panel. Built with Next.js App Router and Material UI\n\nGoldlabel builds and ships modern web apps for clients who need real results — fast\n\n- _Small_ team. _Big_ output\n- Real deployments from Day One\n- Readable, extensible, Open Source\n\nGoldlabel Apps is a UK-based software company that designs, builds, and maintains full-stack web applications. We specialize in Next.js, Firebase, and custom UI development, delivering everything from internal admin tools to polished public-facing websites.\n\n[Flash movie=\"Logo\" height=\"190\"]\n\n## Working with Goldlabel\n\n- Ship early and often.  \n  Each app is live from the outset — not just a mockup or prototyle\n\n- Share the process.  \n  Follow the development on GitHub, view the commit history, clone the code. Get involved with Issues\n\n- Built for reuse.  \n  Every component, pattern, and API is designed to be portable and production-ready\n\n[PrevNext prev=\"/work/expertise/javascript\" next=\"/work/expertise\"]\n"
   }
 ]
