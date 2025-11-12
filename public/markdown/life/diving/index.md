@@ -7,6 +7,7 @@ icon: diving
 image: /png/n64/diving.png
 noImage: true
 ---
+
 [PageAd slug="/life/diving/why-dive"]
 
 [PageAd slug="/life/diving/why-not-dive"]

@@ -6,7 +6,6 @@ slug: '/life/food/air-fried-peppers'
 icon: 'food'
 image: /jpg/wei-zangs-food.jpg
 tags: 'food, punching dolphins, recipes, air fryer, peppers'
-paywall: true
 ---
 
 - 2 Large peppers (capsicums)

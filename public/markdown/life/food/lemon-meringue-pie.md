@@ -5,7 +5,6 @@ description: Apparently lemonading is a real word
 slug: /life/food/lemon-meringue-pie
 icon: food
 image: /jpg/lemon-meringue-pie.jpg
-paywall: true
 ---
 
 > "Lemonading" is an actual word that even people on Radio 4 use. So when life gives you lemons...

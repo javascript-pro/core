@@ -5,7 +5,6 @@ description: Proper crowd pleaser
 slug: /life/food/banana-bread
 icon: food
 image: /jpg/wei-zangs-food.jpg
-paywall: true
 ---
 
 - 125g Butter

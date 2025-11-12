@@ -135,16 +135,9 @@
   {
     "slug": "balance/writing/der-kleine-zeppelin/index",
     "title": "Der Kleine Zeppelin",
-    "description": "by Wei Zang, author of Not here to fuck spiders",
+    "description": "by Wei Zang",
     "tags": [],
-    "content": "\n## Once upon a time\n\nthere was the little zeppelin. Which is what it was like to drive. No power, just a big bloaty white blob floating about all over the road. It's quite tall too. First thing I did is to drive it under a 2m railway bridge which had never been an issue when I was a boy racer\n"
-  },
-  {
-    "slug": "balance/writing/der-kleine-zeppelin/vanlife/best-price",
-    "title": "The best price",
-    "description": "FREE",
-    "tags": [],
-    "content": "\n##\n"
+    "content": "\nOnce upon a time there was a little zeppelin. That's what it felt like to drive. No power, just a big bloaty white blob floating about all over the road.\n\nIt's quite tall too. First thing I did is to drive it under a 2m railway bridge which had never been an issue when I was a boy racer\n\n---\n\nAbout Wei Zang,  \nauthor of Not here to fuck spiders\n"
   },
   {
     "slug": "balance/writing/der-kleine-zeppelin/vanlife/index",
@@ -228,7 +221,7 @@
     "title": "Diving",
     "description": "Fish are friends. Not food.",
     "tags": [],
-    "content": ""
+    "content": "\n[PageAd slug=\"/life/diving/why-dive\"]\n\n[PageAd slug=\"/life/diving/why-not-dive\"]\n"
   },
   {
     "slug": "life/diving/why-dive",
@@ -242,7 +235,7 @@
     "title": "Why not dive?",
     "description": "You might drown",
     "tags": [],
-    "content": "\nYou have to mitigate that posiibility, yeh.\n"
+    "content": "\nYou might die. You have to mitigate that posiibility, yeh.\n"
   },
   {
     "slug": "life/food/air-fried-peppers",
@@ -291,7 +284,7 @@
     "title": "Life",
     "description": "Well, we've all got to have one",
     "tags": [],
-    "content": "\nI work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age I'm never going to ski like I used to. Maybe it's time to take up sailing? I am [Generation X](/balance/writers/generation-x)\n\n> ⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a 1991 novel written by Canadian author Douglas Coupland\n"
+    "content": "\n[PageAd slug=\"/life/motorbikes\"]\n\n> ⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a 1991 novel written by Canadian author Douglas Coupland\n\nI work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age I'm never going to ski like I used to. Maybe it's time to take up sailing? I am [Generation X](/balance/writers/generation-x)\n"
   },
   {
     "slug": "life/motorbikes/index",

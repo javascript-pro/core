@@ -5,7 +5,6 @@ description: Death cap mushrooms optional if you don't like your inlaws
 slug: /life/food/beef-wellie
 icon: food
 image: https://live.staticflickr.com/65535/54742614047_e44e8af81e_b.jpg
-paywall: true
 ---
 
 ## Ingredients

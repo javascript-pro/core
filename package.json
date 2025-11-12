@@ -1,9 +1,9 @@
 {
-  "version": "52.1.6",
+  "version": "52.1.7",
   "name": "core",
   "description": "Always FREE. Always Open Source",
   "scripts": {
-    "dev": "clear && rm -rf .next && yarn format && yarn generate && yarn indexSearch && next dev",
+    "dev": "clear && rm -rf .next && yarn indexSearch && yarn format && yarn generate && next dev",
     "generate": "tsx generate.mjs && yarn indexSearch",
     "prepare": "husky install",
     "build": "next build",

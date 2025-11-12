@@ -4,8 +4,8 @@ title: Life
 description: Well, we've all got to have one
 slug: /life
 icon: life
-image: /jpg/motorbikes.jpg
-noImage: true
+image: /png/n64/weizang.png
+noImage: false
 ---
 
 [PageAd slug="/life/motorbikes"]

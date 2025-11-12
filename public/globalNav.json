@@ -1055,7 +1055,7 @@
           }
         ],
         "icon": "work",
-        "image": "/png/n64/flickr.png",
+        "image": "/png/n64/weizang.png",
         "tags": [
           "Professional",
           "JavaScript",
@@ -1102,12 +1102,12 @@
                 "icon": "diving",
                 "image": "/png/n64/diving.png",
                 "type": "file",
-                "excerpt": "You have to mitigate that posiibility, yeh."
+                "excerpt": "You might die. You have to mitigate that posiibility, yeh."
               }
             ],
             "icon": "diving",
             "image": "/png/n64/diving.png",
-            "excerpt": ""
+            "excerpt": "[PageAd slug=\"/life/diving/whydive\"]\n\n[PageAd slug=\"/life/diving/whynotdive\"]"
           },
           {
             "title": "Food",
@@ -1215,8 +1215,8 @@
           }
         ],
         "icon": "life",
-        "image": "/png/n64/weizang.png",
-        "excerpt": "I work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age I'm never going to ski like I used to. Ma"
+        "image": "/png/n64/flickr.png",
+        "excerpt": "[PageAd slug=\"/life/motorbikes\"]\n\n ⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a 1991 novel written by Canadian author Douglas Coupland\n\nI work remotely. I cook, eat, ride"
       },
       {
         "title": "Balance",
@@ -1233,72 +1233,8 @@
             "type": "folder",
             "children": [
               {
-                "title": "Not Here To Fuck Spiders",
-                "description": "by Wei Zang",
-                "slug": "/balance/writing/not-here-to-fuck-spiders",
-                "order": 1,
-                "type": "folder",
-                "children": [
-                  {
-                    "title": "WIP",
-                    "description": "",
-                    "slug": "/balance/writing/not-here-to-fuck-spiders/wip",
-                    "order": 10,
-                    "type": "folder",
-                    "children": [
-                      {
-                        "title": "Bez",
-                        "slug": "/balance/writing/not-here-to-fuck-spiders/wip/bez",
-                        "order": 11,
-                        "icon": "bug",
-                        "image": "https://live.staticflickr.com/65535/54340497432_b8c92a3215_b.jpg",
-                        "type": "file",
-                        "tags": [
-                          "punk",
-                          "bez"
-                        ],
-                        "excerpt": "Over time, her real name eroded like an old raster image losing resolution, smoothed away by repetition until even she couldn’t recall what it had been. HR still had it on file, but it felt like a rel"
-                      },
-                      {
-                        "title": "dog",
-                        "slug": "/balance/writing/not-here-to-fuck-spiders/wip/puppy-thing",
-                        "order": 30,
-                        "icon": "bug",
-                        "image": "/jpg/puppy-fing.jpg",
-                        "type": "file",
-                        "excerpt": "I put an Attenborough series on for the dogs. Later I notice there’s a polar bear and a baby seal on the TV. I look at the doggy. He's got genuine concern in his eyes which also say \"'at puppy fing’s "
-                      },
-                      {
-                        "title": "That's soience",
-                        "slug": "/balance/writing/not-here-to-fuck-spiders/wip/sci-fi",
-                        "order": 120,
-                        "icon": "bug",
-                        "image": "/jpg/einstein.jpg",
-                        "type": "file",
-                        "excerpt": "That's soience mayte\n\nBecause we can carefully observe constellations when the Sun is not blocking their path, we know what position the stars should be in when the Sun is keeping us from seeing them."
-                      },
-                      {
-                        "title": "Destructo",
-                        "slug": "/balance/writing/not-here-to-fuck-spiders/wip/destructo-the-wonderdog",
-                        "order": 460,
-                        "icon": "bug",
-                        "image": "https://live.staticflickr.com/65535/54691336480_c273fe647c_o.jpg",
-                        "type": "file",
-                        "excerpt": "Once upon a time Destructo the Wonderdog and his best mate Barkin’ Boris were hanging out on the mountain. Just sniffing about, play fighting and barking at stuff when suddenly Boris went still as a m"
-                      }
-                    ],
-                    "icon": "bug",
-                    "image": "https://live.staticflickr.com/65535/54353995935_a904d504aa_b.jpg",
-                    "excerpt": "Child pages please\n\n[FickrAlbum id=\"72177720329145789\"]"
-                  }
-                ],
-                "icon": "bug",
-                "image": "https://live.staticflickr.com/65535/54353995935_a904d504aa_b.jpg",
-                "excerpt": ""
-              },
-              {
                 "title": "Der Kleine Zeppelin",
-                "description": "by Wei Zang, author of Not here to fuck spiders",
+                "description": "by Wei Zang",
                 "slug": "/balance/writing/der-kleine-zeppelin",
                 "order": 10,
                 "type": "folder",
@@ -1382,23 +1318,78 @@
                     "slug": "/balance/writing/der-kleine-zeppelin/vanlife",
                     "order": 10,
                     "type": "folder",
-                    "children": [
-                      {
-                        "title": "The best price",
-                        "slug": "/balance/writing/der-kleine-zeppelin/vanlife/best-price",
-                        "order": 10,
-                        "icon": "van",
-                        "type": "file",
-                        "excerpt": ""
-                      }
-                    ],
+                    "children": [],
                     "icon": "van",
                     "excerpt": "Vanlife (noun)\n\n A lifestyle built around living or traveling in a converted van, often equipped with a bed, kitchen, and storage, sometimes a bathroom.\n\n The practice of turning a vehicle into both h"
                   }
                 ],
                 "icon": "van",
-                "image": "/jpg/90s-high-school.jpg",
-                "excerpt": "Once upon a time\n\nthere was the little zeppelin. Which is what it was like to drive. No power, just a big bloaty white blob floating about all over the road. It's quite tall too. First thing I did is "
+                "image": "https://live.staticflickr.com/65535/54357493661_c102e19402_b.jpg",
+                "excerpt": "Once upon a time there was a little zeppelin. That's what it felt like to drive. No power, just a big bloaty white blob floating about all over the road.\n\nIt's quite tall too. First thing I did is to "
+              },
+              {
+                "title": "Not Here To Fuck Spiders",
+                "description": "by Wei Zang",
+                "slug": "/balance/writing/not-here-to-fuck-spiders",
+                "order": 20,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "WIP",
+                    "description": "",
+                    "slug": "/balance/writing/not-here-to-fuck-spiders/wip",
+                    "order": 10,
+                    "type": "folder",
+                    "children": [
+                      {
+                        "title": "Bez",
+                        "slug": "/balance/writing/not-here-to-fuck-spiders/wip/bez",
+                        "order": 11,
+                        "icon": "bug",
+                        "image": "https://live.staticflickr.com/65535/54340497432_b8c92a3215_b.jpg",
+                        "type": "file",
+                        "tags": [
+                          "punk",
+                          "bez"
+                        ],
+                        "excerpt": "Over time, her real name eroded like an old raster image losing resolution, smoothed away by repetition until even she couldn’t recall what it had been. HR still had it on file, but it felt like a rel"
+                      },
+                      {
+                        "title": "dog",
+                        "slug": "/balance/writing/not-here-to-fuck-spiders/wip/puppy-thing",
+                        "order": 30,
+                        "icon": "bug",
+                        "image": "/jpg/puppy-fing.jpg",
+                        "type": "file",
+                        "excerpt": "I put an Attenborough series on for the dogs. Later I notice there’s a polar bear and a baby seal on the TV. I look at the doggy. He's got genuine concern in his eyes which also say \"'at puppy fing’s "
+                      },
+                      {
+                        "title": "That's soience",
+                        "slug": "/balance/writing/not-here-to-fuck-spiders/wip/sci-fi",
+                        "order": 120,
+                        "icon": "bug",
+                        "image": "/jpg/einstein.jpg",
+                        "type": "file",
+                        "excerpt": "That's soience mayte\n\nBecause we can carefully observe constellations when the Sun is not blocking their path, we know what position the stars should be in when the Sun is keeping us from seeing them."
+                      },
+                      {
+                        "title": "Destructo",
+                        "slug": "/balance/writing/not-here-to-fuck-spiders/wip/destructo-the-wonderdog",
+                        "order": 460,
+                        "icon": "bug",
+                        "image": "https://live.staticflickr.com/65535/54691336480_c273fe647c_o.jpg",
+                        "type": "file",
+                        "excerpt": "Once upon a time Destructo the Wonderdog and his best mate Barkin’ Boris were hanging out on the mountain. Just sniffing about, play fighting and barking at stuff when suddenly Boris went still as a m"
+                      }
+                    ],
+                    "icon": "bug",
+                    "image": "https://live.staticflickr.com/65535/54353995935_a904d504aa_b.jpg",
+                    "excerpt": "Child pages please\n\n[FickrAlbum id=\"72177720329145789\"]"
+                  }
+                ],
+                "icon": "bug",
+                "image": "https://live.staticflickr.com/65535/54353995935_a904d504aa_b.jpg",
+                "excerpt": ""
               }
             ],
             "icon": "balance",
@@ -1537,7 +1528,7 @@
       }
     ],
     "icon": "home",
-    "image": "/png/clouds/javascript.png",
+    "image": "/png/n64/flickr.png",
     "tags": [
       "JavaScript",
       "Next Gen",
