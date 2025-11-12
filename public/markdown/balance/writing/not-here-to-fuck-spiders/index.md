@@ -1,5 +1,5 @@
 ---
-order: 1
+order: 20
 title: Not Here To Fuck Spiders
 description: by Wei Zang
 slug: /balance/writing/not-here-to-fuck-spiders

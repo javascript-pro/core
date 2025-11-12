@@ -7,4 +7,4 @@ icon: diving
 image: /png/n64/diving.png
 ---
 
-You have to mitigate that posiibility, yeh.
+You might die. You have to mitigate that posiibility, yeh.
