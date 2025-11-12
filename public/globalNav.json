@@ -1175,70 +1175,70 @@
             "type": "folder",
             "children": [
               {
-                "title": "Kleiner Zeppelin",
+                "title": "Der Kleine Zeppelin",
                 "description": "Once upon a time",
-                "slug": "/balance/writing/kleiner-zeppelin",
+                "slug": "/balance/writing/der-kleine-zeppelin",
                 "order": 10,
                 "type": "folder",
                 "children": [
                   {
                     "title": "Britain",
-                    "slug": "/balance/writing/kleiner-zeppelin/britain",
+                    "slug": "/balance/writing/der-kleine-zeppelin/britain",
                     "order": 99,
                     "icon": "van",
                     "image": "https://live.staticflickr.com/65535/53998963131_bf0cb94288_b.jpg",
                     "type": "file",
-                    "excerpt": ""
+                    "excerpt": "Where I can understand the advertising"
                   },
                   {
                     "title": "France",
-                    "slug": "/balance/writing/kleiner-zeppelin/france",
+                    "slug": "/balance/writing/der-kleine-zeppelin/france",
                     "order": 110,
                     "icon": "van",
                     "image": "https://live.staticflickr.com/65535/54458539144_1d61fc9025_b.jpg",
                     "type": "file",
-                    "excerpt": ""
+                    "excerpt": "Where nothing works"
                   },
                   {
                     "title": "Belgium",
-                    "slug": "/balance/writing/kleiner-zeppelin/belgium",
+                    "slug": "/balance/writing/der-kleine-zeppelin/belgium",
                     "order": 125,
                     "icon": "van",
                     "image": "https://live.staticflickr.com/65535/54369337224_3278c64992_b.jpg",
                     "type": "file",
-                    "excerpt": ""
+                    "excerpt": "Where wars were"
                   },
                   {
                     "title": "Germany",
-                    "slug": "/balance/writing/kleiner-zeppelin/germany",
+                    "slug": "/balance/writing/der-kleine-zeppelin/germany",
                     "order": 170,
                     "icon": "van",
                     "image": "https://live.staticflickr.com/65535/54873111678_2633c4ba43_b.jpg",
                     "type": "file",
-                    "excerpt": ""
+                    "excerpt": "Where everything works"
                   },
                   {
                     "title": "Spain",
-                    "slug": "/balance/writing/kleiner-zeppelin/spain",
+                    "slug": "/balance/writing/der-kleine-zeppelin/spain",
                     "order": 179,
                     "icon": "van",
                     "image": "https://live.staticflickr.com/65535/54548563778_406a5e74b2_b.jpg",
                     "type": "file",
-                    "excerpt": ""
+                    "excerpt": "Where they don't do much"
                   },
                   {
                     "title": "Portugal",
-                    "slug": "/balance/writing/kleiner-zeppelin/portugal",
+                    "slug": "/balance/writing/der-kleine-zeppelin/portugal",
                     "order": 190,
                     "icon": "van",
                     "image": "https://live.staticflickr.com/65535/54639869696_b8a3cdb0de_b.jpg",
                     "type": "file",
-                    "excerpt": ""
+                    "excerpt": "Where they talk funny"
                   }
                 ],
                 "icon": "van",
                 "image": "https://live.staticflickr.com/65535/54250367683_32802224fb_b.jpg",
-                "excerpt": ""
+                "excerpt": "Once upon a time"
               },
               {
                 "title": "Bez",
@@ -1355,7 +1355,7 @@
             ],
             "icon": "balance",
             "image": "https://live.staticflickr.com/65535/54353995935_a904d504aa_b.jpg",
-            "excerpt": "[PrevNext next=\"/balance/writing/kleinerzeppelin\"]\n\n Wei Zang, author of Not here to fuck spiders"
+            "excerpt": "[PrevNext next=\"/balance/writing/derkleinezeppelin\"]\n\n by Wei Zang, author of Not here to fuck spiders"
           },
           {
             "title": "Video",
@@ -1519,6 +1519,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[Flash movie=\"Logo\" height=\"190\"]\n\n[PageAd slug=\"/work/expertise/javascript/nextjs\"]\n\n[PrevNext prev=\"/work/expertise/javascript/react\" next=\"/work/expertise/javascript/react/hooks\"]\n\n[PageAd slug=\"/w"
+    "excerpt": "[PageAd slug=\"/balance/writing/derkleinezeppelin\"]\n\n[Flash movie=\"Logo\" height=\"190\"]\n\n[PageAd slug=\"/work/expertise/javascript/nextjs\"]\n\n[PrevNext prev=\"/work/expertise/javascript/react\" next=\"/work/"
   }
 ]

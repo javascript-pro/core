@@ -5,7 +5,6 @@ description: and Speculative Fiction
 slug: /balance/writing/sci-fi
 icon: rocket
 image: /jpg/einstein.jpg
-paywall: true
 ---
 
 #### That's soience mayte

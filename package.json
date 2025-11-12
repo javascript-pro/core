@@ -7,6 +7,7 @@
     "generate": "tsx generate.mjs",
     "prepare": "husky install",
     "build": "next build",
+    "indexSearch": "clear && node buildSearchIndex.mjs",
     "lint": "next lint",
     "lint-staged": "lint-staged",
     "format": "prettier --write --ignore-unknown .",

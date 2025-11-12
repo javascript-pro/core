@@ -123,9 +123,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
               pb: 0,
             }}
           >
-            <Box sx={{ flexGrow: 1 }}>
-              <Search defaultValue={frontmatter?.title} />
-            </Box>
             <IconButton
               aria-label="Close menu"
               onClick={() => setMenuOpen(false)}
@@ -148,7 +145,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
               {!isMobile && (
                 <Grid size={{ md: 3 }}>
                   <Box sx={{ mt: 1 }}>
-                    <Search />
                     {Array.isArray(siblings) && siblings.length > 0 ? (
                       <>
                         <Siblings />

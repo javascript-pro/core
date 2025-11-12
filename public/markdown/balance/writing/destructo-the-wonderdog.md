@@ -5,7 +5,6 @@ description: The Wonderdog
 slug: /balance/writing/destructo-the-wonderdog
 icon: dog
 image: https://live.staticflickr.com/65535/54691336480_c273fe647c_o.jpg
-paywall: true
 ---
 
 Once upon a time Destructo the Wonderdog and his best mate Barkin’ Boris were hanging out on the mountain. Just sniffing about, play fighting and barking at stuff when suddenly Boris went still as a mouse

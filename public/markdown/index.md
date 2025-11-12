@@ -10,14 +10,4 @@ image: /png/clouds/javascript.png
 noImage: true
 ---
 
-[Flash movie="Logo" height="190"]
-
-[PageAd slug="/work/expertise/javascript/nextjs"]
-
-[PrevNext prev="/work/expertise/javascript/react" next="/work/expertise/javascript/react/hooks"]
-
-[PageAd slug="/work/expertise/javascript/node"]
-
-[PrevNext prev="/work/experience" next="/work/expertise"]
-
-[ChildPages ]
+[PageAd slug="/balance/writing/der-kleine-zeppelin"]

@@ -6,11 +6,12 @@ import { IconButton, Button } from '@mui/material';
 import { Icon, useDispatch } from '../../../gl-core';
 import { auth } from '../../lib/firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
-import { usePaywall, DialogPaywall, setPaywallKey } from '../Paywall';
+import { useUser, DialogPaywall, setPaywallKey } from '../Paywall';
 
 export default function Paywall() {
   const dispatch = useDispatch();
-  const pw = usePaywall();
+  const user = useUser();
+  // console.log("user", user)
 
   // Subscribe to Firebase auth state changes
   React.useEffect(() => {
@@ -39,7 +40,7 @@ export default function Paywall() {
           right: 8,
         }}
       >
-        Account
+        {!user ? <>Sign in</> : <>{user?.email}</>}
       </Button>
     </>
   );

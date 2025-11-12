@@ -10,7 +10,7 @@ import {
   ListItemText,
   Box,
 } from '@mui/material';
-import { Icon, Search } from '../../../gl-core';
+import { Icon } from '../../../gl-core';
 
 type NavItem = {
   title: string;
