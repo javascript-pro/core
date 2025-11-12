@@ -2,7 +2,7 @@
 order: 55
 title: Beef Wellie
 description: Death cap mushrooms optional if you don't like your inlaws
-slug: /balance/writing/wei-zangs-food/beef-wellie
+slug: /life/food/beef-wellie
 icon: food
 image: https://live.staticflickr.com/65535/54742614047_e44e8af81e_b.jpg
 paywall: true

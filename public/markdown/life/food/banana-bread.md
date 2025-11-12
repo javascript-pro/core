@@ -1,16 +1,12 @@
 ---
 order: 50
-title: 'Banana Bread'
+title: Banana Bread
 description: Proper crowd pleaser
-slug: /balance/writing/wei-zangs-food/banana-bread
+slug: /life/food/banana-bread
 icon: food
 image: /jpg/wei-zangs-food.jpg
 paywall: true
 ---
-
-[Air Fried Stuffed Peppers](/life/food/air-fried-peppers) | [Banana Bread](/life/food/banana-bread)
-
-Moist, flavorful, and easy to make. Perfect for using overripe bananas, this classic loaf is a crowd-pleaser for breakfast, snacks, or dessert.
 
 - 125g Butter
 - 175g Brown sugar

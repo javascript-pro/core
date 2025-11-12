@@ -81,6 +81,12 @@
                     "icon": "flash",
                     "image": "/png/n64/test.png",
                     "type": "file",
+                    "tags": [
+                      "Catridges",
+                      "Flash",
+                      "SVG",
+                      "Macromedia"
+                    ],
                     "excerpt": "[Flash movie=\"Logo\" height=\"250\"]\n\n Maybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You're welcome\n\n SVG Graphics\n Animation using Greensoc"
                   },
                   {
@@ -90,6 +96,13 @@
                     "icon": "uberedux",
                     "image": "/png/n64/test.png",
                     "type": "file",
+                    "tags": [
+                      "Free",
+                      "atridges",
+                      "Uberedux",
+                      "State Management",
+                      "Redux"
+                    ],
                     "excerpt": "Otherwise you'd be back in jQuery callback hell. Nobody wants that.\n\nUberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app already works and gives you the global sta"
                   },
                   {
@@ -1097,6 +1110,78 @@
             "excerpt": ""
           },
           {
+            "title": "Food",
+            "description": "魏藏美食",
+            "slug": "/life/food",
+            "order": 110,
+            "type": "folder",
+            "children": [
+              {
+                "title": "Air Fried Stuffed Peppers",
+                "slug": "/life/food/air-fried-peppers",
+                "order": 35,
+                "icon": "food",
+                "image": "/jpg/wei-zangs-food.jpg",
+                "type": "file",
+                "tags": [
+                  "food",
+                  "punching dolphins",
+                  "recipes",
+                  "air fryer",
+                  "peppers"
+                ],
+                "excerpt": "2 Large peppers (capsicums)\n 1 125g pack of mozzarella\n Enough of your best, most delicious bolognaise to fill the peppers\n\n STEP 1\n\nPrepare Air Fryer pan. Line it with tinfoil if you want to keep it "
+              },
+              {
+                "title": "Breakfast Nasi Goreng",
+                "slug": "/life/food/all-day-brekkie-goreng",
+                "order": 50,
+                "icon": "food",
+                "image": "/jpg/wei-zangs-food.jpg",
+                "type": "file",
+                "tags": [
+                  "food",
+                  "recipes",
+                  "indonesian",
+                  "goreng",
+                  "nasi",
+                  "rice"
+                ],
+                "excerpt": "Nasi Goreng is an Indonesian meal made from leftover rice stirfried with garlic, shallots, chilli, and sweet soy sauce (kecap manis). Often enriched with prawns, chicken, or beef, it’s finished with a"
+              },
+              {
+                "title": "Banana Bread",
+                "slug": "/life/food/banana-bread",
+                "order": 50,
+                "icon": "food",
+                "image": "/jpg/wei-zangs-food.jpg",
+                "type": "file",
+                "excerpt": "125g Butter\n 175g Brown sugar\n 1 tsp Vanilla extract or paste\n 3 Eggs\n 2 Cups mashed banana\n 255g Plain flour\n 1 tsp Baking powder\n 1 tsp Bicarb of (baking) soda\n 1 tsp Ground cinnamon\n ⅓ CUP (115g) G"
+              },
+              {
+                "title": "Beef Wellie",
+                "slug": "/life/food/beef-wellie",
+                "order": 55,
+                "icon": "food",
+                "image": "https://live.staticflickr.com/65535/54742614047_e44e8af81e_b.jpg",
+                "type": "file",
+                "excerpt": "Ingredients\n\n 2 x 400g beef fillets\n Olive oil, for frying\n 500g mixture of wild mushrooms, cleaned\n 1 thyme sprig, leaves only\n 500g puff pastry\n 8 slices of Parma ham\n 2 egg yolks, beaten with 1 tbs"
+              },
+              {
+                "title": "Lemon Meringue Pie",
+                "slug": "/life/food/lemon-meringue-pie",
+                "order": 76,
+                "icon": "food",
+                "image": "/jpg/lemon-meringue-pie.jpg",
+                "type": "file",
+                "excerpt": "\"Lemonading\" is an actual word that even people on Radio 4 use. So when life gives you lemons...\n\n Ingredients\n\n For the pastry\n\n 4 oz (110 g) plain flour, plus a little extra for rolling out\n a pinch"
+              }
+            ],
+            "icon": "food",
+            "image": "/jpg/wei-zangs-food.jpg",
+            "excerpt": "You want a recipe? The interweb's full of them. This is how I cook. This is why I cook.\n\nIf you find something, good. If not — well, maybe you were hungry for something else.\n\nWhen I want a recipe I g"
+          },
+          {
             "title": "Aquaponics",
             "description": "Fish are food. Not friends.",
             "slug": "/life/aquaponics",
@@ -1147,6 +1232,70 @@
             "order": 1,
             "type": "folder",
             "children": [
+              {
+                "title": "Not Here To Fuck Spiders",
+                "description": "by Wei Zang",
+                "slug": "/balance/writing/not-here-to-fuck-spiders",
+                "order": 1,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "WIP",
+                    "description": "",
+                    "slug": "/balance/writing/not-here-to-fuck-spiders/wip",
+                    "order": 10,
+                    "type": "folder",
+                    "children": [
+                      {
+                        "title": "Bez",
+                        "slug": "/balance/writing/not-here-to-fuck-spiders/wip/bez",
+                        "order": 11,
+                        "icon": "flash",
+                        "image": "https://live.staticflickr.com/65535/54340497432_b8c92a3215_b.jpg",
+                        "type": "file",
+                        "tags": [
+                          "punk",
+                          "bez"
+                        ],
+                        "excerpt": "Over time, her real name eroded like an old raster image losing resolution, smoothed away by repetition until even she couldn’t recall what it had been. HR still had it on file, but it felt like a rel"
+                      },
+                      {
+                        "title": "dog",
+                        "slug": "/balance/writing/not-here-to-fuck-spiders/wip/puppy-thing",
+                        "order": 30,
+                        "icon": "dog",
+                        "image": "/jpg/puppy-fing.jpg",
+                        "type": "file",
+                        "excerpt": "I put an Attenborough series on for the dogs. Later I notice there’s a polar bear and a baby seal on the TV. I look at the doggy. He's got genuine concern in his eyes which also say \"'at puppy fing’s "
+                      },
+                      {
+                        "title": "That's soience",
+                        "slug": "/balance/writing/not-here-to-fuck-spiders/wip/sci-fi",
+                        "order": 120,
+                        "icon": "rocket",
+                        "image": "/jpg/einstein.jpg",
+                        "type": "file",
+                        "excerpt": "That's soience mayte\n\nBecause we can carefully observe constellations when the Sun is not blocking their path, we know what position the stars should be in when the Sun is keeping us from seeing them."
+                      },
+                      {
+                        "title": "Destructo",
+                        "slug": "/balance/writing/not-here-to-fuck-spiders/wip/destructo-the-wonderdog",
+                        "order": 460,
+                        "icon": "dog",
+                        "image": "https://live.staticflickr.com/65535/54691336480_c273fe647c_o.jpg",
+                        "type": "file",
+                        "excerpt": "Once upon a time Destructo the Wonderdog and his best mate Barkin’ Boris were hanging out on the mountain. Just sniffing about, play fighting and barking at stuff when suddenly Boris went still as a m"
+                      }
+                    ],
+                    "icon": "bug",
+                    "image": "https://live.staticflickr.com/65535/54353995935_a904d504aa_b.jpg",
+                    "excerpt": "Child pages please"
+                  }
+                ],
+                "icon": "bug",
+                "image": "https://live.staticflickr.com/65535/54353995935_a904d504aa_b.jpg",
+                "excerpt": ""
+              },
               {
                 "title": "Der Kleine Zeppelin",
                 "description": "Once upon a time",
@@ -1238,124 +1387,12 @@
                 ],
                 "icon": "van",
                 "image": "https://live.staticflickr.com/65535/54250367683_32802224fb_b.jpg",
-                "excerpt": "Once upon a time\n\n[FickrAlbum id=\"72177720329145789\"]"
-              },
-              {
-                "title": "Bez",
-                "slug": "/balance/writing/bez",
-                "order": 11,
-                "icon": "flash",
-                "image": "https://live.staticflickr.com/65535/54340497432_b8c92a3215_b.jpg",
-                "type": "file",
-                "tags": [
-                  "punk",
-                  "bez"
-                ],
-                "excerpt": "Over time, her real name eroded like an old raster image losing resolution, smoothed away by repetition until even she couldn’t recall what it had been. HR still had it on file, but it felt like a rel"
-              },
-              {
-                "title": "dog",
-                "slug": "/balance/writing/puppy-thing",
-                "order": 30,
-                "icon": "dog",
-                "image": "/jpg/puppy-fing.jpg",
-                "type": "file",
-                "excerpt": "I put an Attenborough series on for the dogs. Later I notice there’s a polar bear and a baby seal on the TV. I look at the doggy. He's got genuine concern in his eyes which also say \"'at puppy fing’s "
-              },
-              {
-                "title": "Wei Zang’s Food",
-                "description": "魏藏美食",
-                "slug": "/balance/writing/wei-zangs-food",
-                "order": 110,
-                "type": "folder",
-                "children": [
-                  {
-                    "title": "Air Fried Stuffed Peppers",
-                    "slug": "/balance/writing/wei-zangs-food/air-fried-peppers",
-                    "order": 35,
-                    "icon": "food",
-                    "image": "/jpg/wei-zangs-food.jpg",
-                    "type": "file",
-                    "tags": [
-                      "food",
-                      "punching dolphins",
-                      "recipes",
-                      "air fryer",
-                      "peppers"
-                    ],
-                    "excerpt": "2 Large peppers (capsicums)\n 1 125g pack of mozzarella\n Enough of your best, most delicious bolognaise to fill the peppers\n\n STEP 1\n\nPrepare Air Fryer pan. Line it with tinfoil if you want to keep it "
-                  },
-                  {
-                    "title": "Breakfast Nasi Goreng",
-                    "slug": "/balance/writing/wei-zangs-food/all-day-brekkie-goreng",
-                    "order": 50,
-                    "icon": "food",
-                    "image": "/jpg/wei-zangs-food.jpg",
-                    "type": "file",
-                    "tags": [
-                      "food",
-                      "recipes",
-                      "indonesian",
-                      "goreng",
-                      "nasi",
-                      "rice"
-                    ],
-                    "excerpt": "Nasi Goreng is an Indonesian meal made from leftover rice stirfried with garlic, shallots, chilli, and sweet soy sauce (kecap manis). Often enriched with prawns, chicken, or beef, it’s finished with a"
-                  },
-                  {
-                    "title": "Banana Bread",
-                    "slug": "/balance/writing/wei-zangs-food/banana-bread",
-                    "order": 50,
-                    "icon": "food",
-                    "image": "/jpg/wei-zangs-food.jpg",
-                    "type": "file",
-                    "excerpt": "| \n\nMoist, flavorful, and easy to make. Perfect for using overripe bananas, this classic loaf is a crowdpleaser for breakfast, snacks, or dessert.\n\n 125g Butter\n 175g Brown sugar\n 1 tsp Vanilla extrac"
-                  },
-                  {
-                    "title": "Beef Wellie",
-                    "slug": "/balance/writing/wei-zangs-food/beef-wellie",
-                    "order": 55,
-                    "icon": "food",
-                    "image": "https://live.staticflickr.com/65535/54742614047_e44e8af81e_b.jpg",
-                    "type": "file",
-                    "excerpt": "Ingredients\n\n 2 x 400g beef fillets\n Olive oil, for frying\n 500g mixture of wild mushrooms, cleaned\n 1 thyme sprig, leaves only\n 500g puff pastry\n 8 slices of Parma ham\n 2 egg yolks, beaten with 1 tbs"
-                  },
-                  {
-                    "title": "Lemon Meringue Pie",
-                    "slug": "/balance/writing/wei-zangs-food/lemon-meringue-pie",
-                    "order": 76,
-                    "icon": "food",
-                    "image": "/jpg/lemon-meringue-pie.jpg",
-                    "type": "file",
-                    "excerpt": "\"Lemonading\" is an actual word that even people on Radio 4 use. So when life gives you lemons...\n\n Ingredients\n\n For the pastry\n\n 4 oz (110 g) plain flour, plus a little extra for rolling out\n a pinch"
-                  }
-                ],
-                "icon": "food",
-                "image": "/jpg/wei-zangs-food.jpg",
-                "excerpt": "You want a recipe? The interweb's full of them. This is how I cook. This is why I cook.\n\nIf you find something, good. If not — well, maybe you were hungry for something else.\n\nWhen I want a recipe I g"
-              },
-              {
-                "title": "Science Fiction",
-                "slug": "/balance/writing/sci-fi",
-                "order": 120,
-                "icon": "rocket",
-                "image": "/jpg/einstein.jpg",
-                "type": "file",
-                "excerpt": "That's soience mayte\n\nBecause we can carefully observe constellations when the Sun is not blocking their path, we know what position the stars should be in when the Sun is keeping us from seeing them."
-              },
-              {
-                "title": "Destructo",
-                "slug": "/balance/writing/destructo-the-wonderdog",
-                "order": 460,
-                "icon": "dog",
-                "image": "https://live.staticflickr.com/65535/54691336480_c273fe647c_o.jpg",
-                "type": "file",
-                "excerpt": "Once upon a time Destructo the Wonderdog and his best mate Barkin’ Boris were hanging out on the mountain. Just sniffing about, play fighting and barking at stuff when suddenly Boris went still as a m"
+                "excerpt": "Once Upon a Time\n\nThere was a little zeppelin. Which is what this van was like to drive. No real power, just a big bloated white blob floating about all over the shop\n\n[FickrAlbum id=\"7217772032914578"
               }
             ],
             "icon": "balance",
             "image": "https://live.staticflickr.com/65535/54353995935_a904d504aa_b.jpg",
-            "excerpt": "[PrevNext next=\"/balance/writing/derkleinezeppelin\"]\n\n by Wei Zang, author of Not here to fuck spiders"
+            "excerpt": "[PageAd slug=\"/balance/writing/derkleinezeppelin\"]\n\nby Wei Zang, author of Not here to fuck spiders\n\n[PageAd slug=\"/balance/writing/notheretofuckspiders\"]\n\nby Wei Zang"
           },
           {
             "title": "Video",
@@ -1485,7 +1522,7 @@
         ],
         "icon": "balance",
         "image": "/png/3rdParty/unicorn.png",
-        "excerpt": "[PrevNext prev=\"/balance/books/rfkuang\" next=\"/balance/writing/weizangsfood/alldaybrekkiegoreng\"]"
+        "excerpt": "[PageAd slug=\"/balance/writing/derkleinezeppelin\"]\n\n[PrevNext prev=\"/balance/books/rfkuang\" next=\"/balance/writing/weizangsfood/alldaybrekkiegoreng\"]"
       }
     ],
     "icon": "home",

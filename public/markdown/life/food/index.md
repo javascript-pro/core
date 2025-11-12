@@ -1,8 +1,8 @@
 ---
 order: 110
-title: Wei Zang’s Food
+title: Food
 description: 魏藏美食
-slug: /balance/writing/wei-zangs-food
+slug: /life/food
 icon: food
 image: /jpg/wei-zangs-food.jpg
 paywall: true

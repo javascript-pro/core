@@ -6,7 +6,7 @@ description: 'A Pointless reinvention of MacroMedia Flash?'
 icon: flash
 image: /png/n64/test.png
 noImage: true
-keywords: 'Catridges, Flash, SVG, Macromedia'
+tags: 'Catridges, Flash, SVG, Macromedia'
 paywall: true
 ---
 

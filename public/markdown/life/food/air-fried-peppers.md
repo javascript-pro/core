@@ -2,7 +2,7 @@
 order: 35
 title: 'Air Fried Stuffed Peppers'
 description: 'Got bolognese and peppers?'
-slug: '/balance/writing/wei-zangs-food/air-fried-peppers'
+slug: '/life/food/air-fried-peppers'
 icon: 'food'
 image: /jpg/wei-zangs-food.jpg
 tags: 'food, punching dolphins, recipes, air fryer, peppers'

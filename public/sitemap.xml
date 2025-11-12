@@ -35,9 +35,6 @@
     <loc>https://goldlabel.pro/balance/video</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/writing/bez</loc>
-  </url>
-  <url>
     <loc>https://goldlabel.pro/balance/writing/der-kleine-zeppelin/belgium</loc>
   </url>
   <url>
@@ -68,34 +65,25 @@
     <loc>https://goldlabel.pro/balance/writing/der-kleine-zeppelin/vanlife</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/writing/destructo-the-wonderdog</loc>
-  </url>
-  <url>
     <loc>https://goldlabel.pro/balance/writing</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/writing/puppy-thing</loc>
+    <loc>https://goldlabel.pro/balance/writing/not-here-to-fuck-spiders</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/writing/sci-fi</loc>
+    <loc>https://goldlabel.pro/balance/writing/not-here-to-fuck-spiders/wip/bez</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/writing/wei-zangs-food/air-fried-peppers</loc>
+    <loc>https://goldlabel.pro/balance/writing/not-here-to-fuck-spiders/wip/destructo-the-wonderdog</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/writing/wei-zangs-food/all-day-brekkie-goreng</loc>
+    <loc>https://goldlabel.pro/balance/writing/not-here-to-fuck-spiders/wip</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/writing/wei-zangs-food/banana-bread</loc>
+    <loc>https://goldlabel.pro/balance/writing/not-here-to-fuck-spiders/wip/puppy-thing</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/writing/wei-zangs-food/beef-wellie</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/writing/wei-zangs-food</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/writing/wei-zangs-food/lemon-meringue-pie</loc>
+    <loc>https://goldlabel.pro/balance/writing/not-here-to-fuck-spiders/wip/sci-fi</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/</loc>
@@ -114,6 +102,24 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/life/diving/why-not-dive</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/food/air-fried-peppers</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/food/all-day-brekkie-goreng</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/food/banana-bread</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/food/beef-wellie</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/food</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/food/lemon-meringue-pie</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/life</loc>

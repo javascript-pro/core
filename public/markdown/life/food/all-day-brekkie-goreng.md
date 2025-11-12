@@ -2,7 +2,7 @@
 order: 50
 title: Breakfast Nasi Goreng
 description: Euro/Asian Fusian
-slug: /balance/writing/wei-zangs-food/all-day-brekkie-goreng
+slug: /life/food/all-day-brekkie-goreng
 icon: food
 image: /jpg/wei-zangs-food.jpg
 tags: food, recipes, indonesian, goreng, nasi, rice

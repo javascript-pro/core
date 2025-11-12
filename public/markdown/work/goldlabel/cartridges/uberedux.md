@@ -6,7 +6,7 @@ description: 'Because all Apps need State Management'
 icon: 'uberedux'
 image: /png/n64/test.png
 github: 'https://github.com/javascript-pro/core/tree/main/gl-core/cartridges/Uberedux'
-keywords: 'Catridges, Uberedux, State Management, Redux'
+tags: 'Free, atridges, Uberedux, State Management, Redux'
 ---
 
 > Otherwise you'd be back in jQuery callback hell. Nobody wants that.

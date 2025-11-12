@@ -6,6 +6,7 @@ import {
   Box,
   Card,
   CardActionArea,
+  CardMedia,
   CardHeader,
   Alert,
   Typography,
@@ -82,6 +83,7 @@ export default function PageAd({ slug = '/' }: { slug: string }) {
             <Typography variant="body2">{`${subheader} ...`}</Typography>
           }
         />
+        <CardMedia src={item.image} height={100} component={'img'} />
       </CardActionArea>
     </Card>
   );
