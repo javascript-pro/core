@@ -30,3 +30,17 @@ noImage: true
 3. ✨ A community of travelers and nomads
 
 💡 Occasional lack of WiFi, questionable parking spots, and a lot of service station coffee
+
+## Best price (noun)
+
+The universal truth: if it costs nothing, it’s already worth more than you were planning to spend.
+
+#### Usage
+
+- "How much was that? — Free. — Best price."
+- "I wasn’t even looking, but if it’s free, I’ll take three."
+
+Connotations:
+✨ Feels like winning a game you didn’t know you were playing
+✨ Better than half-price, better than 90% off
+✨ The one number that makes everyone suddenly interested

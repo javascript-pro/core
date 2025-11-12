@@ -10,8 +10,4 @@ noImage: true
 
 [PageAd slug="/balance/writing/der-kleine-zeppelin"]
 
-by Wei Zang, author of _Not here to fuck spiders_
-
 [PageAd slug="/balance/writing/not-here-to-fuck-spiders"]
-
-by Wei Zang

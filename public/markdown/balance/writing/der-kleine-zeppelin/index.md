@@ -1,7 +1,7 @@
 ---
 order: 10
 title: Der Kleine Zeppelin
-description: Once upon a time
+description: by Wei Zang, author of Not here to fuck spiders
 slug: /balance/writing/der-kleine-zeppelin
 icon: van
 image: https://live.staticflickr.com/65535/54250367683_32802224fb_b.jpg

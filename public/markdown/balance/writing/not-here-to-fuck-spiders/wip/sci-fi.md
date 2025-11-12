@@ -3,8 +3,9 @@ order: 120
 title: That's soience
 description: Science Fiction and Speculative Fiction
 slug: /balance/writing/not-here-to-fuck-spiders/wip/sci-fi
-icon: rocket
+icon: bug
 image: /jpg/einstein.jpg
+paywall: true
 ---
 
 #### That's soience mayte

@@ -1250,7 +1250,7 @@
                         "title": "Bez",
                         "slug": "/balance/writing/not-here-to-fuck-spiders/wip/bez",
                         "order": 11,
-                        "icon": "flash",
+                        "icon": "bug",
                         "image": "https://live.staticflickr.com/65535/54340497432_b8c92a3215_b.jpg",
                         "type": "file",
                         "tags": [
@@ -1263,7 +1263,7 @@
                         "title": "dog",
                         "slug": "/balance/writing/not-here-to-fuck-spiders/wip/puppy-thing",
                         "order": 30,
-                        "icon": "dog",
+                        "icon": "bug",
                         "image": "/jpg/puppy-fing.jpg",
                         "type": "file",
                         "excerpt": "I put an Attenborough series on for the dogs. Later I notice there’s a polar bear and a baby seal on the TV. I look at the doggy. He's got genuine concern in his eyes which also say \"'at puppy fing’s "
@@ -1272,7 +1272,7 @@
                         "title": "That's soience",
                         "slug": "/balance/writing/not-here-to-fuck-spiders/wip/sci-fi",
                         "order": 120,
-                        "icon": "rocket",
+                        "icon": "bug",
                         "image": "/jpg/einstein.jpg",
                         "type": "file",
                         "excerpt": "That's soience mayte\n\nBecause we can carefully observe constellations when the Sun is not blocking their path, we know what position the stars should be in when the Sun is keeping us from seeing them."
@@ -1281,7 +1281,7 @@
                         "title": "Destructo",
                         "slug": "/balance/writing/not-here-to-fuck-spiders/wip/destructo-the-wonderdog",
                         "order": 460,
-                        "icon": "dog",
+                        "icon": "bug",
                         "image": "https://live.staticflickr.com/65535/54691336480_c273fe647c_o.jpg",
                         "type": "file",
                         "excerpt": "Once upon a time Destructo the Wonderdog and his best mate Barkin’ Boris were hanging out on the mountain. Just sniffing about, play fighting and barking at stuff when suddenly Boris went still as a m"
@@ -1298,14 +1298,79 @@
               },
               {
                 "title": "Der Kleine Zeppelin",
-                "description": "Once upon a time",
+                "description": "by Wei Zang, author of Not here to fuck spiders",
                 "slug": "/balance/writing/der-kleine-zeppelin",
                 "order": 10,
                 "type": "folder",
                 "children": [
                   {
-                    "title": "Google it",
-                    "slug": "/balance/writing/der-kleine-zeppelin/google-it",
+                    "title": "Countries",
+                    "description": "list of",
+                    "slug": "/balance/writing/der-kleine-zeppelin/countries",
+                    "order": 10,
+                    "type": "folder",
+                    "children": [
+                      {
+                        "title": "Britain",
+                        "slug": "/balance/writing/der-kleine-zeppelin/countries/britain",
+                        "order": 99,
+                        "icon": "van",
+                        "image": "https://live.staticflickr.com/65535/53998963131_bf0cb94288_b.jpg",
+                        "type": "file",
+                        "excerpt": "Where I can understand the advertising"
+                      },
+                      {
+                        "title": "France",
+                        "slug": "/balance/writing/der-kleine-zeppelin/countries/france",
+                        "order": 110,
+                        "icon": "van",
+                        "image": "https://live.staticflickr.com/65535/54458539144_1d61fc9025_b.jpg",
+                        "type": "file",
+                        "excerpt": "Where nothing works"
+                      },
+                      {
+                        "title": "Belgium",
+                        "slug": "/balance/writing/der-kleine-zeppelin/countries/belgium",
+                        "order": 125,
+                        "icon": "van",
+                        "image": "https://live.staticflickr.com/65535/54369337224_3278c64992_b.jpg",
+                        "type": "file",
+                        "excerpt": "Where wars were"
+                      },
+                      {
+                        "title": "Germany",
+                        "slug": "/balance/writing/der-kleine-zeppelin/countries/germany",
+                        "order": 170,
+                        "icon": "van",
+                        "image": "https://live.staticflickr.com/65535/54873111678_2633c4ba43_b.jpg",
+                        "type": "file",
+                        "excerpt": "Where everything works"
+                      },
+                      {
+                        "title": "Spain",
+                        "slug": "/balance/writing/der-kleine-zeppelin/countries/spain",
+                        "order": 179,
+                        "icon": "van",
+                        "image": "https://live.staticflickr.com/65535/54548563778_406a5e74b2_b.jpg",
+                        "type": "file",
+                        "excerpt": "Where they don't do much"
+                      },
+                      {
+                        "title": "Portugal",
+                        "slug": "/balance/writing/der-kleine-zeppelin/countries/portugal",
+                        "order": 190,
+                        "icon": "van",
+                        "image": "https://live.staticflickr.com/65535/54639869696_b8a3cdb0de_b.jpg",
+                        "type": "file",
+                        "excerpt": "Where they talk funny"
+                      }
+                    ],
+                    "icon": "geo",
+                    "excerpt": "Country List\n\n A lifesty"
+                  },
+                  {
+                    "title": "Google",
+                    "slug": "/balance/writing/der-kleine-zeppelin/google",
                     "order": 10,
                     "icon": "van",
                     "type": "file",
@@ -1324,65 +1389,11 @@
                         "order": 10,
                         "icon": "van",
                         "type": "file",
-                        "excerpt": "Best price (noun)\n\nThe universal truth: if it costs nothing, it’s already worth more than you were planning to spend.\n\n Usage\n\n \"How much was that? — Free. — Best price.\"\n \"I wasn’t even looking, but "
+                        "excerpt": ""
                       }
                     ],
                     "icon": "van",
                     "excerpt": "Vanlife (noun)\n\n A lifestyle built around living or traveling in a converted van, often equipped with a bed, kitchen, and storage, sometimes a bathroom.\n\n The practice of turning a vehicle into both h"
-                  },
-                  {
-                    "title": "Britain",
-                    "slug": "/balance/writing/der-kleine-zeppelin/britain",
-                    "order": 99,
-                    "icon": "van",
-                    "image": "https://live.staticflickr.com/65535/53998963131_bf0cb94288_b.jpg",
-                    "type": "file",
-                    "excerpt": "Where I can understand the advertising"
-                  },
-                  {
-                    "title": "France",
-                    "slug": "/balance/writing/der-kleine-zeppelin/france",
-                    "order": 110,
-                    "icon": "van",
-                    "image": "https://live.staticflickr.com/65535/54458539144_1d61fc9025_b.jpg",
-                    "type": "file",
-                    "excerpt": "Where nothing works"
-                  },
-                  {
-                    "title": "Belgium",
-                    "slug": "/balance/writing/der-kleine-zeppelin/belgium",
-                    "order": 125,
-                    "icon": "van",
-                    "image": "https://live.staticflickr.com/65535/54369337224_3278c64992_b.jpg",
-                    "type": "file",
-                    "excerpt": "Where wars were"
-                  },
-                  {
-                    "title": "Germany",
-                    "slug": "/balance/writing/der-kleine-zeppelin/germany",
-                    "order": 170,
-                    "icon": "van",
-                    "image": "https://live.staticflickr.com/65535/54873111678_2633c4ba43_b.jpg",
-                    "type": "file",
-                    "excerpt": "Where everything works"
-                  },
-                  {
-                    "title": "Spain",
-                    "slug": "/balance/writing/der-kleine-zeppelin/spain",
-                    "order": 179,
-                    "icon": "van",
-                    "image": "https://live.staticflickr.com/65535/54548563778_406a5e74b2_b.jpg",
-                    "type": "file",
-                    "excerpt": "Where they don't do much"
-                  },
-                  {
-                    "title": "Portugal",
-                    "slug": "/balance/writing/der-kleine-zeppelin/portugal",
-                    "order": 190,
-                    "icon": "van",
-                    "image": "https://live.staticflickr.com/65535/54639869696_b8a3cdb0de_b.jpg",
-                    "type": "file",
-                    "excerpt": "Where they talk funny"
                   }
                 ],
                 "icon": "van",
@@ -1392,7 +1403,7 @@
             ],
             "icon": "balance",
             "image": "https://live.staticflickr.com/65535/54353995935_a904d504aa_b.jpg",
-            "excerpt": "[PageAd slug=\"/balance/writing/derkleinezeppelin\"]\n\nby Wei Zang, author of Not here to fuck spiders\n\n[PageAd slug=\"/balance/writing/notheretofuckspiders\"]\n\nby Wei Zang"
+            "excerpt": "[PageAd slug=\"/balance/writing/derkleinezeppelin\"]\n\n[PageAd slug=\"/balance/writing/notheretofuckspiders\"]"
           },
           {
             "title": "Video",
