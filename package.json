@@ -1,12 +1,12 @@
 {
-  "version": "52.1.4",
+  "version": "52.1.5",
   "name": "core",
   "description": "Always FREE. Always Open Source",
   "scripts": {
     "dev": "clear && rm -rf .next && yarn format && yarn generate && yarn indexSearch && next dev",
     "generate": "tsx generate.mjs && yarn indexSearch",
     "prepare": "husky install",
-    "build": "yarn indexSearch && next build",
+    "build": "next build",
     "indexSearch": "clear && node buildSearchIndex.mjs",
     "lint": "next lint",
     "lint-staged": "lint-staged",
