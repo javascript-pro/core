@@ -9,3 +9,5 @@ paywall: true
 ---
 
 Child pages please
+
+[FickrAlbum id="72177720329145789"]

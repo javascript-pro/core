@@ -4,10 +4,10 @@ title: Balance
 description: A collection of writing
 slug: /balance
 icon: balance
-image: /png/3rdParty/unicorn.png
+image: /png/n64/british.png
 noImage: true
 ---
 
-[PageAd slug="/balance/writing/der-kleine-zeppelin"]
+It's hard to collate stuff into readable writing, but we're doing our best
 
-[PrevNext prev="/balance/books/r-f-kuang" next="/balance/writing/wei-zangs-food/all-day-brekkie-goreng"]
+[PageAd slug="/balance/writing/der-kleine-zeppelin"]

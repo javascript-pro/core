@@ -1,12 +1,9 @@
 ---
 order: 10
 title: Countries
-description: list of
 slug: /balance/writing/der-kleine-zeppelin/countries
-icon: geo
+icon: van
 noImage: true
 ---
 
-## Country List
-
-- A lifesty
+[GoogleMap src="https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=001321"]

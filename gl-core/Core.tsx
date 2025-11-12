@@ -160,7 +160,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
               <Grid size={{ xs: 12, md: 9 }}>
                 <Box sx={{ display: 'flex', mt: 0, mb: 2 }}>
-                  <Box sx={{ ml: -1 }}>
+                  <Box sx={{ ml: -1, mr: 2 }}>
                     <SharePopup />
                   </Box>
 
@@ -171,7 +171,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
                         gutterBottom
                         color="primary"
                         sx={{
-                          fontSize: { xs: '1.75rem', md: '2.25rem' },
+                          mt: 0.5,
+                          fontSize: { xs: '1.7rem', md: '2.2rem' },
                         }}
                       >
                         {title}
@@ -185,7 +186,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                       variant="h2"
                       gutterBottom
                       sx={{
-                        fontSize: { xs: '1.2rem', md: '1.25rem' },
+                        fontSize: { xs: '1.1rem', md: '1.25rem' },
                       }}
                     >
                       {description}

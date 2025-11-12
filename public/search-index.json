@@ -67,7 +67,7 @@
     "title": "Balance",
     "description": "A collection of writing",
     "tags": [],
-    "content": "\n[PrevNext prev=\"/balance/books/r-f-kuang\" next=\"/balance/writing/wei-zangs-food/all-day-brekkie-goreng\"]\n"
+    "content": "\nIt's hard to collate stuff into readable writing, but we're doing our best\n\n[PageAd slug=\"/balance/writing/der-kleine-zeppelin\"]\n"
   },
   {
     "slug": "balance/video/index",
@@ -77,158 +77,137 @@
     "content": "\n[YouTube src=\"https://www.youtube.com/watch?v=Qe2ZLYzQToQ\"]\n\nScript (written October 2000)\n\nKnowing the future is easy\nYou just have to understand the past\nThe situation we have now is one where it's not what you know\nOr even who you know\nBut how fast you can find it out\n\nI'm a digital representation of that knowledge\nI'm not saying I know everything\nI'm just well connected\n\nThe speed you can gain knowledge has become limited only by the speed you can type or talk\n\nImagine if it were limited only by the speed you can think\n\nWe are careering headlong into a world where we are all totally connected\nCan you imagine it?\n\nHaving access to every idea\nEvery grain of knowledge there has ever been\nThinking it is knowing it\n\nYou think think doesn't apply to you, don't you?\nFair enough.\nThe future is not an easy thing to accept.\nThe present is often hard enough\nBut you play your part every day\n\nJust remember.\nYou asked for it.\n\nWhilst working at a design agency in London in the year 2000 I was given the opportunity to work on a personal project and chose to make a film. I was experimenting with animated human characters in 3D with Poser and rendering them over the top of live action.\n\nThe final film took several weeks to produce, filming on the underground, rendering 3D animation and creating some original titles in flash.\n"
   },
   {
-    "slug": "balance/writing/bez",
-    "title": "Bez",
-    "description": "An artist and a punk",
-    "tags": "punk, bez,",
-    "content": "\nOver time, her real name eroded like an old raster image losing resolution, smoothed away by repetition until even she couldn’t recall what it had been. HR still had it on file, but it felt like a relic, an identifier from a previous version of herself. People asked, \"Wait, but what's your actual name?\" She'd just shrug.\n"
-  },
-  {
-    "slug": "balance/writing/der-kleine-zeppelin/belgium",
+    "slug": "balance/writing/der-kleine-zeppelin/countries/belgium",
     "title": "Belgium",
     "description": "België",
     "tags": [],
     "content": "\nWhere wars were\n"
   },
   {
-    "slug": "balance/writing/der-kleine-zeppelin/britain",
+    "slug": "balance/writing/der-kleine-zeppelin/countries/britain",
     "title": "Britain",
     "description": "United Kingdom",
     "tags": [],
     "content": "\nWhere I can understand the advertising\n"
   },
   {
-    "slug": "balance/writing/der-kleine-zeppelin/france",
+    "slug": "balance/writing/der-kleine-zeppelin/countries/france",
     "title": "France",
     "description": "Where nothing works",
     "tags": [],
     "content": "\nWhere nothing works\n"
   },
   {
-    "slug": "balance/writing/der-kleine-zeppelin/germany",
+    "slug": "balance/writing/der-kleine-zeppelin/countries/germany",
     "title": "Germany",
     "description": "Deutschland",
     "tags": [],
     "content": "\nWhere everything works\n"
   },
   {
-    "slug": "balance/writing/der-kleine-zeppelin/google-it",
-    "title": "Google it",
-    "description": "Google it your own self",
+    "slug": "balance/writing/der-kleine-zeppelin/countries/index",
+    "title": "Countries",
+    "description": "",
     "tags": [],
-    "content": "\n## 2025 Map\n\n[GoogleMap src=\"https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=001321\"]\n"
+    "content": "\n[GoogleMap src=\"https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=001321\"]\n"
   },
   {
-    "slug": "balance/writing/der-kleine-zeppelin/index",
-    "title": "Der Kleine Zeppelin",
-    "description": "Once upon a time",
-    "tags": [],
-    "content": "\nOnce upon a time\n\n[FickrAlbum id=\"72177720329145789\"]\n"
-  },
-  {
-    "slug": "balance/writing/der-kleine-zeppelin/portugal",
+    "slug": "balance/writing/der-kleine-zeppelin/countries/portugal",
     "title": "Portugal",
     "description": "Where they talk funny",
     "tags": [],
     "content": "\nWhere they talk funny\n"
   },
   {
-    "slug": "balance/writing/der-kleine-zeppelin/spain",
+    "slug": "balance/writing/der-kleine-zeppelin/countries/spain",
     "title": "Spain",
     "description": "España",
     "tags": [],
     "content": "\nWhere they don't do much\n"
   },
   {
+    "slug": "balance/writing/der-kleine-zeppelin/google",
+    "title": "Google",
+    "description": "Google it your own self",
+    "tags": [],
+    "content": "\n#### 2025 Map\n\n[GoogleMap src=\"https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=001321\"]\n"
+  },
+  {
+    "slug": "balance/writing/der-kleine-zeppelin/index",
+    "title": "Der Kleine Zeppelin",
+    "description": "by Wei Zang, author of Not here to fuck spiders",
+    "tags": [],
+    "content": "\n## Once upon a time\n\nthere was the little zeppelin. Which is what it was like to drive. No power, just a big bloaty white blob floating about all over the road. It's quite tall too. First thing I did is to drive it under a 2m railway bridge which had never been an issue when I was a boy racer\n"
+  },
+  {
     "slug": "balance/writing/der-kleine-zeppelin/vanlife/best-price",
     "title": "The best price",
     "description": "FREE",
     "tags": [],
-    "content": "\n## Best price (noun)\n\nThe universal truth: if it costs nothing, it’s already worth more than you were planning to spend.\n\n#### Usage\n\n- \"How much was that? — Free. — Best price.\"\n- \"I wasn’t even looking, but if it’s free, I’ll take three.\"\n\nConnotations:\n✨ Feels like winning a game you didn’t know you were playing\n✨ Better than half-price, better than 90% off\n✨ The one number that makes everyone suddenly interested\n"
+    "content": "\n##\n"
   },
   {
     "slug": "balance/writing/der-kleine-zeppelin/vanlife/index",
     "title": "Vanlife",
     "description": "definition of",
     "tags": [],
-    "content": "\n## Vanlife (noun)\n\n- A lifestyle built around living or traveling in a converted van, often equipped with a bed, kitchen, and storage, sometimes a bathroom.\n\n- The practice of turning a vehicle into both home and transport, usually for minimalism, freedom, or adventure.\n\n- A cultural movement popularized through social media, showcasing sunsets, mountain roads, and cozy interiors lit by fairy lights.\n\n- The art of quitting your lease, shoving your worldly possessions into a van, and convincing yourself that showering in rivers builds character.\n\n#### Usage\n\n- \"I sold my apartment and went full vanlife in Europe.\"\n- \"Bro, I can’t pay rent anymore — I’m going vanlife.\"\n- \"She said she was into minimalism, but then brought five suitcases into my vanlife.\"\n\n#### Connotations\n\n1. ✨ Freedom of the open road\n2. ✨ Minimalist living\n3. ✨ A community of travelers and nomads\n\n💡 Occasional lack of WiFi, questionable parking spots, and a lot of service station coffee\n"
-  },
-  {
-    "slug": "balance/writing/destructo-the-wonderdog",
-    "title": "Destructo",
-    "description": "The Wonderdog",
-    "tags": [],
-    "content": "\nOnce upon a time Destructo the Wonderdog and his best mate Barkin’ Boris were hanging out on the mountain. Just sniffing about, play fighting and barking at stuff when suddenly Boris went still as a mouse\n\n\"Something’s wrong\" he said. \"The humans are buggin’\"\n\n\"What? Eh?\" said Wonderdog, grabbing the partially destroyed teddy and giving it a shake to make more stuffing fly\n\n\"Pay attention dopey. I think the cats are in trouble. They’re lost\"\n\n\"Nah. They’re over there in that old suitcase having their cat babies\"\n\n\"Yeh. We know that. But the humans dun’t. They’re too thick. Just standing about flapping their lips and hands making those squeaky sounds all the damn day. How can we tell ‘em?\"\n\n\"What would Skippy the Bush Kangaroo do?\" Said Wonderdog. The first sensible thing he’s said all day\n"
+    "content": "\n## Vanlife (noun)\n\n- A lifestyle built around living or traveling in a converted van, often equipped with a bed, kitchen, and storage, sometimes a bathroom.\n\n- The practice of turning a vehicle into both home and transport, usually for minimalism, freedom, or adventure.\n\n- A cultural movement popularized through social media, showcasing sunsets, mountain roads, and cozy interiors lit by fairy lights.\n\n- The art of quitting your lease, shoving your worldly possessions into a van, and convincing yourself that showering in rivers builds character.\n\n#### Usage\n\n- \"I sold my apartment and went full vanlife in Europe.\"\n- \"Bro, I can’t pay rent anymore — I’m going vanlife.\"\n- \"She said she was into minimalism, but then brought five suitcases into my vanlife.\"\n\n#### Connotations\n\n1. ✨ Freedom of the open road\n2. ✨ Minimalist living\n3. ✨ A community of travelers and nomads\n\n💡 Occasional lack of WiFi, questionable parking spots, and a lot of service station coffee\n\n## Best price (noun)\n\nThe universal truth: if it costs nothing, it’s already worth more than you were planning to spend.\n\n#### Usage\n\n- \"How much was that? — Free. — Best price.\"\n- \"I wasn’t even looking, but if it’s free, I’ll take three.\"\n\nConnotations:\n✨ Feels like winning a game you didn’t know you were playing\n✨ Better than half-price, better than 90% off\n✨ The one number that makes everyone suddenly interested\n"
   },
   {
     "slug": "balance/writing/index",
     "title": "Writing",
     "description": "It's hard to collate stuff into readable writing, but we're doing our best",
     "tags": [],
-    "content": "\n[PrevNext next=\"/balance/writing/der-kleine-zeppelin\"]\n\n> by Wei Zang, author of _Not here to fuck spiders_\n"
+    "content": "\n[PageAd slug=\"/balance/writing/der-kleine-zeppelin\"]\n\n[PageAd slug=\"/balance/writing/not-here-to-fuck-spiders\"]\n"
   },
   {
-    "slug": "balance/writing/puppy-thing",
+    "slug": "balance/writing/not-here-to-fuck-spiders/index",
+    "title": "Not Here To Fuck Spiders",
+    "description": "by Wei Zang",
+    "tags": [],
+    "content": ""
+  },
+  {
+    "slug": "balance/writing/not-here-to-fuck-spiders/wip/bez",
+    "title": "Bez",
+    "description": "An artist and a punk",
+    "tags": "punk, bez,",
+    "content": "\nOver time, her real name eroded like an old raster image losing resolution, smoothed away by repetition until even she couldn’t recall what it had been. HR still had it on file, but it felt like a relic, an identifier from a previous version of herself. People asked, \"Wait, but what's your actual name?\" She'd just shrug.\n"
+  },
+  {
+    "slug": "balance/writing/not-here-to-fuck-spiders/wip/destructo-the-wonderdog",
+    "title": "Destructo",
+    "description": "The Wonderdog",
+    "tags": [],
+    "content": "\nOnce upon a time Destructo the Wonderdog and his best mate Barkin’ Boris were hanging out on the mountain. Just sniffing about, play fighting and barking at stuff when suddenly Boris went still as a mouse\n\n\"Something’s wrong\" he said. \"The humans are buggin’\"\n\n\"What? Eh?\" said Wonderdog, grabbing the partially destroyed teddy and giving it a shake to make more stuffing fly\n\n\"Pay attention dopey. I think the cats are in trouble. They’re lost\"\n\n\"Nah. They’re over there in that old suitcase having their cat babies\"\n\n\"Yeh. We know that. But the humans dun’t. They’re too thick. Just standing about flapping their lips and hands making those squeaky sounds all the damn day. How can we tell ‘em?\"\n\n\"What would Skippy the Bush Kangaroo do?\" Said Wonderdog. The first sensible thing he’s said all day\n"
+  },
+  {
+    "slug": "balance/writing/not-here-to-fuck-spiders/wip/index",
+    "title": "WIP",
+    "description": "",
+    "tags": [],
+    "content": "\nChild pages please\n\n[FickrAlbum id=\"72177720329145789\"]\n"
+  },
+  {
+    "slug": "balance/writing/not-here-to-fuck-spiders/wip/puppy-thing",
     "title": "dog",
     "description": "vat puppy fing’s gunna get fucked",
     "tags": [],
     "content": "\nI put an Attenborough series on for the dogs. Later I notice there’s a polar bear and a baby seal on the TV. I look at the doggy. He's got genuine concern in his eyes which also say **\"'at puppy fing’s gunna get fucked\"**\n"
   },
   {
-    "slug": "balance/writing/sci-fi",
-    "title": "Science Fiction",
-    "description": "and Speculative Fiction",
+    "slug": "balance/writing/not-here-to-fuck-spiders/wip/sci-fi",
+    "title": "That's soience",
+    "description": "Science Fiction and Speculative Fiction",
     "tags": [],
-    "content": "\n#### That's soience mayte\n\nBecause we can carefully observe constellations when the Sun is not blocking their path, we know what position the stars should be in when the Sun is keeping us from seeing them. However, according to Einstein, the light from the stars would be slightly curved around the Sun and to us would appear in a different position. Once again, imagine flicking that marble at your friend.\n\nIf they caught it, but were unable to see where you were standing, they might think you're in a different position than where you actually are because they'll trace that marble directly back in a straight line to the other side of the trampoline. This light-bending phenomenon is now known as gravitational lensing, but in Einstein's day it was only a prediction, his prediction.\n\nicon: folder\nimage: /jpg/einstein.jpg\n\n---\n\nBecause we can carefully observe constellations when the Sun is not blocking their path, we know what position the stars should be in when the Sun is keeping us from seeing them. However, according to Einstein, the light from the stars would be slightly curved around the Sun and to us would appear in a different position. Once again, imagine flicking that marble at your friend. If they caught it, but were unable to see where you were standing, they might think you're in a different position than where you actually are because they'll trace that marble directly back in a straight line to the other side of the trampoline. This light-bending phenomenon is now known as gravitational lensing, but in Einstein's day it was only a prediction, his prediction.\n\n> > > > > > > origin/main\n"
-  },
-  {
-    "slug": "balance/writing/wei-zangs-food/air-fried-peppers",
-    "title": "Air Fried Stuffed Peppers",
-    "description": "Got bolognese and peppers?",
-    "tags": "food, punching dolphins, recipes, air fryer, peppers",
-    "content": "\n- 2 Large peppers (capsicums)\n- 1 125g pack of mozzarella\n- Enough of your best, most delicious bolognaise to fill the peppers\n\n#### STEP 1\n\nPrepare Air Fryer pan. Line it with tinfoil if you want to keep it clean, although you might as well be punching dolphins. Silicone liners are good and can be chucked in the dishwasher\n\n#### STEP 2\n\nSlice your peppers in half from top to bottom and remove seeds/stem & anything else you wouldn't want to eat. Place peppers skin side down in Air Fryer pan and season with a little salt, pepper and oil\n\n> Air Fry at 200°C for 7 minutes\n\n#### STEP 3\n\nRemove Air Fryer pan to kitchen sink and spoon the bolognese into the peppers. Cover the tops of each with mozzarella\n\n> Air Fry at 200°C for 12 minutes\n\nUse a big spoon to serve onto big plates. Bung everything in the dishwasher. Basta.\n"
-  },
-  {
-    "slug": "balance/writing/wei-zangs-food/all-day-brekkie-goreng",
-    "title": "Breakfast Nasi Goreng",
-    "description": "Euro/Asian Fusian",
-    "tags": "food, recipes, indonesian, goreng, nasi, rice",
-    "content": "\n> **Nasi Goreng** is an Indonesian meal made from leftover rice stir-fried with garlic, shallots, chilli, and sweet soy sauce (kecap manis). Often enriched with prawns, chicken, or beef, it’s finished with a fried egg on top and a side of crisp cucumber and prawn crackers\n"
-  },
-  {
-    "slug": "balance/writing/wei-zangs-food/banana-bread",
-    "title": "Banana Bread",
-    "description": "Proper crowd pleaser",
-    "tags": [],
-    "content": "\n[Air Fried Stuffed Peppers](/life/food/air-fried-peppers) | [Banana Bread](/life/food/banana-bread)\n\nMoist, flavorful, and easy to make. Perfect for using overripe bananas, this classic loaf is a crowd-pleaser for breakfast, snacks, or dessert.\n\n- 125g Butter\n- 175g Brown sugar\n- 1 tsp Vanilla extract or paste\n- 3 Eggs\n- 2 Cups mashed banana\n- 255g Plain flour\n- 1 tsp Baking powder\n- 1 tsp Bicarb of (baking) soda\n- 1 tsp Ground cinnamon\n- ⅓ CUP (115g) Golden Syrup or honey\n\n1. Preheat oven to 160°C\n   Place the butter, sugar and vanilla in an electric mixer and\n   beat for 8–10 minutes or until pale and creamy.\n   Scrape down the sides of the bowl.\n\n2. Gradually add the eggs and beat well to combine.\n   Add the banana, flour, baking powder, bicarbonate of soda,\n   cinnamon and golden syrup and stir to combine.\n\n3. Spoon the mixture into a 26cm x 11cm (2.5 litre-capacity)\n   lightly greased loaf tin lined with baking paper.\n   Bake for 60–65 minutes or until cooked when tested with a skewer.\n\n4. Cool in the tin for 20 minutes before turning out\n   onto a wire rack to cool completely.\n   Slice and serve with the extra butter. Serves 6–8.\n"
-  },
-  {
-    "slug": "balance/writing/wei-zangs-food/beef-wellie",
-    "title": "Beef Wellie",
-    "description": "Death cap mushrooms optional if you don't like your inlaws",
-    "tags": [],
-    "content": "\n## Ingredients\n\n- 2 x 400g beef fillets\n- Olive oil, for frying\n- 500g mixture of wild mushrooms, cleaned\n- 1 thyme sprig, leaves only\n- 500g puff pastry\n- 8 slices of Parma ham\n- 2 egg yolks, beaten with 1 tbsp water and a pinch of salt\n- Sea salt and freshly ground black pepper\n\n## For the red wine sauce\n\n- 2 tbsp olive oil\n- 200g beef trimmings (ask the butcher to reserve these when trimming the fillet)\n- 4 large shallots, peeled and sliced\n- 12 black peppercorns\n- 1 bay leaf\n- 1 thyme sprig\n- Splash of red wine vinegar\n- 1 x 750ml bottle red wine\n- 750ml beef stock\n\n## Method\n\nWrap each piece of beef tightly in a triple layer of cling film to set its shape, then chill overnight.\n\nRemove the cling film, then quickly sear the beef fillets in a hot pan with a little olive oil for 30-60 seconds until browned all over and rare in the middle. Remove from the pan and leave to cool.\n\nFinely chop the mushrooms and fry in a hot pan with a little olive oil, the thyme leaves and some seasoning. When the mushrooms begin to release their juices, continue to cook over a high heat for about 10 minutes until all the excess moisture has evaporated and you are left with a mushroom paste (known as a duxelle). Remove the duxelle from the pan and leave to cool.\n\nCut the pastry in half, place on a lightly floured surface and roll each piece into a rectangle large enough to envelop one of the beef fillets. Chill in the refrigerator.\n\nLay a large sheet of cling film on a work surface and place 4 slices of Parma ham in the middle, overlapping them slightly, to create a square. Spread half the duxelle evenly over the ham.\n\nSeason the beef fillets, then place them on top of the mushroom-covered ham. Using the cling film, roll the Parma ham over the beef, then roll and tie the cling film to get a nice, evenly thick log. Repeat this step with the other beef fillet, then chill for at least 30 minutes.\n\nBrush the pastry with the egg wash. Remove the cling film from the beef, then wrap the pastry around each ham-wrapped fillet. Trim the pastry and brush all over with the egg wash. Cover with cling film and chill for at least 30 minutes.\n\nMeanwhile, make the red wine sauce. Heat the oil in a large pan, then fry the beef trimmings for a few minutes until browned on all sides. Stir in the shallots with the peppercorns, bay and thyme and continue to cook for about 5 minutes, stirring frequently, until the shallots turn golden brown.\n\nPour in the vinegar and let it bubble for a few minutes until almost dry. Now add the wine and boil until almost completely reduced. Add the stock and bring to the boil again. Lower the heat and simmer gently for 1 hour, removing any scum from the surface of the sauce, until you have the desired consistency. Strain the liquid through a fine sieve lined with muslin. Check for seasoning and set aside.\n\nWhen you are ready to cook the beef wellingtons, score the pastry lightly and brush with the egg wash again, then bake at 200°C/Gas 6 for 15-20 minutes until the pastry is golden brown and cooked. Rest for 10 minutes before carving.\n\nMeanwhile, reheat the sauce. Serve the beef wellingtons sliced, with the sauce as an accompaniment.\n"
-  },
-  {
-    "slug": "balance/writing/wei-zangs-food/index",
-    "title": "Wei Zang’s Food",
-    "description": "魏藏美食",
-    "tags": [],
-    "content": "\nYou want a recipe? The interweb's full of them. This is how I cook. This is why I cook.\n\nIf you find something, good. If not — well, maybe you were hungry for something else.\n\nWhen I want a recipe I go the internet of course. I get annoyed by the amount of adverts on the pages where I want to follow simple instructions.\n\nFor some recipes that I've tried & tested I've stripped them down and added them here. Sometimes they've been tweaked a little or translated from silly ounces to sensible grams.\n"
-  },
-  {
-    "slug": "balance/writing/wei-zangs-food/lemon-meringue-pie",
-    "title": "Lemon Meringue Pie",
-    "description": "Apparently lemonading is a real word",
-    "tags": [],
-    "content": "\n> \"Lemonading\" is an actual word that even people on Radio 4 use. So when life gives you lemons...\n\n### Ingredients\n\n#### For the pastry\n\n- 4 oz (110 g) plain flour, plus a little extra for rolling out\n- a pinch of salt\n- 1 oz (25 g) softened butter, cut into smallish lumps\n- 1 oz (25 g) softened pure lard, cut into smallish lumps\n\n#### For the filling\n\n- Grated zest and juice 2 large lemons\n- 3 level tablespoons cornflour\n- 2 oz (50 g) golden caster sugar\n- 3 large egg yolks\n- 1½ oz (40 g) butter\n\n#### For the meringue\n\n- 3 large egg whites\n- 6 oz (175 g) golden caster sugar\n\n### Method\n\nStart by making the pastry.\n\nFirst sieve the flour and a pinch of salt into a large bowl, holding the sieve up high to give the flour a good airing. Then add the butter and lard and, using only your fingertips, lightly rub the fats into the flour, again lifting the mixture up high. When everything is crumbly, sprinkle in 1 tablespoon of water. Start to mix the pastry with a flat-bladed knife and then finish off with your hands, adding a few more drops of water until you have a smooth dough that will leave the bowl clean. Then pop the pastry into a plastic bag and let it rest in the fridge for 30 minutes.\n\nNext, transfer the pastry to a flat, lightly floured surface and roll it out to a circle about ½ in (1 cm) larger all round than the rim of the tin. Cut a ½ in (1 cm) strip from the edge of the pastry, dampen the rim of the tin with water and fix the strip round it, pressing down well. Dampen the strip before lining the tin with the pastry circle, making sure you don't trap any air underneath it. Then prick the base all over with a fork. Place the tin on the baking sheet and bake on a high shelf in the pre-heated oven for 20-25 minutes, or until cooked through. After that, remove the pastry case from the oven and immediately lower the heat to gas mark 2, 300°F (150°C) for the meringue.\n\nMeanwhile, make the filling. Measure 10 fl oz (275 ml) cold water into a jug, and spoon the cornflour and sugar into a bowl. Add enough of the water to mix the cornflour to a smooth paste, then pour the rest of the water, along with the grated lemon zest, into a small saucepan. Bring this up to the boil, then pour it gradually on to the cornflour, mixing all the time until it is smooth. Now return the mixture to the saucepan and bring it back to the boil still mixing. Next, simmer very gently for about a minute stirring all the time to prevent it from catching. Then remove the pan from the heat and beat in the egg yolks, lemon juice and lastly, the butter. Now pour the lemon mixture into the pastry shell and spread it out evenly.\n\nFinally, for the meringue, use a large, spanking clean, grease-fee bowl and in it whisk the egg whites until they form stiff peaks. Now beat in a quarter of the sugar at a time until it is all incorporated, then spoon the meringue on top of the pie, taking it to the very edge of the pastry rim with a palette knife, so that it seals the edge completely (You can also make a few decorative swirls).\n\nBake in the oven on the centre shelf for 45 minutes, by which time the meringue will have turned pale beige, and be crisp on the outside and squashy within. Serve warm or cold, but if warm, leave it to settle for about 20 minutes. Chilled pouring cream is a nice accompaniment.\n\n#### Additional\n\nPre-heat the oven to gas mark 5, 375°F (190°C).\n\n#### Equipment\n\nYou will also need a 1.5 inch (4 cm) deep, sloping-sided, non-stick pie tin with a ½ in (1 cm) rim, a base diameter of 7in (18 cm) and a top diameter of 9½ in (24 cm)\n"
+    "content": "\n#### That's soience mayte\n\nBecause we can carefully observe constellations when the Sun is not blocking their path, we know what position the stars should be in when the Sun is keeping us from seeing them. However, according to Einstein, the light from the stars would be slightly curved around the Sun and to us would appear in a different position. Once again, imagine flicking that marble at your friend.\n\nIf they caught it, but were unable to see where you were standing, they might think you're in a different position than where you actually are because they'll trace that marble directly back in a straight line to the other side of the trampoline. This light-bending phenomenon is now known as gravitational lensing, but in Einstein's day it was only a prediction, his prediction.\n\nBecause we can carefully observe constellations when the Sun is not blocking their path, we know what position the stars should be in when the Sun is keeping us from seeing them. However, according to Einstein, the light from the stars would be slightly curved around the Sun and to us would appear in a different position. Once again, imagine flicking that marble at your friend. If they caught it, but were unable to see where you were standing, they might think you're in a different position than where you actually are because they'll trace that marble directly back in a straight line to the other side of the trampoline. This light-bending phenomenon is now known as gravitational lensing, but in Einstein's day it was only a prediction, his prediction.\n"
   },
   {
     "slug": "index",
     "title": "Home",
     "description": "Work, Life, Balance",
     "tags": "JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS, secure",
-    "content": "\n[PageAd slug=\"/balance/writing/der-kleine-zeppelin\"]\n"
+    "content": "\n[PageAd slug=\"/work\"]\n\n[PageAd slug=\"/life\"]\n\n[PageAd slug=\"/balance\"]\n"
   },
   {
     "slug": "life/aquaponics/index",
@@ -266,6 +245,48 @@
     "content": "\nYou have to mitigate that posiibility, yeh.\n"
   },
   {
+    "slug": "life/food/air-fried-peppers",
+    "title": "Air Fried Stuffed Peppers",
+    "description": "Got bolognese and peppers?",
+    "tags": "food, punching dolphins, recipes, air fryer, peppers",
+    "content": "\n- 2 Large peppers (capsicums)\n- 1 125g pack of mozzarella\n- Enough of your best, most delicious bolognaise to fill the peppers\n\n#### STEP 1\n\nPrepare Air Fryer pan. Line it with tinfoil if you want to keep it clean, although you might as well be punching dolphins. Silicone liners are good and can be chucked in the dishwasher\n\n#### STEP 2\n\nSlice your peppers in half from top to bottom and remove seeds/stem & anything else you wouldn't want to eat. Place peppers skin side down in Air Fryer pan and season with a little salt, pepper and oil\n\n> Air Fry at 200°C for 7 minutes\n\n#### STEP 3\n\nRemove Air Fryer pan to kitchen sink and spoon the bolognese into the peppers. Cover the tops of each with mozzarella\n\n> Air Fry at 200°C for 12 minutes\n\nUse a big spoon to serve onto big plates. Bung everything in the dishwasher. Basta.\n"
+  },
+  {
+    "slug": "life/food/all-day-brekkie-goreng",
+    "title": "Breakfast Nasi Goreng",
+    "description": "Euro/Asian Fusian",
+    "tags": "food, recipes, indonesian, goreng, nasi, rice",
+    "content": "\n> **Nasi Goreng** is an Indonesian meal made from leftover rice stir-fried with garlic, shallots, chilli, and sweet soy sauce (kecap manis). Often enriched with prawns, chicken, or beef, it’s finished with a fried egg on top and a side of crisp cucumber and prawn crackers\n"
+  },
+  {
+    "slug": "life/food/banana-bread",
+    "title": "Banana Bread",
+    "description": "Proper crowd pleaser",
+    "tags": [],
+    "content": "\n- 125g Butter\n- 175g Brown sugar\n- 1 tsp Vanilla extract or paste\n- 3 Eggs\n- 2 Cups mashed banana\n- 255g Plain flour\n- 1 tsp Baking powder\n- 1 tsp Bicarb of (baking) soda\n- 1 tsp Ground cinnamon\n- ⅓ CUP (115g) Golden Syrup or honey\n\n1. Preheat oven to 160°C\n   Place the butter, sugar and vanilla in an electric mixer and\n   beat for 8–10 minutes or until pale and creamy.\n   Scrape down the sides of the bowl.\n\n2. Gradually add the eggs and beat well to combine.\n   Add the banana, flour, baking powder, bicarbonate of soda,\n   cinnamon and golden syrup and stir to combine.\n\n3. Spoon the mixture into a 26cm x 11cm (2.5 litre-capacity)\n   lightly greased loaf tin lined with baking paper.\n   Bake for 60–65 minutes or until cooked when tested with a skewer.\n\n4. Cool in the tin for 20 minutes before turning out\n   onto a wire rack to cool completely.\n   Slice and serve with the extra butter. Serves 6–8.\n"
+  },
+  {
+    "slug": "life/food/beef-wellie",
+    "title": "Beef Wellie",
+    "description": "Death cap mushrooms optional if you don't like your inlaws",
+    "tags": [],
+    "content": "\n## Ingredients\n\n- 2 x 400g beef fillets\n- Olive oil, for frying\n- 500g mixture of wild mushrooms, cleaned\n- 1 thyme sprig, leaves only\n- 500g puff pastry\n- 8 slices of Parma ham\n- 2 egg yolks, beaten with 1 tbsp water and a pinch of salt\n- Sea salt and freshly ground black pepper\n\n## For the red wine sauce\n\n- 2 tbsp olive oil\n- 200g beef trimmings (ask the butcher to reserve these when trimming the fillet)\n- 4 large shallots, peeled and sliced\n- 12 black peppercorns\n- 1 bay leaf\n- 1 thyme sprig\n- Splash of red wine vinegar\n- 1 x 750ml bottle red wine\n- 750ml beef stock\n\n## Method\n\nWrap each piece of beef tightly in a triple layer of cling film to set its shape, then chill overnight.\n\nRemove the cling film, then quickly sear the beef fillets in a hot pan with a little olive oil for 30-60 seconds until browned all over and rare in the middle. Remove from the pan and leave to cool.\n\nFinely chop the mushrooms and fry in a hot pan with a little olive oil, the thyme leaves and some seasoning. When the mushrooms begin to release their juices, continue to cook over a high heat for about 10 minutes until all the excess moisture has evaporated and you are left with a mushroom paste (known as a duxelle). Remove the duxelle from the pan and leave to cool.\n\nCut the pastry in half, place on a lightly floured surface and roll each piece into a rectangle large enough to envelop one of the beef fillets. Chill in the refrigerator.\n\nLay a large sheet of cling film on a work surface and place 4 slices of Parma ham in the middle, overlapping them slightly, to create a square. Spread half the duxelle evenly over the ham.\n\nSeason the beef fillets, then place them on top of the mushroom-covered ham. Using the cling film, roll the Parma ham over the beef, then roll and tie the cling film to get a nice, evenly thick log. Repeat this step with the other beef fillet, then chill for at least 30 minutes.\n\nBrush the pastry with the egg wash. Remove the cling film from the beef, then wrap the pastry around each ham-wrapped fillet. Trim the pastry and brush all over with the egg wash. Cover with cling film and chill for at least 30 minutes.\n\nMeanwhile, make the red wine sauce. Heat the oil in a large pan, then fry the beef trimmings for a few minutes until browned on all sides. Stir in the shallots with the peppercorns, bay and thyme and continue to cook for about 5 minutes, stirring frequently, until the shallots turn golden brown.\n\nPour in the vinegar and let it bubble for a few minutes until almost dry. Now add the wine and boil until almost completely reduced. Add the stock and bring to the boil again. Lower the heat and simmer gently for 1 hour, removing any scum from the surface of the sauce, until you have the desired consistency. Strain the liquid through a fine sieve lined with muslin. Check for seasoning and set aside.\n\nWhen you are ready to cook the beef wellingtons, score the pastry lightly and brush with the egg wash again, then bake at 200°C/Gas 6 for 15-20 minutes until the pastry is golden brown and cooked. Rest for 10 minutes before carving.\n\nMeanwhile, reheat the sauce. Serve the beef wellingtons sliced, with the sauce as an accompaniment.\n"
+  },
+  {
+    "slug": "life/food/index",
+    "title": "Food",
+    "description": "魏藏美食",
+    "tags": [],
+    "content": "\nYou want a recipe? The interweb's full of them. This is how I cook. This is why I cook.\n\nIf you find something, good. If not — well, maybe you were hungry for something else.\n\nWhen I want a recipe I go the internet of course. I get annoyed by the amount of adverts on the pages where I want to follow simple instructions.\n\nFor some recipes that I've tried & tested I've stripped them down and added them here. Sometimes they've been tweaked a little or translated from silly ounces to sensible grams.\n"
+  },
+  {
+    "slug": "life/food/lemon-meringue-pie",
+    "title": "Lemon Meringue Pie",
+    "description": "Apparently lemonading is a real word",
+    "tags": [],
+    "content": "\n> \"Lemonading\" is an actual word that even people on Radio 4 use. So when life gives you lemons...\n\n### Ingredients\n\n#### For the pastry\n\n- 4 oz (110 g) plain flour, plus a little extra for rolling out\n- a pinch of salt\n- 1 oz (25 g) softened butter, cut into smallish lumps\n- 1 oz (25 g) softened pure lard, cut into smallish lumps\n\n#### For the filling\n\n- Grated zest and juice 2 large lemons\n- 3 level tablespoons cornflour\n- 2 oz (50 g) golden caster sugar\n- 3 large egg yolks\n- 1½ oz (40 g) butter\n\n#### For the meringue\n\n- 3 large egg whites\n- 6 oz (175 g) golden caster sugar\n\n### Method\n\nStart by making the pastry.\n\nFirst sieve the flour and a pinch of salt into a large bowl, holding the sieve up high to give the flour a good airing. Then add the butter and lard and, using only your fingertips, lightly rub the fats into the flour, again lifting the mixture up high. When everything is crumbly, sprinkle in 1 tablespoon of water. Start to mix the pastry with a flat-bladed knife and then finish off with your hands, adding a few more drops of water until you have a smooth dough that will leave the bowl clean. Then pop the pastry into a plastic bag and let it rest in the fridge for 30 minutes.\n\nNext, transfer the pastry to a flat, lightly floured surface and roll it out to a circle about ½ in (1 cm) larger all round than the rim of the tin. Cut a ½ in (1 cm) strip from the edge of the pastry, dampen the rim of the tin with water and fix the strip round it, pressing down well. Dampen the strip before lining the tin with the pastry circle, making sure you don't trap any air underneath it. Then prick the base all over with a fork. Place the tin on the baking sheet and bake on a high shelf in the pre-heated oven for 20-25 minutes, or until cooked through. After that, remove the pastry case from the oven and immediately lower the heat to gas mark 2, 300°F (150°C) for the meringue.\n\nMeanwhile, make the filling. Measure 10 fl oz (275 ml) cold water into a jug, and spoon the cornflour and sugar into a bowl. Add enough of the water to mix the cornflour to a smooth paste, then pour the rest of the water, along with the grated lemon zest, into a small saucepan. Bring this up to the boil, then pour it gradually on to the cornflour, mixing all the time until it is smooth. Now return the mixture to the saucepan and bring it back to the boil still mixing. Next, simmer very gently for about a minute stirring all the time to prevent it from catching. Then remove the pan from the heat and beat in the egg yolks, lemon juice and lastly, the butter. Now pour the lemon mixture into the pastry shell and spread it out evenly.\n\nFinally, for the meringue, use a large, spanking clean, grease-fee bowl and in it whisk the egg whites until they form stiff peaks. Now beat in a quarter of the sugar at a time until it is all incorporated, then spoon the meringue on top of the pie, taking it to the very edge of the pastry rim with a palette knife, so that it seals the edge completely (You can also make a few decorative swirls).\n\nBake in the oven on the centre shelf for 45 minutes, by which time the meringue will have turned pale beige, and be crisp on the outside and squashy within. Serve warm or cold, but if warm, leave it to settle for about 20 minutes. Chilled pouring cream is a nice accompaniment.\n\n#### Additional\n\nPre-heat the oven to gas mark 5, 375°F (190°C).\n\n#### Equipment\n\nYou will also need a 1.5 inch (4 cm) deep, sloping-sided, non-stick pie tin with a ½ in (1 cm) rim, a base diameter of 7in (18 cm) and a top diameter of 9½ in (24 cm)\n"
+  },
+  {
     "slug": "life/index",
     "title": "Life",
     "description": "Well, we've all got to have one",
@@ -280,41 +301,6 @@
     "content": "\n> “It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a motorbike.”\n\n― Jane Austen, Pride and Prejudice\n"
   },
   {
-    "slug": "work/company/index",
-    "title": "Company",
-    "description": "UK Limited Company (5460545)",
-    "tags": [],
-    "content": "\n[goldlabel.apps@gmail.com](mailto:goldlabel.apps@gmail.com)  \nTel/WhatsApp [+44 07745 763 122 ](https://wa.me/447745763122)  \n[GitHub](https://github.com/orgs/goldlabel-apps/) | [LinkedIn](https://www.linkedin.com/in/chris-dorward)\n\n> Goldlabel Apps Ltd  \n> 321-323 High Road  \n> Chadwell Heath  \n> Essex RM6 6AX\n\n> [UK Limited Company 5460545](https://find-and-update.company-information.service.gov.uk/company/15460545)\n"
-  },
-  {
-    "slug": "work/company/join-us",
-    "title": "Join Us",
-    "description": "A Software Developer in possession of a good product, must be in want of a good business partner",
-    "tags": "team",
-    "content": "\n[GitHub url=\"https://github.com/goldlabel-apps\" label=\"@goldlabel-apps\"]\n\nWhether you're a startup with a short deadline or an enterprise with complex workflows, we can help. Get in touch for it's a truth universally acknowledged that a Software Developer in possession of a good product, must be in want of a good business partner\n"
-  },
-  {
-    "slug": "work/company/privacy-cookies",
-    "title": "Privacy & Cookies",
-    "description": "Your trust means everything to us",
-    "tags": "cookies, gdpr, privacy, terms, trust",
-    "content": "\n> We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers to explore alternative approaches or supplementary technologies. Here are a few reasons why some developers might consider cookies as \"old-fashioned\" and explore alternatives:\n\n1. **Privacy Concerns:** Cookies are often associated with privacy concerns because they can be used to track users across different websites. In an era where privacy is a growing concern, some users are wary of being tracked online. Developers may explore alternative solutions that respect user privacy better.\n\n2. **Limited Storage:** Cookies have a size limit (typically around 4KB), which can be a constraint when developers need to store larger sets of data. For more complex applications with substantial data requirements, developers might turn to other technologies that offer more extensive storage options.\n\n3. **Security Issues:** While cookies can be secure, they are still susceptible to certain types of attacks, such as Cross-Site Scripting (XSS) and Cross-Site Request Forgery (CSRF). Some developers may opt for newer technologies with built-in security cartridges or explore ways to enhance cookie security.\n\n4. **Stateless Nature:** Cookies are stateful and rely on the client-side to store information. For stateless applications or those embracing more modern architecture patterns like serverless or microservices, developers might explore stateless alternatives or leverage technologies that allow for centralized state management.\n\n5. **User Experience:** Cookies may contribute to a slightly slower user experience because they are transmitted with every HTTP request. In scenarios where minimizing latency is crucial, developers might explore technologies that can achieve similar functionalities with reduced overhead.\n\nIt's important to note that while cookies have their limitations, they remain a versatile and widely used tool in web development. Developers often make choices based on the specific needs of their projects, considering factors such as user experience, security, and privacy. If your goal is to reduce reliance on cookies, consider exploring technologies like Web Storage, Session Storage, IndexedDB, or modern web standards like the Web Storage API or the Fetch API as alternatives or complements. Always keep in mind the specific requirements and constraints of your project when choosing the right tool for the job.\n\n**Privacy Statement**\n\nWelcome to Goldlabel. We value your privacy and are committed to protecting your personal information. This privacy statement aims to provide clarity on how we collect, use, and safeguard your data.\n\n**What Information Do We Collect?**\n\nWe collect only the necessary information required to enhance your experience with our website. This may include your name, email address, and any other details you willingly provide.\n\n**How Do We Use Your Information?**\n\nThe information we collect is used to personalize your experience, improve our website, and keep you informed about our products and services. Rest assured, we never share your data with third parties without your explicit consent.\n\n**Cookies and Similar Technologies**\n\nWe use cookies and similar technologies to enhance your browsing experience. You have the option to manage cookie preferences through your browser settings.\n\n**Data Security**\n\nYour data security is our priority. We employ industry-standard measures to protect your information from unauthorized access or disclosure.\n\n**Your Choices**\n\nYou have the right to control the information you share with us. If you have any concerns or wish to update your preferences, please contact us.\n\n**Updates to Our Privacy Statement**\n\nWe may update our privacy statement to reflect changes in our practices. Any updates will be posted on this page.\n\n**Contact Us**\n\nIf you have any questions or concerns regarding your privacy, please feel free to contact us at problems@goldlabel.pro\n\nThank you for choosing Goldlabel. Your trust means everything to us\n"
-  },
-  {
-    "slug": "work/company/remote-working",
-    "title": "Working remotely",
-    "description": "Productivity, communication, and collaboration",
-    "tags": "remote, hybrid",
-    "content": "\n> Corporate attitudes to remote working have changed dramatically in recent years.\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communication, and collaboration. However, the pandemic forced many businesses to adopt remote work policies, and they quickly discovered that employees could be just as productive and engaged when working from home\n\nAs a result of this positive experience, many businesses have now embraced remote work as a permanent part of their operations. A recent survey by PwC found that 83% of employers now say the shift to remote work has been successful for their company, and 67% plan to offer more remote work options in the future\n"
-  },
-  {
-    "slug": "work/company/work-with-us",
-    "title": "Work With Us",
-    "description": "We take on a limited number of new projects each month",
-    "tags": "team",
-    "content": "\nWe take on a limited number of new projects each month. If you need something done we’d love to hear about it. Find out if we're a [good fit](/work/cv). We're always looking for collaborators, contributors, and good ideas.\n\nThe apps we ship are real. They run in production and are developed accessibly. The Core is Open Source and Free forever — giving you statically generated sites with Firestore-powered updates and a real admin panel. Built with Next.js App Router and Material UI\n\nGoldlabel builds and ships modern web apps for clients who need real results — fast\n\n- _Small_ team. _Big_ output\n- Real deployments from Day One\n- Readable, extensible, Open Source\n\nGoldlabel Apps is a UK-based software company that designs, builds, and maintains full-stack web applications. We specialize in Next.js, Firebase, and custom UI development, delivering everything from internal admin tools to polished public-facing websites.\n\n#### Working with Goldlabel\n\n- Ship early and often.  \n  Each app is live from the outset — not just a mockup or prototyle\n\n- Share the process.  \n  Follow the development on GitHub, view the commit history, clone the code. Get involved with Issues\n\n- Built for reuse.  \n  Every component, pattern, and API is designed to be portable and production-ready\n"
-  },
-  {
     "slug": "work/experience/aligent",
     "title": "Aligent",
     "description": "Design Systems",
@@ -327,6 +313,41 @@
     "description": "Dots on a Map",
     "tags": "expertise, interview, boral",
     "content": "\n## Geo-Spatial Fleet App\n\n> React Developer, Aug 2018 - Feb 2019, Sydney\n\nIt’s only been a few years since all of Boral’s business was still done on paper. When I joined the Sydney tech team in 2018, the company was mid-transformation. Full of talented people and legacy systems coexisting.\n\nI joined a strong Agile team led by a Product Owner, who had assembled a cross-functional group of contractors to form a kind of rapid-prototyping unit. We had solid backend engineers, frontend specialists, and everything in between — all focused on exploring new ways to bring Boral’s data to life.\n\nThe challenge was typical of a large enterprise: years of evolving microservices, inconsistent versioning, and fragmented data sources. We turned to GraphQL to unify those systems — collating information from multiple APIs and delivering it cleanly to the frontend.\n\nOur focus was a real-time geo-spatial prototype, powered by data streamed from smartphones across a fleet of 200+ vehicles nationwide. The goal was simple but powerful: grab the live location data, enrich it with contextual information, and display it beautifully on a map.\n\nVoila. Dots on a Map. A functional prototype ready for the governance board to explore and iterate on.\n\n### What I Brought to the Team\n\n- **Captain’s Duty** – times I took ownership, showed integrity, and followed through without being asked\n\nWhen communication gaps emerged between our frontend and backend engineers particularly between our young Chinese frontend developer and her backend counterpart. I suggested they use GraphQL as their shared language. This bridge helped them collaborate effectively, freeing me to focus on state management, ensuring every component aligned into a cohesive working app.\n\n- **Fun Loving Heart** How I brought positive energy, supported teammates, and helped create an enjoyable, hard-working environment?\n\nThe first time we actually tested the App fully I rode home with a smartphone in my pocket which the product owner showed his bosses the little icon of my bike heading to Narrabeen\n\n- **Athlete’s Grit** – examples of when I pushed through challenges and delivered under pressure?\n\nObviously in such an environment priorities can change daily and keeping flexible to those changes is a full time job\n\n#### Technical Highlights\n\n- Established foundational test architecture using Cucumber, Gherkin, and BDD principles\n- Developed and tested multiple React PWAs with AWS Amplify and GraphQL\n- Built CI/CD workflows to support rapid feature delivery and iterative feedback loops\n"
+  },
+  {
+    "slug": "work/experience/company/index",
+    "title": "Company",
+    "description": "UK Limited Company (5460545)",
+    "tags": [],
+    "content": "\n[goldlabel.apps@gmail.com](mailto:goldlabel.apps@gmail.com)  \nTel/WhatsApp [+44 07745 763 122 ](https://wa.me/447745763122)  \n[GitHub](https://github.com/orgs/goldlabel-apps/) | [LinkedIn](https://www.linkedin.com/in/chris-dorward)\n\n> Goldlabel Apps Ltd  \n> 321-323 High Road  \n> Chadwell Heath  \n> Essex RM6 6AX\n\n> [UK Limited Company 5460545](https://find-and-update.company-information.service.gov.uk/company/15460545)\n"
+  },
+  {
+    "slug": "work/experience/company/join-us",
+    "title": "Join Us",
+    "description": "A Software Developer in possession of a good product, must be in want of a good business partner",
+    "tags": "team",
+    "content": "\n[GitHub url=\"https://github.com/goldlabel-apps\" label=\"@goldlabel-apps\"]\n\nWhether you're a startup with a short deadline or an enterprise with complex workflows, we can help. Get in touch for it's a truth universally acknowledged that a Software Developer in possession of a good product, must be in want of a good business partner\n"
+  },
+  {
+    "slug": "work/experience/company/privacy-cookies",
+    "title": "Privacy & Cookies",
+    "description": "Your trust means everything to us",
+    "tags": "cookies, gdpr, privacy, terms, trust",
+    "content": "\n> We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers to explore alternative approaches or supplementary technologies. Here are a few reasons why some developers might consider cookies as \"old-fashioned\" and explore alternatives:\n\n1. **Privacy Concerns:** Cookies are often associated with privacy concerns because they can be used to track users across different websites. In an era where privacy is a growing concern, some users are wary of being tracked online. Developers may explore alternative solutions that respect user privacy better.\n\n2. **Limited Storage:** Cookies have a size limit (typically around 4KB), which can be a constraint when developers need to store larger sets of data. For more complex applications with substantial data requirements, developers might turn to other technologies that offer more extensive storage options.\n\n3. **Security Issues:** While cookies can be secure, they are still susceptible to certain types of attacks, such as Cross-Site Scripting (XSS) and Cross-Site Request Forgery (CSRF). Some developers may opt for newer technologies with built-in security cartridges or explore ways to enhance cookie security.\n\n4. **Stateless Nature:** Cookies are stateful and rely on the client-side to store information. For stateless applications or those embracing more modern architecture patterns like serverless or microservices, developers might explore stateless alternatives or leverage technologies that allow for centralized state management.\n\n5. **User Experience:** Cookies may contribute to a slightly slower user experience because they are transmitted with every HTTP request. In scenarios where minimizing latency is crucial, developers might explore technologies that can achieve similar functionalities with reduced overhead.\n\nIt's important to note that while cookies have their limitations, they remain a versatile and widely used tool in web development. Developers often make choices based on the specific needs of their projects, considering factors such as user experience, security, and privacy. If your goal is to reduce reliance on cookies, consider exploring technologies like Web Storage, Session Storage, IndexedDB, or modern web standards like the Web Storage API or the Fetch API as alternatives or complements. Always keep in mind the specific requirements and constraints of your project when choosing the right tool for the job.\n\n**Privacy Statement**\n\nWelcome to Goldlabel. We value your privacy and are committed to protecting your personal information. This privacy statement aims to provide clarity on how we collect, use, and safeguard your data.\n\n**What Information Do We Collect?**\n\nWe collect only the necessary information required to enhance your experience with our website. This may include your name, email address, and any other details you willingly provide.\n\n**How Do We Use Your Information?**\n\nThe information we collect is used to personalize your experience, improve our website, and keep you informed about our products and services. Rest assured, we never share your data with third parties without your explicit consent.\n\n**Cookies and Similar Technologies**\n\nWe use cookies and similar technologies to enhance your browsing experience. You have the option to manage cookie preferences through your browser settings.\n\n**Data Security**\n\nYour data security is our priority. We employ industry-standard measures to protect your information from unauthorized access or disclosure.\n\n**Your Choices**\n\nYou have the right to control the information you share with us. If you have any concerns or wish to update your preferences, please contact us.\n\n**Updates to Our Privacy Statement**\n\nWe may update our privacy statement to reflect changes in our practices. Any updates will be posted on this page.\n\n**Contact Us**\n\nIf you have any questions or concerns regarding your privacy, please feel free to contact us at problems@goldlabel.pro\n\nThank you for choosing Goldlabel. Your trust means everything to us\n"
+  },
+  {
+    "slug": "work/experience/company/remote-working",
+    "title": "Working remotely",
+    "description": "Productivity, communication, and collaboration",
+    "tags": "remote, hybrid",
+    "content": "\n> Corporate attitudes to remote working have changed dramatically in recent years.\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communication, and collaboration. However, the pandemic forced many businesses to adopt remote work policies, and they quickly discovered that employees could be just as productive and engaged when working from home\n\nAs a result of this positive experience, many businesses have now embraced remote work as a permanent part of their operations. A recent survey by PwC found that 83% of employers now say the shift to remote work has been successful for their company, and 67% plan to offer more remote work options in the future\n"
+  },
+  {
+    "slug": "work/experience/company/work-with-us",
+    "title": "Work With Us",
+    "description": "We take on a limited number of new projects each month",
+    "tags": "team",
+    "content": "\nWe take on a limited number of new projects each month. If you need something done we’d love to hear about it. Find out if we're a [good fit](/work/cv). We're always looking for collaborators, contributors, and good ideas.\n\nThe apps we ship are real. They run in production and are developed accessibly. The Core is Open Source and Free forever — giving you statically generated sites with Firestore-powered updates and a real admin panel. Built with Next.js App Router and Material UI\n\nGoldlabel builds and ships modern web apps for clients who need real results — fast\n\n- _Small_ team. _Big_ output\n- Real deployments from Day One\n- Readable, extensible, Open Source\n\nGoldlabel Apps is a UK-based software company that designs, builds, and maintains full-stack web applications. We specialize in Next.js, Firebase, and custom UI development, delivering everything from internal admin tools to polished public-facing websites.\n\n#### Working with Goldlabel\n\n- Ship early and often.  \n  Each app is live from the outset — not just a mockup or prototyle\n\n- Share the process.  \n  Follow the development on GitHub, view the commit history, clone the code. Get involved with Issues\n\n- Built for reuse.  \n  Every component, pattern, and API is designed to be portable and production-ready\n"
   },
   {
     "slug": "work/experience/index",
@@ -710,7 +731,7 @@
     "slug": "work/goldlabel/cartridges/flash",
     "title": "Flash",
     "description": "A Pointless reinvention of MacroMedia Flash?",
-    "tags": [],
+    "tags": "Catridges, Flash, SVG, Macromedia",
     "content": "\n[Flash movie=\"Logo\" height=\"250\"]\n\n> Maybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You're welcome\n\n- SVG Graphics\n- Animation using Greensock\n- State management with redux/toolkit\n- Material UI\n- TypeScript\n\n#### History of Flash\n\nFlash, also known as Adobe Flash, was a multimedia software platform created by Macromedia and later acquired by Adobe. It was widely used on the web to create interactive animations, games, audio and video players, and various other rich media content. Flash content was delivered through browser plugins, allowing users to view and interact with the multimedia elements embedded in web pages.\n\nHowever, Flash began to face several issues that eventually led to its decline and eventual discontinuation:\n\nSecurity vulnerabilities: Flash had a long history of security flaws, making it a prime target for hackers and malicious software. Frequent security updates were required to patch vulnerabilities, creating concerns for users' data and system security.\n\nPerformance issues: Flash content often consumed a significant amount of system resources, leading to slow-loading web pages and negatively impacting the user experience.\n\nClosed and proprietary technology: Flash was a closed platform, controlled by Adobe. This limited the ability of the web community to contribute to its development, leading to a lack of innovation and standardization.\n\nMobile devices and accessibility: Flash content was not supported on iOS devices (iPhone and iPad) and several other mobile platforms. As more users shifted to mobile devices, Flash became increasingly irrelevant.\n\nBattery life and overheating: Running Flash content on mobile devices often resulted in excessive battery drain and device overheating, further adding to its unpopularity on mobile platforms.\n\nEmergence of HTML5: HTML5, along with CSS3 and JavaScript, emerged as a viable alternative to Flash for creating interactive web content. HTML5 provided native support for multimedia elements, eliminating the need for third-party plugins like Flash.\n\nIndustry support: Major tech companies, including Apple and Google, openly criticized Flash and pushed for HTML5 adoption. As a result, browser support for Flash gradually diminished.\n\nIn response to these issues and the rise of HTML5, Adobe officially announced the end of support for Flash in 2017. Major web browsers also started to phase out support for Flash, further accelerating its decline.\n\nModern web applications now rely on open web standards such as HTML5, CSS3, and JavaScript, which offer better security, performance, accessibility, and compatibility across a wide range of devices. With the advent of these web technologies, there is no longer a need for proprietary plugins like Flash, and its use has been almost entirely replaced by more modern and efficient alternatives.\n\nFlash was popular in the development of web apps primarily during the late 1990s and throughout the 2000s. It gained significant traction and widespread adoption during this period for creating interactive and multimedia-rich web applications. Some key milestones in Flash's popularity include:\n\n1. Late 1990s: Flash was initially introduced by Macromedia (later acquired by Adobe) in 1996. By the late 1990s, it had started to gain attention as a tool for creating simple animations and interactive elements on websites.\n\n2. Early 2000s: As internet speeds increased and broadband became more common, web developers began to embrace Flash to create more complex and engaging web applications. Flash provided a way to create interactive websites with animated menus, games, multimedia content, and other dynamic elements.\n\n3. Mid-2000s: Flash became the de facto standard for creating online multimedia content and interactive experiences. Websites often used Flash to deliver audio and video players, photo galleries, and advertisements.\n\n4. Flash-based Web Games: Flash was widely used for developing web-based games, ranging from casual games to more complex and immersive experiences. Popular gaming websites heavily relied on Flash to deliver a wide variety of games.\n\n5. E-learning and Multimedia Content: Flash found extensive use in e-learning platforms and digital content delivery systems due to its ability to present interactive educational materials.\n\n6. Video Streaming: Before the widespread adoption of HTML5's native video support, Flash was commonly used for video streaming, allowing websites to provide video content to their users.\n\nFlash's popularity in web app development was partly due to its ease of use, rich multimedia capabilities, and relatively broad support across different web browsers and operating systems. It offered a way for developers to create visually appealing and interactive content without relying solely on static HTML and limited JavaScript.\n\nHowever, as mentioned earlier, Flash started to face several issues, including security vulnerabilities, performance concerns, and lack of mobile support. These factors, along with the rise of HTML5 and open web standards, eventually led to the decline of Flash in modern web app development. Today, Flash is no longer used, and web developers have transitioned to more modern technologies like HTML5, CSS3, and JavaScript to create interactive and multimedia-rich web applications.\n\n_© copyright?_ Well... Adobe didn't want the name anymore, so we nicked it\n\nWhadya gonna do huh? Forget about it. Donnie Brasco\n"
   },
   {
@@ -752,7 +773,7 @@
     "slug": "work/goldlabel/cartridges/uberedux",
     "title": "Uberedux",
     "description": "Because all Apps need State Management",
-    "tags": [],
+    "tags": "Free, atridges, Uberedux, State Management, Redux",
     "content": "\n> Otherwise you'd be back in jQuery callback hell. Nobody wants that.\n\nUberedux is a simple, zero-config wrapper around Redux. It plugs cleanly into how the app already works and gives you the global state access you need without boilerplate or fuss. There’s nothing clever here — and that’s the point. Uberedux is fast, familiar, and already done for you.\n\nIf you've used Redux before, you already know how to use Uberedux. If you haven't, don't worry — the basics are dead simple. Actions update the store. Components subscribe to the parts they care about. That’s it.\n\nWe’ve trimmed the fat: no reducers to wire up manually, no sprawling folder trees, no indirection. Instead, you get a single useSlice() hook that gives you what you need, when you need it — whether that's in a form field, a route guard, or a floating modal.\n\nUberedux isn’t trying to win design awards. It's just here to work — cleanly, quietly, and consistently across your app. No surprises. No rewrites. Just state management that stays out of your way.\n"
   },
   {

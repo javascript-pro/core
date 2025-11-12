@@ -4,7 +4,7 @@ title: Life
 description: Well, we've all got to have one
 slug: /life
 icon: life
-image: /jpg/wei-zangs-food.jpg
+image: /png/n64/weizang.png
 noImage: false
 ---
 

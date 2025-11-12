@@ -9,4 +9,8 @@ tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Pr
 noImage: true
 ---
 
-[PageAd slug="/balance/writing/der-kleine-zeppelin"]
+[PageAd slug="/work"]
+
+[PageAd slug="/life"]
+
+[PageAd slug="/balance"]

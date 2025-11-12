@@ -49,6 +49,71 @@
                   "boral"
                 ],
                 "excerpt": "GeoSpatial Fleet App\n\n React Developer, Aug 2018  Feb 2019, Sydney\n\nIt’s only been a few years since all of Boral’s business was still done on paper. When I joined the Sydney tech team in 2018, the co"
+              },
+              {
+                "title": "Company",
+                "description": "UK Limited Company (5460545)",
+                "slug": "/work/experience/company",
+                "order": 1020,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "Working remotely",
+                    "slug": "/work/experience/company/remote-working",
+                    "order": 250,
+                    "icon": "company",
+                    "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
+                    "type": "file",
+                    "tags": [
+                      "remote",
+                      "hybrid"
+                    ],
+                    "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years.\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communication, "
+                  },
+                  {
+                    "title": "Join Us",
+                    "slug": "/work/experience/company/join-us",
+                    "order": 666,
+                    "icon": "team",
+                    "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
+                    "type": "file",
+                    "tags": [
+                      "team"
+                    ],
+                    "excerpt": "[GitHub url=\"https://github.com/goldlabelapps\" label=\"@goldlabelapps\"]\n\nWhether you're a startup with a short deadline or an enterprise with complex workflows, we can help. Get in touch for it's a tru"
+                  },
+                  {
+                    "title": "Work With Us",
+                    "slug": "/work/experience/company/work-with-us",
+                    "order": 777,
+                    "icon": "team",
+                    "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
+                    "type": "file",
+                    "tags": [
+                      "team"
+                    ],
+                    "excerpt": "We take on a limited number of new projects each month. If you need something done we’d love to hear about it. Find out if we're a . We're always looking for collaborators, contributors, and good idea"
+                  },
+                  {
+                    "title": "Privacy & Cookies",
+                    "slug": "/work/experience/company/privacy-cookies",
+                    "order": 5555,
+                    "icon": "admin",
+                    "image": "/png/3rdParty/git_og.png",
+                    "type": "file",
+                    "tags": [
+                      "cookies",
+                      "gdpr",
+                      "privacy",
+                      "terms",
+                      "trust"
+                    ],
+                    "excerpt": "We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers t"
+                  }
+                ],
+                "icon": "company",
+                "image": "https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg",
+                "excerpt": "Tel/WhatsApp   \n | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX"
               }
             ],
             "icon": "experience",
@@ -980,82 +1045,17 @@
               }
             ],
             "icon": "expertise",
-            "image": "/png/3rdParty/unicorn.png",
+            "image": "/png/3rdParty/react.png",
             "tags": [
               "expertise",
               "fields",
               "work"
             ],
             "excerpt": "We work across the full stack, from interface to infrastructure, with a focus on robust, modern JavaScript tooling and scalable cloudnative delivery.\n\nWhether building responsive UIs, designing server"
-          },
-          {
-            "title": "Company",
-            "description": "UK Limited Company (5460545)",
-            "slug": "/work/company",
-            "order": 1020,
-            "type": "folder",
-            "children": [
-              {
-                "title": "Working remotely",
-                "slug": "/work/company/remote-working",
-                "order": 250,
-                "icon": "company",
-                "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
-                "type": "file",
-                "tags": [
-                  "remote",
-                  "hybrid"
-                ],
-                "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years.\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communication, "
-              },
-              {
-                "title": "Join Us",
-                "slug": "/work/company/join-us",
-                "order": 666,
-                "icon": "team",
-                "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
-                "type": "file",
-                "tags": [
-                  "team"
-                ],
-                "excerpt": "[GitHub url=\"https://github.com/goldlabelapps\" label=\"@goldlabelapps\"]\n\nWhether you're a startup with a short deadline or an enterprise with complex workflows, we can help. Get in touch for it's a tru"
-              },
-              {
-                "title": "Work With Us",
-                "slug": "/work/company/work-with-us",
-                "order": 777,
-                "icon": "team",
-                "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
-                "type": "file",
-                "tags": [
-                  "team"
-                ],
-                "excerpt": "We take on a limited number of new projects each month. If you need something done we’d love to hear about it. Find out if we're a . We're always looking for collaborators, contributors, and good idea"
-              },
-              {
-                "title": "Privacy & Cookies",
-                "slug": "/work/company/privacy-cookies",
-                "order": 5555,
-                "icon": "admin",
-                "image": "/png/3rdParty/git_og.png",
-                "type": "file",
-                "tags": [
-                  "cookies",
-                  "gdpr",
-                  "privacy",
-                  "terms",
-                  "trust"
-                ],
-                "excerpt": "We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers t"
-              }
-            ],
-            "icon": "company",
-            "image": "https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg",
-            "excerpt": "Tel/WhatsApp   \n | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX"
           }
         ],
         "icon": "work",
-        "image": "/png/3rdParty/git_og.png",
+        "image": "/png/n64/flickr.png",
         "tags": [
           "Professional",
           "JavaScript",
@@ -1215,7 +1215,7 @@
           }
         ],
         "icon": "life",
-        "image": "/jpg/wei-zangs-food.jpg",
+        "image": "/png/n64/weizang.png",
         "excerpt": "I work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age I'm never going to ski like I used to. Ma"
       },
       {
@@ -1289,7 +1289,7 @@
                     ],
                     "icon": "bug",
                     "image": "https://live.staticflickr.com/65535/54353995935_a904d504aa_b.jpg",
-                    "excerpt": "Child pages please"
+                    "excerpt": "Child pages please\n\n[FickrAlbum id=\"72177720329145789\"]"
                   }
                 ],
                 "icon": "bug",
@@ -1305,7 +1305,7 @@
                 "children": [
                   {
                     "title": "Countries",
-                    "description": "list of",
+                    "description": "",
                     "slug": "/balance/writing/der-kleine-zeppelin/countries",
                     "order": 10,
                     "type": "folder",
@@ -1365,8 +1365,8 @@
                         "excerpt": "Where they talk funny"
                       }
                     ],
-                    "icon": "geo",
-                    "excerpt": "Country List\n\n A lifesty"
+                    "icon": "van",
+                    "excerpt": "[GoogleMap src=\"https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=001321\"]"
                   },
                   {
                     "title": "Google",
@@ -1397,8 +1397,8 @@
                   }
                 ],
                 "icon": "van",
-                "image": "https://live.staticflickr.com/65535/54250367683_32802224fb_b.jpg",
-                "excerpt": "Once Upon a Time\n\nThere was a little zeppelin. Which is what this van was like to drive. No real power, just a big bloated white blob floating about all over the shop\n\n[FickrAlbum id=\"7217772032914578"
+                "image": "/jpg/90s-high-school.jpg",
+                "excerpt": "Once upon a time\n\nthere was the little zeppelin. Which is what it was like to drive. No power, just a big bloaty white blob floating about all over the road. It's quite tall too. First thing I did is "
               }
             ],
             "icon": "balance",
@@ -1532,8 +1532,8 @@
           }
         ],
         "icon": "balance",
-        "image": "/png/3rdParty/unicorn.png",
-        "excerpt": "[PageAd slug=\"/balance/writing/derkleinezeppelin\"]\n\n[PrevNext prev=\"/balance/books/rfkuang\" next=\"/balance/writing/weizangsfood/alldaybrekkiegoreng\"]"
+        "image": "/png/n64/british.png",
+        "excerpt": "It's hard to collate stuff into readable writing, but we're doing our best\n\n[PageAd slug=\"/balance/writing/derkleinezeppelin\"]"
       }
     ],
     "icon": "home",
@@ -1567,6 +1567,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[PageAd slug=\"/balance/writing/derkleinezeppelin\"]"
+    "excerpt": "[PageAd slug=\"/work\"]\n\n[PageAd slug=\"/life\"]\n\n[PageAd slug=\"/balance\"]"
   }
 ]
