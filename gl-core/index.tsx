@@ -31,6 +31,7 @@ import {
   PrevNext,
   GitHub,
   ChildPages,
+  PageGrid,
 } from './cartridges/Shortcodes';
 import {
   useLoading,
@@ -40,6 +41,7 @@ import {
   useFeedback,
   useSiblings,
   useGlobalNav,
+  useContent,
 } from './hooks';
 import {
   Uberedux,
@@ -112,6 +114,7 @@ export {
   Mapbox,
   GitHub,
   OpenSource,
+  PageGrid,
 };
 export { Uberedux, UbereduxProvider, setUbereduxKey, resetUberedux };
 export {
@@ -127,5 +130,6 @@ export {
   useThemeMode,
   useSiblings,
   useGlobalNav,
+  useContent,
 };
 export { normalizeError };

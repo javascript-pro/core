@@ -28,7 +28,7 @@ export default function Footer({}: TFooter) {
         }}
       >
         <Toolbar>
-          <Container maxWidth="md">
+          <Container>
             <Box
               sx={{
                 // border: "1px solid green",

@@ -8,6 +8,5 @@ image: /png/n64/diving.png
 noImage: true
 ---
 
-[PageAd slug="/life/diving/why-dive"]
+[PageGrid pages="/life/diving/why-dive, /life/diving/why-not-dive"]
 
-[PageAd slug="/life/diving/why-not-dive"]

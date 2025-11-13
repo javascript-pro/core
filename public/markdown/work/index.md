@@ -4,12 +4,9 @@ title: Work
 description: Fullstack JavaScript Development
 slug: /work
 icon: work
-image: /png/n64/weizang.png
-noImage: true
+image: https://live.staticflickr.com/65535/53670939824_27773d5157_b.jpg
 tags: Professional, JavaScript, Vanilla JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 ---
-
-[PageAd slug="/work/experience"]
 
 > The apps we ship are real. They run in production and are developed accessibly.
 
@@ -20,5 +17,3 @@ Goldlabel builds and ships modern web apps for clients who need real results —
 - _Small_ team. _Big_ output
 - Real deployments from Day One
 - Readable, extensible, Open Source
-
-[PageAd slug="/work/expertise"]

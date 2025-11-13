@@ -1,13 +1,10 @@
 ---
 order: 100
 title: Balance
-description: A collection of writing
+description: It's hard to collate stuff into readable writing, but we're doing our best
 slug: /balance
 icon: balance
-image: /png/n64/british.png
-noImage: true
+image: https://live.staticflickr.com/65535/53670939819_74bfceabd6_b.jpg
 ---
 
-It's hard to collate stuff into readable writing, but we're doing our best
-
-[PageAd slug="/balance/writing/der-kleine-zeppelin"]
+If you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are [Generation X](/balance/books/douglas-coupland/generation-x)

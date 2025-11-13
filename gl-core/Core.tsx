@@ -139,65 +139,59 @@ export default function Core({ frontmatter, body = null }: TCore) {
           </DialogContent>
         </Dialog>
 
-        <Container id="core" maxWidth="md">
+        <Container id="core">
           <Box sx={{ minHeight: '100vh' }}>
             <Grid container spacing={isMobile ? 0 : 1}>
-              {!isMobile && (
-                <Grid size={{ md: 3 }}>
-                  <Box sx={{}}>
+              
+                <Grid size={{ xs: 1, md: 3 }}>
+                  <Box sx={{overflow: 'hidden', ml: isMobile ? -3 : 0}}>
                     {Array.isArray(siblings) && siblings.length > 0 ? (
-                      <>
-                        <Siblings />
-                      </>
+                      <Siblings />
                     ) : (
-                      <>
-                        <SideAds />
-                      </>
+                      <SideAds />
                     )}
                   </Box>
                 </Grid>
-              )}
 
-              <Grid size={{ xs: 12, md: 9 }}>
+              <Grid size={{ xs: 11, md: 9 }}>
                 <Box sx={{ display: 'flex' }}>
-                  <Box sx={{ ml: -1, mr: 2 }}>
+                  
+
+                  <Typography
+                    variant="h1"
+                    gutterBottom
+                    color="primary"
+                    sx={{
+                      fontSize: { xs: '1.7rem', md: '2.2rem' },
+                    }}
+                  >
+                    {title}
+                  </Typography>
+                </Box>
+
+                <Box sx={{ display: 'flex' }}>
+                  <Box sx={{ ml: -1, mt: -1, mr: 1 }}>
                     <SharePopup />
                   </Box>
-
-                  {title !== 'Home' && (
-                    <>
-                      <Typography
-                        variant="h1"
-                        gutterBottom
-                        color="primary"
-                        sx={{
-                          fontSize: { xs: '1.7rem', md: '2.2rem' },
-                        }}
-                      >
-                        {title}
-                      </Typography>
-                    </>
-                  )}
+                  <Typography
+                    variant="h2"
+                    gutterBottom
+                    sx={{
+                      fontSize: { xs: '1.1rem', md: '1.25rem' },
+                    }}
+                  >
+                    {description}
+                  </Typography>
                 </Box>
                 {title !== 'Home' && (
-                  <Box>
-                    <Typography
-                      variant="h2"
-                      gutterBottom
-                      sx={{
-                        fontSize: { xs: '1.1rem', md: '1.25rem' },
-                      }}
-                    >
-                      {description}
-                    </Typography>
-                  </Box>
+                  <>
+                    <Box sx={{ display: 'flex' }}>
+                      <Box sx={{ flexGrow: 1}}>
+                        {pathname !== '/' && <PageBreadcrumb />}
+                      </Box>
+                    </Box>
+                  </>
                 )}
-
-                <Box sx={{ display: 'flex' }}>
-                  <Box sx={{ flexGrow: 1, mt: 1 }}>
-                    {pathname !== '/' && <PageBreadcrumb />}
-                  </Box>
-                </Box>
 
                 {/* 🔒 Content area */}
                 <Box sx={{ mt: isMobile ? 2 : 4, mb: isMobile ? 3 : '175px' }}>

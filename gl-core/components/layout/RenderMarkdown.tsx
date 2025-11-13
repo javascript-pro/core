@@ -1,3 +1,4 @@
+//
 'use client';
 
 import * as React from 'react';
@@ -9,7 +10,6 @@ import {
   useTheme,
   alpha,
 } from '@mui/material';
-import { MightyButton } from '../../../gl-core';
 import {
   GoogleMap,
   FlickrAlbum,
@@ -19,6 +19,7 @@ import {
   PrevNext,
   GitHub,
   ChildPages,
+  PageGrid,
 } from '../../../gl-core';
 import { Flash } from '../../cartridges/Flash';
 
@@ -36,37 +37,6 @@ export default function RenderMarkdown({
 }: TRenderMarkdown) {
   const theme = useTheme();
   const scrollRef = React.useRef<HTMLDivElement>(null);
-  const [canScrollDown, setCanScrollDown] = React.useState(false);
-  const [canScrollUp, setCanScrollUp] = React.useState(false);
-
-  const checkScroll = () => {
-    const el = scrollRef.current;
-    if (el) {
-      setCanScrollDown(el.scrollTop + el.clientHeight < el.scrollHeight - 10);
-      setCanScrollUp(el.scrollTop > 10);
-    }
-  };
-
-  React.useEffect(() => {
-    checkScroll();
-    const observer = new ResizeObserver(checkScroll);
-    if (scrollRef.current) {
-      observer.observe(scrollRef.current);
-      scrollRef.current.addEventListener('scroll', checkScroll);
-    }
-    return () => {
-      observer.disconnect();
-      scrollRef.current?.removeEventListener('scroll', checkScroll);
-    };
-  }, [children]);
-
-  const handleScrollDown = () => {
-    scrollRef.current?.scrollBy({ top: 300, behavior: 'smooth' });
-  };
-
-  const handleScrollUp = () => {
-    scrollRef.current?.scrollBy({ top: -300, behavior: 'smooth' });
-  };
 
   // --- Normalize children to array to prevent map errors ---
   const normalizeChildren = (children: any) =>
@@ -136,7 +106,11 @@ export default function RenderMarkdown({
     const childPages = parseShortcode(/\[ChildPages\s+(.*?)\]/, ChildPages);
     if (childPages) return childPages;
 
-    // fallback: just return text
+    // PageGrid
+    const pageGrid = parseShortcode(/\[PageGrid\s+(.*?)\]/, PageGrid);
+    if (pageGrid) return pageGrid;
+
+    // fallback: simply return text
     return text;
   };
 
@@ -259,32 +233,6 @@ export default function RenderMarkdown({
         >
           {children as string}
         </ReactMarkdown>
-      </Box>
-
-      <Box sx={{ m: 2, display: 'flex', gap: 2, justifyContent: 'left' }}>
-        {canScrollDown && (
-          <MightyButton
-            disabled={!canScrollDown}
-            mode="icon"
-            color="inherit"
-            variant="outlined"
-            label="Scroll Down"
-            icon="down"
-            onClick={handleScrollDown}
-          />
-        )}
-
-        {canScrollUp && (
-          <MightyButton
-            disabled={!canScrollUp}
-            mode="icon"
-            color="inherit"
-            variant="outlined"
-            label="Scroll Up"
-            icon="up"
-            onClick={handleScrollUp}
-          />
-        )}
       </Box>
     </Box>
   );

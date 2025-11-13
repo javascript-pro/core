@@ -1055,7 +1055,7 @@
           }
         ],
         "icon": "work",
-        "image": "/png/n64/weizang.png",
+        "image": "https://live.staticflickr.com/65535/53670939824_27773d5157_b.jpg",
         "tags": [
           "Professional",
           "JavaScript",
@@ -1070,11 +1070,11 @@
           "NextJS",
           "Headless CMS"
         ],
-        "excerpt": "[PageAd slug=\"/work/experience\"]\n\n The apps we ship are real. They run in production and are developed accessibly.\n\nThe Core is Open Source and Free forever — giving you statically generated sites wit"
+        "excerpt": "The apps we ship are real. They run in production and are developed accessibly.\n\nThe Core is Open Source and Free forever — giving you statically generated sites with Firestorepowered updates and a re"
       },
       {
         "title": "Life",
-        "description": "Well, we've all got to have one",
+        "description": "Generation X at 50",
         "slug": "/life",
         "order": 50,
         "type": "folder",
@@ -1215,12 +1215,12 @@
           }
         ],
         "icon": "life",
-        "image": "/png/n64/flickr.png",
-        "excerpt": "[PageAd slug=\"/life/motorbikes\"]\n\n ⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a 1991 novel written by Canadian author Douglas Coupland\n\nI work remotely. I cook, eat, ride"
+        "image": "https://live.staticflickr.com/65535/53670802348_9bb887b680_b.jpg",
+        "excerpt": "⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a 1991 novel written by Canadian author Douglas Coupland\n\n[PageGrid pages=\"/life/aquaponics, /life/diving, /life/food, /life/mo"
       },
       {
         "title": "Balance",
-        "description": "A collection of writing",
+        "description": "It's hard to collate stuff into readable writing, but we're doing our best",
         "slug": "/balance",
         "order": 100,
         "type": "folder",
@@ -1388,12 +1388,12 @@
                   }
                 ],
                 "icon": "bug",
-                "image": "https://live.staticflickr.com/65535/54353995935_a904d504aa_b.jpg",
-                "excerpt": ""
+                "image": "https://live.staticflickr.com/65535/54443656612_a717f5582c_b.jpg",
+                "excerpt": "As far back as I can remember I knew that if I played by the rules I'd lose. I am Wei Zang and this is my story. Some of it is true."
               }
             ],
             "icon": "balance",
-            "image": "https://live.staticflickr.com/65535/54353995935_a904d504aa_b.jpg",
+            "image": "https://live.staticflickr.com/65535/54443656612_a717f5582c_b.jpg",
             "excerpt": "[PageAd slug=\"/balance/writing/derkleinezeppelin\"]\n\n[PageAd slug=\"/balance/writing/notheretofuckspiders\"]"
           },
           {
@@ -1523,8 +1523,8 @@
           }
         ],
         "icon": "balance",
-        "image": "/png/n64/british.png",
-        "excerpt": "It's hard to collate stuff into readable writing, but we're doing our best\n\n[PageAd slug=\"/balance/writing/derkleinezeppelin\"]"
+        "image": "https://live.staticflickr.com/65535/53670939819_74bfceabd6_b.jpg",
+        "excerpt": "If you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are"
       }
     ],
     "icon": "home",
@@ -1558,6 +1558,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[PageAd slug=\"/work\"]\n\n[PageAd slug=\"/life\"]\n\n[PageAd slug=\"/balance\"]"
+    "excerpt": "[PageGrid pages=\"/work, /life, /balance\"]"
   }
 ]
