@@ -139,7 +139,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
           </DialogContent>
         </Dialog>
 
-        <Container id="core" maxWidth="md">
+        <Container id="core">
           <Box sx={{ minHeight: '100vh' }}>
             <Grid container spacing={isMobile ? 0 : 1}>
               {!isMobile && (

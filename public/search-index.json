@@ -65,9 +65,9 @@
   {
     "slug": "balance/index",
     "title": "Balance",
-    "description": "A collection of writing",
+    "description": "It's hard to collate stuff into readable writing, but we're doing our best",
     "tags": [],
-    "content": "\nIt's hard to collate stuff into readable writing, but we're doing our best\n\n[PageAd slug=\"/balance/writing/der-kleine-zeppelin\"]\n"
+    "content": "\n> If you were the kind of kid who liked Lego then we probably have a lot more in common than just that.\n\n[PageAd slug=\"/balance/writing/der-kleine-zeppelin\"]\n\n[PageAd slug=\"/balance/writing/not-here-to-fuck-spiders\"]\n"
   },
   {
     "slug": "balance/video/index",
@@ -158,7 +158,7 @@
     "title": "Not Here To Fuck Spiders",
     "description": "by Wei Zang",
     "tags": [],
-    "content": ""
+    "content": "\nAs far back as I can remember I knew that if I played by the rules I'd lose. I am Wei Zang and this is my story. Some of it is true.\n"
   },
   {
     "slug": "balance/writing/not-here-to-fuck-spiders/wip/bez",

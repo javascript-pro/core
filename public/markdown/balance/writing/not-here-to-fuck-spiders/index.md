@@ -4,6 +4,8 @@ title: Not Here To Fuck Spiders
 description: by Wei Zang
 slug: /balance/writing/not-here-to-fuck-spiders
 icon: bug
-image: https://live.staticflickr.com/65535/54353995935_a904d504aa_b.jpg
+image: https://live.staticflickr.com/65535/54443656612_a717f5582c_b.jpg
 paywall: true
 ---
+
+As far back as I can remember I knew that if I played by the rules I'd lose. I am Wei Zang and this is my story. Some of it is true.

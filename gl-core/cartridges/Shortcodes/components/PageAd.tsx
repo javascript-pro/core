@@ -85,14 +85,14 @@ export default function PageAd({ slug = '/' }: { slug: string }) {
               title={<Typography variant="h6">{item.title}</Typography>}
             />
           </Grid>
-          <Grid size={{ xs: 12, sm: 4 }}>
+          <Grid size={{ xs: 12, sm: 3 }}>
             <CardContent>
-              <CardMedia src={item.image} height={150} component={'img'} />
+              <CardMedia src={item.image} height={120} component={'img'} />
             </CardContent>
           </Grid>
-          <Grid size={{ xs: 12, sm: 8 }}>
+          <Grid size={{ xs: 12, sm: 9 }}>
             <CardContent>
-              <Typography variant="body2">{`${subheader} ...`}</Typography>
+              <Typography variant="body1">{`${subheader} ...`}</Typography>
             </CardContent>
           </Grid>
         </Grid>
