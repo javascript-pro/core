@@ -1,12 +1,15 @@
 ---
 order: 10
 title: Work
-description: Professional Fullstack JavaScript Development
+description: Fullstack JavaScript Development
 slug: /work
 icon: work
-image: /png/3rdParty/git_og.png
-tags: JavaScript, Vanilla JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
+image: /png/n64/weizang.png
+noImage: true
+tags: Professional, JavaScript, Vanilla JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 ---
+
+[PageAd slug="/work/experience"]
 
 > The apps we ship are real. They run in production and are developed accessibly.
 
@@ -18,17 +21,4 @@ Goldlabel builds and ships modern web apps for clients who need real results —
 - Real deployments from Day One
 - Readable, extensible, Open Source
 
-Goldlabel Apps is a UK-based software company that designs, builds, and maintains full-stack web applications. We specialize in Next.js, Firebase, and custom UI development, delivering everything from internal admin tools to polished public-facing websites.
-
-## Working with Goldlabel
-
-- Ship early and often.  
-  Each app is live from the outset — not just a mockup or prototyle
-
-- Share the process.  
-  Follow the development on GitHub, view the commit history, clone the code. Get involved with Issues
-
-- Built for reuse.  
-  Every component, pattern, and API is designed to be portable and production-ready
-
-[PrevNext prev="/work/expertise/javascript" next="/work/expertise"]
+[PageAd slug="/work/expertise"]

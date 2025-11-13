@@ -7,5 +7,14 @@ import PageAd from './components/PageAd';
 import YouTube from './components/YouTube';
 import PrevNext from './components/PrevNext';
 import GitHub from './components/GitHub';
-
-export { GitHub, FlickrAlbum, PrevNext, GoogleMap, Mapbox, PageAd, YouTube };
+import ChildPages from './components/ChildPages';
+export {
+  ChildPages,
+  GitHub,
+  FlickrAlbum,
+  PrevNext,
+  GoogleMap,
+  Mapbox,
+  PageAd,
+  YouTube,
+};

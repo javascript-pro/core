@@ -8,16 +8,128 @@
     "children": [
       {
         "title": "Work",
-        "description": "Professional Fullstack JavaScript Development",
+        "description": "Fullstack JavaScript Development",
         "slug": "/work",
         "order": 10,
         "type": "folder",
         "children": [
           {
-            "title": "Goldlabel Core",
-            "description": "Open Source Fullstack JavaScript Platform",
+            "title": "Experience",
+            "description": "",
+            "slug": "/work/experience",
+            "order": 10,
+            "type": "folder",
+            "children": [
+              {
+                "title": "Aligent",
+                "slug": "/work/experience/aligent",
+                "order": 30,
+                "icon": "experience",
+                "image": "https://live.staticflickr.com/65535/54915903856_0a086bd3ec_b.jpg",
+                "type": "file",
+                "tags": [
+                  "expertise",
+                  "interview",
+                  "php",
+                  "magento",
+                  "e-commerce"
+                ],
+                "excerpt": "Magento PHP & Material Design System\n\n JavaScript Developer, Aug 20XX  Feb 20XX, Adelaide"
+              },
+              {
+                "title": "Boral",
+                "slug": "/work/experience/boral",
+                "order": 30,
+                "icon": "experience",
+                "image": "https://live.staticflickr.com/65535/54915903856_0a086bd3ec_b.jpg",
+                "type": "file",
+                "tags": [
+                  "expertise",
+                  "interview",
+                  "boral"
+                ],
+                "excerpt": "GeoSpatial Fleet App\n\n React Developer, Aug 2018  Feb 2019, Sydney\n\nIt’s only been a few years since all of Boral’s business was still done on paper. When I joined the Sydney tech team in 2018, the co"
+              },
+              {
+                "title": "Company",
+                "description": "UK Limited Company (5460545)",
+                "slug": "/work/experience/company",
+                "order": 1020,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "Working remotely",
+                    "slug": "/work/experience/company/remote-working",
+                    "order": 250,
+                    "icon": "company",
+                    "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
+                    "type": "file",
+                    "tags": [
+                      "remote",
+                      "hybrid"
+                    ],
+                    "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years.\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communication, "
+                  },
+                  {
+                    "title": "Join Us",
+                    "slug": "/work/experience/company/join-us",
+                    "order": 666,
+                    "icon": "team",
+                    "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
+                    "type": "file",
+                    "tags": [
+                      "team"
+                    ],
+                    "excerpt": "[GitHub url=\"https://github.com/goldlabelapps\" label=\"@goldlabelapps\"]\n\nWhether you're a startup with a short deadline or an enterprise with complex workflows, we can help. Get in touch for it's a tru"
+                  },
+                  {
+                    "title": "Work With Us",
+                    "slug": "/work/experience/company/work-with-us",
+                    "order": 777,
+                    "icon": "team",
+                    "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
+                    "type": "file",
+                    "tags": [
+                      "team"
+                    ],
+                    "excerpt": "We take on a limited number of new projects each month. If you need something done we’d love to hear about it. Find out if we're a . We're always looking for collaborators, contributors, and good idea"
+                  },
+                  {
+                    "title": "Privacy & Cookies",
+                    "slug": "/work/experience/company/privacy-cookies",
+                    "order": 5555,
+                    "icon": "admin",
+                    "image": "/png/3rdParty/git_og.png",
+                    "type": "file",
+                    "tags": [
+                      "cookies",
+                      "gdpr",
+                      "privacy",
+                      "terms",
+                      "trust"
+                    ],
+                    "excerpt": "We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers t"
+                  }
+                ],
+                "icon": "company",
+                "image": "https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg",
+                "excerpt": "Tel/WhatsApp   \n | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX"
+              }
+            ],
+            "icon": "experience",
+            "image": "/png/3rdParty/react.png",
+            "tags": [
+              "expertise",
+              "interview",
+              "experience"
+            ],
+            "excerpt": "Contract JavaScript Developer — Huawei Shenzhen, China — Feb 2016 to May 2016\n\nBy 2015–2016, React had evolved beyond an experiment — Facebook, Instagram, and Airbnb were using it at scale, and the op"
+          },
+          {
+            "title": "Goldlabel",
+            "description": "Fullstack Open Source JavaScript",
             "slug": "/work/goldlabel",
-            "order": 1,
+            "order": 10,
             "type": "folder",
             "children": [
               {
@@ -34,6 +146,12 @@
                     "icon": "flash",
                     "image": "/png/n64/test.png",
                     "type": "file",
+                    "tags": [
+                      "Catridges",
+                      "Flash",
+                      "SVG",
+                      "Macromedia"
+                    ],
                     "excerpt": "[Flash movie=\"Logo\" height=\"250\"]\n\n Maybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You're welcome\n\n SVG Graphics\n Animation using Greensoc"
                   },
                   {
@@ -43,6 +161,13 @@
                     "icon": "uberedux",
                     "image": "/png/n64/test.png",
                     "type": "file",
+                    "tags": [
+                      "Free",
+                      "atridges",
+                      "Uberedux",
+                      "State Management",
+                      "Redux"
+                    ],
                     "excerpt": "Otherwise you'd be back in jQuery callback hell. Nobody wants that.\n\nUberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app already works and gives you the global sta"
                   },
                   {
@@ -101,7 +226,7 @@
               },
               {
                 "title": "Open Source",
-                "slug": "/work/goldlabel/core",
+                "slug": "/work/goldlabel/about",
                 "order": 10,
                 "icon": "github",
                 "image": "/png/3rdParty/github_og.png",
@@ -128,13 +253,13 @@
               "NextJS",
               "Headless CMS"
             ],
-            "excerpt": "The public repository that powers goldlabel.pro is free for anyone to fork, copy, hack, and reuse.\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Public GitHub\"]\n\n What is it?\n\nGoldlabel "
+            "excerpt": "[PageAd slug=\"/work/goldlabel/cartridges\"]\n\n The public repository that powers goldlabel.pro is free for anyone to fork, copy, hack, and reuse.\n\n[GitHub url=\"https://github.com/javascriptpro/core\" lab"
           },
           {
             "title": "Expertise",
             "description": "We can help understanding in these fields",
             "slug": "/work/expertise",
-            "order": 20,
+            "order": 25,
             "type": "folder",
             "children": [
               {
@@ -156,7 +281,7 @@
                         "slug": "/work/expertise/javascript/react/history",
                         "order": 10,
                         "icon": "js",
-                        "image": "/png/3rdParty/wikipedia.png",
+                        "image": "/png/3rdParty/react.png",
                         "type": "file",
                         "tags": [
                           "JavaScript",
@@ -167,11 +292,24 @@
                         "excerpt": "When React appeared, the landscape was dominated by AngularJS, Backbone, and Knockout, all of which relied on twoway data binding and manual DOM updates.\n\nReact’s performance and simplicity stood out "
                       },
                       {
+                        "title": "Hooks",
+                        "slug": "/work/expertise/javascript/react/hooks",
+                        "order": 10,
+                        "icon": "js",
+                        "image": "/png/3rdParty/react.png",
+                        "type": "file",
+                        "tags": [
+                          "React",
+                          "hooks"
+                        ],
+                        "excerpt": "In short, Hooks let React functions become stateful and reactive without classes\n\nAt a fundamental level, Hooks hook into React’s internal lifecycle and state system from within functional components."
+                      },
+                      {
                         "title": "Our Experience",
                         "slug": "/work/expertise/javascript/react/experience",
                         "order": 20,
                         "icon": "js",
-                        "image": "/png/3rdParty/wikipedia.png",
+                        "image": "/png/3rdParty/react.png",
                         "type": "file",
                         "tags": [
                           "JavaScript",
@@ -184,14 +322,14 @@
                       }
                     ],
                     "icon": "js",
-                    "image": "/png/3rdParty/wikipedia.png",
+                    "image": "/png/3rdParty/react.png",
                     "tags": [
                       "JavaScript",
                       "TypeScript",
                       "React",
                       "frameworks"
                     ],
-                    "excerpt": "React is a JavaScript library for building user interfaces, originally developed by Jordan Walke at Facebook and opensourced in 2013. It introduced a fundamentally new way of thinking about frontend d"
+                    "excerpt": "[ChildPages title=\"React\"]\n\nReact is a JavaScript library for building user interfaces, originally developed by Jordan Walke at Facebook and opensourced in 2013. It introduced a fundamentally new way "
                   },
                   {
                     "title": "Next.js",
@@ -907,114 +1045,19 @@
               }
             ],
             "icon": "expertise",
-            "image": "/png/3rdParty/unicorn.png",
+            "image": "/png/3rdParty/javascript_og.png",
             "tags": [
               "expertise",
               "fields",
               "work"
             ],
             "excerpt": "We work across the full stack, from interface to infrastructure, with a focus on robust, modern JavaScript tooling and scalable cloudnative delivery.\n\nWhether building responsive UIs, designing server"
-          },
-          {
-            "title": "Company",
-            "description": "UK Limited Company (5460545)",
-            "slug": "/work/company",
-            "order": 1020,
-            "type": "folder",
-            "children": [
-              {
-                "title": "Working remotely",
-                "slug": "/work/company/remote-working",
-                "order": 250,
-                "icon": "company",
-                "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
-                "type": "file",
-                "tags": [
-                  "remote",
-                  "hybrid"
-                ],
-                "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years.\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communication, "
-              },
-              {
-                "title": "Join Us",
-                "slug": "/work/company/join-us",
-                "order": 666,
-                "icon": "team",
-                "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
-                "type": "file",
-                "tags": [
-                  "team"
-                ],
-                "excerpt": "[GitHub url=\"https://github.com/goldlabelapps\" label=\"@goldlabelapps\"]\n\nWhether you're a startup with a short deadline or an enterprise with complex workflows, we can help. Get in touch for it's a tru"
-              },
-              {
-                "title": "Work With Us",
-                "slug": "/work/company/work-with-us",
-                "order": 777,
-                "icon": "team",
-                "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
-                "type": "file",
-                "tags": [
-                  "team"
-                ],
-                "excerpt": "We take on a limited number of new projects each month. If you need something done we’d love to hear about it. Find out if we're a . We're always looking for collaborators, contributors, and good idea"
-              },
-              {
-                "title": "Privacy & Cookies",
-                "slug": "/work/company/privacy-cookies",
-                "order": 5555,
-                "icon": "admin",
-                "image": "https://live.staticflickr.com/65535/54800517077_55d79f6a0a_b.jpg",
-                "type": "file",
-                "tags": [
-                  "cookies",
-                  "gdpr",
-                  "privacy",
-                  "terms",
-                  "trust"
-                ],
-                "excerpt": "We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers t"
-              }
-            ],
-            "icon": "company",
-            "image": "https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg",
-            "excerpt": "Tel/WhatsApp   \n | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX"
-          },
-          {
-            "title": "Aurosafe",
-            "description": "16hrs 11/11/2025",
-            "slug": "/work/interviews",
-            "order": 2018,
-            "type": "folder",
-            "children": [
-              {
-                "title": "Boral",
-                "slug": "/work/interviews/boral",
-                "order": 2019,
-                "icon": "paywall",
-                "image": "https://live.staticflickr.com/65535/54915903856_0a086bd3ec_b.jpg",
-                "type": "file",
-                "tags": [
-                  "expertise",
-                  "interview",
-                  "boral"
-                ],
-                "excerpt": "React Developer, Aug 2018  Feb 2019\n , Sydney, Australia\n\nSTAR\n\n Other outcomes\n\n Built foundational test architecture using Cucumber, Gherkin, and BDD principles\n Developed and tested multiple React "
-              }
-            ],
-            "icon": "paywall",
-            "image": "https://live.staticflickr.com/65535/54914102727_6875cb7c9a_b.jpg",
-            "tags": [
-              "expertise",
-              "interview",
-              "aurosafe"
-            ],
-            "excerpt": "16hrs 11/11/2025\n\n React Developer\n\n\n\nThe client is a Londonbased tech company building smart compliance and monitoring software that connects IoT devices into one platform. You’ll be joining a small,"
           }
         ],
         "icon": "work",
-        "image": "/png/3rdParty/git_og.png",
+        "image": "/png/n64/weizang.png",
         "tags": [
+          "Professional",
           "JavaScript",
           "Vanilla JavaScript",
           "TypeScript",
@@ -1027,7 +1070,7 @@
           "NextJS",
           "Headless CMS"
         ],
-        "excerpt": "The apps we ship are real. They run in production and are developed accessibly.\n\nThe Core is Open Source and Free forever — giving you statically generated sites with Firestorepowered updates and a re"
+        "excerpt": "[PageAd slug=\"/work/experience\"]\n\n The apps we ship are real. They run in production and are developed accessibly.\n\nThe Core is Open Source and Free forever — giving you statically generated sites wit"
       },
       {
         "title": "Life",
@@ -1036,33 +1079,6 @@
         "order": 50,
         "type": "folder",
         "children": [
-          {
-            "title": "Vanlife",
-            "description": "definition of",
-            "slug": "/life/vanlife",
-            "order": 10,
-            "type": "folder",
-            "children": [
-              {
-                "title": "The best price",
-                "slug": "/life/vanlife/best-price",
-                "order": 10,
-                "icon": "van",
-                "type": "file",
-                "excerpt": "Best price (noun)\n\nThe universal truth: if it costs nothing, it’s already worth more than you were planning to spend.\n\n Usage\n\n \"How much was that? — Free. — Best price.\"\n \"I wasn’t even looking, but "
-              },
-              {
-                "title": "2025 Map",
-                "slug": "/life/vanlife/map",
-                "order": 10,
-                "icon": "van",
-                "type": "file",
-                "excerpt": "2025 Map\n\n[GoogleMap src=\"https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=001321\"]"
-              }
-            ],
-            "icon": "van",
-            "excerpt": "Vanlife (noun)\n\n A lifestyle built around living or traveling in a converted van, often equipped with a bed, kitchen, and storage, sometimes a bathroom.\n\n The practice of turning a vehicle into both h"
-          },
           {
             "title": "Diving",
             "description": "Fish are friends. Not food.",
@@ -1086,12 +1102,84 @@
                 "icon": "diving",
                 "image": "/png/n64/diving.png",
                 "type": "file",
-                "excerpt": "You have to mitigate that posiibility, yeh."
+                "excerpt": "You might die. You have to mitigate that posiibility, yeh."
               }
             ],
             "icon": "diving",
             "image": "/png/n64/diving.png",
-            "excerpt": ""
+            "excerpt": "[PageAd slug=\"/life/diving/whydive\"]\n\n[PageAd slug=\"/life/diving/whynotdive\"]"
+          },
+          {
+            "title": "Food",
+            "description": "魏藏美食",
+            "slug": "/life/food",
+            "order": 110,
+            "type": "folder",
+            "children": [
+              {
+                "title": "Air Fried Stuffed Peppers",
+                "slug": "/life/food/air-fried-peppers",
+                "order": 35,
+                "icon": "food",
+                "image": "/jpg/wei-zangs-food.jpg",
+                "type": "file",
+                "tags": [
+                  "food",
+                  "punching dolphins",
+                  "recipes",
+                  "air fryer",
+                  "peppers"
+                ],
+                "excerpt": "2 Large peppers (capsicums)\n 1 125g pack of mozzarella\n Enough of your best, most delicious bolognaise to fill the peppers\n\n STEP 1\n\nPrepare Air Fryer pan. Line it with tinfoil if you want to keep it "
+              },
+              {
+                "title": "Breakfast Nasi Goreng",
+                "slug": "/life/food/all-day-brekkie-goreng",
+                "order": 50,
+                "icon": "food",
+                "image": "/jpg/wei-zangs-food.jpg",
+                "type": "file",
+                "tags": [
+                  "food",
+                  "recipes",
+                  "indonesian",
+                  "goreng",
+                  "nasi",
+                  "rice"
+                ],
+                "excerpt": "Nasi Goreng is an Indonesian meal made from leftover rice stirfried with garlic, shallots, chilli, and sweet soy sauce (kecap manis). Often enriched with prawns, chicken, or beef, it’s finished with a"
+              },
+              {
+                "title": "Banana Bread",
+                "slug": "/life/food/banana-bread",
+                "order": 50,
+                "icon": "food",
+                "image": "/jpg/wei-zangs-food.jpg",
+                "type": "file",
+                "excerpt": "125g Butter\n 175g Brown sugar\n 1 tsp Vanilla extract or paste\n 3 Eggs\n 2 Cups mashed banana\n 255g Plain flour\n 1 tsp Baking powder\n 1 tsp Bicarb of (baking) soda\n 1 tsp Ground cinnamon\n ⅓ CUP (115g) G"
+              },
+              {
+                "title": "Beef Wellie",
+                "slug": "/life/food/beef-wellie",
+                "order": 55,
+                "icon": "food",
+                "image": "https://live.staticflickr.com/65535/54742614047_e44e8af81e_b.jpg",
+                "type": "file",
+                "excerpt": "Ingredients\n\n 2 x 400g beef fillets\n Olive oil, for frying\n 500g mixture of wild mushrooms, cleaned\n 1 thyme sprig, leaves only\n 500g puff pastry\n 8 slices of Parma ham\n 2 egg yolks, beaten with 1 tbs"
+              },
+              {
+                "title": "Lemon Meringue Pie",
+                "slug": "/life/food/lemon-meringue-pie",
+                "order": 76,
+                "icon": "food",
+                "image": "/jpg/lemon-meringue-pie.jpg",
+                "type": "file",
+                "excerpt": "\"Lemonading\" is an actual word that even people on Radio 4 use. So when life gives you lemons...\n\n Ingredients\n\n For the pastry\n\n 4 oz (110 g) plain flour, plus a little extra for rolling out\n a pinch"
+              }
+            ],
+            "icon": "food",
+            "image": "/jpg/wei-zangs-food.jpg",
+            "excerpt": "You want a recipe? The interweb's full of them. This is how I cook. This is why I cook.\n\nIf you find something, good. If not — well, maybe you were hungry for something else.\n\nWhen I want a recipe I g"
           },
           {
             "title": "Aquaponics",
@@ -1127,8 +1215,8 @@
           }
         ],
         "icon": "life",
-        "image": "/jpg/wei-zangs-food.jpg",
-        "excerpt": "I work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age I'm never going to ski like I used to. Ma"
+        "image": "/png/n64/flickr.png",
+        "excerpt": "[PageAd slug=\"/life/motorbikes\"]\n\n ⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a 1991 novel written by Canadian author Douglas Coupland\n\nI work remotely. I cook, eat, ride"
       },
       {
         "title": "Balance",
@@ -1145,187 +1233,168 @@
             "type": "folder",
             "children": [
               {
-                "title": "Kleiner Zeppelin",
-                "description": "Once upon a time",
-                "slug": "/balance/writing/kleiner-zeppelin",
+                "title": "Der Kleine Zeppelin",
+                "description": "by Wei Zang",
+                "slug": "/balance/writing/der-kleine-zeppelin",
                 "order": 10,
                 "type": "folder",
                 "children": [
                   {
-                    "title": "Britain",
-                    "slug": "/balance/writing/kleiner-zeppelin/britain",
-                    "order": 99,
+                    "title": "Countries",
+                    "description": "",
+                    "slug": "/balance/writing/der-kleine-zeppelin/countries",
+                    "order": 10,
+                    "type": "folder",
+                    "children": [
+                      {
+                        "title": "Britain",
+                        "slug": "/balance/writing/der-kleine-zeppelin/countries/britain",
+                        "order": 99,
+                        "icon": "van",
+                        "image": "https://live.staticflickr.com/65535/53998963131_bf0cb94288_b.jpg",
+                        "type": "file",
+                        "excerpt": "Where I can understand the advertising"
+                      },
+                      {
+                        "title": "France",
+                        "slug": "/balance/writing/der-kleine-zeppelin/countries/france",
+                        "order": 110,
+                        "icon": "van",
+                        "image": "https://live.staticflickr.com/65535/54458539144_1d61fc9025_b.jpg",
+                        "type": "file",
+                        "excerpt": "Where nothing works"
+                      },
+                      {
+                        "title": "Belgium",
+                        "slug": "/balance/writing/der-kleine-zeppelin/countries/belgium",
+                        "order": 125,
+                        "icon": "van",
+                        "image": "https://live.staticflickr.com/65535/54369337224_3278c64992_b.jpg",
+                        "type": "file",
+                        "excerpt": "Where wars were"
+                      },
+                      {
+                        "title": "Germany",
+                        "slug": "/balance/writing/der-kleine-zeppelin/countries/germany",
+                        "order": 170,
+                        "icon": "van",
+                        "image": "https://live.staticflickr.com/65535/54873111678_2633c4ba43_b.jpg",
+                        "type": "file",
+                        "excerpt": "Where everything works"
+                      },
+                      {
+                        "title": "Spain",
+                        "slug": "/balance/writing/der-kleine-zeppelin/countries/spain",
+                        "order": 179,
+                        "icon": "van",
+                        "image": "https://live.staticflickr.com/65535/54548563778_406a5e74b2_b.jpg",
+                        "type": "file",
+                        "excerpt": "Where they don't do much"
+                      },
+                      {
+                        "title": "Portugal",
+                        "slug": "/balance/writing/der-kleine-zeppelin/countries/portugal",
+                        "order": 190,
+                        "icon": "van",
+                        "image": "https://live.staticflickr.com/65535/54639869696_b8a3cdb0de_b.jpg",
+                        "type": "file",
+                        "excerpt": "Where they talk funny"
+                      }
+                    ],
                     "icon": "van",
-                    "image": "https://live.staticflickr.com/65535/53998963131_bf0cb94288_b.jpg",
-                    "type": "file",
-                    "excerpt": ""
+                    "excerpt": "[GoogleMap src=\"https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=001321\"]"
                   },
                   {
-                    "title": "France",
-                    "slug": "/balance/writing/kleiner-zeppelin/france",
-                    "order": 110,
+                    "title": "Google",
+                    "slug": "/balance/writing/der-kleine-zeppelin/google",
+                    "order": 10,
                     "icon": "van",
-                    "image": "https://live.staticflickr.com/65535/54458539144_1d61fc9025_b.jpg",
                     "type": "file",
-                    "excerpt": ""
+                    "excerpt": "2025 Map\n\n[GoogleMap src=\"https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=001321\"]"
                   },
                   {
-                    "title": "Belgium",
-                    "slug": "/balance/writing/kleiner-zeppelin/belgium",
-                    "order": 125,
+                    "title": "Vanlife",
+                    "description": "definition of",
+                    "slug": "/balance/writing/der-kleine-zeppelin/vanlife",
+                    "order": 10,
+                    "type": "folder",
+                    "children": [],
                     "icon": "van",
-                    "image": "https://live.staticflickr.com/65535/54369337224_3278c64992_b.jpg",
-                    "type": "file",
-                    "excerpt": ""
-                  },
-                  {
-                    "title": "Germany",
-                    "slug": "/balance/writing/kleiner-zeppelin/germany",
-                    "order": 170,
-                    "icon": "van",
-                    "image": "https://live.staticflickr.com/65535/54873111678_2633c4ba43_b.jpg",
-                    "type": "file",
-                    "excerpt": ""
-                  },
-                  {
-                    "title": "Spain",
-                    "slug": "/balance/writing/kleiner-zeppelin/spain",
-                    "order": 179,
-                    "icon": "van",
-                    "image": "https://live.staticflickr.com/65535/54548563778_406a5e74b2_b.jpg",
-                    "type": "file",
-                    "excerpt": ""
-                  },
-                  {
-                    "title": "Portugal",
-                    "slug": "/balance/writing/kleiner-zeppelin/portugal",
-                    "order": 190,
-                    "icon": "van",
-                    "image": "https://live.staticflickr.com/65535/54639869696_b8a3cdb0de_b.jpg",
-                    "type": "file",
-                    "excerpt": ""
+                    "excerpt": "Vanlife (noun)\n\n A lifestyle built around living or traveling in a converted van, often equipped with a bed, kitchen, and storage, sometimes a bathroom.\n\n The practice of turning a vehicle into both h"
                   }
                 ],
                 "icon": "van",
-                "image": "https://live.staticflickr.com/65535/54250367683_32802224fb_b.jpg",
-                "excerpt": ""
+                "image": "https://live.staticflickr.com/65535/54357493661_c102e19402_b.jpg",
+                "excerpt": "Once upon a time there was a little zeppelin. That's what it felt like to drive. No power, just a big bloaty white blob floating about all over the road.\n\nIt's quite tall too. First thing I did is to "
               },
               {
-                "title": "Bez",
-                "slug": "/balance/writing/bez",
-                "order": 11,
-                "icon": "flash",
-                "image": "https://live.staticflickr.com/65535/54340497432_b8c92a3215_b.jpg",
-                "type": "file",
-                "tags": [
-                  "punk",
-                  "bez"
-                ],
-                "excerpt": "Over time, her real name eroded like an old raster image losing resolution, smoothed away by repetition until even she couldn’t recall what it had been. HR still had it on file, but it felt like a rel"
-              },
-              {
-                "title": "dog",
-                "slug": "/balance/writing/puppy-thing",
-                "order": 30,
-                "icon": "dog",
-                "image": "/jpg/puppy-fing.jpg",
-                "type": "file",
-                "excerpt": "I put an Attenborough series on for the dogs. Later I notice there’s a polar bear and a baby seal on the TV. I look at the doggy. He's got genuine concern in his eyes which also say \"'at puppy fing’s "
-              },
-              {
-                "title": "Wei Zang’s Food",
-                "description": "魏藏美食",
-                "slug": "/balance/writing/wei-zangs-food",
-                "order": 110,
+                "title": "Not Here To Fuck Spiders",
+                "description": "by Wei Zang",
+                "slug": "/balance/writing/not-here-to-fuck-spiders",
+                "order": 20,
                 "type": "folder",
                 "children": [
                   {
-                    "title": "Air Fried Stuffed Peppers",
-                    "slug": "/balance/writing/wei-zangs-food/air-fried-peppers",
-                    "order": 35,
-                    "icon": "food",
-                    "image": "/jpg/wei-zangs-food.jpg",
-                    "type": "file",
-                    "tags": [
-                      "food",
-                      "punching dolphins",
-                      "recipes",
-                      "air fryer",
-                      "peppers"
+                    "title": "WIP",
+                    "description": "",
+                    "slug": "/balance/writing/not-here-to-fuck-spiders/wip",
+                    "order": 10,
+                    "type": "folder",
+                    "children": [
+                      {
+                        "title": "Bez",
+                        "slug": "/balance/writing/not-here-to-fuck-spiders/wip/bez",
+                        "order": 11,
+                        "icon": "bug",
+                        "image": "https://live.staticflickr.com/65535/54340497432_b8c92a3215_b.jpg",
+                        "type": "file",
+                        "tags": [
+                          "punk",
+                          "bez"
+                        ],
+                        "excerpt": "Over time, her real name eroded like an old raster image losing resolution, smoothed away by repetition until even she couldn’t recall what it had been. HR still had it on file, but it felt like a rel"
+                      },
+                      {
+                        "title": "dog",
+                        "slug": "/balance/writing/not-here-to-fuck-spiders/wip/puppy-thing",
+                        "order": 30,
+                        "icon": "bug",
+                        "image": "/jpg/puppy-fing.jpg",
+                        "type": "file",
+                        "excerpt": "I put an Attenborough series on for the dogs. Later I notice there’s a polar bear and a baby seal on the TV. I look at the doggy. He's got genuine concern in his eyes which also say \"'at puppy fing’s "
+                      },
+                      {
+                        "title": "That's soience",
+                        "slug": "/balance/writing/not-here-to-fuck-spiders/wip/sci-fi",
+                        "order": 120,
+                        "icon": "bug",
+                        "image": "/jpg/einstein.jpg",
+                        "type": "file",
+                        "excerpt": "That's soience mayte\n\nBecause we can carefully observe constellations when the Sun is not blocking their path, we know what position the stars should be in when the Sun is keeping us from seeing them."
+                      },
+                      {
+                        "title": "Destructo",
+                        "slug": "/balance/writing/not-here-to-fuck-spiders/wip/destructo-the-wonderdog",
+                        "order": 460,
+                        "icon": "bug",
+                        "image": "https://live.staticflickr.com/65535/54691336480_c273fe647c_o.jpg",
+                        "type": "file",
+                        "excerpt": "Once upon a time Destructo the Wonderdog and his best mate Barkin’ Boris were hanging out on the mountain. Just sniffing about, play fighting and barking at stuff when suddenly Boris went still as a m"
+                      }
                     ],
-                    "excerpt": "2 Large peppers (capsicums)\n 1 125g pack of mozzarella\n Enough of your best, most delicious bolognaise to fill the peppers\n\n STEP 1\n\nPrepare Air Fryer pan. Line it with tinfoil if you want to keep it "
-                  },
-                  {
-                    "title": "Breakfast Nasi Goreng",
-                    "slug": "/balance/writing/wei-zangs-food/all-day-brekkie-goreng",
-                    "order": 50,
-                    "icon": "food",
-                    "image": "/jpg/wei-zangs-food.jpg",
-                    "type": "file",
-                    "tags": [
-                      "food",
-                      "recipes",
-                      "indonesian",
-                      "goreng",
-                      "nasi",
-                      "rice"
-                    ],
-                    "excerpt": "Nasi Goreng is an Indonesian meal made from leftover rice stirfried with garlic, shallots, chilli, and sweet soy sauce (kecap manis). Often enriched with prawns, chicken, or beef, it’s finished with a"
-                  },
-                  {
-                    "title": "Banana Bread",
-                    "slug": "/balance/writing/wei-zangs-food/banana-bread",
-                    "order": 50,
-                    "icon": "food",
-                    "image": "/jpg/wei-zangs-food.jpg",
-                    "type": "file",
-                    "excerpt": "| \n\nMoist, flavorful, and easy to make. Perfect for using overripe bananas, this classic loaf is a crowdpleaser for breakfast, snacks, or dessert.\n\n 125g Butter\n 175g Brown sugar\n 1 tsp Vanilla extrac"
-                  },
-                  {
-                    "title": "Beef Wellie",
-                    "slug": "/balance/writing/wei-zangs-food/beef-wellie",
-                    "order": 55,
-                    "icon": "food",
-                    "image": "https://live.staticflickr.com/65535/54742614047_e44e8af81e_b.jpg",
-                    "type": "file",
-                    "excerpt": "Ingredients\n\n 2 x 400g beef fillets\n Olive oil, for frying\n 500g mixture of wild mushrooms, cleaned\n 1 thyme sprig, leaves only\n 500g puff pastry\n 8 slices of Parma ham\n 2 egg yolks, beaten with 1 tbs"
-                  },
-                  {
-                    "title": "Lemon Meringue Pie",
-                    "slug": "/balance/writing/wei-zangs-food/lemon-meringue-pie",
-                    "order": 76,
-                    "icon": "food",
-                    "image": "/jpg/lemon-meringue-pie.jpg",
-                    "type": "file",
-                    "excerpt": "\"Lemonading\" is an actual word that even people on Radio 4 use. So when life gives you lemons...\n\n Ingredients\n\n For the pastry\n\n 4 oz (110 g) plain flour, plus a little extra for rolling out\n a pinch"
+                    "icon": "bug",
+                    "image": "https://live.staticflickr.com/65535/54353995935_a904d504aa_b.jpg",
+                    "excerpt": "Child pages please\n\n[FickrAlbum id=\"72177720329145789\"]"
                   }
                 ],
-                "icon": "food",
-                "image": "/jpg/wei-zangs-food.jpg",
-                "excerpt": "You want a recipe? The interweb's full of them. This is how I cook. This is why I cook.\n\nIf you find something, good. If not — well, maybe you were hungry for something else.\n\nWhen I want a recipe I g"
-              },
-              {
-                "title": "Science Fiction",
-                "slug": "/balance/writing/sci-fi",
-                "order": 120,
-                "icon": "rocket",
-                "image": "/jpg/einstein.jpg",
-                "type": "file",
-                "excerpt": "That's soience mayte\n\nBecause we can carefully observe constellations when the Sun is not blocking their path, we know what position the stars should be in when the Sun is keeping us from seeing them."
-              },
-              {
-                "title": "Destructo",
-                "slug": "/balance/writing/destructo-the-wonderdog",
-                "order": 460,
-                "icon": "dog",
-                "image": "https://live.staticflickr.com/65535/54691336480_c273fe647c_o.jpg",
-                "type": "file",
-                "excerpt": "Once upon a time Destructo the Wonderdog and his best mate Barkin’ Boris were hanging out on the mountain. Just sniffing about, play fighting and barking at stuff when suddenly Boris went still as a m"
+                "icon": "bug",
+                "image": "https://live.staticflickr.com/65535/54353995935_a904d504aa_b.jpg",
+                "excerpt": ""
               }
             ],
             "icon": "balance",
             "image": "https://live.staticflickr.com/65535/54353995935_a904d504aa_b.jpg",
-            "excerpt": "[PrevNext next=\"/balance/writing/kleinerzeppelin\"]\n\n Wei Zang, author of Not here to fuck spiders"
+            "excerpt": "[PageAd slug=\"/balance/writing/derkleinezeppelin\"]\n\n[PageAd slug=\"/balance/writing/notheretofuckspiders\"]"
           },
           {
             "title": "Video",
@@ -1454,12 +1523,12 @@
           }
         ],
         "icon": "balance",
-        "image": "/png/3rdParty/unicorn.png",
-        "excerpt": "[PrevNext prev=\"/balance/books/rfkuang\" next=\"/balance/writing/weizangsfood/alldaybrekkiegoreng\"]"
+        "image": "/png/n64/british.png",
+        "excerpt": "It's hard to collate stuff into readable writing, but we're doing our best\n\n[PageAd slug=\"/balance/writing/derkleinezeppelin\"]"
       }
     ],
     "icon": "home",
-    "image": "/png/clouds/javascript.png",
+    "image": "/png/n64/flickr.png",
     "tags": [
       "JavaScript",
       "Next Gen",
@@ -1489,6 +1558,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[Flash movie=\"Logo\" height=\"200\"]\n\n[PageAd slug=\"/work/interviews/boral\"]\n\n[PageAd slug=\"/work/expertise/javascript/react\"]\n\n[PageAd slug=\"/work/expertise/javascript/nextjs\"]\n\n[PageAd slug=\"/work/expe"
+    "excerpt": "[PageAd slug=\"/work\"]\n\n[PageAd slug=\"/life\"]\n\n[PageAd slug=\"/balance\"]"
   }
 ]

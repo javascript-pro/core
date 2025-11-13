@@ -2,21 +2,20 @@
 import * as React from 'react';
 import {
   Dialog,
-  DialogTitle,
   DialogContent,
   DialogActions,
+  DialogTitle,
+  CardHeader,
   Box,
-  Typography,
   Button,
+  IconButton,
 } from '@mui/material';
 import { useDispatch, Icon } from '../../../../gl-core';
-import { auth } from '../../../lib/firebase';
-import { signOut } from 'firebase/auth';
 import {
   usePaywall,
   useUser,
   setPaywallKey,
-  Signin,
+  SignInUp,
   User,
 } from '../../Paywall';
 
@@ -30,17 +29,6 @@ export default function DialogPaywall() {
     dispatch(setPaywallKey('dialogOpen', false));
   };
 
-  const handleSignout = async () => {
-    try {
-      await signOut(auth);
-      dispatch(setPaywallKey('user', null));
-      dispatch(setPaywallKey('authed', false));
-      handleClose();
-    } catch (err) {
-      console.error('[Paywall] Sign-out failed:', err);
-    }
-  };
-
   return (
     <Dialog
       open={Boolean(dialogOpen)}
@@ -50,28 +38,24 @@ export default function DialogPaywall() {
       fullWidth
     >
       <DialogTitle>
-        {user ? (
-          <User />
-        ) : (
-          <>
-            <Box sx={{ mr: 2, mt: 1 }}>
-              <Icon icon="paywall" />
-            </Box>
-
-            <Box sx={{ flexGrow: 1 }}>
-              <Typography variant="h6">
-                {user ? user.email : 'Sign in please'}
-              </Typography>
-            </Box>
-          </>
-        )}
+        <CardHeader
+          action={
+            <>
+              <IconButton color="primary" onClick={handleClose}>
+                <Icon icon="close" />
+              </IconButton>
+            </>
+          }
+        />
       </DialogTitle>
+      <User />
 
       {!user ? (
         <>
           <DialogContent>
-            <Box sx={{ mt: 1 }}>
-              <Signin />
+            {user ? <User /> : null}
+            <Box sx={{}}>
+              <SignInUp />
             </Box>
           </DialogContent>
         </>

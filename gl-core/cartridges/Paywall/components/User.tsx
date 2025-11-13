@@ -1,15 +1,17 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/Paywall/components/User.tsx
 'use client';
 import * as React from 'react';
-import { Box, Typography, Chip, List, ListItem } from '@mui/material';
-import { useUser } from '../../Paywall';
-import { Icon } from '../../../../gl-core';
+import { Chip, List, ListItem } from '@mui/material';
+import { useUser, userSignout, setPaywallKey } from '../../Paywall';
+import { Icon, useDispatch } from '../../../../gl-core';
 
 export default function User() {
   const user = useUser();
+  const dispatch = useDispatch();
 
   const handleSignout = () => {
-    return false;
+    dispatch(userSignout());
+    dispatch(setPaywallKey('dialogOpen', false));
   };
 
   const handleEmail = () => {

@@ -18,6 +18,7 @@ import {
   Mapbox,
   PrevNext,
   GitHub,
+  ChildPages,
 } from '../../../gl-core';
 import { Flash } from '../../cartridges/Flash';
 
@@ -130,6 +131,10 @@ export default function RenderMarkdown({
     // GitHub
     const github = parseShortcode(/\[GitHub\s+(.*?)\]/, GitHub);
     if (github) return github;
+
+    // ChildPages
+    const childPages = parseShortcode(/\[ChildPages\s+(.*?)\]/, ChildPages);
+    if (childPages) return childPages;
 
     // fallback: just return text
     return text;

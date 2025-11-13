@@ -6,9 +6,12 @@ import {
   Box,
   Card,
   CardActionArea,
+  CardMedia,
   CardHeader,
+  CardContent,
   Alert,
   Typography,
+  Grid,
 } from '@mui/material';
 import { useGlobalNav, Icon } from '../../../../gl-core';
 
@@ -68,20 +71,31 @@ export default function PageAd({ slug = '/' }: { slug: string }) {
   return (
     <Card variant="outlined">
       <CardActionArea onClick={handleClick}>
-        <CardHeader
-          sx={{
-            alignItems: 'flex-start',
-          }}
-          avatar={
-            <Box sx={{ mt: 0.5 }}>
-              <Icon icon={item.icon as any} color="primary" />
-            </Box>
-          }
-          title={<Typography variant="h6">{item.title}</Typography>}
-          subheader={
-            <Typography variant="body2">{`${subheader} ...`}</Typography>
-          }
-        />
+        <Grid container spacing={1}>
+          <Grid size={{ xs: 12 }}>
+            <CardHeader
+              sx={{
+                alignItems: 'flex-start',
+              }}
+              avatar={
+                <Box sx={{ mt: 0.5 }}>
+                  <Icon icon={item.icon as any} color="primary" />
+                </Box>
+              }
+              title={<Typography variant="h6">{item.title}</Typography>}
+            />
+          </Grid>
+          <Grid size={{ xs: 12, sm: 4 }}>
+            <CardContent>
+              <CardMedia src={item.image} height={150} component={'img'} />
+            </CardContent>
+          </Grid>
+          <Grid size={{ xs: 12, sm: 8 }}>
+            <CardContent>
+              <Typography variant="body2">{`${subheader} ...`}</Typography>
+            </CardContent>
+          </Grid>
+        </Grid>
       </CardActionArea>
     </Card>
   );

@@ -30,6 +30,7 @@ import {
   Mapbox,
   PrevNext,
   GitHub,
+  ChildPages,
 } from './cartridges/Shortcodes';
 import {
   useLoading,
@@ -106,6 +107,7 @@ export {
   FieldUpload,
   ArrowMenu,
   Children,
+  ChildPages,
   PageAd,
   Mapbox,
   GitHub,

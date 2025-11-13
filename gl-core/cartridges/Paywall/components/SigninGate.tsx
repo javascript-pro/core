@@ -3,12 +3,13 @@
 import * as React from 'react';
 import { Box, Alert, AlertTitle } from '@mui/material';
 import { useDispatch, Icon } from '../../../../gl-core';
-import { useUser, setPaywallKey, Register, Signin } from '../../Paywall';
+import { useUser, setPaywallKey, usePaywall, SignInUp } from '../../Paywall';
 
 export default function SigninGate() {
   const dispatch = useDispatch();
   const user = useUser();
-
+  const paywall = usePaywall();
+  // console.log("paywall", paywall)
   React.useEffect(() => {
     if (user) {
       dispatch(setPaywallKey('dialogOpen', false));
@@ -19,24 +20,9 @@ export default function SigninGate() {
     <Box sx={{ mt: 3 }}>
       {!user ? (
         <>
-          <Alert
-            icon={<Icon icon="paywall" />}
-            severity="success"
-            sx={{ mb: 2 }}
-          >
-            Please sign in
-          </Alert>
-          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, my: 2 }}>
-            <Signin />
-          </Box>
+          <SignInUp />
         </>
-      ) : (
-        <Alert severity="success">
-          <AlertTitle>
-            Signed in as {user.email} UID: <code>{user.uid}</code>
-          </AlertTitle>
-        </Alert>
-      )}
+      ) : null}
 
       {/* Debug info (optional, remove in production) */}
       {/* <pre style={{ fontSize: '10px' }}>
