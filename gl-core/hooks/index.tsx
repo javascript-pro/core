@@ -5,6 +5,7 @@ import { useFeedback } from './useFeedback';
 import { useLoading } from './useLoading';
 import { useSiblings } from './useSiblings';
 import { useGlobalNav } from './useGlobalNav';
+import { useContent } from './useContent';
 
 export {
   useGlobalNav,
@@ -14,4 +15,5 @@ export {
   useIsMobile,
   useVersion,
   useFeedback,
+  useContent,
 };

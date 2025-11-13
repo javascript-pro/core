@@ -41,6 +41,7 @@ import {
   useFeedback,
   useSiblings,
   useGlobalNav,
+  useContent,
 } from './hooks';
 import {
   Uberedux,
@@ -129,5 +130,6 @@ export {
   useThemeMode,
   useSiblings,
   useGlobalNav,
+  useContent,
 };
 export { normalizeError };

@@ -142,27 +142,20 @@ export default function Core({ frontmatter, body = null }: TCore) {
         <Container id="core">
           <Box sx={{ minHeight: '100vh' }}>
             <Grid container spacing={isMobile ? 0 : 1}>
-              {!isMobile && (
-                <Grid size={{ md: 3 }}>
-                  <Box sx={{}}>
+              
+                <Grid size={{ xs: 1, md: 3 }}>
+                  <Box sx={{overflow: 'hidden', ml: isMobile ? -3 : 0}}>
                     {Array.isArray(siblings) && siblings.length > 0 ? (
-                      <>
-                        <Siblings />
-                      </>
+                      <Siblings />
                     ) : (
-                      <>
-                        <SideAds />
-                      </>
+                      <SideAds />
                     )}
                   </Box>
                 </Grid>
-              )}
 
-              <Grid size={{ xs: 12, md: 9 }}>
+              <Grid size={{ xs: 11, md: 9 }}>
                 <Box sx={{ display: 'flex' }}>
-                  <Box sx={{ ml: -1, mr: 2 }}>
-                    <SharePopup />
-                  </Box>
+                  
 
                   <Typography
                     variant="h1"
@@ -176,7 +169,10 @@ export default function Core({ frontmatter, body = null }: TCore) {
                   </Typography>
                 </Box>
 
-                <Box>
+                <Box sx={{ display: 'flex' }}>
+                  <Box sx={{ ml: -1, mt: -1, mr: 1 }}>
+                    <SharePopup />
+                  </Box>
                   <Typography
                     variant="h2"
                     gutterBottom
@@ -190,7 +186,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                 {title !== 'Home' && (
                   <>
                     <Box sx={{ display: 'flex' }}>
-                      <Box sx={{ flexGrow: 1, mt: 1 }}>
+                      <Box sx={{ flexGrow: 1}}>
                         {pathname !== '/' && <PageBreadcrumb />}
                       </Box>
                     </Box>

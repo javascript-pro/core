@@ -1055,7 +1055,7 @@
           }
         ],
         "icon": "work",
-        "image": "/png/n64/weizang.png",
+        "image": "https://live.staticflickr.com/65535/53670939824_27773d5157_b.jpg",
         "tags": [
           "Professional",
           "JavaScript",
@@ -1070,11 +1070,11 @@
           "NextJS",
           "Headless CMS"
         ],
-        "excerpt": "[PageAd slug=\"/work/experience\"]\n\n The apps we ship are real. They run in production and are developed accessibly.\n\nThe Core is Open Source and Free forever — giving you statically generated sites wit"
+        "excerpt": "The apps we ship are real. They run in production and are developed accessibly.\n\nThe Core is Open Source and Free forever — giving you statically generated sites with Firestorepowered updates and a re"
       },
       {
         "title": "Life",
-        "description": "Well, we've all got to have one",
+        "description": "Generation X at 50",
         "slug": "/life",
         "order": 50,
         "type": "folder",
@@ -1215,8 +1215,8 @@
           }
         ],
         "icon": "life",
-        "image": "/png/n64/weizang.png",
-        "excerpt": "[PageAd slug=\"/life/motorbikes\"]\n\n ⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a 1991 novel written by Canadian author Douglas Coupland\n\nI work remotely. I cook, eat, ride"
+        "image": "https://live.staticflickr.com/65535/53670802348_9bb887b680_b.jpg",
+        "excerpt": "⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a 1991 novel written by Canadian author Douglas Coupland\n\n[PageGrid pages=\"/life/aquaponics, /life/diving, /life/food, /life/mo"
       },
       {
         "title": "Balance",
@@ -1523,8 +1523,8 @@
           }
         ],
         "icon": "balance",
-        "image": "/png/n64/blank.png",
-        "excerpt": "⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a 1991 novel written by Canadian author Douglas Coupland\n\nIf you were the kind of kid who liked Lego then we probably have a lo"
+        "image": "https://live.staticflickr.com/65535/53670939819_74bfceabd6_b.jpg",
+        "excerpt": "If you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are"
       }
     ],
     "icon": "home",

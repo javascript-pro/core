@@ -67,7 +67,7 @@
     "title": "Balance",
     "description": "It's hard to collate stuff into readable writing, but we're doing our best",
     "tags": [],
-    "content": "\n> ⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a 1991 novel written by Canadian author Douglas Coupland\n\nIf you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are [Generation X](/balance/books/douglas-coupland/generation-x)\n\n[PageAd slug=\"/balance/writing/der-kleine-zeppelin\"]\n\n[PageAd slug=\"/balance/writing/not-here-to-fuck-spiders\"]\n"
+    "content": "\nIf you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are [Generation X](/balance/books/douglas-coupland/generation-x)\n"
   },
   {
     "slug": "balance/video/index",
@@ -282,9 +282,9 @@
   {
     "slug": "life/index",
     "title": "Life",
-    "description": "Well, we've all got to have one",
+    "description": "Generation X at 50",
     "tags": [],
-    "content": "\n[PageAd slug=\"/life/motorbikes\"]\n\n> ⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a 1991 novel written by Canadian author Douglas Coupland\n\nI work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age I'm never going to ski like I used to. Maybe it's time to take up sailing? I am [Generation X](/balance/writers/generation-x)\n"
+    "content": "\n⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a 1991 novel written by Canadian author Douglas Coupland\n\n[PageGrid pages=\"/life/aquaponics, /life/diving, /life/food, /life/motorbikes\"]\n\nI work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age maybe it's time to take up sailing. We are [Generation X](/balance/writers/generation-x)\n"
   },
   {
     "slug": "life/motorbikes/index",
@@ -788,6 +788,6 @@
     "title": "Work",
     "description": "Fullstack JavaScript Development",
     "tags": "Professional, JavaScript, Vanilla JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS",
-    "content": "\n[PageAd slug=\"/work/experience\"]\n\n> The apps we ship are real. They run in production and are developed accessibly.\n\nThe Core is Open Source and Free forever — giving you statically generated sites with Firestore-powered updates and a real admin panel. Built with Next.js App Router and Material UI\n\nGoldlabel builds and ships modern web apps for clients who need real results — fast\n\n- _Small_ team. _Big_ output\n- Real deployments from Day One\n- Readable, extensible, Open Source\n\n[PageAd slug=\"/work/expertise\"]\n"
+    "content": "\n> The apps we ship are real. They run in production and are developed accessibly.\n\nThe Core is Open Source and Free forever — giving you statically generated sites with Firestore-powered updates and a real admin panel. Built with Next.js App Router and Material UI\n\nGoldlabel builds and ships modern web apps for clients who need real results — fast\n\n- _Small_ team. _Big_ output\n- Real deployments from Day One\n- Readable, extensible, Open Source\n"
   }
 ]
