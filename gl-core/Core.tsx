@@ -164,40 +164,38 @@ export default function Core({ frontmatter, body = null }: TCore) {
                     <SharePopup />
                   </Box>
 
-                  {title !== 'Home' && (
-                    <>
-                      <Typography
-                        variant="h1"
-                        gutterBottom
-                        color="primary"
-                        sx={{
-                          fontSize: { xs: '1.7rem', md: '2.2rem' },
-                        }}
-                      >
-                        {title}
-                      </Typography>
-                    </>
-                  )}
+                  <Typography
+                    variant="h1"
+                    gutterBottom
+                    color="primary"
+                    sx={{
+                      fontSize: { xs: '1.7rem', md: '2.2rem' },
+                    }}
+                  >
+                    {title}
+                  </Typography>
+                </Box>
+
+                <Box>
+                  <Typography
+                    variant="h2"
+                    gutterBottom
+                    sx={{
+                      fontSize: { xs: '1.1rem', md: '1.25rem' },
+                    }}
+                  >
+                    {description}
+                  </Typography>
                 </Box>
                 {title !== 'Home' && (
-                  <Box>
-                    <Typography
-                      variant="h2"
-                      gutterBottom
-                      sx={{
-                        fontSize: { xs: '1.1rem', md: '1.25rem' },
-                      }}
-                    >
-                      {description}
-                    </Typography>
-                  </Box>
+                  <>
+                    <Box sx={{ display: 'flex' }}>
+                      <Box sx={{ flexGrow: 1, mt: 1 }}>
+                        {pathname !== '/' && <PageBreadcrumb />}
+                      </Box>
+                    </Box>
+                  </>
                 )}
-
-                <Box sx={{ display: 'flex' }}>
-                  <Box sx={{ flexGrow: 1, mt: 1 }}>
-                    {pathname !== '/' && <PageBreadcrumb />}
-                  </Box>
-                </Box>
 
                 {/* 🔒 Content area */}
                 <Box sx={{ mt: isMobile ? 2 : 4, mb: isMobile ? 3 : '175px' }}>

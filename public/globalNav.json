@@ -1523,8 +1523,8 @@
           }
         ],
         "icon": "balance",
-        "image": "/png/n64/test.png",
-        "excerpt": "If you were the kind of kid who liked Lego then we probably have a lot more in common than just that.\n\n[PageAd slug=\"/balance/writing/derkleinezeppelin\"]\n\n[PageAd slug=\"/balance/writing/notheretofucks"
+        "image": "/png/n64/blank.png",
+        "excerpt": "⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a 1991 novel written by Canadian author Douglas Coupland\n\nIf you were the kind of kid who liked Lego then we probably have a lo"
       }
     ],
     "icon": "home",
@@ -1558,6 +1558,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[PageAd slug=\"/work\"]\n\n[PageAd slug=\"/life\"]\n\n[PageAd slug=\"/balance\"]"
+    "excerpt": "[PageGrid pages=\"/work, /life, /balance\"]"
   }
 ]

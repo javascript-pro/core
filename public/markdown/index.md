@@ -9,8 +9,4 @@ tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Pr
 noImage: true
 ---
 
-[PageAd slug="/work"]
-
-[PageAd slug="/life"]
-
-[PageAd slug="/balance"]
+[PageGrid pages="/work, /life, /balance"]

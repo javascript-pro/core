@@ -67,7 +67,7 @@
     "title": "Balance",
     "description": "It's hard to collate stuff into readable writing, but we're doing our best",
     "tags": [],
-    "content": "\n> If you were the kind of kid who liked Lego then we probably have a lot more in common than just that.\n\n[PageAd slug=\"/balance/writing/der-kleine-zeppelin\"]\n\n[PageAd slug=\"/balance/writing/not-here-to-fuck-spiders\"]\n"
+    "content": "\n> ⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a 1991 novel written by Canadian author Douglas Coupland\n\nIf you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are [Generation X](/balance/books/douglas-coupland/generation-x)\n\n[PageAd slug=\"/balance/writing/der-kleine-zeppelin\"]\n\n[PageAd slug=\"/balance/writing/not-here-to-fuck-spiders\"]\n"
   },
   {
     "slug": "balance/video/index",
@@ -200,7 +200,7 @@
     "title": "Home",
     "description": "Work, Life, Balance",
     "tags": "JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS, secure",
-    "content": "\n[PageAd slug=\"/work\"]\n\n[PageAd slug=\"/life\"]\n\n[PageAd slug=\"/balance\"]\n"
+    "content": "\n[PageGrid pages=\"/work, /life, /balance\"]\n"
   },
   {
     "slug": "life/aquaponics/index",
