@@ -1,11 +1,6 @@
 'use client';
 import * as React from 'react';
-import {
-  Dialog,
-  Box,
-  Button,
-  IconButton,
-} from '@mui/material';
+import { Dialog, Box, Button, DialogActions, DialogTitle, DialogContent, Typography } from '@mui/material';
 import { useDispatch, Icon, useIsMobile } from '../../../../gl-core';
 import {
   usePaywall,
@@ -13,6 +8,7 @@ import {
   setPaywallKey,
   SignInUp,
   User,
+  userSignout,
 } from '../../Paywall';
 
 export default function DialogPaywall() {
@@ -22,48 +18,88 @@ export default function DialogPaywall() {
   const user = useUser();
   const isMobile = useIsMobile();
 
+  const [confirmOpen, setConfirmOpen] = React.useState(false);
+
   const handleClose = () => {
     dispatch(setPaywallKey('dialogOpen', false));
   };
 
+  const handleSignout = () => {
+    dispatch(userSignout());
+    dispatch(setPaywallKey('dialogOpen', false));
+  };
+
   return (
-    <Dialog
-      open={Boolean(dialogOpen)}
-      onClose={handleClose}
-      fullScreen={isMobile}
-      maxWidth="xs"
-      fullWidth
-    >
-        {/* <CardHeader
-          action={
+    <>
+      {/* MAIN DIALOG */}
+      <Dialog
+        open={Boolean(dialogOpen)}
+        onClose={handleClose}
+        fullScreen={isMobile}
+        maxWidth={user ? "lg" : "sm"}
+        fullWidth
+      >
+        <User />
+
+        {!user ? (
+          <>
+            {user ? <User /> : null}
+            <SignInUp />
+          </>
+        ) : null}
+
+        <DialogActions>
+          <Box sx={{ flexGrow: 1 }} />
+
+          {user && (
             <>
-              <IconButton color="primary" onClick={handleClose}>
-                <Icon icon="close" />
-              </IconButton>
+              <Button
+                sx={{ m: 1, mt: 3 }}
+                variant="outlined"
+                onClick={() => setConfirmOpen(true)}
+                endIcon={<Icon icon="signout" />}
+              >
+                Sign Out
+              </Button>
+
+              <Button
+                sx={{ m: 1, mt: 3 }}
+                variant="contained"
+                onClick={handleClose}
+                endIcon={<Icon icon="tick" />}
+              >
+                Close
+              </Button>
             </>
-          }
-        /> */}
-      <User />
+          )}
+        </DialogActions>
+      </Dialog>
 
-      {!user ? (
-        <>
-          {user ? <User /> : null}
-          <SignInUp />
-        </>
-      ) : null}
+      {/* CONFIRM SIGNOUT DIALOG */}
+      <Dialog
+        open={confirmOpen}
+        onClose={() => setConfirmOpen(false)}
+        maxWidth="xs"
+        fullWidth
+      >
+        <DialogTitle>Confirm Sign Out</DialogTitle>
+        <DialogContent>
+          <Typography>Are you sure you want to sign out?</Typography>
+        </DialogContent>
 
-        {user && (
+        <DialogActions>
+          <Button onClick={() => setConfirmOpen(false)}>Cancel</Button>
+
           <Button
-            sx={{m:1, mt: 3}}
-            
             variant="contained"
-            onClick={handleClose}
-            endIcon={<Icon icon="tick" />}
+            color="error"
+            endIcon={<Icon icon="signout" />}
+            onClick={handleSignout}
           >
-            OK
+            Sign Out
           </Button>
-        )}
-        <Box sx={{ flexGrow: 1 }} />
-    </Dialog>
+        </DialogActions>
+      </Dialog>
+    </>
   );
 }

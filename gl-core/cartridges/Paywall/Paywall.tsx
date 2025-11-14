@@ -2,7 +2,7 @@
 'use client';
 
 import * as React from 'react';
-import { IconButton, Button } from '@mui/material';
+import { Button } from '@mui/material';
 import { Icon, useDispatch } from '../../../gl-core';
 import { auth } from '../../lib/firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
@@ -30,7 +30,7 @@ export default function Paywall() {
     <>
       <DialogPaywall />
       <Button
-        variant="outlined"
+        variant={user ? "outlined" : "contained"}
         endIcon={<Icon icon="paywall" />}
         onClick={handleClick}
         sx={{
@@ -40,7 +40,7 @@ export default function Paywall() {
           right: 8,
         }}
       >
-        {!user ? <>Sign in</> : <>{user?.email}</>}
+        {!user ? <>Sign up or in</> : <>{user?.email}</>}
       </Button>
     </>
   );

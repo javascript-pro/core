@@ -85,8 +85,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
             py: 0.5,
           }}
         >
-          
-
           <Box sx={{}}>
             <Paywall />
           </Box>

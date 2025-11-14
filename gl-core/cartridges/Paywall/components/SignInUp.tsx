@@ -1,14 +1,14 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Paywall/components/SignInUp.tsx
 'use client';
 import * as React from 'react';
 import {
+  Box,
   CardHeader,
-  Card,
   CardContent,
-  Button,
-  TextField,
   CardActions,
-  Container,
+  TextField,
+  Button,
+  Grid,
+  Typography,
 } from '@mui/material';
 import {
   onAuthStateChanged,
@@ -18,116 +18,174 @@ import {
 } from 'firebase/auth';
 import { auth } from '../../../lib/firebase';
 import { useDispatch, Icon } from '../../../../gl-core';
-import { usePaywall, setPaywallKey } from '../../Paywall';
 
 export default function SignInUp() {
   const [user, setUser] = React.useState<User | null>(null);
-  const [email, setEmail] = React.useState('');
-  const [password, setPassword] = React.useState('');
-  const [errors, setErrors] = React.useState<{
-    email?: string;
-    password?: string;
-  }>({});
   const dispatch = useDispatch();
 
-  const paywall = usePaywall();
-  const { mode = 'signin' } = paywall; // default to signin
+  // Sign-in fields
+  const [siEmail, setSiEmail] = React.useState('');
+  const [siPassword, setSiPassword] = React.useState('');
+  const [siErrors, setSiErrors] = React.useState<{ email?: string; password?: string }>({});
 
-  React.useEffect(() => {
-    return onAuthStateChanged(auth, (u) => setUser(u));
-  }, []);
+  // Sign-up fields
+  const [suEmail, setSuEmail] = React.useState('');
+  const [suPassword, setSuPassword] = React.useState('');
+  const [suConfirm, setSuConfirm] = React.useState('');
+  const [suErrors, setSuErrors] = React.useState<{
+    email?: string;
+    password?: string;
+    confirm?: string;
+  }>({});
 
-  const validateForm = () => {
-    const newErrors: { email?: string; password?: string } = {};
-    if (!email.trim()) newErrors.email = 'Email is required';
-    if (!password.trim()) newErrors.password = 'Password is required';
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
+  React.useEffect(() => onAuthStateChanged(auth, (u) => setUser(u)), []);
+  if (user) return null;
+
+  // Validation
+  const validateSignin = () => {
+    const e: any = {};
+    if (!siEmail.trim()) e.email = 'Please enter your email';
+    if (!siPassword.trim()) e.password = 'Please enter your password';
+    setSiErrors(e);
+    return Object.keys(e).length === 0;
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const validateSignup = () => {
+    const e: any = {};
+    if (!suEmail.trim()) e.email = 'Email required';
+    if (!suPassword.trim()) e.password = 'Password required';
+    if (!suConfirm.trim()) e.confirm = 'Please confirm your password';
+    if (suPassword && suConfirm && suPassword !== suConfirm) {
+      e.confirm = 'Passwords do not match';
+    }
+    setSuErrors(e);
+    return Object.keys(e).length === 0;
+  };
+
+  // Handlers
+  const handleSignin = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!validateForm()) return;
+    if (!validateSignin()) return;
     try {
-      if (mode === 'signin') {
-        await signInWithEmailAndPassword(auth, email, password);
-      } else {
-        await createUserWithEmailAndPassword(auth, email, password);
-      }
+      await signInWithEmailAndPassword(auth, siEmail, siPassword);
     } catch (err) {
       alert((err as Error).message);
     }
   };
 
-  const toggleMode = (newMode: 'signin' | 'signup') => {
-    dispatch(setPaywallKey('mode', newMode));
-    setErrors({});
-    setEmail('');
-    setPassword('');
+  const handleSignup = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!validateSignup()) return;
+    try {
+      await createUserWithEmailAndPassword(auth, suEmail, suPassword);
+    } catch (err) {
+      alert((err as Error).message);
+    }
   };
 
-  if (user) return null;
-
   return (
-    <>
-      <Card>
-        <CardHeader title={mode === 'signin' ? 'Sign in' : 'Sign up'} />
-        <form onSubmit={handleSubmit} noValidate>
-          <CardContent>
-            <TextField
-              autoFocus
-              fullWidth
-              variant="filled"
-              label="Email"
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              error={Boolean(errors.email)}
-              helperText={errors.email}
-              sx={{ my: 2 }}
-            />
-            <TextField
-              fullWidth
-              variant="filled"
-              label="Password"
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              error={Boolean(errors.password)}
-              helperText={errors.password}
-              sx={{ my: 2 }}
-            />
-          </CardContent>
-          <CardActions>
-            {mode === 'signin' ? (
-              <>
-                <Button
-                  onClick={() => toggleMode('signup')}
-                  startIcon={<Icon icon="tick" />}
-                  variant="outlined"
-                >
-                  Sign up
-                </Button>
-              </>
-            ) : (
-              <Button
-                onClick={() => toggleMode('signin')}
-                startIcon={<Icon icon="left" />}
-                variant="outlined"
-              >
-                Sign in
+    <Box sx={{ mt: 2 }}>
+      <Grid container spacing={3}>
+        {/* SIGN IN */}
+        <Grid size={{ xs: 12, md: 6 }}>
+          <CardHeader title="Sign in" />
+
+          <form onSubmit={handleSignin} noValidate>
+            <CardContent>
+              <Typography variant="body2" sx={{ mb: 2 }}>
+                Access your existing account.  
+                If you're new, use the form on the right to create one.
+              </Typography>
+
+              <TextField
+                fullWidth
+                variant="filled"
+                label="Email"
+                type="email"
+                value={siEmail}
+                onChange={(e) => setSiEmail(e.target.value)}
+                error={Boolean(siErrors.email)}
+                helperText={siErrors.email}
+                sx={{ mb: 2 }}
+              />
+
+              <TextField
+                fullWidth
+                variant="filled"
+                label="Password"
+                type="password"
+                value={siPassword}
+                onChange={(e) => setSiPassword(e.target.value)}
+                error={Boolean(siErrors.password)}
+                helperText={siErrors.password}
+                sx={{ mb: 2 }}
+              />
+            </CardContent>
+
+            <CardActions sx={{ justifyContent: 'flex-end' }}>
+              <Button type="submit" variant="contained" endIcon={<Icon icon="signin" />}>
+                Sign In
               </Button>
-            )}
-            <Button
-              type="submit"
-              endIcon={<Icon icon={mode === 'signin' ? 'signin' : 'right'} />}
-              variant="contained"
-            >
-              {mode === 'signin' ? 'Sign in' : 'Sign up'}
-            </Button>
-          </CardActions>
-        </form>
-      </Card>
-    </>
+            </CardActions>
+          </form>
+        </Grid>
+
+        {/* SIGN UP */}
+        <Grid size={{ xs: 12, md: 6 }}>
+          <CardHeader title="Create an account" />
+
+          <form onSubmit={handleSignup} noValidate>
+            <CardContent>
+              <Typography variant="body2" sx={{ mb: 2 }}>
+                Create a new account.  
+                Password should be at least 6 characters.
+              </Typography>
+
+              <TextField
+                fullWidth
+                variant="filled"
+                label="Email"
+                type="email"
+                value={suEmail}
+                onChange={(e) => setSuEmail(e.target.value)}
+                error={Boolean(suErrors.email)}
+                helperText={suErrors.email}
+                sx={{ mb: 2 }}
+              />
+
+              <TextField
+                fullWidth
+                variant="filled"
+                label="Password"
+                type="password"
+                value={suPassword}
+                onChange={(e) => setSuPassword(e.target.value)}
+                error={Boolean(suErrors.password)}
+                helperText={suErrors.password}
+                sx={{ mb: 2 }}
+              />
+
+              <TextField
+                fullWidth
+                variant="filled"
+                label="Confirm password"
+                type="password"
+                value={suConfirm}
+                onChange={(e) => setSuConfirm(e.target.value)}
+                error={Boolean(suErrors.confirm)}
+                helperText={suErrors.confirm}
+                sx={{ mb: 2 }}
+              />
+            </CardContent>
+
+            <CardActions sx={{ justifyContent: 'flex-end' }}>
+              <Button type="submit" variant="contained" endIcon={<Icon icon="right" />}>
+                Sign Up
+              </Button>
+            </CardActions>
+          </form>
+        </Grid>
+      </Grid>
+    </Box>
   );
 }
