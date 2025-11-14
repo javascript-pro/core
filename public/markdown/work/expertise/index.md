@@ -1,7 +1,7 @@
 ---
 order: 25
 title: Expertise
-description: We can help understanding in these fields
+description: We help understand
 slug: /work/expertise
 icon: expertise
 image: /png/3rdParty/next_og.png

@@ -1,7 +1,7 @@
 ---
 order: 10
 title: Work
-description: Fullstack JavaScript Development
+description: Fullstack JavaScript
 slug: /work
 icon: work
 image: https://live.staticflickr.com/65535/53670939824_27773d5157_b.jpg

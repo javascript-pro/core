@@ -165,7 +165,7 @@
     "title": "Home",
     "description": "Work, Life, Balance",
     "tags": "JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS, secure",
-    "content": "\n[PageGrid pages=\"/work, /life, /balance\"]\n"
+    "content": "\n[PageGrid pages=\"/work, /life, /balance\"]\n\n[PageGrid pages=\"/work/experience, /work/expertise, /work/goldlabel, /work/company\"]\n\n> The apps we ship are real. They run in production and are developed accessibly.\n"
   },
   {
     "slug": "life/aquaponics/index",
@@ -308,11 +308,18 @@
     "content": "\nWe take on a limited number of new projects each month. If you need something done we’d love to hear about it. Find out if we're a [good fit](/work/cv). We're always looking for collaborators, contributors, and good ideas.\n\nThe apps we ship are real. They run in production and are developed accessibly. The Core is Open Source and Free forever — giving you statically generated sites with Firestore-powered updates and a real admin panel. Built with Next.js App Router and Material UI\n\nGoldlabel builds and ships modern web apps for clients who need real results — fast\n\n- _Small_ team. _Big_ output\n- Real deployments from Day One\n- Readable, extensible, Open Source\n\nGoldlabel Apps is a UK-based software company that designs, builds, and maintains full-stack web applications. We specialize in Next.js, Firebase, and custom UI development, delivering everything from internal admin tools to polished public-facing websites.\n\n#### Working with Goldlabel\n\n- Ship early and often.  \n  Each app is live from the outset — not just a mockup or prototyle\n\n- Share the process.  \n  Follow the development on GitHub, view the commit history, clone the code. Get involved with Issues\n\n- Built for reuse.  \n  Every component, pattern, and API is designed to be portable and production-ready\n"
   },
   {
+    "slug": "work/experience/huawei",
+    "title": "Huawei",
+    "description": "Shenzhen, China",
+    "tags": "expertise, interview, huawei, china",
+    "content": "\n> Feb 2016 to May 2016\n\nBy 2015–2016, React had evolved beyond an experiment — Facebook, Instagram, and Airbnb were using it at scale, and the open-source ecosystem around it (Redux, React Router, Create React App) was maturing rapidly\n\n- Built an isomorphic JavaScript project management app using React and Node.js\n- Worked within a small, agile development team\n- Contributed to localisation efforts for Chinese-language users\n- Gained hands-on experience in a Chinese corporate environment\n"
+  },
+  {
     "slug": "work/experience/index",
     "title": "Experience",
-    "description": "The tech we've used",
+    "description": "Clients",
     "tags": "expertise, interview, experience",
-    "content": "\n> Contract JavaScript Developer — Huawei Shenzhen, China — Feb 2016 to May 2016\n\nBy 2015–2016, React had evolved beyond an experiment — Facebook, Instagram, and Airbnb were using it at scale, and the open-source ecosystem around it (Redux, React Router, Create React App) was maturing rapidly.\n\n- Built an isomorphic JavaScript project management app using React and Node.js\n- Worked within a small, agile development team\n- Contributed to localisation efforts for Chinese-language users\n- Gained hands-on experience in a Chinese corporate environment\n"
+    "content": "\n[PageGrid pages=\"/work/experience/huawei, /work/experience/boral, /work/experience/aligent\"]\n"
   },
   {
     "slug": "work/expertise/ai/abgeschottet-ki/confidentiality-obligations",
@@ -513,7 +520,7 @@
   {
     "slug": "work/expertise/index",
     "title": "Expertise",
-    "description": "We can help understanding in these fields",
+    "description": "We help understand",
     "tags": "expertise, fields, work",
     "content": "\n> We work across the full stack, from interface to infrastructure, with a focus on robust, modern JavaScript tooling and scalable cloud-native delivery.\n\nWhether building responsive UIs, designing serverless APIs, or optimising DevOps pipelines, we bring production experience and architectural clarity to every layer of the process.\n\n#### Core Specialisms\n\n- JavaScript & TypeScript  \n  Advanced use of ES6+, with deep expertise in modern frontend and full-stack tooling including React, Node.js, and Next.js (App Router).\n\n- Frameworks & Libraries  \n  Production-level experience with React, Vue, React Native, Redux, Zustand, Express, and legacy codebases (e.g. jQuery, Laminas, Bootstrap).\n\n- Styling Systems  \n  Skilled in scalable design systems using Material UI, Tailwind CSS, Styled Components, and direct CSS. Fluent in Figma-based design workflows.\n\n- API Development  \n  REST, GraphQL, and TRPC. Experience building and consuming APIs with robust auth, validation, and observability.\n\n### Backend & DevOps\n\n- PHP Stack  \n  Longstanding experience with WordPress, Drupal, Magento; Composer-based dependency management; strong grasp of MVC principles.\n\n- Databases  \n  Firestore, MongoDB, DynamoDB, Supabase, MySQL, PostgreSQL. Schema design, indexing, and real-time data flows.\n\n- Cloud & Infrastructure  \n  AWS (Lambda, API Gateway, DynamoDB, S3, CloudFormation), Serverless architectures, Docker, ECS, Terraform, CloudWatch.\n\n- CI/CD & Workflow  \n  GitHub Actions, Netlify Deploy, Vercel pipelines, GitFlow, Agile/SCRUM practices, mono repo tooling (Turborepo).\n\n### Quality & Observability\n\n- Testing & QA  \n  Jest, React Testing Library, Cucumber (BDD), Gherkin. Strong emphasis on automated tests and clean PR reviews.\n\n- Secure & Maintainable Code  \n  OWASP-aligned development practices, modular architecture, and documentation. Observability via modern tooling.\n\n### Additional Capabilities\n\n- CMS & Content  \n  Headless CMS (Strapi, Contentful), WordPress, Drupal. Custom theming, structured content modeling, and integration.\n\n- Rendering Techniques  \n  Progressive Web Apps (PWA), Static Site Generation (SSG), Server-Side Rendering (SSR).\n\n- Other  \n  Raspberry Pi & Python projects, data visualisation (Chart.js, D3.js, Recharts), secure programming practices.\n\nWe don’t just build products—we build platforms that scale.  \nLet’s work together to design something durable.\n"
   },
@@ -751,7 +758,7 @@
   {
     "slug": "work/index",
     "title": "Work",
-    "description": "Fullstack JavaScript Development",
+    "description": "Fullstack JavaScript",
     "tags": "Professional, JavaScript, Vanilla JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS",
     "content": "\n[PageGrid pages=\"/work/experience, /work/expertise, /work/goldlabel, /work/company\"]\n\n> The apps we ship are real. They run in production and are developed accessibly.\n\nThe Core is Open Source and Free forever — giving you statically generated sites with Firestore-powered updates and a real admin panel. Built with Next.js App Router and Material UI\n\nGoldlabel builds and ships modern web apps for clients who need real results — fast\n\n- _Small_ team. _Big_ output\n- Real deployments from Day One\n- Readable, extensible, Open Source\n"
   }
