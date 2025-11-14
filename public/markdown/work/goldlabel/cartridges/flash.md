@@ -3,7 +3,7 @@ order: 15
 slug: /work/goldlabel/cartridges/flash
 title: Flash
 description: 'A Pointless reinvention of MacroMedia Flash?'
-icon: flash
+icon: goldlabel
 image: /png/n64/test.png
 noImage: true
 tags: 'Catridges, Flash, SVG, Macromedia'

@@ -1,16 +1,16 @@
 ---
 order: 25
 title: Expertise
-description: We help understand
+description: Techstack
 slug: /work/expertise
 icon: expertise
-image: /png/3rdParty/next_og.png
+image: /png/3rdParty/react.png
 tags: expertise, fields, work
 ---
 
-> We work across the full stack, from interface to infrastructure, with a focus on robust, modern JavaScript tooling and scalable cloud-native delivery.
+> We work across the full stack to help understand all perspectives, from interface to infrastructure
 
-Whether building responsive UIs, designing serverless APIs, or optimising DevOps pipelines, we bring production experience and architectural clarity to every layer of the process.
+We focus on robust, modern JavaScript tooling and scalable cloud-native delivery. Whether building responsive UIs, designing serverless APIs, or optimising DevOps pipelines, we bring production experience and architectural clarity to every layer of the process.
 
 #### Core Specialisms
 

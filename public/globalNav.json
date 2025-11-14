@@ -14,17 +14,17 @@
         "type": "folder",
         "children": [
           {
-            "title": "Experience",
-            "description": "Clients",
-            "slug": "/work/experience",
+            "title": "Cases",
+            "description": "Real World Experience",
+            "slug": "/work/cases",
             "order": 10,
             "type": "folder",
             "children": [
               {
                 "title": "Aligent",
-                "slug": "/work/experience/aligent",
+                "slug": "/work/cases/aligent",
                 "order": 30,
-                "icon": "experience",
+                "icon": "case",
                 "image": "/png/3rdParty/js.png",
                 "type": "file",
                 "tags": [
@@ -38,9 +38,9 @@
               },
               {
                 "title": "Boral",
-                "slug": "/work/experience/boral",
+                "slug": "/work/cases/boral",
                 "order": 30,
-                "icon": "experience",
+                "icon": "case",
                 "image": "https://live.staticflickr.com/65535/54915903856_cbe4780aed_b.jpg",
                 "type": "file",
                 "tags": [
@@ -52,9 +52,9 @@
               },
               {
                 "title": "Huawei",
-                "slug": "/work/experience/huawei",
+                "slug": "/work/cases/huawei",
                 "order": 30,
-                "icon": "experience",
+                "icon": "case",
                 "image": "https://live.staticflickr.com/65535/54922461987_b333b3acd7_b.jpg",
                 "type": "file",
                 "tags": [
@@ -64,81 +64,16 @@
                   "china"
                 ],
                 "excerpt": "Feb 2016 to May 2016\n\nBy 2015–2016, React had evolved beyond an experiment — Facebook, Instagram, and Airbnb were using it at scale, and the opensource ecosystem around it (Redux, React Router, Create"
-              },
-              {
-                "title": "Company",
-                "description": "UK Limited Company (5460545)",
-                "slug": "/work/experience/company",
-                "order": 1020,
-                "type": "folder",
-                "children": [
-                  {
-                    "title": "Working remotely",
-                    "slug": "/work/experience/company/remote-working",
-                    "order": 250,
-                    "icon": "company",
-                    "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
-                    "type": "file",
-                    "tags": [
-                      "remote",
-                      "hybrid"
-                    ],
-                    "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years.\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communication, "
-                  },
-                  {
-                    "title": "Join Us",
-                    "slug": "/work/experience/company/join-us",
-                    "order": 666,
-                    "icon": "team",
-                    "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
-                    "type": "file",
-                    "tags": [
-                      "team"
-                    ],
-                    "excerpt": "[GitHub url=\"https://github.com/goldlabelapps\" label=\"@goldlabelapps\"]\n\nWhether you're a startup with a short deadline or an enterprise with complex workflows, we can help. Get in touch for it's a tru"
-                  },
-                  {
-                    "title": "Work With Us",
-                    "slug": "/work/experience/company/work-with-us",
-                    "order": 777,
-                    "icon": "team",
-                    "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
-                    "type": "file",
-                    "tags": [
-                      "team"
-                    ],
-                    "excerpt": "We take on a limited number of new projects each month. If you need something done we’d love to hear about it. Find out if we're a . We're always looking for collaborators, contributors, and good idea"
-                  },
-                  {
-                    "title": "Privacy & Cookies",
-                    "slug": "/work/experience/company/privacy-cookies",
-                    "order": 5555,
-                    "icon": "admin",
-                    "image": "/png/3rdParty/git_og.png",
-                    "type": "file",
-                    "tags": [
-                      "cookies",
-                      "gdpr",
-                      "privacy",
-                      "terms",
-                      "trust"
-                    ],
-                    "excerpt": "We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers t"
-                  }
-                ],
-                "icon": "company",
-                "image": "https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg",
-                "excerpt": "Tel/WhatsApp   \n | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX"
               }
             ],
-            "icon": "experience",
+            "icon": "case",
             "image": "https://live.staticflickr.com/65535/54922461987_b333b3acd7_b.jpg",
             "tags": [
               "expertise",
               "interview",
               "experience"
             ],
-            "excerpt": "[PageGrid pages=\"/work/experience/huawei, /work/experience/boral, /work/experience/aligent\"]"
+            "excerpt": "[PageGrid pages=\"/work/cases/huawei, /work/cases/boral, /work/cases/aligent\"]"
           },
           {
             "title": "Goldlabel",
@@ -158,7 +93,7 @@
                     "title": "Flash",
                     "slug": "/work/goldlabel/cartridges/flash",
                     "order": 15,
-                    "icon": "flash",
+                    "icon": "goldlabel",
                     "image": "/png/n64/test.png",
                     "type": "file",
                     "tags": [
@@ -173,7 +108,7 @@
                     "title": "Uberedux",
                     "slug": "/work/goldlabel/cartridges/uberedux",
                     "order": 20,
-                    "icon": "uberedux",
+                    "icon": "goldlabel",
                     "image": "/png/n64/test.png",
                     "type": "file",
                     "tags": [
@@ -189,7 +124,7 @@
                     "title": "Flickr",
                     "slug": "/work/goldlabel/cartridges/flickr",
                     "order": 30,
-                    "icon": "flickr",
+                    "icon": "goldlabel",
                     "image": "/png/n64/test.png",
                     "type": "file",
                     "tags": [
@@ -205,7 +140,7 @@
                     "title": "Lingua",
                     "slug": "/work/goldlabel/cartridges/lingua",
                     "order": 100,
-                    "icon": "lingua",
+                    "icon": "goldlabel",
                     "image": "/png/n64/test.png",
                     "type": "file",
                     "excerpt": "The Lingua cartridge brings localisation to Goldlabel. It enables your site to serve content in multiple languages, making it accessible to a wider audience without complicating your codebase.\n\n What "
@@ -214,7 +149,7 @@
                     "title": "Paywall",
                     "slug": "/work/goldlabel/cartridges/paywall",
                     "order": 130,
-                    "icon": "admin",
+                    "icon": "goldlabel",
                     "image": "/jpg/SWAT-Baby.jpg",
                     "type": "file",
                     "tags": [
@@ -229,13 +164,13 @@
                     "title": "New Cartridge",
                     "slug": "/work/goldlabel/cartridges/new-cartridge",
                     "order": 2200,
-                    "icon": "add",
+                    "icon": "goldlabel",
                     "image": "/png/n64/test.png",
                     "type": "file",
                     "excerpt": "Purpose\n\n is a template designed to help developers quickly bootstrap a new Cartridge in a modular application framework such as Goldlabel. Cartridges are featurespecific, plugandplay components that "
                   }
                 ],
-                "icon": "cartridge",
+                "icon": "goldlabel",
                 "image": "/png/n64/test.png",
                 "excerpt": "Goldlabel is built on cartridges.\n\nA cartridge is a selfcontained piece of application logic: React components, state, styles, and utilities bundled together in a portable unit.\n\nBecause each cartridg"
               },
@@ -243,7 +178,7 @@
                 "title": "Open Source",
                 "slug": "/work/goldlabel/about",
                 "order": 10,
-                "icon": "github",
+                "icon": "goldlabel",
                 "image": "/png/3rdParty/github_og.png",
                 "type": "file",
                 "tags": [
@@ -272,7 +207,7 @@
           },
           {
             "title": "Expertise",
-            "description": "We help understand",
+            "description": "Techstack",
             "slug": "/work/expertise",
             "order": 25,
             "type": "folder",
@@ -1060,13 +995,78 @@
               }
             ],
             "icon": "expertise",
-            "image": "/png/3rdParty/next_og.png",
+            "image": "/png/3rdParty/react.png",
             "tags": [
               "expertise",
               "fields",
               "work"
             ],
-            "excerpt": "We work across the full stack, from interface to infrastructure, with a focus on robust, modern JavaScript tooling and scalable cloudnative delivery.\n\nWhether building responsive UIs, designing server"
+            "excerpt": "We work across the full stack to help understand all perspectives, from interface to infrastructure\n\nWe focus on robust, modern JavaScript tooling and scalable cloudnative delivery. Whether building r"
+          },
+          {
+            "title": "Company",
+            "description": "UK Limited Company (5460545)",
+            "slug": "/work/company",
+            "order": 1020,
+            "type": "folder",
+            "children": [
+              {
+                "title": "Working remotely",
+                "slug": "/work/company/remote-working",
+                "order": 250,
+                "icon": "company",
+                "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
+                "type": "file",
+                "tags": [
+                  "remote",
+                  "hybrid"
+                ],
+                "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years.\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communication, "
+              },
+              {
+                "title": "Join Us",
+                "slug": "/work/company/join-us",
+                "order": 666,
+                "icon": "team",
+                "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
+                "type": "file",
+                "tags": [
+                  "team"
+                ],
+                "excerpt": "[GitHub url=\"https://github.com/goldlabelapps\" label=\"@goldlabelapps\"]\n\nWhether you're a startup with a short deadline or an enterprise with complex workflows, we can help. Get in touch for it's a tru"
+              },
+              {
+                "title": "Work With Us",
+                "slug": "/work/company/work-with-us",
+                "order": 777,
+                "icon": "team",
+                "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
+                "type": "file",
+                "tags": [
+                  "team"
+                ],
+                "excerpt": "We take on a limited number of new projects each month. If you need something done we’d love to hear about it. Find out if we're a . We're always looking for collaborators, contributors, and good idea"
+              },
+              {
+                "title": "Privacy & Cookies",
+                "slug": "/work/company/privacy-cookies",
+                "order": 5555,
+                "icon": "admin",
+                "image": "/png/3rdParty/git_og.png",
+                "type": "file",
+                "tags": [
+                  "cookies",
+                  "gdpr",
+                  "privacy",
+                  "terms",
+                  "trust"
+                ],
+                "excerpt": "We don't use cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead developers t"
+              }
+            ],
+            "icon": "company",
+            "image": "https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg",
+            "excerpt": "Tel/WhatsApp   \n | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX"
           }
         ],
         "icon": "work",
@@ -1085,7 +1085,7 @@
           "NextJS",
           "Headless CMS"
         ],
-        "excerpt": "[PageGrid pages=\"/work/experience, /work/expertise, /work/goldlabel, /work/company\"]\n\n The apps we ship are real. They run in production and are developed accessibly.\n\nThe Core is Open Source and Free"
+        "excerpt": "[PageGrid pages=\"/work/cases, /work/expertise, /work/goldlabel\"]\n\n The apps we ship are real. They run in production and are developed accessibly.\n\nThe Core is Open Source and Free forever — giving yo"
       },
       {
         "title": "Life",
@@ -1520,6 +1520,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[PageGrid pages=\"/work, /life, /balance\"]\n\n[PageGrid pages=\"/work/experience, /work/expertise, /work/goldlabel, /work/company\"]\n\n The apps we ship are real. They run in production and are developed ac"
+    "excerpt": "[PageGrid pages=\"/work, /life, /balance\"]\n\n[PageGrid pages=\"/work/cases, /work/expertise, /work/goldlabel\"]\n\n The apps we ship are real. They run in production and are developed accessibly."
   }
 ]

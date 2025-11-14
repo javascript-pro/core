@@ -3,7 +3,7 @@ order: 2200
 slug: /work/goldlabel/cartridges/new-cartridge
 title: New Cartridge
 description: Template for bootstrapping a new cartridge
-icon: add
+icon: goldlabel
 image: /png/n64/test.png
 ---
 

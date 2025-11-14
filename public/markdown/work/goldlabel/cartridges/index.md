@@ -3,7 +3,7 @@ order: 1
 slug: /work/goldlabel/cartridges
 title: Cartridges
 description: Self-contained pieces of application logic
-icon: cartridge
+icon: goldlabel
 image: /png/n64/test.png
 ---
 

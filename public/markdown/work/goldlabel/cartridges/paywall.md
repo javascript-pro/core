@@ -3,7 +3,7 @@ order: 130
 title: Paywall
 description: Auth & Payments Cartridge
 slug: /work/goldlabel/cartridges/paywall
-icon: admin
+icon: goldlabel
 image: /jpg/SWAT-Baby.jpg
 tags: cartridges, cartridge, free, paywall
 paywall: false

@@ -2,8 +2,8 @@
 order: 30
 title: Aligent
 description: Design Systems
-slug: /work/experience/aligent
-icon: experience
+slug: /work/cases/aligent
+icon: case
 image: /png/3rdParty/js.png
 tags: expertise, interview, php, magento, e-commerce
 ---

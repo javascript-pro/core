@@ -3,7 +3,7 @@ order: 100
 slug: /work/goldlabel/cartridges/lingua
 title: Lingua
 description: Localisation
-icon: lingua
+icon: goldlabel
 image: /png/n64/test.png
 github: https://github.com/javascript-pro/core/tree/main/gl-core/cartridges/Lingua
 ---

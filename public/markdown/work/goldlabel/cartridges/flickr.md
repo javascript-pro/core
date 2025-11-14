@@ -3,7 +3,7 @@ title: Flickr
 slug: /work/goldlabel/cartridges/flickr
 description: React component to load and display the latest Flickr photos with clean UI
 order: 30
-icon: flickr
+icon: goldlabel
 tags: flickr, free, api, REST, Next.js
 image: /png/n64/test.png
 ---
