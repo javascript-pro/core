@@ -29,9 +29,6 @@ export default function User() {
 
   return (
     <>
-      <Box sx={{ m: 2 }}>
-        <Typography variant="h6">Account</Typography>
-      </Box>
       <List disablePadding>
         <ListItemButton onClick={handleEmail}>
           <ListItemIcon>
@@ -48,10 +45,8 @@ export default function User() {
           <ListItemIcon>
             <Icon icon="user" />
           </ListItemIcon>
-          <ListItemText secondary={'UID'} primary={user.uid} />
+          <ListItemText primary={'Unique ID'} secondary={user.uid} />
         </ListItemButton>
-
-        
       </List>
     </>
   );

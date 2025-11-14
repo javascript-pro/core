@@ -1,6 +1,16 @@
 'use client';
 import * as React from 'react';
-import { Dialog, Box, Button, DialogActions, DialogTitle, DialogContent, Typography } from '@mui/material';
+import {
+  Dialog,
+  Box,
+  Button,
+  IconButton,
+  DialogActions,
+  DialogTitle,
+  DialogContent,
+  Typography,
+  CardHeader,
+} from '@mui/material';
 import { useDispatch, Icon, useIsMobile } from '../../../../gl-core';
 import {
   usePaywall,
@@ -27,6 +37,7 @@ export default function DialogPaywall() {
   const handleSignout = () => {
     dispatch(userSignout());
     dispatch(setPaywallKey('dialogOpen', false));
+    setConfirmOpen(false);
   };
 
   return (
@@ -36,11 +47,22 @@ export default function DialogPaywall() {
         open={Boolean(dialogOpen)}
         onClose={handleClose}
         fullScreen={isMobile}
-        maxWidth={user ? "lg" : "sm"}
+        maxWidth={user ? 'md' : 'md'}
         fullWidth
       >
-        <User />
+        <CardHeader 
+          title="User"
+          action={<IconButton
+                    sx={{ ml: -3 }}
+                    color="primary"
+                    onClick={() => setConfirmOpen(true)}
+                  >
+                    <Icon icon="signout" />
+                  </IconButton>}
+        
+        />
 
+        <User />
         {!user ? (
           <>
             {user ? <User /> : null}
@@ -49,19 +71,9 @@ export default function DialogPaywall() {
         ) : null}
 
         <DialogActions>
-          <Box sx={{ flexGrow: 1 }} />
-
           {user && (
             <>
-              <Button
-                sx={{ m: 1, mt: 3 }}
-                variant="outlined"
-                onClick={() => setConfirmOpen(true)}
-                endIcon={<Icon icon="signout" />}
-              >
-                Sign Out
-              </Button>
-
+              <Box sx={{flexGrow:1}}/>
               <Button
                 sx={{ m: 1, mt: 3 }}
                 variant="contained"

@@ -30,8 +30,8 @@ export default function Paywall() {
     <>
       <DialogPaywall />
       <Button
-        variant={user ? "outlined" : "contained"}
-        endIcon={<Icon icon="paywall" />}
+        variant={user ? 'outlined' : 'contained'}
+        endIcon={<Icon icon="tick" />}
         onClick={handleClick}
         sx={{
           zIndex: (theme) => theme.zIndex.modal - 3,
@@ -40,7 +40,7 @@ export default function Paywall() {
           right: 8,
         }}
       >
-        {!user ? <>Sign up or in</> : <>{user?.email}</>}
+        {!user ? <>Sign In</> : <>{user?.email}</>}
       </Button>
     </>
   );
