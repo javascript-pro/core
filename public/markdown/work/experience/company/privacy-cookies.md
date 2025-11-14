@@ -6,6 +6,7 @@ slug: /work/company/privacy-cookies
 icon: admin
 image: /png/3rdParty/git_og.png
 tags: cookies, gdpr, privacy, terms, trust
+noImage: true
 ---
 
 > We don't use cookies

@@ -5,6 +5,7 @@ description: UK Limited Company (5460545)
 slug: /work/company
 icon: company
 image: https://live.staticflickr.com/65535/53670939804_ae83006284_b.jpg
+noImage: true
 ---
 
 [goldlabel.apps@gmail.com](mailto:goldlabel.apps@gmail.com)  

@@ -50,16 +50,19 @@ export default function DialogPaywall() {
         maxWidth={user ? 'md' : 'md'}
         fullWidth
       >
-        <CardHeader 
-          title="User"
-          action={<IconButton
-                    sx={{ ml: -3 }}
-                    color="primary"
-                    onClick={() => setConfirmOpen(true)}
-                  >
-                    <Icon icon="signout" />
-                  </IconButton>}
-        
+        <CardHeader
+          // title="User"
+          action={
+            user ? (
+              <IconButton
+                sx={{ ml: -3 }}
+                color="primary"
+                onClick={() => setConfirmOpen(true)}
+              >
+                <Icon icon="signout" />
+              </IconButton>
+            ) : null
+          }
         />
 
         <User />
@@ -73,7 +76,7 @@ export default function DialogPaywall() {
         <DialogActions>
           {user && (
             <>
-              <Box sx={{flexGrow:1}}/>
+              <Box sx={{ flexGrow: 1 }} />
               <Button
                 sx={{ m: 1, mt: 3 }}
                 variant="contained"
@@ -103,6 +106,7 @@ export default function DialogPaywall() {
           <Button onClick={() => setConfirmOpen(false)}>Cancel</Button>
 
           <Button
+            size="large"
             variant="contained"
             color="error"
             endIcon={<Icon icon="signout" />}

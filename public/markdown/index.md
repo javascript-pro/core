@@ -10,3 +10,7 @@ noImage: true
 ---
 
 [PageGrid pages="/work, /life, /balance"]
+
+> The apps we ship are real. They run in production and are developed accessibly.
+
+[PageGrid pages="/work/experience, /work/expertise, /work/goldlabel, /work/company"]

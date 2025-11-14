@@ -1,7 +1,7 @@
 ---
 order: 10
 title: Goldlabel
-description: Fullstack Open Source JavaScript
+description: Free Forever
 slug: /work/goldlabel
 icon: goldlabel
 image: /png/3rdParty/github_og.png
@@ -11,9 +11,9 @@ noImage: true
 
 [PageGrid pages="/work/goldlabel/cartridges, /work/goldlabel/about, /work/goldlabel/cartridges/new-cartridge"]
 
-> The public repository that powers goldlabel.pro is free for anyone to fork, copy, hack, and reuse.
+[GitHub url="https://github.com/javascript-pro/core" label="Open Source GitHub"]
 
-[GitHub url="https://github.com/javascript-pro/core" label="Public GitHub"]
+> Free for anyone to fork, copy, hack, and reuse.
 
 #### What is it?
 

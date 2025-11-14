@@ -6,6 +6,7 @@ slug: /work/company/join-us
 icon: team
 image: https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg
 tags: team
+noImage: true
 ---
 
 [GitHub url="https://github.com/goldlabel-apps" label="@goldlabel-apps"]

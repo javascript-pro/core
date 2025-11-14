@@ -6,6 +6,7 @@ slug: /work/company/work-with-us
 icon: team
 image: https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg
 tags: team
+noImage: true
 ---
 
 We take on a limited number of new projects each month. If you need something done we’d love to hear about it. Find out if we're a [good fit](/work/cv). We're always looking for collaborators, contributors, and good ideas.

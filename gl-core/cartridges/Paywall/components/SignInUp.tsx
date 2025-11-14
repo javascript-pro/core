@@ -26,7 +26,10 @@ export default function SignInUp() {
 
   const [siEmail, setSiEmail] = React.useState('');
   const [siPassword, setSiPassword] = React.useState('');
-  const [siErrors, setSiErrors] = React.useState<{ email?: string; password?: string }>({});
+  const [siErrors, setSiErrors] = React.useState<{
+    email?: string;
+    password?: string;
+  }>({});
 
   React.useEffect(() => onAuthStateChanged(auth, (u) => setUser(u)), []);
   if (user) return null;
@@ -72,11 +75,7 @@ export default function SignInUp() {
       <Grid container spacing={3}>
         {/* SIGN IN */}
         <Grid size={{ xs: 12, md: 6 }}>
-          <CardHeader
-            title="Sign in"
-            subheader="Access existing account.  
-                If you're new, use Google to create one."
-          />
+          <CardHeader title="Sign in" />
 
           <form onSubmit={handleSignin} noValidate>
             <CardContent>
@@ -88,7 +87,7 @@ export default function SignInUp() {
                 type="email"
                 value={siEmail}
                 onChange={(e) => setSiEmail(e.target.value)}
-                error={Boolean(siErrors.email)}
+                // error={Boolean(siErrors.email)}
                 helperText={siErrors.email}
                 sx={{ mb: 2 }}
               />
@@ -100,7 +99,7 @@ export default function SignInUp() {
                 type="password"
                 value={siPassword}
                 onChange={(e) => setSiPassword(e.target.value)}
-                error={Boolean(siErrors.password)}
+                // error={Boolean(siErrors.password)}
                 helperText={siErrors.password}
                 sx={{ mb: 2 }}
               />
@@ -122,8 +121,8 @@ export default function SignInUp() {
         {/* SIGN UP — GOOGLE + GITHUB */}
         <Grid size={{ xs: 12, md: 6 }}>
           <CardHeader
-            title="Sign Up"
-            subheader="Create a new account using a provider."
+            title="or continue"
+            subheader="using one of these providers"
           />
 
           <CardContent>

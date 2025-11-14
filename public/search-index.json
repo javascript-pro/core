@@ -151,7 +151,7 @@
     "title": "Writing",
     "description": "It's hard to collate stuff into readable writing, but we're doing our best",
     "tags": [],
-    "content": "\n[PageAd slug=\"/balance/writing/der-kleine-zeppelin\"]\n\n[PageAd slug=\"/balance/writing/not-here-to-fuck-spiders\"]\n"
+    "content": "\n[PageGrid pages=\"/balance/writing/not-here-to-fuck-spiders, /balance/writing/der-kleine-zeppelin\"]\n"
   },
   {
     "slug": "balance/writing/not-here-to-fuck-spiders/index",
@@ -159,41 +159,6 @@
     "description": "by Wei Zang",
     "tags": [],
     "content": "\nAs far back as I can remember I knew that if I played by the rules I'd lose. I am Wei Zang and this is my story. Some of it is true.\n"
-  },
-  {
-    "slug": "balance/writing/not-here-to-fuck-spiders/wip/bez",
-    "title": "Bez",
-    "description": "An artist and a punk",
-    "tags": "punk, bez,",
-    "content": "\nOver time, her real name eroded like an old raster image losing resolution, smoothed away by repetition until even she couldn’t recall what it had been. HR still had it on file, but it felt like a relic, an identifier from a previous version of herself. People asked, \"Wait, but what's your actual name?\" She'd just shrug.\n"
-  },
-  {
-    "slug": "balance/writing/not-here-to-fuck-spiders/wip/destructo-the-wonderdog",
-    "title": "Destructo",
-    "description": "The Wonderdog",
-    "tags": [],
-    "content": "\nOnce upon a time Destructo the Wonderdog and his best mate Barkin’ Boris were hanging out on the mountain. Just sniffing about, play fighting and barking at stuff when suddenly Boris went still as a mouse\n\n\"Something’s wrong\" he said. \"The humans are buggin’\"\n\n\"What? Eh?\" said Wonderdog, grabbing the partially destroyed teddy and giving it a shake to make more stuffing fly\n\n\"Pay attention dopey. I think the cats are in trouble. They’re lost\"\n\n\"Nah. They’re over there in that old suitcase having their cat babies\"\n\n\"Yeh. We know that. But the humans dun’t. They’re too thick. Just standing about flapping their lips and hands making those squeaky sounds all the damn day. How can we tell ‘em?\"\n\n\"What would Skippy the Bush Kangaroo do?\" Said Wonderdog. The first sensible thing he’s said all day\n"
-  },
-  {
-    "slug": "balance/writing/not-here-to-fuck-spiders/wip/index",
-    "title": "WIP",
-    "description": "",
-    "tags": [],
-    "content": "\nChild pages please\n\n[FickrAlbum id=\"72177720329145789\"]\n"
-  },
-  {
-    "slug": "balance/writing/not-here-to-fuck-spiders/wip/puppy-thing",
-    "title": "dog",
-    "description": "vat puppy fing’s gunna get fucked",
-    "tags": [],
-    "content": "\nI put an Attenborough series on for the dogs. Later I notice there’s a polar bear and a baby seal on the TV. I look at the doggy. He's got genuine concern in his eyes which also say **\"'at puppy fing’s gunna get fucked\"**\n"
-  },
-  {
-    "slug": "balance/writing/not-here-to-fuck-spiders/wip/sci-fi",
-    "title": "That's soience",
-    "description": "Science Fiction and Speculative Fiction",
-    "tags": [],
-    "content": "\n#### That's soience mayte\n\nBecause we can carefully observe constellations when the Sun is not blocking their path, we know what position the stars should be in when the Sun is keeping us from seeing them. However, according to Einstein, the light from the stars would be slightly curved around the Sun and to us would appear in a different position. Once again, imagine flicking that marble at your friend.\n\nIf they caught it, but were unable to see where you were standing, they might think you're in a different position than where you actually are because they'll trace that marble directly back in a straight line to the other side of the trampoline. This light-bending phenomenon is now known as gravitational lensing, but in Einstein's day it was only a prediction, his prediction.\n\nBecause we can carefully observe constellations when the Sun is not blocking their path, we know what position the stars should be in when the Sun is keeping us from seeing them. However, according to Einstein, the light from the stars would be slightly curved around the Sun and to us would appear in a different position. Once again, imagine flicking that marble at your friend. If they caught it, but were unable to see where you were standing, they might think you're in a different position than where you actually are because they'll trace that marble directly back in a straight line to the other side of the trampoline. This light-bending phenomenon is now known as gravitational lensing, but in Einstein's day it was only a prediction, his prediction.\n"
   },
   {
     "slug": "index",
@@ -779,9 +744,9 @@
   {
     "slug": "work/goldlabel/index",
     "title": "Goldlabel",
-    "description": "Fullstack Open Source JavaScript",
+    "description": "Free Forever",
     "tags": "JavaScript, Vanilla JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS",
-    "content": "\n[PageGrid pages=\"/work/goldlabel/cartridges, /work/goldlabel/about, /work/goldlabel/cartridges/new-cartridge\"]\n\n> The public repository that powers goldlabel.pro is free for anyone to fork, copy, hack, and reuse.\n\n[GitHub url=\"https://github.com/javascript-pro/core\" label=\"Public GitHub\"]\n\n#### What is it?\n\nGoldlabel is a JavaScript platform built with:\n\n- Next.js – modern React framework for the web\n- React – component-driven architecture\n- Material UI – clean, accessible, and customizable UI components\n\nEverything you see on this production site is built from Goldlabel. It’s the full set of building blocks, ready to be adapted to your own projects.\n\n#### Why Use Goldlabel?\n\n- Open & Free – No lock-in. Take what you need, remix the rest.\n- Production-Ready – The exact codebase that runs our live site.\n- Cartridges – Modular units of functionality that can be dropped in or swapped out.\n- Community-Friendly – Fork it, contribute back, or use it as inspiration.\n\n#### Get Started\n\n1. Clone or fork the [repo](https://github.com/javascript-pro/core) from GitHub\n2. Run it locally with npm install && npm run dev\n3. Explore the cartridges and start customizing\n\nGoldlabel isn’t just a showcase — it’s a working platform you can build on. Whether you want to learn from it, launch a project quickly, or contribute improvements, everything is open.\n\nWhen someone lands on a Goldlabel url, the site becomes aware of them; their device, their location and through their actions their intent.\n\nThey appear in the Pr0 console instantly as a ping. Within seconds, a display name and avatar are assigned, and a quiet notification appears on their screen.\n\n| \"This is not AI.\"\n\nWhat just happened is a complete, real-time interaction. No installs, no login, no tracking scripts beyond the minimum. Just modern web tech doing what it was meant to do.\n\nGoldlabel uses this demo to explain what's going on: the moment a prospect opens the link, we’re already connected. They see the quality of the sites clean design, fast load, relevant content while behind the scenes the system proves its capability in real time:\n\n- Instant presence detection (the ping)\n- Live two-way messaging\n- Dynamic avatars and display names\n- Real-time Firestore updates\n- Sound cues and UI feedback\n\nIt’s a conversation disguised as a website — a handshake between technology and attention.\n\n## Some things in life _are_ free — Goldlabel [Core](/free/core) is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or build on. If you’re the kind of developer who likes digging under the hood, this [GitHub repository](https://github.com/javascript-pro/core) is where the engine lives.\n\nWe’re not trying to hide anything behind paywalls or pitch decks. If you want to see how we build things, just open the repo. If you want to get involved, even better — we’re always looking for the right kind of collaborator.\n\n## Working with Goldlabel\n\n- Ship early and often.  \n  Each app is live from the outset — not just a mockup or prototyle\n\n- Share the process.  \n  Follow the development on GitHub, view the commit history, clone the code. Get involved with Issues\n\n- Built for reuse.  \n  Every component, pattern, and API is designed to be portable and production-ready\n"
+    "content": "\n[PageGrid pages=\"/work/goldlabel/cartridges, /work/goldlabel/about, /work/goldlabel/cartridges/new-cartridge\"]\n\n[GitHub url=\"https://github.com/javascript-pro/core\" label=\"Open Source GitHub\"]\n\n> Free for anyone to fork, copy, hack, and reuse.\n\n#### What is it?\n\nGoldlabel is a JavaScript platform built with:\n\n- Next.js – modern React framework for the web\n- React – component-driven architecture\n- Material UI – clean, accessible, and customizable UI components\n\nEverything you see on this production site is built from Goldlabel. It’s the full set of building blocks, ready to be adapted to your own projects.\n\n#### Why Use Goldlabel?\n\n- Open & Free – No lock-in. Take what you need, remix the rest.\n- Production-Ready – The exact codebase that runs our live site.\n- Cartridges – Modular units of functionality that can be dropped in or swapped out.\n- Community-Friendly – Fork it, contribute back, or use it as inspiration.\n\n#### Get Started\n\n1. Clone or fork the [repo](https://github.com/javascript-pro/core) from GitHub\n2. Run it locally with npm install && npm run dev\n3. Explore the cartridges and start customizing\n\nGoldlabel isn’t just a showcase — it’s a working platform you can build on. Whether you want to learn from it, launch a project quickly, or contribute improvements, everything is open.\n\nWhen someone lands on a Goldlabel url, the site becomes aware of them; their device, their location and through their actions their intent.\n\nThey appear in the Pr0 console instantly as a ping. Within seconds, a display name and avatar are assigned, and a quiet notification appears on their screen.\n\n| \"This is not AI.\"\n\nWhat just happened is a complete, real-time interaction. No installs, no login, no tracking scripts beyond the minimum. Just modern web tech doing what it was meant to do.\n\nGoldlabel uses this demo to explain what's going on: the moment a prospect opens the link, we’re already connected. They see the quality of the sites clean design, fast load, relevant content while behind the scenes the system proves its capability in real time:\n\n- Instant presence detection (the ping)\n- Live two-way messaging\n- Dynamic avatars and display names\n- Real-time Firestore updates\n- Sound cues and UI feedback\n\nIt’s a conversation disguised as a website — a handshake between technology and attention.\n\n## Some things in life _are_ free — Goldlabel [Core](/free/core) is one of them.\n\nThis is the foundation for everything we do. It’s fully open source, under active development, and freely available to use, fork, break, or build on. If you’re the kind of developer who likes digging under the hood, this [GitHub repository](https://github.com/javascript-pro/core) is where the engine lives.\n\nWe’re not trying to hide anything behind paywalls or pitch decks. If you want to see how we build things, just open the repo. If you want to get involved, even better — we’re always looking for the right kind of collaborator.\n\n## Working with Goldlabel\n\n- Ship early and often.  \n  Each app is live from the outset — not just a mockup or prototyle\n\n- Share the process.  \n  Follow the development on GitHub, view the commit history, clone the code. Get involved with Issues\n\n- Built for reuse.  \n  Every component, pattern, and API is designed to be portable and production-ready\n"
   },
   {
     "slug": "work/index",

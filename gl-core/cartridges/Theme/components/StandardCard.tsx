@@ -31,6 +31,11 @@ export function StandardCard({ slug }: any) {
   const [expanded, setExpanded] = React.useState(false);
   const isMobile = useIsMobile();
 
+  function stripShortcodes(str: string | undefined) {
+    if (!str) return '';
+    return str.replace(/\[[^\]]*\]/g, '').trim();
+  }
+
   if (!content) return null;
 
   const { title, excerpt, image, icon, description } = content;
@@ -99,7 +104,7 @@ export function StandardCard({ slug }: any) {
       {!isMobile && image && (
         <CardMedia
           component="img"
-          height="175"
+          height="120"
           image={image}
           alt={title}
           sx={{ objectFit: 'cover' }}
@@ -118,7 +123,7 @@ export function StandardCard({ slug }: any) {
           )}
 
           <Typography variant="body2" sx={{ mb: 2 }}>
-            {excerpt}
+            {stripShortcodes(excerpt)}
           </Typography>
         </CardContent>
 

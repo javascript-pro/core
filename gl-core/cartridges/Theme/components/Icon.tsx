@@ -95,7 +95,7 @@ import DocIcon from '@mui/icons-material/Description';
 import PluginIcon from '@mui/icons-material/ExtensionOutlined';
 import LinguaIcon from '@mui/icons-material/TranslateOutlined';
 import GoogleIcon from '@mui/icons-material/Google';
-import WorkIcon from '@mui/icons-material/InterpreterMode';
+import WorkIcon from '@mui/icons-material/WorkHistory';
 // import LifeIcon from '@mui/icons-material/CakeOutlined';
 import BalanceIcon from '@mui/icons-material/Balance';
 import JavascriptIcon from '@mui/icons-material/JavascriptOutlined';
@@ -772,7 +772,7 @@ export default function Icon({ icon, color }: TIcon) {
       iconFragment = <BalanceIcon color={color} />;
       break;
     case 'balance':
-      iconFragment = <DocIcon color={color} />;
+      iconFragment = <BalanceIcon color={color} />;
       break;
     case 'signin':
       iconFragment = <SigninIcon color={color} />;
