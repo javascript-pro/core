@@ -1,6 +1,7 @@
 ---
 order: 10
 title: Experience
+description: The tech we've used
 slug: /work/experience
 icon: experience
 image: /png/3rdParty/react.png

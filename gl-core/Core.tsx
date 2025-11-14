@@ -142,21 +142,18 @@ export default function Core({ frontmatter, body = null }: TCore) {
         <Container id="core">
           <Box sx={{ minHeight: '100vh' }}>
             <Grid container spacing={isMobile ? 0 : 1}>
-              
-                <Grid size={{ xs: 1, md: 3 }}>
-                  <Box sx={{overflow: 'hidden', ml: isMobile ? -3 : 0}}>
-                    {Array.isArray(siblings) && siblings.length > 0 ? (
-                      <Siblings />
-                    ) : (
-                      <SideAds />
-                    )}
-                  </Box>
-                </Grid>
+              <Grid size={{ xs: 1, md: 3 }}>
+                <Box sx={{ overflow: 'hidden', ml: isMobile ? -3 : 0 }}>
+                  {Array.isArray(siblings) && siblings.length > 0 ? (
+                    <Siblings />
+                  ) : (
+                    <SideAds />
+                  )}
+                </Box>
+              </Grid>
 
               <Grid size={{ xs: 11, md: 9 }}>
                 <Box sx={{ display: 'flex' }}>
-                  
-
                   <Typography
                     variant="h1"
                     gutterBottom
@@ -186,7 +183,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                 {title !== 'Home' && (
                   <>
                     <Box sx={{ display: 'flex' }}>
-                      <Box sx={{ flexGrow: 1}}>
+                      <Box sx={{ flexGrow: 1 }}>
                         {pathname !== '/' && <PageBreadcrumb />}
                       </Box>
                     </Box>

@@ -6,7 +6,10 @@ slug: /work
 icon: work
 image: https://live.staticflickr.com/65535/53670939824_27773d5157_b.jpg
 tags: Professional, JavaScript, Vanilla JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
+noImage: true
 ---
+
+[PageGrid pages="/work/experience, /work/expertise, /work/goldlabel, /work/company"]
 
 > The apps we ship are real. They run in production and are developed accessibly.
 

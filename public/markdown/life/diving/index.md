@@ -9,4 +9,3 @@ noImage: true
 ---
 
 [PageGrid pages="/life/diving/why-dive, /life/diving/why-not-dive"]
-

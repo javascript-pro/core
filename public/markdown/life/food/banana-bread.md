@@ -4,7 +4,7 @@ title: Banana Bread
 description: Proper crowd pleaser
 slug: /life/food/banana-bread
 icon: food
-image: /jpg/wei-zangs-food.jpg
+image: /jpg/wei-zang/wei-zangs-food.jpg
 ---
 
 - 125g Butter

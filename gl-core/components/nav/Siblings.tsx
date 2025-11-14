@@ -1,3 +1,4 @@
+// /Users/goldlabel/GitHub/core/gl-core/components/nav/Siblings.tsx
 'use client';
 
 import * as React from 'react';
@@ -10,7 +11,7 @@ import {
   ListItemText,
   Box,
 } from '@mui/material';
-import { Icon } from '../../../gl-core';
+import { Icon, useIsMobile } from '../../../gl-core';
 
 type NavItem = {
   title: string;
@@ -60,6 +61,7 @@ function findParentContents(items: NavItem[], slug: string): NavItem[] | null {
 export default function Siblings() {
   const pathname = usePathname();
   const router = useRouter();
+  const isMobile = useIsMobile();
 
   const currentNode = React.useMemo(
     () => findNode(globalNav as NavItem[], pathname),
@@ -134,7 +136,7 @@ export default function Siblings() {
           <ListItemIcon>
             <Icon icon={(node.icon as any) || 'up'} color="primary" />
           </ListItemIcon>
-          <ListItemText primary={node.title} />
+          {!isMobile && <ListItemText primary={node.title} />}
         </ListItemButton>
       ))}
 
@@ -144,7 +146,7 @@ export default function Siblings() {
           <ListItemIcon>
             <Icon icon={(parent.icon as any) || 'up'} color="primary" />
           </ListItemIcon>
-          <ListItemText primary={parent.title} />
+          {!isMobile && <ListItemText primary={parent.title} />}
         </ListItemButton>
       )}
 
@@ -162,7 +164,7 @@ export default function Siblings() {
                 <ListItemIcon>
                   <Icon icon={item.icon as any} color="primary" />
                 </ListItemIcon>
-                <ListItemText primary={item.title} />
+                {!isMobile && <ListItemText primary={item.title} />}
               </ListItemButton>
             );
           })}

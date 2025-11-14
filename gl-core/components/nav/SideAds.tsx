@@ -9,7 +9,7 @@ import {
   ListItemIcon,
   ListItemText,
 } from '@mui/material';
-import { useDispatch, routeTo, Icon } from '../../../gl-core';
+import { useDispatch, routeTo, Icon, useIsMobile } from '../../../gl-core';
 import { useRouter, usePathname } from 'next/navigation';
 
 export type TSideAds = {
@@ -20,17 +20,13 @@ export type TSideAds = {
 export default function SideAds() {
   const dispatch = useDispatch();
   const router = useRouter();
-  const pathname = usePathname(); // get current path
+  const pathname = usePathname();
+  const isMobile = useIsMobile();
 
   const items = [
-    // { icon: 'home', title: 'Home', path: '/' },
-
     { icon: 'work', title: 'Work', path: '/work' },
     { icon: 'life', title: 'Life', path: '/life' },
     { icon: 'balance', title: 'Balance', path: '/balance' },
-
-    // { icon: 'admin', title: 'Admin', path: '/admin' },
-    // { icon: 'contact', title: 'Contact us', path: '/work/company' },
   ];
 
   return (
@@ -51,7 +47,7 @@ export default function SideAds() {
               <ListItemIcon>
                 <Icon icon={item.icon as any} color="primary" />
               </ListItemIcon>
-              <ListItemText primary={item.title} />
+              {!isMobile && <ListItemText primary={item.title} />}
             </ListItemButton>
           );
         })}

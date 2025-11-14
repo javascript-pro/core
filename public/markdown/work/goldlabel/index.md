@@ -6,9 +6,10 @@ slug: /work/goldlabel
 icon: goldlabel
 image: /png/3rdParty/github_og.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
+noImage: true
 ---
 
-[PageAd slug="/work/goldlabel/cartridges"]
+[PageGrid pages="/work/goldlabel/cartridges, /work/goldlabel/about, /work/goldlabel/cartridges/new-cartridge"]
 
 > The public repository that powers goldlabel.pro is free for anyone to fork, copy, hack, and reuse.
 
