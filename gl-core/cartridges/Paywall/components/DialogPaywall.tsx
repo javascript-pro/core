@@ -2,15 +2,11 @@
 import * as React from 'react';
 import {
   Dialog,
-  DialogContent,
-  DialogActions,
-  DialogTitle,
-  CardHeader,
   Box,
   Button,
   IconButton,
 } from '@mui/material';
-import { useDispatch, Icon } from '../../../../gl-core';
+import { useDispatch, Icon, useIsMobile } from '../../../../gl-core';
 import {
   usePaywall,
   useUser,
@@ -24,6 +20,7 @@ export default function DialogPaywall() {
   const pw = usePaywall();
   const { dialogOpen } = pw ?? {};
   const user = useUser();
+  const isMobile = useIsMobile();
 
   const handleClose = () => {
     dispatch(setPaywallKey('dialogOpen', false));
@@ -33,12 +30,11 @@ export default function DialogPaywall() {
     <Dialog
       open={Boolean(dialogOpen)}
       onClose={handleClose}
-      fullScreen
+      fullScreen={isMobile}
       maxWidth="xs"
       fullWidth
     >
-      <DialogTitle>
-        <CardHeader
+        {/* <CardHeader
           action={
             <>
               <IconButton color="primary" onClick={handleClose}>
@@ -46,27 +42,20 @@ export default function DialogPaywall() {
               </IconButton>
             </>
           }
-        />
-      </DialogTitle>
+        /> */}
       <User />
 
       {!user ? (
         <>
-          <DialogContent>
-            {user ? <User /> : null}
-            <Box sx={{}}>
-              <SignInUp />
-            </Box>
-          </DialogContent>
+          {user ? <User /> : null}
+          <SignInUp />
         </>
-      ) : (
-        <DialogContent />
-      )}
+      ) : null}
 
-      <DialogActions>
         {user && (
           <Button
-            fullWidth
+            sx={{m:1, mt: 3}}
+            
             variant="contained"
             onClick={handleClose}
             endIcon={<Icon icon="tick" />}
@@ -75,7 +64,6 @@ export default function DialogPaywall() {
           </Button>
         )}
         <Box sx={{ flexGrow: 1 }} />
-      </DialogActions>
     </Dialog>
   );
 }

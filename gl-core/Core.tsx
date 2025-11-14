@@ -13,10 +13,6 @@ import {
   Grid,
   Skeleton,
   Typography,
-  IconButton,
-  Dialog,
-  DialogContent,
-  DialogTitle,
 } from '@mui/material';
 import {
   fetchGlobalNav,
@@ -31,14 +27,11 @@ import {
   toggleLoading,
   useDispatch,
   Siblings,
-  Search,
   useSiblings,
-  Icon,
   SideAds,
   SharePopup,
 } from '../gl-core';
-// import { SoundProvider } from './cartridges/Theme';
-import { Paywall, SigninGate, useUser, Tings } from './cartridges/Paywall';
+import { Paywall, SigninGate, useUser } from './cartridges/Paywall';
 
 const config = configRaw as TConfig;
 
@@ -92,52 +85,12 @@ export default function Core({ frontmatter, body = null }: TCore) {
             py: 0.5,
           }}
         >
-          <Box>
-            <IconButton
-              color="primary"
-              onClick={() => setMenuOpen(true)}
-              aria-label="Open menu"
-            >
-              <Icon icon="menu" />
-            </IconButton>
-          </Box>
+          
 
           <Box sx={{}}>
             <Paywall />
           </Box>
         </Box>
-
-        {/* Menu Dialog */}
-        <Dialog
-          open={menuOpen}
-          onClose={() => setMenuOpen(false)}
-          fullScreen={isMobile}
-          maxWidth="xs"
-          fullWidth
-        >
-          <DialogTitle
-            sx={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              pb: 0,
-            }}
-          >
-            <IconButton
-              aria-label="Close menu"
-              onClick={() => setMenuOpen(false)}
-              size="small"
-            >
-              <Icon icon="close" />
-            </IconButton>
-          </DialogTitle>
-
-          <DialogContent>
-            <Box sx={{ mt: 1 }}>
-              <Siblings />
-            </Box>
-          </DialogContent>
-        </Dialog>
 
         <Container id="core">
           <Box sx={{ minHeight: '100vh' }}>

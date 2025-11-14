@@ -30,7 +30,7 @@ export default function Paywall() {
     <>
       <DialogPaywall />
       <Button
-        variant="text"
+        variant="outlined"
         endIcon={<Icon icon="paywall" />}
         onClick={handleClick}
         sx={{
