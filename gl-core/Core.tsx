@@ -83,11 +83,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
             justifyContent: 'space-between',
             px: 1,
             py: 0.5,
-          }}
-        >
-          <Box sx={{}}>
-            <Paywall />
-          </Box>
+          }}>
+          <Paywall />
         </Box>
 
         <Container id="core">
@@ -110,6 +107,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                     gutterBottom
                     color="primary"
                     sx={{
+                      mt: 1,
                       fontSize: { xs: '1.7rem', md: '2.2rem' },
                     }}
                   >

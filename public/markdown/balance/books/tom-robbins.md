@@ -1,7 +1,7 @@
 ---
-order: 2000
+order: 1233
 title: Tom Robbins
-description: Playful, whimsical prose, irreverent humor, and philosophical musings.
+description: Even Cowgirls Get the Blues
 slug: /balance/books/tom-robbins
 icon: books
 image: https://live.staticflickr.com/65535/54735999657_5ec054b3e2_b.jpg

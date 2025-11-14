@@ -4,17 +4,16 @@ import {
   Box,
   CardHeader,
   CardContent,
-  CardActions,
-  TextField,
   Button,
   Grid,
 } from '@mui/material';
 import {
   onAuthStateChanged,
-  signInWithEmailAndPassword,
   User,
   GoogleAuthProvider,
   GithubAuthProvider,
+  FacebookAuthProvider,
+  OAuthProvider,
   signInWithPopup,
 } from 'firebase/auth';
 import { auth } from '../../../lib/firebase';
@@ -24,46 +23,36 @@ export default function SignInUp() {
   const [user, setUser] = React.useState<User | null>(null);
   const dispatch = useDispatch();
 
-  const [siEmail, setSiEmail] = React.useState('');
-  const [siPassword, setSiPassword] = React.useState('');
-  const [siErrors, setSiErrors] = React.useState<{
-    email?: string;
-    password?: string;
-  }>({});
-
   React.useEffect(() => onAuthStateChanged(auth, (u) => setUser(u)), []);
   if (user) return null;
 
-  const validateSignin = () => {
-    const e: any = {};
-    if (!siEmail.trim()) e.email = 'Please enter your email';
-    if (!siPassword.trim()) e.password = 'Please enter your password';
-    setSiErrors(e);
-    return Object.keys(e).length === 0;
-  };
-
-  const handleSignin = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!validateSignin()) return;
+  const handleGoogle = async () => {
     try {
-      await signInWithEmailAndPassword(auth, siEmail, siPassword);
+      await signInWithPopup(auth, new GoogleAuthProvider());
     } catch (err) {
       alert((err as Error).message);
     }
   };
 
-  const handleGoogleSignup = async () => {
+  const handleGithub = async () => {
     try {
-      const provider = new GoogleAuthProvider();
-      await signInWithPopup(auth, provider);
+      await signInWithPopup(auth, new GithubAuthProvider());
     } catch (err) {
       alert((err as Error).message);
     }
   };
 
-  const handleGithubSignup = async () => {
+  const handleFacebook = async () => {
     try {
-      const provider = new GithubAuthProvider();
+      await signInWithPopup(auth, new FacebookAuthProvider());
+    } catch (err) {
+      alert((err as Error).message);
+    }
+  };
+
+  const handleTwitter = async () => {
+    try {
+      const provider = new OAuthProvider('twitter.com');
       await signInWithPopup(auth, provider);
     } catch (err) {
       alert((err as Error).message);
@@ -71,67 +60,21 @@ export default function SignInUp() {
   };
 
   return (
-    <Box sx={{ mt: 2 }}>
-      <Grid container spacing={3}>
-        {/* SIGN IN */}
-        <Grid size={{ xs: 12, md: 6 }}>
-          <CardHeader title="Sign in" />
-
-          <form onSubmit={handleSignin} noValidate>
-            <CardContent>
-              <TextField
-                autoFocus
-                fullWidth
-                variant="filled"
-                label="Email"
-                type="email"
-                value={siEmail}
-                onChange={(e) => setSiEmail(e.target.value)}
-                // error={Boolean(siErrors.email)}
-                helperText={siErrors.email}
-                sx={{ mb: 2 }}
-              />
-
-              <TextField
-                fullWidth
-                variant="filled"
-                label="Password"
-                type="password"
-                value={siPassword}
-                onChange={(e) => setSiPassword(e.target.value)}
-                // error={Boolean(siErrors.password)}
-                helperText={siErrors.password}
-                sx={{ mb: 2 }}
-              />
-            </CardContent>
-
-            <CardActions sx={{ justifyContent: 'flex-end' }}>
-              <Button
-                fullWidth
-                type="submit"
-                variant="contained"
-                endIcon={<Icon icon="signin" />}
-              >
-                Sign In
-              </Button>
-            </CardActions>
-          </form>
-        </Grid>
-
-        {/* SIGN UP — GOOGLE + GITHUB */}
-        <Grid size={{ xs: 12, md: 6 }}>
+    <Box sx={{}}>
+      <Grid container spacing={1} justifyContent="center">
+        <Grid size={{ xs: 12 }}>
           <CardHeader
-            title="or continue"
-            subheader="using one of these providers"
+            title="Paywall"
+            subheader="Continue with one of our trusted providers"
           />
 
           <CardContent>
             <Button
               fullWidth
               variant="contained"
-              onClick={handleGoogleSignup}
+              onClick={handleGoogle}
               startIcon={<Icon icon="google" />}
-              sx={{ py: 1.5 }}
+              sx={{ py: 1.6 }}
             >
               Continue with Google
             </Button>
@@ -139,11 +82,31 @@ export default function SignInUp() {
             <Button
               fullWidth
               variant="contained"
-              onClick={handleGithubSignup}
+              onClick={handleGithub}
               startIcon={<Icon icon="github" />}
-              sx={{ py: 1.5, mt: 2 }}
+              sx={{ py: 1.6, mt: 2 }}
             >
               Continue with GitHub
+            </Button>
+
+            <Button
+              fullWidth
+              variant="contained"
+              onClick={handleFacebook}
+              startIcon={<Icon icon="facebook" />}
+              sx={{ py: 1.6, mt: 2 }}
+            >
+              Continue with Facebook
+            </Button>
+
+            <Button
+              fullWidth
+              variant="contained"
+              onClick={handleTwitter}
+              startIcon={<Icon icon="twitter" />}
+              sx={{ py: 1.6, mt: 2 }}
+            >
+              Continue with Twitter
             </Button>
           </CardContent>
         </Grid>

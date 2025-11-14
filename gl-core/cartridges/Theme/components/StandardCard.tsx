@@ -38,6 +38,8 @@ export function StandardCard({ slug }: any) {
 
   if (!content) return null;
 
+  // console.log('conent', content);
+
   const { title, excerpt, image, icon, description } = content;
 
   return (
@@ -66,20 +68,7 @@ export function StandardCard({ slug }: any) {
             {title}
           </Typography>
         }
-        subheader={
-          <Typography
-            variant="body2"
-            noWrap
-            sx={{
-              minWidth: 0,
-              overflow: 'hidden',
-              textOverflow: 'ellipsis',
-              opacity: 0.8,
-            }}
-          >
-            {description}
-          </Typography>
-        }
+        
         action={
           <IconButton
             color="primary"
@@ -88,7 +77,7 @@ export function StandardCard({ slug }: any) {
               setExpanded(!expanded);
             }}
             edge="end"
-            sx={{ ml: 1 }}
+            sx={{ mr: 1 }}
           >
             {expanded ? <Icon icon="up" /> : <Icon icon="down" />}
           </IconButton>
@@ -100,20 +89,10 @@ export function StandardCard({ slug }: any) {
           },
         }}
       />
-
-      {!isMobile && image && (
-        <CardMedia
-          component="img"
-          height="120"
-          image={image}
-          alt={title}
-          sx={{ objectFit: 'cover' }}
-        />
-      )}
-
+      
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          {isMobile && image && (
+          {image && (
             <CardMedia
               component="img"
               image={image}

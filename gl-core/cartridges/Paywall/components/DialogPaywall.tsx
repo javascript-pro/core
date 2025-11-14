@@ -47,7 +47,7 @@ export default function DialogPaywall() {
         open={Boolean(dialogOpen)}
         onClose={handleClose}
         fullScreen={isMobile}
-        maxWidth={user ? 'md' : 'md'}
+        maxWidth={user ? 'xs' : 'xs'}
         fullWidth
       >
         <CardHeader

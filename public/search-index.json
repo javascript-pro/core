@@ -24,8 +24,8 @@
     "slug": "balance/books/index",
     "title": "Books",
     "description": "What are you reading?",
-    "tags": [],
-    "content": "\n> Curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction. From visionary science fiction to satirical explorations of culture and the human experience, our writers challenge, amuse, and inspire.\n\n[PrevNext prev=\"/balance/books/r-f-kuang\" next=\"/balance/books/douglas-coupland\"]\n\n## Next up\n\n- Cixin Liu\n- Orwell\n- Pullman\n"
+    "tags": "science fiction, books, satire, douglas coupland, Cixin Liu, Orwell, Pullman",
+    "content": "\n> Curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction. From visionary science fiction to satirical explorations of culture and the human experience, our writers challenge, amuse, and inspire.\n\n[PageGrid pages=\"/balance/books/r-f-kuang, /balance/books/douglas-coupland, /balance/books/tom-robbins, /balance/books/william-gibson\"]\n"
   },
   {
     "slug": "balance/books/r-f-kuang/babel",
@@ -39,7 +39,7 @@
     "title": "R. F. Kuang",
     "description": "MPhil in Chinese Studies from Cambridge and an MSc in Contemporary Chinese Studies from Oxford",
     "tags": "Speculative fiction, alternative history",
-    "content": "\n[PrevNext prev=\"/balance/books/r-f-kuang/babel\" next=\"/balance/books/r-f-kuang/katabasis\"]\n\nR. F. Kuang was born on May 29th, 1996, in Guangzhou, China. She immigrated to the United States with her family when she was four years old. Her father grew up in Leiyang, in Hunan province, and her mother grew up in Hainan province. Her maternal grandfather fought for Chiang Kai-shek. Her father's family experienced the Japanese occupation of Hunan during World War II.\n\nKuang's Babel was excluded from consideration for the 2023 Hugo Award along with Chinese Canadian author Xiran Jay Zhao's Iron Widow. The awards ceremony that year was held in Chengdu, China, and leaked emails later revealed that an administrator had recommended that books whose content might prove controversial in China be excluded from the list of nominees.\n"
+    "content": "\nR. F. Kuang was born on May 29th, 1996, in Guangzhou, China. She immigrated to the United States with her family when she was four years old. Her father grew up in Leiyang, in Hunan province, and her mother grew up in Hainan province. Her maternal grandfather fought for Chiang Kai-shek. Her father's family experienced the Japanese occupation of Hunan during World War II.\n\nKuang's Babel was excluded from consideration for the 2023 Hugo Award along with Chinese Canadian author Xiran Jay Zhao's Iron Widow. The awards ceremony that year was held in Chengdu, China, and leaked emails later revealed that an administrator had recommended that books whose content might prove controversial in China be excluded from the list of nominees.\n\n[PageGrid pages=\"/balance/books/r-f-kuang/babel, /balance/books/r-f-kuang/katabasis\"]\n"
   },
   {
     "slug": "balance/books/r-f-kuang/katabasis",
@@ -51,7 +51,7 @@
   {
     "slug": "balance/books/tom-robbins",
     "title": "Tom Robbins",
-    "description": "Playful, whimsical prose, irreverent humor, and philosophical musings.",
+    "description": "Even Cowgirls Get the Blues",
     "tags": [],
     "content": "\n**Tom Robbins** is an American novelist known for playful, whimsical prose, irreverent humor, and philosophical musings. His works blend surrealism, countercultural themes, and sharp social commentary, with a strong focus on language and imagination.\n\n#### Bibliography\n\n- **1971** – _Another Roadside Attraction_\n- **1976** – _Even Cowgirls Get the Blues_\n- **1980** – _Still Life with Woodpecker_\n- **1984** – _Jitterbug Perfume_\n- **1990** – _Skinny Legs and All_\n- **1994** – _Half Asleep in Frog Pajamas_\n- **2000** – _Fierce Invalids Home from Hot Climates_\n- **2003** – _Villa Incognito_\n- **2008** – _Bad Timing_\n- **2009** – _B Is for Beer_ (children’s book)\n- **2014** – _Tibetan Peach Pie: A True Account of an Imaginative Life_ (memoir)\n- **2023** – _Wild Ducks Flying Backward_ (collection of short pieces)\n"
   },

@@ -1417,7 +1417,7 @@
                   "Speculative fiction",
                   "alternative history"
                 ],
-                "excerpt": "[PrevNext prev=\"/balance/books/rfkuang/babel\" next=\"/balance/books/rfkuang/katabasis\"]\n\nR. F. Kuang was born on May 29th, 1996, in Guangzhou, China. She immigrated to the United States with her family"
+                "excerpt": "R. F. Kuang was born on May 29th, 1996, in Guangzhou, China. She immigrated to the United States with her family when she was four years old. Her father grew up in Leiyang, in Hunan province, and her "
               },
               {
                 "title": "Douglas Coupland",
@@ -1480,7 +1480,16 @@
               }
             ],
             "icon": "books",
-            "image": "/png/3rdParty/unicorn.png",
+            "image": "https://live.staticflickr.com/65535/54735999657_5ec054b3e2_b.jpg",
+            "tags": [
+              "science fiction",
+              "books",
+              "satire",
+              "douglas coupland",
+              "Cixin Liu",
+              "Orwell",
+              "Pullman"
+            ],
             "excerpt": "Curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction. From visionary science fiction to satirical explorations of culture and the human exper"
           }
         ],

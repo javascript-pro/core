@@ -30,14 +30,15 @@ export default function Paywall() {
     <>
       <DialogPaywall />
       <Button
-        variant={user ? 'outlined' : 'contained'}
-        endIcon={<Icon icon="tick" />}
+        size='small'
+        variant={user ? 'outlined' : 'outlined'}
+        endIcon={<Icon icon="signin" />}
         onClick={handleClick}
         sx={{
           zIndex: (theme) => theme.zIndex.modal - 3,
           position: 'fixed',
-          top: 8,
-          right: 8,
+          top: 16,
+          right: 16,
         }}
       >
         {!user ? <>Sign In</> : <>{user?.email}</>}
