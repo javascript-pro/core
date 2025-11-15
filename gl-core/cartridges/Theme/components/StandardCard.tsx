@@ -24,7 +24,7 @@ import {
   useIsMobile,
 } from '../../../../gl-core';
 
-export function StandardCard({ slug }: any) {
+export function StandardCard({ slug, thumbnails }: { slug: string; thumbnails?: boolean }) {
   const router = useRouter();
   const dispatch = useDispatch();
   const content = useContent(slug);
@@ -37,8 +37,6 @@ export function StandardCard({ slug }: any) {
   }
 
   if (!content) return null;
-
-  // console.log('conent', content);
 
   const { title, excerpt, image, icon, description } = content;
 
@@ -84,10 +82,25 @@ export function StandardCard({ slug }: any) {
         sx={{
           alignItems: 'center',
           '.MuiCardHeader-content': {
-            minWidth: 0, // crucial for ellipsis to work in flex
+            minWidth: 0,
           },
         }}
       />
+
+      {/* Thumbnail visible even when collapsed */}
+      {thumbnails && image && !expanded && (
+        <CardMedia
+          component="img"
+          image={image}
+          alt={title}
+          sx={{
+            width: '100%',
+            height: 180,
+            objectFit: 'cover',
+            borderRadius: 0,
+          }}
+        />
+      )}
 
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>

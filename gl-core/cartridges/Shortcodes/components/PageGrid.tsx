@@ -32,7 +32,13 @@ function findNode(
   return null;
 }
 
-export default function PageGrid({ pages }: { pages: string }) {
+export default function PageGrid({
+  pages,
+  thumbnails,
+}: {
+  pages: string;
+  thumbnails?: string;
+}) {
   const isMobile = useIsMobile();
   const globalNav = useGlobalNav();
 
@@ -53,11 +59,12 @@ export default function PageGrid({ pages }: { pages: string }) {
     }));
   }, [slugs, globalNav]);
 
-  // --- dynamic: 3 columns if divisible by 3, else 2 columns ---
   const mdSize = React.useMemo(() => {
     const count = nodes.filter((n) => n.node).length;
     return count % 3 === 0 ? 4 : 6;
   }, [nodes]);
+
+  const showThumbs = thumbnails === 'yes';
 
   return (
     <Grid container spacing={1}>
@@ -71,7 +78,7 @@ export default function PageGrid({ pages }: { pages: string }) {
               md: mdSize,
             }}
           >
-            <StandardCard slug={slug} />
+            <StandardCard slug={slug} thumbnails={showThumbs} />
           </Grid>
         );
       })}

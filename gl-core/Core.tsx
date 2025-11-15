@@ -132,16 +132,12 @@ export default function Core({ frontmatter, body = null }: TCore) {
                 </Box>
                 {title !== 'Home' && (
                   <>
-                    <Box sx={{ display: 'flex' }}>
-                      <Box sx={{ flexGrow: 1 }}>
-                        {pathname !== '/' && <PageBreadcrumb />}
-                      </Box>
-                    </Box>
+                    {pathname !== '/' && <PageBreadcrumb />}
                   </>
                 )}
 
                 {/* 🔒 Content area */}
-                <Box sx={{ mt: isMobile ? 2 : 4, mb: isMobile ? 3 : '175px' }}>
+                <Box sx={{ mt: 2, mb: isMobile ? 3 : '175px' }}>
                   {/* ✅ Authenticated users always bypass paywall */}
                   {paywall === true && !isAuthed ? (
                     <SigninGate />

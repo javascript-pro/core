@@ -9,6 +9,7 @@ import PrevNext from './components/PrevNext';
 import GitHub from './components/GitHub';
 import ChildPages from './components/ChildPages';
 import PageGrid from './components/PageGrid';
+
 export {
   ChildPages,
   GitHub,
