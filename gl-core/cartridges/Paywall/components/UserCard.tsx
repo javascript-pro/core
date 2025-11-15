@@ -31,25 +31,25 @@ export default function UserCard() {
   const showFallback = !photoURL;
 
   return (
-    <ButtonBase sx={{ textAlign: 'left' }} onClick={handleClick}>
+    <ButtonBase sx={{ textAlign: 'left', p: 1 }} onClick={handleClick}>
       <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-        {showFallback ? (
-          <Avatar sx={{ width: 48, height: 48, mr: 2, borderRadius: 2 }}>
-            <Icon icon={fallbackIcon} />
-          </Avatar>
-        ) : (
-          <Avatar
-            src={photoURL}
-            sx={{ width: 48, height: 48, mr: 2, borderRadius: 2 }}
-          />
-        )}
-
         <Box>
           <Typography variant="h6">{displayName}</Typography>
           <Typography variant="body2" color="text.primary">
             {email}
           </Typography>
         </Box>
+
+        {showFallback ? (
+          <Avatar sx={{ width: 48, height: 48, ml: 2, borderRadius: 2 }}>
+            <Icon icon={fallbackIcon} />
+          </Avatar>
+        ) : (
+          <Avatar
+            src={photoURL}
+            sx={{ width: 48, height: 48, ml: 2, borderRadius: 2 }}
+          />
+        )}
       </Box>
     </ButtonBase>
   );

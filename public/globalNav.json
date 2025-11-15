@@ -1095,7 +1095,7 @@
           "NextJS",
           "Headless CMS"
         ],
-        "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/work/expertise, /work/goldlabel, /work/cases\"]\n\n The apps we ship are real. They run in production and are developed accessibly.\n\nThe Core is Open Source and Free fo"
+        "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work/, /work/company, /work/expertise, /work/goldlabel, /work/cases\"]\n\n The apps we ship are real. They run in production and are developed accessibly.\n\nThe Core is O"
       },
       {
         "title": "Life",

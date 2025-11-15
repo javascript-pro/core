@@ -58,16 +58,12 @@ export default function DialogPaywall() {
           </>
         ) : null}
 
+        <DialogContent />
         <DialogActions>
           {user && (
             <>
               <Box sx={{ flexGrow: 1 }} />
-              <Button
-                sx={{ m: 1, mt: 3 }}
-                variant="contained"
-                onClick={handleClose}
-                endIcon={<Icon icon="tick" />}
-              >
+              <Button onClick={handleClose} endIcon={<Icon icon="tick" />}>
                 Close
               </Button>
             </>

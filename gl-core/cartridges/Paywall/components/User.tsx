@@ -38,7 +38,15 @@ export default function User() {
 
   return (
     <Box sx={{ p: 2 }}>
-      <UserCard />
+      <Box
+        sx={{
+          width: '100%',
+          display: 'flex',
+        }}
+      >
+        <Box sx={{ flexGrow: 1 }} />
+        <UserCard />
+      </Box>
       <List>
         <ListItemButton onClick={() => setConfirmOpen(true)}>
           <ListItemIcon>
