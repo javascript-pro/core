@@ -14,7 +14,7 @@
         "type": "folder",
         "children": [
           {
-            "title": "Cases",
+            "title": "Case Studies",
             "description": "Real World Experience",
             "slug": "/work/cases",
             "order": 10,
@@ -51,6 +51,20 @@
                 "excerpt": "GeoSpatial Fleet App\n\n React Developer, Aug 2018  Feb 2019, Sydney\n\nIt’s only been a few years since all of Boral’s business was still done on paper. When I joined the Sydney tech team in 2018, the co"
               },
               {
+                "title": "Hertwig & Auer",
+                "slug": "/work/cases/hertwig-auer",
+                "order": 30,
+                "icon": "case",
+                "image": "https://live.staticflickr.com/43/116813551_18d96b6e94_o.jpg",
+                "type": "file",
+                "tags": [
+                  "expertise",
+                  "germany",
+                  "law"
+                ],
+                "excerpt": "Summer 2025\n\nThis content is behind a paywall. Viewers viewing it are accountable for their actions"
+              },
+              {
                 "title": "Huawei",
                 "slug": "/work/cases/huawei",
                 "order": 30,
@@ -73,7 +87,7 @@
               "interview",
               "experience"
             ],
-            "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/work/cases/huawei, /work/cases/boral, /work/cases/aligent\"]"
+            "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/work/cases/hertwigauer, /work/cases/huawei, /work/cases/boral\"]"
           },
           {
             "title": "Goldlabel",
@@ -1081,7 +1095,7 @@
           "NextJS",
           "Headless CMS"
         ],
-        "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/work/cases, /work/expertise, /work/goldlabel\"]\n\n The apps we ship are real. They run in production and are developed accessibly.\n\nThe Core is Open Source and Free fo"
+        "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/work/expertise, /work/goldlabel, /work/cases\"]\n\n The apps we ship are real. They run in production and are developed accessibly.\n\nThe Core is Open Source and Free fo"
       },
       {
         "title": "Life",

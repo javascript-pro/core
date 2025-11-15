@@ -1,3 +1,4 @@
+// cartridges/Paywall/components/SignInUp.tsx
 'use client';
 import * as React from 'react';
 import { Box, CardHeader, CardContent, Button, Grid } from '@mui/material';
@@ -6,16 +7,13 @@ import {
   User,
   GoogleAuthProvider,
   GithubAuthProvider,
-  FacebookAuthProvider,
-  OAuthProvider,
   signInWithPopup,
 } from 'firebase/auth';
 import { auth } from '../../../lib/firebase';
-import { useDispatch, Icon } from '../../../../gl-core';
+import { Icon } from '../../../../gl-core';
 
 export default function SignInUp() {
   const [user, setUser] = React.useState<User | null>(null);
-  const dispatch = useDispatch();
 
   React.useEffect(() => onAuthStateChanged(auth, (u) => setUser(u)), []);
   if (user) return null;
@@ -36,22 +34,22 @@ export default function SignInUp() {
     }
   };
 
-  const handleFacebook = async () => {
-    try {
-      await signInWithPopup(auth, new FacebookAuthProvider());
-    } catch (err) {
-      alert((err as Error).message);
-    }
-  };
+  // const handleFacebook = async () => {
+  //   try {
+  //     await signInWithPopup(auth, new FacebookAuthProvider());
+  //   } catch (err) {
+  //     alert((err as Error).message);
+  //   }
+  // };
 
-  const handleTwitter = async () => {
-    try {
-      const provider = new OAuthProvider('twitter.com');
-      await signInWithPopup(auth, provider);
-    } catch (err) {
-      alert((err as Error).message);
-    }
-  };
+  // const handleTwitter = async () => {
+  //   try {
+  //     const provider = new OAuthProvider('twitter.com');
+  //     await signInWithPopup(auth, provider);
+  //   } catch (err) {
+  //     alert((err as Error).message);
+  //   }
+  // };
 
   return (
     <Box sx={{}}>
@@ -83,25 +81,6 @@ export default function SignInUp() {
               GitHub
             </Button>
 
-            {/* <Button
-              fullWidth
-              variant="contained"
-              onClick={handleFacebook}
-              startIcon={<Icon icon="facebook" />}
-              sx={{ py: 1.6, mt: 2 }}
-            >
-              Continue with Facebook
-            </Button>
-
-            <Button
-              fullWidth
-              variant="contained"
-              onClick={handleTwitter}
-              startIcon={<Icon icon="twitter" />}
-              sx={{ py: 1.6, mt: 2 }}
-            >
-              Continue with Twitter
-            </Button> */}
           </CardContent>
         </Grid>
       </Grid>

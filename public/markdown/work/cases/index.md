@@ -1,6 +1,6 @@
 ---
 order: 10
-title: Cases
+title: Case Studies
 description: Real World Experience
 slug: /work/cases
 icon: case
@@ -9,4 +9,4 @@ tags: expertise, interview, experience
 noImage: true
 ---
 
-[PageGrid thumbnails="yes" pages="/work/cases/huawei, /work/cases/boral, /work/cases/aligent"]
+[PageGrid thumbnails="yes" pages="/work/cases/hertwig-auer, /work/cases/huawei, /work/cases/boral"]

@@ -1,3 +1,4 @@
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Paywall/components/UserCard.tsx 
 'use client';
 import * as React from 'react';
 import {
@@ -18,7 +19,7 @@ import { useUser, userSignout, setPaywallKey } from '../../Paywall';
 import { Icon, useDispatch } from '../../../../gl-core';
 import moment from 'moment';
 
-export default function User() {
+export default function UserCard() {
   const user = useUser();
   const dispatch = useDispatch();
   const [confirmOpen, setConfirmOpen] = React.useState(false);

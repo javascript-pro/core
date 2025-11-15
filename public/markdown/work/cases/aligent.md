@@ -4,10 +4,12 @@ title: Aligent
 description: Design Systems
 slug: /work/cases/aligent
 icon: case
-image: /png/3rdParty/js.png
+image: https://live.staticflickr.com/4168/34263291171_c62c5b24be_b.jpg
 tags: expertise, interview, php, magento, e-commerce
+paywall: true
 ---
 
 ## Magento PHP & Material Design System
 
-> JavaScript Developer, Aug 20XX - Feb 20XX, Adelaide
+> JavaScript Developer, Adelaide
+

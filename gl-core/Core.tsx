@@ -210,12 +210,10 @@ export default function Core({ frontmatter, body = null }: TCore) {
                           )}
                         </Box>
                       )}
-
                       <RenderMarkdown>{body}</RenderMarkdown>
                     </>
                   )}
                 </Box>
-
                 <ThumbMenu />
               </Grid>
             </Grid>
