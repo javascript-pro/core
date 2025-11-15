@@ -11,6 +11,6 @@ noImage: true
 
 [PageGrid thumbnails="yes" pages="/work, /life, /balance"]
 
-[PageGrid pages="/work/cases, /work/expertise, /work/goldlabel"]
+[PageAd slug="/balance/writing/not-here-to-fuck-spiders"]
 
 > The apps we ship are real. They run in production and are developed accessibly.

@@ -83,7 +83,7 @@ export default function SignInUp() {
               Continue with GitHub
             </Button>
 
-            <Button
+            {/* <Button
               fullWidth
               variant="contained"
               onClick={handleFacebook}
@@ -101,7 +101,7 @@ export default function SignInUp() {
               sx={{ py: 1.6, mt: 2 }}
             >
               Continue with Twitter
-            </Button>
+            </Button> */}
           </CardContent>
         </Grid>
       </Grid>

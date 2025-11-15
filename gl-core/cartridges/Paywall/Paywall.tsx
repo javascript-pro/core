@@ -31,7 +31,6 @@ export default function Paywall() {
       <DialogPaywall />
       <Button
         size="small"
-        variant={user ? 'outlined' : 'outlined'}
         endIcon={<Icon icon="signin" />}
         onClick={handleClick}
         sx={{

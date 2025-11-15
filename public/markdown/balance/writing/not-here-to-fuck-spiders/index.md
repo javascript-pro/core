@@ -4,7 +4,7 @@ title: Not Here To Fuck Spiders
 description: by Wei Zang
 slug: /balance/writing/not-here-to-fuck-spiders
 icon: bug
-image: https://live.staticflickr.com/65535/54443656612_a717f5582c_b.jpg
+image: https://live.staticflickr.com/65535/54925242575_c783aa6b7e_b.jpg
 paywall: true
 ---
 

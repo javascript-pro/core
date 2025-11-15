@@ -1,4 +1,3 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/Shortcodes/components/PageAd.tsx
 'use client';
 import React from 'react';
 import { useRouter } from 'next/navigation';
@@ -25,10 +24,9 @@ type NavItem = {
 };
 
 function findBySlug(items: NavItem[], slug: string): NavItem | null {
-  if (!Array.isArray(items)) return null;
   for (const item of items) {
     if (item.slug === slug) return item;
-    if (Array.isArray(item.children)) {
+    if (item.children?.length) {
       const found = findBySlug(item.children, slug);
       if (found) return found;
     }
@@ -36,16 +34,18 @@ function findBySlug(items: NavItem[], slug: string): NavItem | null {
   return null;
 }
 
-function cleanExcerpt(excerpt?: string): string {
+function cleanExcerpt(excerpt?: string) {
   if (!excerpt) return '';
-  let cleaned = excerpt.replace(/\[[^\]]+\]/g, '');
-  cleaned = cleaned.replace(/\s+/g, ' ').trim();
-  return cleaned;
+  return excerpt
+    .replace(/\[[^\]]+\]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
 }
 
-export default function PageAd({ slug = '/' }: { slug: string }) {
-  const globalNav = useGlobalNav() as NavItem[] | NavItem | null;
+export default function PageAd({ slug }: { slug: string }) {
   const router = useRouter();
+  const globalNav = useGlobalNav();
+
   const items: NavItem[] = Array.isArray(globalNav)
     ? globalNav
     : globalNav
@@ -63,10 +63,7 @@ export default function PageAd({ slug = '/' }: { slug: string }) {
   }
 
   const subheader = cleanExcerpt(item.excerpt);
-
-  const handleClick = () => {
-    router.push(item.slug as string);
-  };
+  const handleClick = () => item.slug && router.push(item.slug);
 
   return (
     <Card variant="outlined">
@@ -74,9 +71,7 @@ export default function PageAd({ slug = '/' }: { slug: string }) {
         <Grid container spacing={1}>
           <Grid size={{ xs: 12 }}>
             <CardHeader
-              sx={{
-                alignItems: 'flex-start',
-              }}
+              sx={{ alignItems: 'flex-start' }}
               avatar={
                 <Box sx={{ mt: 0.5 }}>
                   <Icon icon={item.icon as any} color="primary" />
@@ -85,14 +80,25 @@ export default function PageAd({ slug = '/' }: { slug: string }) {
               title={<Typography variant="h6">{item.title}</Typography>}
             />
           </Grid>
-          <Grid size={{ xs: 12, sm: 3 }}>
+
+          {item.image && (
+            <Grid size={{ xs: 12, sm: 6 }}>
+              <CardContent>
+                <CardMedia
+                  component="img"
+                  src={item.image}
+                  height={120}
+                  sx={{ objectFit: 'cover', borderRadius: 1 }}
+                />
+              </CardContent>
+            </Grid>
+          )}
+
+          <Grid size={{ xs: 12, sm: item.image ? 6 : 12 }}>
             <CardContent>
-              <CardMedia src={item.image} height={120} component={'img'} />
-            </CardContent>
-          </Grid>
-          <Grid size={{ xs: 12, sm: 9 }}>
-            <CardContent>
-              <Typography variant="body1">{`${subheader} ...`}</Typography>
+              <Typography variant="body1">
+                {subheader && `${subheader} ...`}
+              </Typography>
             </CardContent>
           </Grid>
         </Grid>

@@ -9,4 +9,4 @@ tags: expertise, interview, experience
 noImage: true
 ---
 
-[PageGrid pages="/work/cases/huawei, /work/cases/boral, /work/cases/aligent"]
+[PageGrid thumbnails="yes" pages="/work/cases/huawei, /work/cases/boral, /work/cases/aligent"]

@@ -4,7 +4,7 @@ title: Generation X
 description: by Douglas Coupland
 slug: /balance/books/douglas-coupland/generation-x
 icon: books
-image: /jpg/gen-x/cassetes.jpg
+image: https://live.staticflickr.com/65535/54736833001_ef9c5f4b57_c.jpg
 ---
 
 > The term **Generation X** acquired a modern application after the release of Generation X: Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland
