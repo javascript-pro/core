@@ -24,7 +24,13 @@ import {
   useIsMobile,
 } from '../../../../gl-core';
 
-export function StandardCard({ slug, thumbnails }: { slug: string; thumbnails?: boolean }) {
+export function StandardCard({
+  slug,
+  thumbnails,
+}: {
+  slug: string;
+  thumbnails?: boolean;
+}) {
   const router = useRouter();
   const dispatch = useDispatch();
   const content = useContent(slug);

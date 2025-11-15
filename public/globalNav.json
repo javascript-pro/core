@@ -174,9 +174,9 @@
                     "slug": "/work/goldlabel/cartridges/shortcodes",
                     "order": 2200,
                     "icon": "goldlabel",
-                    "image": "/jpg/dementia/balance.jpg",
+                    "image": "/jpg/other/Opengraph-template.jpg",
                     "type": "file",
-                    "excerpt": ""
+                    "excerpt": "Goldlabel includes a Shortcodes cartridge that brings a familiar WordPressstyle authoring pattern into a modern React/Next.js environment. Shortcodes let you drop small, purposeful commands directly i"
                   }
                 ],
                 "icon": "goldlabel",

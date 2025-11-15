@@ -131,9 +131,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                   </Typography>
                 </Box>
                 {title !== 'Home' && (
-                  <>
-                    {pathname !== '/' && <PageBreadcrumb />}
-                  </>
+                  <>{pathname !== '/' && <PageBreadcrumb />}</>
                 )}
 
                 {/* 🔒 Content area */}
