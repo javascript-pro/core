@@ -28,29 +28,32 @@ export default function Paywall() {
 
   return (
     <>
-      <DialogPaywall /> 
-      
-      { user ? <Box sx={{
-                  width: '100%',
-                  display: 'flex',
-                }}>
-                  <Box sx={{ flexGrow:1, }} />
-                  <UserCard />
-                </Box> : 
-                <Button
-                  endIcon={<Icon icon="paywall" />}
-                  onClick={handleClick}
-                  sx={{
-                    zIndex: (theme) => theme.zIndex.modal - 3,
-                    position: 'fixed',
-                    top: 16,
-                    right: 16,
-                  }}
-                >
-                  Paywall
-                </Button>
-      }
-      
+      <DialogPaywall />
+
+      {user ? (
+        <Box
+          sx={{
+            width: '100%',
+            display: 'flex',
+          }}
+        >
+          <Box sx={{ flexGrow: 1 }} />
+          <UserCard />
+        </Box>
+      ) : (
+        <Button
+          endIcon={<Icon icon="paywall" />}
+          onClick={handleClick}
+          sx={{
+            zIndex: (theme) => theme.zIndex.modal - 3,
+            position: 'fixed',
+            top: 16,
+            right: 16,
+          }}
+        >
+          Paywall
+        </Button>
+      )}
     </>
   );
 }

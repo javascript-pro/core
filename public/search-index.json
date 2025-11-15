@@ -151,7 +151,7 @@
     "title": "Writing",
     "description": "It's hard to collate stuff into readable writing, but we're doing our best",
     "tags": [],
-    "content": "\n[PageGrid pages=\"/balance/writing/not-here-to-fuck-spiders, /balance/writing/der-kleine-zeppelin\"]\n"
+    "content": "\n[PageGrid thumbnails=\"yes\" pages=\"/balance/writing/not-here-to-fuck-spiders, /balance/writing/der-kleine-zeppelin\"]\n"
   },
   {
     "slug": "balance/writing/not-here-to-fuck-spiders/bez",
@@ -298,7 +298,7 @@
     "title": "Case Studies",
     "description": "Real World Experience",
     "tags": "expertise, interview, experience",
-    "content": "\n[PageGrid thumbnails=\"yes\" pages=\"/work/cases/hertwig-auer, /work/cases/huawei, /work/cases/boral\"]\n"
+    "content": "\n[PageGrid thumbnails=\"yes\" pages=\"/work/cases/hertwig-auer, /work/cases/huawei, /work/cases/boral\", /work/cases/aligent\"]\n"
   },
   {
     "slug": "work/company/index",

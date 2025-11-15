@@ -1,12 +1,7 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/Paywall/components/UserCard.tsx
 'use client';
 import * as React from 'react';
-import {
-  Box,
-  Avatar,
-  Typography,
-  ButtonBase,
-} from '@mui/material';
+import { Box, Avatar, Typography, ButtonBase } from '@mui/material';
 import { useUser, setPaywallKey } from '../../Paywall';
 import { useDispatch, Icon } from '../../../../gl-core';
 
@@ -30,8 +25,8 @@ export default function UserCard() {
     providerId === 'google.com'
       ? 'google'
       : providerId === 'github.com'
-      ? 'github'
-      : 'user';
+        ? 'github'
+        : 'user';
 
   const showFallback = !photoURL;
 

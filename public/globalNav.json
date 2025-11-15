@@ -55,7 +55,7 @@
                 "slug": "/work/cases/hertwig-auer",
                 "order": 30,
                 "icon": "case",
-                "image": "https://live.staticflickr.com/43/116813551_18d96b6e94_o.jpg",
+                "image": "https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg",
                 "type": "file",
                 "tags": [
                   "expertise",
@@ -81,13 +81,13 @@
               }
             ],
             "icon": "case",
-            "image": "https://live.staticflickr.com/65535/54922461987_b333b3acd7_b.jpg",
+            "image": "https://live.staticflickr.com/4168/34263291171_c62c5b24be_b.jpg",
             "tags": [
               "expertise",
               "interview",
               "experience"
             ],
-            "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/work/cases/hertwigauer, /work/cases/huawei, /work/cases/boral\"]"
+            "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/work/cases/hertwigauer, /work/cases/huawei, /work/cases/boral\", /work/cases/aligent\"]"
           },
           {
             "title": "Goldlabel",
@@ -1380,7 +1380,7 @@
             ],
             "icon": "balance",
             "image": "https://live.staticflickr.com/65535/54443656612_a717f5582c_b.jpg",
-            "excerpt": "[PageGrid pages=\"/balance/writing/notheretofuckspiders, /balance/writing/derkleinezeppelin\"]"
+            "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/balance/writing/notheretofuckspiders, /balance/writing/derkleinezeppelin\"]"
           },
           {
             "title": "Video",
