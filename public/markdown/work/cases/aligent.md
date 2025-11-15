@@ -12,4 +12,3 @@ paywall: true
 ## Magento PHP & Material Design System
 
 > JavaScript Developer, Adelaide
-

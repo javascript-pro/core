@@ -34,32 +34,14 @@ export default function SignInUp() {
     }
   };
 
-  // const handleFacebook = async () => {
-  //   try {
-  //     await signInWithPopup(auth, new FacebookAuthProvider());
-  //   } catch (err) {
-  //     alert((err as Error).message);
-  //   }
-  // };
-
-  // const handleTwitter = async () => {
-  //   try {
-  //     const provider = new OAuthProvider('twitter.com');
-  //     await signInWithPopup(auth, provider);
-  //   } catch (err) {
-  //     alert((err as Error).message);
-  //   }
-  // };
-
   return (
     <Box sx={{}}>
       <Grid container spacing={1} justifyContent="center">
         <Grid size={{ xs: 12 }}>
           <CardHeader
-            title="Paywall"
-            subheader="Continue with one of our trusted providers"
+            title="This content is behind a pawall"
+            subheader="Continue with one of these trusted providers"
           />
-
           <CardContent>
             <Button
               fullWidth
@@ -80,7 +62,6 @@ export default function SignInUp() {
             >
               GitHub
             </Button>
-
           </CardContent>
         </Grid>
       </Grid>

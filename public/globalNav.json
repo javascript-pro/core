@@ -25,7 +25,7 @@
                 "slug": "/work/cases/aligent",
                 "order": 30,
                 "icon": "case",
-                "image": "/png/3rdParty/js.png",
+                "image": "https://live.staticflickr.com/4168/34263291171_c62c5b24be_b.jpg",
                 "type": "file",
                 "tags": [
                   "expertise",
@@ -34,7 +34,7 @@
                   "magento",
                   "e-commerce"
                 ],
-                "excerpt": "Magento PHP & Material Design System\n\n JavaScript Developer, Aug 20XX  Feb 20XX, Adelaide"
+                "excerpt": "Magento PHP & Material Design System\n\n JavaScript Developer, Adelaide"
               },
               {
                 "title": "Boral",

@@ -6,7 +6,6 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
-  Avatar,
   Typography,
   Dialog,
   Button,
@@ -14,9 +13,8 @@ import {
   DialogTitle,
   DialogContent,
 } from '@mui/material';
-import { useUser, userSignout, setPaywallKey } from '../../Paywall';
+import { useUser, userSignout, setPaywallKey, UserCard } from '../../Paywall';
 import { Icon, useDispatch } from '../../../../gl-core';
-import moment from 'moment';
 
 export default function User() {
   const user = useUser();
@@ -40,23 +38,8 @@ export default function User() {
 
   return (
     <Box sx={{ p: 2 }}>
-      <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-        <Avatar
-          src={photoURL}
-          sx={{ width: 64, height: 64, mr: 2, borderRadius: 2 }}
-        />
-        <Box>
-          <Typography variant="h6">{displayName}</Typography>
-          <Typography variant="body2" color="text.primary">
-            {email}
-          </Typography>
-          <ListItemText secondary={uid} />
-          
-        </Box>
-      </Box>
-
-      <List disablePadding>
-
+      <UserCard />
+      <List>
         <ListItemButton onClick={() => setConfirmOpen(true)}>
           <ListItemIcon>
             <Icon icon="signout" />
@@ -90,7 +73,6 @@ export default function User() {
           </Button>
         </DialogActions>
       </Dialog>
-
     </Box>
   );
 }

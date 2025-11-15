@@ -50,8 +50,6 @@ export default function DialogPaywall() {
         maxWidth={user ? 'xs' : 'xs'}
         fullWidth
       >
-        
-
         <User />
         {!user ? (
           <>

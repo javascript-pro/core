@@ -6,6 +6,7 @@ import Tings from './components/Tings';
 import User from './components/User';
 import SigninGate from './components/SigninGate';
 import DialogPaywall from './components/DialogPaywall';
+import UserCard from './components/UserCard';
 import { usePaywall } from './hooks/usePaywall';
 import { useUser } from './hooks/useUser';
 import { setUser } from './actions/setUser';
@@ -21,6 +22,7 @@ export {
   setUser,
   SignInUp,
   DialogPaywall,
+  UserCard,
   SigninGate,
   Tings,
   User,
