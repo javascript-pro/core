@@ -1,12 +1,6 @@
 'use client';
 import * as React from 'react';
-import {
-  Box,
-  CardHeader,
-  CardContent,
-  Button,
-  Grid,
-} from '@mui/material';
+import { Box, CardHeader, CardContent, Button, Grid } from '@mui/material';
 import {
   onAuthStateChanged,
   User,

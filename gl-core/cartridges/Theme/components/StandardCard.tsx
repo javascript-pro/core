@@ -68,7 +68,6 @@ export function StandardCard({ slug }: any) {
             {title}
           </Typography>
         }
-        
         action={
           <IconButton
             color="primary"
@@ -89,7 +88,7 @@ export function StandardCard({ slug }: any) {
           },
         }}
       />
-      
+
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           {image && (

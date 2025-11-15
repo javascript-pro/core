@@ -83,7 +83,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
             justifyContent: 'space-between',
             px: 1,
             py: 0.5,
-          }}>
+          }}
+        >
           <Paywall />
         </Box>
 
