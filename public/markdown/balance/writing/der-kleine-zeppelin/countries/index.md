@@ -1,6 +1,6 @@
 ---
 order: 10
-title: Countries
+title: Map
 slug: /balance/writing/der-kleine-zeppelin/countries
 icon: van
 noImage: true

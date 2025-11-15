@@ -1440,7 +1440,7 @@
                     "slug": "/balance/books/douglas-coupland/generation-x",
                     "order": 100,
                     "icon": "books",
-                    "image": "/jpg/cassetes.jpg",
+                    "image": "/jpg/gen-x/cassetes.jpg",
                     "type": "file",
                     "excerpt": "The term Generation X acquired a modern application after the release of Generation X: Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Glossary\n\nMcJob A lo"
                   }
@@ -1499,12 +1499,12 @@
               "Orwell",
               "Pullman"
             ],
-            "excerpt": "Curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction. From visionary science fiction to satirical explorations of culture and the human exper"
+            "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/balance/books/rfkuang/babel, /balance/books/douglascoupland/generationx, /balance/books/williamgibson\"]\n\n Curated collection of contemporary literature, showcasing s"
           }
         ],
         "icon": "balance",
         "image": "https://live.staticflickr.com/65535/53670939819_74bfceabd6_b.jpg",
-        "excerpt": "[PageGrid pages=\"/balance/books, /balance/video, /balance/writing\"]\n\nIf you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are"
+        "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/balance/books, /balance/video, /balance/writing\"]\n\nIf you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are"
       }
     ],
     "icon": "home",

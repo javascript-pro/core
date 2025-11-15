@@ -8,8 +8,6 @@ image: /png/balance/books/babel.png
 tags: Speculative fiction, alternative history
 ---
 
-[PrevNext prev="/balance/books/r-f-kuang" next="/balance/books/r-f-kuang/katabasis"]
-
 ## or... the Necessity of Violence
 
 It is an alternative history novel, set in a fantastical version of Oxford in 1830s England. In the second week of September 2022, Babel was placed at the top spot on The New York Times Best Seller list for hardcover fiction, but dropped to the ninth spot the following week before disappearing from the list by the end of the month.

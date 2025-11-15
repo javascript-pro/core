@@ -1,16 +1,20 @@
 ---
 order: 9
 title: Video
-description: Knowing the future is easy
+description: It's Not Why You Know
 slug: /balance/video
 icon: balance
-image: https://live.staticflickr.com/65535/54353995935_a904d504aa_b.jpg
+image: /jpg/ai/image.jpg
 noImage: true
 ---
 
 [YouTube src="https://www.youtube.com/watch?v=Qe2ZLYzQToQ"]
 
-Script (written October 2000)
+Whilst working at a design agency in London in the year 2000 I was given the opportunity to work on a personal project and chose to make a film. I was experimenting with animated human characters in 3D with Poser and rendering them over the top of live action.
+
+The final film took several weeks to produce, filming on the underground, rendering 3D animation and creating some original titles in flash.
+
+#### Script (written October 2000)
 
 Knowing the future is easy
 You just have to understand the past
@@ -41,7 +45,3 @@ But you play your part every day
 
 Just remember.
 You asked for it.
-
-Whilst working at a design agency in London in the year 2000 I was given the opportunity to work on a personal project and chose to make a film. I was experimenting with animated human characters in 3D with Poser and rendering them over the top of live action.
-
-The final film took several weeks to produce, filming on the underground, rendering 3D animation and creating some original titles in flash.

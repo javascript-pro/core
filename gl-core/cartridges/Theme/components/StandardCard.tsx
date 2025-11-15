@@ -4,7 +4,6 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import {
-  Box,
   Card,
   CardHeader,
   CardMedia,
@@ -44,7 +43,7 @@ export function StandardCard({
 
   if (!content) return null;
 
-  const { title, excerpt, image, icon, description } = content;
+  const { title, excerpt, image, icon } = content;
 
   return (
     <Card
@@ -93,8 +92,8 @@ export function StandardCard({
         }}
       />
 
-      {/* Thumbnail visible even when collapsed */}
-      {thumbnails && image && !expanded && (
+      {/* Desktop-only thumbnail when collapsed */}
+      {thumbnails && image && !expanded && !isMobile && (
         <CardMedia
           component="img"
           image={image}
@@ -110,6 +109,7 @@ export function StandardCard({
 
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
+          {/* On mobile, show the image only inside the expanded section */}
           {image && (
             <CardMedia
               component="img"

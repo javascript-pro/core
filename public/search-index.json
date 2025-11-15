@@ -25,7 +25,7 @@
     "title": "Books",
     "description": "What are you reading?",
     "tags": "science fiction, books, satire, douglas coupland, Cixin Liu, Orwell, Pullman",
-    "content": "\n> Curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction. From visionary science fiction to satirical explorations of culture and the human experience, our writers challenge, amuse, and inspire.\n\n[PageGrid pages=\"/balance/books/r-f-kuang, /balance/books/douglas-coupland, /balance/books/tom-robbins, /balance/books/william-gibson\"]\n"
+    "content": "\n[PageGrid thumbnails=\"yes\" pages=\"/balance/books/r-f-kuang/babel, /balance/books/douglas-coupland/generation-x, /balance/books/william-gibson\"]\n\n> Curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction. From visionary science fiction to satirical explorations of culture and the human experience, our writers challenge, amuse, and inspire.\n"
   },
   {
     "slug": "balance/books/r-f-kuang/babel",
@@ -67,7 +67,7 @@
     "title": "Balance",
     "description": "It's hard to collate stuff into readable writing, but we're doing our best",
     "tags": [],
-    "content": "\n[PageGrid pages=\"/balance/books, /balance/video, /balance/writing\"]\n\nIf you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are [Generation X](/balance/books/douglas-coupland/generation-x)\n"
+    "content": "\n[PageGrid thumbnails=\"yes\" pages=\"/balance/books, /balance/video, /balance/writing\"]\n\nIf you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are [Generation X](/balance/books/douglas-coupland/generation-x)\n"
   },
   {
     "slug": "balance/video/index",
