@@ -70,7 +70,7 @@ export default function SignInUp() {
               startIcon={<Icon icon="google" />}
               sx={{ py: 1.6 }}
             >
-              Continue with Google
+              Google
             </Button>
 
             <Button
@@ -80,7 +80,7 @@ export default function SignInUp() {
               startIcon={<Icon icon="github" />}
               sx={{ py: 1.6, mt: 2 }}
             >
-              Continue with GitHub
+              GitHub
             </Button>
 
             {/* <Button

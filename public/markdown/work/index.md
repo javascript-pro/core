@@ -9,7 +9,7 @@ tags: Professional, JavaScript, Vanilla JavaScript, TypeScript, React, Material 
 noImage: true
 ---
 
-[PageGrid thumbnails="yes" pages="/work/cases, /work/expertise, /work/goldlabel"]
+[PageGrid thumbnails="yes" pages="/work/expertise, /work/goldlabel, /work/cases"]
 
 > The apps we ship are real. They run in production and are developed accessibly.
 

@@ -1342,7 +1342,7 @@
                 "title": "Not Here To Fuck Spiders",
                 "description": "by Wei Zang",
                 "slug": "/balance/writing/not-here-to-fuck-spiders",
-                "order": 20,
+                "order": 500,
                 "type": "folder",
                 "children": [
                   {
@@ -1361,7 +1361,7 @@
                 ],
                 "icon": "bug",
                 "image": "https://live.staticflickr.com/65535/54925242575_c783aa6b7e_b.jpg",
-                "excerpt": "As far back as I can remember I knew that if I played by the rules I'd lose. I am Wei Zang and this is my story. Some of it is true."
+                "excerpt": "Oh we ARE? We are here to fuck spiders?\n\nChapter 1\n\nAs far back as I can remember I knew that to play by the rules meant losing. I am Wei Zang and this is my story. Some of it is true"
               }
             ],
             "icon": "balance",
@@ -1539,6 +1539,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/work, /life, /balance\"]\n\n[PageAd slug=\"/balance/writing/notheretofuckspiders\"]\n\n The apps we ship are real. They run in production and are developed accessibly."
+    "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/work, /life, /balance\"]\n\n The apps we ship are real. They run in production and are developed accessibly.\n\n[PageAd slug=\"/balance/writing/notheretofuckspiders\"]"
   }
 ]

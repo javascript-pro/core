@@ -45,7 +45,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const pathname = usePathname();
   const themeMode = useThemeMode();
   const isMobile = useIsMobile();
-  const user = useUser(); // 🔐 check user state
+  const user = useUser();
   const fetchedNavRef = React.useRef(false);
 
   React.useEffect(() => {
@@ -63,7 +63,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const effectiveThemeMode =
     themeMode === null ? (prefersDark ? 'dark' : 'light') : themeMode;
 
-  const isAuthed = !!(user && user.uid); // ✅ logged-in flag
+  const isAuthed = !!(user && user.uid);
 
   return (
     <>
@@ -130,15 +130,54 @@ export default function Core({ frontmatter, body = null }: TCore) {
                     {description}
                   </Typography>
                 </Box>
+
                 {title !== 'Home' && (
                   <>{pathname !== '/' && <PageBreadcrumb />}</>
                 )}
 
-                {/* 🔒 Content area */}
+                {/* CONTENT AREA */}
                 <Box sx={{ mt: 2, mb: isMobile ? 3 : '175px' }}>
-                  {/* ✅ Authenticated users always bypass paywall */}
+                  {/* PAYWALL MODE */}
                   {paywall === true && !isAuthed ? (
-                    <SigninGate />
+                    <Grid
+                      container
+                      spacing={2}
+                      sx={{ alignItems: 'flex-start' }}
+                    >
+                      {/* Left: Gate */}
+                      <Grid size={{ xs: 12, md: 4 }}>
+                        <SigninGate />
+                      </Grid>
+
+                      {/* Right: Image */}
+                      <Grid size={{ xs: 12, md: 8 }}>
+                        {!noImage && image && (
+                          <Box>
+                            {!imageError ? (
+                              <Image
+                                priority
+                                src={image}
+                                alt={title || 'Featured image'}
+                                width={1200}
+                                height={630}
+                                style={{
+                                  width: '100%',
+                                  height: 'auto',
+                                  borderRadius: 8,
+                                }}
+                                onError={() => setImageError(true)}
+                              />
+                            ) : (
+                              <Skeleton
+                                variant="rectangular"
+                                width="100%"
+                                height={315}
+                              />
+                            )}
+                          </Box>
+                        )}
+                      </Grid>
+                    </Grid>
                   ) : (
                     <>
                       {!noImage && image && (
@@ -171,10 +210,12 @@ export default function Core({ frontmatter, body = null }: TCore) {
                           )}
                         </Box>
                       )}
+
                       <RenderMarkdown>{body}</RenderMarkdown>
                     </>
                   )}
                 </Box>
+
                 <ThumbMenu />
               </Grid>
             </Grid>
