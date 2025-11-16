@@ -18,7 +18,7 @@
     "title": "Books",
     "description": "What are you reading?",
     "tags": "science fiction, books, satire, douglas coupland, Cixin Liu, Orwell, Pullman",
-    "content": "\n[PageGrid thumbnails=\"yes\" pages=\"/balance/books/r-f-kuang/babel, /balance/books/douglas-coupland/generation-x, /balance/books/william-gibson\"]\n\n> Curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction. From visionary science fiction to satirical explorations of culture and the human experience, our writers challenge, amuse, and inspire.\n"
+    "content": "\n> A curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction\n\n[PageGrid thumbnails=\"yes\" pages=\"/balance/books/r-f-kuang/babel, /balance/books/douglas-coupland/generation-x, /balance/books/william-gibson\"]\n"
   },
   {
     "slug": "balance/books/r-f-kuang/babel",
@@ -65,7 +65,7 @@
   {
     "slug": "balance/video/index",
     "title": "Video",
-    "description": "It's Not Why You Know",
+    "description": "It's Not Who You Know (2000)",
     "tags": [],
     "content": "\n[YouTube src=\"https://www.youtube.com/watch?v=Qe2ZLYzQToQ\"]\n\nWhilst working at a design agency in London in the year 2000 I was given the opportunity to work on a personal project and chose to make a film. I was experimenting with animated human characters in 3D with Poser and rendering them over the top of live action.\n\nThe final film took several weeks to produce, filming on the underground, rendering 3D animation and creating some original titles in flash.\n\n#### Script (written October 2000)\n\nKnowing the future is easy\nYou just have to understand the past\nThe situation we have now is one where it's not what you know\nOr even who you know\nBut how fast you can find it out\n\nI'm a digital representation of that knowledge\nI'm not saying I know everything\nI'm just well connected\n\nThe speed you can gain knowledge has become limited only by the speed you can type or talk\n\nImagine if it were limited only by the speed you can think\n\nWe are careering headlong into a world where we are all totally connected\nCan you imagine it?\n\nHaving access to every idea\nEvery grain of knowledge there has ever been\nThinking it is knowing it\n\nYou think think doesn't apply to you, don't you?\nFair enough.\nThe future is not an easy thing to accept.\nThe present is often hard enough\nBut you play your part every day\n\nJust remember.\nYou asked for it.\n"
   },
@@ -158,14 +158,21 @@
     "title": "Not Here To Fuck Spiders",
     "description": "by Wei Zang",
     "tags": [],
-    "content": "\nOh we ARE? We are here to fuck spiders?\n\nChapter 1\n\nAs far back as I can remember I knew that to play by the rules meant losing. I am Wei Zang and this is my story. Some of it is true\n"
+    "content": "\nOh we ARE? We are here to fuck spiders?\n\nChapter 1\n\nAs far back as I can remember I knew that to play by the rules meant losing. I am Wei Zang and this is my story. Some of it is true\n\nJudging from the past, we may safely infer that no one living species will transmit its unaltered likeness to a distant futurity. And of the species now living very few will transmit progeny of any kind to a far distant futurity.\n\n_Charles Darwin, On the Origin of Species By Means of Natural Selection, or The Preservation Of Favoured Race In The Struggle For Life (1859)_\n"
+  },
+  {
+    "slug": "balance/writing/not-here-to-fuck-spiders/puppy-thing",
+    "title": "Dog",
+    "description": "vat puppy fing’s gunna get fucked",
+    "tags": [],
+    "content": "\nI put an Attenborough series on for the dogs. Later I notice there’s a polar bear and a baby seal on the TV. I look at the doggy. He's got genuine concern in his eyes which also say **\"'at puppy fing’s gunna get fucked\"**\n"
   },
   {
     "slug": "index",
     "title": "Home",
     "description": "Work, Life, Balance",
     "tags": "JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS, secure",
-    "content": "\n[PageGrid thumbnails=\"yes\" pages=\"/work, /life, /balance\"]\n\n> The apps we ship are real. They run in production and are developed accessibly.\n\n[PageGrid thumbnails=\"no\" pages=\"/balance/books/douglas-coupland, /work/goldlabel/cartridges/paywall, /balance/writing/not-here-to-fuck-spiders\"]\n"
+    "content": "\n> The apps we ship are real. They run in production and are developed accessibly\n\n[PageGrid thumbnails=\"yes\" pages=\"/work, /life, /balance\"]\n\n[PageGrid thumbnails=\"no\" pages=\"/balance/writing/not-here-to-fuck-spiders/puppy-thing, /life/food/nasi-goreng, /balance/books/douglas-coupland, /work/goldlabel/cartridges/paywall, /balance/writing/not-here-to-fuck-spiders\"]\n"
   },
   {
     "slug": "life/aquaponics/index",
@@ -210,13 +217,6 @@
     "content": "\n- 2 Large peppers (capsicums)\n- 1 125g pack of mozzarella\n- Enough of your best, most delicious bolognaise to fill the peppers\n\n#### STEP 1\n\nPrepare Air Fryer pan. Line it with tinfoil if you want to keep it clean, although you might as well be punching dolphins. Silicone liners are good and can be chucked in the dishwasher\n\n#### STEP 2\n\nSlice your peppers in half from top to bottom and remove seeds/stem & anything else you wouldn't want to eat. Place peppers skin side down in Air Fryer pan and season with a little salt, pepper and oil\n\n> Air Fry at 200°C for 7 minutes\n\n#### STEP 3\n\nRemove Air Fryer pan to kitchen sink and spoon the bolognese into the peppers. Cover the tops of each with mozzarella\n\n> Air Fry at 200°C for 12 minutes\n\nUse a big spoon to serve onto big plates. Bung everything in the dishwasher. Basta.\n"
   },
   {
-    "slug": "life/food/all-day-brekkie-goreng",
-    "title": "Breakfast Nasi Goreng",
-    "description": "Euro/Asian Fusian",
-    "tags": "food, recipes, indonesian, goreng, nasi, rice",
-    "content": "\n> **Nasi Goreng** is an Indonesian meal made from leftover rice stir-fried with garlic, shallots, chilli, and sweet soy sauce (kecap manis). Often enriched with prawns, chicken, or beef, it’s finished with a fried egg on top and a side of crisp cucumber and prawn crackers\n"
-  },
-  {
     "slug": "life/food/banana-bread",
     "title": "Banana Bread",
     "description": "Proper crowd pleaser",
@@ -245,11 +245,18 @@
     "content": "\n> \"Lemonading\" is an actual word that even people on Radio 4 use. So when life gives you lemons...\n\n### Ingredients\n\n#### For the pastry\n\n- 4 oz (110 g) plain flour, plus a little extra for rolling out\n- a pinch of salt\n- 1 oz (25 g) softened butter, cut into smallish lumps\n- 1 oz (25 g) softened pure lard, cut into smallish lumps\n\n#### For the filling\n\n- Grated zest and juice 2 large lemons\n- 3 level tablespoons cornflour\n- 2 oz (50 g) golden caster sugar\n- 3 large egg yolks\n- 1½ oz (40 g) butter\n\n#### For the meringue\n\n- 3 large egg whites\n- 6 oz (175 g) golden caster sugar\n\n### Method\n\nStart by making the pastry.\n\nFirst sieve the flour and a pinch of salt into a large bowl, holding the sieve up high to give the flour a good airing. Then add the butter and lard and, using only your fingertips, lightly rub the fats into the flour, again lifting the mixture up high. When everything is crumbly, sprinkle in 1 tablespoon of water. Start to mix the pastry with a flat-bladed knife and then finish off with your hands, adding a few more drops of water until you have a smooth dough that will leave the bowl clean. Then pop the pastry into a plastic bag and let it rest in the fridge for 30 minutes.\n\nNext, transfer the pastry to a flat, lightly floured surface and roll it out to a circle about ½ in (1 cm) larger all round than the rim of the tin. Cut a ½ in (1 cm) strip from the edge of the pastry, dampen the rim of the tin with water and fix the strip round it, pressing down well. Dampen the strip before lining the tin with the pastry circle, making sure you don't trap any air underneath it. Then prick the base all over with a fork. Place the tin on the baking sheet and bake on a high shelf in the pre-heated oven for 20-25 minutes, or until cooked through. After that, remove the pastry case from the oven and immediately lower the heat to gas mark 2, 300°F (150°C) for the meringue.\n\nMeanwhile, make the filling. Measure 10 fl oz (275 ml) cold water into a jug, and spoon the cornflour and sugar into a bowl. Add enough of the water to mix the cornflour to a smooth paste, then pour the rest of the water, along with the grated lemon zest, into a small saucepan. Bring this up to the boil, then pour it gradually on to the cornflour, mixing all the time until it is smooth. Now return the mixture to the saucepan and bring it back to the boil still mixing. Next, simmer very gently for about a minute stirring all the time to prevent it from catching. Then remove the pan from the heat and beat in the egg yolks, lemon juice and lastly, the butter. Now pour the lemon mixture into the pastry shell and spread it out evenly.\n\nFinally, for the meringue, use a large, spanking clean, grease-fee bowl and in it whisk the egg whites until they form stiff peaks. Now beat in a quarter of the sugar at a time until it is all incorporated, then spoon the meringue on top of the pie, taking it to the very edge of the pastry rim with a palette knife, so that it seals the edge completely (You can also make a few decorative swirls).\n\nBake in the oven on the centre shelf for 45 minutes, by which time the meringue will have turned pale beige, and be crisp on the outside and squashy within. Serve warm or cold, but if warm, leave it to settle for about 20 minutes. Chilled pouring cream is a nice accompaniment.\n\n#### Additional\n\nPre-heat the oven to gas mark 5, 375°F (190°C).\n\n#### Equipment\n\nYou will also need a 1.5 inch (4 cm) deep, sloping-sided, non-stick pie tin with a ½ in (1 cm) rim, a base diameter of 7in (18 cm) and a top diameter of 9½ in (24 cm)\n"
   },
   {
+    "slug": "life/food/nasi-goreng",
+    "title": "Nasi Goreng",
+    "description": "Eurotrash/Asian Fusian",
+    "tags": "food, recipes, indonesian, goreng, nasi, rice",
+    "content": "\n> **Nasi Goreng** is an Indonesian dish made from leftover rice stir-fried with garlic, shallots, chilli, and sweet soy sauce (kecap manis). Often enriched with prawns, chicken, or beef. Usually finished with prawn crackers a fried egg and a side of crisp cucumber\n\nThis is something I've made for over 20 years and it's different every time. If you want to recreate authentically trad Nasi Goreng from scratch, follow these steps\n\nFirst have a chinese the night before. There's always some berk who's ordered too much rice and nobody likes cold boily rice hanging round the fridge\n\nHere's what you kind of need. Substitute as needed\n\n## Protein\n\nWhich protein are you going to use out of these?\n\n- Prawns\n- Eggs\n- Chicken\n- [Seal](/balance/writing/not-here-to-fuck-spiders/puppy-thing)\n- Tofu\n\nor none of the above if you want\n\n## Vegetables\n\nWhich vegetables have you got out of these?\n\n- Spring onions\n- Red onions\n- Finely sliced savoy cabbage\n- Fresh, finely sliced, deseeded chilli\n- Fresh parsly/chives\n- Julienned carrot\n- Mangetout/ Sugersnap\n\n## Which veg have you got out of these\n"
+  },
+  {
     "slug": "life/index",
     "title": "Life",
     "description": "Generation X at 50",
     "tags": [],
-    "content": "\n[PageGrid thumbnails=\"yes\" pages=\"/life/aquaponics, /life/diving, /life/food, /life/motorbikes\"]\n\nI work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age maybe it's time to take up sailing. We are [Generation X](/balance/writers/generation-x)\n\n⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a 1991 novel written by Canadian author Douglas Coupland\n"
+    "content": "\n[PageGrid thumbnails=\"yes\" pages=\" /life/food, /life/motorbikes, /life/aquaponics, /life/diving,\"]\n\nI work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age maybe it's time to take up sailing. We are [Generation X](/balance/writers/generation-x)\n\n⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a 1991 novel written by Canadian author Douglas Coupland\n"
   },
   {
     "slug": "life/motorbikes/index",
