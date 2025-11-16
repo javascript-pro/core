@@ -2,12 +2,14 @@
 order: 130
 title: Paywall
 description: Auth & Payments Cartridge
-slug: /work/goldlabel/cartridges/paywall
-icon: goldlabel
+slug: /work/goldlabel/cartridges/paywall/more
+icon: paywall
 image: /jpg/ai/SWAT-Baby.jpg
 tags: cartridges, cartridge, free, paywall
 paywall: false
 ---
+
+#### More info
 
 > The Paywall cartridge is responsible for two key features: Authentication/Access Control and Pings
 

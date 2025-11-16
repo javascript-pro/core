@@ -13,4 +13,4 @@ noImage: true
 
 > The apps we ship are real. They run in production and are developed accessibly.
 
-[PageAd slug="/balance/writing/not-here-to-fuck-spiders"]
+[PageGrid thumbnails="no" pages="/work/goldlabel/cartridges/paywall, /balance/writing/not-here-to-fuck-spiders"]

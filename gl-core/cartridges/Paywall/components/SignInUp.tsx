@@ -39,7 +39,7 @@ export default function SignInUp() {
       <Grid container spacing={1} justifyContent="center">
         <Grid size={{ xs: 12 }}>
           <CardHeader
-            title="This content is behind a pawall"
+            // title="This content is behind a pawall"
             subheader="Continue with one of these trusted providers"
           />
           <CardContent>

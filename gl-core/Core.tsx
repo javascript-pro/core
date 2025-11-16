@@ -30,6 +30,7 @@ import {
   useSiblings,
   SideAds,
   SharePopup,
+  Icon,
 } from '../gl-core';
 import { Paywall, SigninGate, useUser } from './cartridges/Paywall';
 
@@ -37,9 +38,8 @@ const config = configRaw as TConfig;
 
 export default function Core({ frontmatter, body = null }: TCore) {
   const dispatch = useDispatch();
-  const { noImage, image, title, description, paywall } = frontmatter ?? {};
+  const { noImage, image, icon, title, description, paywall } = frontmatter ?? {};
   const [imageError, setImageError] = React.useState(false);
-  const [menuOpen, setMenuOpen] = React.useState(false);
   const prefersDark = useMediaQuery('(prefers-color-scheme: dark)');
   const siblings = useSiblings();
   const pathname = usePathname();
@@ -92,7 +92,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
           <Box sx={{ minHeight: '100vh' }}>
             <Grid container spacing={isMobile ? 0 : 1}>
               <Grid size={{ xs: 1, md: 3 }}>
-                <Box sx={{ overflow: 'hidden', ml: isMobile ? -3 : 0 }}>
+                <Box sx={{ overflow: 'hidden', ml: isMobile ? -3 : 0, mt: 0 }}>
                   {Array.isArray(siblings) && siblings.length > 0 ? (
                     <Siblings />
                   ) : (
@@ -103,13 +103,18 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
               <Grid size={{ xs: 11, md: 9 }}>
                 <Box sx={{ display: 'flex' }}>
+
+                  <Box sx={{mr: 2, mt: 1.5 }}>
+                    <Icon icon={icon as any} color="primary"/>
+                  </Box>
+
                   <Typography
                     variant="h1"
                     gutterBottom
                     color="primary"
                     sx={{
                       mt: 1,
-                      fontSize: { xs: '1.7rem', md: '2.2rem' },
+                      fontSize: { xs: '1.6rem', md: '2rem' },
                     }}
                   >
                     {title}

@@ -161,18 +161,39 @@
                   },
                   {
                     "title": "Paywall",
+                    "description": "Access Control Cartridge",
                     "slug": "/work/goldlabel/cartridges/paywall",
                     "order": 130,
-                    "icon": "goldlabel",
+                    "type": "folder",
+                    "children": [
+                      {
+                        "title": "Paywall",
+                        "slug": "/work/goldlabel/cartridges/paywall/more",
+                        "order": 130,
+                        "icon": "paywall",
+                        "image": "/jpg/ai/SWAT-Baby.jpg",
+                        "type": "file",
+                        "tags": [
+                          "cartridges",
+                          "cartridge",
+                          "free",
+                          "paywall"
+                        ],
+                        "excerpt": "More info\n\n The Paywall cartridge is responsible for two key features: Authentication/Access Control and Pings\n\n Authentication (Firebase Auth +  collection)\n   User Management\n   Community\n   Passwor"
+                      }
+                    ],
+                    "icon": "paywall",
                     "image": "/jpg/ai/SWAT-Baby.jpg",
-                    "type": "file",
                     "tags": [
-                      "cartridges",
                       "cartridge",
                       "free",
-                      "paywall"
+                      "paywall",
+                      "use cases",
+                      "acess",
+                      "auth",
+                      "subscription"
                     ],
-                    "excerpt": "The Paywall cartridge is responsible for two key features: Authentication/Access Control and Pings\n\n Authentication (Firebase Auth +  collection)\n   User Management\n   Community\n   Passwords\n   Avatar"
+                    "excerpt": "User accounts, passwords, membership access and payment\n\n Use Cases\n\nWe have a page in our writing section for an ebook we are working on. It's not ready to be public yet, so we'll add the attribute  "
                   },
                   {
                     "title": "New Cartridge",
@@ -1553,6 +1574,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/work, /life, /balance\"]\n\n The apps we ship are real. They run in production and are developed accessibly.\n\n[PageAd slug=\"/balance/writing/notheretofuckspiders\"]"
+    "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/work, /life, /balance\"]\n\n The apps we ship are real. They run in production and are developed accessibly.\n\n[PageGrid thumbnails=\"no\" pages=\"/work/goldlabel/cartridge"
   }
 ]
