@@ -1,13 +1,14 @@
 ---
 order: 250
-title: Working remotely
-description: Productivity, communication, and collaboration
-slug: /work/company/remote-working
+title: How we work
+description: 100% Remote, Hybrid, Onsite
+slug: /work/company/how-we-work
 icon: company
 image: https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg
 tags: remote, hybrid
-noImage: true
 ---
+
+#### How we work
 
 > Corporate attitudes to remote working have changed dramatically in recent years.
 

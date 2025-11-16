@@ -1,5 +1,5 @@
 ---
-order: 50
+order: 506
 title: Nasi Goreng
 description: Eurotrash/Asian Fusian
 slug: /life/food/nasi-goreng
@@ -7,7 +7,7 @@ icon: food
 image: https://live.staticflickr.com/65535/54926293607_b77e119765_b.jpg
 tags: food, recipes, indonesian, goreng, nasi, rice
 paywall: true
-noImage: true
+# noImage: true
 ---
 
 > **Nasi Goreng** is an Indonesian dish made from leftover rice stir-fried with garlic, shallots, chilli, and sweet soy sauce (kecap manis). Often enriched with prawns, chicken, or beef. Usually finished with prawn crackers a fried egg and a side of crisp cucumber
@@ -39,25 +39,24 @@ or none of the above if you want
 
 Which vegetables have you got out of these?
 
--   Spring onions
--   Red onions
--   Finely sliced savoy cabbage
--   Fresh, finely sliced, deseeded chilli
--   Fresh parsly/chives
--   Julienned carrot
--   Mangetout/ Sugersnap
+- Spring onions
+- Red onions
+- Finely sliced savoy cabbage
+- Fresh, finely sliced, deseeded chilli
+- Fresh parsly/chives
+- Julienned carrot
+- Mangetout/ Sugersnap
 
 ## Sauce
 
--   Chilli
--   Garlic
--   Ginger
--   Soy
--   Ketjap Manis
--   Shallots/Spring Onions
--   Oil (semame is good)
--   Sugar
--   Lime Juice
-
+- Chilli
+- Garlic
+- Ginger
+- Soy
+- Ketjap Manis
+- Shallots/Spring Onions
+- Oil (semame is good)
+- Sugar
+- Lime Juice
 
 https://live.staticflickr.com/65535/54927461524_a8c8ca2d7a_z.jpg

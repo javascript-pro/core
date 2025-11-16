@@ -3,11 +3,11 @@ order: 5555
 title: Privacy & Cookies
 description: Your trust means everything to us
 slug: /work/company/privacy-cookies
-icon: admin
+icon: company
 image: /png/3rdParty/git_og.png
 tags: cookies, gdpr, privacy, terms, trust
-noImage: true
 ---
+#### Cookies
 
 > We don't use cookies
 
