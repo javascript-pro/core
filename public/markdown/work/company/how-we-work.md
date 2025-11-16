@@ -1,16 +1,16 @@
 ---
 order: 250
 title: How we work
-description: 100% Remote, Hybrid, Onsite
+description: 100% Remote, Hybrid or Onsite
 slug: /work/company/how-we-work
 icon: company
-image: https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg
+image: /png/3rdParty/git_og.png
 tags: remote, hybrid
 ---
 
-#### How we work
-
 > Corporate attitudes to remote working have changed dramatically in recent years.
+
+## How we work
 
 Many businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communication, and collaboration. However, the pandemic forced many businesses to adopt remote work policies, and they quickly discovered that employees could be just as productive and engaged when working from home
 

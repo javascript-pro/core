@@ -4,12 +4,15 @@ title: Work With Us
 description: We take on a limited number of new projects each month
 slug: /work/company/work-with-us
 icon: company
-image: https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg
+image: /png/3rdParty/git_og.png
 tags: company
 ---
-#### Work With Us
 
-We take on a limited number of new projects each month. If you need something done we’d love to hear about it. Find out if we're a [good fit](/work/cv). We're always looking for collaborators, contributors, and good ideas.
+> We take on a limited number of new projects each month
+
+## Work With Us
+
+If you need something done we’d love to hear about it. Find out if we're a [good fit](/work/cv). We're always looking for collaborators, contributors, and good ideas.
 
 The apps we ship are real. They run in production and are developed accessibly. The Core is Open Source and Free forever — giving you statically generated sites with Firestore-powered updates and a real admin panel. Built with Next.js App Router and Material UI
 
@@ -31,3 +34,11 @@ Goldlabel Apps is a UK-based software company that designs, builds, and maintain
 
 - Built for reuse.  
   Every component, pattern, and API is designed to be portable and production-ready
+
+> A Software Developer in possession of a good product, must be in want of a good business partner
+
+## Join Us
+
+Whether you're a startup with a short deadline or an enterprise with complex workflows, we can help. Get in touch for it's a truth universally acknowledged that a Software Developer in possession of a good product, must be in want of a good business partner
+
+[GitHub url="https://github.com/goldlabel-apps" label="@goldlabel-apps"]

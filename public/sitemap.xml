@@ -131,16 +131,19 @@
     <loc>https://goldlabel.pro/work/cases</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/company</loc>
+    <loc>https://goldlabel.pro/work/company/gdpr</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/company/join-us</loc>
+    <loc>https://goldlabel.pro/work/company/how-we-work</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/company</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/company/privacy-cookies</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/company/remote-working</loc>
+    <loc>https://goldlabel.pro/work/company/terms</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/company/work-with-us</loc>

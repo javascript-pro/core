@@ -8,6 +8,6 @@ image: /png/3rdParty/git_og.png
 tags: cookies, gdpr, privacy, terms, trust
 ---
 
-#### GDPR
-
 > T&Cs
+
+## GDPR

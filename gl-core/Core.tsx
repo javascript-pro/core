@@ -38,7 +38,8 @@ const config = configRaw as TConfig;
 
 export default function Core({ frontmatter, body = null }: TCore) {
   const dispatch = useDispatch();
-  const { noImage, image, icon, title, description, paywall } = frontmatter ?? {};
+  const { noImage, image, icon, title, description, paywall } =
+    frontmatter ?? {};
   const [imageError, setImageError] = React.useState(false);
   const prefersDark = useMediaQuery('(prefers-color-scheme: dark)');
   const siblings = useSiblings();
@@ -141,7 +142,11 @@ export default function Core({ frontmatter, body = null }: TCore) {
                 <Box sx={{ mt: 2, mb: isMobile ? 3 : '175px' }}>
                   {/* PAYWALL MODE */}
                   {paywall === true && !isAuthed ? (
-                    <Grid container spacing={2} sx={{ alignItems: 'flex-start' }}>
+                    <Grid
+                      container
+                      spacing={2}
+                      sx={{ alignItems: 'flex-start' }}
+                    >
                       {/* Left: Gate */}
                       <Grid size={{ xs: 12, md: 4 }}>
                         <SigninGate />
@@ -168,7 +173,11 @@ export default function Core({ frontmatter, body = null }: TCore) {
                                 onError={() => setImageError(true)}
                               />
                             ) : (
-                              <Skeleton variant="rectangular" width="100%" height={315} />
+                              <Skeleton
+                                variant="rectangular"
+                                width="100%"
+                                height={315}
+                              />
                             )}
                           </Box>
                         )}
@@ -195,8 +204,16 @@ export default function Core({ frontmatter, body = null }: TCore) {
                             />
                           ) : (
                             <Box>
-                              <Skeleton variant="rectangular" width="100%" height={315} />
-                              <Typography variant="body2" color="text.secondary" mt={1}>
+                              <Skeleton
+                                variant="rectangular"
+                                width="100%"
+                                height={315}
+                              />
+                              <Typography
+                                variant="body2"
+                                color="text.secondary"
+                                mt={1}
+                              >
                                 "{image}" not found.
                               </Typography>
                             </Box>
