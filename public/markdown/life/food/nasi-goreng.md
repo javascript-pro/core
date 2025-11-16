@@ -81,4 +81,3 @@ Which vegetables have you got out of these?
 - Sugar
 - Lime Juice
 
-https://live.staticflickr.com/65535/54927461524_a8c8ca2d7a_z.jpg
