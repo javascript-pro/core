@@ -53,9 +53,7 @@ export default function DialogPaywall() {
             <>
               <SignOut />
               <Box sx={{ flexGrow: 1 }} />
-              <IconButton 
-                color='primary'
-                onClick={handleClose}>
+              <IconButton color="primary" onClick={handleClose}>
                 <Icon icon="close" />
               </IconButton>
             </>

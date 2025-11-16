@@ -40,20 +40,25 @@ export default function Paywall() {
           <Box sx={{ flexGrow: 1 }} />
           <UserCard />
         </Box>
-      ) : (
-        <Button
-          endIcon={<Icon icon="paywall" />}
-          onClick={handleClick}
-          sx={{
-            zIndex: (theme) => theme.zIndex.modal - 3,
-            position: 'fixed',
-            top: 16,
-            right: 16,
-          }}
-        >
-          Paywall
-        </Button>
-      )}
+      ) : null}
     </>
   );
 }
+
+
+/*
+Sign in
+
+<Button
+  endIcon={<Icon icon="paywall" />}
+  onClick={handleClick}
+  sx={{
+    zIndex: (theme) => theme.zIndex.modal - 3,
+    position: 'fixed',
+    top: 16,
+    right: 16,
+  }}
+>
+  Paywall
+</Button>
+*/

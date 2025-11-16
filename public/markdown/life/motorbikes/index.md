@@ -4,7 +4,7 @@ title: Motorbikes
 description: A truth universally acknowledged
 slug: /life/motorbikes
 icon: bike
-image: /jpg/photos/motorbikes.jpg
+image: https://live.staticflickr.com/65535/54926888281_024d3ed9ee_o.jpg
 ---
 
 > “It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a motorbike.”
