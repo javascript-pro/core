@@ -11,7 +11,7 @@ noImage: true
 
 > User accounts, passwords, membership access and payment
 
-#### Use Cases
+## Use Cases
 
 We have a page in our writing section for an e-book we are working on. It's not ready to be public yet, so we'll add the attribute `paywall: true` to the content's frontmatter markdown. Now only logged in users can view.
 
@@ -24,3 +24,7 @@ It still creates a user account on our firebase app, and should the user ever lo
 In this way we can layer up the Paywall to include pages which are viewable if logged in, viewable only if the user has a Stripe subscription or viewable to only certain users.
 
 In other words... Access control
+
+## Examples
+
+[PageGrid thumbnails="yes" pages="/work/cases/hertwig-auer, /balance/writing/not-here-to-fuck-spiders, /balance/writing/not-here-to-fuck-spiders/bez"]

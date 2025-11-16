@@ -5,6 +5,7 @@ import SignInUp from './components/SignInUp';
 import Tings from './components/Tings';
 import User from './components/User';
 import SigninGate from './components/SigninGate';
+import SignOut from './components/SignOut';
 import DialogPaywall from './components/DialogPaywall';
 import UserCard from './components/UserCard';
 import { usePaywall } from './hooks/usePaywall';
@@ -24,6 +25,7 @@ export {
   DialogPaywall,
   UserCard,
   SigninGate,
+  SignOut,
   Tings,
   User,
   userSignout,

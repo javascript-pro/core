@@ -4,12 +4,8 @@ import {
   Dialog,
   Box,
   Button,
-  IconButton,
   DialogActions,
-  DialogTitle,
   DialogContent,
-  Typography,
-  CardHeader,
 } from '@mui/material';
 import { useDispatch, Icon, useIsMobile } from '../../../../gl-core';
 import {
@@ -18,7 +14,6 @@ import {
   setPaywallKey,
   SignInUp,
   User,
-  userSignout,
 } from '../../Paywall';
 
 export default function DialogPaywall() {
@@ -28,18 +23,10 @@ export default function DialogPaywall() {
   const user = useUser();
   const isMobile = useIsMobile();
 
-  const [confirmOpen, setConfirmOpen] = React.useState(false);
-
   const handleClose = () => {
     dispatch(setPaywallKey('dialogOpen', false));
   };
-
-  const handleSignout = () => {
-    dispatch(userSignout());
-    dispatch(setPaywallKey('dialogOpen', false));
-    setConfirmOpen(false);
-  };
-
+  
   return (
     <>
       {/* MAIN DIALOG */}
@@ -63,38 +50,11 @@ export default function DialogPaywall() {
           {user && (
             <>
               <Box sx={{ flexGrow: 1 }} />
-              <Button onClick={handleClose} endIcon={<Icon icon="tick" />}>
+              <Button onClick={handleClose} endIcon={<Icon icon="close" />}>
                 Close
               </Button>
             </>
           )}
-        </DialogActions>
-      </Dialog>
-
-      {/* CONFIRM SIGNOUT DIALOG */}
-      <Dialog
-        open={confirmOpen}
-        onClose={() => setConfirmOpen(false)}
-        maxWidth="xs"
-        fullWidth
-      >
-        <DialogTitle>Confirm Sign Out</DialogTitle>
-        <DialogContent>
-          <Typography>Are you sure you want to sign out?</Typography>
-        </DialogContent>
-
-        <DialogActions>
-          <Button onClick={() => setConfirmOpen(false)}>Cancel</Button>
-
-          <Button
-            size="large"
-            variant="contained"
-            color="error"
-            endIcon={<Icon icon="signout" />}
-            onClick={handleSignout}
-          >
-            Sign Out
-          </Button>
         </DialogActions>
       </Dialog>
     </>

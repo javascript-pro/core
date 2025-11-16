@@ -2,15 +2,17 @@
 'use client';
 import * as React from 'react';
 import { Box, Avatar, Typography, ButtonBase } from '@mui/material';
-import { useUser, setPaywallKey } from '../../Paywall';
+import { useUser, usePaywall, setPaywallKey } from '../../Paywall';
 import { useDispatch, Icon } from '../../../../gl-core';
 
 export default function UserCard() {
+  const pw = usePaywall();
+  const {dialogOpen} = pw;
   const dispatch = useDispatch();
   const user = useUser();
 
   const handleClick = () => {
-    dispatch(setPaywallKey('dialogOpen', true));
+    dispatch(setPaywallKey('dialogOpen', !dialogOpen));
   };
 
   if (!user) return null;

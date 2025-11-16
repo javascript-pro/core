@@ -38,7 +38,8 @@ const config = configRaw as TConfig;
 
 export default function Core({ frontmatter, body = null }: TCore) {
   const dispatch = useDispatch();
-  const { noImage, image, icon, title, description, paywall } = frontmatter ?? {};
+  const { noImage, image, icon, title, description, paywall } =
+    frontmatter ?? {};
   const [imageError, setImageError] = React.useState(false);
   const prefersDark = useMediaQuery('(prefers-color-scheme: dark)');
   const siblings = useSiblings();
@@ -103,9 +104,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
               <Grid size={{ xs: 11, md: 9 }}>
                 <Box sx={{ display: 'flex' }}>
-
-                  <Box sx={{mr: 2, mt: 1.5 }}>
-                    <Icon icon={icon as any} color="primary"/>
+                  <Box sx={{ mr: 2, mt: 1.5 }}>
+                    <Icon icon={icon as any} color="primary" />
                   </Box>
 
                   <Typography
