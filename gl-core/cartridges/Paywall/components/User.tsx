@@ -1,9 +1,7 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/Paywall/components/User.tsx
 'use client';
 import * as React from 'react';
-import {
-  Box,
-} from '@mui/material';
+import { Box } from '@mui/material';
 import { useUser, UserCard } from '../../Paywall';
 
 export default function User() {

@@ -7,7 +7,7 @@ import { useDispatch, Icon } from '../../../../gl-core';
 
 export default function UserCard() {
   const pw = usePaywall();
-  const {dialogOpen} = pw;
+  const { dialogOpen } = pw;
   const dispatch = useDispatch();
   const user = useUser();
 

@@ -6,6 +6,7 @@ import {
   Button,
   DialogActions,
   DialogContent,
+  IconButton,
 } from '@mui/material';
 import { useDispatch, Icon, useIsMobile } from '../../../../gl-core';
 import {
@@ -14,6 +15,7 @@ import {
   setPaywallKey,
   SignInUp,
   User,
+  SignOut,
 } from '../../Paywall';
 
 export default function DialogPaywall() {
@@ -26,7 +28,7 @@ export default function DialogPaywall() {
   const handleClose = () => {
     dispatch(setPaywallKey('dialogOpen', false));
   };
-  
+
   return (
     <>
       {/* MAIN DIALOG */}
@@ -49,10 +51,13 @@ export default function DialogPaywall() {
         <DialogActions>
           {user && (
             <>
+              <SignOut />
               <Box sx={{ flexGrow: 1 }} />
-              <Button onClick={handleClose} endIcon={<Icon icon="close" />}>
-                Close
-              </Button>
+              <IconButton 
+                color='primary'
+                onClick={handleClose}>
+                <Icon icon="close" />
+              </IconButton>
             </>
           )}
         </DialogActions>
