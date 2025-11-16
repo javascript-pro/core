@@ -45,7 +45,6 @@ export default function Paywall() {
   );
 }
 
-
 /*
 Sign in
 

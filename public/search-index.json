@@ -1,12 +1,5 @@
 [
   {
-    "slug": "balance/books/charles-darwin",
-    "title": "Charles Darwin",
-    "description": "From On the Origin of Species By Means of Natural Selection",
-    "tags": [],
-    "content": "\nJudging from the past, we may safely infer that no one living species will transmit its unaltered likeness to a distant futurity. And of the species now living very few will transmit progeny of any kind to a far distant futurity.\n\n_Charles Darwin, On the Origin of Species By Means of Natural Selection, or The Preservation Of Favoured Race In The Struggle For Life (1859)_\n"
-  },
-  {
     "slug": "balance/books/douglas-coupland/generation-x",
     "title": "Generation X",
     "description": "by Douglas Coupland",
@@ -172,7 +165,7 @@
     "title": "Home",
     "description": "Work, Life, Balance",
     "tags": "JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS, secure",
-    "content": "\n[PageGrid thumbnails=\"yes\" pages=\"/work, /life, /balance\"]\n\n> The apps we ship are real. They run in production and are developed accessibly.\n\n[PageGrid thumbnails=\"no\" pages=\"/work/goldlabel/cartridges/paywall, /balance/writing/not-here-to-fuck-spiders\"]\n"
+    "content": "\n[PageGrid thumbnails=\"yes\" pages=\"/work, /life, /balance\"]\n\n> The apps we ship are real. They run in production and are developed accessibly.\n\n[PageGrid thumbnails=\"no\" pages=\"/balance/books/douglas-coupland, /work/goldlabel/cartridges/paywall, /balance/writing/not-here-to-fuck-spiders\"]\n"
   },
   {
     "slug": "life/aquaponics/index",
@@ -256,7 +249,7 @@
     "title": "Life",
     "description": "Generation X at 50",
     "tags": [],
-    "content": "\n[PageGrid pages=\"/life/aquaponics, /life/diving, /life/food, /life/motorbikes\"]\n\nI work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age maybe it's time to take up sailing. We are [Generation X](/balance/writers/generation-x)\n\n⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a 1991 novel written by Canadian author Douglas Coupland\n"
+    "content": "\n[PageGrid thumbnails=\"yes\" pages=\"/life/aquaponics, /life/diving, /life/food, /life/motorbikes\"]\n\nI work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age maybe it's time to take up sailing. We are [Generation X](/balance/writers/generation-x)\n\n⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a 1991 novel written by Canadian author Douglas Coupland\n"
   },
   {
     "slug": "life/motorbikes/index",

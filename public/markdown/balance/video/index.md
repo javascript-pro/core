@@ -1,9 +1,9 @@
 ---
-order: 9
+order: 5
 title: Video
-description: It's Not Why You Know
+description: It's Not Who You Know (2000)
 slug: /balance/video
-icon: balance
+icon: star
 image: /jpg/ai/image.jpg
 noImage: true
 ---

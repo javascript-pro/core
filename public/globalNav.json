@@ -1256,13 +1256,13 @@
             "type": "folder",
             "children": [],
             "icon": "bike",
-            "image": "/jpg/photos/motorbikes.jpg",
+            "image": "https://live.staticflickr.com/65535/54926888281_024d3ed9ee_o.jpg",
             "excerpt": "“It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a motorbike.”\n\n― Jane Austen, Pride and Prejudice"
           }
         ],
         "icon": "life",
         "image": "https://live.staticflickr.com/65535/53670802348_9bb887b680_b.jpg",
-        "excerpt": "[PageGrid pages=\"/life/aquaponics, /life/diving, /life/food, /life/motorbikes\"]\n\nI work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I "
+        "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/life/aquaponics, /life/diving, /life/food, /life/motorbikes\"]\n\nI work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm "
       },
       {
         "title": "Balance",
@@ -1399,7 +1399,7 @@
                 "excerpt": "Oh we ARE? We are here to fuck spiders?\n\nChapter 1\n\nAs far back as I can remember I knew that to play by the rules meant losing. I am Wei Zang and this is my story. Some of it is true"
               }
             ],
-            "icon": "balance",
+            "icon": "oliver",
             "image": "https://live.staticflickr.com/65535/54443656612_a717f5582c_b.jpg",
             "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/balance/writing/notheretofuckspiders, /balance/writing/derkleinezeppelin\"]"
           },
@@ -1513,15 +1513,6 @@
                 "image": "https://live.staticflickr.com/65535/54735999657_5ec054b3e2_b.jpg",
                 "type": "file",
                 "excerpt": "Tom Robbins is an American novelist known for playful, whimsical prose, irreverent humor, and philosophical musings. His works blend surrealism, countercultural themes, and sharp social commentary, wi"
-              },
-              {
-                "title": "Charles Darwin",
-                "slug": "/balance/books/charles-darwin",
-                "order": 3000,
-                "icon": "books",
-                "image": "/jpg/darwin.jpg",
-                "type": "file",
-                "excerpt": "Judging from the past, we may safely infer that no one living species will transmit its unaltered likeness to a distant futurity. And of the species now living very few will transmit progeny of any ki"
               }
             ],
             "icon": "books",
@@ -1574,6 +1565,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/work, /life, /balance\"]\n\n The apps we ship are real. They run in production and are developed accessibly.\n\n[PageGrid thumbnails=\"no\" pages=\"/work/goldlabel/cartridge"
+    "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/work, /life, /balance\"]\n\n The apps we ship are real. They run in production and are developed accessibly.\n\n[PageGrid thumbnails=\"no\" pages=\"/balance/books/douglascou"
   }
 ]

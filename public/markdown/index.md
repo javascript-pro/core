@@ -9,8 +9,8 @@ tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Pr
 noImage: true
 ---
 
+> The apps we ship are real. They run in production and are developed accessibly
+
 [PageGrid thumbnails="yes" pages="/work, /life, /balance"]
 
-> The apps we ship are real. They run in production and are developed accessibly.
-
-[PageGrid thumbnails="no" pages="/work/goldlabel/cartridges/paywall, /balance/writing/not-here-to-fuck-spiders"]
+[PageGrid thumbnails="no" pages="/balance/books/douglas-coupland, /work/goldlabel/cartridges/paywall, /balance/writing/not-here-to-fuck-spiders"]
