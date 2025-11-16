@@ -1046,11 +1046,12 @@
                 "slug": "/work/company/how-we-work",
                 "order": 250,
                 "icon": "company",
-                "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
+                "image": "/png/3rdParty/git_og.png",
                 "type": "file",
                 "tags": [
                   "remote",
-                  "hybrid"
+                  "hybrid",
+                  "intellectual-property"
                 ],
                 "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years.\n\n How we work\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, c"
               },
@@ -1059,10 +1060,11 @@
                 "slug": "/work/company/work-with-us",
                 "order": 777,
                 "icon": "company",
-                "image": "https://live.staticflickr.com/65535/54800517937_85a60c0d3a_b.jpg",
+                "image": "/png/3rdParty/git_og.png",
                 "type": "file",
                 "tags": [
-                  "company"
+                  "company",
+                  "intellectual-property"
                 ],
                 "excerpt": "We take on a limited number of new projects each month\n\n Work With Us\n\nIf you need something done we’d love to hear about it. Find out if we're a . We're always looking for collaborators, contributors"
               },
@@ -1078,7 +1080,8 @@
                   "gdpr",
                   "privacy",
                   "terms",
-                  "trust"
+                  "trust",
+                  "intellectual-property"
                 ],
                 "excerpt": "We don't use cookies\n\n Cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead de"
               },
@@ -1096,7 +1099,7 @@
                   "terms",
                   "trust"
                 ],
-                "excerpt": "T&Cs\n\n GDPR"
+                "excerpt": "GDPR sets the rules for how we collect, store, and use personal data\n\n What does it mean?\n\nFor us it means we must minimise data collection, document what we process, and give users clear control over"
               },
               {
                 "title": "Terms & Conditions",
@@ -1110,18 +1113,22 @@
                   "gdpr",
                   "privacy",
                   "terms",
-                  "trust"
+                  "trust",
+                  "intellectual-property"
                 ],
-                "excerpt": "T&Cs\n\n Terms"
+                "excerpt": "Liability boundaries, intellectualproperty ownership, and disputes\n\n Our Terms & Conditions\n\nDefine how this app should be used, what we’re responsible for, and what users can expect from the platform"
               }
             ],
             "icon": "company",
             "image": "/png/3rdParty/git_og.png",
-            "excerpt": "Company\n\n  \nTel/WhatsApp   \n | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX"
+            "tags": [
+              "intellectual-property"
+            ],
+            "excerpt": "UK Limited Company (5460545)\n\n Company info\n\n  \nTel/WhatsApp   \n | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX\n\n \n\n Social"
           }
         ],
         "icon": "work",
-        "image": "https://live.staticflickr.com/65535/53670939824_27773d5157_b.jpg",
+        "image": "/png/3rdParty/git_og.png",
         "tags": [
           "Professional",
           "JavaScript",

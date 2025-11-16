@@ -5,7 +5,7 @@ description: Your trust means everything to us
 slug: /work/company/privacy-cookies
 icon: company
 image: /png/3rdParty/git_og.png
-tags: cookies, gdpr, privacy, terms, trust
+tags: cookies, gdpr, privacy, terms, trust, intellectual-property
 ---
 
 > We don't use cookies

@@ -5,9 +5,12 @@ description: UK Limited Company (5460545)
 slug: /work/company
 icon: company
 image: /png/3rdParty/git_og.png
+tags: intellectual-property
 ---
 
-#### Company
+> UK Limited Company (5460545)
+
+## Company info
 
 [goldlabel.apps@gmail.com](mailto:goldlabel.apps@gmail.com)  
 Tel/WhatsApp [+44 07745 763 122 ](https://wa.me/447745763122)  
@@ -19,3 +22,8 @@ Tel/WhatsApp [+44 07745 763 122 ](https://wa.me/447745763122)
 > Essex RM6 6AX
 
 > [UK Limited Company 5460545](https://find-and-update.company-information.service.gov.uk/company/15460545)
+
+#### Social
+
+- [Flickr](https://www.flickr.com/photos/listingslab/)
+- [Youtube](https://www.youtube.com/@milkylackstoes)

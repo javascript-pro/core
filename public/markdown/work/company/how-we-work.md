@@ -5,7 +5,7 @@ description: 100% Remote, Hybrid or Onsite
 slug: /work/company/how-we-work
 icon: company
 image: /png/3rdParty/git_og.png
-tags: remote, hybrid
+tags: remote, hybrid, intellectual-property
 ---
 
 > Corporate attitudes to remote working have changed dramatically in recent years.

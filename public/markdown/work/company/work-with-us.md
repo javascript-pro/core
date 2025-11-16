@@ -5,7 +5,7 @@ description: We take on a limited number of new projects each month
 slug: /work/company/work-with-us
 icon: company
 image: /png/3rdParty/git_og.png
-tags: company
+tags: company, intellectual-property
 ---
 
 > We take on a limited number of new projects each month
