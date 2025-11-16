@@ -13,4 +13,4 @@ noImage: true
 
 [PageGrid thumbnails="yes" pages="/work, /life, /balance"]
 
-[PageGrid thumbnails="no" pages="/work/goldlabel/cartridges/paywall, /life/food/nasi-goreng, /balance/books/douglas-coupland,  /balance/writing/not-here-to-fuck-spiders, /balance/writing/not-here-to-fuck-spiders/puppy-thing, /balance/books/r-f-kuang"]
+[PageGrid thumbnails="no" pages="/work/goldlabel/cartridges/paywall, /life/food/nasi-goreng, /balance/books/douglas-coupland, /balance/writing/not-here-to-fuck-spiders, /balance/writing/not-here-to-fuck-spiders/puppy-thing, /balance/books/r-f-kuang"]

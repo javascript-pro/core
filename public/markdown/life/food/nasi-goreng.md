@@ -12,11 +12,16 @@ noImage: true
 
 > **Nasi Goreng** is an Indonesian dish made from leftover rice stir-fried with garlic, shallots, chilli, and sweet soy sauce (kecap manis). Often enriched with prawns, chicken, or beef. Usually finished with prawn crackers a fried egg and a side of crisp cucumber
 
-This is something I've made for over 20 years and it's different every time. If you want to recreate authentically trad Nasi Goreng from scratch, follow these steps
+Extra Doubleplus Bonus for having either or both of these specialist ingredients which would _really_ seal the flavour deal and take you back to climbing Mt Rinjani on Lombok.
 
-First have a chinese the night before. There's always some berk who's ordered too much rice and nobody likes cold boily rice hanging round the fridge
+- Ketjap Manis
+- Nasi Goreng paste
 
-Here's what you kind of need. Substitute as needed
+If you are also [Generation X](/balance/books/douglas-coupland/generation-x) then maybe you travelled in Indonesia and remember Nasi Goreng as being the most delisious thing in the world ever, but you've never been able to recreate it?
+
+If you want to recreate authentically traditional Nasi Goreng from scratch,first have a chinese the night before. There's always some berk who's ordered too much rice and nobody likes cold boily rice hanging round the fridge
+
+Here's what you also kind of need. Substitute as needed
 
 ## Protein
 
@@ -34,12 +39,25 @@ or none of the above if you want
 
 Which vegetables have you got out of these?
 
-- Spring onions
-- Red onions
-- Finely sliced savoy cabbage
-- Fresh, finely sliced, deseeded chilli
-- Fresh parsly/chives
-- Julienned carrot
-- Mangetout/ Sugersnap
+-   Spring onions
+-   Red onions
+-   Finely sliced savoy cabbage
+-   Fresh, finely sliced, deseeded chilli
+-   Fresh parsly/chives
+-   Julienned carrot
+-   Mangetout/ Sugersnap
 
-## Which veg have you got out of these
+## Sauce
+
+-   Chilli
+-   Garlic
+-   Ginger
+-   Soy
+-   Ketjap Manis
+-   Shallots/Spring Onions
+-   Oil (semame is good)
+-   Sugar
+-   Lime Juice
+
+
+https://live.staticflickr.com/65535/54927461524_a8c8ca2d7a_z.jpg
