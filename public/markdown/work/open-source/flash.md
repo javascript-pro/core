@@ -12,7 +12,7 @@ tags: 'Catridges, Flash, SVG, Macromedia'
 
 > Maybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You're welcome
 
-[GitHub url="https://github.com/javascript-pro/core" label="Clone repo"]
+[GitHub url="https://github.com/javascript-pro/core/tree/master/gl-core/cartridges/Flash" label="Flash"]
 
 - SVG Graphics
 - Animation using Greensock

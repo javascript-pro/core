@@ -7,7 +7,7 @@ icon: wordpress
 image: /jpg/other/Opengraph-template.jpg
 ---
 
-[GitHub url="https://github.com/javascript-pro/core" label="Clone repo"]
+[GitHub url="https://github.com/javascript-pro/core/tree/master/gl-core/cartridges/Shortcodes" label="Shortcodes"]
 
 Goldlabel includes a Shortcodes cartridge that brings a familiar WordPress-style authoring pattern into a modern React/Next.js environment. Shortcodes let you drop small, purposeful commands directly into your markdown or content files — things like grids, cards, embeds, or custom UI elements — and have them render as fully interactive components on the page.
 

@@ -20,5 +20,3 @@ Leaving the mothership — the group eventually quits to build their own startup
 Found family in tech — the characters form a tight-knit group, reflecting the intensity and social closeness of early dev teams.
 
 The early digital frontier — it captures the optimism, naivety, and ambition of tech right before the internet fundamentally changed everything. It feels like a time capsule of pre-web, pre-startup-culture software life.
-
-

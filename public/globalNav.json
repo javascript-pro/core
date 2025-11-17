@@ -1528,7 +1528,7 @@
                     "icon": "books",
                     "image": "https://live.staticflickr.com/65535/54736833001_ef9c5f4b57_c.jpg",
                     "type": "file",
-                    "excerpt": "Version one point oh"
+                    "excerpt": "Earliest piece of fiction to centre coders as modern workers with rich inner lives\n\nMicroserfs (1995) captures a moment in tech history that feels both distant and strangely familiar. Coupland wrote i"
                   }
                 ],
                 "icon": "books",
@@ -1615,6 +1615,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/work, /life, /balance\"]"
+    "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work, /life, /balance\"]"
   }
 ]

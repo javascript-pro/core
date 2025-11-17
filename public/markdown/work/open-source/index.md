@@ -10,7 +10,7 @@ tags: JavaScript, Vanilla JavaScript, TypeScript, React, Material UI, Flash, Ser
 
 > Free for anyone to fork, copy, hack, and reuse.
 
-[GitHub url="https://github.com/javascript-pro/core" label="Clone repo"]
+[GitHub url="https://github.com/javascript-pro/core" label="Core repo"]
 
 [PageGrid pages="/work/open-source/cartridges, /work/open-source/uberedux, /work/open-source/flash, /work/open-source/flickr, /work/open-source/lingua, /work/open-source/paywall, /work/open-source/shortcodes, /work/open-source/theme, /work/open-source/new-cartridge"]
 

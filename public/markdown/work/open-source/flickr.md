@@ -8,7 +8,7 @@ tags: flickr, free, api, REST, Next.js
 image: /jpg/other/Opengraph-template.jpg
 ---
 
-[GitHub url="https://github.com/javascript-pro/core" label="Clone repo"]
+[GitHub url="https://github.com/javascript-pro/core/tree/master/gl-core/cartridges/Flickr" label="Flickr"]
 
 ### Flickr Photo Cartridge
 

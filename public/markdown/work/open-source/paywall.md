@@ -10,11 +10,9 @@ tags: cartridge, free, paywall, use cases, acess, auth, subscription
 
 > User accounts, passwords, membership access and payment
 
-[GitHub url="https://github.com/javascript-pro/core" label="Clone repo"]
+[GitHub url="https://github.com/javascript-pro/core/tree/master/gl-core/cartridges/Paywall" label="Paywall"]
 
 ### Use Case
-
-[GitHub url="https://github.com/javascript-pro/core/tree/staging/gl-core/cartridges/Paywall" label="/gl-core/cartridges/Paywall"]
 
 When a draft chapter of an e-book isn’t ready for general release, we mark it with paywall: true in the frontmatter. That instantly restricts access so only authenticated users can view it.
 
