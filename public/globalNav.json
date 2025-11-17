@@ -1,7 +1,7 @@
 [
   {
     "title": "Home",
-    "description": "Work, Life, Balance",
+    "description": "The apps we ship are real",
     "slug": "/",
     "order": 1,
     "type": "folder",
@@ -1440,7 +1440,7 @@
                 "excerpt": "Oh we ARE? We are here to fuck spiders?\n\nChapter 1\n\nAs far back as I can remember I knew that to play by the rules meant losing. I am Wei Zang and this is my story. Some of it is true\n\nJudging from th"
               }
             ],
-            "icon": "oliver",
+            "icon": "writing",
             "image": "https://live.staticflickr.com/65535/53519132441_43525fc3a4_b.jpg",
             "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/balance/writing/notheretofuckspiders, /balance/writing/derkleinezeppelin\"]"
           },
@@ -1580,7 +1580,7 @@
           }
         ],
         "icon": "balance",
-        "image": "https://live.staticflickr.com/65535/53519132441_43525fc3a4_b.jpg",
+        "image": "https://live.staticflickr.com/65535/52538111215_c3a5b085b8_b.jpg",
         "excerpt": "If you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are \n\n[PageGrid thumbnails=\"no\" pages=\"/balance/books, /balance/video, /balance/writing\"]"
       }
     ],
@@ -1615,6 +1615,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "The apps we ship are real. They run in production and are developed accessibly\n\n[PageGrid thumbnails=\"yes\" pages=\"/work, /life, /balance\"]"
+    "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/work, /life, /balance\"]"
   }
 ]

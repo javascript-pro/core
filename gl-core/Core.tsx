@@ -195,6 +195,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                               width={1200}
                               height={630}
                               style={{
+                                borderRadius: 8,
                                 width: '100%',
                                 height: 'auto',
                                 maxHeight: isMobile ? 'none' : '315px',

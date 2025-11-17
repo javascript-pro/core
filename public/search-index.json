@@ -177,9 +177,9 @@
   {
     "slug": "index",
     "title": "Home",
-    "description": "Work, Life, Balance",
+    "description": "The apps we ship are real",
     "tags": "JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS, secure",
-    "content": "\n> The apps we ship are real. They run in production and are developed accessibly\n\n[PageGrid thumbnails=\"yes\" pages=\"/work, /life, /balance\"]\n"
+    "content": "\n[PageGrid thumbnails=\"yes\" pages=\"/work, /life, /balance\"]\n"
   },
   {
     "slug": "life/aquaponics/index",

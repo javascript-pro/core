@@ -157,11 +157,13 @@ import FullstackIcon from '@mui/icons-material/HorizontalSplit';
 import TypescriptIcon from '@mui/icons-material/DataObject';
 import BooksIcon from '@mui/icons-material/MenuBook';
 import FreeIcon from '@mui/icons-material/CurrencyExchange';
+import WritingIcon from '@mui/icons-material/BorderColor';
 
 export type TIcon = {
   icon:
     | 'more'
     | 'free'
+    | 'writing'
     | 'books'
     | 'typescript'
     | 'van'
@@ -927,6 +929,10 @@ export default function Icon({ icon, color }: TIcon) {
 
     case 'van':
       iconFragment = <VanIcon color={color} />;
+      break;
+
+    case 'writing':
+      iconFragment = <WritingIcon color={color} />;
       break;
 
     default:
