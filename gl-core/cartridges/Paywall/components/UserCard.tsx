@@ -35,12 +35,12 @@ export default function UserCard() {
   return (
     <ButtonBase sx={{ textAlign: 'left', p: 1 }} onClick={handleClick}>
       <Box sx={{ display: 'flex', alignItems: 'center' }}>
-        <Box>
+        {/* <Box>
           <Typography variant="h6">{displayName}</Typography>
           <Typography variant="body2" color="text.primary">
             {email}
           </Typography>
-        </Box>
+        </Box> */}
 
         {showFallback ? (
           <Avatar sx={{ width: 48, height: 48, ml: 2, borderRadius: 2 }}>
@@ -49,7 +49,7 @@ export default function UserCard() {
         ) : (
           <Avatar
             src={photoURL}
-            sx={{ width: 48, height: 48, ml: 2, borderRadius: 2 }}
+            sx={{ width: 48, height: 48, borderRadius: 2 }}
           />
         )}
       </Box>

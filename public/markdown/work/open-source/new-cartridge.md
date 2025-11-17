@@ -9,7 +9,6 @@ image: /jpg/other/Opengraph-template.jpg
 
 [GitHub url="https://github.com/javascript-pro/core" label="Clone repo"]
 
-
 `NewCartridge` is a template designed to help developers quickly bootstrap a new **Cartridge** in a modular application framework such as Goldlabel. Cartridges are feature-specific, plug-and-play components that can be developed, tested, and deployed independently.
 
 This template provides a standardized structure, boilerplate code, and default configuration to reduce setup time and ensure consistency across cartridges.

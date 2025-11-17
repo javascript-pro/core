@@ -19,7 +19,6 @@ export default function User() {
       >
         <Box sx={{ flexGrow: 1 }} />
         <UserCard />
-        <Box sx={{ flexGrow: 1 }} />
       </Box>
       {/* <List>
         <ListItemButton onClick={() => setConfirmOpen(true)}>

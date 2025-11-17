@@ -2,7 +2,7 @@
 'use client';
 
 import * as React from 'react';
-import { Box, Button } from '@mui/material';
+import { Box, Avatar, IconButton } from '@mui/material';
 import { Icon, useDispatch } from '../../../gl-core';
 import { auth } from '../../lib/firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
@@ -39,26 +39,26 @@ export default function Paywall() {
         >
           <Box sx={{ flexGrow: 1 }} />
           <UserCard />
-          <Box sx={{ flexGrow: 1 }} />
+          {/* <Box sx={{ flexGrow: 1 }} /> */}
         </Box>
-      ) : null}
+      ) : <Box
+          sx={{
+            width: '100%',
+            display: 'flex',
+          }}
+        >
+          <Box sx={{ flexGrow: 1 }} />
+            <IconButton
+              sx={{
+                width: 48,
+                height: 48,
+                borderRadius: 2,
+              }}
+              onClick={handleClick} color='primary'>
+                <Icon icon={"signin"} />
+            </IconButton>
+          </Box>
+        }
     </>
   );
 }
-
-/*
-Sign in
-
-<Button
-  endIcon={<Icon icon="paywall" />}
-  onClick={handleClick}
-  sx={{
-    zIndex: (theme) => theme.zIndex.modal - 3,
-    position: 'fixed',
-    top: 16,
-    right: 16,
-  }}
->
-  Paywall
-</Button>
-*/

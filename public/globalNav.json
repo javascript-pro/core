@@ -145,7 +145,7 @@
                   "State Management",
                   "Redux"
                 ],
-                "excerpt": "Otherwise you'd be back in jQuery callback hell. Nobody wants that.\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\nUberedux is a simple, zeroconfig wrapper around Redux. It "
+                "excerpt": "Otherwise you'd be back in jQuery callback hell. Nobody wants that.\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Uberedux\" label=\"Uberedux\"]\n\nUberedux is a simple,"
               },
               {
                 "title": "Flickr",
@@ -161,7 +161,7 @@
                   "REST",
                   "Next.js"
                 ],
-                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\n Flickr Photo Cartridge\n\nA React component for clean, fastloading image galleries. Provides an easy way to display recent photo"
+                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Flickr\" label=\"Flickr\"]\n\n Flickr Photo Cartridge\n\nA React component for clean, fastloading image galleries. Provides an"
               },
               {
                 "title": "Lingua",
@@ -170,7 +170,7 @@
                 "icon": "lingua",
                 "image": "https://live.staticflickr.com/65535/54929673394_69c76ac4a3_b.jpg",
                 "type": "file",
-                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\nThe Lingua cartridge brings localisation to Goldlabel. It enables your site to serve content in multiple languages, making it a"
+                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Lingua\" label=\"Lingua\"]\n\nThe Lingua cartridge brings localisation to Goldlabel. It enables your site to serve content i"
               },
               {
                 "title": "Paywall",
@@ -188,7 +188,7 @@
                   "auth",
                   "subscription"
                 ],
-                "excerpt": "User accounts, passwords, membership access and payment\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\n Use Case\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/sta"
+                "excerpt": "User accounts, passwords, membership access and payment\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Paywall\" label=\"Paywall\"]\n\n Use Case\n\nWhen a draft chapter of "
               },
               {
                 "title": "Theme",
@@ -197,7 +197,7 @@
                 "icon": "design",
                 "image": "/jpg/other/Opengraph-template.jpg",
                 "type": "file",
-                "excerpt": "Material UI is a React component library that provides a consistent design system, layout primitives, and readymade UI components\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo"
+                "excerpt": "Material UI is a React component library that provides a consistent design system, layout primitives, and readymade UI components\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore"
               },
               {
                 "title": "New Cartridge",
@@ -215,7 +215,7 @@
                 "icon": "wordpress",
                 "image": "/jpg/other/Opengraph-template.jpg",
                 "type": "file",
-                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\nGoldlabel includes a Shortcodes cartridge that brings a familiar WordPressstyle authoring pattern into a modern React/Next.js e"
+                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Shortcodes\" label=\"Shortcodes\"]\n\nGoldlabel includes a Shortcodes cartridge that brings a familiar WordPressstyle author"
               }
             ],
             "icon": "github",
@@ -233,7 +233,7 @@
               "NextJS",
               "Headless CMS"
             ],
-            "excerpt": "Free for anyone to fork, copy, hack, and reuse.\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\n[PageGrid pages=\"/work/opensource/cartridges, /work/opensource/uberedux, /work"
+            "excerpt": "Free for anyone to fork, copy, hack, and reuse.\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Core repo\"]\n\n[PageGrid pages=\"/work/opensource/cartridges, /work/opensource/uberedux, /work/"
           },
           {
             "title": "Expertise",
