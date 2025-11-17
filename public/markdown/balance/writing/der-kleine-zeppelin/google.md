@@ -4,7 +4,6 @@ title: Google
 description: Google it your own self
 slug: /balance/writing/der-kleine-zeppelin/google
 icon: van
-noImage: true
 ---
 
 #### 2025 Map

@@ -6,7 +6,6 @@ slug: /work/open-source/paywall
 icon: paywall
 image: /jpg/ai/SWAT-Baby.jpg
 tags: cartridge, free, paywall, use cases, acess, auth, subscription
-noImage: true
 ---
 
 > User accounts, passwords, membership access and payment

@@ -4,8 +4,7 @@ title: Books
 description: What are you reading?
 slug: /balance/books
 icon: books
-image: /jpg/ai/book.jpg
-noImage: true
+image: https://live.staticflickr.com/65535/53519132441_43525fc3a4_b.jpg
 tags: science fiction, books, satire, douglas coupland, Cixin Liu, Orwell, Pullman
 ---
 

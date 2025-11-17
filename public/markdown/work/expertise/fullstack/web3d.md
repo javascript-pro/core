@@ -6,7 +6,6 @@ slug: /work/expertise/fullstack/web3d
 icon: web3d
 image: https://live.staticflickr.com/65535/54747599061_445f0323cd_b.jpg
 tags: expertise, web, 3D, WebGL, Three.js, Babylon.js, WebGPU, Flash, JavaScript, web development, history, VR, AR, performance
-noImage: true
 ---
 
 [YouTube src="https://www.youtube.com/watch?v=Qe2ZLYzQToQ"]

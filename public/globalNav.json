@@ -37,20 +37,6 @@
                 "excerpt": "Magento PHP & Material Design System\n\n JavaScript Developer, Adelaide"
               },
               {
-                "title": "Boral",
-                "slug": "/work/case-studies/boral",
-                "order": 30,
-                "icon": "case",
-                "image": "https://live.staticflickr.com/65535/54915903856_cbe4780aed_b.jpg",
-                "type": "file",
-                "tags": [
-                  "expertise",
-                  "interview",
-                  "boral"
-                ],
-                "excerpt": "GeoSpatial Fleet App\n\n React Developer, Aug 2018  Feb 2019, Sydney\n\nIt’s only been a few years since all of Boral’s business was still done on paper. When I joined the Sydney tech team in 2018, the co"
-              },
-              {
                 "title": "Hertwig & Auer",
                 "slug": "/work/case-studies/hertwig-auer",
                 "order": 30,
@@ -69,15 +55,31 @@
                 "slug": "/work/case-studies/huawei",
                 "order": 30,
                 "icon": "case",
-                "image": "https://live.staticflickr.com/65535/54922461987_b333b3acd7_b.jpg",
+                "image": "https://live.staticflickr.com/65535/52602318224_f8c4a92a62_c.jpg",
                 "type": "file",
                 "tags": [
                   "expertise",
                   "interview",
                   "huawei",
-                  "china"
+                  "china",
+                  "react",
+                  "javascript"
                 ],
-                "excerpt": "Feb 2016 to May 2016\n\nBy 2015–2016, React had evolved beyond an experiment — Facebook, Instagram, and Airbnb were using it at scale, and the opensource ecosystem around it (Redux, React Router, Create"
+                "excerpt": "Feb to May 2016\n\n English/Chinese Project Management eLearning App\n\nBy 2015 React had evolved beyond an experiment. Facebook, Instagram, and Airbnb were using it at scale, and the opensource ecosystem"
+              },
+              {
+                "title": "Boral",
+                "slug": "/work/case-studies/boral",
+                "order": 50,
+                "icon": "case",
+                "image": "https://live.staticflickr.com/65535/54928652987_4641b20f75_b.jpg",
+                "type": "file",
+                "tags": [
+                  "expertise",
+                  "interview",
+                  "boral"
+                ],
+                "excerpt": "GeoSpatial Fleet App\n\n React Developer, Aug 2018  Feb 2019, Sydney\n\nIt’s only been a few years since all of Boral’s business was still done on paper. When I joined the Sydney tech team in 2018, the co"
               }
             ],
             "icon": "case",
@@ -1146,7 +1148,7 @@
         "title": "Life",
         "description": "Generation X at 50",
         "slug": "/life",
-        "order": 50,
+        "order": 25,
         "type": "folder",
         "children": [
           {
@@ -1216,7 +1218,7 @@
                 "slug": "/life/food/beef-wellie",
                 "order": 55,
                 "icon": "food",
-                "image": "/jpg/wei-zang/wei-zangs-food.jpg",
+                "image": "https://live.staticflickr.com/65535/54745803793_37a4d33ddc_b.jpg",
                 "type": "file",
                 "excerpt": "Ingredients\n\n 2 x 400g beef fillets\n Olive oil, for frying\n 500g mixture of wild mushrooms, cleaned\n 1 thyme sprig, leaves only\n 500g puff pastry\n 8 slices of Parma ham\n 2 egg yolks, beaten with 1 tbs"
               },
@@ -1291,8 +1293,8 @@
           }
         ],
         "icon": "life",
-        "image": "https://live.staticflickr.com/65535/53670802348_9bb887b680_b.jpg",
-        "excerpt": "[PageGrid thumbnails=\"yes\" pages=\" /life/food, /life/motorbikes, /life/aquaponics, /life/diving,\"]\n\nI work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'"
+        "image": "https://live.staticflickr.com/65535/54929859240_2873323696_b.jpg",
+        "excerpt": "⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a 1991 novel written by Canadian author Douglas Coupland\n\n[PageGrid thumbnails=\"no\" pages=\" /life/food, /life/motorbikes, /life"
       },
       {
         "title": "Balance",
@@ -1439,7 +1441,7 @@
               }
             ],
             "icon": "oliver",
-            "image": "https://live.staticflickr.com/65535/54443656612_a717f5582c_b.jpg",
+            "image": "https://live.staticflickr.com/65535/53519132441_43525fc3a4_b.jpg",
             "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/balance/writing/notheretofuckspiders, /balance/writing/derkleinezeppelin\"]"
           },
           {
@@ -1450,7 +1452,7 @@
             "type": "folder",
             "children": [],
             "icon": "star",
-            "image": "/jpg/ai/image.jpg",
+            "image": "https://live.staticflickr.com/65535/53519132441_43525fc3a4_b.jpg",
             "excerpt": "[YouTube src=\"https://www.youtube.com/watch?v=Qe2ZLYzQToQ\"]\n\nWhilst working at a design agency in London in the year 2000 I was given the opportunity to work on a personal project and chose to make a "
           },
           {
@@ -1518,6 +1520,15 @@
                     "image": "https://live.staticflickr.com/65535/54736833001_ef9c5f4b57_c.jpg",
                     "type": "file",
                     "excerpt": "The term Generation X acquired a modern application after the release of Generation X: Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Glossary\n\nMcJob A lo"
+                  },
+                  {
+                    "title": "Microserfs",
+                    "slug": "/balance/books/douglas-coupland/microserfs",
+                    "order": 150,
+                    "icon": "books",
+                    "image": "https://live.staticflickr.com/65535/54736833001_ef9c5f4b57_c.jpg",
+                    "type": "file",
+                    "excerpt": "Version one point oh"
                   }
                 ],
                 "icon": "books",
@@ -1555,7 +1566,7 @@
               }
             ],
             "icon": "books",
-            "image": "/jpg/ai/book.jpg",
+            "image": "https://live.staticflickr.com/65535/53519132441_43525fc3a4_b.jpg",
             "tags": [
               "science fiction",
               "books",
@@ -1569,8 +1580,8 @@
           }
         ],
         "icon": "balance",
-        "image": "https://live.staticflickr.com/65535/53670939819_74bfceabd6_b.jpg",
-        "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/balance/books, /balance/video, /balance/writing\"]\n\nIf you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are"
+        "image": "https://live.staticflickr.com/65535/53519132441_43525fc3a4_b.jpg",
+        "excerpt": "If you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are \n\n[PageGrid thumbnails=\"no\" pages=\"/balance/books, /balance/video, /balance/writing\"]"
       }
     ],
     "icon": "home",
@@ -1604,6 +1615,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "The apps we ship are real. They run in production and are developed accessibly\n\n[PageGrid thumbnails=\"yes\" pages=\"/work, /life, /balance\"]\n\n[PageGrid thumbnails=\"no\" pages=\"/work/opensource/paywall, /"
+    "excerpt": "The apps we ship are real. They run in production and are developed accessibly\n\n[PageGrid thumbnails=\"yes\" pages=\"/work, /life, /balance\"]"
   }
 ]

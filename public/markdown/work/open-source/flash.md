@@ -5,7 +5,6 @@ title: Flash
 description: 'A Pointless reinvention of MacroMedia Flash?'
 icon: flash
 image: /jpg/other/Opengraph-template.jpg
-noImage: true
 tags: 'Catridges, Flash, SVG, Macromedia'
 ---
 

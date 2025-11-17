@@ -14,6 +14,13 @@
     "content": "\n**Douglas Coupland** is a Canadian novelist and artist, known for capturing contemporary culture, technology, and the malaise of modern life with wit and satirical insight. His writing often blends pop culture references, dark humor, and social commentary, frequently exploring themes of identity, consumerism, and generational shifts.\n\n#### Bibliography\n\n- **1991** – _Generation X: Tales for an Accelerated Culture_\n- **1992** – _Shampoo Planet_\n- **1993** – _Life After God_ (short stories)\n- **1994** – _Microserfs_\n- **1996** – _Polaroids from the Dead_ (fiction/essays)\n- **1998** – _Girlfriend in a Coma_\n- **1999** – _Miss Wyoming_\n- **2002** – _Hey Nostradamus!_\n- **2004** – _God Hates Japan_\n- **2005** – _jPod_\n- **2008** – _Fractal Fever_\n- **2010** – _Generation A_\n- **2013** – _Worst. Person. Ever._\n- **2015** – _Player One: What Is to Become of Us_\n- **2017** – _Kerry_\n- **2019** – _The Tech Writer_\n- **2021** – _Babylon_\n"
   },
   {
+    "slug": "balance/books/douglas-coupland/microserfs",
+    "title": "Microserfs",
+    "description": "by Douglas Coupland",
+    "tags": [],
+    "content": "\n>\n\n#### Version one point oh\n"
+  },
+  {
     "slug": "balance/books/index",
     "title": "Books",
     "description": "What are you reading?",
@@ -60,7 +67,7 @@
     "title": "Balance",
     "description": "It's hard to collate stuff into readable writing, but we're doing our best",
     "tags": [],
-    "content": "\n[PageGrid thumbnails=\"yes\" pages=\"/balance/books, /balance/video, /balance/writing\"]\n\nIf you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are [Generation X](/balance/books/douglas-coupland/generation-x)\n"
+    "content": "\n> If you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are [Generation X](/balance/books/douglas-coupland/generation-x)\n\n[PageGrid thumbnails=\"no\" pages=\"/balance/books, /balance/video, /balance/writing\"]\n"
   },
   {
     "slug": "balance/video/index",
@@ -172,7 +179,7 @@
     "title": "Home",
     "description": "Work, Life, Balance",
     "tags": "JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS, secure",
-    "content": "\n> The apps we ship are real. They run in production and are developed accessibly\n\n[PageGrid thumbnails=\"yes\" pages=\"/work, /life, /balance\"]\n\n[PageGrid thumbnails=\"no\" pages=\"/work/open-source/paywall, /life/food/nasi-goreng, /balance/books/douglas-coupland, /balance/writing/not-here-to-fuck-spiders, /balance/writing/not-here-to-fuck-spiders/puppy-thing, /balance/books/r-f-kuang\"]\n"
+    "content": "\n> The apps we ship are real. They run in production and are developed accessibly\n\n[PageGrid thumbnails=\"yes\" pages=\"/work, /life, /balance\"]\n"
   },
   {
     "slug": "life/aquaponics/index",
@@ -256,7 +263,7 @@
     "title": "Life",
     "description": "Generation X at 50",
     "tags": [],
-    "content": "\n[PageGrid thumbnails=\"yes\" pages=\" /life/food, /life/motorbikes, /life/aquaponics, /life/diving,\"]\n\nI work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age maybe it's time to take up sailing. We are [Generation X](/balance/writers/generation-x)\n\n⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a 1991 novel written by Canadian author Douglas Coupland\n"
+    "content": "\n> ⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a 1991 novel written by Canadian author Douglas Coupland\n\n[PageGrid thumbnails=\"no\" pages=\" /life/food, /life/motorbikes, /life/aquaponics, /life/diving,\"]\n\nI work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age maybe it's time to take up sailing. We are [Generation X](/balance/writers/generation-x)\n"
   },
   {
     "slug": "life/motorbikes/index",
@@ -290,8 +297,8 @@
     "slug": "work/case-studies/huawei",
     "title": "Huawei",
     "description": "Shenzhen, China",
-    "tags": "expertise, interview, huawei, china",
-    "content": "\n> Feb 2016 to May 2016\n\nBy 2015–2016, React had evolved beyond an experiment — Facebook, Instagram, and Airbnb were using it at scale, and the open-source ecosystem around it (Redux, React Router, Create React App) was maturing rapidly\n\n- Built an isomorphic JavaScript project management app using React and Node.js\n- Worked within a small, agile development team\n- Contributed to localisation efforts for Chinese-language users\n- Gained hands-on experience in a Chinese corporate environment\n"
+    "tags": "expertise, interview, huawei, china, react, javascript",
+    "content": "\n> Feb to May 2016\n\n## English/Chinese Project Management eLearning App\n\nBy 2015 React had evolved beyond an experiment. Facebook, Instagram, and Airbnb were using it at scale, and the open-source ecosystem around it (Redux, React Router, Create React App) was maturing rapidly\n\n- Built an isomorphic JavaScript project management app using React and Node.js\n- Worked within a small, agile development team\n- Contributed to localisation efforts for Chinese-language users\n- Gained hands-on experience in a Chinese corporate environment\n"
   },
   {
     "slug": "work/case-studies/index",

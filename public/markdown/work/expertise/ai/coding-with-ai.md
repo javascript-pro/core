@@ -6,7 +6,6 @@ slug: /work/expertise/ai/coding-with-ai
 icon: ai
 image: https://live.staticflickr.com/65535/54802570139_8f4f2ac814_b.jpg
 tags: ai
-noImage: true
 ---
 
 [YouTube src="https://www.youtube.com/watch?v=pkLazYu8JMw"]

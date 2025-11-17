@@ -5,7 +5,6 @@ description: by Wei Zang
 slug: /balance/writing/der-kleine-zeppelin
 icon: van
 image: https://live.staticflickr.com/65535/54357493661_c102e19402_b.jpg
-noImage: true
 ---
 
 Once upon a time there was a little zeppelin. That's what it felt like to drive. No power, just a big bloaty white blob floating about all over the road.

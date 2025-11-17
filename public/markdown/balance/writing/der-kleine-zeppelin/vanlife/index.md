@@ -4,7 +4,6 @@ title: Vanlife
 description: definition of
 slug: /balance/writing/der-kleine-zeppelin/vanlife
 icon: van
-noImage: true
 ---
 
 ## Vanlife (noun)
