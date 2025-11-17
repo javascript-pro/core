@@ -87,7 +87,7 @@
               "interview",
               "experience"
             ],
-            "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work/cases/aligent, /work/cases/hertwigauer, /work/cases/huawei, /work/cases/boral\", /work/cases/aligent\"]"
+            "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work/casestudies/aligent, /work/casestudies/hertwigauer, /work/casestudies/huawei, /work/casestudies/boral\", /work/casestudies/aligent\"]"
           },
           {
             "title": "Open Source",
@@ -97,9 +97,18 @@
             "type": "folder",
             "children": [
               {
+                "title": "Install",
+                "slug": "/work/open-source/install",
+                "order": 5,
+                "icon": "right",
+                "image": "/png/3rdParty/git_og.png",
+                "type": "file",
+                "excerpt": "Clone the repo"
+              },
+              {
                 "title": "Cartridges",
                 "slug": "/work/open-source/cartridges",
-                "order": 1,
+                "order": 10,
                 "icon": "cartridge",
                 "image": "/png/n64/test.png",
                 "type": "file",
@@ -1131,7 +1140,7 @@
           "NextJS",
           "Headless CMS"
         ],
-        "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work/, /work/company, /work/expertise, /work/goldlabel, /work/cases\"]\n\n The apps we ship are real. They run in production and are developed accessibly.\n\nThe Core is O"
+        "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work/, /work/company, /work/expertise, /work/opensource, /work/casestudies\"]\n\n The apps we ship are real. They run in production and are developed accessibly.\n\nThe Co"
       },
       {
         "title": "Life",

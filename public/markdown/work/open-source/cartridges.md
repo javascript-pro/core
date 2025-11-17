@@ -1,5 +1,5 @@
 ---
-order: 1
+order: 10
 slug: /work/open-source/cartridges
 title: Cartridges
 description: Self-contained pieces of application logic
