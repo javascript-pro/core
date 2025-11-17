@@ -1,4 +1,4 @@
-// cartridges/Paywall/components/SignInUp.tsx
+// cartridges/Paywall/components/Continue.tsx
 'use client';
 import * as React from 'react';
 import { Box, CardHeader, CardContent, Button, Grid } from '@mui/material';
@@ -7,12 +7,13 @@ import {
   User,
   GoogleAuthProvider,
   GithubAuthProvider,
+  FacebookAuthProvider,
   signInWithPopup,
 } from 'firebase/auth';
 import { auth } from '../../../lib/firebase';
 import { Icon } from '../../../../gl-core';
 
-export default function SignInUp() {
+export default function Continue() {
   const [user, setUser] = React.useState<User | null>(null);
 
   React.useEffect(() => onAuthStateChanged(auth, (u) => setUser(u)), []);
@@ -21,6 +22,14 @@ export default function SignInUp() {
   const handleGoogle = async () => {
     try {
       await signInWithPopup(auth, new GoogleAuthProvider());
+    } catch (err) {
+      alert((err as Error).message);
+    }
+  };
+
+  const handleFacebook = async () => {
+    try {
+      await signInWithPopup(auth, new FacebookAuthProvider());
     } catch (err) {
       alert((err as Error).message);
     }
@@ -39,8 +48,9 @@ export default function SignInUp() {
       <Grid container spacing={1} justifyContent="center">
         <Grid size={{ xs: 12 }}>
           <CardHeader
-            // title="This content is behind a pawall"
-            subheader="Continue with one of these trusted providers"
+            avatar={<Icon icon="paywall" />}
+            title="Paywall"
+            subheader="Continue with one of these providers"
           />
           <CardContent>
             <Button
@@ -52,7 +62,15 @@ export default function SignInUp() {
             >
               Google
             </Button>
-
+            <Button
+              fullWidth
+              variant="contained"
+              onClick={handleFacebook}
+              startIcon={<Icon icon="facebook" />}
+              sx={{ py: 1.6, mt: 2 }}
+            >
+              Facebook
+            </Button>
             <Button
               fullWidth
               variant="contained"

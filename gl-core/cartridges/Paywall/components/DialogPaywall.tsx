@@ -13,7 +13,7 @@ import {
   usePaywall,
   useUser,
   setPaywallKey,
-  SignInUp,
+  Continue,
   User,
   SignOut,
 } from '../../Paywall';
@@ -39,26 +39,21 @@ export default function DialogPaywall() {
         maxWidth={user ? 'xs' : 'xs'}
         fullWidth
       >
-        <User />
-        {!user ? (
-          <>
-            {user ? <User /> : null}
-            <SignInUp />
-          </>
-        ) : null}
-
-        <DialogContent />
+        <DialogContent>
+          <User />
+          {!user ? <Continue /> : null}
+        </DialogContent>
 
         <DialogActions>
           {user && (
             <>
               <SignOut />
               <Box sx={{ flexGrow: 1 }} />
-              <IconButton color="primary" onClick={handleClose}>
-                <Icon icon="close" />
-              </IconButton>
             </>
           )}
+          <IconButton color="primary" onClick={handleClose}>
+            <Icon icon="close" />
+          </IconButton>
         </DialogActions>
       </Dialog>
     </>
