@@ -6,6 +6,7 @@ description: 'A Pointless reinvention of MacroMedia Flash?'
 icon: flash
 image: /jpg/other/Opengraph-template.jpg
 tags: 'Catridges, Flash, SVG, Macromedia'
+noImage: true
 ---
 
 [Flash movie="Logo" height="250"]

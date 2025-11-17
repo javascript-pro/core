@@ -41,24 +41,27 @@ export default function Paywall() {
           <UserCard />
           {/* <Box sx={{ flexGrow: 1 }} /> */}
         </Box>
-      ) : <Box
+      ) : (
+        <Box
           sx={{
             width: '100%',
             display: 'flex',
           }}
         >
           <Box sx={{ flexGrow: 1 }} />
-            <IconButton
-              sx={{
-                width: 48,
-                height: 48,
-                borderRadius: 2,
-              }}
-              onClick={handleClick} color='primary'>
-                <Icon icon={"signin"} />
-            </IconButton>
-          </Box>
-        }
+          <IconButton
+            sx={{
+              width: 48,
+              height: 48,
+              borderRadius: 2,
+            }}
+            onClick={handleClick}
+            color="primary"
+          >
+            <Icon icon={'signin'} />
+          </IconButton>
+        </Box>
+      )}
     </>
   );
 }
