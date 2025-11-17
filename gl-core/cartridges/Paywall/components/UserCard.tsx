@@ -34,7 +34,7 @@ export default function UserCard() {
 
   return (
     <ButtonBase sx={{ textAlign: 'left', p: 1 }} onClick={handleClick}>
-      <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+      <Box sx={{ display: 'flex', alignItems: 'center' }}>
         <Box>
           <Typography variant="h6">{displayName}</Typography>
           <Typography variant="body2" color="text.primary">

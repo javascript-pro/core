@@ -1,9 +1,9 @@
 ---
 order: 1
-slug: /work/goldlabel/cartridges
+slug: /work/open-source/cartridges
 title: Cartridges
 description: Self-contained pieces of application logic
-icon: goldlabel
+icon: cartridge
 image: /png/n64/test.png
 ---
 

@@ -39,6 +39,7 @@ export default function Paywall() {
         >
           <Box sx={{ flexGrow: 1 }} />
           <UserCard />
+          <Box sx={{ flexGrow: 1 }} />
         </Box>
       ) : null}
     </>

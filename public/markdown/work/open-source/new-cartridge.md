@@ -1,6 +1,6 @@
 ---
 order: 2200
-slug: /work/goldlabel/cartridges/new-cartridge
+slug: /work/open-source/new-cartridge
 title: New Cartridge
 description: Template for bootstrapping a new cartridge
 icon: goldlabel
@@ -22,7 +22,7 @@ This template provides a standardized structure, boilerplate code, and default c
   "title": "New Cartridge",
   "description": "Template for bootstrapping a new cartridge",
   "icon": "cartridge",
-  "slug": "/cartridges/new-cartridge",
+  "slug": "/work/open-source/new-cartridge",
   "theme": {
     "name": "lemon",
     "mode": "dark",

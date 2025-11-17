@@ -2,7 +2,7 @@
 order: 30
 title: Huawei
 description: Shenzhen, China
-slug: /work/cases/huawei
+slug: /work/case-studies/huawei
 icon: case
 image: https://live.staticflickr.com/65535/54922461987_b333b3acd7_b.jpg
 tags: expertise, interview, huawei, china

@@ -1,9 +1,9 @@
 ---
 order: 2200
-slug: /work/goldlabel/cartridges/shortcodes
+slug: /work/open-source/shortcodes
 title: Shortcodes
 description: A WordPress like feature
-icon: goldlabel
+icon: wordpress
 image: /jpg/other/Opengraph-template.jpg
 ---
 

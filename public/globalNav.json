@@ -16,13 +16,13 @@
           {
             "title": "Case Studies",
             "description": "Real World Experience",
-            "slug": "/work/cases",
+            "slug": "/work/case-studies",
             "order": 10,
             "type": "folder",
             "children": [
               {
                 "title": "Aligent",
-                "slug": "/work/cases/aligent",
+                "slug": "/work/case-studies/aligent",
                 "order": 30,
                 "icon": "case",
                 "image": "https://live.staticflickr.com/4168/34263291171_c62c5b24be_b.jpg",
@@ -38,7 +38,7 @@
               },
               {
                 "title": "Boral",
-                "slug": "/work/cases/boral",
+                "slug": "/work/case-studies/boral",
                 "order": 30,
                 "icon": "case",
                 "image": "https://live.staticflickr.com/65535/54915903856_cbe4780aed_b.jpg",
@@ -52,7 +52,7 @@
               },
               {
                 "title": "Hertwig & Auer",
-                "slug": "/work/cases/hertwig-auer",
+                "slug": "/work/case-studies/hertwig-auer",
                 "order": 30,
                 "icon": "case",
                 "image": "https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg",
@@ -66,7 +66,7 @@
               },
               {
                 "title": "Huawei",
-                "slug": "/work/cases/huawei",
+                "slug": "/work/case-studies/huawei",
                 "order": 30,
                 "icon": "case",
                 "image": "https://live.staticflickr.com/65535/54922461987_b333b3acd7_b.jpg",
@@ -87,136 +87,124 @@
               "interview",
               "experience"
             ],
-            "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/work/cases/hertwigauer, /work/cases/huawei, /work/cases/boral\", /work/cases/aligent\"]"
+            "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work/cases/aligent, /work/cases/hertwigauer, /work/cases/huawei, /work/cases/boral\", /work/cases/aligent\"]"
           },
           {
             "title": "Goldlabel",
-            "description": "Free Forever",
+            "description": "Open Source and Free Forever",
             "slug": "/work/goldlabel",
             "order": 10,
             "type": "folder",
             "children": [
               {
                 "title": "Cartridges",
-                "description": "Self-contained pieces of application logic",
                 "slug": "/work/goldlabel/cartridges",
                 "order": 1,
-                "type": "folder",
-                "children": [
-                  {
-                    "title": "Flash",
-                    "slug": "/work/goldlabel/cartridges/flash",
-                    "order": 15,
-                    "icon": "goldlabel",
-                    "image": "/png/n64/test.png",
-                    "type": "file",
-                    "tags": [
-                      "Catridges",
-                      "Flash",
-                      "SVG",
-                      "Macromedia"
-                    ],
-                    "excerpt": "[Flash movie=\"Logo\" height=\"250\"]\n\n Maybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You're welcome\n\n SVG Graphics\n Animation using Greensoc"
-                  },
-                  {
-                    "title": "Uberedux",
-                    "slug": "/work/goldlabel/cartridges/uberedux",
-                    "order": 20,
-                    "icon": "goldlabel",
-                    "image": "/png/n64/test.png",
-                    "type": "file",
-                    "tags": [
-                      "Free",
-                      "atridges",
-                      "Uberedux",
-                      "State Management",
-                      "Redux"
-                    ],
-                    "excerpt": "Otherwise you'd be back in jQuery callback hell. Nobody wants that.\n\nUberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app already works and gives you the global sta"
-                  },
-                  {
-                    "title": "Flickr",
-                    "slug": "/work/goldlabel/cartridges/flickr",
-                    "order": 30,
-                    "icon": "goldlabel",
-                    "image": "/png/n64/test.png",
-                    "type": "file",
-                    "tags": [
-                      "flickr",
-                      "free",
-                      "api",
-                      "REST",
-                      "Next.js"
-                    ],
-                    "excerpt": "Flickr Photo Cartridge\n\nA React component for clean, fastloading image galleries. Provides an easy way to display recent photos from a Flickr account. It connects to a serverside API route in your Nex"
-                  },
-                  {
-                    "title": "Lingua",
-                    "slug": "/work/goldlabel/cartridges/lingua",
-                    "order": 100,
-                    "icon": "goldlabel",
-                    "image": "/png/n64/test.png",
-                    "type": "file",
-                    "excerpt": "The Lingua cartridge brings localisation to Goldlabel. It enables your site to serve content in multiple languages, making it accessible to a wider audience without complicating your codebase.\n\n What "
-                  },
-                  {
-                    "title": "Paywall",
-                    "description": "Access Control Cartridge",
-                    "slug": "/work/goldlabel/cartridges/paywall",
-                    "order": 130,
-                    "type": "folder",
-                    "children": [
-                      {
-                        "title": "Paywall",
-                        "slug": "/work/goldlabel/cartridges/paywall/more",
-                        "order": 130,
-                        "icon": "paywall",
-                        "image": "/jpg/ai/SWAT-Baby.jpg",
-                        "type": "file",
-                        "tags": [
-                          "cartridges",
-                          "cartridge",
-                          "free",
-                          "paywall"
-                        ],
-                        "excerpt": "More info\n\n The Paywall cartridge is responsible for two key features: Authentication/Access Control and Pings\n\n Authentication (Firebase Auth +  collection)\n   User Management\n   Community\n   Passwor"
-                      }
-                    ],
-                    "icon": "paywall",
-                    "image": "/jpg/ai/SWAT-Baby.jpg",
-                    "tags": [
-                      "cartridge",
-                      "free",
-                      "paywall",
-                      "use cases",
-                      "acess",
-                      "auth",
-                      "subscription"
-                    ],
-                    "excerpt": "User accounts, passwords, membership access and payment\n\n Use Cases\n\nWe have a page in our writing section for an ebook we are working on. It's not ready to be public yet, so we'll add the attribute  "
-                  },
-                  {
-                    "title": "New Cartridge",
-                    "slug": "/work/goldlabel/cartridges/new-cartridge",
-                    "order": 2200,
-                    "icon": "goldlabel",
-                    "image": "/png/n64/test.png",
-                    "type": "file",
-                    "excerpt": "Purpose\n\n is a template designed to help developers quickly bootstrap a new Cartridge in a modular application framework such as Goldlabel. Cartridges are featurespecific, plugandplay components that "
-                  },
-                  {
-                    "title": "Shortcodes",
-                    "slug": "/work/goldlabel/cartridges/shortcodes",
-                    "order": 2200,
-                    "icon": "goldlabel",
-                    "image": "/jpg/other/Opengraph-template.jpg",
-                    "type": "file",
-                    "excerpt": "Goldlabel includes a Shortcodes cartridge that brings a familiar WordPressstyle authoring pattern into a modern React/Next.js environment. Shortcodes let you drop small, purposeful commands directly i"
-                  }
+                "icon": "cartridge",
+                "image": "/png/n64/test.png",
+                "type": "file",
+                "excerpt": "Goldlabel is built on cartridges.\n\nA cartridge is a selfcontained piece of application logic: React components, state, styles, and utilities bundled together in a portable unit.\n\nBecause each cartridg"
+              },
+              {
+                "title": "Flash",
+                "slug": "/work/goldlabel/flash",
+                "order": 15,
+                "icon": "flash",
+                "image": "/png/n64/test.png",
+                "type": "file",
+                "tags": [
+                  "Catridges",
+                  "Flash",
+                  "SVG",
+                  "Macromedia"
                 ],
+                "excerpt": "[Flash movie=\"Logo\" height=\"250\"]\n\n Maybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You're welcome\n\n SVG Graphics\n Animation using Greensoc"
+              },
+              {
+                "title": "Uberedux",
+                "slug": "/work/goldlabel/uberedux",
+                "order": 20,
+                "icon": "js",
+                "image": "/png/n64/test.png",
+                "type": "file",
+                "tags": [
+                  "Free",
+                  "atridges",
+                  "Uberedux",
+                  "State Management",
+                  "Redux"
+                ],
+                "excerpt": "Otherwise you'd be back in jQuery callback hell. Nobody wants that.\n\nUberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app already works and gives you the global sta"
+              },
+              {
+                "title": "Flickr",
+                "slug": "/work/goldlabel/flickr",
+                "order": 30,
+                "icon": "flickr",
+                "image": "/png/n64/test.png",
+                "type": "file",
+                "tags": [
+                  "flickr",
+                  "free",
+                  "api",
+                  "REST",
+                  "Next.js"
+                ],
+                "excerpt": "Flickr Photo Cartridge\n\nA React component for clean, fastloading image galleries. Provides an easy way to display recent photos from a Flickr account. It connects to a serverside API route in your Nex"
+              },
+              {
+                "title": "Lingua",
+                "slug": "/work/goldlabel/lingua",
+                "order": 100,
+                "icon": "lingua",
+                "image": "/png/n64/test.png",
+                "type": "file",
+                "excerpt": "The Lingua cartridge brings localisation to Goldlabel. It enables your site to serve content in multiple languages, making it accessible to a wider audience without complicating your codebase.\n\n What "
+              },
+              {
+                "title": "Paywall",
+                "slug": "/work/goldlabel/paywall",
+                "order": 130,
+                "icon": "paywall",
+                "image": "/jpg/ai/SWAT-Baby.jpg",
+                "type": "file",
+                "tags": [
+                  "cartridge",
+                  "free",
+                  "paywall",
+                  "use cases",
+                  "acess",
+                  "auth",
+                  "subscription"
+                ],
+                "excerpt": "User accounts, passwords, membership access and payment\n\n Use Cases\n\nWe have a page in our writing section for an ebook we are working on. It's not ready to be public yet, so we'll add the attribute  "
+              },
+              {
+                "title": "Theme",
+                "slug": "/work/goldlabel/theme",
+                "order": 200,
+                "icon": "design",
+                "image": "/jpg/other/Opengraph-template.jpg",
+                "type": "file",
+                "excerpt": "Material UI is a React component library that provides a consistent design system, layout primitives, and readymade UI components.\n\n Design Systems\n\nIn the theme cartridge, you use it as the foundatio"
+              },
+              {
+                "title": "New Cartridge",
+                "slug": "/work/goldlabel/new-cartridge",
+                "order": 2200,
                 "icon": "goldlabel",
                 "image": "/png/n64/test.png",
-                "excerpt": "Goldlabel is built on cartridges.\n\nA cartridge is a selfcontained piece of application logic: React components, state, styles, and utilities bundled together in a portable unit.\n\nBecause each cartridg"
+                "type": "file",
+                "excerpt": "Purpose\n\n is a template designed to help developers quickly bootstrap a new Cartridge in a modular application framework such as Goldlabel. Cartridges are featurespecific, plugandplay components that "
+              },
+              {
+                "title": "Shortcodes",
+                "slug": "/work/goldlabel/shortcodes",
+                "order": 2200,
+                "icon": "wordpress",
+                "image": "/jpg/other/Opengraph-template.jpg",
+                "type": "file",
+                "excerpt": "Goldlabel includes a Shortcodes cartridge that brings a familiar WordPressstyle authoring pattern into a modern React/Next.js environment. Shortcodes let you drop small, purposeful commands directly i"
               }
             ],
             "icon": "goldlabel",
@@ -234,7 +222,7 @@
               "NextJS",
               "Headless CMS"
             ],
-            "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Open Source GitHub\"]\n\n[PageGrid pages=\"/work/goldlabel/cartridges, /work/goldlabel/about, /work/goldlabel/cartridges/newcartridge\"]\n\n Free fo"
+            "excerpt": "Free for anyone to fork, copy, hack, and reuse.\n\n[GitHub label=\"Open Source GitHub repository\" url=\"https://github.com/javascriptpro/core\"]\n\n[PageGrid pages=\"/work/goldlabel/cartridges, /work/goldlabe"
           },
           {
             "title": "Expertise",
@@ -1241,11 +1229,17 @@
                 "type": "file",
                 "tags": [
                   "food",
+                  "garlic",
                   "recipes",
                   "indonesian",
                   "goreng",
                   "nasi",
-                  "rice"
+                  "rice",
+                  "kecap manis",
+                  "shrimp paste",
+                  "chillies",
+                  "tamarind",
+                  "lime"
                 ],
                 "excerpt": "Nasi Goreng is an Indonesian dish made from leftover rice stirfried with garlic, shallots, chilli, and sweet soy sauce (kecap manis). Often enriched with prawns, chicken, or beef. Usually finished wit"
               }
@@ -1601,6 +1595,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "The apps we ship are real. They run in production and are developed accessibly\n\n[PageGrid thumbnails=\"yes\" pages=\"/work, /life, /balance\"]\n\n[PageGrid thumbnails=\"no\" pages=\"/work/goldlabel/cartridges/"
+    "excerpt": "The apps we ship are real. They run in production and are developed accessibly\n\n[PageGrid thumbnails=\"yes\" pages=\"/work, /life, /balance\"]\n\n[PageGrid thumbnails=\"no\" pages=\"/work/goldlabel/paywall, /l"
   }
 ]

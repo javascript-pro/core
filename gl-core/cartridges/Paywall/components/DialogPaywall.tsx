@@ -48,6 +48,7 @@ export default function DialogPaywall() {
         ) : null}
 
         <DialogContent />
+
         <DialogActions>
           {user && (
             <>

@@ -17,14 +17,14 @@ Extra Doubleplus Bonus for having either or both of these specialist ingredients
 
 ## Main flavours
 
--   Sweet and sticky from kecap manis
--   Umami and slight funk from shrimp paste
--   Heat from chillies
--   Aromatics from garlic and shallot
--   A little tang from tamarind or lime
+- Sweet and sticky from kecap manis
+- Umami and slight funk from shrimp paste
+- Heat from chillies
+- Aromatics from garlic and shallot
+- A little tang from tamarind or lime
 
 ### Kecap manis
-    
+
 Indonesian sweet soy sauce. Thick, glossy, caramel-like, and built from soy sauce reduced with palm sugar plus aromatics (garlic, star anise, galangal, bay leaf).
 
 ### Nasi Goreng paste
@@ -37,9 +37,9 @@ You fry the paste first. A teaspoon or two goes into hot oil so it can cook out,
 
 #### How not to use the paste
 
--   Adding the paste too late: you end up with raw, harsh flavours.
--   Using warm or freshly cooked rice: it turns mushy instead of smoky and separate.
--   Using too much paste: the dish becomes cloying, overly sweet, or sludge-like.
+- Adding the paste too late: you end up with raw, harsh flavours.
+- Using warm or freshly cooked rice: it turns mushy instead of smoky and separate.
+- Using too much paste: the dish becomes cloying, overly sweet, or sludge-like.
 
 If you want to recreate authentically traditional Nasi Goreng from scratch,first have a chinese the night before. There's always some berk who's ordered too much rice and nobody likes cold boily rice hanging round the fridge
 
@@ -80,4 +80,3 @@ Which vegetables have you got out of these?
 - Oil (semame is good)
 - Sugar
 - Lime Juice
-

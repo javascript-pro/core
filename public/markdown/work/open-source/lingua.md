@@ -1,11 +1,10 @@
 ---
 order: 100
-slug: /work/goldlabel/cartridges/lingua
+slug: /work/open-source/lingua
 title: Lingua
 description: Localisation
-icon: goldlabel
+icon: lingua
 image: /png/n64/test.png
-github: https://github.com/javascript-pro/core/tree/main/gl-core/cartridges/Lingua
 ---
 
 The Lingua cartridge brings localisation to Goldlabel. It enables your site to serve content in multiple languages, making it accessible to a wider audience without complicating your codebase.

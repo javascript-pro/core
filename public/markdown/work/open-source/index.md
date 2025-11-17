@@ -1,20 +1,20 @@
 ---
 order: 10
 title: Goldlabel
-description: Free Forever
-slug: /work/goldlabel
+description: Open Source and Free Forever
+slug: /work/open-source
 icon: goldlabel
 image: /png/3rdParty/github_og.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 ---
 
-[GitHub url="https://github.com/javascript-pro/core" label="Open Source GitHub"]
-
-[PageGrid pages="/work/goldlabel/cartridges, /work/goldlabel/about, /work/goldlabel/cartridges/new-cartridge"]
-
 > Free for anyone to fork, copy, hack, and reuse.
 
-#### What is it?
+[GitHub label="Open Source GitHub repository" url="https://github.com/javascript-pro/core"]
+
+[PageGrid pages="/work/open-source/cartridges, /work/open-source/about, /work/open-source/new-cartridge"]
+
+#### What?
 
 Goldlabel is a JavaScript platform built with:
 
@@ -24,7 +24,7 @@ Goldlabel is a JavaScript platform built with:
 
 Everything you see on this production site is built from Goldlabel. It’s the full set of building blocks, ready to be adapted to your own projects.
 
-#### Why Use Goldlabel?
+#### Why?
 
 - Open & Free – No lock-in. Take what you need, remix the rest.
 - Production-Ready – The exact codebase that runs our live site.
@@ -100,7 +100,7 @@ At this stage, the www public-facing site is the primary focus, with an emphasis
    - The site avoids `use client` directives in layout components to ensure full compatibility with SSG and server-side rendering (SSR).
    - Emotion (for CSS-in-JS) is integrated with critical CSS extraction during build time to prevent hydration issues.
 
-3. Theme:
+3. [Theme](/work/open-source/theme)
 
    - A customizable MUI theme defines the color palette, typography, and component styles.
    - MUI components like `Typography` and `Box` are used extensively in the layout and static components, such as the header and footer.
