@@ -90,15 +90,15 @@
             "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work/cases/aligent, /work/cases/hertwigauer, /work/cases/huawei, /work/cases/boral\", /work/cases/aligent\"]"
           },
           {
-            "title": "Goldlabel",
+            "title": "Open Source",
             "description": "Open Source and Free Forever",
-            "slug": "/work/goldlabel",
+            "slug": "/work/open-source",
             "order": 10,
             "type": "folder",
             "children": [
               {
                 "title": "Cartridges",
-                "slug": "/work/goldlabel/cartridges",
+                "slug": "/work/open-source/cartridges",
                 "order": 1,
                 "icon": "cartridge",
                 "image": "/png/n64/test.png",
@@ -107,7 +107,7 @@
               },
               {
                 "title": "Flash",
-                "slug": "/work/goldlabel/flash",
+                "slug": "/work/open-source/flash",
                 "order": 15,
                 "icon": "flash",
                 "image": "/png/n64/test.png",
@@ -122,7 +122,7 @@
               },
               {
                 "title": "Uberedux",
-                "slug": "/work/goldlabel/uberedux",
+                "slug": "/work/open-source/uberedux",
                 "order": 20,
                 "icon": "js",
                 "image": "/png/n64/test.png",
@@ -138,7 +138,7 @@
               },
               {
                 "title": "Flickr",
-                "slug": "/work/goldlabel/flickr",
+                "slug": "/work/open-source/flickr",
                 "order": 30,
                 "icon": "flickr",
                 "image": "/png/n64/test.png",
@@ -154,7 +154,7 @@
               },
               {
                 "title": "Lingua",
-                "slug": "/work/goldlabel/lingua",
+                "slug": "/work/open-source/lingua",
                 "order": 100,
                 "icon": "lingua",
                 "image": "/png/n64/test.png",
@@ -163,7 +163,7 @@
               },
               {
                 "title": "Paywall",
-                "slug": "/work/goldlabel/paywall",
+                "slug": "/work/open-source/paywall",
                 "order": 130,
                 "icon": "paywall",
                 "image": "/jpg/ai/SWAT-Baby.jpg",
@@ -181,7 +181,7 @@
               },
               {
                 "title": "Theme",
-                "slug": "/work/goldlabel/theme",
+                "slug": "/work/open-source/theme",
                 "order": 200,
                 "icon": "design",
                 "image": "/jpg/other/Opengraph-template.jpg",
@@ -190,7 +190,7 @@
               },
               {
                 "title": "New Cartridge",
-                "slug": "/work/goldlabel/new-cartridge",
+                "slug": "/work/open-source/new-cartridge",
                 "order": 2200,
                 "icon": "goldlabel",
                 "image": "/png/n64/test.png",
@@ -199,7 +199,7 @@
               },
               {
                 "title": "Shortcodes",
-                "slug": "/work/goldlabel/shortcodes",
+                "slug": "/work/open-source/shortcodes",
                 "order": 2200,
                 "icon": "wordpress",
                 "image": "/jpg/other/Opengraph-template.jpg",
@@ -222,7 +222,7 @@
               "NextJS",
               "Headless CMS"
             ],
-            "excerpt": "Free for anyone to fork, copy, hack, and reuse.\n\n[GitHub label=\"Open Source GitHub repository\" url=\"https://github.com/javascriptpro/core\"]\n\n[PageGrid pages=\"/work/goldlabel/cartridges, /work/goldlabe"
+            "excerpt": "Free for anyone to fork, copy, hack, and reuse.\n\n[GitHub label=\"Kanban Board\" url=\"https://github.com/users/javascriptpro/projects/8/views/1\"]\n\n[GitHub label=\"Open Source GitHub repository\" url=\"https"
           },
           {
             "title": "Expertise",
@@ -1595,6 +1595,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "The apps we ship are real. They run in production and are developed accessibly\n\n[PageGrid thumbnails=\"yes\" pages=\"/work, /life, /balance\"]\n\n[PageGrid thumbnails=\"no\" pages=\"/work/goldlabel/paywall, /l"
+    "excerpt": "The apps we ship are real. They run in production and are developed accessibly\n\n[PageGrid thumbnails=\"yes\" pages=\"/work, /life, /balance\"]\n\n[PageGrid thumbnails=\"no\" pages=\"/work/opensource/paywall, /"
   }
 ]

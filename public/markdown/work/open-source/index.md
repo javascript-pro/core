@@ -1,6 +1,6 @@
 ---
 order: 10
-title: Goldlabel
+title: Open Source
 description: Open Source and Free Forever
 slug: /work/open-source
 icon: goldlabel
@@ -10,9 +10,11 @@ tags: JavaScript, Vanilla JavaScript, TypeScript, React, Material UI, Flash, Ser
 
 > Free for anyone to fork, copy, hack, and reuse.
 
+[GitHub label="Kanban Board" url="https://github.com/users/javascript-pro/projects/8/views/1"]
+
 [GitHub label="Open Source GitHub repository" url="https://github.com/javascript-pro/core"]
 
-[PageGrid pages="/work/open-source/cartridges, /work/open-source/about, /work/open-source/new-cartridge"]
+[PageGrid pages="/work/open-source/cartridges, /work/open-source/uberedux, /work/open-source/flash, /work/open-source/flickr, /work/open-source/lingua, /work/open-source/paywall, /work/open-source/shortcodes, /work/open-source/theme, /work/open-source/new-cartridge"]
 
 #### What?
 

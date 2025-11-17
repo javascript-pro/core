@@ -8,7 +8,7 @@ image: /png/3rdParty/git_og.png
 tags: Professional, JavaScript, Vanilla JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 ---
 
-[PageGrid thumbnails="no" pages="/work/, /work/company, /work/expertise, /work/goldlabel, /work/cases"]
+[PageGrid thumbnails="no" pages="/work/, /work/company, /work/expertise, /work/open-source, /work/case-studies"]
 
 > The apps we ship are real. They run in production and are developed accessibly.
 

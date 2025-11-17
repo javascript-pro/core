@@ -7,7 +7,6 @@ icon: flash
 image: /png/n64/test.png
 noImage: true
 tags: 'Catridges, Flash, SVG, Macromedia'
-paywall: true
 ---
 
 [Flash movie="Logo" height="250"]

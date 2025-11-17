@@ -31,7 +31,7 @@ export default function GitHub({ url = 'https://', label = '' }) {
               <Icon icon={'github'} color="primary" />
             </Box>
           }
-          title={<Typography variant="body1">{label}</Typography>}
+          title={<Typography variant="h6">{label}</Typography>}
         />
       </CardActionArea>
     </Card>
