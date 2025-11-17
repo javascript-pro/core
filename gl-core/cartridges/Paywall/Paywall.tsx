@@ -50,15 +50,9 @@ export default function Paywall() {
         >
           <Box sx={{ flexGrow: 1 }} />
           <IconButton
-            sx={{
-              width: 48,
-              height: 48,
-              borderRadius: 2,
-            }}
             onClick={handleClick}
-            color="primary"
-          >
-            <Icon icon={'signin'} />
+            color="primary">
+            <Icon icon={'paywall'} />
           </IconButton>
         </Box>
       )}

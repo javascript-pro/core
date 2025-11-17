@@ -13,7 +13,7 @@ import {
   usePaywall,
   useUser,
   setPaywallKey,
-  SignInUp,
+  Continue,
   User,
   SignOut,
 } from '../../Paywall';
@@ -43,7 +43,7 @@ export default function DialogPaywall() {
         {!user ? (
           <>
             {user ? <User /> : null}
-            <SignInUp />
+            <Continue />
           </>
         ) : null}
 
@@ -54,11 +54,12 @@ export default function DialogPaywall() {
             <>
               <SignOut />
               <Box sx={{ flexGrow: 1 }} />
-              <IconButton color="primary" onClick={handleClose}>
-                <Icon icon="close" />
-              </IconButton>
+              
             </>
           )}
+          <IconButton color="primary" onClick={handleClose}>
+                <Icon icon="close" />
+              </IconButton>
         </DialogActions>
       </Dialog>
     </>

@@ -1,3 +1,5 @@
+![Image](https://goldlabel.pro/png/n64/flickr.png)
+
 /Users/goldlabel/GitHub/core/gl-core/cartridges/Paywall/README.md
 
 ## 🚀 Paywall Cartridge

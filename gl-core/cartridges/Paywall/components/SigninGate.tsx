@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { Box, Alert, AlertTitle } from '@mui/material';
 import { useDispatch, Icon } from '../../../../gl-core';
-import { useUser, setPaywallKey, usePaywall, SignInUp } from '../../Paywall';
+import { useUser, setPaywallKey, usePaywall, Continue } from '../../Paywall';
 
 export default function SigninGate() {
   const dispatch = useDispatch();
@@ -20,7 +20,7 @@ export default function SigninGate() {
     <Box sx={{ mt: 3 }}>
       {!user ? (
         <>
-          <SignInUp />
+          <Continue />
         </>
       ) : null}
 
