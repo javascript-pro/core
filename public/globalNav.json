@@ -101,9 +101,9 @@
                 "slug": "/work/open-source/quick-start",
                 "order": 5,
                 "icon": "success",
-                "image": "https://live.staticflickr.com/65535/54929673394_69c76ac4a3_b.jpg",
+                "image": "/png/3rdParty/github_og.png",
                 "type": "file",
-                "excerpt": "Get started with Goldlabel Core Open Source\n\n 🚀 Install\n\n1. Clone the repo\n\n\n\n2. Setup Environment\n\nCreate a  file in the root directory with this variable. If you enable parts of the app which requi"
+                "excerpt": "Get started with Goldlabel Core Open Source\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\n 🚀 Install\n\n1. Clone the repo\n\n\n\n2. Setup Environment\n\nCreate a  file in the root"
               },
               {
                 "title": "Cartridges",
@@ -112,7 +112,7 @@
                 "icon": "cartridge",
                 "image": "/png/n64/test.png",
                 "type": "file",
-                "excerpt": "Goldlabel is built on cartridges.\n\nA cartridge is a selfcontained piece of application logic: React components, state, styles, and utilities bundled together in a portable unit.\n\nBecause each cartridg"
+                "excerpt": "Goldlabel is built on cartridges\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\nA cartridge is a selfcontained piece of application logic: React components, state, styles, a"
               },
               {
                 "title": "Flash",
@@ -127,7 +127,7 @@
                   "SVG",
                   "Macromedia"
                 ],
-                "excerpt": "[Flash movie=\"Logo\" height=\"250\"]\n\n Maybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You're welcome\n\n SVG Graphics\n Animation using Greensoc"
+                "excerpt": "[Flash movie=\"Logo\" height=\"250\"]\n\n Maybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You're welcome\n\n[GitHub url=\"https://github.com/javascr"
               },
               {
                 "title": "Uberedux",
@@ -143,7 +143,7 @@
                   "State Management",
                   "Redux"
                 ],
-                "excerpt": "Otherwise you'd be back in jQuery callback hell. Nobody wants that.\n\nUberedux is a simple, zeroconfig wrapper around Redux. It plugs cleanly into how the app already works and gives you the global sta"
+                "excerpt": "Otherwise you'd be back in jQuery callback hell. Nobody wants that.\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\nUberedux is a simple, zeroconfig wrapper around Redux. It "
               },
               {
                 "title": "Flickr",
@@ -159,7 +159,7 @@
                   "REST",
                   "Next.js"
                 ],
-                "excerpt": "Flickr Photo Cartridge\n\nA React component for clean, fastloading image galleries. Provides an easy way to display recent photos from a Flickr account. It connects to a serverside API route in your Nex"
+                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\n Flickr Photo Cartridge\n\nA React component for clean, fastloading image galleries. Provides an easy way to display recent photo"
               },
               {
                 "title": "Lingua",
@@ -168,7 +168,7 @@
                 "icon": "lingua",
                 "image": "https://live.staticflickr.com/65535/54929673394_69c76ac4a3_b.jpg",
                 "type": "file",
-                "excerpt": "The Lingua cartridge brings localisation to Goldlabel. It enables your site to serve content in multiple languages, making it accessible to a wider audience without complicating your codebase.\n\n What "
+                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\nThe Lingua cartridge brings localisation to Goldlabel. It enables your site to serve content in multiple languages, making it a"
               },
               {
                 "title": "Paywall",
@@ -186,7 +186,7 @@
                   "auth",
                   "subscription"
                 ],
-                "excerpt": "User accounts, passwords, membership access and payment\n\n Use Cases\n\nWe have a page in our writing section for an ebook we are working on. It's not ready to be public yet, so we'll add the attribute  "
+                "excerpt": "User accounts, passwords, membership access and payment\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\n Use Case\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/sta"
               },
               {
                 "title": "Theme",
@@ -195,16 +195,16 @@
                 "icon": "design",
                 "image": "/jpg/other/Opengraph-template.jpg",
                 "type": "file",
-                "excerpt": "Material UI is a React component library that provides a consistent design system, layout primitives, and readymade UI components.\n\n Design Systems\n\nIn the theme cartridge, you use it as the foundatio"
+                "excerpt": "Material UI is a React component library that provides a consistent design system, layout primitives, and readymade UI components\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo"
               },
               {
                 "title": "New Cartridge",
                 "slug": "/work/open-source/new-cartridge",
                 "order": 2200,
-                "icon": "goldlabel",
+                "icon": "add",
                 "image": "/jpg/other/Opengraph-template.jpg",
                 "type": "file",
-                "excerpt": "Purpose\n\n is a template designed to help developers quickly bootstrap a new Cartridge in a modular application framework such as Goldlabel. Cartridges are featurespecific, plugandplay components that "
+                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\n is a template designed to help developers quickly bootstrap a new Cartridge in a modular application framework such as Goldlab"
               },
               {
                 "title": "Shortcodes",
@@ -213,7 +213,7 @@
                 "icon": "wordpress",
                 "image": "/jpg/other/Opengraph-template.jpg",
                 "type": "file",
-                "excerpt": "Goldlabel includes a Shortcodes cartridge that brings a familiar WordPressstyle authoring pattern into a modern React/Next.js environment. Shortcodes let you drop small, purposeful commands directly i"
+                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\nGoldlabel includes a Shortcodes cartridge that brings a familiar WordPressstyle authoring pattern into a modern React/Next.js e"
               }
             ],
             "icon": "github",
@@ -231,7 +231,7 @@
               "NextJS",
               "Headless CMS"
             ],
-            "excerpt": "Free for anyone to fork, copy, hack, and reuse.\n\n[GitHub label=\"Kanban Board\" url=\"https://github.com/users/javascriptpro/projects/8/views/1\"]\n\n[GitHub label=\"Open Source GitHub repository\" url=\"https"
+            "excerpt": "Free for anyone to fork, copy, hack, and reuse.\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\n[PageGrid pages=\"/work/opensource/cartridges, /work/opensource/uberedux, /work"
           },
           {
             "title": "Expertise",

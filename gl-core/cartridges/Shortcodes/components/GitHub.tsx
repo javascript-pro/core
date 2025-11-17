@@ -27,7 +27,7 @@ export default function GitHub({ url = 'https://', label = '' }) {
             alignItems: 'flex-start',
           }}
           avatar={
-            <Box sx={{mt:0.5}}>
+            <Box sx={{ mt: 0.5 }}>
               <Icon icon={'github'} color="primary" />
             </Box>
           }

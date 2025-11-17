@@ -1,10 +1,10 @@
 ---
-order: 30
+order: 50
 title: Boral
 description: Dots on a Map
 slug: /work/cascase-studieses/boral
 icon: case
-image: https://live.staticflickr.com/65535/54915903856_cbe4780aed_b.jpg
+image: https://live.staticflickr.com/65535/54928652987_4641b20f75_b.jpg
 tags: expertise, interview, boral
 ---
 

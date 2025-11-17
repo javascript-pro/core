@@ -12,5 +12,3 @@ noImage: true
 > The apps we ship are real. They run in production and are developed accessibly
 
 [PageGrid thumbnails="yes" pages="/work, /life, /balance"]
-
-[PageGrid thumbnails="no" pages="/work/open-source/paywall, /life/food/nasi-goreng, /balance/books/douglas-coupland, /balance/writing/not-here-to-fuck-spiders, /balance/writing/not-here-to-fuck-spiders/puppy-thing, /balance/books/r-f-kuang"]

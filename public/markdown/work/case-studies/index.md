@@ -10,3 +10,4 @@ noImage: true
 ---
 
 [PageGrid thumbnails="no" pages="/work/case-studies/aligent, /work/case-studies/hertwig-auer, /work/case-studies/huawei, /work/case-studies/boral", /work/case-studies/aligent"]
+

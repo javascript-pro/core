@@ -6,6 +6,7 @@ description: Self-contained pieces of application logic
 icon: cartridge
 image: /png/n64/test.png
 ---
+
 > Goldlabel is built on cartridges
 
 [GitHub url="https://github.com/javascript-pro/core" label="Clone repo"]

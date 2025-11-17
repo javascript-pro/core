@@ -82,6 +82,7 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
         sx={{ mt: -1 }}
       >
         <MenuItem
+          sx={{ minWidth: 200 }}
           onClick={() => {
             dispatch(routeTo('/bad-panda', router));
           }}
@@ -103,7 +104,7 @@ export default function ThumbMenu({ frontmatter = null }: TThumbMenu) {
           <ListItemIcon>
             <Icon icon="reset" color="primary" />
           </ListItemIcon>
-          <ListItemText primary="Reset" />
+          <ListItemText primary="Restart" />
         </MenuItem>
       </Menu>
 

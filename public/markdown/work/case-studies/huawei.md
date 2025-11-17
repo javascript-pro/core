@@ -4,13 +4,15 @@ title: Huawei
 description: Shenzhen, China
 slug: /work/case-studies/huawei
 icon: case
-image: https://live.staticflickr.com/65535/54922461987_b333b3acd7_b.jpg
-tags: expertise, interview, huawei, china
+image: https://live.staticflickr.com/65535/52602318224_f8c4a92a62_c.jpg
+tags: expertise, interview, huawei, china, react, javascript
 ---
 
-> Feb 2016 to May 2016
+> Feb to May 2016
 
-By 2015–2016, React had evolved beyond an experiment — Facebook, Instagram, and Airbnb were using it at scale, and the open-source ecosystem around it (Redux, React Router, Create React App) was maturing rapidly
+## English/Chinese Project Management eLearning App
+
+By 2015 React had evolved beyond an experiment. Facebook, Instagram, and Airbnb were using it at scale, and the open-source ecosystem around it (Redux, React Router, Create React App) was maturing rapidly
 
 - Built an isomorphic JavaScript project management app using React and Node.js
 - Worked within a small, agile development team
