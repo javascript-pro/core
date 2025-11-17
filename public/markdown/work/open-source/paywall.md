@@ -11,13 +11,21 @@ noImage: true
 
 > User accounts, passwords, membership access and payment
 
-## Use Cases
+[GitHub url="https://github.com/javascript-pro/core" label="Clone repo"]
 
-We have a page in our writing section for an e-book we are working on. It's not ready to be public yet, so we'll add the attribute `paywall: true` to the content's frontmatter markdown. Now only logged in users can view.
+### Use Case
 
-But how easy is it to become a logged in user and see the content? There is a direct relationship between that and how many users will do it.
+[GitHub url="https://github.com/javascript-pro/core/tree/staging/gl-core/cartridges/Paywall" label="/gl-core/cartridges/Paywall"]
 
-So we don't ask for email. We don't ask for a password. We need then to be accountable, we need them to be logged in, but we don't need them to create an account with us. We just need them to click the contine with Google or GitHub links and that Authentication will be done by the respective providers
+When a draft chapter of an e-book isn’t ready for general release, we mark it with paywall: true in the frontmatter. That instantly restricts access so only authenticated users can view it.
+
+The important question is how much effort it takes for someone to become authenticated. The more friction we add, the fewer people will cross the line — so we keep it effortless.
+
+We don’t ask for an email. We don’t ask for a password. We only require accountability, not a traditional account. A user simply taps Continue with Google or Continue with GitHub, and the authentication happens through those providers. No forms, no sign-ups, just one click to unlock the content.
+
+### Examples
+
+[PageGrid thumbnails="yes" pages="/work/cases/hertwig-auer, /balance/writing/not-here-to-fuck-spiders, /balance/writing/not-here-to-fuck-spiders/bez"]
 
 It still creates a user account on our firebase app, and should the user ever log out they can easily log back in by clicking the same button
 
@@ -25,11 +33,7 @@ In this way we can layer up the Paywall to include pages which are viewable if l
 
 In other words... Access control
 
-## Examples
-
-[PageGrid thumbnails="yes" pages="/work/cases/hertwig-auer, /balance/writing/not-here-to-fuck-spiders, /balance/writing/not-here-to-fuck-spiders/bez"]
-
-#### More info
+### More info
 
 > The Paywall cartridge is responsible for two key features: Authentication/Access Control and Pings
 
@@ -88,8 +92,6 @@ Each document is keyed by `uid` and typically contains:
 
 - Deletion  
   Delete user from Firebase Auth and Firestore `paywall`.
-
-[GitHub url="https://github.com/javascript-pro/core/tree/staging/gl-core/cartridges/Paywall" label="/gl-core/cartridges/Paywall"]
 
 #### 2. Real‑Time Visitor Tracking (Pings)
 

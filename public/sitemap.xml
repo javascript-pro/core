@@ -323,9 +323,6 @@
     <loc>https://goldlabel.pro/work/open-source</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/open-source/install</loc>
-  </url>
-  <url>
     <loc>https://goldlabel.pro/work/open-source/lingua</loc>
   </url>
   <url>
@@ -333,6 +330,9 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work/open-source/paywall</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/open-source/quick-start</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/open-source/shortcodes</loc>

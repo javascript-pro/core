@@ -6,8 +6,9 @@ description: Self-contained pieces of application logic
 icon: cartridge
 image: /png/n64/test.png
 ---
+> Goldlabel is built on cartridges
 
-## Goldlabel is built on cartridges.
+[GitHub url="https://github.com/javascript-pro/core" label="Clone repo"]
 
 A cartridge is a self-contained piece of application logic: React components, state, styles, and utilities bundled together in a portable unit.
 

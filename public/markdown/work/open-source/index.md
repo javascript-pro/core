@@ -3,16 +3,14 @@ order: 10
 title: Open Source
 description: Open Source and Free Forever
 slug: /work/open-source
-icon: goldlabel
+icon: github
 image: /png/3rdParty/github_og.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 ---
 
 > Free for anyone to fork, copy, hack, and reuse.
 
-[GitHub label="Kanban Board" url="https://github.com/users/javascript-pro/projects/8/views/1"]
-
-[GitHub label="Open Source GitHub repository" url="https://github.com/javascript-pro/core"]
+[GitHub url="https://github.com/javascript-pro/core" label="Clone repo"]
 
 [PageGrid pages="/work/open-source/cartridges, /work/open-source/uberedux, /work/open-source/flash, /work/open-source/flickr, /work/open-source/lingua, /work/open-source/paywall, /work/open-source/shortcodes, /work/open-source/theme, /work/open-source/new-cartridge"]
 
@@ -66,6 +64,8 @@ This is the foundation for everything we do. It’s fully open source, under act
 We’re not trying to hide anything behind paywalls or pitch decks. If you want to see how we build things, just open the repo. If you want to get involved, even better — we’re always looking for the right kind of collaborator.
 
 ## Working with Goldlabel
+
+[GitHub label="Kanban Board" url="https://github.com/users/javascript-pro/projects/8/views/1"]
 
 - Ship early and often.  
   Each app is live from the outset — not just a mockup or prototyle

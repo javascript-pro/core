@@ -7,7 +7,9 @@ icon: design
 image: /jpg/other/Opengraph-template.jpg
 ---
 
-> Material UI is a React component library that provides a consistent design system, layout primitives, and ready-made UI components.
+> Material UI is a React component library that provides a consistent design system, layout primitives, and ready-made UI components
+
+[GitHub url="https://github.com/javascript-pro/core" label="Clone repo"]
 
 ### Design Systems
 

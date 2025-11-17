@@ -97,13 +97,13 @@
             "type": "folder",
             "children": [
               {
-                "title": "Install",
-                "slug": "/work/open-source/install",
+                "title": "Quick Start",
+                "slug": "/work/open-source/quick-start",
                 "order": 5,
-                "icon": "right",
-                "image": "/png/3rdParty/git_og.png",
+                "icon": "success",
+                "image": "https://live.staticflickr.com/65535/54929673394_69c76ac4a3_b.jpg",
                 "type": "file",
-                "excerpt": "Clone the repo"
+                "excerpt": "Get started with Goldlabel Core Open Source\n\n 🚀 Install\n\n1. Clone the repo\n\n\n\n2. Setup Environment\n\nCreate a  file in the root directory with this variable. If you enable parts of the app which requi"
               },
               {
                 "title": "Cartridges",
@@ -119,7 +119,7 @@
                 "slug": "/work/open-source/flash",
                 "order": 15,
                 "icon": "flash",
-                "image": "/png/n64/test.png",
+                "image": "/jpg/other/Opengraph-template.jpg",
                 "type": "file",
                 "tags": [
                   "Catridges",
@@ -134,7 +134,7 @@
                 "slug": "/work/open-source/uberedux",
                 "order": 20,
                 "icon": "js",
-                "image": "/png/n64/test.png",
+                "image": "/jpg/other/Opengraph-template.jpg",
                 "type": "file",
                 "tags": [
                   "Free",
@@ -150,7 +150,7 @@
                 "slug": "/work/open-source/flickr",
                 "order": 30,
                 "icon": "flickr",
-                "image": "/png/n64/test.png",
+                "image": "/jpg/other/Opengraph-template.jpg",
                 "type": "file",
                 "tags": [
                   "flickr",
@@ -166,7 +166,7 @@
                 "slug": "/work/open-source/lingua",
                 "order": 100,
                 "icon": "lingua",
-                "image": "/png/n64/test.png",
+                "image": "https://live.staticflickr.com/65535/54929673394_69c76ac4a3_b.jpg",
                 "type": "file",
                 "excerpt": "The Lingua cartridge brings localisation to Goldlabel. It enables your site to serve content in multiple languages, making it accessible to a wider audience without complicating your codebase.\n\n What "
               },
@@ -202,7 +202,7 @@
                 "slug": "/work/open-source/new-cartridge",
                 "order": 2200,
                 "icon": "goldlabel",
-                "image": "/png/n64/test.png",
+                "image": "/jpg/other/Opengraph-template.jpg",
                 "type": "file",
                 "excerpt": "Purpose\n\n is a template designed to help developers quickly bootstrap a new Cartridge in a modular application framework such as Goldlabel. Cartridges are featurespecific, plugandplay components that "
               },
@@ -216,7 +216,7 @@
                 "excerpt": "Goldlabel includes a Shortcodes cartridge that brings a familiar WordPressstyle authoring pattern into a modern React/Next.js environment. Shortcodes let you drop small, purposeful commands directly i"
               }
             ],
-            "icon": "goldlabel",
+            "icon": "github",
             "image": "/png/3rdParty/github_og.png",
             "tags": [
               "JavaScript",

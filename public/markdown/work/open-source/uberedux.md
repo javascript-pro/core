@@ -4,11 +4,13 @@ slug: /work/open-source/uberedux
 title: 'Uberedux'
 description: 'Because all Apps need State Management'
 icon: js
-image: /png/n64/test.png
+image: /jpg/other/Opengraph-template.jpg
 tags: 'Free, atridges, Uberedux, State Management, Redux'
 ---
 
 > Otherwise you'd be back in jQuery callback hell. Nobody wants that.
+
+[GitHub url="https://github.com/javascript-pro/core" label="Clone repo"]
 
 Uberedux is a simple, zero-config wrapper around Redux. It plugs cleanly into how the app already works and gives you the global state access you need without boilerplate or fuss. There’s nothing clever here — and that’s the point. Uberedux is fast, familiar, and already done for you.
 

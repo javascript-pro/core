@@ -4,7 +4,7 @@ slug: /work/open-source/flash
 title: Flash
 description: 'A Pointless reinvention of MacroMedia Flash?'
 icon: flash
-image: /png/n64/test.png
+image: /jpg/other/Opengraph-template.jpg
 noImage: true
 tags: 'Catridges, Flash, SVG, Macromedia'
 ---
@@ -12,6 +12,8 @@ tags: 'Catridges, Flash, SVG, Macromedia'
 [Flash movie="Logo" height="250"]
 
 > Maybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You're welcome
+
+[GitHub url="https://github.com/javascript-pro/core" label="Clone repo"]
 
 - SVG Graphics
 - Animation using Greensock
