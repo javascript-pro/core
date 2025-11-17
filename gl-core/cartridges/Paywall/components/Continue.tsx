@@ -35,8 +35,6 @@ export default function Continue() {
     }
   };
 
-  
-
   const handleGithub = async () => {
     try {
       await signInWithPopup(auth, new GithubAuthProvider());
@@ -50,7 +48,7 @@ export default function Continue() {
       <Grid container spacing={1} justifyContent="center">
         <Grid size={{ xs: 12 }}>
           <CardHeader
-            avatar={<Icon icon="paywall" />} 
+            avatar={<Icon icon="paywall" />}
             title="Paywall"
             subheader="Continue with one of these providers"
           />
@@ -82,7 +80,6 @@ export default function Continue() {
             >
               GitHub
             </Button>
-
           </CardContent>
         </Grid>
       </Grid>

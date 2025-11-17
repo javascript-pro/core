@@ -29,7 +29,6 @@ export default function Paywall() {
   return (
     <>
       <DialogPaywall />
-
       {user ? (
         <Box
           sx={{
@@ -39,7 +38,6 @@ export default function Paywall() {
         >
           <Box sx={{ flexGrow: 1 }} />
           <UserCard />
-          {/* <Box sx={{ flexGrow: 1 }} /> */}
         </Box>
       ) : (
         <Box
@@ -49,9 +47,7 @@ export default function Paywall() {
           }}
         >
           <Box sx={{ flexGrow: 1 }} />
-          <IconButton
-            onClick={handleClick}
-            color="primary">
+          <IconButton onClick={handleClick} color="primary">
             <Icon icon={'paywall'} />
           </IconButton>
         </Box>
