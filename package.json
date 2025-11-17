@@ -1,10 +1,10 @@
 {
-  "version": "52.2.1",
+  "version": "52.2.2",
   "name": "core",
   "description": "Always FREE. Always Open Source",
   "repository": {
     "type": "git",
-    "url": "https://fictional-space-yodel-vr4j4jrqgcpx4r.github.dev/"
+    "url": "https://github.com/javascript-pro/core"
   },
   "scripts": {
     "dev": "clear && rm -rf .next && yarn indexSearch && yarn format && yarn generate && next dev",
