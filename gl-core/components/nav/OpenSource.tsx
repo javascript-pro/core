@@ -12,7 +12,7 @@ import {
   Button,
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
-import { Icon } from '../../../gl-core';
+import { Icon } from '../../cartridges/DesignSystem';
 
 export default function OpenSource() {
   const [open, setOpen] = React.useState(false);

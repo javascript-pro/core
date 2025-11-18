@@ -5,6 +5,7 @@ description: It's Not Who You Know (2000)
 slug: /balance/video
 icon: star
 image: https://live.staticflickr.com/65535/53519132441_43525fc3a4_b.jpg
+noImage: true
 ---
 
 [YouTube src="https://www.youtube.com/watch?v=Qe2ZLYzQToQ"]

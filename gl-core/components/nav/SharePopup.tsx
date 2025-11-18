@@ -9,7 +9,8 @@ import {
   TwitterShareButton,
 } from 'react-share';
 import { Box, Menu, MenuItem, ListItemIcon, ListItemText } from '@mui/material';
-import { Icon, MightyButton } from '../../../gl-core';
+import { MightyButton } from '../../../gl-core';
+import { Icon } from '../../cartridges/DesignSystem';
 
 export type TFrontmatter = {
   title?: string;

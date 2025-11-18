@@ -8,7 +8,7 @@ import {
   TwitterShareButton,
 } from 'react-share';
 import { Box, MenuItem, ListItemIcon, ListItemText } from '@mui/material';
-import { Icon } from '../../../gl-core';
+import { Icon } from '../../cartridges/DesignSystem';
 
 export type TShareMenu = {
   frontmatter?: any;

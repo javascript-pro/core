@@ -117,21 +117,6 @@
                 "excerpt": "Goldlabel is built on cartridges\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\nA cartridge is a selfcontained piece of application logic: React components, state, styles, a"
               },
               {
-                "title": "Flash",
-                "slug": "/work/open-source/flash",
-                "order": 15,
-                "icon": "flash",
-                "image": "/jpg/other/Opengraph-template.jpg",
-                "type": "file",
-                "tags": [
-                  "Catridges",
-                  "Flash",
-                  "SVG",
-                  "Macromedia"
-                ],
-                "excerpt": "[Flash movie=\"Logo\" height=\"250\"]\n\n Maybe we did ridiculously and pointlessly reinvented MacroMedia Flash with React JS so you'll never have to. You're welcome\n\n[GitHub url=\"https://github.com/javascr"
-              },
-              {
                 "title": "Uberedux",
                 "slug": "/work/open-source/uberedux",
                 "order": 20,
@@ -146,22 +131,6 @@
                   "Redux"
                 ],
                 "excerpt": "Otherwise you'd be back in jQuery callback hell. Nobody wants that.\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Uberedux\" label=\"Uberedux\"]\n\nUberedux is a simple,"
-              },
-              {
-                "title": "Flickr",
-                "slug": "/work/open-source/flickr",
-                "order": 30,
-                "icon": "flickr",
-                "image": "/jpg/other/Opengraph-template.jpg",
-                "type": "file",
-                "tags": [
-                  "flickr",
-                  "free",
-                  "api",
-                  "REST",
-                  "Next.js"
-                ],
-                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Flickr\" label=\"Flickr\"]\n\n Flickr Photo Cartridge\n\nA React component for clean, fastloading image galleries. Provides an"
               },
               {
                 "title": "Lingua",
@@ -191,8 +160,8 @@
                 "excerpt": "User accounts, passwords, membership access and payment\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Paywall\" label=\"Paywall\"]\n\n Use Case\n\nWhen a draft chapter of "
               },
               {
-                "title": "Theme",
-                "slug": "/work/open-source/theme",
+                "title": "Design System",
+                "slug": "/work/open-source/design-system",
                 "order": 200,
                 "icon": "design",
                 "image": "/jpg/other/Opengraph-template.jpg",

@@ -15,10 +15,10 @@ import {
   useSlice,
   useDispatch,
   setUbereduxKey,
-  Icon,
   MightyButton,
   Search,
 } from '../../../gl-core';
+import { Icon } from '../../cartridges/DesignSystem';
 
 export type TNav = {
   title?: string | null;
