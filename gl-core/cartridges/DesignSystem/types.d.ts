@@ -3,8 +3,27 @@
 export type TDesignSystem = {
   cartridge?: string;
   dialog?: any;
+  theme?: TTheme;
   [key: string]: any;
 };
+
+export type TTheme = {
+    mode: 'light' | 'dark';
+    primary: string;
+    secondary: string;
+    background: string;
+    paper: string;
+    text: string;
+    border: string;
+}
+
+export type TSystemDialog = {
+  icon?: string;
+  title?: string;
+  subheader?: string;
+  content?: React.ReactNode;    
+}
+
 
 export type TFlickrState = {
   cartridge?: string;

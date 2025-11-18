@@ -34,6 +34,7 @@ import {
 } from '../gl-core';
 import { Paywall, SigninGate, useUser } from './cartridges/Paywall';
 import { SelectLang } from './cartridges/Lingua';
+import { DesignSystem } from './cartridges/DesignSystem'
 
 const config = configRaw as TConfig;
 
@@ -69,10 +70,10 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
   return (
     <>
+      <DesignSystem>
       <Theme theme={config.themes[effectiveThemeMode]}>
         <CssBaseline />
         <IncludeAll />
-
         <Box
           sx={{
             position: 'sticky',
@@ -232,6 +233,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
           </Box>
         </Container>
       </Theme>
+      </DesignSystem>
     </>
   );
 }

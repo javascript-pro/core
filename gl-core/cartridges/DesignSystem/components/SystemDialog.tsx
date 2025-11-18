@@ -2,6 +2,7 @@
 'use client';
 import * as React from 'react';
 import {
+  CardHeader,
   Dialog,
   Box,
   DialogActions,
@@ -12,28 +13,57 @@ import {
 import { useDispatch, Icon, useIsMobile } from '../../../../gl-core';
 import { useDesignSystem, setDesignSystemKey } from '../../DesignSystem';
 
+export type TSystemDialog = {
+  icon?: string;
+  title?: string;
+  subheader?: string;
+  content?: React.ReactNode;    
+}
+
 export default function SystemDialog() {
   const dispatch = useDispatch();
   const isMobile = useIsMobile();
-  const data = useDesignSystem();
+  const ds = useDesignSystem();
+
+
 
   const handleClose = () => {
     // dispatch(setDesignSystemKey('dialog', {open: true, title: 'fuck'}));
     dispatch(setDesignSystemKey('dialog', null));
   };
 
+ 
+  const fakeData = {
+    icon: "star",
+    title: "This is the title",
+    subheader: "deafult subtitle",
+    content: "Can this be markdown?",
+
+  }
+
   return (
     <>
       <Dialog
-        open={Boolean(data)}
+        fullScreen
+        open={Boolean(ds)}
         onClose={handleClose}
-        fullScreen={isMobile}
         maxWidth={'md'}
         fullWidth
       >
-        <DialogTitle>DialogTitle</DialogTitle>
+        <DialogTitle>
+          
+          <CardHeader
+            avatar={<Icon icon="home" />}
+            title="System Dialog"
+            subheader="Lorem Ipsum"
+            action={'Exit'}
+          />
+          
+        </DialogTitle>
 
-        <DialogContent>Lorem Ipsum</DialogContent>
+        <DialogContent>
+          content
+        </DialogContent>
 
         <DialogActions>
           <Box sx={{ flexGrow: 1 }} />
