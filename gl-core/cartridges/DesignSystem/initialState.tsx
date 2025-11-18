@@ -13,5 +13,5 @@ export const initialState: TDesignSystem = {
     paper: '#ffffff',
     text: '#212121ff',
     border: '#e0e0e0',
-  }
+  },
 };

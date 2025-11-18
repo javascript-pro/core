@@ -43,7 +43,11 @@
                 "icon": "case",
                 "image": "https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg",
                 "type": "file",
-                "tags": ["expertise", "germany", "law"],
+                "tags": [
+                  "expertise",
+                  "germany",
+                  "law"
+                ],
                 "excerpt": "Summer 2025\n\nThis content is behind a paywall. Viewers viewing it are accountable for their actions"
               },
               {
@@ -70,13 +74,21 @@
                 "icon": "case",
                 "image": "https://live.staticflickr.com/65535/54928652987_4641b20f75_b.jpg",
                 "type": "file",
-                "tags": ["expertise", "interview", "boral"],
+                "tags": [
+                  "expertise",
+                  "interview",
+                  "boral"
+                ],
                 "excerpt": "GeoSpatial Fleet App\n\n React Developer, Aug 2018  Feb 2019, Sydney\n\nIt’s only been a few years since all of Boral’s business was still done on paper. When I joined the Sydney tech team in 2018, the co"
               }
             ],
             "icon": "case",
             "image": "https://live.staticflickr.com/4168/34263291171_c62c5b24be_b.jpg",
-            "tags": ["expertise", "interview", "experience"],
+            "tags": [
+              "expertise",
+              "interview",
+              "experience"
+            ],
             "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work/casestudies/aligent, /work/casestudies/hertwigauer, /work/casestudies/huawei, /work/casestudies/boral\", /work/casestudies/aligent\"]"
           },
           {
@@ -235,7 +247,10 @@
                         "icon": "js",
                         "image": "/png/3rdParty/react.png",
                         "type": "file",
-                        "tags": ["React", "hooks"],
+                        "tags": [
+                          "React",
+                          "hooks"
+                        ],
                         "excerpt": "In short, Hooks let React functions become stateful and reactive without classes\n\nAt a fundamental level, Hooks hook into React’s internal lifecycle and state system from within functional components."
                       },
                       {
@@ -257,7 +272,12 @@
                     ],
                     "icon": "js",
                     "image": "/png/3rdParty/react.png",
-                    "tags": ["JavaScript", "TypeScript", "React", "frameworks"],
+                    "tags": [
+                      "JavaScript",
+                      "TypeScript",
+                      "React",
+                      "frameworks"
+                    ],
                     "excerpt": "[ChildPages title=\"React\"]\n\nReact is a JavaScript library for building user interfaces, originally developed by Jordan Walke at Facebook and opensourced in 2013. It introduced a fundamentally new way "
                   },
                   {
@@ -433,7 +453,11 @@
                     "icon": "js",
                     "image": "/png/3rdParty/javascript_og.png",
                     "type": "file",
-                    "tags": ["JavaScript", "Vanilla JavaScript", "TypeScript"],
+                    "tags": [
+                      "JavaScript",
+                      "Vanilla JavaScript",
+                      "TypeScript"
+                    ],
                     "excerpt": "When JavaScript needs to be everywhere instantly\n\nIn modern web engineering, Vanilla JavaScript is often dismissed as oldschool or underpowered. But at scale, especially across multiple domains or bra"
                   }
                 ],
@@ -471,7 +495,11 @@
                     "icon": "api",
                     "image": "/png/og.png",
                     "type": "file",
-                    "tags": ["free", "opensource", "work"],
+                    "tags": [
+                      "free",
+                      "opensource",
+                      "work"
+                    ],
                     "excerpt": "Why We Open Source\n\nWe’ve been building JavaScript applications for over 20 years. In that time, we’ve seen tools come and go. Trends rise, crash, and return again under a different name.\n\nWhat’s rema"
                   },
                   {
@@ -481,7 +509,10 @@
                     "icon": "api",
                     "image": "https://live.staticflickr.com/65535/54801612483_31ce454c4e_b.jpg",
                     "type": "file",
-                    "tags": ["free", "api"],
+                    "tags": [
+                      "free",
+                      "api"
+                    ],
                     "excerpt": "Goldlabel Public API\n\n glapi/flickr endpoints"
                   },
                   {
@@ -533,7 +564,11 @@
                     "icon": "design",
                     "image": "https://live.staticflickr.com/65535/54801612483_31ce454c4e_b.jpg",
                     "type": "file",
-                    "tags": ["github", "process", "design"],
+                    "tags": [
+                      "github",
+                      "process",
+                      "design"
+                    ],
                     "excerpt": "What is a Design System?\n\nA Design System is a collection of reusable components, standards, and guidelines that define how a product looks and behaves. It includes UI elements like buttons, forms, an"
                   },
                   {
@@ -584,7 +619,9 @@
                 ],
                 "icon": "fullstack",
                 "image": "https://live.staticflickr.com/65535/54688814017_148f57032c_o.jpg",
-                "tags": ["fullstack"],
+                "tags": [
+                  "fullstack"
+                ],
                 "excerpt": "A much over used term\n\nSo much so, it's become a bit meaningless. It was such ha useful term, too. Basically it meant that if you were a frontend dev"
               },
               {
@@ -601,7 +638,11 @@
                     "icon": "github",
                     "image": "/png/3rdParty/github_og.png",
                     "type": "file",
-                    "tags": ["github", "process", "javascript"],
+                    "tags": [
+                      "github",
+                      "process",
+                      "javascript"
+                    ],
                     "excerpt": "[PrevNext prev=\"/work/git\" next=\"/work/git/gitkraken\"]\n\n We use GitHub for everything.\n\nMost of the communication done between us and our clients during development is done through GitHub in the form "
                   },
                   {
@@ -661,7 +702,10 @@
                         "icon": "ki",
                         "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                         "type": "file",
-                        "tags": ["abgeschottet", "KI"],
+                        "tags": [
+                          "abgeschottet",
+                          "KI"
+                        ],
                         "excerpt": "How does the AI learn from the prompts over time?\n\n Used carefully, large language models can turn legal research into a faster, more focused process.\n\nWhen we talk about learning, it’s important to d"
                       },
                       {
@@ -689,7 +733,10 @@
                         "icon": "ki",
                         "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                         "type": "file",
-                        "tags": ["abgeschottet", "KI"],
+                        "tags": [
+                          "abgeschottet",
+                          "KI"
+                        ],
                         "excerpt": "What Confidentiality Obligations Do UK Law Firms Have Toward Their Clients?\n\n UK law firms are bound by some of the strongest confidentiality rules in professional life.\n\n Everything you tell your law"
                       },
                       {
@@ -708,7 +755,10 @@
                         "icon": "ki",
                         "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                         "type": "file",
-                        "tags": ["abgeschottet", "KI"],
+                        "tags": [
+                          "abgeschottet",
+                          "KI"
+                        ],
                         "excerpt": "What Does the GDPR Mean for a UK Law Firm?\n\n GDPR means your personal information is handled lawfully, transparently, and with your privacy in mind.\n\nThe General Data Protection Regulation (GDPR) – as"
                       },
                       {
@@ -718,7 +768,10 @@
                         "icon": "ki",
                         "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                         "type": "file",
-                        "tags": ["abgeschottet", "KI"],
+                        "tags": [
+                          "abgeschottet",
+                          "KI"
+                        ],
                         "excerpt": "Keep it simple. Start small. Scale when you need to.\n\n Hardware for Abgeschottet KI\n\nOne of the advantages of Abgeschottet KI is that it’s a low‑investment, quick‑to‑implement solution.  \nYou don’t ne"
                       },
                       {
@@ -728,7 +781,10 @@
                         "icon": "ki",
                         "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                         "type": "file",
-                        "tags": ["abgeschottet", "KI"],
+                        "tags": [
+                          "abgeschottet",
+                          "KI"
+                        ],
                         "excerpt": "How Could Large Language Models Help UK Law Firms With Legal Research?\n\n Used carefully, large language models can turn legal research into a faster, more focused process.\n\n Quickly summarising case l"
                       },
                       {
@@ -756,13 +812,19 @@
                         "icon": "ki",
                         "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                         "type": "file",
-                        "tags": ["abgeschottet", "KI"],
+                        "tags": [
+                          "abgeschottet",
+                          "KI"
+                        ],
                         "excerpt": "What Organisational Measures Should a Law Firm Take?\n\n A ring‑fenced LLM works best as part of a wider culture of confidentiality.\n\n Clear internal policies\n Regular staff training\n Access controls ba"
                       }
                     ],
                     "icon": "ki",
                     "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
-                    "tags": ["abgeschottet", "KI"],
+                    "tags": [
+                      "abgeschottet",
+                      "KI"
+                    ],
                     "excerpt": "A ring‑fenced LLM is like having the power of AI inside a locked room\n\nIt can process sensitive documents and assist with legal work, but nothing ever leaves the firm’s secure network. When we say an "
                   },
                   {
@@ -772,7 +834,12 @@
                     "icon": "ai",
                     "image": "https://live.staticflickr.com/65535/54802570139_8f4f2ac814_b.jpg",
                     "type": "file",
-                    "tags": ["expertise", "AI Visibility", "AI", "agents"],
+                    "tags": [
+                      "expertise",
+                      "AI Visibility",
+                      "AI",
+                      "agents"
+                    ],
                     "excerpt": "As search evolves into AIdriven answers, visibility is no longer about ranking on page one — it’s about being the source that answer engines trust and cite. To win mentions and citations, your content"
                   },
                   {
@@ -782,7 +849,9 @@
                     "icon": "ai",
                     "image": "https://live.staticflickr.com/65535/54802570139_8f4f2ac814_b.jpg",
                     "type": "file",
-                    "tags": ["ai"],
+                    "tags": [
+                      "ai"
+                    ],
                     "excerpt": "[YouTube src=\"https://www.youtube.com/watch?v=pkLazYu8JMw\"]\n\n It raises the bar. What took 6 months, a team of 10 developers and full time project management can now be done by a single developer in t"
                   },
                   {
@@ -806,7 +875,13 @@
                 ],
                 "icon": "ai",
                 "image": "https://live.staticflickr.com/65535/53669705662_d1361d5032_h.jpg",
-                "tags": ["ai", "ki", "expertise", "fields", "work"],
+                "tags": [
+                  "ai",
+                  "ki",
+                  "expertise",
+                  "fields",
+                  "work"
+                ],
                 "excerpt": "Is this Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday\n\nIt's keeping tinfoil hat wearing folk awake at night. If"
               },
               {
@@ -823,7 +898,10 @@
                     "icon": "wordpress",
                     "image": "https://live.staticflickr.com/8504/8434232637_2a7e8b697f_o.jpg",
                     "type": "file",
-                    "tags": ["expertise", "wordpress"],
+                    "tags": [
+                      "expertise",
+                      "wordpress"
+                    ],
                     "excerpt": "[PrevNext prev=\"/work/expertise/wordpress/architecture\" next=\"/work/expertise/wordpress/casestudy\"]\n\n WordPress Modernisation\n\n Keep your WordPress database, admin, and SEO intact — and layer a modern"
                   },
                   {
@@ -833,7 +911,11 @@
                     "icon": "wordpress",
                     "image": "https://live.staticflickr.com/8504/8434232637_2a7e8b697f_o.jpg",
                     "type": "file",
-                    "tags": ["expertise", "wordpress", "source of truth"],
+                    "tags": [
+                      "expertise",
+                      "wordpress",
+                      "source of truth"
+                    ],
                     "excerpt": "WordPress builds everything on a single stack — PHP renders pages on the server, pulling directly from a MySQL database. Themes and plugins share the same environment, which makes it flexible but also"
                   },
                   {
@@ -859,7 +941,10 @@
                 ],
                 "icon": "wordpress",
                 "image": "https://live.staticflickr.com/8504/8434232637_2a7e8b697f_o.jpg",
-                "tags": ["expertise", "wordpress"],
+                "tags": [
+                  "expertise",
+                  "wordpress"
+                ],
                 "excerpt": "[GitHub url=\"https://github.com/goldlabelapps/wordpress\" label=\"goldlabelapps/wordpress\"]\n\n WordPress powers 50% of all websites\n\n We treat an existing WordPress installation as a data source, not a p"
               },
               {
@@ -899,13 +984,22 @@
                 ],
                 "icon": "windows",
                 "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
-                "tags": ["expertise", "windoze", "experience", "work"],
+                "tags": [
+                  "expertise",
+                  "windoze",
+                  "experience",
+                  "work"
+                ],
                 "excerpt": "Easy Legal Letter Assistant\n\n A lightweight, Windows app for generating precise Legal letters. The tool assists staff at a legal firm by making it easy to store all the data around a case to a single "
               }
             ],
             "icon": "expertise",
             "image": "/png/3rdParty/react.png",
-            "tags": ["expertise", "fields", "work"],
+            "tags": [
+              "expertise",
+              "fields",
+              "work"
+            ],
             "excerpt": "We work across the full stack to help understand all perspectives, from interface to infrastructure\n\nWe focus on robust, modern JavaScript tooling and scalable cloudnative delivery. Whether building r"
           },
           {
@@ -922,7 +1016,11 @@
                 "icon": "company",
                 "image": "/png/3rdParty/git_og.png",
                 "type": "file",
-                "tags": ["remote", "hybrid", "intellectual-property"],
+                "tags": [
+                  "remote",
+                  "hybrid",
+                  "intellectual-property"
+                ],
                 "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years.\n\n How we work\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, c"
               },
               {
@@ -932,7 +1030,10 @@
                 "icon": "company",
                 "image": "/png/3rdParty/git_og.png",
                 "type": "file",
-                "tags": ["company", "intellectual-property"],
+                "tags": [
+                  "company",
+                  "intellectual-property"
+                ],
                 "excerpt": "We take on a limited number of new projects each month\n\n Work With Us\n\nIf you need something done we’d love to hear about it. Find out if we're a . We're always looking for collaborators, contributors"
               },
               {
@@ -959,7 +1060,13 @@
                 "icon": "company",
                 "image": "/png/3rdParty/git_og.png",
                 "type": "file",
-                "tags": ["cookies", "gdpr", "privacy", "terms", "trust"],
+                "tags": [
+                  "cookies",
+                  "gdpr",
+                  "privacy",
+                  "terms",
+                  "trust"
+                ],
                 "excerpt": "GDPR sets the rules for how we collect, store, and use personal data\n\n What does it mean?\n\nFor us it means we must minimise data collection, document what we process, and give users clear control over"
               },
               {
@@ -982,7 +1089,9 @@
             ],
             "icon": "company",
             "image": "/png/3rdParty/git_og.png",
-            "tags": ["intellectual-property"],
+            "tags": [
+              "intellectual-property"
+            ],
             "excerpt": "UK Limited Company (5460545)\n\n Company info\n\n  \nTel/WhatsApp   \n | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX\n\n \n\n Social"
           }
         ],
@@ -1279,7 +1388,10 @@
                     "icon": "bug",
                     "image": "https://live.staticflickr.com/65535/54340497432_b8c92a3215_b.jpg",
                     "type": "file",
-                    "tags": ["punk", "bez"],
+                    "tags": [
+                      "punk",
+                      "bez"
+                    ],
                     "excerpt": "Over time, her real name eroded like an old raster image losing resolution, smoothed away by repetition until even she couldn’t recall what it had been. HR still had it on file, but it felt like a rel"
                   },
                   {
@@ -1333,7 +1445,10 @@
                     "icon": "books",
                     "image": "/png/balance/books/babel.png",
                     "type": "file",
-                    "tags": ["Speculative fiction", "alternative history"],
+                    "tags": [
+                      "Speculative fiction",
+                      "alternative history"
+                    ],
                     "excerpt": "or... the Necessity of Violence\n\nIt is an alternative history novel, set in a fantastical version of Oxford in 1830s England. In the second week of September 2022, Babel was placed at the top spot on "
                   },
                   {
@@ -1353,7 +1468,10 @@
                 ],
                 "icon": "books",
                 "image": "/png/balance/writers/r-f-kuang.png",
-                "tags": ["Speculative fiction", "alternative history"],
+                "tags": [
+                  "Speculative fiction",
+                  "alternative history"
+                ],
                 "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/balance/books/rfkuang/babel, /balance/books/rfkuang/katabasis\"]\n\nR. F. Kuang was born on May 29th, 1996, in Guangzhou, China. She immigrated to the United States wit"
               },
               {

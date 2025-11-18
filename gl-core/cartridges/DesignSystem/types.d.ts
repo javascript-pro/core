@@ -8,22 +8,21 @@ export type TDesignSystem = {
 };
 
 export type TTheme = {
-    mode: 'light' | 'dark';
-    primary: string;
-    secondary: string;
-    background: string;
-    paper: string;
-    text: string;
-    border: string;
-}
+  mode: 'light' | 'dark';
+  primary: string;
+  secondary: string;
+  background: string;
+  paper: string;
+  text: string;
+  border: string;
+};
 
 export type TSystemDialog = {
   icon?: string;
   title?: string;
   subheader?: string;
-  content?: React.ReactNode;    
-}
-
+  content?: React.ReactNode;
+};
 
 export type TFlickrState = {
   cartridge?: string;

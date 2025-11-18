@@ -17,29 +17,25 @@ export type TSystemDialog = {
   icon?: string;
   title?: string;
   subheader?: string;
-  content?: React.ReactNode;    
-}
+  content?: React.ReactNode;
+};
 
 export default function SystemDialog() {
   const dispatch = useDispatch();
   const isMobile = useIsMobile();
   const ds = useDesignSystem();
 
-
-
   const handleClose = () => {
     // dispatch(setDesignSystemKey('dialog', {open: true, title: 'fuck'}));
     dispatch(setDesignSystemKey('dialog', null));
   };
 
- 
   const fakeData = {
-    icon: "star",
-    title: "This is the title",
-    subheader: "deafult subtitle",
-    content: "Can this be markdown?",
-
-  }
+    icon: 'star',
+    title: 'This is the title',
+    subheader: 'deafult subtitle',
+    content: 'Can this be markdown?',
+  };
 
   return (
     <>
@@ -51,19 +47,15 @@ export default function SystemDialog() {
         fullWidth
       >
         <DialogTitle>
-          
           <CardHeader
             avatar={<Icon icon="home" />}
             title="System Dialog"
             subheader="Lorem Ipsum"
             action={'Exit'}
           />
-          
         </DialogTitle>
 
-        <DialogContent>
-          content
-        </DialogContent>
+        <DialogContent>content</DialogContent>
 
         <DialogActions>
           <Box sx={{ flexGrow: 1 }} />
