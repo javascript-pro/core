@@ -9,8 +9,12 @@ import {
   DialogContent,
   DialogTitle,
   IconButton,
+  MenuItem,
+  ListItemIcon,
+  ListItemText,
+  Typography,
 } from '@mui/material';
-import { useDispatch, Icon, useIsMobile } from '../../../../gl-core';
+import { useDispatch, Icon, useIsMobile, reset, } from '../../../../gl-core';
 import { useDesignSystem, setDesignSystemKey } from '../../DesignSystem';
 
 export default function SystemDialog() {
@@ -19,12 +23,14 @@ export default function SystemDialog() {
   const ds = useDesignSystem();
 
   const handleOpen = () => {
-    dispatch(setDesignSystemKey('dialog', {
-      open: true, 
-      title: 'fuck',
-    }));
+    dispatch(
+      setDesignSystemKey('dialog', {
+        open: true,
+        title: 'fuck',
+      }),
+    );
   };
-  
+
   const handleClose = () => {
     // dispatch(setDesignSystemKey('dialog', {open: true, title: 'fuck'}));
     dispatch(setDesignSystemKey('dialog', null));
@@ -46,15 +52,26 @@ export default function SystemDialog() {
         <DialogTitle>
           <CardHeader
             avatar={<Icon icon={ds.dialog.icon as any} />}
-            title={ds.dialog.title}
+            title={<Typography variant="h6">
+              {ds.dialog.title}
+            </Typography>}
             subheader={ds.dialog.subheader}
           />
         </DialogTitle>
 
         <DialogContent>
           {/* {fakeData.content} */}
-
-          <pre>dialog: {JSON.stringify(ds.dialog, null, 2)}</pre>
+          
+          <MenuItem
+            onClick={() => {
+              dispatch(reset());
+            }}>
+            <ListItemIcon>
+              <Icon icon="reset" color="primary" />
+            </ListItemIcon>
+            <ListItemText primary="Restart" />
+          </MenuItem>
+          {/* <pre>dialog: {JSON.stringify(ds.dialog, null, 2)}</pre> */}
         </DialogContent>
 
         <DialogActions>

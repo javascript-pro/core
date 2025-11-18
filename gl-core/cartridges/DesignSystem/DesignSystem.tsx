@@ -3,7 +3,11 @@
 import * as React from 'react';
 import { Fab } from '@mui/material';
 import { useDispatch, Icon, useIsMobile } from '../../../gl-core';
-import { useDesignSystem, setDesignSystemKey, SystemDialog } from '../DesignSystem';
+import {
+  useDesignSystem,
+  setDesignSystemKey,
+  SystemDialog,
+} from '../DesignSystem';
 
 export interface IDesignSystem {
   children: React.ReactNode;
@@ -13,11 +17,11 @@ export default function DesignSystem({ children = null }: IDesignSystem) {
   const dispatch = useDispatch();
   const ds = useDesignSystem();
 
-  const example = () => {
+  const openDesignSystem = () => {
     dispatch(
       setDesignSystemKey('dialog', {
-        title: 'fuck',
-        icon: 'case',
+        title: 'Thumb Menu',
+        icon: 'fingerprint',
       }),
     );
   };
@@ -26,7 +30,7 @@ export default function DesignSystem({ children = null }: IDesignSystem) {
     <>
       {children}
       <SystemDialog />
-      <Fab 
+      <Fab
         color="primary"
         sx={{
           zIndex: (theme) => theme.zIndex.modal - 2,
@@ -34,7 +38,7 @@ export default function DesignSystem({ children = null }: IDesignSystem) {
           bottom: 8,
           right: 8,
         }}
-        onClick={example}
+        onClick={openDesignSystem}
       >
         <Icon icon="fingerprint" />
       </Fab>

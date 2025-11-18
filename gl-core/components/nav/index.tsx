@@ -6,7 +6,6 @@ import { PageBreadcrumb } from './PageBreadcrumb';
 import MightyButton from './MightyButton';
 import SideAds from './SideAds';
 import Search from './Search';
-import ThumbMenu from './ThumbMenu';
 import ShareMenu from './ShareMenu';
 import SharePopup from './SharePopup';
 import Siblings from './Siblings';
@@ -23,7 +22,6 @@ export {
   MightyButton,
   Search,
   SideAds,
-  ThumbMenu,
   ShareMenu,
   SharePopup,
   Siblings,
