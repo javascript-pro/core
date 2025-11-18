@@ -1,3 +1,4 @@
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/DesignSystem/components/Icon.tsx
 'use client';
 import * as React from 'react';
 import PingpongballIcon from './SVGIcons/PingpongballIcon';

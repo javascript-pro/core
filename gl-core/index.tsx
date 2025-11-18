@@ -1,5 +1,6 @@
 import Core from './Core';
-import { Theme, Icon, useThemeMode, ModeSwitch } from './cartridges/Theme';
+import { Theme, useThemeMode, ModeSwitch } from './cartridges/Theme';
+import { Icon } from './cartridges/DesignSystem';
 import {
   Advert,
   RenderMarkdown,
@@ -82,6 +83,7 @@ export {
   fetchGlobalNav,
 };
 export {
+  Icon,
   Advert,
   GoogleMap,
   PrevNext,
@@ -89,7 +91,6 @@ export {
   Footer,
   RenderMarkdown,
   Theme,
-  Icon,
   ModeSwitch,
   Nav,
   IndexNav,

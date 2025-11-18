@@ -11,7 +11,8 @@ import {
   ListItemText,
   Box,
 } from '@mui/material';
-import { Icon, useIsMobile } from '../../../gl-core';
+import { useIsMobile } from '../../../gl-core';
+import { Icon } from '../../cartridges/DesignSystem';
 
 type NavItem = {
   title: string;

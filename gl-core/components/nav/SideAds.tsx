@@ -9,8 +9,9 @@ import {
   ListItemIcon,
   ListItemText,
 } from '@mui/material';
-import { useDispatch, routeTo, Icon, useIsMobile } from '../../../gl-core';
+import { useDispatch, routeTo, useIsMobile } from '../../../gl-core';
 import { useRouter, usePathname } from 'next/navigation';
+import { Icon } from '../../cartridges/DesignSystem';
 
 export type TSideAds = {
   children?: React.ReactNode;

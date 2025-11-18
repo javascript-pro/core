@@ -17,13 +17,13 @@ import {
   CardHeader,
 } from '@mui/material';
 import {
-  Icon,
   useDispatch,
   ModeSwitch,
   routeTo,
   useIsMobile,
   reset,
 } from '../../../gl-core';
+import { Icon } from '../../cartridges/DesignSystem';
 
 export type TThumbMenu = {
   frontmatter?: {
