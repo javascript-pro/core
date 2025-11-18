@@ -16,9 +16,7 @@ import {
 } from '@mui/material';
 import {
   fetchGlobalNav,
-  Theme,
   RenderMarkdown,
-  ThumbMenu,
   PageBreadcrumb,
   useIsMobile,
   useVersionCheck,
@@ -32,8 +30,7 @@ import {
   SharePopup,
   Icon,
 } from '../gl-core';
-import { Paywall, SigninGate, useUser } from './cartridges/Paywall';
-import { SelectLang } from './cartridges/Lingua';
+import { SigninGate, useUser } from './cartridges/Paywall';
 import { DesignSystem } from './cartridges/DesignSystem';
 
 const config = configRaw as TConfig;
@@ -67,128 +64,76 @@ export default function Core({ frontmatter, body = null }: TCore) {
     themeMode === null ? (prefersDark ? 'dark' : 'light') : themeMode;
 
   const isAuthed = !!(user && user.uid);
-
+  // <Theme theme={config.themes[effectiveThemeMode]}>
   return (
     <>
       <DesignSystem>
-        <Theme theme={config.themes[effectiveThemeMode]}>
-          <CssBaseline />
-          <IncludeAll />
-          <Box
-            sx={{
-              position: 'sticky',
-              top: 0,
-              zIndex: (theme) => theme.zIndex.appBar,
-              backgroundColor: (theme) => theme.palette.background.default,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              px: 1,
-              py: 0.5,
-            }}
-          >
-            <Paywall />
-            <SelectLang />
-          </Box>
+        <IncludeAll />
+        <Container id="core">
+          <Box sx={{ minHeight: '100vh' }}>
+            <Grid container spacing={isMobile ? 0 : 1}>
+              <Grid size={{ xs: 1, md: 3 }}>
+                <Box sx={{ overflow: 'hidden', ml: isMobile ? -3 : 0, mt: 0 }}>
+                  {Array.isArray(siblings) && siblings.length > 0 ? (
+                    <Siblings />
+                  ) : (
+                    <SideAds />
+                  )}
+                </Box>
+              </Grid>
 
-          <Container id="core">
-            <Box sx={{ minHeight: '100vh' }}>
-              <Grid container spacing={isMobile ? 0 : 1}>
-                <Grid size={{ xs: 1, md: 3 }}>
-                  <Box
-                    sx={{ overflow: 'hidden', ml: isMobile ? -3 : 0, mt: 0 }}
+              <Grid size={{ xs: 11, md: 9 }}>
+                <Box sx={{ display: 'flex' }}>
+                  <Box sx={{ mr: 2, mt: 1.5 }}>
+                    <Icon icon={icon as any} color="primary" />
+                  </Box>
+
+                  <Typography
+                    variant="h1"
+                    gutterBottom
+                    color="primary"
+                    sx={{
+                      mt: 1,
+                      fontSize: { xs: '1.6rem', md: '2rem' },
+                    }}
                   >
-                    {Array.isArray(siblings) && siblings.length > 0 ? (
-                      <Siblings />
-                    ) : (
-                      <SideAds />
-                    )}
+                    {title !== 'Home' ? title : 'Goldlabel Apps'}
+                  </Typography>
+                </Box>
+
+                <Box sx={{ display: 'flex' }}>
+                  <Box sx={{ ml: -1, mt: -1, mr: 1 }}>
+                    <SharePopup />
                   </Box>
-                </Grid>
+                  <Typography
+                    variant="h2"
+                    gutterBottom
+                    sx={{
+                      fontSize: { xs: '1.1rem', md: '1.25rem' },
+                    }}
+                  >
+                    {description}
+                  </Typography>
+                </Box>
 
-                <Grid size={{ xs: 11, md: 9 }}>
-                  <Box sx={{ display: 'flex' }}>
-                    <Box sx={{ mr: 2, mt: 1.5 }}>
-                      <Icon icon={icon as any} color="primary" />
-                    </Box>
+                {title !== 'Home' && pathname !== '/' && <PageBreadcrumb />}
 
-                    <Typography
-                      variant="h1"
-                      gutterBottom
-                      color="primary"
-                      sx={{
-                        mt: 1,
-                        fontSize: { xs: '1.6rem', md: '2rem' },
-                      }}
+                {/* CONTENT AREA */}
+                <Box sx={{ mt: 2, mb: isMobile ? 3 : '175px' }}>
+                  {/* PAYWALL MODE */}
+                  {paywall === true && !isAuthed ? (
+                    <Grid
+                      container
+                      spacing={2}
+                      sx={{ alignItems: 'flex-start' }}
                     >
-                      {title !== 'Home' ? title : 'Goldlabel Apps'}
-                    </Typography>
-                  </Box>
-
-                  <Box sx={{ display: 'flex' }}>
-                    <Box sx={{ ml: -1, mt: -1, mr: 1 }}>
-                      <SharePopup />
-                    </Box>
-                    <Typography
-                      variant="h2"
-                      gutterBottom
-                      sx={{
-                        fontSize: { xs: '1.1rem', md: '1.25rem' },
-                      }}
-                    >
-                      {description}
-                    </Typography>
-                  </Box>
-
-                  {title !== 'Home' && pathname !== '/' && <PageBreadcrumb />}
-
-                  {/* CONTENT AREA */}
-                  <Box sx={{ mt: 2, mb: isMobile ? 3 : '175px' }}>
-                    {/* PAYWALL MODE */}
-                    {paywall === true && !isAuthed ? (
-                      <Grid
-                        container
-                        spacing={2}
-                        sx={{ alignItems: 'flex-start' }}
-                      >
-                        {/* Left: Gate */}
-                        <Grid size={{ xs: 12, md: 4 }}>
-                          <SigninGate />
-                        </Grid>
-
-                        {/* Right: Image */}
-                        <Grid size={{ xs: 12, md: 8 }}>
-                          {!noImage && image && (
-                            <Box>
-                              {!imageError ? (
-                                <Image
-                                  priority
-                                  src={image}
-                                  alt={title || 'Featured image'}
-                                  width={1200}
-                                  height={630}
-                                  style={{
-                                    width: '100%',
-                                    height: 'auto',
-                                    maxHeight: isMobile ? 'none' : '420px',
-                                    objectFit: 'cover',
-                                    borderRadius: 8,
-                                  }}
-                                  onError={() => setImageError(true)}
-                                />
-                              ) : (
-                                <Skeleton
-                                  variant="rectangular"
-                                  width="100%"
-                                  height={315}
-                                />
-                              )}
-                            </Box>
-                          )}
-                        </Grid>
+                      {/* Left: Gate */}
+                      <Grid size={{ xs: 12, md: 4 }}>
+                        <SigninGate />
                       </Grid>
-                    ) : (
-                      <>
+
+                      {/* Right: Image */}
+                      <Grid size={{ xs: 12, md: 8 }}>
                         {!noImage && image && (
                           <Box>
                             {!imageError ? (
@@ -199,43 +144,74 @@ export default function Core({ frontmatter, body = null }: TCore) {
                                 width={1200}
                                 height={630}
                                 style={{
-                                  borderRadius: 8,
                                   width: '100%',
                                   height: 'auto',
-                                  maxHeight: isMobile ? 'none' : '315px',
+                                  maxHeight: isMobile ? 'none' : '420px',
                                   objectFit: 'cover',
+                                  borderRadius: 8,
                                 }}
                                 onError={() => setImageError(true)}
                               />
                             ) : (
-                              <Box>
-                                <Skeleton
-                                  variant="rectangular"
-                                  width="100%"
-                                  height={315}
-                                />
-                                <Typography
-                                  variant="body2"
-                                  color="text.secondary"
-                                  mt={1}
-                                >
-                                  "{image}" not found.
-                                </Typography>
-                              </Box>
+                              <Skeleton
+                                variant="rectangular"
+                                width="100%"
+                                height={315}
+                              />
                             )}
                           </Box>
                         )}
-                        <RenderMarkdown>{body}</RenderMarkdown>
-                      </>
-                    )}
-                  </Box>
-                  <ThumbMenu />
-                </Grid>
+                      </Grid>
+                    </Grid>
+                  ) : (
+                    <>
+                      {!noImage && image && (
+                        <Box>
+                          {!imageError ? (
+                            <Image
+                              priority
+                              src={image}
+                              alt={title || 'Featured image'}
+                              width={1200}
+                              height={630}
+                              style={{
+                                borderRadius: 8,
+                                width: '100%',
+                                height: 'auto',
+                                maxHeight: isMobile ? 'none' : '315px',
+                                objectFit: 'cover',
+                              }}
+                              onError={() => setImageError(true)}
+                            />
+                          ) : (
+                            <Box>
+                              <Skeleton
+                                variant="rectangular"
+                                width="100%"
+                                height={315}
+                              />
+                              <Typography
+                                variant="body2"
+                                color="text.secondary"
+                                mt={1}
+                              >
+                                "{image}" not found.
+                              </Typography>
+                            </Box>
+                          )}
+                        </Box>
+                      )}
+                      <RenderMarkdown>{body}</RenderMarkdown>
+                    </>
+                  )}
+                </Box>
               </Grid>
-            </Box>
-          </Container>
-        </Theme>
+            </Grid>
+          </Box>
+        </Container>
       </DesignSystem>
     </>
   );
 }
+
+// </Theme>

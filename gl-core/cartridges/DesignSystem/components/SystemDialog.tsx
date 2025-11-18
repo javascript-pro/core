@@ -13,49 +13,49 @@ import {
 import { useDispatch, Icon, useIsMobile } from '../../../../gl-core';
 import { useDesignSystem, setDesignSystemKey } from '../../DesignSystem';
 
-export type TSystemDialog = {
-  icon?: string;
-  title?: string;
-  subheader?: string;
-  content?: React.ReactNode;
-};
-
 export default function SystemDialog() {
   const dispatch = useDispatch();
   const isMobile = useIsMobile();
   const ds = useDesignSystem();
 
+  const handleOpen = () => {
+    dispatch(setDesignSystemKey('dialog', {
+      open: true, 
+      title: 'fuck',
+    }));
+  };
+  
   const handleClose = () => {
     // dispatch(setDesignSystemKey('dialog', {open: true, title: 'fuck'}));
     dispatch(setDesignSystemKey('dialog', null));
   };
 
-  const fakeData = {
-    icon: 'star',
-    title: 'This is the title',
-    subheader: 'deafult subtitle',
-    content: 'Can this be markdown?',
-  };
+  if (!ds.dialog) return null;
+
+  // console.log('SystemDialog ds.dialog', ds.dialog);
 
   return (
     <>
       <Dialog
-        fullScreen
-        open={Boolean(ds)}
+        fullScreen={isMobile}
+        open={Boolean(ds.dialog)}
         onClose={handleClose}
         maxWidth={'md'}
         fullWidth
       >
         <DialogTitle>
           <CardHeader
-            avatar={<Icon icon="home" />}
-            title="System Dialog"
-            subheader="Lorem Ipsum"
-            action={'Exit'}
+            avatar={<Icon icon={ds.dialog.icon as any} />}
+            title={ds.dialog.title}
+            subheader={ds.dialog.subheader}
           />
         </DialogTitle>
 
-        <DialogContent>content</DialogContent>
+        <DialogContent>
+          {/* {fakeData.content} */}
+
+          <pre>dialog: {JSON.stringify(ds.dialog, null, 2)}</pre>
+        </DialogContent>
 
         <DialogActions>
           <Box sx={{ flexGrow: 1 }} />

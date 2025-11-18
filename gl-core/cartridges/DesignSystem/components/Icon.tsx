@@ -160,7 +160,7 @@ import BooksIcon from '@mui/icons-material/MenuBook';
 import FreeIcon from '@mui/icons-material/CurrencyExchange';
 import WritingIcon from '@mui/icons-material/BorderColor';
 
-export type TIcon = {
+export type TIconShape = {
   icon:
     | 'more'
     | 'free'
@@ -344,7 +344,7 @@ export type TIcon = {
   color?: any;
 };
 
-export default function Icon({ icon, color }: TIcon) {
+export default function Icon({ icon, color }: TIconShape) {
   if (!color) color = 'inherit';
   let iconFragment = <React.Fragment />;
   switch (icon) {

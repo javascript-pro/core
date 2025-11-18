@@ -1,5 +1,9 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/DesignSystem/types.d.ts
 
+import { TIconShape } from './components/Icon'
+
+export type TIcon = TIconShape;
+
 export type TDesignSystem = {
   cartridge?: string;
   dialog?: any;
