@@ -12,7 +12,7 @@ cd core
 yarn install
 ```
 
-## Setup Environment 
+## Setup Environment
 
 Create a `.env.local` file in the root directory with this variable. When you enable various parts of the apps which require other vars, the app will let you know
 
