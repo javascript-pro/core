@@ -33,6 +33,7 @@ import {
   Icon,
 } from '../gl-core';
 import { Paywall, SigninGate, useUser } from './cartridges/Paywall';
+import { SelectLang } from './cartridges/Lingua';
 
 const config = configRaw as TConfig;
 
@@ -72,7 +73,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
         <CssBaseline />
         <IncludeAll />
 
-        {/* Sticky Header */}
         <Box
           sx={{
             position: 'sticky',
@@ -87,6 +87,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
           }}
         >
           <Paywall />
+          <SelectLang />
         </Box>
 
         <Container id="core">

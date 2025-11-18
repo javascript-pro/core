@@ -3,8 +3,8 @@ import Lingua from './Lingua';
 import { initialState as initialStateLingua } from './initialState';
 import { SelectLang } from './components';
 import { useLingua } from './hooks';
-import { setLang } from './actions';
+import { setLang, setLinguaKey } from './actions';
 
 export { Lingua, initialStateLingua, SelectLang };
 export { useLingua };
-export { setLang };
+export { setLang, setLinguaKey };

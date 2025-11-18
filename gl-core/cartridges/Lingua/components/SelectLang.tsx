@@ -1,3 +1,4 @@
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/Lingua/components/SelectLang.tsx
 'use client';
 
 import * as React from 'react';
@@ -12,17 +13,18 @@ import {
 import { useDispatch, useSelector } from 'react-redux';
 import { setLang } from '../../Lingua/actions/setLang';
 
-// Replace this import with your actual RootState type if available
 type LangData = {
   default: string;
   local: string;
+  switch: string;
 };
+
 type LinguaState = {
   cartridge: string;
   lang: string;
   langs: Record<string, LangData>;
 };
-// If you have RootState defined in your app, import it and replace 'any' below!
+
 type RootState = {
   redux: {
     lingua: LinguaState;
@@ -42,7 +44,7 @@ export default function SelectLang() {
       <Select
         value={lingua.lang}
         onChange={handleChange}
-        variant="outlined"
+        variant="standard"
         size="small"
         sx={{ minWidth: 180 }}
         renderValue={(selected) => {
@@ -54,12 +56,12 @@ export default function SelectLang() {
                 alt={lang?.default || (selected as string)}
                 style={{
                   width: 24,
-                  height: 16,
-                  marginRight: 8,
+                  height: 24,
+                  marginRight: 10,
                   objectFit: 'contain',
                 }}
               />
-              {lang?.default || (selected as string)}
+              {lang?.local || (selected as string)}
             </Box>
           );
         }}
@@ -70,10 +72,10 @@ export default function SelectLang() {
               <img
                 src={`/svg/flags/${code}.svg`}
                 alt={data.default}
-                style={{ width: 24, height: 16, objectFit: 'contain' }}
+                style={{ width: 24, height: 24, objectFit: 'contain' }}
               />
             </ListItemIcon>
-            <ListItemText primary={data.default} secondary={data.local} />
+            <ListItemText primary={data.local} secondary={data.switch} />
           </MenuItem>
         ))}
       </Select>

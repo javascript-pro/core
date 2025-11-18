@@ -3,15 +3,22 @@ import { TLinguaState } from './types';
 
 export const initialState: TLinguaState = {
   cartridge: 'lingua',
-  lang: 'en',
+  lang: 'de',
   langs: {
     en: {
       default: 'English',
-      local: 'Switch to English',
+      local: 'English',
+      switch: 'Switch to English',
     },
     de: {
       default: 'German',
-      local: 'Wechseln Sie zu Deutsch',
+      local: 'Deutsch',
+      switch: 'Wechseln Sie zu Deutsch',
+    },
+    cn: {
+      default: 'Chinese',
+      local: '简体中文',
+      switch: '切换语言为中文',
     },
   },
 };
