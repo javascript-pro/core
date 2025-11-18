@@ -12,7 +12,7 @@ cd core
 yarn install
 ```
 
-## → Environment Setup
+## Setup Environment
 
 Create a `.env.local` file in the root directory with this variable. When you enable various parts of the apps which require other vars, the app will let you know
 
@@ -35,13 +35,11 @@ Goldlabel Core is optimized for [Vercel](https://vercel.com), but can be deploye
 
 ## 💾 [Cartridges](https://github.com/javascript-pro/core/tree/staging/gl-core/cartridges)
 
-- [Bouncer](https://github.com/javascript-pro/core/tree/staging/gl-core/cartridges/Bouncer)  
-   Auth, Admin and Analytics
-- ⚡️ [Flash](https://github.com/javascript-pro/core/tree/staging/gl-core/cartridges/Flash)
-- [Theme](https://github.com/javascript-pro/core/tree/staging/gl-core/cartridges/Theme)
+- [DesignSystem](https://github.com/javascript-pro/core/tree/staging/gl-core/cartridges/DesignSystem)
 - [Uberedux](https://github.com/javascript-pro/core/tree/staging/gl-core/cartridges/Uberedux)
+- [Paywall](https://github.com/javascript-pro/core/tree/staging/gl-core/cartridges/Paywall)
 
-## 👍 Techstack
+## Tech
 
 - Next.js with App Router: Modern routing and optimized builds.
 - Markdown-based content: Pages and apps are generated from the `public/markdown` folder.

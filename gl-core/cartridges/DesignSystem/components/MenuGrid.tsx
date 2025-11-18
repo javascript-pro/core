@@ -20,12 +20,11 @@ import { useDesignSystem, setDesignSystemKey } from '../../DesignSystem';
 import { SelectLang } from '../../Lingua';
 
 export default function MenuGrid() {
-
   const dispatch = useDispatch();
   const router = useRouter();
   const isMobile = useIsMobile();
   const ds = useDesignSystem();
-  const {themeMode} = ds;
+  const { themeMode } = ds;
   // console.log('SystemDialog ds.dialog', ds.dialog);
 
   const handleToggle = () => {
@@ -47,9 +46,12 @@ export default function MenuGrid() {
               <ListItemIcon>
                 <Icon icon="bug" color="primary" />
               </ListItemIcon>
-              <ListItemText primary="Bad Panda" secondary="Page not found, bro" />
+              <ListItemText
+                primary="Bad Panda"
+                secondary="Page not found, bro"
+              />
             </ListItemButton>
-            
+
             <ListItemButton
               onClick={() => {
                 dispatch(setDesignSystemKey('dialog', null));
@@ -64,24 +66,26 @@ export default function MenuGrid() {
 
             <ListItemButton
               onClick={() => {
-                handleToggle()
+                handleToggle();
               }}
             >
               <ListItemIcon>
-                <Icon color="primary" icon={themeMode === 'dark' ? 'lightmode' : ('darkmode' as any)} />
+                <Icon
+                  color="primary"
+                  icon={
+                    themeMode === 'dark' ? 'lightmode' : ('darkmode' as any)
+                  }
+                />
               </ListItemIcon>
               <ListItemText
                 primary="Switch to..."
-                secondary={themeMode === 'dark' ? 'Light mode' : 'Dark mode'} 
-               />
+                secondary={themeMode === 'dark' ? 'Light mode' : 'Dark mode'}
+              />
             </ListItemButton>
-
           </List>
         </Grid>
 
         <Grid size={{ xs: 12, md: 6 }}>
-          
-
           <SelectLang />
         </Grid>
       </Grid>
