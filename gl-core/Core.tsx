@@ -16,9 +16,7 @@ import {
 } from '@mui/material';
 import {
   fetchGlobalNav,
-  Theme,
   RenderMarkdown,
-  ThumbMenu,
   PageBreadcrumb,
   useIsMobile,
   useVersionCheck,
@@ -32,7 +30,8 @@ import {
   SharePopup,
   Icon,
 } from '../gl-core';
-import { Paywall, SigninGate, useUser } from './cartridges/Paywall';
+import { SigninGate, useUser } from './cartridges/Paywall';
+import { DesignSystem, useDesignSystem } from './cartridges/DesignSystem';
 
 const config = configRaw as TConfig;
 
@@ -44,7 +43,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const prefersDark = useMediaQuery('(prefers-color-scheme: dark)');
   const siblings = useSiblings();
   const pathname = usePathname();
-  const themeMode = useThemeMode();
+  const {themeMode} = useDesignSystem();
   const isMobile = useIsMobile();
   const user = useUser();
   const fetchedNavRef = React.useRef(false);
@@ -65,30 +64,11 @@ export default function Core({ frontmatter, body = null }: TCore) {
     themeMode === null ? (prefersDark ? 'dark' : 'light') : themeMode;
 
   const isAuthed = !!(user && user.uid);
-
+  // <Theme theme={config.themes[effectiveThemeMode]}>
   return (
     <>
-      <Theme theme={config.themes[effectiveThemeMode]}>
-        <CssBaseline />
+      <DesignSystem theme={config.themes[effectiveThemeMode]}>
         <IncludeAll />
-
-        {/* Sticky Header */}
-        <Box
-          sx={{
-            position: 'sticky',
-            top: 0,
-            zIndex: (theme) => theme.zIndex.appBar,
-            backgroundColor: (theme) => theme.palette.background.default,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            px: 1,
-            py: 0.5,
-          }}
-        >
-          <Paywall />
-        </Box>
-
         <Container id="core">
           <Box sx={{ minHeight: '100vh' }}>
             <Grid container spacing={isMobile ? 0 : 1}>
@@ -117,7 +97,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                       fontSize: { xs: '1.6rem', md: '2rem' },
                     }}
                   >
-                    {title}
+                    {title !== 'Home' ? title : 'Goldlabel Apps'}
                   </Typography>
                 </Box>
 
@@ -225,12 +205,13 @@ export default function Core({ frontmatter, body = null }: TCore) {
                     </>
                   )}
                 </Box>
-                <ThumbMenu />
               </Grid>
             </Grid>
           </Box>
         </Container>
-      </Theme>
+      </DesignSystem>
     </>
   );
 }
+
+// </Theme>

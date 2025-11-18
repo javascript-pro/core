@@ -18,7 +18,8 @@ import {
   Paper,
   ClickAwayListener,
 } from '@mui/material';
-import { useDispatch, routeTo, Icon } from '../../../gl-core';
+import { useDispatch, routeTo } from '../../../gl-core';
+import { Icon } from '../../cartridges/DesignSystem';
 import globalNav from '../../../public/globalNav.json';
 import { useRouter } from 'next/navigation';
 

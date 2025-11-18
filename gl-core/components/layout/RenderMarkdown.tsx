@@ -12,7 +12,6 @@ import {
 } from '@mui/material';
 import {
   GoogleMap,
-  FlickrAlbum,
   YouTube,
   PageAd,
   Mapbox,
@@ -21,7 +20,7 @@ import {
   ChildPages,
   PageGrid,
 } from '../../../gl-core';
-import { Flash } from '../../cartridges/Flash';
+// import { Flash } from '../../cartridges/Flash';
 
 export type TRenderMarkdown = {
   children: React.ReactNode;
@@ -75,16 +74,16 @@ export default function RenderMarkdown({
     if (google) return google;
 
     // FlickrAlbum
-    const flickr = parseShortcode(/\[FlickrAlbum\s+(.*?)\]/, FlickrAlbum);
-    if (flickr) return flickr;
+    // const flickr = parseShortcode(/\[FlickrAlbum\s+(.*?)\]/, FlickrAlbum);
+    // if (flickr) return flickr;
 
     // YouTube
     const youtube = parseShortcode(/\[YouTube\s+(.*?)\]/, YouTube);
     if (youtube) return youtube;
 
     // Flash
-    const flash = parseShortcode(/\[Flash\s+(.*?)\]/, Flash);
-    if (flash) return flash;
+    // const flash = parseShortcode(/\[Flash\s+(.*?)\]/, Flash);
+    // if (flash) return flash;
 
     // PageAd
     const pageAd = parseShortcode(/\[PageAd\s+(.*?)\]/, PageAd);

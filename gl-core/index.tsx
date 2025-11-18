@@ -1,5 +1,6 @@
 import Core from './Core';
-import { Theme, Icon, useThemeMode, ModeSwitch } from './cartridges/Theme';
+import { Theme, useThemeMode, ModeSwitch } from './cartridges/Theme';
+import { Icon } from './cartridges/DesignSystem';
 import {
   Advert,
   RenderMarkdown,
@@ -11,7 +12,6 @@ import {
   Search,
   SideAds,
   SharePopup,
-  ThumbMenu,
   ShareMenu,
   IncludeAll,
   LoadingOverlay,
@@ -24,7 +24,6 @@ import {
 } from './components';
 import {
   GoogleMap,
-  FlickrAlbum,
   YouTube,
   PageAd,
   Mapbox,
@@ -83,15 +82,14 @@ export {
   fetchGlobalNav,
 };
 export {
+  Icon,
   Advert,
   GoogleMap,
   PrevNext,
-  FlickrAlbum,
   YouTube,
   Footer,
   RenderMarkdown,
   Theme,
-  Icon,
   ModeSwitch,
   Nav,
   IndexNav,
@@ -101,7 +99,6 @@ export {
   MightyButton,
   Search,
   SideAds,
-  ThumbMenu,
   ShareMenu,
   SharePopup,
   IncludeAll,
