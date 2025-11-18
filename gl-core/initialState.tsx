@@ -1,10 +1,9 @@
 // /Users/goldlabel/GitHub/core/gl-core/initialState.tsx
 import pJSON from '../package.json';
 import config from './config.json';
-import { initialStateFlickr } from './cartridges/Flickr';
 import { initialStateLingua } from './cartridges/Lingua';
-import { initialStateFlash } from './cartridges/Flash';
 import { initialStatePaywall } from './cartridges/Paywall';
+import { initialStateDesignSystem } from './cartridges/DesignSystem';
 
 export const initialState: any = {
   config,
@@ -13,8 +12,7 @@ export const initialState: any = {
   globalNav: null,
   themeMode: null,
   feedback: null,
-  flash: initialStateFlash,
-  flickr: initialStateFlickr,
   lingua: initialStateLingua,
   paywall: initialStatePaywall,
+  designSystem: initialStateDesignSystem,
 };
