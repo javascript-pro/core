@@ -5,6 +5,7 @@ import { initialStateFlickr } from './cartridges/Flickr';
 import { initialStateLingua } from './cartridges/Lingua';
 import { initialStateFlash } from './cartridges/Flash';
 import { initialStatePaywall } from './cartridges/Paywall';
+import { initialStateDesignSystem } from './cartridges/DesignSystem';
 
 export const initialState: any = {
   config,
@@ -17,4 +18,5 @@ export const initialState: any = {
   flickr: initialStateFlickr,
   lingua: initialStateLingua,
   paywall: initialStatePaywall,
+  designSystem: initialStateDesignSystem,
 };
