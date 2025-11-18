@@ -1,11 +1,11 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/DesignSystem/hooks/useMUITheme.tsx
 import { createTheme } from '@mui/material';
-
+import { TTheme } from '../types';
 export type TMUITheme = {
   [key: string]: any;
 };
 
-export function useMUITheme(t: TMUITheme) {
+export function useMUITheme(t: TTheme) {
   return createTheme({
     palette: {
       mode: t.mode,

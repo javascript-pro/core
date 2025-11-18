@@ -7,6 +7,8 @@ import MenuGrid from './components/MenuGrid';
 
 import { setDesignSystemKey } from './actions/setDesignSystemKey';
 import { useDesignSystem } from './hooks/useDesignSystem';
+import { useMUITheme } from './hooks/useMUITheme';
+
 import SystemDialog from './components/SystemDialog';
 
 import { initialState as initialStateDesignSystem } from './initialState';
@@ -18,5 +20,6 @@ export {
   initialStateDesignSystem,
   setDesignSystemKey,
   useDesignSystem,
+  useMUITheme,
   SystemDialog,
 };

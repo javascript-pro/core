@@ -31,7 +31,7 @@ import {
   Icon,
 } from '../gl-core';
 import { SigninGate, useUser } from './cartridges/Paywall';
-import { DesignSystem } from './cartridges/DesignSystem';
+import { DesignSystem, useDesignSystem } from './cartridges/DesignSystem';
 
 const config = configRaw as TConfig;
 
@@ -43,7 +43,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const prefersDark = useMediaQuery('(prefers-color-scheme: dark)');
   const siblings = useSiblings();
   const pathname = usePathname();
-  const themeMode = useThemeMode();
+  const {themeMode} = useDesignSystem();
   const isMobile = useIsMobile();
   const user = useUser();
   const fetchedNavRef = React.useRef(false);
@@ -67,7 +67,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
   // <Theme theme={config.themes[effectiveThemeMode]}>
   return (
     <>
-      <DesignSystem>
+      <DesignSystem theme={config.themes[effectiveThemeMode]}>
         <IncludeAll />
         <Container id="core">
           <Box sx={{ minHeight: '100vh' }}>
