@@ -118,7 +118,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                       fontSize: { xs: '1.6rem', md: '2rem' },
                     }}
                   >
-                    {title}
+                    {title !== 'Home' ? title : 'Goldlabel Apps'}
                   </Typography>
                 </Box>
 

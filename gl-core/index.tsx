@@ -24,7 +24,6 @@ import {
 } from './components';
 import {
   GoogleMap,
-  FlickrAlbum,
   YouTube,
   PageAd,
   Mapbox,
@@ -86,7 +85,6 @@ export {
   Advert,
   GoogleMap,
   PrevNext,
-  FlickrAlbum,
   YouTube,
   Footer,
   RenderMarkdown,

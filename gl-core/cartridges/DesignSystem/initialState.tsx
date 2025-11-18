@@ -4,4 +4,5 @@ import { TDesignSystem } from './types';
 export const initialState: TDesignSystem = {
   cartridge: 'designsystem',
   dialog: null,
+  themeMode: null,
 };

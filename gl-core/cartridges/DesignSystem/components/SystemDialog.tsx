@@ -1,3 +1,4 @@
+// core/gl-core/cartridges/DesignSystem/components/SystemDialog.tsx
 'use client';
 import * as React from 'react';
 import {
@@ -9,16 +10,13 @@ import {
   IconButton,
 } from '@mui/material';
 import { useDispatch, Icon, useIsMobile } from '../../../../gl-core';
-import {
-  useDesignSystem,
-  setDesignSystemKey,
-} from '../../DesignSystem';
+import { useDesignSystem, setDesignSystemKey } from '../../DesignSystem';
 
 export default function SystemDialog() {
   const dispatch = useDispatch();
   const isMobile = useIsMobile();
   const data = useDesignSystem();
-  
+
   const handleClose = () => {
     // dispatch(setDesignSystemKey('dialog', {open: true, title: 'fuck'}));
     dispatch(setDesignSystemKey('dialog', null));
@@ -26,7 +24,6 @@ export default function SystemDialog() {
 
   return (
     <>
-    
       <Dialog
         open={Boolean(data)}
         onClose={handleClose}
@@ -34,23 +31,16 @@ export default function SystemDialog() {
         maxWidth={'md'}
         fullWidth
       >
-        <DialogTitle>
-          DialogTitle
-        </DialogTitle>
+        <DialogTitle>DialogTitle</DialogTitle>
 
-        <DialogContent>
-          Lorem Ipsum
-        </DialogContent>
+        <DialogContent>Lorem Ipsum</DialogContent>
 
         <DialogActions>
           <Box sx={{ flexGrow: 1 }} />
-          <IconButton 
-            color="primary" 
-            onClick={handleClose}>
+          <IconButton color="primary" onClick={handleClose}>
             <Icon icon="close" />
           </IconButton>
         </DialogActions>
-
       </Dialog>
     </>
   );

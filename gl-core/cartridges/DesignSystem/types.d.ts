@@ -6,8 +6,6 @@ export type TDesignSystem = {
   [key: string]: any;
 };
 
-
-
 export type TFlickrState = {
   cartridge?: string;
   feedback: {

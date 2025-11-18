@@ -1,8 +1,8 @@
 ---
 order: 200
-slug: /work/open-source/theme
-title: Theme
-description: Material UI
+slug: /work/open-source/design-system
+title: Design System
+description: Based on Material UI
 icon: design
 image: /jpg/other/Opengraph-template.jpg
 ---
