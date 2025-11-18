@@ -14,8 +14,12 @@ import {
   ListItemText,
   Typography,
 } from '@mui/material';
-import { useDispatch, Icon, useIsMobile, reset, } from '../../../../gl-core';
-import { useDesignSystem, setDesignSystemKey } from '../../DesignSystem';
+import { useDispatch, Icon, useIsMobile, reset } from '../../../../gl-core';
+import {
+  useDesignSystem,
+  setDesignSystemKey,
+  MenuGrid,
+} from '../../DesignSystem';
 
 export default function SystemDialog() {
   const dispatch = useDispatch();
@@ -52,25 +56,13 @@ export default function SystemDialog() {
         <DialogTitle>
           <CardHeader
             avatar={<Icon icon={ds.dialog.icon as any} />}
-            title={<Typography variant="h6">
-              {ds.dialog.title}
-            </Typography>}
+            title={<Typography variant="h6">{ds.dialog.title}</Typography>}
             subheader={ds.dialog.subheader}
           />
         </DialogTitle>
 
         <DialogContent>
-          {/* {fakeData.content} */}
-          
-          <MenuItem
-            onClick={() => {
-              dispatch(reset());
-            }}>
-            <ListItemIcon>
-              <Icon icon="reset" color="primary" />
-            </ListItemIcon>
-            <ListItemText primary="Restart" />
-          </MenuItem>
+          <MenuGrid />
           {/* <pre>dialog: {JSON.stringify(ds.dialog, null, 2)}</pre> */}
         </DialogContent>
 

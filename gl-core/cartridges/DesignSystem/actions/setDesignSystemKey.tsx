@@ -7,7 +7,7 @@ export const setDesignSystemKey =
   (key: string, value: any): any =>
   async (dispatch: TUbereduxDispatch, getState: () => any) => {
     try {
-      console.log('setDesignSystemKey', key, value);
+      // console.log('setDesignSystemKey', key, value);
       const current = getState().redux.designSystem;
       const updated = {
         ...current,

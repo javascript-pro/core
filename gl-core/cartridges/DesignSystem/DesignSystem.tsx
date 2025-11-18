@@ -20,7 +20,6 @@ export default function DesignSystem({ children = null }: IDesignSystem) {
   const openDesignSystem = () => {
     dispatch(
       setDesignSystemKey('dialog', {
-        title: 'Thumb Menu',
         icon: 'fingerprint',
       }),
     );
