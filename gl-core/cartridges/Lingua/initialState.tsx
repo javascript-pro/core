@@ -3,7 +3,7 @@ import { TLinguaState } from './types';
 
 export const initialState: TLinguaState = {
   cartridge: 'lingua',
-  lang: 'cn',
+  lang: 'en',
   langs: {
     en: {
       default: 'English',

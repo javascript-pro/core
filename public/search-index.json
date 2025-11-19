@@ -32,7 +32,7 @@
     "title": "Books",
     "description": "What are you reading?",
     "tags": "science fiction, books, satire, douglas coupland, Cixin Liu,",
-    "content": "\n> A curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction\n\n[PageGrid thumbnails=\"yes\" pages=\"/balance/books/cixin-liu, /balance/books/douglas-coupland/generation-x, /balance/books/neuromancer, /balance/books/r-f-kuang/babel, /balance/books/r-f-kuang/katabasis\"]\n"
+    "content": "\n> A curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction\n\n[PageGrid thumbnails=\"yes\" pages=\"/balance/books/tom-robbins, /balance/books/cixin-liu, /balance/books/douglas-coupland/generation-x, /balance/books/neuromancer, /balance/books/r-f-kuang/babel, /balance/books/r-f-kuang/katabasis\"]\n"
   },
   {
     "slug": "balance/books/neuromancer",

@@ -64,7 +64,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
     themeMode === null ? (prefersDark ? 'dark' : 'light') : themeMode;
 
   const isAuthed = !!(user && user.uid);
-  // <Theme theme={config.themes[effectiveThemeMode]}>
+  
   return (
     <>
       <DesignSystem theme={config.themes[effectiveThemeMode]}>
@@ -213,5 +213,3 @@ export default function Core({ frontmatter, body = null }: TCore) {
     </>
   );
 }
-
-// </Theme>

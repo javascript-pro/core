@@ -39,20 +39,21 @@ export default function MenuGrid() {
           <SelectLang />
         </Grid>
         <Grid size={{ xs: 12, md: 6 }}>
-          <List>
+          <List dense>
             <ListItemButton
               onClick={() => {
                 dispatch(setDesignSystemKey('dialog', null));
                 dispatch(routeTo('/bad-panda', router));
               }}
             >
+              
+              <ListItemText
+                primary="Page not found, bro"
+                secondary="Bad Panda"
+              />
               <ListItemIcon>
                 <Icon icon="bug" color="primary" />
               </ListItemIcon>
-              <ListItemText
-                primary="Bad Panda"
-                secondary="Page not found, bro"
-              />
             </ListItemButton>
 
             <ListItemButton
@@ -60,18 +61,18 @@ export default function MenuGrid() {
                 handleToggle();
               }}
             >
+              <ListItemText
+                primary="Switch to..."
+                secondary={themeMode === 'dark' ? 'Light mode' : 'Dark mode'}
+              />
               <ListItemIcon>
-                <Icon
+              <Icon
                   color="primary"
                   icon={
                     themeMode === 'dark' ? 'lightmode' : ('darkmode' as any)
                   }
                 />
               </ListItemIcon>
-              <ListItemText
-                primary="Switch to..."
-                secondary={themeMode === 'dark' ? 'Light mode' : 'Dark mode'}
-              />
             </ListItemButton>
 
             <ListItemButton
@@ -80,15 +81,14 @@ export default function MenuGrid() {
                 dispatch(reset());
               }}
             >
+              
+              <ListItemText primary="Restart" secondary="Back to the future" />
               <ListItemIcon>
                 <Icon icon="reset" color="primary" />
               </ListItemIcon>
-              <ListItemText primary="Restart" secondary="Back to the future" />
             </ListItemButton>
           </List>
         </Grid>
-
-        
       </Grid>
 
       {/* <pre>dialog: {JSON.stringify(ds.dialog, null, 2)}</pre> */}

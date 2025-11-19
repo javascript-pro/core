@@ -53,16 +53,20 @@ export default function SystemDialog() {
         maxWidth={'md'}
         fullWidth
       >
-        <DialogTitle>
+        {/* <DialogTitle>
           <CardHeader
             avatar={<Icon icon={ds.dialog.icon as any} />}
             title={<Typography variant="h6">{ds.dialog.title}</Typography>}
             subheader={ds.dialog.subheader}
           />
-        </DialogTitle>
+        </DialogTitle> */}
 
         <DialogContent>
-          <MenuGrid />
+          <Box sx={{
+            m:2,
+          }}>
+            <MenuGrid />
+          </Box>
           {/* <pre>dialog: {JSON.stringify(ds.dialog, null, 2)}</pre> */}
         </DialogContent>
 
