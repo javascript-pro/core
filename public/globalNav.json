@@ -1158,7 +1158,16 @@
             "type": "folder",
             "children": [
               {
-                "title": "Air Fried Stuffed Peppers",
+                "title": "Bladdy give it some",
+                "slug": "/life/food/bladdy-give-it-some",
+                "order": 20,
+                "icon": "food",
+                "image": "/jpg/wei-zang/wei-zangs-food.jpg",
+                "type": "file",
+                "excerpt": "When we bladdy give it some, we Apply max heat to bring the food to max temperature as quickly as possible.\n\n When to switch it off\n\nIf you were to bladdy give it some and not switch it off, it would "
+              },
+              {
+                "title": "Air Fried Peppers",
                 "slug": "/life/food/air-fried-peppers",
                 "order": 35,
                 "icon": "food",
@@ -1187,9 +1196,9 @@
                 "slug": "/life/food/beef-wellie",
                 "order": 55,
                 "icon": "food",
-                "image": "https://live.staticflickr.com/65535/54745803793_37a4d33ddc_b.jpg",
+                "image": "https://live.staticflickr.com/65535/54933884869_f82145fd92_b.jpg",
                 "type": "file",
-                "excerpt": "Ingredients\n\n 2 x 400g beef fillets\n Olive oil, for frying\n 500g mixture of wild mushrooms, cleaned\n 1 thyme sprig, leaves only\n 500g puff pastry\n 8 slices of Parma ham\n 2 egg yolks, beaten with 1 tbs"
+                "excerpt": "Ein Beef Wellington ist ein klassisch britisches Festgericht: Rinderfilet, umhüllt von Duxelles und Schinken, in Blätterteig gebacken. Edler SonntagsbratenCharakter, tief verwurzelt in englischer Küch"
               },
               {
                 "title": "Lemon Meringue Pie",
@@ -1226,7 +1235,7 @@
             ],
             "icon": "food",
             "image": "/jpg/wei-zang/wei-zangs-food.jpg",
-            "excerpt": "You want a recipe? The interweb's full of them. This is how I cook\n\n[PageGrid pages=\"/life/food/airfriedpeppers, /life/food/bananabread, /life/food/beefwellie, /life/food/lemonmeringuepie\"]\n\nIf you fi"
+            "excerpt": "You want a recipe? The interweb's full of them. This is how I cook\n\n[PageGrid pages=\"/life/food/bladdygiveitsome, /life/food/nasigoreng, /life/food/airfriedpeppers, /life/food/bananabread, /life/food/"
           },
           {
             "title": "Aquaponics",

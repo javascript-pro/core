@@ -69,7 +69,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
     <>
       <DesignSystem theme={config.themes[effectiveThemeMode]}>
         <IncludeAll />
-        <Container id="core" sx={{mt:2}}>
+        <Container id="core" sx={{ mt: 2 }}>
           <Box sx={{ minHeight: '100vh' }}>
             <Grid container spacing={isMobile ? 0 : 1}>
               <Grid size={{ xs: 1, md: 3 }}>
