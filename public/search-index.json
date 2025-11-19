@@ -1,8 +1,8 @@
 [
   {
     "slug": "balance/books/cixin-liu/index",
-    "title": "Cixin Liu",
-    "description": "",
+    "title": "The Three Body Problem",
+    "description": "by Cixin Liu",
     "tags": "Speculative fiction, Chinese, hard sci-fi",
     "content": "\n> Cixin Liu is a Chinese science-fiction writer best known for The Three-Body Problem and its sequels, collectively The Remembrance of Earth’s Past.\n\n## The Three-Body Problem\n\nFirst contact begins when scientists discover an alien civilisation on the unstable planet Trisolaris. Humanity becomes divided over whether to resist or welcome them.\n\n## The Dark Forest\n\nEarth prepares for the coming Trisolaran invasion. The “Dark Forest Theory” reveals why the universe seems silent—and why contact between civilisations is terrifyingly dangerous.\n\n## Death’s End\n\nThe conflict escalates to cosmic scales. Dimensional warfare, universe-changing technology, and the ultimate fate of humanity and the cosmos come into play.\n\nCixin Liu is significant because he brought Chinese hard sci-fi to a global audience, blending rigorous physics, grand cosmic scale, and philosophical depth. His work revitalised hard sci-fi worldwide, won major awards (including the Hugo), and introduced a distinctly non-Western perspective to the genre’s biggest ideas.\n"
   },
@@ -31,8 +31,15 @@
     "slug": "balance/books/index",
     "title": "Books",
     "description": "What are you reading?",
-    "tags": "science fiction, books, satire, douglas coupland, Cixin Liu, Orwell, Pullman",
-    "content": "\n> A curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction\n\n[PageGrid thumbnails=\"yes\" pages=\"/balance/books/cixin-liu, /balance/books/r-f-kuang/babel, /balance/books/douglas-coupland/generation-x, /balance/books/william-gibson\"]\n"
+    "tags": "science fiction, books, satire, douglas coupland, Cixin Liu,",
+    "content": "\n> A curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction\n\n[PageGrid thumbnails=\"yes\" pages=\"/balance/books/cixin-liu, /balance/books/douglas-coupland/generation-x, /balance/books/neuromancer, /balance/books/r-f-kuang/babel, /balance/books/r-f-kuang/katabasis\"]\n"
+  },
+  {
+    "slug": "balance/books/neuromancer",
+    "title": "Neuromancer",
+    "description": "by William Gibson",
+    "tags": "Science Fiction, Fiction, Cyberpunk, Classics, Dystopia, Science Fiction Fantasy, Fantasy, Audiobook, Novels",
+    "content": "\n> Neuromancer's (1984) portrayal of AIs striving for autonomy foreshadowed real-world debates. Neuromancer didn’t predict the future—it just defined how to imagine it\n\n#### Why _Neuromancer_ is Seminal in Sci-Fi\n\n- **Defined Cyberpunk**: Cemented the \"high-tech/low-life\" blend of futuristic tech and gritty urban decay.\n- **Cyberspace**: Popularized the idea of a shared, immersive digital network, anticipating the internet and VR.\n- **AI & Corporations**: Explored powerful artificial intelligences and megacorporations—core cyberpunk themes.\n- **Literary Style**: Mixed noir, crime fiction, and postmodern sensibilities, breaking from traditional space opera.\n\n#### Influence on Pop Culture\n\n- **Film**:\n\n  - _The Matrix_ (1999) drew directly from Gibson’s concepts of jacking into virtual realities.\n  - Visual DNA of cyberpunk cityscapes echoes in _Blade Runner_’s successors, _Akira_, _Ghost in the Shell_.\n\n- **Games**:\n\n  - _Deus Ex_, _Cyberpunk 2077_, _Shadowrun_—all inherit Gibson’s hacker/AI/corporate dystopia.\n\n- **Language & Culture**:\n\n  - Coined “cyberspace,” influencing how society imagined the internet.\n  - Helped define hacker culture’s aesthetic and ethos.\n\n- **Fashion & Music**:\n\n  - Influenced industrial, techno, and punk subcultures in look and attitude.\n\n- **AI Discourse**:\n  - Its portrayal of AIs striving for autonomy foreshadowed real-world debates.\n\n#### Timeline of Influence\n\n- **1984**: _Neuromancer_ published. Hugo, Nebula, and Philip K. Dick Award winner.\n- **1988**: _Akira_ anime film—cyberpunk visuals echo Gibson’s urban chaos.\n- **1995**: _Ghost in the Shell_ anime explores cyberbrains, hacking, and identity.\n- **1999**: _The Matrix_ brings Gibson’s cyberspace vision mainstream.\n- **2000s**: _Deus Ex_ series builds on themes of augmentation, AI, and conspiracy.\n- **2010s–2020s**: Cyberpunk resurgence—_Blade Runner 2049_, _Cyberpunk 2077_, discussions of AI ethics.\n\n#### William Gibson\n\nAmerican-Canadian writer who has been called the father of the cyberpunk subgenre of science fiction, having coined the term cyberspace in 1982 and popularized it in his first novel, Neuromancer (1984), which has sold more than 6.5 million copies worldwide.\n"
   },
   {
     "slug": "balance/books/r-f-kuang/babel",
@@ -57,17 +64,10 @@
   },
   {
     "slug": "balance/books/tom-robbins",
-    "title": "Tom Robbins",
-    "description": "Even Cowgirls Get the Blues",
+    "title": "Even Cowgirls Get the Blues",
+    "description": "by Tom Robbins",
     "tags": [],
-    "content": "\n**Tom Robbins** is an American novelist known for playful, whimsical prose, irreverent humor, and philosophical musings. His works blend surrealism, countercultural themes, and sharp social commentary, with a strong focus on language and imagination.\n\n#### Bibliography\n\n- **1971** – _Another Roadside Attraction_\n- **1976** – _Even Cowgirls Get the Blues_\n- **1980** – _Still Life with Woodpecker_\n- **1984** – _Jitterbug Perfume_\n- **1990** – _Skinny Legs and All_\n- **1994** – _Half Asleep in Frog Pajamas_\n- **2000** – _Fierce Invalids Home from Hot Climates_\n- **2003** – _Villa Incognito_\n- **2008** – _Bad Timing_\n- **2009** – _B Is for Beer_ (children’s book)\n- **2014** – _Tibetan Peach Pie: A True Account of an Imaginative Life_ (memoir)\n- **2023** – _Wild Ducks Flying Backward_ (collection of short pieces)\n"
-  },
-  {
-    "slug": "balance/books/william-gibson",
-    "title": "William Gibson",
-    "description": "The father of cyberpunk",
-    "tags": "Science Fiction, Fiction, Cyberpunk, Classics, Dystopia, Science Fiction Fantasy, Fantasy, Audiobook, Novels",
-    "content": "\n## Neuromancer (1984)\n\n> Neuromancer's portrayal of AIs striving for autonomy foreshadowed real-world debates. Neuromancer didn’t predict the future—it just defined how to imagine it\n\n#### Why _Neuromancer_ is Seminal in Sci-Fi\n\n- **Defined Cyberpunk**: Cemented the \"high-tech/low-life\" blend of futuristic tech and gritty urban decay.\n- **Cyberspace**: Popularized the idea of a shared, immersive digital network, anticipating the internet and VR.\n- **AI & Corporations**: Explored powerful artificial intelligences and megacorporations—core cyberpunk themes.\n- **Literary Style**: Mixed noir, crime fiction, and postmodern sensibilities, breaking from traditional space opera.\n\n#### Influence on Pop Culture\n\n- **Film**:\n\n  - _The Matrix_ (1999) drew directly from Gibson’s concepts of jacking into virtual realities.\n  - Visual DNA of cyberpunk cityscapes echoes in _Blade Runner_’s successors, _Akira_, _Ghost in the Shell_.\n\n- **Games**:\n\n  - _Deus Ex_, _Cyberpunk 2077_, _Shadowrun_—all inherit Gibson’s hacker/AI/corporate dystopia.\n\n- **Language & Culture**:\n\n  - Coined “cyberspace,” influencing how society imagined the internet.\n  - Helped define hacker culture’s aesthetic and ethos.\n\n- **Fashion & Music**:\n\n  - Influenced industrial, techno, and punk subcultures in look and attitude.\n\n- **AI Discourse**:\n  - Its portrayal of AIs striving for autonomy foreshadowed real-world debates.\n\n#### Timeline of Influence\n\n- **1984**: _Neuromancer_ published. Hugo, Nebula, and Philip K. Dick Award winner.\n- **1988**: _Akira_ anime film—cyberpunk visuals echo Gibson’s urban chaos.\n- **1995**: _Ghost in the Shell_ anime explores cyberbrains, hacking, and identity.\n- **1999**: _The Matrix_ brings Gibson’s cyberspace vision mainstream.\n- **2000s**: _Deus Ex_ series builds on themes of augmentation, AI, and conspiracy.\n- **2010s–2020s**: Cyberpunk resurgence—_Blade Runner 2049_, _Cyberpunk 2077_, discussions of AI ethics.\n\n#### William Gibson\n\nAmerican-Canadian writer who has been called the father of the cyberpunk subgenre of science fiction, having coined the term cyberspace in 1982 and popularized it in his first novel, Neuromancer (1984), which has sold more than 6.5 million copies worldwide.\n"
+    "content": "\nEven Cowgirls Get the Blues follows Sissy Hankshaw, a hitchhiker born with enormous thumbs, as she drifts through America’s counterculture. It blends surreal humour, feminism, and mysticism, centring on her adventures at a ranch run by rebellious cowgirls and her search for freedom and identity.\n\n**Tom Robbins** is an American novelist known for playful, whimsical prose, irreverent humor, and philosophical musings. His works blend surrealism, countercultural themes, and sharp social commentary, with a strong focus on language and imagination.\n\n#### Bibliography\n\n- **1971** – _Another Roadside Attraction_\n- **1976** – _Even Cowgirls Get the Blues_\n- **1980** – _Still Life with Woodpecker_\n- **1984** – _Jitterbug Perfume_\n- **1990** – _Skinny Legs and All_\n- **1994** – _Half Asleep in Frog Pajamas_\n- **2000** – _Fierce Invalids Home from Hot Climates_\n- **2003** – _Villa Incognito_\n- **2008** – _Bad Timing_\n- **2009** – _B Is for Beer_ (children’s book)\n- **2014** – _Tibetan Peach Pie: A True Account of an Imaginative Life_ (memoir)\n- **2023** – _Wild Ducks Flying Backward_ (collection of short pieces)\n"
   },
   {
     "slug": "balance/index",

@@ -1,5 +1,5 @@
 ---
-order: 1
+order: 50
 title: Writing
 description: It's hard to collate stuff into readable writing, but we're doing our best
 slug: /balance/writing

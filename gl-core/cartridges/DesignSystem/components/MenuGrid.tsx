@@ -36,6 +36,9 @@ export default function MenuGrid() {
     <>
       <Grid container spacing={2} sx={{ mb: 2 }}>
         <Grid size={{ xs: 12, md: 6 }}>
+          <SelectLang />
+        </Grid>
+        <Grid size={{ xs: 12, md: 6 }}>
           <List>
             <ListItemButton
               onClick={() => {
@@ -50,18 +53,6 @@ export default function MenuGrid() {
                 primary="Bad Panda"
                 secondary="Page not found, bro"
               />
-            </ListItemButton>
-
-            <ListItemButton
-              onClick={() => {
-                dispatch(setDesignSystemKey('dialog', null));
-                dispatch(reset());
-              }}
-            >
-              <ListItemIcon>
-                <Icon icon="reset" color="primary" />
-              </ListItemIcon>
-              <ListItemText primary="Restart" secondary="Back to the future" />
             </ListItemButton>
 
             <ListItemButton
@@ -82,12 +73,22 @@ export default function MenuGrid() {
                 secondary={themeMode === 'dark' ? 'Light mode' : 'Dark mode'}
               />
             </ListItemButton>
+
+            <ListItemButton
+              onClick={() => {
+                dispatch(setDesignSystemKey('dialog', null));
+                dispatch(reset());
+              }}
+            >
+              <ListItemIcon>
+                <Icon icon="reset" color="primary" />
+              </ListItemIcon>
+              <ListItemText primary="Restart" secondary="Back to the future" />
+            </ListItemButton>
           </List>
         </Grid>
 
-        <Grid size={{ xs: 12, md: 6 }}>
-          <SelectLang />
-        </Grid>
+        
       </Grid>
 
       {/* <pre>dialog: {JSON.stringify(ds.dialog, null, 2)}</pre> */}

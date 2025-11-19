@@ -17,6 +17,9 @@
     <loc>https://goldlabel.pro/balance/books</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/balance/books/neuromancer</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/balance/books/r-f-kuang/babel</loc>
   </url>
   <url>
@@ -27,9 +30,6 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/balance/books/tom-robbins</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/books/william-gibson</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/balance</loc>

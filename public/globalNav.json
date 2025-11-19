@@ -1282,10 +1282,158 @@
         "type": "folder",
         "children": [
           {
+            "title": "Books",
+            "description": "What are you reading?",
+            "slug": "/balance/books",
+            "order": 2,
+            "type": "folder",
+            "children": [
+              {
+                "title": "The Three Body Problem",
+                "description": "by Cixin Liu",
+                "slug": "/balance/books/cixin-liu",
+                "order": 10,
+                "type": "folder",
+                "children": [],
+                "icon": "books",
+                "image": "https://live.staticflickr.com/65535/54933893533_4b3dbc97d6_b.jpg",
+                "tags": [
+                  "Speculative fiction",
+                  "Chinese",
+                  "hard sci-fi"
+                ],
+                "excerpt": "Cixin Liu is a Chinese sciencefiction writer best known for The ThreeBody Problem and its sequels, collectively The Remembrance of Earth’s Past.\n\n The ThreeBody Problem\n\nFirst contact begins when scie"
+              },
+              {
+                "title": "R. F. Kuang",
+                "description": "MPhil in Chinese Studies from Cambridge and an MSc in Contemporary Chinese Studies from Oxford",
+                "slug": "/balance/books/r-f-kuang",
+                "order": 10,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "Babel",
+                    "slug": "/balance/books/r-f-kuang/babel",
+                    "order": 25,
+                    "icon": "books",
+                    "image": "/png/balance/books/babel.png",
+                    "type": "file",
+                    "tags": [
+                      "Speculative fiction",
+                      "alternative history"
+                    ],
+                    "excerpt": "or... the Necessity of Violence\n\nIt is an alternative history novel, set in a fantastical version of Oxford in 1830s England. In the second week of September 2022, Babel was placed at the top spot on "
+                  },
+                  {
+                    "title": "Katabasis",
+                    "slug": "/balance/books/r-f-kuang/katabasis",
+                    "order": 40,
+                    "icon": "books",
+                    "image": "/png/balance/books/katabasis.png",
+                    "type": "file",
+                    "tags": [
+                      "Speculative fiction",
+                      "alternative history",
+                      "fantasy"
+                    ],
+                    "excerpt": "[PrevNext prev=\"/balance/books/rfkuang\" next=\"/balance/books/rfkuang/babel\"]\n\nKatabasis is a 2025 fantasy novel by American writer R. F. Kuang. It was released on August 26, 2025. The novel follows tw"
+                  }
+                ],
+                "icon": "books",
+                "image": "/png/balance/writers/r-f-kuang.png",
+                "tags": [
+                  "Speculative fiction",
+                  "alternative history"
+                ],
+                "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/balance/books/rfkuang/babel, /balance/books/rfkuang/katabasis\"]\n\nR. F. Kuang was born on May 29th, 1996, in Guangzhou, China. She immigrated to the United States wit"
+              },
+              {
+                "title": "Douglas Coupland",
+                "description": "Canadian novelist and artist",
+                "slug": "/balance/books/douglas-coupland",
+                "order": 34,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "Generation X",
+                    "slug": "/balance/books/douglas-coupland/generation-x",
+                    "order": 100,
+                    "icon": "books",
+                    "image": "https://live.staticflickr.com/65535/54736833001_ef9c5f4b57_c.jpg",
+                    "type": "file",
+                    "excerpt": "The term Generation X acquired a modern application after the release of Generation X: Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Glossary\n\nMcJob A lo"
+                  },
+                  {
+                    "title": "Microserfs",
+                    "slug": "/balance/books/douglas-coupland/microserfs",
+                    "order": 150,
+                    "icon": "books",
+                    "image": "https://live.staticflickr.com/65535/54736833001_ef9c5f4b57_c.jpg",
+                    "type": "file",
+                    "excerpt": "Earliest piece of fiction to centre coders as modern workers with rich inner lives\n\nMicroserfs (1995) captures a moment in tech history that feels both distant and strangely familiar. Coupland wrote i"
+                  }
+                ],
+                "icon": "books",
+                "image": "https://live.staticflickr.com/65535/54736833001_ef9c5f4b57_c.jpg",
+                "excerpt": "Douglas Coupland is a Canadian novelist and artist, known for capturing contemporary culture, technology, and the malaise of modern life with wit and satirical insight. His writing often blends pop cu"
+              },
+              {
+                "title": "Neuromancer",
+                "slug": "/balance/books/neuromancer",
+                "order": 50,
+                "icon": "books",
+                "image": "https://live.staticflickr.com/65535/54743292173_aed0039452_b.jpg",
+                "type": "file",
+                "tags": [
+                  "Science Fiction",
+                  "Fiction",
+                  "Cyberpunk",
+                  "Classics",
+                  "Dystopia",
+                  "Science Fiction Fantasy",
+                  "Fantasy",
+                  "Audiobook",
+                  "Novels"
+                ],
+                "excerpt": "Neuromancer's (1984) portrayal of AIs striving for autonomy foreshadowed realworld debates. Neuromancer didn’t predict the future—it just defined how to imagine it\n\n Why Neuromancer is Seminal in SciF"
+              },
+              {
+                "title": "Even Cowgirls Get the Blues",
+                "slug": "/balance/books/tom-robbins",
+                "order": 1233,
+                "icon": "books",
+                "image": "https://live.staticflickr.com/65535/54735999657_5ec054b3e2_b.jpg",
+                "type": "file",
+                "excerpt": "Even Cowgirls Get the Blues follows Sissy Hankshaw, a hitchhiker born with enormous thumbs, as she drifts through America’s counterculture. It blends surreal humour, feminism, and mysticism, centring "
+              }
+            ],
+            "icon": "books",
+            "image": "https://live.staticflickr.com/65535/53519132441_43525fc3a4_b.jpg",
+            "tags": [
+              "science fiction",
+              "books",
+              "satire",
+              "douglas coupland",
+              "Cixin Liu"
+            ],
+            "excerpt": "A curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction\n\n[PageGrid thumbnails=\"yes\" pages=\"/balance/books/cixinliu, /balance/books/douglascoup"
+          },
+          {
+            "title": "Video",
+            "description": "It's Not Who You Know (2000)",
+            "slug": "/balance/video",
+            "order": 5,
+            "type": "folder",
+            "children": [],
+            "icon": "star",
+            "image": "https://live.staticflickr.com/65535/53519132441_43525fc3a4_b.jpg",
+            "excerpt": "[YouTube src=\"https://www.youtube.com/watch?v=Qe2ZLYzQToQ\"]\n\nWhilst working at a design agency in London in the year 2000 I was given the opportunity to work on a personal project and chose to make a "
+          },
+          {
             "title": "Writing",
             "description": "It's hard to collate stuff into readable writing, but we're doing our best",
             "slug": "/balance/writing",
-            "order": 1,
+            "order": 50,
             "type": "folder",
             "children": [
               {
@@ -1421,156 +1569,6 @@
             "icon": "writing",
             "image": "https://live.staticflickr.com/65535/53519132441_43525fc3a4_b.jpg",
             "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/balance/writing/notheretofuckspiders, /balance/writing/derkleinezeppelin\"]"
-          },
-          {
-            "title": "Video",
-            "description": "It's Not Who You Know (2000)",
-            "slug": "/balance/video",
-            "order": 5,
-            "type": "folder",
-            "children": [],
-            "icon": "star",
-            "image": "https://live.staticflickr.com/65535/53519132441_43525fc3a4_b.jpg",
-            "excerpt": "[YouTube src=\"https://www.youtube.com/watch?v=Qe2ZLYzQToQ\"]\n\nWhilst working at a design agency in London in the year 2000 I was given the opportunity to work on a personal project and chose to make a "
-          },
-          {
-            "title": "Books",
-            "description": "What are you reading?",
-            "slug": "/balance/books",
-            "order": 20,
-            "type": "folder",
-            "children": [
-              {
-                "title": "Cixin Liu",
-                "description": "",
-                "slug": "/balance/books/cixin-liu",
-                "order": 10,
-                "type": "folder",
-                "children": [],
-                "icon": "books",
-                "image": "https://live.staticflickr.com/65535/54933893533_4b3dbc97d6_b.jpg",
-                "tags": [
-                  "Speculative fiction",
-                  "Chinese",
-                  "hard sci-fi"
-                ],
-                "excerpt": "Cixin Liu is a Chinese sciencefiction writer best known for The ThreeBody Problem and its sequels, collectively The Remembrance of Earth’s Past.\n\n The ThreeBody Problem\n\nFirst contact begins when scie"
-              },
-              {
-                "title": "R. F. Kuang",
-                "description": "MPhil in Chinese Studies from Cambridge and an MSc in Contemporary Chinese Studies from Oxford",
-                "slug": "/balance/books/r-f-kuang",
-                "order": 10,
-                "type": "folder",
-                "children": [
-                  {
-                    "title": "Babel",
-                    "slug": "/balance/books/r-f-kuang/babel",
-                    "order": 25,
-                    "icon": "books",
-                    "image": "/png/balance/books/babel.png",
-                    "type": "file",
-                    "tags": [
-                      "Speculative fiction",
-                      "alternative history"
-                    ],
-                    "excerpt": "or... the Necessity of Violence\n\nIt is an alternative history novel, set in a fantastical version of Oxford in 1830s England. In the second week of September 2022, Babel was placed at the top spot on "
-                  },
-                  {
-                    "title": "Katabasis",
-                    "slug": "/balance/books/r-f-kuang/katabasis",
-                    "order": 40,
-                    "icon": "books",
-                    "image": "/png/balance/books/katabasis.png",
-                    "type": "file",
-                    "tags": [
-                      "Speculative fiction",
-                      "alternative history",
-                      "fantasy"
-                    ],
-                    "excerpt": "[PrevNext prev=\"/balance/books/rfkuang\" next=\"/balance/books/rfkuang/babel\"]\n\nKatabasis is a 2025 fantasy novel by American writer R. F. Kuang. It was released on August 26, 2025. The novel follows tw"
-                  }
-                ],
-                "icon": "books",
-                "image": "/png/balance/writers/r-f-kuang.png",
-                "tags": [
-                  "Speculative fiction",
-                  "alternative history"
-                ],
-                "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/balance/books/rfkuang/babel, /balance/books/rfkuang/katabasis\"]\n\nR. F. Kuang was born on May 29th, 1996, in Guangzhou, China. She immigrated to the United States wit"
-              },
-              {
-                "title": "Douglas Coupland",
-                "description": "Canadian novelist and artist",
-                "slug": "/balance/books/douglas-coupland",
-                "order": 34,
-                "type": "folder",
-                "children": [
-                  {
-                    "title": "Generation X",
-                    "slug": "/balance/books/douglas-coupland/generation-x",
-                    "order": 100,
-                    "icon": "books",
-                    "image": "https://live.staticflickr.com/65535/54736833001_ef9c5f4b57_c.jpg",
-                    "type": "file",
-                    "excerpt": "The term Generation X acquired a modern application after the release of Generation X: Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Glossary\n\nMcJob A lo"
-                  },
-                  {
-                    "title": "Microserfs",
-                    "slug": "/balance/books/douglas-coupland/microserfs",
-                    "order": 150,
-                    "icon": "books",
-                    "image": "https://live.staticflickr.com/65535/54736833001_ef9c5f4b57_c.jpg",
-                    "type": "file",
-                    "excerpt": "Earliest piece of fiction to centre coders as modern workers with rich inner lives\n\nMicroserfs (1995) captures a moment in tech history that feels both distant and strangely familiar. Coupland wrote i"
-                  }
-                ],
-                "icon": "books",
-                "image": "https://live.staticflickr.com/65535/54736833001_ef9c5f4b57_c.jpg",
-                "excerpt": "Douglas Coupland is a Canadian novelist and artist, known for capturing contemporary culture, technology, and the malaise of modern life with wit and satirical insight. His writing often blends pop cu"
-              },
-              {
-                "title": "William Gibson",
-                "slug": "/balance/books/william-gibson",
-                "order": 50,
-                "icon": "books",
-                "image": "https://live.staticflickr.com/65535/54743292173_aed0039452_b.jpg",
-                "type": "file",
-                "tags": [
-                  "Science Fiction",
-                  "Fiction",
-                  "Cyberpunk",
-                  "Classics",
-                  "Dystopia",
-                  "Science Fiction Fantasy",
-                  "Fantasy",
-                  "Audiobook",
-                  "Novels"
-                ],
-                "excerpt": "Neuromancer (1984)\n\n Neuromancer's portrayal of AIs striving for autonomy foreshadowed realworld debates. Neuromancer didn’t predict the future—it just defined how to imagine it\n\n Why Neuromancer is S"
-              },
-              {
-                "title": "Tom Robbins",
-                "slug": "/balance/books/tom-robbins",
-                "order": 1233,
-                "icon": "books",
-                "image": "https://live.staticflickr.com/65535/54735999657_5ec054b3e2_b.jpg",
-                "type": "file",
-                "excerpt": "Tom Robbins is an American novelist known for playful, whimsical prose, irreverent humor, and philosophical musings. His works blend surrealism, countercultural themes, and sharp social commentary, wi"
-              }
-            ],
-            "icon": "books",
-            "image": "https://live.staticflickr.com/65535/53519132441_43525fc3a4_b.jpg",
-            "tags": [
-              "science fiction",
-              "books",
-              "satire",
-              "douglas coupland",
-              "Cixin Liu",
-              "Orwell",
-              "Pullman"
-            ],
-            "excerpt": "A curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction\n\n[PageGrid thumbnails=\"yes\" pages=\"/balance/books/cixinliu, /balance/books/rfkuang/bab"
           }
         ],
         "icon": "balance",

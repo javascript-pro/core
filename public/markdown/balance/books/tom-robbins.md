@@ -1,11 +1,13 @@
 ---
 order: 1233
-title: Tom Robbins
-description: Even Cowgirls Get the Blues
+title: Even Cowgirls Get the Blues
+description: by Tom Robbins
 slug: /balance/books/tom-robbins
 icon: books
 image: https://live.staticflickr.com/65535/54735999657_5ec054b3e2_b.jpg
 ---
+
+Even Cowgirls Get the Blues follows Sissy Hankshaw, a hitchhiker born with enormous thumbs, as she drifts through America’s counterculture. It blends surreal humour, feminism, and mysticism, centring on her adventures at a ranch run by rebellious cowgirls and her search for freedom and identity.
 
 **Tom Robbins** is an American novelist known for playful, whimsical prose, irreverent humor, and philosophical musings. His works blend surrealism, countercultural themes, and sharp social commentary, with a strong focus on language and imagination.
 

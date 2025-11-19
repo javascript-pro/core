@@ -1,16 +1,14 @@
 ---
 order: 50
-title: William Gibson
-description: The father of cyberpunk
-slug: /balance/books/william-gibson
+title: Neuromancer
+description: by William Gibson
+slug: /balance/books/neuromancer
 icon: books
 image: https://live.staticflickr.com/65535/54743292173_aed0039452_b.jpg
 tags: Science Fiction, Fiction, Cyberpunk, Classics, Dystopia, Science Fiction Fantasy, Fantasy, Audiobook, Novels
 ---
 
-## Neuromancer (1984)
-
-> Neuromancer's portrayal of AIs striving for autonomy foreshadowed real-world debates. Neuromancer didn’t predict the future—it just defined how to imagine it
+> Neuromancer's (1984) portrayal of AIs striving for autonomy foreshadowed real-world debates. Neuromancer didn’t predict the future—it just defined how to imagine it
 
 #### Why _Neuromancer_ is Seminal in Sci-Fi
 
