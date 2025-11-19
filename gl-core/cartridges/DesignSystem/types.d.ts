@@ -4,12 +4,17 @@ import { TIconShape } from './components/Icon';
 
 export type TIcon = TIconShape;
 
-export type TDesignSystem = {
+export interface IDesignSystem {
+  theme?: TTheme;
+  children: React.ReactNode;
+}
+
+export interface TDesignSystemState {
   cartridge?: string;
   dialog?: any;
   theme?: TTheme;
   [key: string]: any;
-};
+}
 
 export type TTheme = {
   mode: 'light' | 'dark';

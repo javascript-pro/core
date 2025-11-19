@@ -1,5 +1,12 @@
 [
   {
+    "slug": "balance/books/cixin-liu/index",
+    "title": "Cixin Liu",
+    "description": "",
+    "tags": "Speculative fiction, Chinese, hard sci-fi",
+    "content": "\n> Cixin Liu is a Chinese science-fiction writer best known for The Three-Body Problem and its sequels, collectively The Remembrance of Earth’s Past.\n\n## The Three-Body Problem\n\nFirst contact begins when scientists discover an alien civilisation on the unstable planet Trisolaris. Humanity becomes divided over whether to resist or welcome them.\n\n## The Dark Forest\n\nEarth prepares for the coming Trisolaran invasion. The “Dark Forest Theory” reveals why the universe seems silent—and why contact between civilisations is terrifyingly dangerous.\n\n## Death’s End\n\nThe conflict escalates to cosmic scales. Dimensional warfare, universe-changing technology, and the ultimate fate of humanity and the cosmos come into play.\n\nCixin Liu is significant because he brought Chinese hard sci-fi to a global audience, blending rigorous physics, grand cosmic scale, and philosophical depth. His work revitalised hard sci-fi worldwide, won major awards (including the Hugo), and introduced a distinctly non-Western perspective to the genre’s biggest ideas.\n"
+  },
+  {
     "slug": "balance/books/douglas-coupland/generation-x",
     "title": "Generation X",
     "description": "by Douglas Coupland",
@@ -25,7 +32,7 @@
     "title": "Books",
     "description": "What are you reading?",
     "tags": "science fiction, books, satire, douglas coupland, Cixin Liu, Orwell, Pullman",
-    "content": "\n> A curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction\n\n[PageGrid thumbnails=\"yes\" pages=\"/balance/books/r-f-kuang/babel, /balance/books/douglas-coupland/generation-x, /balance/books/william-gibson\"]\n"
+    "content": "\n> A curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction\n\n[PageGrid thumbnails=\"yes\" pages=\"/balance/books/cixin-liu, /balance/books/r-f-kuang/babel, /balance/books/douglas-coupland/generation-x, /balance/books/william-gibson\"]\n"
   },
   {
     "slug": "balance/books/r-f-kuang/babel",
@@ -67,7 +74,7 @@
     "title": "Balance",
     "description": "It's hard to collate stuff into readable writing, but we're doing our best",
     "tags": [],
-    "content": "\n> If you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are [Generation X](/balance/books/douglas-coupland/generation-x)\n\n[PageGrid thumbnails=\"no\" pages=\"/balance/books, /balance/video, /balance/writing\"]\n"
+    "content": "\n> If you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are [Generation X](/balance/books/douglas-coupland/generation-x)\n\n[PageGrid thumbnails=\"no\" pages=\"/balance/books/cixin-liu, /balance/books, /balance/video, /balance/writing\"]\n"
   },
   {
     "slug": "balance/video/index",

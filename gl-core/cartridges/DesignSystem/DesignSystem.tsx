@@ -1,27 +1,16 @@
 // core/gl-core/cartridges/DesignSystem/DesignSystem.tsx
 'use client';
 import * as React from 'react';
-import { TTheme } from './types';
+import { TTheme, IDesignSystem } from './types';
 import { ThemeProvider, CssBaseline, Fab } from '@mui/material';
-import { useDispatch, Icon, useIsMobile } from '../../../gl-core';
-import {
-  useDesignSystem,
-  setDesignSystemKey,
-  useMUITheme,
-  SystemDialog,
-} from '../DesignSystem';
-
-export interface IDesignSystem {
-  theme?: TTheme;
-  children: React.ReactNode;
-}
+import { useDispatch, Icon } from '../../../gl-core';
+import { setDesignSystemKey, useMUITheme, SystemDialog } from '../DesignSystem';
 
 export default function DesignSystem({
   theme,
   children = null,
 }: IDesignSystem) {
   const dispatch = useDispatch();
-  const ds = useDesignSystem();
 
   const openDesignSystem = () => {
     dispatch(
@@ -38,7 +27,6 @@ export default function DesignSystem({
       <CssBaseline />
       {children}
       <SystemDialog />
-
       <Fab
         color="primary"
         sx={{

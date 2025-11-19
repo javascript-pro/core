@@ -1,7 +1,7 @@
 // core/gl-core/cartridges/DesignSystem/initialState.tsx
-import { TDesignSystem } from './types';
+import { TDesignSystemState } from './types';
 
-export const initialState: TDesignSystem = {
+export const initialState: TDesignSystemState = {
   cartridge: 'designsystem',
   dialog: null,
   themeMode: null,

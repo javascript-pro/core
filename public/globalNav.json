@@ -1441,6 +1441,22 @@
             "type": "folder",
             "children": [
               {
+                "title": "Cixin Liu",
+                "description": "",
+                "slug": "/balance/books/cixin-liu",
+                "order": 10,
+                "type": "folder",
+                "children": [],
+                "icon": "books",
+                "image": "https://live.staticflickr.com/65535/54933893533_4b3dbc97d6_b.jpg",
+                "tags": [
+                  "Speculative fiction",
+                  "Chinese",
+                  "hard sci-fi"
+                ],
+                "excerpt": "Cixin Liu is a Chinese sciencefiction writer best known for The ThreeBody Problem and its sequels, collectively The Remembrance of Earth’s Past.\n\n The ThreeBody Problem\n\nFirst contact begins when scie"
+              },
+              {
                 "title": "R. F. Kuang",
                 "description": "MPhil in Chinese Studies from Cambridge and an MSc in Contemporary Chinese Studies from Oxford",
                 "slug": "/balance/books/r-f-kuang",
@@ -1554,12 +1570,12 @@
               "Orwell",
               "Pullman"
             ],
-            "excerpt": "A curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction\n\n[PageGrid thumbnails=\"yes\" pages=\"/balance/books/rfkuang/babel, /balance/books/dougla"
+            "excerpt": "A curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction\n\n[PageGrid thumbnails=\"yes\" pages=\"/balance/books/cixinliu, /balance/books/rfkuang/bab"
           }
         ],
         "icon": "balance",
         "image": "https://live.staticflickr.com/65535/52538111215_c3a5b085b8_b.jpg",
-        "excerpt": "If you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are \n\n[PageGrid thumbnails=\"no\" pages=\"/balance/books, /balance/video, /balance/writing\"]"
+        "excerpt": "If you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are \n\n[PageGrid thumbnails=\"no\" pages=\"/balance/books/cixinliu, /balance/books, /balance/video,"
       }
     ],
     "icon": "home",
