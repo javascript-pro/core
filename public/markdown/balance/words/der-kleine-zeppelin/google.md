@@ -2,7 +2,7 @@
 order: 10
 title: Google
 description: Google it your own self
-slug: /balance/writing/der-kleine-zeppelin/google
+slug: /balance/words/der-kleine-zeppelin/google
 icon: van
 ---
 

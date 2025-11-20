@@ -2,7 +2,7 @@
 order: 10
 title: Der Kleine Zeppelin
 description: by Wei Zang
-slug: /balance/writing/der-kleine-zeppelin
+slug: /balance/words/der-kleine-zeppelin
 icon: van
 image: https://live.staticflickr.com/65535/54357493661_c102e19402_b.jpg
 ---

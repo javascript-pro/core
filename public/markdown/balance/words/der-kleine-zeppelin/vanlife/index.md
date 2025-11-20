@@ -2,7 +2,7 @@
 order: 10
 title: Vanlife
 description: definition of
-slug: /balance/writing/der-kleine-zeppelin/vanlife
+slug: /balance/words/der-kleine-zeppelin/vanlife
 icon: van
 ---
 

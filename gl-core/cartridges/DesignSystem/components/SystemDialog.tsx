@@ -62,9 +62,11 @@ export default function SystemDialog() {
         </DialogTitle> */}
 
         <DialogContent>
-          <Box sx={{
-            m:2,
-          }}>
+          <Box
+            sx={{
+              m: 2,
+            }}
+          >
             <MenuGrid />
           </Box>
           {/* <pre>dialog: {JSON.stringify(ds.dialog, null, 2)}</pre> */}

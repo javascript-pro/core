@@ -1,7 +1,7 @@
 ---
 order: 10
 title: Map
-slug: /balance/writing/der-kleine-zeppelin/countries
+slug: /balance/words/der-kleine-zeppelin/countries
 icon: van
 ---
 

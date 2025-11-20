@@ -46,7 +46,6 @@ export default function MenuGrid() {
                 dispatch(routeTo('/bad-panda', router));
               }}
             >
-              
               <ListItemText
                 primary="Page not found, bro"
                 secondary="Bad Panda"
@@ -66,7 +65,7 @@ export default function MenuGrid() {
                 secondary={themeMode === 'dark' ? 'Light mode' : 'Dark mode'}
               />
               <ListItemIcon>
-              <Icon
+                <Icon
                   color="primary"
                   icon={
                     themeMode === 'dark' ? 'lightmode' : ('darkmode' as any)
@@ -81,7 +80,6 @@ export default function MenuGrid() {
                 dispatch(reset());
               }}
             >
-              
               <ListItemText primary="Restart" secondary="Back to the future" />
               <ListItemIcon>
                 <Icon icon="reset" color="primary" />

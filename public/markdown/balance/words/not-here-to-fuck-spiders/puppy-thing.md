@@ -3,7 +3,7 @@ order: 30
 title: Dog
 description: vat puppy fing’s gunna get fucked
 icon: bug
-slug: /balance/writing/not-here-to-fuck-spiders/puppy-thing
+slug: /balance/words/not-here-to-fuck-spiders/puppy-thing
 image: /jpg/puppy-fing.jpg
 ---
 

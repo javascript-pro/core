@@ -2,7 +2,7 @@
 order: 11
 title: Bez
 description: An artist and a punk
-slug: /balance/writing/not-here-to-fuck-spiders/bez
+slug: /balance/words/not-here-to-fuck-spiders/bez
 icon: bug
 image: https://live.staticflickr.com/65535/54340497432_b8c92a3215_b.jpg
 tags: punk, bez,
