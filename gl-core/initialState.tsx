@@ -10,7 +10,6 @@ export const initialState: any = {
   version: pJSON.version,
   persisted: Date.now(),
   globalNav: null,
-  themeMode: null,
   feedback: null,
   lingua: initialStateLingua,
   paywall: initialStatePaywall,

@@ -9,23 +9,17 @@ import {
   ListItemIcon,
   ListItemText,
 } from '@mui/material';
-import {
-  routeTo,
-  useDispatch,
-  Icon,
-  useIsMobile,
-  reset,
-} from '../../../../gl-core';
+import { routeTo, useDispatch, Icon, reset } from '../../../../gl-core';
 import { useDesignSystem, setDesignSystemKey } from '../../DesignSystem';
 import { SelectLang } from '../../Lingua';
+import { User, Continue, useUser } from '../../Paywall';
 
 export default function MenuGrid() {
   const dispatch = useDispatch();
   const router = useRouter();
-  const isMobile = useIsMobile();
+  const user = useUser();
   const ds = useDesignSystem();
   const { themeMode } = ds;
-  // console.log('SystemDialog ds.dialog', ds.dialog);
 
   const handleToggle = () => {
     const newMode = themeMode === 'dark' ? 'light' : 'dark';
@@ -36,32 +30,26 @@ export default function MenuGrid() {
     <>
       <Grid container spacing={2} sx={{ mb: 2 }}>
         <Grid size={{ xs: 12, md: 6 }}>
-          <List>
+          {!user ? <Continue /> : <User />}
+
+          <pre>user: {JSON.stringify(user, null, 2)}</pre>
+        </Grid>
+        <Grid size={{ xs: 12, md: 6 }}>
+          <SelectLang />
+          <List dense>
             <ListItemButton
               onClick={() => {
                 dispatch(setDesignSystemKey('dialog', null));
                 dispatch(routeTo('/bad-panda', router));
               }}
             >
+              <ListItemText
+                primary="Page not found, bro"
+                secondary="Bad Panda"
+              />
               <ListItemIcon>
                 <Icon icon="bug" color="primary" />
               </ListItemIcon>
-              <ListItemText
-                primary="Bad Panda"
-                secondary="Page not found, bro"
-              />
-            </ListItemButton>
-
-            <ListItemButton
-              onClick={() => {
-                dispatch(setDesignSystemKey('dialog', null));
-                dispatch(reset());
-              }}
-            >
-              <ListItemIcon>
-                <Icon icon="reset" color="primary" />
-              </ListItemIcon>
-              <ListItemText primary="Restart" secondary="Back to the future" />
             </ListItemButton>
 
             <ListItemButton
@@ -69,6 +57,10 @@ export default function MenuGrid() {
                 handleToggle();
               }}
             >
+              <ListItemText
+                primary="Switch to..."
+                secondary={themeMode === 'dark' ? 'Light mode' : 'Dark mode'}
+              />
               <ListItemIcon>
                 <Icon
                   color="primary"
@@ -77,16 +69,20 @@ export default function MenuGrid() {
                   }
                 />
               </ListItemIcon>
-              <ListItemText
-                primary="Switch to..."
-                secondary={themeMode === 'dark' ? 'Light mode' : 'Dark mode'}
-              />
+            </ListItemButton>
+
+            <ListItemButton
+              onClick={() => {
+                dispatch(setDesignSystemKey('dialog', null));
+                dispatch(reset());
+              }}
+            >
+              <ListItemText primary="Restart" secondary="Back to the future" />
+              <ListItemIcon>
+                <Icon icon="reset" color="primary" />
+              </ListItemIcon>
             </ListItemButton>
           </List>
-        </Grid>
-
-        <Grid size={{ xs: 12, md: 6 }}>
-          <SelectLang />
         </Grid>
       </Grid>
 

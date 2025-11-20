@@ -2,10 +2,8 @@
 
 export type TPaywallState = {
   cartridge: string;
-  dialogOpen?: boolean;
-  mode?: 'signin' | 'signup';
+  dialog?: boolean;
   user?: any;
-  ping?: any;
   // [key: string]: any;
 };
 

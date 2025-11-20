@@ -1,5 +1,5 @@
 ---
-order: 5721
+order: 500
 title: Terms & Conditions
 description: Liability boundaries, intellectual-property ownership, and disputes
 slug: /work/company/terms

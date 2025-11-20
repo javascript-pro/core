@@ -1,10 +1,10 @@
 ---
-order: 200
+order: 25
 slug: /work/open-source/design-system
 title: Design System
 description: Based on Material UI
 icon: design
-image: /jpg/other/Opengraph-template.jpg
+image: /png/n64/test.png
 ---
 
 > Material UI is a React component library that provides a consistent design system, layout primitives, and ready-made UI components

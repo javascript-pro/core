@@ -1,10 +1,10 @@
 ---
-order: 10
+order: 20
 title: Case Studies
 description: Real World Experience
 slug: /work/case-studies
 icon: case
-image: https://live.staticflickr.com/4168/34263291171_c62c5b24be_b.jpg
+image: https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg
 tags: expertise, interview, experience
 ---
 

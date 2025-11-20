@@ -1,10 +1,10 @@
 ---
-order: 2200
+order: 26
 slug: /work/open-source/shortcodes
 title: Shortcodes
 description: A WordPress like feature
 icon: wordpress
-image: /jpg/other/Opengraph-template.jpg
+image: /png/n64/test.png
 ---
 
 [GitHub url="https://github.com/javascript-pro/core/tree/master/gl-core/cartridges/Shortcodes" label="Shortcodes"]

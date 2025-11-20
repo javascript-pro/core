@@ -14,10 +14,102 @@
         "type": "folder",
         "children": [
           {
+            "title": "Company",
+            "description": "UK Limited Company (5460545)",
+            "slug": "/work/company",
+            "order": 10,
+            "type": "folder",
+            "children": [
+              {
+                "title": "How we work",
+                "slug": "/work/company/where-we-work",
+                "order": 250,
+                "icon": "company",
+                "image": "/png/3rdParty/git_og.png",
+                "type": "file",
+                "tags": [
+                  "remote",
+                  "hybrid",
+                  "intellectual-property"
+                ],
+                "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years.\n\n How we work\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, c"
+              },
+              {
+                "title": "Privacy & Cookies",
+                "slug": "/work/company/privacy-cookies",
+                "order": 450,
+                "icon": "company",
+                "image": "/png/3rdParty/git_og.png",
+                "type": "file",
+                "tags": [
+                  "cookies",
+                  "gdpr",
+                  "privacy",
+                  "terms",
+                  "trust",
+                  "intellectual-property"
+                ],
+                "excerpt": "We don't use cookies\n\n Cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead de"
+              },
+              {
+                "title": "Terms & Conditions",
+                "slug": "/work/company/terms",
+                "order": 500,
+                "icon": "company",
+                "image": "/png/3rdParty/git_og.png",
+                "type": "file",
+                "tags": [
+                  "cookies",
+                  "gdpr",
+                  "privacy",
+                  "terms",
+                  "trust",
+                  "intellectual-property"
+                ],
+                "excerpt": "Liability boundaries, intellectualproperty ownership, and disputes\n\n Our Terms & Conditions\n\nDefine how this app should be used, what we’re responsible for, and what users can expect from the platform"
+              },
+              {
+                "title": "Work With Us",
+                "slug": "/work/company/work-with-us",
+                "order": 777,
+                "icon": "company",
+                "image": "/png/3rdParty/git_og.png",
+                "type": "file",
+                "tags": [
+                  "company",
+                  "intellectual-property"
+                ],
+                "excerpt": "We take on a limited number of new projects each month\n\n Work With Us\n\nIf you need something done we’d love to hear about it. Find out if we're a . We're always looking for collaborators, contributors"
+              },
+              {
+                "title": "GDPR",
+                "slug": "/work/company/gdpr",
+                "order": 5721,
+                "icon": "company",
+                "image": "/png/3rdParty/git_og.png",
+                "type": "file",
+                "tags": [
+                  "cookies",
+                  "gdpr",
+                  "privacy",
+                  "terms",
+                  "trust"
+                ],
+                "excerpt": "GDPR sets the rules for how we collect, store, and use personal data\n\n What does it mean?\n\nFor us it means we must minimise data collection, document what we process, and give users clear control over"
+              }
+            ],
+            "icon": "company",
+            "image": "/png/3rdParty/git_og.png",
+            "tags": [
+              "intellectual-property"
+            ],
+            "excerpt": "| Tel/WhatsApp  |  | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX\n\n \n \n \n \n \n\n[PageGrid thumbnails=\"no\" pages=\"/work/company/gdpr, /work/company/privacycookies, /work/c"
+          },
+          {
             "title": "Case Studies",
             "description": "Real World Experience",
             "slug": "/work/case-studies",
-            "order": 10,
+            "order": 20,
             "type": "folder",
             "children": [
               {
@@ -34,7 +126,7 @@
                   "magento",
                   "e-commerce"
                 ],
-                "excerpt": "Magento PHP & Material Design System\n\n JavaScript Developer, Adelaide"
+                "excerpt": "Magento PHP & Material Design System\n\n JavaScript Developer, Adelaide\n\nLead developer creating a front end React application for Cancer Council NSW. The application connecting to a WordPress driven CM"
               },
               {
                 "title": "Hertwig & Auer",
@@ -83,7 +175,7 @@
               }
             ],
             "icon": "case",
-            "image": "https://live.staticflickr.com/4168/34263291171_c62c5b24be_b.jpg",
+            "image": "https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg",
             "tags": [
               "expertise",
               "interview",
@@ -92,142 +184,29 @@
             "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work/casestudies/aligent, /work/casestudies/hertwigauer, /work/casestudies/huawei, /work/casestudies/boral\", /work/casestudies/aligent\"]"
           },
           {
-            "title": "Open Source",
-            "description": "Open Source and Free Forever",
-            "slug": "/work/open-source",
-            "order": 10,
-            "type": "folder",
-            "children": [
-              {
-                "title": "Quick Start",
-                "slug": "/work/open-source/quick-start",
-                "order": 5,
-                "icon": "success",
-                "image": "/png/3rdParty/github_og.png",
-                "type": "file",
-                "excerpt": "Get started with Goldlabel Core Open Source\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\n 🚀 Install\n\n1. Clone the repo\n\n\n\n2. Setup Environment\n\nCreate a  file in the root"
-              },
-              {
-                "title": "Cartridges",
-                "slug": "/work/open-source/cartridges",
-                "order": 10,
-                "icon": "cartridge",
-                "image": "/png/n64/test.png",
-                "type": "file",
-                "excerpt": "Goldlabel is built on cartridges\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\nA cartridge is a selfcontained piece of application logic: React components, state, styles, a"
-              },
-              {
-                "title": "Uberedux",
-                "slug": "/work/open-source/uberedux",
-                "order": 20,
-                "icon": "js",
-                "image": "/jpg/other/Opengraph-template.jpg",
-                "type": "file",
-                "tags": [
-                  "Free",
-                  "atridges",
-                  "Uberedux",
-                  "State Management",
-                  "Redux"
-                ],
-                "excerpt": "Otherwise you'd be back in jQuery callback hell. Nobody wants that.\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Uberedux\" label=\"Uberedux\"]\n\nUberedux is a simple,"
-              },
-              {
-                "title": "Lingua",
-                "slug": "/work/open-source/lingua",
-                "order": 100,
-                "icon": "lingua",
-                "image": "https://live.staticflickr.com/65535/54929673394_69c76ac4a3_b.jpg",
-                "type": "file",
-                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Lingua\" label=\"Lingua\"]\n\nThe Lingua cartridge brings localisation to Goldlabel. It enables your site to serve content i"
-              },
-              {
-                "title": "Paywall",
-                "slug": "/work/open-source/paywall",
-                "order": 130,
-                "icon": "paywall",
-                "image": "/jpg/ai/SWAT-Baby.jpg",
-                "type": "file",
-                "tags": [
-                  "cartridge",
-                  "free",
-                  "paywall",
-                  "use cases",
-                  "acess",
-                  "auth",
-                  "subscription"
-                ],
-                "excerpt": "User accounts, passwords, membership access and payment\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Paywall\" label=\"Paywall\"]\n\n Use Case\n\nWhen a draft chapter of "
-              },
-              {
-                "title": "Design System",
-                "slug": "/work/open-source/design-system",
-                "order": 200,
-                "icon": "design",
-                "image": "/jpg/other/Opengraph-template.jpg",
-                "type": "file",
-                "excerpt": "Material UI is a React component library that provides a consistent design system, layout primitives, and readymade UI components\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore"
-              },
-              {
-                "title": "New Cartridge",
-                "slug": "/work/open-source/new-cartridge",
-                "order": 2200,
-                "icon": "add",
-                "image": "/jpg/other/Opengraph-template.jpg",
-                "type": "file",
-                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\n is a template designed to help developers quickly bootstrap a new Cartridge in a modular application framework such as Goldlab"
-              },
-              {
-                "title": "Shortcodes",
-                "slug": "/work/open-source/shortcodes",
-                "order": 2200,
-                "icon": "wordpress",
-                "image": "/jpg/other/Opengraph-template.jpg",
-                "type": "file",
-                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Shortcodes\" label=\"Shortcodes\"]\n\nGoldlabel includes a Shortcodes cartridge that brings a familiar WordPressstyle author"
-              }
-            ],
-            "icon": "github",
-            "image": "/png/3rdParty/github_og.png",
-            "tags": [
-              "JavaScript",
-              "Vanilla JavaScript",
-              "TypeScript",
-              "React",
-              "Material UI",
-              "Flash",
-              "Server Side JavaScript",
-              "Node",
-              "Gatsby",
-              "NextJS",
-              "Headless CMS"
-            ],
-            "excerpt": "Free for anyone to fork, copy, hack, and reuse.\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Core repo\"]\n\n[PageGrid pages=\"/work/opensource/cartridges, /work/opensource/uberedux, /work/"
-          },
-          {
-            "title": "Expertise",
-            "description": "Techstack",
-            "slug": "/work/expertise",
+            "title": "Techstack",
+            "description": "Full JavaScript stack and more",
+            "slug": "/work/techstack",
             "order": 25,
             "type": "folder",
             "children": [
               {
                 "title": "JavaScript",
                 "description": "JavaScript Whatever the Weather",
-                "slug": "/work/expertise/javascript",
+                "slug": "/work/techstack/javascript",
                 "order": 3,
                 "type": "folder",
                 "children": [
                   {
                     "title": "React",
                     "description": "Frontend JavaScript",
-                    "slug": "/work/expertise/javascript/react",
+                    "slug": "/work/techstack/javascript/react",
                     "order": 1,
                     "type": "folder",
                     "children": [
                       {
                         "title": "History",
-                        "slug": "/work/expertise/javascript/react/history",
+                        "slug": "/work/techstack/javascript/react/history",
                         "order": 10,
                         "icon": "js",
                         "image": "/png/3rdParty/react.png",
@@ -242,7 +221,7 @@
                       },
                       {
                         "title": "Hooks",
-                        "slug": "/work/expertise/javascript/react/hooks",
+                        "slug": "/work/techstack/javascript/react/hooks",
                         "order": 10,
                         "icon": "js",
                         "image": "/png/3rdParty/react.png",
@@ -255,7 +234,7 @@
                       },
                       {
                         "title": "Our Experience",
-                        "slug": "/work/expertise/javascript/react/experience",
+                        "slug": "/work/techstack/javascript/react/experience",
                         "order": 20,
                         "icon": "js",
                         "image": "/png/3rdParty/react.png",
@@ -283,7 +262,7 @@
                   {
                     "title": "Next.js",
                     "description": "React with seamless backend capabilities",
-                    "slug": "/work/expertise/javascript/nextjs",
+                    "slug": "/work/techstack/javascript/nextjs",
                     "order": 2,
                     "type": "folder",
                     "children": [],
@@ -302,7 +281,7 @@
                   {
                     "title": "Node",
                     "description": "JavaScript backend",
-                    "slug": "/work/expertise/javascript/node",
+                    "slug": "/work/techstack/javascript/node",
                     "order": 3,
                     "type": "folder",
                     "children": [],
@@ -320,13 +299,13 @@
                   {
                     "title": "TypeScript",
                     "description": "Better JavaScript",
-                    "slug": "/work/expertise/javascript/typescript",
+                    "slug": "/work/techstack/javascript/typescript",
                     "order": 28,
                     "type": "folder",
                     "children": [
                       {
                         "title": "Getting Started",
-                        "slug": "/work/expertise/javascript/typescript/get-started",
+                        "slug": "/work/techstack/javascript/typescript/get-started",
                         "order": 5,
                         "icon": "js",
                         "image": "/png/3rdParty/typescript_og.png",
@@ -341,7 +320,7 @@
                       },
                       {
                         "title": "Real World TypeScript",
-                        "slug": "/work/expertise/javascript/typescript/real-world",
+                        "slug": "/work/techstack/javascript/typescript/real-world",
                         "order": 10,
                         "icon": "js",
                         "image": "/png/3rdParty/typescript_og.png",
@@ -356,7 +335,7 @@
                       },
                       {
                         "title": "Advanced TypeScript",
-                        "slug": "/work/expertise/javascript/typescript/advanced",
+                        "slug": "/work/techstack/javascript/typescript/advanced",
                         "order": 30,
                         "icon": "js",
                         "image": "/png/3rdParty/typescript_og.png",
@@ -371,7 +350,7 @@
                       },
                       {
                         "title": "Structural Typing",
-                        "slug": "/work/expertise/javascript/typescript/structural-typing",
+                        "slug": "/work/techstack/javascript/typescript/structural-typing",
                         "order": 55,
                         "icon": "js",
                         "image": "/png/3rdParty/typescript_og.png",
@@ -386,7 +365,7 @@
                       },
                       {
                         "title": "Interface vs Types",
-                        "slug": "/work/expertise/javascript/typescript/aliases",
+                        "slug": "/work/techstack/javascript/typescript/aliases",
                         "order": 65,
                         "icon": "js",
                         "image": "/png/3rdParty/typescript_og.png",
@@ -401,7 +380,7 @@
                       },
                       {
                         "title": "Unions and intersections",
-                        "slug": "/work/expertise/javascript/typescript/union-types",
+                        "slug": "/work/techstack/javascript/typescript/union-types",
                         "order": 75,
                         "icon": "js",
                         "image": "/png/3rdParty/typescript_og.png",
@@ -427,9 +406,9 @@
                     "excerpt": "JavaScript was never meant for what became asked of it. It started life scripting image rollovers in the ‘90s — and somehow ended up running banks and billiondollar web apps.\n\nBy the early 2010s, the "
                   },
                   {
-                    "title": "JS Testing",
+                    "title": "Testing",
                     "description": "Left looking approach",
-                    "slug": "/work/expertise/javascript/js-testing",
+                    "slug": "/work/techstack/javascript/testing",
                     "order": 95,
                     "type": "folder",
                     "children": [],
@@ -448,7 +427,7 @@
                   },
                   {
                     "title": "Vanilla JS",
-                    "slug": "/work/expertise/javascript/vanilla-js",
+                    "slug": "/work/techstack/javascript/vanilla-js",
                     "order": 100,
                     "icon": "js",
                     "image": "/png/3rdParty/javascript_og.png",
@@ -479,624 +458,157 @@
                   "Headless CMS",
                   "JSON"
                 ],
-                "excerpt": "We’ve been writing JavaScript since it was called ECMAScript.\n\nBefore the frameworks, before npm, before it ate the world—we were already deep in the language that powers the modern web.\n\nWe’ve built "
-              },
-              {
-                "title": "Fullstack",
-                "description": "Other skills accross the full stack",
-                "slug": "/work/expertise/fullstack",
-                "order": 25,
-                "type": "folder",
-                "children": [
-                  {
-                    "title": "Open Source",
-                    "slug": "/work/expertise/fullstack/open-source",
-                    "order": 10,
-                    "icon": "api",
-                    "image": "/png/og.png",
-                    "type": "file",
-                    "tags": [
-                      "free",
-                      "opensource",
-                      "work"
-                    ],
-                    "excerpt": "Why We Open Source\n\nWe’ve been building JavaScript applications for over 20 years. In that time, we’ve seen tools come and go. Trends rise, crash, and return again under a different name.\n\nWhat’s rema"
-                  },
-                  {
-                    "title": "REST API",
-                    "slug": "/work/expertise/fullstack/rest-api",
-                    "order": 10,
-                    "icon": "api",
-                    "image": "https://live.staticflickr.com/65535/54801612483_31ce454c4e_b.jpg",
-                    "type": "file",
-                    "tags": [
-                      "free",
-                      "api"
-                    ],
-                    "excerpt": "Goldlabel Public API\n\n glapi/flickr endpoints"
-                  },
-                  {
-                    "title": "Data Migration",
-                    "slug": "/work/expertise/fullstack/data-migration",
-                    "order": 20,
-                    "icon": "expertise",
-                    "image": "https://live.staticflickr.com/65535/54688814017_148f57032c_o.jpg",
-                    "type": "file",
-                    "tags": [
-                      "expertise",
-                      "data migration",
-                      "SQL",
-                      "work",
-                      "python",
-                      "next"
-                    ],
-                    "excerpt": "Data Migration via RESTful API using Next, Python and SQL\n\n\n\n This service exposes a RESTful interface for cleaning, transforming, and migrating data from a raw source table to a cleaned, structured t"
-                  },
-                  {
-                    "title": "Three.js",
-                    "slug": "/work/expertise/fullstack/three-js",
-                    "order": 22,
-                    "icon": "web3d",
-                    "image": "https://live.staticflickr.com/65535/54747599061_445f0323cd_b.jpg",
-                    "type": "file",
-                    "tags": [
-                      "expertise",
-                      "web",
-                      "3D",
-                      "WebGL",
-                      "Three.js",
-                      "Babylon.js",
-                      "WebGPU",
-                      "Flash",
-                      "JavaScript",
-                      "web development",
-                      "history",
-                      "VR",
-                      "AR",
-                      "performance"
-                    ],
-                    "excerpt": "Three.js rewards experience. With two decades of JS and deep React/Next.js knowledge, you can transform a blank canvas into a highly optimized, interactive, and visually rich web experience—without co"
-                  },
-                  {
-                    "title": "Material UI",
-                    "slug": "/work/expertise/fullstack/mui",
-                    "order": 101,
-                    "icon": "design",
-                    "image": "https://live.staticflickr.com/65535/54801612483_31ce454c4e_b.jpg",
-                    "type": "file",
-                    "tags": [
-                      "github",
-                      "process",
-                      "design"
-                    ],
-                    "excerpt": "What is a Design System?\n\nA Design System is a collection of reusable components, standards, and guidelines that define how a product looks and behaves. It includes UI elements like buttons, forms, an"
-                  },
-                  {
-                    "title": "Web 3D",
-                    "slug": "/work/expertise/fullstack/web3d",
-                    "order": 112,
-                    "icon": "web3d",
-                    "image": "https://live.staticflickr.com/65535/54747599061_445f0323cd_b.jpg",
-                    "type": "file",
-                    "tags": [
-                      "expertise",
-                      "web",
-                      "3D",
-                      "WebGL",
-                      "Three.js",
-                      "Babylon.js",
-                      "WebGPU",
-                      "Flash",
-                      "JavaScript",
-                      "web development",
-                      "history",
-                      "VR",
-                      "AR",
-                      "performance"
-                    ],
-                    "excerpt": "[YouTube src=\"https://www.youtube.com/watch?v=Qe2ZLYzQToQ\"]\n\n Building for the web for more than twenty years\n\nFirst with Flash, then with JavaScript — and through all that time, 3D in the browser nev"
-                  },
-                  {
-                    "title": "Blockchain",
-                    "slug": "/work/expertise/fullstack/blockchain",
-                    "order": 150,
-                    "icon": "api",
-                    "image": "/png/3rdParty/bitcoin.png",
-                    "type": "file",
-                    "tags": [
-                      "techstack",
-                      "crypto",
-                      "blockchain",
-                      "web3",
-                      "casino",
-                      "igaming",
-                      "experience",
-                      "bitcoin",
-                      "malta"
-                    ],
-                    "excerpt": "Blockchain Crypto Casino\n\n In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online ga"
-                  }
-                ],
-                "icon": "fullstack",
-                "image": "https://live.staticflickr.com/65535/54688814017_148f57032c_o.jpg",
-                "tags": [
-                  "fullstack"
-                ],
-                "excerpt": "A much over used term\n\nSo much so, it's become a bit meaningless. It was such ha useful term, too. Basically it meant that if you were a frontend dev"
+                "excerpt": "We’ve been writing JavaScript since it was called ECMAScript.\n\n[PageGrid thumbnails=\"no\" pages=\"/work/techstack/javascript/typescript, /work/techstack/javascript/react, /work/techstack/javascript/node"
               },
               {
                 "title": "Git",
-                "description": "Where Code Lives",
-                "slug": "/work/expertise/git",
-                "order": 123,
-                "type": "folder",
-                "children": [
-                  {
-                    "title": "GitHub",
-                    "slug": "/work/expertise/git/github",
-                    "order": 25,
-                    "icon": "github",
-                    "image": "/png/3rdParty/github_og.png",
-                    "type": "file",
-                    "tags": [
-                      "github",
-                      "process",
-                      "javascript"
-                    ],
-                    "excerpt": "[PrevNext prev=\"/work/git\" next=\"/work/git/gitkraken\"]\n\n We use GitHub for everything.\n\nMost of the communication done between us and our clients during development is done through GitHub in the form "
-                  },
-                  {
-                    "title": "GitKraken",
-                    "slug": "/work/expertise/git/gitkraken",
-                    "order": 30,
-                    "icon": "github",
-                    "image": "/png/3rdParty/gitkraken.png",
-                    "type": "file",
-                    "tags": [
-                      "github",
-                      "process",
-                      "javascript",
-                      "tools",
-                      "gitkraken"
-                    ],
-                    "excerpt": "[PrevNext prev=\"/work/git\" next=\"/work/git/github\"]\n\n Now with AI Commit and PR Messaging\n\nGitKraken isn’t just another Git GUI. It’s become an essential tool in our daily workflow—one of those rare b"
-                  }
-                ],
+                "slug": "/work/techstack/git",
+                "order": 25,
                 "icon": "github",
-                "image": "/png/3rdParty/git_og.png",
+                "image": "/png/3rdParty/github_og.png",
+                "type": "file",
                 "tags": [
+                  "github",
+                  "process",
+                  "javascript",
                   "source control",
                   "project management",
                   "github",
-                  "bitbucket"
+                  "bitbucket",
+                  "github",
+                  "process",
+                  "javascript",
+                  "tools",
+                  "gitkraken"
                 ],
-                "excerpt": "Other Source Control solutions are available\n\nBut everyone uses git. It was created in 2005 by Linus Torvalds, the same person who built the Linux kernel. Before Git, the Linux project used a propriet"
-              },
-              {
-                "title": "AI",
-                "description": "What do we know about about AI?",
-                "slug": "/work/expertise/ai",
-                "order": 280,
-                "type": "folder",
-                "children": [
-                  {
-                    "title": "Abgeschottet KI",
-                    "description": "What Does It Mean to Ring‑Fence an LLM?",
-                    "slug": "/work/expertise/ai/abgeschottet-ki",
-                    "order": 1,
-                    "type": "folder",
-                    "children": [
-                      {
-                        "title": "Why?",
-                        "slug": "/work/expertise/ai/abgeschottet-ki/why",
-                        "order": 0,
-                        "icon": "ki",
-                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
-                        "type": "file",
-                        "excerpt": "Abgeschottet KI exists because firms need the power of AI without risking client confidentiality.\n\nModern firms handle vast amounts of documents every day. Large Language Models (LLMs) can speed up re"
-                      },
-                      {
-                        "title": "Learning",
-                        "slug": "/work/expertise/ai/abgeschottet-ki/learning",
-                        "order": 2,
-                        "icon": "ki",
-                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
-                        "type": "file",
-                        "tags": [
-                          "abgeschottet",
-                          "KI"
-                        ],
-                        "excerpt": "How does the AI learn from the prompts over time?\n\n Used carefully, large language models can turn legal research into a faster, more focused process.\n\nWhen we talk about learning, it’s important to d"
-                      },
-                      {
-                        "title": "Ring Fencing",
-                        "slug": "/work/expertise/ai/abgeschottet-ki/ringfenced-llm",
-                        "order": 6,
-                        "icon": "ki",
-                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
-                        "type": "file",
-                        "excerpt": "What Does It Mean to Ring‑Fence an LLM?\n\n A ring‑fenced LLM is like having the power of AI inside a locked room.\n\n Runs on internal servers or private cloud\n Blocks external connections\n Uses local st"
-                      },
-                      {
-                        "title": "Secrecy",
-                        "slug": "/work/expertise/ai/abgeschottet-ki/professional-secrecy",
-                        "order": 10,
-                        "icon": "ki",
-                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
-                        "type": "file",
-                        "excerpt": "What Does Professional Secrecy Mean?\n\n What you tell your lawyer stays between you and them.\n\nWhen you speak to a lawyer in the UK, everything you tell them in confidence is protected by a strict lega"
-                      },
-                      {
-                        "title": "Confidentiality",
-                        "slug": "/work/expertise/ai/abgeschottet-ki/confidentiality-obligations",
-                        "order": 20,
-                        "icon": "ki",
-                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
-                        "type": "file",
-                        "tags": [
-                          "abgeschottet",
-                          "KI"
-                        ],
-                        "excerpt": "What Confidentiality Obligations Do UK Law Firms Have Toward Their Clients?\n\n UK law firms are bound by some of the strongest confidentiality rules in professional life.\n\n Everything you tell your law"
-                      },
-                      {
-                        "title": "Example prompts",
-                        "slug": "/work/expertise/ai/abgeschottet-ki/prompts",
-                        "order": 20,
-                        "icon": "ki",
-                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
-                        "type": "file",
-                        "excerpt": "General legal reasoning\n\nErkläre in einfachen Worten, was das Berufsgeheimnis für deutsche Rechtsanwälte bedeutet.\n\nExplain in simple terms what professional secrecy means for UK lawyers.\n\nWelche Pfli"
-                      },
-                      {
-                        "title": "GDPR",
-                        "slug": "/work/expertise/ai/abgeschottet-ki/gdpr-law-firms",
-                        "order": 30,
-                        "icon": "ki",
-                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
-                        "type": "file",
-                        "tags": [
-                          "abgeschottet",
-                          "KI"
-                        ],
-                        "excerpt": "What Does the GDPR Mean for a UK Law Firm?\n\n GDPR means your personal information is handled lawfully, transparently, and with your privacy in mind.\n\nThe General Data Protection Regulation (GDPR) – as"
-                      },
-                      {
-                        "title": "Hardware",
-                        "slug": "/work/expertise/ai/abgeschottet-ki/hardware",
-                        "order": 40,
-                        "icon": "ki",
-                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
-                        "type": "file",
-                        "tags": [
-                          "abgeschottet",
-                          "KI"
-                        ],
-                        "excerpt": "Keep it simple. Start small. Scale when you need to.\n\n Hardware for Abgeschottet KI\n\nOne of the advantages of Abgeschottet KI is that it’s a low‑investment, quick‑to‑implement solution.  \nYou don’t ne"
-                      },
-                      {
-                        "title": "Research",
-                        "slug": "/work/expertise/ai/abgeschottet-ki/llms-legal-research",
-                        "order": 40,
-                        "icon": "ki",
-                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
-                        "type": "file",
-                        "tags": [
-                          "abgeschottet",
-                          "KI"
-                        ],
-                        "excerpt": "How Could Large Language Models Help UK Law Firms With Legal Research?\n\n Used carefully, large language models can turn legal research into a faster, more focused process.\n\n Quickly summarising case l"
-                      },
-                      {
-                        "title": "Risks",
-                        "slug": "/work/expertise/ai/abgeschottet-ki/risks-public-llms",
-                        "order": 50,
-                        "icon": "ki",
-                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
-                        "type": "file",
-                        "excerpt": "What Are the Risks if Lawyers Send Confidential Files to a Public AI Service?\n\n Public AI services are not designed for legally confidential data.\n\n Loss of confidentiality\n Data protection breaches\n "
-                      },
-                      {
-                        "title": "Confidentiality",
-                        "slug": "/work/expertise/ai/abgeschottet-ki/ringfenced-llm-confidentiality",
-                        "order": 70,
-                        "icon": "ki",
-                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
-                        "type": "file",
-                        "excerpt": "How Can a Ring‑Fenced LLM Help?\n\n A ring‑fenced LLM gives a firm all the efficiency of AI while upholding the highest standards of confidentiality.\n\n No data leaves the firm’s network\n Built‑in access"
-                      },
-                      {
-                        "title": "Organisational",
-                        "slug": "/work/expertise/ai/abgeschottet-ki/organisational-measures",
-                        "order": 80,
-                        "icon": "ki",
-                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
-                        "type": "file",
-                        "tags": [
-                          "abgeschottet",
-                          "KI"
-                        ],
-                        "excerpt": "What Organisational Measures Should a Law Firm Take?\n\n A ring‑fenced LLM works best as part of a wider culture of confidentiality.\n\n Clear internal policies\n Regular staff training\n Access controls ba"
-                      }
-                    ],
-                    "icon": "ki",
-                    "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
-                    "tags": [
-                      "abgeschottet",
-                      "KI"
-                    ],
-                    "excerpt": "A ring‑fenced LLM is like having the power of AI inside a locked room\n\nIt can process sensitive documents and assist with legal work, but nothing ever leaves the firm’s secure network. When we say an "
-                  },
-                  {
-                    "title": "Maximizing AI Visibility",
-                    "slug": "/work/expertise/ai/ai-visibility",
-                    "order": 8,
-                    "icon": "ai",
-                    "image": "https://live.staticflickr.com/65535/54802570139_8f4f2ac814_b.jpg",
-                    "type": "file",
-                    "tags": [
-                      "expertise",
-                      "AI Visibility",
-                      "AI",
-                      "agents"
-                    ],
-                    "excerpt": "As search evolves into AIdriven answers, visibility is no longer about ranking on page one — it’s about being the source that answer engines trust and cite. To win mentions and citations, your content"
-                  },
-                  {
-                    "title": "Coding with AI",
-                    "slug": "/work/expertise/ai/coding-with-ai",
-                    "order": 10,
-                    "icon": "ai",
-                    "image": "https://live.staticflickr.com/65535/54802570139_8f4f2ac814_b.jpg",
-                    "type": "file",
-                    "tags": [
-                      "ai"
-                    ],
-                    "excerpt": "[YouTube src=\"https://www.youtube.com/watch?v=pkLazYu8JMw\"]\n\n It raises the bar. What took 6 months, a team of 10 developers and full time project management can now be done by a single developer in t"
-                  },
-                  {
-                    "title": "Agent User Interfaces",
-                    "slug": "/work/expertise/ai/agents",
-                    "order": 20,
-                    "icon": "ai",
-                    "image": "https://live.staticflickr.com/65535/54743292173_aed0039452_b.jpg",
-                    "type": "file",
-                    "tags": [
-                      "expertise",
-                      "js",
-                      "javascript",
-                      "next",
-                      "react",
-                      "AI",
-                      "agents"
-                    ],
-                    "excerpt": "How we help you take your AI product ideas from concept, through prototype to production\n\n From prototype to production\n\nAI agents need more than a good model — they need a front end that users can ac"
-                  }
-                ],
-                "icon": "ai",
-                "image": "https://live.staticflickr.com/65535/53669705662_d1361d5032_h.jpg",
-                "tags": [
-                  "ai",
-                  "ki",
-                  "expertise",
-                  "fields",
-                  "work"
-                ],
-                "excerpt": "Is this Singularity?\n\n \"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday\n\nIt's keeping tinfoil hat wearing folk awake at night. If"
-              },
-              {
-                "title": "WordPress",
-                "description": "Powers 50% of all websites",
-                "slug": "/work/expertise/wordpress",
-                "order": 999,
-                "type": "folder",
-                "children": [
-                  {
-                    "title": "Modernisation",
-                    "slug": "/work/expertise/wordpress/modernising",
-                    "order": 400,
-                    "icon": "wordpress",
-                    "image": "https://live.staticflickr.com/8504/8434232637_2a7e8b697f_o.jpg",
-                    "type": "file",
-                    "tags": [
-                      "expertise",
-                      "wordpress"
-                    ],
-                    "excerpt": "[PrevNext prev=\"/work/expertise/wordpress/architecture\" next=\"/work/expertise/wordpress/casestudy\"]\n\n WordPress Modernisation\n\n Keep your WordPress database, admin, and SEO intact — and layer a modern"
-                  },
-                  {
-                    "title": "Architecture",
-                    "slug": "/work/expertise/wordpress/architecture",
-                    "order": 700,
-                    "icon": "wordpress",
-                    "image": "https://live.staticflickr.com/8504/8434232637_2a7e8b697f_o.jpg",
-                    "type": "file",
-                    "tags": [
-                      "expertise",
-                      "wordpress",
-                      "source of truth"
-                    ],
-                    "excerpt": "WordPress builds everything on a single stack — PHP renders pages on the server, pulling directly from a MySQL database. Themes and plugins share the same environment, which makes it flexible but also"
-                  },
-                  {
-                    "title": "Case Study",
-                    "slug": "/work/expertise/wordpress/case-study",
-                    "order": 700,
-                    "icon": "wordpress",
-                    "image": "https://live.staticflickr.com/8504/8434232637_2a7e8b697f_o.jpg",
-                    "type": "file",
-                    "tags": [
-                      "expertise",
-                      "wordpress",
-                      "source of truth",
-                      "\"WordPress\"",
-                      "\"Goldlabel\"",
-                      "\"case study\"",
-                      "\"SSR\"",
-                      "\"Next.js\"",
-                      "\"performance\""
-                    ],
-                    "excerpt": "How a Shenzhenbased studio used Goldlabel to bring performance, scalability, and modern UX to its WordPress portfolio — without rebuilding from scratch\n\n Case Study: Rahul Sharma Studios\n\nClient: Rahu"
-                  }
-                ],
-                "icon": "wordpress",
-                "image": "https://live.staticflickr.com/8504/8434232637_2a7e8b697f_o.jpg",
-                "tags": [
-                  "expertise",
-                  "wordpress"
-                ],
-                "excerpt": "[GitHub url=\"https://github.com/goldlabelapps/wordpress\" label=\"goldlabelapps/wordpress\"]\n\n WordPress powers 50% of all websites\n\n We treat an existing WordPress installation as a data source, not a p"
-              },
-              {
-                "title": "Windoze",
-                "description": "Easy Legal Letter Assistant",
-                "slug": "/work/expertise/windoze",
-                "order": 1300,
-                "type": "folder",
-                "children": [
-                  {
-                    "title": "Overview",
-                    "slug": "/work/expertise/windoze/overview",
-                    "order": 50,
-                    "icon": "windows",
-                    "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
-                    "type": "file",
-                    "excerpt": "What problem are we talking about? Using tech to improve workflow efficiency\n\n Any sensible business should be interested in that?\n\n Where is the original Ella? Saarland, Germany. A Windows PC securel"
-                  },
-                  {
-                    "title": "Agile approach",
-                    "slug": "/work/expertise/windoze/agile",
-                    "order": 60,
-                    "icon": "windows",
-                    "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
-                    "type": "file",
-                    "excerpt": "Even small projects with just one or two people benefit from an agile approach. The early ideas scribbled on the back of an envelope or sketched out on a kitchen table are often the most creative — bu"
-                  },
-                  {
-                    "title": "Testing",
-                    "slug": "/work/expertise/windoze/testing",
-                    "order": 70,
-                    "icon": "windows",
-                    "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
-                    "type": "file",
-                    "excerpt": "[YouTube src=\"https://www.youtube.com/watch?v=ULmJI1Z8L3E\"]\n\nIn this video, we put Windoze through a realworld timed task, checking the software against key requirements to see just how useful it real"
-                  }
-                ],
-                "icon": "windows",
-                "image": "https://live.staticflickr.com/65535/54799310143_7008bb96f3_b.jpg",
-                "tags": [
-                  "expertise",
-                  "windoze",
-                  "experience",
-                  "work"
-                ],
-                "excerpt": "Easy Legal Letter Assistant\n\n A lightweight, Windows app for generating precise Legal letters. The tool assists staff at a legal firm by making it easy to store all the data around a case to a single "
+                "excerpt": "We use GitHub for everything.\n\nMost of the communication done between us and our clients during development is done through GitHub in the form of comments, tracking bugs and issues, pull resuests, rev"
               }
             ],
-            "icon": "expertise",
+            "icon": "techstack",
             "image": "/png/3rdParty/react.png",
             "tags": [
               "expertise",
               "fields",
               "work"
             ],
-            "excerpt": "We work across the full stack to help understand all perspectives, from interface to infrastructure\n\nWe focus on robust, modern JavaScript tooling and scalable cloudnative delivery. Whether building r"
+            "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work/techstack/javascript, /work/techstack/git\"]\n\n We work across the full JavaScript stack to help understand all perspectives, from interface to infrastructure\n\nWe "
           },
           {
-            "title": "Company",
-            "description": "UK Limited Company (5460545)",
-            "slug": "/work/company",
-            "order": 1020,
+            "title": "Open Source",
+            "description": "Open Source and Free Forever",
+            "slug": "/work/open-source",
+            "order": 100,
             "type": "folder",
             "children": [
               {
-                "title": "How we work",
-                "slug": "/work/company/how-we-work",
-                "order": 250,
-                "icon": "company",
-                "image": "/png/3rdParty/git_og.png",
+                "title": "Quick Start",
+                "slug": "/work/open-source/quick-start",
+                "order": 5,
+                "icon": "success",
+                "image": "/png/n64/test.png",
                 "type": "file",
-                "tags": [
-                  "remote",
-                  "hybrid",
-                  "intellectual-property"
-                ],
-                "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years.\n\n How we work\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, c"
+                "excerpt": "Get started with Goldlabel Core Open Source\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\n 🚀 Install\n\n1. Clone the repo\n\n\n\n2. Setup Environment\n\nCreate a  file in the root"
               },
               {
-                "title": "Work With Us",
-                "slug": "/work/company/work-with-us",
-                "order": 777,
-                "icon": "company",
-                "image": "/png/3rdParty/git_og.png",
+                "title": "Cartridges",
+                "slug": "/work/open-source/cartridges",
+                "order": 10,
+                "icon": "cartridge",
+                "image": "/png/n64/test.png",
                 "type": "file",
-                "tags": [
-                  "company",
-                  "intellectual-property"
-                ],
-                "excerpt": "We take on a limited number of new projects each month\n\n Work With Us\n\nIf you need something done we’d love to hear about it. Find out if we're a . We're always looking for collaborators, contributors"
+                "excerpt": "Goldlabel is built on cartridges\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\nA cartridge is a selfcontained piece of application logic: React components, state, styles, a"
               },
               {
-                "title": "Privacy & Cookies",
-                "slug": "/work/company/privacy-cookies",
-                "order": 5555,
-                "icon": "company",
-                "image": "/png/3rdParty/git_og.png",
+                "title": "New Cartridge",
+                "slug": "/work/open-source/new-cartridge",
+                "order": 15,
+                "icon": "add",
+                "image": "/png/n64/test.png",
                 "type": "file",
-                "tags": [
-                  "cookies",
-                  "gdpr",
-                  "privacy",
-                  "terms",
-                  "trust",
-                  "intellectual-property"
-                ],
-                "excerpt": "We don't use cookies\n\n Cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead de"
+                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\n is a template designed to help developers quickly bootstrap a new Cartridge in a modular application framework such as Goldlab"
               },
               {
-                "title": "GDPR",
-                "slug": "/work/company/gdpr",
-                "order": 5721,
-                "icon": "company",
-                "image": "/png/3rdParty/git_og.png",
+                "title": "Design System",
+                "slug": "/work/open-source/design-system",
+                "order": 25,
+                "icon": "design",
+                "image": "/png/n64/test.png",
                 "type": "file",
-                "tags": [
-                  "cookies",
-                  "gdpr",
-                  "privacy",
-                  "terms",
-                  "trust"
-                ],
-                "excerpt": "GDPR sets the rules for how we collect, store, and use personal data\n\n What does it mean?\n\nFor us it means we must minimise data collection, document what we process, and give users clear control over"
+                "excerpt": "Material UI is a React component library that provides a consistent design system, layout primitives, and readymade UI components\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore"
               },
               {
-                "title": "Terms & Conditions",
-                "slug": "/work/company/terms",
-                "order": 5721,
-                "icon": "company",
-                "image": "/png/3rdParty/git_og.png",
+                "title": "Shortcodes",
+                "slug": "/work/open-source/shortcodes",
+                "order": 26,
+                "icon": "wordpress",
+                "image": "/png/n64/test.png",
+                "type": "file",
+                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Shortcodes\" label=\"Shortcodes\"]\n\nGoldlabel includes a Shortcodes cartridge that brings a familiar WordPressstyle author"
+              },
+              {
+                "title": "Lingua",
+                "slug": "/work/open-source/lingua",
+                "order": 28,
+                "icon": "lingua",
+                "image": "/png/n64/test.png",
+                "type": "file",
+                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Lingua\" label=\"Lingua\"]\n\nThe Lingua cartridge brings localisation to Goldlabel. It enables your site to serve content i"
+              },
+              {
+                "title": "Uberedux",
+                "slug": "/work/open-source/uberedux",
+                "order": 30,
+                "icon": "js",
+                "image": "/png/n64/test.png",
                 "type": "file",
                 "tags": [
-                  "cookies",
-                  "gdpr",
-                  "privacy",
-                  "terms",
-                  "trust",
-                  "intellectual-property"
+                  "Free",
+                  "atridges",
+                  "Uberedux",
+                  "State Management",
+                  "Redux"
                 ],
-                "excerpt": "Liability boundaries, intellectualproperty ownership, and disputes\n\n Our Terms & Conditions\n\nDefine how this app should be used, what we’re responsible for, and what users can expect from the platform"
+                "excerpt": "Otherwise you'd be back in jQuery callback hell. Nobody wants that.\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Uberedux\" label=\"Uberedux\"]\n\nUberedux is a simple,"
+              },
+              {
+                "title": "Paywall",
+                "slug": "/work/open-source/paywall",
+                "order": 130,
+                "icon": "paywall",
+                "image": "/png/n64/test.png",
+                "type": "file",
+                "tags": [
+                  "cartridge",
+                  "free",
+                  "paywall",
+                  "use cases",
+                  "acess",
+                  "auth",
+                  "subscription"
+                ],
+                "excerpt": "User accounts, passwords, membership access and payment\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Paywall\" label=\"Paywall\"]\n\n Use Case\n\nWhen a draft chapter of "
               }
             ],
-            "icon": "company",
-            "image": "/png/3rdParty/git_og.png",
+            "icon": "github",
+            "image": "/png/3rdParty/github_og.png",
             "tags": [
-              "intellectual-property"
+              "JavaScript",
+              "Vanilla JavaScript",
+              "TypeScript",
+              "React",
+              "Material UI",
+              "Flash",
+              "Server Side JavaScript",
+              "Node",
+              "Gatsby",
+              "NextJS",
+              "Headless CMS"
             ],
-            "excerpt": "UK Limited Company (5460545)\n\n Company info\n\n  \nTel/WhatsApp   \n | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX\n\n \n\n Social"
+            "excerpt": "Free for anyone to fork, copy, hack, and reuse.\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Core repo\"]\n\n[PageGrid pages=\"/work/opensource/cartridges, /work/opensource/uberedux, /work/"
           }
         ],
         "icon": "work",
-        "image": "/png/3rdParty/git_og.png",
+        "image": "https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg",
         "tags": [
           "Professional",
           "JavaScript",
@@ -1111,7 +623,7 @@
           "NextJS",
           "Headless CMS"
         ],
-        "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work/, /work/company, /work/expertise, /work/opensource, /work/casestudies\"]\n\n The apps we ship are real. They run in production and are developed accessibly.\n\nThe Co"
+        "excerpt": "The apps we ship are real. They run in production and are developed accessibly.\n\n[PageGrid thumbnails=\"no\" pages=\"/work/company, /work/techstack, /work/opensource, /work/casestudies\"]\n\nThe Core is Ope"
       },
       {
         "title": "Life",
@@ -1120,6 +632,143 @@
         "order": 25,
         "type": "folder",
         "children": [
+          {
+            "title": "Books",
+            "description": "What are you reading?",
+            "slug": "/life/books",
+            "order": 2,
+            "type": "folder",
+            "children": [
+              {
+                "title": "The Three Body Problem",
+                "description": "by Cixin Liu",
+                "slug": "/life/books/cixin-liu",
+                "order": 10,
+                "type": "folder",
+                "children": [],
+                "icon": "books",
+                "image": "https://live.staticflickr.com/65535/54933893533_4b3dbc97d6_b.jpg",
+                "tags": [
+                  "Speculative fiction",
+                  "Chinese",
+                  "hard sci-fi"
+                ],
+                "excerpt": "Cixin Liu is a Chinese sciencefiction writer best known for The ThreeBody Problem and its sequels, collectively The Remembrance of Earth’s Past.\n\n The ThreeBody Problem\n\nFirst contact begins when scie"
+              },
+              {
+                "title": "R. F. Kuang",
+                "description": "MPhil in Chinese Studies from Cambridge and an MSc in Contemporary Chinese Studies from Oxford",
+                "slug": "/life/books/r-f-kuang",
+                "order": 10,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "Babel",
+                    "slug": "/life/books/r-f-kuang/babel",
+                    "order": 25,
+                    "icon": "books",
+                    "image": "/png/balance/books/babel.png",
+                    "type": "file",
+                    "tags": [
+                      "Speculative fiction",
+                      "alternative history"
+                    ],
+                    "excerpt": "or... the Necessity of Violence\n\nIt is an alternative history novel, set in a fantastical version of Oxford in 1830s England. In the second week of September 2022, Babel was placed at the top spot on "
+                  },
+                  {
+                    "title": "Katabasis",
+                    "slug": "/life/books/r-f-kuang/katabasis",
+                    "order": 40,
+                    "icon": "books",
+                    "image": "/png/balance/books/katabasis.png",
+                    "type": "file",
+                    "tags": [
+                      "Speculative fiction",
+                      "alternative history",
+                      "fantasy"
+                    ],
+                    "excerpt": "[PrevNext prev=\"/balance/books/rfkuang\" next=\"/balance/books/rfkuang/babel\"]\n\nKatabasis is a 2025 fantasy novel by American writer R. F. Kuang. It was released on August 26, 2025. The novel follows tw"
+                  }
+                ],
+                "icon": "books",
+                "image": "/png/balance/writers/r-f-kuang.png",
+                "tags": [
+                  "Speculative fiction",
+                  "alternative history"
+                ],
+                "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/balance/books/rfkuang/babel, /balance/books/rfkuang/katabasis\"]\n\nR. F. Kuang was born on May 29th, 1996, in Guangzhou, China. She immigrated to the United States wit"
+              },
+              {
+                "title": "Douglas Coupland",
+                "description": "Canadian novelist and artist",
+                "slug": "/life/books/douglas-coupland",
+                "order": 34,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "Generation X",
+                    "slug": "/life/books/douglas-coupland/generation-x",
+                    "order": 100,
+                    "icon": "books",
+                    "image": "https://live.staticflickr.com/65535/54736833001_ef9c5f4b57_c.jpg",
+                    "type": "file",
+                    "excerpt": "The term Generation X acquired a modern application after the release of Generation X: Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Glossary\n\nMcJob A lo"
+                  },
+                  {
+                    "title": "Microserfs",
+                    "slug": "/life/books/douglas-coupland/microserfs",
+                    "order": 150,
+                    "icon": "books",
+                    "image": "https://live.staticflickr.com/65535/54736833001_ef9c5f4b57_c.jpg",
+                    "type": "file",
+                    "excerpt": "Earliest piece of fiction to centre coders as modern workers with rich inner lives\n\nMicroserfs (1995) captures a moment in tech history that feels both distant and strangely familiar. Coupland wrote i"
+                  }
+                ],
+                "icon": "books",
+                "image": "https://live.staticflickr.com/65535/54736833001_ef9c5f4b57_c.jpg",
+                "excerpt": "Douglas Coupland is a Canadian novelist and artist, known for capturing contemporary culture, technology, and the malaise of modern life with wit and satirical insight. His writing often blends pop cu"
+              },
+              {
+                "title": "Neuromancer",
+                "slug": "/life/books/neuromancer",
+                "order": 50,
+                "icon": "books",
+                "image": "https://live.staticflickr.com/65535/54743292173_aed0039452_b.jpg",
+                "type": "file",
+                "tags": [
+                  "Science Fiction",
+                  "Fiction",
+                  "Cyberpunk",
+                  "Classics",
+                  "Dystopia",
+                  "Science Fiction Fantasy",
+                  "Fantasy",
+                  "Audiobook",
+                  "Novels"
+                ],
+                "excerpt": "Neuromancer's (1984) portrayal of AIs striving for autonomy foreshadowed realworld debates. Neuromancer didn’t predict the future—it just defined how to imagine it\n\n Why Neuromancer is Seminal in SciF"
+              },
+              {
+                "title": "Even Cowgirls Get the Blues",
+                "slug": "/life/books/tom-robbins",
+                "order": 1233,
+                "icon": "books",
+                "image": "https://live.staticflickr.com/65535/54735999657_5ec054b3e2_b.jpg",
+                "type": "file",
+                "excerpt": "Even Cowgirls Get the Blues follows Sissy Hankshaw, a hitchhiker born with enormous thumbs, as she drifts through America’s counterculture. It blends surreal humour, feminism, and mysticism, centring "
+              }
+            ],
+            "icon": "books",
+            "image": "/png/n64/chix.png",
+            "tags": [
+              "science fiction",
+              "books",
+              "satire",
+              "douglas coupland",
+              "Cixin Liu"
+            ],
+            "excerpt": "A curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction\n\n[PageGrid thumbnails=\"yes\" pages=\"/life/books/tomrobbins, /life/books/cixinliu, /life"
+          },
           {
             "title": "Diving",
             "description": "Fish are friends. Not food.",
@@ -1143,11 +792,11 @@
                 "icon": "diving",
                 "image": "/png/n64/diving.png",
                 "type": "file",
-                "excerpt": "You might die. You have to mitigate that posiibility, yeh."
+                "excerpt": "You might die. You have to mitigate that posiibility, yeh.\n\nScuba diving takes you into an environment that does not want you there. One mistake—one second of panic, one lapse in awareness—and water w"
               }
             ],
             "icon": "diving",
-            "image": "/png/n64/diving.png",
+            "image": "https://live.staticflickr.com/65535/54936056240_8d8358141c_b.jpg",
             "excerpt": "[PageGrid pages=\"/life/diving/whydive, /life/diving/whynotdive\"]"
           },
           {
@@ -1158,7 +807,16 @@
             "type": "folder",
             "children": [
               {
-                "title": "Air Fried Stuffed Peppers",
+                "title": "Bladdy give it some",
+                "slug": "/life/food/bladdy-give-it-some",
+                "order": 20,
+                "icon": "food",
+                "image": "/jpg/wei-zang/wei-zangs-food.jpg",
+                "type": "file",
+                "excerpt": "When we bladdy give it some, we Apply max heat to bring the food to max temperature as quickly as possible.\n\n When to switch it off\n\nIf you were to bladdy give it some and not switch it off, it would "
+              },
+              {
+                "title": "Air Fried Peppers",
                 "slug": "/life/food/air-fried-peppers",
                 "order": 35,
                 "icon": "food",
@@ -1187,9 +845,9 @@
                 "slug": "/life/food/beef-wellie",
                 "order": 55,
                 "icon": "food",
-                "image": "https://live.staticflickr.com/65535/54745803793_37a4d33ddc_b.jpg",
+                "image": "https://live.staticflickr.com/65535/54933884869_f82145fd92_b.jpg",
                 "type": "file",
-                "excerpt": "Ingredients\n\n 2 x 400g beef fillets\n Olive oil, for frying\n 500g mixture of wild mushrooms, cleaned\n 1 thyme sprig, leaves only\n 500g puff pastry\n 8 slices of Parma ham\n 2 egg yolks, beaten with 1 tbs"
+                "excerpt": "Ein Beef Wellington ist ein klassisch britisches Festgericht: Rinderfilet, umhüllt von Duxelles und Schinken, in Blätterteig gebacken. Edler SonntagsbratenCharakter, tief verwurzelt in englischer Küch"
               },
               {
                 "title": "Lemon Meringue Pie",
@@ -1226,7 +884,7 @@
             ],
             "icon": "food",
             "image": "/jpg/wei-zang/wei-zangs-food.jpg",
-            "excerpt": "You want a recipe? The interweb's full of them. This is how I cook\n\n[PageGrid pages=\"/life/food/airfriedpeppers, /life/food/bananabread, /life/food/beefwellie, /life/food/lemonmeringuepie\"]\n\nIf you fi"
+            "excerpt": "You want a recipe? The interweb's full of them. This is how I cook\n\n[PageGrid pages=\"/life/food/bladdygiveitsome, /life/food/nasigoreng, /life/food/airfriedpeppers, /life/food/bananabread, /life/food/"
           },
           {
             "title": "Aquaponics",
@@ -1242,12 +900,12 @@
                 "icon": "fish",
                 "image": "/png/n64/hippy.png",
                 "type": "file",
-                "excerpt": "What: Aquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closedloop system.\n\nWho: Ideal for urban growers, hobbyists"
+                "excerpt": "What  \nAquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closedloop system.\n\nWho  \nIdeal for urban growers, hobbyis"
               }
             ],
             "icon": "fish",
             "image": "/png/n64/hippy.png",
-            "excerpt": "Aquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closedloop system."
+            "excerpt": "Aquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closedloop system.\n\n[PageGrid thumbnails=\"no\" pages=\"/life/aquapo"
           },
           {
             "title": "Motorbikes",
@@ -1267,35 +925,97 @@
       },
       {
         "title": "Balance",
-        "description": "It's hard to collate stuff into readable writing, but we're doing our best",
+        "description": "It's hard to collate stuff, but we're doing our best",
         "slug": "/balance",
         "order": 100,
         "type": "folder",
         "children": [
           {
-            "title": "Writing",
-            "description": "It's hard to collate stuff into readable writing, but we're doing our best",
-            "slug": "/balance/writing",
-            "order": 1,
+            "title": "Pictures",
+            "description": "Flickr etc",
+            "slug": "/balance/pictures",
+            "order": 5,
+            "type": "folder",
+            "children": [],
+            "icon": "photo",
+            "image": "https://live.staticflickr.com/65535/53519132441_43525fc3a4_b.jpg",
+            "excerpt": "and AI Gen"
+          },
+          {
+            "title": "Film",
+            "description": "Archive going back to the 90's",
+            "slug": "/balance/film",
+            "order": 10,
+            "type": "folder",
+            "children": [
+              {
+                "title": "A Very British Protest",
+                "slug": "/balance/film/a-very-british-protest",
+                "order": 10,
+                "icon": "film",
+                "type": "file",
+                "excerpt": "[YouTube src=\"https://youtu.be/uPDem3qOUaU\"]"
+              },
+              {
+                "title": "Chamonix Freeride Day",
+                "slug": "/balance/film/freeride-day",
+                "order": 10,
+                "icon": "film",
+                "type": "file",
+                "excerpt": "The death sport capital of the world\n\n[YouTube src=\"https://youtu.be/FtcOeCLt838\"]\n\nChamonix Mont Blanc, France. The death sport and freeskiing capital of the world. This is the closing day party on t"
+              },
+              {
+                "title": "It's Not Who You Know",
+                "slug": "/balance/film/inwyk",
+                "order": 10,
+                "icon": "film",
+                "type": "file",
+                "excerpt": "The final film took several weeks to produce, filming on the underground, rendering 3D animation and creating some original titles in flash.\n\n[YouTube src=\"https://www.youtube.com/watch?v=Qe2ZLYzQToQ\""
+              },
+              {
+                "title": "James Dean",
+                "slug": "/balance/film/james-dean",
+                "order": 10,
+                "icon": "film",
+                "type": "file",
+                "excerpt": "[YouTube src=\"https://youtu.be/N3hz76MR5ao\"]"
+              },
+              {
+                "title": "Who is calling whom moronic?",
+                "slug": "/balance/film/moronic",
+                "order": 10,
+                "icon": "film",
+                "type": "file",
+                "excerpt": "Who is calling whom moronic?\n\n[YouTube src=\"https://youtu.be/vWl2NLY6NaQ\"]"
+              }
+            ],
+            "icon": "film",
+            "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/balance/film/averybritishprotest, /balance/film/jamesdean, /balance/film/moronic, /balance/film/inwyk, /balance/film/freerideday\"]"
+          },
+          {
+            "title": "Words",
+            "description": "It was a dark and stormy night…",
+            "slug": "/balance/words",
+            "order": 20,
             "type": "folder",
             "children": [
               {
                 "title": "Der Kleine Zeppelin",
                 "description": "by Wei Zang",
-                "slug": "/balance/writing/der-kleine-zeppelin",
+                "slug": "/balance/words/der-kleine-zeppelin",
                 "order": 10,
                 "type": "folder",
                 "children": [
                   {
                     "title": "Map",
                     "description": "",
-                    "slug": "/balance/writing/der-kleine-zeppelin/countries",
+                    "slug": "/balance/words/der-kleine-zeppelin/countries",
                     "order": 10,
                     "type": "folder",
                     "children": [
                       {
                         "title": "Britain",
-                        "slug": "/balance/writing/der-kleine-zeppelin/countries/britain",
+                        "slug": "/balance/words/der-kleine-zeppelin/countries/britain",
                         "order": 99,
                         "icon": "van",
                         "image": "https://live.staticflickr.com/65535/53998963131_bf0cb94288_b.jpg",
@@ -1304,7 +1024,7 @@
                       },
                       {
                         "title": "France",
-                        "slug": "/balance/writing/der-kleine-zeppelin/countries/france",
+                        "slug": "/balance/words/der-kleine-zeppelin/countries/france",
                         "order": 110,
                         "icon": "van",
                         "image": "https://live.staticflickr.com/65535/54458539144_1d61fc9025_b.jpg",
@@ -1313,7 +1033,7 @@
                       },
                       {
                         "title": "Belgium",
-                        "slug": "/balance/writing/der-kleine-zeppelin/countries/belgium",
+                        "slug": "/balance/words/der-kleine-zeppelin/countries/belgium",
                         "order": 125,
                         "icon": "van",
                         "image": "https://live.staticflickr.com/65535/54369337224_3278c64992_b.jpg",
@@ -1322,7 +1042,7 @@
                       },
                       {
                         "title": "Germany",
-                        "slug": "/balance/writing/der-kleine-zeppelin/countries/germany",
+                        "slug": "/balance/words/der-kleine-zeppelin/countries/germany",
                         "order": 170,
                         "icon": "van",
                         "image": "https://live.staticflickr.com/65535/54873111678_2633c4ba43_b.jpg",
@@ -1331,7 +1051,7 @@
                       },
                       {
                         "title": "Spain",
-                        "slug": "/balance/writing/der-kleine-zeppelin/countries/spain",
+                        "slug": "/balance/words/der-kleine-zeppelin/countries/spain",
                         "order": 179,
                         "icon": "van",
                         "image": "https://live.staticflickr.com/65535/54548563778_406a5e74b2_b.jpg",
@@ -1340,7 +1060,7 @@
                       },
                       {
                         "title": "Portugal",
-                        "slug": "/balance/writing/der-kleine-zeppelin/countries/portugal",
+                        "slug": "/balance/words/der-kleine-zeppelin/countries/portugal",
                         "order": 190,
                         "icon": "van",
                         "image": "https://live.staticflickr.com/65535/54639869696_b8a3cdb0de_b.jpg",
@@ -1353,7 +1073,7 @@
                   },
                   {
                     "title": "Google",
-                    "slug": "/balance/writing/der-kleine-zeppelin/google",
+                    "slug": "/balance/words/der-kleine-zeppelin/google",
                     "order": 10,
                     "icon": "van",
                     "type": "file",
@@ -1362,7 +1082,7 @@
                   {
                     "title": "Vanlife",
                     "description": "definition of",
-                    "slug": "/balance/writing/der-kleine-zeppelin/vanlife",
+                    "slug": "/balance/words/der-kleine-zeppelin/vanlife",
                     "order": 10,
                     "type": "folder",
                     "children": [],
@@ -1377,13 +1097,13 @@
               {
                 "title": "Not Here To Fuck Spiders",
                 "description": "by Wei Zang",
-                "slug": "/balance/writing/not-here-to-fuck-spiders",
+                "slug": "/balance/words/not-here-to-fuck-spiders",
                 "order": 500,
                 "type": "folder",
                 "children": [
                   {
                     "title": "Bez",
-                    "slug": "/balance/writing/not-here-to-fuck-spiders/bez",
+                    "slug": "/balance/words/not-here-to-fuck-spiders/bez",
                     "order": 11,
                     "icon": "bug",
                     "image": "https://live.staticflickr.com/65535/54340497432_b8c92a3215_b.jpg",
@@ -1396,7 +1116,7 @@
                   },
                   {
                     "title": "Dog",
-                    "slug": "/balance/writing/not-here-to-fuck-spiders/puppy-thing",
+                    "slug": "/balance/words/not-here-to-fuck-spiders/puppy-thing",
                     "order": 30,
                     "icon": "bug",
                     "image": "/jpg/puppy-fing.jpg",
@@ -1410,147 +1130,13 @@
               }
             ],
             "icon": "writing",
-            "image": "https://live.staticflickr.com/65535/53519132441_43525fc3a4_b.jpg",
-            "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/balance/writing/notheretofuckspiders, /balance/writing/derkleinezeppelin\"]"
-          },
-          {
-            "title": "Video",
-            "description": "It's Not Who You Know (2000)",
-            "slug": "/balance/video",
-            "order": 5,
-            "type": "folder",
-            "children": [],
-            "icon": "star",
-            "image": "https://live.staticflickr.com/65535/53519132441_43525fc3a4_b.jpg",
-            "excerpt": "[YouTube src=\"https://www.youtube.com/watch?v=Qe2ZLYzQToQ\"]\n\nWhilst working at a design agency in London in the year 2000 I was given the opportunity to work on a personal project and chose to make a "
-          },
-          {
-            "title": "Books",
-            "description": "What are you reading?",
-            "slug": "/balance/books",
-            "order": 20,
-            "type": "folder",
-            "children": [
-              {
-                "title": "R. F. Kuang",
-                "description": "MPhil in Chinese Studies from Cambridge and an MSc in Contemporary Chinese Studies from Oxford",
-                "slug": "/balance/books/r-f-kuang",
-                "order": 10,
-                "type": "folder",
-                "children": [
-                  {
-                    "title": "Babel",
-                    "slug": "/balance/books/r-f-kuang/babel",
-                    "order": 25,
-                    "icon": "books",
-                    "image": "/png/balance/books/babel.png",
-                    "type": "file",
-                    "tags": [
-                      "Speculative fiction",
-                      "alternative history"
-                    ],
-                    "excerpt": "or... the Necessity of Violence\n\nIt is an alternative history novel, set in a fantastical version of Oxford in 1830s England. In the second week of September 2022, Babel was placed at the top spot on "
-                  },
-                  {
-                    "title": "Katabasis",
-                    "slug": "/balance/books/r-f-kuang/katabasis",
-                    "order": 40,
-                    "icon": "books",
-                    "image": "/png/balance/books/katabasis.png",
-                    "type": "file",
-                    "tags": [
-                      "Speculative fiction",
-                      "alternative history",
-                      "fantasy"
-                    ],
-                    "excerpt": "[PrevNext prev=\"/balance/books/rfkuang\" next=\"/balance/books/rfkuang/babel\"]\n\nKatabasis is a 2025 fantasy novel by American writer R. F. Kuang. It was released on August 26, 2025. The novel follows tw"
-                  }
-                ],
-                "icon": "books",
-                "image": "/png/balance/writers/r-f-kuang.png",
-                "tags": [
-                  "Speculative fiction",
-                  "alternative history"
-                ],
-                "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/balance/books/rfkuang/babel, /balance/books/rfkuang/katabasis\"]\n\nR. F. Kuang was born on May 29th, 1996, in Guangzhou, China. She immigrated to the United States wit"
-              },
-              {
-                "title": "Douglas Coupland",
-                "description": "Canadian novelist and artist",
-                "slug": "/balance/books/douglas-coupland",
-                "order": 34,
-                "type": "folder",
-                "children": [
-                  {
-                    "title": "Generation X",
-                    "slug": "/balance/books/douglas-coupland/generation-x",
-                    "order": 100,
-                    "icon": "books",
-                    "image": "https://live.staticflickr.com/65535/54736833001_ef9c5f4b57_c.jpg",
-                    "type": "file",
-                    "excerpt": "The term Generation X acquired a modern application after the release of Generation X: Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Glossary\n\nMcJob A lo"
-                  },
-                  {
-                    "title": "Microserfs",
-                    "slug": "/balance/books/douglas-coupland/microserfs",
-                    "order": 150,
-                    "icon": "books",
-                    "image": "https://live.staticflickr.com/65535/54736833001_ef9c5f4b57_c.jpg",
-                    "type": "file",
-                    "excerpt": "Earliest piece of fiction to centre coders as modern workers with rich inner lives\n\nMicroserfs (1995) captures a moment in tech history that feels both distant and strangely familiar. Coupland wrote i"
-                  }
-                ],
-                "icon": "books",
-                "image": "https://live.staticflickr.com/65535/54736833001_ef9c5f4b57_c.jpg",
-                "excerpt": "Douglas Coupland is a Canadian novelist and artist, known for capturing contemporary culture, technology, and the malaise of modern life with wit and satirical insight. His writing often blends pop cu"
-              },
-              {
-                "title": "William Gibson",
-                "slug": "/balance/books/william-gibson",
-                "order": 50,
-                "icon": "books",
-                "image": "https://live.staticflickr.com/65535/54743292173_aed0039452_b.jpg",
-                "type": "file",
-                "tags": [
-                  "Science Fiction",
-                  "Fiction",
-                  "Cyberpunk",
-                  "Classics",
-                  "Dystopia",
-                  "Science Fiction Fantasy",
-                  "Fantasy",
-                  "Audiobook",
-                  "Novels"
-                ],
-                "excerpt": "Neuromancer (1984)\n\n Neuromancer's portrayal of AIs striving for autonomy foreshadowed realworld debates. Neuromancer didn’t predict the future—it just defined how to imagine it\n\n Why Neuromancer is S"
-              },
-              {
-                "title": "Tom Robbins",
-                "slug": "/balance/books/tom-robbins",
-                "order": 1233,
-                "icon": "books",
-                "image": "https://live.staticflickr.com/65535/54735999657_5ec054b3e2_b.jpg",
-                "type": "file",
-                "excerpt": "Tom Robbins is an American novelist known for playful, whimsical prose, irreverent humor, and philosophical musings. His works blend surrealism, countercultural themes, and sharp social commentary, wi"
-              }
-            ],
-            "icon": "books",
-            "image": "https://live.staticflickr.com/65535/53519132441_43525fc3a4_b.jpg",
-            "tags": [
-              "science fiction",
-              "books",
-              "satire",
-              "douglas coupland",
-              "Cixin Liu",
-              "Orwell",
-              "Pullman"
-            ],
-            "excerpt": "A curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction\n\n[PageGrid thumbnails=\"yes\" pages=\"/balance/books/rfkuang/babel, /balance/books/dougla"
+            "image": "https://live.staticflickr.com/65535/54935913815_ed25e30042_b.jpg",
+            "excerpt": "Snoopy’s line “It was a dark and stormy night…” is a deliberate parody of the famously bad opening sentence from Edward BulwerLytton’s 1830 novel Paul Clifford. That sentence became a cultural shortha"
           }
         ],
         "icon": "balance",
         "image": "https://live.staticflickr.com/65535/52538111215_c3a5b085b8_b.jpg",
-        "excerpt": "If you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are \n\n[PageGrid thumbnails=\"no\" pages=\"/balance/books, /balance/video, /balance/writing\"]"
+        "excerpt": "If you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are \n\n[PageGrid thumbnails=\"no\" pages=\"/balance/words, /balance/film, /balance/pictures\"]"
       }
     ],
     "icon": "home",

@@ -1,10 +1,10 @@
 ---
-order: 2200
+order: 15
 slug: /work/open-source/new-cartridge
 title: New Cartridge
 description: Template for bootstrapping a new cartridge
 icon: add
-image: /jpg/other/Opengraph-template.jpg
+image: /png/n64/test.png
 ---
 
 [GitHub url="https://github.com/javascript-pro/core" label="Clone repo"]

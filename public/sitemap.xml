@@ -2,79 +2,70 @@
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://goldlabel.pro/balance/books/douglas-coupland/generation-x</loc>
+    <loc>https://goldlabel.pro/balance/film/a-very-british-protest</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/books/douglas-coupland</loc>
+    <loc>https://goldlabel.pro/balance/film/freeride-day</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/books/douglas-coupland/microserfs</loc>
+    <loc>https://goldlabel.pro/balance/film</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/books</loc>
+    <loc>https://goldlabel.pro/balance/film/inwyk</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/books/r-f-kuang/babel</loc>
+    <loc>https://goldlabel.pro/balance/film/james-dean</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/books/r-f-kuang</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/books/r-f-kuang/katabasis</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/books/tom-robbins</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/books/william-gibson</loc>
+    <loc>https://goldlabel.pro/balance/film/moronic</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/balance</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/video</loc>
+    <loc>https://goldlabel.pro/balance/pictures</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/writing/der-kleine-zeppelin/countries/belgium</loc>
+    <loc>https://goldlabel.pro/balance/words/der-kleine-zeppelin/countries/belgium</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/writing/der-kleine-zeppelin/countries/britain</loc>
+    <loc>https://goldlabel.pro/balance/words/der-kleine-zeppelin/countries/britain</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/writing/der-kleine-zeppelin/countries/france</loc>
+    <loc>https://goldlabel.pro/balance/words/der-kleine-zeppelin/countries/france</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/writing/der-kleine-zeppelin/countries/germany</loc>
+    <loc>https://goldlabel.pro/balance/words/der-kleine-zeppelin/countries/germany</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/writing/der-kleine-zeppelin/countries</loc>
+    <loc>https://goldlabel.pro/balance/words/der-kleine-zeppelin/countries</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/writing/der-kleine-zeppelin/countries/portugal</loc>
+    <loc>https://goldlabel.pro/balance/words/der-kleine-zeppelin/countries/portugal</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/writing/der-kleine-zeppelin/countries/spain</loc>
+    <loc>https://goldlabel.pro/balance/words/der-kleine-zeppelin/countries/spain</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/writing/der-kleine-zeppelin/google</loc>
+    <loc>https://goldlabel.pro/balance/words/der-kleine-zeppelin/google</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/writing/der-kleine-zeppelin</loc>
+    <loc>https://goldlabel.pro/balance/words/der-kleine-zeppelin</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/writing/der-kleine-zeppelin/vanlife</loc>
+    <loc>https://goldlabel.pro/balance/words/der-kleine-zeppelin/vanlife</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/writing</loc>
+    <loc>https://goldlabel.pro/balance/words</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/writing/not-here-to-fuck-spiders/bez</loc>
+    <loc>https://goldlabel.pro/balance/words/not-here-to-fuck-spiders/bez</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/writing/not-here-to-fuck-spiders</loc>
+    <loc>https://goldlabel.pro/balance/words/not-here-to-fuck-spiders</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/writing/not-here-to-fuck-spiders/puppy-thing</loc>
+    <loc>https://goldlabel.pro/balance/words/not-here-to-fuck-spiders/puppy-thing</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/</loc>
@@ -84,6 +75,36 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/life/aquaponics/overview</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/books/cixin-liu</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/books/douglas-coupland/generation-x</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/books/douglas-coupland</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/books/douglas-coupland/microserfs</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/books</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/books/neuromancer</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/books/r-f-kuang/babel</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/books/r-f-kuang</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/books/r-f-kuang/katabasis</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/books/tom-robbins</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/life/diving</loc>
@@ -102,6 +123,9 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/life/food/beef-wellie</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/food/bladdy-give-it-some</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/life/food</loc>
@@ -137,9 +161,6 @@
     <loc>https://goldlabel.pro/work/company/gdpr</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/company/how-we-work</loc>
-  </url>
-  <url>
     <loc>https://goldlabel.pro/work/company</loc>
   </url>
   <url>
@@ -149,166 +170,10 @@
     <loc>https://goldlabel.pro/work/company/terms</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/work/company/where-we-work</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/work/company/work-with-us</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/ai/abgeschottet-ki/confidentiality-obligations</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/ai/abgeschottet-ki/gdpr-law-firms</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/ai/abgeschottet-ki/hardware</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/ai/abgeschottet-ki</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/ai/abgeschottet-ki/learning</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/ai/abgeschottet-ki/llms-legal-research</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/ai/abgeschottet-ki/organisational-measures</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/ai/abgeschottet-ki/professional-secrecy</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/ai/abgeschottet-ki/prompts</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/ai/abgeschottet-ki/ringfenced-llm-confidentiality</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/ai/abgeschottet-ki/ringfenced-llm</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/ai/abgeschottet-ki/risks-public-llms</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/ai/abgeschottet-ki/why</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/ai/agents</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/ai/ai-visibility</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/ai/coding-with-ai</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/ai</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/fullstack/blockchain</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/fullstack/data-migration</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/fullstack</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/fullstack/mui</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/fullstack/open-source</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/fullstack/rest-api</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/fullstack/three-js</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/fullstack/web3d</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/git/github</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/git/gitkraken</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/git</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/javascript</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/javascript/js-testing</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/javascript/nextjs</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/javascript/node</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/javascript/react/experience</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/javascript/react/history</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/javascript/react/hooks</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/javascript/react</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/javascript/typescript/advanced</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/javascript/typescript/aliases</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/javascript/typescript/get-started</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/javascript/typescript</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/javascript/typescript/real-world</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/javascript/typescript/structural-typing</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/javascript/typescript/union-types</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/javascript/vanilla-js</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/windoze/agile</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/windoze</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/windoze/overview</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/windoze/testing</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/wordpress/architecture</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/wordpress/case-study</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/wordpress</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/expertise/wordpress/modernising</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work</loc>
@@ -339,5 +204,59 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work/open-source/uberedux</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/git</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/javascript</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/javascript/nextjs</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/javascript/node</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/javascript/react/experience</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/javascript/react/history</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/javascript/react/hooks</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/javascript/react</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/javascript/testing</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/javascript/typescript/advanced</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/javascript/typescript/aliases</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/javascript/typescript/get-started</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/javascript/typescript</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/javascript/typescript/real-world</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/javascript/typescript/structural-typing</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/javascript/typescript/union-types</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/javascript/vanilla-js</loc>
   </url>
 </urlset>

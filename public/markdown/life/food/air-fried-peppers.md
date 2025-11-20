@@ -1,6 +1,6 @@
 ---
 order: 35
-title: 'Air Fried Stuffed Peppers'
+title: 'Air Fried Peppers'
 description: 'Got bolognese and peppers?'
 slug: /life/food/air-fried-peppers
 icon: 'food'
