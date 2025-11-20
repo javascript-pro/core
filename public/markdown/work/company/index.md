@@ -24,4 +24,3 @@ tags: intellectual-property
 - [Facebook](https://www.facebook.com/goldlabelappss)
 - [Youtube](https://www.youtube.com/@milkylackstoes)
 - [Flickr](https://www.flickr.com/photos/listingslab)
-

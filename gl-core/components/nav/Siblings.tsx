@@ -140,7 +140,11 @@ export default function Siblings() {
           </ListItemIcon>
           {!isMobile && (
             <ListItemText
-              primary={<Typography noWrap variant="body2">{node.title}</Typography>}
+              primary={
+                <Typography noWrap variant="body2">
+                  {node.title}
+                </Typography>
+              }
             />
           )}
         </ListItemButton>
@@ -154,7 +158,11 @@ export default function Siblings() {
           </ListItemIcon>
           {!isMobile && (
             <ListItemText
-              primary={<Typography noWrap variant="body2">{parent.title}</Typography>}
+              primary={
+                <Typography noWrap variant="body2">
+                  {parent.title}
+                </Typography>
+              }
             />
           )}
         </ListItemButton>
@@ -177,7 +185,9 @@ export default function Siblings() {
                 {!isMobile && (
                   <ListItemText
                     primary={
-                      <Typography noWrap variant="body2">{item.title}</Typography>
+                      <Typography noWrap variant="body2">
+                        {item.title}
+                      </Typography>
                     }
                   />
                 )}
