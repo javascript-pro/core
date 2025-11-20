@@ -10,6 +10,7 @@ import {
   ListItemIcon,
   ListItemText,
   Box,
+  Typography,
 } from '@mui/material';
 import { useIsMobile } from '../../../gl-core';
 import { Icon } from '../../cartridges/DesignSystem';
@@ -137,7 +138,11 @@ export default function Siblings() {
           <ListItemIcon>
             <Icon icon={(node.icon as any) || 'up'} color="primary" />
           </ListItemIcon>
-          {!isMobile && <ListItemText primary={node.title} />}
+          {!isMobile && (
+            <ListItemText
+              primary={<Typography noWrap variant="body2">{node.title}</Typography>}
+            />
+          )}
         </ListItemButton>
       ))}
 
@@ -147,7 +152,11 @@ export default function Siblings() {
           <ListItemIcon>
             <Icon icon={(parent.icon as any) || 'up'} color="primary" />
           </ListItemIcon>
-          {!isMobile && <ListItemText primary={parent.title} />}
+          {!isMobile && (
+            <ListItemText
+              primary={<Typography noWrap variant="body2">{parent.title}</Typography>}
+            />
+          )}
         </ListItemButton>
       )}
 
@@ -165,7 +174,13 @@ export default function Siblings() {
                 <ListItemIcon>
                   <Icon icon={item.icon as any} color="primary" />
                 </ListItemIcon>
-                {!isMobile && <ListItemText primary={item.title} />}
+                {!isMobile && (
+                  <ListItemText
+                    primary={
+                      <Typography noWrap variant="body2">{item.title}</Typography>
+                    }
+                  />
+                )}
               </ListItemButton>
             );
           })}

@@ -5,10 +5,6 @@ import { Box } from '@mui/material';
 import { useUser, UserCard } from '../../Paywall';
 
 export default function User() {
-  const user = useUser();
-
-  if (!user) return null;
-
   return (
     <Box sx={{ p: 0 }}>
       <Box
@@ -18,16 +14,8 @@ export default function User() {
         }}
       >
         <Box sx={{ flexGrow: 1 }} />
-        <UserCard />
+        UserCard
       </Box>
-      {/* <List>
-        <ListItemButton onClick={() => setConfirmOpen(true)}>
-          <ListItemIcon>
-            <Icon icon="signout" />
-          </ListItemIcon>
-          <ListItemText secondary="Sign Out" />
-        </ListItemButton>
-      </List> */}
     </Box>
   );
 }

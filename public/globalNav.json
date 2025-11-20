@@ -22,7 +22,7 @@
             "children": [
               {
                 "title": "How we work",
-                "slug": "/work/company/how-we-work",
+                "slug": "/work/company/where-we-work",
                 "order": 250,
                 "icon": "company",
                 "image": "/png/3rdParty/git_og.png",
@@ -33,6 +33,40 @@
                   "intellectual-property"
                 ],
                 "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years.\n\n How we work\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, c"
+              },
+              {
+                "title": "Privacy & Cookies",
+                "slug": "/work/company/privacy-cookies",
+                "order": 450,
+                "icon": "company",
+                "image": "/png/3rdParty/git_og.png",
+                "type": "file",
+                "tags": [
+                  "cookies",
+                  "gdpr",
+                  "privacy",
+                  "terms",
+                  "trust",
+                  "intellectual-property"
+                ],
+                "excerpt": "We don't use cookies\n\n Cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead de"
+              },
+              {
+                "title": "Terms & Conditions",
+                "slug": "/work/company/terms",
+                "order": 500,
+                "icon": "company",
+                "image": "/png/3rdParty/git_og.png",
+                "type": "file",
+                "tags": [
+                  "cookies",
+                  "gdpr",
+                  "privacy",
+                  "terms",
+                  "trust",
+                  "intellectual-property"
+                ],
+                "excerpt": "Liability boundaries, intellectualproperty ownership, and disputes\n\n Our Terms & Conditions\n\nDefine how this app should be used, what we’re responsible for, and what users can expect from the platform"
               },
               {
                 "title": "Work With Us",
@@ -46,23 +80,6 @@
                   "intellectual-property"
                 ],
                 "excerpt": "We take on a limited number of new projects each month\n\n Work With Us\n\nIf you need something done we’d love to hear about it. Find out if we're a . We're always looking for collaborators, contributors"
-              },
-              {
-                "title": "Privacy & Cookies",
-                "slug": "/work/company/privacy-cookies",
-                "order": 5555,
-                "icon": "company",
-                "image": "/png/3rdParty/git_og.png",
-                "type": "file",
-                "tags": [
-                  "cookies",
-                  "gdpr",
-                  "privacy",
-                  "terms",
-                  "trust",
-                  "intellectual-property"
-                ],
-                "excerpt": "We don't use cookies\n\n Cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead de"
               },
               {
                 "title": "GDPR",
@@ -79,23 +96,6 @@
                   "trust"
                 ],
                 "excerpt": "GDPR sets the rules for how we collect, store, and use personal data\n\n What does it mean?\n\nFor us it means we must minimise data collection, document what we process, and give users clear control over"
-              },
-              {
-                "title": "Terms & Conditions",
-                "slug": "/work/company/terms",
-                "order": 5721,
-                "icon": "company",
-                "image": "/png/3rdParty/git_og.png",
-                "type": "file",
-                "tags": [
-                  "cookies",
-                  "gdpr",
-                  "privacy",
-                  "terms",
-                  "trust",
-                  "intellectual-property"
-                ],
-                "excerpt": "Liability boundaries, intellectualproperty ownership, and disputes\n\n Our Terms & Conditions\n\nDefine how this app should be used, what we’re responsible for, and what users can expect from the platform"
               }
             ],
             "icon": "company",
@@ -103,7 +103,7 @@
             "tags": [
               "intellectual-property"
             ],
-            "excerpt": "| Tel/WhatsApp  |  | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX"
+            "excerpt": "| Tel/WhatsApp  |  | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX\n\n \n \n \n \n \n\n[PageGrid thumbnails=\"no\" pages=\"/work/company/gdpr, /work/company/privacycookies, /work/c"
           },
           {
             "title": "Case Studies",
@@ -126,7 +126,7 @@
                   "magento",
                   "e-commerce"
                 ],
-                "excerpt": "Magento PHP & Material Design System\n\n JavaScript Developer, Adelaide"
+                "excerpt": "Magento PHP & Material Design System\n\n JavaScript Developer, Adelaide\n\nLead developer creating a front end React application for Cancer Council NSW. The application connecting to a WordPress driven CM"
               },
               {
                 "title": "Hertwig & Auer",

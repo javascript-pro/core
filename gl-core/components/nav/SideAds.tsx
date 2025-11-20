@@ -8,6 +8,7 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  Typography,
 } from '@mui/material';
 import { useDispatch, routeTo, useIsMobile } from '../../../gl-core';
 import { useRouter, usePathname } from 'next/navigation';
@@ -48,7 +49,13 @@ export default function SideAds() {
               <ListItemIcon>
                 <Icon icon={item.icon as any} color="primary" />
               </ListItemIcon>
-              {!isMobile && <ListItemText primary={item.title} />}
+              {!isMobile && (
+                <ListItemText
+                  primary={
+                    <Typography variant="body2" noWrap>{item.title}</Typography>
+                  }
+                />
+              )}
             </ListItemButton>
           );
         })}

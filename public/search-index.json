@@ -333,7 +333,7 @@
     "title": "Aligent",
     "description": "Design Systems",
     "tags": "expertise, interview, php, magento, e-commerce",
-    "content": "\n## Magento PHP & Material Design System\n\n> JavaScript Developer, Adelaide\n"
+    "content": "\n## Magento PHP & Material Design System\n\n> JavaScript Developer, Adelaide\n\nLead developer creating a front end React application for Cancer Council NSW. The application connecting to a WordPress driven CMS via the new JSON API.\nPHP development of custom API endpoints\nWordPress plugin development\nReact App development using ES6 & webpack & managing workflow with GitFlow.\n"
   },
   {
     "slug": "work/case-studies/boral",
@@ -371,18 +371,11 @@
     "content": "\n> GDPR sets the rules for how we collect, store, and use personal data\n\n## What does it mean?\n\nFor us it means we must minimise data collection, document what we process, and give users clear control over anything that can identify them. For readers, it means stronger rights over their data — access, deletion, correction, and the ability to refuse tracking.\n\nThe cookie popup exists because many cookies (especially analytics, advertising, and profiling) count as personal-data processing under GDPR. We have to ask before enabling them. Functional [cookies](/work/company/privacy-cookies) that keep the site working don’t need consent; everything else does.\n"
   },
   {
-    "slug": "work/company/how-we-work",
-    "title": "How we work",
-    "description": "100% Remote, Hybrid or Onsite",
-    "tags": "remote, hybrid, intellectual-property",
-    "content": "\n> Corporate attitudes to remote working have changed dramatically in recent years.\n\n## How we work\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communication, and collaboration. However, the pandemic forced many businesses to adopt remote work policies, and they quickly discovered that employees could be just as productive and engaged when working from home\n\nAs a result of this positive experience, many businesses have now embraced remote work as a permanent part of their operations. A recent survey by PwC found that 83% of employers now say the shift to remote work has been successful for their company, and 67% plan to offer more remote work options in the future\n"
-  },
-  {
     "slug": "work/company/index",
     "title": "Company",
     "description": "UK Limited Company (5460545)",
     "tags": "intellectual-property",
-    "content": "\n> [UK Limited Company 5460545](https://find-and-update.company-information.service.gov.uk/company/15460545)\n\n[goldlabel.apps@gmail.com](mailto:goldlabel.apps@gmail.com) | Tel/WhatsApp [+44 07745 763 122 ](https://wa.me/447745763122) | [GitHub](https://github.com/orgs/goldlabel-apps/) | [LinkedIn](https://www.linkedin.com/in/chris-dorward)\n\n> Goldlabel Apps Ltd  \n> 321-323 High Road  \n> Chadwell Heath  \n> Essex RM6 6AX\n\n- [X](https://x.com/goldlabelapps)\n- [Insta](https://www.instagram.com/milkylackstoes)\n- [Facebook](https://www.facebook.com/goldlabelappss)\n- [Youtube](https://www.youtube.com/@milkylackstoes)\n- [Flickr](https://www.flickr.com/photos/listingslab)\n"
+    "content": "\n> [UK Limited Company 5460545](https://find-and-update.company-information.service.gov.uk/company/15460545)\n\n[goldlabel.apps@gmail.com](mailto:goldlabel.apps@gmail.com) | Tel/WhatsApp [+44 07745 763 122 ](https://wa.me/447745763122) | [GitHub](https://github.com/orgs/goldlabel-apps/) | [LinkedIn](https://www.linkedin.com/in/chris-dorward)\n\n> Goldlabel Apps Ltd  \n> 321-323 High Road  \n> Chadwell Heath  \n> Essex RM6 6AX\n\n- [X](https://x.com/goldlabelapps)\n- [Insta](https://www.instagram.com/milkylackstoes)\n- [Facebook](https://www.facebook.com/goldlabelappss)\n- [Youtube](https://www.youtube.com/@milkylackstoes)\n- [Flickr](https://www.flickr.com/photos/listingslab)\n\n[PageGrid thumbnails=\"no\" pages=\"/work/company/gdpr, /work/company/privacy-cookies, /work/company/terms, /work/company/where-we-work, /work/company/work-with-us\"]\n"
   },
   {
     "slug": "work/company/privacy-cookies",
@@ -397,6 +390,13 @@
     "description": "Liability boundaries, intellectual-property ownership, and disputes",
     "tags": "cookies, gdpr, privacy, terms, trust, intellectual-property",
     "content": "\n> Liability boundaries, intellectual-property ownership, and disputes\n\n## Our Terms & Conditions\n\nDefine how this app should be used, what we’re responsible for, and what users can expect from the platform. For us, they set the legal framework covering content delivery, account access, service limitations, and acceptable use. For readers, they clarify rights, responsibilities, and the rules that apply when interacting with our software, APIs, and published material\n\nThey also explain liability boundaries, intellectual-property ownership, and how disputes are handled. In short, T&Cs ensure both sides know the ground rules before using the service\n"
+  },
+  {
+    "slug": "work/company/where-we-work",
+    "title": "How we work",
+    "description": "Onsite, 100% Remote or Hybrid",
+    "tags": "remote, hybrid, intellectual-property",
+    "content": "\n> Corporate attitudes to remote working have changed dramatically in recent years.\n\n## How we work\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, communication, and collaboration. However, the pandemic forced many businesses to adopt remote work policies, and they quickly discovered that employees could be just as productive and engaged when working from home\n\nAs a result of this positive experience, many businesses have now embraced remote work as a permanent part of their operations. A recent survey by PwC found that 83% of employers now say the shift to remote work has been successful for their company, and 67% plan to offer more remote work options in the future\n"
   },
   {
     "slug": "work/company/work-with-us",

@@ -2,38 +2,32 @@
 'use client';
 import * as React from 'react';
 import {
-  CardHeader,
   Dialog,
   Box,
   DialogActions,
   DialogContent,
-  DialogTitle,
   IconButton,
-  MenuItem,
-  ListItemIcon,
-  ListItemText,
+  DialogTitle,
+  CardHeader,
   Typography,
 } from '@mui/material';
-import { useDispatch, Icon, useIsMobile, reset } from '../../../../gl-core';
+import { useDispatch, useIsMobile, Icon } from '../../../../gl-core';
 import {
   useDesignSystem,
   setDesignSystemKey,
   MenuGrid,
 } from '../../DesignSystem';
+// import {
+//   usePaywall,
+//   useUser,
+// } from '../../Paywall';
 
 export default function SystemDialog() {
   const dispatch = useDispatch();
   const isMobile = useIsMobile();
   const ds = useDesignSystem();
-
-  const handleOpen = () => {
-    dispatch(
-      setDesignSystemKey('dialog', {
-        open: true,
-        title: 'fuck',
-      }),
-    );
-  };
+  // const paywall = usePaywall();
+  // const user = useUser();
 
   const handleClose = () => {
     // dispatch(setDesignSystemKey('dialog', {open: true, title: 'fuck'}));
@@ -41,8 +35,6 @@ export default function SystemDialog() {
   };
 
   if (!ds.dialog) return null;
-
-  // console.log('SystemDialog ds.dialog', ds.dialog);
 
   return (
     <>
@@ -53,14 +45,13 @@ export default function SystemDialog() {
         maxWidth={'md'}
         fullWidth
       >
-        {/* <DialogTitle>
+        <DialogTitle>
           <CardHeader
-            avatar={<Icon icon={ds.dialog.icon as any} />}
-            title={<Typography variant="h6">{ds.dialog.title}</Typography>}
+            avatar={<Icon icon={'design'} />}
+            title={<Typography variant="h6">Design System Dialog</Typography>}
             subheader={ds.dialog.subheader}
           />
-        </DialogTitle> */}
-
+        </DialogTitle>
         <DialogContent>
           <Box
             sx={{
@@ -69,7 +60,6 @@ export default function SystemDialog() {
           >
             <MenuGrid />
           </Box>
-          {/* <pre>dialog: {JSON.stringify(ds.dialog, null, 2)}</pre> */}
         </DialogContent>
 
         <DialogActions>
