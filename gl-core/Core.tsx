@@ -7,7 +7,6 @@ import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import {
   useMediaQuery,
-  CssBaseline,
   Container,
   Box,
   Grid,
@@ -20,8 +19,6 @@ import {
   PageBreadcrumb,
   useIsMobile,
   useVersionCheck,
-  IncludeAll,
-  useThemeMode,
   toggleLoading,
   useDispatch,
   Siblings,
@@ -68,7 +65,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
   return (
     <>
       <DesignSystem theme={config.themes[effectiveThemeMode]}>
-        <IncludeAll />
         <Container id="core" sx={{ mt: 2 }}>
           <Box sx={{ minHeight: '100vh' }}>
             <Grid container spacing={isMobile ? 0 : 1}>

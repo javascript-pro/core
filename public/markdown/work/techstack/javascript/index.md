@@ -10,7 +10,7 @@ tags: JavaScript, Vanilla JavaScript, TypeScript, React, Angular, Vue, Material 
 
 > We’ve been writing JavaScript since it was called ECMAScript.
 
-[PageGrid thumbnails="no" pages="/work/techstack/javascript/typescript, /work/techstack/javascript/react, /work/techstack/javascript/node, /work/techstack/javascript/nextjs, /work/techstack/javascript/js-testing, /work/techstack/javascript/vanilla-js"]
+[PageGrid thumbnails="no" pages="/work/techstack/javascript/typescript, /work/techstack/javascript/react, /work/techstack/javascript/node, /work/techstack/javascript/nextjs, /work/techstack/javascript/vanilla-js, /work/techstack/javascript/js-testing"]
 
 Before the frameworks, before npm, before it ate the world—we were already deep in the language that powers the modern web.
 

@@ -1,15 +1,15 @@
 'use client';
-// core/gl-core/components/includes/Feedback.tsx
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/DesignSystem/components/Feedback.tsx
 
 import * as React from 'react';
+import { TAuthForm } from '../../../../gl-core/types';
 import { Snackbar, Alert, IconButton } from '@mui/material';
-import { TAuthForm } from '../../../gl-core/types';
 import {
   useFeedback,
   useDispatch,
   toggleFeedback,
   Icon,
-} from '../../../gl-core';
+} from '../../../../gl-core';
 
 export default function Feedback({}: TAuthForm) {
   const feedback = useFeedback();
@@ -18,10 +18,9 @@ export default function Feedback({}: TAuthForm) {
   React.useEffect(() => {
     if (feedback && !feedback.hidden) {
       const timer = setTimeout(() => {
-        // console.log('toggleFeedback(null)');
+        console.log('toggleFeedback(null)');
         dispatch(toggleFeedback(null));
       }, 3000);
-
       return () => clearTimeout(timer);
     }
   }, [feedback, dispatch]);

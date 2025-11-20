@@ -215,9 +215,6 @@
     <loc>https://goldlabel.pro/work/techstack/javascript</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/javascript/js-testing</loc>
-  </url>
-  <url>
     <loc>https://goldlabel.pro/work/techstack/javascript/nextjs</loc>
   </url>
   <url>
@@ -234,6 +231,9 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work/techstack/javascript/react</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/javascript/testing</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/techstack/javascript/typescript/advanced</loc>

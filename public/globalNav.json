@@ -406,9 +406,9 @@
                     "excerpt": "JavaScript was never meant for what became asked of it. It started life scripting image rollovers in the ‘90s — and somehow ended up running banks and billiondollar web apps.\n\nBy the early 2010s, the "
                   },
                   {
-                    "title": "JS Testing",
+                    "title": "Testing",
                     "description": "Left looking approach",
-                    "slug": "/work/techstack/javascript/js-testing",
+                    "slug": "/work/techstack/javascript/testing",
                     "order": 95,
                     "type": "folder",
                     "children": [],
@@ -458,7 +458,7 @@
                   "Headless CMS",
                   "JSON"
                 ],
-                "excerpt": "We’ve been writing JavaScript since it was called ECMAScript.\n\nBefore the frameworks, before npm, before it ate the world—we were already deep in the language that powers the modern web.\n\nWe’ve built "
+                "excerpt": "We’ve been writing JavaScript since it was called ECMAScript.\n\n[PageGrid thumbnails=\"no\" pages=\"/work/techstack/javascript/typescript, /work/techstack/javascript/react, /work/techstack/javascript/node"
               },
               {
                 "title": "Git",
@@ -759,7 +759,7 @@
               }
             ],
             "icon": "books",
-            "image": "https://live.staticflickr.com/65535/53519132441_43525fc3a4_b.jpg",
+            "image": "/png/n64/chix.png",
             "tags": [
               "science fiction",
               "books",
@@ -792,11 +792,11 @@
                 "icon": "diving",
                 "image": "/png/n64/diving.png",
                 "type": "file",
-                "excerpt": "You might die. You have to mitigate that posiibility, yeh."
+                "excerpt": "You might die. You have to mitigate that posiibility, yeh.\n\nScuba diving takes you into an environment that does not want you there. One mistake—one second of panic, one lapse in awareness—and water w"
               }
             ],
             "icon": "diving",
-            "image": "/png/n64/diving.png",
+            "image": "https://live.staticflickr.com/65535/54936056240_8d8358141c_b.jpg",
             "excerpt": "[PageGrid pages=\"/life/diving/whydive, /life/diving/whynotdive\"]"
           },
           {
