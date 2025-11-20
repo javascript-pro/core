@@ -191,7 +191,7 @@
             "type": "folder",
             "children": [
               {
-                "title": "JavaScript",
+                "title": "Fullstack JavaScript",
                 "description": "JavaScript Whatever the Weather",
                 "slug": "/work/techstack/javascript",
                 "order": 3,
@@ -443,7 +443,7 @@
                 "icon": "js",
                 "image": "/png/3rdParty/javascript_og.png",
                 "tags": [
-                  "JavaScript",
+                  "Fullstack JavaScript",
                   "Vanilla JavaScript",
                   "TypeScript",
                   "React",

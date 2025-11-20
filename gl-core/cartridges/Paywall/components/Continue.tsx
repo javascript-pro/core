@@ -62,7 +62,7 @@ export default function Continue() {
             >
               Google
             </Button>
-            <Button
+            {/* <Button
               fullWidth
               variant="contained"
               onClick={handleFacebook}
@@ -70,7 +70,7 @@ export default function Continue() {
               sx={{ py: 1.6, mt: 2 }}
             >
               Facebook
-            </Button>
+            </Button> */}
             <Button
               fullWidth
               variant="contained"
