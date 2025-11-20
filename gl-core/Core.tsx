@@ -29,6 +29,9 @@ import {
 } from '../gl-core';
 import { SigninGate, useUser } from './cartridges/Paywall';
 import { DesignSystem, useDesignSystem } from './cartridges/DesignSystem';
+import { 
+  Paywall,
+} from './cartridges/Paywall';
 
 const config = configRaw as TConfig;
 
@@ -65,11 +68,17 @@ export default function Core({ frontmatter, body = null }: TCore) {
   return (
     <>
       <DesignSystem theme={config.themes[effectiveThemeMode]}>
+        <Paywall />
         <Container id="core" sx={{ mt: 2 }}>
+
+          
           <Box sx={{ minHeight: '100vh' }}>
             <Grid container spacing={isMobile ? 0 : 1}>
+              
               <Grid size={{ xs: 1, md: 3 }}>
-                <Box sx={{ overflow: 'hidden', ml: isMobile ? -3 : 0, mt: 0 }}>
+                <Box sx={{ 
+                  overflow: 'hidden', 
+                  ml: isMobile ? -3 : 0, mt: 0 }}>
                   {Array.isArray(siblings) && siblings.length > 0 ? (
                     <Siblings />
                   ) : (

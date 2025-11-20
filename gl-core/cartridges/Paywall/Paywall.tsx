@@ -2,18 +2,24 @@
 'use client';
 
 import * as React from 'react';
-import { Box, Avatar, IconButton } from '@mui/material';
+import { Box, IconButton } from '@mui/material';
 import { Icon, useDispatch } from '../../../gl-core';
 import { auth } from '../../lib/firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
-import { useUser, DialogPaywall, setPaywallKey, UserCard } from '../Paywall';
+import { 
+  useUser, 
+  setPaywallKey, 
+  UserCard,
+  SignOut,
+} from '../Paywall';
+import { 
+  setDesignSystemKey,
+} from '../DesignSystem';
 
 export default function Paywall() {
   const dispatch = useDispatch();
   const user = useUser();
-  // console.log("user", user)
 
-  // Subscribe to Firebase auth state changes
   React.useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user: User | null) => {
       dispatch(setPaywallKey('user', user));
@@ -22,36 +28,18 @@ export default function Paywall() {
     return () => unsubscribe();
   }, [dispatch]);
 
-  const handleClick = () => {
-    dispatch(setPaywallKey('dialogOpen', true));
+  const openDesignSystem = () => {
+    dispatch(
+      setDesignSystemKey('dialog', {
+        icon: 'paywall',
+        title: 'User Authentication',
+      }),
+    );
   };
 
   return (
     <>
-      <DialogPaywall />
-      {user ? (
-        <Box
-          sx={{
-            width: '100%',
-            display: 'flex',
-          }}
-        >
-          <Box sx={{ flexGrow: 1 }} />
-          <UserCard />
-        </Box>
-      ) : (
-        <Box
-          sx={{
-            width: '100%',
-            display: 'flex',
-          }}
-        >
-          <Box sx={{ flexGrow: 1 }} />
-          <IconButton onClick={handleClick} color="primary">
-            <Icon icon={'paywall'} />
-          </IconButton>
-        </Box>
-      )}
+      {user && <SignOut /> }
     </>
   );
 }
