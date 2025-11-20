@@ -30,13 +30,9 @@ export default function MenuGrid() {
   return (
     <>
       <Grid container spacing={1}>
+        <Grid size={{ xs: 12, md: 6 }}>{!user ? <Continue /> : <User />}</Grid>
         <Grid size={{ xs: 12, md: 6 }}>
-          {!user ? <Continue /> : <User />}
-
-          {/* <pre>user: {JSON.stringify(user, null, 2)}</pre> */}
-        </Grid>
-        <Grid size={{ xs: 12, md: 6 }}>
-          <Box sx={{my:2}}>
+          <Box sx={{ my: 2 }}>
             <SelectLang />
           </Box>
           <List dense>

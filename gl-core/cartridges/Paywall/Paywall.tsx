@@ -6,15 +6,8 @@ import { Box, IconButton } from '@mui/material';
 import { Icon, useDispatch } from '../../../gl-core';
 import { auth } from '../../lib/firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
-import { 
-  useUser, 
-  setPaywallKey, 
-  UserCard,
-  SignOut,
-} from '../Paywall';
-import { 
-  setDesignSystemKey,
-} from '../DesignSystem';
+import { useUser, setPaywallKey, UserCard, SignOut } from '../Paywall';
+import { setDesignSystemKey } from '../DesignSystem';
 
 export default function Paywall() {
   const dispatch = useDispatch();
@@ -37,9 +30,5 @@ export default function Paywall() {
     );
   };
 
-  return (
-    <>
-      {user && <SignOut /> }
-    </>
-  );
+  return <>{user && <SignOut />}</>;
 }
