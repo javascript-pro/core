@@ -2,7 +2,7 @@
 order: 10
 title: The Three Body Problem
 description: by Cixin Liu
-slug: /balance/books/cixin-liu
+slug: /life/books/cixin-liu
 icon: books
 image: https://live.staticflickr.com/65535/54933893533_4b3dbc97d6_b.jpg
 tags: Speculative fiction, Chinese, hard sci-fi

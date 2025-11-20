@@ -1430,29 +1430,29 @@
             "excerpt": "[YouTube src=\"https://www.youtube.com/watch?v=Qe2ZLYzQToQ\"]\n\nWhilst working at a design agency in London in the year 2000 I was given the opportunity to work on a personal project and chose to make a "
           },
           {
-            "title": "Writing",
-            "description": "It's hard to collate stuff into readable writing, but we're doing our best",
-            "slug": "/balance/writing",
+            "title": "Words",
+            "description": "It was a dark and stormy night…",
+            "slug": "/balance/words",
             "order": 50,
             "type": "folder",
             "children": [
               {
                 "title": "Der Kleine Zeppelin",
                 "description": "by Wei Zang",
-                "slug": "/balance/writing/der-kleine-zeppelin",
+                "slug": "/balance/words/der-kleine-zeppelin",
                 "order": 10,
                 "type": "folder",
                 "children": [
                   {
                     "title": "Map",
                     "description": "",
-                    "slug": "/balance/writing/der-kleine-zeppelin/countries",
+                    "slug": "/balance/words/der-kleine-zeppelin/countries",
                     "order": 10,
                     "type": "folder",
                     "children": [
                       {
                         "title": "Britain",
-                        "slug": "/balance/writing/der-kleine-zeppelin/countries/britain",
+                        "slug": "/balance/words/der-kleine-zeppelin/countries/britain",
                         "order": 99,
                         "icon": "van",
                         "image": "https://live.staticflickr.com/65535/53998963131_bf0cb94288_b.jpg",
@@ -1461,7 +1461,7 @@
                       },
                       {
                         "title": "France",
-                        "slug": "/balance/writing/der-kleine-zeppelin/countries/france",
+                        "slug": "/balance/words/der-kleine-zeppelin/countries/france",
                         "order": 110,
                         "icon": "van",
                         "image": "https://live.staticflickr.com/65535/54458539144_1d61fc9025_b.jpg",
@@ -1470,7 +1470,7 @@
                       },
                       {
                         "title": "Belgium",
-                        "slug": "/balance/writing/der-kleine-zeppelin/countries/belgium",
+                        "slug": "/balance/words/der-kleine-zeppelin/countries/belgium",
                         "order": 125,
                         "icon": "van",
                         "image": "https://live.staticflickr.com/65535/54369337224_3278c64992_b.jpg",
@@ -1479,7 +1479,7 @@
                       },
                       {
                         "title": "Germany",
-                        "slug": "/balance/writing/der-kleine-zeppelin/countries/germany",
+                        "slug": "/balance/words/der-kleine-zeppelin/countries/germany",
                         "order": 170,
                         "icon": "van",
                         "image": "https://live.staticflickr.com/65535/54873111678_2633c4ba43_b.jpg",
@@ -1488,7 +1488,7 @@
                       },
                       {
                         "title": "Spain",
-                        "slug": "/balance/writing/der-kleine-zeppelin/countries/spain",
+                        "slug": "/balance/words/der-kleine-zeppelin/countries/spain",
                         "order": 179,
                         "icon": "van",
                         "image": "https://live.staticflickr.com/65535/54548563778_406a5e74b2_b.jpg",
@@ -1497,7 +1497,7 @@
                       },
                       {
                         "title": "Portugal",
-                        "slug": "/balance/writing/der-kleine-zeppelin/countries/portugal",
+                        "slug": "/balance/words/der-kleine-zeppelin/countries/portugal",
                         "order": 190,
                         "icon": "van",
                         "image": "https://live.staticflickr.com/65535/54639869696_b8a3cdb0de_b.jpg",
@@ -1510,7 +1510,7 @@
                   },
                   {
                     "title": "Google",
-                    "slug": "/balance/writing/der-kleine-zeppelin/google",
+                    "slug": "/balance/words/der-kleine-zeppelin/google",
                     "order": 10,
                     "icon": "van",
                     "type": "file",
@@ -1519,7 +1519,7 @@
                   {
                     "title": "Vanlife",
                     "description": "definition of",
-                    "slug": "/balance/writing/der-kleine-zeppelin/vanlife",
+                    "slug": "/balance/words/der-kleine-zeppelin/vanlife",
                     "order": 10,
                     "type": "folder",
                     "children": [],
@@ -1534,13 +1534,13 @@
               {
                 "title": "Not Here To Fuck Spiders",
                 "description": "by Wei Zang",
-                "slug": "/balance/writing/not-here-to-fuck-spiders",
+                "slug": "/balance/words/not-here-to-fuck-spiders",
                 "order": 500,
                 "type": "folder",
                 "children": [
                   {
                     "title": "Bez",
-                    "slug": "/balance/writing/not-here-to-fuck-spiders/bez",
+                    "slug": "/balance/words/not-here-to-fuck-spiders/bez",
                     "order": 11,
                     "icon": "bug",
                     "image": "https://live.staticflickr.com/65535/54340497432_b8c92a3215_b.jpg",
@@ -1553,7 +1553,7 @@
                   },
                   {
                     "title": "Dog",
-                    "slug": "/balance/writing/not-here-to-fuck-spiders/puppy-thing",
+                    "slug": "/balance/words/not-here-to-fuck-spiders/puppy-thing",
                     "order": 30,
                     "icon": "bug",
                     "image": "/jpg/puppy-fing.jpg",
@@ -1567,8 +1567,8 @@
               }
             ],
             "icon": "writing",
-            "image": "https://live.staticflickr.com/65535/53519132441_43525fc3a4_b.jpg",
-            "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/balance/writing/notheretofuckspiders, /balance/writing/derkleinezeppelin\"]"
+            "image": "https://live.staticflickr.com/65535/54935913815_ed25e30042_b.jpg",
+            "excerpt": "Snoopy’s line “It was a dark and stormy night…” is a deliberate parody of the famously bad opening sentence from Edward BulwerLytton’s 1830 novel Paul Clifford. That sentence became a cultural shortha"
           }
         ],
         "icon": "balance",

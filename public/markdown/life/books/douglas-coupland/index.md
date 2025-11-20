@@ -2,7 +2,7 @@
 order: 34
 title: Douglas Coupland
 description: Canadian novelist and artist
-slug: /balance/books/douglas-coupland
+slug: /life/books/douglas-coupland
 icon: books
 image: https://live.staticflickr.com/65535/54736833001_ef9c5f4b57_c.jpg
 ---

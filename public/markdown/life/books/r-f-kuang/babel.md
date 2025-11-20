@@ -2,7 +2,7 @@
 order: 25
 title: Babel
 description: by R. F. Kuang
-slug: /balance/books/r-f-kuang/babel
+slug: /life/books/r-f-kuang/babel
 icon: books
 image: /png/balance/books/babel.png
 tags: Speculative fiction, alternative history

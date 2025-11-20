@@ -2,7 +2,7 @@
 order: 50
 title: Neuromancer
 description: by William Gibson
-slug: /balance/books/neuromancer
+slug: /life/books/neuromancer
 icon: books
 image: https://live.staticflickr.com/65535/54743292173_aed0039452_b.jpg
 tags: Science Fiction, Fiction, Cyberpunk, Classics, Dystopia, Science Fiction Fantasy, Fantasy, Audiobook, Novels
