@@ -28,6 +28,8 @@ import AccountIcon from '@mui/icons-material/SupervisedUserCircle';
 import ExperienceIcon from '@mui/icons-material/AllInclusive';
 //
 import AdminIcon from '@mui/icons-material/SupervisedUserCircle';
+import FilmIcon from '@mui/icons-material/Theaters';
+
 import AndroidIcon from '@mui/icons-material/Android';
 import HowIcon from '@mui/icons-material/ElectricBoltOutlined';
 import WhoIcon from '@mui/icons-material/EscalatorWarningOutlined';
@@ -195,6 +197,7 @@ export type TIconShape = {
     | 'album'
     | 'flickr'
     | 'photo'
+    | 'film'
     | 'preview'
     | 'add'
     | 'account'
@@ -350,6 +353,10 @@ export default function Icon({ icon, color }: TIconShape) {
   switch (icon) {
     case 'core':
       iconFragment = <CoreIcon color={color} />;
+      break;
+
+    case 'film':
+      iconFragment = <FilmIcon color={color} />;
       break;
 
     case 'free':

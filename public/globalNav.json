@@ -1437,6 +1437,22 @@
             "type": "folder",
             "children": [
               {
+                "title": "A Very British Protest",
+                "slug": "/balance/film/a-very-british-protest",
+                "order": 10,
+                "icon": "film",
+                "type": "file",
+                "excerpt": "[YouTube src=\"https://youtu.be/uPDem3qOUaU\"]"
+              },
+              {
+                "title": "Chamonix Freeride Day",
+                "slug": "/balance/film/freeride-day",
+                "order": 10,
+                "icon": "film",
+                "type": "file",
+                "excerpt": "The death sport capital of the world\n\n[YouTube src=\"https://youtu.be/FtcOeCLt838\"]\n\nChamonix Mont Blanc, France. The death sport and freeskiing capital of the world. This is the closing day party on t"
+              },
+              {
                 "title": "It's Not Who You Know",
                 "slug": "/balance/film/inwyk",
                 "order": 10,
@@ -1445,16 +1461,24 @@
                 "excerpt": "The final film took several weeks to produce, filming on the underground, rendering 3D animation and creating some original titles in flash.\n\n[YouTube src=\"https://www.youtube.com/watch?v=Qe2ZLYzQToQ\""
               },
               {
+                "title": "James Dean",
+                "slug": "/balance/film/james-dean",
+                "order": 10,
+                "icon": "film",
+                "type": "file",
+                "excerpt": "[YouTube src=\"https://youtu.be/N3hz76MR5ao\"]"
+              },
+              {
                 "title": "Who is calling whom moronic?",
                 "slug": "/balance/film/moronic",
                 "order": 10,
                 "icon": "film",
                 "type": "file",
-                "excerpt": "Who is calling whom moronic?"
+                "excerpt": "Who is calling whom moronic?\n\n[YouTube src=\"https://youtu.be/vWl2NLY6NaQ\"]"
               }
             ],
             "icon": "film",
-            "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/balance/film/moronic, /balance/film/inwyk\"]"
+            "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/balance/film/jamesdean, /balance/film/moronic, /balance/film/inwyk, /balance/film/freerideday\"]"
           },
           {
             "title": "Words",

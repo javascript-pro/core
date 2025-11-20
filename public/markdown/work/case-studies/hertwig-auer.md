@@ -6,7 +6,6 @@ slug: /work/case-studies/hertwig-auer
 icon: case
 image: https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg
 tags: expertise, germany, law
-paywall: true
 ---
 
 > Summer 2025

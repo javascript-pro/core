@@ -6,4 +6,6 @@ slug: /balance/film/moronic
 icon: film
 ---
 
-Who is calling whom moronic?
+> Who is calling whom moronic?
+
+[YouTube src="https://youtu.be/vWl2NLY6NaQ"]
