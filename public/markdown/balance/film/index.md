@@ -1,8 +1,8 @@
 ---
-order: 5
-title: Video
+order: 10
+title: Film
 description: It's Not Who You Know (2000)
-slug: /balance/video
+slug: /balance/film
 icon: star
 image: https://live.staticflickr.com/65535/53519132441_43525fc3a4_b.jpg
 noImage: true

@@ -2,40 +2,13 @@
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://goldlabel.pro/balance/books/cixin-liu</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/books/douglas-coupland/generation-x</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/books/douglas-coupland</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/books/douglas-coupland/microserfs</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/books</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/books/neuromancer</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/books/r-f-kuang/babel</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/books/r-f-kuang</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/books/r-f-kuang/katabasis</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/balance/books/tom-robbins</loc>
+    <loc>https://goldlabel.pro/balance/film</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/balance</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/balance/video</loc>
+    <loc>https://goldlabel.pro/balance/pictures</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/balance/words/der-kleine-zeppelin/countries/belgium</loc>
@@ -87,6 +60,36 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/life/aquaponics/overview</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/books/cixin-liu</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/books/douglas-coupland/generation-x</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/books/douglas-coupland</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/books/douglas-coupland/microserfs</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/books</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/books/neuromancer</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/books/r-f-kuang/babel</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/books/r-f-kuang</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/books/r-f-kuang/katabasis</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/books/tom-robbins</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/life/diving</loc>
