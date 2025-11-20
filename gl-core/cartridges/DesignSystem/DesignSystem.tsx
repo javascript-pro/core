@@ -4,7 +4,12 @@ import * as React from 'react';
 import { TTheme, IDesignSystem } from './types';
 import { ThemeProvider, CssBaseline, Fab } from '@mui/material';
 import { useDispatch, Icon } from '../../../gl-core';
-import { setDesignSystemKey, useMUITheme, SystemDialog } from '../DesignSystem';
+import {
+  setDesignSystemKey,
+  useMUITheme,
+  SystemDialog,
+  Feedback,
+} from '../DesignSystem';
 
 export default function DesignSystem({
   theme,
@@ -27,6 +32,7 @@ export default function DesignSystem({
       <CssBaseline />
       {children}
       <SystemDialog />
+      <Feedback />
       <Fab
         color="primary"
         sx={{

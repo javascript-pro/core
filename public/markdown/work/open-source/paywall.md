@@ -4,7 +4,7 @@ title: Paywall
 description: Access Control Cartridge
 slug: /work/open-source/paywall
 icon: paywall
-image: /jpg/ai/SWAT-Baby.jpg
+image: /png/n64/test.png
 tags: cartridge, free, paywall, use cases, acess, auth, subscription
 ---
 

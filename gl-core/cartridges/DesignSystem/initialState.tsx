@@ -5,4 +5,5 @@ export const initialState: TDesignSystemState = {
   cartridge: 'designsystem',
   dialog: null,
   themeMode: 'dark',
+  feedback: null,
 };

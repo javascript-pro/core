@@ -121,7 +121,7 @@ import GoodfitIcon from '@mui/icons-material/InterpreterMode';
 import SpeakwriteIcon from '@mui/icons-material/KeyboardVoice';
 import ProductsIcon from '@mui/icons-material/Store';
 import UbereduxIcon from '@mui/icons-material/StorageOutlined';
-import CartridgeIcon from '@mui/icons-material/IntegrationInstructionsOutlined';
+import CartridgeIcon from '@mui/icons-material/AutoAwesomeMotion';
 import CoreIcon from '@mui/icons-material/BarcodeReader';
 import CopyIcon from '@mui/icons-material/CopyAllOutlined';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';

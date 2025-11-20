@@ -50,7 +50,7 @@ export default function Continue() {
           <CardHeader
             avatar={<Icon icon="paywall" />}
             title="Paywall"
-            subheader="Continue with one of these providers"
+            subheader="Continue?"
           />
           <CardContent>
             <Button

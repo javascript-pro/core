@@ -4,7 +4,7 @@ slug: /work/open-source/quick-start
 title: Quick Start
 description:
 icon: success
-image: /png/3rdParty/github_og.png
+image: /png/n64/test.png
 ---
 
 > Get started with Goldlabel Core Open Source

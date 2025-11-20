@@ -1,10 +1,10 @@
 ---
-order: 20
+order: 30
 slug: /work/open-source/uberedux
 title: 'Uberedux'
 description: 'Because all Apps need State Management'
 icon: js
-image: /jpg/other/Opengraph-template.jpg
+image: /png/n64/test.png
 tags: 'Free, atridges, Uberedux, State Management, Redux'
 ---
 

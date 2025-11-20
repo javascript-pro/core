@@ -505,7 +505,7 @@
                 "slug": "/work/open-source/quick-start",
                 "order": 5,
                 "icon": "success",
-                "image": "/png/3rdParty/github_og.png",
+                "image": "/png/n64/test.png",
                 "type": "file",
                 "excerpt": "Get started with Goldlabel Core Open Source\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\n 🚀 Install\n\n1. Clone the repo\n\n\n\n2. Setup Environment\n\nCreate a  file in the root"
               },
@@ -519,11 +519,47 @@
                 "excerpt": "Goldlabel is built on cartridges\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\nA cartridge is a selfcontained piece of application logic: React components, state, styles, a"
               },
               {
+                "title": "New Cartridge",
+                "slug": "/work/open-source/new-cartridge",
+                "order": 15,
+                "icon": "add",
+                "image": "/png/n64/test.png",
+                "type": "file",
+                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\n is a template designed to help developers quickly bootstrap a new Cartridge in a modular application framework such as Goldlab"
+              },
+              {
+                "title": "Design System",
+                "slug": "/work/open-source/design-system",
+                "order": 25,
+                "icon": "design",
+                "image": "/png/n64/test.png",
+                "type": "file",
+                "excerpt": "Material UI is a React component library that provides a consistent design system, layout primitives, and readymade UI components\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore"
+              },
+              {
+                "title": "Shortcodes",
+                "slug": "/work/open-source/shortcodes",
+                "order": 26,
+                "icon": "wordpress",
+                "image": "/png/n64/test.png",
+                "type": "file",
+                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Shortcodes\" label=\"Shortcodes\"]\n\nGoldlabel includes a Shortcodes cartridge that brings a familiar WordPressstyle author"
+              },
+              {
+                "title": "Lingua",
+                "slug": "/work/open-source/lingua",
+                "order": 28,
+                "icon": "lingua",
+                "image": "/png/n64/test.png",
+                "type": "file",
+                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Lingua\" label=\"Lingua\"]\n\nThe Lingua cartridge brings localisation to Goldlabel. It enables your site to serve content i"
+              },
+              {
                 "title": "Uberedux",
                 "slug": "/work/open-source/uberedux",
-                "order": 20,
+                "order": 30,
                 "icon": "js",
-                "image": "/jpg/other/Opengraph-template.jpg",
+                "image": "/png/n64/test.png",
                 "type": "file",
                 "tags": [
                   "Free",
@@ -535,20 +571,11 @@
                 "excerpt": "Otherwise you'd be back in jQuery callback hell. Nobody wants that.\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Uberedux\" label=\"Uberedux\"]\n\nUberedux is a simple,"
               },
               {
-                "title": "Lingua",
-                "slug": "/work/open-source/lingua",
-                "order": 100,
-                "icon": "lingua",
-                "image": "https://live.staticflickr.com/65535/54929673394_69c76ac4a3_b.jpg",
-                "type": "file",
-                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Lingua\" label=\"Lingua\"]\n\nThe Lingua cartridge brings localisation to Goldlabel. It enables your site to serve content i"
-              },
-              {
                 "title": "Paywall",
                 "slug": "/work/open-source/paywall",
                 "order": 130,
                 "icon": "paywall",
-                "image": "/jpg/ai/SWAT-Baby.jpg",
+                "image": "/png/n64/test.png",
                 "type": "file",
                 "tags": [
                   "cartridge",
@@ -560,33 +587,6 @@
                   "subscription"
                 ],
                 "excerpt": "User accounts, passwords, membership access and payment\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Paywall\" label=\"Paywall\"]\n\n Use Case\n\nWhen a draft chapter of "
-              },
-              {
-                "title": "Design System",
-                "slug": "/work/open-source/design-system",
-                "order": 200,
-                "icon": "design",
-                "image": "/jpg/other/Opengraph-template.jpg",
-                "type": "file",
-                "excerpt": "Material UI is a React component library that provides a consistent design system, layout primitives, and readymade UI components\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore"
-              },
-              {
-                "title": "New Cartridge",
-                "slug": "/work/open-source/new-cartridge",
-                "order": 2200,
-                "icon": "add",
-                "image": "/jpg/other/Opengraph-template.jpg",
-                "type": "file",
-                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\n is a template designed to help developers quickly bootstrap a new Cartridge in a modular application framework such as Goldlab"
-              },
-              {
-                "title": "Shortcodes",
-                "slug": "/work/open-source/shortcodes",
-                "order": 2200,
-                "icon": "wordpress",
-                "image": "/jpg/other/Opengraph-template.jpg",
-                "type": "file",
-                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Shortcodes\" label=\"Shortcodes\"]\n\nGoldlabel includes a Shortcodes cartridge that brings a familiar WordPressstyle author"
               }
             ],
             "icon": "github",

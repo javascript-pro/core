@@ -1,10 +1,10 @@
 ---
-order: 100
+order: 28
 slug: /work/open-source/lingua
 title: Lingua
 description: Localisation
 icon: lingua
-image: https://live.staticflickr.com/65535/54929673394_69c76ac4a3_b.jpg
+image: /png/n64/test.png
 ---
 
 [GitHub url="https://github.com/javascript-pro/core/tree/master/gl-core/cartridges/Lingua" label="Lingua"]

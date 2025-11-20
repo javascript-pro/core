@@ -2,6 +2,15 @@
 
 import { TIconShape } from './components/Icon';
 
+export type TSeverity = 'success' | 'info' | 'warning' | 'error';
+
+export type TFeedback = {
+  severity?: TSeverity;
+  title?: string;
+  description?: string;
+  onClose?: () => void;
+} | null;
+
 export type TIcon = TIconShape;
 
 export interface IDesignSystem {
@@ -13,6 +22,7 @@ export interface TDesignSystemState {
   cartridge?: string;
   dialog?: any;
   theme?: TTheme;
+  feedback?: TFeedback;
   [key: string]: any;
 }
 
