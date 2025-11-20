@@ -95,7 +95,7 @@
     "title": "Words",
     "description": "It was a dark and stormy night…",
     "tags": [],
-    "content": "\n> Snoopy’s line “It was a dark and stormy night…” is a deliberate parody of the famously bad opening sentence from Edward Bulwer-Lytton’s 1830 novel Paul Clifford. That sentence became a cultural shorthand for overwrought, clichishy writing.\n\n[PageGrid thumbnails=\"yes\" pages=\"/balance/writing/not-here-to-fuck-spiders, /balance/writing/der-kleine-zeppelin\"]\n"
+    "content": "\n> Snoopy’s line “It was a dark and stormy night…” is a deliberate parody of the famously bad opening sentence from Edward Bulwer-Lytton’s 1830 novel Paul Clifford. That sentence became a cultural shorthand for overwrought, clichishy writing.\n\n[PageGrid thumbnails=\"no\" pages=\"/balance/words/not-here-to-fuck-spiders, /balance/words/der-kleine-zeppelin\"]\n"
   },
   {
     "slug": "balance/words/not-here-to-fuck-spiders/bez",
@@ -109,7 +109,7 @@
     "title": "Not Here To Fuck Spiders",
     "description": "by Wei Zang",
     "tags": [],
-    "content": "\nOh we ARE? We are here to fuck spiders?\n\nChapter 1\n\nAs far back as I can remember I knew that to play by the rules meant losing. I am Wei Zang and this is my story. Some of it is true\n\nJudging from the past, we may safely infer that no one living species will transmit its unaltered likeness to a distant futurity. And of the species now living very few will transmit progeny of any kind to a far distant futurity.\n\n_Charles Darwin, On the Origin of Species By Means of Natural Selection, or The Preservation Of Favoured Race In The Struggle For Life (1859)_\n"
+    "content": "\n> Oh we ARE? We are here to fuck spiders?\n\nChapter 1\n\nAs far back as I can remember I knew that to play by the rules meant losing. I am Wei Zang and this is my story. Some of it is true\n\nJudging from the past, we may safely infer that no one living species will transmit its unaltered likeness to a distant futurity. And of the species now living very few will transmit progeny of any kind to a far distant futurity.\n\n_Charles Darwin, On the Origin of Species By Means of Natural Selection, or The Preservation Of Favoured Race In The Struggle For Life (1859)_\n\n> It was a dark and stormy night…\n\nCharles Schulz knew this and used it as a comic device: Snoopy imagines himself a grand novelist but always begins with the most notoriously mocked opener in English literature. The humour comes from the dog’s earnest seriousness contrasted with his terrible taste in prose.\n\n- It’s a running gag in Peanuts.\n- It’s a nod to Bulwer-Lytton’s melodramatic style.\n- It works as a joke about writerly clichés and our delusion of literary grandeur\n"
   },
   {
     "slug": "balance/words/not-here-to-fuck-spiders/puppy-thing",
@@ -130,14 +130,14 @@
     "title": "Aquaponics",
     "description": "Fish are food. Not friends.",
     "tags": [],
-    "content": "\n> Aquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closed-loop system.\n"
+    "content": "\n> Aquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closed-loop system.\n\n[PageGrid thumbnails=\"no\" pages=\"/life/aquaponics/overview\"]\n"
   },
   {
     "slug": "life/aquaponics/overview",
     "title": "Aquaponics 5 Ws",
     "description": "What, Who Where, When & Why",
     "tags": [],
-    "content": "\nWhat: Aquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closed-loop system.\n\nWho: Ideal for urban growers, hobbyists, educators, and anyone interested in eco-friendly food production.\n\nWhere: Can be set up almost anywhere—indoors, in greenhouses, on rooftops, or in backyards.\n\nWhen: Aquaponics can be practiced year-round with the right setup and climate control.\n\nWhy: It uses less water than traditional farming, produces both protein and vegetables, and creates a self-sustaining ecosystem.\n"
+    "content": "\n**What**  \nAquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closed-loop system.\n\n**Who**  \nIdeal for urban growers, hobbyists, educators, and anyone interested in eco-friendly food production.\n\n**Where**  \nCan be set up almost anywhere—indoors, in greenhouses, on rooftops, or in backyards.\n\n**When**  \nAquaponics can be practiced year-round with the right setup and climate control.\n\n**Why**  \nIt uses less water than traditional farming, produces both protein and vegetables, and creates a self-sustaining ecosystem.\n"
   },
   {
     "slug": "life/books/cixin-liu/index",
@@ -172,7 +172,7 @@
     "title": "Books",
     "description": "What are you reading?",
     "tags": "science fiction, books, satire, douglas coupland, Cixin Liu,",
-    "content": "\n> A curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction\n\n[PageGrid thumbnails=\"yes\" pages=\"/balance/books/tom-robbins, /balance/books/cixin-liu, /balance/books/douglas-coupland/generation-x, /balance/books/neuromancer, /balance/books/r-f-kuang/babel, /balance/books/r-f-kuang/katabasis\"]\n"
+    "content": "\n> A curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction\n\n[PageGrid thumbnails=\"yes\" pages=\"/life/books/tom-robbins, /life/books/cixin-liu, /life/books/douglas-coupland/generation-x, /life/books/neuromancer, /life/books/r-f-kuang/babel, /life/books/r-f-kuang/katabasis\"]\n"
   },
   {
     "slug": "life/books/neuromancer",
@@ -284,7 +284,7 @@
     "title": "Life",
     "description": "Generation X at 50",
     "tags": [],
-    "content": "\n> ⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a 1991 novel written by Canadian author Douglas Coupland\n\nI work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age maybe it's time to take up sailing. We are [Generation X](/balance/writers/generation-x)\n\n[PageGrid thumbnails=\"no\" pages=\" /life/food, /life/motorbikes, /life/aquaponics, /life/diving\"]\n"
+    "content": "\n> ⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a 1991 novel written by Canadian author Douglas Coupland\n\nI work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age maybe it's time to take up sailing. We are [Generation X](/balance/writers/generation-x)\n\n[PageGrid thumbnails=\"no\" pages=\" /life/books, /life/food, /life/motorbikes, /life/aquaponics, /life/diving\"]\n"
   },
   {
     "slug": "life/motorbikes/index",

@@ -1255,7 +1255,7 @@
               "douglas coupland",
               "Cixin Liu"
             ],
-            "excerpt": "A curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction\n\n[PageGrid thumbnails=\"yes\" pages=\"/balance/books/tomrobbins, /balance/books/cixinliu,"
+            "excerpt": "A curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction\n\n[PageGrid thumbnails=\"yes\" pages=\"/life/books/tomrobbins, /life/books/cixinliu, /life"
           },
           {
             "title": "Diving",
@@ -1388,12 +1388,12 @@
                 "icon": "fish",
                 "image": "/png/n64/hippy.png",
                 "type": "file",
-                "excerpt": "What: Aquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closedloop system.\n\nWho: Ideal for urban growers, hobbyists"
+                "excerpt": "What  \nAquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closedloop system.\n\nWho  \nIdeal for urban growers, hobbyis"
               }
             ],
             "icon": "fish",
             "image": "/png/n64/hippy.png",
-            "excerpt": "Aquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closedloop system."
+            "excerpt": "Aquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closedloop system.\n\n[PageGrid thumbnails=\"no\" pages=\"/life/aquapo"
           },
           {
             "title": "Motorbikes",
