@@ -1,5 +1,5 @@
 ---
-order: 10
+order: 20
 title: Case Studies
 description: Real World Experience
 slug: /work/case-studies

@@ -1,8 +1,8 @@
 ---
 order: 95
-title: JS Testing
+title: Testing
 description: Left looking approach
-slug: /work/techstack/javascript/js-testing
+slug: /work/techstack/javascript/testing
 icon: js
 image: /png/3rdParty/playwright_og.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React, frameworks, Jest, Playwright

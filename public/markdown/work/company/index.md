@@ -1,5 +1,5 @@
 ---
-order: 1020
+order: 10
 title: Company
 description: UK Limited Company (5460545)
 slug: /work/company
@@ -16,7 +16,6 @@ tags: intellectual-property
 > 321-323 High Road  
 > Chadwell Heath  
 > Essex RM6 6AX
-
 
 - [X](https://x.com/goldlabelapps)
 - [Insta](https://www.instagram.com/milkylackstoes)
