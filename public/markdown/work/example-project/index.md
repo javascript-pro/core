@@ -1,17 +1,19 @@
 ---
 order: 90
 title: Example Project
-description: Goldlabel Apps Open Source
+description: This app... Open Source
 slug: /work/example-project
 icon: examples
-image: /png/3rdParty/github_og.png
-tags: Open Source, JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, NextJS, GitHub
+image: https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg
+tags: Open Source, JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, NextJS, App Router, GitHub
 ---
 
 > The app you are using is free to fork, explore, copy, hack, and reuse
 
+[PageGrid thumbnails="no" pages="/work/example-project/tutorial, /work/example-project/tutorial/quick-start"]
+
+## 🚀 Open Source and Free forever
+
+It offers statically generated sites with Firestore-powered updates and a real admin panel. Built with Next.js App Router and Material UI
+
 [GitHub url="https://github.com/javascript-pro/core" label="github.com/javascript-pro/core"]
-
-## What is Goldlabel Core?
-
-Goldlabel Core is Open Source and Free forever. It offers statically generated sites with Firestore-powered updates and a real admin panel. Built with Next.js App Router and Material UI

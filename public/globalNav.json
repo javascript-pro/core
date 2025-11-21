@@ -185,13 +185,48 @@
           },
           {
             "title": "Example Project",
-            "description": "Goldlabel Apps Open Source",
+            "description": "This app... Open Source",
             "slug": "/work/example-project",
             "order": 90,
             "type": "folder",
-            "children": [],
+            "children": [
+              {
+                "title": "Tutorial",
+                "description": "How to get up and running",
+                "slug": "/work/example-project/tutorial",
+                "order": 90,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "Quick Start",
+                    "slug": "/work/example-project/tutorial/quick-start",
+                    "order": 5,
+                    "icon": "examples",
+                    "image": "https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg",
+                    "type": "file",
+                    "excerpt": "Get started with Goldlabel Core Open Source\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\n 🚀 Install\n\n1. Clone the repo\n\n\n\n2. Setup Environment\n\nCreate a  file in the root"
+                  }
+                ],
+                "icon": "examples",
+                "image": "https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg",
+                "tags": [
+                  "Tutorial",
+                  "Open Source",
+                  "JavaScript",
+                  "TypeScript",
+                  "React",
+                  "Material UI",
+                  "Flash",
+                  "Server Side JavaScript",
+                  "Node",
+                  "NextJS",
+                  "GitHub"
+                ],
+                "excerpt": "Each page focuses on a single part of the system\n\n[PageGrid thumbnails=\"no\" pages=\"/work/exampleproject/tutorial/quickstart\"]\n\n Clone the public repository\n\n[GitHub url=\"https://github.com/javascriptp"
+              }
+            ],
             "icon": "examples",
-            "image": "/png/3rdParty/github_og.png",
+            "image": "https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg",
             "tags": [
               "Open Source",
               "JavaScript",
@@ -204,7 +239,7 @@
               "NextJS",
               "GitHub"
             ],
-            "excerpt": "This app is free to fork, explore, copy, hack, and reuse\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Core repo\"]\n\n 5 W's"
+            "excerpt": "The app you are using is free to fork, explore, copy, hack, and reuse\n\n[PageGrid thumbnails=\"yes\" pages=\"/work/exampleproject/tutorial, /work/exampleproject/tutorial/quickstart\"]\n\n 🚀 Open Source\n\nGol"
           },
           {
             "title": "Techstack",
@@ -484,27 +519,77 @@
                 "excerpt": "We’ve been writing JavaScript since it was called ECMAScript.\n\n[PageGrid thumbnails=\"no\" pages=\"/work/techstack/javascript/typescript, /work/techstack/javascript/react, /work/techstack/javascript/node"
               },
               {
-                "title": "Git",
-                "slug": "/work/techstack/git",
-                "order": 25,
-                "icon": "github",
-                "image": "/png/3rdParty/github_og.png",
-                "type": "file",
-                "tags": [
-                  "github",
-                  "process",
-                  "javascript",
-                  "source control",
-                  "project management",
-                  "github",
-                  "bitbucket",
-                  "github",
-                  "process",
-                  "javascript",
-                  "tools",
-                  "gitkraken"
+                "title": "Other",
+                "description": "As well as JavaScript, we also have experience in these",
+                "slug": "/work/techstack/other",
+                "order": 500,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "Git",
+                    "slug": "/work/techstack/other/git",
+                    "order": 25,
+                    "icon": "github",
+                    "image": "/png/3rdParty/github_og.png",
+                    "type": "file",
+                    "tags": [
+                      "github",
+                      "process",
+                      "javascript",
+                      "source control",
+                      "project management",
+                      "github",
+                      "bitbucket",
+                      "github",
+                      "process",
+                      "javascript",
+                      "tools",
+                      "gitkraken"
+                    ],
+                    "excerpt": "We use GitHub for everything.\n\nMost of the communication done between us and our clients during development is done through GitHub in the form of comments, tracking bugs and issues, pull resuests, rev"
+                  },
+                  {
+                    "title": "Blockchain",
+                    "slug": "/work/techstack/other/blockchain",
+                    "order": 50,
+                    "icon": "api",
+                    "image": "/png/3rdParty/bitcoin.png",
+                    "type": "file",
+                    "tags": [
+                      "techstack",
+                      "crypto",
+                      "blockchain",
+                      "web3",
+                      "casino",
+                      "igaming",
+                      "experience",
+                      "bitcoin",
+                      "malta"
+                    ],
+                    "excerpt": "Blockchain Crypto Casino\n\n In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online ga"
+                  },
+                  {
+                    "title": "RESTful APIs",
+                    "slug": "/work/techstack/other/rest-api",
+                    "order": 70,
+                    "icon": "api",
+                    "image": "https://live.staticflickr.com/65535/54801612483_31ce454c4e_b.jpg",
+                    "type": "file",
+                    "tags": [
+                      "free",
+                      "api"
+                    ],
+                    "excerpt": "Goldlabel Public API\n\n glapi/flickr endpoints"
+                  }
                 ],
-                "excerpt": "We use GitHub for everything.\n\nMost of the communication done between us and our clients during development is done through GitHub in the form of comments, tracking bugs and issues, pull resuests, rev"
+                "icon": "techstack",
+                "image": "/png/3rdParty/react.png",
+                "tags": [
+                  "expertise",
+                  "fields",
+                  "work"
+                ],
+                "excerpt": "Aside\n\n[PageGrid thumbnails=\"yes\" pages=\"/work/techstack/other/git, /work/techstack/other/restapi, /work/techstack/other/blockchain\"]\n\n Core"
               }
             ],
             "icon": "techstack",
@@ -514,7 +599,7 @@
               "fields",
               "work"
             ],
-            "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work/techstack/javascript, /work/techstack/git\"]\n\n We work across the full JavaScript stack to help understand all perspectives, from interface to infrastructure\n\nWe "
+            "excerpt": "Working across the full JavaScript stack to help understand every perspective from interface to infrastructure\n\n[PageGrid thumbnails=\"no\" pages=\"/work/techstack/javascript, /work/techstack/git\"]\n\nWe f"
           }
         ],
         "icon": "work",
@@ -533,7 +618,7 @@
           "NextJS",
           "Headless CMS"
         ],
-        "excerpt": "The apps we ship are real. They run in production and are developed accessibly.\n\n[PageGrid thumbnails=\"no\" pages=\"/work/techstack, /work/exampleproject, /work/casestudies, /work/about\"]\n\nThe Core is O"
+        "excerpt": "Goldlabel builds and ships modern web apps for clients who need real results fast\n\n[PageGrid thumbnails=\"no\" pages=\"/work/techstack, /work/casestudies, /work/exampleproject, /work/about\"]\n\n Small team"
       },
       {
         "title": "Life",

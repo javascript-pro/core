@@ -7,6 +7,7 @@ icon: techstack
 image: /png/3rdParty/react.png
 tags: expertise, fields, work
 ---
+
 > Working across the full JavaScript stack to help understand every perspective from interface to infrastructure
 
 [PageGrid thumbnails="no" pages="/work/techstack/javascript, /work/techstack/git"]

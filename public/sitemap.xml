@@ -179,10 +179,13 @@
     <loc>https://goldlabel.pro/work/example-project</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work</loc>
+    <loc>https://goldlabel.pro/work/example-project/tutorial</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/git</loc>
+    <loc>https://goldlabel.pro/work/example-project/tutorial/quick-start</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/techstack</loc>
@@ -234,5 +237,17 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work/techstack/javascript/vanilla-js</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/other/blockchain</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/other/git</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/other</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/other/rest-api</loc>
   </url>
 </urlset>
