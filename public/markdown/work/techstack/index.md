@@ -10,7 +10,7 @@ tags: expertise, fields, work
 
 > Working across the full JavaScript stack to help understand every perspective from interface to infrastructure
 
-[PageGrid thumbnails="no" pages="/work/techstack/javascript, /work/techstack/git"]
+[PageGrid thumbnails="no" pages="/work/techstack/javascript, /work/techstack/other"]
 
 We focus on robust, modern JavaScript tooling and scalable cloud-native delivery. Whether building responsive UIs, designing serverless APIs, or optimising DevOps pipelines, we bring production experience and architectural clarity to every layer of the process.
 

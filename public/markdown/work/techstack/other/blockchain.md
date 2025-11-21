@@ -3,7 +3,7 @@ order: 50
 title: Blockchain
 description: Building a Bitcoin-Powered Gambling Platform
 slug: /work/techstack/other/blockchain
-icon: api
+icon: techstack
 image: /png/3rdParty/bitcoin.png
 tags: techstack, crypto, blockchain, web3, casino, igaming, experience, bitcoin, malta
 ---

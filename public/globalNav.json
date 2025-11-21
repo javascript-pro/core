@@ -184,91 +184,6 @@
             "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work/casestudies/aligent, /work/casestudies/hertwigauer, /work/casestudies/huawei, /work/casestudies/boral\", /work/casestudies/aligent\"]"
           },
           {
-            "title": "Example Project",
-            "description": "This app... Open Source",
-            "slug": "/work/example-project",
-            "order": 90,
-            "type": "folder",
-            "children": [
-              {
-                "title": "Cartridges",
-                "description": "Self-contained pieces of application logic",
-                "slug": "/work/example-project/cartridges",
-                "order": 10,
-                "type": "folder",
-                "children": [
-                  {
-                    "title": "ContentManager",
-                    "slug": "/work/example-project/cartridges/content-manager",
-                    "order": 15,
-                    "icon": "good-fit",
-                    "image": "/png/n64/test.png",
-                    "type": "file",
-                    "tags": [
-                      "firebase",
-                      "cms",
-                      "contentmanager"
-                    ],
-                    "excerpt": "Manage content stored in a Firebase collection\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/ContentManager\" label=\"ContentManager\"]\n\n Cartridge: ContentManager — I"
-                  }
-                ],
-                "icon": "cartridge",
-                "image": "/png/n64/test.png",
-                "excerpt": "Goldlabel is built on Cartridges\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\nA cartridge is a selfcontained piece of application logic: React components, state, styles, a"
-              },
-              {
-                "title": "Tutorial",
-                "description": "How to get up and running",
-                "slug": "/work/example-project/tutorial",
-                "order": 90,
-                "type": "folder",
-                "children": [
-                  {
-                    "title": "Quick Start",
-                    "slug": "/work/example-project/tutorial/quick-start",
-                    "order": 5,
-                    "icon": "examples",
-                    "image": "/png/3rdParty/github_og.png",
-                    "type": "file",
-                    "excerpt": "Get started with Goldlabel Core Open Source\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\n 🚀 Install\n\n1. Clone the repo\n\n\n\n2. Setup Environment\n\nCreate a  file in the root"
-                  }
-                ],
-                "icon": "github",
-                "image": "/png/3rdParty/github_og.png",
-                "tags": [
-                  "Tutorial",
-                  "Open Source",
-                  "JavaScript",
-                  "TypeScript",
-                  "React",
-                  "Material UI",
-                  "Flash",
-                  "Server Side JavaScript",
-                  "Node",
-                  "NextJS",
-                  "GitHub"
-                ],
-                "excerpt": "Each page focuses on a single part of the system\n\n Clone the public repository\n\nThis section walks through a minimal Goldlabel Core project from start to finish. Each page focuses on a single part of "
-              }
-            ],
-            "icon": "examples",
-            "image": "/png/n64/flickr.png",
-            "tags": [
-              "Open Source",
-              "JavaScript",
-              "TypeScript",
-              "React",
-              "Material UI",
-              "Flash",
-              "Server Side JavaScript",
-              "Node",
-              "NextJS",
-              "App Router",
-              "GitHub"
-            ],
-            "excerpt": "The app you are using is free to fork, explore, copy, hack, and reuse\n\nOpen Source and Free forever. It offers statically generated sites with Firestorepowered updates and a real admin panel. Built wi"
-          },
-          {
             "title": "Techstack",
             "description": "Full JavaScript stack and more",
             "slug": "/work/techstack",
@@ -556,7 +471,7 @@
                     "title": "Git",
                     "slug": "/work/techstack/other/git",
                     "order": 25,
-                    "icon": "github",
+                    "icon": "techstack",
                     "image": "/png/3rdParty/github_og.png",
                     "type": "file",
                     "tags": [
@@ -579,7 +494,7 @@
                     "title": "Blockchain",
                     "slug": "/work/techstack/other/blockchain",
                     "order": 50,
-                    "icon": "api",
+                    "icon": "techstack",
                     "image": "/png/3rdParty/bitcoin.png",
                     "type": "file",
                     "tags": [
@@ -597,9 +512,9 @@
                   },
                   {
                     "title": "RESTful APIs",
-                    "slug": "/work/techstack/other/rest-api",
+                    "slug": "/work/techstack/other/restful-apis",
                     "order": 70,
-                    "icon": "api",
+                    "icon": "techstack",
                     "image": "https://live.staticflickr.com/65535/54801612483_31ce454c4e_b.jpg",
                     "type": "file",
                     "tags": [
@@ -610,13 +525,13 @@
                   }
                 ],
                 "icon": "techstack",
-                "image": "/png/3rdParty/react.png",
+                "image": "/png/clouds/default_whitecloud.png",
                 "tags": [
                   "expertise",
                   "fields",
                   "work"
                 ],
-                "excerpt": "Aside\n\n[PageGrid thumbnails=\"yes\" pages=\"/work/techstack/other/git, /work/techstack/other/restapi, /work/techstack/other/blockchain\"]\n\n Core"
+                "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work/techstack/other/git, /work/techstack/other/restfulapis, /work/techstack/other/blockchain\"]"
               }
             ],
             "icon": "techstack",
@@ -626,7 +541,92 @@
               "fields",
               "work"
             ],
-            "excerpt": "Working across the full JavaScript stack to help understand every perspective from interface to infrastructure\n\n[PageGrid thumbnails=\"no\" pages=\"/work/techstack/javascript, /work/techstack/git\"]\n\nWe f"
+            "excerpt": "Working across the full JavaScript stack to help understand every perspective from interface to infrastructure\n\n[PageGrid thumbnails=\"no\" pages=\"/work/techstack/javascript, /work/techstack/other\"]\n\nWe"
+          },
+          {
+            "title": "Example Project",
+            "description": "This app... Open Source",
+            "slug": "/work/example-project",
+            "order": 190,
+            "type": "folder",
+            "children": [
+              {
+                "title": "Cartridges",
+                "description": "Self-contained pieces of application logic",
+                "slug": "/work/example-project/cartridges",
+                "order": 10,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "ContentManager",
+                    "slug": "/work/example-project/cartridges/content-manager",
+                    "order": 15,
+                    "icon": "good-fit",
+                    "image": "/png/n64/test.png",
+                    "type": "file",
+                    "tags": [
+                      "firebase",
+                      "cms",
+                      "contentmanager"
+                    ],
+                    "excerpt": "Manage content stored in a Firebase collection\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/ContentManager\" label=\"ContentManager\"]\n\n Cartridge: ContentManager — I"
+                  }
+                ],
+                "icon": "cartridge",
+                "image": "/png/n64/test.png",
+                "excerpt": "Goldlabel is built on Cartridges\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\nA cartridge is a selfcontained piece of application logic: React components, state, styles, a"
+              },
+              {
+                "title": "Tutorial",
+                "description": "How to get up and running",
+                "slug": "/work/example-project/tutorial",
+                "order": 90,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "Quick Start",
+                    "slug": "/work/example-project/tutorial/quick-start",
+                    "order": 5,
+                    "icon": "examples",
+                    "image": "/png/3rdParty/github_og.png",
+                    "type": "file",
+                    "excerpt": "Get started with Goldlabel Core Open Source\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\n 🚀 Install\n\n1. Clone the repo\n\n\n\n2. Setup Environment\n\nCreate a  file in the root"
+                  }
+                ],
+                "icon": "github",
+                "image": "/png/3rdParty/github_og.png",
+                "tags": [
+                  "Tutorial",
+                  "Open Source",
+                  "JavaScript",
+                  "TypeScript",
+                  "React",
+                  "Material UI",
+                  "Flash",
+                  "Server Side JavaScript",
+                  "Node",
+                  "NextJS",
+                  "GitHub"
+                ],
+                "excerpt": "Each page focuses on a single part of the system\n\n Clone the public repository\n\nThis section walks through a minimal Goldlabel Core project from start to finish. Each page focuses on a single part of "
+              }
+            ],
+            "icon": "examples",
+            "image": "/png/n64/flickr.png",
+            "tags": [
+              "Open Source",
+              "JavaScript",
+              "TypeScript",
+              "React",
+              "Material UI",
+              "Flash",
+              "Server Side JavaScript",
+              "Node",
+              "NextJS",
+              "App Router",
+              "GitHub"
+            ],
+            "excerpt": "The app you are using is free to fork, explore, copy, hack, and reuse\n\nOpen Source and Free forever. It offers statically generated sites with Firestorepowered updates and a real admin panel. Built wi"
           }
         ],
         "icon": "work",
@@ -1020,7 +1020,7 @@
               }
             ],
             "icon": "film",
-            "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/balance/film/averybritishprotest, /balance/film/jamesdean, /balance/film/moronic, /balance/film/inwyk, /balance/film/freerideday\"]"
+            "excerpt": "[PageGrid pages=\"/balance/film/fuckthegovmint, /balance/film/averybritishprotest, /balance/film/jamesdean, /balance/film/moronic, /balance/film/inwyk, /balance/film/freerideday\"]"
           },
           {
             "title": "Words",

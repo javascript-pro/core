@@ -1,9 +1,9 @@
 ---
 order: 70
 title: RESTful APIs
-slug: /work/techstack/other/rest-api
+slug: /work/techstack/other/restful-apis
 description: Private keys are available
-icon: api
+icon: techstack
 image: https://live.staticflickr.com/65535/54801612483_31ce454c4e_b.jpg
 tags: free, api
 ---
