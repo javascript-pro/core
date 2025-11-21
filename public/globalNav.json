@@ -106,6 +106,20 @@
             "excerpt": "| Tel/WhatsApp  |  | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX\n\n[PageGrid thumbnails=\"no\" pages=\"/work/company/gdpr, /work/company/privacycookies, /work/company/term"
           },
           {
+            "title": "Company",
+            "description": "UK Limited Company (5460545)",
+            "slug": "/work/company",
+            "order": 10,
+            "type": "folder",
+            "children": [],
+            "icon": "company",
+            "image": "/png/3rdParty/git_og.png",
+            "tags": [
+              "intellectual-property"
+            ],
+            "excerpt": "| Tel/WhatsApp  |  | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX\n\n[PageGrid thumbnails=\"no\" pages=\"/work/company/gdpr, /work/company/privacycookies, /work/company/term"
+          },
+          {
             "title": "Case Studies",
             "description": "Real World Experience",
             "slug": "/work/case-studies",
