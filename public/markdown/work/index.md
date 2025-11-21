@@ -1,10 +1,10 @@
 ---
 order: 10
 title: Work
-description: Fullstack JavaScript
+description: 20+ Years of coding
 slug: /work
 icon: work
-image: https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg
+image: /png/n64/flickr.png
 tags: Professional, JavaScript, Vanilla JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 ---
 

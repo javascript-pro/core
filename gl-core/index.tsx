@@ -1,5 +1,4 @@
 import Core from './Core';
-import { Theme, useThemeMode, ModeSwitch } from './cartridges/Theme';
 import { Icon } from './cartridges/DesignSystem';
 import {
   Advert,
@@ -88,8 +87,6 @@ export {
   YouTube,
   Footer,
   RenderMarkdown,
-  Theme,
-  ModeSwitch,
   Nav,
   IndexNav,
   Siblings,
@@ -122,7 +119,6 @@ export {
   useKey,
   useLoading,
   useVersionCheck,
-  useThemeMode,
   useSiblings,
   useGlobalNav,
   useContent,

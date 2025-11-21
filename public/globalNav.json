@@ -8,13 +8,13 @@
     "children": [
       {
         "title": "Work",
-        "description": "Fullstack JavaScript",
+        "description": "20+ Years of coding",
         "slug": "/work",
         "order": 10,
         "type": "folder",
         "children": [
           {
-            "title": "About Goldlabel",
+            "title": "About us",
             "description": "UK Limited Company (5460545)",
             "slug": "/work/about",
             "order": 10,
@@ -98,20 +98,6 @@
                 "excerpt": "GDPR sets the rules for how we collect, store, and use personal data\n\n What does it mean?\n\nFor us it means we must minimise data collection, document what we process, and give users clear control over"
               }
             ],
-            "icon": "company",
-            "image": "/png/3rdParty/git_og.png",
-            "tags": [
-              "intellectual-property"
-            ],
-            "excerpt": "| Tel/WhatsApp  |  | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX\n\n[PageGrid thumbnails=\"no\" pages=\"/work/company/gdpr, /work/company/privacycookies, /work/company/term"
-          },
-          {
-            "title": "Company",
-            "description": "UK Limited Company (5460545)",
-            "slug": "/work/company",
-            "order": 10,
-            "type": "folder",
-            "children": [],
             "icon": "company",
             "image": "/png/3rdParty/git_og.png",
             "tags": [
@@ -205,6 +191,32 @@
             "type": "folder",
             "children": [
               {
+                "title": "Cartridges",
+                "description": "Self-contained pieces of application logic",
+                "slug": "/work/example-project/cartridges",
+                "order": 10,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "ContentManager",
+                    "slug": "/work/example-project/cartridges/content-manager",
+                    "order": 15,
+                    "icon": "good-fit",
+                    "image": "/png/n64/test.png",
+                    "type": "file",
+                    "tags": [
+                      "firebase",
+                      "cms",
+                      "contentmanager"
+                    ],
+                    "excerpt": "Manage content stored in a Firebase collection\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/ContentManager\" label=\"ContentManager\"]\n\n Cartridge: ContentManager — I"
+                  }
+                ],
+                "icon": "cartridge",
+                "image": "/png/n64/test.png",
+                "excerpt": "Goldlabel is built on Cartridges\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\nA cartridge is a selfcontained piece of application logic: React components, state, styles, a"
+              },
+              {
                 "title": "Tutorial",
                 "description": "How to get up and running",
                 "slug": "/work/example-project/tutorial",
@@ -216,13 +228,13 @@
                     "slug": "/work/example-project/tutorial/quick-start",
                     "order": 5,
                     "icon": "examples",
-                    "image": "https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg",
+                    "image": "/png/3rdParty/github_og.png",
                     "type": "file",
                     "excerpt": "Get started with Goldlabel Core Open Source\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\n 🚀 Install\n\n1. Clone the repo\n\n\n\n2. Setup Environment\n\nCreate a  file in the root"
                   }
                 ],
-                "icon": "examples",
-                "image": "https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg",
+                "icon": "github",
+                "image": "/png/3rdParty/github_og.png",
                 "tags": [
                   "Tutorial",
                   "Open Source",
@@ -236,11 +248,11 @@
                   "NextJS",
                   "GitHub"
                 ],
-                "excerpt": "Each page focuses on a single part of the system\n\n[PageGrid thumbnails=\"no\" pages=\"/work/exampleproject/tutorial/quickstart\"]\n\n Clone the public repository\n\n[GitHub url=\"https://github.com/javascriptp"
+                "excerpt": "Each page focuses on a single part of the system\n\n Clone the public repository\n\nThis section walks through a minimal Goldlabel Core project from start to finish. Each page focuses on a single part of "
               }
             ],
             "icon": "examples",
-            "image": "https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg",
+            "image": "/png/n64/flickr.png",
             "tags": [
               "Open Source",
               "JavaScript",
@@ -618,7 +630,7 @@
           }
         ],
         "icon": "work",
-        "image": "https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg",
+        "image": "/png/n64/flickr.png",
         "tags": [
           "Professional",
           "JavaScript",
@@ -973,6 +985,14 @@
                 "icon": "film",
                 "type": "file",
                 "excerpt": "The death sport capital of the world\n\n[YouTube src=\"https://youtu.be/FtcOeCLt838\"]\n\nChamonix Mont Blanc, France. The death sport and freeskiing capital of the world. This is the closing day party on t"
+              },
+              {
+                "title": "Protected",
+                "slug": "/balance/film/fuckthegovmint",
+                "order": 10,
+                "icon": "film",
+                "type": "file",
+                "excerpt": "fuckthegovmint\n\n[YouTube src=\"https://youtu.be/2TBkoSBfCc\"]\n\nWhy do the protected  \nneed to be protected  \nfrom the unprotected  \nby forcing the unprotected  \nto use the protection  \nthat didn't prote"
               },
               {
                 "title": "It's Not Who You Know",
