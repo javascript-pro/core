@@ -409,8 +409,8 @@
     "slug": "work/example-project/index",
     "title": "Example Project",
     "description": "This app... Open Source",
-    "tags": "Open Source, JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, NextJS, GitHub",
-    "content": "\n> The app you are using is free to fork, explore, copy, hack, and reuse\n\n[PageGrid thumbnails=\"yes\" pages=\"/work/example-project/tutorial, /work/example-project/tutorial/quick-start\"]\n\n## 🚀 Open Source\n\nGoldlabel Core is Open Source and Free forever. It offers statically generated sites with Firestore-powered updates and a real admin panel. Built with Next.js App Router and Material UI\n\n[GitHub url=\"https://github.com/javascript-pro/core\" label=\"github.com/javascript-pro/core\"]\n"
+    "tags": "Open Source, JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, NextJS, App Router, GitHub",
+    "content": "\n> The app you are using is free to fork, explore, copy, hack, and reuse\n\n[PageGrid thumbnails=\"no\" pages=\"/work/example-project/tutorial, /work/example-project/tutorial/quick-start\"]\n\n## 🚀 Open Source and Free forever\n\nIt offers statically generated sites with Firestore-powered updates and a real admin panel. Built with Next.js App Router and Material UI\n\n[GitHub url=\"https://github.com/javascript-pro/core\" label=\"github.com/javascript-pro/core\"]\n"
   },
   {
     "slug": "work/example-project/tutorial/index",

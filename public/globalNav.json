@@ -237,9 +237,10 @@
               "Server Side JavaScript",
               "Node",
               "NextJS",
+              "App Router",
               "GitHub"
             ],
-            "excerpt": "The app you are using is free to fork, explore, copy, hack, and reuse\n\n[PageGrid thumbnails=\"yes\" pages=\"/work/exampleproject/tutorial, /work/exampleproject/tutorial/quickstart\"]\n\n 🚀 Open Source\n\nGol"
+            "excerpt": "The app you are using is free to fork, explore, copy, hack, and reuse\n\n[PageGrid thumbnails=\"no\" pages=\"/work/exampleproject/tutorial, /work/exampleproject/tutorial/quickstart\"]\n\n 🚀 Open Source and F"
           },
           {
             "title": "Techstack",
