@@ -2,7 +2,7 @@
 order: 777
 title: Work With Us
 description: We take on a limited number of new projects each month
-slug: /work/company/work-with-us
+slug: /work/about/work-with-us
 icon: company
 image: /png/3rdParty/git_og.png
 tags: company, intellectual-property

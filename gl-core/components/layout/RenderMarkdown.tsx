@@ -174,7 +174,7 @@ export default function RenderMarkdown({
                   backgroundColor:
                     theme.palette.mode === 'dark'
                       ? alpha(theme.palette.primary.main, 0.05)
-                      : alpha(theme.palette.primary.main, 0.08),
+                      : alpha(theme.palette.primary.main, 0.02),
                 }}
               >
                 {children}

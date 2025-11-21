@@ -143,6 +143,24 @@
     <loc>https://goldlabel.pro/life/motorbikes</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/work/about/gdpr</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/about</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/about/privacy-cookies</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/about/terms</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/about/where-we-work</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/about/work-with-us</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/work/case-studies/aligent</loc>
   </url>
   <url>
@@ -158,52 +176,10 @@
     <loc>https://goldlabel.pro/work/case-studies</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/company/gdpr</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/company</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/company/privacy-cookies</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/company/terms</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/company/where-we-work</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/company/work-with-us</loc>
+    <loc>https://goldlabel.pro/work/example-project</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/open-source/cartridges</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/open-source/design-system</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/open-source</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/open-source/lingua</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/open-source/new-cartridge</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/open-source/paywall</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/open-source/quick-start</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/open-source/shortcodes</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/open-source/uberedux</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/techstack/git</loc>

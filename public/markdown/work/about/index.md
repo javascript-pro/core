@@ -1,8 +1,8 @@
 ---
 order: 10
-title: Company
+title: About Goldlabel
 description: UK Limited Company (5460545)
-slug: /work/company
+slug: /work/about
 icon: company
 image: /png/3rdParty/git_og.png
 tags: intellectual-property

@@ -2,7 +2,7 @@
 order: 250
 title: How we work
 description: Onsite, 100% Remote or Hybrid
-slug: /work/company/where-we-work
+slug: /work/about/where-we-work
 icon: company
 image: /png/3rdParty/git_og.png
 tags: remote, hybrid, intellectual-property

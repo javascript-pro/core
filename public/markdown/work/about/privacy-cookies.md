@@ -2,7 +2,7 @@
 order: 450
 title: Privacy & Cookies
 description: Your trust means everything to us
-slug: /work/company/privacy-cookies
+slug: /work/about/privacy-cookies
 icon: company
 image: /png/3rdParty/git_og.png
 tags: cookies, gdpr, privacy, terms, trust, intellectual-property
