@@ -160,6 +160,26 @@
                 "excerpt": "Feb to May 2016\n\n English/Chinese Project Management eLearning App\n\nBy 2015 React had evolved beyond an experiment. Facebook, Instagram, and Airbnb were using it at scale, and the opensource ecosystem"
               },
               {
+                "title": "DTrackt!",
+                "slug": "/work/case-studies/dtrackt",
+                "order": 40,
+                "icon": "techstack",
+                "image": "/png/3rdParty/bitcoin.png",
+                "type": "file",
+                "tags": [
+                  "techstack",
+                  "crypto",
+                  "blockchain",
+                  "web3",
+                  "casino",
+                  "igaming",
+                  "experience",
+                  "bitcoin",
+                  "malta"
+                ],
+                "excerpt": "Blockchain Crypto Casino\n\n In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online ga"
+              },
+              {
                 "title": "Boral",
                 "slug": "/work/case-studies/boral",
                 "order": 50,
@@ -181,7 +201,7 @@
               "interview",
               "experience"
             ],
-            "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work/casestudies/aligent, /work/casestudies/hertwigauer, /work/casestudies/huawei, /work/casestudies/boral\", /work/casestudies/aligent\"]"
+            "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work/techstack/other/dtrackt, /work/casestudies/aligent, /work/casestudies/hertwigauer, /work/casestudies/huawei, /work/casestudies/boral\", /work/casestudies/aligent\""
           },
           {
             "title": "Techstack",
@@ -349,7 +369,7 @@
                       "REST API",
                       "React"
                     ],
-                    "excerpt": "dsad"
+                    "excerpt": "Other services to deploy Next apps are available\n\nVercel created Next.js and runs the platform it was designed for. Deploys are instant, previews are automatic, and the hosting is globally fast withou"
                   },
                   {
                     "title": "TypeScript",
@@ -481,7 +501,7 @@
                     "excerpt": "A Left looking approach\n\n[PrevNext prev=\"/work/expertise/javascript/vanillajs\" next=\"/work/expertise/javascript/typescript\"]\n\nA leftlooking approach in JavaScript testing should mean testing earlier i"
                   },
                   {
-                    "title": "Vanilla JS",
+                    "title": "Vanilla JS (ES6+)",
                     "slug": "/work/techstack/javascript/vanilla-js",
                     "order": 100,
                     "icon": "js",
@@ -546,26 +566,6 @@
                     "excerpt": "We use GitHub for everything.\n\nMost of the communication done between us and our clients during development is done through GitHub in the form of comments, tracking bugs and issues, pull resuests, rev"
                   },
                   {
-                    "title": "Blockchain",
-                    "slug": "/work/techstack/other/blockchain",
-                    "order": 40,
-                    "icon": "techstack",
-                    "image": "/png/3rdParty/bitcoin.png",
-                    "type": "file",
-                    "tags": [
-                      "techstack",
-                      "crypto",
-                      "blockchain",
-                      "web3",
-                      "casino",
-                      "igaming",
-                      "experience",
-                      "bitcoin",
-                      "malta"
-                    ],
-                    "excerpt": "Blockchain Crypto Casino\n\n In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online ga"
-                  },
-                  {
                     "title": "RESTful APIs",
                     "slug": "/work/techstack/other/restful-apis",
                     "order": 70,
@@ -606,7 +606,7 @@
                   "fields",
                   "work"
                 ],
-                "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work/techstack/other/git, /work/techstack/other/restfulapis, /work/techstack/other/blockchain\"]"
+                "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work/techstack/other/git, /work/techstack/other/restfulapis\"]"
               }
             ],
             "icon": "techstack",
@@ -645,11 +645,36 @@
                       "contentmanager"
                     ],
                     "excerpt": "Manage content stored in a Firebase collection\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/ContentManager\" label=\"ContentManager\"]\n\n Cartridge: ContentManager — I"
+                  },
+                  {
+                    "title": "Design System",
+                    "slug": "/work/example-project/cartridges/design-system",
+                    "order": 25,
+                    "icon": "design",
+                    "image": "/png/n64/test.png",
+                    "type": "file",
+                    "excerpt": "Material UI is a React component library that provides a consistent design system, layout primitives, and readymade UI components\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore"
+                  },
+                  {
+                    "title": "Uberedux",
+                    "slug": "/work/example-project/cartridges/uberedux",
+                    "order": 30,
+                    "icon": "js",
+                    "image": "/png/n64/test.png",
+                    "type": "file",
+                    "tags": [
+                      "Free",
+                      "atridges",
+                      "Uberedux",
+                      "State Management",
+                      "Redux"
+                    ],
+                    "excerpt": "Otherwise you'd be back in jQuery callback hell. Nobody wants that.\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Uberedux\" label=\"Uberedux\"]\n\nUberedux is a simple,"
                   }
                 ],
                 "icon": "cartridge",
                 "image": "/png/n64/test.png",
-                "excerpt": "Goldlabel is built on Cartridges\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\nA cartridge is a selfcontained piece of application logic: React components, state, styles, a"
+                "excerpt": "Goldlabel is built on Cartridges\n\n[PageGrid pages=\"/work/exampleproject/cartridges/designsystem, /work/exampleproject/cartridges/uberedux, /work/exampleproject/cartridges/contentmanager\"]\n\nA cartridge"
               },
               {
                 "title": "Tutorial",

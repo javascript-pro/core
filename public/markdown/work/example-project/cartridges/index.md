@@ -9,7 +9,7 @@ image: /png/n64/test.png
 
 > Goldlabel is built on Cartridges
 
-[GitHub url="https://github.com/javascript-pro/core" label="Clone repo"]
+[PageGrid pages="/work/example-project/cartridges/design-system, /work/example-project/cartridges/uberedux, /work/example-project/cartridges/content-manager"]
 
 A cartridge is a self-contained piece of application logic: React components, state, styles, and utilities bundled together in a portable unit.
 
@@ -36,3 +36,5 @@ Each cartridge is:
 - Speed: Build new apps faster by reusing cartridges.
 - Flexibility: Experiment with features without risking the whole system.
 - Clarity: Developers know exactly where functionality lives.
+
+[GitHub url="https://github.com/javascript-pro/core" label="Clone repo"]

@@ -1,6 +1,6 @@
 ---
 order: 100
-title: Vanilla JS
+title: Vanilla JS (ES6+)
 description: Dependency free JavaScript delivery layer
 slug: /work/techstack/javascript/vanilla-js
 icon: js

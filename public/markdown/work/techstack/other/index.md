@@ -8,4 +8,4 @@ image: /png/clouds/default_whitecloud.png
 tags: expertise, fields, work
 ---
 
-[PageGrid thumbnails="no" pages="/work/techstack/other/git, /work/techstack/other/restful-apis, /work/techstack/other/blockchain"]
+[PageGrid thumbnails="no" pages="/work/techstack/other/git, /work/techstack/other/restful-apis"]

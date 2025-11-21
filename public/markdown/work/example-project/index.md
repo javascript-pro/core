@@ -14,6 +14,6 @@ Open Source and Free forever. It offers statically generated sites with Firestor
 
 [GitHub url="https://github.com/users/javascript-pro/projects/8" label="Kanban Project"]
 
-[GitHub url="https://github.com/javascript-pro/core" label="github.com/javascript-pro/core"]
+[GitHub url="https://github.com/javascript-pro/core" label="Repository"]
 
-[PageGrid thumbnails="no" pages="/work/example-project/tutorial, /work/example-project/tutorial/quick-start"]
+[PageGrid pages="/work/example-project/cartridges, /work/example-project/tutorial"]
