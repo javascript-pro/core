@@ -10,7 +10,7 @@ tags: JavaScript, Node, Next.js, API, REST API, React
 
 > Next.js is a full-stack JavaScript framework that brings together the power of React on the frontend with seamless backend capabilities, creating a unified developer experience.
 
-[PageGrid thumbnails="no" pages="/work/techstack/javascript/nextjs/ssg, /work/techstack/javascript/nextjs/ssr"]
+[PageGrid thumbnails="no" pages="/work/techstack/javascript/nextjs/ssg, /work/techstack/javascript/nextjs/ssr, /work/techstack/javascript/vercel"]
 
 ## Why we use it
 

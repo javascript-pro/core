@@ -1,5 +1,5 @@
 ---
-order: 50
+order: 40
 title: Blockchain
 description: Building a Bitcoin-Powered Gambling Platform
 slug: /work/techstack/other/blockchain

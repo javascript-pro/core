@@ -47,7 +47,7 @@ export default async function Page() {
 }
 ```
 
-## When to use SSR 
+## When to use SSR
 
 Use SSR when
 
