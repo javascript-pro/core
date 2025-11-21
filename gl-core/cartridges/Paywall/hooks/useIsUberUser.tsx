@@ -9,7 +9,6 @@ import { useUser } from '../../Paywall';
  * - their uid matches NEXT_PUBLIC_UBER_USER_ID
  */
 export function useIsUberUser() {
-
   const user = useUser();
   const uberId = process.env.NEXT_PUBLIC_UBER_USER_ID;
 

@@ -1,6 +1,6 @@
 ---
 order: 15
-title: ContentManager
+title: Content Manager
 slug: /work/example-project/cartridges/content-manager
 description: Firebase CRUD
 icon: good-fit

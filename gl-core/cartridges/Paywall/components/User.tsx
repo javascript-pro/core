@@ -11,9 +11,9 @@ export default function User() {
 
   return (
     <Box sx={{ p: 0 }}>
-        UID: {uid}
-        <pre>isUberUser: {JSON.stringify(isUberUser, null, 2)}</pre>
-        <SignOut />
+      UID: {uid}
+      <pre>isUberUser: {JSON.stringify(isUberUser, null, 2)}</pre>
+      <SignOut />
     </Box>
   );
 }
