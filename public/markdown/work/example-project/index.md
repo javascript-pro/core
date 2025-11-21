@@ -4,7 +4,7 @@ title: Example Project
 description: This app... Open Source
 slug: /work/example-project
 icon: examples
-image: https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg
+image: /png/3rdParty/github_og.png
 tags: Open Source, JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, NextJS, App Router, GitHub
 ---
 
