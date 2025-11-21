@@ -2,7 +2,7 @@
 order: 500
 title: Terms & Conditions
 description: Liability boundaries, intellectual-property ownership, and disputes
-slug: /work/company/terms
+slug: /work/about/terms
 icon: company
 image: /png/3rdParty/git_og.png
 tags: cookies, gdpr, privacy, terms, trust, intellectual-property

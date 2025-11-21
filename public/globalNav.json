@@ -14,15 +14,15 @@
         "type": "folder",
         "children": [
           {
-            "title": "Company",
+            "title": "About Goldlabel",
             "description": "UK Limited Company (5460545)",
-            "slug": "/work/company",
+            "slug": "/work/about",
             "order": 10,
             "type": "folder",
             "children": [
               {
                 "title": "How we work",
-                "slug": "/work/company/where-we-work",
+                "slug": "/work/about/where-we-work",
                 "order": 250,
                 "icon": "company",
                 "image": "/png/3rdParty/git_og.png",
@@ -36,7 +36,7 @@
               },
               {
                 "title": "Privacy & Cookies",
-                "slug": "/work/company/privacy-cookies",
+                "slug": "/work/about/privacy-cookies",
                 "order": 450,
                 "icon": "company",
                 "image": "/png/3rdParty/git_og.png",
@@ -53,7 +53,7 @@
               },
               {
                 "title": "Terms & Conditions",
-                "slug": "/work/company/terms",
+                "slug": "/work/about/terms",
                 "order": 500,
                 "icon": "company",
                 "image": "/png/3rdParty/git_og.png",
@@ -70,7 +70,7 @@
               },
               {
                 "title": "Work With Us",
-                "slug": "/work/company/work-with-us",
+                "slug": "/work/about/work-with-us",
                 "order": 777,
                 "icon": "company",
                 "image": "/png/3rdParty/git_og.png",
@@ -83,7 +83,7 @@
               },
               {
                 "title": "GDPR",
-                "slug": "/work/company/gdpr",
+                "slug": "/work/about/gdpr",
                 "order": 5721,
                 "icon": "company",
                 "image": "/png/3rdParty/git_og.png",
@@ -103,13 +103,13 @@
             "tags": [
               "intellectual-property"
             ],
-            "excerpt": "| Tel/WhatsApp  |  | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX\n\n \n \n \n \n \n\n[PageGrid thumbnails=\"no\" pages=\"/work/company/gdpr, /work/company/privacycookies, /work/c"
+            "excerpt": "| Tel/WhatsApp  |  | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX\n\n[PageGrid thumbnails=\"no\" pages=\"/work/company/gdpr, /work/company/privacycookies, /work/company/term"
           },
           {
             "title": "Case Studies",
             "description": "Real World Experience",
             "slug": "/work/case-studies",
-            "order": 20,
+            "order": 50,
             "type": "folder",
             "children": [
               {
@@ -184,14 +184,73 @@
             "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work/casestudies/aligent, /work/casestudies/hertwigauer, /work/casestudies/huawei, /work/casestudies/boral\", /work/casestudies/aligent\"]"
           },
           {
-            "title": "Techstack",
-            "description": "Full JavaScript stack and more",
-            "slug": "/work/techstack",
-            "order": 25,
+            "title": "Example Project",
+            "description": "This app... Open Source",
+            "slug": "/work/example-project",
+            "order": 90,
             "type": "folder",
             "children": [
               {
-                "title": "JavaScript",
+                "title": "Tutorial",
+                "description": "How to get up and running",
+                "slug": "/work/example-project/tutorial",
+                "order": 90,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "Quick Start",
+                    "slug": "/work/example-project/tutorial/quick-start",
+                    "order": 5,
+                    "icon": "examples",
+                    "image": "https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg",
+                    "type": "file",
+                    "excerpt": "Get started with Goldlabel Core Open Source\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\n 🚀 Install\n\n1. Clone the repo\n\n\n\n2. Setup Environment\n\nCreate a  file in the root"
+                  }
+                ],
+                "icon": "examples",
+                "image": "https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg",
+                "tags": [
+                  "Tutorial",
+                  "Open Source",
+                  "JavaScript",
+                  "TypeScript",
+                  "React",
+                  "Material UI",
+                  "Flash",
+                  "Server Side JavaScript",
+                  "Node",
+                  "NextJS",
+                  "GitHub"
+                ],
+                "excerpt": "Each page focuses on a single part of the system\n\n[PageGrid thumbnails=\"no\" pages=\"/work/exampleproject/tutorial/quickstart\"]\n\n Clone the public repository\n\n[GitHub url=\"https://github.com/javascriptp"
+              }
+            ],
+            "icon": "examples",
+            "image": "https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg",
+            "tags": [
+              "Open Source",
+              "JavaScript",
+              "TypeScript",
+              "React",
+              "Material UI",
+              "Flash",
+              "Server Side JavaScript",
+              "Node",
+              "NextJS",
+              "App Router",
+              "GitHub"
+            ],
+            "excerpt": "The app you are using is free to fork, explore, copy, hack, and reuse\n\n[PageGrid thumbnails=\"no\" pages=\"/work/exampleproject/tutorial, /work/exampleproject/tutorial/quickstart\"]\n\n 🚀 Open Source and F"
+          },
+          {
+            "title": "Techstack",
+            "description": "Full JavaScript stack and more",
+            "slug": "/work/techstack",
+            "order": 110,
+            "type": "folder",
+            "children": [
+              {
+                "title": "Fullstack JavaScript",
                 "description": "JavaScript Whatever the Weather",
                 "slug": "/work/techstack/javascript",
                 "order": 3,
@@ -443,7 +502,7 @@
                 "icon": "js",
                 "image": "/png/3rdParty/javascript_og.png",
                 "tags": [
-                  "JavaScript",
+                  "Fullstack JavaScript",
                   "Vanilla JavaScript",
                   "TypeScript",
                   "React",
@@ -461,27 +520,77 @@
                 "excerpt": "We’ve been writing JavaScript since it was called ECMAScript.\n\n[PageGrid thumbnails=\"no\" pages=\"/work/techstack/javascript/typescript, /work/techstack/javascript/react, /work/techstack/javascript/node"
               },
               {
-                "title": "Git",
-                "slug": "/work/techstack/git",
-                "order": 25,
-                "icon": "github",
-                "image": "/png/3rdParty/github_og.png",
-                "type": "file",
-                "tags": [
-                  "github",
-                  "process",
-                  "javascript",
-                  "source control",
-                  "project management",
-                  "github",
-                  "bitbucket",
-                  "github",
-                  "process",
-                  "javascript",
-                  "tools",
-                  "gitkraken"
+                "title": "Other",
+                "description": "As well as JavaScript, we also have experience in these",
+                "slug": "/work/techstack/other",
+                "order": 500,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "Git",
+                    "slug": "/work/techstack/other/git",
+                    "order": 25,
+                    "icon": "github",
+                    "image": "/png/3rdParty/github_og.png",
+                    "type": "file",
+                    "tags": [
+                      "github",
+                      "process",
+                      "javascript",
+                      "source control",
+                      "project management",
+                      "github",
+                      "bitbucket",
+                      "github",
+                      "process",
+                      "javascript",
+                      "tools",
+                      "gitkraken"
+                    ],
+                    "excerpt": "We use GitHub for everything.\n\nMost of the communication done between us and our clients during development is done through GitHub in the form of comments, tracking bugs and issues, pull resuests, rev"
+                  },
+                  {
+                    "title": "Blockchain",
+                    "slug": "/work/techstack/other/blockchain",
+                    "order": 50,
+                    "icon": "api",
+                    "image": "/png/3rdParty/bitcoin.png",
+                    "type": "file",
+                    "tags": [
+                      "techstack",
+                      "crypto",
+                      "blockchain",
+                      "web3",
+                      "casino",
+                      "igaming",
+                      "experience",
+                      "bitcoin",
+                      "malta"
+                    ],
+                    "excerpt": "Blockchain Crypto Casino\n\n In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online ga"
+                  },
+                  {
+                    "title": "RESTful APIs",
+                    "slug": "/work/techstack/other/rest-api",
+                    "order": 70,
+                    "icon": "api",
+                    "image": "https://live.staticflickr.com/65535/54801612483_31ce454c4e_b.jpg",
+                    "type": "file",
+                    "tags": [
+                      "free",
+                      "api"
+                    ],
+                    "excerpt": "Goldlabel Public API\n\n glapi/flickr endpoints"
+                  }
                 ],
-                "excerpt": "We use GitHub for everything.\n\nMost of the communication done between us and our clients during development is done through GitHub in the form of comments, tracking bugs and issues, pull resuests, rev"
+                "icon": "techstack",
+                "image": "/png/3rdParty/react.png",
+                "tags": [
+                  "expertise",
+                  "fields",
+                  "work"
+                ],
+                "excerpt": "Aside\n\n[PageGrid thumbnails=\"yes\" pages=\"/work/techstack/other/git, /work/techstack/other/restapi, /work/techstack/other/blockchain\"]\n\n Core"
               }
             ],
             "icon": "techstack",
@@ -491,120 +600,7 @@
               "fields",
               "work"
             ],
-            "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work/techstack/javascript, /work/techstack/git\"]\n\n We work across the full JavaScript stack to help understand all perspectives, from interface to infrastructure\n\nWe "
-          },
-          {
-            "title": "Open Source",
-            "description": "Open Source and Free Forever",
-            "slug": "/work/open-source",
-            "order": 100,
-            "type": "folder",
-            "children": [
-              {
-                "title": "Quick Start",
-                "slug": "/work/open-source/quick-start",
-                "order": 5,
-                "icon": "success",
-                "image": "/png/n64/test.png",
-                "type": "file",
-                "excerpt": "Get started with Goldlabel Core Open Source\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\n 🚀 Install\n\n1. Clone the repo\n\n\n\n2. Setup Environment\n\nCreate a  file in the root"
-              },
-              {
-                "title": "Cartridges",
-                "slug": "/work/open-source/cartridges",
-                "order": 10,
-                "icon": "cartridge",
-                "image": "/png/n64/test.png",
-                "type": "file",
-                "excerpt": "Goldlabel is built on cartridges\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\nA cartridge is a selfcontained piece of application logic: React components, state, styles, a"
-              },
-              {
-                "title": "New Cartridge",
-                "slug": "/work/open-source/new-cartridge",
-                "order": 15,
-                "icon": "add",
-                "image": "/png/n64/test.png",
-                "type": "file",
-                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\n is a template designed to help developers quickly bootstrap a new Cartridge in a modular application framework such as Goldlab"
-              },
-              {
-                "title": "Design System",
-                "slug": "/work/open-source/design-system",
-                "order": 25,
-                "icon": "design",
-                "image": "/png/n64/test.png",
-                "type": "file",
-                "excerpt": "Material UI is a React component library that provides a consistent design system, layout primitives, and readymade UI components\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore"
-              },
-              {
-                "title": "Shortcodes",
-                "slug": "/work/open-source/shortcodes",
-                "order": 26,
-                "icon": "wordpress",
-                "image": "/png/n64/test.png",
-                "type": "file",
-                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Shortcodes\" label=\"Shortcodes\"]\n\nGoldlabel includes a Shortcodes cartridge that brings a familiar WordPressstyle author"
-              },
-              {
-                "title": "Lingua",
-                "slug": "/work/open-source/lingua",
-                "order": 28,
-                "icon": "lingua",
-                "image": "/png/n64/test.png",
-                "type": "file",
-                "excerpt": "[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Lingua\" label=\"Lingua\"]\n\nThe Lingua cartridge brings localisation to Goldlabel. It enables your site to serve content i"
-              },
-              {
-                "title": "Uberedux",
-                "slug": "/work/open-source/uberedux",
-                "order": 30,
-                "icon": "js",
-                "image": "/png/n64/test.png",
-                "type": "file",
-                "tags": [
-                  "Free",
-                  "atridges",
-                  "Uberedux",
-                  "State Management",
-                  "Redux"
-                ],
-                "excerpt": "Otherwise you'd be back in jQuery callback hell. Nobody wants that.\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Uberedux\" label=\"Uberedux\"]\n\nUberedux is a simple,"
-              },
-              {
-                "title": "Paywall",
-                "slug": "/work/open-source/paywall",
-                "order": 130,
-                "icon": "paywall",
-                "image": "/png/n64/test.png",
-                "type": "file",
-                "tags": [
-                  "cartridge",
-                  "free",
-                  "paywall",
-                  "use cases",
-                  "acess",
-                  "auth",
-                  "subscription"
-                ],
-                "excerpt": "User accounts, passwords, membership access and payment\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Paywall\" label=\"Paywall\"]\n\n Use Case\n\nWhen a draft chapter of "
-              }
-            ],
-            "icon": "github",
-            "image": "/png/3rdParty/github_og.png",
-            "tags": [
-              "JavaScript",
-              "Vanilla JavaScript",
-              "TypeScript",
-              "React",
-              "Material UI",
-              "Flash",
-              "Server Side JavaScript",
-              "Node",
-              "Gatsby",
-              "NextJS",
-              "Headless CMS"
-            ],
-            "excerpt": "Free for anyone to fork, copy, hack, and reuse.\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Core repo\"]\n\n[PageGrid pages=\"/work/opensource/cartridges, /work/opensource/uberedux, /work/"
+            "excerpt": "Working across the full JavaScript stack to help understand every perspective from interface to infrastructure\n\n[PageGrid thumbnails=\"no\" pages=\"/work/techstack/javascript, /work/techstack/git\"]\n\nWe f"
           }
         ],
         "icon": "work",
@@ -623,7 +619,7 @@
           "NextJS",
           "Headless CMS"
         ],
-        "excerpt": "The apps we ship are real. They run in production and are developed accessibly.\n\n[PageGrid thumbnails=\"no\" pages=\"/work/company, /work/techstack, /work/opensource, /work/casestudies\"]\n\nThe Core is Ope"
+        "excerpt": "Goldlabel builds and ships modern web apps for clients who need real results fast\n\n[PageGrid thumbnails=\"no\" pages=\"/work/techstack, /work/casestudies, /work/exampleproject, /work/about\"]\n\n Small team"
       },
       {
         "title": "Life",
@@ -1136,7 +1132,7 @@
         ],
         "icon": "balance",
         "image": "https://live.staticflickr.com/65535/52538111215_c3a5b085b8_b.jpg",
-        "excerpt": "If you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are \n\n[PageGrid thumbnails=\"no\" pages=\"/balance/words, /balance/film, /balance/pictures\"]"
+        "excerpt": "If you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are \n\n[PageGrid thumbnails=\"no\" pages=\"/balance/pictures, /balance/film, /balance/words\"]"
       }
     ],
     "icon": "home",

@@ -1,7 +1,7 @@
 {
-  "app": "Goldlabel",
-  "description": "Pr0 JavaScript whatever the weather",
-  "persist": false,
+  "app": "Goldlabel Apps Ltd",
+  "description": "The apps we ship are real",
+  "persist": true,
   "url": "https://goldlabel.pro/work/goldlabel",
   "repo": "https://github.com/javascript-pro/core",
   "themes": {

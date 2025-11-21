@@ -1,5 +1,5 @@
 ---
-order: 25
+order: 110
 title: Techstack
 description: Full JavaScript stack and more
 slug: /work/techstack
@@ -8,9 +8,9 @@ image: /png/3rdParty/react.png
 tags: expertise, fields, work
 ---
 
-[PageGrid thumbnails="no" pages="/work/techstack/javascript, /work/techstack/git"]
+> Working across the full JavaScript stack to help understand every perspective from interface to infrastructure
 
-> We work across the full JavaScript stack to help understand all perspectives, from interface to infrastructure
+[PageGrid thumbnails="no" pages="/work/techstack/javascript, /work/techstack/git"]
 
 We focus on robust, modern JavaScript tooling and scalable cloud-native delivery. Whether building responsive UIs, designing serverless APIs, or optimising DevOps pipelines, we bring production experience and architectural clarity to every layer of the process.
 

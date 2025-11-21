@@ -52,7 +52,9 @@ export default function SideAds() {
               {!isMobile && (
                 <ListItemText
                   primary={
-                    <Typography variant="body2" noWrap>{item.title}</Typography>
+                    <Typography variant="body2" noWrap>
+                      {item.title}
+                    </Typography>
                   }
                 />
               )}

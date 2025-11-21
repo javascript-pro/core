@@ -3,6 +3,7 @@
 import * as React from 'react';
 import { useRouter } from 'next/navigation';
 import {
+  Box,
   Grid,
   List,
   ListItemButton,
@@ -28,14 +29,12 @@ export default function MenuGrid() {
 
   return (
     <>
-      <Grid container spacing={2} sx={{ mb: 2 }}>
+      <Grid container spacing={1}>
+        <Grid size={{ xs: 12, md: 6 }}>{!user ? <Continue /> : <User />}</Grid>
         <Grid size={{ xs: 12, md: 6 }}>
-          {!user ? <Continue /> : <User />}
-
-          <pre>user: {JSON.stringify(user, null, 2)}</pre>
-        </Grid>
-        <Grid size={{ xs: 12, md: 6 }}>
-          <SelectLang />
+          <Box sx={{ my: 2 }}>
+            <SelectLang />
+          </Box>
           <List dense>
             <ListItemButton
               onClick={() => {

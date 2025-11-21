@@ -1,11 +1,11 @@
 ---
 order: 3
-title: JavaScript
+title: Fullstack JavaScript
 description: JavaScript Whatever the Weather
 slug: /work/techstack/javascript
 icon: js
 image: /png/3rdParty/javascript_og.png
-tags: JavaScript, Vanilla JavaScript, TypeScript, React, Angular, Vue, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS, JSON
+tags: Fullstack JavaScript, Vanilla JavaScript, TypeScript, React, Angular, Vue, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS, JSON
 ---
 
 > We’ve been writing JavaScript since it was called ECMAScript.
