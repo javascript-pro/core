@@ -265,7 +265,44 @@
                     "slug": "/work/techstack/javascript/nextjs",
                     "order": 2,
                     "type": "folder",
-                    "children": [],
+                    "children": [
+                      {
+                        "title": "Server-Side Rendering (SSR)",
+                        "slug": "/work/techstack/javascript/nextjs/ssr",
+                        "order": 20,
+                        "icon": "js",
+                        "image": "/png/3rdParty/next_og.png",
+                        "type": "file",
+                        "tags": [
+                          "SSR",
+                          "JavaScript",
+                          "Node",
+                          "Next.js",
+                          "API",
+                          "REST API",
+                          "React"
+                        ],
+                        "excerpt": "ServerSide Rendering (SSR)"
+                      },
+                      {
+                        "title": "Static Site Generation (SSG)",
+                        "slug": "/work/techstack/javascript/nextjs/ssg",
+                        "order": 30,
+                        "icon": "js",
+                        "image": "/png/3rdParty/next_og.png",
+                        "type": "file",
+                        "tags": [
+                          "SSG",
+                          "JavaScript",
+                          "Node",
+                          "Next.js",
+                          "API",
+                          "REST API",
+                          "React"
+                        ],
+                        "excerpt": "Static Site Generation (SSG)"
+                      }
+                    ],
                     "icon": "js",
                     "image": "/png/3rdParty/next_og.png",
                     "tags": [
@@ -276,7 +313,7 @@
                       "REST API",
                       "React"
                     ],
-                    "excerpt": "Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with seamless backend capabilities, creating a unified developer experience.\n\n Why we use it\n\nIt sim"
+                    "excerpt": "Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with seamless backend capabilities, creating a unified developer experience.\n\n[PageGrid thumbnails=\""
                   },
                   {
                     "title": "Node",
