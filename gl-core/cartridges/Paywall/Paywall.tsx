@@ -17,5 +17,5 @@ export default function Paywall() {
     return () => unsubscribe();
   }, [dispatch]);
 
-  return <>{user && <SignOut />}</>;
+  return <></>;
 }

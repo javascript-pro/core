@@ -29,10 +29,7 @@ export default function MenuGrid() {
   return (
     <>
       <Grid container spacing={1}>
-        
-        
         <Grid size={{ xs: 12, md: 6 }}>
-          
           <List dense disablePadding>
             <ListItemButton
               onClick={() => {
@@ -43,10 +40,7 @@ export default function MenuGrid() {
               <ListItemIcon>
                 <Icon icon="bug" color="primary" />
               </ListItemIcon>
-              <ListItemText
-                primary="Bad Panda"
-              />
-              
+              <ListItemText primary="Bad Panda" />
             </ListItemButton>
 
             <ListItemButton
@@ -65,7 +59,6 @@ export default function MenuGrid() {
               <ListItemText
                 primary={themeMode === 'dark' ? 'Light mode' : 'Dark mode'}
               />
-              
             </ListItemButton>
 
             <ListItemButton
@@ -78,15 +71,11 @@ export default function MenuGrid() {
                 <Icon icon="reset" color="primary" />
               </ListItemIcon>
               <ListItemText primary="Restart" />
-              
             </ListItemButton>
           </List>
         </Grid>
 
-        <Grid size={{ xs: 12, md: 6 }}>
-          {!user ? <Continue /> : <User />}
-        </Grid>
-        
+        <Grid size={{ xs: 12, md: 6 }}>{!user ? <Continue /> : <User />}</Grid>
       </Grid>
 
       {/* <pre>dialog: {JSON.stringify(ds.dialog, null, 2)}</pre> */}

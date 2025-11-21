@@ -47,10 +47,10 @@ export default function SystemDialog() {
       >
         <DialogTitle>
           <CardHeader
-            avatar={<Icon icon={'design'} />}
+            avatar={<Icon icon={'goldlabel'} />}
             title={<Typography variant="h6">
-                SystemDialog
-              </Typography>}
+              Goldlabel Apps
+            </Typography>}
             subheader={ds.dialog.subheader}
           />
         </DialogTitle>

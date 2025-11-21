@@ -24,7 +24,6 @@ Vanilla JavaScript isn’t a step backward — it’s a strategic choice for pro
 
 When performance, portability, and integration outweigh the need for complex UI frameworks, a handcrafted, dependency-free JavaScript delivery layer remains one of the most powerful tools in the modern engineer’s kit.
 
-
 #### Key Idea: The Client-Side Delivery Layer
 
 A delivery framework is a small, dependency-free JavaScript client that can be embedded on any page via:

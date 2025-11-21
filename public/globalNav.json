@@ -421,7 +421,7 @@
                           "TypeScript",
                           "React"
                         ],
-                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/getstarted\" next=\"/work/expertise/javascript/typescript/structuraltyping\"]\n\n[PageAd slug=\"/work/expertise/javascript/typescript/structuraltyping\"]"
+                        "excerpt": "[PageAd slug=\"/work/expertise/javascript/typescript/structuraltyping\"]\n\n[PageAd slug=\"/work/expertise/javascript/typescript/aliases\"]\n\n[PageAd slug=\"/work/expertise/javascript/typescript/uniontypes\"]\n"
                       },
                       {
                         "title": "Structural Typing",
@@ -436,7 +436,7 @@
                           "TypeScript",
                           "React"
                         ],
-                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/advanced\" next=\"/work/expertise/javascript/typescript/aliases\"]\n\n TypeScript’s type system is based on shape compatibility, not nominal typing. Th"
+                        "excerpt": "TypeScript’s type system is based on shape compatibility, not nominal typing. That means two types are considered compatible if their structure (shape) matches — not because they have the same declare"
                       },
                       {
                         "title": "Interface vs Types",
@@ -451,7 +451,7 @@
                           "TypeScript",
                           "React"
                         ],
-                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/structuraltyping\" next=\"/work/expertise/javascript/typescript/uniontypes\"]\n\n At first glance, they look identical\n\n\n\nBoth define a “shape” with an"
+                        "excerpt": "At first glance, they look identical\n\n\n\nBoth define a “shape” with an id and name. You can use either for variables, parameters, and return types. So why do both exist?\n\n Conceptual Difference\n\n Inter"
                       },
                       {
                         "title": "Unions and intersections",
@@ -466,7 +466,7 @@
                           "TypeScript",
                           "React"
                         ],
-                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/aliases\"]\n\n Union Types are one of TypeScript’s most powerful and flexible features. They let you describe a value that can be one of several type"
+                        "excerpt": "Union Types are one of TypeScript’s most powerful and flexible features. They let you describe a value that can be one of several types — a way to express this or that\n\n What a Union Type is\n\nA union "
                       }
                     ],
                     "icon": "js",
@@ -498,7 +498,7 @@
                       "Jest",
                       "Playwright"
                     ],
-                    "excerpt": "A Left looking approach\n\n[PrevNext prev=\"/work/expertise/javascript/vanillajs\" next=\"/work/expertise/javascript/typescript\"]\n\nA leftlooking approach in JavaScript testing should mean testing earlier i"
+                    "excerpt": "A Left looking approach\n\nA leftlooking approach in JavaScript testing should mean testing earlier in the development process before code reaches production. Using tools like Jest for unit and integrat"
                   },
                   {
                     "title": "Vanilla JS (ES6+)",
@@ -834,7 +834,7 @@
                       "alternative history",
                       "fantasy"
                     ],
-                    "excerpt": "[PrevNext prev=\"/balance/books/rfkuang\" next=\"/balance/books/rfkuang/babel\"]\n\nKatabasis is a 2025 fantasy novel by American writer R. F. Kuang. It was released on August 26, 2025. The novel follows tw"
+                    "excerpt": "Katabasis is a 2025 fantasy novel by American writer R. F. Kuang. It was released on August 26, 2025. The novel follows two magicians, doctoral candidates, who must venture into hell to save their the"
                   }
                 ],
                 "icon": "books",

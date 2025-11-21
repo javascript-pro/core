@@ -16,7 +16,7 @@ export const userSignout =
       const current = getState().redux.paywall;
       const updated = {
         ...current,
-        user: null
+        user: null,
       };
 
       dispatch(setUbereduxKey({ key: 'paywall', value: updated }));

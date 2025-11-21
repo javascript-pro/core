@@ -2,26 +2,18 @@
 'use client';
 import * as React from 'react';
 import { Box } from '@mui/material';
-import { useUser, UserCard } from '../../Paywall';
+import { useUser, useIsUberUser, SignOut } from '../../Paywall';
 
 export default function User() {
-
   const user = useUser();
   const uid = user?.uid ?? null;
+  const isUberUser = useIsUberUser();
 
   return (
     <Box sx={{ p: 0 }}>
-      <Box
-        sx={{
-          width: '100%',
-          display: 'flex',
-        }}
-      >
         UID: {uid}
-
-        {/* <pre>user: {JSON.stringify(user, null, 2)}</pre> */}
-
-      </Box>
+        <pre>isUberUser: {JSON.stringify(isUberUser, null, 2)}</pre>
+        <SignOut />
     </Box>
   );
 }
