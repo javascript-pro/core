@@ -63,4 +63,3 @@ Not because it’s trendy—but because we know it inside out. We’ve seen the 
 
 If you need a JavaScript team that’s battle-tested, precise, and fast—we’re here.
 
-[PrevNext prev="/work/expertise" next="/work/expertise/javascript/typescript"]

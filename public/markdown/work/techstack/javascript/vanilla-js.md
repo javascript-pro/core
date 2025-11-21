@@ -24,7 +24,6 @@ Vanilla JavaScript isn’t a step backward — it’s a strategic choice for pro
 
 When performance, portability, and integration outweigh the need for complex UI frameworks, a handcrafted, dependency-free JavaScript delivery layer remains one of the most powerful tools in the modern engineer’s kit.
 
-[PrevNext prev="/work/expertise/javascript" next="/work/expertise/javascript/node"]
 
 #### Key Idea: The Client-Side Delivery Layer
 

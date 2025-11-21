@@ -14,5 +14,3 @@ You don’t have to love types, you just have to understand what they are and wh
 
 But here’s the thing, TypeScript isn’t a new language you have to learn.
 It’s just JavaScript with a bit of safety built in. Think of it like turning on seatbelts for your code. You can still drive fast, take corners, and build cool things you'll just have fewer crashes.
-
-[PrevNext prev="/work/expertise/javascript/js-testing" next="/work/expertise/javascript/typescript/real-world"]

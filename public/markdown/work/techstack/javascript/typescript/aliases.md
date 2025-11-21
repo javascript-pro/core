@@ -8,8 +8,6 @@ image: /png/3rdParty/typescript_og.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React
 ---
 
-[PrevNext prev="/work/expertise/javascript/typescript/structural-typing" next="/work/expertise/javascript/typescript/union-types"]
-
 ## At first glance, they look identical
 
 ```

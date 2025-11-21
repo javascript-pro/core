@@ -51,8 +51,6 @@ Vercel is the platform behind Next.js, offering frictionless deployment and host
 
 Next.js + Vercel is one of the most productive and scalable stacks available today, whether you're building a personal portfolio or a full-scale SaaS product.
 
-[PrevNext prev="/work/expertise/javascript/vanilla-js" next="/work/expertise/javascript/js-testing"]
-
 ## Case Study
 
 Situation

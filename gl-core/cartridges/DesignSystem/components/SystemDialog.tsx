@@ -46,12 +46,15 @@ export default function SystemDialog() {
         fullWidth
       >
         <DialogTitle>
-          {/* <CardHeader
+          <CardHeader
             avatar={<Icon icon={'design'} />}
-            title={<Typography variant="h6">Design System Dialog</Typography>}
+            title={<Typography variant="h6">
+                SystemDialog
+              </Typography>}
             subheader={ds.dialog.subheader}
-          /> */}
+          />
         </DialogTitle>
+
         <DialogContent>
           <Box
             sx={{

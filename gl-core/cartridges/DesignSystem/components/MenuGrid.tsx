@@ -12,7 +12,6 @@ import {
 } from '@mui/material';
 import { routeTo, useDispatch, Icon, reset } from '../../../../gl-core';
 import { useDesignSystem, setDesignSystemKey } from '../../DesignSystem';
-import { SelectLang } from '../../Lingua';
 import { User, Continue, useUser } from '../../Paywall';
 
 export default function MenuGrid() {
@@ -30,25 +29,24 @@ export default function MenuGrid() {
   return (
     <>
       <Grid container spacing={1}>
-        <Grid size={{ xs: 12, md: 6 }}>{!user ? <Continue /> : <User />}</Grid>
+        
+        
         <Grid size={{ xs: 12, md: 6 }}>
-          <Box sx={{ my: 2 }}>
-            <SelectLang />
-          </Box>
-          <List dense>
+          
+          <List dense disablePadding>
             <ListItemButton
               onClick={() => {
                 dispatch(setDesignSystemKey('dialog', null));
                 dispatch(routeTo('/bad-panda', router));
               }}
             >
-              <ListItemText
-                primary="Page not found, bro"
-                secondary="Bad Panda"
-              />
               <ListItemIcon>
                 <Icon icon="bug" color="primary" />
               </ListItemIcon>
+              <ListItemText
+                primary="Bad Panda"
+              />
+              
             </ListItemButton>
 
             <ListItemButton
@@ -56,10 +54,6 @@ export default function MenuGrid() {
                 handleToggle();
               }}
             >
-              <ListItemText
-                primary="Switch to..."
-                secondary={themeMode === 'dark' ? 'Light mode' : 'Dark mode'}
-              />
               <ListItemIcon>
                 <Icon
                   color="primary"
@@ -68,6 +62,10 @@ export default function MenuGrid() {
                   }
                 />
               </ListItemIcon>
+              <ListItemText
+                primary={themeMode === 'dark' ? 'Light mode' : 'Dark mode'}
+              />
+              
             </ListItemButton>
 
             <ListItemButton
@@ -76,13 +74,19 @@ export default function MenuGrid() {
                 dispatch(reset());
               }}
             >
-              <ListItemText primary="Restart" secondary="Back to the future" />
               <ListItemIcon>
                 <Icon icon="reset" color="primary" />
               </ListItemIcon>
+              <ListItemText primary="Restart" />
+              
             </ListItemButton>
           </List>
         </Grid>
+
+        <Grid size={{ xs: 12, md: 6 }}>
+          {!user ? <Continue /> : <User />}
+        </Grid>
+        
       </Grid>
 
       {/* <pre>dialog: {JSON.stringify(ds.dialog, null, 2)}</pre> */}
