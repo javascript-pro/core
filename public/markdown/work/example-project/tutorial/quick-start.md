@@ -2,9 +2,15 @@
 order: 5
 slug: /work/example-project/tutorial/quick-start
 title: Quick Start
+<<<<<<< HEAD:public/markdown/work/example-project/tutorial/quick-start.md
 description: Get started with Goldlabel
 icon: examples
 image: https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg
+=======
+description:
+icon: success
+image: /png/n64/test.png
+>>>>>>> master:public/markdown/work/open-source/quick-start.md
 ---
 
 > Get started with Goldlabel Core Open Source
