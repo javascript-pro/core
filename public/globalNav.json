@@ -552,7 +552,7 @@
                     "tags": [
                       "cloud"
                     ],
-                    "excerpt": "/work/techstack/other/cloudservices /work/techstack/other/cloudservices /work/techstack/other/cloudservices"
+                    "excerpt": "You don’t choose a cloud platform. The client has one. You learn each by immersion\n\n The concept\n\nModern React apps rarely stand alone. They sit on top of:\n\n hosting\n auth\n storage\n databases\n APIs\n q"
                   },
                   {
                     "title": "Git",
@@ -582,7 +582,7 @@
                     "slug": "/work/techstack/other/graphql",
                     "order": 70,
                     "icon": "techstack",
-                    "image": "https://live.staticflickr.com/65535/54938278108_599e67a072_b.jpg",
+                    "image": "/png/3rdParty/wikipedia.png",
                     "type": "file",
                     "tags": [
                       "free",

@@ -1,7 +1,6 @@
 import Core from './Core';
 import { Icon } from './cartridges/DesignSystem';
 import {
-  Advert,
   RenderMarkdown,
   Footer,
   Nav,
@@ -12,8 +11,6 @@ import {
   SideAds,
   SharePopup,
   ShareMenu,
-  LoadingOverlay,
-  FieldUpload,
   IndexNav,
   ArrowMenu,
   Siblings,
@@ -81,7 +78,6 @@ export {
 };
 export {
   Icon,
-  Advert,
   GoogleMap,
   PrevNext,
   YouTube,
@@ -97,8 +93,6 @@ export {
   SideAds,
   ShareMenu,
   SharePopup,
-  LoadingOverlay,
-  FieldUpload,
   ArrowMenu,
   Children,
   ChildPages,

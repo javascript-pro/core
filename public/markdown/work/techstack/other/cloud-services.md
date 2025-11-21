@@ -14,24 +14,24 @@ tags: cloud
 
 Modern React apps rarely stand alone. They sit on top of:
 
-* hosting
-* auth
-* storage
-* databases
-* APIs
-* queues
-* serverless functions
-* CI/CD
-* monitoring
+- hosting
+- auth
+- storage
+- databases
+- APIs
+- queues
+- serverless functions
+- CI/CD
+- monitoring
 
 Every company solves those with a cloud provider.
 So when you join a project, you adopt whatever stack is already in place:
 
-* Company A → **AWS** (Cognito, S3, CloudFront, Lambda, DynamoDB)
-* Company B → **Firebase** (Auth, Firestore, Functions, Hosting)
-* Company C → **Azure** (App Services, AAD, Functions, CosmosDB)
-* Startup → **Supabase**
-* Enterprise → **Hybrid mix**
+- Company A → **AWS** (Cognito, S3, CloudFront, Lambda, DynamoDB)
+- Company B → **Firebase** (Auth, Firestore, Functions, Hosting)
+- Company C → **Azure** (App Services, AAD, Functions, CosmosDB)
+- Startup → **Supabase**
+- Enterprise → **Hybrid mix**
 
 As a frontend engineer, you plug your React code into those services to deliver features. You don’t need the full Cloud Architect skillset — just enough to build, deploy, debug, and integrate reliably.
 
@@ -42,8 +42,8 @@ As a frontend engineer, you plug your React code into those services to deliver 
 Auth, storage, databases, serverless, hosting — every cloud provides these.
 Once you understand the pattern, switching cloud is translation work:
 
-* *AWS Cognito → Firebase Auth → Azure AD B2C*
-* *S3 → Firebase Storage → Azure Blob Storage*
+- _AWS Cognito → Firebase Auth → Azure AD B2C_
+- _S3 → Firebase Storage → Azure Blob Storage_
 
 The metaphors repeat.
 
@@ -55,11 +55,11 @@ Every login UI, every file upload, every realtime update pushes you to learn how
 
 Frontend bugs often originate in:
 
-* CORS
-* permissions
-* API routes
-* expired tokens
-* functions timing out
+- CORS
+- permissions
+- API routes
+- expired tokens
+- functions timing out
 
 Solving these teaches you the cloud platform in practice, not theory.
 
@@ -76,12 +76,12 @@ Uploading assets, configuring caching, invalidating CDNs, setting environment va
 
 All major clouds eventually feel similar:
 
-* dashboards
-* logs
-* metrics
-* function editors
-* secret managers
-* auth configuration
+- dashboards
+- logs
+- metrics
+- function editors
+- secret managers
+- auth configuration
 
 The UX differs, but the workflow is the same.
 
@@ -93,12 +93,12 @@ React developers frequently integrate with GitHub Actions, Vercel, Netlify, or n
 
 You’re not hired as DevOps, but working beside them exposes you to:
 
-* environment promotion
-* IaC
-* security policies
-* API gateways
-* container workflows
-* monitoring tools
+- environment promotion
+- IaC
+- security policies
+- API gateways
+- container workflows
+- monitoring tools
 
 This builds confidence over time.
 
@@ -111,6 +111,6 @@ You can drop into AWS, Firebase, or Azure and find your way around quickly becau
 
 If you want, I can compress this into:
 
-* a CV bullet
-* a Goldlabel documentation snippet
-* or a page for your tech stack section.
+- a CV bullet
+- a Goldlabel documentation snippet
+- or a page for your tech stack section.

@@ -4,7 +4,7 @@ import { ReactNode } from 'react';
 import { Provider } from 'react-redux';
 import { store, persistor } from './store';
 import { PersistGate } from 'redux-persist/integration/react';
-import { LoadingOverlay } from '../../../gl-core';
+import { LoadingOverlay } from '../../cartridges/DesignSystem';
 
 export default function UbereduxProvider({
   children,
