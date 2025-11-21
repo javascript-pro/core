@@ -201,7 +201,7 @@
               "interview",
               "experience"
             ],
-            "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work/techstack/other/dtrackt, /work/casestudies/aligent, /work/casestudies/hertwigauer, /work/casestudies/huawei, /work/casestudies/boral\", /work/casestudies/aligent\""
+            "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work/casestudies/dtrackt, /work/casestudies/aligent, /work/casestudies/hertwigauer, /work/casestudies/huawei, /work/casestudies/boral\", /work/casestudies/aligent\"]"
           },
           {
             "title": "Techstack",
@@ -211,7 +211,7 @@
             "type": "folder",
             "children": [
               {
-                "title": "Fullstack JavaScript",
+                "title": "JavaScript",
                 "description": "JavaScript Whatever the Weather",
                 "slug": "/work/techstack/javascript",
                 "order": 3,
@@ -543,6 +543,18 @@
                 "type": "folder",
                 "children": [
                   {
+                    "title": "AWS, Firebase, GCP, Azure",
+                    "slug": "/work/techstack/other/cloud-services",
+                    "order": 20,
+                    "icon": "techstack",
+                    "image": "/png/3rdParty/wikipedia.png",
+                    "type": "file",
+                    "tags": [
+                      "cloud"
+                    ],
+                    "excerpt": "/work/techstack/other/cloudservices /work/techstack/other/cloudservices /work/techstack/other/cloudservices"
+                  },
+                  {
                     "title": "Git",
                     "slug": "/work/techstack/other/git",
                     "order": 25,
@@ -564,6 +576,19 @@
                       "gitkraken"
                     ],
                     "excerpt": "We use GitHub for everything.\n\nMost of the communication done between us and our clients during development is done through GitHub in the form of comments, tracking bugs and issues, pull resuests, rev"
+                  },
+                  {
+                    "title": "GraphQL",
+                    "slug": "/work/techstack/other/graphql",
+                    "order": 70,
+                    "icon": "techstack",
+                    "image": "https://live.staticflickr.com/65535/54938278108_599e67a072_b.jpg",
+                    "type": "file",
+                    "tags": [
+                      "free",
+                      "api"
+                    ],
+                    "excerpt": "Things that actually matter daytoday as a React developer using GraphQL\n\n 1. You fetch exactly what you need\n\nNo overfetching, no underfetching.\nComponents request the precise fields they use, nothing"
                   },
                   {
                     "title": "RESTful APIs",
@@ -606,7 +631,7 @@
                   "fields",
                   "work"
                 ],
-                "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work/techstack/other/git, /work/techstack/other/restfulapis\"]"
+                "excerpt": "[PageGrid pages=\"/work/techstack/other/cloudservices, /work/techstack/other/graphql, /work/techstack/other/git, /work/techstack/other/restfulapis\"]"
               }
             ],
             "icon": "techstack",

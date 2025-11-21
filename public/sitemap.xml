@@ -266,10 +266,16 @@
     <loc>https://goldlabel.pro/work/techstack/javascript/vercel</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/work/techstack/other/cloud-services</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/work/techstack/other/docker</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/techstack/other/git</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/other/graphql</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/techstack/other</loc>
