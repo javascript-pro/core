@@ -2,6 +2,15 @@
 
 import { TIconShape } from './components/Icon';
 
+export interface TDesignSystemState {
+  cartridge?: string;
+  dialog?: any;
+  theme?: TTheme;
+  feedback?: TFeedback;
+  fullScreen?: boolean;
+  [key: string]: any;
+}
+
 export type TSeverity = 'success' | 'info' | 'warning' | 'error';
 
 export type TFeedback = {
@@ -16,14 +25,6 @@ export type TIcon = TIconShape;
 export interface IDesignSystem {
   theme?: TTheme;
   children: React.ReactNode;
-}
-
-export interface TDesignSystemState {
-  cartridge?: string;
-  dialog?: any;
-  theme?: TTheme;
-  feedback?: TFeedback;
-  [key: string]: any;
 }
 
 export type TTheme = {

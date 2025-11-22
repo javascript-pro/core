@@ -2,8 +2,9 @@
 import { TDesignSystemState } from './types';
 
 export const initialState: TDesignSystemState = {
-  cartridge: 'designsystem',
+  cartridge: 'designSystem',
   dialog: null,
-  themeMode: 'dark',
+  themeMode: 'light',
   feedback: null,
+  fullScreen: false,
 };

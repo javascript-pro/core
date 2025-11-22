@@ -1,4 +1,4 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/ContentManager/index.tsx
-import { initialState as initialStateDesignSystem } from './initialState';
+import { initialState as initialStateContentManager } from './initialState';
 
-export { initialStateDesignSystem };
+export { initialStateContentManager };

@@ -3,13 +3,10 @@
 import * as React from 'react';
 import {
   Dialog,
-  Box,
   DialogActions,
   DialogContent,
   IconButton,
   DialogTitle,
-  CardHeader,
-  Typography,
 } from '@mui/material';
 import { useDispatch, useIsMobile, Icon } from '../../../../gl-core';
 import {
@@ -22,13 +19,16 @@ import { useUser, Continue, User } from '../../Paywall';
 export default function SystemDialog() {
   const dispatch = useDispatch();
   const isMobile = useIsMobile();
-  const ds = useDesignSystem();
-  // const paywall = usePaywall();
   const user = useUser();
+  const ds = useDesignSystem();
+  const { fullScreen } = ds;
 
   const handleClose = () => {
-    // dispatch(setDesignSystemKey('dialog', {open: true, title: 'fuck'}));
     dispatch(setDesignSystemKey('dialog', null));
+  };
+
+  const toggleFullscreen = () => {
+    dispatch(setDesignSystemKey('fullScreen', !fullScreen));
   };
 
   if (!ds.dialog) return null;
@@ -36,27 +36,28 @@ export default function SystemDialog() {
   return (
     <>
       <Dialog
-        fullScreen={isMobile}
+        fullScreen={isMobile || fullScreen}
         open={Boolean(ds.dialog)}
         onClose={handleClose}
         maxWidth={'md'}
         fullWidth
       >
-        <DialogTitle>
-          <CardHeader
-            title={!user ? <Continue /> : <User />}
-            subheader={ds.dialog.subheader}
-            action={<Icon icon={'fullscreen'} />}
-          />
-        </DialogTitle>
+        <DialogTitle>{!user ? <Continue /> : <User />}</DialogTitle>
 
         <DialogContent />
+
+        {/* <pre style={{ fontSize: '10px' }}>
+          fullScreen: {JSON.stringify(fullScreen, null, 2)}
+        </pre> */}
 
         <DialogActions sx={{ display: 'block' }}>
           <MenuSystem />
         </DialogActions>
 
         <DialogActions>
+          <IconButton color="primary" onClick={toggleFullscreen}>
+            <Icon icon="fullscreen" />
+          </IconButton>
           <IconButton color="primary" onClick={handleClose}>
             <Icon icon="close" />
           </IconButton>
