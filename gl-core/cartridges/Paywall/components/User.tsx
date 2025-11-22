@@ -3,14 +3,7 @@
 
 import * as React from 'react';
 import moment from 'moment';
-import {
-  Box,
-  Avatar,
-  Typography,
-  Grid,
-  Chip,
-  Paper,
-} from '@mui/material';
+import { Box, Avatar, Typography, Grid, Chip, Paper } from '@mui/material';
 import { useUser, useIsUberUser } from '../../Paywall';
 
 export default function User() {
@@ -36,7 +29,7 @@ export default function User() {
     : null;
 
   return (
-    <Paper variant='outlined' sx={{ p: 2 }}>
+    <Paper variant="outlined" sx={{ p: 2 }}>
       <Grid container spacing={2} alignItems="center">
         <Grid size={{ xs: 3, sm: 2 }}>
           <Avatar
@@ -63,7 +56,6 @@ export default function User() {
       </Grid>
 
       <Box>
-
         {provider?.providerId && (
           <Typography variant="body2">
             <strong>Provider:</strong> {provider.providerId}
