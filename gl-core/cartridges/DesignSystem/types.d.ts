@@ -1,17 +1,5 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/DesignSystem/types.d.ts
-
 import { TIconShape } from './components/Icon';
-
-export type TSeverity = 'success' | 'info' | 'warning' | 'error';
-
-export type TFeedback = {
-  severity?: TSeverity;
-  title?: string;
-  description?: string;
-  onClose?: () => void;
-} | null;
-
-export type TIcon = TIconShape;
 
 export interface IDesignSystem {
   theme?: TTheme;
@@ -23,8 +11,20 @@ export interface TDesignSystemState {
   dialog?: any;
   theme?: TTheme;
   feedback?: TFeedback;
+  fullScreen?: boolean;
   [key: string]: any;
 }
+
+export type TSeverity = 'success' | 'info' | 'warning' | 'error';
+
+export type TFeedback = {
+  severity?: TSeverity;
+  title?: string;
+  description?: string;
+  onClose?: () => void;
+} | null;
+
+export type TIcon = TIconShape;
 
 export type TTheme = {
   mode: 'light' | 'dark';
@@ -41,18 +41,4 @@ export type TSystemDialog = {
   title?: string;
   subheader?: string;
   content?: React.ReactNode;
-};
-
-export type TFlickrState = {
-  cartridge?: string;
-  feedback: {
-    severity: 'error' | 'warning' | 'info' | 'success';
-    title: string;
-    message: string;
-  };
-  latestIndex: number;
-  latest: {
-    fetching: boolean;
-    fetched: boolean;
-  } | null;
 };

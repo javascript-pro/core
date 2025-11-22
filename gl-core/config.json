@@ -1,16 +1,14 @@
 {
   "app": "Goldlabel Apps Ltd",
-  "description": "The apps we ship are real",
+  "url": "https://goldlabel.pro",
   "persist": true,
-  "url": "https://goldlabel.pro/work/goldlabel",
-  "repo": "https://github.com/javascript-pro/core",
   "themes": {
     "light": {
       "mode": "light",
       "primary": "#126A71",
       "secondary": "#0B555B",
-      "background": "#F6F4F4",
-      "paper": "#FFF",
+      "background": "#FFF",
+      "paper": "#F6F4F4",
       "border": "#9FBCD1",
       "text": "#303030"
     },

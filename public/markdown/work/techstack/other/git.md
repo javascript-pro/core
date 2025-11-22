@@ -3,7 +3,7 @@ order: 25
 title: Git
 description: Created in 2005 by Linus Torvalds
 slug: /work/techstack/other/git
-icon: github
+icon: techstack
 image: /png/3rdParty/github_og.png
 tags: github, process, javascript, source control, project management, github, bitbucket, github, process, javascript, tools, gitkraken
 ---

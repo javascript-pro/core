@@ -8,8 +8,6 @@ image: /png/3rdParty/typescript_og.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React
 ---
 
-[PrevNext prev="/work/expertise/javascript/typescript/aliases"]
-
 > Union Types are one of TypeScript’s most powerful and flexible features. They let you describe a value that can be one of several types — a way to express this or that
 
 #### What a Union Type is

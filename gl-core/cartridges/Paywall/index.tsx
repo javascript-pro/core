@@ -9,6 +9,7 @@ import SignOut from './components/SignOut';
 import DialogPaywall from './components/DialogPaywall';
 import UserCard from './components/UserCard';
 import { usePaywall } from './hooks/usePaywall';
+import { useIsUberUser } from './hooks/useIsUberUser';
 import { useUser } from './hooks/useUser';
 import { setUser } from './actions/setUser';
 import { setPaywallKey } from './actions/setPaywallKey';
@@ -18,6 +19,7 @@ export {
   Paywall,
   initialStatePaywall,
   usePaywall,
+  useIsUberUser,
   useUser,
   setPaywallKey,
   setUser,

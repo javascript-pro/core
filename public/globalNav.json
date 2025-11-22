@@ -8,13 +8,13 @@
     "children": [
       {
         "title": "Work",
-        "description": "Fullstack JavaScript",
+        "description": "20+ Years of coding",
         "slug": "/work",
         "order": 10,
         "type": "folder",
         "children": [
           {
-            "title": "About Goldlabel",
+            "title": "About us",
             "description": "UK Limited Company (5460545)",
             "slug": "/work/about",
             "order": 10,
@@ -106,20 +106,6 @@
             "excerpt": "| Tel/WhatsApp  |  | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX\n\n[PageGrid thumbnails=\"no\" pages=\"/work/company/gdpr, /work/company/privacycookies, /work/company/term"
           },
           {
-            "title": "Company",
-            "description": "UK Limited Company (5460545)",
-            "slug": "/work/company",
-            "order": 10,
-            "type": "folder",
-            "children": [],
-            "icon": "company",
-            "image": "/png/3rdParty/git_og.png",
-            "tags": [
-              "intellectual-property"
-            ],
-            "excerpt": "| Tel/WhatsApp  |  | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX\n\n[PageGrid thumbnails=\"no\" pages=\"/work/company/gdpr, /work/company/privacycookies, /work/company/term"
-          },
-          {
             "title": "Case Studies",
             "description": "Real World Experience",
             "slug": "/work/case-studies",
@@ -174,6 +160,26 @@
                 "excerpt": "Feb to May 2016\n\n English/Chinese Project Management eLearning App\n\nBy 2015 React had evolved beyond an experiment. Facebook, Instagram, and Airbnb were using it at scale, and the opensource ecosystem"
               },
               {
+                "title": "DTrackt!",
+                "slug": "/work/case-studies/dtrackt",
+                "order": 40,
+                "icon": "techstack",
+                "image": "/png/3rdParty/bitcoin.png",
+                "type": "file",
+                "tags": [
+                  "techstack",
+                  "crypto",
+                  "blockchain",
+                  "web3",
+                  "casino",
+                  "igaming",
+                  "experience",
+                  "bitcoin",
+                  "malta"
+                ],
+                "excerpt": "Blockchain Crypto Casino\n\n In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online ga"
+              },
+              {
                 "title": "Boral",
                 "slug": "/work/case-studies/boral",
                 "order": 50,
@@ -195,66 +201,7 @@
               "interview",
               "experience"
             ],
-            "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work/casestudies/aligent, /work/casestudies/hertwigauer, /work/casestudies/huawei, /work/casestudies/boral\", /work/casestudies/aligent\"]"
-          },
-          {
-            "title": "Example Project",
-            "description": "This app... Open Source",
-            "slug": "/work/example-project",
-            "order": 90,
-            "type": "folder",
-            "children": [
-              {
-                "title": "Tutorial",
-                "description": "How to get up and running",
-                "slug": "/work/example-project/tutorial",
-                "order": 90,
-                "type": "folder",
-                "children": [
-                  {
-                    "title": "Quick Start",
-                    "slug": "/work/example-project/tutorial/quick-start",
-                    "order": 5,
-                    "icon": "examples",
-                    "image": "https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg",
-                    "type": "file",
-                    "excerpt": "Get started with Goldlabel Core Open Source\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\n 🚀 Install\n\n1. Clone the repo\n\n\n\n2. Setup Environment\n\nCreate a  file in the root"
-                  }
-                ],
-                "icon": "examples",
-                "image": "https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg",
-                "tags": [
-                  "Tutorial",
-                  "Open Source",
-                  "JavaScript",
-                  "TypeScript",
-                  "React",
-                  "Material UI",
-                  "Flash",
-                  "Server Side JavaScript",
-                  "Node",
-                  "NextJS",
-                  "GitHub"
-                ],
-                "excerpt": "Each page focuses on a single part of the system\n\n[PageGrid thumbnails=\"no\" pages=\"/work/exampleproject/tutorial/quickstart\"]\n\n Clone the public repository\n\n[GitHub url=\"https://github.com/javascriptp"
-              }
-            ],
-            "icon": "examples",
-            "image": "https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg",
-            "tags": [
-              "Open Source",
-              "JavaScript",
-              "TypeScript",
-              "React",
-              "Material UI",
-              "Flash",
-              "Server Side JavaScript",
-              "Node",
-              "NextJS",
-              "App Router",
-              "GitHub"
-            ],
-            "excerpt": "The app you are using is free to fork, explore, copy, hack, and reuse\n\nOpen Source and Free forever. It offers statically generated sites with Firestorepowered updates and a real admin panel. Built wi"
+            "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work/casestudies/dtrackt, /work/casestudies/aligent, /work/casestudies/hertwigauer, /work/casestudies/huawei, /work/casestudies/boral\", /work/casestudies/aligent\"]"
           },
           {
             "title": "Techstack",
@@ -264,7 +211,7 @@
             "type": "folder",
             "children": [
               {
-                "title": "Fullstack JavaScript",
+                "title": "JavaScript",
                 "description": "JavaScript Whatever the Weather",
                 "slug": "/work/techstack/javascript",
                 "order": 3,
@@ -338,7 +285,44 @@
                     "slug": "/work/techstack/javascript/nextjs",
                     "order": 2,
                     "type": "folder",
-                    "children": [],
+                    "children": [
+                      {
+                        "title": "Server-Side Rendering (SSR)",
+                        "slug": "/work/techstack/javascript/nextjs/ssr",
+                        "order": 20,
+                        "icon": "js",
+                        "image": "/png/3rdParty/next_og.png",
+                        "type": "file",
+                        "tags": [
+                          "SSR",
+                          "JavaScript",
+                          "Node",
+                          "Next.js",
+                          "API",
+                          "REST API",
+                          "React"
+                        ],
+                        "excerpt": "ServerSide Rendering (SSR) in Next.js means the HTML for a page is generated on the server on every request. The browser receives a fully formed page, then React hydrates it.\n\n What it solves\n\n Fast f"
+                      },
+                      {
+                        "title": "Static Site Generation (SSG)",
+                        "slug": "/work/techstack/javascript/nextjs/ssg",
+                        "order": 30,
+                        "icon": "js",
+                        "image": "/png/3rdParty/next_og.png",
+                        "type": "file",
+                        "tags": [
+                          "SSG",
+                          "JavaScript",
+                          "Node",
+                          "Next.js",
+                          "API",
+                          "REST API",
+                          "React"
+                        ],
+                        "excerpt": "Next.js’s Static Site Generation (SSG) means the HTML is generated at build time, not on each request. When the site is deployed, all pages are already prerendered as static HTML files and can be serv"
+                      }
+                    ],
                     "icon": "js",
                     "image": "/png/3rdParty/next_og.png",
                     "tags": [
@@ -349,7 +333,7 @@
                       "REST API",
                       "React"
                     ],
-                    "excerpt": "Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with seamless backend capabilities, creating a unified developer experience.\n\n Why we use it\n\nIt sim"
+                    "excerpt": "Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with seamless backend capabilities, creating a unified developer experience.\n\n[PageGrid thumbnails=\""
                   },
                   {
                     "title": "Node",
@@ -368,6 +352,24 @@
                       "frameworks"
                     ],
                     "excerpt": "And then there was Node\n\nBack in the mid2000s, most of the web ran on PHP — powering WordPress, Drupal, Joomla — and developers often had to juggle PHP on the backend and JavaScript on the frontend. D"
+                  },
+                  {
+                    "title": "Vercel",
+                    "slug": "/work/techstack/javascript/vercel",
+                    "order": 3,
+                    "icon": "js",
+                    "image": "/png/3rdParty/next_og.png",
+                    "type": "file",
+                    "tags": [
+                      "Vercel",
+                      "JavaScript",
+                      "Node",
+                      "Next.js",
+                      "API",
+                      "REST API",
+                      "React"
+                    ],
+                    "excerpt": "Other services to deploy Next apps are available\n\nVercel created Next.js and runs the platform it was designed for. Deploys are instant, previews are automatic, and the hosting is globally fast withou"
                   },
                   {
                     "title": "TypeScript",
@@ -419,7 +421,7 @@
                           "TypeScript",
                           "React"
                         ],
-                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/getstarted\" next=\"/work/expertise/javascript/typescript/structuraltyping\"]\n\n[PageAd slug=\"/work/expertise/javascript/typescript/structuraltyping\"]"
+                        "excerpt": "[PageAd slug=\"/work/expertise/javascript/typescript/structuraltyping\"]\n\n[PageAd slug=\"/work/expertise/javascript/typescript/aliases\"]\n\n[PageAd slug=\"/work/expertise/javascript/typescript/uniontypes\"]\n"
                       },
                       {
                         "title": "Structural Typing",
@@ -434,7 +436,7 @@
                           "TypeScript",
                           "React"
                         ],
-                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/advanced\" next=\"/work/expertise/javascript/typescript/aliases\"]\n\n TypeScript’s type system is based on shape compatibility, not nominal typing. Th"
+                        "excerpt": "TypeScript’s type system is based on shape compatibility, not nominal typing. That means two types are considered compatible if their structure (shape) matches — not because they have the same declare"
                       },
                       {
                         "title": "Interface vs Types",
@@ -449,7 +451,7 @@
                           "TypeScript",
                           "React"
                         ],
-                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/structuraltyping\" next=\"/work/expertise/javascript/typescript/uniontypes\"]\n\n At first glance, they look identical\n\n\n\nBoth define a “shape” with an"
+                        "excerpt": "At first glance, they look identical\n\n\n\nBoth define a “shape” with an id and name. You can use either for variables, parameters, and return types. So why do both exist?\n\n Conceptual Difference\n\n Inter"
                       },
                       {
                         "title": "Unions and intersections",
@@ -464,7 +466,7 @@
                           "TypeScript",
                           "React"
                         ],
-                        "excerpt": "[PrevNext prev=\"/work/expertise/javascript/typescript/aliases\"]\n\n Union Types are one of TypeScript’s most powerful and flexible features. They let you describe a value that can be one of several type"
+                        "excerpt": "Union Types are one of TypeScript’s most powerful and flexible features. They let you describe a value that can be one of several types — a way to express this or that\n\n What a Union Type is\n\nA union "
                       }
                     ],
                     "icon": "js",
@@ -496,10 +498,10 @@
                       "Jest",
                       "Playwright"
                     ],
-                    "excerpt": "A Left looking approach\n\n[PrevNext prev=\"/work/expertise/javascript/vanillajs\" next=\"/work/expertise/javascript/typescript\"]\n\nA leftlooking approach in JavaScript testing should mean testing earlier i"
+                    "excerpt": "A Left looking approach\n\nA leftlooking approach in JavaScript testing should mean testing earlier in the development process before code reaches production. Using tools like Jest for unit and integrat"
                   },
                   {
-                    "title": "Vanilla JS",
+                    "title": "Vanilla JS (ES6+)",
                     "slug": "/work/techstack/javascript/vanilla-js",
                     "order": 100,
                     "icon": "js",
@@ -541,10 +543,22 @@
                 "type": "folder",
                 "children": [
                   {
+                    "title": "AWS, Firebase, GCP, Azure",
+                    "slug": "/work/techstack/other/cloud-services",
+                    "order": 20,
+                    "icon": "techstack",
+                    "image": "/png/3rdParty/wikipedia.png",
+                    "type": "file",
+                    "tags": [
+                      "cloud"
+                    ],
+                    "excerpt": "You don’t choose a cloud platform. The client has one. You learn each by immersion\n\n The concept\n\nModern React apps rarely stand alone. They sit on top of:\n\n hosting\n auth\n storage\n databases\n APIs\n q"
+                  },
+                  {
                     "title": "Git",
                     "slug": "/work/techstack/other/git",
                     "order": 25,
-                    "icon": "github",
+                    "icon": "techstack",
                     "image": "/png/3rdParty/github_og.png",
                     "type": "file",
                     "tags": [
@@ -564,11 +578,37 @@
                     "excerpt": "We use GitHub for everything.\n\nMost of the communication done between us and our clients during development is done through GitHub in the form of comments, tracking bugs and issues, pull resuests, rev"
                   },
                   {
-                    "title": "Blockchain",
-                    "slug": "/work/techstack/other/blockchain",
-                    "order": 50,
-                    "icon": "api",
-                    "image": "/png/3rdParty/bitcoin.png",
+                    "title": "GraphQL",
+                    "slug": "/work/techstack/other/graphql",
+                    "order": 70,
+                    "icon": "techstack",
+                    "image": "/png/3rdParty/wikipedia.png",
+                    "type": "file",
+                    "tags": [
+                      "free",
+                      "api"
+                    ],
+                    "excerpt": "Things that actually matter daytoday as a React developer using GraphQL\n\n 1. You fetch exactly what you need\n\nNo overfetching, no underfetching.\nComponents request the precise fields they use, nothing"
+                  },
+                  {
+                    "title": "RESTful APIs",
+                    "slug": "/work/techstack/other/restful-apis",
+                    "order": 70,
+                    "icon": "techstack",
+                    "image": "https://live.staticflickr.com/65535/54801612483_31ce454c4e_b.jpg",
+                    "type": "file",
+                    "tags": [
+                      "free",
+                      "api"
+                    ],
+                    "excerpt": "Goldlabel Public API\n\n glapi/flickr endpoints"
+                  },
+                  {
+                    "title": "Docker & Kubernetes",
+                    "slug": "/work/techstack/other/docker",
+                    "order": 75,
+                    "icon": "techstack",
+                    "image": "/png/3rdParty/wikipedia.png",
                     "type": "file",
                     "tags": [
                       "techstack",
@@ -581,30 +621,17 @@
                       "bitcoin",
                       "malta"
                     ],
-                    "excerpt": "Blockchain Crypto Casino\n\n In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online ga"
-                  },
-                  {
-                    "title": "RESTful APIs",
-                    "slug": "/work/techstack/other/rest-api",
-                    "order": 70,
-                    "icon": "api",
-                    "image": "https://live.staticflickr.com/65535/54801612483_31ce454c4e_b.jpg",
-                    "type": "file",
-                    "tags": [
-                      "free",
-                      "api"
-                    ],
-                    "excerpt": "Goldlabel Public API\n\n glapi/flickr endpoints"
+                    "excerpt": "Why use Docker\n\nDocker is process heavy. It can feel like you’re running a small datacentre on your laptop. But once a competent DevOps engineer lays out good images and clean Compose files, the payof"
                   }
                 ],
                 "icon": "techstack",
-                "image": "/png/3rdParty/react.png",
+                "image": "/png/clouds/default_whitecloud.png",
                 "tags": [
                   "expertise",
                   "fields",
                   "work"
                 ],
-                "excerpt": "Aside\n\n[PageGrid thumbnails=\"yes\" pages=\"/work/techstack/other/git, /work/techstack/other/restapi, /work/techstack/other/blockchain\"]\n\n Core"
+                "excerpt": "[PageGrid pages=\"/work/techstack/other/cloudservices, /work/techstack/other/graphql, /work/techstack/other/git, /work/techstack/other/restfulapis\"]"
               }
             ],
             "icon": "techstack",
@@ -614,11 +641,121 @@
               "fields",
               "work"
             ],
-            "excerpt": "Working across the full JavaScript stack to help understand every perspective from interface to infrastructure\n\n[PageGrid thumbnails=\"no\" pages=\"/work/techstack/javascript, /work/techstack/git\"]\n\nWe f"
+            "excerpt": "Working across the full JavaScript stack to help understand every perspective from interface to infrastructure\n\n[PageGrid thumbnails=\"no\" pages=\"/work/techstack/javascript, /work/techstack/other\"]\n\nWe"
+          },
+          {
+            "title": "Example Project",
+            "description": "This app... Open Source",
+            "slug": "/work/example-project",
+            "order": 190,
+            "type": "folder",
+            "children": [
+              {
+                "title": "Cartridges",
+                "description": "Self-contained pieces of application logic",
+                "slug": "/work/example-project/cartridges",
+                "order": 10,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "Content Manager",
+                    "slug": "/work/example-project/cartridges/content-manager",
+                    "order": 15,
+                    "icon": "good-fit",
+                    "image": "/png/n64/test.png",
+                    "type": "file",
+                    "tags": [
+                      "firebase",
+                      "cms",
+                      "contentmanager"
+                    ],
+                    "excerpt": "Manage content stored in a Firebase collection\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/ContentManager\" label=\"ContentManager\"]\n\nWe’re introducing a new cartri"
+                  },
+                  {
+                    "title": "Design System",
+                    "slug": "/work/example-project/cartridges/design-system",
+                    "order": 25,
+                    "icon": "design",
+                    "image": "/png/n64/test.png",
+                    "type": "file",
+                    "excerpt": "Material UI is a React component library that provides a consistent design system, layout primitives, and readymade UI components\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore"
+                  },
+                  {
+                    "title": "Uberedux",
+                    "slug": "/work/example-project/cartridges/uberedux",
+                    "order": 30,
+                    "icon": "js",
+                    "image": "/png/n64/test.png",
+                    "type": "file",
+                    "tags": [
+                      "Free",
+                      "atridges",
+                      "Uberedux",
+                      "State Management",
+                      "Redux"
+                    ],
+                    "excerpt": "Otherwise you'd be back in jQuery callback hell. Nobody wants that.\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Uberedux\" label=\"Uberedux\"]\n\nUberedux is a simple,"
+                  }
+                ],
+                "icon": "cartridge",
+                "image": "/png/n64/test.png",
+                "excerpt": "Goldlabel is built on Cartridges\n\n[PageGrid pages=\"/work/exampleproject/cartridges/designsystem, /work/exampleproject/cartridges/uberedux, /work/exampleproject/cartridges/contentmanager\"]\n\nA cartridge"
+              },
+              {
+                "title": "Tutorial",
+                "description": "How to get up and running",
+                "slug": "/work/example-project/tutorial",
+                "order": 90,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "Quick Start",
+                    "slug": "/work/example-project/tutorial/quick-start",
+                    "order": 5,
+                    "icon": "examples",
+                    "image": "/png/3rdParty/github_og.png",
+                    "type": "file",
+                    "excerpt": "Get started with Goldlabel Core Open Source\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\n 🚀 Install\n\n1. Clone the repo\n\n\n\n2. Setup Environment\n\nCreate a  file in the root"
+                  }
+                ],
+                "icon": "github",
+                "image": "/png/3rdParty/github_og.png",
+                "tags": [
+                  "Tutorial",
+                  "Open Source",
+                  "JavaScript",
+                  "TypeScript",
+                  "React",
+                  "Material UI",
+                  "Flash",
+                  "Server Side JavaScript",
+                  "Node",
+                  "NextJS",
+                  "GitHub"
+                ],
+                "excerpt": "Each page focuses on a single part of the system\n\n Clone the public repository\n\nThis section walks through a minimal Goldlabel Core project from start to finish. Each page focuses on a single part of "
+              }
+            ],
+            "icon": "examples",
+            "image": "/png/n64/flickr.png",
+            "tags": [
+              "Open Source",
+              "JavaScript",
+              "TypeScript",
+              "React",
+              "Material UI",
+              "Flash",
+              "Server Side JavaScript",
+              "Node",
+              "NextJS",
+              "App Router",
+              "GitHub"
+            ],
+            "excerpt": "The app you are using is free to fork, explore, copy, hack, and reuse\n\nOpen Source and Free forever. It offers statically generated sites with Firestorepowered updates and a real admin panel. Built wi"
           }
         ],
         "icon": "work",
-        "image": "https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg",
+        "image": "/png/n64/flickr.png",
         "tags": [
           "Professional",
           "JavaScript",
@@ -633,7 +770,7 @@
           "NextJS",
           "Headless CMS"
         ],
-        "excerpt": "Goldlabel builds and ships modern web apps for clients who need real results fast\n\n[PageGrid thumbnails=\"no\" pages=\"/work/techstack, /work/casestudies, /work/exampleproject, /work/about\"]\n\n Small team"
+        "excerpt": "Goldlabel builds and ships modern web apps for clients who need real results fast\n\n[PageGrid thumbnails=\"no\" pages=\"/work/about, /work/techstack, /work/casestudies, /work/exampleproject\"]\n\n Small team"
       },
       {
         "title": "Life",
@@ -697,7 +834,7 @@
                       "alternative history",
                       "fantasy"
                     ],
-                    "excerpt": "[PrevNext prev=\"/balance/books/rfkuang\" next=\"/balance/books/rfkuang/babel\"]\n\nKatabasis is a 2025 fantasy novel by American writer R. F. Kuang. It was released on August 26, 2025. The novel follows tw"
+                    "excerpt": "Katabasis is a 2025 fantasy novel by American writer R. F. Kuang. It was released on August 26, 2025. The novel follows two magicians, doctoral candidates, who must venture into hell to save their the"
                   }
                 ],
                 "icon": "books",
@@ -975,6 +1112,14 @@
                 "excerpt": "The death sport capital of the world\n\n[YouTube src=\"https://youtu.be/FtcOeCLt838\"]\n\nChamonix Mont Blanc, France. The death sport and freeskiing capital of the world. This is the closing day party on t"
               },
               {
+                "title": "Protected",
+                "slug": "/balance/film/fuckthegovmint",
+                "order": 10,
+                "icon": "film",
+                "type": "file",
+                "excerpt": "fuckthegovmint\n\n[YouTube src=\"https://youtu.be/2TBkoSBfCc\"]\n\nWhy do the protected  \nneed to be protected  \nfrom the unprotected  \nby forcing the unprotected  \nto use the protection  \nthat didn't prote"
+              },
+              {
                 "title": "It's Not Who You Know",
                 "slug": "/balance/film/inwyk",
                 "order": 10,
@@ -1000,7 +1145,7 @@
               }
             ],
             "icon": "film",
-            "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/balance/film/averybritishprotest, /balance/film/jamesdean, /balance/film/moronic, /balance/film/inwyk, /balance/film/freerideday\"]"
+            "excerpt": "[PageGrid pages=\"/balance/film/fuckthegovmint, /balance/film/averybritishprotest, /balance/film/jamesdean, /balance/film/moronic, /balance/film/inwyk, /balance/film/freerideday\"]"
           },
           {
             "title": "Words",
@@ -1135,8 +1280,8 @@
                   }
                 ],
                 "icon": "bug",
-                "image": "https://live.staticflickr.com/65535/54925242575_c783aa6b7e_b.jpg",
-                "excerpt": "Oh we ARE? We are here to fuck spiders?\n\nChapter 1\n\nAs far back as I can remember I knew that to play by the rules meant losing. I am Wei Zang and this is my story. Some of it is true\n\nJudging from th"
+                "image": "https://live.staticflickr.com/65535/54938576927_22aaccb161_b.jpg",
+                "excerpt": "Oh we ARE? We are here to fuck spiders?\n\n Chapter 1\n\nAs far back as I can remember I knew that to play by the rules meant losing. I am Wei Zang and this is my story. Some of it is true\n\nJudging from t"
               }
             ],
             "icon": "writing",

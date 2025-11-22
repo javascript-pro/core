@@ -12,8 +12,6 @@ tags: JavaScript, Vanilla JavaScript, TypeScript, React, frameworks
 
 By the early 2010s, the cracks were showing. Huge front-ends written in Vanilla JavaScript were turning into fragile spaghetti — a single mistyped property could break production. There was no safety net. No way to refactor confidently. No way to know what an object really looked like until runtime.
 
-[PrevNext next="/work/expertise/javascript/typescript/get-started"]
-
 Created at Microsoft by Anders Hejlsberg (the same mind behind C#), TypeScript was released in 2012 as a bold idea: add a type system to JavaScript, but keep it completely compatible.
 
 It didn’t replace JS — it wrapped it with a layer of safety, structure, and intelligence. Suddenly, your editor could understand your code. You could autocomplete reliably, catch errors before running, and refactor without fear.

@@ -97,7 +97,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                     gutterBottom
                     color="primary"
                     sx={{
-                      mt: 1,
+                      mt: 0.5,
                       fontSize: { xs: '1.6rem', md: '2rem' },
                     }}
                   >

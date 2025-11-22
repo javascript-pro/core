@@ -85,7 +85,7 @@ import WebIcon from '@mui/icons-material/Language';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import ExpandIcon from '@mui/icons-material/MenuOpen';
 import WhereIcon from '@mui/icons-material/LocationOnOutlined';
-import TechstackIcon from '@mui/icons-material/CodeOutlined';
+import TechstackIcon from '@mui/icons-material/EmojiEvents';
 import FishIcon from '@mui/icons-material/Phishing';
 import BackofficeIcon from '@mui/icons-material/SecurityOutlined';
 import ShopIcon from '@mui/icons-material/ShoppingBasketOutlined';

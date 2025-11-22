@@ -1,7 +1,8 @@
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/DesignSystem/components/AlertAd.tsx
 'use client';
 import * as React from 'react';
-import { Typography, Alert, ButtonBase, IconButton } from '@mui/material';
-import { Icon, useIsMobile } from '../../../gl-core';
+import { Typography, Alert, ButtonBase } from '@mui/material';
+import { Icon, useIsMobile } from '../../../../gl-core';
 
 export type TAdvert = {
   title?: string | null;
@@ -10,7 +11,7 @@ export type TAdvert = {
   icon?: string;
 };
 
-export default function Advert({
+export default function AlertAd({
   icon = 'star',
   title = 'Default Title',
   description = 'description',

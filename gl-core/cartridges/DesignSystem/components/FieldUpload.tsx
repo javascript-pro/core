@@ -1,4 +1,5 @@
-// core/gl-core/components/FieldUpload.tsx
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/DesignSystem/components/FieldUpload.tsx
+
 'use client';
 import * as React from 'react';
 import { Box, Button } from '@mui/material';

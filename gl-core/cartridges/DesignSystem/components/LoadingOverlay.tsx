@@ -1,8 +1,9 @@
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/DesignSystem/components/LoadingOverlay.tsx
 'use client';
 
 import * as React from 'react';
 import { useEffect } from 'react';
-import { useLoading, useDispatch, toggleLoading } from '../../../gl-core';
+import { useLoading, useDispatch, toggleLoading } from '../../../../gl-core';
 import { Box, CircularProgress, Backdrop } from '@mui/material';
 
 export default function LoadingOverlay() {

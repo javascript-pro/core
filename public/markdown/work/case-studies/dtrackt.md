@@ -1,9 +1,9 @@
 ---
-order: 50
-title: Blockchain
+order: 40
+title: DTrackt!
 description: Building a Bitcoin-Powered Gambling Platform
-slug: /work/techstack/other/blockchain
-icon: api
+slug: /work/case-studies/dtrackt
+icon: techstack
 image: /png/3rdParty/bitcoin.png
 tags: techstack, crypto, blockchain, web3, casino, igaming, experience, bitcoin, malta
 ---
@@ -56,3 +56,5 @@ It’s also a great reminder of what you _can_ build when traditional financial 
 Before joining the team, I completed a technical assessment to demonstrate my understanding of Bitcoin fundamentals and general coding ability. The task involved working directly with Bitcoin hashing algorithms — a core concept behind how transactions are verified on the blockchain.
 
 The code is here on [GitHub](https://github.com/javascript-pro/bitcoin-hash). While it’s a simple project, it reflects the kind of low-level thinking and hands-on problem solving that this space often demands.
+
+[GitHub url="https://github.com/javascript-pro/bitcoin-hash" label="javascript-pro/bitcoin-hash"]

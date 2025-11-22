@@ -4,7 +4,7 @@ slug: /work/example-project/tutorial/quick-start
 title: Quick Start
 description: Get started with Goldlabel
 icon: examples
-image: https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg
+image: /png/3rdParty/github_og.png
 ---
 
 > Get started with Goldlabel Core Open Source

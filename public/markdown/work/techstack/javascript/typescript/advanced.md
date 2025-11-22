@@ -8,8 +8,6 @@ image: /png/3rdParty/typescript_og.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React
 ---
 
-[PrevNext prev="/work/expertise/javascript/typescript/get-started" next="/work/expertise/javascript/typescript/structural-typing"]
-
 [PageAd slug="/work/expertise/javascript/typescript/structural-typing"]
 
 [PageAd slug="/work/expertise/javascript/typescript/aliases"]
