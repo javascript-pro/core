@@ -11,12 +11,7 @@ import {
   ListItemText,
 } from '@mui/material';
 import { useDispatch, Icon } from '../../../../gl-core';
-import {
-  useUser,
-  setPaywallKey,
-  usePaywall,
-  userSignout,
-} from '../../Paywall';
+import { useUser, setPaywallKey, usePaywall, userSignout } from '../../Paywall';
 
 type TSignout = {
   mode?: 'icon' | 'button' | 'listitem';

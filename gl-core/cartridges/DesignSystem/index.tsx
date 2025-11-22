@@ -6,7 +6,7 @@ import StandardCard from './components/StandardCard';
 import FieldUpload from './components/FieldUpload';
 import Icon from './components/Icon';
 import AlertAd from './components/AlertAd';
-import MenuSystem from './components/MenuSystem'
+import MenuSystem from './components/MenuSystem';
 import SystemDialog from './components/SystemDialog';
 import Feedback from './components/Feedback';
 import LoadingOverlay from './components/LoadingOverlay';

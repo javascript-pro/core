@@ -52,7 +52,7 @@ export default function SystemDialog() {
 
         <DialogContent />
 
-        <DialogActions sx={{display: 'block'}}>
+        <DialogActions sx={{ display: 'block' }}>
           <MenuSystem />
         </DialogActions>
 

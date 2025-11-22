@@ -26,49 +26,44 @@ export default function MenuSystem() {
 
   return (
     <>
-    
-          <List dense disablePadding>
-            
+      <List dense disablePadding>
+        <ListItemButton
+          onClick={() => {
+            handleToggle();
+          }}
+        >
+          <ListItemIcon>
+            <Icon
+              color="primary"
+              icon={themeMode === 'dark' ? 'lightmode' : ('darkmode' as any)}
+            />
+          </ListItemIcon>
+          <ListItemText
+            primary={themeMode === 'dark' ? 'Light mode' : 'Dark mode'}
+          />
+        </ListItemButton>
 
-            <ListItemButton
-              onClick={() => {
-                handleToggle();
-              }}
-            >
-              <ListItemIcon>
-                <Icon
-                  color="primary"
-                  icon={
-                    themeMode === 'dark' ? 'lightmode' : ('darkmode' as any)
-                  }
-                />
-              </ListItemIcon>
-              <ListItemText
-                primary={themeMode === 'dark' ? 'Light mode' : 'Dark mode'}
-              />
-            </ListItemButton>
+        {user && (
+          <>
+            <SignOut mode="listitem" />
+          </>
+        )}
 
-            {user && <>
-              <SignOut mode="listitem" />
-            </>}
-          
-            <ListItemButton
-              onClick={() => {
-                dispatch(setDesignSystemKey('dialog', null));
-                dispatch(reset());
-              }}
-            >
-              <ListItemIcon>
-                <Icon icon="reset" color="primary" />
-              </ListItemIcon>
-              <ListItemText primary="Restart" />
-            </ListItemButton>
-          </List>
-      
+        <ListItemButton
+          onClick={() => {
+            dispatch(setDesignSystemKey('dialog', null));
+            dispatch(reset());
+          }}
+        >
+          <ListItemIcon>
+            <Icon icon="reset" color="primary" />
+          </ListItemIcon>
+          <ListItemText primary="Restart" />
+        </ListItemButton>
+      </List>
     </>
   );
 }
-
 
 /*
 <ListItemButton
