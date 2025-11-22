@@ -14,8 +14,8 @@
         "type": "folder",
         "children": [
           {
-            "title": "About us",
-            "description": "UK Limited Company (5460545)",
+            "title": "About",
+            "description": "Goldlabel Apps Ltd",
             "slug": "/work/about",
             "order": 10,
             "type": "folder",
@@ -534,6 +534,120 @@
                   "JSON"
                 ],
                 "excerpt": "We’ve been writing JavaScript since it was called ECMAScript.\n\n[PageGrid thumbnails=\"no\" pages=\"/work/techstack/javascript/typescript, /work/techstack/javascript/react, /work/techstack/javascript/node"
+              },
+              {
+                "title": "Design",
+                "description": "From MUI to CSS",
+                "slug": "/work/techstack/design",
+                "order": 28,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "Adobe",
+                    "slug": "/work/techstack/design/adobe",
+                    "order": 30,
+                    "icon": "design",
+                    "image": "/png/n64/chix.png",
+                    "type": "file",
+                    "tags": [
+                      "Design",
+                      "Adobe"
+                    ],
+                    "excerpt": "Adobe\n\n Adobe"
+                  },
+                  {
+                    "title": "CSS",
+                    "slug": "/work/techstack/design/css",
+                    "order": 40,
+                    "icon": "design",
+                    "image": "/png/n64/chix.png",
+                    "type": "file",
+                    "tags": [
+                      "Design",
+                      "CSS",
+                      "Tailwind",
+                      "Bootstrap"
+                    ],
+                    "excerpt": "CSS\n\n CSS"
+                  },
+                  {
+                    "title": "Figma",
+                    "slug": "/work/techstack/design/figma",
+                    "order": 40,
+                    "icon": "design",
+                    "image": "/png/n64/chix.png",
+                    "type": "file",
+                    "tags": [
+                      "Design",
+                      "SVG",
+                      "Figma",
+                      "Sketch"
+                    ],
+                    "excerpt": "Figma and Sketch\n\n SVG"
+                  },
+                  {
+                    "title": "MUI",
+                    "slug": "/work/techstack/design/mui",
+                    "order": 40,
+                    "icon": "design",
+                    "image": "/png/n64/chix.png",
+                    "type": "file",
+                    "tags": [
+                      "design"
+                    ],
+                    "excerpt": "Material UI\n\n Material UI"
+                  }
+                ],
+                "icon": "design",
+                "image": "/png/n64/chix.png",
+                "tags": [
+                  "Design",
+                  "Figma",
+                  "CSS",
+                  "Adobe"
+                ],
+                "excerpt": "Design\n\n Design"
+              },
+              {
+                "title": "AI",
+                "description": "What do we know about AI?",
+                "slug": "/work/techstack/ai",
+                "order": 50,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "AI User Interfaces",
+                    "slug": "/work/techstack/ai/user-interfaces",
+                    "order": 50,
+                    "icon": "ai",
+                    "image": "https://live.staticflickr.com/65535/53669705662_bd523946ef_b.jpg",
+                    "type": "file",
+                    "tags": [
+                      "ui",
+                      "ai"
+                    ],
+                    "excerpt": "How we help you take your AI product ideas from concept, through prototype to production\n\n From prototype to production\n\nAI agents need more than a good model — they need a front end that users can ac"
+                  },
+                  {
+                    "title": "Prompt Engineering",
+                    "slug": "/work/techstack/ai/prompt-engineering",
+                    "order": 60,
+                    "icon": "ai",
+                    "image": "https://live.staticflickr.com/65535/53669705662_bd523946ef_b.jpg",
+                    "type": "file",
+                    "tags": [
+                      "ui",
+                      "ai"
+                    ],
+                    "excerpt": "Prompt engineering is the art of designing clear, structured instructions that make AI features behave reliably inside your React app.\n\nPrompt engineering, from a React developer’s perspective, is the"
+                  }
+                ],
+                "icon": "ai",
+                "image": "https://live.staticflickr.com/65535/53669705662_bd523946ef_b.jpg",
+                "tags": [
+                  "AI"
+                ],
+                "excerpt": "\"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday\n\n[PageGrid pages=\"/work/techstack/ai/userinterfaces\"]\n\n Is this Singularity?\n\nIt"
               },
               {
                 "title": "Other",

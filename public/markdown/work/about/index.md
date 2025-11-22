@@ -1,7 +1,7 @@
 ---
 order: 10
-title: About us
-description: UK Limited Company (5460545)
+title: About
+description: Goldlabel Apps Ltd
 slug: /work/about
 icon: company
 image: /png/3rdParty/git_og.png

@@ -344,8 +344,8 @@
   },
   {
     "slug": "work/about/index",
-    "title": "About us",
-    "description": "UK Limited Company (5460545)",
+    "title": "About",
+    "description": "Goldlabel Apps Ltd",
     "tags": "intellectual-property",
     "content": "\n> [UK Limited Company 5460545](https://find-and-update.company-information.service.gov.uk/company/15460545)\n\n[goldlabel.apps@gmail.com](mailto:goldlabel.apps@gmail.com) | Tel/WhatsApp [+44 07745 763 122 ](https://wa.me/447745763122) | [GitHub](https://github.com/orgs/goldlabel-apps/) | [LinkedIn](https://www.linkedin.com/in/chris-dorward)\n\n> Goldlabel Apps Ltd  \n> 321-323 High Road  \n> Chadwell Heath  \n> Essex RM6 6AX\n\n[PageGrid thumbnails=\"no\" pages=\"/work/company/gdpr, /work/company/privacy-cookies, /work/company/terms, /work/company/where-we-work, /work/company/work-with-us\"]\n\n- [Twitter, X](https://x.com/goldlabelapps)\n- [Insta](https://www.instagram.com/milkylackstoes)\n- [Facebook](https://www.facebook.com/goldlabelappss)\n- [Youtube](https://www.youtube.com/@milkylackstoes)\n- [Flickr](https://www.flickr.com/photos/listingslab)\n"
   },
@@ -474,6 +474,62 @@
     "description": "20+ Years of coding",
     "tags": "Professional, JavaScript, Vanilla JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS",
     "content": "\n> Goldlabel builds and ships modern web apps for clients who need real results fast\n\n[PageGrid thumbnails=\"no\" pages=\"/work/about, /work/techstack, /work/case-studies, /work/example-project\"]\n\n- _Small_ team. _Big_ output\n- Real deployments from Day One\n- Readable, extensible, Open Source\n"
+  },
+  {
+    "slug": "work/techstack/ai/index",
+    "title": "AI",
+    "description": "What do we know about AI?",
+    "tags": "AI",
+    "content": "\n> \"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" _Bloke down the pub said, yesterday_\n\n[PageGrid pages=\"/work/techstack/ai/user-interfaces\"]\n\n## Is _this_ Singularity?\n\nIt's keeping tinfoil hat wearing folk awake at night. If Singularity is the point at which the machines take over, it's the bad thing. It's Skynet, it's Asimov, it's Arthur C Clarke, it's the end of the world. We've recently invented Large Language Models (LLM) which make things like ChatGPT work.\n\nGive it a text prompt and out comes human-like language. No sensible person has a clue how it really does that, but it must do because it’s doing it right in front of our eyes. That is wizardry. Now change the word Language to the words Human Behavior. Apply the above wizardry and you have an AI which teaches itself to predict and emulate human behaviour.\n\nSome experts believe that deploying AI like that to a drone with a gun might be a bad idea.\n\n### Here comes the science bit\n\n![Jennifer Aniston, in different L'Oreal Elvive adverts](https://live.staticflickr.com/65535/53669711572_3547fb59b2_z.jpg)\n\n> If challenged to explain this silly idea using actual brain knowledge, this is how AI works\n\n### Neural Networks\n\nAIs use sophisticated types of artificial neural networks that are capable of processing sequential and non-sequential data, capturing the nuances of human behavior across different contexts\n\nUnsupervised learning is key because it allows the model to learn from raw behavioral data without needing predefined labels or categories\n\n### New data\n\nAIs are trained using extensive datasets of human behavior. This data comes from videos, CCTV, IoT sensor data, social media activity, and other records of human actions\n\nUnderstanding Context: As the model processes this data, it learns to predict behaviors in certain situations based on previous observations. This process is driven by unsupervised learning, where the model identifies patterns and relationships in the data on its own, without explicit guidance on what to learn\n\n### Self Supervision\n\nThe model is given scenarios with partial data or hypothetical situations and asked to predict outcomes based on learned behaviors. It’s like observing a scene in a movie and guessing what a character will do next based on their past actions\n\n### Fine Tuning\n\nAfter the initial broad training, the model could be fine-tuned with specific types of behavioral data or for particular applications, such as understanding customer behavior in business settings or aiding in psychological analysis\n\n### Additional Training\n\nBy incorporating new and diverse behavioral data over time, the model can adapt to changes in human behavior and understand new patterns that emerge\n\n### Feedback Loops\n\nFeedback from users and behavioral scientists can help refine the model's predictions and make it more attuned to subtle nuances in human behavior\n\n### Architectural & Algorithmic Updates\n\nOngoing research in neural network design and learning algorithms can enhance how AIs process and learn from behavioral data, improving their predictive accuracy and applicability in real-world scenarios\n\n### Drones\n\nFor a few thousand quid you could probably put together a drone with a 3D printed gun and a Raspberry Pi to run the AI needed to pilot it autonomously. It'll be connected to the main AI Hive mind of course. It will use the mobile networks for that\n"
+  },
+  {
+    "slug": "work/techstack/ai/prompt-engineering",
+    "title": "Prompt Engineering",
+    "description": "The art of designing clear, structured instructions",
+    "tags": "ui, ai",
+    "content": "\n> Prompt engineering is the art of designing clear, structured instructions that make AI features behave reliably inside your React app.\n\nPrompt engineering, from a React developer’s perspective, is the design and optimisation of the text instructions you send to an LLM so that your UI behaves consistently and your app returns predictable, useful results.\n\nIn practical terms, it’s about treating prompts as part of your frontend logic, not as static strings.\n\nWhat it means in a React context\n\n1. Designing prompts as part of component behaviour\n   You shape the prompt based on UI state, user input, mode, or feature flags.\n   Example: different prompts for summarising, translating, or generating UI copy.\n\n2. Structuring prompts as data models\n   You build them like config: objects, templates, or composable strings.\n   This makes them testable and easier to maintain.\n\n3. Guarding model behaviour\n   You add rules, constraints, and tone so the LLM behaves like a controlled service.\n   The prompt becomes a contract between your component and the model.\n\n4. Handling streaming responses\n   You write prompts that fit well with streaming output and incremental rendering in React (e.g., chat UIs, Markdown, or partial updates).\n\n5. Integrating prompts with business logic\n   You’re shaping the LLM’s role: assistant, translator, data extractor, etc.\n   This becomes part of your app architecture.\n\n6. Creating reusable prompt “components”\n   Just like hooks or utilities, prompts become reusable parts of your codebase.\n"
+  },
+  {
+    "slug": "work/techstack/ai/user-interfaces",
+    "title": "AI User Interfaces",
+    "description": "Agents need more than a good model",
+    "tags": "ui, ai",
+    "content": "\n> How we help you take your AI product ideas from concept, through prototype to production\n\n## From prototype to production\n\nAI agents need more than a good model — they need a front end that users can actually work with. Our focus is on building React/Next.js interfaces that make LLMs and multi-agent systems practical in production.\n\n#### Typical flow\n\n- Concept → quick proof-of-concepts to explore APIs, workflows, and edge cases\n- Prototype → functional UIs with state management, real-time feedback, and secure integration with agent backends\n- Production → hardened apps deployed to cloud platforms (Firebase, GCP, Azure), with compliance features baked in\n\n#### What we deliver\n\n- Chat & Agent Interfaces → structured prompts, tool invocation, streaming output\n- Dashboards & Visualisation → status tracking, logs, data inspection, feedback loops\n- Security & Compliance → token handling, role-based access, audit logging, CSP headers\n- Reusable Components → React + MUI or Tailwind, integrated with enterprise design systems\n- API Integration → REST, GraphQL, WebSockets for low-latency interaction\n\n#### Stack we work with\n\n- Frameworks: React, Next.js, TypeScript\n- UI: MUI, Tailwind, AG Grid, charting libraries\n- State: Redux Toolkit, React Query, Zustand\n- Cloud: Firebase Hosting, GCP (Cloud Run, Vertex AI), Azure App Services, Azure OpenAI\n- Security: OAuth2, JWT, XSS/CSRF protection, OWASP best practices\n- DevOps: GitHub Actions, Docker, CI/CD pipelines with security scanning\n\n#### Example: Minimal AI agent front end\n\n```tsx\n'use client';\nimport React, { useState } from 'react';\n\nexport default function AgentChat() {\n  const [input, setInput] = useState('');\n  const [messages, setMessages] = useState<string[]>([]);\n  const [loading, setLoading] = useState(false);\n\n  async function sendMessage(e: React.FormEvent) {\n    e.preventDefault();\n    if (!input.trim()) return;\n    setLoading(true);\n    setMessages((prev) => [...prev, `You: ${input}`]);\n    const res = await fetch('/api/agent', {\n      method: 'POST',\n      headers: { 'Content-Type': 'application/json' },\n      body: JSON.stringify({ prompt: input }),\n    });\n    const data = await res.json();\n    setMessages((prev) => [...prev, `Agent: ${data.reply}`]);\n    setInput('');\n    setLoading(false);\n  }\n\n  return (\n    <div className=\"p-4 max-w-lg mx-auto\">\n      <div className=\"border rounded p-2 h-64 overflow-y-auto mb-2 bg-gray-50\">\n        {messages.map((m, i) => (\n          <div key={i} className=\"mb-1\">\n            {m}\n          </div>\n        ))}\n        {loading && <div className=\"text-gray-400\">Agent is typing...</div>}\n      </div>\n      <form onSubmit={sendMessage} className=\"flex gap-2\">\n        <input\n          value={input}\n          onChange={(e) => setInput(e.target.value)}\n          className=\"flex-1 border rounded px-2 py-1\"\n          placeholder=\"Ask the agent...\"\n        />\n        <button\n          type=\"submit\"\n          className=\"px-4 py-1 bg-blue-600 text-white rounded\"\n        >\n          Send\n        </button>\n      </form>\n    </div>\n  );\n}\n```\n"
+  },
+  {
+    "slug": "work/techstack/design/adobe",
+    "title": "Adobe",
+    "description": "",
+    "tags": "Design, Adobe",
+    "content": "\n> Adobe\n\n## Adobe\n"
+  },
+  {
+    "slug": "work/techstack/design/css",
+    "title": "CSS",
+    "description": "Vanilla, Tailwind, Bootstrap",
+    "tags": "Design, CSS, Tailwind, Bootstrap",
+    "content": "\n> CSS\n\n## CSS\n"
+  },
+  {
+    "slug": "work/techstack/design/figma",
+    "title": "Figma",
+    "description": "and Sketch",
+    "tags": "Design, SVG, Figma, Sketch",
+    "content": "\n> Figma and Sketch\n\n## SVG\n"
+  },
+  {
+    "slug": "work/techstack/design/index",
+    "title": "Design",
+    "description": "From MUI to CSS",
+    "tags": "Design, Figma, CSS, Adobe",
+    "content": "\n> Design\n\n## Design\n"
+  },
+  {
+    "slug": "work/techstack/design/mui",
+    "title": "MUI",
+    "description": "Material UI",
+    "tags": "design",
+    "content": "\n> Material UI\n\n## Material UI\n"
   },
   {
     "slug": "work/techstack/index",
