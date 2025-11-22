@@ -15,14 +15,9 @@ import { useDispatch, useIsMobile, Icon } from '../../../../gl-core';
 import {
   useDesignSystem,
   setDesignSystemKey,
-  MenuGrid,
+  MenuSystem,
 } from '../../DesignSystem';
-import {
-  SignOut,
-  useUser,
-  Continue,
-  User,
-} from '../../Paywall';
+import { useUser, Continue, User } from '../../Paywall';
 
 export default function SystemDialog() {
   const dispatch = useDispatch();
@@ -49,28 +44,19 @@ export default function SystemDialog() {
       >
         <DialogTitle>
           <CardHeader
-            avatar={<Icon icon={'goldlabel'} />}
-            title={<Typography variant="h6">Goldlabel Apps</Typography>}
+            title={!user ? <Continue /> : <User />}
             subheader={ds.dialog.subheader}
             action={<Icon icon={'fullscreen'} />}
           />
         </DialogTitle>
 
-        <DialogContent>
-          <Box
-            sx={{
-              m: 2,
-            }}
-          >
-            {!user ? <Continue /> : <User />}
-          </Box>
-        </DialogContent>
+        <DialogContent />
+
+        <DialogActions sx={{display: 'block'}}>
+          <MenuSystem />
+        </DialogActions>
 
         <DialogActions>
-          <MenuGrid />
-          <SignOut />
-
-          <Box sx={{ flexGrow: 1 }} />
           <IconButton color="primary" onClick={handleClose}>
             <Icon icon="close" />
           </IconButton>

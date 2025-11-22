@@ -6,8 +6,8 @@ import StandardCard from './components/StandardCard';
 import FieldUpload from './components/FieldUpload';
 import Icon from './components/Icon';
 import AlertAd from './components/AlertAd';
+import MenuSystem from './components/MenuSystem'
 import SystemDialog from './components/SystemDialog';
-import MenuGrid from './components/MenuGrid';
 import Feedback from './components/Feedback';
 import LoadingOverlay from './components/LoadingOverlay';
 import { setDesignSystemKey } from './actions/setDesignSystemKey';
@@ -20,11 +20,11 @@ export {
   initialStateDesignSystem,
   DesignSystem,
   AlertAd,
+  MenuSystem,
   LoadingOverlay,
   FieldUpload,
   StandardCard,
   Icon,
-  MenuGrid,
   SystemDialog,
   Feedback,
   setDesignSystemKey,

@@ -1,10 +1,8 @@
-// /Users/goldlabel/GitHub/core/gl-core/cartridges/DesignSystem/components/MenuGrid.tsx
+// /Users/goldlabel/GitHub/core/gl-core/cartridges/DesignSystem/components/MenuSystem.tsx
 'use client';
 import * as React from 'react';
 import { useRouter } from 'next/navigation';
 import {
-  Box,
-  Grid,
   List,
   ListItemButton,
   ListItemIcon,
@@ -12,11 +10,11 @@ import {
 } from '@mui/material';
 import { routeTo, useDispatch, Icon, reset } from '../../../../gl-core';
 import { useDesignSystem, setDesignSystemKey } from '../../DesignSystem';
-import { User, Continue, useUser } from '../../Paywall';
+import { useUser, SignOut } from '../../Paywall';
 
-export default function MenuGrid() {
+export default function MenuSystem() {
   const dispatch = useDispatch();
-  const router = useRouter();
+  // const router = useRouter();
   const user = useUser();
   const ds = useDesignSystem();
   const { themeMode } = ds;
@@ -28,20 +26,9 @@ export default function MenuGrid() {
 
   return (
     <>
-      <Grid container spacing={1}>
-        <Grid size={{ xs: 12, md: 6 }}>
+    
           <List dense disablePadding>
-            <ListItemButton
-              onClick={() => {
-                dispatch(setDesignSystemKey('dialog', null));
-                dispatch(routeTo('/bad-panda', router));
-              }}
-            >
-              <ListItemIcon>
-                <Icon icon="bug" color="primary" />
-              </ListItemIcon>
-              <ListItemText primary="Bad Panda" />
-            </ListItemButton>
+            
 
             <ListItemButton
               onClick={() => {
@@ -61,6 +48,10 @@ export default function MenuGrid() {
               />
             </ListItemButton>
 
+            {user && <>
+              <SignOut mode="listitem" />
+            </>}
+          
             <ListItemButton
               onClick={() => {
                 dispatch(setDesignSystemKey('dialog', null));
@@ -73,16 +64,22 @@ export default function MenuGrid() {
               <ListItemText primary="Restart" />
             </ListItemButton>
           </List>
-        </Grid>
-
-        
-      </Grid>
-
-      {/* <pre>dialog: {JSON.stringify(ds.dialog, null, 2)}</pre> */}
+      
     </>
   );
 }
 
-/*
 
+/*
+<ListItemButton
+    onClick={() => {
+    dispatch(setDesignSystemKey('dialog', null));
+    dispatch(routeTo('/bad-panda', router));
+  }}
+>
+  <ListItemIcon>
+    <Icon icon="bug" color="primary" />
+  </ListItemIcon>
+  <ListItemText primary="Bad Panda" />
+</ListItemButton>
 */
