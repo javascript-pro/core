@@ -17,17 +17,19 @@ import {
   setDesignSystemKey,
   MenuGrid,
 } from '../../DesignSystem';
-// import {
-//   usePaywall,
-//   useUser,
-// } from '../../Paywall';
+import {
+  SignOut,
+  useUser,
+  Continue,
+  User,
+} from '../../Paywall';
 
 export default function SystemDialog() {
   const dispatch = useDispatch();
   const isMobile = useIsMobile();
   const ds = useDesignSystem();
   // const paywall = usePaywall();
-  // const user = useUser();
+  const user = useUser();
 
   const handleClose = () => {
     // dispatch(setDesignSystemKey('dialog', {open: true, title: 'fuck'}));
@@ -50,6 +52,7 @@ export default function SystemDialog() {
             avatar={<Icon icon={'goldlabel'} />}
             title={<Typography variant="h6">Goldlabel Apps</Typography>}
             subheader={ds.dialog.subheader}
+            action={<Icon icon={'fullscreen'} />}
           />
         </DialogTitle>
 
@@ -59,11 +62,14 @@ export default function SystemDialog() {
               m: 2,
             }}
           >
-            <MenuGrid />
+            {!user ? <Continue /> : <User />}
           </Box>
         </DialogContent>
 
         <DialogActions>
+          <MenuGrid />
+          <SignOut />
+
           <Box sx={{ flexGrow: 1 }} />
           <IconButton color="primary" onClick={handleClose}>
             <Icon icon="close" />

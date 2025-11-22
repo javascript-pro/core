@@ -75,7 +75,7 @@ export default function MenuGrid() {
           </List>
         </Grid>
 
-        <Grid size={{ xs: 12, md: 6 }}>{!user ? <Continue /> : <User />}</Grid>
+        
       </Grid>
 
       {/* <pre>dialog: {JSON.stringify(ds.dialog, null, 2)}</pre> */}
