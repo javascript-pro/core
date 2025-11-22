@@ -1,6 +1,10 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/DesignSystem/types.d.ts
-
 import { TIconShape } from './components/Icon';
+
+export interface IDesignSystem {
+  theme?: TTheme;
+  children: React.ReactNode;
+}
 
 export interface TDesignSystemState {
   cartridge?: string;
@@ -22,11 +26,6 @@ export type TFeedback = {
 
 export type TIcon = TIconShape;
 
-export interface IDesignSystem {
-  theme?: TTheme;
-  children: React.ReactNode;
-}
-
 export type TTheme = {
   mode: 'light' | 'dark';
   primary: string;
@@ -42,18 +41,4 @@ export type TSystemDialog = {
   title?: string;
   subheader?: string;
   content?: React.ReactNode;
-};
-
-export type TFlickrState = {
-  cartridge?: string;
-  feedback: {
-    severity: 'error' | 'warning' | 'info' | 'success';
-    title: string;
-    message: string;
-  };
-  latestIndex: number;
-  latest: {
-    fetching: boolean;
-    fetched: boolean;
-  } | null;
 };
