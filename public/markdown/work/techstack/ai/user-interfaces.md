@@ -1,7 +1,7 @@
 ---
 order: 50
 title: AI User Interfaces
-description: Agents need more than a good model 
+description: Agents need more than a good model
 slug: /work/techstack/ai/user-interfaces
 icon: ai
 image: https://live.staticflickr.com/65535/53669705662_bd523946ef_b.jpg

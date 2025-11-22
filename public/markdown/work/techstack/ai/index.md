@@ -7,6 +7,7 @@ icon: ai
 image: https://live.staticflickr.com/65535/53669705662_bd523946ef_b.jpg
 tags: AI
 ---
+
 > "Put that kind of AI into a drone with a gun... then yeh, you've got a big problem." _Bloke down the pub said, yesterday_
 
 [PageGrid pages="/work/techstack/ai/user-interfaces"]
@@ -60,4 +61,3 @@ Ongoing research in neural network design and learning algorithms can enhance ho
 ### Drones
 
 For a few thousand quid you could probably put together a drone with a 3D printed gun and a Raspberry Pi to run the AI needed to pilot it autonomously. It'll be connected to the main AI Hive mind of course. It will use the mobile networks for that
-
