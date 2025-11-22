@@ -7,7 +7,6 @@ import {
   Box,
   Avatar,
   Typography,
-  Divider,
   Grid,
   Chip,
   Paper,
@@ -37,7 +36,7 @@ export default function User() {
     : null;
 
   return (
-    <Paper sx={{ p: 2 }}>
+    <Paper variant='outlined' sx={{ p: 2 }}>
       <Grid container spacing={2} alignItems="center">
         <Grid size={{ xs: 3, sm: 2 }}>
           <Avatar
@@ -56,7 +55,6 @@ export default function User() {
           </Typography>
 
           <Box sx={{ mt: 1, display: 'flex', gap: 1 }}>
-            {user.emailVerified && <Chip label="Verified" size="small" />}
             {isUberUser && (
               <Chip label="Uber User" size="small" color="primary" />
             )}
@@ -64,12 +62,7 @@ export default function User() {
         </Grid>
       </Grid>
 
-      <Divider sx={{ my: 2 }} />
-
-      <Box sx={{ fontSize: '13px', opacity: 0.8 }}>
-        <Typography variant="body2">
-          <strong>UID:</strong> {user.uid}
-        </Typography>
+      <Box>
 
         {provider?.providerId && (
           <Typography variant="body2">

@@ -36,24 +36,17 @@ export default function SystemDialog() {
   return (
     <>
       <Dialog
+        fullWidth
         fullScreen={isMobile || fullScreen}
         open={Boolean(ds.dialog)}
         onClose={handleClose}
-        maxWidth={'md'}
-        fullWidth
+        maxWidth={'sm'}
       >
         <DialogTitle>{!user ? <Continue /> : <User />}</DialogTitle>
-
         <DialogContent />
-
-        {/* <pre style={{ fontSize: '10px' }}>
-          fullScreen: {JSON.stringify(fullScreen, null, 2)}
-        </pre> */}
-
         <DialogActions sx={{ display: 'block' }}>
           <MenuSystem />
         </DialogActions>
-
         <DialogActions>
           <IconButton color="primary" onClick={toggleFullscreen}>
             <Icon icon="fullscreen" />

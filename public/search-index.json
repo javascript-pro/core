@@ -473,7 +473,7 @@
     "title": "Work",
     "description": "20+ Years of coding",
     "tags": "Professional, JavaScript, Vanilla JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS",
-    "content": "\n> Goldlabel builds and ships modern web apps for clients who need real results fast\n\n[PageGrid thumbnails=\"no\" pages=\"/work/techstack, /work/case-studies, /work/example-project, /work/about\"]\n\n- _Small_ team. _Big_ output\n- Real deployments from Day One\n- Readable, extensible, Open Source\n"
+    "content": "\n> Goldlabel builds and ships modern web apps for clients who need real results fast\n\n[PageGrid thumbnails=\"no\" pages=\"/work/about, /work/techstack, /work/case-studies, /work/example-project\"]\n\n- _Small_ team. _Big_ output\n- Real deployments from Day One\n- Readable, extensible, Open Source\n"
   },
   {
     "slug": "work/techstack/index",
