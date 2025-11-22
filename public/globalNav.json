@@ -536,6 +536,93 @@
                 "excerpt": "We’ve been writing JavaScript since it was called ECMAScript.\n\n[PageGrid thumbnails=\"no\" pages=\"/work/techstack/javascript/typescript, /work/techstack/javascript/react, /work/techstack/javascript/node"
               },
               {
+                "title": "Design",
+                "description": "From MUI to CSS",
+                "slug": "/work/techstack/design",
+                "order": 28,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "Adobe",
+                    "slug": "/work/techstack/design/adobe",
+                    "order": 30,
+                    "icon": "design",
+                    "image": "/png/n64/chix.png",
+                    "type": "file",
+                    "tags": [
+                      "Design",
+                      "Adobe"
+                    ],
+                    "excerpt": "Adobe\n\n Adobe"
+                  },
+                  {
+                    "title": "CSS",
+                    "slug": "/work/techstack/design/css",
+                    "order": 40,
+                    "icon": "design",
+                    "image": "/png/n64/chix.png",
+                    "type": "file",
+                    "tags": [
+                      "Design",
+                      "CSS",
+                      "Tailwind",
+                      "Bootstrap"
+                    ],
+                    "excerpt": "CSS\n\n CSS"
+                  },
+                  {
+                    "title": "Figma",
+                    "slug": "/work/techstack/design/figma",
+                    "order": 40,
+                    "icon": "design",
+                    "image": "/png/n64/chix.png",
+                    "type": "file",
+                    "tags": [
+                      "Design",
+                      "SVG",
+                      "Figma",
+                      "Sketch"
+                    ],
+                    "excerpt": "Figma and Sketch\n\n SVG"
+                  },
+                  {
+                    "title": "MUI",
+                    "slug": "/work/techstack/design/mui",
+                    "order": 40,
+                    "icon": "design",
+                    "image": "/png/n64/chix.png",
+                    "type": "file",
+                    "tags": [
+                      "design"
+                    ],
+                    "excerpt": "Material UI\n\n Material UI"
+                  }
+                ],
+                "icon": "design",
+                "image": "/png/n64/chix.png",
+                "tags": [
+                  "Design",
+                  "Figma",
+                  "CSS",
+                  "Adobe"
+                ],
+                "excerpt": "Design\n\n Design"
+              },
+              {
+                "title": "AI",
+                "description": "What do we know about AI?",
+                "slug": "/work/techstack/ai",
+                "order": 50,
+                "type": "folder",
+                "children": [],
+                "icon": "ai",
+                "image": "/png/n64/weizang.png",
+                "tags": [
+                  "AI"
+                ],
+                "excerpt": "What do we know about AI\n\n Quite a bit now"
+              },
+              {
                 "title": "Other",
                 "description": "As well as JavaScript, we also have experience in these areas",
                 "slug": "/work/techstack/other",

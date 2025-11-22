@@ -476,6 +476,48 @@
     "content": "\n> Goldlabel builds and ships modern web apps for clients who need real results fast\n\n[PageGrid thumbnails=\"no\" pages=\"/work/about, /work/techstack, /work/case-studies, /work/example-project\"]\n\n- _Small_ team. _Big_ output\n- Real deployments from Day One\n- Readable, extensible, Open Source\n"
   },
   {
+    "slug": "work/techstack/ai/index",
+    "title": "AI",
+    "description": "What do we know about AI?",
+    "tags": "AI",
+    "content": "\n> What do we know about AI\n\n## Quite a bit now\n"
+  },
+  {
+    "slug": "work/techstack/design/adobe",
+    "title": "Adobe",
+    "description": "",
+    "tags": "Design, Adobe",
+    "content": "\n> Adobe\n\n## Adobe\n"
+  },
+  {
+    "slug": "work/techstack/design/css",
+    "title": "CSS",
+    "description": "Vanilla, Tailwind, Bootstrap",
+    "tags": "Design, CSS, Tailwind, Bootstrap",
+    "content": "\n> CSS\n\n## CSS\n"
+  },
+  {
+    "slug": "work/techstack/design/figma",
+    "title": "Figma",
+    "description": "and Sketch",
+    "tags": "Design, SVG, Figma, Sketch",
+    "content": "\n> Figma and Sketch\n\n## SVG\n"
+  },
+  {
+    "slug": "work/techstack/design/index",
+    "title": "Design",
+    "description": "From MUI to CSS",
+    "tags": "Design, Figma, CSS, Adobe",
+    "content": "\n> Design\n\n## Design\n"
+  },
+  {
+    "slug": "work/techstack/design/mui",
+    "title": "MUI",
+    "description": "Material UI",
+    "tags": "design",
+    "content": "\n> Material UI\n\n## Material UI\n"
+  },
+  {
     "slug": "work/techstack/index",
     "title": "Techstack",
     "description": "Fullstack JavaScript & more",
