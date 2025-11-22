@@ -669,7 +669,7 @@
                       "cms",
                       "contentmanager"
                     ],
-                    "excerpt": "Manage content stored in a Firebase collection\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/ContentManager\" label=\"ContentManager\"]\n\n Overview\n\nWe’re introducing a"
+                    "excerpt": "Manage content stored in a Firebase collection\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/ContentManager\" label=\"ContentManager\"]\n\nWe’re introducing a new cartri"
                   },
                   {
                     "title": "Design System",
