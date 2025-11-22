@@ -47,11 +47,11 @@ export default function Continue() {
     <Box sx={{}}>
       <Grid container spacing={1} justifyContent="center">
         <Grid size={{ xs: 12 }}>
-          <CardHeader
+          {/* <CardHeader
             avatar={<Icon icon="paywall" />}
             title="Paywall"
             subheader="Continue?"
-          />
+          /> */}
           <CardContent>
             <Button
               fullWidth

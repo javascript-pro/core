@@ -1,6 +1,6 @@
 ---
 order: 10
-title: About Goldlabel
+title: About us
 description: UK Limited Company (5460545)
 slug: /work/about
 icon: company
@@ -19,7 +19,7 @@ tags: intellectual-property
 
 [PageGrid thumbnails="no" pages="/work/company/gdpr, /work/company/privacy-cookies, /work/company/terms, /work/company/where-we-work, /work/company/work-with-us"]
 
-- [X](https://x.com/goldlabelapps)
+- [Twitter, X](https://x.com/goldlabelapps)
 - [Insta](https://www.instagram.com/milkylackstoes)
 - [Facebook](https://www.facebook.com/goldlabelappss)
 - [Youtube](https://www.youtube.com/@milkylackstoes)

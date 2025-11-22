@@ -1,8 +1,6 @@
 import Core from './Core';
-import { Theme, useThemeMode, ModeSwitch } from './cartridges/Theme';
 import { Icon } from './cartridges/DesignSystem';
 import {
-  Advert,
   RenderMarkdown,
   Footer,
   Nav,
@@ -13,8 +11,6 @@ import {
   SideAds,
   SharePopup,
   ShareMenu,
-  LoadingOverlay,
-  FieldUpload,
   IndexNav,
   ArrowMenu,
   Siblings,
@@ -82,14 +78,11 @@ export {
 };
 export {
   Icon,
-  Advert,
   GoogleMap,
   PrevNext,
   YouTube,
   Footer,
   RenderMarkdown,
-  Theme,
-  ModeSwitch,
   Nav,
   IndexNav,
   Siblings,
@@ -100,8 +93,6 @@ export {
   SideAds,
   ShareMenu,
   SharePopup,
-  LoadingOverlay,
-  FieldUpload,
   ArrowMenu,
   Children,
   ChildPages,
@@ -122,7 +113,6 @@ export {
   useKey,
   useLoading,
   useVersionCheck,
-  useThemeMode,
   useSiblings,
   useGlobalNav,
   useContent,

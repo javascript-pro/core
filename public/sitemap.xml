@@ -8,6 +8,9 @@
     <loc>https://goldlabel.pro/balance/film/freeride-day</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/balance/film/fuckthegovmint</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/balance/film</loc>
   </url>
   <url>
@@ -167,6 +170,9 @@
     <loc>https://goldlabel.pro/work/case-studies/boral</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/work/case-studies/dtrackt</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/work/case-studies/hertwig-auer</loc>
   </url>
   <url>
@@ -174,6 +180,18 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work/case-studies</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/example-project/cartridges/content-manager</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/example-project/cartridges/design-system</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/example-project/cartridges</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/example-project/cartridges/uberedux</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/example-project</loc>
@@ -195,6 +213,12 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work/techstack/javascript/nextjs</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/javascript/nextjs/ssg</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/javascript/nextjs/ssr</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/techstack/javascript/node</loc>
@@ -239,15 +263,33 @@
     <loc>https://goldlabel.pro/work/techstack/javascript/vanilla-js</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/other/blockchain</loc>
+    <loc>https://goldlabel.pro/work/techstack/javascript/vercel</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/other/ci-cd</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/other/databases</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/other/devops</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/other/docker</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/techstack/other/git</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/work/techstack/other/graphql</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/work/techstack/other</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/other/rest-api</loc>
+    <loc>https://goldlabel.pro/work/techstack/other/restful-apis</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/other/turborepo</loc>
   </url>
 </urlset>

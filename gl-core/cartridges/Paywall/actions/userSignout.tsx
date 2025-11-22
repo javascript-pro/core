@@ -8,7 +8,7 @@ import { auth } from '../../../../gl-core/lib/firebase';
 export const userSignout =
   (): any => async (dispatch: TUbereduxDispatch, getState: () => any) => {
     try {
-      console.log('userSignout');
+      // console.log('userSignout');
       // Sign out from Firebase Auth
       await signOut(auth);
 
@@ -17,7 +17,6 @@ export const userSignout =
       const updated = {
         ...current,
         user: null,
-        authed: false,
       };
 
       dispatch(setUbereduxKey({ key: 'paywall', value: updated }));

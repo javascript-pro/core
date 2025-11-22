@@ -8,8 +8,6 @@ image: /png/3rdParty/typescript_og.png
 tags: JavaScript, Vanilla JavaScript, TypeScript, React
 ---
 
-[PrevNext prev="/work/expertise/javascript/typescript/advanced" next="/work/expertise/javascript/typescript/aliases"]
-
 > TypeScript’s type system is based on shape compatibility, not nominal typing. That means two types are considered compatible if their structure (shape) matches — not because they have the same declared name or class.
 
 🧱 1. What is nominal typing?

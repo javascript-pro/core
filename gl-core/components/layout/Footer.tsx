@@ -31,7 +31,7 @@ export default function Footer({}: TFooter) {
           <Container>
             <Box
               sx={{
-                // border: "1px solid green",
+                border: '1px solid green',
                 flexGrow: 1,
               }}
             >

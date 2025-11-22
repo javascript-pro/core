@@ -4,7 +4,7 @@
 import React from 'react';
 import { Grid } from '@mui/material';
 import { useIsMobile, useGlobalNav } from '../../../../gl-core';
-import { StandardCard } from '../../Theme';
+import { StandardCard } from '../../DesignSystem';
 
 type NavItem = {
   title: string;

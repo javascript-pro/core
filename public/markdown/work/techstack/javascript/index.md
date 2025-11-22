@@ -10,7 +10,7 @@ tags: Fullstack JavaScript, Vanilla JavaScript, TypeScript, React, Angular, Vue,
 
 > We’ve been writing JavaScript since it was called ECMAScript.
 
-[PageGrid thumbnails="no" pages="/work/techstack/javascript/typescript, /work/techstack/javascript/react, /work/techstack/javascript/node, /work/techstack/javascript/nextjs, /work/techstack/javascript/vanilla-js, /work/techstack/javascript/js-testing"]
+[PageGrid thumbnails="no" pages="/work/techstack/javascript/typescript, /work/techstack/javascript/react, /work/techstack/javascript/node, /work/techstack/javascript/nextjs, /work/techstack/javascript/vercel, /work/techstack/javascript/js-testing"]
 
 Before the frameworks, before npm, before it ate the world—we were already deep in the language that powers the modern web.
 
@@ -62,5 +62,3 @@ It’s the language we reach for first.
 Not because it’s trendy—but because we know it inside out. We’ve seen the patterns, the pitfalls, and the possibilities. We know where the bodies are buried.
 
 If you need a JavaScript team that’s battle-tested, precise, and fast—we’re here.
-
-[PrevNext prev="/work/expertise" next="/work/expertise/javascript/typescript"]

@@ -3,35 +3,32 @@
 import * as React from 'react';
 import {
   Dialog,
-  Box,
   DialogActions,
   DialogContent,
   IconButton,
   DialogTitle,
-  CardHeader,
-  Typography,
 } from '@mui/material';
 import { useDispatch, useIsMobile, Icon } from '../../../../gl-core';
 import {
   useDesignSystem,
   setDesignSystemKey,
-  MenuGrid,
+  MenuSystem,
 } from '../../DesignSystem';
-// import {
-//   usePaywall,
-//   useUser,
-// } from '../../Paywall';
+import { useUser, Continue, User } from '../../Paywall';
 
 export default function SystemDialog() {
   const dispatch = useDispatch();
   const isMobile = useIsMobile();
+  const user = useUser();
   const ds = useDesignSystem();
-  // const paywall = usePaywall();
-  // const user = useUser();
+  const { fullScreen } = ds;
 
   const handleClose = () => {
-    // dispatch(setDesignSystemKey('dialog', {open: true, title: 'fuck'}));
     dispatch(setDesignSystemKey('dialog', null));
+  };
+
+  const toggleFullscreen = () => {
+    dispatch(setDesignSystemKey('fullScreen', !fullScreen));
   };
 
   if (!ds.dialog) return null;
@@ -39,31 +36,21 @@ export default function SystemDialog() {
   return (
     <>
       <Dialog
-        fullScreen={isMobile}
+        fullWidth
+        fullScreen={isMobile || fullScreen}
         open={Boolean(ds.dialog)}
         onClose={handleClose}
-        maxWidth={'md'}
-        fullWidth
+        maxWidth={'sm'}
       >
-        <DialogTitle>
-          {/* <CardHeader
-            avatar={<Icon icon={'design'} />}
-            title={<Typography variant="h6">Design System Dialog</Typography>}
-            subheader={ds.dialog.subheader}
-          /> */}
-        </DialogTitle>
-        <DialogContent>
-          <Box
-            sx={{
-              m: 2,
-            }}
-          >
-            <MenuGrid />
-          </Box>
-        </DialogContent>
-
+        <DialogTitle>{!user ? <Continue /> : <User />}</DialogTitle>
+        <DialogContent />
+        <DialogActions sx={{ display: 'block' }}>
+          <MenuSystem />
+        </DialogActions>
         <DialogActions>
-          <Box sx={{ flexGrow: 1 }} />
+          <IconButton color="primary" onClick={toggleFullscreen}>
+            <Icon icon="fullscreen" />
+          </IconButton>
           <IconButton color="primary" onClick={handleClose}>
             <Icon icon="close" />
           </IconButton>

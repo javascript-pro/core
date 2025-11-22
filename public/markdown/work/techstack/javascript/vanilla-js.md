@@ -1,6 +1,6 @@
 ---
 order: 100
-title: Vanilla JS
+title: Vanilla JS (ES6+)
 description: Dependency free JavaScript delivery layer
 slug: /work/techstack/javascript/vanilla-js
 icon: js
@@ -23,8 +23,6 @@ It lets teams roll out shared functionality (recommendations, analytics, persona
 Vanilla JavaScript isn’t a step backward — it’s a strategic choice for products that need to operate everywhere, instantly, and invisibly.
 
 When performance, portability, and integration outweigh the need for complex UI frameworks, a handcrafted, dependency-free JavaScript delivery layer remains one of the most powerful tools in the modern engineer’s kit.
-
-[PrevNext prev="/work/expertise/javascript" next="/work/expertise/javascript/node"]
 
 #### Key Idea: The Client-Side Delivery Layer
 
