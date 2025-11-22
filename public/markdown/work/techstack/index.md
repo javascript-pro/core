@@ -1,7 +1,7 @@
 ---
 order: 110
 title: Techstack
-description: Full JavaScript stack and more
+description: Fullstack JavaScript & more
 slug: /work/techstack
 icon: techstack
 image: /png/3rdParty/react.png

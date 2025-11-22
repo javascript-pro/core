@@ -4,7 +4,7 @@ title: Docker & Kubernetes
 description: A necessary evil
 slug: /work/techstack/other/docker
 icon: techstack
-image: /png/3rdParty/wikipedia.png
+image: /png/wei-zang/wei-zang.png
 tags: techstack, crypto, blockchain, web3, casino, igaming, experience, bitcoin, malta
 ---
 

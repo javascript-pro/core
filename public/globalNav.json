@@ -543,23 +543,42 @@
                 "type": "folder",
                 "children": [
                   {
-                    "title": "AWS, Firebase, GCP, Azure",
-                    "slug": "/work/techstack/other/cloud-services",
-                    "order": 20,
+                    "title": "DevOps",
+                    "slug": "/work/techstack/other/devops",
+                    "order": 18,
                     "icon": "techstack",
-                    "image": "/png/3rdParty/wikipedia.png",
+                    "image": "/png/wei-zang/wei-zang.png",
                     "type": "file",
                     "tags": [
-                      "cloud"
+                      "clodevops",
+                      "system uptime"
                     ],
                     "excerpt": "You don’t choose a cloud platform. The client has one. You learn each by immersion\n\n The concept\n\nModern React apps rarely stand alone. They sit on top of:\n\n hosting\n auth\n storage\n databases\n APIs\n q"
+                  },
+                  {
+                    "title": "Databases",
+                    "slug": "/work/techstack/other/databases",
+                    "order": 19,
+                    "icon": "techstack",
+                    "image": "/png/wei-zang/wei-zang.png",
+                    "type": "file",
+                    "tags": [
+                      "databases",
+                      "Firestore",
+                      "NoSQL",
+                      "MongoDB",
+                      "DynamoDB",
+                      "PostgreSQL",
+                      "MySQL"
+                    ],
+                    "excerpt": "Choosing the right database still matters on every new project\n\n NoSQL for speed and agility\n\nTwo decades ago, most of our work sat on classic relational databases like MySQL and PostgreSQL. They powe"
                   },
                   {
                     "title": "Git",
                     "slug": "/work/techstack/other/git",
                     "order": 25,
                     "icon": "techstack",
-                    "image": "/png/3rdParty/github_og.png",
+                    "image": "/png/wei-zang/wei-zang.png",
                     "type": "file",
                     "tags": [
                       "github",
@@ -578,15 +597,48 @@
                     "excerpt": "We use GitHub for everything.\n\nMost of the communication done between us and our clients during development is done through GitHub in the form of comments, tracking bugs and issues, pull resuests, rev"
                   },
                   {
+                    "title": "Turborepo",
+                    "slug": "/work/techstack/other/turborepo",
+                    "order": 26,
+                    "icon": "techstack",
+                    "image": "/png/wei-zang/wei-zang.png",
+                    "type": "file",
+                    "tags": [
+                      "monorepo",
+                      "git",
+                      "turborepo",
+                      "packages"
+                    ],
+                    "excerpt": "Fast, predictable build system with smart caching and pipeline orchestration\n\n Monorepos used to be painful\n\nSlow installs, duplicated dependencies, and build steps that scaled badly as a codebase gre"
+                  },
+                  {
+                    "title": "CI/CD",
+                    "slug": "/work/techstack/other/ci-cd",
+                    "order": 28,
+                    "icon": "techstack",
+                    "image": "/png/wei-zang/wei-zang.png",
+                    "type": "file",
+                    "tags": [
+                      "CI/CD",
+                      "git",
+                      "pipelines",
+                      "FTP",
+                      "GitHub",
+                      "Vercel"
+                    ],
+                    "excerpt": "Fully automated CI/CD pipelines that run every time we push code\n\n Ship reliably, fast, and with confidence\n\nWhy have these tools have become essential to modern development?\n\nOver the last two decade"
+                  },
+                  {
                     "title": "GraphQL",
                     "slug": "/work/techstack/other/graphql",
                     "order": 70,
                     "icon": "techstack",
-                    "image": "/png/3rdParty/wikipedia.png",
+                    "image": "/png/wei-zang/wei-zang.png",
                     "type": "file",
                     "tags": [
-                      "free",
-                      "api"
+                      "graphql",
+                      "api",
+                      "restful"
                     ],
                     "excerpt": "Things that actually matter daytoday as a React developer using GraphQL\n\n 1. You fetch exactly what you need\n\nNo overfetching, no underfetching.\nComponents request the precise fields they use, nothing"
                   },
@@ -595,11 +647,13 @@
                     "slug": "/work/techstack/other/restful-apis",
                     "order": 70,
                     "icon": "techstack",
-                    "image": "https://live.staticflickr.com/65535/54801612483_31ce454c4e_b.jpg",
+                    "image": "/png/wei-zang/wei-zang.png",
                     "type": "file",
                     "tags": [
                       "free",
-                      "api"
+                      "apim",
+                      "restful",
+                      "endpoints"
                     ],
                     "excerpt": "Goldlabel Public API\n\n glapi/flickr endpoints"
                   },
@@ -608,7 +662,7 @@
                     "slug": "/work/techstack/other/docker",
                     "order": 75,
                     "icon": "techstack",
-                    "image": "/png/3rdParty/wikipedia.png",
+                    "image": "/png/wei-zang/wei-zang.png",
                     "type": "file",
                     "tags": [
                       "techstack",
@@ -625,11 +679,10 @@
                   }
                 ],
                 "icon": "techstack",
-                "image": "/png/clouds/default_whitecloud.png",
+                "image": "/png/wei-zang/wei-zang.png",
                 "tags": [
-                  "expertise",
-                  "fields",
-                  "work"
+                  "non-javascript",
+                  "techstack"
                 ],
                 "excerpt": "[PageGrid pages=\"/work/techstack/other/cloudservices, /work/techstack/other/graphql, /work/techstack/other/git, /work/techstack/other/restfulapis\"]"
               }
@@ -718,7 +771,7 @@
                     "excerpt": "Get started with Goldlabel Core Open Source\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\n 🚀 Install\n\n1. Clone the repo\n\n\n\n2. Setup Environment\n\nCreate a  file in the root"
                   }
                 ],
-                "icon": "github",
+                "icon": "doc",
                 "image": "/png/3rdParty/github_og.png",
                 "tags": [
                   "Tutorial",

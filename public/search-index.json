@@ -452,7 +452,7 @@
     "title": "Example Project",
     "description": "This app... Open Source",
     "tags": "Open Source, JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, NextJS, App Router, GitHub",
-    "content": "\n> The app you are using is free to fork, explore, copy, hack, and reuse\n\nOpen Source and Free forever. It offers statically generated sites with Firestore-powered updates and a real admin panel. Built with Next.js App Router and Material UI\n\n[GitHub url=\"https://github.com/users/javascript-pro/projects/8\" label=\"Kanban Project\"]\n\n[GitHub url=\"https://github.com/javascript-pro/core\" label=\"Repository\"]\n\n[PageGrid pages=\"/work/example-project/cartridges, /work/example-project/tutorial\"]\n"
+    "content": "\n> The app you are using is free to fork, explore, copy, hack, and reuse\n\nOpen Source and Free forever. It offers statically generated sites with Firestore-powered updates and a real admin panel. Built with Next.js App Router and Material UI\n\n[GitHub url=\"https://github.com/javascript-pro/core/pulse\" label=\"Repository Pulse\"]\n\n[GitHub url=\"https://github.com/users/javascript-pro/projects/8\" label=\"Kanban\"]\n\n[PageGrid pages=\"/work/example-project/cartridges, /work/example-project/tutorial, /work/example-project/cartridges/content-manager, /work/example-project/cartridges/design-system, /work/example-project/cartridges/uberedux\"]\n"
   },
   {
     "slug": "work/example-project/tutorial/index",
@@ -616,10 +616,24 @@
     "content": "\n> Other services to deploy Next apps are available\n\nVercel created Next.js and runs the platform it was designed for. Deploys are instant, previews are automatic, and the hosting is globally fast without any configuration. You push to Git, and Vercel handles builds, routing, caching, edge functions, and rollbacks with almost no friction.\n\nFor deploying Next.js projects, nothing else comes close.\n"
   },
   {
-    "slug": "work/techstack/other/cloud-services",
-    "title": "AWS, Firebase, GCP, Azure",
-    "description": "",
-    "tags": "cloud",
+    "slug": "work/techstack/other/ci-cd",
+    "title": "CI/CD",
+    "description": "Pipelines & Actions",
+    "tags": "CI/CD, git, pipelines, FTP, GitHub, Vercel",
+    "content": "\n> Fully automated CI/CD pipelines that run every time we push code\n\n## Ship reliably, fast, and with confidence\n\nWhy have these tools have become essential to modern development?\n\nOver the last two decades, deployment has evolved from manual FTP uploads to fully automated CI/CD pipelines that run every time we push code.\n\nWe’ve worked through that entire transition. From crude bash scripts and fragile Jenkins jobs to today’s GitHub Actions, Vercel builds, and container-based workflows, the goal has stayed the same: ship reliably, fast, and with confidence\n"
+  },
+  {
+    "slug": "work/techstack/other/databases",
+    "title": "Databases",
+    "description": "Firestore, NoSQL, MongoDB, DynamoDB, PostgreSQL, MySQL",
+    "tags": "databases, Firestore, NoSQL, MongoDB, DynamoDB, PostgreSQL, MySQL",
+    "content": "\n> Choosing the right database still matters on every new project\n\n## NoSQL for speed and agility\n\nTwo decades ago, most of our work sat on classic relational databases like MySQL and PostgreSQL. They powered early CMS sites and small apps where structured tables and SQL made perfect sense. As our projects grew more distributed—and the web shifted toward realtime experiences—we moved into the NoSQL world: MongoDB for flexible documents, then Firebase/Firestore for realtime sync and frictionless client access. On the cloud side, DynamoDB became the high-scale option for serverless architectures.\n\nEach of these databases has shaped how we build software: SQL for strong structure and reporting, NoSQL for speed and agility, Firestore for instant multi-device updates, and DynamoDB for massive scale. This page outlines how we’ve used them over the years, and why choosing the right one still matters on every new project.\n"
+  },
+  {
+    "slug": "work/techstack/other/devops",
+    "title": "DevOps",
+    "description": "AWS, Firebase, GCP, Azure",
+    "tags": "clodevops, system uptime,",
     "content": "\n> You don’t choose a cloud platform. The client has one. You learn each by immersion\n\n### **The concept**\n\nModern React apps rarely stand alone. They sit on top of:\n\n- hosting\n- auth\n- storage\n- databases\n- APIs\n- queues\n- serverless functions\n- CI/CD\n- monitoring\n\nEvery company solves those with a cloud provider.\nSo when you join a project, you adopt whatever stack is already in place:\n\n- Company A → **AWS** (Cognito, S3, CloudFront, Lambda, DynamoDB)\n- Company B → **Firebase** (Auth, Firestore, Functions, Hosting)\n- Company C → **Azure** (App Services, AAD, Functions, CosmosDB)\n- Startup → **Supabase**\n- Enterprise → **Hybrid mix**\n\nAs a frontend engineer, you plug your React code into those services to deliver features. You don’t need the full Cloud Architect skillset — just enough to build, deploy, debug, and integrate reliably.\n\n### **Why you naturally get good at it over time**\n\n#### **1. Same patterns, different names**\n\nAuth, storage, databases, serverless, hosting — every cloud provides these.\nOnce you understand the pattern, switching cloud is translation work:\n\n- _AWS Cognito → Firebase Auth → Azure AD B2C_\n- _S3 → Firebase Storage → Azure Blob Storage_\n\nThe metaphors repeat.\n\n#### **2. React forces you into the cloud**\n\nEvery login UI, every file upload, every realtime update pushes you to learn how the backend works. You end up understanding IAM, roles, endpoints, throttling, caching, deployment pipelines — simply because the UI needs them.\n\n#### **3. You debug across the boundary**\n\nFrontend bugs often originate in:\n\n- CORS\n- permissions\n- API routes\n- expired tokens\n- functions timing out\n\nSolving these teaches you the cloud platform in practice, not theory.\n\n#### **4. Serverless functions make it accessible**\n\nLambdas, Firebase Functions, Azure Functions — they let frontend developers write backend logic without deep ops knowledge.\nIt’s a natural progression: write a small function → deploy → observe logs → repeat.\n\n#### **5. Deployments become muscle memory**\n\nUploading assets, configuring caching, invalidating CDNs, setting environment variables — you do these repeatedly across projects. Familiarity compounds fast.\n\n#### **6. Cloud consoles converge**\n\nAll major clouds eventually feel similar:\n\n- dashboards\n- logs\n- metrics\n- function editors\n- secret managers\n- auth configuration\n\nThe UX differs, but the workflow is the same.\n\n#### **7. CI/CD integration gives you control**\n\nReact developers frequently integrate with GitHub Actions, Vercel, Netlify, or native cloud pipelines, which reinforces understanding of builds, artifacts, environments, and releases.\n\n#### **8. You absorb DevOps by osmosis**\n\nYou’re not hired as DevOps, but working beside them exposes you to:\n\n- environment promotion\n- IaC\n- security policies\n- API gateways\n- container workflows\n- monitoring tools\n\nThis builds confidence over time.\n\n### **The outcome**\n\nAfter enough projects, you become “cloud multilingual.”\nYou can drop into AWS, Firebase, or Azure and find your way around quickly because the underlying mental model is the same:\n\n**auth + functions + storage + database + hosting + CI/CD → integrated into React.**\n\nIf you want, I can compress this into:\n\n- a CV bullet\n- a Goldlabel documentation snippet\n- or a page for your tech stack section.\n"
   },
   {
@@ -640,21 +654,28 @@
     "slug": "work/techstack/other/graphql",
     "title": "GraphQL",
     "description": "No over-fetching, no under-fetching",
-    "tags": "free, api",
+    "tags": "graphql, api, restful",
     "content": "\n> Things that actually matter day-to-day as a React developer using GraphQL\n\n### **1. You fetch exactly what you need**\n\nNo over-fetching, no under-fetching.\nComponents request the precise fields they use, nothing more.\n\n### **2. Backend shape matches frontend needs**\n\nYou design queries around UI components, not server endpoints.\nThe client drives the data shape.\n\n### **3. One endpoint for everything**\n\nNo sprawling REST paths.\nOne `/graphql` endpoint, infinite queries.\n\n### **4. Strong typing everywhere**\n\nThe schema becomes a contract.\nWith TypeScript + codegen you get fully typed hooks like `useGetUserQuery()`.\nAutocompletion becomes insanely good.\n\n### **5. Automatic caching and cache-normalisation (Apollo/Urql/Relay)**\n\nOut of the box:\n\n- Query deduping\n- Automatic updates when mutations return data\n- Pagination helpers\n- Persisted cache\n\nFeels “state-management-lite” for server data.\n\n### **6. Co-located data and UI**\n\nA component defines its query right next to its JSX.\nDependency is obvious. Refactoring is safer.\n\n### **7. No more custom serializers**\n\nREST often needs backend changes for new UI screens.\nGraphQL lets the frontend assemble data from existing fields without new endpoints.\n\n### **8. Built-in introspection**\n\nYou get:\n\n- GraphiQL\n- Playground\n- Schema exploration\n- Auto-generated docs\n\nZero backend documentation drift.\n\n### **9. Powerful real-time (Subscriptions)**\n\nStream updates:\n\n- chat messages\n- presence\n- stock ticks\n- dashboard data\n\nNo polling hacks.\n\n### **10. Great with component-driven thinking**\n\nUI components → small GQL fragments → composed queries.\nEach component declares what fields it uses.\nThe server stitches everything together.\n\n### **11. Better network efficiency on complex pages**\n\nOne request gathers everything a page needs.\nNo waterfall of fetch calls.\nMassive win for dashboards.\n\n### **12. Evolution without breaking clients**\n\nSchema can be extended by adding new fields/resolvers.\nOld clients keep working.\nNew clients get new data instantly.\n\n### **13. Cleaner error handling**\n\nErrors return with field-level detail.\nUI can surface partial data plus errors without collapsing entirely.\n\n### **14. Middlewares become generic**\n\nRate-limiting, auth, logging, tracing — all sit in one place: the GraphQL resolver layer.\n\n### **15. Fits modern API ecosystems**\n\nGraphQL meshes with:\n\n- Serverless functions\n- Edge runtimes\n- Microservices\n- Federated schemas\n\n[graphql.org](https://graphql.org/)\n"
   },
   {
     "slug": "work/techstack/other/index",
     "title": "Other",
     "description": "As well as JavaScript, we also have experience in these",
-    "tags": "expertise, fields, work",
+    "tags": "non-javascript, techstack",
     "content": "\n[PageGrid pages=\"/work/techstack/other/cloud-services, /work/techstack/other/graphql, /work/techstack/other/git, /work/techstack/other/restful-apis\"]\n"
   },
   {
     "slug": "work/techstack/other/restful-apis",
     "title": "RESTful APIs",
     "description": "Private keys are available",
-    "tags": "free, api",
+    "tags": "free, apim, restful, endpoints",
     "content": "\n## Goldlabel Public API\n\n## gl-api/flickr endpoints\n\n```javascript\n{\n    route: \"/gl-api/flickr\",\n    queryVars: [\n        \"album\", // single album id\n        \"albums\", // comma seperated list of albums\n        \"photo\", // single photo id\n        \"photos\", // comma seperated list of photos\n    ],\n    examples: [\n        {\n            message: \"Gets latest album with all photos\",\n            route: '/api/gl-api/flickr',\n        },\n        {\n            message: \"Gets a single album by id\",\n            route:'/api/gl-api/flickr/?album=72177720324245676',\n        },\n        {\n            message: \"Gets a photo album by id\",\n            route: '/api/gl-api/flickr/?photo=54534952165',\n        },\n    ]\n},\n\n```\n"
+  },
+  {
+    "slug": "work/techstack/other/turborepo",
+    "title": "Turborepo",
+    "description": "Monorepos",
+    "tags": "monorepo, git, turborepo, packages",
+    "content": "\n> Fast, predictable build system with smart caching and pipeline orchestration\n\n## Monorepos used to be painful\n\nSlow installs, duplicated dependencies, and build steps that scaled badly as a codebase grew. Turborepo changed that for us. It gave our multi-package projects a fast, predictable build system with smart caching and pipeline orchestration. After years of juggling separate repos, Turborepo let us treat our ecosystem as one coherent workspace—speeding up development and making shared code straightforward.\n"
   }
 ]

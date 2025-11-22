@@ -1,11 +1,11 @@
 ---
-order: 20
-title: AWS, Firebase, GCP, Azure
-description:
-slug: /work/techstack/other/cloud-services
+order: 18
+title: DevOps
+description: AWS, Firebase, GCP, Azure
+slug: /work/techstack/other/devops
 icon: techstack
-image: /png/3rdParty/wikipedia.png
-tags: cloud
+image: /png/wei-zang/wei-zang.png
+tags: clodevops, system uptime,
 ---
 
 > You don’t choose a cloud platform. The client has one. You learn each by immersion

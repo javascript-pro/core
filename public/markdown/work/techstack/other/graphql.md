@@ -4,8 +4,8 @@ title: GraphQL
 slug: /work/techstack/other/graphql
 description: No over-fetching, no under-fetching
 icon: techstack
-image: /png/3rdParty/wikipedia.png
-tags: free, api
+image: /png/wei-zang/wei-zang.png
+tags: graphql, api, restful
 ---
 
 > Things that actually matter day-to-day as a React developer using GraphQL
