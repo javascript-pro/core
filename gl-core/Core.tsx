@@ -132,12 +132,12 @@ export default function Core({ frontmatter, body = null }: TCore) {
                       sx={{ alignItems: 'flex-start' }}
                     >
                       {/* Left: Gate */}
-                      <Grid size={{ xs: 12, md: 4 }}>
+                      <Grid size={{ xs: 12, md: 6 }}>
                         <SigninGate />
                       </Grid>
 
                       {/* Right: Image */}
-                      <Grid size={{ xs: 12, md: 8 }}>
+                      <Grid size={{ xs: 12, md: 6 }}>
                         {!noImage && image && (
                           <Box>
                             {!imageError ? (

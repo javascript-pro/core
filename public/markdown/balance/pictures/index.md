@@ -4,7 +4,5 @@ title: Pictures
 description: Flickr etc
 slug: /balance/pictures
 icon: photo
-image: https://live.staticflickr.com/65535/53519132441_43525fc3a4_b.jpg
+image: https://live.staticflickr.com/65535/54940372447_3ca7baef00_b.jpg
 ---
-
-> and AI Gen
