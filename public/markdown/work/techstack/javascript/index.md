@@ -1,6 +1,6 @@
 ---
 order: 3
-title: Fullstack JavaScript
+title: JavaScript
 description: JavaScript Whatever the Weather
 slug: /work/techstack/javascript
 icon: js

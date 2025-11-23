@@ -1,6 +1,6 @@
 ---
 order: 40
-title: DTrackt!
+title: DTrackt! (2024)
 description: Building a Bitcoin-Powered Gambling Platform
 slug: /work/experience/dtrackt
 icon: techstack

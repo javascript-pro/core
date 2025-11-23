@@ -1,6 +1,6 @@
 ---
 order: 30
-title: Aligent
+title: Aligent (2016)
 description: Design Systems
 slug: /work/experience/aligent
 icon: case

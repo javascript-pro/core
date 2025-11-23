@@ -1,6 +1,6 @@
 ---
 order: 30
-title: Huawei
+title: Huawei (2015)
 description: Shenzhen, China
 slug: /work/experience/huawei
 icon: case

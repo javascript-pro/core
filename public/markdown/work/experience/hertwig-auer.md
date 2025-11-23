@@ -1,6 +1,6 @@
 ---
 order: 30
-title: Hertwig & Auer
+title: Hertwig & Auer (2025)
 description: Ella
 slug: /work/experience/hertwig-auer
 icon: case

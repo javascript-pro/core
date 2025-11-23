@@ -1,6 +1,6 @@
 ---
 order: 50
-title: Boral
+title: Boral (2018)
 description: Dots on a Map
 slug: /work/experience/boral
 icon: case
