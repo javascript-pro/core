@@ -6,23 +6,24 @@ export interface IDesignSystem {
   children: React.ReactNode;
 }
 
-export interface TDesignSystemState {
-  cartridge?: string;
-  dialog?: any;
-  theme?: TTheme;
-  feedback?: TFeedback;
-  fullScreen?: boolean;
-  [key: string]: any;
-}
-
-export type TSeverity = 'success' | 'info' | 'warning' | 'error';
-
 export type TFeedback = {
   severity?: TSeverity;
   title?: string;
   description?: string;
   onClose?: () => void;
 } | null;
+
+export interface TDesignSystemState {
+  cartridge?: string;
+  dialog?: any;
+  theme?: TTheme;
+  feedback?: TFeedback;
+  feedbackTested?: boolean;
+  fullScreen?: boolean;
+  [key: string]: any;
+}
+
+export type TSeverity = 'success' | 'info' | 'warning' | 'error';
 
 export type TIcon = TIconShape;
 

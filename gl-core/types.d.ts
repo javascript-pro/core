@@ -50,7 +50,6 @@ export type TCore = {
 export type TSeverity = 'success' | 'info' | 'warning' | 'error';
 
 export type TFeedback = {
-  mode?: 'confirm' | 'alert';
   severity?: TSeverity;
   title?: string;
   description?: string;
