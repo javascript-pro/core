@@ -182,11 +182,39 @@
     "content": "\n**What**  \nAquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closed-loop system.\n\n**Who**  \nIdeal for urban growers, hobbyists, educators, and anyone interested in eco-friendly food production.\n\n**Where**  \nCan be set up almost anywhere—indoors, in greenhouses, on rooftops, or in backyards.\n\n**When**  \nAquaponics can be practiced year-round with the right setup and climate control.\n\n**Why**  \nIt uses less water than traditional farming, produces both protein and vegetables, and creates a self-sustaining ecosystem.\n"
   },
   {
+    "slug": "life/books/cixin-liu/deaths-end",
+    "title": "Death's End",
+    "description": "The Remembrance of Earth’s Past, Book 3",
+    "tags": "Cixin Liu, Speculative fiction, Chinese, hard sci-fi, parable, orwell",
+    "content": "\n> The Remembrance of Earth’s Past, Book 3\n\nThe conflict escalates to cosmic scales. Dimensional warfare, universe-changing technology, and the ultimate fate of humanity and the cosmos come into play.\n"
+  },
+  {
     "slug": "life/books/cixin-liu/index",
-    "title": "The Three Body Problem",
-    "description": "by Cixin Liu",
-    "tags": "Speculative fiction, Chinese, hard sci-fi",
-    "content": "\n> Cixin Liu is a Chinese science-fiction writer best known for The Three-Body Problem and its sequels, collectively The Remembrance of Earth’s Past.\n\n## The Three-Body Problem\n\nFirst contact begins when scientists discover an alien civilisation on the unstable planet Trisolaris. Humanity becomes divided over whether to resist or welcome them.\n\n## The Dark Forest\n\nEarth prepares for the coming Trisolaran invasion. The “Dark Forest Theory” reveals why the universe seems silent—and why contact between civilisations is terrifyingly dangerous.\n\n## Death’s End\n\nThe conflict escalates to cosmic scales. Dimensional warfare, universe-changing technology, and the ultimate fate of humanity and the cosmos come into play.\n\nCixin Liu is significant because he brought Chinese hard sci-fi to a global audience, blending rigorous physics, grand cosmic scale, and philosophical depth. His work revitalised hard sci-fi worldwide, won major awards (including the Hugo), and introduced a distinctly non-Western perspective to the genre’s biggest ideas.\n"
+    "title": "Cixin Liu",
+    "description": "author of The Three Body Problem",
+    "tags": "Cixin Liu, Speculative fiction, Chinese, hard sci-fi",
+    "content": "\n> Cixin Liu is significant because he brought Chinese hard sci-fi to a global audience, blending rigorous physics, grand cosmic scale, and philosophical depth. His work revitalised hard sci-fi worldwide, won major awards (including the Hugo), and introduced a distinctly non-Western perspective to the genre’s biggest ideas.\n\nBest known for The Three-Body Problem and its sequels, collectively The Remembrance of Earth’s Past.\n\n## The Three-Body Problem\n\nFirst contact begins when scientists discover an alien civilisation on the unstable planet Trisolaris. Humanity becomes divided over whether to resist or welcome them.\n\n## The Dark Forest\n\nEarth prepares for the coming Trisolaran invasion. The “Dark Forest Theory” reveals why the universe seems silent—and why contact between civilisations is terrifyingly dangerous.\n\n## Death’s End\n\nThe conflict escalates to cosmic scales. Dimensional warfare, universe-changing technology, and the ultimate fate of humanity and the cosmos come into play.\n"
+  },
+  {
+    "slug": "life/books/cixin-liu/of-ants-and-dinosaurs",
+    "title": "Of Ants and Dinosaurs",
+    "description": "Two wildly different species in a forced symbiosis",
+    "tags": "Cixin Liu, Speculative fiction, Chinese, hard sci-fi, parable, orwell",
+    "content": "\n> Cixin Liu is a Chinese science-fiction writer best known for The Three-Body Problem and its sequels, collectively The Remembrance of Earth’s Past.\n\nOf Ants and Dinosaurs works as a sharp, playful satire, but unlike Orwell’s Animal Farm, it doesn’t age in the same way. Orwell tied his allegory tightly to a specific political moment; once you understand the Russian Revolution and early-Soviet power struggles, the book’s targets feel fixed in time. Its punch is still there, but its scope is narrow.\n\nCixin’s novella aims wider. By pairing two wildly different species in a forced symbiosis, he sidesteps topical politics and goes straight for the structural problems of civilisation itself — cooperation, dependency, exploitation, and technological hubris. Because the setup isn’t bound to a particular regime or historical incident, the satire stays fresh. The ants and dinosaurs become stand-ins for any imbalanced partnership: governments and technocrats, capital and labour, humanity and its tools.\n\nThe tone is lighter, almost whimsical, but the critique lands harder precisely because it isn’t pinned to one era. It’s about how societies drift into catastrophe when mutual benefit becomes one-sided, and how intelligence without humility accelerates collapse. That makes it feel more durable than Animal Farm — less a snapshot of a political moment, more a fable about the recurring patterns of civilisation.\n"
+  },
+  {
+    "slug": "life/books/cixin-liu/the-dark-forest",
+    "title": "The Dark Forest",
+    "description": "The Remembrance of Earth’s Past, Book 2",
+    "tags": "Cixin Liu, Speculative fiction, Chinese, hard sci-fi, parable, orwell",
+    "content": "\n> The Remembrance of Earth’s Past, Book 2\n\nEarth prepares for the coming Trisolaran invasion. The “Dark Forest Theory” reveals why the universe seems silent—and why contact between civilisations is terrifyingly dangerous.\n"
+  },
+  {
+    "slug": "life/books/cixin-liu/three-body-problem",
+    "title": "The Three-Body Problem",
+    "description": "The Remembrance of Earth’s Past, Book 1",
+    "tags": "Cixin Liu, Speculative fiction, Chinese, hard sci-fi, parable, orwell",
+    "content": "\n> The Remembrance of Earth’s Past, Book 1\n\nFirst contact begins when scientists discover an alien civilisation on the unstable planet Trisolaris. Humanity becomes divided over whether to resist or welcome them.\n"
   },
   {
     "slug": "life/books/douglas-coupland/generation-x",
@@ -214,7 +242,7 @@
     "title": "Books",
     "description": "What are you reading?",
     "tags": "science fiction, books, satire, douglas coupland, Cixin Liu,",
-    "content": "\n> A curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction\n\n[PageGrid thumbnails=\"yes\" pages=\"/life/books/tom-robbins, /life/books/cixin-liu, /life/books/douglas-coupland/generation-x, /life/books/neuromancer, /life/books/r-f-kuang/babel, /life/books/r-f-kuang/katabasis\"]\n"
+    "content": "\n> A curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction\n\n[PageGrid thumbnails=\"yes\" pages=\"/life/books/cixin-liu, /life/books/tom-robbins, /life/books/douglas-coupland/generation-x, /life/books/neuromancer, /life/books/r-f-kuang/babel, /life/books/r-f-kuang/katabasis\"]\n"
   },
   {
     "slug": "life/books/neuromancer",
@@ -246,8 +274,8 @@
   },
   {
     "slug": "life/books/tom-robbins",
-    "title": "Even Cowgirls Get the Blues",
-    "description": "by Tom Robbins",
+    "title": "Tom Robbins",
+    "description": "Even Cowgirls Get the Blues",
     "tags": [],
     "content": "\nEven Cowgirls Get the Blues follows Sissy Hankshaw, a hitchhiker born with enormous thumbs, as she drifts through America’s counterculture. It blends surreal humour, feminism, and mysticism, centring on her adventures at a ranch run by rebellious cowgirls and her search for freedom and identity.\n\n**Tom Robbins** is an American novelist known for playful, whimsical prose, irreverent humor, and philosophical musings. His works blend surrealism, countercultural themes, and sharp social commentary, with a strong focus on language and imagination.\n\n#### Bibliography\n\n- **1971** – _Another Roadside Attraction_\n- **1976** – _Even Cowgirls Get the Blues_\n- **1980** – _Still Life with Woodpecker_\n- **1984** – _Jitterbug Perfume_\n- **1990** – _Skinny Legs and All_\n- **1994** – _Half Asleep in Frog Pajamas_\n- **2000** – _Fierce Invalids Home from Hot Climates_\n- **2003** – _Villa Incognito_\n- **2008** – _Bad Timing_\n- **2009** – _B Is for Beer_ (children’s book)\n- **2014** – _Tibetan Peach Pie: A True Account of an Imaginative Life_ (memoir)\n- **2023** – _Wild Ducks Flying Backward_ (collection of short pieces)\n"
   },

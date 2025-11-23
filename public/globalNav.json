@@ -1000,20 +1000,90 @@
             "type": "folder",
             "children": [
               {
-                "title": "The Three Body Problem",
-                "description": "by Cixin Liu",
+                "title": "Cixin Liu",
+                "description": "author of The Three Body Problem",
                 "slug": "/life/books/cixin-liu",
                 "order": 10,
                 "type": "folder",
-                "children": [],
+                "children": [
+                  {
+                    "title": "Of Ants and Dinosaurs",
+                    "slug": "/life/books/cixin-liu/of-ants-and-dinosaurs",
+                    "order": 35,
+                    "icon": "books",
+                    "image": "https://live.staticflickr.com/65535/54941778209_29ee005a38_b.jpg",
+                    "type": "file",
+                    "tags": [
+                      "Cixin Liu",
+                      "Speculative fiction",
+                      "Chinese",
+                      "hard sci-fi",
+                      "parable",
+                      "orwell"
+                    ],
+                    "excerpt": "Cixin Liu is a Chinese sciencefiction writer best known for The ThreeBody Problem and its sequels, collectively The Remembrance of Earth’s Past.\n\nOf Ants and Dinosaurs works as a sharp, playful satire"
+                  },
+                  {
+                    "title": "The Three-Body Problem",
+                    "slug": "/life/books/cixin-liu/three-body-problem",
+                    "order": 45,
+                    "icon": "books",
+                    "image": "https://live.staticflickr.com/65535/54941521056_c3dbdb07cc_b.jpg",
+                    "type": "file",
+                    "tags": [
+                      "Cixin Liu",
+                      "Speculative fiction",
+                      "Chinese",
+                      "hard sci-fi",
+                      "parable",
+                      "orwell"
+                    ],
+                    "excerpt": "The Remembrance of Earth’s Past, Book 1\n\nFirst contact begins when scientists discover an alien civilisation on the unstable planet Trisolaris. Humanity becomes divided over whether to resist or welco"
+                  },
+                  {
+                    "title": "Death's End",
+                    "slug": "/life/books/cixin-liu/deaths-end",
+                    "order": 55,
+                    "icon": "books",
+                    "image": "https://live.staticflickr.com/65535/54941521056_c3dbdb07cc_b.jpg",
+                    "type": "file",
+                    "tags": [
+                      "Cixin Liu",
+                      "Speculative fiction",
+                      "Chinese",
+                      "hard sci-fi",
+                      "parable",
+                      "orwell"
+                    ],
+                    "excerpt": "The Remembrance of Earth’s Past, Book 3\n\nThe conflict escalates to cosmic scales. Dimensional warfare, universechanging technology, and the ultimate fate of humanity and the cosmos come into play."
+                  },
+                  {
+                    "title": "The Dark Forest",
+                    "slug": "/life/books/cixin-liu/the-dark-forest",
+                    "order": 55,
+                    "icon": "books",
+                    "image": "https://live.staticflickr.com/65535/54941521056_c3dbdb07cc_b.jpg",
+                    "type": "file",
+                    "tags": [
+                      "Cixin Liu",
+                      "Speculative fiction",
+                      "Chinese",
+                      "hard sci-fi",
+                      "parable",
+                      "orwell"
+                    ],
+                    "excerpt": "The Remembrance of Earth’s Past, Book 2\n\nEarth prepares for the coming Trisolaran invasion. The “Dark Forest Theory” reveals why the universe seems silent—and why contact between civilisations is terr"
+                  }
+                ],
                 "icon": "books",
                 "image": "https://live.staticflickr.com/65535/54933893533_4b3dbc97d6_b.jpg",
                 "tags": [
+                  "Cixin Liu",
                   "Speculative fiction",
                   "Chinese",
                   "hard sci-fi"
                 ],
-                "excerpt": "Cixin Liu is a Chinese sciencefiction writer best known for The ThreeBody Problem and its sequels, collectively The Remembrance of Earth’s Past.\n\n The ThreeBody Problem\n\nFirst contact begins when scie"
+                "excerpt": "Cixin Liu is significant because he brought Chinese hard scifi to a global audience, blending rigorous physics, grand cosmic scale, and philosophical depth. His work revitalised hard scifi worldwide, "
               },
               {
                 "title": "R. F. Kuang",
@@ -1109,7 +1179,7 @@
                 "excerpt": "Neuromancer's (1984) portrayal of AIs striving for autonomy foreshadowed realworld debates. Neuromancer didn’t predict the future—it just defined how to imagine it\n\n Why Neuromancer is Seminal in SciF"
               },
               {
-                "title": "Even Cowgirls Get the Blues",
+                "title": "Tom Robbins",
                 "slug": "/life/books/tom-robbins",
                 "order": 1233,
                 "icon": "books",
@@ -1127,7 +1197,7 @@
               "douglas coupland",
               "Cixin Liu"
             ],
-            "excerpt": "A curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction\n\n[PageGrid thumbnails=\"yes\" pages=\"/life/books/tomrobbins, /life/books/cixinliu, /life"
+            "excerpt": "A curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction\n\n[PageGrid thumbnails=\"yes\" pages=\"/life/books/cixinliu, /life/books/tomrobbins, /life"
           },
           {
             "title": "Diving",

@@ -64,7 +64,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
   // Test out our Feedback component by triggering it here
   React.useEffect(() => {
-    if (!feedbackTested){    
+    if (!feedbackTested) {
       const feedback: TFeedback = {
         severity: 'success',
         title: 'Hello',
@@ -75,7 +75,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
       dispatch(setFeedback(feedback));
       dispatch(setDesignSystemKey('feedbackTested', true));
     }
-    
   }, [dispatch, feedbackTested]);
 
   useVersionCheck();
