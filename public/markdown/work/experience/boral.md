@@ -4,7 +4,7 @@ title: Boral
 description: Dots on a Map
 slug: /work/experience/boral
 icon: case
-image: 
+image:
 tags: expertise, interview, boral
 ---
 

@@ -1,7 +1,7 @@
 ---
-order: 50
-title: Case Studies
-description: Real World Experience
+order: 70
+title: Experience
+description: Real World Case Studies
 slug: /work/experience
 icon: case
 image: https://live.staticflickr.com/65535/54940372447_3ca7baef00_b.jpg

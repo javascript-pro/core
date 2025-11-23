@@ -378,48 +378,6 @@
     "content": "\n> We take on a limited number of new projects each month\n\n## Work With Us\n\nIf you need something done we’d love to hear about it. Find out if we're a [good fit](/work/cv). We're always looking for collaborators, contributors, and good ideas.\n\nThe apps we ship are real. They run in production and are developed accessibly. The Core is Open Source and Free forever — giving you statically generated sites with Firestore-powered updates and a real admin panel. Built with Next.js App Router and Material UI\n\nGoldlabel builds and ships modern web apps for clients who need real results — fast\n\n- _Small_ team. _Big_ output\n- Real deployments from Day One\n- Readable, extensible, Open Source\n\nGoldlabel Apps is a UK-based software company that designs, builds, and maintains full-stack web applications. We specialize in Next.js, Firebase, and custom UI development, delivering everything from internal admin tools to polished public-facing websites.\n\n#### Working with Goldlabel\n\n- Ship early and often.  \n  Each app is live from the outset — not just a mockup or prototyle\n\n- Share the process.  \n  Follow the development on GitHub, view the commit history, clone the code. Get involved with Issues\n\n- Built for reuse.  \n  Every component, pattern, and API is designed to be portable and production-ready\n\n> A Software Developer in possession of a good product, must be in want of a good business partner\n\n## Join Us\n\nWhether you're a startup with a short deadline or an enterprise with complex workflows, we can help. Get in touch for it's a truth universally acknowledged that a Software Developer in possession of a good product, must be in want of a good business partner\n\n[GitHub url=\"https://github.com/goldlabel-apps\" label=\"@goldlabel-apps\"]\n"
   },
   {
-    "slug": "work/case-studies/aligent",
-    "title": "Aligent",
-    "description": "Design Systems",
-    "tags": "expertise, interview, php, magento, e-commerce",
-    "content": "\n## Magento PHP & Material Design System\n\n> JavaScript Developer, Adelaide\n\nLead developer creating a front end React application for Cancer Council NSW. The application connecting to a WordPress driven CMS via the new JSON API.\nPHP development of custom API endpoints\nWordPress plugin development\nReact App development using ES6 & webpack & managing workflow with GitFlow.\n"
-  },
-  {
-    "slug": "work/case-studies/boral",
-    "title": "Boral",
-    "description": "Dots on a Map",
-    "tags": "expertise, interview, boral",
-    "content": "\n## Geo-Spatial Fleet App\n\n> React Developer, Aug 2018 - Feb 2019, Sydney\n\nIt’s only been a few years since all of Boral’s business was still done on paper. When I joined the Sydney tech team in 2018, the company was mid-transformation. Full of talented people and legacy systems coexisting.\n\nI joined a strong Agile team led by a Product Owner, who had assembled a cross-functional group of contractors to form a kind of rapid-prototyping unit. We had solid backend engineers, frontend specialists, and everything in between — all focused on exploring new ways to bring Boral’s data to life.\n\nThe challenge was typical of a large enterprise: years of evolving microservices, inconsistent versioning, and fragmented data sources. We turned to GraphQL to unify those systems — collating information from multiple APIs and delivering it cleanly to the frontend.\n\nOur focus was a real-time geo-spatial prototype, powered by data streamed from smartphones across a fleet of 200+ vehicles nationwide. The goal was simple but powerful: grab the live location data, enrich it with contextual information, and display it beautifully on a map.\n\nVoila. Dots on a Map. A functional prototype ready for the governance board to explore and iterate on.\n\n### What I Brought to the Team\n\n- **Captain’s Duty** – times I took ownership, showed integrity, and followed through without being asked\n\nWhen communication gaps emerged between our frontend and backend engineers particularly between our young Chinese frontend developer and her backend counterpart. I suggested they use GraphQL as their shared language. This bridge helped them collaborate effectively, freeing me to focus on state management, ensuring every component aligned into a cohesive working app.\n\n- **Fun Loving Heart** How I brought positive energy, supported teammates, and helped create an enjoyable, hard-working environment?\n\nThe first time we actually tested the App fully I rode home with a smartphone in my pocket which the product owner showed his bosses the little icon of my bike heading to Narrabeen\n\n- **Athlete’s Grit** – examples of when I pushed through challenges and delivered under pressure?\n\nObviously in such an environment priorities can change daily and keeping flexible to those changes is a full time job\n\n#### Technical Highlights\n\n- Established foundational test architecture using Cucumber, Gherkin, and BDD principles\n- Developed and tested multiple React PWAs with AWS Amplify and GraphQL\n- Built CI/CD workflows to support rapid feature delivery and iterative feedback loops\n"
-  },
-  {
-    "slug": "work/case-studies/dtrackt",
-    "title": "DTrackt!",
-    "description": "Building a Bitcoin-Powered Gambling Platform",
-    "tags": "techstack, crypto, blockchain, web3, casino, igaming, experience, bitcoin, malta",
-    "content": "\n# Blockchain Crypto Casino\n\n> In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online gambling world but was pivoting into blockchain as a way to skirt regulatory overhead and payment processor restrictions.\n\nThe idea was to create a casino that ran entirely on Bitcoin. Players didn’t need to sign up with an email, provide any personal information, or go through a bank. They could simply send Bitcoin to the site, play games, and withdraw any winnings — all in a matter of minutes.\n\n### Key features\n\n- WebSocket-driven live play (e.g., roulette, dice)\n- Bitcoin deposits & withdrawals via ElectrumX\n- In-browser entropy generation for provable fairness\n- Session-based wallets with automatic hot-wallet sweeping\n\n### My Role\n\nWhile I wasn’t the lead, I worked closely with the CTO to build out the frontend and middleware layers. This included integrating live WebSocket games, connecting to Electrum servers for blockchain transaction monitoring, and helping define the client API contract.\n\nI also helped with:\n\n- Creating a responsive React UI for multiple games\n- Implementing realtime transaction feedback via WebSockets\n- Writing middleware to validate Bitcoin deposit addresses\n- Working on wallet entropy sources for provable fairness\n\n### Technical Challenges\n\n- **Latency**: Keeping gameplay snappy while querying Bitcoin balances over Electrum\n- **Security**: Preventing double spends and replay attacks\n- **UX**: Explaining trustless randomness to non-technical users\n- **Architecture**: Designing microservices to isolate financial logic\n\n### Outcome\n\nThe platform launched in private beta and attracted a small but active cohort of users — mostly from forums and crypto communities. Due to legal ambiguity and lack of licensing, the company eventually wound down operations voluntarily.\n\nStill, it served as a successful proof-of-concept for anonymous, crypto-native gaming.\n\n### Reflections\n\nThis project taught me how to move fast in an unregulated space — balancing engineering idealism with pragmatic risk. It also gave me early exposure to the realities of building with Bitcoin: slow confirmation times, Electrum quirks, and the limitations of designing around unfinalized transactions.\n\nIt’s also a great reminder of what you _can_ build when traditional financial rails are removed from the equation.\n\n### Technical Assessment\n\nBefore joining the team, I completed a technical assessment to demonstrate my understanding of Bitcoin fundamentals and general coding ability. The task involved working directly with Bitcoin hashing algorithms — a core concept behind how transactions are verified on the blockchain.\n\nThe code is here on [GitHub](https://github.com/javascript-pro/bitcoin-hash). While it’s a simple project, it reflects the kind of low-level thinking and hands-on problem solving that this space often demands.\n\n[GitHub url=\"https://github.com/javascript-pro/bitcoin-hash\" label=\"javascript-pro/bitcoin-hash\"]\n"
-  },
-  {
-    "slug": "work/case-studies/hertwig-auer",
-    "title": "Hertwig & Auer",
-    "description": "Ella",
-    "tags": "expertise, germany, law",
-    "content": "\n> Summer 2025\n\nThis content is behind a paywall. Viewers viewing it are accountable for their actions\n"
-  },
-  {
-    "slug": "work/case-studies/huawei",
-    "title": "Huawei",
-    "description": "Shenzhen, China",
-    "tags": "expertise, interview, huawei, china, react, javascript",
-    "content": "\n> Feb to May 2016\n\n## English/Chinese Project Management eLearning App\n\nBy 2015 React had evolved beyond an experiment. Facebook, Instagram, and Airbnb were using it at scale, and the open-source ecosystem around it (Redux, React Router, Create React App) was maturing rapidly\n\n- Built an isomorphic JavaScript project management app using React and Node.js\n- Worked within a small, agile development team\n- Contributed to localisation efforts for Chinese-language users\n- Gained hands-on experience in a Chinese corporate environment\n"
-  },
-  {
-    "slug": "work/case-studies/index",
-    "title": "Case Studies",
-    "description": "Real World Experience",
-    "tags": "expertise, interview, experience",
-    "content": "\n[PageGrid thumbnails=\"no\" pages=\"/work/case-studies/dtrackt, /work/case-studies/aligent, /work/case-studies/hertwig-auer, /work/case-studies/huawei, /work/case-studies/boral\", /work/case-studies/aligent\"]\n"
-  },
-  {
     "slug": "work/example-project/cartridges/content-manager",
     "title": "Content Manager",
     "description": "Firebase CRUD",
@@ -469,11 +427,60 @@
     "content": "\n> Get started with Goldlabel Core Open Source\n\n[GitHub url=\"https://github.com/javascript-pro/core\" label=\"Clone repo\"]\n\n## 🚀 Install\n\n1. Clone the repo\n\n```bash\ngit clone https://github.com/javascript-pro/core.git\ncd core\nyarn install\n```\n\n2. Setup Environment\n\nCreate a `.env.local` file in the root directory with this variable. If you enable parts of the app which require other vars, it will let you know\n\n## 🔑 Develop\n\n```bash\nyarn dev\n```\n"
   },
   {
+    "slug": "work/experience/aligent",
+    "title": "Aligent",
+    "description": "Design Systems",
+    "tags": "expertise, interview, php, magento, e-commerce",
+    "content": "\n## Magento PHP & Material Design System\n\n> JavaScript Developer, Adelaide\n\nLead developer creating a front end React application for Cancer Council NSW. The application connecting to a WordPress driven CMS via the new JSON API.\nPHP development of custom API endpoints\nWordPress plugin development\nReact App development using ES6 & webpack & managing workflow with GitFlow.\n"
+  },
+  {
+    "slug": "work/experience/boral",
+    "title": "Boral",
+    "description": "Dots on a Map",
+    "tags": "expertise, interview, boral",
+    "content": "\n## Geo-Spatial Fleet App\n\n> React Developer, Aug 2018 - Feb 2019, Sydney\n\nIt’s only been a few years since all of Boral’s business was still done on paper. When I joined the Sydney tech team in 2018, the company was mid-transformation. Full of talented people and legacy systems coexisting.\n\nI joined a strong Agile team led by a Product Owner, who had assembled a cross-functional group of contractors to form a kind of rapid-prototyping unit. We had solid backend engineers, frontend specialists, and everything in between — all focused on exploring new ways to bring Boral’s data to life.\n\nThe challenge was typical of a large enterprise: years of evolving microservices, inconsistent versioning, and fragmented data sources. We turned to GraphQL to unify those systems — collating information from multiple APIs and delivering it cleanly to the frontend.\n\nOur focus was a real-time geo-spatial prototype, powered by data streamed from smartphones across a fleet of 200+ vehicles nationwide. The goal was simple but powerful: grab the live location data, enrich it with contextual information, and display it beautifully on a map.\n\nVoila. Dots on a Map. A functional prototype ready for the governance board to explore and iterate on.\n\n### What I Brought to the Team\n\n- **Captain’s Duty** – times I took ownership, showed integrity, and followed through without being asked\n\nWhen communication gaps emerged between our frontend and backend engineers particularly between our young Chinese frontend developer and her backend counterpart. I suggested they use GraphQL as their shared language. This bridge helped them collaborate effectively, freeing me to focus on state management, ensuring every component aligned into a cohesive working app.\n\n- **Fun Loving Heart** How I brought positive energy, supported teammates, and helped create an enjoyable, hard-working environment?\n\nThe first time we actually tested the App fully I rode home with a smartphone in my pocket which the product owner showed his bosses the little icon of my bike heading to Narrabeen\n\n- **Athlete’s Grit** – examples of when I pushed through challenges and delivered under pressure?\n\nObviously in such an environment priorities can change daily and keeping flexible to those changes is a full time job\n\n#### Technical Highlights\n\n- Established foundational test architecture using Cucumber, Gherkin, and BDD principles\n- Developed and tested multiple React PWAs with AWS Amplify and GraphQL\n- Built CI/CD workflows to support rapid feature delivery and iterative feedback loops\n"
+  },
+  {
+    "slug": "work/experience/dtrackt",
+    "title": "DTrackt!",
+    "description": "Building a Bitcoin-Powered Gambling Platform",
+    "tags": "techstack, crypto, blockchain, web3, casino, igaming, experience, bitcoin, malta",
+    "content": "\n# Blockchain Crypto Casino\n\n> In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online gambling world but was pivoting into blockchain as a way to skirt regulatory overhead and payment processor restrictions.\n\nThe idea was to create a casino that ran entirely on Bitcoin. Players didn’t need to sign up with an email, provide any personal information, or go through a bank. They could simply send Bitcoin to the site, play games, and withdraw any winnings — all in a matter of minutes.\n\n### Key features\n\n- WebSocket-driven live play (e.g., roulette, dice)\n- Bitcoin deposits & withdrawals via ElectrumX\n- In-browser entropy generation for provable fairness\n- Session-based wallets with automatic hot-wallet sweeping\n\n### My Role\n\nWhile I wasn’t the lead, I worked closely with the CTO to build out the frontend and middleware layers. This included integrating live WebSocket games, connecting to Electrum servers for blockchain transaction monitoring, and helping define the client API contract.\n\nI also helped with:\n\n- Creating a responsive React UI for multiple games\n- Implementing realtime transaction feedback via WebSockets\n- Writing middleware to validate Bitcoin deposit addresses\n- Working on wallet entropy sources for provable fairness\n\n### Technical Challenges\n\n- **Latency**: Keeping gameplay snappy while querying Bitcoin balances over Electrum\n- **Security**: Preventing double spends and replay attacks\n- **UX**: Explaining trustless randomness to non-technical users\n- **Architecture**: Designing microservices to isolate financial logic\n\n### Outcome\n\nThe platform launched in private beta and attracted a small but active cohort of users — mostly from forums and crypto communities. Due to legal ambiguity and lack of licensing, the company eventually wound down operations voluntarily.\n\nStill, it served as a successful proof-of-concept for anonymous, crypto-native gaming.\n\n### Reflections\n\nThis project taught me how to move fast in an unregulated space — balancing engineering idealism with pragmatic risk. It also gave me early exposure to the realities of building with Bitcoin: slow confirmation times, Electrum quirks, and the limitations of designing around unfinalized transactions.\n\nIt’s also a great reminder of what you _can_ build when traditional financial rails are removed from the equation.\n\n### Technical Assessment\n\nBefore joining the team, I completed a technical assessment to demonstrate my understanding of Bitcoin fundamentals and general coding ability. The task involved working directly with Bitcoin hashing algorithms — a core concept behind how transactions are verified on the blockchain.\n\nThe code is here on [GitHub](https://github.com/javascript-pro/bitcoin-hash). While it’s a simple project, it reflects the kind of low-level thinking and hands-on problem solving that this space often demands.\n\n[GitHub url=\"https://github.com/javascript-pro/bitcoin-hash\" label=\"javascript-pro/bitcoin-hash\"]\n"
+  },
+  {
+    "slug": "work/experience/hertwig-auer",
+    "title": "Hertwig & Auer",
+    "description": "Ella",
+    "tags": "expertise, germany, law",
+    "content": "\n> Summer 2025\n\nThis content is behind a paywall. Viewers viewing it are accountable for their actions\n"
+  },
+  {
+    "slug": "work/experience/huawei",
+    "title": "Huawei",
+    "description": "Shenzhen, China",
+    "tags": "expertise, interview, huawei, china, react, javascript",
+    "content": "\n> Feb to May 2016\n\n## English/Chinese Project Management eLearning App\n\nBy 2015 React had evolved beyond an experiment. Facebook, Instagram, and Airbnb were using it at scale, and the open-source ecosystem around it (Redux, React Router, Create React App) was maturing rapidly\n\n- Built an isomorphic JavaScript project management app using React and Node.js\n- Worked within a small, agile development team\n- Contributed to localisation efforts for Chinese-language users\n- Gained hands-on experience in a Chinese corporate environment\n"
+  },
+  {
+    "slug": "work/experience/index",
+    "title": "Experience",
+    "description": "Real World Case Studies",
+    "tags": "expertise, interview, experience",
+    "content": "\n[PageGrid thumbnails=\"no\" pages=\"/work/experience/dtrackt, /work/experience/aligent, /work/experience/hertwig-auer, /work/experience/huawei, /work/experience/boral\", /work/experience/aligent\"]\n"
+  },
+  {
+    "slug": "work/hyperlink-resume",
+    "title": "Hyperlink Resume",
+    "description": "A new approach",
+    "tags": "company, resume,",
+    "content": "\n> This is a new way to present a resume\n"
+  },
+  {
     "slug": "work/index",
     "title": "Work",
     "description": "20+ Years of coding",
     "tags": "Professional, JavaScript, Vanilla JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS",
-    "content": "\n> Goldlabel builds and ships modern web apps for clients who need real results fast\n\n[PageGrid thumbnails=\"no\" pages=\"/work/about, /work/techstack, /work/case-studies, /work/example-project\"]\n\n- _Small_ team. _Big_ output\n- Real deployments from Day One\n- Readable, extensible, Open Source\n"
+    "content": "\n> Goldlabel builds and ships modern web apps for clients who need real results fast\n\n[PageGrid thumbnails=\"no\" pages=\"/work/about/hyperlink-resume, /work/about, /work/techstack, /work/experience, /work/example-project\"]\n\n- _Small_ team. _Big_ output\n- Real deployments from Day One\n- Readable, extensible, Open Source\n"
   },
   {
     "slug": "work/techstack/ai/index",
