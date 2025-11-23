@@ -4,6 +4,7 @@ import { useSlice } from './hooks/useSlice';
 import { useDispatch } from './hooks/useDispatch';
 import { useKey } from './hooks/useKey';
 import { useVersionCheck } from './hooks/useVersionCheck';
+import { useNewContent } from './hooks/useNewContent';
 import { setUbereduxKey, resetUberedux } from './store';
 import { TRootState, TUbereduxDispatch } from './store';
 
@@ -14,6 +15,7 @@ export {
   useSlice,
   useDispatch,
   useVersionCheck,
+  useNewContent,
   setUbereduxKey,
   resetUberedux,
 };

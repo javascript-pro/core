@@ -11,6 +11,7 @@ import MenuSystem from './components/MenuSystem';
 import SystemDialog from './components/SystemDialog';
 import Feedback from './components/Feedback';
 import LoadingOverlay from './components/LoadingOverlay';
+import NewContent from './components/NewContent';
 import { setDesignSystemKey } from './actions/setDesignSystemKey';
 import { setFeedback } from './actions/setFeedback';
 import { useDesignSystem } from './hooks/useDesignSystem';
@@ -20,6 +21,7 @@ import { useFeedback } from './hooks/useFeedback';
 export {
   initialStateDesignSystem,
   DesignSystem,
+  NewContent,
   PushButton,
   AlertAd,
   MenuSystem,

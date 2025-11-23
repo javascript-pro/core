@@ -6,7 +6,7 @@ slug: /life/books/cixin-liu/deaths-end
 icon: books
 image: https://live.staticflickr.com/65535/54941521056_c3dbdb07cc_b.jpg
 tags: Cixin Liu, Speculative fiction, Chinese, hard sci-fi, parable, orwell
-new: true
+newContent: true
 ---
 
 > The Remembrance of Earth’s Past, Book 3
