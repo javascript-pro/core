@@ -1,5 +1,5 @@
 ---
-order: 30
+order: 60
 title: Aligent (2016)
 description: Design Systems
 slug: /work/experience/aligent

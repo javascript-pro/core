@@ -456,35 +456,35 @@
   },
   {
     "slug": "work/experience/aligent",
-    "title": "Aligent",
+    "title": "Aligent (2016)",
     "description": "Design Systems",
     "tags": "expertise, interview, php, magento, e-commerce",
     "content": "\n## Magento PHP & Material Design System\n\n> JavaScript Developer, Adelaide\n\nLead developer creating a front end React application for Cancer Council NSW. The application connecting to a WordPress driven CMS via the new JSON API.\nPHP development of custom API endpoints\nWordPress plugin development\nReact App development using ES6 & webpack & managing workflow with GitFlow.\n"
   },
   {
     "slug": "work/experience/boral",
-    "title": "Boral",
+    "title": "Boral (2018)",
     "description": "Dots on a Map",
     "tags": "expertise, interview, boral",
     "content": "\n## Geo-Spatial Fleet App\n\n> React Developer, Aug 2018 - Feb 2019, Sydney\n\nIt’s only been a few years since all of Boral’s business was still done on paper. When I joined the Sydney tech team in 2018, the company was mid-transformation. Full of talented people and legacy systems coexisting.\n\nI joined a strong Agile team led by a Product Owner, who had assembled a cross-functional group of contractors to form a kind of rapid-prototyping unit. We had solid backend engineers, frontend specialists, and everything in between — all focused on exploring new ways to bring Boral’s data to life.\n\nThe challenge was typical of a large enterprise: years of evolving microservices, inconsistent versioning, and fragmented data sources. We turned to GraphQL to unify those systems — collating information from multiple APIs and delivering it cleanly to the frontend.\n\nOur focus was a real-time geo-spatial prototype, powered by data streamed from smartphones across a fleet of 200+ vehicles nationwide. The goal was simple but powerful: grab the live location data, enrich it with contextual information, and display it beautifully on a map.\n\nVoila. Dots on a Map. A functional prototype ready for the governance board to explore and iterate on.\n\n### What I Brought to the Team\n\n- **Captain’s Duty** – times I took ownership, showed integrity, and followed through without being asked\n\nWhen communication gaps emerged between our frontend and backend engineers particularly between our young Chinese frontend developer and her backend counterpart. I suggested they use GraphQL as their shared language. This bridge helped them collaborate effectively, freeing me to focus on state management, ensuring every component aligned into a cohesive working app.\n\n- **Fun Loving Heart** How I brought positive energy, supported teammates, and helped create an enjoyable, hard-working environment?\n\nThe first time we actually tested the App fully I rode home with a smartphone in my pocket which the product owner showed his bosses the little icon of my bike heading to Narrabeen\n\n- **Athlete’s Grit** – examples of when I pushed through challenges and delivered under pressure?\n\nObviously in such an environment priorities can change daily and keeping flexible to those changes is a full time job\n\n#### Technical Highlights\n\n- Established foundational test architecture using Cucumber, Gherkin, and BDD principles\n- Developed and tested multiple React PWAs with AWS Amplify and GraphQL\n- Built CI/CD workflows to support rapid feature delivery and iterative feedback loops\n"
   },
   {
     "slug": "work/experience/dtrackt",
-    "title": "DTrackt!",
+    "title": "DTrackt! (2024)",
     "description": "Building a Bitcoin-Powered Gambling Platform",
     "tags": "techstack, crypto, blockchain, web3, casino, igaming, experience, bitcoin, malta",
     "content": "\n# Blockchain Crypto Casino\n\n> In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online gambling world but was pivoting into blockchain as a way to skirt regulatory overhead and payment processor restrictions.\n\nThe idea was to create a casino that ran entirely on Bitcoin. Players didn’t need to sign up with an email, provide any personal information, or go through a bank. They could simply send Bitcoin to the site, play games, and withdraw any winnings — all in a matter of minutes.\n\n### Key features\n\n- WebSocket-driven live play (e.g., roulette, dice)\n- Bitcoin deposits & withdrawals via ElectrumX\n- In-browser entropy generation for provable fairness\n- Session-based wallets with automatic hot-wallet sweeping\n\n### My Role\n\nWhile I wasn’t the lead, I worked closely with the CTO to build out the frontend and middleware layers. This included integrating live WebSocket games, connecting to Electrum servers for blockchain transaction monitoring, and helping define the client API contract.\n\nI also helped with:\n\n- Creating a responsive React UI for multiple games\n- Implementing realtime transaction feedback via WebSockets\n- Writing middleware to validate Bitcoin deposit addresses\n- Working on wallet entropy sources for provable fairness\n\n### Technical Challenges\n\n- **Latency**: Keeping gameplay snappy while querying Bitcoin balances over Electrum\n- **Security**: Preventing double spends and replay attacks\n- **UX**: Explaining trustless randomness to non-technical users\n- **Architecture**: Designing microservices to isolate financial logic\n\n### Outcome\n\nThe platform launched in private beta and attracted a small but active cohort of users — mostly from forums and crypto communities. Due to legal ambiguity and lack of licensing, the company eventually wound down operations voluntarily.\n\nStill, it served as a successful proof-of-concept for anonymous, crypto-native gaming.\n\n### Reflections\n\nThis project taught me how to move fast in an unregulated space — balancing engineering idealism with pragmatic risk. It also gave me early exposure to the realities of building with Bitcoin: slow confirmation times, Electrum quirks, and the limitations of designing around unfinalized transactions.\n\nIt’s also a great reminder of what you _can_ build when traditional financial rails are removed from the equation.\n\n### Technical Assessment\n\nBefore joining the team, I completed a technical assessment to demonstrate my understanding of Bitcoin fundamentals and general coding ability. The task involved working directly with Bitcoin hashing algorithms — a core concept behind how transactions are verified on the blockchain.\n\nThe code is here on [GitHub](https://github.com/javascript-pro/bitcoin-hash). While it’s a simple project, it reflects the kind of low-level thinking and hands-on problem solving that this space often demands.\n\n[GitHub url=\"https://github.com/javascript-pro/bitcoin-hash\" label=\"javascript-pro/bitcoin-hash\"]\n"
   },
   {
     "slug": "work/experience/hertwig-auer",
-    "title": "Hertwig & Auer",
+    "title": "Hertwig & Auer (2025)",
     "description": "Ella",
     "tags": "expertise, germany, law",
     "content": "\n> Summer 2025\n\nThis content is behind a paywall. Viewers viewing it are accountable for their actions\n"
   },
   {
     "slug": "work/experience/huawei",
-    "title": "Huawei",
+    "title": "Huawei (2015)",
     "description": "Shenzhen, China",
     "tags": "expertise, interview, huawei, china, react, javascript",
     "content": "\n> Feb to May 2016\n\n## English/Chinese Project Management eLearning App\n\nBy 2015 React had evolved beyond an experiment. Facebook, Instagram, and Airbnb were using it at scale, and the open-source ecosystem around it (Redux, React Router, Create React App) was maturing rapidly\n\n- Built an isomorphic JavaScript project management app using React and Node.js\n- Worked within a small, agile development team\n- Contributed to localisation efforts for Chinese-language users\n- Gained hands-on experience in a Chinese corporate environment\n"
@@ -536,35 +536,35 @@
     "title": "Adobe",
     "description": "",
     "tags": "Design, Adobe",
-    "content": "\n> Adobe\n\n## Adobe\n"
+    "content": "\n> Adobe. The evolution of digital creation?\n\nBefore the web existed as a commercial medium, Adobe Photoshop was already shaping digital design. It became the gateway for an entire generation of early web builders, long before CSS, browsers, or HTML standards matured. Over time, Adobe’s suite expanded into a full creative ecosystem that influenced every stage of web and product design.\n\nBelow is a focused timeline of Adobe’s major products as they emerged:\n\n## 1987 — Photoshop (initial development)\n\nThomas and John Knoll begin developing a program called Display, which evolves into Photoshop.\n\n## 1990 — Adobe Photoshop 1.0\n\nThe first commercial release. Digital image manipulation becomes mainstream. This tool dominated the era of slicing static layouts into HTML.\n\n## 1993 — Adobe Acrobat & PDF\n\nA universal document format is born. Crucial for print, later for digital workflow and assets.\n\n## 1993 — Adobe Premiere\n\nEarly video editing enters Adobe’s world, laying the foundation for the future Creative Cloud video suite.\n\n## 1994 — Adobe After Effects\n\nCompositing and motion graphics arrive, essential for animation workflows and later UI motion design references.\n\n## 1999 — Adobe InDesign\n\nThe successor to PageMaker. Modern digital publishing begins. Influences layout thinking that eventually moves into web grids.\n\n## 2003 — Adobe Illustrator (major modernisation)\n\nIllustrator predates this year, but the CS era redefines it as a core vector tool. Modern SVG-focused workflows trace their lineage back to this point.\n\n## 2005 — Adobe acquires Macromedia\n\nA watershed moment. Flash, Fireworks, and Dreamweaver all become part of Adobe.\nFireworks, especially, plays a major role in early web/UI design before being discontinued.\n\n## 2007 — Adobe Lightroom\n\nPhotography workflow and raw processing become centralised, reinforcing Adobe’s dominance in visual asset production.\n\n## 2011 — Adobe Edge tools\n\nAn attempt to replace Flash with HTML/CSS/JS animation tooling. Short-lived but influential.\n\n## 2017 — Adobe XD\n\nAdobe’s response to Sketch and later Figma. Vector-driven, prototyping-first, and focused on modern product design workflows.\n"
   },
   {
     "slug": "work/techstack/design/css",
     "title": "CSS",
     "description": "Vanilla, Tailwind, Bootstrap",
     "tags": "Design, CSS, Tailwind, Bootstrap",
-    "content": "\n> CSS\n\n## CSS\n"
+    "content": "\n> CSS has been part of front-end development since the beginning\n\nIt shaped every era of layout, typography, and design on the web. The ecosystem around it expanded through countless methodologies and frameworks—each one attempting to simplify styling as the web grew more complex. Every phase left its mark, from early hand-written stylesheets to today’s utility-first engines like Tailwind.\n\nBelow is a clear timeline of the major CSS milestones and the tools that defined each generation:\n\n## 1994 — CSS proposed\n\nHåkon Wium Lie proposes Cascading Style Sheets as a way to separate content from presentation.\n\n## 1996 — CSS1 released\n\nBasic properties for fonts, colours, and simple layout. The earliest moment styling became standardised.\n\n## 1998 — CSS2\n\nPositioning, z-index, media types, and more complex selectors. The foundation for modern layout thinking.\n\n## 2000–2004 — The table-layout era\n\nWidespread browser inconsistencies push developers to rely on HTML tables for structure. CSS remains secondary.\n\n## 2005–2007 — CSS starts winning\n\nFloat-based layouts, clearfix hacks, and the rise of clean semantic HTML push CSS to the centre of front-end work.\n\n## 2006 — Sass\n\nThe first major CSS preprocessor introduces variables, mixins, and nested rules.\n\n## 2007 — LESS\n\nA lighter preprocessor that popularises dynamic CSS in mainstream workflows.\n\n## 2010 — Bootstrap\n\nTwitter releases Bootstrap, bringing grid systems, components, and consistent styling to the masses. Rapidly becomes the de facto UI framework of the early 2010s.\n\n## 2011 — Foundation\n\nZURB’s Foundation offers a more flexible competitor to Bootstrap, widely used in responsive enterprise-style sites.\n\n## 2013 — CSS Flexbox\n\nA modern, intuitive layout model begins to transform frontend structure. Adoption starts slow due to browser support.\n\n## 2014 — BEM, OOCSS, and SMACSS go mainstream\n\nCSS methodologies spread across the industry, formalising naming conventions and component-based thinking.\n\n## 2015 — CSS Modules\n\nBundlers begin allowing styles scoped to components. A major shift toward modular, React-aligned styling.\n\n## 2016 — CSS Grid\n\nA powerful, two-dimensional layout system lands. True modern layout begins here.\n\n## 2017 — Tailwind CSS (utility-first)\n\nA complete rethinking of styling. Utility classes replace custom CSS, enabling rapid UI building with predictable output. Quickly becomes one of the most adopted frameworks in modern frontend development.\n\n## 2019 — Styled Components & Emotion mature\n\nCSS-in-JS becomes deeply integrated with React. Styles become dynamic, themeable, and colocated with components.\n\n## 2020s — Hybrid era\n\nDevelopers mix approaches: Tailwind for layout and spacing, CSS-in-JS for logic-driven components, and raw CSS for global primitives. Tooling like PostCSS, autoprefixer, and modern build systems make everything interoperable.\n"
   },
   {
     "slug": "work/techstack/design/figma",
     "title": "Figma",
-    "description": "and Sketch",
+    "description": "Scalable Vector Graphics",
     "tags": "Design, SVG, Figma, Sketch",
-    "content": "\n> Figma and Sketch\n\n## SVG\n"
+    "content": "\n> The earliest days of web design\n\nBack when the work meant slicing a designer’s static Photoshop layout into HTML, the tooling shifted constantly and the workflow followed every major design app of its era.\n\nToday the latte-drinking designer crowd typically delivers Figma files, though Sketch and other vector tools serve the same purpose. Adobe’s counterpart in this space is Adobe XD.\n\nAll of them need to be supported, but the output that matters now is SVG. Scalable vector graphics are the only format worth caring about, and there are solid technical reasons for that.\n"
   },
   {
     "slug": "work/techstack/design/index",
     "title": "Design",
-    "description": "From MUI to CSS",
+    "description": "From  CSS to Material UI",
     "tags": "Design, Figma, CSS, Adobe",
-    "content": "\n> Design\n\n## Design\n"
+    "content": "\n[PageGrid pages=\"/work/techstack/design/adobe, /work/techstack/design/css, /work/techstack/design/figma, /work/techstack/design/mui\"]\n"
   },
   {
     "slug": "work/techstack/design/mui",
-    "title": "MUI",
-    "description": "Material UI",
+    "title": "Material MUI",
+    "description": "Commonly known as MUI",
     "tags": "design",
-    "content": "\n> Material UI\n\n## Material UI\n"
+    "content": "\n> In the React ecosystem, no other design system sees the same breadth of adoption\n\nMaterial UI, commonly known as MUI, has grown into the most widely used React component library and design system. Its popularity comes from a mix of practical engineering benefits: a complete suite of pre-built components, a predictable theming model, strong TypeScript support, and an ecosystem that stays aligned with modern React patterns.\n\nMUI solves the design system gap for teams that need polished UI out of the box without building every component from scratch. Layouts, form controls, grids, navigation, typography; everything behaves consistently, scales cleanly, and can be themed to match any brand. In the React ecosystem, no other design system sees the same breadth of adoption across startups, enterprise teams, and solo developers.\n\nGoldlabel uses MUI as the foundation for its own theme cartridge, extending the base components with custom styling, utility components, and layout primitives. It gives a consistent look, predictable behaviour, and a reliable way to handle UI complexity without reinventing the basics.\n"
   },
   {
     "slug": "work/techstack/index",
@@ -575,7 +575,7 @@
   },
   {
     "slug": "work/techstack/javascript/index",
-    "title": "Fullstack JavaScript",
+    "title": "JavaScript",
     "description": "JavaScript Whatever the Weather",
     "tags": "Fullstack JavaScript, Vanilla JavaScript, TypeScript, React, Angular, Vue, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS, JSON",
     "content": "\n> We’ve been writing JavaScript since it was called ECMAScript.\n\n[PageGrid thumbnails=\"no\" pages=\"/work/techstack/javascript/typescript, /work/techstack/javascript/react, /work/techstack/javascript/node, /work/techstack/javascript/nextjs, /work/techstack/javascript/vercel, /work/techstack/javascript/js-testing\"]\n\nBefore the frameworks, before npm, before it ate the world—we were already deep in the language that powers the modern web.\n\nWe’ve built Flash apps in ActionScript.  \nWe’ve written jQuery plugins by hand.  \nWe’ve moved through Vanilla JS, React, and beyond.  \nWe’ve worked in Node.js since 2006.\n\nAnd through it all, one thing has remained constant: _JavaScript runs the show_.\n\n### It Was Always JavaScript\n\nEven when it wasn’t.\n\n- _ActionScript?_ Flash’s scripting language was basically JavaScript with a stricter compiler.\n- _jQuery?_ That was us hiding from browser inconsistencies—but it was still JavaScript underneath.\n- _React?_ Just a way of writing better JavaScript components.\n- _Node?_ JavaScript on the server. A game changer.\n\nWe’ve used it for UI, logic, APIs, real-time systems, build tooling, browser extensions, PWAs, even art projects.\n\nIf it runs JavaScript, we’ve probably shipped something on it.\n\n### What We Offer\n\nWe provide JavaScript development services across the full stack:\n\n- _Frontend_  \n  React, Next.js, Vanilla JS, MUI, custom UIs, performance tuning\n\n- _Backend_  \n  Node.js, Express, Firebase Functions, serverless APIs, file pipelines\n\n- _Tooling & Ops_  \n  Turborepos, CI/CD, linters, custom bundlers, markdown pipelines\n\n- _Legacy to Modern_  \n  Converting Flash/ActionScript or jQuery codebases to modern stacks\n\n- _Custom Libraries_  \n  We write clean, documented libraries that solve real-world problems\n\nEverything we do is typed, testable, and built to last.\n\n### JavaScript Is Home\n\nIt’s the language we reach for first.\n\nNot because it’s trendy—but because we know it inside out. We’ve seen the patterns, the pitfalls, and the possibilities. We know where the bodies are buried.\n\nIf you need a JavaScript team that’s battle-tested, precise, and fast—we’re here.\n"

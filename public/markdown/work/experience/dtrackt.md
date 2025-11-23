@@ -1,5 +1,5 @@
 ---
-order: 40
+order: 30
 title: DTrackt! (2024)
 description: Building a Bitcoin-Powered Gambling Platform
 slug: /work/experience/dtrackt

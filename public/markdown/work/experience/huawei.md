@@ -1,5 +1,5 @@
 ---
-order: 30
+order: 40
 title: Huawei (2015)
 description: Shenzhen, China
 slug: /work/experience/huawei
