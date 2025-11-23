@@ -290,6 +290,9 @@
     <loc>https://goldlabel.pro/work/techstack/javascript/vercel</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/work/techstack/other/blockchain</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/work/techstack/other/ci-cd</loc>
   </url>
   <url>
@@ -309,6 +312,9 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work/techstack/other</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/other/rest-api</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/techstack/other/restful-apis</loc>

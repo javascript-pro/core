@@ -211,7 +211,7 @@
             "type": "folder",
             "children": [
               {
-                "title": "JavaScript",
+                "title": "Fullstack JavaScript",
                 "description": "JavaScript Whatever the Weather",
                 "slug": "/work/techstack/javascript",
                 "order": 3,
@@ -743,6 +743,26 @@
                     "excerpt": "Fully automated CI/CD pipelines that run every time we push code\n\n Ship reliably, fast, and with confidence\n\nWhy have these tools have become essential to modern development?\n\nOver the last two decade"
                   },
                   {
+                    "title": "Blockchain",
+                    "slug": "/work/techstack/other/blockchain",
+                    "order": 50,
+                    "icon": "api",
+                    "image": "/png/3rdParty/bitcoin.png",
+                    "type": "file",
+                    "tags": [
+                      "techstack",
+                      "crypto",
+                      "blockchain",
+                      "web3",
+                      "casino",
+                      "igaming",
+                      "experience",
+                      "bitcoin",
+                      "malta"
+                    ],
+                    "excerpt": "Blockchain Crypto Casino\n\n In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online ga"
+                  },
+                  {
                     "title": "GraphQL",
                     "slug": "/work/techstack/other/graphql",
                     "order": 70,
@@ -755,6 +775,19 @@
                       "restful"
                     ],
                     "excerpt": "Things that actually matter daytoday as a React developer using GraphQL\n\n 1. You fetch exactly what you need\n\nNo overfetching, no underfetching.\nComponents request the precise fields they use, nothing"
+                  },
+                  {
+                    "title": "RESTful APIs",
+                    "slug": "/work/techstack/other/rest-api",
+                    "order": 70,
+                    "icon": "api",
+                    "image": "https://live.staticflickr.com/65535/54801612483_31ce454c4e_b.jpg",
+                    "type": "file",
+                    "tags": [
+                      "free",
+                      "api"
+                    ],
+                    "excerpt": "Goldlabel Public API\n\n glapi/flickr endpoints"
                   },
                   {
                     "title": "RESTful APIs",
@@ -808,7 +841,7 @@
               "fields",
               "work"
             ],
-            "excerpt": "Working across the full JavaScript stack to help understand every perspective from interface to infrastructure\n\n[PageGrid thumbnails=\"no\" pages=\"/work/techstack/javascript, /work/techstack/other\"]\n\nWe"
+            "excerpt": "Working across the full JavaScript stack to help understand every perspective from interface to infrastructure\n\n[PageGrid thumbnails=\"no\" pages=\"/work/techstack/javascript, /work/techstack/ai, /work/t"
           },
           {
             "title": "Example Project",

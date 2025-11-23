@@ -4,7 +4,7 @@ title: About
 description: Goldlabel Apps Ltd
 slug: /work/about
 icon: company
-image: /png/3rdParty/git_og.png
+image: https://live.staticflickr.com/65535/54941470978_9dedcdd929_b.jpg
 tags: intellectual-property
 ---
 

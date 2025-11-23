@@ -4,7 +4,7 @@ title: Work With Us
 description: We take on a limited number of new projects each month
 slug: /work/about/work-with-us
 icon: company
-image: /png/3rdParty/git_og.png
+image: https://live.staticflickr.com/65535/54941470978_9dedcdd929_b.jpg
 tags: company, intellectual-property
 ---
 

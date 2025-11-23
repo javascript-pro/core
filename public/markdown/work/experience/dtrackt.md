@@ -2,7 +2,7 @@
 order: 40
 title: DTrackt!
 description: Building a Bitcoin-Powered Gambling Platform
-slug: /work/case-studies/dtrackt
+slug: /work/experience/dtrackt
 icon: techstack
 image: /png/3rdParty/bitcoin.png
 tags: techstack, crypto, blockchain, web3, casino, igaming, experience, bitcoin, malta
