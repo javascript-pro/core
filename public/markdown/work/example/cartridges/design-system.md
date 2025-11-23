@@ -1,6 +1,6 @@
 ---
 order: 25
-slug: /work/example-project/cartridges/design-system
+slug: /work/example/cartridges/design-system
 title: Design System
 description: Based on Material UI
 icon: design

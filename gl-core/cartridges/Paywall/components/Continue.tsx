@@ -57,10 +57,12 @@ export default function Continue() {
       <Grid container spacing={1} justifyContent="center">
         <Grid size={{ xs: 12 }}>
           <CardContent>
-            <Typography variant='body1' sx={{mb:3}}>
-              This content requires authentication. Please sign in using one of the providers below. If you need access but can't use these options, let us know
+            <Typography variant="body1" sx={{ mb: 3 }}>
+              This content requires authentication. Please sign in using one of
+              the providers below. If you need access but can't use these
+              options, let us know
             </Typography>
-            
+
             <Button
               fullWidth
               variant="contained"
@@ -90,7 +92,6 @@ export default function Continue() {
             >
               Twitter
             </Button>
-          
           </CardContent>
         </Grid>
       </Grid>

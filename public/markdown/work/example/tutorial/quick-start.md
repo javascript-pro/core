@@ -1,6 +1,6 @@
 ---
 order: 5
-slug: /work/example-project/tutorial/quick-start
+slug: /work/example/tutorial/quick-start
 title: Quick Start
 description: Get started with Goldlabel
 icon: examples

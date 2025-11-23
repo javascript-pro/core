@@ -844,22 +844,22 @@
             "excerpt": "Working across the full JavaScript stack to help understand every perspective from interface to infrastructure\n\n[PageGrid thumbnails=\"no\" pages=\"/work/techstack/javascript, /work/techstack/ai, /work/t"
           },
           {
-            "title": "Example Project",
+            "title": "Example",
             "description": "This app... Open Source",
-            "slug": "/work/example-project",
+            "slug": "/work/example",
             "order": 190,
             "type": "folder",
             "children": [
               {
                 "title": "Cartridges",
                 "description": "Self-contained pieces of application logic",
-                "slug": "/work/example-project/cartridges",
+                "slug": "/work/example/cartridges",
                 "order": 10,
                 "type": "folder",
                 "children": [
                   {
                     "title": "Content Manager",
-                    "slug": "/work/example-project/cartridges/content-manager",
+                    "slug": "/work/example/cartridges/content-manager",
                     "order": 15,
                     "icon": "good-fit",
                     "image": "/png/n64/test.png",
@@ -873,7 +873,7 @@
                   },
                   {
                     "title": "Design System",
-                    "slug": "/work/example-project/cartridges/design-system",
+                    "slug": "/work/example/cartridges/design-system",
                     "order": 25,
                     "icon": "design",
                     "image": "/png/n64/test.png",
@@ -882,7 +882,7 @@
                   },
                   {
                     "title": "Uberedux",
-                    "slug": "/work/example-project/cartridges/uberedux",
+                    "slug": "/work/example/cartridges/uberedux",
                     "order": 30,
                     "icon": "js",
                     "image": "/png/n64/test.png",
@@ -904,13 +904,13 @@
               {
                 "title": "Tutorial",
                 "description": "How to get up and running",
-                "slug": "/work/example-project/tutorial",
+                "slug": "/work/example/tutorial",
                 "order": 90,
                 "type": "folder",
                 "children": [
                   {
                     "title": "Quick Start",
-                    "slug": "/work/example-project/tutorial/quick-start",
+                    "slug": "/work/example/tutorial/quick-start",
                     "order": 5,
                     "icon": "examples",
                     "image": "/png/3rdParty/github_og.png",
@@ -1298,8 +1298,8 @@
             "type": "folder",
             "children": [],
             "icon": "photo",
-            "image": "https://live.staticflickr.com/65535/53519132441_43525fc3a4_b.jpg",
-            "excerpt": "and AI Gen"
+            "image": "https://live.staticflickr.com/65535/54940372447_3ca7baef00_b.jpg",
+            "excerpt": ""
           },
           {
             "title": "Film",

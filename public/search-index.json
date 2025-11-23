@@ -60,7 +60,7 @@
     "title": "Pictures",
     "description": "Flickr etc",
     "tags": [],
-    "content": "\n> and AI Gen\n"
+    "content": ""
   },
   {
     "slug": "balance/words/der-kleine-zeppelin/countries/belgium",
@@ -378,49 +378,49 @@
     "content": "\n> We take on a limited number of new projects each month\n\n## Work With Us\n\nIf you need something done we’d love to hear about it. Find out if we're a [good fit](/work/cv). We're always looking for collaborators, contributors, and good ideas.\n\nThe apps we ship are real. They run in production and are developed accessibly. The Core is Open Source and Free forever — giving you statically generated sites with Firestore-powered updates and a real admin panel. Built with Next.js App Router and Material UI\n\nGoldlabel builds and ships modern web apps for clients who need real results — fast\n\n- _Small_ team. _Big_ output\n- Real deployments from Day One\n- Readable, extensible, Open Source\n\nGoldlabel Apps is a UK-based software company that designs, builds, and maintains full-stack web applications. We specialize in Next.js, Firebase, and custom UI development, delivering everything from internal admin tools to polished public-facing websites.\n\n#### Working with Goldlabel\n\n- Ship early and often.  \n  Each app is live from the outset — not just a mockup or prototyle\n\n- Share the process.  \n  Follow the development on GitHub, view the commit history, clone the code. Get involved with Issues\n\n- Built for reuse.  \n  Every component, pattern, and API is designed to be portable and production-ready\n\n> A Software Developer in possession of a good product, must be in want of a good business partner\n\n## Join Us\n\nWhether you're a startup with a short deadline or an enterprise with complex workflows, we can help. Get in touch for it's a truth universally acknowledged that a Software Developer in possession of a good product, must be in want of a good business partner\n\n[GitHub url=\"https://github.com/goldlabel-apps\" label=\"@goldlabel-apps\"]\n"
   },
   {
-    "slug": "work/example-project/cartridges/content-manager",
+    "slug": "work/example/cartridges/content-manager",
     "title": "Content Manager",
     "description": "Firebase CRUD",
     "tags": "firebase, cms, contentmanager",
     "content": "\n> Manage content stored in a Firebase collection\n\n[GitHub url=\"https://github.com/javascript-pro/core/tree/master/gl-core/cartridges/ContentManager\" label=\"ContentManager\"]\n\nWe’re introducing a new cartridge called ContentManager. Its role is to provide a lightweight CMS inside Goldlabel Core, backed by Firebase. It should support CRUD operations on a Firestore collection (e.g., `content`), exposing reusable hooks and UI components that other cartridges can use.\n\nThis cartridge will live alongside Theme, Shortcodes, Paywall, etc., and must follow the same architectural patterns:\n\n- isolated logic\n- reusable components\n- no tight coupling to any specific app\n\n### Objectives (Phase 1)\n\n1. Create cartridge structure\n\n   - `cartridges/ContentManager/`\n   - Include subfolders: `components`, `hooks`, `types`, and `utils`.\n\n2. Define Firestore data model\n\n   - Draft a `TContentDoc` TypeScript type.\n   - Fields: `id`, `title`, `slug`, `body`, `updatedAt`, `createdAt`, optional fields for tags, images, status, etc.\n\n3. Implement core hooks\n\n   - `useContentDocs()` → fetch all docs in the collection.\n   - `useContentDoc(id)` → fetch a single doc.\n   - `createContentDoc(data)` → add new doc.\n   - `updateContentDoc(id, data)` → update.\n   - `deleteContentDoc(id)` → delete.\n\n4. Build basic UI components\n\n   - `<ContentList />` → table/grid of docs.\n   - `<ContentEditor />` → form with title, slug, markdown editor (placeholder for now), save button.\n   - `<ContentDeleteDialog />`.\n\n   Components should use MUI and match existing cartridge conventions.\n\n5. Integrate Firebase\n\n   - Reuse existing Firebase config from Paywall.\n   - Ensure all Firestore calls work in both Core (Next.js) and Pro (CRA).\n\n6. Add route page for testing\n\n   - A development-only page: `/dev/content-manager`.\n   - Shows list, ability to open editor, create/delete items.\n\n7. Prepare for future expansion\n\n   - Versioning\n   - Media uploads\n   - Draft/published states\n\n### First Steps for Developer\n\n1. Scaffold `cartridges/ContentManager` with required folders.\n2. Create `types.ts` with `TContentDoc`.\n3. Implement hooks using Firestore (start with list + create).\n4. Create a minimal `<ContentList />` and wire it to the hook.\n5. Add a test page in `app/dev/content-manager/page.tsx` to verify functionality.\n6. Submit PR with initial structure + list + create flow.\n"
   },
   {
-    "slug": "work/example-project/cartridges/design-system",
+    "slug": "work/example/cartridges/design-system",
     "title": "Design System",
     "description": "Based on Material UI",
     "tags": [],
     "content": "\n> Material UI is a React component library that provides a consistent design system, layout primitives, and ready-made UI components\n\n[GitHub url=\"https://github.com/javascript-pro/core/tree/master/gl-core/cartridges/Theme\" label=\"Theme\"]\n\n### Design Systems\n\nIn the theme cartridge, you use it as the foundation for all shared UI:\n– MUI’s ThemeProvider establishes colours, typography, spacing and breakpoints.\n– Components like Card, Grid, Box, Button, Dialog, Typography form the structural building blocks of all shared layouts.\n– Custom elements (StandardCard, ConfirmDialog, PageGrid, etc.) wrap these primitives to enforce Goldlabel’s design language while staying flexible across cartridges and apps.\n"
   },
   {
-    "slug": "work/example-project/cartridges/index",
+    "slug": "work/example/cartridges/index",
     "title": "Cartridges",
     "description": "Self-contained pieces of application logic",
     "tags": [],
     "content": "\n> Goldlabel is built on Cartridges\n\n[PageGrid pages=\"/work/example-project/cartridges/design-system, /work/example-project/cartridges/uberedux, /work/example-project/cartridges/content-manager\"]\n\nA cartridge is a self-contained piece of application logic: React components, state, styles, and utilities bundled together in a portable unit.\n\nBecause each cartridge is standalone, it can be added, removed, or swapped out without affecting the rest of the system. This makes development faster, maintenance simpler, and code reuse effortless.\n\n#### Why Cartridges?\n\n- Modular by design – Cartridges are designed to plug in and work immediately.\n- Portable – Move a cartridge from one project to another with minimal friction.\n- Maintainable – Keep features isolated and easy to update.\n- Composable – Combine cartridges to build larger features without creating tight coupling.\n\n#### How they work\n\nInstead of one large, monolithic codebase, Goldlabel is assembled from cartridges.\nEach cartridge is:\n\n- Scoped to a clear purpose (e.g., authentication, UI elements, data handling).\n- Built with React and TypeScript for reliability and type safety.\n- Compatible with Next.js and modern frontend tooling.\n\n#### Benefits\n\n- Speed: Build new apps faster by reusing cartridges.\n- Flexibility: Experiment with features without risking the whole system.\n- Clarity: Developers know exactly where functionality lives.\n\n[GitHub url=\"https://github.com/javascript-pro/core\" label=\"Clone repo\"]\n"
   },
   {
-    "slug": "work/example-project/cartridges/uberedux",
+    "slug": "work/example/cartridges/uberedux",
     "title": "Uberedux",
     "description": "Because all Apps need State Management",
     "tags": "Free, atridges, Uberedux, State Management, Redux",
     "content": "\n> Otherwise you'd be back in jQuery callback hell. Nobody wants that.\n\n[GitHub url=\"https://github.com/javascript-pro/core/tree/master/gl-core/cartridges/Uberedux\" label=\"Uberedux\"]\n\nUberedux is a simple, zero-config wrapper around Redux. It plugs cleanly into how the app already works and gives you the global state access you need without boilerplate or fuss. There’s nothing clever here — and that’s the point. Uberedux is fast, familiar, and already done for you.\n\nIf you've used Redux before, you already know how to use Uberedux. If you haven't, don't worry — the basics are dead simple. Actions update the store. Components subscribe to the parts they care about. That’s it.\n\nWe’ve trimmed the fat: no reducers to wire up manually, no sprawling folder trees, no indirection. Instead, you get a single useSlice() hook that gives you what you need, when you need it — whether that's in a form field, a route guard, or a floating modal.\n\nUberedux isn’t trying to win design awards. It's just here to work — cleanly, quietly, and consistently across your app. No surprises. No rewrites. Just state management that stays out of your way.\n"
   },
   {
-    "slug": "work/example-project/index",
-    "title": "Example Project",
+    "slug": "work/example/index",
+    "title": "Example",
     "description": "This app... Open Source",
     "tags": "Open Source, JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, NextJS, App Router, GitHub",
     "content": "\n> The app you are using is free to fork, explore, copy, hack, and reuse\n\nOpen Source and Free forever. It offers statically generated sites with Firestore-powered updates and a real admin panel. Built with Next.js App Router and Material UI\n\n[GitHub url=\"https://github.com/javascript-pro/core/pulse\" label=\"Repository Pulse\"]\n\n[GitHub url=\"https://github.com/users/javascript-pro/projects/8\" label=\"Kanban\"]\n\n[PageGrid pages=\"/work/example-project/cartridges, /work/example-project/tutorial, /work/example-project/cartridges/content-manager, /work/example-project/cartridges/design-system, /work/example-project/cartridges/uberedux\"]\n"
   },
   {
-    "slug": "work/example-project/tutorial/index",
+    "slug": "work/example/tutorial/index",
     "title": "Tutorial",
     "description": "How to get up and running",
     "tags": "Tutorial, Open Source, JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, NextJS, GitHub",
     "content": "\n> Each page focuses on a single part of the system\n\n## Clone the public repository\n\nThis section walks through a minimal Goldlabel Core project from start to finish. Each page focuses on a single part of the system so you can see how the framework works in practice: how content is structured, how cartridges plug in, and how the app turns Markdown into a complete site.\n\nYou’ll clone the public repository, run the project locally, explore the folder layout, and understand how pages, components, and the global configuration interact. By the end, you’ll have a working mental model of Core and how to extend it with your own cartridges or custom UI.\n\nUse the pages in order, or jump directly to the area you need.\n\n[GitHub url=\"https://github.com/javascript-pro/core\" label=\"git clone https://github.com/javascript-pro/core.git\"]\n"
   },
   {
-    "slug": "work/example-project/tutorial/quick-start",
+    "slug": "work/example/tutorial/quick-start",
     "title": "Quick Start",
     "description": "Get started with Goldlabel",
     "tags": [],
@@ -480,7 +480,7 @@
     "title": "Work",
     "description": "20+ Years of coding",
     "tags": "Professional, JavaScript, Vanilla JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS",
-    "content": "\n> Goldlabel builds and ships modern web apps for clients who need real results fast\n\n[PageGrid thumbnails=\"no\" pages=\"/work/about/hyperlink-resume, /work/about, /work/techstack, /work/experience, /work/example-project\"]\n\n- _Small_ team. _Big_ output\n- Real deployments from Day One\n- Readable, extensible, Open Source\n"
+    "content": "\n> Goldlabel builds and ships modern web apps for clients who need real results fast\n\n[PageGrid thumbnails=\"no\" pages=\"/work/about/hyperlink-resume, /work/about, /work/techstack, /work/experience, /work/example\"]\n\n- _Small_ team. _Big_ output\n- Real deployments from Day One\n- Readable, extensible, Open Source\n"
   },
   {
     "slug": "work/techstack/ai/index",
