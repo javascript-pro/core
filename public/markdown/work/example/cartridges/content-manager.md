@@ -1,7 +1,7 @@
 ---
 order: 15
 title: Content Manager
-slug: /work/example-project/cartridges/content-manager
+slug: /work/example/cartridges/content-manager
 description: Firebase CRUD
 icon: good-fit
 image: /png/n64/test.png

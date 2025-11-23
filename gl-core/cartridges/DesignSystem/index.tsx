@@ -3,6 +3,7 @@
 import { initialState as initialStateDesignSystem } from './initialState';
 import DesignSystem from './DesignSystem';
 import StandardCard from './components/StandardCard';
+import PushButton from './components/PushButton';
 import FieldUpload from './components/FieldUpload';
 import Icon from './components/Icon';
 import AlertAd from './components/AlertAd';
@@ -19,6 +20,7 @@ import { useFeedback } from './hooks/useFeedback';
 export {
   initialStateDesignSystem,
   DesignSystem,
+  PushButton,
   AlertAd,
   MenuSystem,
   LoadingOverlay,

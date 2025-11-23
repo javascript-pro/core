@@ -1,5 +1,6 @@
 // core/gl-core/Core.tsx
 'use client';
+import { TFeedback } from './cartridges/DesignSystem/types';
 import configRaw from './config.json';
 import { TCore, TConfig } from './types';
 import * as React from 'react';
@@ -28,7 +29,12 @@ import {
   Icon,
 } from '../gl-core';
 import { SigninGate, useUser } from './cartridges/Paywall';
-import { DesignSystem, useDesignSystem } from './cartridges/DesignSystem';
+import {
+  DesignSystem,
+  useDesignSystem,
+  setFeedback,
+  setDesignSystemKey,
+} from './cartridges/DesignSystem';
 import { Paywall } from './cartridges/Paywall';
 
 const config = configRaw as TConfig;
@@ -41,7 +47,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const prefersDark = useMediaQuery('(prefers-color-scheme: dark)');
   const siblings = useSiblings();
   const pathname = usePathname();
-  const { themeMode } = useDesignSystem();
+  const { themeMode, feedbackTested } = useDesignSystem();
   const isMobile = useIsMobile();
   const user = useUser();
   const fetchedNavRef = React.useRef(false);
@@ -55,6 +61,22 @@ export default function Core({ frontmatter, body = null }: TCore) {
   React.useEffect(() => {
     dispatch(toggleLoading(false));
   }, [dispatch]);
+
+  // Test out our Feedback component by triggering it here
+  React.useEffect(() => {
+    if (!feedbackTested){    
+      const feedback: TFeedback = {
+        severity: 'success',
+        title: 'Hello',
+        onClose: () => {
+          console.log('do the thing');
+        },
+      };
+      dispatch(setFeedback(feedback));
+      dispatch(setDesignSystemKey('feedbackTested', true));
+    }
+    
+  }, [dispatch, feedbackTested]);
 
   useVersionCheck();
 

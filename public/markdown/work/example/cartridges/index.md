@@ -1,6 +1,6 @@
 ---
 order: 10
-slug: /work/example-project/cartridges
+slug: /work/example/cartridges
 title: Cartridges
 description: Self-contained pieces of application logic
 icon: cartridge

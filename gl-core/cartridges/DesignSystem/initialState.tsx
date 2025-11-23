@@ -6,5 +6,6 @@ export const initialState: TDesignSystemState = {
   themeMode: 'dark',
   dialog: null,
   feedback: null,
+  feedbackTested: false,
   fullScreen: false,
 };
