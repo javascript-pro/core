@@ -164,43 +164,46 @@
     <loc>https://goldlabel.pro/work/about/work-with-us</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/case-studies/aligent</loc>
+    <loc>https://goldlabel.pro/work/example/cartridges/content-manager</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/case-studies/boral</loc>
+    <loc>https://goldlabel.pro/work/example/cartridges/design-system</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/case-studies/dtrackt</loc>
+    <loc>https://goldlabel.pro/work/example/cartridges</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/case-studies/hertwig-auer</loc>
+    <loc>https://goldlabel.pro/work/example/cartridges/uberedux</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/case-studies/huawei</loc>
+    <loc>https://goldlabel.pro/work/example</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/case-studies</loc>
+    <loc>https://goldlabel.pro/work/example/tutorial</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/example-project/cartridges/content-manager</loc>
+    <loc>https://goldlabel.pro/work/example/tutorial/quick-start</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/example-project/cartridges/design-system</loc>
+    <loc>https://goldlabel.pro/work/experience/aligent</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/example-project/cartridges</loc>
+    <loc>https://goldlabel.pro/work/experience/boral</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/example-project/cartridges/uberedux</loc>
+    <loc>https://goldlabel.pro/work/experience/dtrackt</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/example-project</loc>
+    <loc>https://goldlabel.pro/work/experience/hertwig-auer</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/example-project/tutorial</loc>
+    <loc>https://goldlabel.pro/work/experience/huawei</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/example-project/tutorial/quick-start</loc>
+    <loc>https://goldlabel.pro/work/experience</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/hyperlink-resume</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work</loc>
@@ -290,6 +293,9 @@
     <loc>https://goldlabel.pro/work/techstack/javascript/vercel</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/work/techstack/other/blockchain</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/work/techstack/other/ci-cd</loc>
   </url>
   <url>
@@ -309,6 +315,9 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work/techstack/other</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/techstack/other/rest-api</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/techstack/other/restful-apis</loc>

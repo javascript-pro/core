@@ -4,13 +4,13 @@ title: Work
 description: 20+ Years of coding
 slug: /work
 icon: work
-image: /png/n64/flickr.png
+image: https://live.staticflickr.com/65535/54940372447_3ca7baef00_b.jpg
 tags: Professional, JavaScript, Vanilla JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS
 ---
 
 > Goldlabel builds and ships modern web apps for clients who need real results fast
 
-[PageGrid thumbnails="no" pages="/work/about, /work/techstack, /work/case-studies, /work/example-project"]
+[PageGrid thumbnails="no" pages="/work/about/hyperlink-resume, /work/about, /work/techstack, /work/experience, /work/example"]
 
 - _Small_ team. _Big_ output
 - Real deployments from Day One

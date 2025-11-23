@@ -4,7 +4,7 @@ title: Terms & Conditions
 description: Liability boundaries, intellectual-property ownership, and disputes
 slug: /work/about/terms
 icon: company
-image: /png/3rdParty/git_og.png
+image: https://live.staticflickr.com/65535/54941470978_9dedcdd929_b.jpg
 tags: cookies, gdpr, privacy, terms, trust, intellectual-property
 ---
 

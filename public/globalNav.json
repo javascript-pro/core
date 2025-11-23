@@ -25,7 +25,7 @@
                 "slug": "/work/about/where-we-work",
                 "order": 250,
                 "icon": "company",
-                "image": "/png/3rdParty/git_og.png",
+                "image": "https://live.staticflickr.com/65535/54941470978_9dedcdd929_b.jpg",
                 "type": "file",
                 "tags": [
                   "remote",
@@ -39,7 +39,7 @@
                 "slug": "/work/about/privacy-cookies",
                 "order": 450,
                 "icon": "company",
-                "image": "/png/3rdParty/git_og.png",
+                "image": "https://live.staticflickr.com/65535/54941470978_9dedcdd929_b.jpg",
                 "type": "file",
                 "tags": [
                   "cookies",
@@ -56,7 +56,7 @@
                 "slug": "/work/about/terms",
                 "order": 500,
                 "icon": "company",
-                "image": "/png/3rdParty/git_og.png",
+                "image": "https://live.staticflickr.com/65535/54941470978_9dedcdd929_b.jpg",
                 "type": "file",
                 "tags": [
                   "cookies",
@@ -73,7 +73,7 @@
                 "slug": "/work/about/work-with-us",
                 "order": 777,
                 "icon": "company",
-                "image": "/png/3rdParty/git_og.png",
+                "image": "https://live.staticflickr.com/65535/54941470978_9dedcdd929_b.jpg",
                 "type": "file",
                 "tags": [
                   "company",
@@ -86,7 +86,7 @@
                 "slug": "/work/about/gdpr",
                 "order": 5721,
                 "icon": "company",
-                "image": "/png/3rdParty/git_og.png",
+                "image": "https://live.staticflickr.com/65535/54941520864_5f39fde35d_b.jpg",
                 "type": "file",
                 "tags": [
                   "cookies",
@@ -99,22 +99,22 @@
               }
             ],
             "icon": "company",
-            "image": "/png/3rdParty/git_og.png",
+            "image": "https://live.staticflickr.com/65535/54941470978_9dedcdd929_b.jpg",
             "tags": [
               "intellectual-property"
             ],
             "excerpt": "| Tel/WhatsApp  |  | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX\n\n[PageGrid thumbnails=\"no\" pages=\"/work/company/gdpr, /work/company/privacycookies, /work/company/term"
           },
           {
-            "title": "Case Studies",
-            "description": "Real World Experience",
-            "slug": "/work/case-studies",
-            "order": 50,
+            "title": "Experience",
+            "description": "Real World Case Studies",
+            "slug": "/work/experience",
+            "order": 70,
             "type": "folder",
             "children": [
               {
                 "title": "Aligent",
-                "slug": "/work/case-studies/aligent",
+                "slug": "/work/experience/aligent",
                 "order": 30,
                 "icon": "case",
                 "image": "https://live.staticflickr.com/4168/34263291171_c62c5b24be_b.jpg",
@@ -130,7 +130,7 @@
               },
               {
                 "title": "Hertwig & Auer",
-                "slug": "/work/case-studies/hertwig-auer",
+                "slug": "/work/experience/hertwig-auer",
                 "order": 30,
                 "icon": "case",
                 "image": "https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg",
@@ -144,7 +144,7 @@
               },
               {
                 "title": "Huawei",
-                "slug": "/work/case-studies/huawei",
+                "slug": "/work/experience/huawei",
                 "order": 30,
                 "icon": "case",
                 "image": "https://live.staticflickr.com/65535/52602318224_f8c4a92a62_c.jpg",
@@ -161,7 +161,7 @@
               },
               {
                 "title": "DTrackt!",
-                "slug": "/work/case-studies/dtrackt",
+                "slug": "/work/experience/dtrackt",
                 "order": 40,
                 "icon": "techstack",
                 "image": "/png/3rdParty/bitcoin.png",
@@ -181,10 +181,10 @@
               },
               {
                 "title": "Boral",
-                "slug": "/work/case-studies/boral",
+                "slug": "/work/experience/boral",
                 "order": 50,
                 "icon": "case",
-                "image": "https://live.staticflickr.com/65535/54928652987_4641b20f75_b.jpg",
+                "image": null,
                 "type": "file",
                 "tags": [
                   "expertise",
@@ -195,13 +195,13 @@
               }
             ],
             "icon": "case",
-            "image": "https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg",
+            "image": "https://live.staticflickr.com/65535/54940372447_3ca7baef00_b.jpg",
             "tags": [
               "expertise",
               "interview",
               "experience"
             ],
-            "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work/casestudies/dtrackt, /work/casestudies/aligent, /work/casestudies/hertwigauer, /work/casestudies/huawei, /work/casestudies/boral\", /work/casestudies/aligent\"]"
+            "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work/experience/dtrackt, /work/experience/aligent, /work/experience/hertwigauer, /work/experience/huawei, /work/experience/boral\", /work/experience/aligent\"]"
           },
           {
             "title": "Techstack",
@@ -211,7 +211,7 @@
             "type": "folder",
             "children": [
               {
-                "title": "JavaScript",
+                "title": "Fullstack JavaScript",
                 "description": "JavaScript Whatever the Weather",
                 "slug": "/work/techstack/javascript",
                 "order": 3,
@@ -743,6 +743,26 @@
                     "excerpt": "Fully automated CI/CD pipelines that run every time we push code\n\n Ship reliably, fast, and with confidence\n\nWhy have these tools have become essential to modern development?\n\nOver the last two decade"
                   },
                   {
+                    "title": "Blockchain",
+                    "slug": "/work/techstack/other/blockchain",
+                    "order": 50,
+                    "icon": "api",
+                    "image": "/png/3rdParty/bitcoin.png",
+                    "type": "file",
+                    "tags": [
+                      "techstack",
+                      "crypto",
+                      "blockchain",
+                      "web3",
+                      "casino",
+                      "igaming",
+                      "experience",
+                      "bitcoin",
+                      "malta"
+                    ],
+                    "excerpt": "Blockchain Crypto Casino\n\n In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online ga"
+                  },
+                  {
                     "title": "GraphQL",
                     "slug": "/work/techstack/other/graphql",
                     "order": 70,
@@ -755,6 +775,19 @@
                       "restful"
                     ],
                     "excerpt": "Things that actually matter daytoday as a React developer using GraphQL\n\n 1. You fetch exactly what you need\n\nNo overfetching, no underfetching.\nComponents request the precise fields they use, nothing"
+                  },
+                  {
+                    "title": "RESTful APIs",
+                    "slug": "/work/techstack/other/rest-api",
+                    "order": 70,
+                    "icon": "api",
+                    "image": "https://live.staticflickr.com/65535/54801612483_31ce454c4e_b.jpg",
+                    "type": "file",
+                    "tags": [
+                      "free",
+                      "api"
+                    ],
+                    "excerpt": "Goldlabel Public API\n\n glapi/flickr endpoints"
                   },
                   {
                     "title": "RESTful APIs",
@@ -808,25 +841,25 @@
               "fields",
               "work"
             ],
-            "excerpt": "Working across the full JavaScript stack to help understand every perspective from interface to infrastructure\n\n[PageGrid thumbnails=\"no\" pages=\"/work/techstack/javascript, /work/techstack/other\"]\n\nWe"
+            "excerpt": "Working across the full JavaScript stack to help understand every perspective from interface to infrastructure\n\n[PageGrid thumbnails=\"no\" pages=\"/work/techstack/javascript, /work/techstack/ai, /work/t"
           },
           {
-            "title": "Example Project",
+            "title": "Example",
             "description": "This app... Open Source",
-            "slug": "/work/example-project",
+            "slug": "/work/example",
             "order": 190,
             "type": "folder",
             "children": [
               {
                 "title": "Cartridges",
                 "description": "Self-contained pieces of application logic",
-                "slug": "/work/example-project/cartridges",
+                "slug": "/work/example/cartridges",
                 "order": 10,
                 "type": "folder",
                 "children": [
                   {
                     "title": "Content Manager",
-                    "slug": "/work/example-project/cartridges/content-manager",
+                    "slug": "/work/example/cartridges/content-manager",
                     "order": 15,
                     "icon": "good-fit",
                     "image": "/png/n64/test.png",
@@ -840,7 +873,7 @@
                   },
                   {
                     "title": "Design System",
-                    "slug": "/work/example-project/cartridges/design-system",
+                    "slug": "/work/example/cartridges/design-system",
                     "order": 25,
                     "icon": "design",
                     "image": "/png/n64/test.png",
@@ -849,7 +882,7 @@
                   },
                   {
                     "title": "Uberedux",
-                    "slug": "/work/example-project/cartridges/uberedux",
+                    "slug": "/work/example/cartridges/uberedux",
                     "order": 30,
                     "icon": "js",
                     "image": "/png/n64/test.png",
@@ -871,13 +904,13 @@
               {
                 "title": "Tutorial",
                 "description": "How to get up and running",
-                "slug": "/work/example-project/tutorial",
+                "slug": "/work/example/tutorial",
                 "order": 90,
                 "type": "folder",
                 "children": [
                   {
                     "title": "Quick Start",
-                    "slug": "/work/example-project/tutorial/quick-start",
+                    "slug": "/work/example/tutorial/quick-start",
                     "order": 5,
                     "icon": "examples",
                     "image": "/png/3rdParty/github_og.png",
@@ -919,10 +952,23 @@
               "GitHub"
             ],
             "excerpt": "The app you are using is free to fork, explore, copy, hack, and reuse\n\nOpen Source and Free forever. It offers statically generated sites with Firestorepowered updates and a real admin panel. Built wi"
+          },
+          {
+            "title": "Hyperlink Resume",
+            "slug": "/work/hyperlink-resume",
+            "order": 800,
+            "icon": "doc",
+            "image": "https://live.staticflickr.com/65535/54940372447_3ca7baef00_b.jpg",
+            "type": "file",
+            "tags": [
+              "company",
+              "resume"
+            ],
+            "excerpt": "This is a new way to present a resume"
           }
         ],
         "icon": "work",
-        "image": "/png/n64/flickr.png",
+        "image": "https://live.staticflickr.com/65535/54940372447_3ca7baef00_b.jpg",
         "tags": [
           "Professional",
           "JavaScript",
@@ -937,7 +983,7 @@
           "NextJS",
           "Headless CMS"
         ],
-        "excerpt": "Goldlabel builds and ships modern web apps for clients who need real results fast\n\n[PageGrid thumbnails=\"no\" pages=\"/work/about, /work/techstack, /work/casestudies, /work/exampleproject\"]\n\n Small team"
+        "excerpt": "Goldlabel builds and ships modern web apps for clients who need real results fast\n\n[PageGrid thumbnails=\"no\" pages=\"/work/about/hyperlinkresume, /work/about, /work/techstack, /work/experience, /work/e"
       },
       {
         "title": "Life",
@@ -1252,8 +1298,8 @@
             "type": "folder",
             "children": [],
             "icon": "photo",
-            "image": "https://live.staticflickr.com/65535/53519132441_43525fc3a4_b.jpg",
-            "excerpt": "and AI Gen"
+            "image": "https://live.staticflickr.com/65535/54940372447_3ca7baef00_b.jpg",
+            "excerpt": ""
           },
           {
             "title": "Film",

@@ -2,7 +2,7 @@
 order: 90
 title: Tutorial
 description: How to get up and running
-slug: /work/example-project/tutorial
+slug: /work/example/tutorial
 icon: doc
 image: /png/3rdParty/github_og.png
 tags: Tutorial, Open Source, JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, NextJS, GitHub

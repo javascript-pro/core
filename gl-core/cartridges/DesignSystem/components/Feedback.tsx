@@ -1,15 +1,10 @@
 'use client';
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/DesignSystem/components/Feedback.tsx
-
 import * as React from 'react';
 import { TAuthForm } from '../../../../gl-core/types';
 import { Snackbar, Alert, IconButton } from '@mui/material';
-import {
-  useFeedback,
-  useDispatch,
-  toggleFeedback,
-  Icon,
-} from '../../../../gl-core';
+import { useDispatch, Icon } from '../../../../gl-core';
+import { useFeedback, setFeedback } from '../../DesignSystem';
 
 export default function Feedback({}: TAuthForm) {
   const feedback = useFeedback();
@@ -18,9 +13,8 @@ export default function Feedback({}: TAuthForm) {
   React.useEffect(() => {
     if (feedback && !feedback.hidden) {
       const timer = setTimeout(() => {
-        console.log('toggleFeedback(null)');
-        dispatch(toggleFeedback(null));
-      }, 3000);
+        dispatch(setFeedback(null));
+      }, 5000);
       return () => clearTimeout(timer);
     }
   }, [feedback, dispatch]);
@@ -30,13 +24,16 @@ export default function Feedback({}: TAuthForm) {
   const { title, description, severity } = feedback;
 
   const handleClose = () => {
-    dispatch(toggleFeedback(null));
+    dispatch(setFeedback(null));
   };
 
   return (
     <Snackbar
       open
-      anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+      anchorOrigin={{
+        vertical: 'top',
+        horizontal: 'right',
+      }}
       onClose={handleClose}
     >
       <Alert

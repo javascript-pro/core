@@ -1,6 +1,6 @@
 ---
 order: 30
-slug: /work/example-project/cartridges/uberedux
+slug: /work/example/cartridges/uberedux
 title: Uberedux
 description: Because all Apps need State Management
 icon: js

@@ -1,13 +1,14 @@
 // cartridges/Paywall/components/Continue.tsx
 'use client';
 import * as React from 'react';
-import { Box, CardHeader, CardContent, Button, Grid } from '@mui/material';
+import { Box, Typography, CardContent, Button, Grid } from '@mui/material';
 import {
   onAuthStateChanged,
   User,
   GoogleAuthProvider,
   GithubAuthProvider,
   FacebookAuthProvider,
+  TwitterAuthProvider,
   signInWithPopup,
 } from 'firebase/auth';
 import { auth } from '../../../lib/firebase';
@@ -43,16 +44,25 @@ export default function Continue() {
     }
   };
 
+  const handleTwitter = async () => {
+    try {
+      await signInWithPopup(auth, new TwitterAuthProvider());
+    } catch (err) {
+      alert((err as Error).message);
+    }
+  };
+
   return (
     <Box sx={{}}>
       <Grid container spacing={1} justifyContent="center">
         <Grid size={{ xs: 12 }}>
-          {/* <CardHeader
-            avatar={<Icon icon="paywall" />}
-            title="Paywall"
-            subheader="Continue?"
-          /> */}
           <CardContent>
+            <Typography variant="body1" sx={{ mb: 3 }}>
+              This content requires authentication. Please sign in using one of
+              the providers below. If you need access but can't use these
+              options, let us know
+            </Typography>
+
             <Button
               fullWidth
               variant="contained"
@@ -62,15 +72,7 @@ export default function Continue() {
             >
               Google
             </Button>
-            {/* <Button
-              fullWidth
-              variant="contained"
-              onClick={handleFacebook}
-              startIcon={<Icon icon="facebook" />}
-              sx={{ py: 1.6, mt: 2 }}
-            >
-              Facebook
-            </Button> */}
+
             <Button
               fullWidth
               variant="contained"
@@ -79,6 +81,16 @@ export default function Continue() {
               sx={{ py: 1.6, mt: 2 }}
             >
               GitHub
+            </Button>
+
+            <Button
+              fullWidth
+              variant="contained"
+              onClick={handleTwitter}
+              startIcon={<Icon icon="twitter" />}
+              sx={{ py: 1.6, mt: 2 }}
+            >
+              Twitter
             </Button>
           </CardContent>
         </Grid>

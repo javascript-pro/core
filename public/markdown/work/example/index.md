@@ -1,8 +1,8 @@
 ---
 order: 190
-title: Example Project
+title: Example
 description: This app... Open Source
-slug: /work/example-project
+slug: /work/example
 icon: examples
 image: /png/n64/flickr.png
 tags: Open Source, JavaScript, TypeScript, React, Material UI, Flash, Server Side JavaScript, Node, NextJS, App Router, GitHub
