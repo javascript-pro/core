@@ -6,12 +6,14 @@ import {
   DialogActions,
   DialogContent,
   IconButton,
+  Typography,
 } from '@mui/material';
 import { useDispatch, useIsMobile, Icon } from '../../../../gl-core';
 import {
   useDesignSystem,
   setDesignSystemKey,
   MenuSystem,
+  NewContent,
 } from '../../DesignSystem';
 import { useNewContent } from '../../Uberedux';
 
@@ -43,11 +45,14 @@ export default function SystemDialog() {
       >
         {/* <DialogTitle>{!user ? <Continue /> : <User />}</DialogTitle> */}
         <DialogContent>
-          Here is new content
-          <pre style={{ fontSize: '10px' }}>
-            newContent: {JSON.stringify(newContent, null, 2)}
-          </pre>
+          <Typography variant='h6' gutterBottom>
+            Cixin Liu
+          </Typography>
+          {newContent?.map((item: any, i: number) => (
+            <NewContent key={`content_${i}`} slug={item.slug} />
+          ))}
         </DialogContent>
+
         <DialogActions sx={{ display: 'block' }}>
           <MenuSystem />
         </DialogActions>

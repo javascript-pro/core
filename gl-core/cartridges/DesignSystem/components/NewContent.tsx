@@ -1,30 +1,46 @@
-'use client';
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/DesignSystem/components/NewContent.tsx
-
+'use client';
 import * as React from 'react';
-import { TAuthForm } from '../../../../gl-core/types';
-import { Fab } from '@mui/material';
-import { useDispatch, Icon } from '../../../../gl-core';
+import { useRouter } from 'next/navigation';
+import { Typography, Alert, ButtonBase } from '@mui/material';
+import { Icon, routeTo, useDispatch } from '../../../../gl-core';
+import { useBySlug } from '../../Uberedux';
 import { setDesignSystemKey } from '../../DesignSystem';
-import { useNewContent } from '../../Uberedux';
 
-export default function NewContent({}: TAuthForm) {
+export interface INewContent {
+  slug?: string;
+}
+
+export default function NewContent({ slug }: INewContent) {
+  const content = useBySlug(slug || '');
   const dispatch = useDispatch();
-  const newContent = useNewContent();
-
-  // const openDesignSystem = () => {
-  //   dispatch(
-  //     setDesignSystemKey('dialog', {
-  //       icon: 'fingerprint',
-  //     }),
-  //   );
-  // };
+  const router = useRouter();
+  if (!content) return null;
 
   return (
-    <>
-      {/* <pre style={{ fontSize: '10px' }}>
-        newContent: {JSON.stringify(newContent, null, 2)}
-      </pre> */}
-    </>
+    <ButtonBase
+      sx={{
+        textAlign: 'left',
+        mb: 1,
+        width: '100%',
+      }}
+      onClick={() => {
+        dispatch(routeTo(slug as string, router));
+        dispatch(setDesignSystemKey('dialog', null));
+      }}
+    >
+      <Alert
+        sx={{ width: '100%', border: 0 }}
+        severity="success"
+        variant="outlined"
+        icon={<Icon icon={content.icon || 'home'} color="inherit" />}
+      >
+        <Typography variant="body1">{content.title}</Typography>
+
+        <Typography variant="body2" sx={{ opacity: 0.8 }}>
+          {content.excerpt || content.description || ''}
+        </Typography>
+      </Alert>
+    </ButtonBase>
   );
 }
