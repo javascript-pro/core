@@ -193,7 +193,7 @@
     "title": "Cixin Liu",
     "description": "author of The Three Body Problem",
     "tags": "Cixin Liu, Speculative fiction, Chinese, hard sci-fi",
-    "content": "\n> Cixin Liu is significant because he brought Chinese hard sci-fi to a global audience, blending rigorous physics, grand cosmic scale, and philosophical depth. His work revitalised hard sci-fi worldwide, won major awards (including the Hugo), and introduced a distinctly non-Western perspective to the genre’s biggest ideas.\n\nBest known for The Three-Body Problem and its sequels, collectively The Remembrance of Earth’s Past.\n\n## The Three-Body Problem\n\nFirst contact begins when scientists discover an alien civilisation on the unstable planet Trisolaris. Humanity becomes divided over whether to resist or welcome them.\n\n## The Dark Forest\n\nEarth prepares for the coming Trisolaran invasion. The “Dark Forest Theory” reveals why the universe seems silent—and why contact between civilisations is terrifyingly dangerous.\n\n## Death’s End\n\nThe conflict escalates to cosmic scales. Dimensional warfare, universe-changing technology, and the ultimate fate of humanity and the cosmos come into play.\n"
+    "content": "\n> Cixin Liu is significant because he brought Chinese hard sci-fi to a global audience, blending rigorous physics, grand cosmic scale, and philosophical depth. His work revitalised hard sci-fi worldwide, won major awards (including the Hugo), and introduced a distinctly non-Western perspective to the genre’s biggest ideas.\n\nBest known for The Three-Body Problem and its sequels, collectively The Remembrance of Earth’s Past.\n\n[PageGrid pages=\"/life/books/cixin-liu/three-body-problem, /life/books/cixin-liu/the-dark-forest, /life/books/cixin-liu/deaths-end\"]\n\n## The Three-Body Problem\n\nFirst contact begins when scientists discover an alien civilisation on the unstable planet Trisolaris. Humanity becomes divided over whether to resist or welcome them.\n\n## The Dark Forest\n\nEarth prepares for the coming Trisolaran invasion. The “Dark Forest Theory” reveals why the universe seems silent—and why contact between civilisations is terrifyingly dangerous.\n\n## Death’s End\n\nThe conflict escalates to cosmic scales. Dimensional warfare, universe-changing technology, and the ultimate fate of humanity and the cosmos come into play.\n"
   },
   {
     "slug": "life/books/cixin-liu/of-ants-and-dinosaurs",
@@ -354,7 +354,7 @@
     "title": "Life",
     "description": "Generation X at 50",
     "tags": [],
-    "content": "\n> ⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a 1991 novel written by Canadian author Douglas Coupland\n\nI work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age maybe it's time to take up sailing. We are [Generation X](/balance/writers/generation-x)\n\n[PageGrid thumbnails=\"no\" pages=\" /life/books, /life/food, /life/motorbikes, /life/aquaponics, /life/diving\"]\n"
+    "content": "\n> ⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a 1991 novel written by Canadian author Douglas Coupland\n\nI work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age maybe it's time to take up sailing. We are [Generation X](/balance/writers/generation-x)\n\n[PageGrid thumbnails=\"no\" pages=\" /life/books, /life/food, /life/motorbikes, /life/aquaponics, /life/diving, /life/skiing\"]\n"
   },
   {
     "slug": "life/motorbikes/index",
@@ -362,6 +362,13 @@
     "description": "A truth universally acknowledged",
     "tags": [],
     "content": "\n> “It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a motorbike.”\n\n― Jane Austen, Pride and Prejudice\n"
+  },
+  {
+    "slug": "life/skiing/index",
+    "title": "Skiing",
+    "description": "yeh. I'm a bit old now",
+    "tags": [],
+    "content": "\n>\n"
   },
   {
     "slug": "work/about/gdpr",

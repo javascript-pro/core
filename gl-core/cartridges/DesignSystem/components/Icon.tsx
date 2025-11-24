@@ -29,7 +29,7 @@ import ExperienceIcon from '@mui/icons-material/AllInclusive';
 //
 import AdminIcon from '@mui/icons-material/SupervisedUserCircle';
 import FilmIcon from '@mui/icons-material/Theaters';
-
+import SkiIcon from '@mui/icons-material/DownhillSkiing';
 import AndroidIcon from '@mui/icons-material/Android';
 import HowIcon from '@mui/icons-material/ElectricBoltOutlined';
 import WhoIcon from '@mui/icons-material/EscalatorWarningOutlined';
@@ -168,6 +168,8 @@ export type TIconShape = {
     | 'free'
     | 'writing'
     | 'books'
+    | 'ski'
+    | 'skiing'
     | 'typescript'
     | 'van'
     | 'fullstack'
@@ -413,6 +415,14 @@ export default function Icon({ icon, color }: TIconShape) {
 
     case 'pdf':
       iconFragment = <PDFIcon color={color} />;
+      break;
+
+    case 'ski':
+      iconFragment = <SkiIcon color={color} />;
+      break;
+
+    case 'skiing':
+      iconFragment = <SkiIcon color={color} />;
       break;
 
     case 'ki':

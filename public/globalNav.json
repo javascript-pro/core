@@ -1348,6 +1348,17 @@
             "icon": "bike",
             "image": "https://live.staticflickr.com/65535/54926888281_024d3ed9ee_o.jpg",
             "excerpt": "“It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a motorbike.”\n\n― Jane Austen, Pride and Prejudice"
+          },
+          {
+            "title": "Skiing",
+            "description": "yeh. I'm a bit old now",
+            "slug": "/life/skiing",
+            "order": 250,
+            "type": "folder",
+            "children": [],
+            "icon": "skiing",
+            "image": "/png/n64/punk.png",
+            "excerpt": ""
           }
         ],
         "icon": "life",
