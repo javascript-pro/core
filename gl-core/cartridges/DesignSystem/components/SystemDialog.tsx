@@ -6,7 +6,7 @@ import {
   DialogActions,
   DialogContent,
   IconButton,
-  DialogTitle,
+  // DialogTitle,
 } from '@mui/material';
 import { useDispatch, useIsMobile, Icon } from '../../../../gl-core';
 import {
@@ -14,12 +14,12 @@ import {
   setDesignSystemKey,
   MenuSystem,
 } from '../../DesignSystem';
-import { useUser, Continue, User } from '../../Paywall';
+// import { useUser, Continue, User } from '../../Paywall';
 
 export default function SystemDialog() {
   const dispatch = useDispatch();
   const isMobile = useIsMobile();
-  const user = useUser();
+  // const user = useUser();
   const ds = useDesignSystem();
   const { fullScreen } = ds;
 
@@ -42,7 +42,7 @@ export default function SystemDialog() {
         onClose={handleClose}
         maxWidth={'sm'}
       >
-        <DialogTitle>{!user ? <Continue /> : <User />}</DialogTitle>
+        {/* <DialogTitle>{!user ? <Continue /> : <User />}</DialogTitle> */}
         <DialogContent />
         <DialogActions sx={{ display: 'block' }}>
           <MenuSystem />
