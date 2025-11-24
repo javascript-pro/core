@@ -18,4 +18,4 @@ You’ll clone the public repository, run the project locally, explore the folde
 
 Use the pages in order, or jump directly to the area you need.
 
-[GitHub url="https://github.com/javascript-pro/core" label="git clone https://github.com/javascript-pro/core.git"]
+[GitHub url="https://github.com/javascript-pro/example-app" label="git clone https://github.com/javascript-pro/example-app.git"]

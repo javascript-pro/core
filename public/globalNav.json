@@ -189,6 +189,16 @@
                     "type": "file",
                     "excerpt": "Get started with Goldlabel Core Open Source\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\n 🚀 Install\n\n1. Clone the repo\n\n\n\n2. Setup Environment\n\nCreate a  file in the root",
                     "newContent": false
+                  },
+                  {
+                    "title": ".env",
+                    "slug": "/work/example-app/tutorial/env",
+                    "order": 6,
+                    "icon": "examples",
+                    "image": "/png/3rdParty/github_og.png",
+                    "type": "file",
+                    "excerpt": "How environment files behave in a Next.js environment, including the practical traps that appear during development.\n\nEnvironment files in a Next.js project hold configuration values that shouldn’t li",
+                    "newContent": false
                   }
                 ],
                 "icon": "doc",
