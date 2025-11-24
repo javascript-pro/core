@@ -5,6 +5,7 @@ import { useDispatch } from './hooks/useDispatch';
 import { useKey } from './hooks/useKey';
 import { useVersionCheck } from './hooks/useVersionCheck';
 import { useNewContent } from './hooks/useNewContent';
+import { useBySlug } from './hooks/useBySlug';
 import { setUbereduxKey, resetUberedux } from './store';
 import { TRootState, TUbereduxDispatch } from './store';
 
@@ -16,6 +17,7 @@ export {
   useDispatch,
   useVersionCheck,
   useNewContent,
+  useBySlug,
   setUbereduxKey,
   resetUberedux,
 };

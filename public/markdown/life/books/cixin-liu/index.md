@@ -12,6 +12,8 @@ tags: Cixin Liu, Speculative fiction, Chinese, hard sci-fi
 
 Best known for The Three-Body Problem and its sequels, collectively The Remembrance of Earth’s Past.
 
+[PageGrid pages="/life/books/cixin-liu/three-body-problem, /life/books/cixin-liu/the-dark-forest, /life/books/cixin-liu/deaths-end"]
+
 ## The Three-Body Problem
 
 First contact begins when scientists discover an alien civilisation on the unstable planet Trisolaris. Humanity becomes divided over whether to resist or welcome them.
