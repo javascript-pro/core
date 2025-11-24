@@ -11,7 +11,7 @@
     "generate": "tsx generate.mjs && yarn indexSearch",
     "prepare": "husky install",
     "build": "next build",
-    "indexSearch": "clear && node buildSearchIndex.mjs",
+    "indexSearch": "clear && node ./gl-core/lib/buildSearchIndex.mjs",
     "lint": "next lint",
     "lint-staged": "lint-staged",
     "format": "prettier --write --ignore-unknown .",
