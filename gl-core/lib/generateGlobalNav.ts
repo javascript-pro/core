@@ -15,6 +15,7 @@ type NavNode = {
   tags?: string[];
   excerpt?: string;
   description?: string;
+  newContent?: boolean;
   children?: NavNode[];
 };
 
@@ -23,11 +24,11 @@ type NavNode = {
  */
 function extractExcerpt(content: string): string {
   return content
-    .replace(/<!--.*?-->/gs, '') // comments
-    .replace(/!\[.*?\]\(.*?\)/g, '') // images
-    .replace(/\[.*?\]\(.*?\)/g, '') // links
-    .replace(/`{1,3}.*?`{1,3}/gs, '') // inline code
-    .replace(/[#>*_`-]/g, '') // markdown punctuation
+    .replace(/<!--.*?-->/gs, '')
+    .replace(/!\[.*?\]\(.*?\)/g, '')
+    .replace(/\[.*?\]\(.*?\)/g, '')
+    .replace(/`{1,3}.*?`{1,3}/gs, '')
+    .replace(/[#>*_`-]/g, '')
     .trim()
     .slice(0, 200);
 }
@@ -52,7 +53,6 @@ function createSlugFromSegments(segments: string[]): string {
 
 /**
  * Recursively walk the markdown directory tree and build navigation nodes.
- * Folders are included even if they lack index.md — the folder name is used as fallback.
  */
 export async function getMarkdownPagesRecursively(
   dir: string,
@@ -61,7 +61,7 @@ export async function getMarkdownPagesRecursively(
   const entries = await fs.readdir(dir, { withFileTypes: true });
   const fullIndexPath = path.join(dir, 'index.md');
 
-  // Default folder node (fallback if no index.md)
+  // Default folder node
   let folderNode: NavNode = {
     title: path.basename(dir),
     description: '',
@@ -71,10 +71,11 @@ export async function getMarkdownPagesRecursively(
     children: [],
   };
 
-  // Try to load metadata from index.md if present
+  // Try to load metadata from index.md
   try {
     const rawIndex = await fs.readFile(fullIndexPath, 'utf-8');
     const { data, content } = matter(rawIndex);
+
     folderNode = {
       ...folderNode,
       title: data.title || folderNode.title,
@@ -84,9 +85,10 @@ export async function getMarkdownPagesRecursively(
       image: data.image,
       tags: parseTags(data.tags),
       excerpt: extractExcerpt(content),
+      newContent: data.newContent === true,
     };
   } catch {
-    // no index.md — fall back to folder defaults (don’t return [])
+    // no index.md
   }
 
   for (const entry of entries) {
@@ -120,16 +122,17 @@ export async function getMarkdownPagesRecursively(
         type: 'file',
         tags: parseTags(data.tags),
         excerpt: extractExcerpt(content),
+        newContent: data.newContent === true,
       });
     }
   }
 
-  // Sort by order if present
+  // Sort folder children
   if (folderNode.children && folderNode.children.length > 0) {
     folderNode.children.sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
   }
 
-  // Skip truly empty folders (no index.md, no child files)
+  // Skip empty folders with no index.md
   try {
     await fs.access(fullIndexPath);
   } catch {
@@ -148,7 +151,7 @@ export async function generateGlobalNav() {
   console.log(`✅ Generated /public/globalNav.json`);
 }
 
-// Run directly (if executed with `node scripts/generateGlobalNav.js`)
+// Run directly
 if (process.argv[1] === __filename) {
   generateGlobalNav().catch((err) => {
     console.error('❌ Failed to generate globalNav.json', err);
