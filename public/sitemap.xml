@@ -176,25 +176,28 @@
     <loc>https://goldlabel.pro/work/about/work-with-us</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/example/cartridges/content-manager</loc>
+    <loc>https://goldlabel.pro/work/cv</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/example/cartridges/design-system</loc>
+    <loc>https://goldlabel.pro/work/example-app/docs/content-manager</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/example/cartridges</loc>
+    <loc>https://goldlabel.pro/work/example-app/docs/design-system</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/example/cartridges/uberedux</loc>
+    <loc>https://goldlabel.pro/work/example-app/docs</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/example</loc>
+    <loc>https://goldlabel.pro/work/example-app/docs/uberedux</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/example/tutorial</loc>
+    <loc>https://goldlabel.pro/work/example-app</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/example/tutorial/quick-start</loc>
+    <loc>https://goldlabel.pro/work/example-app/tutorial</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/example-app/tutorial/quick-start</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/experience/aligent</loc>
@@ -215,126 +218,120 @@
     <loc>https://goldlabel.pro/work/experience</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/hyperlink-resume</loc>
-  </url>
-  <url>
     <loc>https://goldlabel.pro/work</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/ai</loc>
+    <loc>https://goldlabel.pro/work/skills/ai</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/ai/prompt-engineering</loc>
+    <loc>https://goldlabel.pro/work/skills/ai/prompt-engineering</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/ai/user-interfaces</loc>
+    <loc>https://goldlabel.pro/work/skills/ai/user-interfaces</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/design/adobe</loc>
+    <loc>https://goldlabel.pro/work/skills/design/adobe</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/design/css</loc>
+    <loc>https://goldlabel.pro/work/skills/design/css</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/design/figma</loc>
+    <loc>https://goldlabel.pro/work/skills/design/figma</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/design</loc>
+    <loc>https://goldlabel.pro/work/skills/design</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/design/mui</loc>
+    <loc>https://goldlabel.pro/work/skills/design/mui</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack</loc>
+    <loc>https://goldlabel.pro/work/skills/fullstack/blockchain</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/javascript</loc>
+    <loc>https://goldlabel.pro/work/skills/fullstack/ci-cd</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/javascript/nextjs</loc>
+    <loc>https://goldlabel.pro/work/skills/fullstack/databases</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/javascript/nextjs/ssg</loc>
+    <loc>https://goldlabel.pro/work/skills/fullstack/devops</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/javascript/nextjs/ssr</loc>
+    <loc>https://goldlabel.pro/work/skills/fullstack/docker</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/javascript/node</loc>
+    <loc>https://goldlabel.pro/work/skills/fullstack/git</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/javascript/react/experience</loc>
+    <loc>https://goldlabel.pro/work/skills/fullstack/graphql</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/javascript/react/history</loc>
+    <loc>https://goldlabel.pro/work/skills/fullstack</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/javascript/react/hooks</loc>
+    <loc>https://goldlabel.pro/work/skills/fullstack/restful-apis</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/javascript/react</loc>
+    <loc>https://goldlabel.pro/work/skills/fullstack/turborepo</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/javascript/testing</loc>
+    <loc>https://goldlabel.pro/work/skills</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/javascript/typescript/advanced</loc>
+    <loc>https://goldlabel.pro/work/skills/javascript</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/javascript/typescript/aliases</loc>
+    <loc>https://goldlabel.pro/work/skills/javascript/nextjs</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/javascript/typescript/get-started</loc>
+    <loc>https://goldlabel.pro/work/skills/javascript/nextjs/ssg</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/javascript/typescript</loc>
+    <loc>https://goldlabel.pro/work/skills/javascript/nextjs/ssr</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/javascript/typescript/real-world</loc>
+    <loc>https://goldlabel.pro/work/skills/javascript/node</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/javascript/typescript/structural-typing</loc>
+    <loc>https://goldlabel.pro/work/skills/javascript/react/experience</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/javascript/typescript/union-types</loc>
+    <loc>https://goldlabel.pro/work/skills/javascript/react/history</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/javascript/vanilla-js</loc>
+    <loc>https://goldlabel.pro/work/skills/javascript/react/hooks</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/javascript/vercel</loc>
+    <loc>https://goldlabel.pro/work/skills/javascript/react</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/other/blockchain</loc>
+    <loc>https://goldlabel.pro/work/skills/javascript/testing</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/other/ci-cd</loc>
+    <loc>https://goldlabel.pro/work/skills/javascript/typescript/advanced</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/other/databases</loc>
+    <loc>https://goldlabel.pro/work/skills/javascript/typescript/aliases</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/other/devops</loc>
+    <loc>https://goldlabel.pro/work/skills/javascript/typescript/get-started</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/other/docker</loc>
+    <loc>https://goldlabel.pro/work/skills/javascript/typescript</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/other/git</loc>
+    <loc>https://goldlabel.pro/work/skills/javascript/typescript/real-world</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/other/graphql</loc>
+    <loc>https://goldlabel.pro/work/skills/javascript/typescript/structural-typing</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/other</loc>
+    <loc>https://goldlabel.pro/work/skills/javascript/typescript/union-types</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/other/rest-api</loc>
+    <loc>https://goldlabel.pro/work/skills/javascript/vanilla-js</loc>
   </url>
   <url>
-    <loc>https://goldlabel.pro/work/techstack/other/restful-apis</loc>
-  </url>
-  <url>
-    <loc>https://goldlabel.pro/work/techstack/other/turborepo</loc>
+    <loc>https://goldlabel.pro/work/skills/javascript/vercel</loc>
   </url>
 </urlset>

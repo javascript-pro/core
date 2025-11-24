@@ -28,14 +28,14 @@ import {
   SharePopup,
   Icon,
 } from '../gl-core';
-import { SigninGate, useUser } from './cartridges/Paywall';
+import { Paywall, SigninGate, useUser } from './cartridges/Paywall';
 import {
   DesignSystem,
   useDesignSystem,
   setFeedback,
   setDesignSystemKey,
+  NewContent,
 } from './cartridges/DesignSystem';
-import { Paywall } from './cartridges/Paywall';
 
 const config = configRaw as TConfig;
 
@@ -104,6 +104,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
                   ) : (
                     <SideAds />
                   )}
+
+                  <NewContent />
                 </Box>
               </Grid>
 
