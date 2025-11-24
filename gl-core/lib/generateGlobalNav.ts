@@ -45,6 +45,18 @@ function parseTags(rawTags?: string): string[] | undefined {
 }
 
 /**
+ * Coerce frontmatter values to boolean.
+ */
+function parseBoolean(v: any): boolean | undefined {
+  if (v === true) return true;
+  if (typeof v === 'string') {
+    const s = v.toLowerCase().trim();
+    if (s === 'true' || s === 'yes' || s === '1') return true;
+  }
+  return undefined;
+}
+
+/**
  * Builds a normalized slug from an array of path segments.
  */
 function createSlugFromSegments(segments: string[]): string {
@@ -85,7 +97,7 @@ export async function getMarkdownPagesRecursively(
       image: data.image,
       tags: parseTags(data.tags),
       excerpt: extractExcerpt(content),
-      newContent: data.newContent === true,
+      newContent: parseBoolean(data.newContent),
     };
   } catch {
     // no index.md
@@ -122,7 +134,7 @@ export async function getMarkdownPagesRecursively(
         type: 'file',
         tags: parseTags(data.tags),
         excerpt: extractExcerpt(content),
-        newContent: data.newContent === true,
+        newContent: parseBoolean(data.newContent),
       });
     }
   }

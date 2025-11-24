@@ -6,7 +6,7 @@ import globalNav from '../../../../public/globalNav.json';
 
 /**
  * useNewContent
- * Returns every nav item whose frontmatter has new: true
+ * Returns all nav items with newContent: true
  */
 export function useNewContent() {
   return useMemo(() => {
@@ -14,20 +14,17 @@ export function useNewContent() {
 
     function walk(list: any[]) {
       for (const item of list) {
-        // if (item['newContent']){
-        //   console.log("item", item);
-        // }
-
-        if (item?.frontmatter?.newContent === true) {
+        if (item?.newContent === true) {
           out.push(item);
         }
-        if (item.children && item.children.length) {
-          walk(item.children);
-        }
+        if (item.children?.length) walk(item.children);
       }
     }
 
     walk(globalNav as any[]);
-    return out.length ? out : null;
+
+    if (!out.length) return null;
+
+    return out.sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
   }, []);
 }
