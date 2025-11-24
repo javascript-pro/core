@@ -26,11 +26,13 @@ export default function Continue() {
     try {
       await signInWithPopup(auth, new GoogleAuthProvider());
     } catch (err) {
-      dispatch(setFeedback({
-        severity: 'error',
-        title: 'Problem signing into Google',
-        description: (err as Error).message,
-      }))
+      dispatch(
+        setFeedback({
+          severity: 'error',
+          title: 'Problem signing into Google',
+          description: (err as Error).message,
+        }),
+      );
     }
   };
 
@@ -38,11 +40,13 @@ export default function Continue() {
     try {
       await signInWithPopup(auth, new FacebookAuthProvider());
     } catch (err) {
-      dispatch(setFeedback({
-        severity: 'error',
-        title: 'Problem signing into Facebook',
-        description: (err as Error).message,
-      }))
+      dispatch(
+        setFeedback({
+          severity: 'error',
+          title: 'Problem signing into Facebook',
+          description: (err as Error).message,
+        }),
+      );
     }
   };
 
@@ -50,11 +54,13 @@ export default function Continue() {
     try {
       await signInWithPopup(auth, new GithubAuthProvider());
     } catch (err) {
-      dispatch(setFeedback({
-        severity: 'error',
-        title: 'Problem signing into Github',
-        description: (err as Error).message,
-      }))
+      dispatch(
+        setFeedback({
+          severity: 'error',
+          title: 'Problem signing into Github',
+          description: (err as Error).message,
+        }),
+      );
     }
   };
 
@@ -62,11 +68,13 @@ export default function Continue() {
     try {
       await signInWithPopup(auth, new TwitterAuthProvider());
     } catch (err) {
-      dispatch(setFeedback({
-        severity: 'error',
-        title: 'Problem signing into Twitter',
-        description: (err as Error).message,
-      }))
+      dispatch(
+        setFeedback({
+          severity: 'error',
+          title: 'Problem signing into Twitter',
+          description: (err as Error).message,
+        }),
+      );
     }
   };
 
