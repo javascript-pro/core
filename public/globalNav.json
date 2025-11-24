@@ -204,29 +204,29 @@
             "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work/experience/dtrackt, /work/experience/aligent, /work/experience/hertwigauer, /work/experience/huawei, /work/experience/boral\", /work/experience/aligent\"]"
           },
           {
-            "title": "Techstack",
+            "title": "Skills",
             "description": "Fullstack JavaScript & more",
-            "slug": "/work/techstack",
+            "slug": "/work/skills",
             "order": 110,
             "type": "folder",
             "children": [
               {
                 "title": "JavaScript",
                 "description": "JavaScript Whatever the Weather",
-                "slug": "/work/techstack/javascript",
+                "slug": "/work/skills/javascript",
                 "order": 3,
                 "type": "folder",
                 "children": [
                   {
                     "title": "React",
                     "description": "Frontend JavaScript",
-                    "slug": "/work/techstack/javascript/react",
+                    "slug": "/work/skills/javascript/react",
                     "order": 1,
                     "type": "folder",
                     "children": [
                       {
                         "title": "History",
-                        "slug": "/work/techstack/javascript/react/history",
+                        "slug": "/work/skills/javascript/react/history",
                         "order": 10,
                         "icon": "js",
                         "image": "/png/3rdParty/react.png",
@@ -241,7 +241,7 @@
                       },
                       {
                         "title": "Hooks",
-                        "slug": "/work/techstack/javascript/react/hooks",
+                        "slug": "/work/skills/javascript/react/hooks",
                         "order": 10,
                         "icon": "js",
                         "image": "/png/3rdParty/react.png",
@@ -254,7 +254,7 @@
                       },
                       {
                         "title": "Our Experience",
-                        "slug": "/work/techstack/javascript/react/experience",
+                        "slug": "/work/skills/javascript/react/experience",
                         "order": 20,
                         "icon": "js",
                         "image": "/png/3rdParty/react.png",
@@ -282,13 +282,13 @@
                   {
                     "title": "Next.js",
                     "description": "React with seamless backend capabilities",
-                    "slug": "/work/techstack/javascript/nextjs",
+                    "slug": "/work/skills/javascript/nextjs",
                     "order": 2,
                     "type": "folder",
                     "children": [
                       {
                         "title": "Server-Side Rendering (SSR)",
-                        "slug": "/work/techstack/javascript/nextjs/ssr",
+                        "slug": "/work/skills/javascript/nextjs/ssr",
                         "order": 20,
                         "icon": "js",
                         "image": "/png/3rdParty/next_og.png",
@@ -306,7 +306,7 @@
                       },
                       {
                         "title": "Static Site Generation (SSG)",
-                        "slug": "/work/techstack/javascript/nextjs/ssg",
+                        "slug": "/work/skills/javascript/nextjs/ssg",
                         "order": 30,
                         "icon": "js",
                         "image": "/png/3rdParty/next_og.png",
@@ -338,7 +338,7 @@
                   {
                     "title": "Node",
                     "description": "JavaScript backend",
-                    "slug": "/work/techstack/javascript/node",
+                    "slug": "/work/skills/javascript/node",
                     "order": 3,
                     "type": "folder",
                     "children": [],
@@ -355,7 +355,7 @@
                   },
                   {
                     "title": "Vercel",
-                    "slug": "/work/techstack/javascript/vercel",
+                    "slug": "/work/skills/javascript/vercel",
                     "order": 3,
                     "icon": "js",
                     "image": "/png/3rdParty/next_og.png",
@@ -374,13 +374,13 @@
                   {
                     "title": "TypeScript",
                     "description": "Better JavaScript",
-                    "slug": "/work/techstack/javascript/typescript",
+                    "slug": "/work/skills/javascript/typescript",
                     "order": 28,
                     "type": "folder",
                     "children": [
                       {
                         "title": "Getting Started",
-                        "slug": "/work/techstack/javascript/typescript/get-started",
+                        "slug": "/work/skills/javascript/typescript/get-started",
                         "order": 5,
                         "icon": "js",
                         "image": "/png/3rdParty/typescript_og.png",
@@ -395,7 +395,7 @@
                       },
                       {
                         "title": "Real World TypeScript",
-                        "slug": "/work/techstack/javascript/typescript/real-world",
+                        "slug": "/work/skills/javascript/typescript/real-world",
                         "order": 10,
                         "icon": "js",
                         "image": "/png/3rdParty/typescript_og.png",
@@ -410,7 +410,7 @@
                       },
                       {
                         "title": "Advanced TypeScript",
-                        "slug": "/work/techstack/javascript/typescript/advanced",
+                        "slug": "/work/skills/javascript/typescript/advanced",
                         "order": 30,
                         "icon": "js",
                         "image": "/png/3rdParty/typescript_og.png",
@@ -425,7 +425,7 @@
                       },
                       {
                         "title": "Structural Typing",
-                        "slug": "/work/techstack/javascript/typescript/structural-typing",
+                        "slug": "/work/skills/javascript/typescript/structural-typing",
                         "order": 55,
                         "icon": "js",
                         "image": "/png/3rdParty/typescript_og.png",
@@ -440,7 +440,7 @@
                       },
                       {
                         "title": "Interface vs Types",
-                        "slug": "/work/techstack/javascript/typescript/aliases",
+                        "slug": "/work/skills/javascript/typescript/aliases",
                         "order": 65,
                         "icon": "js",
                         "image": "/png/3rdParty/typescript_og.png",
@@ -455,7 +455,7 @@
                       },
                       {
                         "title": "Unions and intersections",
-                        "slug": "/work/techstack/javascript/typescript/union-types",
+                        "slug": "/work/skills/javascript/typescript/union-types",
                         "order": 75,
                         "icon": "js",
                         "image": "/png/3rdParty/typescript_og.png",
@@ -483,7 +483,7 @@
                   {
                     "title": "Testing",
                     "description": "Left looking approach",
-                    "slug": "/work/techstack/javascript/testing",
+                    "slug": "/work/skills/javascript/testing",
                     "order": 95,
                     "type": "folder",
                     "children": [],
@@ -502,7 +502,7 @@
                   },
                   {
                     "title": "Vanilla JS (ES6+)",
-                    "slug": "/work/techstack/javascript/vanilla-js",
+                    "slug": "/work/skills/javascript/vanilla-js",
                     "order": 100,
                     "icon": "js",
                     "image": "/png/3rdParty/javascript_og.png",
@@ -533,18 +533,18 @@
                   "Headless CMS",
                   "JSON"
                 ],
-                "excerpt": "We’ve been writing JavaScript since it was called ECMAScript.\n\n[PageGrid thumbnails=\"no\" pages=\"/work/techstack/javascript/typescript, /work/techstack/javascript/react, /work/techstack/javascript/node"
+                "excerpt": "We’ve been writing JavaScript since it was called ECMAScript.\n\n[PageGrid thumbnails=\"no\" pages=\"/work/skills/javascript/typescript, /work/skills/javascript/react, /work/skills/javascript/node, /work/s"
               },
               {
                 "title": "Design",
                 "description": "From  CSS to Material UI",
-                "slug": "/work/techstack/design",
+                "slug": "/work/skills/design",
                 "order": 28,
                 "type": "folder",
                 "children": [
                   {
                     "title": "Adobe",
-                    "slug": "/work/techstack/design/adobe",
+                    "slug": "/work/skills/design/adobe",
                     "order": 30,
                     "icon": "design",
                     "image": "/png/n64/chix.png",
@@ -557,7 +557,7 @@
                   },
                   {
                     "title": "CSS",
-                    "slug": "/work/techstack/design/css",
+                    "slug": "/work/skills/design/css",
                     "order": 40,
                     "icon": "design",
                     "image": "/png/n64/chix.png",
@@ -572,7 +572,7 @@
                   },
                   {
                     "title": "Figma",
-                    "slug": "/work/techstack/design/figma",
+                    "slug": "/work/skills/design/figma",
                     "order": 40,
                     "icon": "design",
                     "image": "/png/n64/chix.png",
@@ -587,7 +587,7 @@
                   },
                   {
                     "title": "Material MUI",
-                    "slug": "/work/techstack/design/mui",
+                    "slug": "/work/skills/design/mui",
                     "order": 40,
                     "icon": "design",
                     "image": "/png/n64/chix.png",
@@ -606,18 +606,18 @@
                   "CSS",
                   "Adobe"
                 ],
-                "excerpt": "[PageGrid pages=\"/work/techstack/design/adobe, /work/techstack/design/css, /work/techstack/design/figma, /work/techstack/design/mui\"]"
+                "excerpt": "[PageGrid pages=\"/work/skills/design/adobe, /work/skills/design/css, /work/skills/design/figma, /work/skills/design/mui\"]"
               },
               {
-                "title": "AI",
+                "title": "A.I.",
                 "description": "What do we know about AI?",
-                "slug": "/work/techstack/ai",
+                "slug": "/work/skills/ai",
                 "order": 50,
                 "type": "folder",
                 "children": [
                   {
                     "title": "AI User Interfaces",
-                    "slug": "/work/techstack/ai/user-interfaces",
+                    "slug": "/work/skills/ai/user-interfaces",
                     "order": 50,
                     "icon": "ai",
                     "image": "https://live.staticflickr.com/65535/53669705662_bd523946ef_b.jpg",
@@ -630,7 +630,7 @@
                   },
                   {
                     "title": "Prompt Engineering",
-                    "slug": "/work/techstack/ai/prompt-engineering",
+                    "slug": "/work/skills/ai/prompt-engineering",
                     "order": 60,
                     "icon": "ai",
                     "image": "https://live.staticflickr.com/65535/53669705662_bd523946ef_b.jpg",
@@ -647,18 +647,18 @@
                 "tags": [
                   "AI"
                 ],
-                "excerpt": "\"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday\n\n[PageGrid pages=\"/work/techstack/ai/userinterfaces\"]\n\n Is this Singularity?\n\nIt"
+                "excerpt": "\"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday\n\n[PageGrid pages=\"/work/skills/ai/promptengineering, /work/skills/ai/userinterfa"
               },
               {
-                "title": "Other",
-                "description": "As well as JavaScript, we also have experience in these areas",
-                "slug": "/work/techstack/other",
+                "title": "Fullstack",
+                "description": "As well as JavaScript, we also have experience across the full stack",
+                "slug": "/work/skills/fullstack",
                 "order": 500,
                 "type": "folder",
                 "children": [
                   {
                     "title": "DevOps",
-                    "slug": "/work/techstack/other/devops",
+                    "slug": "/work/skills/fullstack/devops",
                     "order": 18,
                     "icon": "techstack",
                     "image": "/png/wei-zang/wei-zang.png",
@@ -671,7 +671,7 @@
                   },
                   {
                     "title": "Databases",
-                    "slug": "/work/techstack/other/databases",
+                    "slug": "/work/skills/fullstack/databases",
                     "order": 19,
                     "icon": "techstack",
                     "image": "/png/wei-zang/wei-zang.png",
@@ -689,7 +689,7 @@
                   },
                   {
                     "title": "Git",
-                    "slug": "/work/techstack/other/git",
+                    "slug": "/work/skills/fullstack/git",
                     "order": 25,
                     "icon": "techstack",
                     "image": "/png/wei-zang/wei-zang.png",
@@ -712,7 +712,7 @@
                   },
                   {
                     "title": "Turborepo",
-                    "slug": "/work/techstack/other/turborepo",
+                    "slug": "/work/skills/fullstack/turborepo",
                     "order": 26,
                     "icon": "techstack",
                     "image": "/png/wei-zang/wei-zang.png",
@@ -727,7 +727,7 @@
                   },
                   {
                     "title": "CI/CD",
-                    "slug": "/work/techstack/other/ci-cd",
+                    "slug": "/work/skills/fullstack/ci-cd",
                     "order": 28,
                     "icon": "techstack",
                     "image": "/png/wei-zang/wei-zang.png",
@@ -744,7 +744,7 @@
                   },
                   {
                     "title": "Blockchain",
-                    "slug": "/work/techstack/other/blockchain",
+                    "slug": "/work/skills/fullstack/blockchain",
                     "order": 50,
                     "icon": "api",
                     "image": "/png/3rdParty/bitcoin.png",
@@ -764,7 +764,7 @@
                   },
                   {
                     "title": "GraphQL",
-                    "slug": "/work/techstack/other/graphql",
+                    "slug": "/work/skills/fullstack/graphql",
                     "order": 70,
                     "icon": "techstack",
                     "image": "/png/wei-zang/wei-zang.png",
@@ -778,20 +778,7 @@
                   },
                   {
                     "title": "RESTful APIs",
-                    "slug": "/work/techstack/other/rest-api",
-                    "order": 70,
-                    "icon": "api",
-                    "image": "https://live.staticflickr.com/65535/54801612483_31ce454c4e_b.jpg",
-                    "type": "file",
-                    "tags": [
-                      "free",
-                      "api"
-                    ],
-                    "excerpt": "Goldlabel Public API\n\n glapi/flickr endpoints"
-                  },
-                  {
-                    "title": "RESTful APIs",
-                    "slug": "/work/techstack/other/restful-apis",
+                    "slug": "/work/skills/fullstack/restful-apis",
                     "order": 70,
                     "icon": "techstack",
                     "image": "/png/wei-zang/wei-zang.png",
@@ -806,7 +793,7 @@
                   },
                   {
                     "title": "Docker & Kubernetes",
-                    "slug": "/work/techstack/other/docker",
+                    "slug": "/work/skills/fullstack/docker",
                     "order": 75,
                     "icon": "techstack",
                     "image": "/png/wei-zang/wei-zang.png",
@@ -831,7 +818,7 @@
                   "non-javascript",
                   "techstack"
                 ],
-                "excerpt": "[PageGrid pages=\"/work/techstack/other/cicd, /work/techstack/other/databases, /work/techstack/other/devops, /work/techstack/other/docker, /work/techstack/other/git, /work/techstack/other/graphql, /wor"
+                "excerpt": "[PageGrid pages=\"/work/skills/fullstack/cicd, /work/skills/fullstack/databases, /work/skills/fullstack/devops, /work/skills/fullstack/docker, /work/skills/fullstack/git, /work/skills/fullstack/graphql"
               }
             ],
             "icon": "techstack",
@@ -841,25 +828,25 @@
               "fields",
               "work"
             ],
-            "excerpt": "Working across the full JavaScript stack to help understand every perspective from interface to infrastructure\n\n[PageGrid thumbnails=\"no\" pages=\"/work/techstack/javascript, /work/techstack/ai, /work/t"
+            "excerpt": "Working across the full JavaScript stack to help understand every perspective from interface to infrastructure\n\n[PageGrid pages=\"/work/skills/javascript, /work/skills/fullstack, /work/skills/ai, /work"
           },
           {
-            "title": "Example",
-            "description": "This app... Open Source",
-            "slug": "/work/example",
+            "title": "Example App",
+            "description": "This app is Open Source",
+            "slug": "/work/example-app",
             "order": 190,
             "type": "folder",
             "children": [
               {
-                "title": "Cartridges",
-                "description": "Self-contained pieces of application logic",
-                "slug": "/work/example/cartridges",
+                "title": "Docs",
+                "description": "Example Documentation",
+                "slug": "/work/example-app/docs",
                 "order": 10,
                 "type": "folder",
                 "children": [
                   {
                     "title": "Content Manager",
-                    "slug": "/work/example/cartridges/content-manager",
+                    "slug": "/work/example-app/docs/content-manager",
                     "order": 15,
                     "icon": "good-fit",
                     "image": "/png/n64/test.png",
@@ -873,7 +860,7 @@
                   },
                   {
                     "title": "Design System",
-                    "slug": "/work/example/cartridges/design-system",
+                    "slug": "/work/example-app/docs/design-system",
                     "order": 25,
                     "icon": "design",
                     "image": "/png/n64/test.png",
@@ -882,7 +869,7 @@
                   },
                   {
                     "title": "Uberedux",
-                    "slug": "/work/example/cartridges/uberedux",
+                    "slug": "/work/example-app/docs/uberedux",
                     "order": 30,
                     "icon": "js",
                     "image": "/png/n64/test.png",
@@ -899,18 +886,18 @@
                 ],
                 "icon": "cartridge",
                 "image": "/png/n64/test.png",
-                "excerpt": "Goldlabel is built on Cartridges\n\n[PageGrid pages=\"/work/exampleproject/cartridges/designsystem, /work/exampleproject/cartridges/uberedux, /work/exampleproject/cartridges/contentmanager\"]\n\nA cartridge"
+                "excerpt": "Goldlabel is built on Cartridges\n\n[PageGrid pages=\"/work/exampleapp/docs/designsystem, /work/exampleapp/docs/uberedux, /work/exampleapp/docs/contentmanager\"]\n\nA cartridge is a selfcontained piece of a"
               },
               {
                 "title": "Tutorial",
                 "description": "How to get up and running",
-                "slug": "/work/example/tutorial",
+                "slug": "/work/example-app/tutorial",
                 "order": 90,
                 "type": "folder",
                 "children": [
                   {
                     "title": "Quick Start",
-                    "slug": "/work/example/tutorial/quick-start",
+                    "slug": "/work/example-app/tutorial/quick-start",
                     "order": 5,
                     "icon": "examples",
                     "image": "/png/3rdParty/github_og.png",
@@ -954,17 +941,18 @@
             "excerpt": "The app you are using is free to fork, explore, copy, hack, and reuse\n\nOpen Source and Free forever. It offers statically generated sites with Firestorepowered updates and a real admin panel. Built wi"
           },
           {
-            "title": "Hyperlink Resume",
-            "slug": "/work/hyperlink-resume",
+            "title": "CV",
+            "slug": "/work/cv",
             "order": 800,
             "icon": "doc",
             "image": "https://live.staticflickr.com/65535/54940372447_3ca7baef00_b.jpg",
             "type": "file",
             "tags": [
               "company",
-              "resume"
+              "resume",
+              "cv"
             ],
-            "excerpt": "This is a new way to present a resume"
+            "excerpt": "The traditional CV is a blunt tool, but it still serves a purpose\n\nIt sits somewhere between a business card and a phone call, widely used yet constrained by format. The core challenge is balancing le"
           }
         ],
         "icon": "work",
@@ -983,7 +971,7 @@
           "NextJS",
           "Headless CMS"
         ],
-        "excerpt": "Goldlabel builds and ships modern web apps for clients who need real results fast\n\n[PageGrid thumbnails=\"no\" pages=\"/work/about/hyperlinkresume, /work/about, /work/techstack, /work/experience, /work/e"
+        "excerpt": "Goldlabel builds and ships modern web apps for clients who need real results fast\n\n[PageGrid thumbnails=\"no\" pages=\"/work/about/hyperlinkresume, /work/about, /work/skills, /work/experience, /work/exam"
       },
       {
         "title": "Life",

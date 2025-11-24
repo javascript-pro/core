@@ -10,7 +10,7 @@ tags: Professional, JavaScript, Vanilla JavaScript, TypeScript, React, Material 
 
 > Goldlabel builds and ships modern web apps for clients who need real results fast
 
-[PageGrid thumbnails="no" pages="/work/about/hyperlink-resume, /work/about, /work/techstack, /work/experience, /work/example"]
+[PageGrid thumbnails="no" pages="/work/about/hyperlink-resume, /work/about, /work/skills, /work/experience, /work/example-app"]
 
 - _Small_ team. _Big_ output
 - Real deployments from Day One
