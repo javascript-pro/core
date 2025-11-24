@@ -14,7 +14,7 @@ export default function Feedback({}: TAuthForm) {
     if (feedback && !feedback.hidden) {
       const timer = setTimeout(() => {
         dispatch(setFeedback(null));
-      }, 5000);
+      }, 3000);
       return () => clearTimeout(timer);
     }
   }, [feedback, dispatch]);
@@ -31,8 +31,8 @@ export default function Feedback({}: TAuthForm) {
     <Snackbar
       open
       anchorOrigin={{
-        vertical: 'top',
-        horizontal: 'right',
+        vertical: 'bottom',
+        horizontal: 'left',
       }}
       onClose={handleClose}
     >

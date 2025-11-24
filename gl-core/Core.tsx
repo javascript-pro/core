@@ -66,11 +66,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
   React.useEffect(() => {
     if (!feedbackTested) {
       const feedback: TFeedback = {
-        severity: 'success',
-        title: 'Hello',
-        onClose: () => {
-          console.log('do the thing');
-        },
+        severity: 'info',
+        title: 'Connecting...'
       };
       dispatch(setFeedback(feedback));
       dispatch(setDesignSystemKey('feedbackTested', true));

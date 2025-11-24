@@ -4,11 +4,11 @@ import * as React from 'react';
 import { useDispatch } from '../../../gl-core';
 import { auth } from '../../lib/firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
-import { useUser, setPaywallKey, SignOut } from '../Paywall';
+import { setPaywallKey } from '../Paywall';
 
 export default function Paywall() {
   const dispatch = useDispatch();
-  const user = useUser();
+  // const user = useUser();
 
   React.useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user: User | null) => {

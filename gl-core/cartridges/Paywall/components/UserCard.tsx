@@ -1,9 +1,9 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/Paywall/components/UserCard.tsx
 'use client';
 import * as React from 'react';
-import { Box, Avatar, IconButton, ButtonBase } from '@mui/material';
+import { Avatar, IconButton } from '@mui/material';
 import { useUser, usePaywall, setPaywallKey } from '../../Paywall';
-import { useDispatch, Icon } from '../../../../gl-core';
+import { useDispatch } from '../../../../gl-core';
 
 export default function UserCard() {
   const pw = usePaywall();
@@ -18,19 +18,19 @@ export default function UserCard() {
   if (!user) return null;
 
   const provider = user.providerData?.[0];
-  const displayName = user.displayName || provider?.displayName || '';
-  const email = user.email || provider?.email || '';
+  // const displayName = user.displayName || provider?.displayName || '';
+  // const email = user.email || provider?.email || '';
   const photoURL = user.photoURL || provider?.photoURL || '';
 
-  const providerId = provider?.providerId;
-  const fallbackIcon =
-    providerId === 'google.com'
-      ? 'google'
-      : providerId === 'github.com'
-        ? 'github'
-        : 'user';
+  // const providerId = provider?.providerId;
+  // const fallbackIcon =
+  //   providerId === 'google.com'
+  //     ? 'google'
+  //     : providerId === 'github.com'
+  //       ? 'github'
+  //       : 'user';
 
-  const showFallback = !photoURL;
+  // const showFallback = !photoURL;
 
   return (
     <>
