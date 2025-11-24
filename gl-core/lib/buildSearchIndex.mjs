@@ -1,4 +1,4 @@
-// /Users/goldlabel/GitHub/core/buildSearchIndex.mjs
+// /Users/goldlabel/GitHub/example-app/gl-core/lib/buildSearchIndex.mjs
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';

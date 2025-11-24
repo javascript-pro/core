@@ -6,7 +6,6 @@ import {
   DialogActions,
   DialogContent,
   IconButton,
-  // DialogTitle,
 } from '@mui/material';
 import { useDispatch, useIsMobile, Icon } from '../../../../gl-core';
 import {
@@ -14,13 +13,13 @@ import {
   setDesignSystemKey,
   MenuSystem,
 } from '../../DesignSystem';
-// import { useUser, Continue, User } from '../../Paywall';
+import { useNewContent } from '../../Uberedux';
 
 export default function SystemDialog() {
   const dispatch = useDispatch();
   const isMobile = useIsMobile();
-  // const user = useUser();
   const ds = useDesignSystem();
+  const newContent = useNewContent();
   const { fullScreen } = ds;
 
   const handleClose = () => {
@@ -43,7 +42,12 @@ export default function SystemDialog() {
         maxWidth={'sm'}
       >
         {/* <DialogTitle>{!user ? <Continue /> : <User />}</DialogTitle> */}
-        <DialogContent />
+        <DialogContent>
+          Here is new content
+          <pre style={{ fontSize: '10px' }}>
+            newContent: {JSON.stringify(newContent, null, 2)}
+          </pre>
+        </DialogContent>
         <DialogActions sx={{ display: 'block' }}>
           <MenuSystem />
         </DialogActions>

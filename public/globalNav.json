@@ -32,8 +32,7 @@
                   "hybrid",
                   "intellectual-property"
                 ],
-                "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years.\n\n How we work\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, c",
-                "newContent": false
+                "excerpt": "Corporate attitudes to remote working have changed dramatically in recent years.\n\n How we work\n\nMany businesses were hesitant to allow employees to work remotely, citing concerns about productivity, c"
               },
               {
                 "title": "Privacy & Cookies",
@@ -50,8 +49,7 @@
                   "trust",
                   "intellectual-property"
                 ],
-                "excerpt": "We don't use cookies\n\n Cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead de",
-                "newContent": false
+                "excerpt": "We don't use cookies\n\n Cookies\n\nWhile cookies have been a fundamental part of web development for many years and continue to serve important functions, there are some considerations that might lead de"
               },
               {
                 "title": "Terms & Conditions",
@@ -68,8 +66,7 @@
                   "trust",
                   "intellectual-property"
                 ],
-                "excerpt": "Liability boundaries, intellectualproperty ownership, and disputes\n\n Our Terms & Conditions\n\nDefine how this app should be used, what we’re responsible for, and what users can expect from the platform",
-                "newContent": false
+                "excerpt": "Liability boundaries, intellectualproperty ownership, and disputes\n\n Our Terms & Conditions\n\nDefine how this app should be used, what we’re responsible for, and what users can expect from the platform"
               },
               {
                 "title": "Work With Us",
@@ -82,8 +79,7 @@
                   "company",
                   "intellectual-property"
                 ],
-                "excerpt": "We take on a limited number of new projects each month\n\n Work With Us\n\nIf you need something done we’d love to hear about it. Find out if we're a . We're always looking for collaborators, contributors",
-                "newContent": false
+                "excerpt": "We take on a limited number of new projects each month\n\n Work With Us\n\nIf you need something done we’d love to hear about it. Find out if we're a . We're always looking for collaborators, contributors"
               },
               {
                 "title": "GDPR",
@@ -99,8 +95,7 @@
                   "terms",
                   "trust"
                 ],
-                "excerpt": "GDPR sets the rules for how we collect, store, and use personal data\n\n What does it mean?\n\nFor us it means we must minimise data collection, document what we process, and give users clear control over",
-                "newContent": false
+                "excerpt": "GDPR sets the rules for how we collect, store, and use personal data\n\n What does it mean?\n\nFor us it means we must minimise data collection, document what we process, and give users clear control over"
               }
             ],
             "icon": "company",
@@ -108,8 +103,7 @@
             "tags": [
               "intellectual-property"
             ],
-            "excerpt": "| Tel/WhatsApp  |  | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX\n\n[PageGrid thumbnails=\"no\" pages=\"/work/company/gdpr, /work/company/privacycookies, /work/company/term",
-            "newContent": false
+            "excerpt": "| Tel/WhatsApp  |  | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX\n\n[PageGrid thumbnails=\"no\" pages=\"/work/company/gdpr, /work/company/privacycookies, /work/company/term"
           },
           {
             "title": "Example App",
@@ -137,8 +131,7 @@
                       "cms",
                       "contentmanager"
                     ],
-                    "excerpt": "Manage content stored in a Firebase collection\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/ContentManager\" label=\"ContentManager\"]\n\nWe’re introducing a new cartri",
-                    "newContent": false
+                    "excerpt": "Manage content stored in a Firebase collection\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/ContentManager\" label=\"ContentManager\"]\n\nWe’re introducing a new cartri"
                   },
                   {
                     "title": "Design System",
@@ -147,8 +140,7 @@
                     "icon": "design",
                     "image": "/png/n64/test.png",
                     "type": "file",
-                    "excerpt": "Material UI is a React component library that provides a consistent design system, layout primitives, and readymade UI components\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore",
-                    "newContent": false
+                    "excerpt": "Material UI is a React component library that provides a consistent design system, layout primitives, and readymade UI components\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore"
                   },
                   {
                     "title": "Uberedux",
@@ -164,14 +156,12 @@
                       "State Management",
                       "Redux"
                     ],
-                    "excerpt": "Otherwise you'd be back in jQuery callback hell. Nobody wants that.\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Uberedux\" label=\"Uberedux\"]\n\nUberedux is a simple,",
-                    "newContent": false
+                    "excerpt": "Otherwise you'd be back in jQuery callback hell. Nobody wants that.\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Uberedux\" label=\"Uberedux\"]\n\nUberedux is a simple,"
                   }
                 ],
                 "icon": "cartridge",
                 "image": "/png/n64/test.png",
-                "excerpt": "Goldlabel is built on Cartridges\n\n[PageGrid pages=\"/work/exampleapp/docs/designsystem, /work/exampleapp/docs/uberedux, /work/exampleapp/docs/contentmanager\"]\n\nA cartridge is a selfcontained piece of a",
-                "newContent": false
+                "excerpt": "Goldlabel is built on Cartridges\n\n[PageGrid pages=\"/work/exampleapp/docs/designsystem, /work/exampleapp/docs/uberedux, /work/exampleapp/docs/contentmanager\"]\n\nA cartridge is a selfcontained piece of a"
               },
               {
                 "title": "Tutorial",
@@ -187,8 +177,7 @@
                     "icon": "examples",
                     "image": "/png/3rdParty/github_og.png",
                     "type": "file",
-                    "excerpt": "Get started with Goldlabel Core Open Source\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\n 🚀 Install\n\n1. Clone the repo\n\n\n\n2. Setup Environment\n\nCreate a  file in the root",
-                    "newContent": false
+                    "excerpt": "Get started with Goldlabel Core Open Source\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\n 🚀 Install\n\n1. Clone the repo\n\n\n\n2. Setup Environment\n\nCreate a  file in the root"
                   },
                   {
                     "title": ".env",
@@ -197,8 +186,7 @@
                     "icon": "examples",
                     "image": "/png/3rdParty/github_og.png",
                     "type": "file",
-                    "excerpt": "How environment files behave in a Next.js environment, including the practical traps that appear during development.\n\nEnvironment files in a Next.js project hold configuration values that shouldn’t li",
-                    "newContent": false
+                    "excerpt": "How environment files behave in a Next.js environment, including the practical traps that appear during development.\n\nEnvironment files in a Next.js project hold configuration values that shouldn’t li"
                   }
                 ],
                 "icon": "doc",
@@ -216,8 +204,7 @@
                   "NextJS",
                   "GitHub"
                 ],
-                "excerpt": "Each page focuses on a single part of the system\n\n Clone the public repository\n\nThis section walks through a minimal Goldlabel Core project from start to finish. Each page focuses on a single part of ",
-                "newContent": false
+                "excerpt": "Each page focuses on a single part of the system\n\n Clone the public repository\n\nThis section walks through a minimal Goldlabel Core project from start to finish. Each page focuses on a single part of "
               }
             ],
             "icon": "examples",
@@ -235,8 +222,7 @@
               "App Router",
               "GitHub"
             ],
-            "excerpt": "The app you are using is free to fork, explore, copy, hack, and reuse\n\nOpen Source and Free forever. It offers statically generated sites with Firestorepowered updates and a real admin panel. Built wi",
-            "newContent": false
+            "excerpt": "The app you are using is free to fork, explore, copy, hack, and reuse\n\nOpen Source and Free forever. It offers statically generated sites with Firestorepowered updates and a real admin panel. Built wi"
           },
           {
             "title": "Experience",
@@ -263,8 +249,7 @@
                   "bitcoin",
                   "malta"
                 ],
-                "excerpt": "Blockchain Crypto Casino\n\n In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online ga",
-                "newContent": false
+                "excerpt": "Blockchain Crypto Casino\n\n In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online ga"
               },
               {
                 "title": "Hertwig & Auer (2025)",
@@ -296,8 +281,7 @@
                   "react",
                   "javascript"
                 ],
-                "excerpt": "Feb to May 2016\n\n English/Chinese Project Management eLearning App\n\nBy 2015 React had evolved beyond an experiment. Facebook, Instagram, and Airbnb were using it at scale, and the opensource ecosystem",
-                "newContent": false
+                "excerpt": "Feb to May 2016\n\n English/Chinese Project Management eLearning App\n\nBy 2015 React had evolved beyond an experiment. Facebook, Instagram, and Airbnb were using it at scale, and the opensource ecosystem"
               },
               {
                 "title": "Boral (2018)",
@@ -311,8 +295,7 @@
                   "interview",
                   "boral"
                 ],
-                "excerpt": "GeoSpatial Fleet App\n\n React Developer, Aug 2018  Feb 2019, Sydney\n\nIt’s only been a few years since all of Boral’s business was still done on paper. When I joined the Sydney tech team in 2018, the co",
-                "newContent": false
+                "excerpt": "GeoSpatial Fleet App\n\n React Developer, Aug 2018  Feb 2019, Sydney\n\nIt’s only been a few years since all of Boral’s business was still done on paper. When I joined the Sydney tech team in 2018, the co"
               },
               {
                 "title": "Aligent (2016)",
@@ -328,8 +311,7 @@
                   "magento",
                   "e-commerce"
                 ],
-                "excerpt": "Magento PHP & Material Design System\n\n JavaScript Developer, Adelaide\n\nLead developer creating a front end React application for Cancer Council NSW. The application connecting to a WordPress driven CM",
-                "newContent": false
+                "excerpt": "Magento PHP & Material Design System\n\n JavaScript Developer, Adelaide\n\nLead developer creating a front end React application for Cancer Council NSW. The application connecting to a WordPress driven CM"
               }
             ],
             "icon": "case",
@@ -339,8 +321,7 @@
               "interview",
               "experience"
             ],
-            "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work/experience/dtrackt, /work/experience/aligent, /work/experience/hertwigauer, /work/experience/huawei, /work/experience/boral\", /work/experience/aligent\"]",
-            "newContent": false
+            "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work/experience/dtrackt, /work/experience/aligent, /work/experience/hertwigauer, /work/experience/huawei, /work/experience/boral\", /work/experience/aligent\"]"
           },
           {
             "title": "Skills",
@@ -376,8 +357,7 @@
                           "React",
                           "frameworks"
                         ],
-                        "excerpt": "When React appeared, the landscape was dominated by AngularJS, Backbone, and Knockout, all of which relied on twoway data binding and manual DOM updates.\n\nReact’s performance and simplicity stood out ",
-                        "newContent": false
+                        "excerpt": "When React appeared, the landscape was dominated by AngularJS, Backbone, and Knockout, all of which relied on twoway data binding and manual DOM updates.\n\nReact’s performance and simplicity stood out "
                       },
                       {
                         "title": "Hooks",
@@ -390,8 +370,7 @@
                           "React",
                           "hooks"
                         ],
-                        "excerpt": "In short, Hooks let React functions become stateful and reactive without classes\n\nAt a fundamental level, Hooks hook into React’s internal lifecycle and state system from within functional components.",
-                        "newContent": false
+                        "excerpt": "In short, Hooks let React functions become stateful and reactive without classes\n\nAt a fundamental level, Hooks hook into React’s internal lifecycle and state system from within functional components."
                       },
                       {
                         "title": "Our Experience",
@@ -407,8 +386,7 @@
                           "frameworks",
                           "china"
                         ],
-                        "excerpt": "Contract JavaScript Developer — Huawei Shenzhen, China — Feb 2016 to May 2016\n\nBy 2015–2016, React had evolved beyond an experiment — Facebook, Instagram, and Airbnb were using it at scale, and the op",
-                        "newContent": false
+                        "excerpt": "Contract JavaScript Developer — Huawei Shenzhen, China — Feb 2016 to May 2016\n\nBy 2015–2016, React had evolved beyond an experiment — Facebook, Instagram, and Airbnb were using it at scale, and the op"
                       }
                     ],
                     "icon": "js",
@@ -419,8 +397,7 @@
                       "React",
                       "frameworks"
                     ],
-                    "excerpt": "[ChildPages title=\"React\"]\n\nReact is a JavaScript library for building user interfaces, originally developed by Jordan Walke at Facebook and opensourced in 2013. It introduced a fundamentally new way ",
-                    "newContent": false
+                    "excerpt": "[ChildPages title=\"React\"]\n\nReact is a JavaScript library for building user interfaces, originally developed by Jordan Walke at Facebook and opensourced in 2013. It introduced a fundamentally new way "
                   },
                   {
                     "title": "Next.js",
@@ -445,8 +422,7 @@
                           "REST API",
                           "React"
                         ],
-                        "excerpt": "ServerSide Rendering (SSR) in Next.js means the HTML for a page is generated on the server on every request. The browser receives a fully formed page, then React hydrates it.\n\n What it solves\n\n Fast f",
-                        "newContent": false
+                        "excerpt": "ServerSide Rendering (SSR) in Next.js means the HTML for a page is generated on the server on every request. The browser receives a fully formed page, then React hydrates it.\n\n What it solves\n\n Fast f"
                       },
                       {
                         "title": "Static Site Generation (SSG)",
@@ -464,8 +440,7 @@
                           "REST API",
                           "React"
                         ],
-                        "excerpt": "Next.js’s Static Site Generation (SSG) means the HTML is generated at build time, not on each request. When the site is deployed, all pages are already prerendered as static HTML files and can be serv",
-                        "newContent": false
+                        "excerpt": "Next.js’s Static Site Generation (SSG) means the HTML is generated at build time, not on each request. When the site is deployed, all pages are already prerendered as static HTML files and can be serv"
                       }
                     ],
                     "icon": "js",
@@ -478,8 +453,7 @@
                       "REST API",
                       "React"
                     ],
-                    "excerpt": "Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with seamless backend capabilities, creating a unified developer experience.\n\n[PageGrid thumbnails=\"",
-                    "newContent": false
+                    "excerpt": "Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with seamless backend capabilities, creating a unified developer experience.\n\n[PageGrid thumbnails=\""
                   },
                   {
                     "title": "Node",
@@ -497,8 +471,7 @@
                       "React",
                       "frameworks"
                     ],
-                    "excerpt": "And then there was Node\n\nBack in the mid2000s, most of the web ran on PHP — powering WordPress, Drupal, Joomla — and developers often had to juggle PHP on the backend and JavaScript on the frontend. D",
-                    "newContent": false
+                    "excerpt": "And then there was Node\n\nBack in the mid2000s, most of the web ran on PHP — powering WordPress, Drupal, Joomla — and developers often had to juggle PHP on the backend and JavaScript on the frontend. D"
                   },
                   {
                     "title": "Vercel",
@@ -516,8 +489,7 @@
                       "REST API",
                       "React"
                     ],
-                    "excerpt": "Other services to deploy Next apps are available\n\nVercel created Next.js and runs the platform it was designed for. Deploys are instant, previews are automatic, and the hosting is globally fast withou",
-                    "newContent": false
+                    "excerpt": "Other services to deploy Next apps are available\n\nVercel created Next.js and runs the platform it was designed for. Deploys are instant, previews are automatic, and the hosting is globally fast withou"
                   },
                   {
                     "title": "TypeScript",
@@ -539,8 +511,7 @@
                           "TypeScript",
                           "React"
                         ],
-                        "excerpt": "TypeScript for the reluctant coder\n\nYou don’t have to love types, you just have to understand what they are and why they matter. If you come from design, UX, writing, or any other creative field, Java",
-                        "newContent": false
+                        "excerpt": "TypeScript for the reluctant coder\n\nYou don’t have to love types, you just have to understand what they are and why they matter. If you come from design, UX, writing, or any other creative field, Java"
                       },
                       {
                         "title": "Real World TypeScript",
@@ -555,8 +526,7 @@
                           "TypeScript",
                           "React"
                         ],
-                        "excerpt": "Sometimes there's a project where the existing codebase has become brittle, errorprone and crashheavy. Developers are regularly firefighting bugs that TypeScript could have prevented at compile time. ",
-                        "newContent": false
+                        "excerpt": "Sometimes there's a project where the existing codebase has become brittle, errorprone and crashheavy. Developers are regularly firefighting bugs that TypeScript could have prevented at compile time. "
                       },
                       {
                         "title": "Advanced TypeScript",
@@ -571,8 +541,7 @@
                           "TypeScript",
                           "React"
                         ],
-                        "excerpt": "[PageAd slug=\"/work/expertise/javascript/typescript/structuraltyping\"]\n\n[PageAd slug=\"/work/expertise/javascript/typescript/aliases\"]\n\n[PageAd slug=\"/work/expertise/javascript/typescript/uniontypes\"]\n",
-                        "newContent": false
+                        "excerpt": "[PageAd slug=\"/work/expertise/javascript/typescript/structuraltyping\"]\n\n[PageAd slug=\"/work/expertise/javascript/typescript/aliases\"]\n\n[PageAd slug=\"/work/expertise/javascript/typescript/uniontypes\"]\n"
                       },
                       {
                         "title": "Structural Typing",
@@ -587,8 +556,7 @@
                           "TypeScript",
                           "React"
                         ],
-                        "excerpt": "TypeScript’s type system is based on shape compatibility, not nominal typing. That means two types are considered compatible if their structure (shape) matches — not because they have the same declare",
-                        "newContent": false
+                        "excerpt": "TypeScript’s type system is based on shape compatibility, not nominal typing. That means two types are considered compatible if their structure (shape) matches — not because they have the same declare"
                       },
                       {
                         "title": "Interface vs Types",
@@ -603,8 +571,7 @@
                           "TypeScript",
                           "React"
                         ],
-                        "excerpt": "At first glance, they look identical\n\n\n\nBoth define a “shape” with an id and name. You can use either for variables, parameters, and return types. So why do both exist?\n\n Conceptual Difference\n\n Inter",
-                        "newContent": false
+                        "excerpt": "At first glance, they look identical\n\n\n\nBoth define a “shape” with an id and name. You can use either for variables, parameters, and return types. So why do both exist?\n\n Conceptual Difference\n\n Inter"
                       },
                       {
                         "title": "Unions and intersections",
@@ -619,8 +586,7 @@
                           "TypeScript",
                           "React"
                         ],
-                        "excerpt": "Union Types are one of TypeScript’s most powerful and flexible features. They let you describe a value that can be one of several types — a way to express this or that\n\n What a Union Type is\n\nA union ",
-                        "newContent": false
+                        "excerpt": "Union Types are one of TypeScript’s most powerful and flexible features. They let you describe a value that can be one of several types — a way to express this or that\n\n What a Union Type is\n\nA union "
                       }
                     ],
                     "icon": "js",
@@ -632,8 +598,7 @@
                       "React",
                       "frameworks"
                     ],
-                    "excerpt": "JavaScript was never meant for what became asked of it. It started life scripting image rollovers in the ‘90s — and somehow ended up running banks and billiondollar web apps.\n\nBy the early 2010s, the ",
-                    "newContent": false
+                    "excerpt": "JavaScript was never meant for what became asked of it. It started life scripting image rollovers in the ‘90s — and somehow ended up running banks and billiondollar web apps.\n\nBy the early 2010s, the "
                   },
                   {
                     "title": "Testing",
@@ -653,8 +618,7 @@
                       "Jest",
                       "Playwright"
                     ],
-                    "excerpt": "A Left looking approach\n\nA leftlooking approach in JavaScript testing should mean testing earlier in the development process before code reaches production. Using tools like Jest for unit and integrat",
-                    "newContent": false
+                    "excerpt": "A Left looking approach\n\nA leftlooking approach in JavaScript testing should mean testing earlier in the development process before code reaches production. Using tools like Jest for unit and integrat"
                   },
                   {
                     "title": "Vanilla JS (ES6+)",
@@ -668,8 +632,7 @@
                       "Vanilla JavaScript",
                       "TypeScript"
                     ],
-                    "excerpt": "When JavaScript needs to be everywhere instantly\n\nIn modern web engineering, Vanilla JavaScript is often dismissed as oldschool or underpowered. But at scale, especially across multiple domains or bra",
-                    "newContent": false
+                    "excerpt": "When JavaScript needs to be everywhere instantly\n\nIn modern web engineering, Vanilla JavaScript is often dismissed as oldschool or underpowered. But at scale, especially across multiple domains or bra"
                   }
                 ],
                 "icon": "js",
@@ -690,8 +653,7 @@
                   "Headless CMS",
                   "JSON"
                 ],
-                "excerpt": "We’ve been writing JavaScript since it was called ECMAScript.\n\n[PageGrid thumbnails=\"no\" pages=\"/work/skills/javascript/typescript, /work/skills/javascript/react, /work/skills/javascript/node, /work/s",
-                "newContent": false
+                "excerpt": "We’ve been writing JavaScript since it was called ECMAScript.\n\n[PageGrid thumbnails=\"no\" pages=\"/work/skills/javascript/typescript, /work/skills/javascript/react, /work/skills/javascript/node, /work/s"
               },
               {
                 "title": "Design",
@@ -711,8 +673,7 @@
                       "Design",
                       "Adobe"
                     ],
-                    "excerpt": "Adobe. The evolution of digital creation?\n\nBefore the web existed as a commercial medium, Adobe Photoshop was already shaping digital design. It became the gateway for an entire generation of early we",
-                    "newContent": false
+                    "excerpt": "Adobe. The evolution of digital creation?\n\nBefore the web existed as a commercial medium, Adobe Photoshop was already shaping digital design. It became the gateway for an entire generation of early we"
                   },
                   {
                     "title": "CSS",
@@ -727,8 +688,7 @@
                       "Tailwind",
                       "Bootstrap"
                     ],
-                    "excerpt": "CSS has been part of frontend development since the beginning\n\nIt shaped every era of layout, typography, and design on the web. The ecosystem around it expanded through countless methodologies and fr",
-                    "newContent": false
+                    "excerpt": "CSS has been part of frontend development since the beginning\n\nIt shaped every era of layout, typography, and design on the web. The ecosystem around it expanded through countless methodologies and fr"
                   },
                   {
                     "title": "Figma",
@@ -743,8 +703,7 @@
                       "Figma",
                       "Sketch"
                     ],
-                    "excerpt": "The earliest days of web design\n\nBack when the work meant slicing a designer’s static Photoshop layout into HTML, the tooling shifted constantly and the workflow followed every major design app of its",
-                    "newContent": false
+                    "excerpt": "The earliest days of web design\n\nBack when the work meant slicing a designer’s static Photoshop layout into HTML, the tooling shifted constantly and the workflow followed every major design app of its"
                   },
                   {
                     "title": "Material MUI",
@@ -756,8 +715,7 @@
                     "tags": [
                       "design"
                     ],
-                    "excerpt": "In the React ecosystem, no other design system sees the same breadth of adoption\n\nMaterial UI, commonly known as MUI, has grown into the most widely used React component library and design system. Its",
-                    "newContent": false
+                    "excerpt": "In the React ecosystem, no other design system sees the same breadth of adoption\n\nMaterial UI, commonly known as MUI, has grown into the most widely used React component library and design system. Its"
                   }
                 ],
                 "icon": "design",
@@ -768,8 +726,7 @@
                   "CSS",
                   "Adobe"
                 ],
-                "excerpt": "[PageGrid pages=\"/work/skills/design/adobe, /work/skills/design/css, /work/skills/design/figma, /work/skills/design/mui\"]",
-                "newContent": false
+                "excerpt": "[PageGrid pages=\"/work/skills/design/adobe, /work/skills/design/css, /work/skills/design/figma, /work/skills/design/mui\"]"
               },
               {
                 "title": "A.I.",
@@ -789,8 +746,7 @@
                       "ui",
                       "ai"
                     ],
-                    "excerpt": "How we help you take your AI product ideas from concept, through prototype to production\n\n From prototype to production\n\nAI agents need more than a good model — they need a front end that users can ac",
-                    "newContent": false
+                    "excerpt": "How we help you take your AI product ideas from concept, through prototype to production\n\n From prototype to production\n\nAI agents need more than a good model — they need a front end that users can ac"
                   },
                   {
                     "title": "Prompt Engineering",
@@ -803,8 +759,7 @@
                       "ui",
                       "ai"
                     ],
-                    "excerpt": "Prompt engineering is the art of designing clear, structured instructions that make AI features behave reliably inside your React app.\n\nPrompt engineering, from a React developer’s perspective, is the",
-                    "newContent": false
+                    "excerpt": "Prompt engineering is the art of designing clear, structured instructions that make AI features behave reliably inside your React app.\n\nPrompt engineering, from a React developer’s perspective, is the"
                   }
                 ],
                 "icon": "ai",
@@ -812,8 +767,7 @@
                 "tags": [
                   "AI"
                 ],
-                "excerpt": "\"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday\n\n[PageGrid pages=\"/work/skills/ai/promptengineering, /work/skills/ai/userinterfa",
-                "newContent": false
+                "excerpt": "\"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday\n\n[PageGrid pages=\"/work/skills/ai/promptengineering, /work/skills/ai/userinterfa"
               },
               {
                 "title": "Fullstack",
@@ -833,8 +787,7 @@
                       "clodevops",
                       "system uptime"
                     ],
-                    "excerpt": "You don’t choose a cloud platform. The client has one. You learn each by immersion\n\n The concept\n\nModern React apps rarely stand alone. They sit on top of:\n\n hosting\n auth\n storage\n databases\n APIs\n q",
-                    "newContent": false
+                    "excerpt": "You don’t choose a cloud platform. The client has one. You learn each by immersion\n\n The concept\n\nModern React apps rarely stand alone. They sit on top of:\n\n hosting\n auth\n storage\n databases\n APIs\n q"
                   },
                   {
                     "title": "Databases",
@@ -852,8 +805,7 @@
                       "PostgreSQL",
                       "MySQL"
                     ],
-                    "excerpt": "Choosing the right database still matters on every new project\n\n NoSQL for speed and agility\n\nTwo decades ago, most of our work sat on classic relational databases like MySQL and PostgreSQL. They powe",
-                    "newContent": false
+                    "excerpt": "Choosing the right database still matters on every new project\n\n NoSQL for speed and agility\n\nTwo decades ago, most of our work sat on classic relational databases like MySQL and PostgreSQL. They powe"
                   },
                   {
                     "title": "Git",
@@ -876,8 +828,7 @@
                       "tools",
                       "gitkraken"
                     ],
-                    "excerpt": "We use GitHub for everything.\n\nMost of the communication done between us and our clients during development is done through GitHub in the form of comments, tracking bugs and issues, pull resuests, rev",
-                    "newContent": false
+                    "excerpt": "We use GitHub for everything.\n\nMost of the communication done between us and our clients during development is done through GitHub in the form of comments, tracking bugs and issues, pull resuests, rev"
                   },
                   {
                     "title": "Turborepo",
@@ -892,8 +843,7 @@
                       "turborepo",
                       "packages"
                     ],
-                    "excerpt": "Fast, predictable build system with smart caching and pipeline orchestration\n\n Monorepos used to be painful\n\nSlow installs, duplicated dependencies, and build steps that scaled badly as a codebase gre",
-                    "newContent": false
+                    "excerpt": "Fast, predictable build system with smart caching and pipeline orchestration\n\n Monorepos used to be painful\n\nSlow installs, duplicated dependencies, and build steps that scaled badly as a codebase gre"
                   },
                   {
                     "title": "CI/CD",
@@ -910,8 +860,7 @@
                       "GitHub",
                       "Vercel"
                     ],
-                    "excerpt": "Fully automated CI/CD pipelines that run every time we push code\n\n Ship reliably, fast, and with confidence\n\nWhy have these tools have become essential to modern development?\n\nOver the last two decade",
-                    "newContent": false
+                    "excerpt": "Fully automated CI/CD pipelines that run every time we push code\n\n Ship reliably, fast, and with confidence\n\nWhy have these tools have become essential to modern development?\n\nOver the last two decade"
                   },
                   {
                     "title": "Blockchain",
@@ -931,8 +880,7 @@
                       "bitcoin",
                       "malta"
                     ],
-                    "excerpt": "Blockchain Crypto Casino\n\n In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online ga",
-                    "newContent": false
+                    "excerpt": "Blockchain Crypto Casino\n\n In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online ga"
                   },
                   {
                     "title": "GraphQL",
@@ -946,8 +894,7 @@
                       "api",
                       "restful"
                     ],
-                    "excerpt": "Things that actually matter daytoday as a React developer using GraphQL\n\n 1. You fetch exactly what you need\n\nNo overfetching, no underfetching.\nComponents request the precise fields they use, nothing",
-                    "newContent": false
+                    "excerpt": "Things that actually matter daytoday as a React developer using GraphQL\n\n 1. You fetch exactly what you need\n\nNo overfetching, no underfetching.\nComponents request the precise fields they use, nothing"
                   },
                   {
                     "title": "RESTful APIs",
@@ -962,8 +909,7 @@
                       "restful",
                       "endpoints"
                     ],
-                    "excerpt": "Goldlabel Public API\n\n glapi/flickr endpoints",
-                    "newContent": false
+                    "excerpt": "Goldlabel Public API\n\n glapi/flickr endpoints"
                   },
                   {
                     "title": "Docker & Kubernetes",
@@ -983,8 +929,7 @@
                       "bitcoin",
                       "malta"
                     ],
-                    "excerpt": "Why use Docker\n\nDocker is process heavy. It can feel like you’re running a small datacentre on your laptop. But once a competent DevOps engineer lays out good images and clean Compose files, the payof",
-                    "newContent": false
+                    "excerpt": "Why use Docker\n\nDocker is process heavy. It can feel like you’re running a small datacentre on your laptop. But once a competent DevOps engineer lays out good images and clean Compose files, the payof"
                   }
                 ],
                 "icon": "techstack",
@@ -993,8 +938,7 @@
                   "non-javascript",
                   "techstack"
                 ],
-                "excerpt": "[PageGrid pages=\"/work/skills/fullstack/cicd, /work/skills/fullstack/databases, /work/skills/fullstack/devops, /work/skills/fullstack/docker, /work/skills/fullstack/git, /work/skills/fullstack/graphql",
-                "newContent": false
+                "excerpt": "[PageGrid pages=\"/work/skills/fullstack/cicd, /work/skills/fullstack/databases, /work/skills/fullstack/devops, /work/skills/fullstack/docker, /work/skills/fullstack/git, /work/skills/fullstack/graphql"
               }
             ],
             "icon": "techstack",
@@ -1004,8 +948,7 @@
               "fields",
               "work"
             ],
-            "excerpt": "Working across the full JavaScript stack to help understand every perspective from interface to infrastructure\n\n[PageGrid pages=\"/work/skills/javascript, /work/skills/fullstack, /work/skills/ai, /work",
-            "newContent": false
+            "excerpt": "Working across the full JavaScript stack to help understand every perspective from interface to infrastructure\n\n[PageGrid pages=\"/work/skills/javascript, /work/skills/fullstack, /work/skills/ai, /work"
           },
           {
             "title": "CV",
@@ -1019,8 +962,7 @@
               "resume",
               "cv"
             ],
-            "excerpt": "The traditional CV is a blunt tool, but it still serves a purpose. It sits somewhere between a business card and a phone call, widely used yet constrained by format. The core challenge is balancing le",
-            "newContent": false
+            "excerpt": "The traditional CV is a blunt tool, but it still serves a purpose. It sits somewhere between a business card and a phone call, widely used yet constrained by format. The core challenge is balancing le"
           }
         ],
         "icon": "work",
@@ -1039,8 +981,7 @@
           "NextJS",
           "Headless CMS"
         ],
-        "excerpt": "Goldlabel builds and ships modern web apps for clients who need real results fast\n\n[PageGrid thumbnails=\"no\" pages=\"/work/about/hyperlinkresume, /work/about, /work/skills, /work/experience, /work/exam",
-        "newContent": false
+        "excerpt": "Goldlabel builds and ships modern web apps for clients who need real results fast\n\n[PageGrid thumbnails=\"no\" pages=\"/work/about/hyperlinkresume, /work/about, /work/skills, /work/experience, /work/exam"
       },
       {
         "title": "Life",
@@ -1144,8 +1085,7 @@
                   "Chinese",
                   "hard sci-fi"
                 ],
-                "excerpt": "Cixin Liu is significant because he brought Chinese hard scifi to a global audience, blending rigorous physics, grand cosmic scale, and philosophical depth. His work revitalised hard scifi worldwide, ",
-                "newContent": false
+                "excerpt": "Cixin Liu is significant because he brought Chinese hard scifi to a global audience, blending rigorous physics, grand cosmic scale, and philosophical depth. His work revitalised hard scifi worldwide, "
               },
               {
                 "title": "R. F. Kuang",
@@ -1165,8 +1105,7 @@
                       "Speculative fiction",
                       "alternative history"
                     ],
-                    "excerpt": "or... the Necessity of Violence\n\nIt is an alternative history novel, set in a fantastical version of Oxford in 1830s England. In the second week of September 2022, Babel was placed at the top spot on ",
-                    "newContent": false
+                    "excerpt": "or... the Necessity of Violence\n\nIt is an alternative history novel, set in a fantastical version of Oxford in 1830s England. In the second week of September 2022, Babel was placed at the top spot on "
                   },
                   {
                     "title": "Katabasis",
@@ -1180,8 +1119,7 @@
                       "alternative history",
                       "fantasy"
                     ],
-                    "excerpt": "Katabasis is a 2025 fantasy novel by American writer R. F. Kuang. It was released on August 26, 2025. The novel follows two magicians, doctoral candidates, who must venture into hell to save their the",
-                    "newContent": false
+                    "excerpt": "Katabasis is a 2025 fantasy novel by American writer R. F. Kuang. It was released on August 26, 2025. The novel follows two magicians, doctoral candidates, who must venture into hell to save their the"
                   }
                 ],
                 "icon": "books",
@@ -1190,8 +1128,7 @@
                   "Speculative fiction",
                   "alternative history"
                 ],
-                "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/balance/books/rfkuang/babel, /balance/books/rfkuang/katabasis\"]\n\nR. F. Kuang was born on May 29th, 1996, in Guangzhou, China. She immigrated to the United States wit",
-                "newContent": false
+                "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/balance/books/rfkuang/babel, /balance/books/rfkuang/katabasis\"]\n\nR. F. Kuang was born on May 29th, 1996, in Guangzhou, China. She immigrated to the United States wit"
               },
               {
                 "title": "Douglas Coupland",
@@ -1207,8 +1144,7 @@
                     "icon": "books",
                     "image": "https://live.staticflickr.com/65535/54736833001_ef9c5f4b57_c.jpg",
                     "type": "file",
-                    "excerpt": "The term Generation X acquired a modern application after the release of Generation X: Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Glossary\n\nMcJob A lo",
-                    "newContent": false
+                    "excerpt": "The term Generation X acquired a modern application after the release of Generation X: Tales for an Accelerated Culture, a 1991 novel written by Canadian author Douglas Coupland\n\n Glossary\n\nMcJob A lo"
                   },
                   {
                     "title": "Microserfs",
@@ -1217,14 +1153,12 @@
                     "icon": "books",
                     "image": "https://live.staticflickr.com/65535/54736833001_ef9c5f4b57_c.jpg",
                     "type": "file",
-                    "excerpt": "Earliest piece of fiction to centre coders as modern workers with rich inner lives\n\nMicroserfs (1995) captures a moment in tech history that feels both distant and strangely familiar. Coupland wrote i",
-                    "newContent": false
+                    "excerpt": "Earliest piece of fiction to centre coders as modern workers with rich inner lives\n\nMicroserfs (1995) captures a moment in tech history that feels both distant and strangely familiar. Coupland wrote i"
                   }
                 ],
                 "icon": "books",
                 "image": "https://live.staticflickr.com/65535/54736833001_ef9c5f4b57_c.jpg",
-                "excerpt": "Douglas Coupland is a Canadian novelist and artist, known for capturing contemporary culture, technology, and the malaise of modern life with wit and satirical insight. His writing often blends pop cu",
-                "newContent": false
+                "excerpt": "Douglas Coupland is a Canadian novelist and artist, known for capturing contemporary culture, technology, and the malaise of modern life with wit and satirical insight. His writing often blends pop cu"
               },
               {
                 "title": "Neuromancer",
@@ -1244,8 +1178,7 @@
                   "Audiobook",
                   "Novels"
                 ],
-                "excerpt": "Neuromancer's (1984) portrayal of AIs striving for autonomy foreshadowed realworld debates. Neuromancer didn’t predict the future—it just defined how to imagine it\n\n Why Neuromancer is Seminal in SciF",
-                "newContent": false
+                "excerpt": "Neuromancer's (1984) portrayal of AIs striving for autonomy foreshadowed realworld debates. Neuromancer didn’t predict the future—it just defined how to imagine it\n\n Why Neuromancer is Seminal in SciF"
               },
               {
                 "title": "Tom Robbins",
@@ -1254,8 +1187,7 @@
                 "icon": "books",
                 "image": "https://live.staticflickr.com/65535/54735999657_5ec054b3e2_b.jpg",
                 "type": "file",
-                "excerpt": "Even Cowgirls Get the Blues follows Sissy Hankshaw, a hitchhiker born with enormous thumbs, as she drifts through America’s counterculture. It blends surreal humour, feminism, and mysticism, centring ",
-                "newContent": false
+                "excerpt": "Even Cowgirls Get the Blues follows Sissy Hankshaw, a hitchhiker born with enormous thumbs, as she drifts through America’s counterculture. It blends surreal humour, feminism, and mysticism, centring "
               }
             ],
             "icon": "books",
@@ -1267,8 +1199,7 @@
               "douglas coupland",
               "Cixin Liu"
             ],
-            "excerpt": "A curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction\n\n[PageGrid thumbnails=\"yes\" pages=\"/life/books/cixinliu, /life/books/tomrobbins, /life",
-            "newContent": false
+            "excerpt": "A curated collection of contemporary literature, showcasing some of the most distinctive voices in modern fiction\n\n[PageGrid thumbnails=\"yes\" pages=\"/life/books/cixinliu, /life/books/tomrobbins, /life"
           },
           {
             "title": "Diving",
@@ -1284,8 +1215,7 @@
                 "icon": "diving",
                 "image": "/png/n64/diving.png",
                 "type": "file",
-                "excerpt": "I’ve been diving for over 25 years. I’m not an instructor, and I don’t dive every weekend — but it’s something that’s been part of my life for a long time. I trained as a PADI Divemaster (though my ce",
-                "newContent": false
+                "excerpt": "I’ve been diving for over 25 years. I’m not an instructor, and I don’t dive every weekend — but it’s something that’s been part of my life for a long time. I trained as a PADI Divemaster (though my ce"
               },
               {
                 "title": "Why not dive?",
@@ -1294,14 +1224,12 @@
                 "icon": "diving",
                 "image": "/png/n64/diving.png",
                 "type": "file",
-                "excerpt": "You might die. You have to mitigate that posiibility, yeh.\n\nScuba diving takes you into an environment that does not want you there. One mistake—one second of panic, one lapse in awareness—and water w",
-                "newContent": false
+                "excerpt": "You might die. You have to mitigate that posiibility, yeh.\n\nScuba diving takes you into an environment that does not want you there. One mistake—one second of panic, one lapse in awareness—and water w"
               }
             ],
             "icon": "diving",
             "image": "https://live.staticflickr.com/65535/54936056240_8d8358141c_b.jpg",
-            "excerpt": "[PageGrid pages=\"/life/diving/whydive, /life/diving/whynotdive\"]",
-            "newContent": false
+            "excerpt": "[PageGrid pages=\"/life/diving/whydive, /life/diving/whynotdive\"]"
           },
           {
             "title": "Food",
@@ -1317,8 +1245,7 @@
                 "icon": "food",
                 "image": "/jpg/wei-zang/wei-zangs-food.jpg",
                 "type": "file",
-                "excerpt": "When we bladdy give it some, we Apply max heat to bring the food to max temperature as quickly as possible.\n\n When to switch it off\n\nIf you were to bladdy give it some and not switch it off, it would ",
-                "newContent": false
+                "excerpt": "When we bladdy give it some, we Apply max heat to bring the food to max temperature as quickly as possible.\n\n When to switch it off\n\nIf you were to bladdy give it some and not switch it off, it would "
               },
               {
                 "title": "Air Fried Peppers",
@@ -1334,8 +1261,7 @@
                   "air fryer",
                   "peppers"
                 ],
-                "excerpt": "2 Large peppers (capsicums)\n 1 125g pack of mozzarella\n Enough of your best, most delicious bolognaise to fill the peppers\n\n STEP 1\n\nPrepare Air Fryer pan. Line it with tinfoil if you want to keep it ",
-                "newContent": false
+                "excerpt": "2 Large peppers (capsicums)\n 1 125g pack of mozzarella\n Enough of your best, most delicious bolognaise to fill the peppers\n\n STEP 1\n\nPrepare Air Fryer pan. Line it with tinfoil if you want to keep it "
               },
               {
                 "title": "Banana Bread",
@@ -1344,8 +1270,7 @@
                 "icon": "food",
                 "image": "/jpg/wei-zang/wei-zangs-food.jpg",
                 "type": "file",
-                "excerpt": "125g Butter\n 175g Brown sugar\n 1 tsp Vanilla extract or paste\n 3 Eggs\n 2 Cups mashed banana\n 255g Plain flour\n 1 tsp Baking powder\n 1 tsp Bicarb of (baking) soda\n 1 tsp Ground cinnamon\n ⅓ CUP (115g) G",
-                "newContent": false
+                "excerpt": "125g Butter\n 175g Brown sugar\n 1 tsp Vanilla extract or paste\n 3 Eggs\n 2 Cups mashed banana\n 255g Plain flour\n 1 tsp Baking powder\n 1 tsp Bicarb of (baking) soda\n 1 tsp Ground cinnamon\n ⅓ CUP (115g) G"
               },
               {
                 "title": "Beef Wellie",
@@ -1354,8 +1279,7 @@
                 "icon": "food",
                 "image": "https://live.staticflickr.com/65535/54933884869_f82145fd92_b.jpg",
                 "type": "file",
-                "excerpt": "Ein Beef Wellington ist ein klassisch britisches Festgericht: Rinderfilet, umhüllt von Duxelles und Schinken, in Blätterteig gebacken. Edler SonntagsbratenCharakter, tief verwurzelt in englischer Küch",
-                "newContent": false
+                "excerpt": "Ein Beef Wellington ist ein klassisch britisches Festgericht: Rinderfilet, umhüllt von Duxelles und Schinken, in Blätterteig gebacken. Edler SonntagsbratenCharakter, tief verwurzelt in englischer Küch"
               },
               {
                 "title": "Lemon Meringue Pie",
@@ -1364,8 +1288,7 @@
                 "icon": "food",
                 "image": "/jpg/wei-zang/wei-zangs-food.jpg",
                 "type": "file",
-                "excerpt": "\"Lemonading\" is an actual word that even people on Radio 4 use. So when life gives you lemons...\n\n Ingredients\n\n For the pastry\n\n 4 oz (110 g) plain flour, plus a little extra for rolling out\n a pinch",
-                "newContent": false
+                "excerpt": "\"Lemonading\" is an actual word that even people on Radio 4 use. So when life gives you lemons...\n\n Ingredients\n\n For the pastry\n\n 4 oz (110 g) plain flour, plus a little extra for rolling out\n a pinch"
               },
               {
                 "title": "Nasi Goreng",
@@ -1388,14 +1311,12 @@
                   "tamarind",
                   "lime"
                 ],
-                "excerpt": "Nasi Goreng is an Indonesian dish made from leftover rice stirfried with garlic, shallots, chilli, and sweet soy sauce (kecap manis). Often enriched with prawns, chicken, or beef. Usually finished wit",
-                "newContent": false
+                "excerpt": "Nasi Goreng is an Indonesian dish made from leftover rice stirfried with garlic, shallots, chilli, and sweet soy sauce (kecap manis). Often enriched with prawns, chicken, or beef. Usually finished wit"
               }
             ],
             "icon": "food",
             "image": "/jpg/wei-zang/wei-zangs-food.jpg",
-            "excerpt": "You want a recipe? The interweb's full of them. This is how I cook\n\n[PageGrid pages=\"/life/food/bladdygiveitsome, /life/food/nasigoreng, /life/food/airfriedpeppers, /life/food/bananabread, /life/food/",
-            "newContent": false
+            "excerpt": "You want a recipe? The interweb's full of them. This is how I cook\n\n[PageGrid pages=\"/life/food/bladdygiveitsome, /life/food/nasigoreng, /life/food/airfriedpeppers, /life/food/bananabread, /life/food/"
           },
           {
             "title": "Aquaponics",
@@ -1411,14 +1332,12 @@
                 "icon": "fish",
                 "image": "/png/n64/hippy.png",
                 "type": "file",
-                "excerpt": "What  \nAquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closedloop system.\n\nWho  \nIdeal for urban growers, hobbyis",
-                "newContent": false
+                "excerpt": "What  \nAquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closedloop system.\n\nWho  \nIdeal for urban growers, hobbyis"
               }
             ],
             "icon": "fish",
             "image": "/png/n64/hippy.png",
-            "excerpt": "Aquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closedloop system.\n\n[PageGrid thumbnails=\"no\" pages=\"/life/aquapo",
-            "newContent": false
+            "excerpt": "Aquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closedloop system.\n\n[PageGrid thumbnails=\"no\" pages=\"/life/aquapo"
           },
           {
             "title": "Motorbikes",
@@ -1429,14 +1348,12 @@
             "children": [],
             "icon": "bike",
             "image": "https://live.staticflickr.com/65535/54926888281_024d3ed9ee_o.jpg",
-            "excerpt": "“It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a motorbike.”\n\n― Jane Austen, Pride and Prejudice",
-            "newContent": false
+            "excerpt": "“It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a motorbike.”\n\n― Jane Austen, Pride and Prejudice"
           }
         ],
         "icon": "life",
         "image": "https://live.staticflickr.com/65535/54929859240_2873323696_b.jpg",
-        "excerpt": "⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a 1991 novel written by Canadian author Douglas Coupland\n\nI work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing ",
-        "newContent": false
+        "excerpt": "⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a 1991 novel written by Canadian author Douglas Coupland\n\nI work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing "
       },
       {
         "title": "Balance",
@@ -1454,8 +1371,7 @@
             "children": [],
             "icon": "photo",
             "image": "https://live.staticflickr.com/65535/54940372447_3ca7baef00_b.jpg",
-            "excerpt": "",
-            "newContent": false
+            "excerpt": ""
           },
           {
             "title": "Film",
@@ -1470,8 +1386,7 @@
                 "order": 10,
                 "icon": "film",
                 "type": "file",
-                "excerpt": "[YouTube src=\"https://youtu.be/uPDem3qOUaU\"]",
-                "newContent": false
+                "excerpt": "[YouTube src=\"https://youtu.be/uPDem3qOUaU\"]"
               },
               {
                 "title": "Chamonix Freeride Day",
@@ -1479,8 +1394,7 @@
                 "order": 10,
                 "icon": "film",
                 "type": "file",
-                "excerpt": "The death sport capital of the world\n\n[YouTube src=\"https://youtu.be/FtcOeCLt838\"]\n\nChamonix Mont Blanc, France. The death sport and freeskiing capital of the world. This is the closing day party on t",
-                "newContent": false
+                "excerpt": "The death sport capital of the world\n\n[YouTube src=\"https://youtu.be/FtcOeCLt838\"]\n\nChamonix Mont Blanc, France. The death sport and freeskiing capital of the world. This is the closing day party on t"
               },
               {
                 "title": "Protected",
@@ -1488,8 +1402,7 @@
                 "order": 10,
                 "icon": "film",
                 "type": "file",
-                "excerpt": "fuckthegovmint\n\n[YouTube src=\"https://youtu.be/2TBkoSBfCc\"]\n\nWhy do the protected  \nneed to be protected  \nfrom the unprotected  \nby forcing the unprotected  \nto use the protection  \nthat didn't prote",
-                "newContent": false
+                "excerpt": "fuckthegovmint\n\n[YouTube src=\"https://youtu.be/2TBkoSBfCc\"]\n\nWhy do the protected  \nneed to be protected  \nfrom the unprotected  \nby forcing the unprotected  \nto use the protection  \nthat didn't prote"
               },
               {
                 "title": "It's Not Who You Know",
@@ -1497,8 +1410,7 @@
                 "order": 10,
                 "icon": "film",
                 "type": "file",
-                "excerpt": "The final film took several weeks to produce, filming on the underground, rendering 3D animation and creating some original titles in flash.\n\n[YouTube src=\"https://www.youtube.com/watch?v=Qe2ZLYzQToQ\"",
-                "newContent": false
+                "excerpt": "The final film took several weeks to produce, filming on the underground, rendering 3D animation and creating some original titles in flash.\n\n[YouTube src=\"https://www.youtube.com/watch?v=Qe2ZLYzQToQ\""
               },
               {
                 "title": "James Dean",
@@ -1506,8 +1418,7 @@
                 "order": 10,
                 "icon": "film",
                 "type": "file",
-                "excerpt": "[YouTube src=\"https://youtu.be/N3hz76MR5ao\"]",
-                "newContent": false
+                "excerpt": "[YouTube src=\"https://youtu.be/N3hz76MR5ao\"]"
               },
               {
                 "title": "Who is calling whom moronic?",
@@ -1515,13 +1426,11 @@
                 "order": 10,
                 "icon": "film",
                 "type": "file",
-                "excerpt": "Who is calling whom moronic?\n\n[YouTube src=\"https://youtu.be/vWl2NLY6NaQ\"]",
-                "newContent": false
+                "excerpt": "Who is calling whom moronic?\n\n[YouTube src=\"https://youtu.be/vWl2NLY6NaQ\"]"
               }
             ],
             "icon": "film",
-            "excerpt": "[PageGrid pages=\"/balance/film/fuckthegovmint, /balance/film/averybritishprotest, /balance/film/jamesdean, /balance/film/moronic, /balance/film/inwyk, /balance/film/freerideday\"]",
-            "newContent": false
+            "excerpt": "[PageGrid pages=\"/balance/film/fuckthegovmint, /balance/film/averybritishprotest, /balance/film/jamesdean, /balance/film/moronic, /balance/film/inwyk, /balance/film/freerideday\"]"
           },
           {
             "title": "Words",
@@ -1551,8 +1460,7 @@
                         "icon": "van",
                         "image": "https://live.staticflickr.com/65535/53998963131_bf0cb94288_b.jpg",
                         "type": "file",
-                        "excerpt": "Where I can understand the advertising",
-                        "newContent": false
+                        "excerpt": "Where I can understand the advertising"
                       },
                       {
                         "title": "France",
@@ -1561,8 +1469,7 @@
                         "icon": "van",
                         "image": "https://live.staticflickr.com/65535/54458539144_1d61fc9025_b.jpg",
                         "type": "file",
-                        "excerpt": "Where nothing works",
-                        "newContent": false
+                        "excerpt": "Where nothing works"
                       },
                       {
                         "title": "Belgium",
@@ -1571,8 +1478,7 @@
                         "icon": "van",
                         "image": "https://live.staticflickr.com/65535/54369337224_3278c64992_b.jpg",
                         "type": "file",
-                        "excerpt": "Where wars were",
-                        "newContent": false
+                        "excerpt": "Where wars were"
                       },
                       {
                         "title": "Germany",
@@ -1581,8 +1487,7 @@
                         "icon": "van",
                         "image": "https://live.staticflickr.com/65535/54873111678_2633c4ba43_b.jpg",
                         "type": "file",
-                        "excerpt": "Where everything works",
-                        "newContent": false
+                        "excerpt": "Where everything works"
                       },
                       {
                         "title": "Spain",
@@ -1591,8 +1496,7 @@
                         "icon": "van",
                         "image": "https://live.staticflickr.com/65535/54548563778_406a5e74b2_b.jpg",
                         "type": "file",
-                        "excerpt": "Where they don't do much",
-                        "newContent": false
+                        "excerpt": "Where they don't do much"
                       },
                       {
                         "title": "Portugal",
@@ -1601,13 +1505,11 @@
                         "icon": "van",
                         "image": "https://live.staticflickr.com/65535/54639869696_b8a3cdb0de_b.jpg",
                         "type": "file",
-                        "excerpt": "Where they talk funny",
-                        "newContent": false
+                        "excerpt": "Where they talk funny"
                       }
                     ],
                     "icon": "van",
-                    "excerpt": "[GoogleMap src=\"https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=001321\"]",
-                    "newContent": false
+                    "excerpt": "[GoogleMap src=\"https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=001321\"]"
                   },
                   {
                     "title": "Google",
@@ -1615,8 +1517,7 @@
                     "order": 10,
                     "icon": "van",
                     "type": "file",
-                    "excerpt": "2025 Map\n\n[GoogleMap src=\"https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=001321\"]",
-                    "newContent": false
+                    "excerpt": "2025 Map\n\n[GoogleMap src=\"https://www.google.com/maps/d/u/0/embed?mid=18Hp21Ko6VrmMNQsvF6zELzwJbfYAyuc&ehbc=001321\"]"
                   },
                   {
                     "title": "Vanlife",
@@ -1626,14 +1527,12 @@
                     "type": "folder",
                     "children": [],
                     "icon": "van",
-                    "excerpt": "Vanlife (noun)\n\n A lifestyle built around living or traveling in a converted van, often equipped with a bed, kitchen, and storage, sometimes a bathroom.\n\n The practice of turning a vehicle into both h",
-                    "newContent": false
+                    "excerpt": "Vanlife (noun)\n\n A lifestyle built around living or traveling in a converted van, often equipped with a bed, kitchen, and storage, sometimes a bathroom.\n\n The practice of turning a vehicle into both h"
                   }
                 ],
                 "icon": "van",
                 "image": "https://live.staticflickr.com/65535/54357493661_c102e19402_b.jpg",
-                "excerpt": "Once upon a time there was a little zeppelin. That's what it felt like to drive. No power, just a big bloaty white blob floating about all over the road.\n\nIt's quite tall too. First thing I did is to ",
-                "newContent": false
+                "excerpt": "Once upon a time there was a little zeppelin. That's what it felt like to drive. No power, just a big bloaty white blob floating about all over the road.\n\nIt's quite tall too. First thing I did is to "
               },
               {
                 "title": "Not Here To Fuck Spiders",
@@ -1653,8 +1552,7 @@
                       "punk",
                       "bez"
                     ],
-                    "excerpt": "Over time, her real name eroded like an old raster image losing resolution, smoothed away by repetition until even she couldn’t recall what it had been. HR still had it on file, but it felt like a rel",
-                    "newContent": false
+                    "excerpt": "Over time, her real name eroded like an old raster image losing resolution, smoothed away by repetition until even she couldn’t recall what it had been. HR still had it on file, but it felt like a rel"
                   },
                   {
                     "title": "Dog",
@@ -1663,26 +1561,22 @@
                     "icon": "bug",
                     "image": "/jpg/puppy-fing.jpg",
                     "type": "file",
-                    "excerpt": "I put an Attenborough series on for the dogs. Later I notice there’s a polar bear and a baby seal on the TV. I look at the doggy. He's got genuine concern in his eyes which also say \"'at puppy fing’s ",
-                    "newContent": false
+                    "excerpt": "I put an Attenborough series on for the dogs. Later I notice there’s a polar bear and a baby seal on the TV. I look at the doggy. He's got genuine concern in his eyes which also say \"'at puppy fing’s "
                   }
                 ],
                 "icon": "bug",
                 "image": "https://live.staticflickr.com/65535/54938576927_22aaccb161_b.jpg",
-                "excerpt": "Oh we ARE? We are here to fuck spiders?\n\n Chapter 1\n\nAs far back as I can remember I knew that to play by the rules meant losing. I am Wei Zang and this is my story. Some of it is true\n\nJudging from t",
-                "newContent": false
+                "excerpt": "Oh we ARE? We are here to fuck spiders?\n\n Chapter 1\n\nAs far back as I can remember I knew that to play by the rules meant losing. I am Wei Zang and this is my story. Some of it is true\n\nJudging from t"
               }
             ],
             "icon": "writing",
             "image": "https://live.staticflickr.com/65535/54935913815_ed25e30042_b.jpg",
-            "excerpt": "Snoopy’s line “It was a dark and stormy night…” is a deliberate parody of the famously bad opening sentence from Edward BulwerLytton’s 1830 novel Paul Clifford. That sentence became a cultural shortha",
-            "newContent": false
+            "excerpt": "Snoopy’s line “It was a dark and stormy night…” is a deliberate parody of the famously bad opening sentence from Edward BulwerLytton’s 1830 novel Paul Clifford. That sentence became a cultural shortha"
           }
         ],
         "icon": "balance",
         "image": "https://live.staticflickr.com/65535/52538111215_c3a5b085b8_b.jpg",
-        "excerpt": "If you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are \n\n[PageGrid thumbnails=\"no\" pages=\"/balance/pictures, /balance/film, /balance/words\"]",
-        "newContent": false
+        "excerpt": "If you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are \n\n[PageGrid thumbnails=\"no\" pages=\"/balance/pictures, /balance/film, /balance/words\"]"
       }
     ],
     "icon": "home",
@@ -1716,7 +1610,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work, /life, /balance\"]",
-    "newContent": false
+    "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work, /life, /balance\"]"
   }
 ]
