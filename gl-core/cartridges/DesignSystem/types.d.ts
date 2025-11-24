@@ -10,7 +10,6 @@ export type TFeedback = {
   severity?: TSeverity;
   title?: string;
   description?: string;
-  onClose?: () => void;
 } | null;
 
 export interface TDesignSystemState {

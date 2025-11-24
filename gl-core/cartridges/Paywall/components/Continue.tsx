@@ -12,9 +12,11 @@ import {
   signInWithPopup,
 } from 'firebase/auth';
 import { auth } from '../../../lib/firebase';
-import { Icon } from '../../../../gl-core';
+import { Icon, useDispatch } from '../../../../gl-core';
+import { setFeedback } from '../../DesignSystem';
 
 export default function Continue() {
+  const dispatch = useDispatch();
   const [user, setUser] = React.useState<User | null>(null);
 
   React.useEffect(() => onAuthStateChanged(auth, (u) => setUser(u)), []);
@@ -24,7 +26,11 @@ export default function Continue() {
     try {
       await signInWithPopup(auth, new GoogleAuthProvider());
     } catch (err) {
-      alert((err as Error).message);
+      dispatch(setFeedback({
+        severity: 'error',
+        title: 'Problem signing into Google',
+        description: (err as Error).message,
+      }))
     }
   };
 
@@ -32,7 +38,11 @@ export default function Continue() {
     try {
       await signInWithPopup(auth, new FacebookAuthProvider());
     } catch (err) {
-      alert((err as Error).message);
+      dispatch(setFeedback({
+        severity: 'error',
+        title: 'Problem signing into Facebook',
+        description: (err as Error).message,
+      }))
     }
   };
 
@@ -40,7 +50,11 @@ export default function Continue() {
     try {
       await signInWithPopup(auth, new GithubAuthProvider());
     } catch (err) {
-      alert((err as Error).message);
+      dispatch(setFeedback({
+        severity: 'error',
+        title: 'Problem signing into Github',
+        description: (err as Error).message,
+      }))
     }
   };
 
@@ -48,7 +62,11 @@ export default function Continue() {
     try {
       await signInWithPopup(auth, new TwitterAuthProvider());
     } catch (err) {
-      alert((err as Error).message);
+      dispatch(setFeedback({
+        severity: 'error',
+        title: 'Problem signing into Twitter',
+        description: (err as Error).message,
+      }))
     }
   };
 
@@ -81,6 +99,16 @@ export default function Continue() {
               sx={{ py: 1.6, mt: 2 }}
             >
               GitHub
+            </Button>
+
+            <Button
+              fullWidth
+              variant="contained"
+              onClick={handleFacebook}
+              startIcon={<Icon icon="facebook" />}
+              sx={{ py: 1.6, mt: 2 }}
+            >
+              Facebook
             </Button>
 
             <Button

@@ -106,6 +106,116 @@
             "excerpt": "| Tel/WhatsApp  |  | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX\n\n[PageGrid thumbnails=\"no\" pages=\"/work/company/gdpr, /work/company/privacycookies, /work/company/term"
           },
           {
+            "title": "Example App",
+            "description": "This app is Open Source",
+            "slug": "/work/example-app",
+            "order": 60,
+            "type": "folder",
+            "children": [
+              {
+                "title": "Docs",
+                "description": "Example Documentation",
+                "slug": "/work/example-app/docs",
+                "order": 10,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "Content Manager",
+                    "slug": "/work/example-app/docs/content-manager",
+                    "order": 15,
+                    "icon": "good-fit",
+                    "image": "/png/n64/test.png",
+                    "type": "file",
+                    "tags": [
+                      "firebase",
+                      "cms",
+                      "contentmanager"
+                    ],
+                    "excerpt": "Manage content stored in a Firebase collection\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/ContentManager\" label=\"ContentManager\"]\n\nWe’re introducing a new cartri"
+                  },
+                  {
+                    "title": "Design System",
+                    "slug": "/work/example-app/docs/design-system",
+                    "order": 25,
+                    "icon": "design",
+                    "image": "/png/n64/test.png",
+                    "type": "file",
+                    "excerpt": "Material UI is a React component library that provides a consistent design system, layout primitives, and readymade UI components\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore"
+                  },
+                  {
+                    "title": "Uberedux",
+                    "slug": "/work/example-app/docs/uberedux",
+                    "order": 30,
+                    "icon": "js",
+                    "image": "/png/n64/test.png",
+                    "type": "file",
+                    "tags": [
+                      "Free",
+                      "atridges",
+                      "Uberedux",
+                      "State Management",
+                      "Redux"
+                    ],
+                    "excerpt": "Otherwise you'd be back in jQuery callback hell. Nobody wants that.\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Uberedux\" label=\"Uberedux\"]\n\nUberedux is a simple,"
+                  }
+                ],
+                "icon": "cartridge",
+                "image": "/png/n64/test.png",
+                "excerpt": "Goldlabel is built on Cartridges\n\n[PageGrid pages=\"/work/exampleapp/docs/designsystem, /work/exampleapp/docs/uberedux, /work/exampleapp/docs/contentmanager\"]\n\nA cartridge is a selfcontained piece of a"
+              },
+              {
+                "title": "Tutorial",
+                "description": "How to get up and running",
+                "slug": "/work/example-app/tutorial",
+                "order": 90,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "Quick Start",
+                    "slug": "/work/example-app/tutorial/quick-start",
+                    "order": 5,
+                    "icon": "examples",
+                    "image": "/png/3rdParty/github_og.png",
+                    "type": "file",
+                    "excerpt": "Get started with Goldlabel Core Open Source\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\n 🚀 Install\n\n1. Clone the repo\n\n\n\n2. Setup Environment\n\nCreate a  file in the root"
+                  }
+                ],
+                "icon": "doc",
+                "image": "/png/3rdParty/github_og.png",
+                "tags": [
+                  "Tutorial",
+                  "Open Source",
+                  "JavaScript",
+                  "TypeScript",
+                  "React",
+                  "Material UI",
+                  "Flash",
+                  "Server Side JavaScript",
+                  "Node",
+                  "NextJS",
+                  "GitHub"
+                ],
+                "excerpt": "Each page focuses on a single part of the system\n\n Clone the public repository\n\nThis section walks through a minimal Goldlabel Core project from start to finish. Each page focuses on a single part of "
+              }
+            ],
+            "icon": "examples",
+            "image": "/png/n64/flickr.png",
+            "tags": [
+              "Open Source",
+              "JavaScript",
+              "TypeScript",
+              "React",
+              "Material UI",
+              "Flash",
+              "Server Side JavaScript",
+              "Node",
+              "NextJS",
+              "App Router",
+              "GitHub"
+            ],
+            "excerpt": "The app you are using is free to fork, explore, copy, hack, and reuse\n\nOpen Source and Free forever. It offers statically generated sites with Firestorepowered updates and a real admin panel. Built wi"
+          },
+          {
             "title": "Experience",
             "description": "Real World Case Studies",
             "slug": "/work/experience",
@@ -829,116 +939,6 @@
               "work"
             ],
             "excerpt": "Working across the full JavaScript stack to help understand every perspective from interface to infrastructure\n\n[PageGrid pages=\"/work/skills/javascript, /work/skills/fullstack, /work/skills/ai, /work"
-          },
-          {
-            "title": "Example App",
-            "description": "This app is Open Source",
-            "slug": "/work/example-app",
-            "order": 190,
-            "type": "folder",
-            "children": [
-              {
-                "title": "Docs",
-                "description": "Example Documentation",
-                "slug": "/work/example-app/docs",
-                "order": 10,
-                "type": "folder",
-                "children": [
-                  {
-                    "title": "Content Manager",
-                    "slug": "/work/example-app/docs/content-manager",
-                    "order": 15,
-                    "icon": "good-fit",
-                    "image": "/png/n64/test.png",
-                    "type": "file",
-                    "tags": [
-                      "firebase",
-                      "cms",
-                      "contentmanager"
-                    ],
-                    "excerpt": "Manage content stored in a Firebase collection\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/ContentManager\" label=\"ContentManager\"]\n\nWe’re introducing a new cartri"
-                  },
-                  {
-                    "title": "Design System",
-                    "slug": "/work/example-app/docs/design-system",
-                    "order": 25,
-                    "icon": "design",
-                    "image": "/png/n64/test.png",
-                    "type": "file",
-                    "excerpt": "Material UI is a React component library that provides a consistent design system, layout primitives, and readymade UI components\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore"
-                  },
-                  {
-                    "title": "Uberedux",
-                    "slug": "/work/example-app/docs/uberedux",
-                    "order": 30,
-                    "icon": "js",
-                    "image": "/png/n64/test.png",
-                    "type": "file",
-                    "tags": [
-                      "Free",
-                      "atridges",
-                      "Uberedux",
-                      "State Management",
-                      "Redux"
-                    ],
-                    "excerpt": "Otherwise you'd be back in jQuery callback hell. Nobody wants that.\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Uberedux\" label=\"Uberedux\"]\n\nUberedux is a simple,"
-                  }
-                ],
-                "icon": "cartridge",
-                "image": "/png/n64/test.png",
-                "excerpt": "Goldlabel is built on Cartridges\n\n[PageGrid pages=\"/work/exampleapp/docs/designsystem, /work/exampleapp/docs/uberedux, /work/exampleapp/docs/contentmanager\"]\n\nA cartridge is a selfcontained piece of a"
-              },
-              {
-                "title": "Tutorial",
-                "description": "How to get up and running",
-                "slug": "/work/example-app/tutorial",
-                "order": 90,
-                "type": "folder",
-                "children": [
-                  {
-                    "title": "Quick Start",
-                    "slug": "/work/example-app/tutorial/quick-start",
-                    "order": 5,
-                    "icon": "examples",
-                    "image": "/png/3rdParty/github_og.png",
-                    "type": "file",
-                    "excerpt": "Get started with Goldlabel Core Open Source\n\n[GitHub url=\"https://github.com/javascriptpro/core\" label=\"Clone repo\"]\n\n 🚀 Install\n\n1. Clone the repo\n\n\n\n2. Setup Environment\n\nCreate a  file in the root"
-                  }
-                ],
-                "icon": "doc",
-                "image": "/png/3rdParty/github_og.png",
-                "tags": [
-                  "Tutorial",
-                  "Open Source",
-                  "JavaScript",
-                  "TypeScript",
-                  "React",
-                  "Material UI",
-                  "Flash",
-                  "Server Side JavaScript",
-                  "Node",
-                  "NextJS",
-                  "GitHub"
-                ],
-                "excerpt": "Each page focuses on a single part of the system\n\n Clone the public repository\n\nThis section walks through a minimal Goldlabel Core project from start to finish. Each page focuses on a single part of "
-              }
-            ],
-            "icon": "examples",
-            "image": "/png/n64/flickr.png",
-            "tags": [
-              "Open Source",
-              "JavaScript",
-              "TypeScript",
-              "React",
-              "Material UI",
-              "Flash",
-              "Server Side JavaScript",
-              "Node",
-              "NextJS",
-              "App Router",
-              "GitHub"
-            ],
-            "excerpt": "The app you are using is free to fork, explore, copy, hack, and reuse\n\nOpen Source and Free forever. It offers statically generated sites with Firestorepowered updates and a real admin panel. Built wi"
           },
           {
             "title": "CV",
