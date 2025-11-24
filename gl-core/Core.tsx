@@ -28,7 +28,11 @@ import {
   SharePopup,
   Icon,
 } from '../gl-core';
-import { Paywall, SigninGate, useUser } from './cartridges/Paywall';
+import {
+  // Paywall,
+  SigninGate,
+  useUser,
+} from './cartridges/Paywall';
 import {
   DesignSystem,
   useDesignSystem,
@@ -84,7 +88,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
   return (
     <>
       <DesignSystem theme={config.themes[effectiveThemeMode]}>
-        <Paywall />
+        {/* <Paywall /> */}
         <Container id="core" sx={{ mt: 2 }}>
           <Box sx={{ minHeight: '100vh' }}>
             <Grid container spacing={isMobile ? 0 : 1}>
