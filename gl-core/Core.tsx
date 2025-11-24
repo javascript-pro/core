@@ -67,7 +67,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
     if (!feedbackTested) {
       const feedback: TFeedback = {
         severity: 'info',
-        title: 'Connecting...'
+        title: 'Connecting...',
       };
       dispatch(setFeedback(feedback));
       dispatch(setDesignSystemKey('feedbackTested', true));
