@@ -7,5 +7,5 @@ export const initialState: TDesignSystemState = {
   dialog: null,
   feedback: null,
   feedbackTested: false,
-  fullScreen: true,
+  fullScreen: false,
 };
