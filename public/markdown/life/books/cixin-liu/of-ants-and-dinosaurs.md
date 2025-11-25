@@ -6,7 +6,6 @@ slug: /life/books/cixin-liu/of-ants-and-dinosaurs
 icon: books
 image: https://live.staticflickr.com/65535/54941778209_29ee005a38_b.jpg
 tags: Cixin Liu, Speculative fiction, Chinese, hard sci-fi, parable, orwell
-newContent: true
 ---
 
 > Cixin Liu is a Chinese science-fiction writer best known for The Three-Body Problem and its sequels, collectively The Remembrance of Earth’s Past.

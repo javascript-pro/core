@@ -4,7 +4,7 @@ title: How we work
 description: Onsite, 100% Remote or Hybrid
 slug: /work/about/where-we-work
 icon: company
-image: https://live.staticflickr.com/65535/54941470978_9dedcdd929_b.jpg
+image: https://live.staticflickr.com/65535/54940372447_3ca7baef00_b.jpg
 tags: remote, hybrid, intellectual-property
 ---
 
