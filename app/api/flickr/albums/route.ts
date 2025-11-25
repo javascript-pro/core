@@ -1,6 +1,6 @@
 // /app/api/gl-api/flickr/albums/route.ts
 import { NextRequest, NextResponse } from 'next/server';
-import { adminDb } from '../../../../../gl-core/lib/firebaseAdmin';
+import { adminDb } from '../../../../gl-core/lib/firebaseAdmin';
 
 export async function POST(req: NextRequest) {
   const flickrApiKey = process.env.FLICKR_KEY!;

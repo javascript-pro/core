@@ -354,7 +354,7 @@
     "title": "Life",
     "description": "Generation X at 50",
     "tags": [],
-    "content": "\n> ⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a 1991 novel written by Canadian author Douglas Coupland\n\nI work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age maybe it's time to take up sailing. We are [Generation X](/balance/writers/generation-x)\n\n[PageGrid thumbnails=\"no\" pages=\" /life/books, /life/food, /life/motorbikes, /life/aquaponics, /life/diving, /life/skiing\"]\n"
+    "content": "\n[PageGrid thumbnails=\"no\" pages=\" /life/books, /life/food, /life/motorbikes, /life/aquaponics, /life/diving, /life/skiing\"]\n\n> ⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a 1991 novel written by Canadian author Douglas Coupland\n\nI work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing used to be my favourite, but I'm a bit old now. I lost toes and broke a hip, so at my age maybe it's time to take up sailing. We are [Generation X](/balance/writers/generation-x)\n"
   },
   {
     "slug": "life/motorbikes/index",
@@ -368,7 +368,7 @@
     "title": "Skiing",
     "description": "yeh. I'm a bit old now",
     "tags": [],
-    "content": "\n>\n"
+    "content": "\n[YouTube src=\"https://www.youtube.com/watch?v=wrgbTrGahKU\"]\n"
   },
   {
     "slug": "work/about/gdpr",
@@ -640,8 +640,8 @@
     "slug": "work/skills/fullstack/restful-apis",
     "title": "RESTful APIs",
     "description": "Private keys are available",
-    "tags": "free, apim, restful, endpoints",
-    "content": "\n## Goldlabel Public API\n\n## gl-api/flickr endpoints\n\n```javascript\n{\n    route: \"/gl-api/flickr\",\n    queryVars: [\n        \"album\", // single album id\n        \"albums\", // comma seperated list of albums\n        \"photo\", // single photo id\n        \"photos\", // comma seperated list of photos\n    ],\n    examples: [\n        {\n            message: \"Gets latest album with all photos\",\n            route: '/api/gl-api/flickr',\n        },\n        {\n            message: \"Gets a single album by id\",\n            route:'/api/gl-api/flickr/?album=72177720324245676',\n        },\n        {\n            message: \"Gets a photo album by id\",\n            route: '/api/gl-api/flickr/?photo=54534952165',\n        },\n    ]\n},\n\n```\n"
+    "tags": "free, api, restful, endpoints, next, nextjs",
+    "content": "\nREST has been the backbone of web communication for two decades. Despite alternatives such as GraphQL, REST remains the dominant standard. The challenge has never been the concept itself, but the implementation. A REST API only becomes effective when it is structured clearly, documented properly, and resilient under real-world load — qualities that many APIs fail to achieve.\n\nNext.js provides a streamlined API layer that fits naturally into the App Router. Endpoints live alongside the rest of the application, follow the same routing conventions, and require no additional server framework. For full-stack React development, this creates a unified environment with minimal overhead.\n\nFlickr API Example\n\nThe Flickr integration in this project demonstrates the pattern clearly. The API layer handles:\n\n- OAuth-based authentication with Flickr\n- Photo and album lookups\n- Response caching in Firestore to minimise API calls and avoid rate limits\n- Automatic expiry and refresh\n- A client-side CRUD component that surfaces albums, photos and metadata\n\nThe client communicates only with the internal API, never with Flickr directly. This keeps tokens secure, ensures consistent responses, and benefits from the Firestore cache. The pattern is reusable across the Goldlabel ecosystem: define an endpoint in /app/api/..., add caching where appropriate, and pair it with a simple CRUD UI on the client. The result is a stable integration without the overhead of maintaining a separate backend service.\n\n## [https://goldlabel.pro/api](goldlabel.pro/api)\n\n```javascript\n{\n    route: \"/gl-api/flickr\",\n    queryVars: [\n        \"album\", // single album id\n        \"albums\", // comma seperated list of albums\n        \"photo\", // single photo id\n        \"photos\", // comma seperated list of photos\n    ],\n    examples: [\n        {\n            message: \"Gets latest album with all photos\",\n            route: '/api/gl-api/flickr',\n        },\n        {\n            message: \"Gets a single album by id\",\n            route:'/api/gl-api/flickr/?album=72177720324245676',\n        },\n        {\n            message: \"Gets a photo album by id\",\n            route: '/api/gl-api/flickr/?photo=54534952165',\n        },\n    ]\n},\n\n```\n"
   },
   {
     "slug": "work/skills/fullstack/turborepo",

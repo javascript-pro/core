@@ -25,7 +25,7 @@
                 "slug": "/work/about/where-we-work",
                 "order": 250,
                 "icon": "company",
-                "image": "https://live.staticflickr.com/65535/54941470978_9dedcdd929_b.jpg",
+                "image": "https://live.staticflickr.com/65535/54940372447_3ca7baef00_b.jpg",
                 "type": "file",
                 "tags": [
                   "remote",
@@ -39,7 +39,7 @@
                 "slug": "/work/about/privacy-cookies",
                 "order": 450,
                 "icon": "company",
-                "image": "https://live.staticflickr.com/65535/54941470978_9dedcdd929_b.jpg",
+                "image": "https://live.staticflickr.com/65535/54940372447_3ca7baef00_b.jpg",
                 "type": "file",
                 "tags": [
                   "cookies",
@@ -56,7 +56,7 @@
                 "slug": "/work/about/terms",
                 "order": 500,
                 "icon": "company",
-                "image": "https://live.staticflickr.com/65535/54941470978_9dedcdd929_b.jpg",
+                "image": "https://live.staticflickr.com/65535/54940372447_3ca7baef00_b.jpg",
                 "type": "file",
                 "tags": [
                   "cookies",
@@ -73,7 +73,7 @@
                 "slug": "/work/about/work-with-us",
                 "order": 777,
                 "icon": "company",
-                "image": "https://live.staticflickr.com/65535/54941470978_9dedcdd929_b.jpg",
+                "image": "https://live.staticflickr.com/65535/54940372447_3ca7baef00_b.jpg",
                 "type": "file",
                 "tags": [
                   "company",
@@ -99,7 +99,7 @@
               }
             ],
             "icon": "company",
-            "image": "https://live.staticflickr.com/65535/54941470978_9dedcdd929_b.jpg",
+            "image": "https://live.staticflickr.com/65535/54940372447_3ca7baef00_b.jpg",
             "tags": [
               "intellectual-property"
             ],
@@ -900,15 +900,18 @@
                     "slug": "/work/skills/fullstack/restful-apis",
                     "order": 70,
                     "icon": "techstack",
-                    "image": "/png/wei-zang/wei-zang.png",
+                    "image": "/png/3rdParty/next_og.png",
                     "type": "file",
                     "tags": [
                       "free",
-                      "apim",
+                      "api",
                       "restful",
-                      "endpoints"
+                      "endpoints",
+                      "next",
+                      "nextjs"
                     ],
-                    "excerpt": "Goldlabel Public API\n\n glapi/flickr endpoints"
+                    "excerpt": "REST has been the backbone of web communication for two decades. Despite alternatives such as GraphQL, REST remains the dominant standard. The challenge has never been the concept itself, but the impl",
+                    "newContent": true
                   },
                   {
                     "title": "Docker & Kubernetes",
@@ -1018,8 +1021,7 @@
                       "parable",
                       "orwell"
                     ],
-                    "excerpt": "The Remembrance of Earth’s Past, Book 1\n\nFirst contact begins when scientists discover an alien civilisation on the unstable planet Trisolaris. Humanity becomes divided over whether to resist or welco",
-                    "newContent": true
+                    "excerpt": "The Remembrance of Earth’s Past, Book 1\n\nFirst contact begins when scientists discover an alien civilisation on the unstable planet Trisolaris. Humanity becomes divided over whether to resist or welco"
                   },
                   {
                     "title": "The Dark Forest",
@@ -1036,8 +1038,7 @@
                       "parable",
                       "orwell"
                     ],
-                    "excerpt": "The Remembrance of Earth’s Past, Book 2\n\nEarth prepares for the coming Trisolaran invasion. The “Dark Forest Theory” reveals why the universe seems silent—and why contact between civilisations is terr",
-                    "newContent": true
+                    "excerpt": "The Remembrance of Earth’s Past, Book 2\n\nEarth prepares for the coming Trisolaran invasion. The “Dark Forest Theory” reveals why the universe seems silent—and why contact between civilisations is terr"
                   },
                   {
                     "title": "Death's End",
@@ -1054,8 +1055,7 @@
                       "parable",
                       "orwell"
                     ],
-                    "excerpt": "The Remembrance of Earth’s Past, Book 3\n\nThe conflict escalates to cosmic scales. Dimensional warfare, universechanging technology, and the ultimate fate of humanity and the cosmos come into play.",
-                    "newContent": true
+                    "excerpt": "The Remembrance of Earth’s Past, Book 3\n\nThe conflict escalates to cosmic scales. Dimensional warfare, universechanging technology, and the ultimate fate of humanity and the cosmos come into play."
                   },
                   {
                     "title": "Of Ants and Dinosaurs",
@@ -1072,8 +1072,7 @@
                       "parable",
                       "orwell"
                     ],
-                    "excerpt": "Cixin Liu is a Chinese sciencefiction writer best known for The ThreeBody Problem and its sequels, collectively The Remembrance of Earth’s Past.\n\nOf Ants and Dinosaurs works as a sharp, playful satire",
-                    "newContent": true
+                    "excerpt": "Cixin Liu is a Chinese sciencefiction writer best known for The ThreeBody Problem and its sequels, collectively The Remembrance of Earth’s Past.\n\nOf Ants and Dinosaurs works as a sharp, playful satire"
                   }
                 ],
                 "icon": "books",
@@ -1084,7 +1083,8 @@
                   "Chinese",
                   "hard sci-fi"
                 ],
-                "excerpt": "Cixin Liu is significant because he brought Chinese hard scifi to a global audience, blending rigorous physics, grand cosmic scale, and philosophical depth. His work revitalised hard scifi worldwide, "
+                "excerpt": "Cixin Liu is significant because he brought Chinese hard scifi to a global audience, blending rigorous physics, grand cosmic scale, and philosophical depth. His work revitalised hard scifi worldwide, ",
+                "newContent": true
               },
               {
                 "title": "R. F. Kuang",
@@ -1358,12 +1358,12 @@
             "children": [],
             "icon": "skiing",
             "image": "/png/n64/punk.png",
-            "excerpt": ""
+            "excerpt": "[YouTube src=\"https://www.youtube.com/watch?v=wrgbTrGahKU\"]"
           }
         ],
         "icon": "life",
         "image": "https://live.staticflickr.com/65535/54929859240_2873323696_b.jpg",
-        "excerpt": "⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a 1991 novel written by Canadian author Douglas Coupland\n\nI work remotely. I cook, eat, ride motorbikes and scuba dive. Skiing "
+        "excerpt": "[PageGrid thumbnails=\"no\" pages=\" /life/books, /life/food, /life/motorbikes, /life/aquaponics, /life/diving, /life/skiing\"]\n\n ⚠️ Cultural reference: Generation X, Tales for an Accelerated Culture is a"
       },
       {
         "title": "Balance",

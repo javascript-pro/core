@@ -1,7 +1,7 @@
 // /Users/goldlabel/GitHub/core/app/api/gl-api/flickr/latest/route.ts
 import { NextRequest, NextResponse } from 'next/server';
-import { getBase } from '../getBase';
-import { TFlickrPhoto, TFlickrPhotoSize } from '../types';
+import { getBase } from '../gl-api/getBase';
+import { TFlickrPhoto, TFlickrPhotoSize } from '../gl-api/types';
 
 const FLICKR_API = 'https://api.flickr.com/services/rest/';
 const flickrApiKey = process.env.FLICKR_KEY;
