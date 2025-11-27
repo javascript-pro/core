@@ -4,7 +4,7 @@ title: Aligent
 description: Design Systems
 slug: /work/experience/aligent
 icon: case
-image: https://live.staticflickr.com/4168/34263291171_c62c5b24be_b.jpg
+image: https://live.staticflickr.com/65535/54950372920_bd9247d0b5_b.jpg
 tags: expertise, interview, php, magento, e-commerce
 ---
 
@@ -12,7 +12,7 @@ tags: expertise, interview, php, magento, e-commerce
 
 #### Magento PHP & Material Design System
 
-> JavaScript Developer, Adelaide
+_JavaScript Developer, Adelaide_
 
 Lead developer creating a front end React application for Cancer Council NSW. The application connecting to a WordPress driven CMS via the new JSON API.
 PHP development of custom API endpoints
