@@ -8,4 +8,5 @@ export const initialState: TDesignSystemState = {
   feedback: null,
   feedbackTested: false,
   fullScreen: false,
+  loading: false,
 };

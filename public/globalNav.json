@@ -1476,7 +1476,7 @@
       },
       {
         "title": "Balance",
-        "description": "It's hard to collate stuff, but we're doing our best",
+        "description": "Were the kind of kid who liked Lego?",
         "slug": "/balance",
         "order": 100,
         "type": "folder",
@@ -1549,7 +1549,7 @@
               }
             ],
             "icon": "film",
-            "excerpt": "[PageGrid pages=\"/balance/film/fuckthegovmint, /balance/film/averybritishprotest, /balance/film/jamesdean, /balance/film/moronic, /balance/film/inwyk, /balance/film/freerideday\"]"
+            "excerpt": "[PageGrid pages=\"/balance/film/fuckthegovmint, /balance/film/averybritishprotest, /balance/film/jamesdean, /balance/film/moronic, /balance/film/inwyk, /balance/film/freerideday\"]\n\nhttps://www.youtube."
           },
           {
             "title": "Words",
@@ -1694,21 +1694,19 @@
           }
         ],
         "icon": "balance",
-        "image": "https://live.staticflickr.com/65535/52538111215_c3a5b085b8_b.jpg",
+        "image": "https://live.staticflickr.com/65535/54941521056_c3dbdb07cc_b.jpg",
         "excerpt": "If you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are \n\n[PageGrid thumbnails=\"no\" pages=\"/balance/pictures, /balance/film, /balance/words\"]"
       }
     ],
     "icon": "home",
-    "image": "/png/n64/flickr.png",
+    "image": "https://live.staticflickr.com/65535/53669705662_bd523946ef_b.jpg",
     "tags": [
       "JavaScript",
       "Next Gen",
       "Next.js",
-      "core",
+      "example app",
       "Gen X",
       "goldlabel",
-      "pr0",
-      "bouncer",
       "AI Prompt Engineering",
       "ChatGPT",
       "OpenAI",
@@ -1717,12 +1715,11 @@
       "Vanilla JS",
       "TypeScript",
       "React",
-      "Angular",
-      "Vue",
       "Material UI",
       "MUI",
       "Flash",
-      "Server Side JavaScript",
+      "SSR",
+      "SSG",
       "Node",
       "Gatsby",
       "NextJS",

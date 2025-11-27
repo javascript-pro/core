@@ -1,8 +1,8 @@
 // core/gl-core/actions/routeTo.tsx
 
-import { setUbereduxKey, toggleLoading } from '../../gl-core';
+import { setUbereduxKey } from '../../gl-core';
 import { TUbereduxDispatch } from '../../gl-core/types';
-// import { store } from '../../gl-core/cartridges/Uberedux/store';
+import { toggleLoading } from '../../gl-core/cartridges/DesignSystem';
 
 export type TUbereduxState = {
   // define shape if needed

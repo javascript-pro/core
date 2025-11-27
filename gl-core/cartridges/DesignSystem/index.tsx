@@ -14,9 +14,12 @@ import LoadingOverlay from './components/LoadingOverlay';
 import NewContent from './components/NewContent';
 import { setDesignSystemKey } from './actions/setDesignSystemKey';
 import { setFeedback } from './actions/setFeedback';
+import { toggleLoading } from './actions/toggleLoading';
 import { useDesignSystem } from './hooks/useDesignSystem';
 import { useMUITheme } from './hooks/useMUITheme';
 import { useFeedback } from './hooks/useFeedback';
+import { useLoading } from './hooks/useLoading';
+
 
 export {
   initialStateDesignSystem,
@@ -33,7 +36,9 @@ export {
   Feedback,
   setDesignSystemKey,
   setFeedback,
+  toggleLoading,
   useFeedback,
   useDesignSystem,
   useMUITheme,
+  useLoading,
 };

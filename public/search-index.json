@@ -25,7 +25,7 @@
     "title": "Film",
     "description": "Archive going back to the 90's",
     "tags": [],
-    "content": "\n[PageGrid pages=\"/balance/film/fuckthegovmint, /balance/film/a-very-british-protest, /balance/film/james-dean, /balance/film/moronic, /balance/film/inwyk, /balance/film/freeride-day\"]\n"
+    "content": "\n[PageGrid pages=\"/balance/film/fuckthegovmint, /balance/film/a-very-british-protest, /balance/film/james-dean, /balance/film/moronic, /balance/film/inwyk, /balance/film/freeride-day\"]\n\nhttps://www.youtube.com/@milkylackstoes\n"
   },
   {
     "slug": "balance/film/inwyk",
@@ -51,7 +51,7 @@
   {
     "slug": "balance/index",
     "title": "Balance",
-    "description": "It's hard to collate stuff, but we're doing our best",
+    "description": "Were the kind of kid who liked Lego?",
     "tags": [],
     "content": "\n> If you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are [Generation X](/balance/books/douglas-coupland/generation-x)\n\n[PageGrid thumbnails=\"no\" pages=\"/balance/pictures, /balance/film, /balance/words\"]\n"
   },
@@ -164,7 +164,7 @@
     "slug": "index",
     "title": "Home",
     "description": "The apps we ship are real",
-    "tags": "JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS, secure",
+    "tags": "JavaScript, Next Gen, Next.js, example app, Gen X, goldlabel, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Material UI, MUI, Flash, SSR, SSG, Node, Gatsby, NextJS, Headless CMS, secure",
     "content": "\n[PageGrid thumbnails=\"no\" pages=\"/work, /life, /balance\"]\n"
   },
   {
