@@ -1,10 +1,10 @@
 ---
 order: 40
-title: Material MUI
+title: Material UI
 description: Commonly known as MUI
 slug: /work/skills/design/mui
 icon: design
-image: /png/n64/chix.png
+image: /png/3rdParty/react.png
 tags: design
 ---
 

@@ -1,5 +1,5 @@
 ---
-order: 100
+order: 3
 title: Vanilla JS (ES6+)
 description: Dependency free JavaScript delivery layer
 slug: /work/skills/javascript/vanilla-js
