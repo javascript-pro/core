@@ -172,14 +172,14 @@
     "title": "Aquaponics",
     "description": "Fish are food. Not friends.",
     "tags": [],
-    "content": "\n> Aquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closed-loop system.\n\n[PageGrid thumbnails=\"no\" pages=\"/life/aquaponics/overview\"]\n"
+    "content": "\n> Aquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closed-loop system.\n\n[PageGrid thumbnails=\"no\" pages=\"/life/aquaponics/overview, /life/aquaponics/murray-hallam\"]\n"
   },
   {
     "slug": "life/aquaponics/murray-hallam",
     "title": "Murray Hallam",
     "description": "Simple engineering, reliability, and water efficiency",
     "tags": [],
-    "content": "\n> Grow serious food with almost no waste\n\n[YouTube src=\"https://www.youtube.com/watch?v=qknk7jUABq8\"]\n\nMurray Hallam is one of the core pioneers of modern aquaponics and a major reason the technique broke out of hobby circles and into mainstream sustainable agriculture. Based in Queensland, he built his reputation by turning a simple idea—fish and plants supporting each other in a closed loop—into a practical, teachable system that ordinary people can run in backyards, schools, or commercial sites.\n\nHis work focuses on simple engineering, reliability, and water efficiency in hot Australian climates. Through workshops, videos, and system designs, he championed aquaponics long before it was fashionable, showing that you can grow serious food with almost no waste.\n"
+    "content": "\n> Grow serious food with almost no waste\n\n[YouTube src=\"https://www.youtube.com/watch?v=qknk7jUABq8\"]\n\nMurray Hallam is one of the core pioneers of modern aquaponics and a major reason the technique broke out of hobby circles and into mainstream sustainable agriculture. Based in Queensland, he built his reputation by turning a simple idea—fish and plants supporting each other in a closed loop—into a practical, teachable system that ordinary people can run in backyards, schools, or commercial sites.\n\nHis work focuses on simple engineering, reliability, and water efficiency in hot Australian climates. Through workshops, videos, and system designs, he championed aquaponics long before it was fashionable, showing that you can grow serious food with almost no waste.\n\n[aquaponics.net.au](https://www.aquaponics.net.au/)\n"
   },
   {
     "slug": "life/aquaponics/overview",
@@ -294,11 +294,46 @@
     "content": "\nThis was an accident I actually saw happen in front of me. It was the worst not because of the outcome — the guy survived without any life-changing injuries — but because of how easily it happened, and how clearly I could see it happening to me.\n\nIt went like this. A pressurised air hose runs from your tank to your BCD. It’s used to quickly inflate the BCD to make you buoyant when needed — for example, when stepping off a boat weighed down with lead and other heavy kit. You want to be buoyant, otherwise you sink. This guy hadn’t connected the hose properly, and when he inflated his BCD prior to getting in, he heard the hissing but didn’t realise the BCD wasn’t inflating. His buddy did a buddy check but didn’t notice it either.\n\nSo blokey giant-strides off the boat and immediately sinks like a stone. We’re in 20m of water and he goes straight down. No time to equalise the pressure in his ears, no time to get calm or settled — just a panicked, painful fall to the bottom of the sea, where he finally got it together enough for his training to kick in, released his weight belt, and shot to the surface.\n\nLucky for him, he didn’t hold his breath on the way up or the injuries could have been far worse. As it was, an unplanned bounce dive to 20 metres in under a minute caused a lot of pain and distress. He ended up in hospital, and it properly ruined his holiday.\n"
   },
   {
+    "slug": "life/diving/fish/index",
+    "title": "Fish",
+    "description": "Fish are friends. Not food.",
+    "tags": [],
+    "content": "\n[PageGrid pages=\"/life/diving/fish/white-shark, /life/diving/fish/seahorse, /life/diving/fish/octopus, /life/diving/fish/white-seabream\"]\n"
+  },
+  {
+    "slug": "life/diving/fish/octopus",
+    "title": "Common octopus",
+    "description": "Octopus vulgaris",
+    "tags": [],
+    "content": "\n> Common octopus – Octopus vulgaris\n\nCephalopod mollusc belonging to the Octopod order. Easily recognised by its large, globular head which is distinct from the rest of its body, formed by eight tentacles with double rows of suckers. Colouring is variable due to its mimetic abilities. Found on rocky or detrital beds with crevices, from a few metres to over 100. Maximum size 60 centimetres.\n"
+  },
+  {
+    "slug": "life/diving/fish/seahorse",
+    "title": "Seahorse",
+    "description": "Hippocampus hippocampus",
+    "tags": [],
+    "content": "\n> Syngnathidae family. Common sea-horse – Hippocampus hippocampus\n\nUnmistakable fish. The body is formed of a series of superimposed bony rings. The head is positioned at an angle to the body and the prehensile tail. The colouration is brownish or greenish black. The male keeps the fecundated eggs in a fold in his body until they open. Lives near Neptune grass from 2–4 to 20–30 metres. Measures up to 15 centimetres.\n"
+  },
+  {
+    "slug": "life/diving/fish/white-seabream",
+    "title": "White seabream",
+    "description": "Diplodus sargus sargus",
+    "tags": [],
+    "content": "\n> White seabream – Diplodus sargus sargus\n\nFish with oval, very tall and compressed body. The colouration is silvery grey, darker on the snout. Has 8–9 alternating light and dark stripes on the flanks. The rear edge of the caudal is black. Forms small groups that remain near the seabed. Lives on sandy and rocky seabeds near rocks from 2–3 to more than 50 metres. Measures up to 45 centimetres.\n"
+  },
+  {
+    "slug": "life/diving/fish/white-shark",
+    "title": "White shark",
+    "description": "Carcharodon carcharias",
+    "tags": [],
+    "content": "\n> Lamnidae family\n\nLarge shark with short, pointed snout with wide mouth equipped with big triangular teeth with saw-toothed edges. The first dorsal fin is tall and developed. The caudal is characteristically sickle-shaped with almost identical lobes. The colouration is dark grey on the back and white underneath. Predator on top of the food chain, it feeds mainly on tuna and small cetaceans. Reaches lengths of over 7 metres.\n"
+  },
+  {
     "slug": "life/diving/index",
     "title": "Diving",
     "description": "Fish are friends. Not food.",
     "tags": [],
-    "content": "\n[PageGrid pages=\"/life/diving/why-dive, /life/diving/why-not-dive, /life/diving/diving-accident\"]\n"
+    "content": "\n[PageGrid pages=\"/life/diving/why-dive, /life/diving/why-not-dive, /life/diving/fish, /life/diving/diving-accident\"]\n"
   },
   {
     "slug": "life/diving/why-dive",

@@ -1250,11 +1250,59 @@
                 "image": "/png/n64/diving.png",
                 "type": "file",
                 "excerpt": "This was an accident I actually saw happen in front of me. It was the worst not because of the outcome — the guy survived without any lifechanging injuries — but because of how easily it happened, and"
+              },
+              {
+                "title": "Fish",
+                "description": "Fish are friends. Not food.",
+                "slug": "/life/diving/fish",
+                "order": 100,
+                "type": "folder",
+                "children": [
+                  {
+                    "title": "Seahorse",
+                    "slug": "/life/diving/fish/seahorse",
+                    "order": 60,
+                    "icon": "diving",
+                    "image": "https://live.staticflickr.com/65535/54949756724_7a409a7f60_b.jpg",
+                    "type": "file",
+                    "excerpt": "Syngnathidae family. Common seahorse – Hippocampus hippocampus\n\nUnmistakable fish. The body is formed of a series of superimposed bony rings. The head is positioned at an angle to the body and the pre"
+                  },
+                  {
+                    "title": "Common octopus",
+                    "slug": "/life/diving/fish/octopus",
+                    "order": 70,
+                    "icon": "diving",
+                    "image": "https://live.staticflickr.com/65535/54949808870_b3f61a98c8_b.jpg",
+                    "type": "file",
+                    "excerpt": "Common octopus – Octopus vulgaris\n\nCephalopod mollusc belonging to the Octopod order. Easily recognised by its large, globular head which is distinct from the rest of its body, formed by eight tentacl"
+                  },
+                  {
+                    "title": "White seabream",
+                    "slug": "/life/diving/fish/white-seabream",
+                    "order": 70,
+                    "icon": "diving",
+                    "image": "https://live.staticflickr.com/65535/54949812440_8a33dbb03d_b.jpg",
+                    "type": "file",
+                    "excerpt": "White seabream – Diplodus sargus sargus\n\nFish with oval, very tall and compressed body. The colouration is silvery grey, darker on the snout. Has 8–9 alternating light and dark stripes on the flanks. "
+                  },
+                  {
+                    "title": "White shark",
+                    "slug": "/life/diving/fish/white-shark",
+                    "order": 80,
+                    "icon": "diving",
+                    "image": "https://live.staticflickr.com/65535/54949812440_8a33dbb03d_b.jpg",
+                    "type": "file",
+                    "excerpt": "Lamnidae family\n\nLarge shark with short, pointed snout with wide mouth equipped with big triangular teeth with sawtoothed edges. The first dorsal fin is tall and developed. The caudal is characteristi"
+                  }
+                ],
+                "icon": "diving",
+                "image": "https://live.staticflickr.com/65535/54949514516_b29d02b1c7_b.jpg",
+                "excerpt": "[PageGrid pages=\"/life/diving/fish/whiteshark, /life/diving/fish/seahorse, /life/diving/fish/octopus, /life/diving/fish/whiteseabream\"]"
               }
             ],
             "icon": "diving",
             "image": "https://live.staticflickr.com/65535/54936056240_8d8358141c_b.jpg",
-            "excerpt": "[PageGrid pages=\"/life/diving/whydive, /life/diving/whynotdive, /life/diving/divingaccident\"]"
+            "excerpt": "[PageGrid pages=\"/life/diving/whydive, /life/diving/whynotdive, /life/diving/fish, /life/diving/divingaccident\"]"
           },
           {
             "title": "Food",

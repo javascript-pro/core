@@ -15,3 +15,5 @@ noImage: true
 Murray Hallam is one of the core pioneers of modern aquaponics and a major reason the technique broke out of hobby circles and into mainstream sustainable agriculture. Based in Queensland, he built his reputation by turning a simple idea—fish and plants supporting each other in a closed loop—into a practical, teachable system that ordinary people can run in backyards, schools, or commercial sites.
 
 His work focuses on simple engineering, reliability, and water efficiency in hot Australian climates. Through workshops, videos, and system designs, he championed aquaponics long before it was fashionable, showing that you can grow serious food with almost no waste.
+
+[aquaponics.net.au](https://www.aquaponics.net.au/)
