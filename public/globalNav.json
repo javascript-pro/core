@@ -1358,6 +1358,15 @@
                 "image": "/png/n64/hippy.png",
                 "type": "file",
                 "excerpt": "What  \nAquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closedloop system.\n\nWho  \nIdeal for urban growers, hobbyis"
+              },
+              {
+                "title": "Murray Hallam",
+                "slug": "/life/aquaponics/murray-hallam",
+                "order": 60,
+                "icon": "fish",
+                "image": "/png/n64/hippy.png",
+                "type": "file",
+                "excerpt": "Grow serious food with almost no waste\n\n[YouTube src=\"https://www.youtube.com/watch?v=qknk7jUABq8\"]\n\nMurray Hallam is one of the core pioneers of modern aquaponics and a major reason the technique bro"
               }
             ],
             "icon": "fish",
