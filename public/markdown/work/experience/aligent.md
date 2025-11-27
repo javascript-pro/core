@@ -1,6 +1,6 @@
 ---
 order: 60
-title: Aligent (2016)
+title: Aligent
 description: Design Systems
 slug: /work/experience/aligent
 icon: case
@@ -8,7 +8,9 @@ image: https://live.staticflickr.com/4168/34263291171_c62c5b24be_b.jpg
 tags: expertise, interview, php, magento, e-commerce
 ---
 
-## Magento PHP & Material Design System
+> (2016)
+
+#### Magento PHP & Material Design System
 
 > JavaScript Developer, Adelaide
 

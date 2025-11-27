@@ -232,7 +232,7 @@
             "type": "folder",
             "children": [
               {
-                "title": "DTrackt! (2024)",
+                "title": "DTrackt!",
                 "slug": "/work/experience/dtrackt",
                 "order": 30,
                 "icon": "techstack",
@@ -249,32 +249,35 @@
                   "bitcoin",
                   "malta"
                 ],
-                "excerpt": "Blockchain Crypto Casino\n\n In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online ga"
+                "excerpt": "(2024)\n\n Blockchain Crypto Casino\n\n In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the "
               },
               {
-                "title": "Hertwig & Auer (2025)",
+                "title": "Hertwig & Auer",
                 "slug": "/work/experience/hertwig-auer",
                 "order": 30,
                 "icon": "case",
-                "image": "https://live.staticflickr.com/65535/54672542132_50fa3a5654_b.jpg",
+                "image": "https://live.staticflickr.com/65535/54950372920_bd9247d0b5_b.jpg",
                 "type": "file",
                 "tags": [
                   "expertise",
                   "germany",
-                  "law"
+                  "law",
+                  "react",
+                  "nextjs"
                 ],
-                "excerpt": "Summer 2025\n\nThis content is behind a paywall. Viewers viewing it are accountable for their actions"
+                "excerpt": "Easy Legal Letter Assistant, 2025\n\nThe ELLA (Easy Legal Letter Assistant) project is a tool designed to streamline the creation and management of legal letters. It's built to simplify the process of g"
               },
               {
                 "title": "Huawei (2015)",
                 "slug": "/work/experience/huawei",
                 "order": 40,
                 "icon": "case",
-                "image": "https://live.staticflickr.com/65535/52602318224_f8c4a92a62_c.jpg",
+                "image": "https://live.staticflickr.com/65535/54950372920_bd9247d0b5_b.jpg",
                 "type": "file",
                 "tags": [
                   "expertise",
                   "interview",
+                  "chinese",
                   "huawei",
                   "china",
                   "react",
@@ -283,7 +286,7 @@
                 "excerpt": "Feb to May 2016\n\n English/Chinese Project Management eLearning App\n\nBy 2015 React had evolved beyond an experiment. Facebook, Instagram, and Airbnb were using it at scale, and the opensource ecosystem"
               },
               {
-                "title": "Boral (2018)",
+                "title": "Boral",
                 "slug": "/work/experience/boral",
                 "order": 50,
                 "icon": "case",
@@ -294,10 +297,10 @@
                   "interview",
                   "boral"
                 ],
-                "excerpt": "GeoSpatial Fleet App\n\n React Developer, Aug 2018  Feb 2019, Sydney\n\nIt’s only been a few years since all of Boral’s business was still done on paper. When I joined the Sydney tech team in 2018, the co"
+                "excerpt": "(2018)\n\n GeoSpatial Fleet App\n\n React Developer, Aug 2018  Feb 2019, Sydney\n\nIt’s only been a few years since all of Boral’s business was still done on paper. When I joined the Sydney tech team in 201"
               },
               {
-                "title": "Aligent (2016)",
+                "title": "Aligent",
                 "slug": "/work/experience/aligent",
                 "order": 60,
                 "icon": "case",
@@ -310,7 +313,7 @@
                   "magento",
                   "e-commerce"
                 ],
-                "excerpt": "Magento PHP & Material Design System\n\n JavaScript Developer, Adelaide\n\nLead developer creating a front end React application for Cancer Council NSW. The application connecting to a WordPress driven CM"
+                "excerpt": "(2016)\n\n Magento PHP & Material Design System\n\n JavaScript Developer, Adelaide\n\nLead developer creating a front end React application for Cancer Council NSW. The application connecting to a WordPress "
               }
             ],
             "icon": "case",
@@ -668,7 +671,7 @@
                   "Headless CMS",
                   "JSON"
                 ],
-                "excerpt": "We’ve been writing JavaScript since it was called ECMAScript.\n\n[PageGrid thumbnails=\"no\" pages=\"/work/skills/javascript/typescript, /work/skills/javascript/react, /work/skills/javascript/react/reactna"
+                "excerpt": "\"A JavaScript team that’s battletested, precise, and fast.\"\n\n[PageGrid thumbnails=\"no\" pages=\"/work/skills/javascript/typescript, /work/skills/javascript/react, /work/skills/javascript/react/reactnati"
               },
               {
                 "title": "Design",
@@ -721,11 +724,11 @@
                     "excerpt": "The earliest days of web design\n\nBack when the work meant slicing a designer’s static Photoshop layout into HTML, the tooling shifted constantly and the workflow followed every major design app of its"
                   },
                   {
-                    "title": "Material MUI",
+                    "title": "Material UI",
                     "slug": "/work/skills/design/mui",
                     "order": 40,
                     "icon": "design",
-                    "image": "/png/n64/chix.png",
+                    "image": "/png/3rdParty/react.png",
                     "type": "file",
                     "tags": [
                       "design"
@@ -786,7 +789,7 @@
               },
               {
                 "title": "Fullstack",
-                "description": "As well as JavaScript, we also have experience across the full stack",
+                "description": "JavaScript development services across the full stack",
                 "slug": "/work/skills/fullstack",
                 "order": 500,
                 "type": "folder",
@@ -881,7 +884,7 @@
                     "title": "Blockchain",
                     "slug": "/work/skills/fullstack/blockchain",
                     "order": 50,
-                    "icon": "api",
+                    "icon": "techstack",
                     "image": "/png/3rdParty/bitcoin.png",
                     "type": "file",
                     "tags": [
@@ -895,7 +898,7 @@
                       "bitcoin",
                       "malta"
                     ],
-                    "excerpt": "Blockchain Crypto Casino\n\n In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online ga"
+                    "excerpt": "Fully anonymous, provably fair crypto casino\n\n Blockchain Crypto Casino\n\nIn 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The co"
                   },
                   {
                     "title": "GraphQL",
@@ -952,12 +955,12 @@
                   }
                 ],
                 "icon": "techstack",
-                "image": "/png/wei-zang/wei-zang.png",
+                "image": "/png/3rdParty/javascript_og.png",
                 "tags": [
                   "non-javascript",
                   "techstack"
                 ],
-                "excerpt": "[PageGrid pages=\"/work/skills/fullstack/cicd, /work/skills/fullstack/databases, /work/skills/fullstack/devops, /work/skills/fullstack/docker, /work/skills/fullstack/git, /work/skills/fullstack/graphql"
+                "excerpt": "Fullstack JavaScript\n\nWe provide JavaScript development services across the full stack:\n\n Frontend  \n  React, Next.js, Vanilla JS, MUI, custom UIs, performance tuning\n\n Backend  \n  Node.js, Express, F"
               }
             ],
             "icon": "techstack",
@@ -967,7 +970,7 @@
               "fields",
               "work"
             ],
-            "excerpt": "Working across the full JavaScript stack to help understand every perspective from interface to infrastructure\n\n[PageGrid pages=\"/work/skills/javascript/react/reactnative, /work/skills/javascript, /wo"
+            "excerpt": "Working across the full JavaScript stack to help understand every perspective from interface to infrastructure\n\n[PageGrid pages=\"/work/skills/javascript/react, /work/skills/javascript/react/reactnativ"
           },
           {
             "title": "CV",
@@ -1290,13 +1293,13 @@
                     "slug": "/life/diving/fish/white-shark",
                     "order": 80,
                     "icon": "diving",
-                    "image": "https://live.staticflickr.com/65535/54949812440_8a33dbb03d_b.jpg",
+                    "image": "https://live.staticflickr.com/65535/54949514516_b29d02b1c7_b.jpg",
                     "type": "file",
                     "excerpt": "Lamnidae family\n\nLarge shark with short, pointed snout with wide mouth equipped with big triangular teeth with sawtoothed edges. The first dorsal fin is tall and developed. The caudal is characteristi"
                   }
                 ],
                 "icon": "diving",
-                "image": "https://live.staticflickr.com/65535/54949514516_b29d02b1c7_b.jpg",
+                "image": "https://live.staticflickr.com/65535/54936056240_8d8358141c_b.jpg",
                 "excerpt": "[PageGrid pages=\"/life/diving/fish/whiteshark, /life/diving/fish/seahorse, /life/diving/fish/octopus, /life/diving/fish/whiteseabream\"]"
               }
             ],

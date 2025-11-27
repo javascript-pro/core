@@ -1,6 +1,6 @@
 ---
 order: 50
-title: Boral (2018)
+title: Boral
 description: Dots on a Map
 slug: /work/experience/boral
 icon: case
@@ -8,7 +8,9 @@ image:
 tags: expertise, interview, boral
 ---
 
-## Geo-Spatial Fleet App
+> (2018)
+
+#### Geo-Spatial Fleet App
 
 > React Developer, Aug 2018 - Feb 2019, Sydney
 
