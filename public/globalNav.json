@@ -777,6 +777,34 @@
                 "type": "folder",
                 "children": [
                   {
+                    "title": "Local LLM",
+                    "description": "Ringfenced AI powered Document Management for SMEs",
+                    "slug": "/work/skills/ai/aki",
+                    "order": 10,
+                    "type": "folder",
+                    "children": [
+                      {
+                        "title": "Ring‑fenced LLM",
+                        "slug": "/work/skills/ai/aki/ring-fenced-llm",
+                        "order": 20,
+                        "icon": "ai",
+                        "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
+                        "type": "file",
+                        "excerpt": "Sending sensitive files to external platforms can breach professional secrecy, violate GDPR, and damage client trust\n\nAKI exists because firms need the power of AI without risking client confidentiali",
+                        "newContent": true
+                      }
+                    ],
+                    "icon": "ai",
+                    "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
+                    "tags": [
+                      "abgeschottet",
+                      "ring‑fenced LLM",
+                      "AKI",
+                      "AI"
+                    ],
+                    "excerpt": "A ring‑fenced LLM is like having the power of AI inside a locked room\n\n[GitHub url=\"https://github.com/javascriptpro/aki\" label=\"Repository\"]\n\nIt can process sensitive documents and assist with legal "
+                  },
+                  {
                     "title": "AI User Interfaces",
                     "slug": "/work/skills/ai/user-interfaces",
                     "order": 50,
@@ -808,7 +836,7 @@
                 "tags": [
                   "AI"
                 ],
-                "excerpt": "\"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday\n\n[PageGrid pages=\"/work/skills/ai/promptengineering, /work/skills/ai/userinterfa"
+                "excerpt": "\"Put that kind of AI into a drone with a gun... then yeh, you've got a big problem.\" Bloke down the pub said, yesterday\n\n[PageGrid pages=\" /work/expertise/ai/aki/ringfencedllm, /work/skills/ai/prompte"
               },
               {
                 "title": "Fullstack",
@@ -1043,7 +1071,7 @@
             "children": [
               {
                 "title": "Cixin Liu",
-                "description": "author of The Three Body Problem",
+                "description": "Author of The Three Body Problem",
                 "slug": "/life/books/cixin-liu",
                 "order": 10,
                 "type": "folder",
@@ -1125,8 +1153,7 @@
                   "Chinese",
                   "hard sci-fi"
                 ],
-                "excerpt": "Cixin Liu is significant because he brought Chinese hard scifi to a global audience, blending rigorous physics, grand cosmic scale, and philosophical depth. His work revitalised hard scifi worldwide, ",
-                "newContent": true
+                "excerpt": "Cixin Liu is significant because he brought Chinese hard scifi to a global audience, blending rigorous physics, grand cosmic scale, and philosophical depth. His work revitalised hard scifi worldwide, "
               },
               {
                 "title": "R. F. Kuang",

@@ -103,7 +103,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
                     mt: 0,
                   }}
                 >
-
                   {!isMobile && (
                     <>
                       <Box sx={{ mb: 2 }}>
@@ -119,7 +118,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
                   ) : (
                     <SideAds />
                   )}
-
                 </Box>
               </Grid>
 
