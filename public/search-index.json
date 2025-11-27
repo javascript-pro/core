@@ -280,11 +280,18 @@
     "content": "\nEven Cowgirls Get the Blues follows Sissy Hankshaw, a hitchhiker born with enormous thumbs, as she drifts through America’s counterculture. It blends surreal humour, feminism, and mysticism, centring on her adventures at a ranch run by rebellious cowgirls and her search for freedom and identity.\n\n**Tom Robbins** is an American novelist known for playful, whimsical prose, irreverent humor, and philosophical musings. His works blend surrealism, countercultural themes, and sharp social commentary, with a strong focus on language and imagination.\n\n#### Bibliography\n\n- **1971** – _Another Roadside Attraction_\n- **1976** – _Even Cowgirls Get the Blues_\n- **1980** – _Still Life with Woodpecker_\n- **1984** – _Jitterbug Perfume_\n- **1990** – _Skinny Legs and All_\n- **1994** – _Half Asleep in Frog Pajamas_\n- **2000** – _Fierce Invalids Home from Hot Climates_\n- **2003** – _Villa Incognito_\n- **2008** – _Bad Timing_\n- **2009** – _B Is for Beer_ (children’s book)\n- **2014** – _Tibetan Peach Pie: A True Account of an Imaginative Life_ (memoir)\n- **2023** – _Wild Ducks Flying Backward_ (collection of short pieces)\n"
   },
   {
+    "slug": "life/diving/diving-accident",
+    "title": "What can go wrong?",
+    "description": "The worst diving accident I’ve ever seen",
+    "tags": [],
+    "content": "\nThis was an accident I actually saw happen in front of me. It was the worst not because of the outcome — the guy survived without any life-changing injuries — but because of how easily it happened, and how clearly I could see it happening to me.\n\nIt went like this. A pressurised air hose runs from your tank to your BCD. It’s used to quickly inflate the BCD to make you buoyant when needed — for example, when stepping off a boat weighed down with lead and other heavy kit. You want to be buoyant, otherwise you sink. This guy hadn’t connected the hose properly, and when he inflated his BCD prior to getting in, he heard the hissing but didn’t realise the BCD wasn’t inflating. His buddy did a buddy check but didn’t notice it either.\n\nSo blokey giant-strides off the boat and immediately sinks like a stone. We’re in 20m of water and he goes straight down. No time to equalise the pressure in his ears, no time to get calm or settled — just a panicked, painful fall to the bottom of the sea, where he finally got it together enough for his training to kick in, released his weight belt, and shot to the surface.\n\nLucky for him, he didn’t hold his breath on the way up or the injuries could have been far worse. As it was, an unplanned bounce dive to 20 metres in under a minute caused a lot of pain and distress. He ended up in hospital, and it properly ruined his holiday.\n"
+  },
+  {
     "slug": "life/diving/index",
     "title": "Diving",
     "description": "Fish are friends. Not food.",
     "tags": [],
-    "content": "\n[PageGrid pages=\"/life/diving/why-dive, /life/diving/why-not-dive\"]\n"
+    "content": "\n[PageGrid pages=\"/life/diving/why-dive, /life/diving/why-not-dive, /life/diving/diving-accident\"]\n"
   },
   {
     "slug": "life/diving/why-dive",

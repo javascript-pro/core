@@ -1241,11 +1241,20 @@
                 "image": "/png/n64/diving.png",
                 "type": "file",
                 "excerpt": "You might die. You have to mitigate that posiibility, yeh.\n\nScuba diving takes you into an environment that does not want you there. One mistake—one second of panic, one lapse in awareness—and water w"
+              },
+              {
+                "title": "What can go wrong?",
+                "slug": "/life/diving/diving-accident",
+                "order": 60,
+                "icon": "diving",
+                "image": "/png/n64/diving.png",
+                "type": "file",
+                "excerpt": "This was an accident I actually saw happen in front of me. It was the worst not because of the outcome — the guy survived without any lifechanging injuries — but because of how easily it happened, and"
               }
             ],
             "icon": "diving",
             "image": "https://live.staticflickr.com/65535/54936056240_8d8358141c_b.jpg",
-            "excerpt": "[PageGrid pages=\"/life/diving/whydive, /life/diving/whynotdive\"]"
+            "excerpt": "[PageGrid pages=\"/life/diving/whydive, /life/diving/whynotdive, /life/diving/divingaccident\"]"
           },
           {
             "title": "Food",
