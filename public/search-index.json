@@ -165,7 +165,7 @@
     "title": "Home",
     "description": "The apps we ship are real",
     "tags": "JavaScript, Next Gen, Next.js, example app, Gen X, goldlabel, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Material UI, MUI, Flash, SSR, SSG, Node, Gatsby, NextJS, Headless CMS, secure",
-    "content": "\n[PageGrid thumbnails=\"no\" pages=\"/work, /life, /balance\"]\n"
+    "content": "\n[PageGrid pages=\"/work, /life, /balance\"]\n"
   },
   {
     "slug": "life/aquaponics/index",

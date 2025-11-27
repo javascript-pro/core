@@ -6,7 +6,6 @@ description: The backbone of web communication for two decades
 icon: techstack
 image: /png/3rdParty/next_og.png
 tags: free, api, restful, endpoints, next, nextjs, flickr
-newContent: true
 ---
 
 > Effective when it is structured clearly, documented properly, and resilient under real-world load

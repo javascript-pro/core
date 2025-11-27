@@ -6,9 +6,7 @@ import { setDesignSystemKey } from '../../DesignSystem';
 export const toggleLoading =
   (value: boolean) => async (dispatch: TUbereduxDispatch) => {
     try {
-      dispatch(
-        setDesignSystemKey('loading', value),
-      );
+      dispatch(setDesignSystemKey('loading', value));
     } catch (e: unknown) {
       const msg = e instanceof Error ? e.message : String(e);
       dispatch(setUbereduxKey({ key: 'error', value: msg }));

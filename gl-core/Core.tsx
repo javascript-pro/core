@@ -13,6 +13,7 @@ import {
   Grid,
   Skeleton,
   Typography,
+  Divider,
 } from '@mui/material';
 import {
   fetchGlobalNav,
@@ -20,7 +21,6 @@ import {
   PageBreadcrumb,
   useIsMobile,
   useVersionCheck,
-  
   useDispatch,
   Siblings,
   useSiblings,
@@ -41,11 +41,13 @@ import {
   NewContent,
   toggleLoading,
 } from './cartridges/DesignSystem';
+import { useNewContent } from './cartridges/Uberedux';
 
 const config = configRaw as TConfig;
 
 export default function Core({ frontmatter, body = null }: TCore) {
   const dispatch = useDispatch();
+  const newContent = useNewContent();
   const { noImage, image, icon, title, description, paywall } =
     frontmatter ?? {};
   const [imageError, setImageError] = React.useState(false);
@@ -70,11 +72,11 @@ export default function Core({ frontmatter, body = null }: TCore) {
   // Test out our Feedback component by triggering it here
   React.useEffect(() => {
     if (!feedbackTested) {
-      const feedback: TFeedback = {
-        severity: 'info',
-        title: 'Connecting...',
-      };
-      dispatch(setFeedback(feedback));
+      // const feedback: TFeedback = {
+      //   severity: 'info',
+      //   title: 'Connecting...',
+      // };
+      // dispatch(setFeedback(feedback));
       dispatch(setDesignSystemKey('feedbackTested', true));
     }
   }, [dispatch, feedbackTested]);
@@ -101,13 +103,23 @@ export default function Core({ frontmatter, body = null }: TCore) {
                     mt: 0,
                   }}
                 >
+
+                  {!isMobile && (
+                    <>
+                      <Box sx={{ mb: 2 }}>
+                        {newContent?.map((item: any, i: number) => (
+                          <NewContent key={`content_${i}`} slug={item.slug} />
+                        ))}
+                      </Box>
+                    </>
+                  )}
+
                   {Array.isArray(siblings) && siblings.length > 0 ? (
                     <Siblings />
                   ) : (
                     <SideAds />
                   )}
 
-                  <NewContent />
                 </Box>
               </Grid>
 

@@ -45,8 +45,8 @@ export default function SystemDialog() {
       >
         {/* <DialogTitle>{!user ? <Continue /> : <User />}</DialogTitle> */}
         <DialogContent>
-          <Typography variant="h6" gutterBottom>
-            Cixin Liu
+          <Typography variant="h6" sx={{ mb: 2 }}>
+            New Content
           </Typography>
           {newContent?.map((item: any, i: number) => (
             <NewContent key={`content_${i}`} slug={item.slug} />

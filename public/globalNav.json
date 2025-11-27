@@ -953,8 +953,7 @@
                       "nextjs",
                       "flickr"
                     ],
-                    "excerpt": "Effective when it is structured clearly, documented properly, and resilient under realworld load\n\nREST has been the backbone of web communication for two decades. Despite alternatives such as GraphQL,",
-                    "newContent": true
+                    "excerpt": "Effective when it is structured clearly, documented properly, and resilient under realworld load\n\nREST has been the backbone of web communication for two decades. Despite alternatives such as GraphQL,"
                   },
                   {
                     "title": "Docker & Kubernetes",
@@ -1699,7 +1698,7 @@
       }
     ],
     "icon": "home",
-    "image": "https://live.staticflickr.com/65535/53669705662_bd523946ef_b.jpg",
+    "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
     "tags": [
       "JavaScript",
       "Next Gen",
@@ -1726,6 +1725,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work, /life, /balance\"]"
+    "excerpt": "[PageGrid pages=\"/work, /life, /balance\"]"
   }
 ]

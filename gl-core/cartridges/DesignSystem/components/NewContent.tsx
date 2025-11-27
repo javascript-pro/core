@@ -32,14 +32,9 @@ export default function NewContent({ slug }: INewContent) {
       <Alert
         sx={{ width: '100%', border: 0 }}
         severity="success"
-        variant="outlined"
         icon={<Icon icon={content.icon || 'home'} color="inherit" />}
       >
         <Typography variant="body1">{content.title}</Typography>
-
-        <Typography variant="body2" sx={{ opacity: 0.8 }}>
-          {content.excerpt || content.description || ''}
-        </Typography>
       </Alert>
     </ButtonBase>
   );

@@ -23,8 +23,6 @@ export type TFeedback = {
   description?: string;
 } | null;
 
-
-
 export type TSeverity = 'success' | 'info' | 'warning' | 'error';
 
 export type TIcon = TIconShape;

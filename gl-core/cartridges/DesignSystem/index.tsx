@@ -20,7 +20,6 @@ import { useMUITheme } from './hooks/useMUITheme';
 import { useFeedback } from './hooks/useFeedback';
 import { useLoading } from './hooks/useLoading';
 
-
 export {
   initialStateDesignSystem,
   DesignSystem,
