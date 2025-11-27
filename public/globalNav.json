@@ -318,9 +318,11 @@
             "tags": [
               "expertise",
               "interview",
-              "experience"
+              "experience",
+              "react native",
+              "mobile"
             ],
-            "excerpt": "[PageGrid thumbnails=\"no\" pages=\"/work/experience/dtrackt, /work/experience/aligent, /work/experience/hertwigauer, /work/experience/huawei, /work/experience/boral\", /work/experience/aligent\"]"
+            "excerpt": "Delivering highquality, crossplatform mobile solutions that are both efficient and performant, making it a valuable part of our tech stack\n\n[PageGrid thumbnails=\"no\" pages=\"/work/experience/dtrackt, /"
           },
           {
             "title": "Skills",
@@ -372,7 +374,7 @@
                         "excerpt": "In short, Hooks let React functions become stateful and reactive without classes\n\nAt a fundamental level, Hooks hook into React’s internal lifecycle and state system from within functional components."
                       },
                       {
-                        "title": "Our Experience",
+                        "title": "Real world experience",
                         "slug": "/work/skills/javascript/react/experience",
                         "order": 20,
                         "icon": "js",
@@ -385,7 +387,21 @@
                           "frameworks",
                           "china"
                         ],
-                        "excerpt": "Contract JavaScript Developer — Huawei Shenzhen, China — Feb 2016 to May 2016\n\nBy 2015–2016, React had evolved beyond an experiment — Facebook, Instagram, and Airbnb were using it at scale, and the op"
+                        "excerpt": "By 2015–2016, React had evolved beyond an experiment — Facebook, Instagram, and Airbnb were using it at scale, and the opensource ecosystem around it (Redux, React Router, Create React App) was maturi"
+                      },
+                      {
+                        "title": "React Native",
+                        "slug": "/work/skills/javascript/react/react-native",
+                        "order": 60,
+                        "icon": "js",
+                        "image": "/png/3rdParty/react.png",
+                        "type": "file",
+                        "tags": [
+                          "React",
+                          "react native",
+                          "hooks"
+                        ],
+                        "excerpt": "Developed by Facebook for building crossplatform mobile applications\n\nIt allows developers to use JavaScript and React (a widely used frontend library) to create native apps for both iOS and Android. "
                       }
                     ],
                     "icon": "js",
@@ -399,10 +415,42 @@
                     "excerpt": "[ChildPages title=\"React\"]\n\nReact is a JavaScript library for building user interfaces, originally developed by Jordan Walke at Facebook and opensourced in 2013. It introduced a fundamentally new way "
                   },
                   {
+                    "title": "Vanilla JS (ES6+)",
+                    "slug": "/work/skills/javascript/vanilla-js",
+                    "order": 3,
+                    "icon": "js",
+                    "image": "/png/3rdParty/javascript_og.png",
+                    "type": "file",
+                    "tags": [
+                      "JavaScript",
+                      "Vanilla JavaScript",
+                      "TypeScript"
+                    ],
+                    "excerpt": "When JavaScript needs to be everywhere instantly\n\nIn modern web engineering, Vanilla JavaScript is often dismissed as oldschool or underpowered. But at scale, especially across multiple domains or bra"
+                  },
+                  {
+                    "title": "Vercel",
+                    "slug": "/work/skills/javascript/vercel",
+                    "order": 3,
+                    "icon": "js",
+                    "image": "/png/3rdParty/next_og.png",
+                    "type": "file",
+                    "tags": [
+                      "Vercel",
+                      "JavaScript",
+                      "Node",
+                      "Next.js",
+                      "API",
+                      "REST API",
+                      "React"
+                    ],
+                    "excerpt": "Other services to deploy Next apps are available\n\nVercel created Next.js and runs the platform it was designed for. Deploys are instant, previews are automatic, and the hosting is globally fast withou"
+                  },
+                  {
                     "title": "Next.js",
                     "description": "React with seamless backend capabilities",
                     "slug": "/work/skills/javascript/nextjs",
-                    "order": 2,
+                    "order": 25,
                     "type": "folder",
                     "children": [
                       {
@@ -453,42 +501,6 @@
                       "React"
                     ],
                     "excerpt": "Next.js is a fullstack JavaScript framework that brings together the power of React on the frontend with seamless backend capabilities, creating a unified developer experience.\n\n[PageGrid thumbnails=\""
-                  },
-                  {
-                    "title": "Node",
-                    "description": "JavaScript backend",
-                    "slug": "/work/skills/javascript/node",
-                    "order": 3,
-                    "type": "folder",
-                    "children": [],
-                    "icon": "js",
-                    "image": "/png/3rdParty/node_og.png",
-                    "tags": [
-                      "JavaScript",
-                      "Vanilla JavaScript",
-                      "TypeScript",
-                      "React",
-                      "frameworks"
-                    ],
-                    "excerpt": "And then there was Node\n\nBack in the mid2000s, most of the web ran on PHP — powering WordPress, Drupal, Joomla — and developers often had to juggle PHP on the backend and JavaScript on the frontend. D"
-                  },
-                  {
-                    "title": "Vercel",
-                    "slug": "/work/skills/javascript/vercel",
-                    "order": 3,
-                    "icon": "js",
-                    "image": "/png/3rdParty/next_og.png",
-                    "type": "file",
-                    "tags": [
-                      "Vercel",
-                      "JavaScript",
-                      "Node",
-                      "Next.js",
-                      "API",
-                      "REST API",
-                      "React"
-                    ],
-                    "excerpt": "Other services to deploy Next apps are available\n\nVercel created Next.js and runs the platform it was designed for. Deploys are instant, previews are automatic, and the hosting is globally fast withou"
                   },
                   {
                     "title": "TypeScript",
@@ -600,6 +612,24 @@
                     "excerpt": "JavaScript was never meant for what became asked of it. It started life scripting image rollovers in the ‘90s — and somehow ended up running banks and billiondollar web apps.\n\nBy the early 2010s, the "
                   },
                   {
+                    "title": "Node",
+                    "description": "JavaScript backend",
+                    "slug": "/work/skills/javascript/node",
+                    "order": 30,
+                    "type": "folder",
+                    "children": [],
+                    "icon": "js",
+                    "image": "/png/3rdParty/node_og.png",
+                    "tags": [
+                      "JavaScript",
+                      "Vanilla JavaScript",
+                      "TypeScript",
+                      "React",
+                      "frameworks"
+                    ],
+                    "excerpt": "And then there was Node\n\nBack in the mid2000s, most of the web ran on PHP — powering WordPress, Drupal, Joomla — and developers often had to juggle PHP on the backend and JavaScript on the frontend. D"
+                  },
+                  {
                     "title": "Testing",
                     "description": "Left looking approach",
                     "slug": "/work/skills/javascript/testing",
@@ -618,20 +648,6 @@
                       "Playwright"
                     ],
                     "excerpt": "A Left looking approach\n\nA leftlooking approach in JavaScript testing should mean testing earlier in the development process before code reaches production. Using tools like Jest for unit and integrat"
-                  },
-                  {
-                    "title": "Vanilla JS (ES6+)",
-                    "slug": "/work/skills/javascript/vanilla-js",
-                    "order": 100,
-                    "icon": "js",
-                    "image": "/png/3rdParty/javascript_og.png",
-                    "type": "file",
-                    "tags": [
-                      "JavaScript",
-                      "Vanilla JavaScript",
-                      "TypeScript"
-                    ],
-                    "excerpt": "When JavaScript needs to be everywhere instantly\n\nIn modern web engineering, Vanilla JavaScript is often dismissed as oldschool or underpowered. But at scale, especially across multiple domains or bra"
                   }
                 ],
                 "icon": "js",
@@ -652,7 +668,7 @@
                   "Headless CMS",
                   "JSON"
                 ],
-                "excerpt": "We’ve been writing JavaScript since it was called ECMAScript.\n\n[PageGrid thumbnails=\"no\" pages=\"/work/skills/javascript/typescript, /work/skills/javascript/react, /work/skills/javascript/node, /work/s"
+                "excerpt": "We’ve been writing JavaScript since it was called ECMAScript.\n\n[PageGrid thumbnails=\"no\" pages=\"/work/skills/javascript/typescript, /work/skills/javascript/react, /work/skills/javascript/react/reactna"
               },
               {
                 "title": "Design",
@@ -908,9 +924,10 @@
                       "restful",
                       "endpoints",
                       "next",
-                      "nextjs"
+                      "nextjs",
+                      "flickr"
                     ],
-                    "excerpt": "REST has been the backbone of web communication for two decades. Despite alternatives such as GraphQL, REST remains the dominant standard. The challenge has never been the concept itself, but the impl",
+                    "excerpt": "Effective when it is structured clearly, documented properly, and resilient under realworld load\n\n[GitHub url=\"https://github.com/javascriptpro/exampleapp/tree/master/app/api\" label=\"/api\"]\n\nREST has ",
                     "newContent": true
                   },
                   {
@@ -950,7 +967,7 @@
               "fields",
               "work"
             ],
-            "excerpt": "Working across the full JavaScript stack to help understand every perspective from interface to infrastructure\n\n[PageGrid pages=\"/work/skills/javascript, /work/skills/fullstack, /work/skills/ai, /work"
+            "excerpt": "Working across the full JavaScript stack to help understand every perspective from interface to infrastructure\n\n[PageGrid pages=\"/work/skills/javascript/react/reactnative, /work/skills/javascript, /wo"
           },
           {
             "title": "CV",

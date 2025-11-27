@@ -3,14 +3,16 @@ order: 50
 title: Blockchain
 description: Building a Bitcoin-Powered Gambling Platform
 slug: /work/skills/fullstack/blockchain
-icon: api
+icon: techstack
 image: /png/3rdParty/bitcoin.png
 tags: techstack, crypto, blockchain, web3, casino, igaming, experience, bitcoin, malta
 ---
 
+> Fully anonymous, provably fair crypto casino
+
 # Blockchain Crypto Casino
 
-> In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online gambling world but was pivoting into blockchain as a way to skirt regulatory overhead and payment processor restrictions.
+In 2023, I joined a small iGaming startup in Malta focused on developing a fully anonymous, provably fair crypto casino. The company was founded by veterans of the online gambling world but was pivoting into blockchain as a way to skirt regulatory overhead and payment processor restrictions.
 
 The idea was to create a casino that ran entirely on Bitcoin. Players didn’t need to sign up with an email, provide any personal information, or go through a bank. They could simply send Bitcoin to the site, play games, and withdraw any winnings — all in a matter of minutes.
 
