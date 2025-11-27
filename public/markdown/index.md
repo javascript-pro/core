@@ -3,9 +3,9 @@ order: 1
 slug: /
 title: Home
 description: The apps we ship are real
-image: /png/n64/flickr.png
+image: https://live.staticflickr.com/65535/53669705662_bd523946ef_b.jpg
 icon: home
-tags: JavaScript, Next Gen, Next.js, core, Gen X, goldlabel, pr0, bouncer, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Angular, Vue, Material UI, MUI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS, secure
+tags: JavaScript, Next Gen, Next.js, example app, Gen X, goldlabel, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Material UI, MUI, Flash, SSR, SSG, Node, Gatsby, NextJS, Headless CMS, secure
 ---
 
 [PageGrid thumbnails="no" pages="/work, /life, /balance"]

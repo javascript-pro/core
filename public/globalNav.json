@@ -147,7 +147,7 @@
                     "slug": "/work/example-app/docs/lingua",
                     "order": 28,
                     "icon": "lingua",
-                    "image": "/png/aki/aki.png",
+                    "image": "/png/lingua.png",
                     "type": "file",
                     "excerpt": "The Lingua cartridge brings localisation to Goldlabel. It enables your site to serve content in multiple languages, making it accessible to a wider audience without complicating your codebase.\n\n[GitHu"
                   },
@@ -169,8 +169,8 @@
                   }
                 ],
                 "icon": "cartridge",
-                "image": "/png/n64/test.png",
-                "excerpt": "Goldlabel is built on Cartridges\n\n[PageGrid pages=\"/work/exampleapp/docs/designsystem, /work/exampleapp/docs/uberedux, /work/exampleapp/docs/contentmanager\"]\n\nA cartridge is a selfcontained piece of a"
+                "image": "/png/lingua.png",
+                "excerpt": "Goldlabel is built on Cartridges\n\n[PageGrid pages=\"/work/exampleapp/docs/designsystem, /work/exampleapp/docs/lingua, /work/exampleapp/docs/uberedux, /work/exampleapp/docs/contentmanager\"]\n\nA cartridge"
               },
               {
                 "title": "Tutorial",
@@ -953,7 +953,7 @@
                       "nextjs",
                       "flickr"
                     ],
-                    "excerpt": "Effective when it is structured clearly, documented properly, and resilient under realworld load\n\n[GitHub url=\"https://github.com/javascriptpro/exampleapp/tree/master/app/api\" label=\"/api\"]\n\nREST has ",
+                    "excerpt": "Effective when it is structured clearly, documented properly, and resilient under realworld load\n\nREST has been the backbone of web communication for two decades. Despite alternatives such as GraphQL,",
                     "newContent": true
                   },
                   {
