@@ -13,7 +13,6 @@ import {
   Grid,
   Skeleton,
   Typography,
-  Divider,
 } from '@mui/material';
 import {
   fetchGlobalNav,
@@ -29,7 +28,7 @@ import {
   Icon,
 } from '../gl-core';
 import {
-  // Paywall,
+  Paywall,
   SigninGate,
   useUser,
 } from './cartridges/Paywall';
@@ -91,7 +90,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
   return (
     <>
       <DesignSystem theme={config.themes[effectiveThemeMode]}>
-        {/* <Paywall /> */}
+        <Paywall />
         <Container id="core" sx={{ mt: 2 }}>
           <Box sx={{ minHeight: '100vh' }}>
             <Grid container spacing={isMobile ? 0 : 1}>

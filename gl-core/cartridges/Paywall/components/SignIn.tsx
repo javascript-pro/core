@@ -1,4 +1,4 @@
-// cartridges/Paywall/components/Continue.tsx
+// cartridges/Paywall/components/SignIn.tsx
 'use client';
 import * as React from 'react';
 import { Box, Typography, CardContent, Button, Grid } from '@mui/material';
@@ -15,7 +15,7 @@ import { auth } from '../../../lib/firebase';
 import { Icon, useDispatch } from '../../../../gl-core';
 import { setFeedback } from '../../DesignSystem';
 
-export default function Continue() {
+export default function SignIn() {
   const dispatch = useDispatch();
   const [user, setUser] = React.useState<User | null>(null);
 

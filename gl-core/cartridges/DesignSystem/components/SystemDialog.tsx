@@ -16,6 +16,7 @@ import {
   NewContent,
 } from '../../DesignSystem';
 import { useNewContent } from '../../Uberedux';
+import { User, SignIn, useUser } from '../../Paywall';
 
 export default function SystemDialog() {
   const dispatch = useDispatch();
@@ -23,6 +24,7 @@ export default function SystemDialog() {
   const ds = useDesignSystem();
   const newContent = useNewContent();
   const { fullScreen } = ds;
+  const user = useUser();
 
   const handleClose = () => {
     dispatch(setDesignSystemKey('dialog', null));
@@ -43,14 +45,16 @@ export default function SystemDialog() {
         onClose={handleClose}
         maxWidth={'sm'}
       >
-        {/* <DialogTitle>{!user ? <Continue /> : <User />}</DialogTitle> */}
         <DialogContent>
+          
+          
           <Typography variant="h6" sx={{ mb: 2 }}>
             New Content
           </Typography>
           {newContent?.map((item: any, i: number) => (
             <NewContent key={`content_${i}`} slug={item.slug} />
           ))}
+          {user ? <User /> : <SignIn />}
         </DialogContent>
 
         <DialogActions sx={{ display: 'block' }}>
