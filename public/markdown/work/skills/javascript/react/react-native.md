@@ -6,6 +6,7 @@ slug: /work/skills/javascript/react/react-native
 icon: js
 image: /png/3rdParty/react.png
 tags: React, react native, hooks
+newContent: true
 ---
 
 > Developed by Facebook for building cross-platform mobile applications

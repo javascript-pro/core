@@ -77,6 +77,9 @@
     <loc>https://goldlabel.pro/life/aquaponics</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/life/aquaponics/murray-hallam</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/life/aquaponics/overview</loc>
   </url>
   <url>
@@ -120,6 +123,24 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/life/books/tom-robbins</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/diving/diving-accident</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/diving/fish</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/diving/fish/octopus</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/diving/fish/seahorse</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/diving/fish/white-seabream</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/life/diving/fish/white-shark</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/life/diving</loc>
@@ -191,6 +212,9 @@
     <loc>https://goldlabel.pro/work/example-app/docs</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/work/example-app/docs/lingua</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/work/example-app/docs/uberedux</loc>
   </url>
   <url>
@@ -215,6 +239,9 @@
     <loc>https://goldlabel.pro/work/experience/dtrackt</loc>
   </url>
   <url>
+    <loc>https://goldlabel.pro/work/experience/eras</loc>
+  </url>
+  <url>
     <loc>https://goldlabel.pro/work/experience/hertwig-auer</loc>
   </url>
   <url>
@@ -225,6 +252,15 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/npm</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/skills/ai/aki</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/skills/ai/aki/ring-fenced-llm</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/skills/ai</loc>
@@ -249,6 +285,9 @@
   </url>
   <url>
     <loc>https://goldlabel.pro/work/skills/design/mui</loc>
+  </url>
+  <url>
+    <loc>https://goldlabel.pro/work/skills/ecmascript</loc>
   </url>
   <url>
     <loc>https://goldlabel.pro/work/skills/fullstack/blockchain</loc>

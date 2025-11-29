@@ -9,4 +9,4 @@ image: /png/n64/hippy.png
 
 > Aquaponics is a sustainable farming method that combines aquaculture (raising fish) and hydroponics (growing plants without soil) in a closed-loop system.
 
-[PageGrid thumbnails="no" pages="/life/aquaponics/overview"]
+[PageGrid thumbnails="no" pages="/life/aquaponics/overview, /life/aquaponics/murray-hallam"]

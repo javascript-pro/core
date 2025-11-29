@@ -10,4 +10,4 @@ tags: expertise, interview, experience, react native, mobile
 
 > Delivering high-quality, cross-platform mobile solutions that are both efficient and performant, making it a valuable part of our tech stack
 
-[PageGrid thumbnails="no" pages="/work/experience/dtrackt, /work/experience/aligent, /work/experience/hertwig-auer, /work/experience/huawei, /work/experience/boral", /work/experience/aligent"]
+[PageGrid thumbnails="no" pages="/work/experience/eras, /work/experience/dtrackt, /work/experience/aligent, /work/experience/hertwig-auer, /work/experience/huawei, /work/experience/boral", /work/experience/aligent"]

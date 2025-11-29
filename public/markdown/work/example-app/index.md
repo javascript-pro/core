@@ -12,8 +12,8 @@ tags: Open Source, JavaScript, TypeScript, React, Material UI, Flash, Server Sid
 
 Open Source and Free forever. It offers statically generated sites with Firestore-powered updates and a real admin panel. Built with Next.js App Router and Material UI
 
-[GitHub url="https://github.com/javascript-pro/core/pulse" label="Repository Pulse"]
-
-[GitHub url="https://github.com/users/javascript-pro/projects/8" label="Kanban"]
-
 [PageGrid pages="/work/example-app/docs, /work/example-app/tutorial"]
+
+[GitHub url="https://github.com/javascript-pro/core/pulse" label="Public Repository"]
+
+[GitHub url="https://github.com/users/javascript-pro/projects/8" label="Kanban Agile Board"]

@@ -4,12 +4,12 @@ title: Docs
 slug: /work/example-app/docs
 description: Example Documentation
 icon: cartridge
-image: /png/n64/test.png
+image: /png/lingua.png
 ---
 
 > Goldlabel is built on Cartridges
 
-[PageGrid pages="/work/example-app/docs/design-system, /work/example-app/docs/uberedux, /work/example-app/docs/content-manager"]
+[PageGrid pages="/work/example-app/docs/design-system, /work/example-app/docs/lingua, /work/example-app/docs/uberedux, /work/example-app/docs/content-manager"]
 
 A cartridge is a self-contained piece of application logic: React components, state, styles, and utilities bundled together in a portable unit.
 

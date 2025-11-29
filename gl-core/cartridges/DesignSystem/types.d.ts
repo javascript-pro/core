@@ -1,6 +1,17 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/DesignSystem/types.d.ts
 import { TIconShape } from './components/Icon';
 
+export interface TDesignSystemState {
+  cartridge?: string;
+  dialog?: any;
+  theme?: TTheme;
+  feedback?: TFeedback;
+  feedbackTested?: boolean;
+  fullScreen?: boolean;
+  loading?: boolean;
+  [key: string]: any;
+}
+
 export interface IDesignSystem {
   theme?: TTheme;
   children: React.ReactNode;
@@ -11,16 +22,6 @@ export type TFeedback = {
   title?: string;
   description?: string;
 } | null;
-
-export interface TDesignSystemState {
-  cartridge?: string;
-  dialog?: any;
-  theme?: TTheme;
-  feedback?: TFeedback;
-  feedbackTested?: boolean;
-  fullScreen?: boolean;
-  [key: string]: any;
-}
 
 export type TSeverity = 'success' | 'info' | 'warning' | 'error';
 

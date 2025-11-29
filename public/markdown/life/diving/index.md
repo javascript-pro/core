@@ -7,4 +7,4 @@ icon: diving
 image: https://live.staticflickr.com/65535/54936056240_8d8358141c_b.jpg
 ---
 
-[PageGrid pages="/life/diving/why-dive, /life/diving/why-not-dive"]
+[PageGrid pages="/life/diving/why-dive, /life/diving/why-not-dive, /life/diving/fish, /life/diving/diving-accident"]

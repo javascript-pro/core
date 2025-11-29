@@ -7,6 +7,7 @@ import PrevNext from './components/PrevNext';
 import GitHub from './components/GitHub';
 import ChildPages from './components/ChildPages';
 import PageGrid from './components/PageGrid';
+import LinkOut from './components/LinkOut';
 
 export {
   ChildPages,
@@ -17,4 +18,5 @@ export {
   PageAd,
   YouTube,
   PageGrid,
+  LinkOut,
 };

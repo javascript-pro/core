@@ -1,7 +1,8 @@
 // core/gl-core/actions/navigateTo.tsx
 
-import { setUbereduxKey, toggleLoading } from '../../gl-core';
+import { setUbereduxKey } from '../../gl-core';
 import { TUbereduxDispatch } from '../../gl-core/types';
+import { toggleLoading } from '../../gl-core/cartridges/DesignSystem';
 
 export type TUbereduxState = {
   // define shape if needed

@@ -4,7 +4,7 @@ title: Git
 description: Created in 2005 by Linus Torvalds
 slug: /work/skills/fullstack/git
 icon: techstack
-image: /png/wei-zang/wei-zang.png
+image: /png/3rdParty/gitkraken.png
 tags: github, process, javascript, source control, project management, github, bitbucket, github, process, javascript, tools, gitkraken
 ---
 

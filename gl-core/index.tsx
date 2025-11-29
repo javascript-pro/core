@@ -26,6 +26,7 @@ import {
   GitHub,
   ChildPages,
   PageGrid,
+  LinkOut,
 } from './cartridges/Shortcodes';
 import {
   useLoading,
@@ -53,7 +54,6 @@ import {
   navigateTo,
   routeTo,
   toggleFeedback,
-  toggleLoading,
   toggleHideImage,
   uploadToStorage,
   resend,
@@ -68,7 +68,6 @@ export {
   navigateTo,
   routeTo,
   toggleFeedback,
-  toggleLoading,
   uploadToStorage,
   toggleHideImage,
   resend,
@@ -99,6 +98,7 @@ export {
   PageAd,
   Mapbox,
   GitHub,
+  LinkOut,
   OpenSource,
   PageGrid,
 };
