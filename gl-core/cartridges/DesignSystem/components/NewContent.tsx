@@ -33,7 +33,7 @@ export default function NewContent({ slug }: INewContent) {
         sx={{ width: '100%', border: 0 }}
         severity="success"
         icon={
-          <Badge color="primary" badgeContent="New">
+          <Badge color="primary" badgeContent="!">
             <Icon icon={content.icon || 'home'} color="inherit" />
           </Badge>
         }
