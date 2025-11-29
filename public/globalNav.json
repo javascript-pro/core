@@ -373,6 +373,21 @@
             "type": "folder",
             "children": [
               {
+                "title": "ECMAScript",
+                "slug": "/work/skills/ecmascript",
+                "order": 2,
+                "icon": "js",
+                "image": "https://live.staticflickr.com/65535/54953837208_d14c69878f_b.jpg",
+                "type": "file",
+                "tags": [
+                  "expertise",
+                  "ECMAScript",
+                  "JScript",
+                  "ActionScript"
+                ],
+                "excerpt": "Initially dominant on the client side for the Web, ECMAScript now powers Node.js\n\nECMAScript is the formal language specification behind JavaScript, JScript, ActionScript, and similar scripting langua"
+              },
+              {
                 "title": "JavaScript",
                 "description": "JavaScript Whatever the Weather",
                 "slug": "/work/skills/javascript",
@@ -805,8 +820,7 @@
                         "icon": "ai",
                         "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                         "type": "file",
-                        "excerpt": "Sending sensitive files to external platforms can breach professional secrecy, violate GDPR, and damage client trust\n\nAKI exists because firms need the power of AI without risking client confidentiali",
-                        "newContent": true
+                        "excerpt": "Sending sensitive files to external platforms can breach professional secrecy, violate GDPR, and damage client trust\n\nAKI exists because firms need the power of AI without risking client confidentiali"
                       }
                     ],
                     "icon": "ai",
@@ -896,7 +910,7 @@
                     "slug": "/work/skills/fullstack/git",
                     "order": 25,
                     "icon": "techstack",
-                    "image": "/png/wei-zang/wei-zang.png",
+                    "image": "/png/3rdParty/gitkraken.png",
                     "type": "file",
                     "tags": [
                       "github",
@@ -1035,7 +1049,7 @@
               "fields",
               "work"
             ],
-            "excerpt": "Working across the full JavaScript stack to help understand every perspective from interface to infrastructure\n\n[PageGrid pages=\"/work/skills/javascript/react, /work/skills/javascript/react/reactnativ"
+            "excerpt": "Working across the full JavaScript stack to help understand every perspective from interface to infrastructure\n\n[PageGrid pages=\"/work/skills/ecmascript, /work/skills/javascript/react, /work/skills/ja"
           },
           {
             "title": "CV",
@@ -1767,6 +1781,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[PageGrid pages=\"/work, /life, /balance\"]"
+    "excerpt": "[PageGrid pages=\"/work, /life, /balance\"]\n\n[PageGrid thumbnails=\"yes\" pages=\"/work/npm, /work/skills/ecmascript\"]"
   }
 ]

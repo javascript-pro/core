@@ -10,3 +10,5 @@ tags: JavaScript, Next Gen, Next.js, example app, Gen X, goldlabel, AI Prompt En
 ---
 
 [PageGrid pages="/work, /life, /balance"]
+
+[PageGrid thumbnails="yes" pages="/work/npm, /work/skills/ecmascript"]
