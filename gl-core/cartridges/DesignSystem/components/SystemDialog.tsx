@@ -46,8 +46,6 @@ export default function SystemDialog() {
         maxWidth={'sm'}
       >
         <DialogContent>
-          
-          
           <Typography variant="h6" sx={{ mb: 2 }}>
             New Content
           </Typography>

@@ -106,6 +106,21 @@
             "excerpt": "| Tel/WhatsApp  |  | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX\n\n[PageGrid thumbnails=\"no\" pages=\"/work/company/gdpr, /work/company/privacycookies, /work/company/term"
           },
           {
+            "title": "NPM",
+            "slug": "/work/npm",
+            "order": 10,
+            "icon": "work",
+            "image": "https://live.staticflickr.com/65535/54953590078_b40cbc83fb_b.jpg",
+            "type": "file",
+            "tags": [
+              "NPM",
+              "JavaScript",
+              "packages"
+            ],
+            "excerpt": "NPM is the central registry for JavaScript packages, providing developers with a vast ecosystem of reusable modules, version management, and dependency tools for building modern Node and frontend appl",
+            "newContent": true
+          },
+          {
             "title": "Example App",
             "description": "This app is Open Source",
             "slug": "/work/example-app",

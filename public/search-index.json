@@ -588,6 +588,13 @@
     "content": "\n> Goldlabel builds and ships modern web apps for clients who need real results fast\n\n[PageGrid thumbnails=\"no\" pages=\"/work/about/hyperlink-resume, /work/about, /work/skills, /work/experience, /work/example-app\"]\n\n- _Small_ team. _Big_ output\n- Real deployments from Day One\n- Readable, extensible, Open Source\n"
   },
   {
+    "slug": "work/npm",
+    "title": "NPM",
+    "description": "Central registry for JavaScript packages",
+    "tags": "NPM, JavaScript, packages",
+    "content": "\n[Package on NPM](https://www.npmjs.com/package/@goldlabelapps/core)\n\n[Package on GitHub](https://github.com/goldlabelapps/npm)\n\nNPM is the central registry for JavaScript packages, providing developers with a vast ecosystem of reusable modules, version management, and dependency tools for building modern Node and front-end applications.\n\n1. Install\n\n```\ncd <working-dir>\nnpm i @goldlabelapps/core\n```\n\n2. Use\n"
+  },
+  {
     "slug": "work/skills/ai/aki/index",
     "title": "Local LLM",
     "description": "Ringfenced AI powered Document Management for SMEs",

@@ -27,11 +27,7 @@ import {
   SharePopup,
   Icon,
 } from '../gl-core';
-import {
-  Paywall,
-  SigninGate,
-  useUser,
-} from './cartridges/Paywall';
+import { Paywall, SigninGate, useUser } from './cartridges/Paywall';
 import {
   DesignSystem,
   useDesignSystem,
