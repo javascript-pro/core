@@ -5,6 +5,7 @@ description: Hosted entirely within your firm’s secure environment
 slug: /work/expertise/ai/aki/ring-fenced-llm
 icon: ai
 image: https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg
+newContent: true
 ---
 
 > Sending sensitive files to external platforms can breach professional secrecy, violate GDPR, and damage client trust

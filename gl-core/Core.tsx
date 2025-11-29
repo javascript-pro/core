@@ -70,6 +70,12 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
   const isAuthed = !!(user && user.uid);
 
+  const mdSize = React.useMemo(() => {
+    if (!newContent) return 6;
+    const count = newContent.length;
+    return count % 3 === 0 ? 4 : 6;
+  }, [newContent]);
+
   return (
     <>
       <DesignSystem theme={config.themes[effectiveThemeMode]}>
@@ -92,16 +98,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
                     <Siblings />
                   ) : (
                     <SideAds />
-                  )}
-
-                  {!isMobile && (
-                    <>
-                      <Box sx={{ mt: 1 }}>
-                        {newContent?.map((item: any, i: number) => (
-                          <NewContent key={`content_${i}`} slug={item.slug} />
-                        ))}
-                      </Box>
-                    </>
                   )}
                 </Box>
               </Grid>
@@ -228,6 +224,24 @@ export default function Core({ frontmatter, body = null }: TCore) {
                       <RenderMarkdown>{body}</RenderMarkdown>
                     </>
                   )}
+
+                  <>
+                    <Box sx={{ mt: 1 }}>
+                      <Grid container spacing={1}>
+                        {newContent?.map((item: any, i: number) => (
+                          <Grid
+                            key={`page_${i}`}
+                            size={{
+                              xs: 12,
+                              md: mdSize,
+                            }}
+                          >
+                            <NewContent slug={item.slug} />
+                          </Grid>
+                        ))}
+                      </Grid>
+                    </Box>
+                  </>
                 </Box>
               </Grid>
             </Grid>

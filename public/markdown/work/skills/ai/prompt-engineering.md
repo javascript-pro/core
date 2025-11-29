@@ -6,9 +6,10 @@ slug: /work/skills/ai/prompt-engineering
 icon: ai
 image: https://live.staticflickr.com/65535/53669705662_bd523946ef_b.jpg
 tags: ui, ai
+newContent: true
 ---
 
-> Prompt engineering is the art of designing clear, structured instructions that make AI features behave reliably inside your React app.
+> The art of designing clear, structured instructions that make AI features behave reliably inside your app
 
 Prompt engineering, from a React developer’s perspective, is the design and optimisation of the text instructions you send to an LLM so that your UI behaves consistently and your app returns predictable, useful results.
 
