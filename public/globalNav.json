@@ -117,7 +117,7 @@
               "JavaScript",
               "packages"
             ],
-            "excerpt": "NPM is the central registry for JavaScript packages, providing developers with a vast ecosystem of reusable modules, version management, and dependency tools for building modern Node and frontend appl",
+            "excerpt": "NPM is the central registry for JavaScript packages, providing developers with a vast ecosystem of reusable modules, versio\n\n[LinkOut title=\"GitHub goldlabelapps/npmcore\" icon=\"github\" url=\"https://gi",
             "newContent": true
           },
           {
@@ -377,7 +377,7 @@
                 "slug": "/work/skills/ecmascript",
                 "order": 2,
                 "icon": "js",
-                "image": "https://live.staticflickr.com/65535/54953837208_d14c69878f_b.jpg",
+                "image": "https://live.staticflickr.com/65535/54953844493_dce461ec4c_b.jpg",
                 "type": "file",
                 "tags": [
                   "expertise",
@@ -385,7 +385,8 @@
                   "JScript",
                   "ActionScript"
                 ],
-                "excerpt": "Initially dominant on the client side for the Web, ECMAScript now powers Node.js\n\nECMAScript is the formal language specification behind JavaScript, JScript, ActionScript, and similar scripting langua"
+                "excerpt": "Initially dominant on the client side for the Web, ECMAScript now powers Node.js\n\nECMAScript is the formal language specification behind JavaScript, JScript, ActionScript, and similar scripting langua",
+                "newContent": true
               },
               {
                 "title": "JavaScript",
@@ -724,7 +725,7 @@
                   "Headless CMS",
                   "JSON"
                 ],
-                "excerpt": "\"A JavaScript team that’s battletested, precise, and fast.\"\n\n[PageGrid thumbnails=\"no\" pages=\"/work/skills/javascript/typescript, /work/skills/javascript/react, /work/skills/javascript/react/reactnati"
+                "excerpt": "\"A JavaScript team that’s battletested, precise, and fast.\"\n\n[PageGrid thumbnails=\"no\" pages=\"/work/skills/ecmascript, /work/skills/javascript/typescript, /work/skills/javascript/react, /work/skills/j"
               },
               {
                 "title": "Design",
@@ -1531,7 +1532,7 @@
       },
       {
         "title": "Balance",
-        "description": "Were the kind of kid who liked Lego?",
+        "description": "Were you the kind of kid who liked Lego?",
         "slug": "/balance",
         "order": 100,
         "type": "folder",
@@ -1749,7 +1750,7 @@
           }
         ],
         "icon": "balance",
-        "image": "https://live.staticflickr.com/65535/54941521056_c3dbdb07cc_b.jpg",
+        "image": "https://live.staticflickr.com/65535/54941778209_29ee005a38_b.jpg",
         "excerpt": "If you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are \n\n[PageGrid thumbnails=\"no\" pages=\"/balance/pictures, /balance/film, /balance/words\"]"
       }
     ],
@@ -1781,6 +1782,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[PageGrid pages=\"/work, /life, /balance\"]\n\n[PageGrid thumbnails=\"yes\" pages=\"/work/npm, /work/skills/ecmascript\"]"
+    "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/work, /life, /balance\"]"
   }
 ]

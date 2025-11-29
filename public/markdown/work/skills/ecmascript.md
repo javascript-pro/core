@@ -6,6 +6,7 @@ slug: /work/skills/ecmascript
 icon: js
 image: https://live.staticflickr.com/65535/54953844493_dce461ec4c_b.jpg
 tags: expertise, ECMAScript, JScript, ActionScript
+newContent: true
 ---
 
 > Initially dominant on the client side for the Web, ECMAScript now powers Node.js

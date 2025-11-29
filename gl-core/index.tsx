@@ -26,6 +26,7 @@ import {
   GitHub,
   ChildPages,
   PageGrid,
+  LinkOut,
 } from './cartridges/Shortcodes';
 import {
   useLoading,
@@ -97,6 +98,7 @@ export {
   PageAd,
   Mapbox,
   GitHub,
+  LinkOut,
   OpenSource,
   PageGrid,
 };

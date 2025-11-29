@@ -52,7 +52,7 @@ export default function SystemDialog() {
           {newContent?.map((item: any, i: number) => (
             <NewContent key={`content_${i}`} slug={item.slug} />
           ))}
-          {user ? <User /> : <SignIn />}
+          
         </DialogContent>
 
         <DialogActions sx={{ display: 'block' }}>

@@ -51,7 +51,7 @@
   {
     "slug": "balance/index",
     "title": "Balance",
-    "description": "Were the kind of kid who liked Lego?",
+    "description": "Were you the kind of kid who liked Lego?",
     "tags": [],
     "content": "\n> If you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are [Generation X](/balance/books/douglas-coupland/generation-x)\n\n[PageGrid thumbnails=\"no\" pages=\"/balance/pictures, /balance/film, /balance/words\"]\n"
   },
@@ -165,7 +165,7 @@
     "title": "Home",
     "description": "The apps we ship are real",
     "tags": "JavaScript, Next Gen, Next.js, example app, Gen X, goldlabel, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Material UI, MUI, Flash, SSR, SSG, Node, Gatsby, NextJS, Headless CMS, secure",
-    "content": "\n[PageGrid pages=\"/work, /life, /balance\"]\n\n[PageGrid thumbnails=\"yes\" pages=\"/work/npm, /work/skills/ecmascript\"]\n"
+    "content": "\n[PageGrid thumbnails=\"yes\" pages=\"/work, /life, /balance\"]\n"
   },
   {
     "slug": "life/aquaponics/index",
@@ -592,7 +592,7 @@
     "title": "NPM",
     "description": "Central registry for JavaScript packages",
     "tags": "NPM, JavaScript, packages",
-    "content": "\n[Package on NPM](https://www.npmjs.com/package/@goldlabelapps/core)\n\n[Package on GitHub](https://github.com/goldlabelapps/npm)\n\nNPM is the central registry for JavaScript packages, providing developers with a vast ecosystem of reusable modules, version management, and dependency tools for building modern Node and front-end applications.\n\n1. Install\n\n```\ncd <working-dir>\nnpm i @goldlabelapps/core\n```\n\n2. Use\n"
+    "content": "\n> NPM is the central registry for JavaScript packages, providing developers with a vast ecosystem of reusable modules, versio\n\n[LinkOut title=\"GitHub goldlabelapps/npm-core\" icon=\"github\" url=\"https://github.com/goldlabelapps/npm-core\"]\n\n[LinkOut title=\"NPM @goldlabelapps/core\" url=\"https://www.npmjs.com/package/@goldlabelapps/core\"]\n\n1. Install\n\n```cd <working-dir>\nnpm i @goldlabelapps/core\n```\n\n2. Use\n"
   },
   {
     "slug": "work/skills/ai/aki/index",
@@ -753,7 +753,7 @@
     "title": "JavaScript",
     "description": "JavaScript Whatever the Weather",
     "tags": "Fullstack JavaScript, Vanilla JavaScript, TypeScript, React, Angular, Vue, Material UI, Flash, Server Side JavaScript, Node, Gatsby, NextJS, Headless CMS, JSON",
-    "content": "\n> \"A JavaScript team that’s battle-tested, precise, and fast.\"\n\n[PageGrid thumbnails=\"no\" pages=\"/work/skills/javascript/typescript, /work/skills/javascript/react, /work/skills/javascript/react/react-native, /work/skills/javascript/node, /work/skills/javascript/nextjs, /work/skills/javascript/vercel, /work/skills/javascript/js-testing\"]\n\nBefore the frameworks, before npm, before it ate the world—we were already deep in the language that powers the modern web.\n\n- We’ve built Flash apps in ActionScript.\n- We’ve written jQuery plugins by hand.\n- We’ve moved through Vanilla JS, React, and beyond.\n- We’ve worked in Node.js since 2006.\n\nAnd through it all, one thing has remained constant: _ECMA Script_.\n\n> We’ve been writing JavaScript since it was called ECMAScript.\n\n[ECMAScript](https://en.wikipedia.org/wiki/ECMAScript) (/ˈɛkməskrɪpt/; ES) is a standard for scripting languages, including JavaScript, JScript, and ActionScript. It is best known as a JavaScript standard intended to ensure the interoperability of web pages across different web browsers. It is standardized by Ecma International in the document ECMA-262\n\n> Always JavaScript even when it wasn’t\n\n- _ActionScript?_ Flash’s scripting language was basically JavaScript with a stricter compiler.\n- _jQuery?_ That was us hiding from browser inconsistencies—but it was still JavaScript underneath.\n- _React?_ Just a way of writing better JavaScript components.\n- _Node?_ JavaScript on the server. A game changer.\n\nWe’ve used it for UI, logic, APIs, real-time systems, build tooling, browser extensions, PWAs, even art projects.\n\nIf it runs JavaScript, we’ve probably shipped something on it.\n"
+    "content": "\n> \"A JavaScript team that’s battle-tested, precise, and fast.\"\n\n[PageGrid thumbnails=\"no\" pages=\"/work/skills/ecmascript, /work/skills/javascript/typescript, /work/skills/javascript/react, /work/skills/javascript/react/react-native, /work/skills/javascript/node, /work/skills/javascript/nextjs, /work/skills/javascript/vercel, /work/skills/javascript/js-testing\"]\n\nBefore the frameworks, before npm, before it ate the world—we were already deep in the language that powers the modern web.\n\n- We’ve built Flash apps in ActionScript.\n- We’ve written jQuery plugins by hand.\n- We’ve moved through Vanilla JS, React, and beyond.\n- We’ve worked in Node.js since 2006.\n\nAnd through it all, one thing has remained constant: _ECMA Script_.\n\n> We’ve been writing JavaScript since it was called ECMAScript.\n\n[ECMAScript](https://en.wikipedia.org/wiki/ECMAScript) (/ˈɛkməskrɪpt/; ES) is a standard for scripting languages, including JavaScript, JScript, and ActionScript. It is best known as a JavaScript standard intended to ensure the interoperability of web pages across different web browsers. It is standardized by Ecma International in the document ECMA-262\n\n> Always JavaScript even when it wasn’t\n\n- _ActionScript?_ Flash’s scripting language was basically JavaScript with a stricter compiler.\n- _jQuery?_ That was us hiding from browser inconsistencies—but it was still JavaScript underneath.\n- _React?_ Just a way of writing better JavaScript components.\n- _Node?_ JavaScript on the server. A game changer.\n\nWe’ve used it for UI, logic, APIs, real-time systems, build tooling, browser extensions, PWAs, even art projects.\n\nIf it runs JavaScript, we’ve probably shipped something on it.\n"
   },
   {
     "slug": "work/skills/javascript/nextjs/index",

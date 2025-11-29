@@ -9,16 +9,15 @@ tags: NPM, JavaScript, packages
 newContent: true
 ---
 
-[Package on NPM](https://www.npmjs.com/package/@goldlabelapps/core)
+> NPM is the central registry for JavaScript packages, providing developers with a vast ecosystem of reusable modules, versio
 
-[Package on GitHub](https://github.com/goldlabelapps/npm)
+[LinkOut title="GitHub goldlabelapps/npm-core" icon="github" url="https://github.com/goldlabelapps/npm-core"]
 
-NPM is the central registry for JavaScript packages, providing developers with a vast ecosystem of reusable modules, version management, and dependency tools for building modern Node and front-end applications.
+[LinkOut title="NPM @goldlabelapps/core" url="https://www.npmjs.com/package/@goldlabelapps/core"]
 
 1. Install
 
-```
-cd <working-dir>
+```cd <working-dir>
 npm i @goldlabelapps/core
 ```
 
