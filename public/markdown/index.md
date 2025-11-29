@@ -9,4 +9,4 @@ noImage: true
 tags: JavaScript, Next Gen, Next.js, example app, Gen X, goldlabel, AI Prompt Engineering, ChatGPT, OpenAI, Singularity, Frontend, Vanilla JS, TypeScript, React, Material UI, MUI, Flash, SSR, SSG, Node, Gatsby, NextJS, Headless CMS, secure
 ---
 
-[PageGrid pages="/work, /life, /balance"]
+[PageGrid thumbnails="yes" pages="/work, /life, /balance"]

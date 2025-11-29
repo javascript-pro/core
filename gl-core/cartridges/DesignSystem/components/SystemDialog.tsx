@@ -2,6 +2,7 @@
 'use client';
 import * as React from 'react';
 import {
+  Grid,
   Dialog,
   DialogActions,
   DialogContent,
@@ -46,20 +47,20 @@ export default function SystemDialog() {
         maxWidth={'sm'}
       >
         <DialogContent>
-          
-          
-          <Typography variant="h6" sx={{ mb: 2 }}>
-            New Content
-          </Typography>
-          {newContent?.map((item: any, i: number) => (
-            <NewContent key={`content_${i}`} slug={item.slug} />
-          ))}
-          {user ? <User /> : <SignIn />}
+          <Grid container spacing={2} sx={{ mb: 2 }}>
+            <Grid size={{ xs: 12, sm: 6 }}>
+              <Typography variant="h6" sx={{ mb: 2 }}>
+                New Content
+              </Typography>
+              {newContent?.map((item: any, i: number) => (
+                <NewContent key={`content_${i}`} slug={item.slug} />
+              ))}
+            </Grid>
+            <Grid size={{ xs: 12, sm: 6 }}>
+              <MenuSystem />
+            </Grid>
+          </Grid>
         </DialogContent>
-
-        <DialogActions sx={{ display: 'block' }}>
-          <MenuSystem />
-        </DialogActions>
         <DialogActions>
           <IconButton color="primary" onClick={toggleFullscreen}>
             <Icon icon="fullscreen" />

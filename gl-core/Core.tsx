@@ -1,6 +1,6 @@
 // core/gl-core/Core.tsx
 'use client';
-import { TFeedback } from './cartridges/DesignSystem/types';
+
 import configRaw from './config.json';
 import { TCore, TConfig } from './types';
 import * as React from 'react';
@@ -27,16 +27,11 @@ import {
   SharePopup,
   Icon,
 } from '../gl-core';
-import {
-  Paywall,
-  SigninGate,
-  useUser,
-} from './cartridges/Paywall';
+import { Paywall, SigninGate, useUser, User } from './cartridges/Paywall';
 import {
   DesignSystem,
   useDesignSystem,
-  setFeedback,
-  setDesignSystemKey,
+  // setDesignSystemKey,
   NewContent,
   toggleLoading,
 } from './cartridges/DesignSystem';
@@ -68,18 +63,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
     dispatch(toggleLoading(false));
   }, [dispatch]);
 
-  // Test out our Feedback component by triggering it here
-  React.useEffect(() => {
-    if (!feedbackTested) {
-      // const feedback: TFeedback = {
-      //   severity: 'info',
-      //   title: 'Connecting...',
-      // };
-      // dispatch(setFeedback(feedback));
-      dispatch(setDesignSystemKey('feedbackTested', true));
-    }
-  }, [dispatch, feedbackTested]);
-
   useVersionCheck();
 
   const effectiveThemeMode =
@@ -102,20 +85,23 @@ export default function Core({ frontmatter, body = null }: TCore) {
                     mt: 0,
                   }}
                 >
-                  {!isMobile && (
-                    <>
-                      <Box sx={{ mb: 2 }}>
-                        {newContent?.map((item: any, i: number) => (
-                          <NewContent key={`content_${i}`} slug={item.slug} />
-                        ))}
-                      </Box>
-                    </>
-                  )}
+                  {/* Global Error Boundry */}
+                  {user ? <User /> : null}
 
                   {Array.isArray(siblings) && siblings.length > 0 ? (
                     <Siblings />
                   ) : (
                     <SideAds />
+                  )}
+
+                  {!isMobile && (
+                    <>
+                      <Box sx={{ mt: 1 }}>
+                        {newContent?.map((item: any, i: number) => (
+                          <NewContent key={`content_${i}`} slug={item.slug} />
+                        ))}
+                      </Box>
+                    </>
                   )}
                 </Box>
               </Grid>

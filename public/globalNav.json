@@ -106,6 +106,21 @@
             "excerpt": "| Tel/WhatsApp  |  | \n\n Goldlabel Apps Ltd  \n 321323 High Road  \n Chadwell Heath  \n Essex RM6 6AX\n\n[PageGrid thumbnails=\"no\" pages=\"/work/company/gdpr, /work/company/privacycookies, /work/company/term"
           },
           {
+            "title": "NPM",
+            "slug": "/work/npm",
+            "order": 10,
+            "icon": "work",
+            "image": "https://live.staticflickr.com/65535/54953590078_b40cbc83fb_b.jpg",
+            "type": "file",
+            "tags": [
+              "NPM",
+              "JavaScript",
+              "packages"
+            ],
+            "excerpt": "NPM is the central registry for JavaScript packages, providing developers with a vast ecosystem of reusable modules, versio\n\n[LinkOut title=\"GitHub goldlabelapps/npmcore\" icon=\"github\" url=\"https://gi",
+            "newContent": true
+          },
+          {
             "title": "Example App",
             "description": "This app is Open Source",
             "slug": "/work/example-app",
@@ -358,6 +373,22 @@
             "type": "folder",
             "children": [
               {
+                "title": "ECMAScript",
+                "slug": "/work/skills/ecmascript",
+                "order": 2,
+                "icon": "js",
+                "image": "https://live.staticflickr.com/65535/54953844493_dce461ec4c_b.jpg",
+                "type": "file",
+                "tags": [
+                  "expertise",
+                  "ECMAScript",
+                  "JScript",
+                  "ActionScript"
+                ],
+                "excerpt": "Initially dominant on the client side for the Web, ECMAScript now powers Node.js\n\nECMAScript is the formal language specification behind JavaScript, JScript, ActionScript, and similar scripting langua",
+                "newContent": true
+              },
+              {
                 "title": "JavaScript",
                 "description": "JavaScript Whatever the Weather",
                 "slug": "/work/skills/javascript",
@@ -427,7 +458,8 @@
                           "react native",
                           "hooks"
                         ],
-                        "excerpt": "Developed by Facebook for building crossplatform mobile applications\n\nIt allows developers to use JavaScript and React (a widely used frontend library) to create native apps for both iOS and Android. "
+                        "excerpt": "Developed by Facebook for building crossplatform mobile applications\n\nIt allows developers to use JavaScript and React (a widely used frontend library) to create native apps for both iOS and Android. ",
+                        "newContent": true
                       }
                     ],
                     "icon": "js",
@@ -694,7 +726,7 @@
                   "Headless CMS",
                   "JSON"
                 ],
-                "excerpt": "\"A JavaScript team that’s battletested, precise, and fast.\"\n\n[PageGrid thumbnails=\"no\" pages=\"/work/skills/javascript/typescript, /work/skills/javascript/react, /work/skills/javascript/react/reactnati"
+                "excerpt": "\"A JavaScript team that’s battletested, precise, and fast.\"\n\n[PageGrid thumbnails=\"no\" pages=\"/work/skills/ecmascript, /work/skills/javascript/typescript, /work/skills/javascript/react, /work/skills/j"
               },
               {
                 "title": "Design",
@@ -790,8 +822,7 @@
                         "icon": "ai",
                         "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                         "type": "file",
-                        "excerpt": "Sending sensitive files to external platforms can breach professional secrecy, violate GDPR, and damage client trust\n\nAKI exists because firms need the power of AI without risking client confidentiali",
-                        "newContent": true
+                        "excerpt": "Sending sensitive files to external platforms can breach professional secrecy, violate GDPR, and damage client trust\n\nAKI exists because firms need the power of AI without risking client confidentiali"
                       }
                     ],
                     "icon": "ai",
@@ -881,7 +912,7 @@
                     "slug": "/work/skills/fullstack/git",
                     "order": 25,
                     "icon": "techstack",
-                    "image": "/png/wei-zang/wei-zang.png",
+                    "image": "/png/3rdParty/gitkraken.png",
                     "type": "file",
                     "tags": [
                       "github",
@@ -1020,7 +1051,7 @@
               "fields",
               "work"
             ],
-            "excerpt": "Working across the full JavaScript stack to help understand every perspective from interface to infrastructure\n\n[PageGrid pages=\"/work/skills/javascript/react, /work/skills/javascript/react/reactnativ"
+            "excerpt": "Working across the full JavaScript stack to help understand every perspective from interface to infrastructure\n\n[PageGrid pages=\"/work/skills/ecmascript, /work/skills/javascript/react, /work/skills/ja"
           },
           {
             "title": "CV",
@@ -1502,7 +1533,7 @@
       },
       {
         "title": "Balance",
-        "description": "Were the kind of kid who liked Lego?",
+        "description": "Were you the kind of kid who liked Lego?",
         "slug": "/balance",
         "order": 100,
         "type": "folder",
@@ -1720,7 +1751,7 @@
           }
         ],
         "icon": "balance",
-        "image": "https://live.staticflickr.com/65535/54941521056_c3dbdb07cc_b.jpg",
+        "image": "https://live.staticflickr.com/65535/54941778209_29ee005a38_b.jpg",
         "excerpt": "If you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are \n\n[PageGrid thumbnails=\"no\" pages=\"/balance/pictures, /balance/film, /balance/words\"]"
       }
     ],
@@ -1752,6 +1783,6 @@
       "Headless CMS",
       "secure"
     ],
-    "excerpt": "[PageGrid pages=\"/work, /life, /balance\"]"
+    "excerpt": "[PageGrid thumbnails=\"yes\" pages=\"/work, /life, /balance\"]"
   }
 ]

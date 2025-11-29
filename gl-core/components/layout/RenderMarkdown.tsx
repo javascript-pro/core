@@ -1,6 +1,5 @@
-//
+// /Users/goldlabel/GitHub/example-app/gl-core/components/layout/RenderMarkdown.tsx
 'use client';
-
 import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
 import {
@@ -19,10 +18,10 @@ import {
   GitHub,
   ChildPages,
   PageGrid,
+  LinkOut,
 } from '../../../gl-core';
-// import { Flash } from '../../cartridges/Flash';
 
-export type TRenderMarkdown = {
+type TRenderMarkdown = {
   children: React.ReactNode;
   height?: number | string;
   width?: number | string;
@@ -52,16 +51,14 @@ export default function RenderMarkdown({
 
       const attrs = match[1];
       const props: Record<string, any> = {};
-
-      // capture all key="value" pairs
       const attrRegex = /(\w+)="(.*?)"/g;
       let attrMatch;
       while ((attrMatch = attrRegex.exec(attrs)) !== null) {
         let val: any = attrMatch[2];
         if (!isNaN(Number(val))) {
-          val = Number(val); // turn "350" into 350
+          val = Number(val);
         } else if (val === 'true' || val === 'false') {
-          val = val === 'true'; // handle booleans
+          val = val === 'true';
         }
         props[attrMatch[1]] = val;
       }
@@ -108,6 +105,10 @@ export default function RenderMarkdown({
     // PageGrid
     const pageGrid = parseShortcode(/\[PageGrid\s+(.*?)\]/, PageGrid);
     if (pageGrid) return pageGrid;
+
+    // LinkOut
+    const linkOut = parseShortcode(/\[LinkOut\s+(.*?)\]/, LinkOut);
+    if (linkOut) return linkOut;
 
     // fallback: simply return text
     return text;

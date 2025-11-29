@@ -2,7 +2,7 @@
 'use client';
 import * as React from 'react';
 import { useRouter } from 'next/navigation';
-import { Typography, Alert, ButtonBase } from '@mui/material';
+import { Badge, Typography, Alert, ButtonBase } from '@mui/material';
 import { Icon, routeTo, useDispatch } from '../../../../gl-core';
 import { useBySlug } from '../../Uberedux';
 import { setDesignSystemKey } from '../../DesignSystem';
@@ -32,9 +32,16 @@ export default function NewContent({ slug }: INewContent) {
       <Alert
         sx={{ width: '100%', border: 0 }}
         severity="success"
-        icon={<Icon icon={content.icon || 'home'} color="inherit" />}
+        icon={
+          <Badge color="primary" badgeContent="!">
+            <Icon icon={content.icon || 'home'} color="inherit" />
+          </Badge>
+        }
       >
         <Typography variant="body1">{content.title}</Typography>
+        <Typography variant="body2" noWrap>
+          {content.excerpt}
+        </Typography>
       </Alert>
     </ButtonBase>
   );
