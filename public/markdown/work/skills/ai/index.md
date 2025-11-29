@@ -10,7 +10,7 @@ tags: AI
 
 > "Put that kind of AI into a drone with a gun... then yeh, you've got a big problem." _Bloke down the pub said, yesterday_
 
-[PageGrid pages="/work/skills/ai/prompt-engineering, /work/skills/ai/user-interfaces"]
+[PageGrid pages=" /work/expertise/ai/aki/ring-fenced-llm, /work/skills/ai/prompt-engineering, /work/skills/ai/user-interfaces"]
 
 ## Is _this_ Singularity?
 

@@ -1,28 +1,15 @@
 ---
 order: 10
 title: Cixin Liu
-description: author of The Three Body Problem
+description: Author of The Three Body Problem
 slug: /life/books/cixin-liu
 icon: books
 image: https://live.staticflickr.com/65535/54933893533_4b3dbc97d6_b.jpg
 tags: Cixin Liu, Speculative fiction, Chinese, hard sci-fi
-newContent: true
 ---
 
 > Cixin Liu is significant because he brought Chinese hard sci-fi to a global audience, blending rigorous physics, grand cosmic scale, and philosophical depth. His work revitalised hard sci-fi worldwide, won major awards (including the Hugo), and introduced a distinctly non-Western perspective to the genre’s biggest ideas.
 
 Best known for The Three-Body Problem and its sequels, collectively The Remembrance of Earth’s Past.
 
-[PageGrid pages="/life/books/cixin-liu/three-body-problem, /life/books/cixin-liu/the-dark-forest, /life/books/cixin-liu/deaths-end"]
-
-## The Three-Body Problem
-
-First contact begins when scientists discover an alien civilisation on the unstable planet Trisolaris. Humanity becomes divided over whether to resist or welcome them.
-
-## The Dark Forest
-
-Earth prepares for the coming Trisolaran invasion. The “Dark Forest Theory” reveals why the universe seems silent—and why contact between civilisations is terrifyingly dangerous.
-
-## Death’s End
-
-The conflict escalates to cosmic scales. Dimensional warfare, universe-changing technology, and the ultimate fate of humanity and the cosmos come into play.
+[PageGrid pages="/life/books/cixin-liu/three-body-problem, /life/books/cixin-liu/the-dark-forest, /life/books/cixin-liu/deaths-end, /life/books/cixin-liu/of-ants-and-dinosaurs"]

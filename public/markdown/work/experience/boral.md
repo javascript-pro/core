@@ -1,16 +1,18 @@
 ---
 order: 50
-title: Boral (2018)
+title: Boral
 description: Dots on a Map
 slug: /work/experience/boral
 icon: case
-image:
+image: https://live.staticflickr.com/65535/54950372920_bd9247d0b5_b.jpg
 tags: expertise, interview, boral
 ---
 
-## Geo-Spatial Fleet App
+> (2018)
 
-> React Developer, Aug 2018 - Feb 2019, Sydney
+#### Geo-Spatial Fleet App
+
+_React Developer, Aug 2018 - Feb 2019, Sydney_
 
 It’s only been a few years since all of Boral’s business was still done on paper. When I joined the Sydney tech team in 2018, the company was mid-transformation. Full of talented people and legacy systems coexisting.
 

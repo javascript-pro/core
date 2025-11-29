@@ -8,6 +8,7 @@ import {
   SystemDialog,
   Feedback,
   PushButton,
+  LoadingOverlay,
 } from '../DesignSystem';
 
 export default function DesignSystem({
@@ -19,6 +20,7 @@ export default function DesignSystem({
   return (
     <ThemeProvider theme={newtheme}>
       <CssBaseline />
+      <LoadingOverlay />
       <Feedback />
       <SystemDialog />
       {children}
