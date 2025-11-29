@@ -85,7 +85,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
                     mt: 0,
                   }}
                 >
-                  
+                  {/* Global Error Boundry */}
+                  {user ? <User /> : null}
 
                   {Array.isArray(siblings) && siblings.length > 0 ? (
                     <Siblings />
@@ -102,9 +103,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
                       </Box>
                     </>
                   )}
-                  {/* Global Error Boundry */}
-                  {user ? <User /> : null }
-
                 </Box>
               </Grid>
 

@@ -458,7 +458,8 @@
                           "react native",
                           "hooks"
                         ],
-                        "excerpt": "Developed by Facebook for building crossplatform mobile applications\n\nIt allows developers to use JavaScript and React (a widely used frontend library) to create native apps for both iOS and Android. "
+                        "excerpt": "Developed by Facebook for building crossplatform mobile applications\n\nIt allows developers to use JavaScript and React (a widely used frontend library) to create native apps for both iOS and Android. ",
+                        "newContent": true
                       }
                     ],
                     "icon": "js",
