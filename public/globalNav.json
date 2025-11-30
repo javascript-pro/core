@@ -297,7 +297,7 @@
               {
                 "title": "Huawei",
                 "slug": "/work/experience/huawei",
-                "order": 40,
+                "order": 30,
                 "icon": "case",
                 "image": "https://live.staticflickr.com/65535/54950372920_bd9247d0b5_b.jpg",
                 "type": "file",
@@ -310,7 +310,8 @@
                   "react",
                   "javascript"
                 ],
-                "excerpt": "Feb to May 2015\n\n English/Chinese Project Management eLearning App\n\nBy 2015 React had evolved beyond an experiment. Facebook, Instagram, and Airbnb were using it at scale, and the opensource ecosystem"
+                "excerpt": "Feb to May 2015\n\n English/Chinese Project Management eLearning App\n\nBy 2015 React had evolved beyond an experiment. Facebook, Instagram, and Airbnb were using it at scale, and the opensource ecosystem",
+                "newContent": true
               },
               {
                 "title": "Boral",
@@ -343,16 +344,17 @@
                 "excerpt": "(2016)\n\n Magento PHP & Material Design System\n\nJavaScript Developer, Adelaide\n\nLead developer creating a front end React application for Cancer Council NSW. The application connecting to a WordPress d"
               },
               {
-                "title": "Eras",
+                "title": "Internet Eras",
                 "slug": "/work/experience/eras",
-                "order": 60,
+                "order": 1000,
                 "icon": "case",
                 "image": "https://live.staticflickr.com/65535/54950372920_bd9247d0b5_b.jpg",
                 "type": "file",
                 "tags": [
                   "eras"
                 ],
-                "excerpt": "Evolution from the Flash era with basic dialup experiences to today's AIenhanced, cloudnative web apps built on React and Next.js\n\n 2000s: The Flash Era (Dialup to Early Broadband)\n\n Technologies: Fla"
+                "excerpt": "Evolution from the Flash era with basic dialup experiences to today's AIenhanced, cloudnative web apps built on React and Next.js\n\n 2000s: The Flash Era (Dialup to Early Broadband)\n\n Technologies: Fla",
+                "newContent": true
               }
             ],
             "icon": "case",
@@ -810,6 +812,20 @@
                 "type": "folder",
                 "children": [
                   {
+                    "title": "Prompt Engineering",
+                    "slug": "/work/skills/ai/prompt-engineering",
+                    "order": 1,
+                    "icon": "ai",
+                    "image": "https://live.staticflickr.com/65535/53669705662_bd523946ef_b.jpg",
+                    "type": "file",
+                    "tags": [
+                      "ui",
+                      "ai"
+                    ],
+                    "excerpt": "The art of designing clear, structured instructions that make AI features behave reliably inside your app\n\nPrompt engineering, from a React developer’s perspective, is the design and optimisation of t",
+                    "newContent": true
+                  },
+                  {
                     "title": "Local LLM",
                     "description": "Ringfenced AI powered Document Management for SMEs",
                     "slug": "/work/skills/ai/aki",
@@ -849,20 +865,6 @@
                       "ai"
                     ],
                     "excerpt": "How we help you take your AI product ideas from concept, through prototype to production\n\n From prototype to production\n\nAI agents need more than a good model — they need a front end that users can ac"
-                  },
-                  {
-                    "title": "Prompt Engineering",
-                    "slug": "/work/skills/ai/prompt-engineering",
-                    "order": 60,
-                    "icon": "ai",
-                    "image": "https://live.staticflickr.com/65535/53669705662_bd523946ef_b.jpg",
-                    "type": "file",
-                    "tags": [
-                      "ui",
-                      "ai"
-                    ],
-                    "excerpt": "The art of designing clear, structured instructions that make AI features behave reliably inside your app\n\nPrompt engineering, from a React developer’s perspective, is the design and optimisation of t",
-                    "newContent": true
                   }
                 ],
                 "icon": "ai",
@@ -1066,9 +1068,11 @@
             "tags": [
               "company",
               "resume",
-              "cv"
+              "cv",
+              "google",
+              "pdf"
             ],
-            "excerpt": "The traditional CV is a blunt tool, but it still serves a purpose. It sits somewhere between a business card and a phone call, widely used yet constrained by format. The core challenge is balancing le"
+            "excerpt": "[LinkOut title=\"Google Doc\" icon=\"google\" url=\"https://docs.google.com/document/d/1KgpbzwVlVF5PXVqJXEhFp52QolOWlVptecAo4JU7Zo/edit?usp=sharing\"]\n\n[LinkOut title=\"Download PDF\" icon=\"download\" url=\"/pd"
           }
         ],
         "icon": "work",

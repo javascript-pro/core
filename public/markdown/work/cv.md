@@ -8,11 +8,11 @@ image: https://live.staticflickr.com/65535/54940372447_3ca7baef00_b.jpg
 tags: company, resume, cv, google, pdf
 ---
 
-[LinkOut title="Google Doc"  icon="google" url="https://docs.google.com/document/d/1KgpbzwVlVF5PXVqJ-XEhFp52QolOWlVptecAo4JU7Zo/edit?usp=sharing"]
+[LinkOut title="Google Doc" icon="google" url="https://docs.google.com/document/d/1KgpbzwVlVF5PXVqJ-XEhFp52QolOWlVptecAo4JU7Zo/edit?usp=sharing"]
 
-[LinkOut title="Download PDF"  icon="download" url="/pdf/Chris Dorward CV.pdf"]
+[LinkOut title="Download PDF" icon="download" url="/pdf/Chris Dorward CV.pdf"]
 
-The traditional CV can be a blunt tool, but it serves a purpose. It's somewhere between a business card and a phone call. A widely used yet constrained by format. 
+The traditional CV can be a blunt tool, but it serves a purpose. It's somewhere between a business card and a phone call. A widely used yet constrained by format.
 
 The core challenge is balancing length with relevance. A full account of two decades of contracts and projects easily grows into an eight-page document
 

@@ -1,5 +1,5 @@
 ---
-order: 60
+order: 1
 title: Prompt Engineering
 description: The art of designing clear, structured instructions
 slug: /work/skills/ai/prompt-engineering

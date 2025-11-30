@@ -48,10 +48,11 @@ export default function SystemDialog() {
       >
         <DialogContent>
           <Grid container spacing={2} sx={{ mb: 2 }}>
-            <Grid size={{ xs: 12, sm: 6 }}></Grid>
+            
             <Grid size={{ xs: 12, sm: 6 }}>
               <MenuSystem />
             </Grid>
+            <Grid size={{ xs: 12, sm: 6 }}></Grid>
           </Grid>
         </DialogContent>
         <DialogActions>

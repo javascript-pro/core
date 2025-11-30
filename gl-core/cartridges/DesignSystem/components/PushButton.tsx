@@ -22,6 +22,7 @@ export default function PushButton({}: TAuthForm) {
       color="primary"
       sx={{
         zIndex: (theme) => theme.zIndex.modal - 2,
+        boxShadow: 0,
         position: 'fixed',
         bottom: 8,
         right: 8,

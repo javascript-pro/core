@@ -1,11 +1,12 @@
 ---
-order: 60
-title: Eras
+order: 1000
+title: Internet Eras
 description: Two decades of experience over every era of web development
 slug: /work/experience/eras
 icon: case
 image: https://live.staticflickr.com/65535/54950372920_bd9247d0b5_b.jpg
 tags: eras
+newContent: true
 ---
 
 > Evolution from the Flash era with basic dial-up experiences to today's AI-enhanced, cloud-native web apps built on React and Next.js
