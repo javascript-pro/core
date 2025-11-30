@@ -8,9 +8,9 @@ image: https://live.staticflickr.com/65535/54940372447_3ca7baef00_b.jpg
 tags: company, resume, cv,
 ---
 
-[Google Doc](https://docs.google.com/document/d/1KgpbzwVlVF5PXVqJ-XEhFp52QolOWlVptecAo4JU7Zo/edit?usp=sharing)
+[LinkOut title="Google Doc"  icon="google" url="https://docs.google.com/document/d/1KgpbzwVlVF5PXVqJ-XEhFp52QolOWlVptecAo4JU7Zo/edit?usp=sharing"]
 
-> [Download PDF](/pdf/Chris Dorward CV.pdf)
+[LinkOut title="Download PDF"  icon="download" url="/pdf/Chris Dorward CV.pdf"]
 
 The traditional CV is a blunt tool, but it still serves a purpose. It sits somewhere between a business card and a phone call, widely used yet constrained by format. The core challenge is balancing length with relevance. A full account of two decades of contracts and projects easily grows into an eight-page document
 
