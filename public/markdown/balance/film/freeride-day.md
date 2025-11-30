@@ -3,7 +3,9 @@ order: 10
 title: Chamonix Freeride Day
 description: April 2008
 slug: /balance/film/freeride-day
+image: https://live.staticflickr.com/65535/54725152223_f961935776_b.jpg
 icon: film
+noImage: true
 ---
 
 > The death sport capital of the world

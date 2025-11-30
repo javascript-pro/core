@@ -1568,6 +1568,7 @@
                 "slug": "/balance/film/a-very-british-protest",
                 "order": 10,
                 "icon": "film",
+                "image": "https://live.staticflickr.com/65535/54725152223_f961935776_b.jpg",
                 "type": "file",
                 "excerpt": "[YouTube src=\"https://youtu.be/uPDem3qOUaU\"]"
               },
@@ -1576,6 +1577,7 @@
                 "slug": "/balance/film/freeride-day",
                 "order": 10,
                 "icon": "film",
+                "image": "https://live.staticflickr.com/65535/54725152223_f961935776_b.jpg",
                 "type": "file",
                 "excerpt": "The death sport capital of the world\n\n[YouTube src=\"https://youtu.be/FtcOeCLt838\"]\n\nChamonix Mont Blanc, France. The death sport and freeskiing capital of the world. This is the closing day party on t"
               },
@@ -1584,6 +1586,7 @@
                 "slug": "/balance/film/fuckthegovmint",
                 "order": 10,
                 "icon": "film",
+                "image": "https://live.staticflickr.com/65535/54725152223_f961935776_b.jpg",
                 "type": "file",
                 "excerpt": "fuckthegovmint\n\n[YouTube src=\"https://youtu.be/2TBkoSBfCc\"]\n\nWhy do the protected  \nneed to be protected  \nfrom the unprotected  \nby forcing the unprotected  \nto use the protection  \nthat didn't prote"
               },
@@ -1592,6 +1595,7 @@
                 "slug": "/balance/film/inwyk",
                 "order": 10,
                 "icon": "film",
+                "image": "https://live.staticflickr.com/65535/54725152223_f961935776_b.jpg",
                 "type": "file",
                 "excerpt": "The final film took several weeks to produce, filming on the underground, rendering 3D animation and creating some original titles in flash.\n\n[YouTube src=\"https://www.youtube.com/watch?v=Qe2ZLYzQToQ\""
               },
@@ -1600,6 +1604,7 @@
                 "slug": "/balance/film/james-dean",
                 "order": 10,
                 "icon": "film",
+                "image": "https://live.staticflickr.com/65535/54725152223_f961935776_b.jpg",
                 "type": "file",
                 "excerpt": "[YouTube src=\"https://youtu.be/N3hz76MR5ao\"]"
               },
@@ -1608,12 +1613,39 @@
                 "slug": "/balance/film/moronic",
                 "order": 10,
                 "icon": "film",
+                "image": "https://live.staticflickr.com/65535/54725152223_f961935776_b.jpg",
                 "type": "file",
                 "excerpt": "Who is calling whom moronic?\n\n[YouTube src=\"https://youtu.be/vWl2NLY6NaQ\"]"
+              },
+              {
+                "title": "Lotsa Fish",
+                "slug": "/balance/film/lotsa-fish",
+                "order": 130,
+                "icon": "film",
+                "image": "https://live.staticflickr.com/65535/54954918028_0bb4b92502_b.jpg",
+                "type": "file",
+                "tags": [
+                  "diving",
+                  "film",
+                  "advert"
+                ],
+                "excerpt": "Long Reef, Sydney Dec 2018\n\n[YouTube src=\"https://youtu.be/aIG3FrACeQ\"]\n\nAd: We dive around the Northern Beaches every weekend. Check out our upcoming dives at divespearandsport.com.au",
+                "newContent": true
+              },
+              {
+                "title": "Sweet Comme Une Nut",
+                "slug": "/balance/film/sweet-comme-une-nut",
+                "order": 190,
+                "icon": "film",
+                "image": "https://live.staticflickr.com/65535/54953842977_8f861a0fa2_b.jpg",
+                "type": "file",
+                "excerpt": "London, Summer 2004\n\n[YouTube src=\"https://youtu.be/lSRtbgt5ays\"]\n\nMade in the summer of 2004 when living in Deptford, London. I drove a bashed up Gold Beemer and had a shaved head. It helped to look ",
+                "newContent": true
               }
             ],
             "icon": "film",
-            "excerpt": "[PageGrid pages=\"/balance/film/fuckthegovmint, /balance/film/averybritishprotest, /balance/film/jamesdean, /balance/film/moronic, /balance/film/inwyk, /balance/film/freerideday\"]\n\nhttps://www.youtube."
+            "image": "https://live.staticflickr.com/65535/54725152223_f961935776_b.jpg",
+            "excerpt": "[LinkOut title=\"@milkylackstoes on Youtube\" icon=\"youtube\" url=\"https://www.youtube.com/@milkylackstoes\"]\n\n[PageGrid pages=\"/balance/film/lotsafish, /balance/film/sweetcommeunenut, /balance/film/fuckt"
           },
           {
             "title": "Words",
@@ -1759,7 +1791,7 @@
         ],
         "icon": "balance",
         "image": "https://live.staticflickr.com/65535/54941778209_29ee005a38_b.jpg",
-        "excerpt": "If you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are \n\n[PageGrid thumbnails=\"no\" pages=\"/balance/pictures, /balance/film, /balance/words\"]"
+        "excerpt": "If you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are \n\n[PageGrid thumbnails=\"yes\" pages=\"/balance/pictures, /balance/film, /balance/words\"]"
       }
     ],
     "icon": "home",

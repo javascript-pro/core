@@ -3,7 +3,9 @@ order: 10
 title: It's Not Who You Know
 description: October 2000
 slug: /balance/film/inwyk
+image: https://live.staticflickr.com/65535/54725152223_f961935776_b.jpg
 icon: film
+noImage: true
 ---
 
 > The final film took several weeks to produce, filming on the underground, rendering 3D animation and creating some original titles in flash.

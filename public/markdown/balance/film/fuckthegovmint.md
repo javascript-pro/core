@@ -3,7 +3,9 @@ order: 10
 title: Protected
 description: Covid era
 slug: /balance/film/fuckthegovmint
+image: https://live.staticflickr.com/65535/54725152223_f961935776_b.jpg
 icon: film
+noImage: true
 ---
 
 # #fuckthegovmint
