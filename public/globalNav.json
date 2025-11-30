@@ -175,13 +175,12 @@
                     "type": "file",
                     "tags": [
                       "Free",
-                      "atridges",
+                      "cartridges",
                       "Uberedux",
                       "State Management",
                       "Redux"
                     ],
-                    "excerpt": "Otherwise you'd be back in jQuery callback hell. Nobody wants that.\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Uberedux\" label=\"Uberedux\"]\n\nUberedux is a simple,",
-                    "newContent": true
+                    "excerpt": "Otherwise you'd be back in jQuery callback hell. Nobody wants that.\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Uberedux\" label=\"Uberedux\"]\n\nUberedux is a simple,"
                   }
                 ],
                 "icon": "cartridge",
@@ -310,8 +309,7 @@
                   "react",
                   "javascript"
                 ],
-                "excerpt": "Feb to May 2015\n\n English/Chinese Project Management eLearning App\n\nBy 2015 React had evolved beyond an experiment. Facebook, Instagram, and Airbnb were using it at scale, and the opensource ecosystem",
-                "newContent": true
+                "excerpt": "Feb to May 2015\n\n English/Chinese Project Management eLearning App\n\nBy 2015 React had evolved beyond an experiment. Facebook, Instagram, and Airbnb were using it at scale, and the opensource ecosystem"
               },
               {
                 "title": "Boral",
@@ -353,8 +351,7 @@
                 "tags": [
                   "eras"
                 ],
-                "excerpt": "Evolution from the Flash era with basic dialup experiences to today's AIenhanced, cloudnative web apps built on React and Next.js\n\n 2000s: The Flash Era (Dialup to Early Broadband)\n\n Technologies: Fla",
-                "newContent": true
+                "excerpt": "Evolution from the Flash era with basic dialup experiences to today's AIenhanced, cloudnative web apps built on React and Next.js\n\n 2000s: The Flash Era (Dialup to Early Broadband)\n\n Technologies: Fla"
               }
             ],
             "icon": "case",
@@ -820,10 +817,10 @@
                     "type": "file",
                     "tags": [
                       "ui",
-                      "ai"
+                      "ai",
+                      "prompts"
                     ],
-                    "excerpt": "The art of designing clear, structured instructions that make AI features behave reliably inside your app\n\nPrompt engineering, from a React developer’s perspective, is the design and optimisation of t",
-                    "newContent": true
+                    "excerpt": "The art of designing clear, structured instructions that make AI features behave reliably inside your app\n\nPrompt engineering, from a React developer’s perspective, is the design and optimisation of t"
                   },
                   {
                     "title": "Local LLM",
@@ -1564,6 +1561,26 @@
             "type": "folder",
             "children": [
               {
+                "title": "Diamond Diving",
+                "slug": "/balance/film/diamond-diving",
+                "order": 3,
+                "icon": "film",
+                "image": "https://live.staticflickr.com/65535/54955011959_b1e67fcb04_b.jpg",
+                "type": "file",
+                "excerpt": "Interview with Alex Diamond of Diamond Diving\n\n[YouTube src=\"https://youtu.be/lSRtbgt5ays\"]\n\nAn interview with Alex Diamond of Diamond Diving. We join Alex on the easydive Antibes dive boat where on a",
+                "newContent": true
+              },
+              {
+                "title": "Sweet Comme Une Nut",
+                "slug": "/balance/film/sweet-comme-une-nut",
+                "order": 3,
+                "icon": "film",
+                "image": "https://live.staticflickr.com/65535/54955011959_b1e67fcb04_b.jpg",
+                "type": "file",
+                "excerpt": "London, Summer 2004\n\n[YouTube src=\"https://youtu.be/lSRtbgt5ays\"]\n\nMade in the summer of 2004 when living in Deptford, London. I drove a bashed up Gold Beemer and had a shaved head. It helped to look ",
+                "newContent": true
+              },
+              {
                 "title": "A Very British Protest",
                 "slug": "/balance/film/a-very-british-protest",
                 "order": 10,
@@ -1631,20 +1648,10 @@
                 ],
                 "excerpt": "Long Reef, Sydney Dec 2018\n\n[YouTube src=\"https://youtu.be/aIG3FrACeQ\"]\n\nAd: We dive around the Northern Beaches every weekend. Check out our upcoming dives at divespearandsport.com.au",
                 "newContent": true
-              },
-              {
-                "title": "Sweet Comme Une Nut",
-                "slug": "/balance/film/sweet-comme-une-nut",
-                "order": 190,
-                "icon": "film",
-                "image": "https://live.staticflickr.com/65535/54953842977_8f861a0fa2_b.jpg",
-                "type": "file",
-                "excerpt": "London, Summer 2004\n\n[YouTube src=\"https://youtu.be/lSRtbgt5ays\"]\n\nMade in the summer of 2004 when living in Deptford, London. I drove a bashed up Gold Beemer and had a shaved head. It helped to look ",
-                "newContent": true
               }
             ],
             "icon": "film",
-            "image": "https://live.staticflickr.com/65535/54725152223_f961935776_b.jpg",
+            "image": "https://live.staticflickr.com/65535/54955011959_b1e67fcb04_b.jpg",
             "excerpt": "[LinkOut title=\"@milkylackstoes on Youtube\" icon=\"youtube\" url=\"https://www.youtube.com/@milkylackstoes\"]\n\n[PageGrid pages=\"/balance/film/lotsafish, /balance/film/sweetcommeunenut, /balance/film/fuckt"
           },
           {

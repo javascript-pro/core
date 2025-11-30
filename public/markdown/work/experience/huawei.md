@@ -6,7 +6,6 @@ slug: /work/experience/huawei
 icon: case
 image: https://live.staticflickr.com/65535/54950372920_bd9247d0b5_b.jpg
 tags: expertise, interview, chinese, huawei, china, react, javascript
-newContent: true
 ---
 
 > Feb to May 2015

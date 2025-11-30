@@ -5,8 +5,7 @@ title: Uberedux
 description: Because all Apps need State Management
 icon: js
 image: /png/n64/test.png
-tags: Free, atridges, Uberedux, State Management, Redux
-newContent: true
+tags: Free, cartridges, Uberedux, State Management, Redux
 ---
 
 > Otherwise you'd be back in jQuery callback hell. Nobody wants that.
