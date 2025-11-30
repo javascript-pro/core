@@ -6,7 +6,6 @@ import {
   CardHeader,
   Box,
   Avatar,
-  Typography,
   Chip,
 } from '@mui/material';
 import {

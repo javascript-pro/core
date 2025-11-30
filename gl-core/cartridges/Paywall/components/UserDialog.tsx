@@ -9,13 +9,20 @@ import {
   DialogActions,
   DialogContent,
   IconButton,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
 } from '@mui/material';
 import { useDispatch, useIsMobile, Icon } from '../../../../gl-core';
+import { useDesignSystem, setDesignSystemKey } from '../../DesignSystem';
 import {
-  useDesignSystem,
-  setDesignSystemKey,
-} from '../../DesignSystem';
-import { useUser, setPaywallKey, usePaywall, SignIn, UserMenu } from '../../Paywall';
+  useUser,
+  setPaywallKey,
+  usePaywall,
+  SignIn,
+  UserMenu,
+  User,
+} from '../../Paywall';
 
 export default function UserDialog() {
   const dispatch = useDispatch();
@@ -54,24 +61,38 @@ export default function UserDialog() {
             }
           />
         </DialogTitle>
+
         <DialogContent>
-          <Grid container spacing={2} sx={{ mb: 2 }}>
+          <Grid container spacing={1} sx={{ mb: 0 }}>
+
+            {user && (
+              <Grid size={{ xs: 12 }}>
+                <Accordion variant='outlined'>
+                  <AccordionSummary expandIcon={<Icon icon="down" />}>
+                    user
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <pre style={{ fontSize: '10px', margin: 0 }}>
+                      user: {JSON.stringify(user, null, 2)}
+                    </pre>
+                  </AccordionDetails>
+                </Accordion>
+              </Grid>
+            )}
+
+            <Grid size={{ xs: 12 }}>
+              <User />
+            </Grid>
+
+            <Grid size={{ xs: 12 }}>
+              {user ? <UserMenu /> : <SignIn />}
+            </Grid>
 
             
-            <Grid size={{ xs: 12 }}>
-              {user ? <UserMenu /> : <SignIn /> }
-            </Grid>  
-
-            { user && <Grid size={{ xs: 12}}>
-              <pre style={{ fontSize: '10px' }}>
-                user: {JSON.stringify(user, null, 2)}
-              </pre>
-            </Grid>    }
-                  
           </Grid>
         </DialogContent>
+
         <DialogActions>
-          
           <IconButton color="primary" onClick={handleClose}>
             <Icon icon="close" />
           </IconButton>

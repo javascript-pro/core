@@ -1,50 +1,47 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/Paywall/components/UserMenu.tsx
 'use client';
 import * as React from 'react';
-// import { useRouter } from 'next/navigation';
 import {
   List,
-  // ListItemButton,
-  // ListItemIcon,
-  // ListItemText,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
 } from '@mui/material';
-import { useDispatch } from '../../../../gl-core';
-import { 
-  // useUser, 
-  SignOut,
-} from '../../Paywall';
+import { useDispatch, Icon } from '../../../../gl-core';
+import { useUser, SignOut } from '../../Paywall';
 
 export default function UserMenu() {
   const dispatch = useDispatch();
-  // const router = useRouter();
-  // const user = useUser();
-  // const ds = useDesignSystem();
-  // const { themeMode } = ds;
+  const user = useUser();
 
-  // const handleToggle = () => {
-  //   const newMode = themeMode === 'dark' ? 'light' : 'dark';
-  //   dispatch(setDesignSystemKey('themeMode', newMode));
-  // };
+  const uid = user?.uid;
+  // const projectId = 'goldlabel-pr0'; // change here if needed
+
+  const firebaseAuthUrl =
+    uid
+      ? `https://console.firebase.google.com/u/1/project/goldlabel-pr0/authentication/users`
+      : null;
 
   return (
     <>
       <List dense disablePadding>
+
+        {firebaseAuthUrl && (
+          <ListItemButton
+            component="a"
+            href={firebaseAuthUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <ListItemIcon>
+              <Icon icon="link" color="primary" />
+            </ListItemIcon>
+            <ListItemText primary={`Firebase Auth id ${uid}`} />
+          </ListItemButton>
+        )}
+
         <SignOut mode="listitem" />
       </List>
     </>
   );
 }
-
-/*
-<ListItemButton
-    onClick={() => {
-    dispatch(setDesignSystemKey('dialog', null));
-    dispatch(routeTo('/bad-panda', router));
-  }}
->
-  <ListItemIcon>
-    <Icon icon="bug" color="primary" />
-  </ListItemIcon>
-  <ListItemText primary="Bad Panda" />
-</ListItemButton>
-*/
