@@ -8,11 +8,10 @@ import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import {
   useMediaQuery,
-  Container,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
   Box,
+  IconButton,
+  Container,
+  Collapse,
   Grid,
   Skeleton,
   Typography,
@@ -34,7 +33,6 @@ import { Paywall, SigninGate, useUser, User } from './cartridges/Paywall';
 import {
   DesignSystem,
   useDesignSystem,
-  // setDesignSystemKey,
   NewContent,
   toggleLoading,
 } from './cartridges/DesignSystem';
@@ -48,10 +46,12 @@ export default function Core({ frontmatter, body = null }: TCore) {
   const { noImage, image, icon, title, description, paywall } =
     frontmatter ?? {};
   const [imageError, setImageError] = React.useState(false);
+  const [showWhatsNew, setShowWhatsNew] = React.useState(false);
+
   const prefersDark = useMediaQuery('(prefers-color-scheme: dark)');
   const siblings = useSiblings();
   const pathname = usePathname();
-  const { themeMode, feedbackTested } = useDesignSystem();
+  const { themeMode } = useDesignSystem();
   const isMobile = useIsMobile();
   const user = useUser();
   const fetchedNavRef = React.useRef(false);
@@ -86,6 +86,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
         <Container id="core" sx={{ mt: 2 }}>
           <Box sx={{ minHeight: '100vh' }}>
             <Grid container spacing={isMobile ? 0 : 1}>
+              {/* LEFT COLUMN */}
               <Grid size={{ xs: 1, md: 3 }}>
                 <Box
                   sx={{
@@ -94,7 +95,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
                     mt: 0,
                   }}
                 >
-                  {/* Global Error Boundry */}
                   {user ? <User /> : null}
 
                   {Array.isArray(siblings) && siblings.length > 0 ? (
@@ -105,7 +105,9 @@ export default function Core({ frontmatter, body = null }: TCore) {
                 </Box>
               </Grid>
 
+              {/* RIGHT COLUMN */}
               <Grid size={{ xs: 11, md: 9 }}>
+                {/* Title + Icon */}
                 <Box sx={{ display: 'flex' }}>
                   <Box sx={{ mr: 2, mt: 1.5 }}>
                     <Icon icon={icon as any} color="primary" />
@@ -124,61 +126,53 @@ export default function Core({ frontmatter, body = null }: TCore) {
                   </Typography>
                 </Box>
 
-                <Box sx={{ display: 'flex' }}>
-                  <Box sx={{ ml: -1, mt: -1, mr: 1 }}>
-                    <SharePopup />
-                  </Box>
+                {/* Description + Share + NEW TOGGLE */}
+                <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                  
+                  {newContent && newContent.length > 0 && (
+                    <Box>
+                      <IconButton color="primary" onClick={() => setShowWhatsNew((v) => !v)}>
+                        <Icon
+                          icon={showWhatsNew ? 'up' : 'down'}
+                        />
+                      </IconButton>
+                    </Box>
+                  )}
+                    <Box sx={{ mr: 1 }}>
+                      <SharePopup />
+                    </Box>
+
+                  
+                  <Box sx={{mt:1 }}>
                   <Typography
                     variant="h2"
                     gutterBottom
-                    sx={{
-                      fontSize: { xs: '1.1rem', md: '1.25rem' },
-                    }}
+                    sx={{ fontSize: { xs: '1.1rem', md: '1.25rem' } }}
                   >
                     {description}
                   </Typography>
+                  </Box>
                 </Box>
 
                 {title !== 'Home' && pathname !== '/' && <PageBreadcrumb />}
 
-                <>
-                  <Box sx={{ mb: 1 }}>
-                    {newContent && newContent.length > 0 && (
-                      <Accordion sx={{ mt: 2, boxShadow: 'none' }}>
-                        <AccordionSummary
-                          expandIcon={<Icon icon="down" color="primary" />}
-                        >
-                          <Typography variant="h3" sx={{ fontSize: '1.1rem' }}>
-                            What’s New?
-                          </Typography>
-                        </AccordionSummary>
-
-                        <AccordionDetails>
-                          <Grid container spacing={1}>
-                            {newContent.map((item: any, i: number) => (
-                              <Grid
-                                key={`page_${i}`}
-                                size={{ xs: 12, md: mdSize }}
-                              >
-                                <NewContent slug={item.slug} />
-                              </Grid>
-                            ))}
-                          </Grid>
-                        </AccordionDetails>
-                      </Accordion>
-                    )}
-                  </Box>
-                </>
+                {/* WHAT'S NEW — COLLAPSE */}
+                <Box sx={{ mb: 1 }}>
+                  <Collapse in={showWhatsNew} unmountOnExit>
+                    <Grid container spacing={1}>
+                      {newContent?.map((item: any, i: number) => (
+                        <Grid key={`page_${i}`} size={{ xs: 12, md: mdSize }}>
+                          <NewContent slug={item.slug} />
+                        </Grid>
+                      ))}
+                    </Grid>
+                  </Collapse>
+                </Box>
 
                 {/* CONTENT AREA */}
                 <Box sx={{ mt: 2, mb: isMobile ? 3 : '175px' }}>
-                  {/* PAYWALL MODE */}
                   {paywall === true && !isAuthed ? (
-                    <Grid
-                      container
-                      spacing={2}
-                      sx={{ alignItems: 'flex-start' }}
-                    >
+                    <Grid container spacing={2} sx={{ alignItems: 'flex-start' }}>
                       {/* Left: Gate */}
                       <Grid size={{ xs: 12, md: 6 }}>
                         <SigninGate />
@@ -253,6 +247,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                           )}
                         </Box>
                       )}
+
                       <RenderMarkdown>{body}</RenderMarkdown>
                     </>
                   )}
