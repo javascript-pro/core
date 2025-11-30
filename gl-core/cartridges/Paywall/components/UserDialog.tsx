@@ -10,18 +10,12 @@ import {
   DialogContent,
   IconButton,
 } from '@mui/material';
-import { useDispatch, useIsMobile, Icon, Siblings } from '../../../../gl-core';
+import { useDispatch, useIsMobile, Icon } from '../../../../gl-core';
 import {
   useDesignSystem,
   setDesignSystemKey,
-  MenuSystem,
 } from '../../DesignSystem';
-import { useNewContent } from '../../Uberedux';
-import { 
-  useUser,
-  setPaywallKey,
-  usePaywall,
-} from '../../Paywall';
+import { useUser, setPaywallKey, usePaywall, SignIn, UserMenu } from '../../Paywall';
 
 export default function UserDialog() {
   const dispatch = useDispatch();
@@ -30,7 +24,7 @@ export default function UserDialog() {
   const { fullScreen } = ds;
   const user = useUser();
   const paywall = usePaywall();
-  const {dialog} = paywall;
+  const { dialog } = paywall;
 
   const handleClose = () => {
     dispatch(setPaywallKey('dialog', false));
@@ -52,24 +46,32 @@ export default function UserDialog() {
         maxWidth={'sm'}
       >
         <DialogTitle>
-          <CardHeader 
-            
-            action={<IconButton color="primary" onClick={toggleFullscreen}>
-            <Icon icon="fullscreen" />
-          </IconButton>}
+          <CardHeader
+            action={
+              <IconButton color="primary" onClick={toggleFullscreen}>
+                <Icon icon="fullscreen" />
+              </IconButton>
+            }
           />
         </DialogTitle>
         <DialogContent>
           <Grid container spacing={2} sx={{ mb: 2 }}>
-            <Grid size={{ xs: 12, sm: 6 }}>
-              
-            </Grid>
-            <Grid size={{ xs: 12, sm: 6 }}>
-              
-            </Grid>
+
+            
+            <Grid size={{ xs: 12 }}>
+              {user ? <UserMenu /> : <SignIn /> }
+            </Grid>  
+
+            { user && <Grid size={{ xs: 12}}>
+              <pre style={{ fontSize: '10px' }}>
+                user: {JSON.stringify(user, null, 2)}
+              </pre>
+            </Grid>    }
+                  
           </Grid>
         </DialogContent>
         <DialogActions>
+          
           <IconButton color="primary" onClick={handleClose}>
             <Icon icon="close" />
           </IconButton>

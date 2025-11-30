@@ -9,7 +9,12 @@ import {
   Typography,
   Chip,
 } from '@mui/material';
-import { useUser, useIsUberUser, setPaywallKey, usePaywall } from '../../Paywall';
+import {
+  useUser,
+  useIsUberUser,
+  setPaywallKey,
+  usePaywall,
+} from '../../Paywall';
 import { Icon } from '../../DesignSystem';
 import { useDispatch } from '../../Uberedux';
 import { useIsMobile } from '../../../../gl-core';
@@ -20,16 +25,16 @@ export default function User() {
   const isMobile = useIsMobile();
   const isUberUser = useIsUberUser();
   const paywall = usePaywall();
-  const {dialog} = paywall;
+  const { dialog } = paywall;
 
   const toggleDialogOpen = () => {
-    dispatch(setPaywallKey("dialog", !dialog));
-  }
+    dispatch(setPaywallKey('dialog', !dialog));
+  };
 
   if (!user) {
     return (
-      <Box sx={{ px: 2}}>
-        <IconButton onClick={toggleDialogOpen} sx={{ ml: -1 }} color='primary'>
+      <Box sx={{ px: 2 }}>
+        <IconButton onClick={toggleDialogOpen} sx={{ ml: -1 }} color="primary">
           <Icon icon="signin" />
         </IconButton>
       </Box>
@@ -41,7 +46,7 @@ export default function User() {
     return (
       <CardHeader
         avatar={
-          <IconButton sx={{ ml: -2 }}>
+          <IconButton onClick={toggleDialogOpen} sx={{ ml: -2 }}>
             <Avatar src={user.photoURL || provider?.photoURL || undefined} />
           </IconButton>
         }
@@ -56,7 +61,7 @@ export default function User() {
 
   return (
     <Box sx={{ display: 'flex', alignItems: 'center', p: 2 }}>
-      <IconButton sx={{ ml: -1 }}>
+      <IconButton onClick={toggleDialogOpen} sx={{ ml: -1 }}>
         <Avatar
           src={user.photoURL || provider?.photoURL || undefined}
           sx={{ width: 24, height: 24 }}

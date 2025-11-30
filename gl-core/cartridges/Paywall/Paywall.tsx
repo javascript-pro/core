@@ -17,7 +17,9 @@ export default function Paywall() {
     return () => unsubscribe();
   }, [dispatch]);
 
-  return <>
-          <UserDialog />
-        </>;
+  return (
+    <>
+      <UserDialog />
+    </>
+  );
 }
