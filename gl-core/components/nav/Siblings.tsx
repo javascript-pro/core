@@ -12,8 +12,8 @@ import {
   Box,
   Typography,
 } from '@mui/material';
-import { useIsMobile } from '../../../gl-core';
-import { Icon } from '../../cartridges/DesignSystem';
+import { useIsMobile, useDispatch } from '../../../gl-core';
+import { Icon, setDesignSystemKey } from '../../cartridges/DesignSystem';
 
 type NavItem = {
   title: string;
@@ -61,9 +61,16 @@ function findParentContents(items: NavItem[], slug: string): NavItem[] | null {
 
 // --- main component ---
 export default function Siblings() {
+  const dispatch = useDispatch();
   const pathname = usePathname();
   const router = useRouter();
   const isMobile = useIsMobile();
+
+
+  const handleCloseDialog = () => {
+    dispatch(setDesignSystemKey('dialog', null));
+  };
+  
 
   const currentNode = React.useMemo(
     () => findNode(globalNav as NavItem[], pathname),
@@ -134,7 +141,10 @@ export default function Siblings() {
     <Box>
       {/* Ancestor chain */}
       {ancestors.map((node) => (
-        <ListItemButton key={node.slug} onClick={() => router.push(node.slug)}>
+        <ListItemButton key={node.slug} onClick={() => {
+          handleCloseDialog();
+         router.push(node.slug);
+        }}>
           <ListItemIcon>
             <Icon icon={(node.icon as any) || 'up'} color="primary" />
           </ListItemIcon>
@@ -152,7 +162,11 @@ export default function Siblings() {
 
       {/* Parent fallback if no siblings */}
       {(!siblings || siblings.length === 0) && parent && (
-        <ListItemButton onClick={() => router.push(parent.slug)}>
+        <ListItemButton onClick={() => {
+          handleCloseDialog();
+          router.push(parent.slug);
+          
+        }}>
           <ListItemIcon>
             <Icon icon={(parent.icon as any) || 'up'} color="primary" />
           </ListItemIcon>
@@ -177,7 +191,11 @@ export default function Siblings() {
               <ListItemButton
                 key={item.slug}
                 disabled={isCurrent}
-                onClick={() => !isCurrent && router.push(item.slug)}
+
+                onClick={() => {
+                  handleCloseDialog();
+                  router.push(item.slug);
+                }}
               >
                 <ListItemIcon>
                   <Icon icon={item.icon as any} color="primary" />

@@ -1,10 +1,16 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/Paywall/components/User.tsx
 'use client';
 import * as React from 'react';
-import { IconButton, CardHeader, Box, Avatar, Typography, Chip } from '@mui/material';
+import {
+  IconButton,
+  CardHeader,
+  Box,
+  Avatar,
+  Typography,
+  Chip,
+} from '@mui/material';
 import { useUser, useIsUberUser } from '../../Paywall';
 import { useIsMobile } from '../../../../gl-core';
-
 
 export default function User() {
   const user = useUser();
@@ -20,13 +26,14 @@ export default function User() {
   }
 
   const provider = user.providerData?.[0] ?? null;
-  if (!isMobile){
+  if (!isMobile) {
     return (
       <CardHeader
-        avatar={<IconButton sx={{ ml:-2}}>
-                  <Avatar src={user.photoURL || provider?.photoURL || undefined} />
-                </IconButton>
-                }
+        avatar={
+          <IconButton sx={{ ml: -2 }}>
+            <Avatar src={user.photoURL || provider?.photoURL || undefined} />
+          </IconButton>
+        }
         title={user.displayName || provider?.displayName || 'Unknown user'}
         subheader={user.email || provider?.email}
         action={
@@ -38,12 +45,12 @@ export default function User() {
 
   return (
     <Box sx={{ display: 'flex', alignItems: 'center', p: 2 }}>
-      <IconButton sx={{ ml:-1}}>
+      <IconButton sx={{ ml: -1 }}>
         <Avatar
           src={user.photoURL || provider?.photoURL || undefined}
           sx={{ width: 24, height: 24 }}
         />
       </IconButton>
     </Box>
-  )
+  );
 }

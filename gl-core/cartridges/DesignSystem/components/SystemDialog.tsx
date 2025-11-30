@@ -7,17 +7,15 @@ import {
   DialogActions,
   DialogContent,
   IconButton,
-  Typography,
 } from '@mui/material';
-import { useDispatch, useIsMobile, Icon } from '../../../../gl-core';
+import { useDispatch, useIsMobile, Icon, Siblings } from '../../../../gl-core';
 import {
   useDesignSystem,
   setDesignSystemKey,
   MenuSystem,
-  NewContent,
 } from '../../DesignSystem';
 import { useNewContent } from '../../Uberedux';
-import { User, SignIn, useUser } from '../../Paywall';
+import { useUser } from '../../Paywall';
 
 export default function SystemDialog() {
   const dispatch = useDispatch();
@@ -51,7 +49,9 @@ export default function SystemDialog() {
             <Grid size={{ xs: 12, sm: 6 }}>
               <MenuSystem />
             </Grid>
-            <Grid size={{ xs: 12, sm: 6 }}></Grid>
+            <Grid size={{ xs: 12, sm: 6 }}>
+              <Siblings />
+            </Grid>
           </Grid>
         </DialogContent>
         <DialogActions>

@@ -128,9 +128,8 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
                 {/* Description + Share + NEW TOGGLE */}
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                  
                   {newContent && newContent.length > 0 && (
-                    <Box sx={{ml: -1}}>
+                    <Box sx={{ ml: -1 }}>
                       <IconButton
                         color="primary"
                         onClick={() => setShowWhatsNew((v) => !v)}
@@ -139,7 +138,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                       </IconButton>
                     </Box>
                   )}
-                  
+
                   <Box sx={{ mr: 1 }}>
                     <SharePopup />
                   </Box>
