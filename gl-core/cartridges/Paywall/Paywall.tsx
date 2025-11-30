@@ -4,7 +4,7 @@ import * as React from 'react';
 import { useDispatch } from '../../../gl-core';
 import { auth } from '../../lib/firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
-import { setPaywallKey } from '../Paywall';
+import { setPaywallKey, UserDialog } from '../Paywall';
 
 export default function Paywall() {
   const dispatch = useDispatch();
@@ -17,5 +17,7 @@ export default function Paywall() {
     return () => unsubscribe();
   }, [dispatch]);
 
-  return <></>;
+  return <>
+          <UserDialog />
+        </>;
 }

@@ -3,7 +3,7 @@
 
 import * as React from 'react';
 import { TAuthForm } from '../../../../gl-core/types';
-import { Fab } from '@mui/material';
+import { Fab, IconButton } from '@mui/material';
 import { useDispatch, Icon } from '../../../../gl-core';
 import { setDesignSystemKey } from '../../DesignSystem';
 
@@ -18,7 +18,7 @@ export default function PushButton({}: TAuthForm) {
   };
 
   return (
-    <Fab
+    <IconButton
       color="primary"
       sx={{
         zIndex: (theme) => theme.zIndex.modal - 2,
@@ -30,6 +30,6 @@ export default function PushButton({}: TAuthForm) {
       onClick={openDesignSystem}
     >
       <Icon icon="fingerprint" />
-    </Fab>
+    </IconButton>
   );
 }

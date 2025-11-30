@@ -1,31 +1,67 @@
 // /Users/goldlabel/GitHub/core/gl-core/cartridges/Paywall/components/User.tsx
 'use client';
 import * as React from 'react';
-import { CardHeader, Box, Avatar, Typography, Chip } from '@mui/material';
-import { useUser, useIsUberUser } from '../../Paywall';
+import {
+  IconButton,
+  CardHeader,
+  Box,
+  Avatar,
+  Typography,
+  Chip,
+} from '@mui/material';
+import { useUser, useIsUberUser, setPaywallKey, usePaywall } from '../../Paywall';
+import { Icon } from '../../DesignSystem';
+import { useDispatch } from '../../Uberedux';
+import { useIsMobile } from '../../../../gl-core';
 
 export default function User() {
   const user = useUser();
+  const dispatch = useDispatch();
+  const isMobile = useIsMobile();
   const isUberUser = useIsUberUser();
+  const paywall = usePaywall();
+  const {dialog} = paywall;
+
+  const toggleDialogOpen = () => {
+    dispatch(setPaywallKey("dialog", !dialog));
+  }
 
   if (!user) {
     return (
-      <Box sx={{ p: 2, opacity: 0.6 }}>
-        <Typography variant="caption">No user</Typography>
+      <Box sx={{ px: 2}}>
+        <IconButton onClick={toggleDialogOpen} sx={{ ml: -1 }} color='primary'>
+          <Icon icon="signin" />
+        </IconButton>
       </Box>
     );
   }
 
   const provider = user.providerData?.[0] ?? null;
+  if (!isMobile) {
+    return (
+      <CardHeader
+        avatar={
+          <IconButton sx={{ ml: -2 }}>
+            <Avatar src={user.photoURL || provider?.photoURL || undefined} />
+          </IconButton>
+        }
+        title={user.displayName || provider?.displayName || 'Unknown user'}
+        subheader={user.email || provider?.email}
+        action={
+          isUberUser && <Chip label="Uber User" size="small" color="primary" />
+        }
+      />
+    );
+  }
 
   return (
-    <CardHeader
-      avatar={<Avatar src={user.photoURL || provider?.photoURL || undefined} />}
-      title={user.displayName || provider?.displayName || 'Unknown user'}
-      subheader={user.email || provider?.email}
-      action={
-        isUberUser && <Chip label="Uber User" size="small" color="primary" />
-      }
-    />
+    <Box sx={{ display: 'flex', alignItems: 'center', p: 2 }}>
+      <IconButton sx={{ ml: -1 }}>
+        <Avatar
+          src={user.photoURL || provider?.photoURL || undefined}
+          sx={{ width: 24, height: 24 }}
+        />
+      </IconButton>
+    </Box>
   );
 }

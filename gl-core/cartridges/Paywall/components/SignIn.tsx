@@ -109,7 +109,7 @@ export default function SignIn() {
               GitHub
             </Button>
 
-            <Button
+            {/* <Button
               fullWidth
               variant="contained"
               onClick={handleFacebook}
@@ -127,7 +127,7 @@ export default function SignIn() {
               sx={{ py: 1.6, mt: 2 }}
             >
               Twitter
-            </Button>
+            </Button> */}
           </CardContent>
         </Grid>
       </Grid>
