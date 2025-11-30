@@ -9,18 +9,29 @@ import {
   Typography,
   Chip,
 } from '@mui/material';
-import { useUser, useIsUberUser } from '../../Paywall';
+import { useUser, useIsUberUser, setPaywallKey, usePaywall } from '../../Paywall';
+import { Icon } from '../../DesignSystem';
+import { useDispatch } from '../../Uberedux';
 import { useIsMobile } from '../../../../gl-core';
 
 export default function User() {
   const user = useUser();
+  const dispatch = useDispatch();
   const isMobile = useIsMobile();
   const isUberUser = useIsUberUser();
+  const paywall = usePaywall();
+  const {dialog} = paywall;
+
+  const toggleDialogOpen = () => {
+    dispatch(setPaywallKey("dialog", !dialog));
+  }
 
   if (!user) {
     return (
-      <Box sx={{ p: 2, opacity: 0.6 }}>
-        <Typography variant="caption">No user</Typography>
+      <Box sx={{ px: 2}}>
+        <IconButton onClick={toggleDialogOpen} sx={{ ml: -1 }} color='primary'>
+          <Icon icon="signin" />
+        </IconButton>
       </Box>
     );
   }

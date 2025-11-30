@@ -4,6 +4,7 @@ import { initialState as initialStatePaywall } from './initialState';
 import SignIn from './components/SignIn';
 import Tings from './components/Tings';
 import User from './components/User';
+import UserDialog from './components/UserDialog';
 import SigninGate from './components/SigninGate';
 import SignOut from './components/SignOut';
 import UserCard from './components/UserCard';
@@ -28,5 +29,6 @@ export {
   SignOut,
   Tings,
   User,
+  UserDialog,
   userSignout,
 };

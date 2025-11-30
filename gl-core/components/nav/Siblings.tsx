@@ -66,11 +66,9 @@ export default function Siblings() {
   const router = useRouter();
   const isMobile = useIsMobile();
 
-
   const handleCloseDialog = () => {
     dispatch(setDesignSystemKey('dialog', null));
   };
-  
 
   const currentNode = React.useMemo(
     () => findNode(globalNav as NavItem[], pathname),
@@ -141,10 +139,13 @@ export default function Siblings() {
     <Box>
       {/* Ancestor chain */}
       {ancestors.map((node) => (
-        <ListItemButton key={node.slug} onClick={() => {
-          handleCloseDialog();
-         router.push(node.slug);
-        }}>
+        <ListItemButton
+          key={node.slug}
+          onClick={() => {
+            handleCloseDialog();
+            router.push(node.slug);
+          }}
+        >
           <ListItemIcon>
             <Icon icon={(node.icon as any) || 'up'} color="primary" />
           </ListItemIcon>
@@ -162,11 +163,12 @@ export default function Siblings() {
 
       {/* Parent fallback if no siblings */}
       {(!siblings || siblings.length === 0) && parent && (
-        <ListItemButton onClick={() => {
-          handleCloseDialog();
-          router.push(parent.slug);
-          
-        }}>
+        <ListItemButton
+          onClick={() => {
+            handleCloseDialog();
+            router.push(parent.slug);
+          }}
+        >
           <ListItemIcon>
             <Icon icon={(parent.icon as any) || 'up'} color="primary" />
           </ListItemIcon>
@@ -191,7 +193,6 @@ export default function Siblings() {
               <ListItemButton
                 key={item.slug}
                 disabled={isCurrent}
-
                 onClick={() => {
                   handleCloseDialog();
                   router.push(item.slug);

@@ -95,7 +95,7 @@ export default function Core({ frontmatter, body = null }: TCore) {
                     mt: 0,
                   }}
                 >
-                  {user ? <User /> : null}
+                  <User />
 
                   {Array.isArray(siblings) && siblings.length > 0 ? (
                     <Siblings />

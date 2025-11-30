@@ -3,7 +3,7 @@ import { TDesignSystemState } from './types';
 
 export const initialState: TDesignSystemState = {
   cartridge: 'designSystem',
-  themeMode: 'light',
+  themeMode: 'dark',
   dialog: null,
   feedback: null,
   feedbackTested: false,

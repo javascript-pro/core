@@ -1,4 +1,4 @@
-// core/gl-core/cartridges/DesignSystem/components/SystemDialog.tsx
+// /Users/goldlabel/GitHub/example-app/gl-core/cartridges/Paywall/components/UserDialog.tsx
 'use client';
 import * as React from 'react';
 import {
@@ -17,32 +17,37 @@ import {
   MenuSystem,
 } from '../../DesignSystem';
 import { useNewContent } from '../../Uberedux';
-import { useUser } from '../../Paywall';
+import { 
+  useUser,
+  setPaywallKey,
+  usePaywall,
+} from '../../Paywall';
 
-export default function SystemDialog() {
+export default function UserDialog() {
   const dispatch = useDispatch();
   const isMobile = useIsMobile();
   const ds = useDesignSystem();
-  const newContent = useNewContent();
   const { fullScreen } = ds;
   const user = useUser();
+  const paywall = usePaywall();
+  const {dialog} = paywall;
 
   const handleClose = () => {
-    dispatch(setDesignSystemKey('dialog', null));
+    dispatch(setPaywallKey('dialog', false));
   };
 
   const toggleFullscreen = () => {
     dispatch(setDesignSystemKey('fullScreen', !fullScreen));
   };
 
-  if (!ds.dialog) return null;
+  if (!dialog) return null;
 
   return (
     <>
       <Dialog
         fullWidth
         fullScreen={isMobile || fullScreen}
-        open={Boolean(ds.dialog)}
+        open={Boolean(dialog)}
         onClose={handleClose}
         maxWidth={'sm'}
       >
@@ -57,10 +62,10 @@ export default function SystemDialog() {
         <DialogContent>
           <Grid container spacing={2} sx={{ mb: 2 }}>
             <Grid size={{ xs: 12, sm: 6 }}>
-              <Siblings />
+              
             </Grid>
             <Grid size={{ xs: 12, sm: 6 }}>
-              <MenuSystem />
+              
             </Grid>
           </Grid>
         </DialogContent>
