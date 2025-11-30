@@ -130,27 +130,28 @@ export default function Core({ frontmatter, body = null }: TCore) {
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
                   
                   {newContent && newContent.length > 0 && (
-                    <Box>
-                      <IconButton color="primary" onClick={() => setShowWhatsNew((v) => !v)}>
-                        <Icon
-                          icon={showWhatsNew ? 'up' : 'down'}
-                        />
+                    <Box sx={{ml: -1}}>
+                      <IconButton
+                        color="primary"
+                        onClick={() => setShowWhatsNew((v) => !v)}
+                      >
+                        <Icon icon={showWhatsNew ? 'up' : 'down'} />
                       </IconButton>
                     </Box>
                   )}
-                    <Box sx={{ mr: 1 }}>
-                      <SharePopup />
-                    </Box>
-
                   
-                  <Box sx={{mt:1 }}>
-                  <Typography
-                    variant="h2"
-                    gutterBottom
-                    sx={{ fontSize: { xs: '1.1rem', md: '1.25rem' } }}
-                  >
-                    {description}
-                  </Typography>
+                  <Box sx={{ mr: 1 }}>
+                    <SharePopup />
+                  </Box>
+
+                  <Box sx={{ mt: 1 }}>
+                    <Typography
+                      variant="h2"
+                      gutterBottom
+                      sx={{ fontSize: { xs: '1.1rem', md: '1.25rem' } }}
+                    >
+                      {description}
+                    </Typography>
                   </Box>
                 </Box>
 
@@ -172,7 +173,11 @@ export default function Core({ frontmatter, body = null }: TCore) {
                 {/* CONTENT AREA */}
                 <Box sx={{ mt: 2, mb: isMobile ? 3 : '175px' }}>
                   {paywall === true && !isAuthed ? (
-                    <Grid container spacing={2} sx={{ alignItems: 'flex-start' }}>
+                    <Grid
+                      container
+                      spacing={2}
+                      sx={{ alignItems: 'flex-start' }}
+                    >
                       {/* Left: Gate */}
                       <Grid size={{ xs: 12, md: 6 }}>
                         <SigninGate />
