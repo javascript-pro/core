@@ -21,7 +21,7 @@ export default function NewContent({ slug }: INewContent) {
     <ButtonBase
       sx={{
         textAlign: 'left',
-        mb: 1,
+        mt: 1,
         width: '100%',
       }}
       onClick={() => {
@@ -30,11 +30,12 @@ export default function NewContent({ slug }: INewContent) {
       }}
     >
       <Alert
-        sx={{ width: '100%', border: 0 }}
+        sx={{ width: '100%' }}
         severity="success"
+        variant="outlined"
         icon={
-          <Badge color="primary" badgeContent="!">
-            <Icon icon={content.icon || 'home'} color="inherit" />
+          <Badge color="primary" badgeContent={null}>
+            <Icon icon={content.icon || 'home'} color="primary" />
           </Badge>
         }
       >

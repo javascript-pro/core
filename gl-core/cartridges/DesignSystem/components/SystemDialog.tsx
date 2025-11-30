@@ -48,14 +48,7 @@ export default function SystemDialog() {
       >
         <DialogContent>
           <Grid container spacing={2} sx={{ mb: 2 }}>
-            <Grid size={{ xs: 12, sm: 6 }}>
-              <Typography variant="h6" sx={{ mb: 2 }}>
-                New Content
-              </Typography>
-              {newContent?.map((item: any, i: number) => (
-                <NewContent key={`content_${i}`} slug={item.slug} />
-              ))}
-            </Grid>
+            <Grid size={{ xs: 12, sm: 6 }}></Grid>
             <Grid size={{ xs: 12, sm: 6 }}>
               <MenuSystem />
             </Grid>

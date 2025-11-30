@@ -109,7 +109,7 @@
             "title": "NPM",
             "slug": "/work/npm",
             "order": 10,
-            "icon": "work",
+            "icon": "js",
             "image": "https://live.staticflickr.com/65535/54953590078_b40cbc83fb_b.jpg",
             "type": "file",
             "tags": [
@@ -180,7 +180,8 @@
                       "State Management",
                       "Redux"
                     ],
-                    "excerpt": "Otherwise you'd be back in jQuery callback hell. Nobody wants that.\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Uberedux\" label=\"Uberedux\"]\n\nUberedux is a simple,"
+                    "excerpt": "Otherwise you'd be back in jQuery callback hell. Nobody wants that.\n\n[GitHub url=\"https://github.com/javascriptpro/core/tree/master/glcore/cartridges/Uberedux\" label=\"Uberedux\"]\n\nUberedux is a simple,",
+                    "newContent": true
                   }
                 ],
                 "icon": "cartridge",
@@ -822,7 +823,8 @@
                         "icon": "ai",
                         "image": "https://live.staticflickr.com/65535/54676004619_ac1207c621_c.jpg",
                         "type": "file",
-                        "excerpt": "Sending sensitive files to external platforms can breach professional secrecy, violate GDPR, and damage client trust\n\nAKI exists because firms need the power of AI without risking client confidentiali"
+                        "excerpt": "Sending sensitive files to external platforms can breach professional secrecy, violate GDPR, and damage client trust\n\nAKI exists because firms need the power of AI without risking client confidentiali",
+                        "newContent": true
                       }
                     ],
                     "icon": "ai",
@@ -859,7 +861,8 @@
                       "ui",
                       "ai"
                     ],
-                    "excerpt": "Prompt engineering is the art of designing clear, structured instructions that make AI features behave reliably inside your React app.\n\nPrompt engineering, from a React developer’s perspective, is the"
+                    "excerpt": "The art of designing clear, structured instructions that make AI features behave reliably inside your app\n\nPrompt engineering, from a React developer’s perspective, is the design and optimisation of t",
+                    "newContent": true
                   }
                 ],
                 "icon": "ai",
