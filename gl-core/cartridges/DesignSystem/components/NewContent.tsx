@@ -32,7 +32,7 @@ export default function NewContent({ slug }: INewContent) {
       <Alert
         sx={{ width: '100%' }}
         severity="success"
-        variant="outlined"
+        // variant="outlined"
         icon={
           <Badge color="primary" badgeContent={null}>
             <Icon icon={content.icon || 'home'} color="primary" />
