@@ -25,7 +25,7 @@
     "title": "Film",
     "description": "Archive going back to the 90's",
     "tags": [],
-    "content": "\n[PageGrid pages=\"/balance/film/fuckthegovmint, /balance/film/a-very-british-protest, /balance/film/james-dean, /balance/film/moronic, /balance/film/inwyk, /balance/film/freeride-day\"]\n\nhttps://www.youtube.com/@milkylackstoes\n"
+    "content": "\n[LinkOut title=\"@milkylackstoes on Youtube\" icon=\"youtube\" url=\"https://www.youtube.com/@milkylackstoes\"]\n\n[PageGrid pages=\"/balance/film/lotsa-fish, /balance/film/sweet-comme-une-nut, /balance/film/fuckthegovmint, /balance/film/a-very-british-protest, /balance/film/james-dean, /balance/film/moronic, /balance/film/inwyk, /balance/film/freeride-day\"]\n"
   },
   {
     "slug": "balance/film/inwyk",
@@ -42,6 +42,13 @@
     "content": "\n[YouTube src=\"https://youtu.be/N3hz76MR5ao\"]\n"
   },
   {
+    "slug": "balance/film/lotsa-fish",
+    "title": "Lotsa Fish",
+    "description": "",
+    "tags": "diving, film, advert",
+    "content": "\n> Long Reef, Sydney Dec 2018\n\n[YouTube src=\"https://youtu.be/aIG3F_rACeQ\"]\n\nAd: We dive around the Northern Beaches every weekend. Check out our upcoming dives at divespearandsport.com.au\n"
+  },
+  {
     "slug": "balance/film/moronic",
     "title": "Who is calling whom moronic?",
     "description": "Dec 2021",
@@ -49,11 +56,18 @@
     "content": "\n> Who is calling whom moronic?\n\n[YouTube src=\"https://youtu.be/vWl2NLY6NaQ\"]\n"
   },
   {
+    "slug": "balance/film/sweet-comme-une-nut",
+    "title": "Sweet Comme Une Nut",
+    "description": "London in the naughties. innit",
+    "tags": [],
+    "content": "\n> London, Summer 2004\n\n[YouTube src=\"https://youtu.be/lSRtbgt5ays\"]\n\nMade in the summer of 2004 when living in Deptford, London. I drove a bashed up Gold Beemer and had a shaved head. It helped to look a bit hard to live there. In making this film I tried to capture a bit of how it felt to live in the place.\n\nMusic is from a demo CD called The Move by the mooschool. Nick and Mike Maroussas, old school friends. Find out more about their hiphop career and download more mooschool music\n"
+  },
+  {
     "slug": "balance/index",
     "title": "Balance",
     "description": "Were you the kind of kid who liked Lego?",
     "tags": [],
-    "content": "\n> If you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are [Generation X](/balance/books/douglas-coupland/generation-x)\n\n[PageGrid thumbnails=\"no\" pages=\"/balance/pictures, /balance/film, /balance/words\"]\n"
+    "content": "\n> If you were the kind of kid who liked Lego then we probably have a lot more in common than just that. We are [Generation X](/balance/books/douglas-coupland/generation-x)\n\n[PageGrid thumbnails=\"yes\" pages=\"/balance/pictures, /balance/film, /balance/words\"]\n"
   },
   {
     "slug": "balance/pictures/index",

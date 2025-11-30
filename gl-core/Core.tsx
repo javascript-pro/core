@@ -9,6 +9,9 @@ import Image from 'next/image';
 import {
   useMediaQuery,
   Container,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
   Box,
   Grid,
   Skeleton,
@@ -138,6 +141,35 @@ export default function Core({ frontmatter, body = null }: TCore) {
 
                 {title !== 'Home' && pathname !== '/' && <PageBreadcrumb />}
 
+                <>
+                  <Box sx={{ mb: 1 }}>
+                    {newContent && newContent.length > 0 && (
+                      <Accordion sx={{ mt: 2, boxShadow: 'none' }}>
+                        <AccordionSummary
+                          expandIcon={<Icon icon="down" color="primary" />}
+                        >
+                          <Typography variant="h3" sx={{ fontSize: '1.1rem' }}>
+                            What’s New?
+                          </Typography>
+                        </AccordionSummary>
+
+                        <AccordionDetails>
+                          <Grid container spacing={1}>
+                            {newContent.map((item: any, i: number) => (
+                              <Grid
+                                key={`page_${i}`}
+                                size={{ xs: 12, md: mdSize }}
+                              >
+                                <NewContent slug={item.slug} />
+                              </Grid>
+                            ))}
+                          </Grid>
+                        </AccordionDetails>
+                      </Accordion>
+                    )}
+                  </Box>
+                </>
+
                 {/* CONTENT AREA */}
                 <Box sx={{ mt: 2, mb: isMobile ? 3 : '175px' }}>
                   {/* PAYWALL MODE */}
@@ -224,24 +256,6 @@ export default function Core({ frontmatter, body = null }: TCore) {
                       <RenderMarkdown>{body}</RenderMarkdown>
                     </>
                   )}
-
-                  <>
-                    <Box sx={{ mt: 1 }}>
-                      <Grid container spacing={1}>
-                        {newContent?.map((item: any, i: number) => (
-                          <Grid
-                            key={`page_${i}`}
-                            size={{
-                              xs: 12,
-                              md: mdSize,
-                            }}
-                          >
-                            <NewContent slug={item.slug} />
-                          </Grid>
-                        ))}
-                      </Grid>
-                    </Box>
-                  </>
                 </Box>
               </Grid>
             </Grid>
