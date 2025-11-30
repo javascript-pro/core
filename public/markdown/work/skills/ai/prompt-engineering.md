@@ -5,8 +5,7 @@ description: The art of designing clear, structured instructions
 slug: /work/skills/ai/prompt-engineering
 icon: ai
 image: https://live.staticflickr.com/65535/53669705662_bd523946ef_b.jpg
-tags: ui, ai
-newContent: true
+tags: ui, ai, prompts
 ---
 
 > The art of designing clear, structured instructions that make AI features behave reliably inside your app

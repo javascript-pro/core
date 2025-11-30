@@ -7,6 +7,13 @@
     "content": "\n[YouTube src=\"https://youtu.be/uPDem3qOUaU\"]\n"
   },
   {
+    "slug": "balance/film/diamond-diving",
+    "title": "Diamond Diving",
+    "description": "Scuba diving in southern France",
+    "tags": [],
+    "content": "\n> Interview with Alex Diamond of Diamond Diving\n\n[YouTube src=\"https://youtu.be/lSRtbgt5ays\"]\n\nAn interview with Alex Diamond of Diamond Diving. We join Alex on the easydive Antibes dive boat where on a beautiful June day in early season we learn what kind of marine life we can expect to see in Antibes, what level of diver you have to be, and why diving in the med is all about where you dive. The Cote d'Azur is in fact: a world class dive spot.\n"
+  },
+  {
     "slug": "balance/film/freeride-day",
     "title": "Chamonix Freeride Day",
     "description": "April 2008",
@@ -514,7 +521,7 @@
     "slug": "work/example-app/docs/uberedux",
     "title": "Uberedux",
     "description": "Because all Apps need State Management",
-    "tags": "Free, atridges, Uberedux, State Management, Redux",
+    "tags": "Free, cartridges, Uberedux, State Management, Redux",
     "content": "\n> Otherwise you'd be back in jQuery callback hell. Nobody wants that.\n\n[GitHub url=\"https://github.com/javascript-pro/core/tree/master/gl-core/cartridges/Uberedux\" label=\"Uberedux\"]\n\nUberedux is a simple, zero-config wrapper around Redux. It plugs cleanly into how the app already works and gives you the global state access you need without boilerplate or fuss. There’s nothing clever here — and that’s the point. Uberedux is fast, familiar, and already done for you.\n\nIf you've used Redux before, you already know how to use Uberedux. If you haven't, don't worry — the basics are dead simple. Actions update the store. Components subscribe to the parts they care about. That’s it.\n\nWe’ve trimmed the fat: no reducers to wire up manually, no sprawling folder trees, no indirection. Instead, you get a single useSlice() hook that gives you what you need, when you need it — whether that's in a form field, a route guard, or a floating modal.\n\nUberedux isn’t trying to win design awards. It's just here to work — cleanly, quietly, and consistently across your app. No surprises. No rewrites. Just state management that stays out of your way.\n"
   },
   {
@@ -633,7 +640,7 @@
     "slug": "work/skills/ai/prompt-engineering",
     "title": "Prompt Engineering",
     "description": "The art of designing clear, structured instructions",
-    "tags": "ui, ai",
+    "tags": "ui, ai, prompts",
     "content": "\n> The art of designing clear, structured instructions that make AI features behave reliably inside your app\n\nPrompt engineering, from a React developer’s perspective, is the design and optimisation of the text instructions you send to an LLM so that your UI behaves consistently and your app returns predictable, useful results.\n\nIn practical terms, it’s about treating prompts as part of your frontend logic, not as static strings.\n\nWhat it means in a React context\n\n1. Designing prompts as part of component behaviour\n   You shape the prompt based on UI state, user input, mode, or feature flags.\n   Example: different prompts for summarising, translating, or generating UI copy.\n\n2. Structuring prompts as data models\n   You build them like config: objects, templates, or composable strings.\n   This makes them testable and easier to maintain.\n\n3. Guarding model behaviour\n   You add rules, constraints, and tone so the LLM behaves like a controlled service.\n   The prompt becomes a contract between your component and the model.\n\n4. Handling streaming responses\n   You write prompts that fit well with streaming output and incremental rendering in React (e.g., chat UIs, Markdown, or partial updates).\n\n5. Integrating prompts with business logic\n   You’re shaping the LLM’s role: assistant, translator, data extractor, etc.\n   This becomes part of your app architecture.\n\n6. Creating reusable prompt “components”\n   Just like hooks or utilities, prompts become reusable parts of your codebase.\n"
   },
   {
