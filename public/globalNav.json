@@ -1561,16 +1561,6 @@
             "type": "folder",
             "children": [
               {
-                "title": "Diamond Diving",
-                "slug": "/balance/film/diamond-diving",
-                "order": 3,
-                "icon": "film",
-                "image": "https://live.staticflickr.com/65535/54955011959_b1e67fcb04_b.jpg",
-                "type": "file",
-                "excerpt": "Interview with Alex Diamond of Diamond Diving\n\n[YouTube src=\"https://youtu.be/lSRtbgt5ays\"]\n\nAn interview with Alex Diamond of Diamond Diving. We join Alex on the easydive Antibes dive boat where on a",
-                "newContent": true
-              },
-              {
                 "title": "Sweet Comme Une Nut",
                 "slug": "/balance/film/sweet-comme-une-nut",
                 "order": 3,
@@ -1635,6 +1625,16 @@
                 "excerpt": "Who is calling whom moronic?\n\n[YouTube src=\"https://youtu.be/vWl2NLY6NaQ\"]"
               },
               {
+                "title": "Diamond Diving",
+                "slug": "/balance/film/diamond-diving",
+                "order": 60,
+                "icon": "film",
+                "image": "https://live.staticflickr.com/65535/54953886652_7754217501_b.jpg",
+                "type": "file",
+                "excerpt": "Interview with Alex Diamond of Diamond Diving\n\n[YouTube src=\"https://youtu.be/txD6kc8dVr8\"]\n\nAn interview with Alex Diamond of Diamond Diving. We join Alex on the easydive Antibes dive boat where on a",
+                "newContent": true
+              },
+              {
                 "title": "Lotsa Fish",
                 "slug": "/balance/film/lotsa-fish",
                 "order": 130,
@@ -1652,7 +1652,7 @@
             ],
             "icon": "film",
             "image": "https://live.staticflickr.com/65535/54955011959_b1e67fcb04_b.jpg",
-            "excerpt": "[LinkOut title=\"@milkylackstoes on Youtube\" icon=\"youtube\" url=\"https://www.youtube.com/@milkylackstoes\"]\n\n[PageGrid pages=\"/balance/film/lotsafish, /balance/film/sweetcommeunenut, /balance/film/fuckt"
+            "excerpt": "[LinkOut title=\"@milkylackstoes on Youtube\" icon=\"youtube\" url=\"https://www.youtube.com/@milkylackstoes\"]\n\n[PageGrid pages=\"/balance/film/diamonddiving, /balance/film/lotsafish, /balance/film/sweetcom"
           },
           {
             "title": "Words",
