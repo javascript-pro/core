@@ -1056,6 +1056,22 @@
             "excerpt": "Working across the full JavaScript stack to help understand every perspective from interface to infrastructure\n\n[PageGrid pages=\"/work/skills/ecmascript, /work/skills/javascript/react, /work/skills/ja"
           },
           {
+            "title": "TEFL",
+            "description": "English as a Foreign Language",
+            "slug": "/work/tefl",
+            "order": 120,
+            "type": "folder",
+            "children": [],
+            "icon": "lingua",
+            "image": "/png/3rdParty/react.png",
+            "tags": [
+              "expertise",
+              "fields",
+              "work"
+            ],
+            "excerpt": ""
+          },
+          {
             "title": "CV",
             "slug": "/work/cv",
             "order": 800,

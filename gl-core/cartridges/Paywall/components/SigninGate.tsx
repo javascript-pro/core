@@ -17,12 +17,8 @@ export default function SigninGate() {
   }, [user, dispatch]);
 
   return (
-    <Box sx={{ mt: 3 }}>
-      {!user ? (
-        <>
-          <SignIn />
-        </>
-      ) : null}
+    <Box sx={{ mt: 0 }}>
+      {!user ? <SignIn /> : null}
 
       {/* Debug info (optional, remove in production) */}
       {/* <pre style={{ fontSize: '10px' }}>

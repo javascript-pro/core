@@ -908,5 +908,12 @@
     "description": "Vercel created Next.js and runs the platform it was designed for",
     "tags": "Vercel, JavaScript, Node, Next.js, API, REST API, React",
     "content": "\n> Other services to deploy Next apps are available\n\nVercel created Next.js and runs the platform it was designed for. Deploys are instant, previews are automatic, and the hosting is globally fast without any configuration. You push to Git, and Vercel handles builds, routing, caching, edge functions, and rollbacks with almost no friction.\n\nFor deploying Next.js projects, nothing else comes close.\n"
+  },
+  {
+    "slug": "work/tefl/index",
+    "title": "TEFL",
+    "description": "English as a Foreign Language",
+    "tags": "expertise, fields, work",
+    "content": ""
   }
 ]

@@ -47,11 +47,12 @@ export default function SystemDialog() {
         maxWidth={'sm'}
       >
         <DialogTitle>
-          <CardHeader 
-            
-            action={<IconButton color="primary" onClick={toggleFullscreen}>
-            <Icon icon="fullscreen" />
-          </IconButton>}
+          <CardHeader
+            action={
+              <IconButton color="primary" onClick={toggleFullscreen}>
+                <Icon icon="fullscreen" />
+              </IconButton>
+            }
           />
         </DialogTitle>
         <DialogContent>

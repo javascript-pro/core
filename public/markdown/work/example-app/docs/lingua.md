@@ -2,7 +2,7 @@
 order: 28
 slug: /work/example-app/docs/lingua
 title: Lingua
-description: Localisation
+description: Serve Localised content in multiple languages
 icon: lingua
 image: /png/lingua.png
 ---

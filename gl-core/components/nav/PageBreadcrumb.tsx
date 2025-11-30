@@ -1,3 +1,4 @@
+// /Users/goldlabel/GitHub/example-app/gl-core/components/nav/PageBreadcrumb.tsx
 'use client';
 
 import React, { Suspense } from 'react';
@@ -47,6 +48,10 @@ function smartCapitalize(label: string): string {
     'UX',
     'HTTP',
     'HTTPS',
+    'TEFL',
+    'GDPR',
+    'NPM',
+    'CV',
     'JSON',
     'SQL',
     'CSS',
