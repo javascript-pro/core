@@ -7,7 +7,6 @@ import {
   User,
   GoogleAuthProvider,
   GithubAuthProvider,
-  FacebookAuthProvider,
   TwitterAuthProvider,
   signInWithPopup,
 } from 'firebase/auth';
@@ -30,20 +29,6 @@ export default function SignIn() {
         setFeedback({
           severity: 'error',
           title: 'Problem signing into Google',
-          description: (err as Error).message,
-        }),
-      );
-    }
-  };
-
-  const handleFacebook = async () => {
-    try {
-      await signInWithPopup(auth, new FacebookAuthProvider());
-    } catch (err) {
-      dispatch(
-        setFeedback({
-          severity: 'error',
-          title: 'Problem signing into Facebook',
           description: (err as Error).message,
         }),
       );
@@ -79,58 +64,47 @@ export default function SignIn() {
   };
 
   return (
-    <Box sx={{}}>
-      <Grid container spacing={1} justifyContent="center">
-        <Grid size={{ xs: 12 }}>
-          <CardContent>
-            <Typography variant="body1" sx={{ mb: 3 }}>
-              This content requires authentication. Please sign in using one of
-              the providers below. If you need access but can't use these
-              options, let us know
-            </Typography>
+    <Grid container spacing={1}>
+      <Grid size={{ xs: 12 }}>
+        <CardContent>
+          <Typography variant="body2" sx={{ mb: 3 }}>
+            This content requires authentication. Please sign in using one of
+            the providers below. If you need access but can't use these
+            options, let us know
+          </Typography>
 
-            <Button
-              fullWidth
-              variant="contained"
-              onClick={handleGoogle}
-              startIcon={<Icon icon="google" />}
-              sx={{ py: 1.6 }}
-            >
-              Google
-            </Button>
+          <Button
+            fullWidth
+            variant="contained"
+            onClick={handleGoogle}
+            startIcon={<Icon icon="google" />}
+            sx={{ py: 1.6 }}
+          >
+            Google
+          </Button>
 
-            <Button
-              fullWidth
-              variant="contained"
-              onClick={handleGithub}
-              startIcon={<Icon icon="github" />}
-              sx={{ py: 1.6, mt: 2 }}
-            >
-              GitHub
-            </Button>
+          <Button
+            fullWidth
+            variant="contained"
+            onClick={handleGithub}
+            startIcon={<Icon icon="github" />}
+            sx={{ py: 1.6, mt: 2 }}
+          >
+            GitHub
+          </Button>
 
-            {/* <Button
-              fullWidth
-              variant="contained"
-              onClick={handleFacebook}
-              startIcon={<Icon icon="facebook" />}
-              sx={{ py: 1.6, mt: 2 }}
-            >
-              Facebook
-            </Button>
+          <Button
+            fullWidth
+            variant="contained"
+            onClick={handleTwitter}
+            startIcon={<Icon icon="twitter" />}
+            sx={{ py: 1.6, mt: 2 }}
+          >
+            Twitter
+          </Button>
 
-            <Button
-              fullWidth
-              variant="contained"
-              onClick={handleTwitter}
-              startIcon={<Icon icon="twitter" />}
-              sx={{ py: 1.6, mt: 2 }}
-            >
-              Twitter
-            </Button> */}
-          </CardContent>
-        </Grid>
+        </CardContent>
       </Grid>
-    </Box>
+    </Grid>
   );
 }

@@ -64,12 +64,18 @@ export default function UserDialog() {
 
         <DialogContent>
           <Grid container spacing={1} sx={{ mb: 0 }}>
+            <Grid size={{ xs: 12 }}>
+              <User />
+            </Grid>
+            <Grid size={{ xs: 12 }}>{user ? <UserMenu /> : <SignIn />}</Grid>
+          </Grid>
+        </DialogContent>
 
             {user && (
               <Grid size={{ xs: 12 }}>
-                <Accordion variant='outlined'>
-                  <AccordionSummary expandIcon={<Icon icon="down" />}>
-                    user
+                <Accordion variant="outlined">
+                  <AccordionSummary expandIcon={<Icon icon="up" />}>
+                    User Data
                   </AccordionSummary>
                   <AccordionDetails>
                     <pre style={{ fontSize: '10px', margin: 0 }}>
@@ -79,18 +85,6 @@ export default function UserDialog() {
                 </Accordion>
               </Grid>
             )}
-
-            <Grid size={{ xs: 12 }}>
-              <User />
-            </Grid>
-
-            <Grid size={{ xs: 12 }}>
-              {user ? <UserMenu /> : <SignIn />}
-            </Grid>
-
-            
-          </Grid>
-        </DialogContent>
 
         <DialogActions>
           <IconButton color="primary" onClick={handleClose}>

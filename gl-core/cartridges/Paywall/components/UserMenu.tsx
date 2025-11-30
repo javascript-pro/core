@@ -17,15 +17,14 @@ export default function UserMenu() {
   const uid = user?.uid;
   // const projectId = 'goldlabel-pr0'; // change here if needed
 
-  const firebaseAuthUrl =
-    uid
-      ? `https://console.firebase.google.com/u/1/project/goldlabel-pr0/authentication/users`
-      : null;
+  const firebaseAuthUrl = uid
+    ? `https://console.firebase.google.com/u/1/project/goldlabel-pr0/authentication/users`
+    : null;
 
   return (
     <>
+    
       <List dense disablePadding>
-
         {firebaseAuthUrl && (
           <ListItemButton
             component="a"
@@ -36,7 +35,9 @@ export default function UserMenu() {
             <ListItemIcon>
               <Icon icon="link" color="primary" />
             </ListItemIcon>
-            <ListItemText primary={`Firebase Auth id ${uid}`} />
+            <ListItemText 
+              primary={`Firebase Auth`} 
+            />
           </ListItemButton>
         )}
 
